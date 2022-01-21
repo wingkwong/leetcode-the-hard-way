@@ -47,7 +47,7 @@ Explanation:
 * `1 <= n <= 105`
 * `1 <= arr[i] <= 105`
 
-## Approach 1:
+## Approach 1: Prefix Sum
 
 First we need to know the indices for each number. We can easily construct it using `unordered_map<int, vector<int>>`. Then it comes to the math part. Our goal is to calculate the absolute difference for numbers smaller than and greater than or equal to $$k$$ in linear time.
 
