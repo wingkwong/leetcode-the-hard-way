@@ -11,6 +11,7 @@
   * [2108 -Find First Palindromic String in the Array (Easy)](solutions/2100-2199/2108-find-first-palindromic-string-in-the-array-easy.md)
   * [2109 - Adding Spaces to a String (Medium)](solutions/2100-2199/2109-adding-spaces-to-a-string-medium.md)
   * [2110 - Number of Smooth Descent Periods of a Stock (Medium)](solutions/2100-2199/2110-number-of-smooth-descent-periods-of-a-stock-medium.md)
+  * [2111 - Minimum Operations to Make the Array K-Increasing (Hard)](solutions/2100-2199/2111-minimum-operations-to-make-the-array-k-increasing-hard.md)
   * [2119 - A Number After a Double Reversal (Easy)](solutions/2100-2199/2119-a-number-after-a-double-reversal-easy.md)
   * [2120 - Execution of All Suffix Instructions Staying in a Grid (Medium)](solutions/2100-2199/2120-execution-of-all-suffix-instructions-staying-in-a-grid-medium.md)
   * [2121 - Intervals Between Identical Elements (Medium)](solutions/2100-2199/2121-intervals-between-identical-elements-medium.md)
