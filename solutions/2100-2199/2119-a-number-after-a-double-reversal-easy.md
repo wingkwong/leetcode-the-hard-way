@@ -40,9 +40,7 @@ Explanation: Reverse num to get 0, then reverse 0 to get 0, which equals num.
 
 * `0 <= num <= 106`
 
-## Approach 1:&#x20;
-
-If you just do what it says, here's the code.
+## Approach 1: Just do what it says
 
 ### C++
 
@@ -60,7 +58,7 @@ public:
 };
 ```
 
-## Approach 2:&#x20;
+## Approach 2: Check Trailing Zero
 
 However, a better way to solve this is to check if there is any trailing zero. No matter how many zeros at the end, after removing them all, it won't be same if you reverse it. The only exceptional case is $$num=0$$.
 
