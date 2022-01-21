@@ -48,6 +48,22 @@ class Solution:
         return [-1, -1]
 ```
 
+### Go
+
+```go
+func twoSum(nums []int, target int) []int {
+    n := len(nums)
+    for i := 0; i < n; i++ {
+        for j := i + 1; j < n; j++ {
+            if nums[i] + nums[j] == target {
+                return []int{i, j}
+            }
+        }
+    }
+    return []int{-1, -1}
+}
+```
+
 ## Approach 2: Hash Table
 
 A better way to do it is using one-pass hash table approach. We iterate each element and insert it into the hash table. We also check if the complement already exists in the hash table or not. If so, we can return the answer immediately. This solution gives $O(n)$ time complexity and O(n) space complexity.
@@ -85,4 +101,20 @@ class Solution:
                 return [i, d[complement]]
             d[nums[i]] = i
         return [-1, -1]
+```
+
+### Go
+
+```go
+func twoSum(nums []int, target int) []int {
+    n := len(nums)
+    m := make(map[int]int)
+    for i := 0; i < n; i++ {
+        if j, ok := m[target - nums[i]]; ok {
+            return []int{i, j}
+        }
+        m[nums[i]] = i
+    }
+    return []int{-1, -1}
+}
 ```
