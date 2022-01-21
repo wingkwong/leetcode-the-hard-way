@@ -76,6 +76,37 @@ We can just simulate the whole process. For each $$i−th$$instruction, we have 
 class Solution {
 public:
     vector<int> executeInstructions(int n, vector<int>& startPos, string s) {
+        int m = s.size();
+        vector<int> ans;
+        for (int i = 0; i < m; i++) {
+            int x = startPos[0];
+            int y = startPos[1];
+            int cnt = 0;
+            for (int j = i; j < m; j++) {
+                if (s[j] == 'L') y--;
+                if (s[j] == 'R') y++;
+                if (s[j] == 'U') x--;
+                if (s[j] == 'D') x++;
+                if (0 <= x && x < n && 0 <= y && y < n) cnt++;
+                else break;
+            }
+            ans.push_back(cnt);
+        }
+        return ans;
+    }
+};
+```
+
+Time Complexity: O(m ^ 2)
+
+## Approach 2: One Pass
+
+### C++
+
+```cpp
+class Solution {
+public:
+    vector<int> executeInstructions(int n, vector<int>& startPos, string s) {
         int m = s.size(), h = m + n, v = m + n;
         vector<int> hor((m + n) * 2, m), ver((m + n) * 2, m), ans(m);
         for (int i = m - 1; i >= 0; i--) {
@@ -96,3 +127,5 @@ public:
     }    
 };
 ```
+
+Time Complexity: O(m)
