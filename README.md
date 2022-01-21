@@ -21,7 +21,7 @@ I was an ACMHK Collegiate Programming Contests Representative back in 2015. I've
 
 You can find my profile [here](https://leetcode.com/minus400eq/).&#x20;
 
-![Captured on 21 Jan 2022](.gitbook/assets/image.png)
+![Captured on 21 Jan 2022](<.gitbook/assets/image (1).png>)
 
 ### Source Code
 
