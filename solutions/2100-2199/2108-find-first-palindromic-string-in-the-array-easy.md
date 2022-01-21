@@ -6,13 +6,9 @@ description: https://leetcode.com/problems/find-first-palindromic-string-in-the-
 
 ## Problem Statement
 
-
-
 Given an array of strings `words`, return _the first **palindromic** string in the array_. If there is no such string, return _an **empty string** _ `""`.
 
 A string is **palindromic** if it reads the same forward and backward.
-
-
 
 **Example 1:**
 
@@ -87,7 +83,9 @@ bool isPalindrome(const string &s) {
 }
 ```
 
-We just need to iterate each string and check if the target $$s$$s is a palindrome, return the string if so
+We just need to iterate each string and check if the target $$s$$s is a palindrome, return the string if so.
+
+### C++
 
 ```cpp
 class Solution {
