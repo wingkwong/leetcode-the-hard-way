@@ -8,7 +8,7 @@ description: https://leetcode.com/problems/two-sum/
 
 Given an array of integers `nums` and an integer `target`, return _indices of the two numbers such that they add up to `target`_.
 
-You may assume that each input would have _**exactly**_** one solution**, and you may not use the _same_ element twice.
+You may assume that each input would have _**exactly**_\*\* one solution\*\*, and you may not use the _same_ element twice.
 
 You can return the answer in any order.
 
@@ -50,7 +50,7 @@ class Solution:
 
 ## Approach 2: Hash Table
 
-A better way to do it is using one-pass hash table approach. We iterate each element and insert it into the hash table. We also check if the complement already exists in the hash table or not. If so, we can return the answer immediately. This solution gives O(n) time complexity and O(n) space complexity.
+A better way to do it is using one-pass hash table approach. We iterate each element and insert it into the hash table. We also check if the complement already exists in the hash table or not. If so, we can return the answer immediately. This solution gives $O(n)$ time complexity and O(n) space complexity.
 
 ### C++
 
@@ -72,7 +72,7 @@ public:
 };
 ```
 
-### Python
+### Python3
 
 ```python
 class Solution:
