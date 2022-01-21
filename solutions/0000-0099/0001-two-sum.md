@@ -16,6 +16,8 @@ You can return the answer in any order.
 
 Since this is an easy problem, most of the time brute force solutions would work due to the loose constraints. However, this solution gives O(n^2) time complexity and O(1) space complexity.
 
+### C++
+
 ```cpp
 class Solution {
 public:
@@ -33,10 +35,24 @@ public:
 };
 ```
 
+### Python3
+
+```python
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        n = len(nums)
+        for i in range(n):
+            for j in range(i + 1, n):
+                if nums[i] + nums[j] == target:
+                    return [i, j]
+        return [-1, -1]
+```
+
 ## Approach 2: Hash Table
 
-A better way to do it is using one-pass hash table approach. We iterate each element and insert it into the hash table. We also check if the complement already exists in the hash table or not. If so, we can return the answer immediately. This solution gives O(n) time complexity and O(n) space complexity.\
+A better way to do it is using one-pass hash table approach. We iterate each element and insert it into the hash table. We also check if the complement already exists in the hash table or not. If so, we can return the answer immediately. This solution gives O(n) time complexity and O(n) space complexity.
 
+### C++
 
 ```cpp
 class Solution {
@@ -54,4 +70,19 @@ public:
         return {-1, -1};
     }
 };
+```
+
+### Python
+
+```python
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        n = len(nums)
+        d = {}
+        for i in range(n):
+            complement = target - nums[i]
+            if complement in d:
+                return [i, d[complement]]
+            d[nums[i]] = i
+        return [-1, -1]
 ```
