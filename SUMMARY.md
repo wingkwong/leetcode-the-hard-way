@@ -12,3 +12,4 @@
   * [2120 - Execution of All Suffix Instructions Staying in a Grid (Medium)](solutions/2100-2199/2120-execution-of-all-suffix-instructions-staying-in-a-grid-medium.md)
   * [2121 - Intervals Between Identical Elements (Medium)](solutions/2100-2199/2121-intervals-between-identical-elements-medium.md)
   * [2122 - Recover the Original Array (Hard)](solutions/2100-2199/2122-recover-the-original-array-hard.md)
+  * [2127 - Maximum Employees to Be Invited to a Meeting](solutions/2100-2199/2127-maximum-employees-to-be-invited-to-a-meeting.md)
