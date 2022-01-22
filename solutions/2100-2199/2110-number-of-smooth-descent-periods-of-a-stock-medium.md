@@ -67,3 +67,24 @@ public:
     }
 };
 ```
+
+## Approach 2: Math
+
+For a non-increasing contiguous segement with length `l`, it contributes `1 + 2 + 3 + ... + l = (l + 1) * l / 2` subarrays.&#x20;
+
+```cpp
+class Solution {
+public:
+    long long getDescentPeriods(vector<int>& prices) {
+        int n = prices.size();
+        long long ans = 0, i = 0;
+        while (i < n) {
+            long long l = 1;
+            i++;
+            while (i < n && prices[i - 1] - prices[i] == 1) i++, l++;
+            ans += (l + 1) * l / 2;
+        }
+        return ans;
+    }
+};
+```
