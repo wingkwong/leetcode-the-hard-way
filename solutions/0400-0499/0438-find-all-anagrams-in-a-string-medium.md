@@ -2,7 +2,7 @@
 description: https://leetcode.com/problems/find-all-anagrams-in-a-string/
 ---
 
-# 0438 - Find All Anagrams in a String (
+# 0438 - Find All Anagrams in a String (Medium)
 
 ## Problem Statement
 
