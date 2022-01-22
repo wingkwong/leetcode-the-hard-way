@@ -2,6 +2,15 @@
 
 * [Welcome!](README.md)
 
+## Tutorials
+
+* [Graph Theory](tutorials/graph-theory.md)
+* [Number Theory](tutorials/number-theory.md)
+* [Dynamic Programming](tutorials/dynamic-programming.md)
+* [Heap](tutorials/heap.md)
+* [Math](tutorials/math.md)
+* [Strings](tutorials/strings.md)
+
 ## Solutions
 
 * [0000 - 0099](solutions/0000-0099/README.md)
