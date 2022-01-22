@@ -7,6 +7,8 @@
 * [0000 - 0099](solutions/0000-0099/README.md)
   * [0001 - Two Sum (Easy)](solutions/0000-0099/0001-two-sum.md)
   * [0072 - Edit Distance (Hard)](solutions/0000-0099/0072-edit-distance-hard.md)
+* [0200 - 0299](solutions/0200-0299/README.md)
+  * [0261 -Graph Valid Tree (Medium)](solutions/0200-0299/0261-graph-valid-tree-medium.md)
 * [0400 - 0499](solutions/0400-0499/README.md)
   * [0438 - Find All Anagrams in a String (Medium)](solutions/0400-0499/0438-find-all-anagrams-in-a-string-medium.md)
 * [0800 - 0899](solutions/0800-0899/README.md)
