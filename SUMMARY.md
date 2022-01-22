@@ -7,6 +7,7 @@
 * [0000 - 0099](solutions/0000-0099/README.md)
   * [0001 - Two Sum (Easy)](solutions/0000-0099/0001-two-sum.md)
   * [0072 - Edit Distance (Hard)](solutions/0000-0099/0072-edit-distance-hard.md)
+* [0400 - 0499](solutions/0400-0499.md)
 * [0800 - 0899](solutions/0800-0899/README.md)
   * [0877 - Stone Game (Medium)](solutions/0800-0899/0877-stone-game-medium.md)
 * [1500 - 1599](solutions/1500-1599/README.md)
