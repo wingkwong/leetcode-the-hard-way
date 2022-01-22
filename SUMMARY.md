@@ -15,6 +15,7 @@
 
 * [0000 - 0099](solutions/0000-0099/README.md)
   * [0001 - Two Sum (Easy)](solutions/0000-0099/0001-two-sum.md)
+  * [0005 - Longest Palindromic Substring (Medium)](solutions/0000-0099/0005-longest-palindromic-substring-medium.md)
   * [0072 - Edit Distance (Hard)](solutions/0000-0099/0072-edit-distance-hard.md)
 * [0200 - 0299](solutions/0200-0299/README.md)
   * [0261 -Graph Valid Tree (Medium)](solutions/0200-0299/0261-graph-valid-tree-medium.md)
