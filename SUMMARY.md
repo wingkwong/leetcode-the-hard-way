@@ -9,6 +9,8 @@
   * [0072 - Edit Distance (Hard)](solutions/0000-0099/0072-edit-distance-hard.md)
 * [0200 - 0299](solutions/0200-0299/README.md)
   * [0261 -Graph Valid Tree (Medium)](solutions/0200-0299/0261-graph-valid-tree-medium.md)
+* [0300 - 0399](solutions/0300-0399/README.md)
+  * [0344 - Reverse String (Easy)](solutions/0300-0399/0344-reverse-string-easy.md)
 * [0400 - 0499](solutions/0400-0499/README.md)
   * [0438 - Find All Anagrams in a String (Medium)](solutions/0400-0499/0438-find-all-anagrams-in-a-string-medium.md)
 * [0800 - 0899](solutions/0800-0899/README.md)
