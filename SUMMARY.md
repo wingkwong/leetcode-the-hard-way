@@ -7,6 +7,8 @@
 * [0000 - 0099](solutions/0000-0099/README.md)
   * [0001 - Two Sum (Easy)](solutions/0000-0099/0001-two-sum.md)
   * [0072 - Edit Distance (Hard)](solutions/0000-0099/0072-edit-distance-hard.md)
+* [1500 - 1599](solutions/1500-1599/README.md)
+  * [1510 - Stone Game IV (Hard)](solutions/1500-1599/1510-stone-game-iv-hard.md)
 * [2100 - 2199](solutions/2100-2199/README.md)
   * [2108 -Find First Palindromic String in the Array (Easy)](solutions/2100-2199/2108-find-first-palindromic-string-in-the-array-easy.md)
   * [2109 - Adding Spaces to a String (Medium)](solutions/2100-2199/2109-adding-spaces-to-a-string-medium.md)
