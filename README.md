@@ -5,7 +5,7 @@ coverY: 0
 
 # Welcome!
 
-![](<.gitbook/assets/image (1).png>)
+![](<.gitbook/assets/image (2).png>)
 
 ### Introduction
 
