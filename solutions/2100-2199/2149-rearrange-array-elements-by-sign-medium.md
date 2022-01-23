@@ -44,7 +44,9 @@ So nums is rearranged to [1,-1].
 * `1 <= |nums[i]| <= 10^5`
 * `nums` consists of **equal** number of positive and negative integers.
 
-## Approach 1: Split and Put
+## Approach 1: Split and Combine
+
+This problem looks like the one I solved in 2015. The idea is to split the input into two vectors - positive and negative. Then iterate both vector to build the final answer.
 
 ```cpp
 class Solution {
