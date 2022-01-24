@@ -23,6 +23,8 @@
   * [0344 - Reverse String (Easy)](solutions/0300-0399/0344-reverse-string-easy.md)
 * [0400 - 0499](solutions/0400-0499/README.md)
   * [0438 - Find All Anagrams in a String (Medium)](solutions/0400-0499/0438-find-all-anagrams-in-a-string-medium.md)
+* [0500 - 0599](solutions/0500-0599/README.md)
+  * [0520 - Detect Capital (Easy)](solutions/0500-0599/0520-detect-capital-easy.md)
 * [0800 - 0899](solutions/0800-0899/README.md)
   * [0877 - Stone Game (Medium)](solutions/0800-0899/0877-stone-game-medium.md)
 * [1500 - 1599](solutions/1500-1599/README.md)
