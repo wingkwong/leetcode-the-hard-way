@@ -39,6 +39,7 @@
   * [2122 - Recover the Original Array (Hard)](solutions/2100-2199/2122-recover-the-original-array-hard.md)
   * [2127 - Maximum Employees to Be Invited to a Meeting (Hard)](solutions/2100-2199/2127-maximum-employees-to-be-invited-to-a-meeting-hard.md)
   * [2145 - Count the Hidden Sequences (Medium)](solutions/2100-2199/2145-count-the-hidden-sequences-medium.md)
+  * [2146 - K Highest Ranked Items Within a Price Range (Medium)](solutions/2100-2199/2146-k-highest-ranked-items-within-a-price-range-medium.md)
   * [2148 - Count Elements With Strictly Smaller and Greater Elements (Easy)](solutions/2100-2199/2148-count-elements-with-strictly-smaller-and-greater-elements-easy.md)
   * [2149 - Rearrange Array Elements by Sign (Medium)](solutions/2100-2199/2149-rearrange-array-elements-by-sign-medium.md)
   * [2150 - Find All Lonely Numbers in the Array (Medium)](solutions/2100-2199/2150-find-all-lonely-numbers-in-the-array-medium.md)
