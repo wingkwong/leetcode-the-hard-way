@@ -31,6 +31,7 @@
   * [0941 - Valid Mountain Array (Easy)](solutions/0900-0999/0941-valid-mountain-array-easy.md)
 * [1500 - 1599](solutions/1500-1599/README.md)
   * [1510 - Stone Game IV (Hard)](solutions/1500-1599/1510-stone-game-iv-hard.md)
+* [1600 - 1699](solutions/1600-1699.md)
 * [2100 - 2199](solutions/2100-2199/README.md)
   * [2108 -Find First Palindromic String in the Array (Easy)](solutions/2100-2199/2108-find-first-palindromic-string-in-the-array-easy.md)
   * [2109 - Adding Spaces to a String (Medium)](solutions/2100-2199/2109-adding-spaces-to-a-string-medium.md)
