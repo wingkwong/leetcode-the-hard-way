@@ -57,7 +57,7 @@ Note that there can be other ways to make the array K-increasing, but none of th
 * `1 <= arr.length <= 10^5`
 * `1 <= arr[i], k <= arr.length`
 
-## Approach 1:
+## Approach 1: Longest Increasing Subsequence
 
 We can break input vector into $$k$$k groups $$ai,ai+k,ai+2∗k,...$$for each $$i<k$$. Calculate the LIS (Longest Increasing Subsequence) on each group and compare the length with the target size. We need to perform $$a.size()−lengthOfLIS(a)$$operations to make it K-increasing.
 
