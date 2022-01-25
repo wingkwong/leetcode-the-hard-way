@@ -65,7 +65,7 @@ The maximum number of employees that can be invited to the meeting is 4.
 * `0 <= favorite[i] <= n - 1`
 * `favorite[i] != i`
 
-## Approach 1:&#x20;
+## Approach 1: DFS
 
 If an employee A has a favourite person, let's say employee B, and vice versa. Then we can put them together. Then we can put an employee, let's say C, whose favourite person is A on the left hand side of A. Then put an employee, let's say D, whose favourite person is C next to C. If we do the same thing for employee B, then we can have two ways to extend. Therefore, we can first look for the interdependent nodes, in this case, A & B.
 
