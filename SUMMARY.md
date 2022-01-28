@@ -22,6 +22,7 @@
 * [0300 - 0399](solutions/0300-0399/README.md)
   * [0344 - Reverse String (Easy)](solutions/0300-0399/0344-reverse-string-easy.md)
 * [0400 - 0499](solutions/0400-0499/README.md)
+  * [421 - Maximum XOR of Two Numbers in an Array](solutions/0400-0499/421-maximum-xor-of-two-numbers-in-an-array.md)
   * [0438 - Find All Anagrams in a String (Medium)](solutions/0400-0499/0438-find-all-anagrams-in-a-string-medium.md)
 * [0500 - 0599](solutions/0500-0599/README.md)
   * [0520 - Detect Capital (Easy)](solutions/0500-0599/0520-detect-capital-easy.md)
