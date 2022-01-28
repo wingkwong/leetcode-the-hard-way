@@ -23,7 +23,7 @@ I joined LeetCode in 2020. With constant practice, I would like to share my intu
 
 You can find my LeetCode profile [here](https://leetcode.com/minus400eq/).
 
-![Captured on 21 Jan 2022](<.gitbook/assets/image (1) (1).png>)
+![Captured on 21 Jan 2022](<.gitbook/assets/image (1) (1) (1).png>)
 
 ### Source Code
 
