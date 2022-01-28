@@ -10,6 +10,7 @@
 * [Heap](tutorials/heap.md)
 * [Math](tutorials/math.md)
 * [Strings](tutorials/strings.md)
+* [Bit Masking](tutorials/bit-masking.md)
 
 ## Solutions
 
