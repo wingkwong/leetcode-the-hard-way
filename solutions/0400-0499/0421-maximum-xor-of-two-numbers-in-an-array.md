@@ -2,7 +2,7 @@
 description: https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/
 ---
 
-# 421 - Maximum XOR of Two Numbers in an Array
+# 0421 - Maximum XOR of Two Numbers in an Array
 
 ## Problem Statement
 
@@ -30,7 +30,7 @@ Output: 127
 
 ## Approach 1: Bit Masking + Set + Two Sum Idea
 
-In order to maximise the answer, we can construct the max XOR from the leftmost bit. The best answer is always all bits set. Hence, we can check bit by bit. We need to find two numbers such that its XOR starts with `1000...000`, then find `1100..000,` then `1110...000`, `1111...000` and till `1111...111`. We build each mask to extract the prefix of each number by using `num & mask`. Then apply Two Sum idea, if the complement exists in the set, then we can update answer.
+In order to maximise the answer, we can construct the max XOR from the leftmost bit. The best answer is always all bits set. Hence, we can check bit by bit. We need to find two numbers such that its XOR starts with `1000...000`, then find `1100..000,` then `1110...000`, `1111...000` and till `1111...111`. We build each mask to extract the prefix of length `(L - i)` in binary representation of each number by using `num & mask`. Then apply Two Sum idea, if the complement exists in the set, then we can update answer.
 
 ```cpp
 class Solution {
