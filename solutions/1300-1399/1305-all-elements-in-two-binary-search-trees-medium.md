@@ -35,7 +35,7 @@ Output: [1,1,8,8]
 
 There are different ways to traverse trees - In-order, Pre-order, and Post-order. Supposing we have a binary tree with 5 nodes,&#x20;
 
-![](<../../.gitbook/assets/image (1).png>)
+![](<../../.gitbook/assets/image (1) (1).png>)
 
 | Traversal  | Path               | Order               |
 | ---------- | ------------------ | ------------------- |
