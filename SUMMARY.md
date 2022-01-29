@@ -11,7 +11,7 @@
   * [Minimum Spanning Tree](tutorials/graph-theory/minimum-spanning-tree.md)
   * [Single Source Shortest Path (SSSP)](tutorials/graph-theory/single-source-shortest-path-sssp.md)
   * [Topological Sorting](tutorials/graph-theory/topological-sorting.md)
-* [Number Theory](tutorials/number-theory/README.md)
+* [Number Theory](tutorials/number-theory.md)
   * [Binary Exponentiation](tutorials/number-theory/binary-exponentiation.md)
   * [Seive of Eratosthenes](tutorials/number-theory/seive-of-eratosthenes.md)
 * [Dynamic Programming](tutorials/dynamic-programming.md)
@@ -19,6 +19,9 @@
 * [Math](tutorials/math.md)
 * [Strings](tutorials/strings.md)
 * [Bit Masking](tutorials/bit-masking.md)
+* [Miscelleneous](tutorials/miscelleneous/README.md)
+  * [Two Pointers](tutorials/miscelleneous/two-pointers.md)
+  * [Binary Search](tutorials/miscelleneous/binary-search.md)
 
 ## Solutions
 
