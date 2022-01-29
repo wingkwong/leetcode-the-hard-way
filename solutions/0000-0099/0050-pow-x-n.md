@@ -45,9 +45,9 @@ class Solution {
 public:
     double myPow(double x, int N) {
         long long n = N;
-        double ans = 1;
         if(n < 0) n = -n, x = 1 / x;
         // Binary Exponentiation
+        double ans = 1;
         if(n == 0) return 1;
         while(n > 0) {
             if(n & 1) ans *= x;
