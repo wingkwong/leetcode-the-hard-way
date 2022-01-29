@@ -4,7 +4,13 @@
 
 ## Tutorials
 
-* [Graph Theory](tutorials/graph-theory.md)
+* [Graph Theory](tutorials/graph-theory/README.md)
+  * [Introduction](tutorials/graph-theory/introduction.md)
+  * [Depth First Search](tutorials/graph-theory/depth-first-search.md)
+  * [Breadth First Search](tutorials/graph-theory/breadth-first-search.md)
+  * [Minimum Spanning Tree](tutorials/graph-theory/minimum-spanning-tree.md)
+  * [Single Source Shortest Path (SSSP)](tutorials/graph-theory/single-source-shortest-path-sssp.md)
+  * [Topological Sorting](tutorials/graph-theory/topological-sorting.md)
 * [Number Theory](tutorials/number-theory.md)
 * [Dynamic Programming](tutorials/dynamic-programming.md)
 * [Heap](tutorials/heap.md)
