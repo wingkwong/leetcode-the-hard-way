@@ -67,3 +67,4 @@
   * [2149 - Rearrange Array Elements by Sign (Medium)](solutions/2100-2199/2149-rearrange-array-elements-by-sign-medium.md)
   * [2150 - Find All Lonely Numbers in the Array (Medium)](solutions/2100-2199/2150-find-all-lonely-numbers-in-the-array-medium.md)
   * [2151 - Maximum Good People Based on Statements (Hard)](solutions/2100-2199/2151-maximum-good-people-based-on-statements-hard.md)
+  * [2154 - Keep Multiplying Found Values by Two (Easy)](solutions/2100-2199/2154-keep-multiplying-found-values-by-two-easy.md)
