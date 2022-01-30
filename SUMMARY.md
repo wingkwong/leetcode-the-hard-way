@@ -13,7 +13,7 @@
   * [Topological Sorting](tutorials/graph-theory/topological-sorting.md)
 * [Number Theory](tutorials/number-theory.md)
   * [Binary Exponentiation](tutorials/number-theory/binary-exponentiation.md)
-  * [Seive of Eratosthenes](tutorials/number-theory/seive-of-eratosthenes.md)
+  * [Sieve of Eratosthenes](tutorials/number-theory/sieve-of-eratosthenes.md)
 * [Dynamic Programming](tutorials/dynamic-programming.md)
 * [Heap](tutorials/heap.md)
 * [Math](tutorials/math.md)
