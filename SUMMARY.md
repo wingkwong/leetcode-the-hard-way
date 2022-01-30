@@ -20,6 +20,7 @@
 * [Strings](tutorials/strings.md)
 * [Bit Masking](tutorials/bit-masking.md)
 * [Miscelleneous](tutorials/miscelleneous/README.md)
+  * [Time Complexity](tutorials/miscelleneous/time-complexity.md)
   * [Two Pointers](tutorials/miscelleneous/two-pointers.md)
   * [Binary Search](tutorials/miscelleneous/binary-search.md)
 
