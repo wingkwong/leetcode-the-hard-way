@@ -35,6 +35,7 @@
   * [0050 - Pow(x, n) (Medium)](solutions/0000-0099/0050-pow-x-n-medium.md)
   * [0072 - Edit Distance (Hard)](solutions/0000-0099/0072-edit-distance-hard.md)
 * [0200 - 0299](solutions/0200-0299/README.md)
+  * [0204 - Count Primes](solutions/0200-0299/0204-count-primes.md)
   * [0261 -Graph Valid Tree (Medium)](solutions/0200-0299/0261-graph-valid-tree-medium.md)
 * [0300 - 0399](solutions/0300-0399/README.md)
   * [0344 - Reverse String (Easy)](solutions/0300-0399/0344-reverse-string-easy.md)

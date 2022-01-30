@@ -19,3 +19,8 @@ vector<bool> sieveOfEratosthenes(const int n) {
   return isPrime;
 }
 ```
+
+### Suggested Problems
+
+* [0204 - Count Primes](../../solutions/0200-0299/0204-count-primes.md)
+
