@@ -68,3 +68,4 @@
   * [2150 - Find All Lonely Numbers in the Array (Medium)](solutions/2100-2199/2150-find-all-lonely-numbers-in-the-array-medium.md)
   * [2151 - Maximum Good People Based on Statements (Hard)](solutions/2100-2199/2151-maximum-good-people-based-on-statements-hard.md)
   * [2154 - Keep Multiplying Found Values by Two (Easy)](solutions/2100-2199/2154-keep-multiplying-found-values-by-two-easy.md)
+  * [2155 - All Divisions With the Highest Score of a Binary Array (Medium)](solutions/2100-2199/2155-all-divisions-with-the-highest-score-of-a-binary-array-medium.md)
