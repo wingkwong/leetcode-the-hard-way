@@ -28,3 +28,7 @@ You can find my LeetCode profile [here](https://leetcode.com/minus400eq/).
 ### Source Code
 
 This gitbook is synchronised with [leetcode-the-hard-way](https://github.com/wingkwong/leetcode-the-hard-way) on Github. All solutions are available [here](https://github.com/wingkwong/competitive-programming/tree/master/leetcode/problems). You may also check out other solutions for different CP platforms. If you find anything wrong, please feel free to report it in Github.
+
+### Contributing
+
+Contributions are welcome. If you want to add your solutions, explanations or tutorials, please feel free to create a PR on Github.
