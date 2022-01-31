@@ -4,6 +4,8 @@ Sieve of Eratosthenes is a way of finding all prime numbers up to $$n$$ (inclusi
 
 First we mark all integers as true except 0 and 1. Then starting from 2, we mark out all multiples of 2 that are bigger than itself because they are composite. The next integer that is not marked out is 3 and it is prime. We mark out all multiples of 3 that are bigger than itself. Similarly, we search for the next integer $$k$$ that is not marked out and is prime, then mark out all multiples of $$k$$.
 
+### C++ Implementation
+
 ```cpp
 vector<bool> sieveOfEratosthenes(const int n) {
   assert(n >= 2 && "N must be greater or equal to 2");
