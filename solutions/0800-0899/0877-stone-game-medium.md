@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/stone-game/'
+description: https://leetcode.com/problems/stone-game/
 ---
 
 # 0877 - Stone Game (Medium)

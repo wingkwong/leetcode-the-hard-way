@@ -1,7 +1,5 @@
 ---
-description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/number-of-smooth-descent-periods-of-a-stock/
+description: https://leetcode.com/problems/number-of-smooth-descent-periods-of-a-stock/
 ---
 
 # 2110 - Number of Smooth Descent Periods of a Stock (Medium)

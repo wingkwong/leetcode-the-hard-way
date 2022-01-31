@@ -1,7 +1,5 @@
 ---
-description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/
+description: https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/
 ---
 
 # 0421 - Maximum XOR of Two Numbers in an Array

@@ -1,7 +1,5 @@
 ---
-description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/find-first-palindromic-string-in-the-array/
+description: https://leetcode.com/problems/find-first-palindromic-string-in-the-array/
 ---
 
 # 2108 -Find First Palindromic String in the Array (Easy)

@@ -1,7 +1,5 @@
 ---
-description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/minimum-cost-of-buying-candies-with-discount/
+description: https://leetcode.com/problems/minimum-cost-of-buying-candies-with-discount/
 ---
 
 # 2144 - Minimum Cost of Buying Candies With Discount (Easy)

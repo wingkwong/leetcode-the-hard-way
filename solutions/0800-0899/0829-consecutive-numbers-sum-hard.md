@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/consecutive-numbers-sum/'
+description: https://leetcode.com/problems/consecutive-numbers-sum/
 ---
 
 # 0829 - Consecutive Numbers Sum (Hard)

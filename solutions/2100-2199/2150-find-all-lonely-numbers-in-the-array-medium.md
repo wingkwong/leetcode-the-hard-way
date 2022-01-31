@@ -1,7 +1,5 @@
 ---
-description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/find-all-lonely-numbers-in-the-array/
+description: https://leetcode.com/problems/find-all-lonely-numbers-in-the-array/
 ---
 
 # 2150 - Find All Lonely Numbers in the Array (Medium)

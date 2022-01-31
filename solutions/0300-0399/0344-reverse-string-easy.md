@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/reverse-string/'
+description: https://leetcode.com/problems/reverse-string/
 ---
 
 # 0344 - Reverse String (Easy)

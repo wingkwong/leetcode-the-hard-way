@@ -1,7 +1,5 @@
 ---
-description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/intervals-between-identical-elements/
+description: https://leetcode.com/problems/intervals-between-identical-elements/
 ---
 
 # 2121 - Intervals Between Identical Elements (Medium)

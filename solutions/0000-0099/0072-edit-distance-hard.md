@@ -1,8 +1,8 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/edit-distance/'
+description: https://leetcode.com/problems/edit-distance/
 ---
 
-# 0072 - Edit Distance (Hard)
+# 72 - Edit Distance (Hard)
 
 ## Problem Statement
 
@@ -45,11 +45,11 @@ exection -> execution (insert 'u')
 
 ## Approach 1: Dynamic Programming
 
-Edit distance is a classic DP problem. It is used to quantify the dissimilarity of two given strings by counting the minimum possible number of operations required to transform one string into the other.
+Edit distance is a classic DP problem. It is used to quantify the dissimilarity of two given strings by counting the minimum possible number of operations required to transform one string into the other.&#x20;
 
-Given that the constraints, we assume that a O(m \* n) solution would pass.
+Given that the constraints, we assume that a O(m \* n) solution would pass.&#x20;
 
-Let's define `dp[i][j]` as the minimum edit distance between the first `i` character of `word1` and the first `j` characters of `word2`. In example 1, `dp[3][2]` would be the edit distance between `word1[1..3]` (HOR) and `word2[1..2]`(RO).
+Let's define `dp[i][j]` as the minimum edit distance between the first `i` character of `word1` and the first `j` characters of `word2`. In example 1, `dp[3][2]` would be the edit distance between `word1[1..3]` (HOR) and `word2[1..2]`(RO).&#x20;
 
 If the last character is the same, then `dp[i][j]` would be `dp[i - 1][j - 1]` because we don't need to perform any operation. Otherwise, we need to perform either one. There are three possible ways to do the transformation.
 

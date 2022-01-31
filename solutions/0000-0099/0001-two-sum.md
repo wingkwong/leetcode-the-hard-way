@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/two-sum/'
+description: https://leetcode.com/problems/two-sum/
 ---
 
 # 0001 - Two Sum (Easy)

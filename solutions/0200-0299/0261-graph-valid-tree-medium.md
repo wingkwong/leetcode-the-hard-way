@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/graph-valid-tree/'
+description: https://leetcode.com/problems/graph-valid-tree/
 ---
 
 # 0261 -Graph Valid Tree (Medium)

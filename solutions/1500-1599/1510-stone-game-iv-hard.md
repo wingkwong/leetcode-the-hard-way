@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/stone-game-iv/'
+description: https://leetcode.com/problems/stone-game-iv/
 ---
 
 # 1510 - Stone Game IV (Hard)

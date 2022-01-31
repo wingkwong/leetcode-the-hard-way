@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/richest-customer-wealth/'
+description: https://leetcode.com/problems/richest-customer-wealth/
 ---
 
 # 1672 - Richest Customer Wealth (Easy)
