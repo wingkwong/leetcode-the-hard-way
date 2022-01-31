@@ -1,5 +1,7 @@
 ---
-description: https://leetcode.com/problems/maximum-employees-to-be-invited-to-a-meeting/
+description: >-
+  Author: @wingkwong |
+  https://leetcode.com/problems/maximum-employees-to-be-invited-to-a-meeting/
 ---
 
 # 2127 - Maximum Employees to Be Invited to a Meeting (Hard)

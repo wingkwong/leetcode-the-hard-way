@@ -1,5 +1,5 @@
 ---
-description: https://leetcode.com/problems/powx-n/
+description: 'Author: @wingkwong | https://leetcode.com/problems/powx-n/'
 ---
 
 # 0050 - Pow(x, n) (Medium)

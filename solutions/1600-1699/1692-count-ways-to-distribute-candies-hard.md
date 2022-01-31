@@ -1,5 +1,7 @@
 ---
-description: https://leetcode.com/problems/count-ways-to-distribute-candies/
+description: >-
+  Author: @wingkwong |
+  https://leetcode.com/problems/count-ways-to-distribute-candies/
 ---
 
 # 1692 - Count Ways to Distribute Candies (Hard)

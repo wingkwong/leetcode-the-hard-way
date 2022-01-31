@@ -1,5 +1,7 @@
 ---
-description: https://leetcode.com/problems/all-elements-in-two-binary-search-trees/
+description: >-
+  Author: @wingkwong |
+  https://leetcode.com/problems/all-elements-in-two-binary-search-trees/
 ---
 
 # 1305 - All Elements in Two Binary Search Trees (Medium)
