@@ -82,7 +82,7 @@ $$
 k * (k - 1) < 2 * n
 $$
 
-The upper bound for $$k$$ approximately would be around $$\sqrt {2 * n}$$. Therefore, we iterate $$k$$ from $$2$$ to $$\sqrt {2 * n}$$ to check if $$n - k * (k - 1) / 2$$ is a multiple of $$k$$. If so, it means we have one sequence so we increase our answer by $$1$$.
+The upper bound for $$k$$ approximately would be around $$\sqrt {2 * n + k}$$. Therefore, we iterate $$k$$ from $$2$$ to $$\sqrt {2 * n + k}$$ to check if $$n - k * (k - 1) / 2$$ is a multiple of $$k$$. If so, it means we have one sequence so we increase the answer by $$1$$.
 
 ```cpp
 class Solution {
@@ -94,8 +94,8 @@ public:
         // k * x = n - k * (k - 1) / 2
         // n - k * (k - 1) / 2 > 0
         // k * (k - 1) < 2 * n
-        // ~= k * k < 2 * n 
-        for (int k = 2; k < sqrt(2 * n); k++) {
+        // ~= k * k < 2 * n + k
+        for (int k = 2; k < sqrt(2 * n + k); k++) {
             ans += (n - (k * (k - 1) / 2)) % k == 0;
         }
         return ans;
