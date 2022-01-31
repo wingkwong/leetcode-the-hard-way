@@ -1,3 +1,7 @@
+---
+description: 'Author: @wingkwong'
+---
+
 # Binary Exponentiation
 
 Binary Exponentiation is also known as Exponentiation by Squaring or even called Fast Pow in some CP templates. It is used to calculate $$a ^ n$$ using only $$O(logn)$$ multiplications instead of $$O(n)$$using naive approach.
@@ -39,3 +43,7 @@ long long modpow(long long base, long long exp, long long mod) {
 }
 
 ```
+
+### Suggested Problems:
+
+* [0050 - Pow(x, n) (Medium)](../../../solutions/0000-0099/0050-pow-x-n-medium.md)

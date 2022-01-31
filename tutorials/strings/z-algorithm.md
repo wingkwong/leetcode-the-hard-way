@@ -1,3 +1,7 @@
+---
+description: 'Author: @wingkwong'
+---
+
 # Z Algorithm
 
 ```cpp

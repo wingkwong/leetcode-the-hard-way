@@ -1,3 +1,7 @@
+---
+description: 'Author: @heiheihang'
+---
+
 # Depth First Search
 
 In Depth-First Search (DFS), we aim to finish one branch before looking at other branches.

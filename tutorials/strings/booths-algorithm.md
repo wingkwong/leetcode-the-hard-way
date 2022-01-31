@@ -1,3 +1,7 @@
+---
+description: 'Author: @wingkwong'
+---
+
 # Booth's Algorithm
 
 ### Determine the lexicographically minimal rotation of a string

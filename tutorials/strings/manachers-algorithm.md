@@ -1,6 +1,10 @@
+---
+description: 'Author: @wingkwong'
+---
+
 # Manacher's Algorithm
 
-### Find the longest palindrome substring
+## Find the longest palindrome substring
 
 ```cpp
 string manacher(string s) {
