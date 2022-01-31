@@ -13,13 +13,13 @@ Speaking of LeetCode, most people solve LeetCode problems just because they want
 
 ### Target Audience
 
-Programming Lovers!
+LeetCode Beginner / Programming Lovers!
 
 ### Who am I?
 
 I was an ACMHK Collegiate Programming Contests Representative back in 2015. I've given up since then and picked up again in 2019.
 
-I joined LeetCode in 2020. With constant practice, I would like to share my intuitions to guide some beginners and document what I have learned. I mainly solve problems in C++ as this was the first programming language I learned. Sometime I would do it in Python, Go and maybe Rust.
+I joined LeetCode in 2020. With constant practice, I would like to share my intuitions to guide some beginners and document what I have learned. I mainly solve problems in C++ as this was the first programming language I learned. Sometimes I would do it in Python, Go or maybe Rust.
 
 You can find my LeetCode profile [here](https://leetcode.com/minus400eq/).
 
