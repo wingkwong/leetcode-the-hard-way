@@ -48,6 +48,7 @@
 * [0500 - 0599](solutions/0500-0599/README.md)
   * [0520 - Detect Capital (Easy)](solutions/0500-0599/0520-detect-capital-easy.md)
 * [0800 - 0899](solutions/0800-0899/README.md)
+  * [0829 - Consecutive Numbers Sum (Hard)](solutions/0800-0899/0829-consecutive-numbers-sum-hard.md)
   * [0877 - Stone Game (Medium)](solutions/0800-0899/0877-stone-game-medium.md)
 * [0900 - 0999](solutions/0900-0999/README.md)
   * [0941 - Valid Mountain Array (Easy)](solutions/0900-0999/0941-valid-mountain-array-easy.md)
