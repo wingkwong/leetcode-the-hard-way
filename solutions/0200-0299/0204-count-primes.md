@@ -36,7 +36,7 @@ Output: 0
 
 ## Approach 1: Sieve of Eratosthenes
 
-See [Sieve of Eratosthenes](../../tutorials/number-theory/sieve-of-eratosthenes.md).
+See [Sieve of Eratosthenes](../../tutorials/math/number-theory/sieve-of-eratosthenes.md).
 
 ```cpp
 class Solution {

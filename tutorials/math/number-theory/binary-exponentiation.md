@@ -6,7 +6,7 @@ We can express $$a ^ n$$as $$a * a * ... * a$$ but it is not efficient for a lar
 
 To generalise it, for a positive integer $$n$$, we have
 
-![](<../../.gitbook/assets/image (1).png>)
+![](<../../../.gitbook/assets/image (1).png>)
 
 ### C++ Implementation
 

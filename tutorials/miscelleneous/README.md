@@ -1,3 +1,2 @@
-# Miscelleneous
+# Basic Topics
 
-Coming Soon!

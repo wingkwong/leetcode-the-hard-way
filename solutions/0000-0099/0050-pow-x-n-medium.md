@@ -38,7 +38,7 @@ Explanation: 2-2 = 1/22 = 1/4 = 0.25
 
 ## Approach 1: Binary Exponentiation
 
-If the exponent $$n$$ is negative, we need to change it to positive exponent $$- n$$ and make the base  to $$1 / x$$. Then apply [Binary Exponentiation](../../tutorials/number-theory/binary-exponentiation.md).&#x20;
+If the exponent $$n$$ is negative, we need to change it to positive exponent $$- n$$ and make the base  to $$1 / x$$. Then apply [Binary Exponentiation](../../tutorials/math/number-theory/binary-exponentiation.md).&#x20;
 
 ```cpp
 class Solution {
