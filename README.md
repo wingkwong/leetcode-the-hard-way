@@ -13,7 +13,7 @@ Speaking of LeetCode, most people solve LeetCode problems just because they want
 
 ### Target Audience
 
-LeetCode Beginner / Programming Lovers!
+LeetCode Beginners / Programming Lovers!
 
 ### Who am I?
 
