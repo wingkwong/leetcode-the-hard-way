@@ -61,6 +61,7 @@
   * [0829 - Consecutive Numbers Sum (Hard)](solutions/0800-0899/0829-consecutive-numbers-sum-hard.md)
   * [0877 - Stone Game (Medium)](solutions/0800-0899/0877-stone-game-medium.md)
 * [0900 - 0999](solutions/0900-0999/README.md)
+  * [0921 - Sort an Array (Medium)](solutions/0900-0999/0921-sort-an-array-medium.md)
   * [0941 - Valid Mountain Array (Easy)](solutions/0900-0999/0941-valid-mountain-array-easy.md)
 * [1300 - 1399](solutions/1300-1399/README.md)
   * [1305 - All Elements in Two Binary Search Trees (Medium)](solutions/1300-1399/1305-all-elements-in-two-binary-search-trees-medium.md)
