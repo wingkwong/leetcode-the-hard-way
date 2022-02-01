@@ -1,5 +1,5 @@
 ---
-description: https://leetcode.com/problems/reverse-string/
+description: 'Author: @wingkwong | https://leetcode.com/problems/reverse-string/'
 ---
 
 # 0344 - Reverse String (Easy)
@@ -28,7 +28,7 @@ Output: ["h","a","n","n","a","H"]
 
 **Constraints:**
 
-* `1 <= s.length <= 105`
+* `1 <= s.length <= 10^5`
 * `s[i]` is a [printable ascii character](https://en.wikipedia.org/wiki/ASCII#Printable\_characters).
 
 ## Approach 1: In-place modification
