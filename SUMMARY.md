@@ -41,6 +41,8 @@
 * [0000 - 0099](solutions/0000-0099/README.md)
   * [0001 - Two Sum (Easy)](solutions/0000-0099/0001-two-sum.md)
   * [0005 - Longest Palindromic Substring (Medium)](solutions/0000-0099/0005-longest-palindromic-substring-medium.md)
+  * [0039 - Combination Sum (Medium)](solutions/0000-0099/0039-combination-sum-medium.md)
+  * [0040 - Combination Sum II (Medium)](solutions/0000-0099/0040-combination-sum-ii-medium.md)
   * [0050 - Pow(x, n) (Medium)](solutions/0000-0099/0050-pow-x-n-medium.md)
   * [0072 - Edit Distance (Hard)](solutions/0000-0099/0072-edit-distance-hard.md)
 * [0100 - 0199](solutions/0100-0199/README.md)
