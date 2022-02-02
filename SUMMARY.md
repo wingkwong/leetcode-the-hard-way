@@ -47,6 +47,7 @@
   * [0072 - Edit Distance (Hard)](solutions/0000-0099/0072-edit-distance-hard.md)
 * [0100 - 0199](solutions/0100-0199/README.md)
   * [0110 - Balanced Binary Tree (Easy)](solutions/0100-0199/0110-balanced-binary-tree-easy.md)
+  * [0115 - Distinct Subsequences (Hard)](solutions/0100-0199/0115-distinct-subsequences-hard.md)
 * [0200 - 0299](solutions/0200-0299/README.md)
   * [0204 - Count Primes](solutions/0200-0299/0204-count-primes.md)
   * [0261 -Graph Valid Tree (Medium)](solutions/0200-0299/0261-graph-valid-tree-medium.md)
