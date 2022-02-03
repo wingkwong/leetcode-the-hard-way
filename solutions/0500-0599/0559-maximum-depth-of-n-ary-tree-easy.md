@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: heiheihang |
+  Author: @heiheihang |
   https://leetcode.com/problems/maximum-depth-of-n-ary-tree/
 ---
 
@@ -39,7 +39,7 @@ Output: 5
 
 ## Approach 1: DFS
 
-We should use the DFS template from [DFS Guide](../../tutorials/graph-theory/depth-first-search.md). Instead of looking at the left and right child, we look at all children in an _n-ary tree._ We find the deepest child and set it to the current `largestDepth`, then we add one for counting the depth of the current level.&#x20;
+We should use the DFS template from [DFS Guide](../../tutorials/graph-theory/depth-first-search.md). Instead of looking at the left and right child, we look at all children in an _n-ary tree._ We find the deepest child and set it to the current `largestDepth`, then we add one for counting the depth of the current level.
 
 _Note: A **binary tree** means each node at most has **2 children** (binary means 2). An **n-ary** tree means each node at most has **n children**_
 

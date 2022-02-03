@@ -1,5 +1,5 @@
 ---
-description: 'Author: heiheihang | https://leetcode.com/problems/sum-of-left-leaves/'
+description: 'Author: @heiheihang | https://leetcode.com/problems/sum-of-left-leaves/'
 ---
 
 # 0404 - Sum of Left Leaves (Easy)
@@ -57,4 +57,3 @@ def sumOfLeftLeaves(self, root: Optional[TreeNode]) -> int:
         #but it is not a left leaf (no right/left)
         return dfs(root, False)
 ```
-
