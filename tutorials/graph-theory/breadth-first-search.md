@@ -8,7 +8,7 @@ In Breadth-First Search (BFS), we explore **all** the closest nodes first before
 
 > Given a binary tree, find the **closest node** from **root** that has the **value 3**
 
-Of course, you may use DFS to find the solution by iterating all nodes. However, as you can imagine, if the target node is the right child of the root, we have wasted so much time iterating the entire left branch of the root!&#x20;
+Of course, you may use DFS to find the solution by iterating all nodes. However, as you can imagine, if the target node is the right child of the root, we have wasted so much time iterating the entire left branch of the root!
 
 BFS would immediately locate the closest target node without wasting time iterating deeper nodes.
 
@@ -63,7 +63,7 @@ In this problem, our primary goal is to separate the tree into different levels.
 
 When we can separate the tree into different levels, we are just one step before obtaining the solution (which is just getting the averages of each list)
 
-The challenge here is how can we separate the tree into different levels. We can use the template above with `currentLevel` and `nextLevel`.&#x20;
+The challenge here is how can we separate the tree into different levels. We can use the template above with `currentLevel` and `nextLevel`.
 
 ```python
 def findAverageOfLevels(root):
@@ -97,3 +97,9 @@ def findAverageOfLevels(root):
         currentLevel = nextLevel
     return answer
 ```
+
+We should keep practising the this template of BFS in these similar problems:
+
+* [ ] Binary Tree Right Side View ([LeetCode Link](https://leetcode.com/problems/binary-tree-right-side-view/)) (Guide)
+* [ ] Binary Tree Zigzag Level Order Traversal ([LeetCode Link](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/)) (Guide)
+* [ ] Symmetric Tree ([LeetCode Link](https://leetcode.com/problems/symmetric-tree/)) (Guide)
