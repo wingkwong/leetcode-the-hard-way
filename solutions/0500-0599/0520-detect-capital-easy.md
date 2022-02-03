@@ -1,5 +1,5 @@
 ---
-description: https://leetcode.com/problems/detect-capital/
+description: 'Author: @wingkwong | https://leetcode.com/problems/detect-capital/'
 ---
 
 # 0520 - Detect Capital (Easy)

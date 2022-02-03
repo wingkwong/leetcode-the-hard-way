@@ -1,3 +1,9 @@
+---
+description: >-
+  Author: @wingkwong |
+  https://leetcode.com/problems/minimum-operations-to-make-the-array-k-increasing/
+---
+
 # 2111 - Minimum Operations to Make the Array K-Increasing (Hard)
 
 ## Problem Statement

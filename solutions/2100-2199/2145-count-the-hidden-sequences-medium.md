@@ -1,5 +1,5 @@
 ---
-description: https://leetcode.com/problems/count-the-hidden-sequences/
+description: 'Author: @wingkwong | https://leetcode.com/problems/count-the-hidden-sequences/'
 ---
 
 # 2145 - Count the Hidden Sequences (Medium)

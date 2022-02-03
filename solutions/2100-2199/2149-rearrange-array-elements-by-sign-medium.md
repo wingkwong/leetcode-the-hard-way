@@ -1,5 +1,7 @@
 ---
-description: https://leetcode.com/problems/rearrange-array-elements-by-sign/
+description: >-
+  Author: @wingkwong |
+  https://leetcode.com/problems/rearrange-array-elements-by-sign/
 ---
 
 # 2149 - Rearrange Array Elements by Sign (Medium)

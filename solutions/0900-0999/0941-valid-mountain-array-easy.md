@@ -1,5 +1,5 @@
 ---
-description: https://leetcode.com/problems/valid-mountain-array/
+description: 'Author: @wingkwong | https://leetcode.com/problems/valid-mountain-array/'
 ---
 
 # 0941 - Valid Mountain Array (Easy)

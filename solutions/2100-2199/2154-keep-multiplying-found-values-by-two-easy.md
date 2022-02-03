@@ -1,5 +1,7 @@
 ---
-description: https://leetcode.com/problems/keep-multiplying-found-values-by-two/
+description: >-
+  Author: @wingkwong |
+  https://leetcode.com/problems/keep-multiplying-found-values-by-two/
 ---
 
 # 2154 - Keep Multiplying Found Values by Two (Easy)

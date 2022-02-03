@@ -1,5 +1,7 @@
 ---
-description: https://leetcode.com/problems/longest-palindromic-substring/
+description: >-
+  Author: @wingkwong |
+  https://leetcode.com/problems/longest-palindromic-substring/
 ---
 
 # 0005 - Longest Palindromic Substring (Medium)
