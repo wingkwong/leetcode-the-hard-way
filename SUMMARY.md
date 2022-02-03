@@ -54,6 +54,7 @@
   * [0199 - Binary Tree Right Side View (Medium)](solutions/0100-0199/0199-binary-tree-right-side-view-medium.md)
 * [0200 - 0299](solutions/0200-0299/README.md)
   * [0204 - Count Primes](solutions/0200-0299/0204-count-primes.md)
+  * [0214 - Shortest Palindrome (Hard)](solutions/0200-0299/0214-shortest-palindrome-hard.md)
   * [0261 -Graph Valid Tree (Medium)](solutions/0200-0299/0261-graph-valid-tree-medium.md)
 * [0300 - 0399](solutions/0300-0399/README.md)
   * [0344 - Reverse String (Easy)](solutions/0300-0399/0344-reverse-string-easy.md)
