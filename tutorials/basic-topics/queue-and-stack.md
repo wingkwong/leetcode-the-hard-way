@@ -150,7 +150,7 @@ We can look at the following problem ([LeetCode Link](https://leetcode.com/probl
 
 As the problem statement and examples are quite long, we kindly ask you to read them on LeetCode.
 
-To implement a Queue, we must have a data structure that handles adding element on the left in _O(1)_ time. These are the options in different languages:
+To implement a Queue, we must have a data structure that handles adding element on the left in $$O(1)$$ __ time. These are the options in different languages:
 
 * Python: `queue = deque([]) # queue.appendleft(x) , queue.pop()`
 * C++: `queue<int> q; // q.push(x), q.pop()`
