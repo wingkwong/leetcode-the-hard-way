@@ -39,9 +39,9 @@ We have 3 types of arrays.
 
 `boys_and_girls_of_classes`: This array is a 2-d array containing the number of boys and girls of each class. For example, the first class has 10 boys and 23 girls. We can access the number of girls in the 3rd class with `boys_and_girls_of_classes[2][1]` . This is useful to obtain specific information. Let's take a look at several operations on this 2-d array:
 
-* [ ] `boys_and_girls_of_classes.sort()`: We have two elements in each entry this time. In `python` the pre-built `sort()` sorts by the first element, then the second element, then the third (if it exists) etc...
-* [ ] `boys_and_girls_of_classes.sort(key = lambda class : class[1])`: We can use the `key` parameter to change the `sort()` behaviour. We declare that we want to look at the number of girls **FIRST** in each `class` in this case. There are more advanced application of `sort`, and we will learn them in harder problems.
-* [ ] `list(map(lambda class: class[0] + class[1], boys_and_girls_of_classes))`: This returns the list of the class size of each size. It is useful if we want to know the total number of students in each class.
+* `boys_and_girls_of_classes.sort()`: We have two elements in each entry this time. In `python` the pre-built `sort()` sorts by the first element, then the second element, then the third (if it exists) etc...
+* `boys_and_girls_of_classes.sort(key = lambda class : class[1])`: We can use the `key` parameter to change the `sort()` behaviour. We declare that we want to look at the number of girls **FIRST** in each `class` in this case. There are more advanced application of `sort`, and we will learn them in harder problems.
+* `list(map(lambda class: class[0] + class[1], boys_and_girls_of_classes))`: This returns the list of the class size of each size. It is useful if we want to know the total number of students in each class.
 
 `basketball_matches` : This array is a 2-d array, but it is special that its dimension is `n x n` . These arrays (or better, matrices) usually have a special meaning. In this case, we have the scores of each team competing with each other. For example, team 1 vs team 2 has the score of `76 - 56` . We will use for-loops to iterate these arrays.
 
@@ -57,16 +57,16 @@ for i in range(len(basketball_matches)):
 
 | Operation        | Complexity | Explanation                                                                                                                                                                                                                             |
 | ---------------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Look-up (Access) | _O(1)_     | When we do `array[1]`, the program can instantly find the value stored at the first location.                                                                                                                                           |
-| Add              | _O(1)_     | More accurately this is amortised O(1). When we add to the end of the array, it only takes constant time.                                                                                                                               |
-| Pop              | O(1)       | When we remove the last element of the array, it takes constant time.                                                                                                                                                                   |
-| Insert           | O(N)       | When we insert an element to the middle of the array, it takes O(N) time. The whole array needs to be restructured to accommodate the new element.                                                                                      |
-| Remove           | O(N)       | When we remove an element in the middle of the array, it takes O(N) time. The whole array needs to be restructured to replace the missing gap of the replaced element.                                                                  |
-| Len              | O(1)       | This may seem like to be O(N) as we have to go through the whole array to check its length. However, checking the length of an array in many languages should be pre-computed in their data structures, so it only takes constant time. |
+| Look-up (Access) | $$O(1)$$   | When we do `array[1]`, the program can instantly find the value stored at the first location.                                                                                                                                           |
+| Add              | $$O(1)$$   | More accurately this is amortised O(1). When we add to the end of the array, it only takes constant time.                                                                                                                               |
+| Pop              | $$O(1)$$   | When we remove the last element of the array, it takes constant time.                                                                                                                                                                   |
+| Insert           | $$O(N)$$   | When we insert an element to the middle of the array, it takes O(N) time. The whole array needs to be restructured to accommodate the new element.                                                                                      |
+| Remove           | $$O(N)$$   | When we remove an element in the middle of the array, it takes O(N) time. The whole array needs to be restructured to replace the missing gap of the replaced element.                                                                  |
+| Len              | $$O(1)$$   | This may seem like to be O(N) as we have to go through the whole array to check its length. However, checking the length of an array in many languages should be pre-computed in their data structures, so it only takes constant time. |
 
 We can look at the following problems for some practice:
 
-* Running Sum of 1d Array ([LeetCode Link](https://leetcode.com/problems/running-sum-of-1d-array/)) (Guide)
-* Concatenation of Array ([LeetCode Link](https://leetcode.com/problems/concatenation-of-array/)) (Guide)
-* Kids With the Greatest Number of Candies ([LeetCode Link](https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/)) (Guide)
-* Matrix Diagonal Sum ([LeetCode Link](https://leetcode.com/problems/matrix-diagonal-sum/)) (Guide)
+* Running Sum of 1d Array ([LeetCode Link](https://leetcode.com/problems/running-sum-of-1d-array/)) ([Guide](../../solutions/1400-1499/1480-running-sum-of-1d-array-easy.md))
+* Concatenation of Array ([LeetCode Link](https://leetcode.com/problems/concatenation-of-array/)) ([Guide](../../solutions/1900-1999/1929-concatenation-of-array-easy.md))
+* Kids With the Greatest Number of Candies ([LeetCode Link](https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/)) ([Guide](../../solutions/1400-1499/1431-kids-with-the-greatest-number-of-candies-easy.md))
+* Matrix Diagonal Sum ([LeetCode Link](https://leetcode.com/problems/matrix-diagonal-sum/)) ([Guide](../../solutions/1500-1599/1572-matrix-diagonal-sum-easy.md))
