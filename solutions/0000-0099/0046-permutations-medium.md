@@ -37,7 +37,7 @@ Output: [[1]]
 
 ## Approach 1: STL
 
-Use C++ STL `next_permutation` to generate all possible permutations.&#x20;
+Use C++ STL `next_permutation` to generate all possible permutations.
 
 ```cpp
 class Solution {
@@ -55,7 +55,7 @@ public:
 
 ## Approach 2: Backtracking
 
-Check out [Backtracking](../../tutorials/miscelleneous/backtracking.md) section for the detailed explanation.
+Check out [Backtracking](../../tutorials/basic-topics/backtracking.md) section for the detailed explanation.
 
 ```cpp
 class Solution {
