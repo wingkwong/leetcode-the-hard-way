@@ -67,6 +67,7 @@
   * [0454 - 4Sum II (Medium)](solutions/0400-0499/0454-4sum-ii-medium.md)
 * [0500 - 0599](solutions/0500-0599/README.md)
   * [0520 - Detect Capital (Easy)](solutions/0500-0599/0520-detect-capital-easy.md)
+  * [0525 - Contiguous Array (Medium)](solutions/0500-0599/0525-contiguous-array-medium.md)
   * [0559 - Maximum Depth of N-ary Tree (Easy)](solutions/0500-0599/0559-maximum-depth-of-n-ary-tree-easy.md)
 * [0800 - 0899](solutions/0800-0899/README.md)
   * [0829 - Consecutive Numbers Sum (Hard)](solutions/0800-0899/0829-consecutive-numbers-sum-hard.md)
