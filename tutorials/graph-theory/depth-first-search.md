@@ -71,8 +71,6 @@ Let's look at another problem ([LeetCode Link](https://leetcode.com/problems/dia
 
 This problem may seem difficult at first glance. However it is just a minor tweak from the previous problem. The longest path between two nodes would be the sum of the maximum depth of the left branch and that of the right branch. Modify the code above before you look at the solution below.
 
-
-
 ```python
 def findTreeDiameter(root):
     diameter = 0
@@ -108,6 +106,6 @@ def findTreeDiameter(root):
 
 Here are some similar problems in which you can tweak the template above to obtain a solution:
 
-* [ ] Sum of Left Leaves ([LeetCode Link](https://leetcode.com/problems/sum-of-left-leaves/)) (Guide)
-* [ ] Balanced Binary Tree ([LeetCode Link](https://leetcode.com/problems/balanced-binary-tree/)) (Guide)
-* [ ] Maximum Depth of N-ary Tree ([LeetCode Link](https://leetcode.com/problems/maximum-depth-of-n-ary-tree/)) (Guide)
+* Sum of Left Leaves ([LeetCode Link](https://leetcode.com/problems/sum-of-left-leaves/)) (Guide)
+* Balanced Binary Tree ([LeetCode Link](https://leetcode.com/problems/balanced-binary-tree/)) (Guide)
+* Maximum Depth of N-ary Tree ([LeetCode Link](https://leetcode.com/problems/maximum-depth-of-n-ary-tree/)) (Guide)

@@ -100,6 +100,6 @@ def findAverageOfLevels(root):
 
 We should keep practising the this template of BFS in these similar problems:
 
-* [ ] Binary Tree Right Side View ([LeetCode Link](https://leetcode.com/problems/binary-tree-right-side-view/)) (Guide)
-* [ ] Binary Tree Zigzag Level Order Traversal ([LeetCode Link](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/)) (Guide)
-* [ ] Symmetric Tree ([LeetCode Link](https://leetcode.com/problems/symmetric-tree/)) (Guide)
+* Binary Tree Right Side View ([LeetCode Link](https://leetcode.com/problems/binary-tree-right-side-view/)) (Guide)
+* Binary Tree Zigzag Level Order Traversal ([LeetCode Link](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/)) (Guide)
+* Symmetric Tree ([LeetCode Link](https://leetcode.com/problems/symmetric-tree/)) (Guide)
