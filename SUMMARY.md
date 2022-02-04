@@ -77,6 +77,7 @@
   * [0941 - Valid Mountain Array (Easy)](solutions/0900-0999/0941-valid-mountain-array-easy.md)
 * [1300 - 1399](solutions/1300-1399/README.md)
   * [1305 - All Elements in Two Binary Search Trees (Medium)](solutions/1300-1399/1305-all-elements-in-two-binary-search-trees-medium.md)
+  * [1328 - Break a Palindrome (Medium)](solutions/1300-1399/1328-break-a-palindrome-medium.md)
 * [1400 - 1499](solutions/1400-1499/README.md)
   * [1431 - Kids With the Greatest Number of Candies (Easy)](solutions/1400-1499/1431-kids-with-the-greatest-number-of-candies-easy.md)
   * [1480 - Running Sum of 1d Array (Easy)](solutions/1400-1499/1480-running-sum-of-1d-array-easy.md)
