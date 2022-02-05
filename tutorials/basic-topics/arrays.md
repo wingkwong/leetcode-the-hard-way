@@ -66,7 +66,8 @@ for i in range(len(basketball_matches)):
 
 ### Suggested Problems
 
-* [Running Sum of 1d Array (Easy)](../../solutions/1400-1499/1480-running-sum-of-1d-array-easy.md) ([LeetCode Link](https://leetcode.com/problems/running-sum-of-1d-array/))&#x20;
-* [Concatenation of Array (Easy) ](../../solutions/1900-1999/1929-concatenation-of-array-easy.md)([LeetCode Link](https://leetcode.com/problems/concatenation-of-array/))&#x20;
-* [Kids With the Greatest Number of Candies (Easy) ](../../solutions/1400-1499/1431-kids-with-the-greatest-number-of-candies-easy.md)([LeetCode Link](https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/))&#x20;
-* [Matrix Diagonal Sum (Easy)](../../solutions/1500-1599/1572-matrix-diagonal-sum-easy.md) ([LeetCode Link](https://leetcode.com/problems/matrix-diagonal-sum/))
+* [1480 - Running Sum of 1d Array (Easy) ](../../solutions/1400-1499/1480-running-sum-of-1d-array-easy.md)([LeetCode Link](https://leetcode.com/problems/running-sum-of-1d-array/))
+* [1929 - Concatenation of Array (Easy) ](../../solutions/1900-1999/1929-concatenation-of-array-easy.md)([LeetCode Link](https://leetcode.com/problems/concatenation-of-array/))
+* [1431 - Kids With the Greatest Number of Candies (Easy)](../../solutions/1400-1499/1431-kids-with-the-greatest-number-of-candies-easy.md) ([LeetCode Link](https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/))
+* [1572 - Matrix Diagonal Sum (Easy)](../../solutions/1500-1599/1572-matrix-diagonal-sum-easy.md) ([LeetCode Link](https://leetcode.com/problems/matrix-diagonal-sum/))
+
