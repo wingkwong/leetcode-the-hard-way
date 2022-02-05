@@ -1,5 +1,5 @@
 ---
-description: 'Author: @TBC | https://leetcode.com/problems/matrix-diagonal-sum/'
+description: 'Author: @heiheihang | https://leetcode.com/problems/matrix-diagonal-sum/'
 ---
 
 # 1572 - Matrix Diagonal Sum (Easy)

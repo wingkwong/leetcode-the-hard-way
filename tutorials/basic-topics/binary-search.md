@@ -1,10 +1,10 @@
 ---
-description: 'Authors: @heiheihang'
+description: 'Author: @heiheihang'
 ---
 
 # Binary Search
 
-We have all played a game to guess a number from 1 to 100. The optimal approach to this game is actually binary search. Binary search is the searching strategy that reduces the search space by half every iteration until you have found the target.&#x20;
+We have all played a game to guess a number from 1 to 100. The optimal approach to this game is actually binary search. Binary search is the searching strategy that reduces the search space by half every iteration until you have found the target.
 
 Let's look at the most basic form of binary search:
 
@@ -27,7 +27,7 @@ def binarySearch(nums, target):
     rp = len(nums) - 1
     
     while(lp <= rp):
-        mid = (lp+rp) // 2
+        mid = (lp + rp) // 2
         if(nums[mid] == target):
             return mid
         elif(nums[mid] < target):
