@@ -8,8 +8,6 @@ description: Author:@heiheihang
 
 Stack is the data structure The first item that comes in will be the first to go out. Let's look at this question ([LeetCode Link](https://leetcode.com/problems/valid-parentheses/))
 
->
->
 > Given a string `s` containing just the characters `'('`, `')'`, `'{'`, `'}'`, `'['` and `']'`, determine if the input string is valid.
 >
 > An input string is valid if:
@@ -30,16 +28,14 @@ We can process the string in the following way:
 valid_string_1_step_1 = ["("] 
 ```
 
-We have the first character first. We do not need to do anything if it is an opening bracket.&#x20;
+We have the first character first. We do not need to do anything if it is an opening bracket.
 
 ```python
 #2nd character from valid_string_1
 valid_string_1_step_2 = ["(", "["] 
 ```
 
-
-
-We have the second character now. Again, we do not need to do anything if it is an opening bracket.&#x20;
+We have the second character now. Again, we do not need to do anything if it is an opening bracket.
 
 ```python
 #3rd character from valid_string_1 
@@ -81,7 +77,7 @@ Similar to the scenario above, we can skip the first two characters and have:
 invalid_string_1_step3a = ["[", "(", ")"]
 ```
 
-We see a matching pair in the 2nd character and the 3rd character, so we can remove them.&#x20;
+We see a matching pair in the 2nd character and the 3rd character, so we can remove them.
 
 ```python
 invalid_string_1_step3b = ["["]
@@ -144,13 +140,13 @@ class Solution:
 
 ### Queue
 
-Queue is the data structure that is First-In-First-Out. The first person who enters the queue should be the first person to leave the queue.&#x20;
+Queue is the data structure that is First-In-First-Out. The first person who enters the queue should be the first person to leave the queue.
 
 We can look at the following problem ([LeetCode Link](https://leetcode.com/problems/time-needed-to-buy-tickets/))
 
 As the problem statement and examples are quite long, we kindly ask you to read them on LeetCode.
 
-To implement a Queue, we must have a data structure that handles adding element on the left in $$O(1)$$ __ time. These are the options in different languages:
+To implement a Queue, we must have a data structure that handles adding element on the left in $$O(1)$$ \_\_ time. These are the options in different languages:
 
 * Python: `queue = deque([]) # queue.appendleft(x) , queue.pop()`
 * C++: `queue<int> q; // q.push(x), q.pop()`
@@ -199,3 +195,6 @@ class Solution:
         return time
 ```
 
+### Suggested Problems
+
+*
