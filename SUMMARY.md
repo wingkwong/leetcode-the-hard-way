@@ -90,6 +90,7 @@
 * [1500 - 1599](solutions/1500-1599/README.md)
   * [1510 - Stone Game IV (Hard)](solutions/1500-1599/1510-stone-game-iv-hard.md)
   * [1572 - Matrix Diagonal Sum (Easy)](solutions/1500-1599/1572-matrix-diagonal-sum-easy.md)
+  * [1584 - Min Cost to Connect All Points (Medium)](solutions/1500-1599/1584-min-cost-to-connect-all-points-medium.md)
 * [1600 - 1699](solutions/1600-1699/README.md)
   * [1672 - Richest Customer Wealth (Easy)](solutions/1600-1699/1672-richest-customer-wealth-easy.md)
   * [1692 - Count Ways to Distribute Candies (Hard)](solutions/1600-1699/1692-count-ways-to-distribute-candies-hard.md)
