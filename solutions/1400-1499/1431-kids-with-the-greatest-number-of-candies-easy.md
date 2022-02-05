@@ -50,4 +50,33 @@ Output: [true,false,true]
 * `1 <= candies[i] <= 100`
 * `1 <= extraCandies <= 50`
 
-## Approach 1: TBC
+## Approach 1: Iteration
+
+We need to use `max` to find the largest number of candies among the kids. Then we need to iterate the list of candies, and check if the number of candies is greater than the largest number of candies after adding `extra_candies`. We put `True` to `result` if yes, put `False` to `result` otherwise.
+
+```python
+def kidsWithCandies(self, candies: List[int], extra_candies: int) -> List[bool]:
+        
+        #find the greatest number of candies among the kids
+        most_candies = max(candies)
+        
+        #initialize the result list
+        result = []
+        
+        #iterate each kid
+        for i in range(len(candies)):
+            
+            #declare a veriable for the number of candies of the ith kid
+            kid = candies[i]
+            
+            #check if the kid can have more than or equal to the largest number of candies
+            if(kid + extra_candies >= most_candies):
+                #put TRUE to result if yes
+                result.append(True)
+            else:
+                #put FALSE to result if no
+                result.append(False)
+        
+        #return result list
+        return result
+```

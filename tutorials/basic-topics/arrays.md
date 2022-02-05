@@ -64,9 +64,10 @@ for i in range(len(basketball_matches)):
 | Remove           | $$O(N)$$   | When we remove an element in the middle of the array, it takes O(N) time. The whole array needs to be restructured to replace the missing gap of the replaced element.                                                                  |
 | Len              | $$O(1)$$   | This may seem like to be O(N) as we have to go through the whole array to check its length. However, checking the length of an array in many languages should be pre-computed in their data structures, so it only takes constant time. |
 
-We can look at the following problems for some practice:
+### Suggested Problems
 
-* Running Sum of 1d Array ([LeetCode Link](https://leetcode.com/problems/running-sum-of-1d-array/)) ([Guide](../../solutions/1400-1499/1480-running-sum-of-1d-array-easy.md))
-* Concatenation of Array ([LeetCode Link](https://leetcode.com/problems/concatenation-of-array/)) ([Guide](../../solutions/1900-1999/1929-concatenation-of-array-easy.md))
-* Kids With the Greatest Number of Candies ([LeetCode Link](https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/)) ([Guide](../../solutions/1400-1499/1431-kids-with-the-greatest-number-of-candies-easy.md))
-* Matrix Diagonal Sum ([LeetCode Link](https://leetcode.com/problems/matrix-diagonal-sum/)) ([Guide](../../solutions/1500-1599/1572-matrix-diagonal-sum-easy.md))
+* [1480 - Running Sum of 1d Array (Easy) ](../../solutions/1400-1499/1480-running-sum-of-1d-array-easy.md)([LeetCode Link](https://leetcode.com/problems/running-sum-of-1d-array/))
+* [1929 - Concatenation of Array (Easy) ](../../solutions/1900-1999/1929-concatenation-of-array-easy.md)([LeetCode Link](https://leetcode.com/problems/concatenation-of-array/))
+* [1431 - Kids With the Greatest Number of Candies (Easy)](../../solutions/1400-1499/1431-kids-with-the-greatest-number-of-candies-easy.md) ([LeetCode Link](https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/))
+* [1572 - Matrix Diagonal Sum (Easy)](../../solutions/1500-1599/1572-matrix-diagonal-sum-easy.md) ([LeetCode Link](https://leetcode.com/problems/matrix-diagonal-sum/))
+

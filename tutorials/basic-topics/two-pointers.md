@@ -26,9 +26,9 @@ We want to return the following sorted squares:
 answer = [0, 1, 9, 16, 100]
 ```
 
-You may be thinking, why can't we generate the squares and then sort the result? This approach would take $$O(NlogN)$$, and we want to do better than this.&#x20;
+You may be thinking, why can't we generate the squares and then sort the result? This approach would take $$O(NlogN)$$, and we want to do better than this.
 
-We can sequentially add the next biggest elements with the two pointer approach. We first set a `left_pointer` at the left of the list and a `right_pointer` at the right of the list.  The `left_pointer` should be pointing at the **largest** negative number (most negative), and the `right_pointer` should be pointing at the **largest** positive number. We can move the pointers accordingly to find the next largest squared number.&#x20;
+We can sequentially add the next biggest elements with the two pointer approach. We first set a `left_pointer` at the left of the list and a `right_pointer` at the right of the list. The `left_pointer` should be pointing at the **largest** negative number (most negative), and the `right_pointer` should be pointing at the **largest** positive number. We can move the pointers accordingly to find the next largest squared number.
 
 ```python
 def sortedSquares(self, nums: List[int]) -> List[int]:
@@ -61,4 +61,10 @@ def sortedSquares(self, nums: List[int]) -> List[int]:
         return res
 ```
 
-Unfortunately, there is no fixed way to perform two pointers. However, generally, we have a pointer at the start of the list and another pointer at the end of the list. We have to carefully analyze the question and choose the most appropriate approach to operate the two pointers.&#x20;
+Unfortunately, there is no fixed way to perform two pointers. However, generally, we have a pointer at the start of the list and another pointer at the end of the list. We have to carefully analyze the question and choose the most appropriate approach to operate the two pointers.
+
+### Suggested Problems
+
+* 1768 - Merge Strings Alternately (Easy) [(LeetCode Link)](https://leetcode.com/problems/merge-strings-alternately/)
+* 2108 - Find First Palindromic String in the Array (Easy) ([LeetCode Link](https://leetcode.com/problems/merge-strings-alternately/))
+* 0283 - Move Zeroes (Easy) [(LeetCode Link)](https://leetcode.com/problems/move-zeroes/)

@@ -38,4 +38,24 @@ Explanation: The array ans is formed as follows:
 * `1 <= n <= 1000`
 * `1 <= nums[i] <= 1000`
 
-## Approach 1: TBC
+## Approach 1: Iteration
+
+We need to look at `nums` two times to create the desired result. The simplest approach is to perform two for-loops in `nums` and copy the numbers to `result` .&#x20;
+
+```python
+def getConcatenation(self, nums: List[int]) -> List[int]:
+        
+        #initialize result
+        result = []
+        
+        #first iteration of nums
+        for i in range(len(nums)):
+            result.append(nums[i])
+        
+        #second iteration of nums
+        for i in range(len(nums)):
+            result.append(nums[i])
+        
+        #return result
+        return result
+```

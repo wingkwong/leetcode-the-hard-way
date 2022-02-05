@@ -1,7 +1,6 @@
 ---
-description: 'Author:'
+description: 'Author: @heiheihang'
 ---
 
 # Sliding Window
 
-Coming Soon!
