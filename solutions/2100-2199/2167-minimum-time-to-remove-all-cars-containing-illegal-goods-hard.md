@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @TBC |
+  Author: @heiheihang |
   https://leetcode.com/problems/minimum-time-to-remove-all-cars-containing-illegal-goods/
 ---
 
@@ -74,7 +74,7 @@ We note that our goal is to **minimize** the following:
 
 _totalCost = left + right + mid(1) \* 2_
 
-Where _mid(1)_ denotes the number of 1s in the middle part, and _mid(0)_ denotes the number of 0s in the middle part.&#x20;
+Where _mid(1)_ denotes the number of 1s in the middle part, and _mid(0)_ denotes the number of 0s in the middle part.
 
 We can calculate _mid(1)_ in the following way:
 
@@ -88,7 +88,7 @@ _totalCost = all + mid(1) - mid(0)_
 
 As all is a constant, we need to **minimize** _mid(1) - mid(0)_
 
-This becomes a minimum sum of subarray problem when we substitute -1 to 0 in the original input.&#x20;
+This becomes a minimum sum of subarray problem when we substitute -1 to 0 in the original input.
 
 The rest of the problem becomes a classic subarray sum problem.
 
@@ -121,10 +121,3 @@ def minimumTime(self, s: str) -> int:
         #return result based on formula
         return len(s) + smallest
 ```
-
-
-
-
-
-
-

@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @TBC |
+  Author: @heiheihang |
   https://leetcode.com/problems/smallest-value-of-the-rearranged-number/
 ---
 
@@ -40,8 +40,8 @@ The arrangement with the smallest value that does not contain any leading zeros 
 
 There are two cases in this problem:
 
-* `num` is positive: we need to rearrange the digits such that they are **minimized**&#x20;
-* `num` is negative: we need to rearrange the digits such that they are **maximized**&#x20;
+* `num` is positive: we need to rearrange the digits such that they are **minimized**
+* `num` is negative: we need to rearrange the digits such that they are **maximized**
 
 There are some common tools that you will need for this problem:
 
@@ -65,20 +65,20 @@ To build a number from digits (`digits = [4,2,5,6]`, and we want 4256 as a resul
 number = number * 10 + new_digit
 ```
 
-Let's look at the example with `digits = [4,2,5,9]`.&#x20;
+Let's look at the example with `digits = [4,2,5,9]`.
 
 * `result = 0` initially, we perform `result = result * 10 + digits[0]`, we get `result = 0 * 10 + 4`, which results in `4`.
 * `result = 4` , we perform `result = result * 10 + digits[1]`, we get `result = 4*10 + 2`, which results in `42`
 * `result = 42`, we perform `result = result * 10 + digits[2]`, we get `result = 42 * 10 + 5`, which results in 425
 * `result = 425,` we perform `result = result * 10 + digits[3]`, we get `result = 425 * 10 + 9`, which results in 4259.
 
-We first need to get the digits from a number. Then we need to sort them in order.&#x20;
+We first need to get the digits from a number. Then we need to sort them in order.
 
 For the _negative_ case, we need to **maximize** the result, so we reverse the order of the digits. To **maximize** the number, we put the zeros at the end, so we need to perform `result = result * 10 ** number_of_zeros` **after** merging the digits.
 
-For the _positive_ case, we need to **minimize** the result. We need to put the zeros after the first digit to **minimize** the result, so we perform `result = digits[0] * 10 ** number_of_zeros` **before** looking at other digits.&#x20;
+For the _positive_ case, we need to **minimize** the result. We need to put the zeros after the first digit to **minimize** the result, so we perform `result = digits[0] * 10 ** number_of_zeros` **before** looking at other digits.
 
-And we do not forget to multiply -1 in the negative case before returning.&#x20;
+And we do not forget to multiply -1 in the negative case before returning.
 
 ```python
  def smallestNumber(self, num: int) -> int:

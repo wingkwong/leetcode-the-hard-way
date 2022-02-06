@@ -1,5 +1,5 @@
 ---
-description: 'Author: @TBC | https://leetcode.com/problems/design-bitset/'
+description: 'Author: @heiheihang | https://leetcode.com/problems/design-bitset/'
 ---
 
 # 2166 - Design Bitset (Medium)
@@ -58,14 +58,14 @@ In general, we need to keep track of 3 things:
 * The number of 1s
 * Flipped or not
 
-We first consider the `flip` function first. The naive way to perform `flip` is to iterate over the `bits` and change all the bits. This takes $$O(N)$$ time and is too slow. We instead use a state called `flipped` to store the state whether the `bits` are flipped or not. When we call `flip`, the new number of 1s in `bits` becomes the old number of 0s in `bits`, which can be calculated by `len(bits) - ones`.&#x20;
+We first consider the `flip` function first. The naive way to perform `flip` is to iterate over the `bits` and change all the bits. This takes $$O(N)$$ time and is too slow. We instead use a state called `flipped` to store the state whether the `bits` are flipped or not. When we call `flip`, the new number of 1s in `bits` becomes the old number of 0s in `bits`, which can be calculated by `len(bits) - ones`.
 
-We then consider `fix` and `unfix`. These two functions require certain condition of the target bit to activate. If we want to check a bit is `1` or not, we have two possibilities&#x20;
+We then consider `fix` and `unfix`. These two functions require certain condition of the target bit to activate. If we want to check a bit is `1` or not, we have two possibilities
 
-* target bit is `0`, and `flipped = True`&#x20;
-* target bit is `1`, and `flipped = False`&#x20;
+* target bit is `0`, and `flipped = True`
+* target bit is `1`, and `flipped = False`
 
-Then we update the target bit and `ones` accordingly.&#x20;
+Then we update the target bit and `ones` accordingly.
 
 Similar logic applies to `toString` that we need to accommodate the state of `flipped`
 
