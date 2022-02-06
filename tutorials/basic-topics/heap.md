@@ -4,9 +4,9 @@ description: 'Author: @heiheihang'
 
 # Heap
 
-A heap, or a priority queue, is a data structure that efficiently stores elements in a particular order. It is very efficient in inserting an element to the heap ($$O(logN)$$), and very efficient in removing the first element of the heap ($$O(logN)$$). To know the details of heap, we recommend you to look at [this](https://www.youtube.com/watch?v=t0Cq6tVNRBA).&#x20;
+A heap, or a priority queue, is a data structure that efficiently stores elements in a particular order. It is very efficient in inserting an element to the heap ($$O(logN)$$), and very efficient in removing the first element of the heap ($$O(logN)$$). To know the details of heap, we recommend you to look at [this](https://www.youtube.com/watch?v=t0Cq6tVNRBA).
 
-By default, when we refer to heap, most implementations are min-heaps. This means the first element is always the smallest element.&#x20;
+By default, when we refer to heap, most implementations are min-heaps. This means the first element is always the smallest element.
 
 In Python, you can use the following functions to interact with a heap:
 
@@ -43,7 +43,6 @@ heappush(max_heap, -7)
 max_element_from_heap = -1 * heappop(heap)
 #heap = [-7], -10 is removed
 #max_element_from_heap = 10, we have retrieved the largest element from the heap
-
 ```
 
 Let's work on a problem ([LeetCode Link](https://leetcode.com/problems/last-stone-weight/))
@@ -65,7 +64,7 @@ I want you to think about these questions before working on it:
 * If it is a max-heap, how to we "store" the numbers?
 * What do we have to check before retrieving the two heaviest stones?
 
-As we need to get the two heaviest stones in every iteration, we should use a max-heap for quick access of the largest elements. To use a max-heap, we can store the negative of the integer. We have to check if there are at least two more stones in the heap before retrieving the two heaviest stones.&#x20;
+As we need to get the two heaviest stones in every iteration, we should use a max-heap for quick access of the largest elements. To use a max-heap, we can store the negative of the integer. We have to check if there are at least two more stones in the heap before retrieving the two heaviest stones.
 
 ```python
 def lastStoneWeight(self, stones: List[int]) -> int:
@@ -103,4 +102,6 @@ def lastStoneWeight(self, stones: List[int]) -> int:
 
 ### Suggested Problem
 
-*
+* 0703 - Kth Largest Element in a Stream (Easy) [(LeetCode Link)](https://leetcode.com/problems/kth-largest-element-in-a-stream/)
+* 0215 - Kth Largest Element in an Array (Medium) [(LeetCode Link)](https://leetcode.com/problems/kth-largest-element-in-an-array/)
+* 0973 - K Closest Points to Origin (Medium) [(LeetCode Link)](https://leetcode.com/problems/k-closest-points-to-origin/)

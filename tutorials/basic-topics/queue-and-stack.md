@@ -197,6 +197,6 @@ class Solution:
 
 ### Suggested Problems
 
-* 0155 - Min Stack (Easy) [(LeetCode Link)](https://leetcode.com/problems/min-stack/)
-* 0496 - Next Greater Element I (Easy) [(LeetCode Link)](https://leetcode.com/problems/next-greater-element-i/)
-* 1475 - Final Prices With a Special Discount in a Shop (Easy) ([LeetCode Link](https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/))
+* [0155 - Min Stack (Easy)](../../solutions/0100-0199/0155-min-stack-easy.md) [(LeetCode Link)](https://leetcode.com/problems/min-stack/)
+* [0496 - Next Greater Element I (Easy)](../../solutions/0400-0499/0469-next-greater-element-i-easy.md) [(LeetCode Link)](https://leetcode.com/problems/next-greater-element-i/)
+* [1475 - Final Prices With a Special Discount in a Shop (Easy)](../../solutions/1400-1499/1475-final-prices-with-a-special-discount-in-a-shop-easy.md) ([LeetCode Link](https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/))
