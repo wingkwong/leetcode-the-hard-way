@@ -43,3 +43,37 @@ Output: true
 
 * The number of nodes in the tree is in the range `[0, 5000]`.
 * `-10^4 <= Node.val <= 10^4`
+
+## Visualization
+![height-balanced](https://user-images.githubusercontent.com/63882653/152684367-0ea099bd-623c-4d5a-8862-0ec035620c13.jpg)
+![Height-unbalanced](https://user-images.githubusercontent.com/63882653/152684944-1e774af3-8303-42be-9d7b-20af26221f74.jpg)
+
+## Approach 1: Straight forward
+This solution is strictly following the definition of a balanced binary tree.  
+(1) ABS(left sub-tree's height - right sub-tree's height) <= 1.  
+(2) Every left sub-trees and right sub-trees are also balanced.  
+
+First, we need to set up the base case for the recursion solution. Then we check if the whole left subtree and right subtree are balanced. If so, then we check if every subtrees are balanced. This solution should give O(n^2) time complexity
+
+### Java
+```java
+class Solution {
+    public boolean isBalanced(TreeNode root) {
+        if (root == null) {
+            return true;
+        }
+        if(Math.abs(height(root.left) - height(root.right)) <= 1){
+            return isBalanced(root.left) && isBalanced(root.right);
+        } else {
+            return false;
+        }
+    }
+    
+    public int height(TreeNode root){
+        if (root == null) return -1;
+        int ld = height(root.left);
+        int rd = height(root.right);
+        return 1 + Math.max(ld,rd);
+    }
+}
+```
