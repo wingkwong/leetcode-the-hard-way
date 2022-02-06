@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @heiheihang |
+  Authors: @heiheihang, @wingkwong |
   https://leetcode.com/problems/smallest-value-of-the-rearranged-number/
 ---
 
@@ -80,6 +80,8 @@ For the _positive_ case, we need to **minimize** the result. We need to put the 
 
 And we do not forget to multiply -1 in the negative case before returning.
 
+### Python
+
 ```python
  def smallestNumber(self, num: int) -> int:
         
@@ -158,4 +160,29 @@ And we do not forget to multiply -1 in the negative case before returning.
                 
             #return result
             return result
+```
+
+## Approach 2: Sort and Swap
+
+If $$num$$is negative, we sort it in descending order to make it greatest value.&#x20;
+
+If $$num$$ is positive, we sort it in ascending order to make it smallest value. However, it may contain leading zeros. For example,  $$310$$ would become $$013$$. In this case, we simply swap the first digit (i.e. zero) with the first non-zero digit to have the minimal value. In this case, it would be $$103$$.
+
+To implement it, we first convert $$num$$ from long long to string. Sort the string and swap the first digit with the first non-zero digit. If there is no leading zero, it stays as-is. At the end, we convert the string back to long long type and add minus sign if $$num$$ is negative.
+
+### C++
+
+```cpp
+class Solution {
+public:
+    long long smallestNumber(long long num) {
+        int pos = num >= 0;
+        string s = to_string(abs(num));
+        sort(s.begin(), s.end(), [&](const int x, const int y){
+            return pos ? x < y : x > y;
+        });
+        if (s.size() > 1) swap(s[0], s[s.find_first_not_of('0')]);
+        return pos ? stoll(s) : -stoll(s);
+    }
+};
 ```
