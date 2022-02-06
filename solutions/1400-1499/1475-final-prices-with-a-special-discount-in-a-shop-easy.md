@@ -44,4 +44,46 @@ Output: [9,0,1,6]
 * `1 <= prices.length <= 500`
 * `1 <= prices[i] <= 10^3`
 
-## Approach 1: TBC
+## Approach 1: Stack
+
+We first initialize the `result` list to be a copy of `prices`. The reason of choosing to copy `prices` is that it is convenient to not change anything if an item does not have a discount.
+
+Then we initalize a stack and iterate `prices`. If the last element of the stack if greater than or equal to the `current_price` , we have found a discount for the last element of the stack. We calculate the discounted price, and put it in the result array (its index is stored as the second element). We `pop` that element from the `stack`.
+
+We then add the new item to the stack with its value and its index.
+
+
+
+```python
+def finalPrices(self, prices: List[int]) -> List[int]:
+        
+        #initialize the result list to be a copy of prices
+        result = prices.copy()
+        
+        #initialize stack
+        stack = []
+        
+        #iterate prices
+        for i in range(len(prices)):
+            
+            #declare current_price
+            current_price = prices[i]
+            
+            #identify the prices that have not found a discount yet
+            while(stack and stack[-1][0] >= current_price):
+                
+                #get the item's index
+                item_index = stack[-1][1]
+                
+                #set its discounted price
+                result[item_index] = stack[-1][0] - current_price
+                
+                #remove the item as it has found a discount
+                stack.pop()
+            
+            #add the current item to the stack
+            stack.append([current_price, i])
+        
+        #return result
+        return result
+```
