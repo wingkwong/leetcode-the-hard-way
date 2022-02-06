@@ -91,6 +91,7 @@
   * [1004 - Max Consecutive Ones III (Medium)](solutions/1000-1999/1004-max-consecutive-ones-iii-medium.md)
 * [1100 - 1199](solutions/1100-1199/README.md)
   * [1135 - Connecting Cities With Minimum Cost (Medium)](solutions/1100-1199/1135-connecting-cities-with-minimum-cost-medium.md)
+  * [1168 - Optimize Water Distribution in a Village (Hard)](solutions/1100-1199/1168-optimize-water-distribution-in-a-village-hard.md)
 * [1300 - 1399](solutions/1300-1399/README.md)
   * [1305 - All Elements in Two Binary Search Trees (Medium)](solutions/1300-1399/1305-all-elements-in-two-binary-search-trees-medium.md)
   * [1328 - Break a Palindrome (Medium)](solutions/1300-1399/1328-break-a-palindrome-medium.md)
