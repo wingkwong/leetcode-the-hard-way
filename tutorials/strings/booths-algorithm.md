@@ -4,7 +4,7 @@ description: 'Author: @wingkwong'
 
 # Booth's Algorithm
 
-### Determine the lexicographically minimal rotation of a string
+#### Determine the lexicographically minimal rotation of a string
 
 ```cpp
 int booth_function(string s) {
@@ -33,7 +33,7 @@ int booth_function(string s) {
 }
 ```
 
-### Example
+#### Example
 
 ```cpp
 void solve() {

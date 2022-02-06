@@ -4,7 +4,7 @@ description: 'Author: @wingkwong'
 
 # Manacher's Algorithm
 
-## Find the longest palindrome substring
+#### Find the longest palindrome substring
 
 ```cpp
 string manacher(string s) {
@@ -36,7 +36,7 @@ string manacher(string s) {
 }
 ```
 
-### Find numbers of palindromic substrings in the given string
+#### Find numbers of palindromic substrings in the given string
 
 ```cpp
 int manacher(string s) {
