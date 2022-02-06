@@ -109,7 +109,7 @@
 * [1700 - 1799](solutions/1700-1799/README.md)
   * [1768 - Merge Strings Alternately (Easy)](solutions/1700-1799/1768-merge-strings-alternately-easy.md)
 * [1800 - 1899](solutions/1800-1899/README.md)
-  * [1852 - Distinct Numbers in Each Subarray (Medium)](solutions/1852-distinct-numbers-in-each-subarray-medium.md)
+  * [1852 - Distinct Numbers in Each Subarray (Medium)](solutions/1800-1899/1852-distinct-numbers-in-each-subarray-medium.md)
 * [1900 - 1999](solutions/1900-1999/README.md)
   * [1929 - Concatenation of Array (Easy)](solutions/1900-1999/1929-concatenation-of-array-easy.md)
 * [2100 - 2199](solutions/2100-2199/README.md)
