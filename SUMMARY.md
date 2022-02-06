@@ -134,3 +134,7 @@
   * [2161 - Partition Array According to Given Pivot (Medium)](solutions/2100-2199/2161-partition-array-according-to-given-pivot-medium.md)
   * [2162 - Minimum Cost to Set Cooking Time (Medium)](solutions/2100-2199/2162-minimum-cost-to-set-cooking-time-medium.md)
   * [2163 - Minimum Difference in Sums After Removal of Elements (Hard)](solutions/2100-2199/2163-minimum-difference-in-sums-after-removal-of-elements-hard.md)
+  * [2164 - Sort Even and Odd Indices Independently (Easy)](solutions/2100-2199/2164-sort-even-and-odd-indices-independently-easy.md)
+  * [2165 - Smallest Value of the Rearranged Number (Medium)](solutions/2100-2199/2165-smallest-value-of-the-rearranged-number-medium.md)
+  * [2166 - Design Bitset (Medium)](solutions/2100-2199/2166-design-bitset-medium.md)
+  * [2167 - Minimum Time to Remove All Cars Containing Illegal Goods (Hard)](solutions/2100-2199/2167-minimum-time-to-remove-all-cars-containing-illegal-goods-hard.md)
