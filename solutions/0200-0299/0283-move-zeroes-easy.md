@@ -1,5 +1,5 @@
 ---
-description: 'Author: @TBC | https://leetcode.com/problems/move-zeroes/'
+description: 'Author: @heiheihang | https://leetcode.com/problems/move-zeroes/'
 ---
 
 # 0283 - Move Zeroes (Easy)
@@ -31,4 +31,39 @@ Output: [0]
 
 **Follow up:** Could you minimize the total number of operations done?
 
-## Approach 1: TBC
+## Approach 1: Two pointers
+
+We need to set two pointers for this problem. The first pointer identifies the current number it is looking at. The second pointer identifies the next un-updated slot for moving the non-zero numbers in.&#x20;
+
+When we see a non-zero element, we put it in the slot pointed by `left_pointer`, and then increment `left_pointer`. When we see a zero, we just skip.
+
+At the end, we need to set all the unused slots of `nums` to zero.&#x20;
+
+```python
+def moveZeroes(self, nums: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        
+        #initialize left pointer to keep track of spaces for non-zero elements
+        left_pointer = 0
+        
+        #iterate all numbers in nums
+        for i in range(len(nums)):
+            
+            #we skip if we see a 0
+            if(nums[i] == 0):
+                continue
+            else:
+                
+                #we put the current number to the empty space if its non-zero
+                nums[left_pointer] = nums[i]
+                
+                #as the current position is filled, move to the next one
+                left_pointer += 1
+        
+        #we put zeros to the remaining spots in nums
+        for i in range(left_pointer, len(nums)):
+            nums[i] = 0
+            
+```
