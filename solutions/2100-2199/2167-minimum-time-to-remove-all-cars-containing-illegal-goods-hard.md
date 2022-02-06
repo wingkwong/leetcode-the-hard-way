@@ -20,8 +20,6 @@ Return _the **minimum** time to remove all the cars containing illegal goods_.
 
 Note that an empty sequence of cars is considered to have no cars containing illegal goods.
 
-&#x20;
-
 **Example 1:**
 
 ```
@@ -70,4 +68,63 @@ There are no other ways to remove them with less time.
 * `1 <= s.length <= 2 * 10^5`
 * `s[i]` is either `'0'` or `'1'`.
 
-## Approach 1: TBC
+## Approach 1: Minimum Sum of Subarray
+
+We note that our goal is to **minimize** the following:
+
+_totalCost = left + right + mid(1) \* 2_
+
+Where _mid(1)_ denotes the number of 1s in the middle part, and _mid(0)_ denotes the number of 0s in the middle part.&#x20;
+
+We can calculate _mid(1)_ in the following way:
+
+_mid - mid(0)_
+
+So our new equation becomes:
+
+_totalCost = left + right + 2 \* (mid - mid(0)) = left + right + mid + (mid - mid(0)) - mid(0)_
+
+_totalCost = all + mid(1) - mid(0)_
+
+As all is a constant, we need to **minimize** _mid(1) - mid(0)_
+
+This becomes a minimum sum of subarray problem when we substitute -1 to 0 in the original input.&#x20;
+
+The rest of the problem becomes a classic subarray sum problem.
+
+```python
+def minimumTime(self, s: str) -> int:
+        
+        #initialize currentValue and smallest
+        currentValue = 0
+        smallest = 0
+        
+        #iterate all characters
+        for c in s:
+            
+            #separate the cases of 0 and 1
+            if(c == "0"):
+                
+                #-1 if it is 0
+                currentValue -= 1
+                
+                #update smallest subarray sum including current value
+                currentValue = min(-1, currentValue)
+                
+                #update smallest
+                smallest = min(smallest, currentValue)
+            else:
+                
+                #add 1 if it is 1
+                currentValue += 1
+        
+        #return result based on formula
+        return len(s) + smallest
+```
+
+
+
+
+
+
+
