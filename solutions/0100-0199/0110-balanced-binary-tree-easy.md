@@ -1,5 +1,5 @@
 ---
-description: 'Author: @TBC | https://leetcode.com/problems/balanced-binary-tree/'
+description: 'Author: @SkollRyu | https://leetcode.com/problems/balanced-binary-tree/'
 ---
 
 # 0110 - Balanced Binary Tree (Easy)
@@ -53,7 +53,7 @@ This solution is strictly following the definition of a balanced binary tree.
 (1) ABS(left sub-tree's height - right sub-tree's height) <= 1.  
 (2) Every left sub-trees and right sub-trees are also balanced.  
 
-First, we need to set up the base case for the recursion solution. Then we check if the whole left subtree and right subtree are balanced. If so, then we check if every subtrees are balanced. This solution should give O(n^2) time complexity
+First, we need to set up the base case for the recursion solution. Then we check if the whole left subtree and right subtree are balanced. If so, then we check if every subtrees are balanced. This solution should give $$O(n^2)$$ time complexity
 
 ### Java
 ```java
