@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @heiheihang |
+  Authors: @heiheihang, @wingkwong |
   https://leetcode.com/problems/minimum-time-to-remove-all-cars-containing-illegal-goods/
 ---
 
@@ -120,4 +120,50 @@ def minimumTime(self, s: str) -> int:
         
         #return result based on formula
         return len(s) + smallest
+```
+
+## Approach 2: Dynamic Programming
+
+Let $$dp1[i]$$ be the time you need to take from the left to to index $$i$$ and $$dp2[j]$$ be the time you need to take from the right to to index $$j$$.
+
+For each index, we have three options.
+
+1. remove from the left and contribute $$i$$ time
+2. remove from the middle and contribute $$dp1[i - 1] + 2$$ or $$dp2[i + 1] + 2$$ time if applicable.
+3. remove from the right and contribute $$n - i$$ time
+
+Let's think about the case from the left to right, the transition is &#x20;
+
+* if the character is 0, it doesn't contribute anything, so we take the previous state. $$dp1[i] := dp1[i - 1]$$
+* if the character is 1, we can either take $$i$$ or $$dp1[i - 1] + 2$$.&#x20;
+
+For $$dp2$$, we need to do it in reverse order. We can reverse the string and perform the same logic. At the end, the answer is to find the minimum value from $$dp1[i] + dp2[n - i]$$.
+
+```cpp
+class Solution {
+public:
+    int minimumTime(string s) {
+        int n = s.size(), ans = 1e9;
+        // dp1: min time to take from left to right
+        // dp2: min time to take from right to left
+        vector<int> dp1(n + 1), dp2(n + 1);
+        for (int i = 1; i <= n; i++) {
+            // if it is 0, then take the previous state
+            // if not, remove from the left or remove from the middle directly
+            if (s[i - 1] == '0') dp1[i] = dp1[i - 1];
+            else dp1[i] = min(i, dp1[i - 1] + 2);
+        }
+        // reverse the string and apply the same logic on dp2
+        reverse(s.begin(), s.end());
+        for (int i = 1; i <= n; i++) {
+            if (s[i - 1] == '0') dp2[i] = dp2[i - 1];
+            else dp2[i] = min(i, dp2[i - 1] + 2);
+        }
+        for (int i = 0; i <= n; i++) {
+            // dp1 + dp2: cover those three options
+            ans = min(ans, dp1[i] + dp2[n - i]);
+        }
+        return ans;
+    }
+};
 ```
