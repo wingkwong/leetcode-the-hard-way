@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong |'
+description: 'Author: @wingkwong | https://leetcode.com/problems/single-number/'
 ---
 
 # 0136 - Single Number (Easy)
