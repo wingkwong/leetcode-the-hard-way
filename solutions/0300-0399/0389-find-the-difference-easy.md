@@ -69,7 +69,7 @@ class Solution {
 public:
     char findTheDifference(string s, string t) {
         unordered_map<char, int> m;
-        // count occurrence for t
+        // count the occurrence for t
         for (auto x : t) m[x]++;
         // instead of using an extra hash map, 
         // we decrease the occurrence
