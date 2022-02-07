@@ -45,11 +45,14 @@ Let's have a quick review.&#x20;
 * If we take XOR of two same numbers, it will return 0, i.e. $$a \oplus a = 0$$.&#x20;
 * If we take XOR of multiple numbers, the order doesn't affect the result, i.e. $$a \oplus b \oplus c = a \oplus c \oplus b$$.&#x20;
 
+Therefore, we apply XOR on each character. The same characters will cancel out each other. What's left is the answer.
+
 ```cpp
 class Solution {
 public:
     char findTheDifference(string s, string t) {
         char ans = 0;
+        // take XOR for each character: ans = ans ^ x 
         for (auto x : s) ans ^= x;
         for (auto x : t) ans ^= x;
         return ans;
@@ -59,16 +62,20 @@ public:
 
 ## Approach 2: Hash Map
 
-We can store the frequency for each character. As `t` has one more character, we can count `t` first, iterate `s` to subtract the occurrences. The answer will be the one which has one occurrence.&#x20;
+We can store the occurrence for each character. As `t` has one more character, we can count `t` first, iterate `s` to subtract the occurrences. The answer will be the one which has one occurrence.&#x20;
 
 ```cpp
 class Solution {
 public:
     char findTheDifference(string s, string t) {
         unordered_map<char, int> m;
+        // count occurrence for t
         for (auto x : t) m[x]++;
+        // instead of using an extra hash map, 
+        // we decrease the occurrence
         for (auto x : s) m[x]--;
         for (auto x : m) {
+            // the answer will be the one with occurrence = 1
             if (x.second == 1) {
                 return x.first;
             }
@@ -87,13 +94,22 @@ We can sort both input and compare each character one by one. If there is a diff
 class Solution {
 public:
     char findTheDifference(string s, string t) {
+        // sort s in ascending order
         sort(s.begin(), s.end());
+        // sort t in ascending order
         sort(t.begin(), t.end());
         for (int i = 0; i < s.size(); i++) {
+            // s = "abcde"
+            // t = "abcdde"
+            // "e" is not same as "d" at position 4 (0-base)
+            // hence, return t[i], i.e. "d"
             if (s[i] != t[i]) {
                 return t[i];
             }
         }
+        // for the case like
+        // s = "abcd"
+        // t = "abcde"
         return t.back();
     }
 };
