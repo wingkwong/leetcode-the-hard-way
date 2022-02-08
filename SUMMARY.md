@@ -63,6 +63,7 @@
   * [0215 - Kth Largest Element in an Array (Medium)](solutions/0200-0299/0215-kth-largest-element-in-an-array-medium.md)
   * [0217 - Contains Duplicate (Easy)](solutions/0200-0299/0217-contains-duplicate-easy.md)
   * [0219 - Contains Duplicate II (Easy)](solutions/0200-0299/0219-contains-duplicate-ii-easy.md)
+  * [0258 - Add Digits (Easy)](solutions/0200-0299/0258-add-digits-easy.md)
   * [0261 -Graph Valid Tree (Medium)](solutions/0200-0299/0261-graph-valid-tree-medium.md)
   * [0283 - Move Zeroes (Easy)](solutions/0200-0299/0283-move-zeroes-easy.md)
 * [0300 - 0399](solutions/0300-0399/README.md)
