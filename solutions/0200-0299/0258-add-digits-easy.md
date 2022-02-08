@@ -82,6 +82,22 @@ public:
 
 ## Approach 2: Congruence Formula
 
+If $$n$$ is $$0$$, then obviously it is $$0$$.&#x20;
+
+If $$n$$ can be divisible by $$9$$ , then it is $$9$$. E.g 27 % 9 == 0 -> 2 + 7 -> 9.
+
+Otherwise, it would be $$n \mod 9$$. Why? &#x20;
+
+Let's say $$n = a_0 * 1 + a_1 * 10 + a_2 * 100 + ... + a_n * 10^n$$  where $$a_i$$ ∈ $$[0, 9]$$ and let $$x$$ be $$a_0 + a_1 + a_2 + ... + a_n$$. We know that $$1 \mod 9 = 10 \mod 9 = 100 \mod 9 = 1$$. Then, $$n \mod 9$$ would be $$x$$. For example, $$n = 123 = 3 * 1 + 2 * 10 + 1 * 100$$ and $$x = 1 + 2 + 3$$. We can see that $$123 \mod 9 = 6$$, which is also the difference between $$n$$ and the closest number  which can be divisible by $$9$$.
+
+To generalise, for base $$b$$, we'll have&#x20;
+
+![](<../../.gitbook/assets/image (5).png>)
+
+which can be further simplified as&#x20;
+
+![](<../../.gitbook/assets/image (3).png>)
+
 ```cpp
 class Solution {
 public:
