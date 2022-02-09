@@ -80,6 +80,7 @@
 * [0500 - 0599](solutions/0500-0599/README.md)
   * [0520 - Detect Capital (Easy)](solutions/0500-0599/0520-detect-capital-easy.md)
   * [0525 - Contiguous Array (Medium)](solutions/0500-0599/0525-contiguous-array-medium.md)
+  * [0532 - K-diff Pairs in an Array (Medium)](solutions/0500-0599/0532-k-diff-pairs-in-an-array-medium.md)
   * [0559 - Maximum Depth of N-ary Tree (Easy)](solutions/0500-0599/0559-maximum-depth-of-n-ary-tree-easy.md)
 * [0700 - 0799](solutions/0700-0799/README.md)
   * [0703 - Kth Largest Element in a Stream (Easy)](solutions/0700-0799/0703-kth-largest-element-in-a-stream-easy.md)
