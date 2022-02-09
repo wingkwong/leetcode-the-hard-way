@@ -105,6 +105,7 @@
   * [1480 - Running Sum of 1d Array (Easy)](solutions/1400-1499/1480-running-sum-of-1d-array-easy.md)
 * [1500 - 1599](solutions/1500-1599/README.md)
   * [1510 - Stone Game IV (Hard)](solutions/1500-1599/1510-stone-game-iv-hard.md)
+  * [1547 - Minimum Cost to Cut a Stick (Hard)](solutions/1500-1599/1547-minimum-cost-to-cut-a-stick-hard.md)
   * [1572 - Matrix Diagonal Sum (Easy)](solutions/1500-1599/1572-matrix-diagonal-sum-easy.md)
   * [1584 - Min Cost to Connect All Points (Medium)](solutions/1500-1599/1584-min-cost-to-connect-all-points-medium.md)
 * [1600 - 1699](solutions/1600-1699/README.md)
