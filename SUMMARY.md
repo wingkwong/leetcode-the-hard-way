@@ -83,6 +83,7 @@
   * [0532 - K-diff Pairs in an Array (Medium)](solutions/0500-0599/0532-k-diff-pairs-in-an-array-medium.md)
   * [0559 - Maximum Depth of N-ary Tree (Easy)](solutions/0500-0599/0559-maximum-depth-of-n-ary-tree-easy.md)
   * [0560 - Subarray Sum Equals K (Medium)](solutions/0500-0599/0560-subarray-sum-equals-k-medium.md)
+  * [0567 - Permutation in String (Medium)](solutions/0500-0599/0567-permutation-in-string-medium.md)
 * [0700 - 0799](solutions/0700-0799/README.md)
   * [0703 - Kth Largest Element in a Stream (Easy)](solutions/0700-0799/0703-kth-largest-element-in-a-stream-easy.md)
 * [0800 - 0899](solutions/0800-0899/README.md)
