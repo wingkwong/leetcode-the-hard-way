@@ -68,6 +68,7 @@
   * [0283 - Move Zeroes (Easy)](solutions/0200-0299/0283-move-zeroes-easy.md)
 * [0300 - 0399](solutions/0300-0399/README.md)
   * [0344 - Reverse String (Easy)](solutions/0300-0399/0344-reverse-string-easy.md)
+  * [0346 - Moving Average from Data Stream (Easy)](solutions/0300-0399/0346-moving-average-from-data-stream-easy.md)
   * [0389 - Find the Difference (Easy)](solutions/0300-0399/0389-find-the-difference-easy.md)
 * [0400 - 0499](solutions/0400-0499/README.md)
   * [0404 - Sum of Left Leaves (Easy)](solutions/0400-0499/0404-sum-of-left-leaves-easy.md)
