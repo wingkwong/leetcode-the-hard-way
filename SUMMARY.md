@@ -151,3 +151,7 @@
   * [2165 - Smallest Value of the Rearranged Number (Medium)](solutions/2100-2199/2165-smallest-value-of-the-rearranged-number-medium.md)
   * [2166 - Design Bitset (Medium)](solutions/2100-2199/2166-design-bitset-medium.md)
   * [2167 - Minimum Time to Remove All Cars Containing Illegal Goods (Hard)](solutions/2100-2199/2167-minimum-time-to-remove-all-cars-containing-illegal-goods-hard.md)
+  * [2169 - Count Operations to Obtain Zero (Easy)](solutions/2100-2199/2169-count-operations-to-obtain-zero-easy.md)
+  * [2170 - Minimum Operations to Make the Array Alternating (Medium)](solutions/2100-2199/2170-minimum-operations-to-make-the-array-alternating-medium.md)
+  * [2171 - Removing Minimum Number of Magic Beans (Medium)](solutions/2100-2199/2171-removing-minimum-number-of-magic-beans-medium.md)
+  * [2172 - Maximum AND Sum of Array (Hard)](solutions/2100-2199/2172-maximum-and-sum-of-array-hard.md)
