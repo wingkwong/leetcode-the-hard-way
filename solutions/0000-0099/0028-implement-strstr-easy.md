@@ -84,7 +84,7 @@ class Solution:
                 #       or using Python's slicing syntax, s[i: i + m] and s[i + 1: i + m + 1],
                 #       one can say they differ by 
                 #           i) the previously leftmost character, which is now dropped, and,
-                #           ii) the currently rightmost character, which is new part of the sibstring.
+                #           ii) the currently rightmost character, which is new part of the substring.
                 #   In other words, the other m - 1 characters are basically unaffected 
                 #       except that their positions are shifted leftward by one index.
                 #       These charachers, alongside the differing ones, make up of both t[i - 1] and t[i], 
