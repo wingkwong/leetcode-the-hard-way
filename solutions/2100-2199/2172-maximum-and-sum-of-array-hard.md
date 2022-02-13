@@ -60,6 +60,8 @@ We can think of $$nums$$ as the source of a bipartite graph and $$slots$$ as the
 
 <summary>MCMF Template</summary>
 
+This [template](https://github.com/ShahjalalShohag/code-library/blob/master/Graph%20Theory/Min%20Cost%20Max%20Flow.cpp) is created by Shahjalal Shohag.
+
 ```cpp
 using T = long long;
 const T inf = 1LL << 61;
@@ -171,7 +173,7 @@ struct MCMF {
     }
     return make_pair(flow, cost);
   }
-};
+}
 ```
 
 </details>
