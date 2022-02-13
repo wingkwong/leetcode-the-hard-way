@@ -1,5 +1,7 @@
 ---
-description: 'Author: @TBC | https://leetcode.com/problems/count-operations-to-obtain-zero/'
+description: >-
+  Author: @wingkwong |
+  https://leetcode.com/problems/count-operations-to-obtain-zero/
 ---
 
 # 2169 - Count Operations to Obtain Zero (Easy)
@@ -42,4 +44,21 @@ So the total number of operations required is 1.
 
 * `0 <= num1, num2 <= 10^5`
 
-## Approach 1: TBC
+## Approach 1: Simulation
+
+Just do what it says. If num1 >= num2, we subtract num2 from num1, otherwise subtract num1 from num2. Increase answer by 1 in each iteration.
+
+```cpp
+class Solution {
+public:
+    int countOperations(int num1, int num2) {
+        int ans = 0;
+        while (num1 != 0 && num2 != 0) {
+            if (num1 >= num2) num1 -= num2;
+            else num2 -= num1;
+            ans += 1;
+        }
+        return ans;
+    }
+};
+```
