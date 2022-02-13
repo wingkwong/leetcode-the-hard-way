@@ -39,6 +39,7 @@
 ## Solutions
 
 * [0000 - 0099](solutions/0000-0099/README.md)
+  * [0028 - Implement strStr() \[Easy\]](solutions/0000-0099/0028-implement-strstr-easy.md)
   * [0001 - Two Sum (Easy)](solutions/0000-0099/0001-two-sum.md)
   * [0003 - Longest Substring Without Repeating Characters (Medium)](solutions/0000-0099/0003-longest-substring-without-repeating-characters-medium.md)
   * [0005 - Longest Palindromic Substring (Medium)](solutions/0000-0099/0005-longest-palindromic-substring-medium.md)
