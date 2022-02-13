@@ -95,8 +95,9 @@ class Solution:
                 #           and take that amount off t[i - 1];
                 #       secondly, multiply the result by d, adjusting for the power of d having increased by one 
                 #           (with respect to each characher).
-                #       finally, add the last part of t[i], that of the character on the right end, 
+                #       thirdly, add the last part of t[i], that of the character on the right end, 
                 #           given by ord(s[i + m - 1]), to the sum.
+                #       finally, don't forget the modulo operation.
                 t[idx] = (PRIME * (t[idx - 1] - ord(s[idx - 1]) * h) + ord(s[idx + m - 1])) % MOD
             # If two strings are identical, they must have the same hash value.
             # However, beware of "spurious hits", where two different strings happen to share the same hash value.
