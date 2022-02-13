@@ -49,6 +49,7 @@
   * [0046 - Permutations (Medium)](solutions/0000-0099/0046-permutations-medium.md)
   * [0050 - Pow(x, n) (Medium)](solutions/0000-0099/0050-pow-x-n-medium.md)
   * [0072 - Edit Distance (Hard)](solutions/0000-0099/0072-edit-distance-hard.md)
+  * [0078 - Subsets (Medium)](solutions/0000-0099/0078-subsets-medium.md)
 * [0100 - 0199](solutions/0100-0199/README.md)
   * [0101 - Symmetric Tree (Easy)](solutions/0100-0199/0101-symmetric-tree-easy.md)
   * [0103 - Binary Tree Zigzag Level Order Traversal (Medium)](solutions/0100-0199/0103-binary-tree-zigzag-level-order-traversal-medium.md)

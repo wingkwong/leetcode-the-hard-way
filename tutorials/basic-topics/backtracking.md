@@ -4,11 +4,11 @@ description: 'Author: @wingkwong'
 
 # Backtracking
 
-A backtracking algorithm is used to construct a solution recursively by starting with an empty solution and adding solution one by one. Let's take [0046 - Permutations (Medium)](../../solutions/0000-0099/0046-permutations-medium.md) as an example, if we have an array `nums` of distinct integers, what are all the possible permutations? If the input is `[1,2,3]`, then the permutations would be `[[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]`.  In C++, it is easy to solve this problem by using the built-in STL `next_permutation`. However, we can also solve it using backtracking.&#x20;
+A backtracking algorithm is used to construct a solution recursively by starting with an empty solution and adding solution one by one. Let's take [0046 - Permutations (Medium)](../../solutions/0000-0099/0046-permutations-medium.md) as an example, if we have an array `nums` of distinct integers, what are all the possible permutations? If the input is `[1,2,3]`, then the permutations would be `[[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]`. In C++, it is easy to solve this problem by using the built-in STL `next_permutation`. However, we can also solve it using backtracking.
 
-The general steps are as follows.&#x20;
+The general steps are as follows.
 
-1. Sort the input array if necessary. However, in this example, sorting is not necessary.&#x20;
+1. Sort the input array if necessary. However, in this example, sorting is not necessary.
 
 ```cpp
 sort(nums.begin(), nums.end());
@@ -27,7 +27,7 @@ vector<int> tmp;
 backtrack(nums, ans, tmp);
 ```
 
-4\. Let's add logic in `backtrack()` function. First we need to define the exit criteria. When should we push `tmp` to `ans`? If `tmp` already got enough candidates, then we can push `tmp` to `ans`.&#x20;
+4\. Let's add logic in `backtrack()` function. First we need to define the exit criteria. When should we push `tmp` to `ans`? If `tmp` already got enough candidates, then we can push `tmp` to `ans`.
 
 ```cpp
 if ((int) tmp.size() == (int) nums.size()) {
@@ -49,6 +49,7 @@ for (auto x : nums) {
 
 ### Suggested Problems:
 
-* [0046 - Permutations (Medium)](../../solutions/0000-0099/0046-permutations-medium.md)
 * [0039 - Combination Sum (Medium)](../../solutions/0000-0099/0039-combination-sum-medium.md)
 * [0040 - Combination Sum II (Medium)](../../solutions/0000-0099/0040-combination-sum-ii-medium.md)
+* [0046 - Permutations (Medium)](../../solutions/0000-0099/0046-permutations-medium.md)
+* [0078 - Subsets (Medium)](../../solutions/0000-0099/0078-subsets-medium.md)
