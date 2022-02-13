@@ -64,7 +64,7 @@ class Solution:
         # Compute the hash value of `pattern`. This can be done by simply applying the formula.
         hash_val = sum(ord(c) * pow(PRIME, m - 1 - i, MOD) for i, c in enumerate(pattern)) % MOD
         # Initialize a dictionary which maps indices to the hash values of their respective substrings.
-        #   Specifically, t[i] is the hash value of s[i: i + m + 1] (i.e., an m-sized substring of `s` starting at index `i`)
+        #   Specifically, t[i] is the hash value of s[i: i + m] (i.e., an m-sized substring of `s` starting at index `i`)
         t = {}
 
         # Calculate the hash value of all substrings of `s`, the number of which is n - m.
@@ -81,7 +81,7 @@ class Solution:
                 #       (the sum of s_k * d ^ (m + i - 1 - k) for i <= k < i + m) mod q
                 #       where s_k is the numerical value for the s[k] (here we use the ASCII value).
                 #   Then, observe that, for two successive substrings of length m,
-                #       or using Python's slicing syntax, s[i: i + m + 1] and s[i + 1: i + 1 + m + 1],
+                #       or using Python's slicing syntax, s[i: i + m] and s[i + 1: i + m + 1],
                 #       one can say they differ by 
                 #           i) the previously leftmost character, which is now dropped, and,
                 #           ii) the currently rightmost character, which is new part of the sibstring.
