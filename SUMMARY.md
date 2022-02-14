@@ -54,6 +54,7 @@
 * [0100 - 0199](solutions/0100-0199/README.md)
   * [0101 - Symmetric Tree (Easy)](solutions/0100-0199/0101-symmetric-tree-easy.md)
   * [0103 - Binary Tree Zigzag Level Order Traversal (Medium)](solutions/0100-0199/0103-binary-tree-zigzag-level-order-traversal-medium.md)
+  * [0104 - Maximum Depth of Binary Tree (Easy)](solutions/0100-0199/0104-maximum-depth-of-binary-tree-easy.md)
   * [0110 - Balanced Binary Tree (Easy)](solutions/0100-0199/0110-balanced-binary-tree-easy.md)
   * [0115 - Distinct Subsequences (Hard)](solutions/0100-0199/0115-distinct-subsequences-hard.md)
   * [0127 - Word Ladder (Hard)](solutions/0100-0199/0127-word-ladder-hard.md)
