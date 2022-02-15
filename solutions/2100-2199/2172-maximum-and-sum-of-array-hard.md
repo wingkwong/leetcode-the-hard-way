@@ -42,9 +42,104 @@ Note that slots 2, 5, 6, and 8 are empty which is permitted.
 * `1 <= n <= 2 * numSlots`
 * `1 <= nums[i] <= 15`
 
+## Approach 1: Brute Force
+
+Naive backtracking
+
+```python
+class Solution:
+    def maximumANDSum(self, nums: List[int], numSlots: int) -> int:
+        
+        #store the number of elements in each slot
+        slots = defaultdict(int)
+        val = 0
+        res = 0
+        
+        def backtrack(idx):
+            
+            #return 0 when reaches the end of nums
+            if(idx == len(nums)):
+                return 0
+            
+            #store the maximum result    
+            res = 0
+            
+            #iterate all slots
+            for i in range(numSlots):
+                
+                #naive pruning for trivial results
+                if(nums[idx] & (i+1) == 0 or slots[i+1] == 2):
+                    continue
+                
+                #update if we want to take that number at ith slot
+                slots[i+1] += 1
+                
+                #backtrack
+                res = max(res, backtrack(idx+1) + ((i+1) & nums[idx]))
+                
+                #resume state
+                slots[i+1] -= 1
+            
+            #final backtrack for not using the current number
+            backtrack(idx+1) 
+                
+        return backtrack(0)
+```
+
 ## Approach 1: Bitmask DP
 
-Preparing by @heiheihang
+We notice that the naive approach is too inefficient. There are some repetitions in the combination of numbers in slots. We can take advantage of that by storing the state of the slots (utilizing the `slots` dictionary from brute force!)
+
+To do this, we use bits. Each slot has 3 states: 0 element, 1 element, 2 elements. We need to use 2 bits to represent each slot. We can use a single integer to cover potentially 18 bits, but its implementation is more complicated than using two separate bit masks.&#x20;
+
+We can use the _ith_ bit `mask1` to represent if the _ith_ slot has 0 or 1 element. We can use the _ith_ bit of `mask2` to represent if the _ith_ slot has 2 elements.&#x20;
+
+We need to use some bit manipulation to update the states.&#x20;
+
+```python
+class Solution:
+    def maximumANDSum(self, nums: List[int], numSlots: int) -> int:
+        
+        
+        #mask 1 represents if the slot has 0 or 1 element
+        #mask 2 represents if the slot has 2 element 
+        @lru_cache(None)
+        def dp(i, mask1, mask2):
+            
+            #reached the end of nums
+            if(i == len(nums)):
+                return 0
+            
+            #set the initial result
+            res = 0
+            
+            #iterate all slots
+            for j in range(numSlots):
+                
+                #check if slot is full
+                #both slots are filled
+                if(mask2 & (1 << j) != 0):
+                    continue
+                else:
+                    newMask1 = mask1
+                    newMask2 = mask2
+                    
+                    #slot is empty
+                    if(mask1 & (1 << j) == 0):
+                        #set mask 1 to 
+                        newMask1 = mask1 | (1 << j)
+                    #slot has 1 element
+                    else:
+                        #clear mask 1 
+                        newMask1 = mask1 ^ (1 << j)
+                        newMask2 = mask2 | (1 << j)
+                        
+                    res = max(res, dp(i+1, newMask1, newMask2) + (nums[i] & (j+1)))
+                    
+            return res
+        
+        return dp(0,0,0)
+```
 
 ## Approach 2: MCMF
 
