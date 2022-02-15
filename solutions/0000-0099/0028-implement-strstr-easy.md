@@ -39,7 +39,7 @@ Output: 0
 
 **Constraints:**
 
-* `0 <= haystack.length, needle.length <= 5 * 104`
+* `0 <= haystack.length, needle.length <= 5 * 10^4`
 * `haystack` and `needle` consist of only lower-case English characters.
 
 ## Approach 1: Rolling Hash
