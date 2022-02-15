@@ -44,6 +44,8 @@ Note that slots 2, 5, 6, and 8 are empty which is permitted.
 
 ## Approach 1: Brute Force
 
+_This approach is prepared by @heiheihang._&#x20;
+
 Naive backtracking
 
 ```python
@@ -86,15 +88,17 @@ class Solution:
         return backtrack(0)
 ```
 
-## Approach 1: Bitmask DP
+## Approach 2: Bitmask DP
+
+_This approach is prepared by @heiheihang._&#x20;
 
 We notice that the naive approach is too inefficient. There are some repetitions in the combination of numbers in slots. We can take advantage of that by storing the state of the slots (utilizing the `slots` dictionary from brute force!)
 
-To do this, we use bits. Each slot has 3 states: 0 element, 1 element, 2 elements. We need to use 2 bits to represent each slot. We can use a single integer to cover potentially 18 bits, but its implementation is more complicated than using two separate bit masks.&#x20;
+To do this, we use bits. Each slot has 3 states: 0 element, 1 element, 2 elements. We need to use 2 bits to represent each slot. We can use a single integer to cover potentially 18 bits, but its implementation is more complicated than using two separate bit masks.
 
-We can use the _ith_ bit `mask1` to represent if the _ith_ slot has 0 or 1 element. We can use the _ith_ bit of `mask2` to represent if the _ith_ slot has 2 elements.&#x20;
+We can use the _ith_ bit `mask1` to represent if the _ith_ slot has 0 or 1 element. We can use the _ith_ bit of `mask2` to represent if the _ith_ slot has 2 elements.
 
-We need to use some bit manipulation to update the states.&#x20;
+We need to use some bit manipulation to update the states.
 
 ```python
 class Solution:
@@ -141,7 +145,9 @@ class Solution:
         return dp(0,0,0)
 ```
 
-## Approach 2: MCMF
+## Approach 3: MCMF
+
+_This approach is prepared by @wingkwong._&#x20;
 
 **Prerequisite**: MCMF
 
