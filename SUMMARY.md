@@ -77,6 +77,7 @@
   * [0346 - Moving Average from Data Stream (Easy)](solutions/0300-0399/0346-moving-average-from-data-stream-easy.md)
   * [0389 - Find the Difference (Easy)](solutions/0300-0399/0389-find-the-difference-easy.md)
 * [0400 - 0499](solutions/0400-0499/README.md)
+  * [0402 - Remove K Digits (Medium)](solutions/0400-0499/0402-remove-k-digits-medium.md)
   * [0404 - Sum of Left Leaves (Easy)](solutions/0400-0499/0404-sum-of-left-leaves-easy.md)
   * [0421 - Maximum XOR of Two Numbers in an Array](solutions/0400-0499/0421-maximum-xor-of-two-numbers-in-an-array.md)
   * [0435 - Non-overlapping Intervals (Medium)](solutions/0400-0499/0435-non-overlapping-intervals-medium.md)
