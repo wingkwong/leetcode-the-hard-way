@@ -62,7 +62,7 @@ public:
         if (finalSum & 1) return ans;
         // add lowest even number
         long long x = 2;
-        // check if it is greater than finalSum
+        // check if we can use x
         while (x <= finalSum) {
             // add it to answer
             ans.push_back(x);
