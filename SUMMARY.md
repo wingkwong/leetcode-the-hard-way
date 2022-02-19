@@ -121,6 +121,7 @@
 * [1600 - 1699](solutions/1600-1699/README.md)
   * [1655 - Distribute Repeating Integers (Hard)](solutions/1600-1699/1655-distribute-repeating-integers-hard.md)
   * [1672 - Richest Customer Wealth (Easy)](solutions/1600-1699/1672-richest-customer-wealth-easy.md)
+  * [1675 - Minimize Deviation in Array (Hard)](solutions/1600-1699/1675-minimize-deviation-in-array-hard.md)
   * [1692 - Count Ways to Distribute Candies (Hard)](solutions/1600-1699/1692-count-ways-to-distribute-candies-hard.md)
 * [1700 - 1799](solutions/1700-1799/README.md)
   * [1768 - Merge Strings Alternately (Easy)](solutions/1700-1799/1768-merge-strings-alternately-easy.md)
