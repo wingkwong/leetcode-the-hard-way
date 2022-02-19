@@ -163,3 +163,7 @@
   * [2170 - Minimum Operations to Make the Array Alternating (Medium)](solutions/2100-2199/2170-minimum-operations-to-make-the-array-alternating-medium.md)
   * [2171 - Removing Minimum Number of Magic Beans (Medium)](solutions/2100-2199/2171-removing-minimum-number-of-magic-beans-medium.md)
   * [2172 - Maximum AND Sum of Array (Hard)](solutions/2100-2199/2172-maximum-and-sum-of-array-hard.md)
+  * [2176 - Count Equal and Divisible Pairs in an Array (Easy)](solutions/2100-2199/2176-count-equal-and-divisible-pairs-in-an-array-easy.md)
+  * [2177 - Find Three Consecutive Integers That Sum to a Given Number (Medium)](solutions/2100-2199/2177-find-three-consecutive-integers-that-sum-to-a-given-number-medium.md)
+  * [2178 - Maximum Split of Positive Even Integers (Medium)](solutions/2100-2199/2178-maximum-split-of-positive-even-integers-medium.md)
+  * [2179 - Count Good Triplets in an Array (Hard)](solutions/2100-2199/2179-count-good-triplets-in-an-array-hard.md)
