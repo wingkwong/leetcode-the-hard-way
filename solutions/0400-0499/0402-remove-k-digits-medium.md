@@ -39,16 +39,16 @@ Explanation: Remove all the digits from the number and it is left with nothing w
 * `num` does not have any leading zeros except for the zero itself.
 
 ## Approach 1: Monotonic Stack
-Only a (local) monotonically increasing stack is allowed. 
-i.e. $num[i] \geq num[j]$ for any $i > j$.
 
-For example: `142`, `k = 1`, smallest value possible is 12 because 12 is the smallest among 42, 12 and 14 (removing 1st, 2nd and 3rd digit respectively). 
+Only a (local) monotonically increasing stack is allowed. i.e. $$num[i] \geq num[j]$$ for any $$i > j$$.
 
-Explanation: we only care for the local monotonicity because when we have a number splited into two part, ab $\rArr$ a, b, when each of digit inside a and b is monotonically increasing, ab is also smallest. This is true no matter is the input number ab itself is monotonic or not.
+For example: `142`, `k = 1`, smallest value possible is 12 because 12 is the smallest among 42, 12 and 14 (removing 1st, 2nd and 3rd digit respectively).
 
-After that, if k > 0, i.e. some more digits need to be removed, we remove the trailing k digits. This is true because in such case the remainig digits must be monotonically increasing. Remove the least significant digits gives the smallest value.
+Explanation: we only care for the local monotonicity because when we have a number split into two part, ab $$\rArr$$ a, b, when each of digit inside a and b is monotonically increasing, ab is also smallest. This is true no matter is the input number ab itself is monotonic or not.
 
-The time and space complexity is $O(N)$.
+After that, if k > 0, i.e. some more digits need to be removed, we remove the trailing k digits. This is true because in such case the remaining digits must be monotonically increasing. Remove the least significant digits gives the smallest value.
+
+The time and space complexity is $$O(N)$$.
 
 p.s. `vector<char>` is used instead of `stack<char>` because we can get iterator `vector<char>::begin()` and `vector<char>::end()` while stack doesn't have iterators. One line conversion to string could be done by `string ansStr(ans.begin()+idx, ans.end());`.
 
