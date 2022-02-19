@@ -51,7 +51,7 @@ Note that [10,2,4,12], [6,2,4,16], etc. are also accepted.
 
 If $$finalSum$$ is odd, then return empty array.&#x20;
 
-Otherwise, we start from the lowest even number $$x = 2$$. Then add it to our final array. Subtract $$finalSum$$ from $$x$$ and set $$x$$ to the next even number. At the end, add the remainder to the end of the array.&#x20;
+Otherwise, we start from the lowest even number $$x = 2$$. Then add it to our final array. Subtract $$finalSum$$ from $$x$$ and set $$x$$ to the next even number. At the end, add the remainder to the last element of the array.&#x20;
 
 ```cpp
 class Solution {
