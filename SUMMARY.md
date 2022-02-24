@@ -62,6 +62,7 @@
   * [0127 - Word Ladder (Hard)](solutions/0100-0199/0127-word-ladder-hard.md)
   * [0133 - Clone Graph (Medium)](solutions/0100-0199/0133-clone-graph-medium.md)
   * [0136 - Single Number (Easy)](solutions/0100-0199/0136-single-number-easy.md)
+  * [0148 - Sort List (Medium)](solutions/0100-0199/0148-sort-list-medium.md)
   * [0155 - Min Stack (Easy)](solutions/0100-0199/0155-min-stack-easy.md)
   * [0169 - Majority Element (Easy)](solutions/0100-0199/0169-majority-element-easy.md)
   * [0199 - Binary Tree Right Side View (Medium)](solutions/0100-0199/0199-binary-tree-right-side-view-medium.md)
