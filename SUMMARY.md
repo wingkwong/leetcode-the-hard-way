@@ -131,6 +131,7 @@
   * [1770 - Maximum Score from Performing Multiplication Operations (Medium)](solutions/1700-1799/1770-maximum-score-from-performing-multiplication-operations-medium.md)
 * [1800 - 1899](solutions/1800-1899/README.md)
   * [1852 - Distinct Numbers in Each Subarray (Medium)](solutions/1800-1899/1852-distinct-numbers-in-each-subarray-medium.md)
+  * [1800 - Maximum Ascending Subarray Sum (Easy)](solutions/1800-1899/1800-maximum-ascending-subarray-sum-easy.md)
 * [1900 - 1999](solutions/1900-1999/README.md)
   * [1929 - Concatenation of Array (Easy)](solutions/1900-1999/1929-concatenation-of-array-easy.md)
 * [2100 - 2199](solutions/2100-2199/README.md)
