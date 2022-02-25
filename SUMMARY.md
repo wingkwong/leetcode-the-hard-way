@@ -118,6 +118,7 @@
   * [1431 - Kids With the Greatest Number of Candies (Easy)](solutions/1400-1499/1431-kids-with-the-greatest-number-of-candies-easy.md)
   * [1475 - Final Prices With a Special Discount in a Shop (Easy)](solutions/1400-1499/1475-final-prices-with-a-special-discount-in-a-shop-easy.md)
   * [1480 - Running Sum of 1d Array (Easy)](solutions/1400-1499/1480-running-sum-of-1d-array-easy.md)
+  * [1491 - Average Salary Excluding the Minimum and Maximum Salary (Easy)](solutions/1400-1499/1491-average-salary-excluding-the-minimum-and-maximum-salary-easy.md)
 * [1500 - 1599](solutions/1500-1599/README.md)
   * [1510 - Stone Game IV (Hard)](solutions/1500-1599/1510-stone-game-iv-hard.md)
   * [1523 - Count Odd Numbers in an Interval Range (Easy)](solutions/1500-1599/1523-count-odd-numbers-in-an-interval-range-easy.md)
