@@ -98,6 +98,7 @@
   * [0567 - Permutation in String (Medium)](solutions/0500-0599/0567-permutation-in-string-medium.md)
 * [0700 - 0799](solutions/0700-0799/README.md)
   * [0703 - Kth Largest Element in a Stream (Easy)](solutions/0700-0799/0703-kth-largest-element-in-a-stream-easy.md)
+  * [0733 - Flood Fill (Easy)](solutions/0700-0799/0733-flood-fill-easy.md)
 * [0800 - 0899](solutions/0800-0899/README.md)
   * [0829 - Consecutive Numbers Sum (Hard)](solutions/0800-0899/0829-consecutive-numbers-sum-hard.md)
   * [0877 - Stone Game (Medium)](solutions/0800-0899/0877-stone-game-medium.md)
