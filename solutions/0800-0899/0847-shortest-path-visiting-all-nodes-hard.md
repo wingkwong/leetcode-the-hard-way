@@ -43,7 +43,7 @@ Explanation: One possible path is [0,1,4,2,3]
 
 ## Approach 1: BFS
 
-_This approach is preparing by @heiheihang._
+_This approach is prepared by @heiheihang._
 
 There are two key observations in this question
 
@@ -110,9 +110,15 @@ def shortestPathLength(self, graph: List[List[int]]) -> int:
 
 ## Approach 2: **Floyd-Warshall &** TSP
 
-_This approach is preparing by @wingkwong._
+_This approach is prepared by @wingkwong._
 
-Explanation : Work In Progress
+Since $$n$$ is small, we can use Floyd–Warshall algorithm to calculate the shortest distances between all pairs of nodes in $$O(n ^ 3)$$. Let $$d[i][j]$$ be the distance between node $$i$$ and node $$j$$. First we initialise each distance to be infinity or a large number. Then for each edge, we can set the weight (i.e. distance in this case) to $$0$$ if $$i$$ is same as $$j$$, else we can build $$d$$ based on the input.&#x20;
+
+Then, we use the below recursive formula to calculate the shortest distances. For details, please check out [Floyd-Warshall Algorithm](https://cp-algorithms.com/graph/all-pair-shortest-path-floyd-warshall.html).$$shortestPath(i, j, k) = min(shortestPath(i, j, k - 1), shortestPath(i, k, k - 1) + shortestPath(k, j, k - 1))$$
+
+What's left is similar to TSP, which is Traveling Salesman Problem. Given a set of nodes and weight between every pair, what is the shortest possible path that visits all nodes exactly once and returns to the starting point. The only difference is that a node is allowed to be visited multiple times and the starting point and the ending point may not be same.
+
+Let $$dp[i][mask]$$ be the shortest distances with visited nodes defined in $$mask$$ from the starting point $$i$$. In our function, first we check if $$dp[src][mask]$$ has been calculated before. If so, we can return it immediately. Otherwise, let's set this node in $$mask$$ and compare it with the target mask, which is $$(1 << n) - 1$$, i.e. all 1s with $$n$$ digits. If it matches with target mask, that means we visited all the nodes. Hence, we return $$0$$. Otherwise, we look for the next possible node to visit and calculate the distances recursively. At the end, we memoize the shortest distance at the current state and return it.
 
 ```go
 func min(x, y int) int {
@@ -124,42 +130,57 @@ func min(x, y int) int {
 
 // Traveling Salesman Problem (TSP)
 func tsp(mask int, src int, n int, d [][]int, dp [][]int) int {
+    // if dp[src][mask] has been calculated before
+    // then just return it
     if dp[src][mask] != -1 {
         return dp[src][mask]
     }
+    // mark src visited
     now := mask | (1 << src)
+    // the dest is all 1s - meaning all nodes have been visited
     dest := (1 << n) - 1
+    // if we viste all nodes, then return 0
     if now == dest {
         return 0
     }
+    // init mi as a large number
     mi := 10000000
     for i := 0; i < n; i++ {
+        // check for the next possible node to move
         if ((mask & (1 << i)) == 0) {
+            // the distance from node src to node i 
+            // plus the shortest distance starting from node i
             mi = min(mi, d[src][i] + tsp(now, i, n, d, dp))
         }
     }
+    // memoize the shortest distance
     dp[src][mask] = mi
     return dp[src][mask]
 }
 
 func shortestPathLength(graph [][]int) int {
     n := len(graph)
-    // d[i][j]: distance between node i and node j
+    // use floyd-warshall algo to calcuate the shortest distances 
+    // between all pairs of nodes
+    // d[i][j]: shortest distance between node i and node j
     d := make([][]int, 1 << n)
-    // preparing d
+    // preparing initial d
     for i := 0; i < n; i++ {
         d[i] = make([]int, n)
         for j := 0; j < n; j++ {
+            // set the initial weight (distance) to a large number / inf
             d[i][j] = 10000000
         }
     }
-    // floyd-warshall
     for i := 0; i < n; i++ {
+        // if source is same as dest, then the shortest distance is 0
         d[i][i] = 0
         for _, j := range graph[i] {
+            // iterate the input to build the distances for each pair
             d[i][j] = 1
         }
     }
+    // recusively calculate the shortest distances
     for k := 0; k < n; k++ {
         for i := 0; i < n; i++ {
             for j := 0; j < n; j++ {
@@ -167,7 +188,7 @@ func shortestPathLength(graph [][]int) int {
             }
         }
     }
-    // preparing dp
+    // preparing dp for TSP
     dp := make([][]int, n)
     for i := 0; i < n; i++ {
         dp[i] = make([]int, 1 << n)
