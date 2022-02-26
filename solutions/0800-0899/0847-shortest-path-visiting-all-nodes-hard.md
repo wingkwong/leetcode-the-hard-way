@@ -1,5 +1,7 @@
 ---
-description: 'Author: @TBC | https://leetcode.com/problems/shortest-path-visiting-all-nodes/'
+description: >-
+  Author: @heiheihang |
+  https://leetcode.com/problems/shortest-path-visiting-all-nodes/
 ---
 
 # 0847 - Shortest Path Visiting All Nodes (Hard)
@@ -46,9 +48,9 @@ There are two key observations in this question
 * We can use a bitmask to represent visited nodes as there are at most 12 nodes
 * We should use BFS as we want to find the shortest path that visits all nodes
 
-We then need to figure out how to keep track of duplication. We can simply store the (currentNode, visitedBitMask) tuple in a set to prevent duplication.&#x20;
+We then need to figure out how to keep track of duplication. We can simply store the (currentNode, visitedBitMask) tuple in a set to prevent duplication.
 
-We can start at any node in the graph initially, and we should update the bitmask accordingly.&#x20;
+We can start at any node in the graph initially, and we should update the bitmask accordingly.
 
 ```python
 def shortestPathLength(self, graph: List[List[int]]) -> int:
