@@ -101,6 +101,7 @@
   * [0733 - Flood Fill (Easy)](solutions/0700-0799/0733-flood-fill-easy.md)
 * [0800 - 0899](solutions/0800-0899/README.md)
   * [0829 - Consecutive Numbers Sum (Hard)](solutions/0800-0899/0829-consecutive-numbers-sum-hard.md)
+  * [0847 - Shortest Path Visiting All Nodes (Hard)](solutions/0800-0899/0847-shortest-path-visiting-all-nodes-hard.md)
   * [0877 - Stone Game (Medium)](solutions/0800-0899/0877-stone-game-medium.md)
 * [0900 - 0999](solutions/0900-0999/README.md)
   * [0921 - Sort an Array (Medium)](solutions/0900-0999/0921-sort-an-array-medium.md)
