@@ -39,4 +39,67 @@ Explanation: One possible path is [0,1,4,2,3]
 * If `graph[a]` contains `b`, then `graph[b]` contains `a`.
 * The input graph is always connected.
 
-## Approach 1: TBC
+## Approach 1: BFS
+
+There are two key observations in this question
+
+* We can use a bitmask to represent visited nodes as there are at most 12 nodes
+* We should use BFS as we want to find the shortest path that visits all nodes
+
+We then need to figure out how to keep track of duplication. We can simply store the (currentNode, visitedBitMask) tuple in a set to prevent duplication.&#x20;
+
+We can start at any node in the graph initially, and we should update the bitmask accordingly.&#x20;
+
+```python
+def shortestPathLength(self, graph: List[List[int]]) -> int:
+        
+        #a visited set to prevent duplication
+        visited = set()
+        
+        #number of nodes in the graph
+        n = len(graph)
+        
+        #we want to visit all nodes (1111...1111)
+        target = (1 << n) - 1
+        
+        #a level set to keep the states at the current depth
+        level = set()
+        
+        #we can start at any node initially
+        for i in range(n):
+            level.add((i, 1 << i))
+        
+        #keep track of the distance of the path
+        depth = 0
+        
+        while(level):
+            
+            #store the states in the next level
+            new_level = set()
+            
+            for node, mask in level:
+    
+                #continue if state is visited before
+                if (node,mask) in visited:
+                    continue
+                
+                #return depth if all nodes have been visited
+                if(mask == target):
+                    return depth
+                
+                #add the current state to visited
+                visited.add((node,mask))
+                
+                #add the visiting neighbour state to the next level
+                for neighbour in graph[node]:
+                    new_level.add((neighbour, mask | (1 << neighbour)))
+            
+            #go to the next level
+            level = new_level
+            
+            #increase distance by 1
+            depth += 1
+        
+        #should never reach here
+        return -1
+```
