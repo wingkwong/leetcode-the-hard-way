@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @heiheihang |
+  Author: @heiheihang, @wingkwong |
   https://leetcode.com/problems/shortest-path-visiting-all-nodes/
 ---
 
@@ -105,3 +105,7 @@ def shortestPathLength(self, graph: List[List[int]]) -> int:
         #should never reach here
         return -1
 ```
+
+## Approach 2: **Floyd-Warshall &** TSP
+
+Preparing by @wingkwong&#x20;
