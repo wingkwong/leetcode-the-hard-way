@@ -43,6 +43,8 @@ Explanation: One possible path is [0,1,4,2,3]
 
 ## Approach 1: BFS
 
+_This approach is preparing by @heiheihang._
+
 There are two key observations in this question
 
 * We can use a bitmask to represent visited nodes as there are at most 12 nodes
@@ -108,4 +110,75 @@ def shortestPathLength(self, graph: List[List[int]]) -> int:
 
 ## Approach 2: **Floyd-Warshall &** TSP
 
-Preparing by @wingkwong&#x20;
+_This approach is preparing by @wingkwong._
+
+Explanation : Work In Progress
+
+```go
+func min(x, y int) int {
+    if x < y {
+        return x
+    }
+    return y
+}
+
+// Traveling Salesman Problem (TSP)
+func tsp(mask int, src int, n int, d [][]int, dp [][]int) int {
+    if dp[src][mask] != -1 {
+        return dp[src][mask]
+    }
+    now := mask | (1 << src)
+    dest := (1 << n) - 1
+    if now == dest {
+        return 0
+    }
+    mi := 10000000
+    for i := 0; i < n; i++ {
+        if ((mask & (1 << i)) == 0) {
+            mi = min(mi, d[src][i] + tsp(now, i, n, d, dp))
+        }
+    }
+    dp[src][mask] = mi
+    return dp[src][mask]
+}
+
+func shortestPathLength(graph [][]int) int {
+    n := len(graph)
+    // d[i][j]: distance between node i and node j
+    d := make([][]int, 1 << n)
+    // preparing d
+    for i := 0; i < n; i++ {
+        d[i] = make([]int, n)
+        for j := 0; j < n; j++ {
+            d[i][j] = 10000000
+        }
+    }
+    // floyd-warshall
+    for i := 0; i < n; i++ {
+        d[i][i] = 0
+        for _, j := range graph[i] {
+            d[i][j] = 1
+        }
+    }
+    for k := 0; k < n; k++ {
+        for i := 0; i < n; i++ {
+            for j := 0; j < n; j++ {
+                d[i][j] = min(d[i][j], d[i][k] + d[k][j])
+            }
+        }
+    }
+    // preparing dp
+    dp := make([][]int, n)
+    for i := 0; i < n; i++ {
+        dp[i] = make([]int, 1 << n)
+        for j := 0; j < (1 << n); j++ {
+            dp[i][j] = -1
+        }
+    }
+    ans := 10000000
+    for i := 0; i < n; i++ {
+        ans = min(ans, tsp(1 << i, i, n, d, dp))
+    }
+    return ans
+ }
+```
