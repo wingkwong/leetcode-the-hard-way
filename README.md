@@ -13,15 +13,17 @@ For those who don't know, LeetCode is one of the most well-known platforms where
 
 ### Target Audience
 
-Everyone who wants to improve their programming skills.
+Everyone who wants to improve their programming skills or learn how to LeetCode.
 
 ### Source Code
 
-This gitbook is synchronised with [leetcode-the-hard-way](https://github.com/wingkwong/leetcode-the-hard-way) on Github. All solutions are available [here](https://github.com/wingkwong/competitive-programming/tree/master/leetcode/problems) as well. You may also check out other solutions for different CP platforms. If you find anything wrong, please feel free to report it in Github.
+This gitbook is synchronised with [leetcode-the-hard-way](https://github.com/wingkwong/leetcode-the-hard-way) on Github. The solutions written by myslef are available [here](https://github.com/wingkwong/competitive-programming/tree/master/leetcode/problems) as well. You may also check out other solutions for different CP platforms. If you find anything wrong, please feel free to report it in Github.
 
 ### Contributing
 
-Contributions are welcome. If you want to add your solutions, explanations or tutorials, please feel free to create a PR on Github.
+Contributions are welcome. If you want to add your solutions, explanations or tutorials, please feel free to create a PR on Github. A good starting point is to search `@TBC` in this repository.
+
+If a page does not exist, please create an issue stating which page you want to add. I'll create the page for you.
 
 ### Outro
 
