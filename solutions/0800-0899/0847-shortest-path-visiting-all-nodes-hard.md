@@ -198,6 +198,8 @@ func shortestPathLength(graph [][]int) int {
     }
     ans := 10000000
     for i := 0; i < n; i++ {
+        // try each i as starting node
+        // to find out the min distance
         ans = min(ans, tsp(1 << i, i, n, d, dp))
     }
     return ans
