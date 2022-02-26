@@ -54,6 +54,8 @@ We then need to figure out how to keep track of duplication. We can simply store
 
 We can start at any node in the graph initially, and we should update the bitmask accordingly.
 
+### Python3
+
 ```python
 def shortestPathLength(self, graph: List[List[int]]) -> int:
         
@@ -119,6 +121,8 @@ Then, we use the below recursive formula to calculate the shortest distances. Fo
 What's left is similar to TSP, which is Traveling Salesman Problem. Given a set of nodes and weight between every pair, what is the shortest possible path that visits all nodes exactly once and returns to the starting point? The only difference is that a node is allowed to be visited multiple times and the starting point and the ending point may not be same.
 
 Let $$dp[i][mask]$$ be the shortest distances with visited nodes (marked as $$1$$ in $$mask$$) from the starting point $$i$$. In our function, first we check if $$dp[src][mask]$$ has been calculated before. If so, we can return it immediately. Otherwise, let's set this node in $$mask$$ and compare it with the target mask, which is $$(1 << n) - 1$$, i.e. all 1s with $$n$$ digits. If it matches with target mask, that means we visited all the nodes. Hence, we return $$0$$. Otherwise, we look for the next possible node to visit and calculate the distances recursively. At the end, we memoize the shortest distance at the current state and return it.
+
+### Go
 
 ```go
 func min(x, y int) int {
