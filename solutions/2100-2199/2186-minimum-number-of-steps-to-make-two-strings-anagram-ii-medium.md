@@ -10,7 +10,7 @@ description: >-
 
 You are given two strings `s` and `t`. In one step, you can append **any character** to either `s` or `t`.
 
-Return _the minimum number of steps to make_ `s` _and_ `t` _ **anagrams** of each other._
+Return _the minimum number of steps to make_ `s` _and_ `t` \_ **anagrams** of each other.\_
 
 An **anagram** of a string is a string that contains the same characters with a different (or the same) ordering.
 
@@ -40,4 +40,38 @@ Explanation: The given strings are already anagrams of each other. Thus, we do n
 * `1 <= s.length, t.length <= 2 * 10^5`
 * `s` and `t` consist of lowercase English letters.
 
-## Approach 1: TBC
+## Approach 1: Compare Dictionary
+
+We can store the characters of both strings into two dictionaries, and we make the following observation
+
+* To make the number of any character `c` equal in string `s` and `t`, we must add the difference between `s.count(c)` and `t.count(c)`&#x20;
+
+The implementation then is tricky that we should not only iterate the characters in one dictionary. The simplest way is to visit each character once and find the differences.&#x20;
+
+```python
+def minSteps(self, s: str, t: str) -> int:
+        
+        #initialize the dictionaries
+        d1 = defaultdict(int)
+        d2 = defaultdict(int)
+        
+        #count the number of characters in each string
+        for c in s:
+            d1[c] += 1
+            
+        for c in t:
+            d2[c] += 1
+        
+        #initialize result    
+        res = 0
+        
+        #iterate all 26 lowercase characters
+        for i in range(26):
+            #generate the character from i
+            c = chr(ord('a') + i)
+            
+            #add the difference of character count to result
+            res += abs(d1[c] - d2[c])
+            
+        return res
+```
