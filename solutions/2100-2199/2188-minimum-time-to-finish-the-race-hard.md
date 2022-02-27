@@ -1,5 +1,7 @@
 ---
-description: 'Author: @TBC | https://leetcode.com/problems/minimum-time-to-finish-the-race/'
+description: >-
+  Author: @heiheihang |
+  https://leetcode.com/problems/minimum-time-to-finish-the-race/
 ---
 
 # 2188 - Minimum Time to Finish the Race (Hard)
@@ -15,8 +17,6 @@ You are also given an integer `changeTime` and an integer `numLaps`.
 The race consists of `numLaps` laps and you may start the race with **any** tire. You have an **unlimited** supply of each tire and after every lap, you may **change** to any given tire (including the current tire type) if you wait `changeTime` seconds.
 
 Return _the **minimum** time to finish the race._
-
-&#x20;
 
 **Example 1:**
 
@@ -55,4 +55,78 @@ The minimum time to complete the race is 25 seconds.
 * `2 <= ri <= 10^5`
 * `1 <= numLaps <= 1000`
 
-## Approach 1: TBC
+## Approach 1: DP
+
+The general approach is to store the minimum time required to travel each lap. We must make the following observation:
+
+* To travel $$n$$ laps, we must use the same tire for $$n$$ laps, or we can use the set of tires used to travel $$a$$ laps and another set of tires used to travel $$b$$ laps such that $$a+b=n$$.
+* Before we can find an optimal set of tires to travel $$n$$ laps, we can only consider using the same tire  to travel $$1$$ to $$n$$ laps
+
+We can now break this problem into 2 parts:
+
+1. Find the shortest time to travel $$n$$ laps when we can only use 1 tire at a time
+2. Find the shortest time to travel $$n$$ laps by potentially choosing the time needed to travel $$a$$ laps and the time needed to travel $$b$$ laps such that we can travel $$n$$ laps with $$time(a)+time(b)+changeTime$$
+
+The first part is straightforward as we only need to iterate each tire for $$numLaps$$ times. However, we need some optimizations to stop iterating when the following condition is met
+
+* `f_i * (r_i) ^ n >= time[(n+1)//2] + time[(n+1)//2] + changeTime`
+
+Notice that the above condition is not optimally the upper bound, but it is good enough to break the loop. We know that we can stop here because using the same tire increases exponentially, and further combining previous sets of tires increases linearly.&#x20;
+
+The second part involves looking for a combination of laps for each lap. For example, if we want to find the minimum time for running 9 laps, we need to find the following
+
+* `dp[1] + dp[8] + changeTime`
+* `dp[2] + dp[7] + changeTime`
+* `dp[3] + dp[6] + changeTime`
+* `dp[4] + dp[5] + changeTime`
+
+Of course, if there exists a tire running 9 laps in a row that is fast than the above, we keep it.&#x20;
+
+A small optimisation here is that instead of generating repeating pairs (\[1,8] and \[8,1]), we can cut each loop by half.
+
+```python
+def minimumFinishTime(self, tires: List[List[int]], changeTime: int, numLaps: int) -> int:
+        
+        #initialize DP Array
+        #it keeps track of the shortest time needed to finish each lap
+        dp = [float('inf')] * (numLaps + 1)
+        
+        #initialize the shortest time needed to finish each lap with 1 tire only
+        for f, r in tires:
+        
+            #initialize the finishing time
+            time = f
+            
+            #initialize the number of laps
+            cnt = 1
+            
+            #hard upper limit is numLaps
+            while(cnt <= numLaps):
+            
+                #a terminating condition if continually running the same lap is slower
+                if(dp[(cnt+1)//2] * 2 + changeTime <= time):
+                    dp[cnt] = min(dp[(cnt+1)//2] * 2 + changeTime, dp[cnt])
+                    break
+                else:
+                    #update the shortest time needed to finish cnt laps
+                    dp[cnt] = min(dp[cnt], time)
+                
+                #update finishing time and number of laps
+                time += f * (r ** (cnt))
+                cnt += 1
+                
+        #check for all small + big = i 
+        for i in range(2,numLaps+1):
+            for j in range(1,i//2+1):
+                
+                small = j
+                big = i - j
+                
+                #remember to add changeTime if we combine two previous sets of tires
+                dp[i] = min(dp[i], dp[small] + dp[big] + changeTime)
+                
+        return dp[-1]
+                
+                
+
+```
