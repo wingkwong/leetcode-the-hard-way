@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @TBC |
+  Author: @heiheihang |
   https://leetcode.com/problems/counting-words-with-a-given-prefix/
 ---
 

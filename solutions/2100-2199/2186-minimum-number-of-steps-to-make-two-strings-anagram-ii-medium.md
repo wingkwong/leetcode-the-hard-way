@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @TBC |
+  Author: @heiheihang |
   https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram-ii/
 ---
 
@@ -44,9 +44,9 @@ Explanation: The given strings are already anagrams of each other. Thus, we do n
 
 We can store the characters of both strings into two dictionaries, and we make the following observation
 
-* To make the number of any character `c` equal in string `s` and `t`, we must add the difference between `s.count(c)` and `t.count(c)`&#x20;
+* To make the number of any character `c` equal in string `s` and `t`, we must add the difference between `s.count(c)` and `t.count(c)`
 
-The implementation then is tricky that we should not only iterate the characters in one dictionary. The simplest way is to visit each character once and find the differences.&#x20;
+The implementation then is tricky that we should not only iterate the characters in one dictionary. The simplest way is to visit each character once and find the differences.
 
 ```python
 def minSteps(self, s: str, t: str) -> int:
