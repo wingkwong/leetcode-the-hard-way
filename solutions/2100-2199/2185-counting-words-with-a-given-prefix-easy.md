@@ -36,4 +36,27 @@ Explanation: There are no strings that contain "code" as a prefix.
 * `1 <= words[i].length, pref.length <= 100`
 * `words[i]` and `pref` consist of lowercase English letters.
 
-## Approach 1: TBC
+## Approach 1: Iteration
+
+We can define the length of the prefix string to be `n` , then we need to grab the first `n` characters of each word and compare their substrings. In the case the word has length less than `n`, we skip the word.
+
+```python
+def prefixCount(self, words: List[str], pref: str) -> int:
+        
+        #define the length of prefix
+        n = len(pref)
+        
+        res = 0
+        
+        #iterate each word
+        for s in words:
+        
+            #cannot get first n characters if it is shorter than n, so skip
+            if( len(s) < n):
+                continue
+            #compare the first n characters
+            if(s[:n] == pref):
+                res += 1
+                
+        return res
+```
