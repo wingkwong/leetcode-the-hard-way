@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @heiheihang |
+  Author: @heiheihang, @wingkwong |
   https://leetcode.com/problems/minimum-time-to-complete-trips/
 ---
 
@@ -46,7 +46,7 @@ So the minimum time needed to complete 1 trip is 2.
 
 ## Approach 1: Binary Search
 
-This is a classic problem of finding the smallest integer given a bound under a monotonic function.&#x20;
+This is a classic problem of finding the smallest integer given a bound under a monotonic function.
 
 We can perform binary search on the `time` needed to finish the trips, and we check that if we are able to complete `totalTrips` within the given amount of time. There are two components to this solution:
 
@@ -54,6 +54,8 @@ We can perform binary search on the `time` needed to finish the trips, and we ch
 * Checking if `totalTrips` can be completed given a time
 
 There are many similar problems to this question, and you should know this: [https://leetcode.com/discuss/general-discussion/786126/python-powerful-ultimate-binary-search-template-solved-many-problems](https://leetcode.com/discuss/general-discussion/786126/python-powerful-ultimate-binary-search-template-solved-many-problems)
+
+### Python3 (By @heiheihang)
 
 ```python
 def minimumTime(self, time: List[int], totalTrips: int) -> int:
@@ -98,3 +100,21 @@ def minimumTime(self, time: List[int], totalTrips: int) -> int:
         return res
 ```
 
+### C++ (By @wingkwong)
+
+```cpp
+class Solution {
+public:
+    long long minimumTime(vector<int>& time, int totalTrips) {
+        long long l = *min_element(time.begin(), time.end());
+        long long r = accumulate(time.begin(), time.end(), 0LL) * totalTrips;
+        while (l < r) {
+            long long m = l + (r - l) / 2, trips = 0;
+            for (auto x : time) trips += (m / x);
+            if (trips < totalTrips) l = m + 1;
+            else r = m;
+        }
+        return l;
+    }
+};
+```

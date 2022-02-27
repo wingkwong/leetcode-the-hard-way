@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @heiheihang |
+  Author: @heiheihang, @wingkwong |
   https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram-ii/
 ---
 
@@ -48,6 +48,8 @@ We can store the characters of both strings into two dictionaries, and we make t
 
 The implementation then is tricky that we should not only iterate the characters in one dictionary. The simplest way is to visit each character once and find the differences.
 
+### Python3 (By @heiheihang)
+
 ```python
 def minSteps(self, s: str, t: str) -> int:
         
@@ -74,4 +76,20 @@ def minSteps(self, s: str, t: str) -> int:
             res += abs(d1[c] - d2[c])
             
         return res
+```
+
+### C++ (By @wingkwong)
+
+```cpp
+class Solution {
+public:
+    int minSteps(string s, string t) {
+        int ans = 0;
+        unordered_map<int, int> m;
+        for (auto x : s) m[x - 'a']++;
+        for (auto x : t) m[x - 'a']--;
+        for (int i = 0; i < 26; i++) ans += abs(m[i]);
+        return ans;
+    }
+};
 ```
