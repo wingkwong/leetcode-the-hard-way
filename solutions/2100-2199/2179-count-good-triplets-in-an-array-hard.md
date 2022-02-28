@@ -53,7 +53,7 @@ $$l[i] * r[i]$$.
 
 ```cpp
 template <class T>
-struct BIT { //1-indexed
+struct BIT {
   int n; vector<T> t;
   BIT() {}
   BIT(int _n) {
@@ -91,7 +91,7 @@ public:
         for (int i = 0; i < n; i++) {
             // target position in nums2 for nums1[i]
             int x = id[nums1[i]];
-            // get the prefix sum, i.e. 0 .. pos
+            // get the prefix sum
             l[i] = lb.query(x);
             // update the tree
             lb.upd(x, 1);
@@ -100,7 +100,7 @@ public:
         for (int i = n - 1; i >= 0; i--) {
             // target position in nums2 for nums1[i]
             int x = id[nums1[i]];
-            // get the suffix sum, i.e pos .. n
+            // get the suffix sum
             r[i] = rb.query(x, n);
             // update the tree
             rb.upd(x, 1);
