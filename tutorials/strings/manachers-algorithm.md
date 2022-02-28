@@ -4,7 +4,7 @@ description: 'Author: @wingkwong'
 
 # Manacher's Algorithm
 
-#### _Tutorial: Work in Progress_
+#### _Tutorial: Coming Soon!_
 
 #### Find the longest palindrome substring
 

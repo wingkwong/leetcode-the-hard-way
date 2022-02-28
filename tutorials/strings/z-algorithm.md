@@ -4,7 +4,7 @@ description: 'Author: @wingkwong'
 
 # Z Algorithm
 
-#### _Tutorial: Work in Progress_
+#### _Tutorial: Coming Soon!_
 
 ```cpp
 template <typename T>

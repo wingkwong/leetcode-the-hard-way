@@ -4,7 +4,7 @@ description: 'Author: @wingkwong'
 
 # Booth's Algorithm
 
-#### _Tutorial: Work in Progress_
+#### _Tutorial: Coming Soon!_
 
 #### Determine the lexicographically minimal rotation of a string
 
