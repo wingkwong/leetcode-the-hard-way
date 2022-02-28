@@ -4,6 +4,8 @@ description: 'Author: @wingkwong'
 
 # Z Algorithm
 
+#### _Tutorial: Work in Progress_
+
 ```cpp
 template <typename T>
 vector<int> z_function(int n, const T &s) {

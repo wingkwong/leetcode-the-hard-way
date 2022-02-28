@@ -4,6 +4,8 @@ description: 'Author: @wingkwong'
 
 # Booth's Algorithm
 
+#### _Tutorial: Work in Progress_
+
 #### Determine the lexicographically minimal rotation of a string
 
 ```cpp

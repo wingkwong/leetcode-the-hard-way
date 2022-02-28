@@ -4,6 +4,8 @@ description: 'Author: @wingkwong'
 
 # Manacher's Algorithm
 
+#### _Tutorial: Work in Progress_
+
 #### Find the longest palindrome substring
 
 ```cpp
