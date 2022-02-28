@@ -66,6 +66,7 @@
   * [0155 - Min Stack (Easy)](solutions/0100-0199/0155-min-stack-easy.md)
   * [0165 - Compare Version Numbers (Medium)](solutions/0100-0199/0165-compare-version-numbers-medium.md)
   * [0169 - Majority Element (Easy)](solutions/0100-0199/0169-majority-element-easy.md)
+  * [0191 - Number of 1 Bits (Easy)](solutions/0100-0199/0191-number-of-1-bits-easy.md)
   * [0199 - Binary Tree Right Side View (Medium)](solutions/0100-0199/0199-binary-tree-right-side-view-medium.md)
 * [0200 - 0299](solutions/0200-0299/README.md)
   * [0204 - Count Primes (Medium)](solutions/0200-0299/0204-count-primes.md)
