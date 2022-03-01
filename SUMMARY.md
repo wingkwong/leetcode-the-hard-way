@@ -98,6 +98,7 @@
   * [0452 - Minimum Number of Arrows to Burst Balloons (Medium)](solutions/0400-0499/0452-minimum-number-of-arrows-to-burst-balloons-medium.md)
   * [0454 - 4Sum II (Medium)](solutions/0400-0499/0454-4sum-ii-medium.md)
   * [0469 - Next Greater Element I (Easy)](solutions/0400-0499/0469-next-greater-element-i-easy.md)
+  * [0473 - Matchsticks to Square (Medium)](solutions/0400-0499/0473-matchsticks-to-square-medium.md)
 * [0500 - 0599](solutions/0500-0599/README.md)
   * [0520 - Detect Capital (Easy)](solutions/0500-0599/0520-detect-capital-easy.md)
   * [0525 - Contiguous Array (Medium)](solutions/0500-0599/0525-contiguous-array-medium.md)
