@@ -116,6 +116,7 @@
 * [0900 - 0999](solutions/0900-0999/README.md)
   * [0921 - Sort an Array (Medium)](solutions/0900-0999/0921-sort-an-array-medium.md)
   * [0973 - K Closest Points to Origin (Medium)](solutions/0900-0999/0973-k-closest-points-to-origin-medium.md)
+  * [0976 - Largest Perimeter Triangle (Easy)](solutions/0900-0999/0976-largest-perimeter-triangle-easy.md)
   * [0941 - Valid Mountain Array (Easy)](solutions/0900-0999/0941-valid-mountain-array-easy.md)
 * [1000 - 1999](solutions/1000-1999/README.md)
   * [1004 - Max Consecutive Ones III (Medium)](solutions/1000-1999/1004-max-consecutive-ones-iii-medium.md)
