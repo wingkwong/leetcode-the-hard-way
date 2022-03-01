@@ -83,6 +83,7 @@
   * [0258 - Add Digits (Easy)](solutions/0200-0299/0258-add-digits-easy.md)
   * [0261 -Graph Valid Tree (Medium)](solutions/0200-0299/0261-graph-valid-tree-medium.md)
   * [0283 - Move Zeroes (Easy)](solutions/0200-0299/0283-move-zeroes-easy.md)
+  * [0200 - Number of Islands (Medium)](solutions/0200-0299/0200-number-of-islands-medium.md)
 * [0300 - 0399](solutions/0300-0399/README.md)
   * [0344 - Reverse String (Easy)](solutions/0300-0399/0344-reverse-string-easy.md)
   * [0346 - Moving Average from Data Stream (Easy)](solutions/0300-0399/0346-moving-average-from-data-stream-easy.md)
