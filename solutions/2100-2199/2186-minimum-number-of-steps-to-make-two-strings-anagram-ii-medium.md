@@ -40,13 +40,13 @@ Explanation: The given strings are already anagrams of each other. Thus, we do n
 * `1 <= s.length, t.length <= 2 * 10^5`
 * `s` and `t` consist of lowercase English letters.
 
-## Approach 1: Compare Dictionary
+## Approach 1: 2 Dictionaries
 
 We can store the characters of both strings into two dictionaries, and we make the following observation
 
 * To make the number of any character `c` equal in string `s` and `t`, we must add the difference between `s.count(c)` and `t.count(c)`
 
-The implementation then is tricky that we should not only iterate the characters in one dictionary. In python defaultdict, if we simply perfrm `for key in d1` , we will miss out the keys in `d2`. If we iterate both dictionaries, we will need to cancel out double counts.&#x20;
+In python `defaultdict`, if we simply perform `for key in d1` , we will miss out the `keys` in `d2`. If we iterate both dictionaries, we will need to cancel out double counts.&#x20;
 
 Hence, The simplest way is to visit each character once (by iterating from 0 to 25) and find the differences of characters between 2 dicts.
 
@@ -54,30 +54,62 @@ Hence, The simplest way is to visit each character once (by iterating from 0 to 
 
 ```python
 def minSteps(self, s: str, t: str) -> int:
+
+    # initialize the dictionaries
+    d1 = defaultdict(int)
+    d2 = defaultdict(int)
+
+    # count the number of characters in each string
+    for c in s:
+        d1[c] += 1
+
+    for c in t:
+        d2[c] += 1
+
+    # initialize result
+    res = 0
+
+    # iterate all 26 lowercase characters
+    for i in range(26):
+        # generate the character from i
+        c = chr(ord('a') + i)
+
+        # add the difference of character count to result
+        res += abs(d1[c] - d2[c])
+
+    return res
+
+```
+
+## Approach 2: 1 Dictionary
+
+We can actually use 1 dictionary with less code. The main idea is that we are only concerned with the **difference** of each characters in both strings, so we can simply take the count of character of `s` as positive and that of `t` as negative.&#x20;
+
+### Python3 (By @heiheihang)
+
+```python
+def minSteps(self, s: str, t: str) -> int:
+
+    # initialize the dictionary
+    d = defaultdict(int)
+
+    # count c in s as positive
+    for c in s:
+        d[c] += 1
         
-        #initialize the dictionaries
-        d1 = defaultdict(int)
-        d2 = defaultdict(int)
-        
-        #count the number of characters in each string
-        for c in s:
-            d1[c] += 1
-            
-        for c in t:
-            d2[c] += 1
-        
-        #initialize result    
-        res = 0
-        
-        #iterate all 26 lowercase characters
-        for i in range(26):
-            #generate the character from i
-            c = chr(ord('a') + i)
-            
-            #add the difference of character count to result
-            res += abs(d1[c] - d2[c])
-            
-        return res
+    #count c in t as negative
+    for c in t:
+        d[c] -= 1
+    # initialize result
+    res = 0
+
+    # iterate all characters present in both strings
+    for key in d:
+
+        # add the difference of character count to result
+        res += abs(d[key])
+
+    return res
 ```
 
 ### C++ (By @wingkwong)
