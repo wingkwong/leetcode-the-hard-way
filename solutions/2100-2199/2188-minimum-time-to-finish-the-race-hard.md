@@ -102,46 +102,45 @@ Here is a dry run of the following test case:&#x20;
 
 ```python
 def minimumFinishTime(self, tires: List[List[int]], changeTime: int, numLaps: int) -> int:
-        
-        #initialize DP Array
-        #it keeps track of the shortest time needed to finish each lap
-        dp = [float('inf')] * (numLaps + 1)
-        
-        #initialize the shortest time needed to finish each lap with 1 tire only
-        for f, r in tires:
-        
-            #initialize the finishing time
-            time = f
-            
-            #initialize the number of laps
-            cnt = 1
-            
-            #hard upper limit is numLaps
-            while(cnt <= numLaps):
-            
-                #a terminating condition if continually running the same lap is slower
-                if(dp[(cnt+1)//2] * 2 + changeTime <= time):
-                    dp[cnt] = min(dp[(cnt+1)//2] * 2 + changeTime, dp[cnt])
-                    break
-                else:
-                    #update the shortest time needed to finish cnt laps
-                    dp[cnt] = min(dp[cnt], time)
-                
-                #update finishing time and number of laps
-                time += f * (r ** (cnt))
-                cnt += 1
-                
-        #check for all small + big = i 
-        for i in range(2,numLaps+1):
-            for j in range(1,i//2+1):
-                
-                small = j
-                big = i - j
-                
-                #remember to add changeTime if we combine two previous sets of tires
-                dp[i] = min(dp[i], dp[small] + dp[big] + changeTime)
-                
-        return dp[-1]
-                
-                
+
+    # initialize DP Array
+    # it keeps track of the shortest time needed to finish each lap
+    dp = [float('inf')] * (numLaps + 1)
+
+    # initialize the shortest time needed to finish each lap with 1 tire only
+    for f, r in tires:
+
+        # initialize the finishing time
+        time = f
+
+        # initialize the number of laps
+        cnt = 1
+
+        # hard upper limit is numLaps
+        while(cnt <= numLaps):
+
+            # a terminating condition if continually running the same lap is slower
+            if(dp[(cnt + 1) // 2] * 2 + changeTime <= time):
+                dp[cnt] = min(dp[(cnt + 1) // 2] * 2 + changeTime, dp[cnt])
+                break
+            else:
+                # update the shortest time needed to finish cnt laps
+                dp[cnt] = min(dp[cnt], time)
+
+            # update finishing time and number of laps
+            time += f * (r ** (cnt))
+            cnt += 1
+
+    # check for all small + big = i
+    for i in range(2, numLaps+1):
+        for j in range(1, i // 2 + 1):
+
+            small = j
+            big = i - j
+
+            # remember to add changeTime if we combine two previous sets of tires
+            dp[i] = min(dp[i], dp[small] + dp[big] + changeTime)
+
+    return dp[-1]
+
 ```
