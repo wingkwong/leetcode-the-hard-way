@@ -46,7 +46,9 @@ We can store the characters of both strings into two dictionaries, and we make t
 
 * To make the number of any character `c` equal in string `s` and `t`, we must add the difference between `s.count(c)` and `t.count(c)`
 
-The implementation then is tricky that we should not only iterate the characters in one dictionary. The simplest way is to visit each character once and find the differences.
+The implementation then is tricky that we should not only iterate the characters in one dictionary. In python defaultdict, if we simply perfrm `for key in d1` , we will miss out the keys in `d2`. If we iterate both dictionaries, we will need to cancel out double counts.&#x20;
+
+Hence, The simplest way is to visit each character once (by iterating from 0 to 25) and find the differences of characters between 2 dicts.
 
 ### Python3 (By @heiheihang)
 
