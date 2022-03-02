@@ -55,7 +55,7 @@ public:
 
 ## Approach 2: Edit Distance
 
-We can directly use [0072 - Edit Distance (Hard)](../0000-0099/0072-edit-distance-hard.md) to solve this easy problem since the constraints are not large. Edit distance here means the minimum number of operations required to covert $$s$$ to $$t$$. We just need to check if it is equal to $$m - n$$.
+We can directly use [0072 - Edit Distance (Hard)](../0000-0099/0072-edit-distance-hard.md) solution to solve this easy problem since the constraints are not large. Edit distance here means the minimum number of operations required to covert $$s$$ to $$t$$. We just need to check if it is equal to $$m - n$$.
 
 ```cpp
 class Solution {
