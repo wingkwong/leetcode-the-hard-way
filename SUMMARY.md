@@ -89,6 +89,7 @@
   * [0346 - Moving Average from Data Stream (Easy)](solutions/0300-0399/0346-moving-average-from-data-stream-easy.md)
   * [0389 - Find the Difference (Easy)](solutions/0300-0399/0389-find-the-difference-easy.md)
   * [0338 - Counting Bits (Easy)](solutions/0300-0399/0338-counting-bits-easy.md)
+  * [0392 - Is Subsequence (Easy)](solutions/0300-0399/0392-is-subsequence-easy.md)
 * [0400 - 0499](solutions/0400-0499/README.md)
   * [0402 - Remove K Digits (Medium)](solutions/0400-0499/0402-remove-k-digits-medium.md)
   * [0404 - Sum of Left Leaves (Easy)](solutions/0400-0499/0404-sum-of-left-leaves-easy.md)
