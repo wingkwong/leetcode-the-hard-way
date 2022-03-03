@@ -91,3 +91,41 @@ public:
     }
 }
 ```
+
+## Approach 3: Lower Bound of Indices
+
+This approach is for follow-up. We can store the indices $$idx$$ of each character in $$t$$. For example, if $$t$$ is $$aaaabbcde$$, then we have the following $$idx$$.
+
+| Character (Key) | Indice (Value) |
+| --------------- | -------------- |
+| a               | \[0, 1, 2, 3]  |
+| b               | \[4, 5]        |
+| c               | \[6]           |
+| d               | \[7]           |
+| e               | \[8]           |
+
+Then we initialise $$bound$$ which is the starting index. For each character in $$s$$, we want to find the index $$j$$ which starts from $$bound$$. If it reaches the end, then return false. Else we can update $$bound := j + 1$$ because the next character cannot appear before the previous character and continue until we process all characters.
+
+For example, let's say $$s = abc$$ and $$t = aaaabbcde$$. The first character is $$a$$ and we got $$bound = 0$$ and $$j = 0$$. Then we update the bound to $$j + 1$$. Then for the second character $$b$$, we got $$bound = 1$$ and $$j = 4$$. Similarly, we got $$bound = 5$$ and $$j = 6$$ for the last character.
+
+```cpp
+class Solution {
+public:
+    bool isSubsequence(string s, string t) {
+        int n = s.size(), m = t.size();
+        unordered_map<char, vector<int>> idx;
+        // put each char as key, the value is the indice of that char
+        for (int i = 0; i < m; i++) idx[t[i]].push_back(i);
+        int bound = 0;
+        for (auto x : s) {
+            // find the index which starts from bound
+            auto j = lower_bound(idx[x].begin(), idx[x].end(), bound);
+            // cannot find the index -> false
+            if (j == idx[x].end()) return false;
+            // update bound and try next character
+            bound = *j + 1;
+        }
+        return true;
+    }
+};
+```
