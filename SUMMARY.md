@@ -126,6 +126,7 @@
   * [1004 - Max Consecutive Ones III (Medium)](solutions/1000-1999/1004-max-consecutive-ones-iii-medium.md)
 * [1100 - 1199](solutions/1100-1199/README.md)
   * [1135 - Connecting Cities With Minimum Cost (Medium)](solutions/1100-1199/1135-connecting-cities-with-minimum-cost-medium.md)
+  * [1143 - Longest Common Subsequence (Medium)](solutions/1100-1199/1143-longest-common-subsequence-medium.md)
   * [1168 - Optimize Water Distribution in a Village (Hard)](solutions/1100-1199/1168-optimize-water-distribution-in-a-village-hard.md)
 * [1200 - 1299](solutions/1200-1299/README.md)
   * [1281 - Subtract the Product and Sum of Digits of an Integer (Easy)](solutions/1200-1299/1281-subtract-the-product-and-sum-of-digits-of-an-integer-easy.md)

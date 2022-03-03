@@ -130,14 +130,14 @@ public:
 };
 ```
 
-## Approach 4: DP
+## Approach 4: LCS
 
-_Explanation - preparing by @wingkwong_
+If $$s$$ is a subsequence of $$t$$, then it means the Longest Common Subsequence (LCS) would be $$n$$. We can directly use [1143 - Longest Common Subsequence (Medium)](../1100-1199/1143-longest-common-subsequence-medium.md) solution.
 
 ```cpp
 class Solution {
 public:
-    // 1143 - Longest Common Subsequence
+    // 1143 - Longest Common Subsequence (Medium)
     int longestCommonSubsequence(string text1, string text2) {
         int n = text1.size(), m = text2.size();
         vector<vector<int>> dp(n + 1, vector<int>(m + 1));
