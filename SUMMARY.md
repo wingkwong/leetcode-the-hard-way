@@ -93,6 +93,7 @@
 * [0400 - 0499](solutions/0400-0499/README.md)
   * [0402 - Remove K Digits (Medium)](solutions/0400-0499/0402-remove-k-digits-medium.md)
   * [0404 - Sum of Left Leaves (Easy)](solutions/0400-0499/0404-sum-of-left-leaves-easy.md)
+  * [0413 - Arithmetic Slices (Medium)](solutions/0400-0499/0413-arithmetic-slices-medium.md)
   * [0421 - Maximum XOR of Two Numbers in an Array](solutions/0400-0499/0421-maximum-xor-of-two-numbers-in-an-array.md)
   * [0435 - Non-overlapping Intervals (Medium)](solutions/0400-0499/0435-non-overlapping-intervals-medium.md)
   * [0438 - Find All Anagrams in a String (Medium)](solutions/0400-0499/0438-find-all-anagrams-in-a-string-medium.md)
