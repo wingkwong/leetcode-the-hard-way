@@ -204,3 +204,7 @@
   * [2186 - Minimum Number of Steps to Make Two Strings Anagram II (Medium)](solutions/2100-2199/2186-minimum-number-of-steps-to-make-two-strings-anagram-ii-medium.md)
   * [2187 - Minimum Time to Complete Trips (Medium)](solutions/2100-2199/2187-minimum-time-to-complete-trips-medium.md)
   * [2188 - Minimum Time to Finish the Race (Hard)](solutions/2100-2199/2188-minimum-time-to-finish-the-race-hard.md)
+  * [2190 - Most Frequent Number Following Key In an Array (Easy)](solutions/2100-2199/2190-most-frequent-number-following-key-in-an-array-easy.md)
+  * [2191 - Sort the Jumbled Numbers (Medium)](solutions/2100-2199/2191-sort-the-jumbled-numbers-medium.md)
+  * [2192 - All Ancestors of a Node in a Directed Acyclic Graph (Medium)](solutions/2100-2199/2192-all-ancestors-of-a-node-in-a-directed-acyclic-graph-medium.md)
+  * [2193 - Minimum Number of Moves to Make Palindrome (Hard)](solutions/2100-2199/2193-minimum-number-of-moves-to-make-palindrome-hard.md)
