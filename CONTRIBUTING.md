@@ -2,6 +2,18 @@
 
 Thanks for considering to contribute to LeetCode The Hard Way!
 
+## If you want to create an existing tutorial 
+
+- Modify a tutorial markdown page under [tutorials](https://github.com/wingkwong/leetcode-the-hard-way/tree/main/tutorials).
+
+> You may search @TBC as sometime we create draft pages for people to write.
+
+## If you want to create an existing solution 
+
+- Modify a solution markdown page under [solutions](https://github.com/wingkwong/leetcode-the-hard-way/tree/main/solutions).
+
+> You may search @TBC as sometime we create draft pages for people to write.
+
 ## If you want to create a new tutorial 
 
 - Create a tutorial markdown page under [tutorials](https://github.com/wingkwong/leetcode-the-hard-way/tree/main/tutorials). If the category does not exist, you may create a new one.
@@ -29,5 +41,4 @@ description: 'Author: @<YOUR_USERNAME> | <LEETCODE_PROBLEM_LINK>'
 <YOUR_APPROACH_EXPLANATION>
 
 <YOUR_SOLUTION>
-
 ```
