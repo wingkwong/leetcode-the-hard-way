@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @TBC |
+  Author: @heiheihang |
   https://leetcode.com/problems/all-ancestors-of-a-node-in-a-directed-acyclic-graph/
 ---
 
@@ -15,8 +15,6 @@ You are also given a 2D integer array `edges`, where `edges[i] = [fromi, toi]` d
 Return _a list_ `answer`_, where_ `answer[i]` _is the **list of ancestors** of the_ `ith` _node, sorted in **ascending order**_.
 
 A node `u` is an **ancestor** of another node `v` if `u` can reach `v` via a set of edges.
-
-&#x20;
 
 **Example 1:**
 
@@ -51,8 +49,6 @@ The above diagram represents the input graph.
 - Node 4 has four ancestors 0, 1, 2, and 3.
 ```
 
-&#x20;
-
 **Constraints:**
 
 * `1 <= n <= 1000`
@@ -63,4 +59,82 @@ The above diagram represents the input graph.
 * There are no duplicate edges.
 * The graph is **directed** and **acyclic**.
 
-## Approach 1: TBC
+## Approach 1: Topological Sort
+
+This question is quite challenging, and there are multiple ways to do it. Topological sort is one of the less direct way, but the logic is as following:
+
+1. Count the number of parents (In-Degree) of each node
+2. Start from the nodes without any parent
+3. For each child, remove one In-Degree of it, if it is zero, add it to the queue
+4. When looking at a node, perform union to the set of ancestors of each of its parent
+
+We observe that we can be sure that the ancestors of a node are all found until all of its parents are visited. This is the reason why we only visit a node when its In-Degree (number of unvisited parent) is 0.&#x20;
+
+```python
+def getAncestors(self, n: int, edges: List[List[int]]) -> List[List[int]]:
+        
+        #initialise the list of ancestors
+        ancestors = []
+        for i in range(n):
+            ancestors.append(set())
+        
+        #initialize bfs level
+        level = set()
+        
+        #initialize sets of parent, children, and in-degree
+        parents = defaultdict(list)
+        children = defaultdict(list)
+        degree = defaultdict(int)
+        
+        for parent,child in edges:
+            parents[child].append(parent)
+            children[parent].append(child)
+            degree[child] += 1
+            
+        #find the set of nodes without parents
+        for i in range(n):
+            if(i not in parents):
+                level.add(i)
+        
+        
+        #perform bfs
+        while(level):
+            newLevel = set()
+            for node in level:
+                
+                #group all its parent's ancestors to node_ancestors
+                node_ancestors = set()
+                for parent in parents[node]:
+                    node_ancestors |= ancestors[parent]
+                
+                #need to include itself for its children to reference
+                node_ancestors.add(node)
+                
+                #set the node's ancestors 
+                ancestors[node] = node_ancestors
+                
+                #update its child in-degree
+                for child in children[node]:
+                    degree[child] -= 1
+                    
+                    #if the child's parents have been visited, add it to next level
+                    if(degree[child] == 0):
+                        newLevel.add(child)
+            level = newLevel
+                
+        
+        ans = []
+        
+        #put all ancestors to the final answer list
+        for i in range(n):
+            s = res[i]
+            
+            #need to remove itself 
+            s.remove(i)
+            l = list(s)
+            l.sort()
+            ans.append(l)
+            
+        return ans
+```
+
