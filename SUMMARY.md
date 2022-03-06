@@ -208,3 +208,4 @@
   * [2191 - Sort the Jumbled Numbers (Medium)](solutions/2100-2199/2191-sort-the-jumbled-numbers-medium.md)
   * [2192 - All Ancestors of a Node in a Directed Acyclic Graph (Medium)](solutions/2100-2199/2192-all-ancestors-of-a-node-in-a-directed-acyclic-graph-medium.md)
   * [2193 - Minimum Number of Moves to Make Palindrome (Hard)](solutions/2100-2199/2193-minimum-number-of-moves-to-make-palindrome-hard.md)
+  * [2194 - Cells in a Range on an Excel Sheet (Easy)](solutions/2100-2199/2194-cells-in-a-range-on-an-excel-sheet-easy.md)
