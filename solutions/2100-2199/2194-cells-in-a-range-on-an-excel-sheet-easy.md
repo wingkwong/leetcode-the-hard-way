@@ -1,14 +1,12 @@
 ---
 description: >-
-  Author: @TBC |
+  Author: @wingkwong |
   https://leetcode.com/problems/cells-in-a-range-on-an-excel-sheet/
 ---
 
 # 2194 - Cells in a Range on an Excel Sheet (Easy)
 
 ## Problem Statement
-
-
 
 A cell `(r, c)` of an excel sheet is represented as a string `"<col><row>"` where:
 
@@ -55,4 +53,24 @@ The red arrow denotes the order in which the cells should be presented.
 * `'1' <= s[1] <= s[4] <= '9'`
 * `s` consists of uppercase English letters, digits and `':'`.
 
-## Approach 1: TBC
+## Approach 1: Loops
+
+Iterate each letter from $$s[0]$$ to $$s[3]$$ and iterate each number from $$s[1]$$ to $$s[4]$$ to build the answer.
+
+```cpp
+class Solution {
+public:
+    vector<string> cellsInRange(string s) {
+        vector<string> ans;
+        // iterate each letter
+        for (char x = s[0]; x <= s[3]; x++) {
+            // iterate each number
+            for (int y = s[1] - '0'; y <= s[4] - '0'; y++) {
+                // build the answer
+                ans.push_back(x + to_string(y));
+            }
+        }
+        return ans;
+    }
+};
+```
