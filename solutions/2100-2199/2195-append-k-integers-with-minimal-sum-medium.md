@@ -100,3 +100,31 @@ public:
     }
 };
 ```
+
+From above solution, we can see that we use the same formula on different cases based on $$need$$. In fact, we can combine different cases into one by tuning $$need$$.&#x20;
+
+```cpp
+class Solution {
+public:
+    long long minimalKSum(vector<int>& nums, int k) {
+        // add the large value at the end
+        nums.push_back(INT_MAX);
+        // sort the input
+        sort(nums.begin(), nums.end());
+        long long ans = 0, prev = 0;
+        for (auto x : nums) {
+            // if we have appeneded k numbers, then skip the rest of the numbers
+            if (k <= 0) break;
+            // combine all cases into one
+            long long need = max(0, min(x - (int) prev - 1, k));
+            // substract need from k
+            k -= need;
+            // sum = (start + end) * n / 2
+            ans += ((prev + 1) + (prev + need)) * need / 2;
+            // mark prev
+            prev = 1LL * x;
+        }
+        return ans;
+    }
+};
+```
