@@ -209,3 +209,6 @@
   * [2192 - All Ancestors of a Node in a Directed Acyclic Graph (Medium)](solutions/2100-2199/2192-all-ancestors-of-a-node-in-a-directed-acyclic-graph-medium.md)
   * [2193 - Minimum Number of Moves to Make Palindrome (Hard)](solutions/2100-2199/2193-minimum-number-of-moves-to-make-palindrome-hard.md)
   * [2194 - Cells in a Range on an Excel Sheet (Easy)](solutions/2100-2199/2194-cells-in-a-range-on-an-excel-sheet-easy.md)
+  * [2195 - Append K Integers With Minimal Sum (Medium)](solutions/2100-2199/2195-append-k-integers-with-minimal-sum-medium.md)
+  * [2196 - Create Binary Tree From Descriptions (Medium)](solutions/2100-2199/2196-create-binary-tree-from-descriptions-medium.md)
+  * [2197 - Replace Non-Coprime Numbers in Array (Hard)](solutions/2100-2199/2197-replace-non-coprime-numbers-in-array-hard.md)
