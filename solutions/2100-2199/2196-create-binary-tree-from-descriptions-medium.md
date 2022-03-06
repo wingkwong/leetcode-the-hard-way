@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @TBC |
+  Author: @wingkwong |
   https://leetcode.com/problems/create-binary-tree-from-descriptions/
 ---
 
@@ -8,10 +8,10 @@ description: >-
 
 ## Problem Statement
 
-You are given a 2D integer array `descriptions` where `descriptions[i] = [parenti, childi, isLefti]` indicates that `parenti` is the **parent** of `childi` in a **binary** tree of **unique** values. Furthermore,
+You are given a 2D integer array `descriptions` where `descriptions[i] = [parent_i, child_i, isLeft_i]` indicates that `parent_i` is the **parent** of `child_i` in a **binary** tree of **unique** values. Furthermore,
 
-* If `isLefti == 1`, then `childi` is the left child of `parenti`.
-* If `isLefti == 0`, then `childi` is the right child of `parenti`.
+* If `isLeft_i == 1`, then `child_i` is the left child of `parent_i`.
+* If `isLeft_i == 0`, then `child_i` is the right child of `parent_i`.
 
 Construct the binary tree described by `descriptions` and return _its **root**_.
 
@@ -49,4 +49,62 @@ The resulting binary tree is shown in the diagram.
 * `0 <= isLeft_i <= 1`
 * The binary tree described by `descriptions` is valid.
 
-## Approach 1: TBC
+## Approach 1: Hash Map
+
+We use a hash map to store the TreeNode\* for the key $$i$$ and another hash map to store if this TreeNode\* has a parent.
+
+We iterate the input to get the values of parent, child and isLeft. Then we check if the parent and the child are in the hash map. If not, we create a new TreeNode for it and store it in hash map.&#x20;
+
+If $$isLeft$$ is $$1$$, that means the child is the left child of parent. Else, the child is the right child of parent.&#x20;
+
+At the end, we find out the node without parent, return that TreeNode\* because that is the root.
+
+```cpp
+class Solution {
+public:
+    TreeNode* createBinaryTree(vector<vector<int>>& descriptions) {
+        unordered_map<int, TreeNode*> m;
+        unordered_map<TreeNode*, int> hasParent;
+        TreeNode* p = nullptr;
+        TreeNode* c = nullptr;
+        for (auto x : descriptions) {
+            int parent = x[0], child = x[1], isLeft = x[2];
+            // check if TreeNode* for parent is in hash map or not
+            if (m.count(parent)) {
+                // if so, store it in p
+                p = m[parent];
+            } else {
+                // if not, create a new one
+                p = new TreeNode(parent);
+                // and store it in hash map
+                m[parent] = p;
+            }
+            // check if TreeNode* for child is in hash map or not
+            if (m.count(child)) {
+                // if so, store it in c
+                c = m[child];
+            } else {
+                // if not, create a new one
+                c = new TreeNode(child);
+                // and store it in hash map
+                m[child] = c;
+            }
+            // if isLeft is 1, then this child is the left child of this parent
+            if (isLeft) p->left = c;
+            // else this child is the right child of this parent
+            else p->right = c;
+            // mark this child has a parent
+            hasParent[c] = 1;
+        }
+        // search for a TreeNode* without parent
+        for (auto x : m) {
+            // found -> return this TreeNode* as this is the root
+            if (!hasParent.count(x.second)) {
+                return m[x.first];
+            }
+        }
+        // never reach here
+        return nullptr;
+    }
+};
+```
