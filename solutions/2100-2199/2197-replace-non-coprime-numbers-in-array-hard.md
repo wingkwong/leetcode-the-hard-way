@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @TBC |
+  Author: @wingkwong |
   https://leetcode.com/problems/replace-non-coprime-numbers-in-array/
 ---
 
@@ -58,4 +58,29 @@ Note that there are other ways to obtain the same resultant array.
 * `1 <= nums[i] <= 10^5`
 * The test cases are generated such that the values in the final array are **less than or equal** to `108`.
 
-## Approach 1: TBC
+## Approach 1: Simulation
+
+We iterate each number and check if the gcd of this number $$x$$ and the last element $$y$$ of $$ans$$ is non co-prime, i.e. $$gcd(x, y) > 1$$.  If so, replace them with their LCM and keep doing the same process till they are co-prime.
+
+```cpp
+class Solution {
+public:
+    vector<int> replaceNonCoprimes(vector<int>& nums) {
+        int n = nums.size();
+        vector<int> ans;
+        for (int i = 0; i < n; i++) {
+            // check if the last element of ans
+            // and nums[i] are non co-prime
+            while (ans.size() && gcd(ans.back(), nums[i]) > 1) {
+                // replace them with their LCM
+                nums[i] = lcm(ans.back(), nums[i]);
+                // delete the last element
+                ans.pop_back();
+            }
+            // insert nums[i] to ans for the next round
+            ans.push_back(nums[i]);
+        }
+        return ans;
+    }
+};
+```
