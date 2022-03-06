@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @heiheihang, @wingkwong |
+  Author: @heiheihang |
   https://leetcode.com/problems/all-ancestors-of-a-node-in-a-directed-acyclic-graph/
 ---
 
@@ -61,8 +61,6 @@ The above diagram represents the input graph.
 
 ## Approach 1: Topological Sort
 
-_This approach is prepared by @heiheihang._
-
 This question is quite challenging, and there are multiple ways to do it. Topological sort is one of the less direct way, but the logic is as following:
 
 1. Count the number of parents (In-Degree) of each node
@@ -70,9 +68,7 @@ This question is quite challenging, and there are multiple ways to do it. Topolo
 3. For each child, remove one In-Degree of it, if it is zero, add it to the queue
 4. When looking at a node, perform union to the set of ancestors of each of its parent
 
-We observe that we can be sure that the ancestors of a node are all found until all of its parents are visited. This is the reason why we only visit a node when its In-Degree (number of unvisited parent) is 0.
-
-### Python 3
+We observe that we can be sure that the ancestors of a node are all found until all of its parents are visited. This is the reason why we only visit a node when its In-Degree (number of unvisited parent) is 0.&#x20;
 
 ```python
 def getAncestors(self, n: int, edges: List[List[int]]) -> List[List[int]]:
@@ -142,57 +138,3 @@ def getAncestors(self, n: int, edges: List[List[int]]) -> List[List[int]]:
         return ans
 ```
 
-## Approach 2: DFS
-
-_This approach is prepared by @wingkwong._
-
-We can start from each node $$u$$ and perform DFS to find out all visited nodes. The ancestors of $$u$$would be those visited nodes excluding $$u$$. Since the searching direction is opposite, we change it from $$u$$ -> $$v$$ to $$v$$ -> $$u$$. In Example 1, if $$u$$ is $$6$$, then $$6$$-> $$3$$ -> $$0$$, $$6$$ -> $$3$$-> $$1$$ and $$6$$-> $$4$$ -> $$2$$, so the visited nodes excluding itself are $$[0, 1, 2, 3,4]$$.&#x20;
-
-### C++
-
-```cpp
-class Solution {
-public:
-    vector<vector<int>> g;
-    vector<int> vis;
-    void dfs(int u) {
-        // mark it visited
-        vis[u] = 1;
-        // from u, check the next node
-        // e.g. node 6 can go to node 3 and node 4
-        for (auto v : g[u]) {
-            // only perform dfs if node is not visited
-            if (!vis[v]) {
-                dfs(v);
-            }
-        }
-    }
-    vector<vector<int>> getAncestors(int n, vector<vector<int>>& edges) {
-        g.resize(n);
-        vis.resize(n);
-        // from x[1] to x[0]
-        for (auto x : edges) g[x[1]].push_back(x[0]);
-        vector<vector<int>> ans;
-        for (int i = 0; i < n; i++) {
-            // tmp array to hold answer for node i
-            vector<int> tmp;
-            // vis is used to check if node i is visited or not
-            // re-init for each node
-            vis = vector<int>(n, 0);
-            // dfs - start from node i
-            dfs(i);
-            // right here all nodes from node i have been visited
-            // iterate each node
-            for (int j = 0; j < n; j++) {
-                // ancestors = those visited nodes excluding itself
-                if (!vis[j] || i == j) continue;
-                // node j is one of the ancestors
-                tmp.push_back(j);
-            }
-            // push it to ans
-            ans.push_back(tmp);
-        }
-        return ans;
-    }
-};
-```
