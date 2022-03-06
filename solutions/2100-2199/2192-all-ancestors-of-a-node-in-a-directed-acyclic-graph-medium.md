@@ -100,7 +100,6 @@ def getAncestors(self, n: int, edges: List[List[int]]) -> List[List[int]]:
             if(i not in parents):
                 level.add(i)
         
-        
         #perform bfs
         while(level):
             newLevel = set()
