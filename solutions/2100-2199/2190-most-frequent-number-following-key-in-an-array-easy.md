@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @TBC |
+  Author: @wingkwong |
   https://leetcode.com/problems/most-frequent-number-following-key-in-an-array/
 ---
 
@@ -45,4 +45,54 @@ target = 2 has the maximum number of occurrences following an occurrence of key,
 * `1 <= nums[i] <= 1000`
 * The test cases will be generated such that the answer is unique.
 
-## Approach 1: TBC
+## Approach 1: Counting
+
+We iterate the input to find the possible $$target$$ and store its occurrence. Return the maximum one.
+
+```cpp
+class Solution {
+public:
+    int mostFrequent(vector<int>& nums, int key) {
+        int n = nums.size(), ans = 0;
+        // use hash map to store the occurrence of a possible target
+        unordered_map<int, int> m;
+        for (int i = 1; i < n; i++) {
+            // the previous one is key
+            // nums[i] is target
+            if (nums[i - 1] == key) {
+                // count occurrence
+                m[nums[i]]++;
+            }
+        }
+        int mx = 0;
+        for (auto x : m) {
+            // check if it is greater than the current max count
+            if (x.second > mx) {
+                // store the number
+                ans = x.first;
+                // update the max count
+                mx = x.second;
+            }
+        }
+        return ans;
+    }
+};
+```
+
+Once we get the idea, we can further optimise the above solution a bit. We only set answer if the current number is $$target$$ and its occurrence is greater than the current max count.
+
+```cpp
+class Solution {
+public:
+    int mostFrequent(vector<int>& nums, int key) {
+        int n = nums.size(), ans = 0;
+        unordered_map<int, int> m;
+        for (int i = 1; i < n; i++) {
+            if (nums[i - 1] == key && ++m[nums[i]] > m[ans]) {
+                ans = nums[i];
+            }
+        }
+        return ans;
+    }
+};
+```
