@@ -1,5 +1,5 @@
 ---
-description: 'Author: @TBC | https://leetcode.com/problems/sort-the-jumbled-numbers/'
+description: 'Author: @wingkwong | https://leetcode.com/problems/sort-the-jumbled-numbers/'
 ---
 
 # 2191 - Sort the Jumbled Numbers (Medium)
@@ -51,4 +51,30 @@ Explanation: 789 maps to 789, 456 maps to 456, and 123 maps to 123. Thus, the so
 * `1 <= nums.length <= 3 * 10^4`
 * `0 <= nums[i] < 10^9`
 
-## Approach 1: TBC
+## Approach 1: Sorting
+
+For each number, we generate a mapped value. For example, $$991$$ -> $$669$$. We store it in a pair where the key is the original value and the value is the mapped value. Then we sort by the value so  that we could keep the same relative order if the values are same.
+
+```cpp
+class Solution {
+public:
+    vector<int> sortJumbled(vector<int>& mapping, vector<int>& nums) {
+        vector<pair<int, int>> a;
+        for (auto x : nums) {
+            string s = to_string(x), t;
+            // generate a mapped value
+            for (auto c : s) t += mapping[c - '0'] + '0';
+            // {original value, mapped value}
+            a.push_back({x, stoi(t)});
+        }
+        // sort by value
+        sort(a.begin(), a.end(), [&](const pair<int, int> a, const pair<int, int> b) {
+           return a.second < b.second;
+        });
+        vector<int> ans;
+        // print the original value based on new order
+        for (auto x : a) ans.push_back(x.first);
+        return ans;
+    }
+};
+```
