@@ -21,9 +21,7 @@ This gitbook is synchronised with [leetcode-the-hard-way](https://github.com/win
 
 ### Contributing
 
-Contributions are welcome. If you want to add your solutions, explanations or tutorials, please feel free to create a PR on Github. A good starting point is to search `@TBC` in this repository.
-
-If a page does not exist, please create an issue stating which page you want to add. I'll create the page for you.
+See [CONTRIBUTING.md](https://github.com/wingkwong/leetcode-the-hard-way/blob/main/CONTRIBUTING.md).
 
 ### Outro
 
