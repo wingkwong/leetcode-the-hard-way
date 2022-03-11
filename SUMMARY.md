@@ -56,6 +56,7 @@
   * [0040 - Combination Sum II (Medium)](solutions/0000-0099/0040-combination-sum-ii-medium.md)
   * [0046 - Permutations (Medium)](solutions/0000-0099/0046-permutations-medium.md)
   * [0050 - Pow(x, n) (Medium)](solutions/0000-0099/0050-pow-x-n-medium.md)
+  * [0061 - Rotate List (Medium)](solutions/0000-0099/0061-rotate-list-medium.md)
   * [0072 - Edit Distance (Hard)](solutions/0000-0099/0072-edit-distance-hard.md)
   * [0078 - Subsets (Medium)](solutions/0000-0099/0078-subsets-medium.md)
 * [0100 - 0199](solutions/0100-0199/README.md)
