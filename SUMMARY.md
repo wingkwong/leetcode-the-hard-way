@@ -89,6 +89,7 @@
   * [0338 - Counting Bits (Easy)](solutions/0300-0399/0338-counting-bits-easy.md)
   * [0344 - Reverse String (Easy)](solutions/0300-0399/0344-reverse-string-easy.md)
   * [0346 - Moving Average from Data Stream (Easy)](solutions/0300-0399/0346-moving-average-from-data-stream-easy.md)
+  * [0365 - Water and Jug Problem (Medium)](solutions/0300-0399/0365-water-and-jug-problem-medium.md)
   * [0389 - Find the Difference (Easy)](solutions/0300-0399/0389-find-the-difference-easy.md)
   * [0392 - Is Subsequence (Easy)](solutions/0300-0399/0392-is-subsequence-easy.md)
 * [0400 - 0499](solutions/0400-0499/README.md)
