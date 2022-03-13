@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @TBC |
+  Author: @wingkwong |
   https://leetcode.com/problems/count-artifacts-that-can-be-extracted/
 ---
 
@@ -62,4 +62,29 @@ Explanation: Both the red and blue artifacts have all parts uncovered (labeled w
 * The number of cells covered by an artifact is **at most** `4`.
 * The entries of `dig` are unique.
 
-## Approach 1: TBC
+## Approach 1: Loops
+
+Check if each cell from $$(r1_i, c1_i)$$ to $$(r2_i, c2_i)$$ in $$artifacts[i]$$ are all dug or not. If so, increase $$ans$$ by $$1$$.&#x20;
+
+```cpp
+class Solution {
+public:
+    int digArtifacts(int n, vector<vector<int>>& art, vector<vector<int>>& dig) {
+        int ans = 0;
+        vector<vector<int>> isDug(n, vector<int>(n));
+        for (auto x : dig) isDug[x[0]][x[1]] = 1;
+        for (auto x : art) {
+            int ok = 1;
+            for (int i = x[0]; i <= x[2] && ok; i++) {
+                for (int j = x[1]; j <= x[3] && ok; j++) {
+                    if (!isDug[i][j]) {
+                        ok = 0;
+                    }
+                }
+            }
+            ans += ok;
+        }
+        return ans;
+    }
+};
+```
