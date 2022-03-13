@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @TBC |
+  Author: @wingkwong |
   https://leetcode.com/problems/maximize-the-topmost-element-after-k-moves/
 ---
 
@@ -50,4 +50,23 @@ Since it is not possible to obtain a non-empty pile after one move, we return -1
 * `1 <= nums.length <= 10^5`
 * `0 <= nums[i], k <= 10^9`
 
-## Approach 1: TBC
+## Approach 1: Check All Cases
+
+If $$k > n$$, then we can remove all elements and put the maximum element back at the end. However, this cannot be done when $$k - n$$ is an even number when $$n$$ is $$1$$. If $$k > 1$$, we can check the maximum value for the top $$k - 1$$ elements so that we put the maximum value in the last move. The last case is we only remove elements and not putting any of them back, i.e. check $$nums[k]$$ is the maximum.&#x20;
+
+```cpp
+class Solution {
+public:
+    int maximumTop(vector<int>& nums, int k) {
+        int n = nums.size(), mx = -1;
+        if (k > n) {
+            auto p = max_element(nums.begin(), nums.end());
+            if (p != nums.end() && (k - n) % 2 == 0 && n == 1) return -1;
+            return *p;
+        }
+        if (k > 1) mx = *max_element(nums.begin(), nums.begin() + k - 1);
+        if (k < n) mx = max(mx, nums[k]);
+        return mx;
+    }
+};
+```
