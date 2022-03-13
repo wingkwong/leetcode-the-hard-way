@@ -217,3 +217,7 @@
   * [2195 - Append K Integers With Minimal Sum (Medium)](solutions/2100-2199/2195-append-k-integers-with-minimal-sum-medium.md)
   * [2196 - Create Binary Tree From Descriptions (Medium)](solutions/2100-2199/2196-create-binary-tree-from-descriptions-medium.md)
   * [2197 - Replace Non-Coprime Numbers in Array (Hard)](solutions/2100-2199/2197-replace-non-coprime-numbers-in-array-hard.md)
+  * [2200 - Find All K-Distant Indices in an Array (Easy)](solutions/2100-2199/2200-find-all-k-distant-indices-in-an-array-easy.md)
+  * [2201 - Count Artifacts That Can Be Extracted (Medium)](solutions/2100-2199/2201-count-artifacts-that-can-be-extracted-medium.md)
+  * [2202 - Maximize the Topmost Element After K Moves (Medium)](solutions/2100-2199/2202-maximize-the-topmost-element-after-k-moves-medium.md)
+  * [2203 - Minimum Weighted Subgraph With the Required Paths (Hard)](solutions/2100-2199/2203-minimum-weighted-subgraph-with-the-required-paths-hard.md)
