@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @TBC |
+  Author: @wingkwong |
   https://leetcode.com/problems/find-all-k-distant-indices-in-an-array/
 ---
 
@@ -44,4 +44,25 @@ Hence, we return [0,1,2,3,4].
 * `key` is an integer from the array `nums`.
 * `1 <= k <= nums.length`
 
-## Approach 1: TBC
+## Approach 1: Brute Force
+
+Just do what it says.
+
+```cpp
+class Solution {
+public:
+    vector<int> findKDistantIndices(vector<int>& nums, int key, int k) {
+        vector<int> ans;
+        int n = nums.size();
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (abs(i - j) <= k && nums[j] == key) {
+                    ans.push_back(i);
+                    break;
+                }
+            }
+        }
+        return ans;
+    }
+};
+```
