@@ -116,6 +116,7 @@
   * [0703 - Kth Largest Element in a Stream (Easy)](solutions/0700-0799/0703-kth-largest-element-in-a-stream-easy.md)
   * [0733 - Flood Fill (Easy)](solutions/0700-0799/0733-flood-fill-easy.md)
   * [0740 - Delete and Earn (Medium)](solutions/0700-0799/0740-delete-and-earn-medium.md)
+  * [0743 - Network Delay Time (Medium)](solutions/0700-0799/0743-network-delay-time-medium.md)
   * [0799 - Champagne Tower (Medium)](solutions/0700-0799/0799-champagne-tower-medium.md)
 * [0800 - 0899](solutions/0800-0899/README.md)
   * [0829 - Consecutive Numbers Sum (Hard)](solutions/0800-0899/0829-consecutive-numbers-sum-hard.md)
