@@ -128,6 +128,7 @@
   * [0973 - K Closest Points to Origin (Medium)](solutions/0900-0999/0973-k-closest-points-to-origin-medium.md)
   * [0976 - Largest Perimeter Triangle (Easy)](solutions/0900-0999/0976-largest-perimeter-triangle-easy.md)
   * [0941 - Valid Mountain Array (Easy)](solutions/0900-0999/0941-valid-mountain-array-easy.md)
+  * [0952 - Largest Component Size by Common Factor (Hard)](solutions/0900-0999/0952-largest-component-size-by-common-factor-hard.md)
 * [1000 - 1999](solutions/1000-1999/README.md)
   * [1004 - Max Consecutive Ones III (Medium)](solutions/1000-1999/1004-max-consecutive-ones-iii-medium.md)
   * [1066 - Campus Bikes II (Medium)](solutions/1000-1999/1066-campus-bikes-ii-medium.md)
