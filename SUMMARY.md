@@ -226,3 +226,7 @@
   * [2201 - Count Artifacts That Can Be Extracted (Medium)](solutions/2100-2199/2201-count-artifacts-that-can-be-extracted-medium.md)
   * [2202 - Maximize the Topmost Element After K Moves (Medium)](solutions/2100-2199/2202-maximize-the-topmost-element-after-k-moves-medium.md)
   * [2203 - Minimum Weighted Subgraph With the Required Paths (Hard)](solutions/2100-2199/2203-minimum-weighted-subgraph-with-the-required-paths-hard.md)
+  * [2206 - Divide Array Into Equal Pairs (Easy)](solutions/2100-2199/2206-divide-array-into-equal-pairs-easy.md)
+  * [2207 - Maximize Number of Subsequences in a String (Medium)](solutions/2100-2199/2207-maximize-number-of-subsequences-in-a-string-medium.md)
+  * [2208 - Minimum Operations to Halve Array Sum (Medium)](solutions/2100-2199/2208-minimum-operations-to-halve-array-sum-medium.md)
+  * [2209 - Minimum White Tiles After Covering With Carpets (Hard)](solutions/2100-2199/2209-minimum-white-tiles-after-covering-with-carpets-hard.md)
