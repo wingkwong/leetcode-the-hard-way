@@ -72,3 +72,28 @@ public:
     }
 };
 ```
+
+We can further optimize a bit. Since we only care about the frequency of $$pattern[0]$$, we can use a variable to store the count instead of using a hash map.
+
+```cpp
+class Solution {
+public:
+    long long maximumSubsequenceCount(string text, string pattern) {
+        char f = pattern[0], s = pattern[1];
+        auto check = [&](string text) -> long long {
+            long long res = 0, cnt = 0;
+            for (auto x : text) {
+                if (x == s) res += cnt;
+                if (x == f) cnt++;
+            }
+            return res;
+        };
+        // case 1: add pattern[0] at the beginning
+        long long x = check(f + text);
+        // case 2: add pattern[1] at the end
+        long long y = check(text + s);
+        // take the max one
+        return max(x, y);
+    }
+};
+```
