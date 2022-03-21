@@ -1,18 +1,16 @@
 ---
-description: >-
-  Author: @tostream |
-  https://leetcode.com/problems/palindrome-number/
+description: 'Author: @tostream | https://leetcode.com/problems/palindrome-number/'
 ---
 
 # 0009 - Palindrome Number (Easy)
 
 ## Problem Statement
 
-Given an integer x, return true if x is palindrome integer.
+Given an integer `x`, return `true` if `x` is palindrome integer.
 
-An integer is a palindrome when it reads the same backward as forward.
+An integer is a **palindrome** when it reads the same backward as forward.
 
-* For example, 121 is a palindrome while 123 is not.
+* For example, `121` is a palindrome while `123` is not.
 
 **Example 1:**
 
@@ -30,7 +28,7 @@ Output: false
 Explanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.
 ```
 
-**Example 2:**
+**Example 3:**
 
 ```
 Input: x = 10
@@ -42,9 +40,9 @@ Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
 
 * `-2^31 <= x <= 2^31 - 1`
 
-## Approach 1: convert to string
+## Approach 1: Convert to string
 
-convert the integer value to string format and compare it one by one
+Convert the integer value to string format and compare it one by one.
 
 ### Python
 
@@ -54,12 +52,11 @@ class Solution:
         #str: convert to string
         #[::-1]: read from the end
         return str(x) == str(x)[::-1]
-
 ```
 
-## Approach 2: calculation
+## Approach 2: Calculation
 
-calculate the reversed number
+Calculate the reversed number.
 
 ### Python
 
@@ -68,8 +65,8 @@ class Solution:
     def isPalindrome(self, x: int) -> bool:
         in_num = x
         reverser = 0
-        while in_num>0:
-            reverser = reverser * 10 + checker%10
+        while in_num > 0:
+            reverser = reverser * 10 + checker % 10
             in_num = in_num//10
         return reverser == x
 ```
