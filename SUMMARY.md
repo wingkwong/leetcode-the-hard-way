@@ -47,6 +47,7 @@
   * [0001 - Two Sum (Easy)](solutions/0000-0099/0001-two-sum.md)
   * [0003 - Longest Substring Without Repeating Characters (Medium)](solutions/0000-0099/0003-longest-substring-without-repeating-characters-medium.md)
   * [0005 - Longest Palindromic Substring (Medium)](solutions/0000-0099/0005-longest-palindromic-substring-medium.md)
+  * [0009 - Palindrome Number (Easy)](solutions/0000-0099/0009-palindrome-number-easy.md)
   * [0021 - Merge Two Sorted Lists (Easy)](solutions/0000-0099/0021-merge-two-sorted-lists-easy.md)
   * [0023 - Merge k Sorted Lists (Hard)](solutions/0000-0099/0023-merge-k-sorted-lists-hard.md)
   * [0024 - Swap Nodes in Pairs (Medium)](solutions/0000-0099/0024-swap-nodes-in-pairs-medium.md)
