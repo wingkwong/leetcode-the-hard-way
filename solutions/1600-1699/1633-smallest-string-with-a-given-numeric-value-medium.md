@@ -66,3 +66,17 @@ public:
     }
 };
 ```
+
+## Approach 2: Calculate each segment
+
+```cpp
+class Solution {
+public:
+    string getSmallestString(int n, int k) {
+        int left = ((k - n) + 25 - 1) / 25;
+        return string(n - left, 'a') + 
+               char(k - (n - left) - (left - 1) * 26 + 'a' - 1) + 
+               string(left - 1, 'z');
+    }
+};
+```
