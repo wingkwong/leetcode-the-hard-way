@@ -40,7 +40,7 @@ Output: "aaszz"
 
 ## Approach 1: Build from the right
 
-To obtain lexicographically smallest string, we should put $$a$$ from the left and $$z$$ from the right if possible and put what's left in the middle. Therefore, we initialise the answer with all $$a$$s. Starting from the right, we replace the character by $$z$$ if possible, else we put the only possible character there.&#x20;
+To obtain lexicographically smallest string, we should put $$a$$ from the left and $$z$$ from the right if possible and put what's left in the middle. Therefore, we initialise the answer with all $$a$$s. Starting from the right, the best case is to make it to $$z$$ (i.e. $$s[i] + 25$$). If we cannot do it, then we can only make it to the max one (i.e. $$s[i] + k$$).
 
 ```cpp
 class Solution {
