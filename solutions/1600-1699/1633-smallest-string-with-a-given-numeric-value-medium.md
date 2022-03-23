@@ -67,16 +67,26 @@ public:
 };
 ```
 
-## Approach 2: Calculate each segment
+## Approach 2: Three segments
+
+The answer can be potentially constructed by three segments. The first segment contains only $$a$$. The last segment contains only $$z$$. The middle segment contains a character. This approach is to calculate each character in each segment given $$n$$ and $$k$$.
+
+First we calculate the number of characters that are not $$a$$, i.e. the total number of characters in the second and the third segment. Let's call it $$nonA$$. Then we know that there would be $$n - nonA$$ a in the first segment and $$nonA - 1$$ z in the third segment (minus one because we need one for the second segment). So how to get $$nonA$$? We can use above condition to find out $$nonA$$. That is $$(n - nonA) * 1 + nonA * 26 >= k$$ which gives $$nonA >= (k - n) / 25$$.
+
+For the middle segment, how many $$k$$ left we can use? We've used $$(n - nonA) * 1$$ for the first segment and $$(nonA-1)* 26$$ for the last segment. The index of the character in the middle segment would be $$k - (n - nonA) - (nonA - 1) * 26$$.
 
 ```cpp
 class Solution {
 public:
     string getSmallestString(int n, int k) {
-        int left = ((k - n) + 25 - 1) / 25;
-        return string(n - left, 'a') + 
-               char(k - (n - left) - (left - 1) * 26 + 'a' - 1) + 
-               string(left - 1, 'z');
+        // total number of characters in 2nd & 3rd segment
+        int nonA = ((k - n) + 25 - 1) / 25;
+        // 1st segment: there is (n - nonA) 'a's
+        // 2nd segment: one character with index k - (n - nonA) - (nonA - 1) * 26
+        // 3rd segemnt: there is (nonA - 1) 'z's
+        return string(n - nonA, 'a') + 
+               char(k - (n - nonA) - (nonA - 1) * 26 + 'a' - 1) + 
+               string(nonA - 1, 'z');
     }
 };
 ```
