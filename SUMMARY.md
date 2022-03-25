@@ -23,7 +23,7 @@
   * [Topological Sorting](tutorials/graph-theory/topological-sorting.md)
   * [Binary Tree](tutorials/graph-theory/binary-tree.md)
   * [Binary Search Tree](tutorials/graph-theory/binary-search-tree.md)
-  * [Dijkstra's Algorithm](tutorials/graph-theory/dijkstras-algorithm.md)
+  * [Dijkstra's Algorithm](tutorials/graph-theory/dijkstra.md)
   * [Bellman Form Algorithm](tutorials/graph-theory/bellman-form-algorithm.md)
   * [Kruskal's Algorithm](tutorials/graph-theory/kruskals-algorithm.md)
   * [Prim's Algorithm](tutorials/graph-theory/prims-algorithm.md)

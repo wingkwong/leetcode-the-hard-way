@@ -99,3 +99,57 @@ public:
     }
 };
 ```
+
+## Approach 2: Dijkstra's Algorithm
+
+We can perform Dijkstra's algorithm on each node to calculate the distances between that node and other nodes. Iterate them and check if the distance is at most $$distanceThreshold$$. If so, update the minimum counter and the answer.
+
+```cpp
+class Solution {
+public:
+    template<typename T_pair, typename T_vector>
+        void dijkstra(T_pair &g, T_vector &dist, int start) {
+          priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
+          dist[start] = 0;
+          pq.push({start, 0});
+          while (!pq.empty()) {
+            auto [u_node, u_cost] = pq.top(); pq.pop();
+            if (u_cost > dist[u_node]) continue;
+            for (auto [v_node, v_cost] : g[u_node]) {
+              if (dist[v_node] > dist[u_node] + v_cost) {
+                dist[v_node] = dist[u_node] + v_cost;
+                pq.push({v_node, dist[v_node]});
+              }
+            }
+          }
+        }
+
+    int findTheCity(int n, vector<vector<int>>& edges, int distanceThreshold) {
+        int ans = 0, mi_cnt = 1e9;
+        vector<vector<pair<int, int>>> g(n);
+        for (auto x : edges) {
+            // x[0] -> x[1] with cost x[2]
+            g[x[0]].push_back({x[1], x[2]});
+            // x[1] -> x[0] with cost x[2]
+            g[x[1]].push_back({x[0], x[2]});
+        }
+        // iterate each node
+        for (int i = 0; i < n; i++) {
+            // perform dijkstra
+            vector<int> dist(n, 1e9);
+            dijkstra(g, dist, i);
+            int cnt = 0;
+            // iterate each node
+            for (int j = 0; j < n; j++) {
+                // bypass the same node
+                if (i == j) continue;
+                // if reachable, count if the distance is at most distanceThreshold
+                cnt += dist[j] <= distanceThreshold;
+            }
+            // update mi_cnt and ans
+            if (cnt <= mi_cnt) mi_cnt = cnt, ans = i;
+        }
+        return ans;
+    }
+};
+```
