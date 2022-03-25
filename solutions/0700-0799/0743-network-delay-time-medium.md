@@ -79,3 +79,33 @@ public:
     }
 };
 ```
+
+## Approach 2: Bellman Ford
+
+```cpp
+class Solution {
+public:
+    template<typename T_a3, typename T_vector>
+    void bellman_ford(T_a3 &g, T_vector &dist, int src, int mx_edges) {
+        // dist[i] : dist to reach node j using at most i edges from src
+        dist[src] = 0;
+        for (int i = 0; i <= mx_edges; i++) {
+            T_vector ndist = dist;
+            for (auto x : g) {
+                auto [from, to, cost] = x;
+                ndist[to] = min(ndist[to], dist[from] + cost);
+            }
+            dist = ndist;
+        }
+    }
+    
+    int networkDelayTime(vector<vector<int>>& times, int n, int k) {
+        vector<array<int, 3>> g;
+        vector<int> dist(n, 1e9);
+        for (auto x : times) g.push_back({x[0] - 1, x[1] - 1, x[2]});
+        bellman_ford(g, dist, k - 1, n);
+        int mx = *max_element(dist.begin(), dist.end());
+        return mx == 1e9 ? -1 : mx;
+    }
+};
+```
