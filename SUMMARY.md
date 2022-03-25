@@ -134,6 +134,7 @@
   * [0991 - Broken Calculator (Medium)](solutions/0900-0999/0991-broken-calculator-medium.md)
 * [1000 - 1999](solutions/1000-1999/README.md)
   * [1004 - Max Consecutive Ones III (Medium)](solutions/1000-1999/1004-max-consecutive-ones-iii-medium.md)
+  * [1029 - Two City Scheduling (Medium)](solutions/1000-1999/1029-two-city-scheduling-medium.md)
   * [1066 - Campus Bikes II (Medium)](solutions/1000-1999/1066-campus-bikes-ii-medium.md)
 * [1100 - 1199](solutions/1100-1199/README.md)
   * [1125 - Smallest Sufficient Team (Hard)](solutions/1100-1199/1125-smallest-sufficient-team-hard.md)
