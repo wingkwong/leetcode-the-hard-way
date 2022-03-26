@@ -114,6 +114,7 @@
   * [0662 - Maximum Width of Binary Tree (Medium)](solutions/0600-0699/0662-maximum-width-of-binary-tree-medium.md)
 * [0700 - 0799](solutions/0700-0799/README.md)
   * [0703 - Kth Largest Element in a Stream (Easy)](solutions/0700-0799/0703-kth-largest-element-in-a-stream-easy.md)
+  * [0704 - Binary Search (Easy)](solutions/0700-0799/0704-binary-search-easy.md)
   * [0733 - Flood Fill (Easy)](solutions/0700-0799/0733-flood-fill-easy.md)
   * [0740 - Delete and Earn (Medium)](solutions/0700-0799/0740-delete-and-earn-medium.md)
   * [0743 - Network Delay Time (Medium)](solutions/0700-0799/0743-network-delay-time-medium.md)
