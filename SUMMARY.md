@@ -177,6 +177,8 @@
 * [1900 - 1999](solutions/1900-1999/README.md)
   * [1929 - Concatenation of Array (Easy)](solutions/1900-1999/1929-concatenation-of-array-easy.md)
   * [1980 - Find Unique Binary String (Medium)](solutions/1900-1999/1980-find-unique-binary-string-medium.md)
+* [2000 - 2099](solutions/2000-2099/README.md)
+  * [2017 - Grid Game (Medium)](solutions/2000-2099/2017-grid-game-medium.md)
 * [2100 - 2199](solutions/2100-2199/README.md)
   * [2108 -Find First Palindromic String in the Array (Easy)](solutions/2100-2199/2108-find-first-palindromic-string-in-the-array-easy.md)
   * [2109 - Adding Spaces to a String (Medium)](solutions/2100-2199/2109-adding-spaces-to-a-string-medium.md)
