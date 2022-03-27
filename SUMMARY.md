@@ -240,3 +240,7 @@
   * [2207 - Maximize Number of Subsequences in a String (Medium)](solutions/2100-2199/2207-maximize-number-of-subsequences-in-a-string-medium.md)
   * [2208 - Minimum Operations to Halve Array Sum (Medium)](solutions/2100-2199/2208-minimum-operations-to-halve-array-sum-medium.md)
   * [2209 - Minimum White Tiles After Covering With Carpets (Hard)](solutions/2100-2199/2209-minimum-white-tiles-after-covering-with-carpets-hard.md)
+  * [2215 - Find the Difference of Two Arrays (Easy)](solutions/2100-2199/2215-find-the-difference-of-two-arrays-easy.md)
+  * [2216 - Minimum Deletions to Make Array Beautiful (Medium)](solutions/2100-2199/2216-minimum-deletions-to-make-array-beautiful-medium.md)
+  * [2217 - Find Palindrome With Fixed Length (Medium)](solutions/2100-2199/2217-find-palindrome-with-fixed-length-medium.md)
+  * [2218 - Maximum Value of K Coins From Piles (Hard)](solutions/2100-2199/2218-maximum-value-of-k-coins-from-piles-hard.md)
