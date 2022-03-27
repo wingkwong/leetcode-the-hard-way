@@ -121,10 +121,47 @@ public:
                 // accumulate(mat[i].begin(), mat[i].end(), 0),
                 i
             });
-        }
-        partial_sort(a.begin(), a.begin() + k, a.end());
+        }        
+        sort(a.begin(), a.end());
+        // or use partial_sort
+        // partial_sort(a.begin(), a.begin() + k, a.end());
         for (int i = 0; i < k; i++) {
             ans.push_back(a[i].second);
+        }
+        return ans;
+    }
+};
+```
+
+## Approach 3: Binary Search + Priority Queue
+
+Instead of using a vector to store and sort, we use priority queue to handle the order.
+
+```cpp
+class Solution {
+public:
+    int search(vector<int>& nums, int target) {
+        int n = nums.size(), l = 0, r = n;
+        while (l < r) {
+            int m = l + (r - l) / 2;
+            if (nums[m] == target) l = m + 1;
+            else r = m;
+        }
+        return l;
+    }
+
+    vector<int> kWeakestRows(vector<vector<int>>& mat, int k) {
+        vector<int> ans;
+        priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
+        for (int i = 0; i < mat.size(); i++) {
+            pq.push({
+                search(mat[i], 1),
+                i
+            });
+        }
+        for (int i = 0; i < k; i++) {
+            ans.push_back(pq.top().second);
+            pq.pop();
         }
         return ans;
     }
