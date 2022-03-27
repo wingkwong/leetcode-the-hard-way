@@ -152,6 +152,7 @@
   * [1337 - The K Weakest Rows in a Matrix (Easy)](solutions/1300-1399/1337-the-k-weakest-rows-in-a-matrix-easy.md)
   * [1349 - Maximum Students Taking Exam (Hard)](solutions/1300-1399/1349-maximum-students-taking-exam-hard.md)
   * [1359 - Count All Valid Pickup and Delivery Options (Hard)](solutions/1300-1399/1359-count-all-valid-pickup-and-delivery-options-hard.md)
+  * [1371 - Find the Longest Substring Containing Vowels in Even Counts (Medium)](solutions/1300-1399/1371-find-the-longest-substring-containing-vowels-in-even-counts-medium.md)
 * [1400 - 1499](solutions/1400-1499/README.md)
   * [1431 - Kids With the Greatest Number of Candies (Easy)](solutions/1400-1499/1431-kids-with-the-greatest-number-of-candies-easy.md)
   * [1475 - Final Prices With a Special Discount in a Shop (Easy)](solutions/1400-1499/1475-final-prices-with-a-special-discount-in-a-shop-easy.md)
