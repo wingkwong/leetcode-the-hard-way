@@ -102,6 +102,7 @@
   * [0438 - Find All Anagrams in a String (Medium)](solutions/0400-0499/0438-find-all-anagrams-in-a-string-medium.md)
   * [0452 - Minimum Number of Arrows to Burst Balloons (Medium)](solutions/0400-0499/0452-minimum-number-of-arrows-to-burst-balloons-medium.md)
   * [0454 - 4Sum II (Medium)](solutions/0400-0499/0454-4sum-ii-medium.md)
+  * [0465 - Optimal Account Balancing (Hard)](solutions/0400-0499/0465-optimal-account-balancing-hard.md)
   * [0469 - Next Greater Element I (Easy)](solutions/0400-0499/0469-next-greater-element-i-easy.md)
   * [0473 - Matchsticks to Square (Medium)](solutions/0400-0499/0473-matchsticks-to-square-medium.md)
 * [0500 - 0599](solutions/0500-0599/README.md)
