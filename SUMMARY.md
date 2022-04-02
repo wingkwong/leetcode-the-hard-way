@@ -152,6 +152,7 @@
   * [1168 - Optimize Water Distribution in a Village (Hard)](solutions/1100-1199/1168-optimize-water-distribution-in-a-village-hard.md)
 * [1200 - 1299](solutions/1200-1299/README.md)
   * [1281 - Subtract the Product and Sum of Digits of an Integer (Easy)](solutions/1200-1299/1281-subtract-the-product-and-sum-of-digits-of-an-integer-easy.md)
+  * [1232 - Check If It Is a Straight Line (Easy)](solutions/1200-1299/1232-check-if-it-is-a-straight-line-easy.md)
 * [1300 - 1399](solutions/1300-1399/README.md)
   * [1305 - All Elements in Two Binary Search Trees (Medium)](solutions/1300-1399/1305-all-elements-in-two-binary-search-trees-medium.md)
   * [1328 - Break a Palindrome (Medium)](solutions/1300-1399/1328-break-a-palindrome-medium.md)
