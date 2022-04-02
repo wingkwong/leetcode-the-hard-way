@@ -75,6 +75,7 @@
   * [0191 - Number of 1 Bits (Easy)](solutions/0100-0199/0191-number-of-1-bits-easy.md)
   * [0199 - Binary Tree Right Side View (Medium)](solutions/0100-0199/0199-binary-tree-right-side-view-medium.md)
 * [0200 - 0299](solutions/0200-0299/README.md)
+  * [0202 - Happy Number (Easy)](solutions/0200-0299/0202-happy-number-easy.md)
   * [0204 - Count Primes (Medium)](solutions/0200-0299/0204-count-primes.md)
   * [0214 - Shortest Palindrome (Hard)](solutions/0200-0299/0214-shortest-palindrome-hard.md)
   * [0215 - Kth Largest Element in an Array (Medium)](solutions/0200-0299/0215-kth-largest-element-in-an-array-medium.md)
