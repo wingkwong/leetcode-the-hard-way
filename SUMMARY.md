@@ -107,6 +107,7 @@
   * [0473 - Matchsticks to Square (Medium)](solutions/0400-0499/0473-matchsticks-to-square-medium.md)
 * [0500 - 0599](solutions/0500-0599/README.md)
   * [0520 - Detect Capital (Easy)](solutions/0500-0599/0520-detect-capital-easy.md)
+  * [0523 - Continuous Subarray Sum (Medium)](solutions/0500-0599/0523-continuous-subarray-sum-medium.md)
   * [0525 - Contiguous Array (Medium)](solutions/0500-0599/0525-contiguous-array-medium.md)
   * [0532 - K-diff Pairs in an Array (Medium)](solutions/0500-0599/0532-k-diff-pairs-in-an-array-medium.md)
   * [0559 - Maximum Depth of N-ary Tree (Easy)](solutions/0500-0599/0559-maximum-depth-of-n-ary-tree-easy.md)
