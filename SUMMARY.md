@@ -180,6 +180,7 @@
 * [1700 - 1799](solutions/1700-1799/README.md)
   * [1768 - Merge Strings Alternately (Easy)](solutions/1700-1799/1768-merge-strings-alternately-easy.md)
   * [1770 - Maximum Score from Performing Multiplication Operations (Medium)](solutions/1700-1799/1770-maximum-score-from-performing-multiplication-operations-medium.md)
+  * [1790 - Check if One String Swap Can Make Strings Equal (Easy)](solutions/1700-1799/1790-check-if-one-string-swap-can-make-strings-equal-easy.md)
 * [1800 - 1899](solutions/1800-1899/README.md)
   * [1822 - Sign of the Product of an Array (Easy)](solutions/1800-1899/1822-sign-of-the-product-of-an-array-easy.md)
   * [1852 - Distinct Numbers in Each Subarray (Medium)](solutions/1800-1899/1852-distinct-numbers-in-each-subarray-medium.md)
