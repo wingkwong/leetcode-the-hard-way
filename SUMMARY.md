@@ -257,3 +257,7 @@
   * [2216 - Minimum Deletions to Make Array Beautiful (Medium)](solutions/2100-2199/2216-minimum-deletions-to-make-array-beautiful-medium.md)
   * [2217 - Find Palindrome With Fixed Length (Medium)](solutions/2100-2199/2217-find-palindrome-with-fixed-length-medium.md)
   * [2218 - Maximum Value of K Coins From Piles (Hard)](solutions/2100-2199/2218-maximum-value-of-k-coins-from-piles-hard.md)
+  * [2224 - Minimum Number of Operations to Convert Time (Easy)](solutions/2100-2199/2224-minimum-number-of-operations-to-convert-time-easy.md)
+  * [2225 - Find Players With Zero or One Losses (Medium)](solutions/2100-2199/2225-find-players-with-zero-or-one-losses-medium.md)
+  * [2226 - Maximum Candies Allocated to K Children (Medium)](solutions/2100-2199/2226-maximum-candies-allocated-to-k-children-medium.md)
+  * [2227 - Encrypt and Decrypt Strings (Hard)](solutions/2100-2199/2227-encrypt-and-decrypt-strings-hard.md)
