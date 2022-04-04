@@ -131,6 +131,7 @@
 * [0800 - 0899](solutions/0800-0899/README.md)
   * [0829 - Consecutive Numbers Sum (Hard)](solutions/0800-0899/0829-consecutive-numbers-sum-hard.md)
   * [0847 - Shortest Path Visiting All Nodes (Hard)](solutions/0800-0899/0847-shortest-path-visiting-all-nodes-hard.md)
+  * [0852 - Peak Index in a Mountain Array (Easy)](solutions/0800-0899/0852-peak-index-in-a-mountain-array-easy.md)
   * [0877 - Stone Game (Medium)](solutions/0800-0899/0877-stone-game-medium.md)
   * [0881 - Boats to Save People (Medium)](solutions/0800-0899/0881-boats-to-save-people-medium.md)
 * [0900 - 0999](solutions/0900-0999/README.md)
