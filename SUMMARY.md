@@ -51,6 +51,7 @@
   * [0023 - Merge k Sorted Lists (Hard)](solutions/0000-0099/0023-merge-k-sorted-lists-hard.md)
   * [0024 - Swap Nodes in Pairs (Medium)](solutions/0000-0099/0024-swap-nodes-in-pairs-medium.md)
   * [0028 - Implement strStr() (Easy)](solutions/0000-0099/0028-implement-strstr-easy.md)
+  * [0035 - Search Insert Position (Easy)](solutions/0000-0099/0035-search-insert-position-easy.md)
   * [0036 - Valid Sudoku (Easy)](solutions/0000-0099/0036-valid-sudoku-easy.md)
   * [0039 - Combination Sum (Medium)](solutions/0000-0099/0039-combination-sum-medium.md)
   * [0040 - Combination Sum II (Medium)](solutions/0000-0099/0040-combination-sum-ii-medium.md)
