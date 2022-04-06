@@ -88,6 +88,7 @@
   * [0228 - Summary Ranges (Easy)](solutions/0200-0299/0228-summary-ranges-easy.md)
   * [0258 - Add Digits (Easy)](solutions/0200-0299/0258-add-digits-easy.md)
   * [0261 -Graph Valid Tree (Medium)](solutions/0200-0299/0261-graph-valid-tree-medium.md)
+  * [0278 - First Bad Version (Easy)](solutions/0200-0299/0278-first-bad-version-easy.md)
   * [0283 - Move Zeroes (Easy)](solutions/0200-0299/0283-move-zeroes-easy.md)
   * [0287 - Find the Duplicate Number (Medium)](solutions/0200-0299/0287-find-the-duplicate-number-medium.md)
   * [0200 - Number of Islands (Medium)](solutions/0200-0299/0200-number-of-islands-medium.md)
