@@ -141,6 +141,7 @@
   * [0881 - Boats to Save People (Medium)](solutions/0800-0899/0881-boats-to-save-people-medium.md)
 * [0900 - 0999](solutions/0900-0999/README.md)
   * [0921 - Sort an Array (Medium)](solutions/0900-0999/0921-sort-an-array-medium.md)
+  * [0923 - 3Sum With Multiplicity (Medium)](solutions/0900-0999/0923-3sum-with-multiplicity-medium.md)
   * [0946 - Validate Stack Sequences (Medium)](solutions/0900-0999/0946-validate-stack-sequences-medium.md)
   * [0973 - K Closest Points to Origin (Medium)](solutions/0900-0999/0973-k-closest-points-to-origin-medium.md)
   * [0976 - Largest Perimeter Triangle (Easy)](solutions/0900-0999/0976-largest-perimeter-triangle-easy.md)
