@@ -1,5 +1,7 @@
 ---
-description: 'Author: @TBC | https://leetcode.com/problems/kth-largest-element-in-a-stream/'
+description: >-
+  Author: @wingkwong |
+  https://leetcode.com/problems/kth-largest-element-in-a-stream/
 ---
 
 # 0703 - Kth Largest Element in a Stream (Easy)
@@ -40,4 +42,41 @@ kthLargest.add(4);   // return 8
 * At most `10^4` calls will be made to `add`.
 * It is guaranteed that there will be at least `k` elements in the array when you search for the `kth` element.
 
-## Approach 1: TBC
+## Approach 1: Priority Queue
+
+We can use priority queue to handle the sort order and only maintain at most k element. Return to the top, which is the k-th element in a stream.
+
+```cpp
+class KthLargest {
+public:
+    KthLargest(int k, vector<int>& nums) {
+        // add val to priority queue
+        for (auto x : nums) pq.push(x);
+        // here the queue is sorted
+        // only keep at most k elements
+        // pop out first pq.size() - k elements
+        while (pq.size() > k) pq.pop();
+        K = k;
+    }
+    
+    int add(int val) {
+        // add val to priority queue
+        pq.push(val);
+        // here the queue is sorted
+        // only keep at most k elements
+        // pop out first pq.size() - k elements
+        while (pq.size() > K) pq.pop();
+        return pq.top();
+    }
+private:
+    int K;
+    // smaller first
+    priority_queue<int, vector<int>, greater<int>> pq;
+};
+
+/**
+ * Your KthLargest object will be instantiated and called as such:
+ * KthLargest* obj = new KthLargest(k, nums);
+ * int param_1 = obj->add(val);
+ */
+```
