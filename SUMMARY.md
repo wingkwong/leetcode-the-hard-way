@@ -97,6 +97,7 @@
   * [0338 - Counting Bits (Easy)](solutions/0300-0399/0338-counting-bits-easy.md)
   * [0344 - Reverse String (Easy)](solutions/0300-0399/0344-reverse-string-easy.md)
   * [0346 - Moving Average from Data Stream (Easy)](solutions/0300-0399/0346-moving-average-from-data-stream-easy.md)
+  * [0347 - Top K Frequent Elements (Medium)](solutions/0300-0399/0347-top-k-frequent-elements-medium.md)
   * [0365 - Water and Jug Problem (Medium)](solutions/0300-0399/0365-water-and-jug-problem-medium.md)
   * [0367 - Valid Perfect Square (Easy)](solutions/0300-0399/0367-valid-perfect-square-easy.md)
   * [0374 - Guess Number Higher or Lower (Easy)](solutions/0300-0399/0374-guess-number-higher-or-lower-easy.md)
