@@ -127,6 +127,7 @@
 * [0600 - 0699](solutions/0600-0699/README.md)
   * [0662 - Maximum Width of Binary Tree (Medium)](solutions/0600-0699/0662-maximum-width-of-binary-tree-medium.md)
   * [0680 - Valid Palindrome II (Easy)](solutions/0600-0699/0680-valid-palindrome-ii-easy.md)
+  * [0682 - Baseball Game (Easy)](solutions/0600-0699/0682-baseball-game-easy.md)
 * [0700 - 0799](solutions/0700-0799/README.md)
   * [0703 - Kth Largest Element in a Stream (Easy)](solutions/0700-0799/0703-kth-largest-element-in-a-stream-easy.md)
   * [0704 - Binary Search (Easy)](solutions/0700-0799/0704-binary-search-easy.md)
