@@ -172,6 +172,7 @@
   * [1328 - Break a Palindrome (Medium)](solutions/1300-1399/1328-break-a-palindrome-medium.md)
   * [1334 - Find the City With the Smallest Number of Neighbors at a Threshold Distance (Medium)](solutions/1300-1399/1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance-medium.md)
   * [1337 - The K Weakest Rows in a Matrix (Easy)](solutions/1300-1399/1337-the-k-weakest-rows-in-a-matrix-easy.md)
+  * [1346 - Check If N and Its Double Exist (Easy)](solutions/1300-1399/1346-check-if-n-and-its-double-exist-easy.md)
   * [1349 - Maximum Students Taking Exam (Hard)](solutions/1300-1399/1349-maximum-students-taking-exam-hard.md)
   * [1359 - Count All Valid Pickup and Delivery Options (Hard)](solutions/1300-1399/1359-count-all-valid-pickup-and-delivery-options-hard.md)
   * [1371 - Find the Longest Substring Containing Vowels in Even Counts (Medium)](solutions/1300-1399/1371-find-the-longest-substring-containing-vowels-in-even-counts-medium.md)
