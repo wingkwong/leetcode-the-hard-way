@@ -282,3 +282,4 @@
   * [2227 - Encrypt and Decrypt Strings (Hard)](solutions/2100-2199/2227-encrypt-and-decrypt-strings-hard.md)
   * [2231 -  Largest Number After Digit Swaps by Parity (Easy)](solutions/2200-2299/2231-largest-number-after-digit-swaps-by-parity-easy.md)
   * [2233 - Maximum Product After K Increments (Medium)](solutions/2200-2299/2233-maximum-product-after-k-increments-medium.md)
+  * [2235 - Add Two Integers (Easy)](solutions/2200-2299/2235-add-two-integers-easy.md)
