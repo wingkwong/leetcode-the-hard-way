@@ -127,6 +127,7 @@
   * [0589 - N-ary Tree Preorder Traversal (Easy)](solutions/0500-0599/0589-n-ary-tree-preorder-traversal-easy.md)
 * [0600 - 0699](solutions/0600-0699/README.md)
   * [0662 - Maximum Width of Binary Tree (Medium)](solutions/0600-0699/0662-maximum-width-of-binary-tree-medium.md)
+  * [0633 - Sum of Square Numbers (Medium)](solutions/0600-0699/0633-sum-of-square-numbers-medium.md)
   * [0680 - Valid Palindrome II (Easy)](solutions/0600-0699/0680-valid-palindrome-ii-easy.md)
   * [0682 - Baseball Game (Easy)](solutions/0600-0699/0682-baseball-game-easy.md)
 * [0700 - 0799](solutions/0700-0799/README.md)
