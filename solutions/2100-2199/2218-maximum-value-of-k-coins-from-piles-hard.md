@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @TBC |
+  Author: @wingkwong |
   https://leetcode.com/problems/maximum-value-of-k-coins-from-piles/
 ---
 
@@ -44,4 +44,33 @@ The maximum total can be obtained if we choose all coins from the last pile.
 * `1 <= piles[i][j] <= 10^5`
 * `1 <= k <= sum(piles[i].length) <= 2000`
 
-## Approach 1: TBC
+## Approach 1: Dynamic Programming
+
+Let $$dp[i][j]$$ be the maximum total value we can have if we pick $$j$$ elements starting from $$piles[i]$$. The answer is $$dp[0][k]$$. First we calculate the value if we pick any elements in the current pile. Then we try to pick at most $$min((int) piles[i].size(), k)$$ elements and find out the max result.
+
+```cpp
+class Solution {
+public:
+    int maxValueOfCoins(vector<vector<int>>& piles, int k) {
+        int n = piles.size();
+        vector<vector<int>> dp(n, vector<int>(k + 1, -1));
+        function<int(int,int)> dfs = [&](int i, int k) {
+            // reach the end - return 0
+            if (i == n || k == 0) return 0;
+            // calculated previously - return immediately
+            if (dp[i][k] != -1) return dp[i][k];
+            // do not take 
+            int res = dfs(i + 1, k), val = 0;
+            // try to take it one by one 
+            // calculate the value we could have
+            for (int j = 0; j < min((int) piles[i].size(), k); j++) {
+                // take this element
+                val += piles[i][j];
+                res = max(res, dfs(i + 1, k - 1 - j) + val);
+            }
+            return dp[i][k] = res;
+        };
+        return dfs(0, k);
+    }
+};
+```
