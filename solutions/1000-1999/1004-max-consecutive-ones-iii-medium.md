@@ -32,7 +32,7 @@ Bolded numbers were flipped from 0 to 1. The longest subarray is underlined.
 * `nums[i]` is either `0` or `1`.
 * `0 <= k <= nums.length`
 
-## Approach 1: Sliding Windows
+## Approach 1: Sliding Window
 
 We are looking for the longest subarray with $$k$$ zeros. We can use standard sliding windows to solve it.
 
