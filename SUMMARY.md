@@ -116,6 +116,7 @@
   * [0465 - Optimal Account Balancing (Hard)](solutions/0400-0499/0465-optimal-account-balancing-hard.md)
   * [0469 - Next Greater Element I (Easy)](solutions/0400-0499/0469-next-greater-element-i-easy.md)
   * [0473 - Matchsticks to Square (Medium)](solutions/0400-0499/0473-matchsticks-to-square-medium.md)
+  * [0493 - Reverse Pairs (Hard)](solutions/0400-0499/0493-reverse-pairs-hard.md)
 * [0500 - 0599](solutions/0500-0599/README.md)
   * [0520 - Detect Capital (Easy)](solutions/0500-0599/0520-detect-capital-easy.md)
   * [0523 - Continuous Subarray Sum (Medium)](solutions/0500-0599/0523-continuous-subarray-sum-medium.md)
