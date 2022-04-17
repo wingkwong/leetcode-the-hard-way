@@ -291,3 +291,4 @@
   * [2239 - Find Closest Number to Zero (Easy)](solutions/2200-2299/2239-find-closest-number-to-zero-easy.md)
   * [2240 - Number of Ways to Buy Pens and Pencils (Medium)](solutions/2200-2299/2240-number-of-ways-to-buy-pens-and-pencils-medium.md)
   * [2241 - Design an ATM Machine (Medium)](solutions/2200-2299/2241-design-an-atm-machine-medium.md)
+  * [2242 - Maximum Score of a Node Sequence (Hard)](solutions/2200-2299/2242-maximum-score-of-a-node-sequence-hard.md)
