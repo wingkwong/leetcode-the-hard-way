@@ -1,5 +1,7 @@
 ---
-description: 'Author: @TBC | https://leetcode.com/problems/maximum-score-of-a-node-sequence/'
+description: >-
+  Author: @wingkwong |
+  https://leetcode.com/problems/maximum-score-of-a-node-sequence/
 ---
 
 # 2242 - Maximum Score of a Node Sequence (Hard)
@@ -57,4 +59,38 @@ There are no valid node sequences of length 4, so we return -1.
 * `ai != bi`
 * There are no duplicate edges.
 
-## Approach 1: TBC
+## Approach 1: Find the neighbours
+
+The key idea is to find the best three neighbours for each node. We need to keep the order based on the scores. We can use priority queue but in C++ it is not convenient to iterate it at the end, instead we use set as it is sorted internally. After that, we just need to iterate them to find out all the combinations. However, we need to check if they are duplicate before updating the answer.
+
+```cpp
+class Solution {
+public:
+    int maximumScore(vector<int>& scores, vector<vector<int>>& edges) {
+        int n = scores.size();
+        // find the best neighbours (at most 3)
+        vector<set<pair<int, int>>> m(n);
+        for(auto x : edges) {
+            int u = x[0], v = x[1];
+            m[u].insert({scores[v], v});
+            m[v].insert({scores[u], u});
+            if (m[u].size() > 3) m[u].erase(m[u].begin());
+            if (m[v].size() > 3) m[v].erase(m[v].begin());
+        }
+        // iterate each combination to find the answer
+        int ans = -1;
+        for (auto x : edges) {
+            int u = x[0], v = x[1];
+            for (auto x1 : m[u]) {
+                for (auto x2 : m[v]) {
+                    // skip some cases
+                    if (x1.second != x2.second && x1.second != v && x2.second != u) {
+                        ans = max(ans, scores[u] + scores[v] + x1.first + x2.first);
+                    }
+                }
+            }
+        }
+        return ans;
+    }
+};
+```
