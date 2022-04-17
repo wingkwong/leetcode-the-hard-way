@@ -292,3 +292,4 @@
   * [2240 - Number of Ways to Buy Pens and Pencils (Medium)](solutions/2200-2299/2240-number-of-ways-to-buy-pens-and-pencils-medium.md)
   * [2241 - Design an ATM Machine (Medium)](solutions/2200-2299/2241-design-an-atm-machine-medium.md)
   * [2242 - Maximum Score of a Node Sequence (Hard)](solutions/2200-2299/2242-maximum-score-of-a-node-sequence-hard.md)
+  * [2246 - Longest Path With Different Adjacent Characters (Hard)](solutions/2200-2299/2246-longest-path-with-different-adjacent-characters-hard.md)
