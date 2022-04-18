@@ -200,6 +200,7 @@
   * [1675 - Minimize Deviation in Array (Hard)](solutions/1600-1699/1675-minimize-deviation-in-array-hard.md)
   * [1692 - Count Ways to Distribute Candies (Hard)](solutions/1600-1699/1692-count-ways-to-distribute-candies-hard.md)
 * [1700 - 1799](solutions/1700-1799/README.md)
+  * [1751 - Maximum Number of Events That Can Be Attended II (Hard)](solutions/1700-1799/1751-maximum-number-of-events-that-can-be-attended-ii-hard.md)
   * [1762 - Buildings With an Ocean View (Medium)](solutions/1700-1799/1762-buildings-with-an-ocean-view-medium.md)
   * [1768 - Merge Strings Alternately (Easy)](solutions/1700-1799/1768-merge-strings-alternately-easy.md)
   * [1770 - Maximum Score from Performing Multiplication Operations (Medium)](solutions/1700-1799/1770-maximum-score-from-performing-multiplication-operations-medium.md)
