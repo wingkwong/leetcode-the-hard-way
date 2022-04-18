@@ -71,7 +71,7 @@ public:
         function<int(int,int)> dfs = [&](int idx, int end) {
             // reached all events
             if (idx == n) return 0;
-            // current start time <= previous end time
+            // current start time < previous end time
             // cannot take it -> move to the next one
             if (events[idx][0] < end) return dfs(idx + 1, end);
             // calculate before -> return immediately
