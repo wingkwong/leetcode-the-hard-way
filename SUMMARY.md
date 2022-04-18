@@ -170,6 +170,7 @@
 * [1200 - 1299](solutions/1200-1299/README.md)
   * [1281 - Subtract the Product and Sum of Digits of an Integer (Easy)](solutions/1200-1299/1281-subtract-the-product-and-sum-of-digits-of-an-integer-easy.md)
   * [1232 - Check If It Is a Straight Line (Easy)](solutions/1200-1299/1232-check-if-it-is-a-straight-line-easy.md)
+  * [1235 - Maximum Profit in Job Scheduling (Hard)](solutions/1200-1299/1235-maximum-profit-in-job-scheduling-hard.md)
   * [1259 - Handshakes That Don't Cross (Hard)](solutions/1200-1299/1259-handshakes-that-dont-cross-hard.md)
 * [1300 - 1399](solutions/1300-1399/README.md)
   * [1305 - All Elements in Two Binary Search Trees (Medium)](solutions/1300-1399/1305-all-elements-in-two-binary-search-trees-medium.md)
