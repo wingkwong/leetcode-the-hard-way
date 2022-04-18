@@ -94,6 +94,7 @@
   * [0287 - Find the Duplicate Number (Medium)](solutions/0200-0299/0287-find-the-duplicate-number-medium.md)
   * [0200 - Number of Islands (Medium)](solutions/0200-0299/0200-number-of-islands-medium.md)
 * [0300 - 0399](solutions/0300-0399/README.md)
+  * [0327 - Count of Range Sum (Hard)](solutions/0300-0399/0327-count-of-range-sum-hard.md)
   * [0338 - Counting Bits (Easy)](solutions/0300-0399/0338-counting-bits-easy.md)
   * [0344 - Reverse String (Easy)](solutions/0300-0399/0344-reverse-string-easy.md)
   * [0346 - Moving Average from Data Stream (Easy)](solutions/0300-0399/0346-moving-average-from-data-stream-easy.md)
