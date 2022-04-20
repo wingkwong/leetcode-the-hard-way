@@ -211,6 +211,7 @@
   * [1822 - Sign of the Product of an Array (Easy)](solutions/1800-1899/1822-sign-of-the-product-of-an-array-easy.md)
   * [1852 - Distinct Numbers in Each Subarray (Medium)](solutions/1800-1899/1852-distinct-numbers-in-each-subarray-medium.md)
   * [1800 - Maximum Ascending Subarray Sum (Easy)](solutions/1800-1899/1800-maximum-ascending-subarray-sum-easy.md)
+  * [1854 - Maximum Population Year (Easy)](solutions/1800-1899/1854-maximum-population-year-easy.md)
   * [1855 - Maximum Distance Between a Pair of Values (Medium)](solutions/1800-1899/1855-maximum-distance-between-a-pair-of-values-medium.md)
 * [1900 - 1999](solutions/1900-1999/README.md)
   * [1929 - Concatenation of Array (Easy)](solutions/1900-1999/1929-concatenation-of-array-easy.md)
