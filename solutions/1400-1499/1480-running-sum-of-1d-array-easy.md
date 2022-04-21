@@ -1,5 +1,7 @@
 ---
-description: 'Author: @heiheihang | https://leetcode.com/problems/running-sum-of-1d-array/'
+description: >-
+  Author: @heiheihang, @wingkwong |
+  https://leetcode.com/problems/running-sum-of-1d-array/
 ---
 
 # 1480 - Running Sum of 1d Array (Easy)
@@ -40,9 +42,11 @@ Output: [3,4,6,16,17]
 
 ## Approach 1: Iteration
 
+_Prepared by @heiheihang_
+
 We need to define an accumulator (`running_sum` in this problem) to save the sum of all numbers in `nums`. After calculating the latest `running_sum`, we put that number to our result list.
 
-The trick here is that we need to add the number from `nums` to `running_sum` first before adding `running_sum` to `result`. This is because the `ith` position from `result` should include the `ith` number in `nums` .&#x20;
+The trick here is that we need to add the number from `nums` to `running_sum` first before adding `running_sum` to `result`. This is because the `ith` position from `result` should include the `ith` number in `nums` .
 
 ```python
 def runningSum(self, nums: List[int]) -> List[int]:
@@ -67,4 +71,37 @@ def runningSum(self, nums: List[int]) -> List[int]:
         
         #return result
         return result
+```
+
+## Approach 2: Partial Sum
+
+_Prepared by @wingkwong_\
+__\
+__Using C++ STL.
+
+```cpp
+class Solution {
+public:
+    vector<int> runningSum(vector<int>& nums) {
+        partial_sum(nums.begin(), nums.end(), nums.begin());
+        return nums;
+    }
+};
+```
+
+## Approach 3: In-place Modification
+
+_Prepared by @wingkwong_
+
+```cpp
+class Solution {
+public:
+    vector<int> runningSum(vector<int>& nums) {
+        for(int i = 1; i < nums.size(); i++) {
+            // add the previous result to the current element.
+            nums[i] += nums[i - 1];
+        }
+        return nums;
+    }
+};
 ```
