@@ -196,6 +196,7 @@
   * [1539 - Kth Missing Positive Number (Easy)](solutions/1500-1599/1539-kth-missing-positive-number-easy.md)
   * [1547 - Minimum Cost to Cut a Stick (Hard)](solutions/1500-1599/1547-minimum-cost-to-cut-a-stick-hard.md)
   * [1572 - Matrix Diagonal Sum (Easy)](solutions/1500-1599/1572-matrix-diagonal-sum-easy.md)
+  * [1575 - Count All Possible Routes (Hard)](solutions/1500-1599/1575-count-all-possible-routes-hard.md)
   * [1584 - Min Cost to Connect All Points (Medium)](solutions/1500-1599/1584-min-cost-to-connect-all-points-medium.md)
 * [1600 - 1699](solutions/1600-1699/README.md)
   * [1633 - Smallest String With A Given Numeric Value (Medium)](solutions/1600-1699/1633-smallest-string-with-a-given-numeric-value-medium.md)
