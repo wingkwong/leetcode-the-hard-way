@@ -200,6 +200,7 @@
   * [1584 - Min Cost to Connect All Points (Medium)](solutions/1500-1599/1584-min-cost-to-connect-all-points-medium.md)
 * [1600 - 1699](solutions/1600-1699/README.md)
   * [1633 - Smallest String With A Given Numeric Value (Medium)](solutions/1600-1699/1633-smallest-string-with-a-given-numeric-value-medium.md)
+  * [1639 - Number of Ways to Form a Target String Given a Dictionary (Hard)](solutions/1600-1699/1639-number-of-ways-to-form-a-target-string-given-a-dictionary-hard.md)
   * [1655 - Distribute Repeating Integers (Hard)](solutions/1600-1699/1655-distribute-repeating-integers-hard.md)
   * [1672 - Richest Customer Wealth (Easy)](solutions/1600-1699/1672-richest-customer-wealth-easy.md)
   * [1675 - Minimize Deviation in Array (Hard)](solutions/1600-1699/1675-minimize-deviation-in-array-hard.md)
