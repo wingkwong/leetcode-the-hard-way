@@ -305,3 +305,4 @@
   * [2244 - Minimum Rounds to Complete All Tasks (Medium)](solutions/2200-2299/2244-minimum-rounds-to-complete-all-tasks-medium.md)
   * [2246 - Longest Path With Different Adjacent Characters (Hard)](solutions/2200-2299/2246-longest-path-with-different-adjacent-characters-hard.md)
   * [2237 - Count Positions on Street With Required Brightness (Medium)](solutions/2200-2299/2237-count-positions-on-street-with-required-brightness-medium.md)
+  * [2248 - Intersection of Multiple Arrays (Easy)](solutions/2200-2299/2248-intersection-of-multiple-arrays-easy.md)
