@@ -308,3 +308,4 @@
   * [2248 - Intersection of Multiple Arrays (Easy)](solutions/2200-2299/2248-intersection-of-multiple-arrays-easy.md)
   * [2249 - Count Lattice Points Inside a Circle (Medium)](solutions/2200-2299/2249-count-lattice-points-inside-a-circle-medium.md)
   * [2250 - Count Number of Rectangles Containing Each Point (Medium)](solutions/2200-2299/2250-count-number-of-rectangles-containing-each-point-medium.md)
+  * [2251 - Number of Flowers in Full Bloom (Hard)](solutions/2200-2299/2251-number-of-flowers-in-full-bloom-hard.md)
