@@ -171,6 +171,7 @@
   * [1147 - Longest Chunked Palindrome Decomposition (Hard)](solutions/1100-1199/1147-longest-chunked-palindrome-decomposition-hard.md)
   * [1155 - Number of Dice Rolls With Target Sum (Medium)](solutions/1100-1199/1155-number-of-dice-rolls-with-target-sum-medium.md)
 * [1200 - 1299](solutions/1200-1299/README.md)
+  * [1201 - Ugly Number III (Medium)](solutions/1200-1299/1201-ugly-number-iii-medium.md)
   * [1281 - Subtract the Product and Sum of Digits of an Integer (Easy)](solutions/1200-1299/1281-subtract-the-product-and-sum-of-digits-of-an-integer-easy.md)
   * [1232 - Check If It Is a Straight Line (Easy)](solutions/1200-1299/1232-check-if-it-is-a-straight-line-easy.md)
   * [1235 - Maximum Profit in Job Scheduling (Hard)](solutions/1200-1299/1235-maximum-profit-in-job-scheduling-hard.md)
