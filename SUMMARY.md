@@ -176,6 +176,7 @@
   * [1232 - Check If It Is a Straight Line (Easy)](solutions/1200-1299/1232-check-if-it-is-a-straight-line-easy.md)
   * [1235 - Maximum Profit in Job Scheduling (Hard)](solutions/1200-1299/1235-maximum-profit-in-job-scheduling-hard.md)
   * [1259 - Handshakes That Don't Cross (Hard)](solutions/1200-1299/1259-handshakes-that-dont-cross-hard.md)
+  * [1269 - Number of Ways to Stay in the Same Place After Some Steps (Hard)](solutions/1200-1299/1269-number-of-ways-to-stay-in-the-same-place-after-some-steps-hard.md)
 * [1300 - 1399](solutions/1300-1399/README.md)
   * [1305 - All Elements in Two Binary Search Trees (Medium)](solutions/1300-1399/1305-all-elements-in-two-binary-search-trees-medium.md)
   * [1328 - Break a Palindrome (Medium)](solutions/1300-1399/1328-break-a-palindrome-medium.md)
