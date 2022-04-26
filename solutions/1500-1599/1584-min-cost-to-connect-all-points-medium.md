@@ -42,7 +42,13 @@ Output: 18
 
 ## Approach 1: Kruskal's Algorithm
 
-If we can see this problem as a graph problem, it is same as find a minimum spanning tree (MST).  We can use Kruskal's algorithm with disjoint-set data structure (DSU) to solve it. We calculate the weight and build edges for all points. Then sort the array in an increasing order. For each edge, we check if two points are united or not. If not, we unite them and and the cost.
+If we see this problem as a graph problem, it is same as find a minimum spanning tree (MST).  We can use Kruskal's algorithm with disjoint-set data structure (DSU) to solve it. We calculate the weight and build edges for all points. Then sort the array in an increasing order. For each edge, we check if two points are united or not. If not, we unite them and and the cost.
+
+For more, please see [Kruskal's Algorithm](https://en.wikipedia.org/wiki/Kruskal's\_algorithm).
+
+<details>
+
+<summary>DSU Template</summary>
 
 ```cpp
 class dsu {
@@ -83,22 +89,31 @@ class dsu {
     return false;
   }
 };
+```
 
+</details>
+
+```cpp
 class Solution {
 public:
     int minCostConnectPoints(vector<vector<int>>& points) {
         int n = points.size(); 
         vector<array<int, 3>> edges;
+        // build all the edges
         for(int i = 0; i < n; i++) {
             for(int j = i + 1; j < n; j++) {
                 int w = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1]);
+                // put w first - as we want to sort by weight
                 edges.push_back({w, i, j});
             }
         }
+        // init dsu
         dsu d(n);
+        // sort by weight - as we choose the shortest edge for each round
         sort(edges.begin(), edges.end());
         int ans = 0;
         for (auto x : edges) {
+            // unite both point and add the weight
             if (d.unite(x[1], x[2])) ans += x[0];
         }
         return ans;
