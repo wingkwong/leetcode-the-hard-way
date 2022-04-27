@@ -220,6 +220,7 @@
   * [1800 - Maximum Ascending Subarray Sum (Easy)](solutions/1800-1899/1800-maximum-ascending-subarray-sum-easy.md)
   * [1854 - Maximum Population Year (Easy)](solutions/1800-1899/1854-maximum-population-year-easy.md)
   * [1855 - Maximum Distance Between a Pair of Values (Medium)](solutions/1800-1899/1855-maximum-distance-between-a-pair-of-values-medium.md)
+  * [1866 - Number of Ways to Rearrange Sticks With K Sticks Visible (Hard)](solutions/1800-1899/1866-number-of-ways-to-rearrange-sticks-with-k-sticks-visible-hard.md)
 * [1900 - 1999](solutions/1900-1999/README.md)
   * [1929 - Concatenation of Array (Easy)](solutions/1900-1999/1929-concatenation-of-array-easy.md)
   * [1980 - Find Unique Binary String (Medium)](solutions/1900-1999/1980-find-unique-binary-string-medium.md)
