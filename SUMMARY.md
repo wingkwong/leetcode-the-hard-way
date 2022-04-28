@@ -202,6 +202,7 @@
   * [1575 - Count All Possible Routes (Hard)](solutions/1500-1599/1575-count-all-possible-routes-hard.md)
   * [1584 - Min Cost to Connect All Points (Medium)](solutions/1500-1599/1584-min-cost-to-connect-all-points-medium.md)
 * [1600 - 1699](solutions/1600-1699/README.md)
+  * [1631 - Path With Minimum Effort (Medium)](solutions/1600-1699/1631-path-with-minimum-effort-medium.md)
   * [1633 - Smallest String With A Given Numeric Value (Medium)](solutions/1600-1699/1633-smallest-string-with-a-given-numeric-value-medium.md)
   * [1639 - Number of Ways to Form a Target String Given a Dictionary (Hard)](solutions/1600-1699/1639-number-of-ways-to-form-a-target-string-given-a-dictionary-hard.md)
   * [1655 - Distribute Repeating Integers (Hard)](solutions/1600-1699/1655-distribute-repeating-integers-hard.md)
