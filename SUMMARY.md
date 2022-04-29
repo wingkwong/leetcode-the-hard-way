@@ -140,6 +140,7 @@
   * [0740 - Delete and Earn (Medium)](solutions/0700-0799/0740-delete-and-earn-medium.md)
   * [0743 - Network Delay Time (Medium)](solutions/0700-0799/0743-network-delay-time-medium.md)
   * [0744 - Find Smallest Letter Greater Than Target (Easy)](solutions/0700-0799/0744-find-smallest-letter-greater-than-target-easy.md)
+  * [0785 -  Is Graph Bipartite? (Medium)](solutions/0700-0799/0785-is-graph-bipartite-medium.md)
   * [0787 - Cheapest Flights Within K Stops (Medium)](solutions/0700-0799/0787-cheapest-flights-within-k-stops-medium.md)
   * [0799 - Champagne Tower (Medium)](solutions/0700-0799/0799-champagne-tower-medium.md)
 * [0800 - 0899](solutions/0800-0899/README.md)
