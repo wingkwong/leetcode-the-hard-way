@@ -9,7 +9,7 @@ coverY: 0
 
 ### Introduction
 
-For those who don't know, LeetCode is one of the most well-known platforms where you can practice your programming skills by solving coding questions. Most people, However, solve LeetCode problems just because they want to get into FANG companies as they often ask candidates these programming problems during interviews. It is pretty sad to see that only minority of people do it just for fun. Logical thinking has been an important trait in Programming. This book is to guide you how to solve LeetCode problems and it covers DSA topics that you need before solving them with different difficulties.
+For those who don't know, LeetCode is one of the most well-known platforms where you can practice your programming skills by solving coding questions. This book is to guide you how to solve LeetCode problems and it covers DSA topics that you need before solving them with different difficulties.
 
 ### Target Audience
 
@@ -21,7 +21,7 @@ This gitbook is synchronised with [leetcode-the-hard-way](https://github.com/win
 
 ### Contributing
 
-See [CONTRIBUTING.md](https://github.com/wingkwong/leetcode-the-hard-way/blob/main/CONTRIBUTING.md).
+See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ### Outro
 
