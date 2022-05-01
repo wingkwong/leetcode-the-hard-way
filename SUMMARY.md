@@ -153,6 +153,7 @@
 * [0900 - 0999](solutions/0900-0999/README.md)
   * [0921 - Sort an Array (Medium)](solutions/0900-0999/0921-sort-an-array-medium.md)
   * [0923 - 3Sum With Multiplicity (Medium)](solutions/0900-0999/0923-3sum-with-multiplicity-medium.md)
+  * [0936 - Stamping The Sequence (Hard)](solutions/0900-0999/0936-stamping-the-sequence-hard.md)
   * [0946 - Validate Stack Sequences (Medium)](solutions/0900-0999/0946-validate-stack-sequences-medium.md)
   * [0973 - K Closest Points to Origin (Medium)](solutions/0900-0999/0973-k-closest-points-to-origin-medium.md)
   * [0976 - Largest Perimeter Triangle (Easy)](solutions/0900-0999/0976-largest-perimeter-triangle-easy.md)
