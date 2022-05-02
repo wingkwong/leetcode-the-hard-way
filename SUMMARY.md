@@ -318,6 +318,7 @@
   * [2250 - Count Number of Rectangles Containing Each Point (Medium)](solutions/2200-2299/2250-count-number-of-rectangles-containing-each-point-medium.md)
   * [2251 - Number of Flowers in Full Bloom (Hard)](solutions/2200-2299/2251-number-of-flowers-in-full-bloom-hard.md)
   * [2255 - Count Prefixes of a Given String (Easy)](solutions/2200-2299/2255-count-prefixes-of-a-given-string-easy.md)
+  * [2256 - Minimum Average Difference (Medium)](solutions/2200-2299/2256-minimum-average-difference-medium.md)
   * [2259 - Remove Digit From Number to Maximize Result (Easy)](solutions/2200-2299/2259-remove-digit-from-number-to-maximize-result-easy.md)
   * [2260 - Minimum Consecutive Cards to Pick Up (Medium)](solutions/2200-2299/2260-minimum-consecutive-cards-to-pick-up-medium.md)
   * [2261 - K Divisible Elements Subarrays (Medium)](solutions/2200-2299/2261-k-divisible-elements-subarrays-medium.md)
