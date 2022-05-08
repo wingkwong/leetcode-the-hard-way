@@ -326,3 +326,4 @@
   * [2260 - Minimum Consecutive Cards to Pick Up (Medium)](solutions/2200-2299/2260-minimum-consecutive-cards-to-pick-up-medium.md)
   * [2261 - K Divisible Elements Subarrays (Medium)](solutions/2200-2299/2261-k-divisible-elements-subarrays-medium.md)
   * [2262 - Total Appeal of A String (Hard)](solutions/2200-2299/2262-total-appeal-of-a-string-hard.md)
+  * [2267 - Check if There Is a Valid Parentheses String Path (Hard)](solutions/2200-2299/2267-check-if-there-is-a-valid-parentheses-string-path-hard.md)
