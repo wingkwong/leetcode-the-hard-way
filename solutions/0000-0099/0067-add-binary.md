@@ -36,7 +36,7 @@ Explanation: Remove all the digits from the number and it is left with nothing w
 * a and b consist only of '0' or '1' characters.
 * Each string does not contain leading zeros except for the zero itself.
 
-## Approach 1: Monotonic Stack
+## Approach 1: Adding Digits One By One
 
 For each digit, start from least significant ones, calculate the sum of digits and the carry. If the value > 1 then carry to the next digit.
 
