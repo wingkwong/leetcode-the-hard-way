@@ -61,6 +61,7 @@
   * [0050 - Pow(x, n) (Medium)](solutions/0000-0099/0050-pow-x-n-medium.md)
   * [0061 - Rotate List (Medium)](solutions/0000-0099/0061-rotate-list-medium.md)
   * [0062 - Unique Paths (Medium)](solutions/0000-0099/0062-unique-paths-medium.md)
+  * [0067 - Add Binary (Easy)](solutions/0000-0099/0067-add-binary.md)
   * [0069 - Sqrt(x) (Easy)](solutions/0000-0099/0069-sqrt-x-easy.md)
   * [0072 - Edit Distance (Hard)](solutions/0000-0099/0072-edit-distance-hard.md)
   * [0078 - Subsets (Medium)](solutions/0000-0099/0078-subsets-medium.md)
