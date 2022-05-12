@@ -78,6 +78,4 @@ public:
         return ans;
     }
 };
-
-c+s
 ```
