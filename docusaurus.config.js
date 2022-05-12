@@ -57,17 +57,23 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'My Site',
+        title: 'LeetCode The Hard Way',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'LeetCode The Hard Way',
           src: 'img/logo.svg',
         },
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'tutorials/index',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Tutorials',
+          },
+          {
+            type: 'doc',
+            docId: 'solutions/index',
+            position: 'left',
+            label: 'Solutions',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
@@ -85,7 +91,7 @@ const config = {
             items: [
               {
                 label: 'Tutorial',
-                to: '/docs/intro',
+                to: '/docs/',
               },
             ],
           },
@@ -120,7 +126,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} LeetCode The Hard Way. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
