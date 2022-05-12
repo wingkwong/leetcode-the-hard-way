@@ -34,6 +34,11 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          routeBasePath: '/',
+          path: './docs',
+          lastVersion: 'current',
+          onlyIncludeVersions: ['current'],
+
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -64,16 +69,14 @@ const config = {
         },
         items: [
           {
-            type: 'doc',
-            docId: 'tutorials/index',
-            position: 'left',
             label: 'Tutorials',
+            to: '/tutorials',
+            activeBaseRegex: `/tutorials/`,
           },
           {
-            type: 'doc',
-            docId: 'solutions/index',
-            position: 'left',
             label: 'Solutions',
+            to: '/solutions',
+            activeBaseRegex: `/solutions/`,
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
@@ -86,15 +89,6 @@ const config = {
       footer: {
         style: 'dark',
         links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/',
-              },
-            ],
-          },
           {
             title: 'Community',
             items: [
@@ -133,6 +127,28 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
+
+    plugins: [
+      [
+        '@docusaurus/plugin-content-docs',
+        {
+          id: 'solutions',
+          path: 'solutions',
+          routeBasePath: 'solutions',
+          sidebarPath: require.resolve('./sidebars.js'),
+        }, 
+      ],
+      [
+        '@docusaurus/plugin-content-docs',
+        {
+          id: 'tutorials',
+          path: 'tutorials',
+          routeBasePath: 'tutorials',
+          sidebarPath: require.resolve('./sidebars.js'),
+        }, 
+      ],
+  ],
+  
 };
 
 module.exports = config;
