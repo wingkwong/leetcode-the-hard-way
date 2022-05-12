@@ -94,9 +94,10 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
+            href: 'https://github.com/wingkwong/leetcode-the-hard-way',
             position: 'right',
+            className: 'header-github-link',
+            'aria-label': 'GitHub repository',
           },
         ],
       },
@@ -104,32 +105,24 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Community',
+            title: 'General',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Tutorials',
+                href: '/tutorials/',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: 'Solutions',
+                href: '/solutions/',
               },
             ],
           },
           {
-            title: 'More',
+            title: 'Links',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/wingkwong/leetcode-the-hard-way',
               },
             ],
           },
