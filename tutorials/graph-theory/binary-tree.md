@@ -1,6 +1,0 @@
----
-description: 'Author:'
----
-
-# Binary Tree
-

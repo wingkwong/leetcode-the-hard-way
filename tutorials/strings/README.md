@@ -1,3 +1,0 @@
-# Strings
-
-Coming Soon!
