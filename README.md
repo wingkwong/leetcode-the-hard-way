@@ -1,41 +1,19 @@
-# Website
+# Welcome!
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+![](https://user-images.githubusercontent.com/35857179/168307611-1b28018b-fc98-4cff-88a6-d8312ac7bce6.png)
 
-### Installation
+### Introduction
 
-```
-$ yarn
-```
+For those who don't know, LeetCode is one of the most well-known platforms where you can practice your programming skills by solving coding questions. This book is to guide you how to solve LeetCode problems and it covers DSA topics that you need before solving them with different difficulties.
 
-### Local Development
+### Target Audience
 
-```
-$ yarn start
-```
+Everyone who wants to improve their programming skills or learn how to LeetCode.
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+### Contributing
 
-### Build
+See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-```
-$ yarn build
-```
+### Outro
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+GLHF.
