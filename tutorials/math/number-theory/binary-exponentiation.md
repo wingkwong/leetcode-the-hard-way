@@ -43,4 +43,4 @@ long long modpow(long long base, long long exp, long long mod) {
 
 ### Suggested Problems
 
-* [0050 - Pow(x, n) (Medium)](../../../solutions/0000-0099/0050-pow-x-n-medium.md)
+* [0050 - Pow(x, n) (Medium)](../../../solutions/0000-0099/pow-x-n-medium)

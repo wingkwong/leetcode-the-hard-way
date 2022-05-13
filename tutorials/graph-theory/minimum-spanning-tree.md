@@ -71,5 +71,5 @@ int mst(vector<vector<int>>& g) {
 
 ### Suggested Problems
 
-* [1135 - Connecting Cities With Minimum Cost (Medium)](../../solutions/1100-1199/1135-connecting-cities-with-minimum-cost-medium.md)
-* [1168 - Optimize Water Distribution in a Village (Hard)](../../solutions/1100-1199/1168-optimize-water-distribution-in-a-village-hard.md)
+* [1135 - Connecting Cities With Minimum Cost (Medium)](../../solutions/1100-1199/connecting-cities-with-minimum-cost-medium)
+* [1168 - Optimize Water Distribution in a Village (Hard)](../../solutions/1100-1199/optimize-water-distribution-in-a-village-hard)

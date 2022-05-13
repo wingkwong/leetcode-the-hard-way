@@ -75,7 +75,7 @@ def countGoodSubstrings(self, s: str) -> int:
         return unique_substring_count
 ```
 
-In this problem, the size of the sliding window is constant. There are harder problems with varying sliding window size, but you need to learn [Hash Map](hash-map.md) first.&#x20;
+In this problem, the size of the sliding window is constant. There are harder problems with varying sliding window size, but you need to learn [Hash Map](hash-map) first.&#x20;
 
 ### Suggested Problems
 

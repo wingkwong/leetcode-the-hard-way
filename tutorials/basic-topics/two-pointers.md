@@ -65,6 +65,6 @@ Unfortunately, there is no fixed way to perform two pointers. However, generally
 
 ### Suggested Problems
 
-* [1768 - Merge Strings Alternately (Easy)](../../solutions/1700-1799/1768-merge-strings-alternately-easy.md) [(LeetCode Link)](https://leetcode.com/problems/merge-strings-alternately/)
-* [2108 - Find First Palindromic String in the Array (Easy)](../../solutions/2100-2199/2108-find-first-palindromic-string-in-the-array-easy.md) ([LeetCode Link](https://leetcode.com/problems/merge-strings-alternately/))
-* [0283 - Move Zeroes (Easy)](../../solutions/0200-0299/0283-move-zeroes-easy.md) [(LeetCode Link)](https://leetcode.com/problems/move-zeroes/)
+* [1768 - Merge Strings Alternately (Easy)](../../solutions/1700-1799/merge-strings-alternately-easy) [(LeetCode Link)](https://leetcode.com/problems/merge-strings-alternately/)
+* [2108 - Find First Palindromic String in the Array (Easy)](../../solutions/2100-2199/find-first-palindromic-string-in-the-array-easy) ([LeetCode Link](https://leetcode.com/problems/merge-strings-alternately/))
+* [0283 - Move Zeroes (Easy)](../../solutions/0200-0299/move-zeroes-easy) [(LeetCode Link)](https://leetcode.com/problems/move-zeroes/)

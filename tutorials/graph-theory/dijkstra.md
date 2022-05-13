@@ -31,5 +31,5 @@ void dijkstra(T_pair &g, T_vector &dist, int start) {
 
 ### Suggested Problems
 
-* [0743 - Network Delay Time (Medium)](../../solutions/0700-0799/0743-network-delay-time-medium.md)
-* [1334 - Find the City With the Smallest Number of Neighbors at a Threshold Distance (Medium)](../../solutions/1300-1399/1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance-medium.md)
+* [0743 - Network Delay Time (Medium)](../../solutions/0700-0799/network-delay-time-medium)
+* [1334 - Find the City With the Smallest Number of Neighbors at a Threshold Distance (Medium)](../../solutions/1300-1399/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance-medium)

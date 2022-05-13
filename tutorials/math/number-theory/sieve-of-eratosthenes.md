@@ -28,5 +28,5 @@ vector<bool> sieveOfEratosthenes(const int n) {
 
 ### Suggested Problems
 
-* [0204 - Count Primes (Medium)](../../../solutions/0200-0299/0204-count-primes.md)
+* [0204 - Count Primes (Medium)](../../../solutions/0200-0299/count-primes)
 

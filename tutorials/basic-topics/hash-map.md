@@ -71,7 +71,7 @@ else:
 
 This operation only takes $$O(1)$$ time! Without hash map, we would need to iterate the input to search for a specific element.&#x20;
 
-After understanding Hash Map, are you able to solve [Two Sum](../../solutions/0000-0099/0001-two-sum.md) in $$O(N)$$ time?
+After understanding Hash Map, are you able to solve [Two Sum](../../solutions/0000-0099/two-sum) in $$O(N)$$ time?
 
 ### Suggested Problems:
 

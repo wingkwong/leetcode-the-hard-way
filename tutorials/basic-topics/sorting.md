@@ -50,4 +50,4 @@ sort(a.begin(), a.end(), [&](const array<int, 3>& x, const array<int, 3>& y) {
 
 ### Suggested Problems
 
-* [0912 - Sort an Array (Medium)](../../solutions/0900-0999/0921-sort-an-array-medium.md)
+* [0912 - Sort an Array (Medium)](../../solutions/0900-0999/sort-an-array-medium)
