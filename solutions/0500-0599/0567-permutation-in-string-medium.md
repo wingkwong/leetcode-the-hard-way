@@ -32,7 +32,7 @@ Output: false
 
 ## Approach 1: Sliding Window
 
-The solution is almost same as [0438 - Find All Anagrams in a String (Medium)](../0400-0499/0438-find-all-anagrams-in-a-string-medium.md). The general idea is to count the character occurrences as the string order doesn't matter, and check if there is a window with the same length as $$s1$$ contains the same set of occurrences.
+The solution is almost same as [0438 - Find All Anagrams in a String (Medium)](../0400-0499/find-all-anagrams-in-a-string-medium). The general idea is to count the character occurrences as the string order doesn't matter, and check if there is a window with the same length as $$s1$$ contains the same set of occurrences.
 
 We first use a hash map $$target$$ count the occurrences for each character in $$s1$$. Then we apply sliding window. We use a pointer $$i$$ to track the window starting point and use a pointer $$j$$ to track the window ending point in $$s2$$. We increase the pointer $$j$$ to count the occurrences in $$s2$$ and put the result in another hash map $$now$$ until the window size $$j - i + 1$$ is equal to the length of $$s1$$. Then we compare if both hash maps are identical. If so, return the answer immediately. If not, then we need to remove the leftmost element within this window. Continue the same process until the pointer $$i$$ reaches the end of the string.
 

@@ -63,7 +63,7 @@ public:
 
 ## Approach 2: Hasp Map (TLE)
 
-We can take the same approach from [0001 - Two Sum (Easy)](../0000-0099/0001-two-sum.md). We know that $$a + b + c + d = 0$$ is same as $$a = -(b + c + d)$$. Therefore, we iterate $$nums1$$ to count the number of element $$a$$. Then iterate $$nums2$$, $$nums3$$ and $$nums4$$to find if the complementary sum $$-(b + c + d)$$is in hash map or not. However, this solution gives TLE as it is a $$O(n^3)$$solution.
+We can take the same approach from [0001 - Two Sum (Easy)](../0000-0099/two-sum). We know that $$a + b + c + d = 0$$ is same as $$a = -(b + c + d)$$. Therefore, we iterate $$nums1$$ to count the number of element $$a$$. Then iterate $$nums2$$, $$nums3$$ and $$nums4$$to find if the complementary sum $$-(b + c + d)$$is in hash map or not. However, this solution gives TLE as it is a $$O(n^3)$$solution.
 
 ```cpp
 class Solution {
@@ -88,7 +88,7 @@ public:
 
 ## Approach 3: Hash Map (Accepted)
 
-We can take the same approach from [0001 - Two Sum (Easy)](../0000-0099/0001-two-sum.md). We know that $$a + b + c + d = 0$$ is same as $$a + b = - (c + d)$$. Therefore, we iterate $$nums1$$and $$nums2$$ to count the sum of elements $$a + b$$. Then iterate $$nums3$$ and $$nums4$$to find if the complementary sum $$- (c + d)$$is in hash map or not. This solution passes as it is a $$O(n^2)$$solution.
+We can take the same approach from [0001 - Two Sum (Easy)](../0000-0099/two-sum). We know that $$a + b + c + d = 0$$ is same as $$a + b = - (c + d)$$. Therefore, we iterate $$nums1$$and $$nums2$$ to count the sum of elements $$a + b$$. Then iterate $$nums3$$ and $$nums4$$to find if the complementary sum $$- (c + d)$$is in hash map or not. This solution passes as it is a $$O(n^2)$$solution.
 
 ```cpp
 class Solution {

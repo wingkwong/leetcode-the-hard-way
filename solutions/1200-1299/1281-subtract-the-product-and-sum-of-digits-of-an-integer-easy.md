@@ -38,7 +38,7 @@ Result = 32 - 11 = 21
 
 ## Approach 1: **Product & Sum of Digits**
 
-If you have done [0258 - Add Digits (Easy)](../0200-0299/0258-add-digits-easy.md), then you should know how to calculate the sum of digits. If not, it is recommended to solve 0258 before solving this problem. To recap, here's how to calculate the sum of digits.
+If you have done [0258 - Add Digits (Easy)](../0200-0299/add-digits-easy), then you should know how to calculate the sum of digits. If not, it is recommended to solve 0258 before solving this problem. To recap, here's how to calculate the sum of digits.
 
 ```cpp
 int digitSum(int n) {

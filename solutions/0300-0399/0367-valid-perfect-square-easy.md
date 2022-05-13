@@ -30,7 +30,7 @@ Output: false
 
 ## Approach 1: Binary Search
 
-Prerequisite: [Binary Search](../../tutorials/basic-topics/binary-search.md).
+Prerequisite: [Binary Search](../../tutorials/basic-topics/binary-search).
 
 ```cpp
 class Solution {

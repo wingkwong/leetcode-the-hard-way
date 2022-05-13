@@ -44,7 +44,7 @@ Output:
 
 ## Approach 1: Backtracking
 
-Similar to [0039 - Combination Sum (Medium)](0039-combination-sum-medium.md), the only difference is each number can be used once in the combination. To avoid overcounting, we can simply add `i != start && candidates[i] == candidates[i - 1].`
+Similar to [0039 - Combination Sum (Medium)](combination-sum-medium), the only difference is each number can be used once in the combination. To avoid overcounting, we can simply add `i != start && candidates[i] == candidates[i - 1].`
 
 ```cpp
 class Solution {

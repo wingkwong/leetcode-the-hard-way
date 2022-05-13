@@ -39,7 +39,7 @@ Output: 1
 
 ## Approach 1: Binary Search
 
-Prerequisite: [Binary Search](0278-first-bad-version-easy.md#undefined)
+Prerequisite: [Binary Search](../../tutorials/basic-topics/binary-search)
 
 ```cpp
 // The API isBadVersion is defined for you.

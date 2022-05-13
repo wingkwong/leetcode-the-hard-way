@@ -58,7 +58,7 @@ public:
 
 ## Approach 2: Backtracking
 
-Standard [Backtracking](../../tutorials/basic-topics/backtracking.md) problem.
+Standard [Backtracking](../../tutorials/basic-topics/backtracking) problem.
 
 ```cpp
 class Solution {

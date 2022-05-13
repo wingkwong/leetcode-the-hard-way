@@ -86,4 +86,4 @@ public:
 
 ### Similar Problems:
 
-- [1235 - Maximum Profit in Job Scheduling (Hard)](../1200-1299/1235-maximum-profit-in-job-scheduling-hard.md)
+- [1235 - Maximum Profit in Job Scheduling (Hard)](../1200-1299/maximum-profit-in-job-scheduling-hard)

@@ -33,7 +33,7 @@ Explanation: The square root of 8 is 2.82842..., and since the decimal part is t
 
 ## Approach 1: Binary Search
 
-Prerequisite: [Binary Search](../../tutorials/basic-topics/binary-search.md)
+Prerequisite: [Binary Search](../../tutorials/basic-topics/binary-search)
 
 ```cpp
 class Solution {

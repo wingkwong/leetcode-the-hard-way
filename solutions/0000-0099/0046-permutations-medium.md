@@ -55,7 +55,7 @@ public:
 
 ## Approach 2: Backtracking
 
-Check out [Backtracking](../../tutorials/basic-topics/backtracking.md) section for the detailed explanation.
+Check out [Backtracking](../../tutorials/basic-topics/backtracking) section for the detailed explanation.
 
 ```cpp
 class Solution {

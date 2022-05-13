@@ -35,7 +35,7 @@ Output: "y"
 
 ## Approach 1: Bit Manipulation&#x20;
 
-Same idea as [0136 - Single Number (Easy)](../0100-0199/0136-single-number-easy.md).
+Same idea as [0136 - Single Number (Easy)](../0100-0199/single-number-easy).
 
 Prerequisite:  You should understand properties of XOR.&#x20;
 

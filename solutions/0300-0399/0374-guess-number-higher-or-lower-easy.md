@@ -50,7 +50,7 @@ Output: 1
 
 ## Approach 1: Binary Search
 
-See [Binary Search](../../tutorials/basic-topics/binary-search.md) for basic understanding.
+See [Binary Search](../../tutorials/basic-topics/binary-search) for basic understanding.
 
 ```cpp
 /** 
