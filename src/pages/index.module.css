@@ -8,6 +8,11 @@
   text-align: center;
   position: relative;
   overflow: hidden;
+  display: block;
+}
+
+.heroBanner img {
+  margin: 0px 20px;
 }
 
 @media screen and (max-width: 996px) {
