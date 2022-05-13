@@ -135,6 +135,12 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
+      // https://docusaurus.io/docs/search#using-algolia-docsearch
+      // algolia: {
+      //   appId: 'TODO',
+      //   apiKey: 'TODO',
+      //   indexName: 'leetcodethehardway',
+      // },
     }),
 
     plugins: [
