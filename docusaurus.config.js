@@ -47,11 +47,11 @@ const config = {
           editUrl:
             'https://github.com/wingkwong/leetcode-the-hard-way',
         },
-        blog: {
-          showReadingTime: true,
-          editUrl:
-            'https://github.com/wingkwong/leetcode-the-hard-way',
-        },
+        // blog: {
+        //   showReadingTime: true,
+        //   editUrl:
+        //     'https://github.com/wingkwong/leetcode-the-hard-way',
+        // },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -89,7 +89,7 @@ const config = {
             to: '/solutions',
             activeBaseRegex: `/solutions/`,
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          // {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/wingkwong/leetcode-the-hard-way',
             position: 'right',
