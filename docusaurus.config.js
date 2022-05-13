@@ -42,6 +42,8 @@ const config = {
           onlyIncludeVersions: ['current'],
           remarkPlugins: [math],
           rehypePlugins: [katex],
+          showLastUpdateTime: true,
+          showLastUpdateAuthor: true,
 
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -145,6 +147,8 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           remarkPlugins: [math],
           rehypePlugins: [katex],
+          showLastUpdateTime: true,
+          showLastUpdateAuthor: true,
         }, 
       ],
       [
@@ -156,6 +160,8 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           remarkPlugins: [math],
           rehypePlugins: [katex],
+          showLastUpdateTime: true,
+          showLastUpdateAuthor: true,
         }, 
       ],
   ],
