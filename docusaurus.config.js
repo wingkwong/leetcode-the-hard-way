@@ -74,10 +74,10 @@ const config = {
     ({
       navbar: {
         title: 'LeetCode The Hard Way',
-        logo: {
-          alt: 'LeetCode The Hard Way',
-          src: 'img/logo.svg',
-        },
+        // logo: {
+        //   alt: 'LeetCode The Hard Way',
+        //   src: 'img/logo.svg',
+        // },
         items: [
           {
             label: 'Tutorials',
