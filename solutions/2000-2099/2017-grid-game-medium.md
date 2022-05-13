@@ -108,9 +108,7 @@ public:
 };
 ```
 
-{% hint style="info" %}
-Further Question 1: What is the maximum points collected by robot 1?
-{% endhint %}
+> Further Question 1: What is the maximum points collected by robot 1?
 
 <details>
 
@@ -144,6 +142,4 @@ public:
 
 </details>
 
-{% hint style="info" %}
-Further Question 2: Are you able to optimise the above solution?
-{% endhint %}
+> Further Question 2: Are you able to optimise the above solution?

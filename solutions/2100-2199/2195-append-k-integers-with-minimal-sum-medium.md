@@ -45,9 +45,7 @@ If we need to append some numbers, then the next question is how many numbers we
 
 If $$k$$ is greater than / equal to what we need, we update $$k := k - need$$ and add the consecutive sum between $$prev$$ to $$x$$ which is $$((prev + 1) + (x - 1)) * need / 2$$.  For example, if $$prev$$ is $$1$$ and $$x$$ is $$4$$, then the consecutive sum between them is $$((1 + 1) + (4 - 1)) * 2 / 2 = 5$$, i.e $$2 + 3$$. Then we update $$prev := x$$. If we have already appended $$k$$ numbers, then we can return the answer.&#x20;
 
-{% hint style="info" %}
-The consecutive sum between $$start$$ and $$end$$ is simply $$(start + end) * n / 2$$. If you are interested in how to get this formula, please check out [0829 - Consecutive Numbers Sum (Hard)](../0800-0899/consecutive-numbers-sum-hard).
-{% endhint %}
+> The consecutive sum between $$start$$ and $$end$$ is simply $$(start + end) * n / 2$$. If you are interested in how to get this formula, please check out [0829 - Consecutive Numbers Sum (Hard)](../0800-0899/consecutive-numbers-sum-hard).
 
 The other case is we just need to append $$k$$ numbers. Then we simply add $$(prev * 2 + k + 1) * k$$ and return the answer.
 

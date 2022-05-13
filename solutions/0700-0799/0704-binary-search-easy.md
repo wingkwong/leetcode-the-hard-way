@@ -59,9 +59,7 @@ public:
 };
 ```
 
-{% hint style="info" %}
-How about taking the lower element if the number of elements is even?&#x20;
-{% endhint %}
+> How about taking the lower element if the number of elements is even?
 
 Similarly, we set the boundary from the first index to the last index of the array. In each round, we try the middle one $$m = l + (r - l) / 2$$. If there are even number of elements, we take the lower one. If the target is greater than $$nums[m]$$, then move the left pointer to $$m + 1$$, else move the right pointer to $$m$$. At the end, if the target is found, the index would be $$l$$.&#x20;
 

@@ -50,9 +50,8 @@ Output: []
 
 ## &#x20;Approach 1: Divide and Conquer
 
-{% hint style="info" %}
-It is recommended to solve [0021 - Merge Two Sorted Lists (Easy)](merge-two-sorted-lists-easy) first.
-{% endhint %}
+
+> It is recommended to solve [0021 - Merge Two Sorted Lists (Easy)](merge-two-sorted-lists-easy) first.
 
 We can directly use the solution from [0021 - Merge Two Sorted Lists (Easy)](merge-two-sorted-lists-easy) to solve this problem because merging K sorted lists is same as merging two sorted lists $$log_2k$$ times.
 
