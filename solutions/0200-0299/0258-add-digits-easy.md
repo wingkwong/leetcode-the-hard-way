@@ -92,13 +92,11 @@ Let's say $$n = a_0 * 1 + a_1 * 10 + a_2 * 100 + ... + a_n * 10^n$$  where $$a_i
 
 To generalise, for base $$b$$, we'll have&#x20;
 
-<!-- TODO -->
-<!-- ![](<../../.gitbook/assets/image (5).png>) -->
+![image](https://user-images.githubusercontent.com/35857179/168303513-5e58fd4a-8775-487c-9a21-25d0e061e418.png)
 
 which can be further simplified as&#x20;
 
-<!-- TODO -->
-<!-- ![](<../../.gitbook/assets/image (3).png>) -->
+![image](https://user-images.githubusercontent.com/35857179/168303537-9079b250-0106-41d0-84ab-bc4d8d672541.png)
 
 ```cpp
 class Solution {

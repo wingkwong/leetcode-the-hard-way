@@ -120,8 +120,7 @@ public:
 
 This problem is exactly asking Stirling number of the second kind (or Stirling partition number) which is the number of ways to partition a set of n objects into k non-empty subsets.
 
-<!-- TODO -->
-<!-- ![The 15 partitions of a 4-element set ordered in a Hasse diagram. Source: Wikipedia](<../../.gitbook/assets/image (4).png>) -->
+![image](https://user-images.githubusercontent.com/35857179/168303702-13eaa317-ed34-43a8-a6b1-926b3b9cf6ca.png)
 
 Stirling partition number can be calculated by using the following formula.&#x20;
 

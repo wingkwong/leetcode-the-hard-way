@@ -69,7 +69,9 @@ We can now break this problem into 2 parts:
 
 The first part is straightforward as we only need to iterate each tire for $$numLaps$$ times. However, we need some optimizations to stop iterating when the following condition is met
 
-* `f_i * (r_i) ^ n >= time[(n+1)//2] + time[(n+1)//2] + changeTime`
+```
+f_i * (r_i) ^ n >= time[(n+1)//2] + time[(n+1)//2] + changeTime
+```
 
 Notice that the above condition is not optimally the upper bound, but it is good enough to break the loop. We know that we can stop here because using the same tire increases exponentially, and further combining previous sets of tires increases linearly.
 
@@ -86,21 +88,22 @@ A small optimisation here is that instead of generating repeating pairs (\[1,8] 
 
 Here is a dry run of the following test case:&#x20;
 
-&#x20;`tires = [2,3], [3,3], [3, 2], changeTime = 5, numLaps = 6`
+```
+tires = [2,3], [3,3], [3, 2], changeTime = 5, numLaps = 6
+```
 
-<!-- TODO: -->
+![image](https://user-images.githubusercontent.com/35857179/168303953-913d229c-ce49-4480-8810-a7b397856140.png)
 
-<!-- ![Pre-compute the shortest amount of time when using a single tire. We stop exploring the time of using a single tire when it takes longer than to change tire once. ](<../../.gitbook/assets/2188 Graph 1 (1).png>)
+![image](https://user-images.githubusercontent.com/35857179/168303969-2225c532-7582-4940-ab0f-5a76a3662e60.png)
 
-![Start with the shortest time of finishing 2 laps. We check if it is faster to use 1 tire for 2 laps, or 2 tires for 1 lap. ](<../../.gitbook/assets/2188 Graph 2.png>)
+![image](https://user-images.githubusercontent.com/35857179/168303988-5ec8284a-8690-4702-a363-a14a2f963cd9.png)
 
-![Start with the shortest time of finishing 3 laps. We check if it is faster to use 1 tire for 3 laps, or 2 tires for 3 lap (1+2). ](<../../.gitbook/assets/2188 Graph 3.png>)
+![image](https://user-images.githubusercontent.com/35857179/168304003-39cee495-675e-4b33-b813-4fd1ee280ea8.png)
 
-![Start with the shortest time of finishing 4 laps. We check if it is faster to use 1 tire for 4 laps, or 2 tires for 4 lap (2+2 or 1+3). ](<../../.gitbook/assets/2188 Graph 4.png>)
+![image](https://user-images.githubusercontent.com/35857179/168304019-dfb9f067-4556-44e8-9c2e-c19e42f8415c.png)
 
-![Start with the shortest time of finishing 5 laps. We check if it is faster to use 1 tire for 5 laps, or 2 tires for 5 lap (2+3 or 1+4). ](<../../.gitbook/assets/2188 Graph 5.png>)
+![image](https://user-images.githubusercontent.com/35857179/168304028-cf195b2c-3e05-4736-b950-a0c5851fcc20.png)
 
-![Start with the shortest time of finishing 6 laps. We check if it is faster to use 1 tire for 6 laps, or 2 tires for 6 lap (3+3 or 2+4 or 1+5). ](<../../.gitbook/assets/\_2188 Graph 6 (1).png>) -->
 
 ```python
 def minimumFinishTime(self, tires: List[List[int]], changeTime: int, numLaps: int) -> int:

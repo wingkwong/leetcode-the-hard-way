@@ -61,8 +61,7 @@ Therefore, the transition would be `dp[i][j] = 1 + min(dp[i - 1][j - 1], dp[i - 
 
 What is the base case then? The base case is simply an edit distance between the empty string and non-empty string, i.e. `dp[i][0] = i` and `dp[0][j] = j`. The answer would be `dp[m][n]`. This algorithm is also known as Wagner–Fischer algorithm.
 
-<!-- TODO -->
-<!-- ![Wagner–Fischer algorithm](../../.gitbook/assets/image.png) -->
+![image](https://user-images.githubusercontent.com/35857179/168303382-cadaf726-02e3-400d-a8cc-fd0c7db315c3.png)
 
 ### C++
 
