@@ -10,8 +10,8 @@ const katex = require('rehype-katex');
 const config = {
   title: 'LeetCode The Hard Way',
   tagline: 'From Absolute Beginner to Quitter',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
+  url: 'https://wingkwong.github.io',
+  baseUrl: '/leetcode-the-hard-way/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
