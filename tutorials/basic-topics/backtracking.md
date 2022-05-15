@@ -47,7 +47,7 @@ for (auto x : nums) {
 }
 ```
 
-### Suggested Problems:
+### Suggested Problems
 
 * [0039 - Combination Sum (Medium)](../../solutions/0000-0099/combination-sum-medium)
 * [0040 - Combination Sum II (Medium)](../../solutions/0000-0099/combination-sum-ii-medium)

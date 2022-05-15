@@ -73,7 +73,7 @@ This operation only takes $$O(1)$$ time! Without hash map, we would need to iter
 
 After understanding Hash Map, are you able to solve [Two Sum](../../solutions/0000-0099/two-sum) in $$O(N)$$ time?
 
-### Suggested Problems:
+### Suggested Problems
 
 * 0003 - Longest Substring Without Repeating Characters (Medium) [(LeetCode Link)](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 * 0217 - Contains Duplicate (Easy) [(LeetCode Link)](https://leetcode.com/problems/contains-duplicate/)
