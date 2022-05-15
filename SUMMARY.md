@@ -59,6 +59,7 @@
     * [0219 - Contains Duplicate II (Easy)](solutions/0200-0299/0219-contains-duplicate-ii-easy.md)
     * [0225 - Implement Stack using Queues (Easy)](solutions/0200-0299/0225-implement-stack-using-queues-easy.md)
     * [0228 - Summary Ranges (Easy)](solutions/0200-0299/0228-summary-ranges-easy.md)
+    * [0242 - Valid Anagram (Easy)](solutions/0200-0299/0242-valid-anagram-easy.md)
     * [0258 - Add Digits (Easy)](solutions/0200-0299/0258-add-digits-easy.md)
     * [0261 -Graph Valid Tree (Medium)](solutions/0200-0299/0261-graph-valid-tree-medium.md)
     * [0278 - First Bad Version (Easy)](solutions/0200-0299/0278-first-bad-version-easy.md)
