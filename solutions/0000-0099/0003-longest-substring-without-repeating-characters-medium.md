@@ -2,6 +2,7 @@
 description: >-
   Author: @TBC |
   https://leetcode.com/problems/longest-substring-without-repeating-characters/
+tags: [Hash Table, String, Sliding Window]
 ---
 
 # 0003 - Longest Substring Without Repeating Characters (Medium)

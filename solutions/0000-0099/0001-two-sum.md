@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wingkwong | https://leetcode.com/problems/two-sum/'
+tags: [Array, Hash Table]
 ---
 
 # 0001 - Two Sum (Easy)

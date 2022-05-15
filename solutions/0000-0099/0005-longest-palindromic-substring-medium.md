@@ -2,6 +2,7 @@
 description: >-
   Author: @wingkwong |
   https://leetcode.com/problems/longest-palindromic-substring/
+tags: [String, Dynamic Programming]
 ---
 
 # 0005 - Longest Palindromic Substring (Medium)
