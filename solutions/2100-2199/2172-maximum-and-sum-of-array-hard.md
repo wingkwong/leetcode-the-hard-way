@@ -151,9 +151,7 @@ _This approach is prepared by @wingkwong._&#x20;
 
 **Prerequisite**: MCMF
 
-{% hint style="warning" %}
-MCMF tutorial will not be included here. Please check out [https://cp-algorithms.com/graph/min\_cost\_flow.html](https://cp-algorithms.com/graph/min\_cost\_flow.html) for more.
-{% endhint %}
+> MCMF tutorial will not be included here. Please check out [https://cp-algorithms.com/graph/min\_cost\_flow.html](https://cp-algorithms.com/graph/min\_cost\_flow.html) for more.
 
 We can think of $$nums$$ as the source of a bipartite graph and $$slots$$ as the destination. If we add two more vertices $$source$$ before $$nums$$ and $$sink$$ after $$slots$$, then we can easily solve it using standard MCMF template.
 
