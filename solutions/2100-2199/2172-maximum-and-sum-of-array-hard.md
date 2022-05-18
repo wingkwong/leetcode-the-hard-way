@@ -283,7 +283,7 @@ $$
 source, nums[0], nums[1], ... ,nums[n - 1], slot_1, slot_2, .., slot_k, sink
 $$
 
-Now we need to create the edges from $$source$$ to each element in $$nums$$ with $$1$$ capacity and $$0$$ cost. Then we create the edges from each element in $$nums$$ to each slot with $$1$$ capacity and $$-(nums[i - 1] \text & slot)$$. The minus sign is here because this MCMF template is to calculate the minimum cost and this problem is asking for the maximum one. Similarly, we create edges from each slot to $$sink$$ with $$2$$ capacities (because each slot at most contains 2 elements) and $$0$$ cost.
+Now we need to create the edges from $$source$$ to each element in $$nums$$ with $$1$$ capacity and $$0$$ cost. Then we create the edges from each element in $$nums$$ to each slot with $$1$$ capacity and $$-(nums[i - 1] & slot)$$. The minus sign is here because this MCMF template is to calculate the minimum cost and this problem is asking for the maximum one. Similarly, we create edges from each slot to $$sink$$ with $$2$$ capacities (because each slot at most contains 2 elements) and $$0$$ cost.
 
 ```cpp
 class Solution {
