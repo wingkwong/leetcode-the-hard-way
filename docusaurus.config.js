@@ -42,8 +42,8 @@ const config = {
           onlyIncludeVersions: ['current'],
           remarkPlugins: [math],
           rehypePlugins: [katex],
-          showLastUpdateTime: true,
-          showLastUpdateAuthor: true,
+          // showLastUpdateTime: true,
+          // showLastUpdateAuthor: true,
           editUrl:
             'https://github.com/wingkwong/leetcode-the-hard-way',
         },
@@ -154,8 +154,8 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           remarkPlugins: [math],
           rehypePlugins: [katex],
-          showLastUpdateTime: true,
-          showLastUpdateAuthor: true,
+          // showLastUpdateTime: true,
+          // showLastUpdateAuthor: true,
           editUrl:
             'https://github.com/wingkwong/leetcode-the-hard-way',
         }, 
@@ -169,8 +169,8 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           remarkPlugins: [math],
           rehypePlugins: [katex],
-          showLastUpdateTime: true,
-          showLastUpdateAuthor: true,
+          // showLastUpdateTime: true,
+          // showLastUpdateAuthor: true,
           editUrl:
             'https://github.com/wingkwong/leetcode-the-hard-way',
         }, 
