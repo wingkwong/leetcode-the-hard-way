@@ -1,8 +1,10 @@
 ---
+title: 'Sieve of Eratosthenes'
 description: 'Author: @wingkwong'
+hide_table_of_contents: true
 ---
 
-# Sieve of Eratosthenes
+> This tutorial is written by @wingkwong
 
 Sieve of Eratosthenes is a way of finding all prime numbers up to $$n$$ (inclusive).
 

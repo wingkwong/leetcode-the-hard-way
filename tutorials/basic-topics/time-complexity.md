@@ -1,8 +1,10 @@
 ---
+title: 'Time Complexity'
 description: 'Author: @wingkwong'
+hide_table_of_contents: true
 ---
 
-# Time Complexity
+> This tutorial is written by @wingkwong
 
 Time Complexity is one of the important measurements when it comes to writing an efficient solution. It estimates how much time your solution needs based on some input. If your solution is too slow, even it passes some test cases, it will still consider it as a wrong answer.
 

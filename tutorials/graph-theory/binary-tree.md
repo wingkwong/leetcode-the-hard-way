@@ -1,6 +1,6 @@
 ---
-description: 'Author:'
+title: 'Binary Tree'
+description: 'Coming Soon!'
 ---
 
-# Binary Tree
-
+Coming Soon

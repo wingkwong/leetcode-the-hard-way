@@ -1,3 +1,6 @@
-# Prim's Algorithm
+---
+title: "Prim's Algorithm"
+description: 'Coming Soon!'
+---
 
-#### _Tutorial: Coming Soon!_
+Coming Soon

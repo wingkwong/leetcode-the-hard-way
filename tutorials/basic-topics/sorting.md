@@ -1,8 +1,10 @@
 ---
+title: 'Sorting'
 description: 'Author: @wingkwong'
+hide_table_of_contents: true
 ---
 
-# Sorting
+> This tutorial is written by @wingkwong
 
 Sorting refers to rearranging elements in a specific order. The most common order is either ascending or descending. There are a lot of algorithms to sort the array with different time complexity.&#x20;
 

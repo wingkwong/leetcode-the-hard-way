@@ -1,8 +1,10 @@
 ---
+title: 'Depth First Search (DFS)'
 description: 'Author: @heiheihang'
+hide_table_of_contents: true
 ---
 
-# Depth First Search
+> This tutorial is written by @heiheihang
 
 In Depth-First Search (DFS), we aim to finish one branch before looking at other branches.
 

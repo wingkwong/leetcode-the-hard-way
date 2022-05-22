@@ -1,8 +1,8 @@
 ---
-description: 'Author:'
+title: 'Dynamic Programming'
+description: 'Coming Soon'
+hide_table_of_contents: true
 ---
-
-# Dynamic Programming
 
 ### Suggested Problems
 

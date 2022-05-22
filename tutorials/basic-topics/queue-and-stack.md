@@ -1,8 +1,10 @@
 ---
-description: Author:@heiheihang
+title: 'Queue & Stack'
+description: 'Author: @heiheihang'
+# hide_table_of_contents: true
 ---
 
-# Queue & Stack
+> This tutorial is written by @heiheihang
 
 ### Stack
 

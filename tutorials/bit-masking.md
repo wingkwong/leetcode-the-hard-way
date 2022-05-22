@@ -1,8 +1,8 @@
 ---
-description: 'Author:'
+title: 'Bit Manipulation'
+description: 'Coming Soon'
+hide_table_of_contents: true
 ---
-
-# Bit Manipulation
 
 ### Suggested Problems
 

@@ -1,3 +1,6 @@
-# Disjoint Set
+---
+title: 'Disjoint Set'
+description: 'Coming Soon!'
+---
 
-#### _Tutorial: Coming Soon!_
+Coming Soon

@@ -1,8 +1,9 @@
 ---
-description: 'Author: @wingkwong'
+title: "Z Algorithm"
+description: 'Coming Soon!'
 ---
 
-# Z Algorithm
+Coming Soon
 
 #### _Tutorial: Coming Soon!_
 

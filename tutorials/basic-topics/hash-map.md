@@ -1,6 +1,10 @@
 ---
-description: Author:@heiheihang
+title: 'Hash Map'
+description: 'Author: @heiheihang'
+hide_table_of_contents: true
 ---
+
+> This tutorial is written by @heiheihang
 
 # Hash Map
 

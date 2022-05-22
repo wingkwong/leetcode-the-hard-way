@@ -1,8 +1,10 @@
 ---
+title: 'Trie'
 description: 'Author: @wingkwong'
+# hide_table_of_contents: true
 ---
 
-# Trie
+> This tutorial is written by @wingkwong
 
 ## Overview
 

@@ -1,8 +1,10 @@
 ---
+title: "Dijkstra's Algorithm"
 description: 'Author: @wingkwong'
+hide_table_of_contents: true
 ---
 
-# Dijkstra's Algorithm
+> This tutorial is written by @wingkwong
 
 Dijkstra's Algorithm is used to find the shortest paths between nodes in a graph. It can only be used when the graphs have non-negative weights for all edges.
 

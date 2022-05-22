@@ -1,8 +1,10 @@
 ---
+title: 'Binary Search'
 description: 'Author: @heiheihang'
+hide_table_of_contents: true
 ---
 
-# Binary Search
+> This tutorial is written by @heiheihang
 
 We have all played a game to guess a number from 1 to 100. The optimal approach to this game is actually binary search. Binary search is the searching strategy that reduces the search space by half every iteration until you have found the target.
 

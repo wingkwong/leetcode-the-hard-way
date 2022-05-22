@@ -1,7 +1,6 @@
 ---
-description: 'Author:'
+title: "Topological Sorting"
+description: 'Coming Soon!'
 ---
 
-# Topological Sorting
-
-Coming Soon!
+Coming Soon

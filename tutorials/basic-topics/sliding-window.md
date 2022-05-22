@@ -1,8 +1,10 @@
 ---
+title: 'Sliding Window'
 description: 'Author: @heiheihang'
+hide_table_of_contents: true
 ---
 
-# Sliding Window
+> This tutorial is written by @heiheihang
 
 In some problems, we need to keep track of the elements in a list that satisfy certain conditions. Let's take a look at the following problem:&#x20;
 

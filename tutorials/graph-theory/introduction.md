@@ -1,8 +1,11 @@
 ---
+title: 'Introduction'
 description: 'Author: @heiheihang'
+hide_table_of_contents: true
+sidebar_position: 1
 ---
 
-# Introduction
+> This tutorial is written by @heiheihang
 
 Graphs can solve a plethora of interesting problems!
 

@@ -1,3 +1,6 @@
-# Kruskal's Algorithm
+---
+title: "Kruskal's Algorithm"
+description: 'Coming Soon!'
+---
 
-#### _Tutorial: Coming Soon!_
+Coming Soon

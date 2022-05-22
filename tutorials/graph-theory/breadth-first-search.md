@@ -1,8 +1,10 @@
 ---
+title: 'Breadth First Search (BFS)'
 description: 'Author: @heiheihang'
+hide_table_of_contents: true
 ---
 
-# Breadth First Search
+> This tutorial is written by @heiheihang
 
 In Breadth-First Search (BFS), we explore **all** the closest nodes first before going one step further. A good example would be:
 
