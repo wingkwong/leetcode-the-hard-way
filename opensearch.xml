@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
+                       xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+  <ShortName>LeetCode The Hard Way</ShortName>
+  <Description>Search LeetCode The Hard Way</Description>
+  <InputEncoding>UTF-8</InputEncoding>
+  <Image width="16" height="16" type="image/x-icon">https://wingkwong.github.io/leetcode-the-hard-way/img/favicon.ico</Image>
+  <Url type="text/html" method="get" template="https://wingkwong.github.io/leetcode-the-hard-way/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://wingkwong.github.io/leetcode-the-hard-way/opensearch.xml" />
+  <moz:SearchForm>https://wingkwong.github.io/leetcode-the-hard-way/</moz:SearchForm>
+</OpenSearchDescription>
