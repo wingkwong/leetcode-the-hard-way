@@ -92,7 +92,7 @@ const config = {
           },
           {
             label: 'Solutions',
-            to: '/solutions',
+            to: '/solutions/category/0000---0099',
             activeBaseRegex: `/solutions/`,
           },
           // {to: '/blog', label: 'Blog', position: 'left'},
