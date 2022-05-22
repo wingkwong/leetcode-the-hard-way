@@ -87,7 +87,7 @@ const config = {
         items: [
           {
             label: 'Tutorials',
-            to: '/tutorials',
+            to: '/tutorials/category/basic-topics',
             activeBaseRegex: `/tutorials/`,
           },
           {
