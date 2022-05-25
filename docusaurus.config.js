@@ -112,11 +112,11 @@ const config = {
             items: [
               {
                 label: 'Tutorials',
-                href: '/tutorials/',
+                href: '/tutorials/category/basic-topics/',
               },
               {
                 label: 'Solutions',
-                href: '/solutions/',
+                href: '/solutions/category/0000---0099/',
               },
             ],
           },
