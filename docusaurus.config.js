@@ -74,7 +74,7 @@ const config = {
       crossorigin: 'anonymous',
     },
   ],
-
+  themes: ['@docusaurus/theme-search-algolia'],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -141,6 +141,7 @@ const config = {
         appId: '3476Z84HTB',
         apiKey: '55a35f603f206084ba60cc05f22d30a2',
         indexName: 'leetcodethehardway',
+        contextualSearch: true
       },
     }),
 
