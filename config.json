@@ -1,0 +1,11 @@
+{
+    "index_name": "leetcodethehardway",
+    "start_urls": ["https://wingkwong.github.io/leetcode-the-hard-way"],
+    "selectors": {
+      "lvl0": "",
+      "lvl1": "h1",
+      "lvl2": "h2",
+      "lvl3": "h3",
+      "text": "article div,article p,article theme-code-block"
+    }
+}
