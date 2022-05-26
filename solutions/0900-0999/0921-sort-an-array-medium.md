@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wingkwong | https://leetcode.com/problems/sort-an-array/'
+tags: ['sorting']
 ---
 
 # 0921 - Sort an Array (Medium)
@@ -45,7 +46,7 @@ void stableSTLSort(vector<int>& nums) {
 }
 ```
 
-## Approach 2: Quick Sor
+## Approach 2: Quick Sort
 
 ### Quick Sort with Fixed Pivot (TLE)
 
