@@ -82,7 +82,7 @@ public:
             // It is guaranteed there will always be a previous score.
             else if (op == "D") s.push_back(2 * s[n - 1]);
             // Invalidate the previous score, removing it from the record. 
-            It is guaranteed there will always be a previous score.
+            // It is guaranteed there will always be a previous score.
             else if (op == "C") s.pop_back();
             // An integer x - Record a new score of x.
             else s.push_back(stoi(op));
