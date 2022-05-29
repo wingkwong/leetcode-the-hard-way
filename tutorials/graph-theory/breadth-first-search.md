@@ -2,6 +2,12 @@
 title: 'Breadth First Search (BFS)'
 description: 'In BFS, we explore all the closest nodes first before going one step further.'
 hide_table_of_contents: true
+keywords:
+  - leetcode
+  - tutorial
+  - breadth first search
+  - bfs
+  - algorithm
 ---
 
 > This tutorial is written by @heiheihang

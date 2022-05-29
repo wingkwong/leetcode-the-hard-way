@@ -2,6 +2,12 @@
 title: 'Depth First Search (DFS)'
 description: 'In DFS, we aim to finish one branch before looking at other branches.'
 hide_table_of_contents: true
+keywords:
+  - leetcode
+  - tutorial
+  - depth first search
+  - dfs
+  - algorithm
 ---
 
 > This tutorial is written by @heiheihang

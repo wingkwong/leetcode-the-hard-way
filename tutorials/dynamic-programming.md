@@ -2,6 +2,11 @@
 title: 'Dynamic Programming'
 description: 'Dynamic Programming'
 hide_table_of_contents: true
+keywords:
+  - leetcode
+  - tutorial
+  - dynamic programming
+  - algorithm
 ---
 
 ### Suggested Problems

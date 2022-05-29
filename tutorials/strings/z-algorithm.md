@@ -2,6 +2,11 @@
 title: "Z Algorithm"
 description: 'Coming Soon!'
 draft: true
+keywords:
+  - leetcode
+  - tutorial
+  - z algorithm
+  - algorithm
 ---
 
 Coming Soon

@@ -2,6 +2,11 @@
 title: 'Two Pointers'
 description: 'Two Pointers is an effective technique used for searching pairs in a sorted array.'
 hide_table_of_contents: true
+keywords:
+  - leetcode
+  - tutorial
+  - two pointers
+  - algorithm
 ---
 
 > This tutorial is written by @heiheihang

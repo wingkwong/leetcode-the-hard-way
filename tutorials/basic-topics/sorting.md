@@ -2,6 +2,11 @@
 title: 'Sorting'
 description: 'Sorting refers to rearranging elements in a specific order.'
 hide_table_of_contents: true
+keywords:
+  - leetcode
+  - tutorial
+  - sorting
+  - algorithm
 ---
 
 > This tutorial is written by @wingkwong

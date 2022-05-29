@@ -2,6 +2,10 @@
 title: 'Bit Manipulation'
 description: 'Bit Manipulation'
 hide_table_of_contents: true
+keywords:
+  - leetcode
+  - tutorial
+  - bit manipulation
 ---
 
 ### Suggested Problems

@@ -2,6 +2,12 @@
 title: 'Queue & Stack'
 description: 'Stack is the data structure The first item that comes in will be the first to go out.'
 # hide_table_of_contents: true
+keywords:
+  - leetcode
+  - tutorial
+  - queue
+  - stack
+  - data structure
 ---
 
 > This tutorial is written by @heiheihang

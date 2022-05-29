@@ -2,6 +2,12 @@
 title: 'Binary Exponentiation'
 description: 'Binary Exponentiation is also known as Exponentiation by Squaring.'
 hide_table_of_contents: true
+keywords:
+  - leetcode
+  - tutorial
+  - binary exponentiation
+  - fast pow
+  - algorithm
 ---
 
 > This tutorial is written by @wingkwong

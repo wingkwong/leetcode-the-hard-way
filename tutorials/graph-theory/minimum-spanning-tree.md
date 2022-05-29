@@ -2,6 +2,12 @@
 title: 'Minimum Spanning Tree'
 description: 'A minimum spanning tree is a subset of the edges of a connected undirected graph with the minimum possible total edge weight and it does not contain any cycles.'
 hide_table_of_contents: true
+keywords:
+  - leetcode
+  - tutorial
+  - minimum spanning tree
+  - mst
+  - algorithm
 ---
 
 > This tutorial is written by @wingkwong

@@ -2,6 +2,12 @@
 title: 'Disjoint Set Union (DSU)'
 description: 'Disjoint Set Union is a data structure that allows us to combine any two sets into one.'
 hide_table_of_contents: true
+keywords:
+  - leetcode
+  - tutorial
+  - disjoint set union
+  - dsu
+  - algorithm
 ---
 
 > This tutorial is written by @wingkwong

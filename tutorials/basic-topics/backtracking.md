@@ -2,6 +2,11 @@
 title: 'Backtracking'
 description: 'A backtracking algorithm is used to construct a solution recursively by starting with an empty solution and adding solution one by one.'
 hide_table_of_contents: true
+keywords:
+  - leetcode
+  - tutorial
+  - backtracking
+  - algorithm
 ---
 
 > This tutorial is written by @wingkwong

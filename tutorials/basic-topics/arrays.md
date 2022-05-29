@@ -2,6 +2,11 @@
 title: 'Arrays'
 description: 'An array is a data structure consisting of a collection of elements.'
 hide_table_of_contents: true
+keywords:
+  - leetcode
+  - tutorial
+  - arrays
+  - data structure
 ---
 
 > This tutorial is written by @heiheihang

@@ -2,6 +2,11 @@
 title: 'Binary Search'
 description: 'Binary search is the searching strategy that reduces the search space by half every iteration until you have found the target.'
 hide_table_of_contents: true
+keywords:
+  - leetcode
+  - tutorial
+  - binary search
+  - algorithm
 ---
 
 > This tutorial is written by @heiheihang

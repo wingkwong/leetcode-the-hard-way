@@ -2,6 +2,11 @@
 title: "Dijkstra's Algorithm"
 description: 'Dijkstra's Algorithm is used to find the shortest paths between nodes in a graph.'
 hide_table_of_contents: true
+keywords:
+  - leetcode
+  - tutorial
+  - dijkstra
+  - algorithm
 ---
 
 > This tutorial is written by @wingkwong

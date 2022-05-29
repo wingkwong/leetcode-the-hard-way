@@ -2,6 +2,12 @@
 title: 'Heap / Priority Queue'
 description: 'A heap, or a priority queue, is a data structure that efficiently stores elements in a particular order.'
 hide_table_of_contents: true
+keywords:
+  - leetcode
+  - tutorial
+  - heap
+  - priority queue
+  - algorithm
 ---
 
 > This tutorial is written by @heiheihang

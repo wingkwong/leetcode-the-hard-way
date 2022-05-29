@@ -2,6 +2,11 @@
 title: 'Sliding Window'
 description: 'Sliding window is a technique used to solve problems in array or string.'
 hide_table_of_contents: true
+keywords:
+  - leetcode
+  - tutorial
+  - sliding window
+  - algorithm
 ---
 
 > This tutorial is written by @heiheihang
