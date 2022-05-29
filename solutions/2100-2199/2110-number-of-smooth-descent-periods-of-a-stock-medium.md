@@ -72,7 +72,7 @@ public:
 
 ## Approach 2: Math
 
-For a non-increasing contiguous segement with length `l`, it contributes `1 + 2 + 3 + ... + l = (l + 1) * l / 2` subarrays.&#x20;
+For a non-increasing contiguous segement with length `l`, it contributes `1 + 2 + 3 + ... + l = (l + 1) * l / 2` subarrays.
 
 ```cpp
 class Solution {

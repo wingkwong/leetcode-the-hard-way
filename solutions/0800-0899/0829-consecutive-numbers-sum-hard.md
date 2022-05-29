@@ -38,7 +38,7 @@ Explanation: 15 = 8 + 7 = 4 + 5 + 6 = 1 + 2 + 3 + 4 + 5
 
 ## Approach: Math
 
-The first observation is that $$n$$itself is one of the answer. We can define $$ans = 1$$.&#x20;
+The first observation is that $$n$$itself is one of the answer. We can define $$ans = 1$$.
 
 Let $$x$$ be the first number of the sequence, then we should have
 
@@ -46,15 +46,15 @@ $$
 n = x + (x + 1) + (x + 2) + ... + (x + (k - 1))
 $$
 
-We can arrange the formula. First there are $$k$$ terms of $$x$$ so we can just multiply them together. The remaining sum is just $$0 + 1 + 2 + ... + (k - 1)$$ which is $$k * (k - 1) / 2$$. Why? We can get that from sum of $$n$$ terms in Arithmetic Progress (A.P.) formula&#x20;
+We can arrange the formula. First there are $$k$$ terms of $$x$$ so we can just multiply them together. The remaining sum is just $$0 + 1 + 2 + ... + (k - 1)$$ which is $$k * (k - 1) / 2$$. Why? We can get that from sum of $$n$$ terms in Arithmetic Progress (A.P.) formula
 
 $$
 S = (n / 2) * (2 * a + (n - 1) * d)
 $$
 
-where $$a$$is the first term and $$d$$ is the common difference.&#x20;
+where $$a$$is the first term and $$d$$ is the common difference.
 
-We can further transform from&#x20;
+We can further transform from
 
 $$
 S = (n / 2) * (a + a + (n - 1) * d)
@@ -70,7 +70,7 @@ where $$l$$is the last term and it is equivalent to $$a + (n - 1) * d$$.
 
 Back to our problem, from $$0 + 1 + 2 + ... + (k - 1)$$, we can see that the first term is 0 and and last term is $$(k - 1)$$. Therefore, we can know that  $$0 + 1 + 2 + ... + (k - 1) = (k / 2) * (0 + (k - 1))  = k * (k - 1) / 2$$.
 
-Now we have $$k * x = n - k * (k - 1) / 2$$, which means we can construct a sum of $$n$$using $$k$$terms starting from $$x$$ if $$n - k * (k - 1) / 2$$ is a multiple of $$k$$. We can iterate $$k$$and check if this statement is true or not. The next problem would be "What is the range of $$k$$?".&#x20;
+Now we have $$k * x = n - k * (k - 1) / 2$$, which means we can construct a sum of $$n$$using $$k$$terms starting from $$x$$ if $$n - k * (k - 1) / 2$$ is a multiple of $$k$$. We can iterate $$k$$and check if this statement is true or not. The next problem would be "What is the range of $$k$$?".
 
 Since $$n$$itself is already considered, so we need to start $$k$$ from 2. From the above formula, $$n - k * (k - 1) / 2$$ needs to be greater than 0.
 

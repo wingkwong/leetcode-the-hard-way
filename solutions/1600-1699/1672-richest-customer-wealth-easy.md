@@ -49,7 +49,7 @@ Output: 17
 
 ## Approach 1: Max Row Sum
 
-Given a `m x n` grid, we need to find the maximum row sum. We iterate each row and define `wealth = 0`, then iterate each column, add each `accounts[i][j]` to `wealth`. After that, update the answer if the wealth for the current row is greater than the current maximum sum.&#x20;
+Given a `m x n` grid, we need to find the maximum row sum. We iterate each row and define `wealth = 0`, then iterate each column, add each `accounts[i][j]` to `wealth`. After that, update the answer if the wealth for the current row is greater than the current maximum sum.
 
 ```cpp
 class Solution {

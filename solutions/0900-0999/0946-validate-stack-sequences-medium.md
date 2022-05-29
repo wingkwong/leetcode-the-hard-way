@@ -6,7 +6,7 @@ description: 'Author: @wingkwong | https://leetcode.com/problems/validate-stack-
 
 ## Problem Statement
 
-Given two integer arrays `pushed` and `popped` each with distinct values, return `true` _if this could have been the result of a sequence of push and pop operations on an initially empty stack, or_ `false` _otherwise._&#x20;
+Given two integer arrays `pushed` and `popped` each with distinct values, return `true` _if this could have been the result of a sequence of push and pop operations on an initially empty stack, or_ `false` _otherwise._
 
 **Example 1:**
 

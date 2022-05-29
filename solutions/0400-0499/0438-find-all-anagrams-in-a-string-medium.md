@@ -12,7 +12,7 @@ Given two strings `s` and `p`, return _an array of all the start indices of_ `p`
 
 An **Anagram** is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
 
-&#x20;
+
 
 **Example 1:**
 

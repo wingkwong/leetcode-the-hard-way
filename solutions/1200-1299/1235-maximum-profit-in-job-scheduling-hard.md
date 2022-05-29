@@ -14,7 +14,7 @@ You're given the `startTime`, `endTime` and `profit` arrays, return the maximum 
 
 If you choose a job that ends at time `X` you will be able to start another job that starts at time `X`.
 
-&#x20;
+
 
 **Example 1:**
 

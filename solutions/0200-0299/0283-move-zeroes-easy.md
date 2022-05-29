@@ -33,11 +33,11 @@ Output: [0]
 
 ## Approach 1: Two pointers
 
-We need to set two pointers for this problem. The first pointer identifies the current number it is looking at. The second pointer identifies the next un-updated slot for moving the non-zero numbers in.&#x20;
+We need to set two pointers for this problem. The first pointer identifies the current number it is looking at. The second pointer identifies the next un-updated slot for moving the non-zero numbers in.
 
 When we see a non-zero element, we put it in the slot pointed by `left_pointer`, and then increment `left_pointer`. When we see a zero, we just skip.
 
-At the end, we need to set all the unused slots of `nums` to zero.&#x20;
+At the end, we need to set all the unused slots of `nums` to zero.
 
 ```python
 def moveZeroes(self, nums: List[int]) -> None:

@@ -50,7 +50,7 @@ merged: a p b q c   d
 
 ## Approach 1: Two Pointers
 
-We define two pointers, `pointer_for_word1`and `pointer_for_word2` . We then iterate the letters from both words until we have exhausted one of them. After that, we exhaust the remaining word (if both words have different lengths).&#x20;
+We define two pointers, `pointer_for_word1`and `pointer_for_word2` . We then iterate the letters from both words until we have exhausted one of them. After that, we exhaust the remaining word (if both words have different lengths).
 
 ```python
 def mergeAlternately(self, word1: str, word2: str) -> str:

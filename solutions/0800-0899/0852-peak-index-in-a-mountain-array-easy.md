@@ -17,7 +17,7 @@ Let's call an array `arr` a **mountain** if the following properties hold:
 
 Given an integer array `arr` that is **guaranteed** to be a mountain, return any `i` such that `arr[0] < arr[1] < ... arr[i - 1] < arr[i] > arr[i + 1] > ... > arr[arr.length - 1]`.
 
-&#x20;
+
 
 **Example 1:**
 
@@ -46,7 +46,7 @@ Output: 1
 * `0 <= arr[i] <= 10^6`
 * `arr` is **guaranteed** to be a mountain array.
 
-&#x20;
+
 
 **Follow up:** Finding the `O(n)` is straightforward, could you find an `O(log(n))` solution?\
 

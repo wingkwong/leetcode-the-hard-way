@@ -16,7 +16,7 @@ Return _the **maximum** number of times_ `pattern` _can occur as a **subsequence
 
 A **subsequence** is a string that can be derived from another string by deleting some or no characters without changing the order of the remaining characters.
 
-&#x20;
+
 
 **Example 1:**
 

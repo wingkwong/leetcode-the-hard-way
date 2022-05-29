@@ -16,7 +16,7 @@ The **score** of `si` is the length of the **longest common prefix** between `si
 
 Given the final string `s`, return _the **sum** of the **score** of every_ `si`.
 
-&#x20;
+
 
 **Example 1:**
 

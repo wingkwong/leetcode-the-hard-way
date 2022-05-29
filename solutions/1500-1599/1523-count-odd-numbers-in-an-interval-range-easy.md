@@ -32,7 +32,7 @@ Explanation: The odd numbers between 8 and 10 are [9].
 
 ## Approach 1: Brute Force
 
-Iterate from $$low$$ to $$high$$ and check if $$i$$ is odd.&#x20;
+Iterate from $$low$$ to $$high$$ and check if $$i$$ is odd.
 
 ```go
 func countOdds(low int, high int) int {

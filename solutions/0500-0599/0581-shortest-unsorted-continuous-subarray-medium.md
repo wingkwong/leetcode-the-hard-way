@@ -41,7 +41,7 @@ Output: 0
 
 ## Approach 1: Sort
 
-If the input is sorted, then return $$0$$.&#x20;
+If the input is sorted, then return $$0$$.
 
 Otherwise, we compare the input with the sorted version to check the first difference $$l$$ and the last difference $$r$$. The answer will be $$r - l + 1$$.
 

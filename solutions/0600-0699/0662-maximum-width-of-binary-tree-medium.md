@@ -16,7 +16,7 @@ The **width** of one level is defined as the length between the end-nodes (the l
 
 It is **guaranteed** that the answer will in the range of **32-bit** signed integer.
 
-&#x20;
+
 
 **Example 1:**
 
@@ -55,9 +55,9 @@ Explanation: The maximum width existing in the second level with the length 2 (3
 
 ## Approach 1: BFS
 
-We want to traverse each node level by level to calculate the width between the leftmost and the rightmost non-null nodes on the same level. We can use queue to perform BFS.&#x20;
+We want to traverse each node level by level to calculate the width between the leftmost and the rightmost non-null nodes on the same level. We can use queue to perform BFS.
 
-First we initialise a queue with a pair of tuple $$(node, idx)$$. Then we append the root with idx $$0$$ at the beginning. How do we assign $$idx$$ for other nodes? Given a full binary tree, we can easily see a pattern here. If a node with idx $$i$$ has the left node, the its idx would be $$2 * i$$. If a node with idx $$i$$ has the right node, the its idx would be $$2 * i + 1$$. &#x20;
+First we initialise a queue with a pair of tuple $$(node, idx)$$. Then we append the root with idx $$0$$ at the beginning. How do we assign $$idx$$ for other nodes? Given a full binary tree, we can easily see a pattern here. If a node with idx $$i$$ has the left node, the its idx would be $$2 * i$$. If a node with idx $$i$$ has the right node, the its idx would be $$2 * i + 1$$. 
 
 ![BFS traversal](https://leetcode.com/problems/maximum-width-of-binary-tree/Figures/662/662\_bfs\_traversal.png)
 

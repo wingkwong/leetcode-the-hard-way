@@ -11,7 +11,7 @@ You have a graph of `n` nodes labeled from `0` to `n - 1`. You are given an inte
 
 Return `true` _if the edges of the given graph make up a valid tree, and_ `false` _otherwise_.
 
-&#x20;
+
 
 **Example 1:**
 
@@ -31,7 +31,7 @@ Input: n = 5, edges = [[0,1],[1,2],[2,3],[1,3],[1,4]]
 Output: false
 ```
 
-&#x20;
+
 
 **Constraints:**
 

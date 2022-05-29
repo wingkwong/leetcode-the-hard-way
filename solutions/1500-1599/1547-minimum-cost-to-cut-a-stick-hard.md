@@ -20,7 +20,7 @@ The cost of one cut is the length of the stick to be cut, the total cost is the 
 
 Return _the minimum total cost_ of the cuts.
 
-&#x20;
+
 
 **Example 1:**
 
@@ -53,9 +53,9 @@ There are much ordering with total cost <= 25, for example, the order [4, 6, 5, 
 
 ## Approach 1: Dynamic Programming
 
-Let $$dp[i][j]$$ be the minimum total cost between cut position $$i$$and $$j$$. First let's add $$0$$ and $$n$$ to the input for further calculation. Then we sort the input in ascending order. We can perform a dfs function $$dfs(cuts, 0, (int) cuts.size() - 1)$$ to get the answer.&#x20;
+Let $$dp[i][j]$$ be the minimum total cost between cut position $$i$$and $$j$$. First let's add $$0$$ and $$n$$ to the input for further calculation. Then we sort the input in ascending order. We can perform a dfs function $$dfs(cuts, 0, (int) cuts.size() - 1)$$ to get the answer.
 
-Let's think of the base case first. Since the minimum length of a rod is $$1$$, we reach the destination when $$j - i <= 1$$ because we cannot make further cuts anymore. If $$dp[i][j]$$ has been calculated before, we can return it immediately.&#x20;
+Let's think of the base case first. Since the minimum length of a rod is $$1$$, we reach the destination when $$j - i <= 1$$ because we cannot make further cuts anymore. If $$dp[i][j]$$ has been calculated before, we can return it immediately.
 
 Otherwise, we iterate each position$$k$$ and perform each possible cut. We know that the cost is the length of the rod to be cut, i.e. $$cuts[j]  - cuts[i]$$. In example 1, the first cut costs 7. Since we have added $$0$$ and $$n$$to the input, so we have covered that. Once we cut at a certain point, the rod will be split into two parts. We perform the logic to calculate the costs for these two parts until we perform all the cuts.
 

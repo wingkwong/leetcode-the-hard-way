@@ -14,7 +14,7 @@ A **good triplet** is a set of `3` **distinct** values which are present in **in
 
 Return _the **total number** of good triplets_.
 
-&#x20;
+
 
 **Example 1:**
 
@@ -47,7 +47,7 @@ BIT aka fenwick tree is a data structure that can efficiently update elements an
 
 In this problem, we use two BITs to store the number of elements $$l$$ smaller than $$nums[i]$$ and the number of elements $$r$$ greater than $$nums[i]$$. In other word, we fix the middle point and calculate the number of triplets by $$l * r$$ at that point. The answer is the sum of them.
 
-First, we need to know that what is the position of $$nums1[i]$$ in $$nums2[i]$$. Then we iterate the array to get the position in $$nums2$$ for $$nums1[i]$$. We call $$query$$ to get the number of elements smaller than it. It's also the prefix sum or the range query from $$0$$ to it. Then we update the tree for this position. Similarly, we do the same thing for the second BIT in reversed order. This time we are looking for the suffix sum with the range from the target position till the end. At the end, we sum all &#x20;
+First, we need to know that what is the position of $$nums1[i]$$ in $$nums2[i]$$. Then we iterate the array to get the position in $$nums2$$ for $$nums1[i]$$. We call $$query$$ to get the number of elements smaller than it. It's also the prefix sum or the range query from $$0$$ to it. Then we update the tree for this position. Similarly, we do the same thing for the second BIT in reversed order. This time we are looking for the suffix sum with the range from the target position till the end. At the end, we sum all 
 
 $$l[i] * r[i]$$.
 

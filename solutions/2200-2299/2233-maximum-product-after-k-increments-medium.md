@@ -41,11 +41,11 @@ Note that there may be other ways to increment nums to have the maximum product.
 
 ## Approach 1: Priority Queue
 
-We should increase the smallest element every time.&#x20;
+We should increase the smallest element every time.
 
 > Let's say $$x > y$$. If we add it to the larger value $$x$$, we got $$(x + 1) * y = x * y + y$$. If we add it to the smaller value $$y$$, then we got $$x * (y + 1) = x*y+x$$. We can see that both got $$x * y$$ and we conclude that $$x * y + x > x  * y + y$$.
 
-However, we cannot sort it every time after the increment as it takes too much time. Instead, we can use priority queue to maintain the order.&#x20;
+However, we cannot sort it every time after the increment as it takes too much time. Instead, we can use priority queue to maintain the order.
 
 ```cpp
 class Solution {

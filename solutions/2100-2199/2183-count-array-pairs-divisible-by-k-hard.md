@@ -9,7 +9,7 @@ description: 'Author: @TBC | https://leetcode.com/problems/count-array-pairs-div
 Given a **0-indexed** integer array `nums` of length `n` and an integer `k`, return _the **number of pairs**_ `(i, j)` _such that:_
 
 * `0 <= i < j <= n - 1` _and_
-* `nums[i] * nums[j]` _is divisible by_ `k`.&#x20;
+* `nums[i] * nums[j]` _is divisible by_ `k`.
 
 **Example 1:**
 

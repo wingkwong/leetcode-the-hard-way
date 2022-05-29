@@ -17,7 +17,7 @@ At the beginning of the game, you start with an empty record. You are given a li
 
 Return _the sum of all the scores on the record_.
 
-&#x20;
+
 
 **Example 1:**
 

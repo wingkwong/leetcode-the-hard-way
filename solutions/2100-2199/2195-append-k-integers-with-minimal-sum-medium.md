@@ -39,11 +39,11 @@ The sum of the six integers appended is 1 + 2 + 3 + 4 + 7 + 8 = 25, so we return
 
 ## Approach 1: Sum of Consecutive Numbers
 
-First we sort the input. For each number $$x$$, we need to know how many numbers between $$prev$$ to $$x - 1$$, where the initial value $$prev$$ is $$0$$. For example, if the first number is $$4$$, then we need to append $$4 - 0 - 1 = 3$$ numbers. If we don't need to append any number, we simply set $$prev := x$$.&#x20;
+First we sort the input. For each number $$x$$, we need to know how many numbers between $$prev$$ to $$x - 1$$, where the initial value $$prev$$ is $$0$$. For example, if the first number is $$4$$, then we need to append $$4 - 0 - 1 = 3$$ numbers. If we don't need to append any number, we simply set $$prev := x$$.
 
-If we need to append some numbers, then the next question is how many numbers we can append. Remember that we just need to append $$k$$ numbers.&#x20;
+If we need to append some numbers, then the next question is how many numbers we can append. Remember that we just need to append $$k$$ numbers.
 
-If $$k$$ is greater than / equal to what we need, we update $$k := k - need$$ and add the consecutive sum between $$prev$$ to $$x$$ which is $$((prev + 1) + (x - 1)) * need / 2$$.  For example, if $$prev$$ is $$1$$ and $$x$$ is $$4$$, then the consecutive sum between them is $$((1 + 1) + (4 - 1)) * 2 / 2 = 5$$, i.e $$2 + 3$$. Then we update $$prev := x$$. If we have already appended $$k$$ numbers, then we can return the answer.&#x20;
+If $$k$$ is greater than / equal to what we need, we update $$k := k - need$$ and add the consecutive sum between $$prev$$ to $$x$$ which is $$((prev + 1) + (x - 1)) * need / 2$$.  For example, if $$prev$$ is $$1$$ and $$x$$ is $$4$$, then the consecutive sum between them is $$((1 + 1) + (4 - 1)) * 2 / 2 = 5$$, i.e $$2 + 3$$. Then we update $$prev := x$$. If we have already appended $$k$$ numbers, then we can return the answer.
 
 > The consecutive sum between $$start$$ and $$end$$ is simply $$(start + end) * n / 2$$. If you are interested in how to get this formula, please check out [0829 - Consecutive Numbers Sum (Hard)](../0800-0899/consecutive-numbers-sum-hard).
 
@@ -99,7 +99,7 @@ public:
 };
 ```
 
-From above solution, we can see that we use the same formula on different cases based on $$need$$. In fact, we can combine different cases into one by tuning $$need$$.&#x20;
+From above solution, we can see that we use the same formula on different cases based on $$need$$. In fact, we can combine different cases into one by tuning $$need$$.
 
 ```cpp
 class Solution {

@@ -33,7 +33,7 @@ Output: "bb"
 
 ## Approach 1: Manacher's Algorithm
 
-The most efficient solution is using Manacher's Algorithm to solve it in O(n). It is faster than other solutions because it exploits when a palindrome happens inside another palindrome.&#x20;
+The most efficient solution is using Manacher's Algorithm to solve it in O(n). It is faster than other solutions because it exploits when a palindrome happens inside another palindrome.
 
 ### C++
 

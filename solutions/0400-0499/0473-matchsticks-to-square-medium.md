@@ -10,7 +10,7 @@ You are given an integer array `matchsticks` where `matchsticks[i]` is the lengt
 
 Return `true` if you can make this square and `false` otherwise.
 
-&#x20;
+
 
 **Example 1:**
 
@@ -39,9 +39,9 @@ Explanation: You cannot find a way to form a square with all the matchsticks.
 
 If we need to put all matchsticks to form a square, then each side should equally have a length of$$sum(matchsticks) / 4$$. If the perimeter cannot be divided by $$4$$, then the answer is false. If the longest matchstick is greater than the target side, then it is also false.
 
-We can use bitmask to track which matchsticks are used. For example, for matchsticks = \[1, 1, 2, 2, 2], then bitmask $$10001_2$$simply means the first and the last matchsticks are used. If we have a state $$10001_2$$, then we can only put the middle three matchsticks to some positions.&#x20;
+We can use bitmask to track which matchsticks are used. For example, for matchsticks = \[1, 1, 2, 2, 2], then bitmask $$10001_2$$simply means the first and the last matchsticks are used. If we have a state $$10001_2$$, then we can only put the middle three matchsticks to some positions.
 
-Let $$dp[mask]$$ be the length of matchsticks we have put in the state $$mask$$. For example, If $$mask := 10001_2$$, $$dp[mask] := 5$$, $$side := 7$$, then it means we have put two matchsticks with the length of $$5$$ in total.&#x20;
+Let $$dp[mask]$$ be the length of matchsticks we have put in the state $$mask$$. For example, If $$mask := 10001_2$$, $$dp[mask] := 5$$, $$side := 7$$, then it means we have put two matchsticks with the length of $$5$$ in total.
 
 Hence, we iterate the mask. If the mask cannot be used, then skip it. Otherwise, we iterate $$n$$ times to check if $$i$$-th bit is used. If not, it means we may take this matchstick. However, we can only set this bit (take the matchstick) only if putting it won't exceed the length of side, i.e. $$dp[mask] + matchsticks[i] <= side$$. Once we choose it, then we update the new state $$(dp[mask] + matchsticks[i]) \mod side$$. We take $$mod$$ here because if we want to reset it if the prefect match for a side is found. At the end, choosing all $$5$$ matchsticks would give $$dp[(11111_2)] = 0$$.
 

@@ -164,7 +164,7 @@ And we do not forget to multiply -1 in the negative case before returning.
 
 ## Approach 2: Sort and Swap
 
-If $$num$$is negative, we sort it in descending order to make it greatest value.&#x20;
+If $$num$$is negative, we sort it in descending order to make it greatest value.
 
 If $$num$$ is positive, we sort it in ascending order to make it smallest value. However, it may contain leading zeros. For example,  $$310$$ would become $$013$$. In this case, we simply swap the first digit (i.e. zero) with the first non-zero digit to have the minimal value. In this case, it would be $$103$$.
 

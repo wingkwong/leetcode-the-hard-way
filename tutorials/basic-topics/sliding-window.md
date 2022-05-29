@@ -11,7 +11,7 @@ keywords:
 
 > This tutorial is written by @heiheihang
 
-In some problems, we need to keep track of the elements in a list that satisfy certain conditions. Let's take a look at the following problem:&#x20;
+In some problems, we need to keep track of the elements in a list that satisfy certain conditions. Let's take a look at the following problem:
 
 1876 - Substrings of Size Three with Distinct Characters (Easy) ([LeetCode Link](https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters/))
 
@@ -38,9 +38,9 @@ s3 = "zza" #index 2-4
 s4 = "zaz" #index 3-5
 ```
 
-Among these substrings, the only substring with distinct characters is `"xyz"`.&#x20;
+Among these substrings, the only substring with distinct characters is `"xyz"`.
 
-In this problem, we need to keep a _window_ of substrings of length 3.&#x20;
+In this problem, we need to keep a _window_ of substrings of length 3.
 
 We can use the following strategy:
 

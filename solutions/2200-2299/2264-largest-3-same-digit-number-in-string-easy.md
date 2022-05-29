@@ -18,7 +18,7 @@ Return _the **maximum good** integer as a **string** or an empty string_ `""` _i
 Note:
 
 * A **substring** is a contiguous sequence of characters within a string.
-* There may be **leading zeroes** in `num` or a good integer.&#x20;
+* There may be **leading zeroes** in `num` or a good integer.
 
 **Example 1:**
 

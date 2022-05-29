@@ -44,7 +44,7 @@ Explanation: "101" does not appear in nums. "000", "010", "100", and "110" would
 
 ## Approach 1: Hash Map
 
-First we store the existing binary string into a hash map. Then we try to build all binary strings one by one and check if it exists in the hash map or not. If so, we return the answer.&#x20;
+First we store the existing binary string into a hash map. Then we try to build all binary strings one by one and check if it exists in the hash map or not. If so, we return the answer.
 
 As $$n$$ is at most $$16$$, there would be at most $$2 ^ {16} = 65536$$ possibilities. To find all of them, we can do the following.
 

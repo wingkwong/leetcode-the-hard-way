@@ -16,7 +16,7 @@ Return _any sufficient team of the smallest possible size, represented by the in
 
 It is **guaranteed** an answer exists.
 
-&#x20;
+
 
 **Example 1:**
 

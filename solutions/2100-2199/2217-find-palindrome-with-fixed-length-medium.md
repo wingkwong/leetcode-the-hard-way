@@ -12,7 +12,7 @@ Given an integer array `queries` and a **positive** integer `intLength`, return 
 
 A **palindrome** is a number that reads the same backwards and forwards. Palindromes cannot have leading zeros.
 
-&#x20;
+
 
 **Example 1:**
 

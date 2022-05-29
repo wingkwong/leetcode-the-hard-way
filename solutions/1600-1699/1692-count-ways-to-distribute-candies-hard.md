@@ -70,7 +70,7 @@ $$
 dp[2 bags][3 balls] = dp[2 bags][2 balls] * 2 bags + dp[1 bag][2 balls]
 $$
 
-To generalise, we have such transition.&#x20;
+To generalise, we have such transition.
 
 $$
 dp[i][j] = dp[i][j - 1] * i + dp[i - 1][j - 1]
@@ -122,7 +122,7 @@ This problem is exactly asking Stirling number of the second kind (or Stirling p
 
 ![image](https://user-images.githubusercontent.com/35857179/168303702-13eaa317-ed34-43a8-a6b1-926b3b9cf6ca.png)
 
-Stirling partition number can be calculated by using the following formula.&#x20;
+Stirling partition number can be calculated by using the following formula.
 
 $$
 S(n,k)=\frac1{k!}\sum_{j=0}^k(-1)^j\binom{k}j(k-j)^n

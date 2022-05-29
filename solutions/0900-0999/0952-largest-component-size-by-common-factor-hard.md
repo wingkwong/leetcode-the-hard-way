@@ -42,7 +42,7 @@ Input: nums = [2,3,6,7,4,12,21,39]
 Output: 8
 ```
 
-&#x20;
+
 
 **Constraints:**
 
@@ -69,7 +69,7 @@ vector<int> factorize(int x) {
 }
 ```
 
-Once we got the factors, we use DSU to unite each factor and the number.&#x20;
+Once we got the factors, we use DSU to unite each factor and the number.
 
 <details>
 

@@ -27,7 +27,7 @@ For simplicity, each node's value is the same as the node's index (1-indexed). F
 
 The given node will always be the first node with `val = 1`. You must return the **copy of the given node** as a reference to the cloned graph.
 
-&#x20;
+
 
 **Example 1:**
 
@@ -61,7 +61,7 @@ Output: []
 Explanation: This an empty graph, it does not have any nodes.
 ```
 
-&#x20;
+
 
 **Constraints:**
 

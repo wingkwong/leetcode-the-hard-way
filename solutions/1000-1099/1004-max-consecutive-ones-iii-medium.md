@@ -6,7 +6,7 @@ description: 'Author: @wingkwong| https://leetcode.com/problems/max-consecutive-
 
 ## Problem Statement
 
-Given a binary array `nums` and an integer `k`, return _the maximum number of consecutive_ `1`_'s in the array if you can flip at most_ `k` `0`'s.&#x20;
+Given a binary array `nums` and an integer `k`, return _the maximum number of consecutive_ `1`_'s in the array if you can flip at most_ `k` `0`'s.
 
 **Example 1:**
 

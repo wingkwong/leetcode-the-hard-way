@@ -15,7 +15,7 @@ Given a 2D integer array `circles` where `circles[i] = [xi, yi, ri]` represents 
 * A **lattice point** is a point with integer coordinates.
 * Points that lie **on the circumference of a circle** are also considered to be inside it.
 
-&#x20;
+
 
 **Example 1:**
 

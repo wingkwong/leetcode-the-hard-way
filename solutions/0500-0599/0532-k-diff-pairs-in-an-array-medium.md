@@ -13,7 +13,7 @@ A **k-diff** pair is an integer pair `(nums[i], nums[j])`, where the following a
 * `0 <= i < j < nums.length`
 * `|nums[i] - nums[j]| == k`
 
-**Notice** that `|val|` denotes the absolute value of `val`.&#x20;
+**Notice** that `|val|` denotes the absolute value of `val`.
 
 **Example 1:**
 
@@ -48,7 +48,7 @@ Explanation: There is one 0-diff pair in the array, (1, 1).
 
 ## Approach 1: Hash Map
 
-Let's build a frequency hash map $$m$$. The key $$x$$ is each unique number and the value $$y$$ is the occurrence of that number. For example, for input $$[1,3,1,5,4]$$, we will have the following $$(x, y)$$:&#x20;
+Let's build a frequency hash map $$m$$. The key $$x$$ is each unique number and the value $$y$$ is the occurrence of that number. For example, for input $$[1,3,1,5,4]$$, we will have the following $$(x, y)$$:
 
 | key | value |
 | --- | ----- |

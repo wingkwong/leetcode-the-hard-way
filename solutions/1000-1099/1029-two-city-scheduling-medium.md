@@ -8,7 +8,7 @@ description: 'Author: @wingkwong | https://leetcode.com/problems/two-city-schedu
 
 A company is planning to interview `2n` people. Given the array `costs` where `costs[i] = [aCosti, bCosti]`, the cost of flying the `ith` person to city `a` is `aCosti`, and the cost of flying the `ith` person to city `b` is `bCosti`.
 
-Return _the minimum cost to fly every person to a city_ such that exactly `n` people arrive in each city.&#x20;
+Return _the minimum cost to fly every person to a city_ such that exactly `n` people arrive in each city.
 
 **Example 1:**
 
@@ -38,7 +38,7 @@ Input: costs = [[515,563],[451,713],[537,709],[343,819],[855,779],[457,60],[650,
 Output: 3086
 ```
 
-&#x20;
+
 
 **Constraints:**
 

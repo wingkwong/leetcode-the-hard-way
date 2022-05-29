@@ -12,7 +12,7 @@ The **same** number may be chosen from `candidates` an **unlimited number of tim
 
 It is **guaranteed** that the number of unique combinations that sum up to `target` is less than `150` combinations for the given input.
 
-&#x20;
+
 
 **Example 1:**
 
@@ -48,9 +48,9 @@ Output: []
 
 ## Approach 1: Backtracking
 
-We can apply backtracking in this problem.&#x20;
+We can apply backtracking in this problem.
 
-First, we sort the array and build our candidates incrementally. We iterate from starting point and  push each candidate to `tmp` and call `backtrack()` with the updated  $$target_{new} = target_{old} - candidates[i]$$.&#x20;
+First, we sort the array and build our candidates incrementally. We iterate from starting point and  push each candidate to `tmp` and call `backtrack()` with the updated  $$target_{new} = target_{old} - candidates[i]$$.
 
 If we have a valid solution, we push `tmp` to answer and abandon a candidate.
 

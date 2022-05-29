@@ -14,7 +14,7 @@ The employees are numbered from `0` to `n - 1`. Each employee has a **favorite**
 
 Given a **0-indexed** integer array `favorite`, where `favorite[i]` denotes the favorite person of the `ith` employee, return _the **maximum number of employees** that can be invited to the meeting_.
 
-&#x20;
+
 
 **Example 1:**
 
@@ -58,7 +58,7 @@ So the company leaves them out of the meeting.
 The maximum number of employees that can be invited to the meeting is 4.
 ```
 
-&#x20;
+
 
 **Constraints:**
 

@@ -5,7 +5,7 @@ tags: ['sorting']
 
 # 0921 - Sort an Array (Medium)
 
-## Problem Statement&#x20;
+## Problem Statement
 
 Given an array of integers `nums`, sort the array in ascending order.
 

@@ -12,7 +12,7 @@ There are `n` cities numbered from `0` to `n-1`. Given the array `edges` where `
 
 Return the city with the smallest number of cities that are reachable through some path and whose distance is **at most** `distanceThreshold`, If there are multiple such cities, return the city with the greatest number.
 
-Notice that the distance of a path connecting cities _**i**_ and _**j**_ is equal to the sum of the edges' weights along that path.&#x20;
+Notice that the distance of a path connecting cities _**i**_ and _**j**_ is equal to the sum of the edges' weights along that path.
 
 **Example 1:**
 
@@ -58,7 +58,7 @@ The city 0 has 1 neighboring city at a distanceThreshold = 2.
 
 ## Approach 1: Floyd Warshall Algorithm
 
-Since $$n$$ is small, we can use Floyd Warshall Algorithm to calculate the distances between each node. Let $$dist[i][j]$$ be the distance beween node $$i$$ and node $$j$$. Once we know all the distances, we can iterate each node $$i$$, and check each node $$j$$ to see if the distance is less than / equal to $$distanceThreshold$$. If so, we count it and check the minimal value.&#x20;
+Since $$n$$ is small, we can use Floyd Warshall Algorithm to calculate the distances between each node. Let $$dist[i][j]$$ be the distance beween node $$i$$ and node $$j$$. Once we know all the distances, we can iterate each node $$i$$, and check each node $$j$$ to see if the distance is less than / equal to $$distanceThreshold$$. If so, we count it and check the minimal value.
 
 ```cpp
 class Solution {

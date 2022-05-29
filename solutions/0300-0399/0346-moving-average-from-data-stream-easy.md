@@ -40,7 +40,7 @@ movingAverage.next(5); // return 6.0 = (10 + 3 + 5) / 3
 
 ## Approach 1: Deque
 
-We define a deque $$d$$ to store the values, $$sum$$ to store the sum. If this is not a sliding window problem, for every move, we add the current value to $$sum$$ and output $$sum / (int) d.size()$$.&#x20;
+We define a deque $$d$$ to store the values, $$sum$$ to store the sum. If this is not a sliding window problem, for every move, we add the current value to $$sum$$ and output $$sum / (int) d.size()$$.
 
 ```cpp
 deque<int> d;

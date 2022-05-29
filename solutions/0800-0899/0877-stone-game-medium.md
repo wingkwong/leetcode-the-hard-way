@@ -43,7 +43,7 @@ Output: true
 
 ## Approach 1: Math
 
-Yes .. Just return true. In fact, it is always true because there are an even number of piles and the total number of stones across all the piles is odd. Therefore, if Alice picks the first one, then Bob must pick either the second one or the last one. In each turn, Alice can always pick the even indexed piles while Bob can only pick odd indexed piles. Since there is no tie, if the sum of stones of even indexed piles is greater than that of odd indexed piles, Alice just need to pick the even indexed piles and win the game. Otherwise, she can pick the odd indexed piles. As Alice always go first, in this case, she must win whatsoever.&#x20;
+Yes .. Just return true. In fact, it is always true because there are an even number of piles and the total number of stones across all the piles is odd. Therefore, if Alice picks the first one, then Bob must pick either the second one or the last one. In each turn, Alice can always pick the even indexed piles while Bob can only pick odd indexed piles. Since there is no tie, if the sum of stones of even indexed piles is greater than that of odd indexed piles, Alice just need to pick the even indexed piles and win the game. Otherwise, she can pick the odd indexed piles. As Alice always go first, in this case, she must win whatsoever.
 
 ```cpp
 class Solution {

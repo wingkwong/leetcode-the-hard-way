@@ -58,9 +58,9 @@ This is a classic DP problem. You choose one operation out of two. The tricky pa
 
 If we go for a 3D DP solution, it will get TLE given the constraints. Hence we need to reduce it to a 2D solution. We need the pointer at multipliers anyway so we need to think about how to use one pointer to track both starting point and the ending point.
 
-Supposing our multipliers pointer is at index $$j$$ (0-based), that means we have multiplied $$j + 1$$elements already. If our starting point is at index $$i$$ (0-based), the ending point would be at index $$n - 1 - j  +i$$.&#x20;
+Supposing our multipliers pointer is at index $$j$$ (0-based), that means we have multiplied $$j + 1$$elements already. If our starting point is at index $$i$$ (0-based), the ending point would be at index $$n - 1 - j  +i$$.
 
-Let $$dp[i][j]$$ be the maximum score where $$i$$ is the pointer at $$nums$$ and $$j$$ is the pointer at $$mult$$. When $$j$$ reaches the end of $$mult$$, then return $$0$$. If $$dp[i][j]$$has been calculated before, return it immediately. Otherwise, we have two options.&#x20;
+Let $$dp[i][j]$$ be the maximum score where $$i$$ is the pointer at $$nums$$ and $$j$$ is the pointer at $$mult$$. When $$j$$ reaches the end of $$mult$$, then return $$0$$. If $$dp[i][j]$$has been calculated before, return it immediately. Otherwise, we have two options.
 
 * if we pick from the left, we got $$mult[j] * nums[i] + dfs(nums, mult, i + 1, j + 1)$$
 * if we pick from the right, $$mult[j] * nums[n - 1 - j + i] + dfs(nums, mult, i, j + 1)$$

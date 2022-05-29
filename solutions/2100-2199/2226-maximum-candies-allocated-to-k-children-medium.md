@@ -14,7 +14,7 @@ You are also given an integer `k`. You should allocate piles of candies to `k` c
 
 Return _the **maximum number of candies** each child can get._
 
-&#x20;
+
 
 **Example 1:**
 

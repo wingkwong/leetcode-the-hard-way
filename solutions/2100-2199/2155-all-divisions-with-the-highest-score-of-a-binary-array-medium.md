@@ -66,7 +66,7 @@ Only index 0 has the highest possible division score 2.
 
 ## Approach 1: Prefix Sum + Suffix Sum
 
-Calculate the prefix sum and suffix sum first. Then construct the score (`left[i] + right[i]`) at each index. Find the maximum value and push all indices with such value into the final array. &#x20;
+Calculate the prefix sum and suffix sum first. Then construct the score (`left[i] + right[i]`) at each index. Find the maximum value and push all indices with such value into the final array. 
 
 ```cpp
 class Solution {

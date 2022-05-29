@@ -13,7 +13,7 @@ Return _the **smallest sorted** list of ranges that **cover all the numbers in t
 Each range `[a,b]` in the list should be output as:
 
 * `"a->b"` if `a != b`
-* `"a"` if `a == b`&#x20;
+* `"a"` if `a == b`
 
 **Example 1:**
 

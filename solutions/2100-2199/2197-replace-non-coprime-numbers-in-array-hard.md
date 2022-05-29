@@ -21,7 +21,7 @@ The test cases are generated such that the values in the final array are **less 
 
 Two values `x` and `y` are **non-coprime** if `GCD(x, y) > 1` where `GCD(x, y)` is the **Greatest Common Divisor** of `x` and `y`.
 
-&#x20;
+
 
 **Example 1:**
 

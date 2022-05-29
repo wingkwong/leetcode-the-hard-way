@@ -42,4 +42,4 @@ Therefore, person #1 only need to give person #0 $4, and all debt is settled.
 * `fromi != toi`
 * `1 <= amounti <= 100`
 
-## Approach 1: TBC&#x20;
+## Approach 1: TBC

@@ -14,7 +14,7 @@ Operations allowed:
 
 * Fill any of the jugs with water.
 * Empty any of the jugs.
-* Pour water from one jug into another till the other jug is completely full, or the first jug itself is empty.&#x20;
+* Pour water from one jug into another till the other jug is completely full, or the first jug itself is empty.
 
 **Example 1:**
 

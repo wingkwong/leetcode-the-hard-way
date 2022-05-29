@@ -23,7 +23,7 @@ Given a string `pressedKeys` representing the string received by Bob, return _th
 
 Since the answer may be very large, return it **modulo** `109 + 7`.
 
-&#x20;
+
 
 **Example 1:**
 

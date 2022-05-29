@@ -26,7 +26,7 @@ The time complexity is denoted by Big O notation. Normally,  $$n$$ means the inp
 | $$n <= 10^6$$ | $$O(nlogn)$$, $$O(n)$$   |
 | $$large$$     | $$O(1)$$, $$O(logn)$$    |
 
-#### Example 1:&#x20;
+#### Example 1:
 
 In the following case, the time complexity depends on $$n$$. Therefore, it is $$O(n)$$.
 
@@ -36,7 +36,7 @@ for (int i = 0; i < n; i++) {
 }
 ```
 
-#### Example 2:&#x20;
+#### Example 2:
 
 In the following case, the time complexity depends on $$n$$ and $$m$$. Therefore, it is $$O(n*m)$$.
 
@@ -48,7 +48,7 @@ for (int i = 0; i < n; i++) {
 }
 ```
 
-#### Example 3:&#x20;
+#### Example 3:
 
 In the following case, the time complexity is $$O(\sqrt n)$$. You can see $$i * i <= n$$ as $$i <= \sqrt n$$.
 

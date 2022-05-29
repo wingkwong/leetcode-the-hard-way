@@ -64,7 +64,7 @@ We can use bit masking approach in this problem where $$1$$ means a student is s
 
 First we need to know where are the broken seats for each row first. We can simply iterate each seats and store the result in $$broken[i]$$ where $$i$$ is the row number. Then We can use DP to calculate the answer row by row. We iterate each row, iterate each mask $$curMask$$ and iterate each previous mask $$prevMask$$.
 
-For $$curMask$$, we need to skip some cases.&#x20;
+For $$curMask$$, we need to skip some cases.
 
 1. If there is a student sitting on a broken seat
 2. If there is a student sitting next to the left of another student
@@ -72,7 +72,7 @@ For $$curMask$$, we need to skip some cases.&#x20;
 
 For $$prevMask$$, we also need to skip some cases.
 
-1. If there is a student sitting on upper left&#x20;
+1. If there is a student sitting on upper left
 2. If there is a student sitting on upper right
 
 Otherwise, we can calculate $$dp[row][curMask]$$ by taking the previous row with previous mask value plus the number of students who can seat on $$row$$ (i.e. number of $$1s$$ in $$curMask$$). The answer is the maximum mask of $$dp[n]$$.

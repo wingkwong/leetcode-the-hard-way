@@ -12,7 +12,7 @@ Merge the two lists in a one **sorted** list. The list should be made by splicin
 
 Return _the head of the merged linked list_.
 
-&#x20;
+
 
 **Example 1:**
 
@@ -47,7 +47,7 @@ Output: [0]
 
 Let's think of the edge cases first. If either list is null, there is no way to merge. Therefore we simply return the non-null list. In other words, if list1 is null, we return list2, and vice versa.
 
-We compare a node in list1 and that in list2. If the value of node in list1 is smaller than that in list2, then we can set the next node to the result of next merge result. Otherwise, we set it in list2.&#x20;
+We compare a node in list1 and that in list2. If the value of node in list1 is smaller than that in list2, then we can set the next node to the result of next merge result. Otherwise, we set it in list2.
 
 In general, we will have $$list1[0] + mergeTwoLists(list1[1:], list2)$$ for $$list1[0] < list2[0]$$ else we have $$list2[0] + mergeTwoLists(list1, list2[1:])$$.
 

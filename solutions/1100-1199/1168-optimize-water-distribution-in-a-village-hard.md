@@ -16,7 +16,7 @@ For each house `i`, we can either build a well inside it directly with cost `wel
 
 Return _the minimum total cost to supply water to all houses_.
 
-&#x20;
+
 
 **Example 1:**
 
@@ -50,7 +50,7 @@ The total cost will be 2.
 Note that we can connect houses 1 and 2 with cost 1 or with cost 2 but we will always choose the cheapest option. 
 ```
 
-&#x20;
+
 
 **Constraints:**
 
@@ -65,9 +65,9 @@ Note that we can connect houses 1 and 2 with cost 1 or with cost 2 but we will a
 
 ## Approach 1: **Kruskal's Algorithm**
 
-If we add a new house, says house 0, and connect it to each houses with weight $$wells[i]$$. Then this problem is actually same as finding Minimum Spanning Tree. Hence, we can use Kruskal's Algorithm with DSU to solve it.&#x20;
+If we add a new house, says house 0, and connect it to each houses with weight $$wells[i]$$. Then this problem is actually same as finding Minimum Spanning Tree. Hence, we can use Kruskal's Algorithm with DSU to solve it.
 
-In order to get the MST, we sort the edges based on the weights in an increasing order. Then we iterate them one by one, and greedily pick edges which does not result in cycle with the previous edges.&#x20;
+In order to get the MST, we sort the edges based on the weights in an increasing order. Then we iterate them one by one, and greedily pick edges which does not result in cycle with the previous edges.
 
 ```cpp
 class dsu {

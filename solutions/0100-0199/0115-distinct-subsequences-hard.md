@@ -45,7 +45,7 @@ babgbag
 
 ## Approach 1: Dynamic Programming
 
-Let $$dp[i][j]$$be the number of distinct subsequences if $$s[0 .. i)$$contains $$t[0 .. j)$$. The base case is when $$t$$ is empty, there is one valid subsequence for each $$i$$. If the subsequence doesn't contain $$s[i - 1]$$, then we take $$dp[i - 1][j]$$. If $$s[i - 1] == t[j - 1]$$, then we need to include $$dp[i - 1][j - 1]$$as well as $$dp[i - 1][j]$$.&#x20;
+Let $$dp[i][j]$$be the number of distinct subsequences if $$s[0 .. i)$$contains $$t[0 .. j)$$. The base case is when $$t$$ is empty, there is one valid subsequence for each $$i$$. If the subsequence doesn't contain $$s[i - 1]$$, then we take $$dp[i - 1][j]$$. If $$s[i - 1] == t[j - 1]$$, then we need to include $$dp[i - 1][j - 1]$$as well as $$dp[i - 1][j]$$.
 
 ```cpp
 class Solution {

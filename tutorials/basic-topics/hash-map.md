@@ -29,7 +29,7 @@ For example, given the following input:
 nums = [2,7,11,15], target = 9
 ```
 
-We can see that the first two elements (`2` and `7` ) add up to the target (`9)`. So we need to return `[0,1]` , as these two indices refer to `2` and `7` .&#x20;
+We can see that the first two elements (`2` and `7` ) add up to the target (`9)`. So we need to return `[0,1]` , as these two indices refer to `2` and `7` .
 
 The naive way to solve this problem is to use a nested for-loop:
 
@@ -53,7 +53,7 @@ def twoSum(self, nums: List[int], target: int) -> List[int]:
 
 We observe that with a nested for-loop, the runtime complexity is $$O(n^2)$$. Let us look at how hash map can help us here.
 
-Hash Map basically is a label. For example, if we want to store the (value, index) pair from the example above in a Hash Map.&#x20;
+Hash Map basically is a label. For example, if we want to store the (value, index) pair from the example above in a Hash Map.
 
 ```python
 #we use {} to initialize a hash map
@@ -78,7 +78,7 @@ else:
     print("7 is not in input_1")
 ```
 
-This operation only takes $$O(1)$$ time! Without hash map, we would need to iterate the input to search for a specific element.&#x20;
+This operation only takes $$O(1)$$ time! Without hash map, we would need to iterate the input to search for a specific element.
 
 After understanding Hash Map, are you able to solve [Two Sum](../../solutions/0000-0099/two-sum) in $$O(N)$$ time?
 

@@ -18,7 +18,7 @@ Return _the **minimum weight** of a subgraph of the graph such that it is **poss
 
 A **subgraph** is a graph whose vertices and edges are subsets of the original graph. The **weight** of a subgraph is the sum of weights of its constituent edges.
 
-&#x20;
+
 
 **Example 1:**
 

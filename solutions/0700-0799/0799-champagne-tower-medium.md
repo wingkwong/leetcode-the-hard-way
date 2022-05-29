@@ -74,7 +74,7 @@ public:
 };
 ```
 
-We can see that the row $$i$$ depends on $$i - 1$$ row so we can use 1D array to store the state. Let $$dp[j]$$ be the amount poured to a glass located at $$j$$ column. We use $$ndp$$ to store the current state while $$dp$$ state stores the previous state. We swap them for every row, i.e. transit the state from row $$i$$ to row $$i + 1$$.&#x20;
+We can see that the row $$i$$ depends on $$i - 1$$ row so we can use 1D array to store the state. Let $$dp[j]$$ be the amount poured to a glass located at $$j$$ column. We use $$ndp$$ to store the current state while $$dp$$ state stores the previous state. We swap them for every row, i.e. transit the state from row $$i$$ to row $$i + 1$$.
 
 ```cpp
 class Solution {

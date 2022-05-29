@@ -17,7 +17,7 @@ A graph is **bipartite** if the nodes can be partitioned into two independent se
 
 Return `true` _if and only if it is **bipartite**_.
 
-&#x20;
+
 
 **Example 1:**
 
@@ -51,7 +51,7 @@ Explanation: We can partition the nodes into two sets: {0, 2} and {1, 3}.
 
 ## Approach 1: DSF Colouring
 
-We can colour each set, says $$0$$ and $$1$$. For example, in example 2, we can colour {0, 2} to $$0$$ and {1, 3} to $$1$$. Therefore, we greedily colour them - if the current node is marked as $$0$$, then all neighbours would be $$1$$ and so on.&#x20;
+We can colour each set, says $$0$$ and $$1$$. For example, in example 2, we can colour {0, 2} to $$0$$ and {1, 3} to $$1$$. Therefore, we greedily colour them - if the current node is marked as $$0$$, then all neighbours would be $$1$$ and so on.
 
 ```cpp
 class Solution {

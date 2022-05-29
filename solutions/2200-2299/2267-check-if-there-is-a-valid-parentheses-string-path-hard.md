@@ -23,7 +23,7 @@ You are given an `m x n` matrix of parentheses `grid`. A **valid parentheses str
 
 Return `true` _if there exists a **valid parentheses string path** in the grid._ Otherwise, return `false`.
 
-&#x20;
+
 
 **Example 1:**
 

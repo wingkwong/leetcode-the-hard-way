@@ -18,7 +18,7 @@ Return _the index with the **minimum average difference**_. If there are multipl
 * The **average** of `n` elements is the **sum** of the `n` elements divided (**integer division**) by `n`.
 * The average of `0` elements is considered to be `0`.
 
-&#x20;
+
 
 **Example 1:**
 

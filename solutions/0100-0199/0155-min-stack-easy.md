@@ -45,9 +45,9 @@ minStack.getMin(); // return -2
 
 ## Approach 1: Implementation
 
-The general approach is to keep track of the `current_min` at each level of the stack.&#x20;
+The general approach is to keep track of the `current_min` at each level of the stack.
 
-When we add a new element to the stack, we need to check if the new element is smaller than `current_min`. If yes, we need to update the value. We also need to attach a label of `current_min` when we `push`, so we can keep track of the smallest element **BEFORE** that entry.&#x20;
+When we add a new element to the stack, we need to check if the new element is smaller than `current_min`. If yes, we need to update the value. We also need to attach a label of `current_min` when we `push`, so we can keep track of the smallest element **BEFORE** that entry.
 
 Similarly, when we `pop` an element from the stack, we need to update `current_min`. A simple example is that the last element in the stack is the smallest. When we `pop` that element, `current_min` is still not updated. Hence, we need to set `current_min` to the new last element's label.
 

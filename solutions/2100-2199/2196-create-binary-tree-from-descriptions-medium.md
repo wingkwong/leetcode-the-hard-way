@@ -17,7 +17,7 @@ Construct the binary tree described by `descriptions` and return _its **root**_.
 
 The test cases will be generated such that the binary tree is **valid**.
 
-&#x20;
+
 
 **Example 1:**
 
@@ -53,9 +53,9 @@ The resulting binary tree is shown in the diagram.
 
 We use a hash map to store the TreeNode\* for the key $$i$$ and another hash map to store if this TreeNode\* has a parent.
 
-We iterate the input to get the values of parent, child and isLeft. Then we check if the parent and the child are in the hash map. If not, we create a new TreeNode for it and store it in hash map.&#x20;
+We iterate the input to get the values of parent, child and isLeft. Then we check if the parent and the child are in the hash map. If not, we create a new TreeNode for it and store it in hash map.
 
-If $$isLeft$$ is $$1$$, that means the child is the left child of parent. Else, the child is the right child of parent.&#x20;
+If $$isLeft$$ is $$1$$, that means the child is the left child of parent. Else, the child is the right child of parent.
 
 At the end, we find out the node without parent, return that TreeNode\* because that is the root.
 

@@ -22,7 +22,7 @@ We want to convert `s` to `target` using **at most** `10 * target.length` turns.
 
 Return _an array of the index of the left-most letter being stamped at each turn_. If we cannot obtain `target` from `s` within `10 * target.length` turns, return an empty array.
 
-&#x20;
+
 
 **Example 1:**
 

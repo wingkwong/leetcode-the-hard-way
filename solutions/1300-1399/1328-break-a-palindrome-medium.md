@@ -38,7 +38,7 @@ Explanation: There is no way to replace a single character to make "a" not a pal
 
 If the input $$s$$ has the length of 1, then the answer is an empty string because a single letter is always a palindrome. There is no way to make it not a palindrome.
 
-If we need to make it lexicographically smallest one, that means we should replace a character with `a` as early as possible (from the left to right). Therefore, we iterate the input and check the first index $$i$$ where $$s[i]$$is not `a`. This is the position where we need to replace.&#x20;
+If we need to make it lexicographically smallest one, that means we should replace a character with `a` as early as possible (from the left to right). Therefore, we iterate the input and check the first index $$i$$ where $$s[i]$$is not `a`. This is the position where we need to replace.
 
 If there is no such position, that means all characters are `a`. In this case, the lexicographically smallest one is $$aaaaaab$$. We can simply change the last character to `b`.
 

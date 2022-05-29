@@ -14,7 +14,7 @@ Return _the maximum amount of water a container can store_.
 
 **Notice** that you may not slant the container.
 
-&#x20;
+
 
 **Example 1:**
 
