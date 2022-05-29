@@ -10,7 +10,9 @@ keywords:
   - algorithm
 ---
 
-> This tutorial is written by @wingkwong
+import Authors from '@site/src/components/Authors';
+
+<Authors names="@wingkwong"/>
 
 Binary Exponentiation is also known as Exponentiation by Squaring or even called Fast Pow in some CP templates. It is used to calculate $$a ^ n$$ using only $$O(logn)$$ multiplications instead of $$O(n)$$using naive approach.
 

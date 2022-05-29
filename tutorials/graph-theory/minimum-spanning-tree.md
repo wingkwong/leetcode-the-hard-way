@@ -10,7 +10,9 @@ keywords:
   - algorithm
 ---
 
-> This tutorial is written by @wingkwong
+import Authors from '@site/src/components/Authors';
+
+<Authors names="@wingkwong"/>
 
 A minimum spanning tree is a subset of the edges of a connected undirected graph with the minimum possible total edge weight and it does not contain any cycles.
 

@@ -9,7 +9,9 @@ keywords:
   - graphs
 ---
 
-> This tutorial is written by @heiheihang
+import Authors from '@site/src/components/Authors';
+
+<Authors names="@heiheihang"/>
 
 Graphs can solve a plethora of interesting problems!
 

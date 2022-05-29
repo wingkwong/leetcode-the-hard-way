@@ -9,7 +9,9 @@ keywords:
   - algorithm
 ---
 
-> This tutorial is written by @wingkwong
+import Authors from '@site/src/components/Authors';
+
+<Authors names="@wingkwong"/>
 
 Sorting refers to rearranging elements in a specific order. The most common order is either ascending or descending. There are a lot of algorithms to sort the array with different time complexity.
 

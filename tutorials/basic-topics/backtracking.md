@@ -9,7 +9,9 @@ keywords:
   - algorithm
 ---
 
-> This tutorial is written by @wingkwong
+import Authors from '@site/src/components/Authors';
+
+<Authors names="@wingkwong"/>
 
 A backtracking algorithm is used to construct a solution recursively by starting with an empty solution and adding solution one by one. Let's take [0046 - Permutations (Medium)](../../solutions/0000-0099/permutations-medium) as an example, if we have an array `nums` of distinct integers, what are all the possible permutations? If the input is `[1,2,3]`, then the permutations would be `[[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]`. In C++, it is easy to solve this problem by using the built-in STL `next_permutation`. However, we can also solve it using backtracking.
 

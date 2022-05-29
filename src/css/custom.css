@@ -86,3 +86,15 @@ html[data-theme='dark'] .header-github-link:before {
     var(--ifm-color-emphasis-100) 100%
   );
 }
+
+.author-wrapper {
+  margin: 10px 0px;
+}
+
+.author-wrapper .author-tag {
+  background-color: #04448c;
+  border-radius: 2px;
+  color: #fff;
+  padding: 5px;
+  margin: 5px;
+}

@@ -9,7 +9,9 @@ keywords:
   - algorithm
 ---
 
-> This tutorial is written by @heiheihang
+import Authors from '@site/src/components/Authors';
+
+<Authors names="@heiheihang"/>
 
 In some problems, we need to keep track of the elements in a list that satisfy certain conditions. Let's take a look at the following problem:
 

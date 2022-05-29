@@ -8,7 +8,9 @@ keywords:
   - time complexity
 ---
 
-> This tutorial is written by @wingkwong
+import Authors from '@site/src/components/Authors';
+
+<Authors names="@wingkwong"/>
 
 Time Complexity is one of the important measurements when it comes to writing an efficient solution. It estimates how much time your solution needs based on some input. If your solution is too slow, even it passes some test cases, it will still consider it as a wrong answer.
 

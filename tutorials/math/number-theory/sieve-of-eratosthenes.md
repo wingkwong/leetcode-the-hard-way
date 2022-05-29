@@ -9,7 +9,9 @@ keywords:
   - algorithm
 ---
 
-> This tutorial is written by @wingkwong
+import Authors from '@site/src/components/Authors';
+
+<Authors names="@wingkwong"/>
 
 Sieve of Eratosthenes is a way of finding all prime numbers up to $$n$$ (inclusive).
 

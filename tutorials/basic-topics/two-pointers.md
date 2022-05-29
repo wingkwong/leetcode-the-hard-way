@@ -9,7 +9,9 @@ keywords:
   - algorithm
 ---
 
-> This tutorial is written by @heiheihang
+import Authors from '@site/src/components/Authors';
+
+<Authors names="@heiheihang"/>
 
 For some simple iteration problems, we may be able to get away with a simple one-pass iteration. In some special problems, we have to use the technique **Two Pointers** to strategically move around in our input. Let's take a look at this problem ([LeetCode Link](https://leetcode.com/problems/squares-of-a-sorted-array/))
 

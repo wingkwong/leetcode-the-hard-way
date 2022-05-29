@@ -10,7 +10,9 @@ keywords:
   - algorithm
 ---
 
-> This tutorial is written by @heiheihang
+import Authors from '@site/src/components/Authors';
+
+<Authors names="@heiheihang"/>
 
 In Breadth-First Search (BFS), we explore **all** the closest nodes first before going one step further. A good example would be:
 

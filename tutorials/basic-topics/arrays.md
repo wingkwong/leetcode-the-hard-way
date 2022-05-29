@@ -9,7 +9,9 @@ keywords:
   - data structure
 ---
 
-> This tutorial is written by @heiheihang
+import Authors from '@site/src/components/Authors';
+
+<Authors names="@heiheihang"/>
 
 As there is not much distinction between many data structures in the context of LeetCode. I will use the term `array` to cover the following data structures in these popular languages:
 
@@ -70,6 +72,10 @@ for i in range(len(basketball_matches)):
 | Insert           | $$O(N)$$   | When we insert an element to the middle of the array, it takes O(N) time. The whole array needs to be restructured to accommodate the new element.                                                                                      |
 | Remove           | $$O(N)$$   | When we remove an element in the middle of the array, it takes O(N) time. The whole array needs to be restructured to replace the missing gap of the replaced element.                                                                  |
 | Len              | $$O(1)$$   | This may seem like to be O(N) as we have to go through the whole array to check its length. However, checking the length of an array in many languages should be pre-computed in their data structures, so it only takes constant time. |
+<!-- 
+import Highlight from '@site/src/components/SuggestedProblems'; -->
+
+<!-- <SuggestedProblems data={"a": "b"}/> -->
 
 ### Suggested Problems
 

@@ -10,7 +10,9 @@ keywords:
   - data structure
 ---
 
-> This tutorial is written by @wingkwong
+import Authors from '@site/src/components/Authors';
+
+<Authors names="@wingkwong"/>
 
 ## Overview
 

@@ -10,7 +10,9 @@ keywords:
   - data structure
 ---
 
-> This tutorial is written by @heiheihang
+import Authors from '@site/src/components/Authors';
+
+<Authors names="@heiheihang"/>
 
 ### Stack
 
