@@ -13,8 +13,6 @@ import Authors from '@site/src/components/Authors';
 
 <Authors names="@heiheihang"/>
 
-# Hash Map
-
 Hash Map provides quick lookup of certain values in $$O(1)$$ time, and it is very useful in many LeetCode questions. Let's take a look at the classic Two Sum question
 
 0001 - Two Sum (Easy) ([LeetCode Link](https://leetcode.com/problems/two-sum/))
