@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function SuggestedProblems({data}) {
+export default function Table({title, data}) {
   const renderRow = data.map(d => {
     return (
       <tr>
@@ -24,7 +24,7 @@ export default function SuggestedProblems({data}) {
 
   return (
       <>
-        <h3>Suggested Problems</h3>
+        <h3>{title}</h3>
         <table>
           <th>Problem Name</th>
           <th>Difficulty</th>
