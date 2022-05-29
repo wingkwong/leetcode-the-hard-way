@@ -94,4 +94,4 @@ export const suggestedProblems = [
   },
 ]
 
-<Table title="Suggested Problem" data={suggestedProblems} />
+<Table title="Suggested Problems" data={suggestedProblems} />
