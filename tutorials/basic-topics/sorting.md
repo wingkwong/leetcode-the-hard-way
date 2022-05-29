@@ -10,6 +10,7 @@ keywords:
 ---
 
 import Authors from '@site/src/components/Authors';
+import Table from '@site/src/components/Table';
 
 <Authors names="@wingkwong"/>
 
@@ -57,6 +58,13 @@ sort(a.begin(), a.end(), [&](const array<int, 3>& x, const array<int, 3>& y) {
 });
 ```
 
-### Suggested Problems
+export const suggestedProblems = [
+  {
+    "problemName": "0921 - Sort an Array",
+    "difficulty": "Medium",
+    "LeetCodeLink": "https://leetcode.com/problems/distinct-numbers-in-each-subarray/",
+    "SolutionLink": "../../solutions/0900-0999/sort-an-array-medium"
+  },
+]
 
-* [0912 - Sort an Array (Medium)](../../solutions/0900-0999/sort-an-array-medium)
+<Table title="Suggested Problem" data={suggestedProblems} />

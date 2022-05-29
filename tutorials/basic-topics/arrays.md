@@ -10,6 +10,7 @@ keywords:
 ---
 
 import Authors from '@site/src/components/Authors';
+import Table from '@site/src/components/Table';
 
 <Authors names="@heiheihang"/>
 
@@ -73,8 +74,6 @@ for i in range(len(basketball_matches)):
 | Remove           | $$O(N)$$   | When we remove an element in the middle of the array, it takes O(N) time. The whole array needs to be restructured to replace the missing gap of the replaced element.                                                                  |
 | Len              | $$O(1)$$   | This may seem like to be O(N) as we have to go through the whole array to check its length. However, checking the length of an array in many languages should be pre-computed in their data structures, so it only takes constant time. |
 
-import SuggestedProblems from '@site/src/components/SuggestedProblems';
-
 export const suggestedProblems = [
   {
     "problemName": "1480 - Running Sum of 1d Array",
@@ -108,4 +107,4 @@ export const suggestedProblems = [
   },
 ]
 
-<SuggestedProblems data={suggestedProblems} />
+<Table title="Suggested Problem" data={suggestedProblems} />

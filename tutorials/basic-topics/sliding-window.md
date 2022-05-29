@@ -10,12 +10,11 @@ keywords:
 ---
 
 import Authors from '@site/src/components/Authors';
+import Table from '@site/src/components/Table';
 
 <Authors names="@heiheihang"/>
 
-In some problems, we need to keep track of the elements in a list that satisfy certain conditions. Let's take a look at the following problem:
-
-1876 - Substrings of Size Three with Distinct Characters (Easy) ([LeetCode Link](https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters/))
+In some problems, we need to keep track of the elements in a list that satisfy certain conditions. Let's take a look at [1876 - Substrings of Size Three with Distinct Characters](https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters/).
 
 > A string is **good** if there are no repeated characters.
 >
@@ -86,10 +85,25 @@ def countGoodSubstrings(self, s: str) -> int:
 
 In this problem, the size of the sliding window is constant. There are harder problems with varying sliding window size, but you need to learn [Hash Map](hash-map) first.
 
-### Suggested Problems
+export const suggestedProblems = [
+  {
+    "problemName": "1852 - Distinct Numbers in Each Subarray",
+    "difficulty": "Medium",
+    "LeetCodeLink": "https://leetcode.com/problems/distinct-numbers-in-each-subarray",
+    "SolutionLink": "../../solutions/1800-1899/distinct-numbers-in-each-subarray-medium"
+  },
+  {
+    "problemName": "1004 - Max Consecutive Ones III",
+    "difficulty": "Medium",
+    "LeetCodeLink": "https://leetcode.com/problems/max-consecutive-ones-iii",
+    "SolutionLink": "../../solutions/1000-1099/max-consecutive-ones-iii-medium"
+  },
+  {
+    "problemName": "1876 - Substrings of Size Three with Distinct Characters",
+    "difficulty": "Medium",
+    "LeetCodeLink": "https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters/",
+    "SolutionLink": ""
+  },
+]
 
-* 1852 - Distinct Numbers in Each Subarray (Medium) ([LeetCode Link](https://leetcode.com/problems/distinct-numbers-in-each-subarray/))
-* 1004 - Max Consecutive Ones III (Medium) ([LeetCode Link](https://leetcode.com/problems/max-consecutive-ones-iii/))
-
-
-
+<Table title="Suggested Problem" data={suggestedProblems} />

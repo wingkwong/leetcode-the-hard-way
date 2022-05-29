@@ -11,6 +11,7 @@ keywords:
 ---
 
 import Authors from '@site/src/components/Authors';
+import Table from '@site/src/components/Table';
 
 <Authors names="@wingkwong"/>
 
@@ -54,6 +55,13 @@ long long modpow(long long base, long long exp, long long mod) {
 
 ```
 
-### Suggested Problems
+export const suggestedProblems = [
+  {
+    "problemName": "0050 - Pow(x, n)",
+    "difficulty": "Medium",
+    "LeetCodeLink": "https://leetcode.com/problems/powx-n/",
+    "SolutionLink": "../../../solutions/0000-0099/pow-x-n-medium"
+  },
+]
 
-* [0050 - Pow(x, n) (Medium)](../../../solutions/0000-0099/pow-x-n-medium)
+<Table title="Suggested Problem" data={suggestedProblems} />

@@ -10,6 +10,7 @@ keywords:
 ---
 
 import Authors from '@site/src/components/Authors';
+import Table from '@site/src/components/Table';
 
 <Authors names="@heiheihang"/>
 
@@ -72,8 +73,25 @@ def sortedSquares(self, nums: List[int]) -> List[int]:
 
 Unfortunately, there is no fixed way to perform two pointers. However, generally, we have a pointer at the start of the list and another pointer at the end of the list. We have to carefully analyze the question and choose the most appropriate approach to operate the two pointers.
 
-### Suggested Problems
+export const suggestedProblems = [
+  {
+    "problemName": "1768 - Merge Strings Alternately",
+    "difficulty": "Easy",
+    "LeetCodeLink": "https://leetcode.com/problems/merge-strings-alternately/",
+    "SolutionLink": "../../solutions/1700-1799/merge-strings-alternately-easy"
+  },
+  {
+    "problemName": "2108 - Find First Palindromic String in the Array",
+    "difficulty": "Easy",
+    "LeetCodeLink": "https://leetcode.com/problems/merge-strings-alternately/",
+    "SolutionLink": "../../solutions/2100-2199/find-first-palindromic-string-in-the-array-easy"
+  },
+  {
+    "problemName": "0283 - Move Zeroes",
+    "difficulty": "Easy",
+    "LeetCodeLink": "https://leetcode.com/problems/move-zeroes/",
+    "SolutionLink": "../../solutions/0200-0299/move-zeroes-easy"
+  },
+]
 
-* [1768 - Merge Strings Alternately (Easy)](../../solutions/1700-1799/merge-strings-alternately-easy) [(LeetCode Link)](https://leetcode.com/problems/merge-strings-alternately/)
-* [2108 - Find First Palindromic String in the Array (Easy)](../../solutions/2100-2199/find-first-palindromic-string-in-the-array-easy) ([LeetCode Link](https://leetcode.com/problems/merge-strings-alternately/))
-* [0283 - Move Zeroes (Easy)](../../solutions/0200-0299/move-zeroes-easy) [(LeetCode Link)](https://leetcode.com/problems/move-zeroes/)
+<Table title="Suggested Problem" data={suggestedProblems} />

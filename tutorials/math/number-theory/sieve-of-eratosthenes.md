@@ -10,6 +10,7 @@ keywords:
 ---
 
 import Authors from '@site/src/components/Authors';
+import Table from '@site/src/components/Table';
 
 <Authors names="@wingkwong"/>
 
@@ -35,7 +36,13 @@ vector<bool> sieveOfEratosthenes(const int n) {
 }
 ```
 
-### Suggested Problems
+export const suggestedProblems = [
+  {
+    "problemName": "0204 - Count Primes",
+    "difficulty": "Medium",
+    "LeetCodeLink": "https://leetcode.com/problems/count-primes/",
+    "SolutionLink": "../../../solutions/0200-0299/count-primes"
+  },
+]
 
-* [0204 - Count Primes (Medium)](../../../solutions/0200-0299/count-primes)
-
+<Table title="Suggested Problem" data={suggestedProblems} />

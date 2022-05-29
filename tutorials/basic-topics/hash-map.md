@@ -10,6 +10,7 @@ keywords:
 ---
 
 import Authors from '@site/src/components/Authors';
+import Table from '@site/src/components/Table';
 
 <Authors names="@heiheihang"/>
 
@@ -82,9 +83,25 @@ This operation only takes $$O(1)$$ time! Without hash map, we would need to iter
 
 After understanding Hash Map, are you able to solve [Two Sum](../../solutions/0000-0099/two-sum) in $$O(N)$$ time?
 
-### Suggested Problems
+export const suggestedProblems = [
+  {
+    "problemName": "0217 - Contains Duplicate",
+    "difficulty": "Easy",
+    "LeetCodeLink": "https://leetcode.com/problems/contains-duplicate/",
+    "SolutionLink": "../../solutions/0200-0299/contains-duplicate-easy"
+  },
+  {
+    "problemName": "0219 - Contains Duplicate II",
+    "difficulty": "Easy",
+    "LeetCodeLink": "https://leetcode.com/problems/contains-duplicate-ii/",
+    "SolutionLink": "../../solutions/0200-0299/contains-duplicate-ii-easy"
+  },
+  {
+    "problemName": "0003 - Longest Substring Without Repeating Characters",
+    "difficulty": "Medium",
+    "LeetCodeLink": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+    "SolutionLink": "../../solutions/0000-0099/longest-substring-without-repeating-characters-medium"
+  },
+]
 
-* 0003 - Longest Substring Without Repeating Characters (Medium) [(LeetCode Link)](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
-* 0217 - Contains Duplicate (Easy) [(LeetCode Link)](https://leetcode.com/problems/contains-duplicate/)
-* 0219 - Contains Duplicate II (Easy) [(LeetCode Link)](https://leetcode.com/problems/contains-duplicate-ii/)
-
+<Table title="Suggested Problem" data={suggestedProblems} />

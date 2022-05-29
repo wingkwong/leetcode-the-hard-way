@@ -11,6 +11,7 @@ keywords:
 ---
 
 import Authors from '@site/src/components/Authors';
+import Table from '@site/src/components/Table';
 
 <Authors names="@heiheihang"/>
 
@@ -205,8 +206,25 @@ class Solution:
         return time
 ```
 
-### Suggested Problems
+export const suggestedProblems = [
+  {
+    "problemName": "0155 - Min Stack",
+    "difficulty": "Easy",
+    "LeetCodeLink": "https://leetcode.com/problems/min-stack/",
+    "SolutionLink": "../../solutions/0100-0199/min-stack-easy"
+  },
+  {
+    "problemName": "0496 - Next Greater Element I",
+    "difficulty": "Easy",
+    "LeetCodeLink": "https://leetcode.com/problems/next-greater-element-i/",
+    "SolutionLink": "../../solutions/0400-0499/next-greater-element-i-easy"
+  },
+  {
+    "problemName": "1475 - Final Prices With a Special Discount in a Shop",
+    "difficulty": "Easy",
+    "LeetCodeLink": "https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/",
+    "SolutionLink": "../../solutions/1400-1499/final-prices-with-a-special-discount-in-a-shop-easy"
+  },
+]
 
-* [0155 - Min Stack (Easy)](../../solutions/0100-0199/min-stack-easy) [(LeetCode Link)](https://leetcode.com/problems/min-stack/)
-* [0496 - Next Greater Element I (Easy)](../../solutions/0400-0499/next-greater-element-i-easy) [(LeetCode Link)](https://leetcode.com/problems/next-greater-element-i/)
-* [1475 - Final Prices With a Special Discount in a Shop (Easy)](../../solutions/1400-1499/final-prices-with-a-special-discount-in-a-shop-easy) ([LeetCode Link](https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/))
+<Table title="Suggested Problem" data={suggestedProblems} />
