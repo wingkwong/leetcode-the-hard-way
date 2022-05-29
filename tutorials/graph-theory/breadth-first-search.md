@@ -1,6 +1,6 @@
 ---
 title: 'Breadth First Search (BFS)'
-description: 'Author: @heiheihang'
+description: 'In BFS, we explore all the closest nodes first before going one step further.'
 hide_table_of_contents: true
 ---
 

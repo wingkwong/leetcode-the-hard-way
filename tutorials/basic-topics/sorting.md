@@ -1,20 +1,20 @@
 ---
 title: 'Sorting'
-description: 'Author: @wingkwong'
+description: 'Sorting refers to rearranging elements in a specific order.'
 hide_table_of_contents: true
 ---
 
 > This tutorial is written by @wingkwong
 
-Sorting refers to rearranging elements in a specific order. The most common order is either ascending or descending. There are a lot of algorithms to sort the array with different time complexity.&#x20;
+Sorting refers to rearranging elements in a specific order. The most common order is either ascending or descending. There are a lot of algorithms to sort the array with different time complexity.
 
-In C++, if define a static array of N elements of type int such as $$a[4]$$ you can sort like as below where $$N$$ is the number of elements to be sorted.&#x20;
+In C++, if define a static array of N elements of type int such as $$a[4]$$ you can sort like as below where $$N$$ is the number of elements to be sorted.
 
 ```cpp
 sort(a, a + N);
 ```
 
-If you want to sort for a specific range $$[x, y)$$,  then use&#x20;
+If you want to sort for a specific range $$[x, y)$$,  then use
 
 ```cpp
 sort(a + x, a + y);
@@ -26,13 +26,13 @@ For dynamic array, we do in such way
 sort(a.begin(), a.end());
 ```
 
-If you want to sort for a specific range $$[x, y)$$,  then use&#x20;
+If you want to sort for a specific range $$[x, y)$$,  then use
 
 ```cpp
 sort(a.begin() + x, a.begin() + y);
 ```
 
-To sort in an decreasing order,&#x20;
+To sort in an decreasing order,
 
 ```cpp
 sort(a.begin(), a.end(), greater<int>());

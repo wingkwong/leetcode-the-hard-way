@@ -1,6 +1,6 @@
 ---
 title: 'Binary Exponentiation'
-description: 'Author: @wingkwong'
+description: 'Binary Exponentiation is also known as Exponentiation by Squaring.'
 hide_table_of_contents: true
 ---
 

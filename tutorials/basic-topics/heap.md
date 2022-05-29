@@ -1,6 +1,6 @@
 ---
-title: 'Heap'
-description: 'Author: @heiheihang'
+title: 'Heap / Priority Queue'
+description: 'A heap, or a priority queue, is a data structure that efficiently stores elements in a particular order.'
 hide_table_of_contents: true
 ---
 

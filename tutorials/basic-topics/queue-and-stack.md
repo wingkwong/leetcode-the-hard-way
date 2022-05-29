@@ -1,6 +1,6 @@
 ---
 title: 'Queue & Stack'
-description: 'Author: @heiheihang'
+description: 'Stack is the data structure The first item that comes in will be the first to go out.'
 # hide_table_of_contents: true
 ---
 

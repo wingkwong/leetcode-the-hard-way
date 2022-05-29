@@ -1,6 +1,6 @@
 ---
 title: 'Depth First Search (DFS)'
-description: 'Author: @heiheihang'
+description: 'In DFS, we aim to finish one branch before looking at other branches.'
 hide_table_of_contents: true
 ---
 

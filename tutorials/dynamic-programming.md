@@ -1,6 +1,6 @@
 ---
 title: 'Dynamic Programming'
-description: 'Coming Soon'
+description: 'Dynamic Programming'
 hide_table_of_contents: true
 ---
 

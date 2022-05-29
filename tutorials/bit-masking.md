@@ -1,6 +1,6 @@
 ---
 title: 'Bit Manipulation'
-description: 'Coming Soon'
+description: 'Bit Manipulation'
 hide_table_of_contents: true
 ---
 

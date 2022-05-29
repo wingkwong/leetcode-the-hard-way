@@ -1,6 +1,6 @@
 ---
 title: 'Sliding Window'
-description: 'Author: @heiheihang'
+description: 'Sliding window is a technique used to solve problems in array or string.'
 hide_table_of_contents: true
 ---
 
@@ -12,7 +12,7 @@ In some problems, we need to keep track of the elements in a list that satisfy c
 
 > A string is **good** if there are no repeated characters.
 >
-> Given a string `s`​​​​​, return _the number of **good substrings** of length **three** in_ `s`​​​​​​.
+> Given a string `s`, return _the number of **good substrings** of length **three** in_ `s`.
 >
 > Note that if there are multiple occurrences of the same substring, every occurrence should be counted.
 >
@@ -77,7 +77,7 @@ def countGoodSubstrings(self, s: str) -> int:
         return unique_substring_count
 ```
 
-In this problem, the size of the sliding window is constant. There are harder problems with varying sliding window size, but you need to learn [Hash Map](hash-map) first.&#x20;
+In this problem, the size of the sliding window is constant. There are harder problems with varying sliding window size, but you need to learn [Hash Map](hash-map) first.
 
 ### Suggested Problems
 

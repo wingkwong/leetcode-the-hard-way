@@ -1,6 +1,6 @@
 ---
 title: 'Arrays'
-description: 'Author: @heiheihang'
+description: 'An array is a data structure consisting of a collection of elements.'
 hide_table_of_contents: true
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: 'Time Complexity'
-description: 'Author: @wingkwong'
+description: 'Time Complexity is one of the important measurements when it comes to writing an efficient solution.'
 hide_table_of_contents: true
 ---
 

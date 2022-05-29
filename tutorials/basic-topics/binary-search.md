@@ -1,6 +1,6 @@
 ---
 title: 'Binary Search'
-description: 'Author: @heiheihang'
+description: 'Binary search is the searching strategy that reduces the search space by half every iteration until you have found the target.'
 hide_table_of_contents: true
 ---
 

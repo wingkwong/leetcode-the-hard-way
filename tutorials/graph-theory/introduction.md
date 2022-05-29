@@ -1,6 +1,6 @@
 ---
 title: 'Introduction'
-description: 'Author: @heiheihang'
+description: 'Graphs can solve a plethora of interesting problems!'
 hide_table_of_contents: true
 sidebar_position: 1
 ---

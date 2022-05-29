@@ -1,6 +1,6 @@
 ---
 title: 'Two Pointers'
-description: 'Author: @heiheihang'
+description: 'Two Pointers is an effective technique used for searching pairs in a sorted array.'
 hide_table_of_contents: true
 ---
 

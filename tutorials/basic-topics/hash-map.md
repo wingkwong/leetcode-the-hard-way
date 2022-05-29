@@ -1,6 +1,6 @@
 ---
 title: 'Hash Map'
-description: 'Author: @heiheihang'
+description: 'Hash Map provides quick lookup of certain values in O(1) time.'
 hide_table_of_contents: true
 ---
 

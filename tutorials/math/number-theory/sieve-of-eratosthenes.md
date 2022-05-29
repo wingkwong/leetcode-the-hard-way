@@ -1,6 +1,6 @@
 ---
 title: 'Sieve of Eratosthenes'
-description: 'Author: @wingkwong'
+description: 'Sieve of Eratosthenes is a way of finding all prime numbers up to N (inclusive).'
 hide_table_of_contents: true
 ---
 
