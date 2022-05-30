@@ -85,4 +85,8 @@ export const DPBitManipulationProblems = [
   },
 ]
 
-<Table title="Bit Manipulation" data={DPBitManipulationProblems} />
+<Table 
+  title="Bit Manipulation" 
+  data={DPBitManipulationProblems} 
+  collectionLink="https://leetcode.com/list/eeo6ays7"  
+/>
