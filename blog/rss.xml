@@ -4,10 +4,22 @@
         <title>LeetCode The Hard Way Blog</title>
         <link>https://wingkwong.github.io/leetcode-the-hard-way/blog</link>
         <description>LeetCode The Hard Way Blog</description>
-        <lastBuildDate>Thu, 26 Aug 2021 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 30 May 2022 03:17:26 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[blog]]></title>
+            <link>https://wingkwong.github.io/leetcode-the-hard-way/blog/README</link>
+            <guid>/README</guid>
+            <pubDate>Mon, 30 May 2022 03:17:26 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[2021-08-26-welcome]]></title>
+            <link>https://wingkwong.github.io/leetcode-the-hard-way/blog/2021/08/26/welcome/README</link>
+            <guid>/2021/08/26/welcome/README</guid>
+            <pubDate>Thu, 26 Aug 2021 00:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[Welcome]]></title>
             <link>https://wingkwong.github.io/leetcode-the-hard-way/blog/welcome</link>
