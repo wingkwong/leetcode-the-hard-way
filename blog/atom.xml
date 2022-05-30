@@ -2,23 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wingkwong.github.io/leetcode-the-hard-way/blog</id>
     <title>LeetCode The Hard Way Blog</title>
-    <updated>2022-05-30T03:17:26.000Z</updated>
+    <updated>2021-08-26T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wingkwong.github.io/leetcode-the-hard-way/blog"/>
     <subtitle>LeetCode The Hard Way Blog</subtitle>
     <icon>https://wingkwong.github.io/leetcode-the-hard-way/img/favicon.ico</icon>
-    <entry>
-        <title type="html"><![CDATA[blog]]></title>
-        <id>/README</id>
-        <link href="https://wingkwong.github.io/leetcode-the-hard-way/blog/README"/>
-        <updated>2022-05-30T03:17:26.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[2021-08-26-welcome]]></title>
-        <id>/2021/08/26/welcome/README</id>
-        <link href="https://wingkwong.github.io/leetcode-the-hard-way/blog/2021/08/26/welcome/README"/>
-        <updated>2021-08-26T00:00:00.000Z</updated>
-    </entry>
     <entry>
         <title type="html"><![CDATA[Welcome]]></title>
         <id>welcome</id>
