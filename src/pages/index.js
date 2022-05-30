@@ -10,8 +10,6 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero', styles.heroBanner)}>
       <img src="https://user-images.githubusercontent.com/35857179/168307611-1b28018b-fc98-4cff-88a6-d8312ac7bce6.png"/> 
-      <img src="https://user-images.githubusercontent.com/35857179/168307611-1b28018b-fc98-4cff-88a6-d8312ac7bce6.png"/>
-      <img src="https://user-images.githubusercontent.com/35857179/168307611-1b28018b-fc98-4cff-88a6-d8312ac7bce6.png"/>
     </header>
   );
 }
