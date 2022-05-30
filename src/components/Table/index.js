@@ -1,12 +1,12 @@
 import React from 'react';
 
-export default function Table({title, collectionLink, data}) {
+export default function Table({title, collectionLink, isSorted = true, data}) {
   const sortOrder = {
     'Easy': 0,
     'Medium': 1,
     'Hard': 2
   }
-  const renderRow = data.sort((x, y) => sortOrder[x.difficulty] - sortOrder[y.difficulty]).map(d => {
+  const renderRow = (isSorted ? data.sort((x, y) => sortOrder[x.difficulty] - sortOrder[y.difficulty]) : data).map(d => {
     return (
       <tr>
         <td>
