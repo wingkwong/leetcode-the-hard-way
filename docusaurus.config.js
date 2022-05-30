@@ -94,6 +94,11 @@ const config = {
             to: '/solutions/category/0000---0099',
             activeBaseRegex: `/solutions/`,
           },
+          {
+            label: 'Collections',
+            to: '/collections/',
+            activeBaseRegex: `/collections/`,
+          },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/wingkwong/leetcode-the-hard-way',
@@ -116,6 +121,10 @@ const config = {
               {
                 label: 'Solutions',
                 href: '/solutions/category/0000---0099/',
+              },
+              {
+                label: 'Collections',
+                href: '/collections',
               },
             ],
           },
@@ -166,6 +175,21 @@ const config = {
           id: 'tutorials',
           path: 'tutorials',
           routeBasePath: 'tutorials',
+          sidebarPath: require.resolve('./sidebars.js'),
+          remarkPlugins: [math],
+          rehypePlugins: [katex],
+          // showLastUpdateTime: true,
+          // showLastUpdateAuthor: true,
+          editUrl:
+            'https://github.com/wingkwong/leetcode-the-hard-way',
+        }, 
+      ],
+      [
+        '@docusaurus/plugin-content-docs',
+        {
+          id: 'collections',
+          path: 'collections',
+          routeBasePath: 'collections',
           sidebarPath: require.resolve('./sidebars.js'),
           remarkPlugins: [math],
           rehypePlugins: [katex],
