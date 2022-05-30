@@ -34,7 +34,7 @@ Output: true
 * `1 <= nums.length <= 10^5`
 * `-10^9 <= nums[i] <= 10^9`
 
-## Approach 1: Count number of appearance using std::unordered_set
+## Approach 1: Count number of appearance using std::unordered\_set
 
 Perhaps the most straight forward way to find out duplicated elements since nothing could be added into a set when the same value is inside the set already. Then we could compare the number of distinct elements vs. number of elements in nums to judge if there is duplicates.
 
@@ -64,6 +64,7 @@ public:
 ```
 
 ## Approach 2: Sort, then see if next element is the same
+
 Another approach is to sort `nums` and then see for each element, whether next element has the same value. For example sorting `1, 2, 5, 5, 4` gives `1, 2, 4, 5, 5`.
 
 This approach is more memory efficient ($$O(logN)$$) then approach 1 since it doesn't need to make copies of input values stored in a set but comes at a price of $$O(NlogN)$$ time complexity.
@@ -89,3 +90,25 @@ public:
 };
 ```
 
+## Beginner Python Solution
+
+In general, we want to make use of `defaultdict` in python.&#x20;
+
+We can declare `dictionary = defaultdict(int)` to keep track of what elements we have seen so far.
+
+You might be thinking: Why can't we simply loop the array for each element to check if there is duplicate? It is less time efficient if we do not use a `dictionary`.&#x20;
+![1](https://user-images.githubusercontent.com/24492138/170910845-58aaea00-3a90-4c15-9ca2-fdf9e473baa5.jpg)
+![2](https://user-images.githubusercontent.com/24492138/170910857-5bcbaf02-22f7-4d31-8b93-94784fa2be73.jpg)
+![3](https://user-images.githubusercontent.com/24492138/170910863-48ac46bf-dae8-423e-809a-22ec32466b06.jpg)
+![4](https://user-images.githubusercontent.com/24492138/170910866-22f6ed1d-b58c-4e6a-8e32-11ba7e0b6b29.jpg)
+
+
+```python
+hashNum = defaultdict(int)
+for i in nums:
+  if i not in hashNum:
+    hashNum[i] = 1
+  else:
+    return True
+return False
+```
