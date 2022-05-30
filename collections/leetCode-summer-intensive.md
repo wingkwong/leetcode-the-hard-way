@@ -60,6 +60,16 @@ export const week1Problems = [
     "LeetCodeLink": "https://leetcode.com/problems/word-subsets/",
     "SolutionLink": ""
   },
+]
+
+<Table 
+    title="Week 1 (24 May - 27 May)"
+    data={week1Problems}
+    collectionLink="https://leetcode.com/list/eeyho3um"
+    isSorted={false}
+/>
+
+export const week2Problems = [
   {
     "problemName": "1046 - Last Stone Weight",
     "difficulty": "Easy",
@@ -75,8 +85,8 @@ export const week1Problems = [
 ]
 
 <Table 
-    title="Week 1 (24 May - 27 May)"
-    data={week1Problems}
-    collectionLink="https://leetcode.com/list/eeyho3um"
+    title="Week 2 (30 May - 3 June)"
+    data={week2Problems}
+    collectionLink="https://leetcode.com/list/eeyew3e6"
     isSorted={false}
 />
