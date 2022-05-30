@@ -98,11 +98,6 @@ We can declare `dictionary = defaultdict(int)` to keep track of what elements we
 
 You might be thinking: Why can't we simply loop the array for each element to check if there is duplicate? It is less time efficient if we do not use a `dictionary`.&#x20;
 
-<img src="../../.gitbook/assets/1.jpg" alt="" data-size="original">
-
-![](../../.gitbook/assets/2.jpg)
-
-![](../../.gitbook/assets/3.jpg)
 
 ```python
 hashNum = defaultdict(int)
