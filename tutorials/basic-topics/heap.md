@@ -172,6 +172,7 @@ We will use a min heap as we want the result rank from `weakest to strongest`.
 Create a min heap which will contains `pair of {number of soldiers in the row, row index}`. By default, c++ will rank the order of element by the first element in the heap. In this case, it will be `number of soldiers`
 ```cpp
 priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>> pq;
+//priority_queue<pair<int,int>,vector<pair<int,int>>,greater<>> pq; // this line will also work
 ```
 To access the `pair of {number of soldiers in the row, row index}`
 ```cpp
