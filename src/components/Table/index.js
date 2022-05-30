@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Table({title, data}) {
+export default function Table({title, collectionLink, data}) {
   const sortOrder = {
     'Easy': 0,
     'Medium': 1,
@@ -30,6 +30,9 @@ export default function Table({title, data}) {
   return (
       <>
         <h3>{title}</h3>
+        {
+          collectionLink && <h4>Start Practicing: <a href={collectionLink} target="_blank">{collectionLink}</a></h4>
+        }
         <table>
           <th>Problem Name</th>
           <th>Difficulty</th>
