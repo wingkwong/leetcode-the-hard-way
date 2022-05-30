@@ -1,7 +1,7 @@
 ---
 title: 'Heap / Priority Queue'
 description: 'A heap, or a priority queue, is a data structure that efficiently stores elements in a particular order.'
-hide_table_of_contents: true
+# hide_table_of_contents: true
 keywords:
   - leetcode
   - tutorial
@@ -13,10 +13,12 @@ keywords:
 import Authors from '@site/src/components/Authors';
 import Table from '@site/src/components/Table';
 
-<Authors names="@heiheihang"/>
+<Authors names="@heiheihang,@potatochick"/>
+
+## Overview
 
 A heap, or a priority queue, is a data structure that efficiently stores elements in a particular order. It is very efficient in inserting an element to the heap ($$O(logN)$$), and very efficient in removing the first element of the heap ($$O(logN)$$). To know the details of heap, we recommend you to look at [this](https://www.youtube.com/watch?v=t0Cq6tVNRBA).
-
+## Python
 By default, when we refer to heap, most implementations are min-heaps. This means the first element is always the smallest element.
 
 In Python, you can use the following functions to interact with a heap:
@@ -110,6 +112,107 @@ def lastStoneWeight(self, stones: List[int]) -> int:
         #if no stone left, return 0
         return 0
 ```
+## C++
+In C++, when we are refer to heap, we mostly refer to priority queue. By default, priority queue is a max heap in c++.
+
+Create a max heap:
+```cpp 
+priority_queue<int> max_heap; // max heap 
+```
+Create a min heap:
+```cpp 
+priority_queue<int,vector<int>,greater<int>> min_heap; // min heap 
+```
+Other related function:
+```cpp
+priority_queue<int> max_heap; //max heap
+
+//To push element into a priority queue
+max_heap.push(1);
+max_heap.push(2);
+max_heap.push(3);
+//max_heap now contains: {3,2,1}
+
+//To push element from a vector into a priority queue
+vector<int> vc = {6,5,4};
+for (auto x:vc){
+  max_heap.push(x);
+}
+//max_heap now contains: {6,5,4,3,2,1}
+
+//To get element from the priority queue
+int top_element = max_heap.top();max_heap.pop();
+cout<<top_element; //output: 6
+//As we want to access the second largest element later, we need to remove the max element after we access it. 
+
+//To get all element from the priority queue
+while(!max_heap.empty()){
+  int element = max_heap.top();max_heap.pop();
+  cout<<element<<" "; //output: 5 4 3 2 1
+}
+```
+**Advance usage:** Use heap to sort the element by value while containing the index of the elements.
+
+Let's work on a problem ([LeetCode Link](https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix/))
+>you are given an m x n binary matrix mat of 1's (representing soldiers) and 0's (representing civilians). The soldiers are positioned in front of >the civilians. That is, all the 1's will appear to the left of all the 0's in each row.
+>
+>A row i is weaker than a row j if one of the following is true:
+>
+>The number of soldiers in row i is less than the number of soldiers in row j.
+>Both rows have the same number of soldiers and i < j.
+>Return the indices of the k weakest rows in the matrix ordered from weakest to strongest.
+
+The idea of this question is 
+* count the number of soilders in each row
+* sort it
+* return the 1st - kth weakest **index** of row
+
+We will use a min heap as we want the result rank from `weakest to strongest`.
+
+Create a min heap which will contains `pair of {number of soldiers in the row, row index}`. By default, c++ will rank the order of element by the first element in the heap. In this case, it will be `number of soldiers`
+```cpp
+priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>> pq;
+//priority_queue<pair<int,int>,vector<pair<int,int>>,greater<>> pq; // this line will also work
+```
+To access the `pair of {number of soldiers in the row, row index}`
+```cpp
+pair<int,int> top_element;
+top_element=pq.top();pq.pop();
+int number_of_soldiers = top_element.first;
+int index = top_element.second;
+```
+My solution:
+```cpp
+vector<int> kWeakestRows(vector<vector<int>>& mat, int k) {
+        priority_queue<pair<int,int>,vector<pair<int,int>>,greater<>> pq; //min heap
+        //push elements to min heap
+        for (int i =0;i<mat.size();i++){
+            int count= 0;
+            for (int j=0;j<mat[0].size();j++){
+                if (mat[i][j] == 1) count++;
+            }
+            pq.push({count,i}); //push pair of {number of soldiers in the row, row index} to the min heap
+            //pq.push(make_pair(count,i)); can replace with this line of syntax 
+        }
+        vector<int> result;
+        int count = 0;
+        
+        //get the index only from the heap and put it in the array
+        while(!pq.empty() && count<k){
+            count++;
+            int ans = pq.top().second;
+            pq.pop();
+            result.push_back(ans);
+        }
+        return result;
+    }
+```
+**Additional knowledge:** You can create a `max heap with pair<int,int>` with following syntax
+```cpp
+priority_queue<pair<int,int>> pq;
+```
+
+
 
 export const suggestedProblems = [
   {
