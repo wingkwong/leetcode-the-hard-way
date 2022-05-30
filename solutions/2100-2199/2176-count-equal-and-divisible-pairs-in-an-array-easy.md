@@ -8,7 +8,7 @@ description: >-
 
 ## Problem Statement
 
-Given a **0-indexed** integer array `nums` of length `n` and an integer `k`, return _the **number of pairs**_ `(i, j)` _where_ `0 <= i < j < n`, _such that_ `nums[i] == nums[j]` _and_ `(i * j)` _is divisible by_ `k`.&#x20;
+Given a **0-indexed** integer array `nums` of length `n` and an integer `k`, return _the **number of pairs**_ `(i, j)` _where_ `0 <= i < j < n`, _such that_ `nums[i] == nums[j]` _and_ `(i * j)` _is divisible by_ `k`.
 
 **Example 1:**
 
@@ -38,7 +38,7 @@ Explanation: Since no value in nums is repeated, there are no pairs (i,j) that m
 
 ## Approach 1: Brute Force
 
-Just do what it says.&#x20;
+Just do what it says.
 
 ```cpp
 class Solution {

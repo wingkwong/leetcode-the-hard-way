@@ -16,7 +16,7 @@ Return _an integer array_ `count` _of length_ `points.length` _where_ `count[j]`
 
 The `ith` rectangle **contains** the `jth` point if `0 <= xj <= li` and `0 <= yj <= hi`. Note that points that lie on the **edges** of a rectangle are also considered to be contained by that rectangle.
 
-&#x20;
+
 
 **Example 1:**
 
@@ -63,9 +63,9 @@ Therefore, we return [1, 3].
 
 Observation: The max $$y$$ is only $$100$$, while the max $$x$$is $$10^9$$.
 
-For each $$y$$, we push the corresponding $$x$$ and then we sort all the $$x$$s for each $$y$$.&#x20;
+For each $$y$$, we push the corresponding $$x$$ and then we sort all the $$x$$s for each $$y$$.
 
-Then iterate each point, and iterate from $$p_y$$ to $$max_y$$to check how many points are greater than $$p_x$$.&#x20;
+Then iterate each point, and iterate from $$p_y$$ to $$max_y$$to check how many points are greater than $$p_x$$.
 
 ```cpp
 class Solution {

@@ -27,7 +27,7 @@ You are interested in the **positions** of the `k` **highest-ranked** items whos
 
 Return _the_ `k` _highest-ranked items within the price range **sorted** by their rank (highest to lowest)_. If there are fewer than `k` reachable items within the price range, return _**all** of them_.
 
-&#x20;
+
 
 **Example 1:**
 
@@ -96,7 +96,7 @@ Note that k = 3 but there are only 2 reachable items within the price range.
 
 ## Approach 1: BFS
 
-This is a standard BFS problem. It is not difficult to implement but we need to pay attention on the requirements.&#x20;
+This is a standard BFS problem. It is not difficult to implement but we need to pay attention on the requirements.
 
 First we put our starting point to a queue. Then iterate the current queue and check if current cell grid\[x]\[y] is within the price range. If so, we can put this cell to a temporary array for further processing. After that, we try to move in four directions. We need to check the new coordinate `(next_x, next_y)` is within boundary or not. Also we don't want to visit the same cell that we have already visited so we use `vis[next_x][next_y]` to check it. If it is not visited, we add the next cell to the queue and mark it as visited.
 
@@ -151,7 +151,7 @@ public:
 };
 ```
 
-In fact, a custom comparator is not necessary if we push the criteria in the same order to `tmp`, i.e. distance, price, row number and column number. This is because the `sort()` will sort them based on this order.&#x20;
+In fact, a custom comparator is not necessary if we push the criteria in the same order to `tmp`, i.e. distance, price, row number and column number. This is because the `sort()` will sort them based on this order.
 
 ```cpp
 class Solution {

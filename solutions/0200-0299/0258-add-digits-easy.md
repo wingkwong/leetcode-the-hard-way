@@ -6,7 +6,7 @@ description: 'Author: @wingkwong | https://leetcode.com/problems/add-digits/'
 
 ## Problem Statement
 
-Given an integer `num`, repeatedly add all its digits until the result has only one digit, and return it.&#x20;
+Given an integer `num`, repeatedly add all its digits until the result has only one digit, and return it.
 
 **Example 1:**
 
@@ -53,7 +53,7 @@ int digitSum(int n) {
 
 We initialise $$sum := 0$$ first. Then we take modulo operation $$n \ mod 10$$ to get the last digit and add it to $$sum$$. Then we divide $$n$$ by 10 to eliminate the last digit and perform the same operation until $$n$$ becomes $$0$$.
 
-Now we just need to calculate the digit sum repeatedly until $$n$$ has only one digit.&#x20;
+Now we just need to calculate the digit sum repeatedly until $$n$$ has only one digit.
 
 ```cpp
 class Solution {
@@ -82,19 +82,19 @@ public:
 
 ## Approach 2: Congruence Formula
 
-If $$n$$ is $$0$$, then obviously it is $$0$$.&#x20;
+If $$n$$ is $$0$$, then obviously it is $$0$$.
 
 If $$n$$ can be divisible by $$9$$ , then it is $$9$$. E.g 27 % 9 == 0 -> 2 + 7 -> 9.
 
-Otherwise, it would be $$n \mod 9$$. Why? &#x20;
+Otherwise, it would be $$n \mod 9$$. Why? 
 
 Let's say $$n = a_0 * 1 + a_1 * 10 + a_2 * 100 + ... + a_n * 10^n$$  where $$a_i$$ ∈ $$[0, 9]$$ and let $$x$$ be $$a_0 + a_1 + a_2 + ... + a_n$$. We know that $$1 \mod 9 = 10 \mod 9 = 100 \mod 9 = 1$$. Then, $$n \mod 9$$ would be $$x$$. For example, $$n = 123 = 3 * 1 + 2 * 10 + 1 * 100$$ and $$x = 1 + 2 + 3$$. We can see that $$123 \mod 9 = 6$$, which is also the difference between $$n$$ and the closest number  which can be divisible by $$9$$.
 
-To generalise, for base $$b$$, we'll have&#x20;
+To generalise, for base $$b$$, we'll have
 
 ![image](https://user-images.githubusercontent.com/35857179/168303513-5e58fd4a-8775-487c-9a21-25d0e061e418.png)
 
-which can be further simplified as&#x20;
+which can be further simplified as
 
 ![image](https://user-images.githubusercontent.com/35857179/168303537-9079b250-0106-41d0-84ab-bc4d8d672541.png)
 

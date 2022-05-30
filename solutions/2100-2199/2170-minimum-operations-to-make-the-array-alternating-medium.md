@@ -48,7 +48,7 @@ Note that the array cannot be converted to [2,2,2,2,2] because in this case nums
 
 ## Approach 1: Frequency Table
 
-First, we need to separate the numbers at odd positions (`odd`) and even positions (`even`).&#x20;
+First, we need to separate the numbers at odd positions (`odd`) and even positions (`even`).
 
 We are only interested in the top 2 most frequent elements in `odd` and `even`. We have the following cases:
 

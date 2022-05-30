@@ -31,7 +31,7 @@ Input: head = [1]
 Output: [1]
 ```
 
-&#x20;
+
 
 **Constraints:**
 

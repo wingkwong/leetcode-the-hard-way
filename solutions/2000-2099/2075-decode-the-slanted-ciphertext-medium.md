@@ -32,7 +32,7 @@ Given the encoded string `encodedText` and number of rows `rows`, return _the or
 
 **Note:** `originalText` **does not** have any trailing spaces `' '`. The test cases are generated such that there is only one possible `originalText`.
 
-&#x20;
+
 
 **Example 1:**
 

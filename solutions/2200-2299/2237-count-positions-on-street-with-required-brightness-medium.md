@@ -14,7 +14,7 @@ The **brightness** of a position `p` is defined as the number of street lamps th
 
 Return _the number of positions_ `i` _on the street between_ `0` _and_ `n - 1` _that have a **brightness** of **at least** _ `requirement[i]`_._
 
-&#x20;
+
 
 **Example 1:**
 

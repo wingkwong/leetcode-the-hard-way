@@ -45,7 +45,7 @@ Note that [5, 1] may also be returned.
 
 ## Approach 1: Counting
 
-We count the frequency for each number and store in hash map first. Then iterate each element in hash map to see if it only appears once. If so, check if no adjacent numbers (i.e. x + 1 and x - 1) appear in the array by checking their existence in the hash map.&#x20;
+We count the frequency for each number and store in hash map first. Then iterate each element in hash map to see if it only appears once. If so, check if no adjacent numbers (i.e. x + 1 and x - 1) appear in the array by checking their existence in the hash map.
 
 ```cpp
 class Solution {

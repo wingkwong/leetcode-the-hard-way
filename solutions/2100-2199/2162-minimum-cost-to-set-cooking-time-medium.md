@@ -28,7 +28,7 @@ Return _the **minimum cost** to set_ `targetSeconds` _seconds of cooking time_.
 
 Remember that one minute consists of `60` seconds.
 
-&#x20;
+
 
 **Example 1:**
 
@@ -75,7 +75,7 @@ First let's get the minutes $$m$$ and seconds $$s$$ from $$targetSeconds$$. If t
 
 To calculate the cost, it is pretty straightforward. Example 2 gives a good hint to remind us to handle leading zeros.
 
-After calculating the first possible minimum cost, we can try the second one. Similarly, we check if $$m'$$ and $$s'$$ are valid. If so, calculate the cost and return the minimum one.&#x20;
+After calculating the first possible minimum cost, we can try the second one. Similarly, we check if $$m'$$ and $$s'$$ are valid. If so, calculate the cost and return the minimum one.
 
 ```cpp
 class Solution {

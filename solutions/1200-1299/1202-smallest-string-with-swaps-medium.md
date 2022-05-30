@@ -53,7 +53,7 @@ Swap s[0] and s[1], s = "abc"
 
 ## Approach 1: DSU
 
-If we have like $$[[0,1],[1,2]]$$, even $$0$$ doesn't connect to $$2$$, it can still swap with $$2$$ as we can first swap $$0$$ and $$1$$, then swap $$0$$ with $$2$$. Therefore, we can use DSU to group all the connected nodes together first, then sort it and replace the character at corresponding indices.&#x20;
+If we have like $$[[0,1],[1,2]]$$, even $$0$$ doesn't connect to $$2$$, it can still swap with $$2$$ as we can first swap $$0$$ and $$1$$, then swap $$0$$ with $$2$$. Therefore, we can use DSU to group all the connected nodes together first, then sort it and replace the character at corresponding indices.
 
 <details>
 

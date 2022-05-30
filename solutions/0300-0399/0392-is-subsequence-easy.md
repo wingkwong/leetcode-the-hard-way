@@ -34,7 +34,7 @@ Output: false
 
 ## Approach 1: Two Pointers
 
-We use two pointers $$i$$ and $$j$$ to track the index in $$s$$ and $$t$$ respectively. If $$s[i] == t[j]$$, then we set $$i := i + 1$$ and $$j := j + 1$$ and then check the next character in both string. If they are not same, we move $$j$$ to the next character in $$t$$ while keeping $$i$$ in $$s$$. At the end, pointer $$i$$ would be $$n$$ if $$s$$ is a subsequence of $$t$$.&#x20;
+We use two pointers $$i$$ and $$j$$ to track the index in $$s$$ and $$t$$ respectively. If $$s[i] == t[j]$$, then we set $$i := i + 1$$ and $$j := j + 1$$ and then check the next character in both string. If they are not same, we move $$j$$ to the next character in $$t$$ while keeping $$i$$ in $$s$$. At the end, pointer $$i$$ would be $$n$$ if $$s$$ is a subsequence of $$t$$.
 
 ```cpp
 class Solution {

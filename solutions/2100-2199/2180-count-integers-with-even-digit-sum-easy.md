@@ -31,7 +31,7 @@ The 14 integers less than or equal to 30 whose digit sums are even are
 2, 4, 6, 8, 11, 13, 15, 17, 19, 20, 22, 24, 26, and 28.
 ```
 
-&#x20;
+
 
 **Constraints:**
 

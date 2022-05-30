@@ -14,7 +14,7 @@ To perform a **flood fill**, consider the starting pixel, plus any pixels connec
 
 Return _the modified image after performing the flood fill_.
 
-&#x20;
+
 
 **Example 1:**
 

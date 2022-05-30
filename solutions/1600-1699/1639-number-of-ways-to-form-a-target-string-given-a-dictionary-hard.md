@@ -21,7 +21,7 @@ Your task is to form `target` using the given `words` under the following rules:
 
 Return _the number of ways to form `target` from `words`_. Since the answer may be too large, return it **modulo** `109 + 7`.
 
-&#x20;
+
 
 **Example 1:**
 
@@ -49,7 +49,7 @@ Explanation: There are 4 ways to form target.
 "bab" -> index 1 ("abba"), index 2 ("baab"), index 3 ("baab")
 ```
 
-&#x20;
+
 
 **Constraints:**
 

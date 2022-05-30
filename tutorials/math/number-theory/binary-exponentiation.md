@@ -1,8 +1,23 @@
-# Binary Exponentiation
+---
+title: 'Binary Exponentiation'
+description: 'Binary Exponentiation is also known as Exponentiation by Squaring.'
+hide_table_of_contents: true
+keywords:
+  - leetcode
+  - tutorial
+  - binary exponentiation
+  - fast pow
+  - algorithm
+---
+
+import Authors from '@site/src/components/Authors';
+import Table from '@site/src/components/Table';
+
+<Authors names="@wingkwong"/>
 
 Binary Exponentiation is also known as Exponentiation by Squaring or even called Fast Pow in some CP templates. It is used to calculate $$a ^ n$$ using only $$O(logn)$$ multiplications instead of $$O(n)$$using naive approach.
 
-We can express $$a ^ n$$as $$a * a * ... * a$$ but it is not efficient for a large $$a$$ and $$n$$. If we display the exponent in binary representation, says 13 = 1101, then we have $$3 ^{13} = 3^{1101} = 3^8*3^4*3^1.$$ Supposing we have a sequence $$a ^ 1, a ^ 2, a ^4, ..., a^{\lfloor log_2 n\rfloor}$$, we can see the an element in the sequence is the square of previous element, i.e. $$3 ^ 4 = (3^2)^2$$. Therefore, to calculate $$3 ^ {13}$$, we just need to calculate $${\lfloor log_2 13\rfloor} = 3$$ times, i.e. (1 -> 4 -> 8). We skip 2 here because the bit is not set. This approach gives us $$O(log n)$$ complexity.&#x20;
+We can express $$a ^ n$$as $$a * a * ... * a$$ but it is not efficient for a large $$a$$ and $$n$$. If we display the exponent in binary representation, says 13 = 1101, then we have $$3 ^{13} = 3^{1101} = 3^8*3^4*3^1.$$ Supposing we have a sequence $$a ^ 1, a ^ 2, a ^4, ..., a^{\lfloor log_2 n\rfloor}$$, we can see the an element in the sequence is the square of previous element, i.e. $$3 ^ 4 = (3^2)^2$$. Therefore, to calculate $$3 ^ {13}$$, we just need to calculate $${\lfloor log_2 13\rfloor} = 3$$ times, i.e. (1 -> 4 -> 8). We skip 2 here because the bit is not set. This approach gives us $$O(log n)$$ complexity.
 
 To generalise it, for a positive integer $$n$$, we have
 
@@ -24,7 +39,7 @@ long long fastpow(long long base, long long exp) {
 }
 ```
 
-In case you need to take mod.&#x20;
+In case you need to take mod.
 
 ```cpp
 long long modpow(long long base, long long exp, long long mod) {
@@ -40,6 +55,13 @@ long long modpow(long long base, long long exp, long long mod) {
 
 ```
 
-### Suggested Problems
+export const suggestedProblems = [
+  {
+    "problemName": "0050 - Pow(x, n)",
+    "difficulty": "Medium",
+    "LeetCodeLink": "https://leetcode.com/problems/powx-n/",
+    "SolutionLink": "../../../solutions/0000-0099/pow-x-n-medium"
+  },
+]
 
-* [0050 - Pow(x, n) (Medium)](../../../solutions/0000-0099/pow-x-n-medium)
+<Table title="Suggested Problems" data={suggestedProblems} />

@@ -33,7 +33,7 @@ Explanation: There is no way to express 4 as the sum of 3 consecutive integers.
 
 ## Approach 1: Math
 
-We can express it as $$n + (n + 1) + (n + 2) = num$$ and find what $$n$$ is.&#x20;
+We can express it as $$n + (n + 1) + (n + 2) = num$$ and find what $$n$$ is.
 
 $$
 n + (n + 1) + (n + 2) = num

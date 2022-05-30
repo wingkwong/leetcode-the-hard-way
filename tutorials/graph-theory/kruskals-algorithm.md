@@ -1,3 +1,12 @@
-# Kruskal's Algorithm
+---
+title: "Kruskal's Algorithm"
+description: 'Coming Soon!'
+draft: true
+keywords:
+  - leetcode
+  - tutorial
+  - kruskals
+  - algorithm
+---
 
-#### _Tutorial: Coming Soon!_
+Coming Soon

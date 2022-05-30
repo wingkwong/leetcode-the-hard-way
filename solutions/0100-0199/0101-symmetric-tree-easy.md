@@ -4,7 +4,7 @@ description: 'Author: @TBC | https://leetcode.com/problems/symmetric-tree/'
 
 # 0101 - Symmetric Tree (Easy)
 
-## Problem Statement&#x20;
+## Problem Statement
 
 Given the `root` of a binary tree, _check whether it is a mirror of itself_ (i.e., symmetric around its center).
 

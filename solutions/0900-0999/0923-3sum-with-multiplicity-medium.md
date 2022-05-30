@@ -42,7 +42,7 @@ and two 2s from [2,2,2,2] in 6 ways.
 
 ## Approach 1: Hash Map + Binomial
 
-We can use hash map to store the frequency for each number. As we know $$x + y + z == target$$, we can break it down into 4 cases, which are&#x20;
+We can use hash map to store the frequency for each number. As we know $$x + y + z == target$$, we can break it down into 4 cases, which are
 
 * Case 1: $$i + i + i == target$$
 * Case 2: $$i + i + j == target$$
@@ -68,9 +68,9 @@ Let's define our nChooseK function here.
   }
 ```
 
-For case 2, we need to choose $$2$$ elements from $$m[i]$$ and multiply by $$m[j]$$.&#x20;
+For case 2, we need to choose $$2$$ elements from $$m[i]$$ and multiply by $$m[j]$$.
 
-For case 3, we need to choose $$2$$ elements from $$m[j]$$ and multiply by $$m[i]$$.&#x20;
+For case 3, we need to choose $$2$$ elements from $$m[j]$$ and multiply by $$m[i]$$.
 
 For case 4, there are $$m[i] * m[j] * m[k]$$ ways.
 

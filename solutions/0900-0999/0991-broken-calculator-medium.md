@@ -13,7 +13,7 @@ There is a broken calculator that has the integer `startValue` on its display in
 
 Given two integers `startValue` and `target`, return _the minimum number of operations needed to display_ `target` _on the calculator_.
 
-&#x20;
+
 
 **Example 1:**
 

@@ -1,0 +1,8 @@
+{
+  "label": "0100 - 0199",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Solutions categorised by Problem IDs"
+  }
+}

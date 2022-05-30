@@ -8,9 +8,9 @@ description: >-
 
 ## Problem Statement
 
-Given `n` orders, each order consist in pickup and delivery services.&#x20;
+Given `n` orders, each order consist in pickup and delivery services.
 
-Count all valid pickup/delivery possible sequences such that delivery(i) is always after of pickup(i).&#x20;
+Count all valid pickup/delivery possible sequences such that delivery(i) is always after of pickup(i).
 
 Since the answer may be too large, return it modulo 10^9 + 7.
 
@@ -47,7 +47,7 @@ Output: 90
 
 If we just put all $$P$$ in a row, we would have $$N!$$ ways. It's a permutation with no repetition. The first choice has $$N$$ possibilities, and the next choice has $$N - 1$$ possibilities (as you cannot choose the first choice), and then $$N - 2$$ (as you cannot choose the previous two choices), $$N - 3$$ and so on.  Hence, we got $$N * (N - 1) * (N - 2) * .. * 1 = N!$$.
 
-Then we need to think how to put $$D_i$$in some possible places. We know that$$D_i$$ must come after $$P_i$$. It's obvious that there is only one way to put $$D$$ for the last $$P$$. For the second $$D$$, we can put it right after the corresponding $$P$$ or put it to the left / right of the previous $$D$$. Hence, we have $$3$$ possible places to put. If you keep doing the same thing, you should find the number of ways to put $$D$$ is $$1 * 3 * 5 * .. * (2N - 1)$$.&#x20;
+Then we need to think how to put $$D_i$$in some possible places. We know that$$D_i$$ must come after $$P_i$$. It's obvious that there is only one way to put $$D$$ for the last $$P$$. For the second $$D$$, we can put it right after the corresponding $$P$$ or put it to the left / right of the previous $$D$$. Hence, we have $$3$$ possible places to put. If you keep doing the same thing, you should find the number of ways to put $$D$$ is $$1 * 3 * 5 * .. * (2N - 1)$$.
 
 Hence, the answer is $$N! * \sum_{i=1}^{N} (2 * i - 1)$$. Remember to take $$MOD$$ during the calculation.
 

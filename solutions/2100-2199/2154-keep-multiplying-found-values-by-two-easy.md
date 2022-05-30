@@ -18,7 +18,7 @@ You then do the following steps:
 
 Return _the **final** value of_ `original`.
 
-&#x20;
+
 
 **Example 1:**
 

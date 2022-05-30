@@ -14,7 +14,7 @@ At the start of the game, the **first** robot moves from `(0, 0)` to `(1, n-1)`,
 
 The **first** robot wants to **minimize** the number of points collected by the **second** robot. In contrast, the **second** robot wants to **maximize** the number of points it collects. If both robots play **optimally**, return _the **number of points** collected by the **second** robot._
 
-&#x20;
+
 
 **Example 1:**
 
@@ -63,7 +63,7 @@ The second robot will collect 0 + 1 + 3 + 3 + 0 = 7 points.
 
 The first observation is that the first point on the top row and the last point on the bottom row would be collected by robot 1. Therefore, robot 2 can only collect some from the top or from the bottom. In this case, we can use prefix sum and suffix sum to get how many points robot 2 can collect at a certain index.
 
-For each index $$i$$, robot 2 could either&#x20;
+For each index $$i$$, robot 2 could either
 
 * get from the top row, i.e. $$pref[n - 1] - pref[i]$$, or
 * get from the bottom row, i.e. $$suff[0] - suff[i]$$

@@ -10,7 +10,7 @@ description: >-
 
 Given an integer array `nums`, return `true` _if there exists a triple of indices_ `(i, j, k)` _such that_ `i < j < k` _and_ `nums[i] < nums[j] < nums[k]`. If no such indices exists, return `false`.
 
-&#x20;
+
 
 **Example 1:**
 

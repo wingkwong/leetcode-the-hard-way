@@ -1,8 +1,18 @@
 ---
-description: 'Author: @heiheihang'
+title: 'Two Pointers'
+description: 'Two Pointers is an effective technique used for searching pairs in a sorted array.'
+hide_table_of_contents: true
+keywords:
+  - leetcode
+  - tutorial
+  - two pointers
+  - algorithm
 ---
 
-# Two Pointers
+import Authors from '@site/src/components/Authors';
+import Table from '@site/src/components/Table';
+
+<Authors names="@heiheihang"/>
 
 For some simple iteration problems, we may be able to get away with a simple one-pass iteration. In some special problems, we have to use the technique **Two Pointers** to strategically move around in our input. Let's take a look at this problem ([LeetCode Link](https://leetcode.com/problems/squares-of-a-sorted-array/))
 
@@ -63,8 +73,25 @@ def sortedSquares(self, nums: List[int]) -> List[int]:
 
 Unfortunately, there is no fixed way to perform two pointers. However, generally, we have a pointer at the start of the list and another pointer at the end of the list. We have to carefully analyze the question and choose the most appropriate approach to operate the two pointers.
 
-### Suggested Problems
+export const suggestedProblems = [
+  {
+    "problemName": "1768 - Merge Strings Alternately",
+    "difficulty": "Easy",
+    "LeetCodeLink": "https://leetcode.com/problems/merge-strings-alternately/",
+    "SolutionLink": "../../solutions/1700-1799/merge-strings-alternately-easy"
+  },
+  {
+    "problemName": "2108 - Find First Palindromic String in the Array",
+    "difficulty": "Easy",
+    "LeetCodeLink": "https://leetcode.com/problems/merge-strings-alternately/",
+    "SolutionLink": "../../solutions/2100-2199/find-first-palindromic-string-in-the-array-easy"
+  },
+  {
+    "problemName": "0283 - Move Zeroes",
+    "difficulty": "Easy",
+    "LeetCodeLink": "https://leetcode.com/problems/move-zeroes/",
+    "SolutionLink": "../../solutions/0200-0299/move-zeroes-easy"
+  },
+]
 
-* [1768 - Merge Strings Alternately (Easy)](../../solutions/1700-1799/merge-strings-alternately-easy) [(LeetCode Link)](https://leetcode.com/problems/merge-strings-alternately/)
-* [2108 - Find First Palindromic String in the Array (Easy)](../../solutions/2100-2199/find-first-palindromic-string-in-the-array-easy) ([LeetCode Link](https://leetcode.com/problems/merge-strings-alternately/))
-* [0283 - Move Zeroes (Easy)](../../solutions/0200-0299/move-zeroes-easy) [(LeetCode Link)](https://leetcode.com/problems/move-zeroes/)
+<Table title="Suggested Problems" data={suggestedProblems} />

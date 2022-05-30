@@ -1,8 +1,18 @@
 ---
-description: 'Author: @heiheihang'
+title: 'Arrays'
+description: 'An array is a data structure consisting of a collection of elements.'
+hide_table_of_contents: true
+keywords:
+  - leetcode
+  - tutorial
+  - arrays
+  - data structure
 ---
 
-# Arrays
+import Authors from '@site/src/components/Authors';
+import Table from '@site/src/components/Table';
+
+<Authors names="@heiheihang"/>
 
 As there is not much distinction between many data structures in the context of LeetCode. I will use the term `array` to cover the following data structures in these popular languages:
 
@@ -64,10 +74,37 @@ for i in range(len(basketball_matches)):
 | Remove           | $$O(N)$$   | When we remove an element in the middle of the array, it takes O(N) time. The whole array needs to be restructured to replace the missing gap of the replaced element.                                                                  |
 | Len              | $$O(1)$$   | This may seem like to be O(N) as we have to go through the whole array to check its length. However, checking the length of an array in many languages should be pre-computed in their data structures, so it only takes constant time. |
 
-### Suggested Problems
+export const suggestedProblems = [
+  {
+    "problemName": "1480 - Running Sum of 1d Array",
+    "difficulty": "Easy",
+    "LeetCodeLink": "https://leetcode.com/problems/running-sum-of-1d-array/",
+    "SolutionLink": "../../solutions/1400-1499/running-sum-of-1d-array-easy"
+  },
+  {
+    "problemName": "1929 - Concatenation of Array",
+    "difficulty": "Easy",
+    "LeetCodeLink": "https://leetcode.com/problems/concatenation-of-array/",
+    "SolutionLink": "../../solutions/1900-1999/concatenation-of-array-easy"
+  },
+  {
+    "problemName": "1431 - Kids With the Greatest Number of Candies",
+    "difficulty": "Easy",
+    "LeetCodeLink": "https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/",
+    "SolutionLink": "../../solutions/1400-1499/kids-with-the-greatest-number-of-candies-easy"
+  },
+  {
+    "problemName": "1572 - Matrix Diagonal Sum",
+    "difficulty": "Easy",
+    "LeetCodeLink": "https://leetcode.com/problems/matrix-diagonal-sum/",
+    "SolutionLink": "../../solutions/1500-1599/matrix-diagonal-sum-easy"
+  },
+  {
+    "problemName": "0036 - Valid Sudoku",
+    "difficulty": "Medium",
+    "LeetCodeLink": "https://leetcode.com/problems/valid-sudoku/",
+    "SolutionLink": ""
+  },
+]
 
-* [1480 - Running Sum of 1d Array (Easy) ](../../solutions/1400-1499/running-sum-of-1d-array-easy)([LeetCode Link](https://leetcode.com/problems/running-sum-of-1d-array/))
-* [1929 - Concatenation of Array (Easy) ](../../solutions/1900-1999/concatenation-of-array-easy)([LeetCode Link](https://leetcode.com/problems/concatenation-of-array/))
-* [1431 - Kids With the Greatest Number of Candies (Easy)](../../solutions/1400-1499/kids-with-the-greatest-number-of-candies-easy) ([LeetCode Link](https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/))
-* [1572 - Matrix Diagonal Sum (Easy)](../../solutions/1500-1599/matrix-diagonal-sum-easy) ([LeetCode Link](https://leetcode.com/problems/matrix-diagonal-sum/))
-* 0036 - Valid Sudoku (Medium) [(LeetCode Link)](https://leetcode.com/problems/valid-sudoku/)
+<Table title="Suggested Problems" data={suggestedProblems} />

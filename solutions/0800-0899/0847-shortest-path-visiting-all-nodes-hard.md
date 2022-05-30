@@ -114,7 +114,7 @@ def shortestPathLength(self, graph: List[List[int]]) -> int:
 
 _This approach is prepared by @wingkwong._
 
-Since $$n$$ is small, we can use Floyd–Warshall algorithm to calculate the shortest distances between all pairs of nodes in $$O(n ^ 3)$$. Let $$d[i][j]$$ be the distance between node $$i$$ and node $$j$$. First we initialise each distance to be infinity or a large number. Then for each edge, we can set the weight (i.e. distance in this case) to $$0$$ if $$i$$ is same as $$j$$, else we can build $$d$$ based on the input.&#x20;
+Since $$n$$ is small, we can use Floyd–Warshall algorithm to calculate the shortest distances between all pairs of nodes in $$O(n ^ 3)$$. Let $$d[i][j]$$ be the distance between node $$i$$ and node $$j$$. First we initialise each distance to be infinity or a large number. Then for each edge, we can set the weight (i.e. distance in this case) to $$0$$ if $$i$$ is same as $$j$$, else we can build $$d$$ based on the input.
 
 Then, we use the below recursive formula to calculate the shortest distances. For details, please check out [Floyd-Warshall Algorithm](https://cp-algorithms.com/graph/all-pair-shortest-path-floyd-warshall.html).$$shortestPath(i, j, k) = min(shortestPath(i, j, k - 1), shortestPath(i, k, k - 1) + shortestPath(k, j, k - 1))$$
 

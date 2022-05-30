@@ -49,7 +49,7 @@ The relative ordering of the elements less than and greater than pivot is also m
 
 It is same as
 
-* Pushing the elements less the pivot.&#x20;
+* Pushing the elements less the pivot.
 * Pushing the elements equal to the pivot
 * Pushing the elements greater than the pivot
 

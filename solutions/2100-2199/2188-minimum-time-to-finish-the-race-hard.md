@@ -86,7 +86,7 @@ Of course, if there exists a tire running 9 laps in a row that is fast than the 
 
 A small optimisation here is that instead of generating repeating pairs (\[1,8] and \[8,1]), we can cut each loop by half.
 
-Here is a dry run of the following test case:&#x20;
+Here is a dry run of the following test case:
 
 ```
 tires = [2,3], [3,3], [3, 2], changeTime = 5, numLaps = 6

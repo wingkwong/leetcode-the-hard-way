@@ -1,8 +1,17 @@
 ---
-description: 'Author: @heiheihang'
+title: 'Binary Search'
+description: 'Binary search is the searching strategy that reduces the search space by half every iteration until you have found the target.'
+hide_table_of_contents: true
+keywords:
+  - leetcode
+  - tutorial
+  - binary search
+  - algorithm
 ---
 
-# Binary Search
+import Authors from '@site/src/components/Authors';
+
+<Authors names="@heiheihang"/>
 
 We have all played a game to guess a number from 1 to 100. The optimal approach to this game is actually binary search. Binary search is the searching strategy that reduces the search space by half every iteration until you have found the target.
 

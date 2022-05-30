@@ -17,7 +17,7 @@ Two arrays `nums1` and `nums2` are said to be **distinct** if:
 
 A **subarray** is defined as a **non-empty** contiguous sequence of elements in an array.
 
-&#x20;
+
 
 **Example 1:**
 

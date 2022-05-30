@@ -17,7 +17,7 @@ Given an array `nums` consisting of `2n` integers, where **exactly** `n` of the 
 
 **Note:** The test cases are generated such that there exists **at least one** valid array `arr`.
 
-&#x20;
+
 
 **Example 1:**
 

@@ -58,7 +58,7 @@ Given an array of $$3 * n$$ elements, we need to remove a subsequence of $$n$$ e
 
 We use two heaps $$p$$ and $$s$$ to record the smallest $$n$$ elements and the largest $$n$$ elements and $$pre$$to record the sum of $$p$$ and $$suf$$ to record that of $$s$$.
 
-Now we handle the middle $$n$$ elements. From left to right, we check if the element $$nums[i]$$ is smaller than the top element $$q$$ from $$p$$. If so, we should take this element instead and ditch the top one. We update $$pre' = pre + nums[i] - q$$. At the same time we keep the prefix sum $$pv[i]$$ in$$[n, 2 * n)$$. Similarly, we do the same thing from right to left to build the suffix sum $$sv[i]$$ in the same range.&#x20;
+Now we handle the middle $$n$$ elements. From left to right, we check if the element $$nums[i]$$ is smaller than the top element $$q$$ from $$p$$. If so, we should take this element instead and ditch the top one. We update $$pre' = pre + nums[i] - q$$. At the same time we keep the prefix sum $$pv[i]$$ in$$[n, 2 * n)$$. Similarly, we do the same thing from right to left to build the suffix sum $$sv[i]$$ in the same range.
 
 At the end, we can find out the minimum difference by checking $$pv[i - 1] - sv[i]$$ between the middle $$n$$ range.
 

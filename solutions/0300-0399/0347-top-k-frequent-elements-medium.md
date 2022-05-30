@@ -6,7 +6,7 @@ description: 'Author: @wingkwong | https://leetcode.com/problems/top-k-frequent-
 
 ## Problem Statement
 
-Given an integer array `nums` and an integer `k`, return _the_ `k` _most frequent elements_. You may return the answer in **any order**.&#x20;
+Given an integer array `nums` and an integer `k`, return _the_ `k` _most frequent elements_. You may return the answer in **any order**.
 
 **Example 1:**
 
@@ -28,7 +28,7 @@ Output: [1]
 * `k` is in the range `[1, the number of unique elements in the array]`.
 * It is **guaranteed** that the answer is **unique**.
 
-&#x20;
+
 
 **Follow up:** Your algorithm's time complexity must be better than `O(n log n)`, where n is the array's size.
 

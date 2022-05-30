@@ -1,6 +1,12 @@
 ---
-description: 'Author:'
+title: 'Binary Tree'
+description: 'Coming Soon!'
+draft: true
+keywords:
+  - leetcode
+  - tutorial
+  - binary tree
+  - data structure
 ---
 
-# Binary Tree
-
+Coming Soon

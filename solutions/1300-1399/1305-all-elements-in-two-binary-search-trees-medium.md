@@ -35,7 +35,7 @@ Output: [1,1,8,8]
 
 ## Prerequisites
 
-There are different ways to traverse trees - In-order, Pre-order, and Post-order. Supposing we have a binary tree with 5 nodes,&#x20;
+There are different ways to traverse trees - In-order, Pre-order, and Post-order. Supposing we have a binary tree with 5 nodes,
 
 ![image](https://user-images.githubusercontent.com/35857179/168303628-5830a3ca-7e36-4751-893b-09443e44bdc7.png)
 
@@ -78,9 +78,9 @@ void postorder(TreeNode* node) {
 }
 ```
 
-## Approach 1: DFS Traversal and Sorting&#x20;
+## Approach 1: DFS Traversal and Sorting
 
-&#x20;In this problem, we can use either one to traverse all nodes and put them into a common array. We sort the array at the end.
+In this problem, we can use either one to traverse all nodes and put them into a common array. We sort the array at the end.
 
 ```cpp
 class Solution {
@@ -103,7 +103,7 @@ public:
 };
 ```
 
-However, we can see the in-order traversal is faster than the other two. This is because the array is already sorted after the traversal for binary tree. In example 1, after the traversal, we will have \[1, 2, 4] and \[0, 1, 3].&#x20;
+However, we can see the in-order traversal is faster than the other two. This is because the array is already sorted after the traversal for binary tree. In example 1, after the traversal, we will have \[1, 2, 4] and \[0, 1, 3].
 
 | Traversal  | Runtime | Memory  | Language |
 | ---------- | ------- | ------- | -------- |
@@ -113,7 +113,7 @@ However, we can see the in-order traversal is faster than the other two. This is
 
 ## Approach 2: In-order Traversal + Merging
 
-As we know In-order traversal will make the array sorted, the remaining problem is same as "merging two sorted arrays into one". &#x20;
+As we know In-order traversal will make the array sorted, the remaining problem is same as "merging two sorted arrays into one". 
 
 ```cpp
 class Solution {

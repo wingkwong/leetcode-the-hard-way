@@ -59,7 +59,7 @@ for (auto s : wordList) {
 }
 ```
 
-Then, we can perform BFS using queue. We take the word, build its form and get the list of next nodes. If the next word is $$endWord$$, then we can return the answer which is $$level + 1$$. Otherwise, we check if the next word is visited or not, then push it to the queue and mark it as visited if it hasn't been reached before.&#x20;
+Then, we can perform BFS using queue. We take the word, build its form and get the list of next nodes. If the next word is $$endWord$$, then we can return the answer which is $$level + 1$$. Otherwise, we check if the next word is visited or not, then push it to the queue and mark it as visited if it hasn't been reached before.
 
 ```cpp
 // 2. BFS 

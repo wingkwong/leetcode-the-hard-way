@@ -14,7 +14,7 @@ Return _the **number of strings** in_ `words` _that are a **prefix** of_ `s`.
 
 A **prefix** of a string is a substring that occurs at the beginning of the string. A **substring** is a contiguous sequence of characters within a string.
 
-&#x20;
+
 
 **Example 1:**
 

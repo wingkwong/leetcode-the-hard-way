@@ -6,7 +6,7 @@ description: 'Author: @wingkwong | https://leetcode.com/problems/subarray-sum-eq
 
 ## Problem Statement
 
-Given an array of integers `nums` and an integer `k`, return _the total number of continuous subarrays whose sum equals to `k`_.&#x20;
+Given an array of integers `nums` and an integer `k`, return _the total number of continuous subarrays whose sum equals to `k`_.
 
 **Example 1:**
 

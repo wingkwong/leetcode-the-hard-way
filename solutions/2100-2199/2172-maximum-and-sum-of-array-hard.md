@@ -44,7 +44,7 @@ Note that slots 2, 5, 6, and 8 are empty which is permitted.
 
 ## Approach 1: Brute Force
 
-_This approach is prepared by @heiheihang._&#x20;
+_This approach is prepared by @heiheihang._
 
 Naive backtracking
 
@@ -90,7 +90,7 @@ class Solution:
 
 ## Approach 2: Bitmask DP
 
-_This approach is prepared by @heiheihang._&#x20;
+_This approach is prepared by @heiheihang._
 
 We notice that the naive approach is too inefficient. There are some repetitions in the combination of numbers in slots. We can take advantage of that by storing the state of the slots (utilizing the `slots` dictionary from brute force!)
 
@@ -147,13 +147,11 @@ class Solution:
 
 ## Approach 3: MCMF
 
-_This approach is prepared by @wingkwong._&#x20;
+_This approach is prepared by @wingkwong._
 
 **Prerequisite**: MCMF
 
-{% hint style="warning" %}
-MCMF tutorial will not be included here. Please check out [https://cp-algorithms.com/graph/min\_cost\_flow.html](https://cp-algorithms.com/graph/min\_cost\_flow.html) for more.
-{% endhint %}
+> MCMF tutorial will not be included here. Please check out [https://cp-algorithms.com/graph/min\_cost\_flow.html](https://cp-algorithms.com/graph/min\_cost\_flow.html) for more.
 
 We can think of $$nums$$ as the source of a bipartite graph and $$slots$$ as the destination. If we add two more vertices $$source$$ before $$nums$$ and $$sink$$ after $$slots$$, then we can easily solve it using standard MCMF template.
 
@@ -285,7 +283,7 @@ $$
 source, nums[0], nums[1], ... ,nums[n - 1], slot_1, slot_2, .., slot_k, sink
 $$
 
-Now we need to create the edges from $$source$$ to each element in $$nums$$ with $$1$$ capacity and $$0$$ cost. Then we create the edges from each element in $$nums$$ to each slot with $$1$$ capacity and $$-(nums[i - 1] \text & slot)$$. The minus sign is here because this MCMF template is to calculate the minimum cost and this problem is asking for the maximum one. Similarly, we create edges from each slot to $$sink$$ with $$2$$ capacities (because each slot at most contains 2 elements) and $$0$$ cost.
+Now we need to create the edges from $$source$$ to each element in $$nums$$ with $$1$$ capacity and $$0$$ cost. Then we create the edges from each element in $$nums$$ to each slot with $$1$$ capacity and $$-(nums[i - 1] & slot)$$. The minus sign is here because this MCMF template is to calculate the minimum cost and this problem is asking for the maximum one. Similarly, we create edges from each slot to $$sink$$ with $$2$$ capacities (because each slot at most contains 2 elements) and $$0$$ cost.
 
 ```cpp
 class Solution {

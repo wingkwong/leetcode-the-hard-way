@@ -1,3 +1,12 @@
-# Prim's Algorithm
+---
+title: "Prim's Algorithm"
+description: 'Coming Soon!'
+draft: true
+keywords:
+  - leetcode
+  - tutorial
+  - prim
+  - algorithm
+---
 
-#### _Tutorial: Coming Soon!_
+Coming Soon

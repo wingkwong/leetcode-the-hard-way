@@ -16,7 +16,7 @@ You are given two integers `n` and `k`. Return _the **lexicographically smallest
 
 Note that a string `x` is lexicographically smaller than string `y` if `x` comes before `y` in dictionary order, that is, either `x` is a prefix of `y`, or if `i` is the first position such that `x[i] != y[i]`, then `x[i]` comes before `y[i]` in alphabetic order.
 
-&#x20;
+
 
 **Example 1:**
 

@@ -30,13 +30,13 @@ Output: 2
 * `1 <= n <= 5 * 10^4`
 * `-2^31 <= nums[i] <= 2^31 - 1`
 
-&#x20;
+
 
 **Follow-up:** Could you solve the problem in linear time and in `O(1)` space?
 
 ## Approach 1: Boyer-Moore Voting Algorithm
 
-The Boyer-Moore Voting Algorithm is used to find the majority of a sequence of elements using linear time and constant space. We initialise the counter $$i := 0$$ and iterate each number $$x$$. If the counter is $$0$$, then we set $$x$$ as the major element. If the current number is the major element, then we increase the counter by $$1$$, else decrease by $$1$$.&#x20;
+The Boyer-Moore Voting Algorithm is used to find the majority of a sequence of elements using linear time and constant space. We initialise the counter $$i := 0$$ and iterate each number $$x$$. If the counter is $$0$$, then we set $$x$$ as the major element. If the current number is the major element, then we increase the counter by $$1$$, else decrease by $$1$$.
 
 Reference: [Boyer-Moore Voting Algorithm](https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore\_majority\_vote\_algorithm)
 

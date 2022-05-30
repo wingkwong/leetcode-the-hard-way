@@ -75,9 +75,9 @@ def runningSum(self, nums: List[int]) -> List[int]:
 
 ## Approach 2: Partial Sum
 
-_Prepared by @wingkwong_\
-__\
-__Using C++ STL.
+_Prepared by @wingkwong_
+
+Using C++ STL.
 
 ```cpp
 class Solution {

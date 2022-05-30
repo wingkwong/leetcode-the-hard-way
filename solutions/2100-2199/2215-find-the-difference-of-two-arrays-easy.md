@@ -15,7 +15,7 @@ Given two **0-indexed** integer arrays `nums1` and `nums2`, return _a list_ `ans
 
 **Note** that the integers in the lists may be returned in **any** order.
 
-&#x20;
+
 
 **Example 1:**
 

@@ -1,8 +1,14 @@
 ---
-description: 'Author:'
+title: 'Dynamic Programming'
+description: 'Dynamic Programming'
+hide_table_of_contents: true
+draft: true
+keywords:
+  - leetcode
+  - tutorial
+  - dynamic programming
+  - algorithm
 ---
-
-# Dynamic Programming
 
 ### Suggested Problems
 

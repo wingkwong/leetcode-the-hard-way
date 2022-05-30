@@ -53,7 +53,7 @@ There are no other solutions that removes 7 beans or fewer.
 
 ## Approach 1: Sorting
 
-The number of beans in remaining non-empty bag must be one of the values in the input. We sort the array and iterate each one to see how many beans we need to remove in order to fulfil the case.&#x20;
+The number of beans in remaining non-empty bag must be one of the values in the input. We sort the array and iterate each one to see how many beans we need to remove in order to fulfil the case.
 
 For example, if $$a[i]$$ is selected, then all beans before index $$i$$ need to be removed. i.e. $$a[0] + a[1] + ... + a[i - 1]$$. For those beans starting from index $$i$$, we just need to remove some to make them equal to $$a[i]$$, i.e. $$a[i] + a[i + 1] + ... + a[n - 1] - (n * i) * a[i]$$. In other words, that would be $$sum_a - (n - i) * a[i]$$.
 

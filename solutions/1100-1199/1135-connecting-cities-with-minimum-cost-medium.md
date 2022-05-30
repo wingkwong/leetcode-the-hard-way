@@ -14,7 +14,7 @@ Return _the minimum **cost** to connect all the_ `n` _cities such that there is 
 
 The **cost** is the sum of the connections' costs used.
 
-&#x20;
+
 
 **Example 1:**
 
@@ -47,7 +47,7 @@ Explanation: There is no way to connect all cities even if all edges are used.
 
 ## Approach 1: **Kruskal's Algorithm**
 
-If we treat it as a graph problem, it is actually same as finding Minimum Spanning Tree. Hence, we can use Kruskal's Algorithm with DSU to solve it.&#x20;
+If we treat it as a graph problem, it is actually same as finding Minimum Spanning Tree. Hence, we can use Kruskal's Algorithm with DSU to solve it.
 
 In order to get the MST, we sort the edges based on the weights in an increasing order. Then we iterate them one by one, and greedily pick edges which does not result in cycle with the previous edges. At the end, we should have $$N - 1$$edges in MST. Otherwise, we return $$-1$$.
 

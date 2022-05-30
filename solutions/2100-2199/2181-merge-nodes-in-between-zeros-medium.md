@@ -12,7 +12,7 @@ For **every** two consecutive `0`'s, **merge** all the nodes lying in between th
 
 Return _the_ `head` _of the modified linked list_.
 
-&#x20;
+
 
 **Example 1:**
 

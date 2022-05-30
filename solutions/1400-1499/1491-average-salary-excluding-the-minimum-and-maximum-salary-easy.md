@@ -36,7 +36,7 @@ Average salary excluding minimum and maximum salary is (2000) / 1 = 2000
 
 ## Approach 1: One Pass
 
-We iterate $$salary$$ and calculate the total sum $$sum$$, the minimum value $$mi$$ and the maximum value $$mx$$. The average salary of employees excluding the minimum and maximum salary would be $$sum - mi - mx$$. Since we exclude two items, we just need to divide by $$len(salary) - 2$$.&#x20;
+We iterate $$salary$$ and calculate the total sum $$sum$$, the minimum value $$mi$$ and the maximum value $$mx$$. The average salary of employees excluding the minimum and maximum salary would be $$sum - mi - mx$$. Since we exclude two items, we just need to divide by $$len(salary) - 2$$.
 
 ### Go
 

@@ -18,7 +18,7 @@ You are given a string `s` in the format `"<col1><row1>:<col2><row2>"`, where `<
 
 Return _the **list of cells**_ `(x, y)` _such that_ `r1 <= x <= r2` _and_ `c1 <= y <= c2`. The cells should be represented as **strings** in the format mentioned above and be sorted in **non-decreasing** order first by columns and then by rows.
 
-&#x20;
+
 
 **Example 1:**
 
@@ -44,7 +44,7 @@ The above diagram shows the cells which should be present in the list.
 The red arrow denotes the order in which the cells should be presented.
 ```
 
-&#x20;
+
 
 **Constraints:**
 

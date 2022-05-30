@@ -17,7 +17,7 @@ Recall that arr is a mountain array if and only if:
 
 ![](https://assets.leetcode.com/uploads/2019/10/20/hint\_valid\_mountain\_array.png)
 
-&#x20;
+
 
 **Example 1:**
 

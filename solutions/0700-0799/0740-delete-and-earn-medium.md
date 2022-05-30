@@ -42,7 +42,7 @@ You earn a total of 9 points.
 
 ## Approach 1: DP
 
-Let $$dp[i]$$ be the maximum number of points you can earn by apply the operation till number $$i$$.&#x20;
+Let $$dp[i]$$ be the maximum number of points you can earn by apply the operation till number $$i$$.
 
 If we pick $$1$$, we can earn $$dp[1]$$. If we pick $$2$$, we can earn $$dp[2]$$. If we pick $$3$$, then we cannot pick $$2$$ but we can earn $$dp[3]$$ + $$dp[1]$$. If we don't pick it, then the max point we can earn is the previous state which is $$dp[2]$$.
 

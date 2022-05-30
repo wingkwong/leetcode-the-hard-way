@@ -145,7 +145,7 @@ def getAncestors(self, n: int, edges: List[List[int]]) -> List[List[int]]:
 
 _This approach is prepared by @wingkwong._
 
-We can start from each node $$u$$ and perform DFS to find out all visited nodes. The ancestors of $$u$$would be those visited nodes excluding $$u$$. Since the searching direction is opposite, we change it from $$u$$ -> $$v$$ to $$v$$ -> $$u$$. In Example 1, if $$u$$ is $$6$$, then $$6$$-> $$3$$ -> $$0$$, $$6$$ -> $$3$$-> $$1$$ and $$6$$-> $$4$$ -> $$2$$, so the visited nodes excluding itself are $$[0, 1, 2, 3,4]$$.&#x20;
+We can start from each node $$u$$ and perform DFS to find out all visited nodes. The ancestors of $$u$$would be those visited nodes excluding $$u$$. Since the searching direction is opposite, we change it from $$u$$ -> $$v$$ to $$v$$ -> $$u$$. In Example 1, if $$u$$ is $$6$$, then $$6$$-> $$3$$ -> $$0$$, $$6$$ -> $$3$$-> $$1$$ and $$6$$-> $$4$$ -> $$2$$, so the visited nodes excluding itself are $$[0, 1, 2, 3,4]$$.
 
 ### C++
 

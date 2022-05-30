@@ -1,8 +1,19 @@
 ---
-description: 'Author: @heiheihang'
+title: 'Heap / Priority Queue'
+description: 'A heap, or a priority queue, is a data structure that efficiently stores elements in a particular order.'
+hide_table_of_contents: true
+keywords:
+  - leetcode
+  - tutorial
+  - heap
+  - priority queue
+  - algorithm
 ---
 
-# Heap
+import Authors from '@site/src/components/Authors';
+import Table from '@site/src/components/Table';
+
+<Authors names="@heiheihang"/>
 
 A heap, or a priority queue, is a data structure that efficiently stores elements in a particular order. It is very efficient in inserting an element to the heap ($$O(logN)$$), and very efficient in removing the first element of the heap ($$O(logN)$$). To know the details of heap, we recommend you to look at [this](https://www.youtube.com/watch?v=t0Cq6tVNRBA).
 
@@ -100,8 +111,25 @@ def lastStoneWeight(self, stones: List[int]) -> int:
         return 0
 ```
 
-### Suggested Problem
+export const suggestedProblems = [
+  {
+    "problemName": "0703 - Kth Largest Element in a Stream",
+    "difficulty": "Easy",
+    "LeetCodeLink": "https://leetcode.com/problems/kth-largest-element-in-a-stream/",
+    "SolutionLink": "../../solutions/0700-0799/kth-largest-element-in-a-stream-easy"
+  },
+  {
+    "problemName": "0215 - Kth Largest Element in an Array",
+    "difficulty": "Medium",
+    "LeetCodeLink": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
+    "SolutionLink": "../../solutions/0200-0299/kth-largest-element-in-an-array-medium"
+  },
+  {
+    "problemName": "0973 - K Closest Points to Origin",
+    "difficulty": "Medium",
+    "LeetCodeLink": "https://leetcode.com/problems/k-closest-points-to-origin/",
+    "SolutionLink": "../../solutions/0900-0999/k-closest-points-to-origin-medium"
+  },
+]
 
-* 0703 - Kth Largest Element in a Stream (Easy) [(LeetCode Link)](https://leetcode.com/problems/kth-largest-element-in-a-stream/)
-* 0215 - Kth Largest Element in an Array (Medium) [(LeetCode Link)](https://leetcode.com/problems/kth-largest-element-in-an-array/)
-* 0973 - K Closest Points to Origin (Medium) [(LeetCode Link)](https://leetcode.com/problems/k-closest-points-to-origin/)
+<Table title="Suggested Problems" data={suggestedProblems} />

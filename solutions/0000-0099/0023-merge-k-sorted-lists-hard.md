@@ -48,7 +48,7 @@ Output: []
 * `lists[i]` is sorted in **ascending order**.
 * The sum of `lists[i].length` won't exceed `10^4`.
 
-## &#x20;Approach 1: Divide and Conquer
+## Approach 1: Divide and Conquer
 
 
 > It is recommended to solve [0021 - Merge Two Sorted Lists (Easy)](merge-two-sorted-lists-easy) first.

@@ -24,7 +24,7 @@ Implement the `Encrypter` class:
 * `String encrypt(String word1)` Encrypts `word1` with the encryption process described above and returns the encrypted string.
 * `int decrypt(String word2)` Returns the number of possible strings `word2` could decrypt to that also appear in `dictionary`.
 
-&#x20;
+
 
 **Example 1:**
 

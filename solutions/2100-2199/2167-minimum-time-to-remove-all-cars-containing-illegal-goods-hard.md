@@ -132,10 +132,10 @@ For each index, we have three options.
 2. remove from the middle and contribute $$dp1[i - 1] + 2$$ or $$dp2[i + 1] + 2$$ time if applicable.
 3. remove from the right and contribute $$n - i$$ time
 
-Let's think about the case from the left to right, the transition is &#x20;
+Let's think about the case from the left to right, the transition is 
 
 * if the character is 0, it doesn't contribute anything, so we take the previous state. $$dp1[i] := dp1[i - 1]$$
-* if the character is 1, we can either take $$i$$ or $$dp1[i - 1] + 2$$.&#x20;
+* if the character is 1, we can either take $$i$$ or $$dp1[i - 1] + 2$$.
 
 For $$dp2$$, we need to do it in reverse order. We can reverse the string and perform the same logic. At the end, the answer is to find the minimum value from $$dp1[i] + dp2[n - i]$$.
 

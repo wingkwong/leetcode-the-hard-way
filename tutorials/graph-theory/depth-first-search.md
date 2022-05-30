@@ -1,8 +1,19 @@
 ---
-description: 'Author: @heiheihang'
+title: 'Depth First Search (DFS)'
+description: 'In DFS, we aim to finish one branch before looking at other branches.'
+hide_table_of_contents: true
+keywords:
+  - leetcode
+  - tutorial
+  - depth first search
+  - dfs
+  - algorithm
 ---
 
-# Depth First Search
+import Authors from '@site/src/components/Authors';
+import Table from '@site/src/components/Table';
+
+<Authors names="@heiheihang"/>
 
 In Depth-First Search (DFS), we aim to finish one branch before looking at other branches.
 
@@ -104,8 +115,27 @@ def findTreeDiameter(root):
     return diameter
 ```
 
-Here are some similar problems in which you can tweak the template above to obtain a solution:
+Here are some similar problems in which you can tweak the template above to obtain a solution.
 
-* Sum of Left Leaves ([LeetCode Link](https://leetcode.com/problems/sum-of-left-leaves/)) (Guide)
-* Balanced Binary Tree ([LeetCode Link](https://leetcode.com/problems/balanced-binary-tree/)) (Guide)
-* Maximum Depth of N-ary Tree ([LeetCode Link](https://leetcode.com/problems/maximum-depth-of-n-ary-tree/)) (Guide)
+export const suggestedProblems = [
+  {
+    "problemName": "0404 - Sum of Left Leaves",
+    "difficulty": "Easy",
+    "LeetCodeLink": "https://leetcode.com/problems/sum-of-left-leaves/",
+    "SolutionLink": "../../solutions/0400-0499/sum-of-left-leaves-easy"
+  },
+  {
+    "problemName": "0110 - Balanced Binary Tree",
+    "difficulty": "Easy",
+    "LeetCodeLink": "https://leetcode.com/problems/balanced-binary-tree/",
+    "SolutionLink": "../../solutions/0100-0199/balanced-binary-tree-easy"
+  },
+  {
+    "problemName": "0559 - Maximum Depth of N-ary Tree",
+    "difficulty": "Easy",
+    "LeetCodeLink": "https://leetcode.com/problems/maximum-depth-of-n-ary-tree/",
+    "SolutionLink": "../../solutions/0500-0599/maximum-depth-of-n-ary-tree-easy"
+  },
+]
+
+<Table title="Suggested Problems" data={suggestedProblems} />

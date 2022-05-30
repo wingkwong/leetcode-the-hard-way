@@ -8,7 +8,7 @@ description: 'Author: @wingkwong | https://leetcode.com/problems/binary-search/'
 
 Given an array of integers `nums` which is sorted in ascending order, and an integer `target`, write a function to search `target` in `nums`. If `target` exists, then return its index. Otherwise, return `-1`.
 
-You must write an algorithm with `O(log n)` runtime complexity.&#x20;
+You must write an algorithm with `O(log n)` runtime complexity.
 
 **Example 1:**
 
@@ -37,7 +37,7 @@ Explanation: 2 does not exist in nums so return -1
 
 Prerequisite: [Binary Search](../../tutorials/basic-topics/binary-search)
 
-We set the boundary from the first index to the last index of the array. In each round, we try the middle one $$m = l + (r - l + 1) / 2$$. The reason we add $$1$$ here is that we need to take the upper one if there are even number of elements. If the target is less than $$nums[m]$$, then move the right pointer to $$m - 1$$, else move the left pointer to $$m$$. At the end, if the target is found, the index would be $$l$$.&#x20;
+We set the boundary from the first index to the last index of the array. In each round, we try the middle one $$m = l + (r - l + 1) / 2$$. The reason we add $$1$$ here is that we need to take the upper one if there are even number of elements. If the target is less than $$nums[m]$$, then move the right pointer to $$m - 1$$, else move the left pointer to $$m$$. At the end, if the target is found, the index would be $$l$$.
 
 ```cpp
 class Solution {
@@ -61,7 +61,7 @@ public:
 
 > How about taking the lower element if the number of elements is even?
 
-Similarly, we set the boundary from the first index to the last index of the array. In each round, we try the middle one $$m = l + (r - l) / 2$$. If there are even number of elements, we take the lower one. If the target is greater than $$nums[m]$$, then move the left pointer to $$m + 1$$, else move the right pointer to $$m$$. At the end, if the target is found, the index would be $$l$$.&#x20;
+Similarly, we set the boundary from the first index to the last index of the array. In each round, we try the middle one $$m = l + (r - l) / 2$$. If there are even number of elements, we take the lower one. If the target is greater than $$nums[m]$$, then move the left pointer to $$m + 1$$, else move the right pointer to $$m$$. At the end, if the target is found, the index would be $$l$$.
 
 ```cpp
 class Solution {

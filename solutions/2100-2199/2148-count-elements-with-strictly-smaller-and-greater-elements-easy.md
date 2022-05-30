@@ -8,7 +8,7 @@ description: >-
 
 ## Problem Statement
 
-Given an integer array `nums`, return _the number of elements that have **both** a strictly smaller and a strictly greater element appear in_ `nums`.&#x20;
+Given an integer array `nums`, return _the number of elements that have **both** a strictly smaller and a strictly greater element appear in_ `nums`.
 
 **Example 1:**
 
@@ -36,7 +36,7 @@ Since there are two elements with the value 3, in total there are 2 elements hav
 
 ## Approach 1: Sorting
 
-The order doesn't matter. We can sort the array and only focus on all elements except the first one and the last one because those two elements won't have strictly smaller and greater elements at the same time. From `nums[1..n - 2]`, we can check if the element is greater than the smallest one and smaller than the greatest one.&#x20;
+The order doesn't matter. We can sort the array and only focus on all elements except the first one and the last one because those two elements won't have strictly smaller and greater elements at the same time. From `nums[1..n - 2]`, we can check if the element is greater than the smallest one and smaller than the greatest one.
 
 ```cpp
 class Solution {

@@ -12,7 +12,7 @@ A route's **effort** is the **maximum absolute difference** in heights between t
 
 Return _the minimum **effort** required to travel from the top-left cell to the bottom-right cell._
 
-&#x20;
+
 
 **Example 1:**
 

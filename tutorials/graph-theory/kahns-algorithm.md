@@ -1,3 +1,12 @@
-# Kahn's Algorithm
+---
+title: "Kahn's Algorithm"
+description: 'Coming Soon!'
+draft: true
+keywords:
+  - leetcode
+  - tutorial
+  - kahn
+  - algorithm
+---
 
-#### _Tutorial: Coming Soon!_
+Coming Soon

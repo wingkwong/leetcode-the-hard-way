@@ -23,7 +23,7 @@ The test cases are generated such that:
 * Each artifact only covers at most `4` cells.
 * The entries of `dig` are unique.
 
-&#x20;
+
 
 **Example 1:**
 
@@ -64,7 +64,7 @@ Explanation: Both the red and blue artifacts have all parts uncovered (labeled w
 
 ## Approach 1: Loops
 
-Check if each cell from $$(r1_i, c1_i)$$ to $$(r2_i, c2_i)$$ in $$artifacts[i]$$ are all dug or not. If so, increase $$ans$$ by $$1$$.&#x20;
+Check if each cell from $$(r1_i, c1_i)$$ to $$(r2_i, c2_i)$$ in $$artifacts[i]$$ are all dug or not. If so, increase $$ans$$ by $$1$$.
 
 ```cpp
 class Solution {

@@ -1,8 +1,19 @@
 ---
-description: 'Author: @wingkwong'
+title: 'Minimum Spanning Tree'
+description: 'A minimum spanning tree is a subset of the edges of a connected undirected graph with the minimum possible total edge weight and it does not contain any cycles.'
+hide_table_of_contents: true
+keywords:
+  - leetcode
+  - tutorial
+  - minimum spanning tree
+  - mst
+  - algorithm
 ---
 
-# Minimum Spanning Tree
+import Authors from '@site/src/components/Authors';
+import Table from '@site/src/components/Table';
+
+<Authors names="@wingkwong"/>
 
 A minimum spanning tree is a subset of the edges of a connected undirected graph with the minimum possible total edge weight and it does not contain any cycles.
 
@@ -69,7 +80,19 @@ int mst(vector<vector<int>>& g) {
 }
 ```
 
-### Suggested Problems
+export const suggestedProblems = [
+  {
+    "problemName": "1135 - Connecting Cities With Minimum Cost",
+    "difficulty": "Medium",
+    "LeetCodeLink": "https://leetcode.com/problems/connecting-cities-with-minimum-cost/",
+    "SolutionLink": "../../solutions/1100-1199/connecting-cities-with-minimum-cost-medium"
+  },
+  {
+    "problemName": "1168 - Optimize Water Distribution in a Village",
+    "difficulty": "Hard",
+    "LeetCodeLink": "https://leetcode.com/problems/optimize-water-distribution-in-a-village/",
+    "SolutionLink": "../../solutions/1100-1199/optimize-water-distribution-in-a-village-hard"
+  },
+]
 
-* [1135 - Connecting Cities With Minimum Cost (Medium)](../../solutions/1100-1199/connecting-cities-with-minimum-cost-medium)
-* [1168 - Optimize Water Distribution in a Village (Hard)](../../solutions/1100-1199/optimize-water-distribution-in-a-village-hard)
+<Table title="Suggested Problems" data={suggestedProblems} />

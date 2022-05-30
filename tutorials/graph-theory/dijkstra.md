@@ -1,8 +1,18 @@
 ---
-description: 'Author: @wingkwong'
+title: "Dijkstra's Algorithm"
+description: "Dijkstra's Algorithm is used to find the shortest paths between nodes in a graph."
+hide_table_of_contents: true
+keywords:
+  - leetcode
+  - tutorial
+  - dijkstra
+  - algorithm
 ---
 
-# Dijkstra's Algorithm
+import Authors from '@site/src/components/Authors';
+import Table from '@site/src/components/Table';
+
+<Authors names="@wingkwong"/>
 
 Dijkstra's Algorithm is used to find the shortest paths between nodes in a graph. It can only be used when the graphs have non-negative weights for all edges.
 
@@ -29,7 +39,19 @@ void dijkstra(T_pair &g, T_vector &dist, int start) {
 }
 ```
 
-### Suggested Problems
+export const suggestedProblems = [
+  {
+    "problemName": "0743 - Network Delay Time",
+    "difficulty": "Medium",
+    "LeetCodeLink": "https://leetcode.com/problems/network-delay-time/",
+    "SolutionLink": "../../solutions/0700-0799/network-delay-time-medium"
+  },
+  {
+    "problemName": "1334 - Find the City With the Smallest Number of Neighbors at a Threshold Distance",
+    "difficulty": "Medium",
+    "LeetCodeLink": "https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/",
+    "SolutionLink": "../../solutions/1300-1399/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance-medium"
+  },
+]
 
-* [0743 - Network Delay Time (Medium)](../../solutions/0700-0799/network-delay-time-medium)
-* [1334 - Find the City With the Smallest Number of Neighbors at a Threshold Distance (Medium)](../../solutions/1300-1399/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance-medium)
+<Table title="Suggested Problems" data={suggestedProblems} />

@@ -41,9 +41,9 @@ There are no more pairs that sum up to 6, hence a total of 1 operation.
 
 ## Approach 1: Hash Map
 
-We can use hash map to store the occurrences for each number. Just like Two Sum problem, we find the complement $$k - x$$. Then, we will be facing two cases.&#x20;
+We can use hash map to store the occurrences for each number. Just like Two Sum problem, we find the complement $$k - x$$. Then, we will be facing two cases.
 
-The first case is when $$x$$ is same as $$k - x$$. In this case, we can only take $$m[x] / 2$$ at most, then we update both value with the remainder.&#x20;
+The first case is when $$x$$ is same as $$k - x$$. In this case, we can only take $$m[x] / 2$$ at most, then we update both value with the remainder.
 
 Otherwise, we can only take the minimal value of $$m[x]$$and $$m[k - x]$$, then update the hash map values.
 

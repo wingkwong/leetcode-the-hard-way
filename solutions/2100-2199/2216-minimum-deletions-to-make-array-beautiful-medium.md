@@ -19,7 +19,7 @@ You can delete any number of elements from `nums`. When you delete an element, a
 
 Return _the **minimum** number of elements to delete from_ `nums` _to make it beautiful._
 
-&#x20;
+
 
 **Example 1:**
 

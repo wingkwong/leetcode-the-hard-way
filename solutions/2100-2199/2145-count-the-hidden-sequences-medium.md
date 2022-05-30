@@ -58,9 +58,9 @@ Explanation: There are no possible hidden sequences. Thus, we return 0.
 
 ## Approach 1: Moving up and down
 
-Note that we just need to return the **number** of possible hidden sequences. Supposing `hidden[0] = 0`,  we can calculate the next value by `differences`, i.e. `hidden[i + 1] = hidden[i] + differences[i]`. Here we just need to record the max and min values and calculate the possible ranges by moving the hidden array up and down within upper and lower range.&#x20;
+Note that we just need to return the **number** of possible hidden sequences. Supposing `hidden[0] = 0`,  we can calculate the next value by `differences`, i.e. `hidden[i + 1] = hidden[i] + differences[i]`. Here we just need to record the max and min values and calculate the possible ranges by moving the hidden array up and down within upper and lower range.
 
-If we move the hidden array up (i.e. +1 to each element) until the maximum value reaches upper boundary, we can move `upper - max` steps. Similarly, if we move down (i.e. -1 to each element), then we can move `min - lower` steps. Therefore, the answer is `(upper - max) - (min - lower) + 1`.  We need to add 1 here because this is the original hidden array without moving.&#x20;
+If we move the hidden array up (i.e. +1 to each element) until the maximum value reaches upper boundary, we can move `upper - max` steps. Similarly, if we move down (i.e. -1 to each element), then we can move `min - lower` steps. Therefore, the answer is `(upper - max) - (min - lower) + 1`.  We need to add 1 here because this is the original hidden array without moving.
 
 Another way to think about it is that we first include the whole boundary which is `(upper - lower)` and we exclude the fixed area `(max - min)`.  In this case, we will also get the same answer `(upper - lower) - (max - min) + 1`.
 

@@ -16,7 +16,7 @@ Divide the corridor into non-overlapping sections, where each section has **exac
 
 Return _the number of ways to divide the corridor_. Since the answer may be very large, return it **modulo** `109 + 7`. If there is no way, return `0`.
 
-&#x20;
+
 
 **Example 1:**
 

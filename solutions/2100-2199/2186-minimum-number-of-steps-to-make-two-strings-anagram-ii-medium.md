@@ -46,7 +46,7 @@ We can store the characters of both strings into two dictionaries, and we make t
 
 * To make the number of any character `c` equal in string `s` and `t`, we must add the difference between `s.count(c)` and `t.count(c)`
 
-In python `defaultdict`, if we simply perform `for key in d1` , we will miss out the `keys` in `d2`. If we iterate both dictionaries, we will need to cancel out double counts.&#x20;
+In python `defaultdict`, if we simply perform `for key in d1` , we will miss out the `keys` in `d2`. If we iterate both dictionaries, we will need to cancel out double counts.
 
 Hence, The simplest way is to visit each character once (by iterating from 0 to 25) and find the differences of characters between 2 dicts.
 
@@ -83,7 +83,7 @@ def minSteps(self, s: str, t: str) -> int:
 
 ## Approach 2: 1 Dictionary
 
-We can actually use 1 dictionary with less code. The main idea is that we are only concerned with the **difference** of each characters in both strings, so we can simply take the count of character of `s` as positive and that of `t` as negative.&#x20;
+We can actually use 1 dictionary with less code. The main idea is that we are only concerned with the **difference** of each characters in both strings, so we can simply take the count of character of `s` as positive and that of `t` as negative.
 
 ### Python3 (By @heiheihang)
 

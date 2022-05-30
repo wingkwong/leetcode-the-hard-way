@@ -52,7 +52,7 @@ The first solution solves it in $$O(N^2)$$ time brute force. The general logic i
 
 1. Count the number of occurrences of each character
 2. Start iterating rightward from the left character, skip if it does not have an available matching character
-3. &#x20;Start iterating leftward from the right-most unmatched character, and find the first matching character
+3. Start iterating leftward from the right-most unmatched character, and find the first matching character
 4. When found, swap the characters in between to its appropriate position
 5. If we have skipped the odd character, we need to add its disposition from the middle position to the result
 

@@ -14,7 +14,7 @@ Return _the number of ways these handshakes could occur such that none of the ha
 
 Since the answer could be very large, return it **modulo** `109 + 7`.
 
-&#x20;
+
 
 **Example 1:**
 

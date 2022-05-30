@@ -17,7 +17,7 @@ You are also given another integer array `nums`. Return _the array_ `nums` _sort
 * Elements with the same mapped values should appear in the **same relative order** as in the input.
 * The elements of `nums` should only be sorted based on their mapped values and **not be replaced** by them.
 
-&#x20;
+
 
 **Example 1:**
 

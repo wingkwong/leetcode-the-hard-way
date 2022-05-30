@@ -49,7 +49,7 @@ The resultant array formed is [2,1], which is the same as the initial array.
 
 The simplest approach is to store odd-indexed numbers and even-indexed numbers separately, then sort them and merge them. One approach to store them separately is to check the parity (odd or even) of the iterating variable ( `i` in this example solution), and store them to their corresponding lists.
 
-We then sort the two lists. We note that odd-indexed numbers need to be **non-increasing**, so we need to call `reverse`. Another approach to sort in reverse order is `odds.sort(reverse = True)`.&#x20;
+We then sort the two lists. We note that odd-indexed numbers need to be **non-increasing**, so we need to call `reverse`. Another approach to sort in reverse order is `odds.sort(reverse = True)`.
 
 We then put the numbers back to `nums` using a similar method of retrieving the parity of the iterating variable.
 

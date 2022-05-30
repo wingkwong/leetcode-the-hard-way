@@ -48,9 +48,9 @@ Explanation: The next greater element for each value of nums1 is as follows:
 
 The first thing we need to do is to store the $$(value, index)$$ pair from `nums1` in a hash map.
 
-Then we need to find the _next greater element_ of all elements in `nums2`. This can be achieved by using a stack. If the current element is greater than the last element of the stack, we know the next greater element of the last element of the stack is the current element. We can access the index of the last element of the stack with `hash_map` (if it exists). Then we can put the current\_element in result.&#x20;
+Then we need to find the _next greater element_ of all elements in `nums2`. This can be achieved by using a stack. If the current element is greater than the last element of the stack, we know the next greater element of the last element of the stack is the current element. We can access the index of the last element of the stack with `hash_map` (if it exists). Then we can put the current\_element in result.
 
-After processing `nums2`, we need to assign `-1` to the elements still in the stack (no _next greater element_) with the help of `hash_map`.&#x20;
+After processing `nums2`, we need to assign `-1` to the elements still in the stack (no _next greater element_) with the help of `hash_map`.
 
 ```python
 def nextGreaterElement(self, nums1: List[int], nums2: List[int]) -> List[int]:

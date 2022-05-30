@@ -14,7 +14,7 @@ You are also given a string `s` of length `n`, where `s[i]` is the character ass
 
 Return _the length of the **longest path** in the tree such that no pair of **adjacent** nodes on the path have the same character assigned to them._
 
-&#x20;
+
 
 **Example 1:**
 

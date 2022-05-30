@@ -1,8 +1,18 @@
 ---
-description: Author:@heiheihang
+title: 'Hash Map'
+description: 'Hash Map provides quick lookup of certain values in O(1) time.'
+hide_table_of_contents: true
+keywords:
+  - leetcode
+  - tutorial
+  - hash map
+  - algorithm
 ---
 
-# Hash Map
+import Authors from '@site/src/components/Authors';
+import Table from '@site/src/components/Table';
+
+<Authors names="@heiheihang"/>
 
 Hash Map provides quick lookup of certain values in $$O(1)$$ time, and it is very useful in many LeetCode questions. Let's take a look at the classic Two Sum question
 
@@ -20,7 +30,7 @@ For example, given the following input:
 nums = [2,7,11,15], target = 9
 ```
 
-We can see that the first two elements (`2` and `7` ) add up to the target (`9)`. So we need to return `[0,1]` , as these two indices refer to `2` and `7` .&#x20;
+We can see that the first two elements (`2` and `7` ) add up to the target (`9)`. So we need to return `[0,1]` , as these two indices refer to `2` and `7` .
 
 The naive way to solve this problem is to use a nested for-loop:
 
@@ -44,7 +54,7 @@ def twoSum(self, nums: List[int], target: int) -> List[int]:
 
 We observe that with a nested for-loop, the runtime complexity is $$O(n^2)$$. Let us look at how hash map can help us here.
 
-Hash Map basically is a label. For example, if we want to store the (value, index) pair from the example above in a Hash Map.&#x20;
+Hash Map basically is a label. For example, if we want to store the (value, index) pair from the example above in a Hash Map.
 
 ```python
 #we use {} to initialize a hash map
@@ -69,13 +79,29 @@ else:
     print("7 is not in input_1")
 ```
 
-This operation only takes $$O(1)$$ time! Without hash map, we would need to iterate the input to search for a specific element.&#x20;
+This operation only takes $$O(1)$$ time! Without hash map, we would need to iterate the input to search for a specific element.
 
 After understanding Hash Map, are you able to solve [Two Sum](../../solutions/0000-0099/two-sum) in $$O(N)$$ time?
 
-### Suggested Problems
+export const suggestedProblems = [
+  {
+    "problemName": "0217 - Contains Duplicate",
+    "difficulty": "Easy",
+    "LeetCodeLink": "https://leetcode.com/problems/contains-duplicate/",
+    "SolutionLink": "../../solutions/0200-0299/contains-duplicate-easy"
+  },
+  {
+    "problemName": "0219 - Contains Duplicate II",
+    "difficulty": "Easy",
+    "LeetCodeLink": "https://leetcode.com/problems/contains-duplicate-ii/",
+    "SolutionLink": "../../solutions/0200-0299/contains-duplicate-ii-easy"
+  },
+  {
+    "problemName": "0003 - Longest Substring Without Repeating Characters",
+    "difficulty": "Medium",
+    "LeetCodeLink": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+    "SolutionLink": "../../solutions/0000-0099/longest-substring-without-repeating-characters-medium"
+  },
+]
 
-* 0003 - Longest Substring Without Repeating Characters (Medium) [(LeetCode Link)](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
-* 0217 - Contains Duplicate (Easy) [(LeetCode Link)](https://leetcode.com/problems/contains-duplicate/)
-* 0219 - Contains Duplicate II (Easy) [(LeetCode Link)](https://leetcode.com/problems/contains-duplicate-ii/)
-
+<Table title="Suggested Problems" data={suggestedProblems} />

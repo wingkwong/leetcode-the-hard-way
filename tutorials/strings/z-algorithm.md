@@ -1,8 +1,15 @@
 ---
-description: 'Author: @wingkwong'
+title: "Z Algorithm"
+description: 'Coming Soon!'
+draft: true
+keywords:
+  - leetcode
+  - tutorial
+  - z algorithm
+  - algorithm
 ---
 
-# Z Algorithm
+Coming Soon
 
 #### _Tutorial: Coming Soon!_
 

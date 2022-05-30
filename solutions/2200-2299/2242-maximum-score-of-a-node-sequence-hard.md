@@ -21,7 +21,7 @@ The score of a node sequence is defined as the **sum** of the scores of the node
 
 Return _the **maximum score** of a valid node sequence with a length of_ `4`_._ If no such sequence exists, return __ `-1`.
 
-&#x20;
+
 
 **Example 1:**
 

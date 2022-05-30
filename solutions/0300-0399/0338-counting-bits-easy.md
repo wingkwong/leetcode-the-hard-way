@@ -69,9 +69,9 @@ public:
 
 ## Approach 2: One Pass
 
-$$i \text& (i  - 1)$$ is a common trick to turn the rightmost set bit to $$0$$. For example, if $$i = (1000100)_2$$, then $$i \text& (i  - 1)$$ would be $$(1000000)_2$$. We can iterate each number and calculate the number of 1s by adding 1 from the previous state.&#x20;
+$$i & (i  - 1)$$ is a common trick to turn the rightmost set bit to $$0$$. For example, if $$i = (1000100)_2$$, then $$i & (i  - 1)$$ would be $$(1000000)_2$$. We can iterate each number and calculate the number of 1s by adding 1 from the previous state.
 
-The transition function is simply  $$ans[i] = ans[i \text& (i - 1)] + 1$$.
+The transition function is simply  $$ans[i] = ans[i & (i - 1)] + 1$$.
 
 ```cpp
 class Solution {

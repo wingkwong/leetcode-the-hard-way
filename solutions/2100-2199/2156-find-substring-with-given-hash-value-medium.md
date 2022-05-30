@@ -50,7 +50,7 @@ Note that "bxz" also has a hash of 32 but it appears later than "fbx".
 
 ## Approach 1: Reversed **Rabin-Karp**
 
-In Rabin-Karp Rolling Hash, we know that&#x20;
+In Rabin-Karp Rolling Hash, we know that
 
 $$
 H = s_0*p^{k-1}+s_1*p^{k-2}+...+s_{k-1}*p^{0}
@@ -64,7 +64,7 @@ $$
 
 Given a substring problem with a fixed length $$k$$, we may think of Sliding Window. However, if we do it normally from the left to right, it may lead to some problems. For example, if the string is `fbxzaad` and $$k$$ is `3`. Then $$H('fbx') = (f * p^0 + b * p^1 + c * p^2) \mod m$$. If we shift the window to the right by 1 character, we have to remove the first character that is out of the window. In order to get $$H('bxz') = (b * p^0 + c * p^1 + d * p^2) \mod m$$, we need to subtract $$f$$ and then divide the whole sum by $$p$$ so that we can reduce each exponent by 1 for other terms. At the end, we add the $$d * p^2$$ to the new window. Division may cause problems with modulo. A workaround is to do it in a reversed order so that we just need to add $$f$$ and subtract $$d * p^3$$.
 
-We can precompute the hash backwards $$h[i]$$ and check all possible starting point $$i$$ of the window. Generally we can obtain the hash between $$[i .. i + k]$$ by $$h[i] - h[i - k] * p^k$$. We need to take care of the modulo as well. To get $$p ^ k$$efficiently, we apply [Binary Exponentiation](../../tutorials/math/number-theory/binary-exponentiation) with modulo.&#x20;
+We can precompute the hash backwards $$h[i]$$ and check all possible starting point $$i$$ of the window. Generally we can obtain the hash between $$[i .. i + k]$$ by $$h[i] - h[i - k] * p^k$$. We need to take care of the modulo as well. To get $$p ^ k$$efficiently, we apply [Binary Exponentiation](../../tutorials/math/number-theory/binary-exponentiation) with modulo.
 
 You can also pre-calculate it in the following approach.
 

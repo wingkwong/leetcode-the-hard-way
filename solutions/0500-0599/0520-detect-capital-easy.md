@@ -10,7 +10,7 @@ We define the usage of capitals in a word to be right when one of the following 
 * All letters in this word are not capitals, like `"leetcode"`.
 * Only the first letter in this word is capital, like `"Google"`.
 
-Given a string `word`, return `true` if the usage of capitals in it is right.&#x20;
+Given a string `word`, return `true` if the usage of capitals in it is right.
 
 **Example 1:**
 
@@ -31,9 +31,9 @@ Output: false
 * `1 <= word.length <= 100`
 * `word` consists of lowercase and uppercase English letters.
 
-## Approach 1:&#x20;
+## Approach 1:
 
-Just check if it is invalid the conditions. If so, return false immediately.&#x20;
+Just check if it is invalid the conditions. If so, return false immediately.
 
 ```cpp
 class Solution {

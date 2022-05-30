@@ -1,16 +1,24 @@
 ---
-description: 'Author: @heiheihang'
+title: 'Sliding Window'
+description: 'Sliding window is a technique used to solve problems in array or string.'
+hide_table_of_contents: true
+keywords:
+  - leetcode
+  - tutorial
+  - sliding window
+  - algorithm
 ---
 
-# Sliding Window
+import Authors from '@site/src/components/Authors';
+import Table from '@site/src/components/Table';
 
-In some problems, we need to keep track of the elements in a list that satisfy certain conditions. Let's take a look at the following problem:&#x20;
+<Authors names="@heiheihang"/>
 
-1876 - Substrings of Size Three with Distinct Characters (Easy) ([LeetCode Link](https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters/))
+In some problems, we need to keep track of the elements in a list that satisfy certain conditions. Let's take a look at [1876 - Substrings of Size Three with Distinct Characters](https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters/).
 
 > A string is **good** if there are no repeated characters.
 >
-> Given a string `s`​​​​​, return _the number of **good substrings** of length **three** in_ `s`​​​​​​.
+> Given a string `s`, return _the number of **good substrings** of length **three** in_ `s`.
 >
 > Note that if there are multiple occurrences of the same substring, every occurrence should be counted.
 >
@@ -31,9 +39,9 @@ s3 = "zza" #index 2-4
 s4 = "zaz" #index 3-5
 ```
 
-Among these substrings, the only substring with distinct characters is `"xyz"`.&#x20;
+Among these substrings, the only substring with distinct characters is `"xyz"`.
 
-In this problem, we need to keep a _window_ of substrings of length 3.&#x20;
+In this problem, we need to keep a _window_ of substrings of length 3.
 
 We can use the following strategy:
 
@@ -75,12 +83,27 @@ def countGoodSubstrings(self, s: str) -> int:
         return unique_substring_count
 ```
 
-In this problem, the size of the sliding window is constant. There are harder problems with varying sliding window size, but you need to learn [Hash Map](hash-map) first.&#x20;
+In this problem, the size of the sliding window is constant. There are harder problems with varying sliding window size, but you need to learn [Hash Map](hash-map) first.
 
-### Suggested Problems
+export const suggestedProblems = [
+  {
+    "problemName": "1852 - Distinct Numbers in Each Subarray",
+    "difficulty": "Medium",
+    "LeetCodeLink": "https://leetcode.com/problems/distinct-numbers-in-each-subarray",
+    "SolutionLink": "../../solutions/1800-1899/distinct-numbers-in-each-subarray-medium"
+  },
+  {
+    "problemName": "1004 - Max Consecutive Ones III",
+    "difficulty": "Medium",
+    "LeetCodeLink": "https://leetcode.com/problems/max-consecutive-ones-iii",
+    "SolutionLink": "../../solutions/1000-1099/max-consecutive-ones-iii-medium"
+  },
+  {
+    "problemName": "1876 - Substrings of Size Three with Distinct Characters",
+    "difficulty": "Medium",
+    "LeetCodeLink": "https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters/",
+    "SolutionLink": ""
+  },
+]
 
-* 1852 - Distinct Numbers in Each Subarray (Medium) ([LeetCode Link](https://leetcode.com/problems/distinct-numbers-in-each-subarray/))
-* 1004 - Max Consecutive Ones III (Medium) ([LeetCode Link](https://leetcode.com/problems/max-consecutive-ones-iii/))
-
-
-
+<Table title="Suggested Problems" data={suggestedProblems} />

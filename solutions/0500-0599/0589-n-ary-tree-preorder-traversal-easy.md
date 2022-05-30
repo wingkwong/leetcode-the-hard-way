@@ -12,7 +12,7 @@ Given the `root` of an n-ary tree, return _the preorder traversal of its nodes' 
 
 Nary-Tree input serialization is represented in their level order traversal. Each group of children is separated by the null value (See examples)
 
-&#x20;
+
 
 **Example 1:**
 
@@ -40,7 +40,7 @@ Output: [1,2,3,6,7,11,14,4,8,12,5,9,13,10]
 
 ## Approach 1: DFS
 
-Straightforward preorder traversal.&#x20;
+Straightforward preorder traversal.
 
 ```cpp
 class Solution {
