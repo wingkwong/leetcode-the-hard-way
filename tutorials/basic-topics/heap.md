@@ -183,7 +183,7 @@ int index = top_element.second;
 My solution:
 ```cpp
 vector<int> kWeakestRows(vector<vector<int>>& mat, int k) {
-        priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>> pq; //min heap
+        priority_queue<pair<int,int>,vector<pair<int,int>>,greater<>> pq; //min heap
         //push elements to min heap
         for (int i =0;i<mat.size();i++){
             int count= 0;
@@ -206,7 +206,10 @@ vector<int> kWeakestRows(vector<vector<int>>& mat, int k) {
         return result;
     }
 ```
-
+**Additional knowledge:** You can create a `max heap with pair<int,int>` with following syntax
+```cpp
+priority_queue<pair<int,int>> pq;
+```
 
 
 
