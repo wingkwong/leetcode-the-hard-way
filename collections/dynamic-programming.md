@@ -33,19 +33,19 @@ export const DPBitManipulationProblems = [
     "problemName": "0847 -  Shortest Path Visiting All Nodes",
     "difficulty": "Medium",
     "LeetCodeLink": "https://leetcode.com/problems/shortest-path-visiting-all-nodes/",
-    "SolutionLink": "../../solutions/0800-0899/shortest-path-visiting-all-nodes-hard"
+    "SolutionLink": "../solutions/0800-0899/shortest-path-visiting-all-nodes-hard"
   },
   {
     "problemName": "1125 -  Smallest Sufficient Team",
     "difficulty": "Hard",
     "LeetCodeLink": "https://leetcode.com/problems/smallest-sufficient-team/",
-    "SolutionLink": "../../solutions/1100-1199/smallest-sufficient-team-hard"
+    "SolutionLink": "../solutions/1100-1199/smallest-sufficient-team-hard"
   },
   {
     "problemName": "1349 - Maximum Students Taking Exam",
     "difficulty": "Hard",
     "LeetCodeLink": "https://leetcode.com/problems/maximum-students-taking-exam/",
-    "SolutionLink": "../../solutions/1300-1399/maximum-students-taking-exam-hard"
+    "SolutionLink": "../solutions/1300-1399/maximum-students-taking-exam-hard"
   },
   {
     "problemName": "1434 - Number of Ways to Wear Different Hats to Each Other",

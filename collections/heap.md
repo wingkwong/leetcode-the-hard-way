@@ -22,19 +22,19 @@ export const problems = [
     "problemName": "1337 - The K Weakest Rows in a Matrix",
     "difficulty": "Easy",
     "LeetCodeLink": "https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix/",
-    "SolutionLink": "../../solutions/1300-1399/the-k-weakest-rows-in-a-matrix-easy"
+    "SolutionLink": "../solutions/1300-1399/the-k-weakest-rows-in-a-matrix-easy"
   },
   {
     "problemName": "0703 - Kth Largest Element in a Stream",
     "difficulty": "Easy",
     "LeetCodeLink": "https://leetcode.com/problems/kth-largest-element-in-a-stream/",
-    "SolutionLink": "../../solutions/0700-0799/kth-largest-element-in-a-stream-easy"
+    "SolutionLink": "../solutions/0700-0799/kth-largest-element-in-a-stream-easy"
   },
   {
     "problemName": "0347 - Top K Frequent Elements",
     "difficulty": "Medium",
     "LeetCodeLink": "https://leetcode.com/problems/top-k-frequent-elements/",
-    "SolutionLink": "../../solutions/0300-0399/top-k-frequent-elements-medium"
+    "SolutionLink": "../solutions/0300-0399/top-k-frequent-elements-medium"
   },
   {
     "problemName": "0378 - Kth Smallest Element in a Sorted Matrix",
@@ -46,13 +46,13 @@ export const problems = [
     "problemName": "0215 - Kth Largest Element in an Array",
     "difficulty": "Medium",
     "LeetCodeLink": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
-    "SolutionLink": "../../solutions/0200-0299/kth-largest-element-in-an-array-medium"
+    "SolutionLink": "../solutions/0200-0299/kth-largest-element-in-an-array-medium"
   },
   {
     "problemName": "0973 - K Closest Points to Origin",
     "difficulty": "Medium",
     "LeetCodeLink": "https://leetcode.com/problems/k-closest-points-to-origin/",
-    "SolutionLink": "../../solutions/0900-0999/k-closest-points-to-origin-medium"
+    "SolutionLink": "../solutions/0900-0999/k-closest-points-to-origin-medium"
   },
   {
     "problemName": "1642 - Furthest Building You Can Reach",
