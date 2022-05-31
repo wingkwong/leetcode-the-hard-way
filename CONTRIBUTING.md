@@ -40,21 +40,27 @@ import Authors from '@site/src/components/Authors';
 
 # <PROBLEM_ID> - <PROBLEM_TITLE> (<DIFFICULTY>)
 
+## Problem Link
+
+// Add the link here
+
 ## Problem Statement
 
 // This part will be handled by the owner @wingkwong. Contributors can leave it blank.
 
 ## Approach 1: <APPROACH_NAME>
 
-<Authors names="@YOUR_ALIAS>"/>
-
 // Your explanation goes here or you can add it to your code
+
+<Authors names="@YOUR_ALIAS>"/>
 
 // Your code goes here
 
 ## Approach 2: <APPROACH_NAME> (ADD IT IF NECESSARY)
 
 // Your explanation goes here or you can add it to your code
+
+<Authors names="@YOUR_ALIAS>"/>
 
 // Your code goes here
 ```
