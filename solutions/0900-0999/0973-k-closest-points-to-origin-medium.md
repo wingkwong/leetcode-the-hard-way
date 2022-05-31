@@ -1,6 +1,8 @@
 ---
-description: 'Author: @TBC | https://leetcode.com/problems/k-closest-points-to-origin/'
+description: 'Author: @wingkwong | https://leetcode.com/problems/k-closest-points-to-origin/'
 ---
+
+import Authors from '@site/src/components/Authors';
 
 # 0973 - K Closest Points to Origin (Medium)
 
@@ -39,4 +41,27 @@ Explanation: The answer [[-2,4],[3,3]] would also be accepted.
 * `1 <= k <= points.length <= 10^4`
 * `-10^4 < xi, yi < 10^4`
 
-## Approach 1: TBC
+## Approach 1: nth_element
+
+<Authors names="@wingkwong"/>
+
+```cpp
+class Solution {
+public:
+    vector<vector<int>> kClosest(vector<vector<int>>& points, int K) {
+        // we don't need to care about the exact order 
+        // nth_element approach is enough
+        nth_element(points.begin(), points.begin() + K, points.end(),[](vector<int>& q, vector<int>& p) {
+            // sort by Euclidean distance
+            // dist(q, p) = sqrt( (q1 - p1) * (q1 - p1) + (q2 - p2) * (q2 - p2) )
+            // since we are comparing the points with the origin (0,0)
+            // dist(q, p) = sqrt( (q1) * (q1) + (q2) * (q2) )
+            // and we don't need to perform sqrt as sqrt(a) must be smaller than sqrt(b) if a < b
+            return q[0] * q[0] + q[1] * q[1] < p[0] * p[0] + p[1] * p[1];
+        });
+        // resize points to show K clostest points
+        points.resize(K);
+        return points;
+    }
+};
+```
