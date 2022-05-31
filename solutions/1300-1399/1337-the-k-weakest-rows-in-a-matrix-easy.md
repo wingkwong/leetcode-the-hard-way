@@ -1,8 +1,10 @@
 ---
 description: >-
-  Author: @wingkwong |
+  Author: @wingkwong,@heiheihang |
   https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix/
 ---
+
+import Authors from '@site/src/components/Authors';
 
 # 1337 - The K Weakest Rows in a Matrix (Easy)
 
@@ -67,6 +69,8 @@ The rows ordered from weakest to strongest are [0,2,3,1].
 
 ## Approach 1: Brute Force
 
+<Authors names="@wingkwong"/>
+
 Iterate each row to find out the number of soldiers, store the count with the row index. Sort it and take the first $$k$$ counts.
 
 ```cpp
@@ -95,7 +99,39 @@ public:
 };
 ```
 
-## Approach 2: Binary Search
+## Approach 2: Heap
+
+<Authors names="@heiheihang"/>
+
+```py
+class Solution:
+    def kWeakestRows(self, mat: List[List[int]], k: int) -> List[int]:
+        rows = []
+        
+        for i in range(len(mat)):
+            cnt = 0
+            for j in range(len(mat[i])):
+                if(mat[i][j] == 1):
+                    cnt += 1
+                else:
+                    break
+            heappush(rows, [-cnt, -i])
+            if len(rows) > k:
+                heappop(rows)
+            
+        ans = []
+        
+        while rows:
+            cnt, row = heappop(rows)
+            ans.append(-row)
+            
+        ans.reverse()
+        return ans
+```
+
+## Approach 3: Binary Search
+
+<Authors names="@wingkwong"/>
 
 Instead of searching linearly, we can use binary search to find out the number of soldiers. The rest is same as approach 1.
 
@@ -133,7 +169,9 @@ public:
 };
 ```
 
-## Approach 3: Binary Search + Priority Queue
+## Approach 4: Binary Search + Priority Queue
+
+<Authors names="@wingkwong"/>
 
 Instead of using a vector to store and sort, we use priority queue to handle the order.
 
@@ -166,31 +204,4 @@ public:
         return ans;
     }
 };
-```
-
-## Python Heap Solution:
-```py
-class Solution:
-    def kWeakestRows(self, mat: List[List[int]], k: int) -> List[int]:
-        rows = []
-        
-        for i in range(len(mat)):
-            cnt = 0
-            for j in range(len(mat[i])):
-                if(mat[i][j] == 1):
-                    cnt += 1
-                else:
-                    break
-            heappush(rows, [-cnt, -i])
-            if len(rows) > k:
-                heappop(rows)
-            
-        ans = []
-        
-        while rows:
-            cnt, row = heappop(rows)
-            ans.append(-row)
-            
-        ans.reverse()
-        return ans
 ```
