@@ -168,7 +168,7 @@ public:
 };
 ```
 
-#Python Heap Solution:
+## Python Heap Solution:
 ```py
 class Solution:
     def kWeakestRows(self, mat: List[List[int]], k: int) -> List[int]:
