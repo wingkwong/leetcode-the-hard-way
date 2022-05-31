@@ -167,3 +167,30 @@ public:
     }
 };
 ```
+
+#Python Heap Solution:
+```py
+class Solution:
+    def kWeakestRows(self, mat: List[List[int]], k: int) -> List[int]:
+        rows = []
+        
+        for i in range(len(mat)):
+            cnt = 0
+            for j in range(len(mat[i])):
+                if(mat[i][j] == 1):
+                    cnt += 1
+                else:
+                    break
+            heappush(rows, [-cnt, -i])
+            if len(rows) > k:
+                heappop(rows)
+            
+        ans = []
+        
+        while rows:
+            cnt, row = heappop(rows)
+            ans.append(-row)
+            
+        ans.reverse()
+        return ans
+```
