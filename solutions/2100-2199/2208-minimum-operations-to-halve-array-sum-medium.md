@@ -51,7 +51,7 @@ It can be shown that we cannot reduce the sum by at least half in less than 3 op
 
 ## Approach 1: Priority Queue
 
-First we calculate $$sum$$ and $$half$$. We use priority queue to store the elements. We pop out the maximum element $$top$$, add the half of it (i.e. $$top / 2$$) to $$reduce$$, and push it to priority queue. We keep doing that until $$reduce$$ is greater than $$half$$. The answer is how many round we have performed.
+First we calculate $$sum$$ and $$half$$. We use priority queue to store the elements. We pop out the maximum element $$top$$, add the half of it (i.e. $$top / 2$$) to $$reduce$$, and push it to priority queue. We keep doing that until $$reduce$$ is greater than / equal to $$half$$. The answer is how many rounds we have performed.
 
 ```cpp
 class Solution {
