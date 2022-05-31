@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0034 - Find First and Last Position of Element in Sorted Array (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
 
 ## Problem Statement
 
@@ -45,6 +51,8 @@ Output: [-1,-1]
 ## Approach 1: Binary Search
 
 Prerequisite: [Binary Search](../../tutorials/basic-topics/binary-search)
+
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

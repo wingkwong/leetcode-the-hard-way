@@ -5,7 +5,13 @@ description: >-
 tags: [String, Dynamic Programming]
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0005 - Longest Palindromic Substring (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/longest-palindromic-substring/
 
 ## Problem Statement
 
@@ -36,6 +42,8 @@ Output: "bb"
 The most efficient solution is using Manacher's Algorithm to solve it in O(n). It is faster than other solutions because it exploits when a palindrome happens inside another palindrome.
 
 ### C++
+
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

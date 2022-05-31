@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/edit-distance/'
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0072 - Edit Distance (Hard)
+
+## Problem Link
+
+https://leetcode.com/problems/edit-distance/
 
 ## Problem Statement
 
@@ -63,10 +69,11 @@ What is the base case then? The base case is simply an edit distance between the
 
 ![image](https://user-images.githubusercontent.com/35857179/168303382-cadaf726-02e3-400d-a8cc-fd0c7db315c3.png)
 
-### C++
+Time Complexity: $O(m * n)$
 
-Time Complexity: O(m \* n)\
-Space Complexity: O(m \* n)
+Space Complexity: $O(m * n)$
+
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

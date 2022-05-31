@@ -1,2 +1,5 @@
-# 0036 - Valid Sudoku (Easy)
+---
+draft: true
+---
 
+# 0036 - Valid Sudoku (Easy)

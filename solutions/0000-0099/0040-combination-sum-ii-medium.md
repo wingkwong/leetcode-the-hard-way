@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/combination-sum-ii/'
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0040 - Combination Sum II (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/combination-sum-ii/
 
 ## Problem Statement
 
@@ -45,6 +51,8 @@ Output:
 ## Approach 1: Backtracking
 
 Similar to [0039 - Combination Sum (Medium)](combination-sum-medium), the only difference is each number can be used once in the combination. To avoid overcounting, we can simply add `i != start && candidates[i] == candidates[i - 1].`
+
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

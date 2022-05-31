@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/powx-n/'
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0050 - Pow(x, n) (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/powx-n/
 
 ## Problem Statement
 
@@ -39,6 +45,8 @@ Explanation: 2-2 = 1/22 = 1/4 = 0.25
 ## Approach 1: Binary Exponentiation
 
 If the exponent $$n$$ is negative, we need to change it to positive exponent $$- n$$ and make the base  to $$1 / x$$. Then apply [Binary Exponentiation](../../tutorials/math/number-theory/binary-exponentiation).
+
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

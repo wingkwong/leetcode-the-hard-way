@@ -5,7 +5,13 @@ description: >-
 tags: [Hash Table, String, Sliding Window]
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0003 - Longest Substring Without Repeating Characters (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/longest-substring-without-repeating-characters/
 
 ## Problem Statement
 

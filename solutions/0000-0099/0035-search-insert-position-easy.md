@@ -2,15 +2,19 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/search-insert-position/'
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0035 - Search Insert Position (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/search-insert-position/
 
 ## Problem Statement
 
 Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
 
 You must write an algorithm with `O(log n)` runtime complexity.
-
-
 
 **Example 1:**
 
@@ -42,7 +46,9 @@ Output: 4
 
 ## Approach 1: Lower Bound
 
-We can use STL to get the answer. lower\_bound returns the first element which has a value not less than target. We need to subtract `nums.begin()` to get the index.
+We can use STL to get the answer. lower_bound returns the first element which has a value not less than target. We need to subtract `nums.begin()` to get the index.
+
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -56,6 +62,8 @@ public:
 ## Approach 2: Binary Search
 
 Prerequisite: [Binary Search](../../tutorials/basic-topics/binary-search).
+
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

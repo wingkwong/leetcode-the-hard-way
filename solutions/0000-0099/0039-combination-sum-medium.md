@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/combination-sum/'
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0039 - Combination Sum (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/combination-sum//
 
 ## Problem Statement
 
@@ -11,8 +17,6 @@ Given an array of **distinct** integers `candidates` and a target integer `targe
 The **same** number may be chosen from `candidates` an **unlimited number of times**. Two combinations are unique if the frequency of at least one of the chosen numbers is different.
 
 It is **guaranteed** that the number of unique combinations that sum up to `target` is less than `150` combinations for the given input.
-
-
 
 **Example 1:**
 
@@ -53,6 +57,8 @@ We can apply backtracking in this problem.
 First, we sort the array and build our candidates incrementally. We iterate from starting point and  push each candidate to `tmp` and call `backtrack()` with the updated  $$target_{new} = target_{old} - candidates[i]$$.
 
 If we have a valid solution, we push `tmp` to answer and abandon a candidate.
+
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

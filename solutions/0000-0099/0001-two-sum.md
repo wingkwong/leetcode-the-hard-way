@@ -3,7 +3,13 @@ description: 'Author: @wingkwong | https://leetcode.com/problems/two-sum/'
 tags: [Array, Hash Table]
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0001 - Two Sum (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/two-sum/
 
 ## Problem Statement
 
@@ -50,6 +56,8 @@ Since this is an easy problem, most of the time brute force solutions would work
 
 ### C++
 
+<Authors names="@wingkwong"/>
+
 ```cpp
 class Solution {
 public:
@@ -69,6 +77,8 @@ public:
 
 ### Python3
 
+<Authors names="@wingkwong"/>
+
 ```python
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
@@ -81,6 +91,8 @@ class Solution:
 ```
 
 ### Go
+
+<Authors names="@wingkwong"/>
 
 ```go
 func twoSum(nums []int, target int) []int {
@@ -102,6 +114,8 @@ A better way to do it is using one-pass hash table approach. We iterate each ele
 
 ### C++
 
+<Authors names="@wingkwong"/>
+
 ```cpp
 class Solution {
 public:
@@ -122,6 +136,8 @@ public:
 
 ### Python3
 
+<Authors names="@wingkwong"/>
+
 ```python
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
@@ -136,6 +152,8 @@ class Solution:
 ```
 
 ### Go
+
+<Authors names="@wingkwong"/>
 
 ```go
 func twoSum(nums []int, target int) []int {

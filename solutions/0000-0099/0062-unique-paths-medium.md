@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/unique-paths/'
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0062 - Unique Paths (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/unique-paths/
 
 ## Problem Statement
 
@@ -39,6 +45,8 @@ Explanation: From the top-left corner, there are a total of 3 ways to reach the 
 ## Approach 1 : Math
 
 We need to make $$n - 1 + m - 1$$ steps in total. How many ways to choose from $$m - 1$$ right steps and $$n - 1$$ down steps out of the total steps?
+
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

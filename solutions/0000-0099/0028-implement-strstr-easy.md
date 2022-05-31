@@ -2,7 +2,13 @@
 description: 'Author: @la-la-Cute | https://leetcode.com/problems/implement-strstr/'
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0028 - Implement strStr() (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/implement-strstr/
 
 ## Problem Statement
 
@@ -43,6 +49,8 @@ Output: 0
 * `haystack` and `needle` consist of only lower-case English characters.
 
 ## Approach 1: Rolling Hash
+
+<Authors names="@la-la-Cute"/>
 
 ```python
 class Solution:

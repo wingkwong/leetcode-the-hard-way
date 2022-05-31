@@ -2,7 +2,13 @@
 description: 'Author: @DoubleSpicy | https://leetcode.com/problems/add-binary/'
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0067 - Add Binary (easy)
+
+## Problem Link
+
+https://leetcode.com/problems/add-binary/
 
 ## Problem Statement
 
@@ -41,6 +47,8 @@ Explanation: Remove all the digits from the number and it is left with nothing w
 For each digit, start from least significant ones, calculate the sum of digits and the carry. If the value > 1 then carry to the next digit.
 
 The annoying part of this problem is taking care about index out-of-bound.
+
+<Authors names="@DoubleSpicy"/>
 
 ```cpp
 class Solution {

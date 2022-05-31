@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/merge-two-sorted-lists/'
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0021 - Merge Two Sorted Lists (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/merge-two-sorted-lists/
 
 ## Problem Statement
 
@@ -11,8 +17,6 @@ You are given the heads of two sorted linked lists `list1` and `list2`.
 Merge the two lists in a one **sorted** list. The list should be made by splicing together the nodes of the first two lists.
 
 Return _the head of the merged linked list_.
-
-
 
 **Example 1:**
 
@@ -50,6 +54,8 @@ Let's think of the edge cases first. If either list is null, there is no way to 
 We compare a node in list1 and that in list2. If the value of node in list1 is smaller than that in list2, then we can set the next node to the result of next merge result. Otherwise, we set it in list2.
 
 In general, we will have $$list1[0] + mergeTwoLists(list1[1:], list2)$$ for $$list1[0] < list2[0]$$ else we have $$list2[0] + mergeTwoLists(list1, list2[1:])$$.
+
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {
