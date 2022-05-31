@@ -2,7 +2,13 @@
 description: 'Author: @TBC | https://leetcode.com/problems/symmetric-tree/'
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0101 - Symmetric Tree (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/symmetric-tree/
 
 ## Problem Statement
 

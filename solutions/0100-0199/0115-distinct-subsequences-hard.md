@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/distinct-subsequences/'
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0115 - Distinct Subsequences (Hard)
+
+## Problem Link
+
+https://leetcode.com/problems/distinct-subsequences/
 
 ## Problem Statement
 
@@ -45,7 +51,9 @@ babgbag
 
 ## Approach 1: Dynamic Programming
 
-Let $$dp[i][j]$$be the number of distinct subsequences if $$s[0 .. i)$$contains $$t[0 .. j)$$. The base case is when $$t$$ is empty, there is one valid subsequence for each $$i$$. If the subsequence doesn't contain $$s[i - 1]$$, then we take $$dp[i - 1][j]$$. If $$s[i - 1] == t[j - 1]$$, then we need to include $$dp[i - 1][j - 1]$$as well as $$dp[i - 1][j]$$.
+Let $$dp[i][j]$$ be the number of distinct subsequences if $$s[0 .. i)$$contains $$t[0 .. j)$$. The base case is when $$t$$ is empty, there is one valid subsequence for each $$i$$. If the subsequence doesn't contain $$s[i - 1]$$, then we take $$dp[i - 1][j]$$. If $$s[i - 1] == t[j - 1]$$, then we need to include $$dp[i - 1][j - 1]$$ as well as $$dp[i - 1][j]$$.
+
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -70,7 +78,9 @@ public:
 
 ## Approach 2: Dynamic Programming (Space Optimised)
 
-In Approach 1, we calculate $$dp[i][j]$$based on the previous row. We can simplify it by using a one dimensional array of size $$m$$ where $$m$$ is the length of $$t.$$ Then we calculate $$dp$$backwards so that the new value won't affect the calculate of the next value.
+In Approach 1, we calculate $$dp[i][j]$$ based on the previous row. We can simplify it by using a one dimensional array of size $m$ where $$m$$ is the length of $$t$$ Then we calculate $$dp$$ backwards so that the new value won't affect the calculate of the next value.
+
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

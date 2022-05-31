@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/single-number/'
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0136 - Single Number (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/single-number/
 
 ## Problem Statement
 
@@ -49,6 +55,8 @@ Let's have a quick review.
 
 Therefore, if we take XOR of all numbers, what's left would be that single number as every element that appears twice would be cancelled out. For example, $$nums = [4,1,2,1,2]$$, we can reorder it like $$[1,1,2,2,4]$$, and we got $$(1 \oplus 1) \oplus (2 \oplus 2) \oplus 4 = 4$$.
 
+<Authors names="@wingkwong"/>
+
 ### C++
 
 ```cpp
@@ -64,6 +72,8 @@ public:
 
 ### Python 3
 
+<Authors names="@wingkwong"/>
+
 ```python
 class Solution:
     def singleNumber(self, nums: List[int]) -> int:
@@ -75,6 +85,8 @@ class Solution:
 $$2 * sumOfSet - (SumOfNumbers) = answer$$
 
 For example, $$nums = [4,1,2,1,2]$$, $$sumOfSet$$ is $$1 + 2 + 4 = 7$$ and $$sumOfNumbers$$is $$1 + 1 + 2 + 2 + 4 = 10$$. Then the answer is $$2 *7 - 10 = 4$$.
+
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

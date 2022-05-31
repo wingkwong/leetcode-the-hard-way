@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/majority-element/'
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0169 - Majority Element (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/majority-element/
 
 ## Problem Statement
 
@@ -40,6 +46,8 @@ The Boyer-Moore Voting Algorithm is used to find the majority of a sequence of e
 
 Reference: [Boyer-Moore Voting Algorithm](https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore\_majority\_vote\_algorithm)
 
+<Authors names="@wingkwong"/>
+
 ```cpp
 class Solution {
 public:
@@ -62,6 +70,8 @@ public:
 ## Approach 2: Bit Manipulation
 
 If the majority number appears more than $$[n / 2]$$ times, each of its bits will also appear more than $$[n / 2]$$ times. Therefore, we iterate each bit on each number to see if condition is true. If so, we set this bit as 1.
+
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

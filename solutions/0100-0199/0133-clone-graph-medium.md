@@ -2,7 +2,13 @@
 description: 'Author: @TBC | https://leetcode.com/problems/clone-graph/'
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0133 - Clone Graph (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/clone-graph/
 
 ## Problem Statement
 

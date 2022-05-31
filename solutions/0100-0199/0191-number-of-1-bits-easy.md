@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/number-of-1-bits/'
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0191 - Number of 1 Bits (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/number-of-1-bits/
 
 ## Problem Statement
 
@@ -12,8 +18,6 @@ Write a function that takes an unsigned integer and returns the number of '1' bi
 
 * Note that in some languages, such as Java, there is no unsigned integer type. In this case, the input will be given as a signed integer type. It should not affect your implementation, as the integer's internal binary representation is the same, whether it is signed or unsigned.
 * In Java, the compiler represents the signed integers using [2's complement notation](https://en.wikipedia.org/wiki/Two's_complement). Therefore, in **Example 3**, the input represents the signed integer. `-3`.
-
-
 
 **Example 1:**
 
@@ -49,6 +53,8 @@ Explanation: The input binary string 11111111111111111111111111111101 has a tota
 
 ### C++
 
+<Authors names="@wingkwong"/>
+
 ```cpp
 class Solution {
 public:
@@ -69,6 +75,8 @@ public:
 
 ### Python 3
 
+<Authors names="@wingkwong"/>
+
 ```python
 class Solution:
     def hammingWeight(self, n: int) -> int:
@@ -76,6 +84,8 @@ class Solution:
 ```
 
 ### Go
+
+<Authors names="@wingkwong"/>
 
 ```go
 func hammingWeight(num uint32) int {
@@ -88,6 +98,8 @@ func hammingWeight(num uint32) int {
 We check each parity of teach bit. Increase $$ans$$ by 1 if the bit is set.
 
 ### C++
+
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -129,6 +141,8 @@ n     n     n - 1  n & (n - 1)
 ```
 
 ### C++
+
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

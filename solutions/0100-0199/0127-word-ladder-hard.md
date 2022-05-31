@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/word-ladder/'
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0127 - Word Ladder (Hard)
+
+## Problem Link
+
+https://leetcode.com/problems/word-ladder/
 
 ## Problem Statement
 
@@ -45,6 +51,8 @@ Explanation: The endWord "cog" is not in wordList, therefore there is no valid t
 Imaginate $$beginWord$$ is a starting node and $$endWord$$ is the ending node of a graph with some other nodes between them. The node is connected to each other by only one letter difference. The problem is same as "finding the shortest path between the starting node and the ending node in an undirected and unweighted graph".
 
 Since we are looking for the shortest path, then we should use BFS instead of DFS. Before that, we need to pre-process on the words of the given $$wordList$$. If a word is $$hot$$, then there could be three forms which are $$*ot$$, $$h*t$$, and $$ho*$$ where $$*$$ can be any alphabet. To implement this, we can use a hash map where the key is the form and the value is the list of word which has the same form. Example: $$*ot: [hot , dot, lot]$$.
+
+<Authors names="@wingkwong"/>
 
 ```cpp
 // 1. build the combination of words that can be formed 

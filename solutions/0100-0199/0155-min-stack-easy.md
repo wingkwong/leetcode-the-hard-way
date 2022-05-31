@@ -2,7 +2,13 @@
 description: 'Author: @heiheihang | https://leetcode.com/problems/min-stack/'
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0155 - Min Stack (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/min-stack/
 
 ## Problem Statement
 
@@ -52,6 +58,8 @@ When we add a new element to the stack, we need to check if the new element is s
 Similarly, when we `pop` an element from the stack, we need to update `current_min`. A simple example is that the last element in the stack is the smallest. When we `pop` that element, `current_min` is still not updated. Hence, we need to set `current_min` to the new last element's label.
 
 `top` and `getMin` are very straightforward implementations.
+
+<Authors names="@heiheihang"/>
 
 ```python
 class MinStack:
