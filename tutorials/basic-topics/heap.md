@@ -13,7 +13,7 @@ keywords:
 import Authors from '@site/src/components/Authors';
 import Table from '@site/src/components/Table';
 
-<Authors names="@heiheihang,@potatochick"/>
+<Authors names="@heiheihang,@potatochick,@SkollRyu"/>
 
 ## Overview
 
@@ -24,8 +24,8 @@ A heap, or a priority queue, is a data structure that efficiently stores element
 To do insetion in heap, we would add the new element to the end of the heap. If the position of the new element violates the heap properity, the new elements will be sifted up until it reaches the correct position.
 ![heap_insertion](https://user-images.githubusercontent.com/63882653/171032169-d92bc368-8f5a-44eb-8507-3c84f884c113.gif)
 
-### Deletion
-In heap, the deletion refers to pop the root in the heap. After the root of the heap has been popped out, the last element of the heap will be inserted to the root position. If this violates the heap porperity, the new root would be sifted down until it reaches the correct position.
+#### Deletion
+In heap, the deletion refers to pop the root in the heap. After the root of the heap has been popped out, the last element in the heap will be inserted to the root position. If this violates the heap porperity, the new root would be sifted down until it reaches the correct position.
 ![deletion_heap](https://user-images.githubusercontent.com/63882653/171033836-ec8841ac-649a-468d-8961-4ad395152df7.gif)
 
 ## Python
