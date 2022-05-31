@@ -33,8 +33,10 @@ Template
 description: >-
   Author: @<YOUR_ALIAS> |
   <PROBLEM_LINK>
-tags: [<TAG_1>, <TAG_2>] 
+tags: ['<TAG_1>', '<TAG_2>'] 
 ---
+
+import Authors from '@site/src/components/Authors';
 
 # <PROBLEM_ID> - <PROBLEM_TITLE> (<DIFFICULTY>)
 
@@ -43,6 +45,8 @@ tags: [<TAG_1>, <TAG_2>]
 // This part will be handled by the owner @wingkwong. Contributors can leave it blank.
 
 ## Approach 1: <APPROACH_NAME>
+
+<Authors names="@YOUR_ALIAS>"/>
 
 // Your explanation goes here or you can add it to your code
 
@@ -57,8 +61,7 @@ tags: [<TAG_1>, <TAG_2>]
 
 Examples: 
 
-- [0005-longest-palindromic-substring-medium.md](https://raw.githubusercontent.com/wingkwong/leetcode-the-hard-way/main/solutions/0000-0099/0005-longest-palindromic-substring-medium.md)
-- [2267-check-if-there-is-a-valid-parentheses-string-path-hard.md](https://raw.githubusercontent.com/wingkwong/leetcode-the-hard-way/main/solutions/2200-2299/2267-check-if-there-is-a-valid-parentheses-string-path-hard.md)
+- [1337-the-k-weakest-rows-in-a-matrix-easy.md](https://raw.githubusercontent.com/wingkwong/leetcode-the-hard-way/main/solutions/1300-1399/1337-the-k-weakest-rows-in-a-matrix-easy.md)
 
 ## Misc
 
