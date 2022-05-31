@@ -82,6 +82,18 @@ export const week2Problems = [
     "LeetCodeLink": "https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix/",
     "SolutionLink": "../solutions/1300-1399/the-k-weakest-rows-in-a-matrix-easy"
   },
+  {
+    "problemName": "0973 -  K Closest Points to Origin",
+    "difficulty": "Medium",
+    "LeetCodeLink": "https://leetcode.com/problems/k-closest-points-to-origin/",
+    "SolutionLink": "../solutions/0900-0999/k-closest-points-to-origin-medium"
+  },
+  {
+    "problemName": "2208 - Minimum Operations to Halve Array Sum",
+    "difficulty": "Medium",
+    "LeetCodeLink": "https://leetcode.com/problems/minimum-operations-to-halve-array-sum/",
+    "SolutionLink": "../solutions/2100-2199/minimum-operations-to-halve-array-sum-medium"
+  },
 ]
 
 <Table 
