@@ -94,6 +94,18 @@ export const week2Problems = [
     "LeetCodeLink": "https://leetcode.com/problems/minimum-operations-to-halve-array-sum/",
     "SolutionLink": "../solutions/2100-2199/minimum-operations-to-halve-array-sum-medium"
   },
+  {
+    "problemName": "2233 - Maximum Product After K Increments",
+    "difficulty": "Medium",
+    "LeetCodeLink": "https://leetcode.com/problems/maximum-product-after-k-increments/",
+    "SolutionLink": "../solutions/2200-2299/maximum-product-after-k-increments-medium"
+  },
+  {
+    "problemName": "1642 - Furthest Building You Can Reach",
+    "difficulty": "Medium",
+    "LeetCodeLink": "https://leetcode.com/problems/furthest-building-you-can-reach/",
+    "SolutionLink": ""
+  },
 ]
 
 <Table 
