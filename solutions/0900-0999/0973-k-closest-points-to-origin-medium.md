@@ -65,3 +65,32 @@ public:
     }
 };
 ```
+
+## Approach 2: Heap (Python)
+
+<Authors names="@heiheihang"/>
+
+We can use a max heap of size `k` to store the `k` points closest to the origin. 
+
+```py
+class Solution:
+    def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]:
+        h = []
+        
+        for a, b in points:
+            
+            dist = a ** 2 + b ** 2
+            heappush(h, [-dist, a, b])
+            if len(h) > k:
+                heappop(h)
+            
+        
+        res = []
+        
+        while h:
+            res.append([h[0][1], h[0][2]])
+            heappop(h)
+            
+        return res
+```
+
