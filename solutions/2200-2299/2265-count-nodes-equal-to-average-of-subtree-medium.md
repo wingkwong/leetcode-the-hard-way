@@ -53,7 +53,7 @@ Explanation: For the node with value 1: The average of its subtree is 1 / 1 = 1.
 
 ## Approach 1: Post Order Traversal
 
-<Authors names="@wingkwing"/>
+<Authors names="@wingkwong"/>
 
 ```cpp
 /**

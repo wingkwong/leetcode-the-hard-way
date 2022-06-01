@@ -65,7 +65,7 @@ Explanation:
 
 ## Approach 1: Line Sweep
 
-<Authors names="@wingkwing"/>
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

@@ -47,7 +47,7 @@ Note that there may be other sequences of swaps but it can be shown that 87655 i
 
 Put all digits with the same parity together. Sort them. Build the result.
 
-<Authors names="@wingkwing"/>
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -82,7 +82,7 @@ public:
 
 We cast the number as a string. Compare each pair the number and check its parity. If they have the same parity and $$s[i]$$ is smaller, then swap it with $$s[j]$$. Return the value as integer.
 
-<Authors names="@wingkwing"/>
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

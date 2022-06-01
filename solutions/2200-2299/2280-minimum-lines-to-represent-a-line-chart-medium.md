@@ -50,7 +50,7 @@ As shown in the diagram above, the line chart can be represented with a single l
 
 ## Approach 1: Greedy
 
-<Authors names="@wingkwing"/>
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

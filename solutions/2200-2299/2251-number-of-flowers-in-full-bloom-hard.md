@@ -50,7 +50,7 @@ For each person, we return the number of flowers in full bloom during their arri
 
 ## Approach 1: Line Sweep
 
-<Authors names="@wingkwing"/>
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

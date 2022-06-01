@@ -56,7 +56,7 @@ Note that we did not use all of the additional rocks.
 
 ## Approach 1: Greedy
 
-<Authors names="@wingkwing"/>
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

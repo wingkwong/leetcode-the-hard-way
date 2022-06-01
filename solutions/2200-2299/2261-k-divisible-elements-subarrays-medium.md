@@ -57,7 +57,7 @@ Since all subarrays are distinct, the total number of subarrays satisfying all t
 
 Build all subarrays and insert them to set. The answer would be the size of the set.
 
-<Authors names="@wingkwing"/>
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

@@ -52,7 +52,7 @@ We add $bottom - 1$ and $top + 1$ to the array $special$ and sort the array so t
 
 The answer would be the maximum result of $special[i] - special[i - 1] - 1$ for $i = [1 .. n)$.
 
-<Authors names="@wingkwing"/>
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

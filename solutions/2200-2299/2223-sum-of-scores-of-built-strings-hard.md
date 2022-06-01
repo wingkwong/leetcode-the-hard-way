@@ -60,7 +60,7 @@ The sum of the scores is 2 + 3 + 9 = 14, so we return 14.
 
 The sum of the score of every $$s_i$$ would be the sum of the values in $$Z$$ array.
 
-<Authors names="@wingkwing"/>
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

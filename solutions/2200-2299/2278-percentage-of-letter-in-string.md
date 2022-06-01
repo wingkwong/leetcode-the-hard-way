@@ -42,7 +42,7 @@ The percentage of characters in s that equal the letter 'k' is 0%, so we return 
 
 ## Approach 1: Counting
 
-<Authors names="@wingkwing"/>
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

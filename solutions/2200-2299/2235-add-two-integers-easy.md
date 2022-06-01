@@ -36,7 +36,7 @@ Explanation: num1 + num2 = -6, so -6 is returned.
 
 ## Approach 1: A + B
 
-<Authors names="@wingkwing"/>
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -49,7 +49,7 @@ public:
 
 ## Approach 2: Half Adder
 
-<Authors names="@wingkwing"/>
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -62,7 +62,7 @@ public:
 
 ## Approach 3: Log & Exp
 
-<Authors names="@wingkwing"/>
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

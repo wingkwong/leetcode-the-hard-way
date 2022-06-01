@@ -63,7 +63,7 @@ Explanation: The two possible paths form the parentheses strings "))(" and ")(("
 
 ## Approach 1: DFS + DP + Memo
 
-<Authors names="@wingkwing"/>
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

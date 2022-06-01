@@ -56,7 +56,7 @@ Explanation: The longest path where each two adjacent nodes have different chara
 
 The first observation is that node can have at most two longest chains from child nodes. If a node have more than two chains, we only need to take the longest two.
 
-<Authors names="@wingkwing"/>
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

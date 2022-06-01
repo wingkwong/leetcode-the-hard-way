@@ -47,7 +47,7 @@ Explanation: 1 and -1 are both the closest numbers to 0, so 1 being larger is re
 
 If we sort the input and check if the absolute value is minimal, the answer would be found in the last round. However, it is not necessary to sort it here. We just need to check if the number is greater that answer or not.
 
-<Authors names="@wingkwing"/>
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

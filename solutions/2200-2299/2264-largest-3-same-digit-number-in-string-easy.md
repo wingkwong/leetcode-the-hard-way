@@ -60,7 +60,7 @@ Explanation: No substring of length 3 consists of only one unique digit. Therefo
 
 Iterate num and check if the current character is same as the previous two. If so, store the maximum digit and render at the end.
 
-<Authors names="@wingkwing"/>
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

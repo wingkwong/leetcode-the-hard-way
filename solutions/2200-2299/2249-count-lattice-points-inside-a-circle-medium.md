@@ -59,7 +59,7 @@ Some of them are (0, 2), (2, 0), (2, 4), (3, 2), and (4, 4).
 
 Iterate each point, check if the distance between the center point and the target point is less than or equal to the radius. If so, that means the target point is within the circle.
 
-<Authors names="@wingkwing"/>
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

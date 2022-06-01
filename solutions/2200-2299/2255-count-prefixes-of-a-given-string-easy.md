@@ -49,7 +49,7 @@ Note that the same string can occur multiple times in words, and it should be co
 
 ## Approach 1: STL
 
-<Authors names="@wingkwing"/>
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

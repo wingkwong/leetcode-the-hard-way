@@ -46,6 +46,8 @@ Explanation: The price of both pens and pencils are 10, which cost more than tot
 
 We try all the cases - if buy 0 pen to $$total / cost1$$ pens, how many pencils we can buy in each round?
 
+<Authors names="@wingkwong"/>
+
 ```cpp
 class Solution {
 public:

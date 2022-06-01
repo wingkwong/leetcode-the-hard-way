@@ -64,7 +64,7 @@ atm.withdraw(550);        // Returns [0,1,0,0,1]. The machine uses 1 $50 banknot
 
 Use $$bank$$ to track the count of each note. When we withdraw, we only use the max possible currency count. If the amount still possible, then return -1. Otherwise, update $$bank$$ and return how many we've taken.
 
-<Authors names="@wingkwing"/>
+<Authors names="@wingkwong"/>
 
 ```cpp
 class ATM {

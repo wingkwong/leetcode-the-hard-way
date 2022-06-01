@@ -58,7 +58,7 @@ The average difference of index 0 is: |0 / 1 - 0| = |0 - 0| = 0.
 
 For the example we can see that we need a range of sum of the input. Hence, we can calculate the prefix sum first. Then for each index, we split $$nums$$ into two parts and calculate the average difference.
 
-<Authors names="@wingkwing"/>
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

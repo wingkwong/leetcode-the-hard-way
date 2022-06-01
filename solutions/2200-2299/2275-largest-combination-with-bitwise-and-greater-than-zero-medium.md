@@ -53,7 +53,7 @@ The size of the combination is 2, so we return 2.
 
 If the $i$-th bit is set after performing AND operation on $k$ candidates, it means the $i$-th of all $k$ candidates must be 1. Therefore, we check each bit to see which bit has the most candidates with the bit set. 
 
-<Authors names="@wingkwing"/>
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

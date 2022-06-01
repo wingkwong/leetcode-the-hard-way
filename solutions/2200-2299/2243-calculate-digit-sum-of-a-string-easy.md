@@ -60,7 +60,7 @@ s becomes "0" + "0" + "0" = "000", whose length is equal to k, so we return "000
 
 Just following the instructions.
 
-<Authors names="@wingkwing"/>
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

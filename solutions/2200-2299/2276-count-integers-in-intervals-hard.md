@@ -59,7 +59,7 @@ countIntervals.count();    // return 8
 
 ## Approach 1: Sweep Line & Merge
 
-<Authors names="@wingkwing"/>
+<Authors names="@wingkwong"/>
 
 ```cpp
 class CountIntervals {

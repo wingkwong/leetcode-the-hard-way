@@ -47,7 +47,7 @@ Observation: Each element of the final output would have a frequency of $$nums.l
 
 We use hash map to store the frequency for each integer. Iterate the map and look for the those with $$occurrence ==nums.length$$.
 
-<Authors names="@wingkwing"/>
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

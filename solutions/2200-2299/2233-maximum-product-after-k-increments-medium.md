@@ -53,7 +53,7 @@ We should increase the smallest element every time.
 
 However, we cannot sort it every time after the increment as it takes too much time. Instead, we can use priority queue to maintain the order.
 
-<Authors names="@wingkwing"/>
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

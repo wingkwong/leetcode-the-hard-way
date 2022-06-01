@@ -55,7 +55,7 @@ Both result in the string "51".
 
 Iterate from the right, check each possible answer.
 
-<Authors names="@wingkwing"/>
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

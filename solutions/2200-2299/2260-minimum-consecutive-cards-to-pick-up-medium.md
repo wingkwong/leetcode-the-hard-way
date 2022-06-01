@@ -43,7 +43,7 @@ Explanation: There is no way to pick up a set of consecutive cards that contain 
 
 Store the index for each number, check each element with size > 1 and find out the minimum gap between them.
 
-<Authors names="@wingkwing"/>
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

@@ -69,7 +69,7 @@ There are no valid node sequences of length 4, so we return -1.
 
 The key idea is to find the best three neighbours for each node. We need to keep the order based on the scores. We can use priority queue but in C++ it is not convenient to iterate it at the end, instead we use set as it is sorted internally. After that, we just need to iterate them to find out all the combinations. However, we need to check if they are duplicate before updating the answer.
 
-<Authors names="@wingkwing"/>
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

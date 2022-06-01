@@ -71,7 +71,7 @@ For each $$y$$, we push the corresponding $$x$$ and then we sort all the $$x$$s 
 
 Then iterate each point, and iterate from $$p_y$$ to $$max_y$$to check how many points are greater than $$p_x$$.
 
-<Authors names="@wingkwing"/>
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {
