@@ -1,10 +1,14 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/k-closest-points-to-origin/'
+description: 'Author: @wingkwong,@heiheihang | https://leetcode.com/problems/k-closest-points-to-origin/'
 ---
 
 import Authors from '@site/src/components/Authors';
 
 # 0973 - K Closest Points to Origin (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/k-closest-points-to-origin/
 
 ## Problem Statement
 
@@ -83,7 +87,6 @@ class Solution:
             heappush(h, [-dist, a, b])
             if len(h) > k:
                 heappop(h)
-            
         
         res = []
         

@@ -6,6 +6,10 @@ description: >-
 
 # 2208 -  Minimum Operations to Halve Array Sum (Medium)
 
+## Problem Link
+
+https://leetcode.com/problems/minimum-operations-to-halve-array-sum/
+
 ## Problem Statement
 
 You are given an array nums of positive integers. In one operation, you can choose any number from nums and reduce it to exactly half the number. (Note that you may choose this reduced number in future operations.)
@@ -51,6 +55,8 @@ It can be shown that we cannot reduce the sum by at least half in less than 3 op
 ## Approach 1: Max Heap
 
 We can keep track of the current largest number, and perform the division on the largest number while keeping track of the sum
+
+<Authors names="@heiheihang"/>
 
 ```py
 class Solution:
