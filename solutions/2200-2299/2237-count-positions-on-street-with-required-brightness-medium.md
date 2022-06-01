@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/count-positions-on-street-with-required-brightness/
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 2237 - Count Positions on Street With Required Brightness (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/count-positions-on-street-with-required-brightness/
 
 ## Problem Statement
 
@@ -58,6 +64,8 @@ Explanation:
 * `0 <= requirement[i] <= 10^5`
 
 ## Approach 1: Line Sweep
+
+<Authors names="@wingkwing"/>
 
 ```cpp
 class Solution {

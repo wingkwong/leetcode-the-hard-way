@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/count-nodes-equal-to-average-of-subtree/
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 2265 - Count Nodes Equal to Average of Subtree (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/count-nodes-equal-to-average-of-subtree/
 
 ## Problem Statement
 
@@ -46,6 +52,8 @@ Explanation: For the node with value 1: The average of its subtree is 1 / 1 = 1.
 * `0 <= Node.val <= 1000`
 
 ## Approach 1: Post Order Traversal
+
+<Authors names="@wingkwing"/>
 
 ```cpp
 /**

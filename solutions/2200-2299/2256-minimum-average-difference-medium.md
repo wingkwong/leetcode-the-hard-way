@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/minimum-average-difference/'
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 2256 - Minimum Average Difference (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/minimum-average-difference/
 
 ## Problem Statement
 
@@ -17,8 +23,6 @@ Return _the index with the **minimum average difference**_. If there are multipl
 * The **absolute difference** of two numbers is the absolute value of their difference.
 * The **average** of `n` elements is the **sum** of the `n` elements divided (**integer division**) by `n`.
 * The average of `0` elements is considered to be `0`.
-
-
 
 **Example 1:**
 
@@ -53,6 +57,8 @@ The average difference of index 0 is: |0 / 1 - 0| = |0 - 0| = 0.
 ## Approach 1: Prefix Sum
 
 For the example we can see that we need a range of sum of the input. Hence, we can calculate the prefix sum first. Then for each index, we split $$nums$$ into two parts and calculate the average difference.
+
+<Authors names="@wingkwing"/>
 
 ```cpp
 class Solution {

@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/minimum-rounds-to-complete-all-tasks/
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 2244 - Minimum Rounds to Complete All Tasks (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/minimum-rounds-to-complete-all-tasks/
 
 ## Problem Statement
 
@@ -41,6 +47,8 @@ Explanation: There is only 1 task of difficulty level 2, but in each round, you 
 ## Approach 1: Math
 
 Count the frequency of each level. If the frequency is $$1$$, then return $$-1$$. Otherwise, we must complete them in some rounds. We first finish $$3$$ tasks multiple times and $$2$$ tasks at most $$2$$ times. Either way, we could finish it in $$ceil(freq / 3)$$ rounds.
+
+<Authors names="@wingkwing"/>
 
 ```cpp
 class Solution {

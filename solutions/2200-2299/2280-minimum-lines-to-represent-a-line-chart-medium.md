@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/minimum-lines-to-represent-a-line-chart
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 2280 - Minimum Lines to Represent a Line Chart (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/minimum-lines-to-represent-a-line-chart
 
 ## Problem Statement
 
@@ -43,6 +49,8 @@ As shown in the diagram above, the line chart can be represented with a single l
 - All day_i are distinct.
 
 ## Approach 1: Greedy
+
+<Authors names="@wingkwing"/>
 
 ```cpp
 class Solution {

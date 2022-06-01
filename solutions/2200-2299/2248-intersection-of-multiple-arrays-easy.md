@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/intersection-of-multiple-arrays/
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 2248 - Intersection of Multiple Arrays (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/intersection-of-multiple-arrays/
 
 ## Problem Statement
 
@@ -40,6 +46,8 @@ There does not exist any integer present both in nums[0] and nums[1], so we retu
 Observation: Each element of the final output would have a frequency of $$nums.length$$.
 
 We use hash map to store the frequency for each integer. Iterate the map and look for the those with $$occurrence ==nums.length$$.
+
+<Authors names="@wingkwing"/>
 
 ```cpp
 class Solution {

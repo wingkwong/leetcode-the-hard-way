@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/maximum-bags-with-full-capacity-of-rocks
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 2279 - Maximum Bags With Full Capacity of Rocks (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/maximum-bags-with-full-capacity-of-rocks
 
 ## Problem Statement
 
@@ -49,6 +55,8 @@ Note that we did not use all of the additional rocks.
 - 1 <= additionalRocks <= 10^9
 
 ## Approach 1: Greedy
+
+<Authors names="@wingkwing"/>
 
 ```cpp
 class Solution {

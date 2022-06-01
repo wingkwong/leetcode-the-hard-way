@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/remove-digit-from-number-to-maximize-result/
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 2259 - Remove Digit From Number to Maximize Result (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/remove-digit-from-number-to-maximize-result/
 
 ## Problem Statement
 
@@ -48,6 +54,8 @@ Both result in the string "51".
 ## Approach 1: Brute Force
 
 Iterate from the right, check each possible answer.
+
+<Authors names="@wingkwing"/>
 
 ```cpp
 class Solution {

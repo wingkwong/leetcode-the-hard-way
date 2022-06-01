@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/count-integers-in-intervals
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 2276 - Count Integers in Intervals (Hard)
+
+## Problem Link
+
+https://leetcode.com/problems/count-integers-in-intervals
 
 ## Problem Statement
 
@@ -52,6 +58,8 @@ countIntervals.count();    // return 8
 * At least **one** call will be made to `count`.
 
 ## Approach 1: Sweep Line & Merge
+
+<Authors names="@wingkwing"/>
 
 ```cpp
 class CountIntervals {

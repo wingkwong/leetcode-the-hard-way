@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/maximum-consecutive-floors-without-special-floors
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 2274 - Maximum Consecutive Floors Without Special Floors (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/maximum-consecutive-floors-without-special-floors
 
 ## Problem Statement
 
@@ -45,6 +51,8 @@ Explanation: Every floor rented is a special floor, so we return 0.
 We add $bottom - 1$ and $top + 1$ to the array $special$ and sort the array so that we can easily calculate consecutive floors between two special floors.
 
 The answer would be the maximum result of $special[i] - special[i - 1] - 1$ for $i = [1 .. n)$.
+
+<Authors names="@wingkwing"/>
 
 ```cpp
 class Solution {

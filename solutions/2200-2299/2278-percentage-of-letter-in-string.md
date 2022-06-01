@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/percentage-of-letter-in-string
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 2278 - Percentage of Letter in String (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/percentage-of-letter-in-string
 
 ## Problem Statement
 
@@ -35,6 +41,8 @@ The percentage of characters in s that equal the letter 'k' is 0%, so we return 
 - letter is a lowercase English letter.
 
 ## Approach 1: Counting
+
+<Authors names="@wingkwing"/>
 
 ```cpp
 class Solution {

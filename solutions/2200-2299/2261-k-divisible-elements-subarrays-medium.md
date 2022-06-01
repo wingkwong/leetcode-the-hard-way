@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/k-divisible-elements-subarrays/
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 2261 - K Divisible Elements Subarrays (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/k-divisible-elements-subarrays/
 
 ## Problem Statement
 
@@ -16,8 +22,6 @@ Two arrays `nums1` and `nums2` are said to be **distinct** if:
 * There exists **at least** one index `i` where `nums1[i] != nums2[i]`.
 
 A **subarray** is defined as a **non-empty** contiguous sequence of elements in an array.
-
-
 
 **Example 1:**
 
@@ -52,6 +56,8 @@ Since all subarrays are distinct, the total number of subarrays satisfying all t
 ## Approach 1: Brute Force
 
 Build all subarrays and insert them to set. The answer would be the size of the set.
+
+<Authors names="@wingkwing"/>
 
 ```cpp
 class Solution {

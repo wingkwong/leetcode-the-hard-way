@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/count-prefixes-of-a-given-string/
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 2255 - Count Prefixes of a Given String (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/count-prefixes-of-a-given-string/
 
 ## Problem Statement
 
@@ -13,8 +19,6 @@ You are given a string array `words` and a string `s`, where `words[i]` and `s` 
 Return _the **number of strings** in_ `words` _that are a **prefix** of_ `s`.
 
 A **prefix** of a string is a substring that occurs at the beginning of the string. A **substring** is a contiguous sequence of characters within a string.
-
-
 
 **Example 1:**
 
@@ -44,6 +48,8 @@ Note that the same string can occur multiple times in words, and it should be co
 * `words[i]` and `s` consist of lowercase English letters **only**.
 
 ## Approach 1: STL
+
+<Authors names="@wingkwing"/>
 
 ```cpp
 class Solution {

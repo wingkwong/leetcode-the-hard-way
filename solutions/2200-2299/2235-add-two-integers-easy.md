@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/add-two-integers/'
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 2235 - Add Two Integers (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/add-two-integers/
 
 ## Problem Statement
 
@@ -30,6 +36,8 @@ Explanation: num1 + num2 = -6, so -6 is returned.
 
 ## Approach 1: A + B
 
+<Authors names="@wingkwing"/>
+
 ```cpp
 class Solution {
 public:
@@ -41,7 +49,9 @@ public:
 
 ## Approach 2: Half Adder
 
-```c
+<Authors names="@wingkwing"/>
+
+```cpp
 class Solution {
 public:
     int sum(int num1, int num2) {
@@ -52,10 +62,12 @@ public:
 
 ## Approach 3: Log & Exp
 
+<Authors names="@wingkwing"/>
+
 ```cpp
 class Solution {
 public:
-    int sum(int num1, int num2) {}
+    int sum(int num1, int num2) {
         return log(exp(num1) * exp(num2)));
     }
 };

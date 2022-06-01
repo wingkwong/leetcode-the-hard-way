@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/sum-of-scores-of-built-strings/
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 2223 - Sum of Scores of Built Strings (Hard)
+
+## Problem Link
+
+https://leetcode.com/problems/sum-of-scores-of-built-strings/
 
 ## Problem Statement
 
@@ -53,6 +59,8 @@ The sum of the scores is 2 + 3 + 9 = 14, so we return 14.
 ## Approach 1: Z Algorithm
 
 The sum of the score of every $$s_i$$ would be the sum of the values in $$Z$$ array.
+
+<Authors names="@wingkwing"/>
 
 ```cpp
 class Solution {

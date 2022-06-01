@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong| https://leetcode.com/problems/design-an-atm-machine/'
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 2241 - Design an ATM Machine (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/design-an-atm-machine/
 
 ## Problem Statement
 
@@ -57,6 +63,8 @@ atm.withdraw(550);        // Returns [0,1,0,0,1]. The machine uses 1 $50 banknot
 ## Approach 1:  Implementation
 
 Use $$bank$$ to track the count of each note. When we withdraw, we only use the max possible currency count. If the amount still possible, then return -1. Otherwise, update $$bank$$ and return how many we've taken.
+
+<Authors names="@wingkwing"/>
 
 ```cpp
 class ATM {

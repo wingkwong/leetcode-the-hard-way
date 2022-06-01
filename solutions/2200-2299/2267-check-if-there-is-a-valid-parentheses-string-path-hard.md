@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/check-if-there-is-a-valid-parentheses-string-path/
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 2267 - Check if There Is a Valid Parentheses String Path (Hard)
+
+## Problem Link
+
+https://leetcode.com/problems/check-if-there-is-a-valid-parentheses-string-path/
 
 ## Problem Statement
 
@@ -56,6 +62,8 @@ Explanation: The two possible paths form the parentheses strings "))(" and ")(("
 * `grid[i][j]` is either `'('` or `')'`.
 
 ## Approach 1: DFS + DP + Memo
+
+<Authors names="@wingkwing"/>
 
 ```cpp
 class Solution {

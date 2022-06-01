@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/number-of-ways-to-buy-pens-and-pencils/
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 2240 - Number of Ways to Buy Pens and Pencils (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/number-of-ways-to-buy-pens-and-pencils/
 
 ## Problem Statement
 

@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/number-of-flowers-in-full-bloom/
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 2251 - Number of Flowers in Full Bloom (Hard)
+
+## Problem Link
+
+https://leetcode.com/problems/number-of-flowers-in-full-bloom/
 
 ## Problem Statement
 
@@ -43,6 +49,8 @@ For each person, we return the number of flowers in full bloom during their arri
 * `1 <= persons[i] <= 10^9`
 
 ## Approach 1: Line Sweep
+
+<Authors names="@wingkwing"/>
 
 ```cpp
 class Solution {

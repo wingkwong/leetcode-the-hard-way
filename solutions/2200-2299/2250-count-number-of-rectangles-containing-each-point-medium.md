@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/count-number-of-rectangles-containing-each-point/
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 2250 - Count Number of Rectangles Containing Each Point (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/count-number-of-rectangles-containing-each-point/
 
 ## Problem Statement
 
@@ -15,8 +21,6 @@ The `ith` rectangle has its **bottom-left corner** point at the coordinates `(0,
 Return _an integer array_ `count` _of length_ `points.length` _where_ `count[j]` _is the number of rectangles that **contain** the_ `jth` _point._
 
 The `ith` rectangle **contains** the `jth` point if `0 <= xj <= li` and `0 <= yj <= hi`. Note that points that lie on the **edges** of a rectangle are also considered to be contained by that rectangle.
-
-
 
 **Example 1:**
 
@@ -66,6 +70,8 @@ Observation: The max $$y$$ is only $$100$$, while the max $$x$$is $$10^9$$.
 For each $$y$$, we push the corresponding $$x$$ and then we sort all the $$x$$s for each $$y$$.
 
 Then iterate each point, and iterate from $$p_y$$ to $$max_y$$to check how many points are greater than $$p_x$$.
+
+<Authors names="@wingkwing"/>
 
 ```cpp
 class Solution {

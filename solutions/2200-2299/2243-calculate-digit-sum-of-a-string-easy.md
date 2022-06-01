@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/calculate-digit-sum-of-a-string/
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 2243 - Calculate Digit Sum of a String (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/calculate-digit-sum-of-a-string/
 
 ## Problem Statement
 
@@ -53,6 +59,8 @@ s becomes "0" + "0" + "0" = "000", whose length is equal to k, so we return "000
 ## Approach 1: Simulation
 
 Just following the instructions.
+
+<Authors names="@wingkwing"/>
 
 ```cpp
 class Solution {

@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/largest-combination-with-bitwise-and-greater-than-zero
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 2275 - Largest Combination With Bitwise AND Greater Than Zero (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/largest-combination-with-bitwise-and-greater-than-zero
 
 ## Problem Statement
 
@@ -46,6 +52,8 @@ The size of the combination is 2, so we return 2.
 ## Approach 1: Counting
 
 If the $i$-th bit is set after performing AND operation on $k$ candidates, it means the $i$-th of all $k$ candidates must be 1. Therefore, we check each bit to see which bit has the most candidates with the bit set. 
+
+<Authors names="@wingkwing"/>
 
 ```cpp
 class Solution {
