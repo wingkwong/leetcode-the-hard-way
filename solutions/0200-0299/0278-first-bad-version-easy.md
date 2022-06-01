@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/first-bad-version/'
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0278 - First Bad Version (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/first-bad-version/
 
 ## Problem Statement
 
@@ -11,8 +17,6 @@ You are a product manager and currently leading a team to develop a new product.
 Suppose you have `n` versions `[1, 2, ..., n]` and you want to find out the first bad one, which causes all the following ones to be bad.
 
 You are given an API `bool isBadVersion(version)` which returns whether `version` is bad. Implement a function to find the first bad version. You should minimize the number of calls to the API.
-
-
 
 **Example 1:**
 
@@ -40,6 +44,8 @@ Output: 1
 ## Approach 1: Binary Search
 
 Prerequisite: [Binary Search](../../tutorials/basic-topics/binary-search)
+
+<Authors names="@wingkwong"/>
 
 ```cpp
 // The API isBadVersion is defined for you.

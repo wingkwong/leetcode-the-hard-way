@@ -3,7 +3,13 @@ description: 'Author: @wingkwong | https://leetcode.com/problems/missing-number/
 tags: ['Array', 'Hash Table', 'Math', 'Bit Manupulation', 'Sorting']
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0268 - Missing Number (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/missing-number/
 
 ## Problem Statement
 
@@ -41,6 +47,8 @@ Explanation: n = 9 since there are 9 numbers, so all numbers are in the range [0
 * All the numbers of `nums` are **unique**.
 
 ## Approach 1: Sorting
+
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

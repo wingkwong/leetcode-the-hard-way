@@ -2,7 +2,13 @@
 description: 'Author: @DoubleSpicy | https://leetcode.com/problems/contains-duplicate/'
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0217 - Contains Duplicate (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/contains-duplicate/
 
 ## Problem Statement
 
@@ -42,6 +48,8 @@ Some further optimizations could be done. First, we could stop early once we hav
 
 Both time and space complexity is $$O(N)$$.
 
+<Authors names="@DoubleSpicy"/>
+
 ```cpp
 class Solution {
 public:
@@ -69,6 +77,8 @@ Another approach is to sort `nums` and then see for each element, whether next e
 
 This approach is more memory efficient ($$O(logN)$$) then approach 1 since it doesn't need to make copies of input values stored in a set but comes at a price of $$O(NlogN)$$ time complexity.
 
+<Authors names="@DoubleSpicy"/>
+
 ```cpp
 class Solution {
 public:
@@ -77,7 +87,6 @@ public:
         // make a variable to store the last value read.
         sort(nums.begin(), nums.end());
         int last = nums[0];
-
         // for each element, see if the value is equal to last value.
         for (int i = 1; i < nums.size(); i++){
             if (last == nums[i])
@@ -92,16 +101,17 @@ public:
 
 ## Beginner Python Solution
 
-In general, we want to make use of `defaultdict` in python.&#x20;
+In general, we want to make use of `defaultdict` in python.
 
 We can declare `dictionary = defaultdict(int)` to keep track of what elements we have seen so far.
 
-You might be thinking: Why can't we simply loop the array for each element to check if there is duplicate? It is less time efficient if we do not use a `dictionary`.&#x20;
+You might be thinking: Why can't we simply loop the array for each element to check if there is duplicate? It is less time efficient if we do not use a `dictionary`.
 ![1](https://user-images.githubusercontent.com/24492138/170910845-58aaea00-3a90-4c15-9ca2-fdf9e473baa5.jpg)
 ![2](https://user-images.githubusercontent.com/24492138/170910857-5bcbaf02-22f7-4d31-8b93-94784fa2be73.jpg)
 ![3](https://user-images.githubusercontent.com/24492138/170910863-48ac46bf-dae8-423e-809a-22ec32466b06.jpg)
 ![4](https://user-images.githubusercontent.com/24492138/170910866-22f6ed1d-b58c-4e6a-8e32-11ba7e0b6b29.jpg)
 
+<Authors names="@DoubleSpicy"/>
 
 ```python
 hashNum = defaultdict(int)

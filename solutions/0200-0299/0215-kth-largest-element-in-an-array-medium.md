@@ -2,7 +2,13 @@
 description: 'Author: @TBC | https://leetcode.com/problems/kth-largest-element-in-an-array/'
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0215 - Kth Largest Element in an Array (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/kth-largest-element-in-an-array/
 
 ## Problem Statement
 

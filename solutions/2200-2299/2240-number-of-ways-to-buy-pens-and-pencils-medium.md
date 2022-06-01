@@ -48,6 +48,8 @@ We try all the cases - if buy 0 pen to $$total / cost1$$ pens, how many pencils 
 
 <Authors names="@wingkwong"/>
 
+<Authors names="@wingkwong"/>
+
 ```cpp
 class Solution {
 public:

@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/count-primes/'
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0204 - Count Primes
+
+## Problem Link
+
+https://leetcode.com/problems/count-primes/
 
 ## Problem Statement
 
@@ -37,6 +43,8 @@ Output: 0
 ## Approach 1: Sieve of Eratosthenes
 
 See [Sieve of Eratosthenes](../../tutorials/math/number-theory/sieve-of-eratosthenes).
+
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

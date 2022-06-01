@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/find-the-duplicate-number/'
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0287 - Find the Duplicate Number (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/find-the-duplicate-number/
 
 ## Problem Statement
 
@@ -36,6 +42,8 @@ Output: 3
 ## Approach 1: Bit Masking
 
 We iterate each bit one by one. We calculate the expected bit count and the actual bit count. If the actual one is greater than the expected one, then it means this bit is part of the duplicate number.
+
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

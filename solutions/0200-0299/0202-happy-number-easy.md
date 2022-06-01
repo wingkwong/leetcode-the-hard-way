@@ -2,7 +2,13 @@
 description: 'Author: @TBC | https://leetcode.com/problems/happy-number/'
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0202 - Happy Number (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/happy-number/
 
 ## Problem Statement
 

@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/add-digits/'
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0258 - Add Digits (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/add-digits/
 
 ## Problem Statement
 
@@ -54,6 +60,8 @@ int digitSum(int n) {
 We initialise $$sum := 0$$ first. Then we take modulo operation $$n \ mod 10$$ to get the last digit and add it to $$sum$$. Then we divide $$n$$ by 10 to eliminate the last digit and perform the same operation until $$n$$ becomes $$0$$.
 
 Now we just need to calculate the digit sum repeatedly until $$n$$ has only one digit.
+
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

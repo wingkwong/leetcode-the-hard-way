@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/implement-stack-using-queues
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0225 - Implement Stack using Queues (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/implement-stack-using-queues
 
 ## Problem Statement
 
@@ -49,6 +55,8 @@ myStack.empty(); // return False
 ## Approach 1: 2 Queues
 
 We can push all elements to one queue. For `pop` and `top` function, we move first $$n - 1$$ elements to another queue. What's left would be the top element. For `pop` function, we pop the top element as well and swap the queue.
+
+<Authors names="@wingkwong"/>
 
 ```cpp
 class MyStack {
@@ -99,6 +107,8 @@ public:
 ## Approach 2: 1 Queue
 
 For every push, we simply make the order backwards for `push` function. For `pop`() and `top()`, we can use `front()` to get the top element and return it.
+
+<Authors names="@wingkwong"/>
 
 ```cpp
 class MyStack {

@@ -1,8 +1,14 @@
 ---
-description: 'Author: @heiheihang'
+description: 'Author: @heiheihang | https://leetcode.com/problems/valid-anagram/'
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0242 - Valid Anagram (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/valid-anagram/
 
 ## Problem Statement
 
@@ -26,14 +32,10 @@ Input: s = "rat", t = "car"
 Output: false
 ```
 
-&#x20;
-
 **Constraints:**
 
 * `1 <= s.length, t.length <= 5 * 104`
 * `s` and `t` consist of lowercase English letters.
-
-&#x20;
 
 **Follow up:** What if the inputs contain Unicode characters? How would you adapt your solution to such a case?
 

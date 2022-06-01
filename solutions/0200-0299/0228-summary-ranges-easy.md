@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/summary-ranges/'
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0228 - Summary Ranges (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/summary-ranges/
 
 ## Problem Statement
 
@@ -48,6 +54,8 @@ Explanation: The ranges are:
 ## Approach 1: Iteration
 
 We take a number as an starting point at $$i$$, then search for the next ending point $$j$$ which satisfies $$nums[j] + 1 \ne nums[j + 1]$$. If both pointer is not same, then we can push $$nums[i]$$->$$nums[j]$$ to our answer array, else we just push $$nums[i]$$.
+
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {
