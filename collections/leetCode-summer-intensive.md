@@ -15,50 +15,50 @@ export const week1Problems = [
   {
     "problemName": "0169 - Majority Element",
     "difficulty": "Easy",
-    "LeetCodeLink": "https://leetcode.com/problems/majority-element/",
-    "SolutionLink": "../solutions/0100-0199/majority-element-easy"
+    "leetCodeLink": "https://leetcode.com/problems/majority-element/",
+    "solutionLink": "../solutions/0100-0199/majority-element-easy"
   },
   {
     "problemName": "0217 - Contains Duplicate",
     "difficulty": "Easy",
-    "LeetCodeLink": "https://leetcode.com/problems/contains-duplicate/",
-    "SolutionLink": "../solutions/0200-0299/contains-duplicate-easy#problem-statement"
+    "leetCodeLink": "https://leetcode.com/problems/contains-duplicate/",
+    "solutionLink": "../solutions/0200-0299/contains-duplicate-easy#problem-statement"
   },
   {
     "problemName": "2032 - Two Out of Three",
     "difficulty": "Easy",
-    "LeetCodeLink": "https://leetcode.com/problems/two-out-of-three/",
-    "SolutionLink": ""
+    "leetCodeLink": "https://leetcode.com/problems/two-out-of-three/",
+    "solutionLink": ""
   },
   {
     "problemName": "1748 - Sum of Unique Elements",
     "difficulty": "Easy",
-    "LeetCodeLink": "https://leetcode.com/problems/sum-of-unique-elements/",
-    "SolutionLink": ""
+    "leetCodeLink": "https://leetcode.com/problems/sum-of-unique-elements/",
+    "solutionLink": ""
   },
   {
     "problemName": "0242 - Valid Anagram",
     "difficulty": "Easy",
-    "LeetCodeLink": "https://leetcode.com/problems/valid-anagram/",
-    "SolutionLink": ""
+    "leetCodeLink": "https://leetcode.com/problems/valid-anagram/",
+    "solutionLink": ""
   },
   {
     "problemName": "1347 - Minimum Number of Steps to Make Two Strings Anagram",
     "difficulty": "Medium",
-    "LeetCodeLink": "https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram/",
-    "SolutionLink": ""
+    "leetCodeLink": "https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram/",
+    "solutionLink": ""
   },
   {
     "problemName": "2225 - Find Players With Zero or One Losses",
     "difficulty": "Medium",
-    "LeetCodeLink": "https://leetcode.com/problems/find-players-with-zero-or-one-losses/",
-    "SolutionLink": ""
+    "leetCodeLink": "https://leetcode.com/problems/find-players-with-zero-or-one-losses/",
+    "solutionLink": ""
   },
   {
     "problemName": "0916 - Word Subsets",
     "difficulty": "Medium",
-    "LeetCodeLink": "https://leetcode.com/problems/word-subsets/",
-    "SolutionLink": ""
+    "leetCodeLink": "https://leetcode.com/problems/word-subsets/",
+    "solutionLink": ""
   },
 ]
 
@@ -73,50 +73,50 @@ export const week2Problems = [
   {
     "problemName": "1046 - Last Stone Weight",
     "difficulty": "Easy",
-    "LeetCodeLink": "https://leetcode.com/problems/last-stone-weight/",
-    "SolutionLink": ""
+    "leetCodeLink": "https://leetcode.com/problems/last-stone-weight/",
+    "solutionLink": ""
   },
   {
     "problemName": "1337 - The K Weakest Rows in a Matrix",
     "difficulty": "Easy",
-    "LeetCodeLink": "https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix/",
-    "SolutionLink": "../solutions/1300-1399/the-k-weakest-rows-in-a-matrix-easy"
+    "leetCodeLink": "https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix/",
+    "solutionLink": "../solutions/1300-1399/the-k-weakest-rows-in-a-matrix-easy"
   },
   {
     "problemName": "0973 -  K Closest Points to Origin",
     "difficulty": "Medium",
-    "LeetCodeLink": "https://leetcode.com/problems/k-closest-points-to-origin/",
-    "SolutionLink": "../solutions/0900-0999/k-closest-points-to-origin-medium"
+    "leetCodeLink": "https://leetcode.com/problems/k-closest-points-to-origin/",
+    "solutionLink": "../solutions/0900-0999/k-closest-points-to-origin-medium"
   },
   {
     "problemName": "2208 - Minimum Operations to Halve Array Sum",
     "difficulty": "Medium",
-    "LeetCodeLink": "https://leetcode.com/problems/minimum-operations-to-halve-array-sum/",
-    "SolutionLink": "../solutions/2100-2199/minimum-operations-to-halve-array-sum-medium"
+    "leetCodeLink": "https://leetcode.com/problems/minimum-operations-to-halve-array-sum/",
+    "solutionLink": "../solutions/2100-2199/minimum-operations-to-halve-array-sum-medium"
   },
   {
     "problemName": "2233 - Maximum Product After K Increments",
     "difficulty": "Medium",
-    "LeetCodeLink": "https://leetcode.com/problems/maximum-product-after-k-increments/",
-    "SolutionLink": "../solutions/2200-2299/maximum-product-after-k-increments-medium"
+    "leetCodeLink": "https://leetcode.com/problems/maximum-product-after-k-increments/",
+    "solutionLink": "../solutions/2200-2299/maximum-product-after-k-increments-medium"
   },
   {
     "problemName": "1642 - Furthest Building You Can Reach",
     "difficulty": "Medium",
-    "LeetCodeLink": "https://leetcode.com/problems/furthest-building-you-can-reach/",
-    "SolutionLink": ""
+    "leetCodeLink": "https://leetcode.com/problems/furthest-building-you-can-reach/",
+    "solutionLink": ""
   },
   {
     "problemName": "1859 - Sorting the Sentence",
     "difficulty": "Easy",
-    "LeetCodeLink": "https://leetcode.com/problems/furthest-building-you-can-reach/",
-    "SolutionLink": "../solutions/1800-1899/sorting-the-sentence-easy"
+    "leetCodeLink": "https://leetcode.com/problems/furthest-building-you-can-reach/",
+    "solutionLink": "../solutions/1800-1899/sorting-the-sentence-easy"
   },
   {
     "problemName": "1365 - How Many Numbers Are Smaller Than the Current Number",
     "difficulty": "Easy",
-    "LeetCodeLink": "https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/",
-    "SolutionLink": "../solutions/1300-1399/how-many-numbers-are-smaller-than-the-current-number-easy"
+    "leetCodeLink": "https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/",
+    "solutionLink": "../solutions/1300-1399/how-many-numbers-are-smaller-than-the-current-number-easy"
   },
 ]
 

@@ -10,15 +10,15 @@ export default function Table({title, collectionLink, isSorted = true, data}) {
     return (
       <tr>
         <td>
-          <a href={d.LeetCodeLink} target="_blank">
+          <a href={d.leetCodeLink} target="_blank">
             {d.problemName}
           </a>
         </td>
         <td>{d.difficulty}</td>
         <td>
           {
-            d.SolutionLink && 
-            <a href={d.SolutionLink} target="_blank">
+            d.solutionLink && 
+            <a href={d.solutionLink} target="_blank">
               View Solutions
             </a>
           }
