@@ -106,6 +106,18 @@ export const week2Problems = [
     "LeetCodeLink": "https://leetcode.com/problems/furthest-building-you-can-reach/",
     "SolutionLink": ""
   },
+  {
+    "problemName": "1859 - Sorting the Sentence",
+    "difficulty": "Easy",
+    "LeetCodeLink": "https://leetcode.com/problems/furthest-building-you-can-reach/",
+    "SolutionLink": "../solutions/1800-1899/sorting-the-sentence-easy"
+  },
+  {
+    "problemName": "1365 - How Many Numbers Are Smaller Than the Current Number",
+    "difficulty": "Easy",
+    "LeetCodeLink": "https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/",
+    "SolutionLink": ""
+  },
 ]
 
 <Table 
