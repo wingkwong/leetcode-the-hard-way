@@ -47,7 +47,7 @@ Explanation: Sort the words in s to their original positions "Me1 Myself2 and3 I
 * The words in `s` are separated by a single space.
 * `s` contains no leading or trailing spaces.
 
-## Appraoch 1: Sorting with Comparator
+## Approach 1: Sorting with Comparator
 
 ```cpp
 class Solution {
