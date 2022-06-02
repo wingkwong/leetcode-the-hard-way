@@ -116,7 +116,7 @@ export const week2Problems = [
     "problemName": "1365 - How Many Numbers Are Smaller Than the Current Number",
     "difficulty": "Easy",
     "LeetCodeLink": "https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/",
-    "SolutionLink": ""
+    "SolutionLink": "../solutions/1300-1399/how-many-numbers-are-smaller-than-the-current-number-easy"
   },
 ]
 
