@@ -49,6 +49,8 @@ Explanation: Sort the words in s to their original positions "Me1 Myself2 and3 I
 
 ## Approach 1: Sorting with Comparator
 
+<Authors names="@wingkwong"/>
+
 ```cpp
 class Solution {
 public:
