@@ -1,6 +1,8 @@
 import React from 'react';
+import Tags from '@site/src/components/Tags';
 
 export default function Table({title, collectionLink, isSorted = true, data}) {
+  const hasTopic = data.some(d => d.tags)
   const sortOrder = {
     'Easy': 0,
     'Medium': 1,
@@ -23,6 +25,12 @@ export default function Table({title, collectionLink, isSorted = true, data}) {
             </a>
           }
         </td>
+        {
+          hasTopic && 
+          <td>
+            <Tags names={d.tags}/>
+          </td>
+        }
       </tr>
     )
   })
@@ -37,6 +45,7 @@ export default function Table({title, collectionLink, isSorted = true, data}) {
           <th>Problem Name</th>
           <th>Difficulty</th>
           <th>Solution Link</th>
+          { hasTopic && <th>Topic</th> }
           { renderRow }
         </table>
       </>
