@@ -75,6 +75,7 @@ export const week1Problems = [
     data={week1Problems}
     collectionLink="https://leetcode.com/list/eeyho3um"
     isSorted={false}
+    key="w1"
 />
 
 export const week2Problems = [
@@ -123,7 +124,7 @@ export const week2Problems = [
   {
     "problemName": "1859 - Sorting the Sentence",
     "difficulty": "Easy",
-    "leetCodeLink": "https://leetcode.com/problems/furthest-building-you-can-reach/",
+    "leetCodeLink": "https://leetcode.com/problems/sorting-the-sentence/",
     "solutionLink": "../solutions/1800-1899/sorting-the-sentence-easy",
     "tags": "Sorting"
   },
@@ -141,4 +142,5 @@ export const week2Problems = [
     data={week2Problems}
     collectionLink="https://leetcode.com/list/eeyew3e6"
     isSorted={false}
+    key="w2"
 />
