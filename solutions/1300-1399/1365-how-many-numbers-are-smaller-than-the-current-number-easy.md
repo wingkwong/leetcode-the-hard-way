@@ -99,7 +99,7 @@ public:
                 if (x != y) {
                     smaller += 1;
                 } else {
-                    // otherwise, we got all smaller elements than x
+                    // otherwise, we got all elements smaller than x
                     // so break it here
                     break;
                 }
