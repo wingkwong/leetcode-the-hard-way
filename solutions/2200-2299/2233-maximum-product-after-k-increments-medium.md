@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
+  Author: @wingkwong | @heiheihang
   https://leetcode.com/problems/maximum-product-after-k-increments/
 ---
 
@@ -70,4 +70,26 @@ public:
         return p;
     }
 };
+```
+## Approach 2 Heap (Python)
+```py
+class Solution:
+    def maximumProduct(self, nums: List[int], k: int) -> int:
+        h = []
+        
+        for n in nums:
+            heappush(h, n)
+            
+        while(k > 0):
+            val = heappop(h)
+            val += 1
+            heappush(h, val)
+            k -= 1
+        ans = 1
+        
+        for n in h:
+            ans *= n
+            ans %= (10 ** 9 + 7)
+            
+        return ans
 ```
