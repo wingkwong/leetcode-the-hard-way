@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong | @heiheihang
+  Author: @wingkwong @heiheihang| 
   https://leetcode.com/problems/maximum-product-after-k-increments/
 ---
 
