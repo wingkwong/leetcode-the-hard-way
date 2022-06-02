@@ -1,5 +1,5 @@
 ---
-title: 'Heap / Priority Queue'
+title: 'Heap (Priority Queue)'
 description: 'A heap, or a priority queue, is a data structure that efficiently stores elements in a particular order.'
 # hide_table_of_contents: true
 keywords:
@@ -19,16 +19,20 @@ import Table from '@site/src/components/Table';
 
 A heap, or a priority queue, is a data structure that efficiently stores elements in a particular order. It is very efficient in inserting an element to the heap ($$O(logN)$$), and very efficient in removing the first element of the heap ($$O(logN)$$). To know the details of heap, we recommend you to look at [this](https://www.youtube.com/watch?v=t0Cq6tVNRBA).
 
-### Operations
-#### Insertion
+## Operations
+
+### Insertion
+
 To do insetion in heap, we would add the new element to the end of the heap. If the position of the new element violates the heap properity, the new elements will be sifted up until it reaches the correct position.
 ![heap_insertion](https://user-images.githubusercontent.com/63882653/171032169-d92bc368-8f5a-44eb-8507-3c84f884c113.gif)
 
-#### Deletion
+### Deletion
+
 In heap, the deletion refers to pop the root in the heap. After the root of the heap has been popped out, the last element in the heap will be inserted to the root position. If this violates the heap porperity, the new root would be sifted down until it reaches the correct position.
 ![deletion_heap](https://user-images.githubusercontent.com/63882653/171033836-ec8841ac-649a-468d-8961-4ad395152df7.gif)
 
 ## Python
+
 By default, when we refer to heap, most implementations are min-heaps. This means the first element is always the smallest element.
 
 In Python, you can use the following functions to interact with a heap:
@@ -218,11 +222,10 @@ vector<int> kWeakestRows(vector<vector<int>>& mat, int k) {
     }
 ```
 **Additional knowledge:** You can create a `max heap with pair<int,int>` with following syntax
+
 ```cpp
 priority_queue<pair<int,int>> pq;
 ```
-
-
 
 export const suggestedProblems = [
   {

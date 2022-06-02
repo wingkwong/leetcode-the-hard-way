@@ -1,6 +1,6 @@
 ---
-title: 'Heap / Priority Queue'
-description: 'Collections of Heap / Priority Queue Problems'
+title: 'Heap (Priority Queue)'
+description: 'Collections of Heap (Priority Queue) Problems'
 hide_table_of_contents: true
 keywords:
   - leetcode
