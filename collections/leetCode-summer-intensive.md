@@ -135,6 +135,20 @@ export const week2Problems = [
     "solutionLink": "../solutions/1300-1399/how-many-numbers-are-smaller-than-the-current-number-easy",
     "tags": "Sorting"
   },
+  {
+    "problemName": "1356 - Sort Integers by The Number of 1 Bits",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/sort-integers-by-the-number-of-1-bits/",
+    "solutionLink": "../solutions/1300-1399/sort-integers-by-the-number-of-1-bits-easy",
+    "tags": "Sorting"
+  },
+  {
+    "problemName": "1331 - Rank Transform of an Array",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/rank-transform-of-an-array/",
+    "solutionLink": "../solutions/1300-1399/rank-transform-of-an-array-easy",
+    "tags": "Sorting"
+  },
 ]
 
 <Table 
