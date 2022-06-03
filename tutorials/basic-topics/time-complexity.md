@@ -14,11 +14,13 @@ import Authors from '@site/src/components/Authors';
 
 Time Complexity is one of the important measurements when it comes to writing an efficient solution. It estimates how much time your solution needs based on some input. If your solution is too slow, even it passes some test cases, it will still consider it as a wrong answer.
 
-The time complexity is denoted by Big O notation. Normally,  $$n$$ means the input size. For example, if the input is a string $$s$$, then $$n$$would be the length of $$s$$.
+The time complexity is denoted by Big O notation. Normally, $$n$$ means the input size. For example, if the input is a string $$s$$, then $$n$$ would be the length of $$s$$.
+
+<img width="840" alt="image" src="https://user-images.githubusercontent.com/35857179/171774214-25ca6ee0-a108-482a-ade1-3bb0eacf93ad.png"/>
 
 #### Estimating Time Complexity
 
-| Input size    | Time Complexities        |
+| Input size    | Time Complexity          |
 | ------------- | ------------------------ |
 | $$n <= 10$$   | $$O(n!), O(n^7),O(n^6)$$ |
 | $$n <= 20$$   | $$O(2^n)$$               |
@@ -61,3 +63,8 @@ for (int i = 2; i * i <= n; i++) {
   // do something
 }
 ```
+
+## Useful Resources
+
+- [Big-O_Cheat_Sheet-Letter.pdf](https://github.com/wingkwong/leetcode-the-hard-way/files/8829046/Big-O_Cheat_Sheet-Letter.pdf)
+- [BIG-O.pdf](https://github.com/wingkwong/leetcode-the-hard-way/files/8829047/BIG-O.pdf)
