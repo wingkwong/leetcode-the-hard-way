@@ -52,6 +52,8 @@ Output: [0,0,0,0]
 
 ## Approach 1: Brute Force
 
+<Authors names="@wingkwong"/>
+
 ```cpp
 class Solution {
 public:
@@ -78,6 +80,8 @@ public:
 ```
 
 ## Approach 2: Sorting
+
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -113,6 +117,8 @@ public:
 ```
 
 ## Approach 3: Sorting + Lower Bound
+
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

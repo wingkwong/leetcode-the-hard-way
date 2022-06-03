@@ -8,6 +8,10 @@ import Authors from '@site/src/components/Authors';
 
 # 1337 - The K Weakest Rows in a Matrix (Easy)
 
+## Problem Link
+
+https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix/
+
 ## Problem Statement
 
 You are given an `m x n` binary matrix `mat` of `1`'s (representing soldiers) and `0`'s (representing civilians). The soldiers are positioned **in front** of the civilians. That is, all the `1`'s will appear to the **left** of all the `0`'s in each row.

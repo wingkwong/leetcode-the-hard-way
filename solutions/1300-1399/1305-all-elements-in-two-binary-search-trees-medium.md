@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/all-elements-in-two-binary-search-trees/
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 1305 - All Elements in Two Binary Search Trees (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/all-elements-in-two-binary-search-trees/
 
 ## Problem Statement
 
@@ -82,6 +88,8 @@ void postorder(TreeNode* node) {
 
 In this problem, we can use either one to traverse all nodes and put them into a common array. We sort the array at the end.
 
+<Authors names="@wingkwong"/>
+
 ```cpp
 class Solution {
 public:
@@ -114,6 +122,8 @@ However, we can see the in-order traversal is faster than the other two. This is
 ## Approach 2: In-order Traversal + Merging
 
 As we know In-order traversal will make the array sorted, the remaining problem is same as "merging two sorted arrays into one". 
+
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

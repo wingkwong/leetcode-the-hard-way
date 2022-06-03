@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/count-all-valid-pickup-and-delivery-options/
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 1359 - Count All Valid Pickup and Delivery Options (Hard)
+
+## Problem Link
+
+https://leetcode.com/problems/count-all-valid-pickup-and-delivery-options/
 
 ## Problem Statement
 
@@ -50,6 +56,8 @@ If we just put all $$P$$ in a row, we would have $$N!$$ ways. It's a permutation
 Then we need to think how to put $$D_i$$in some possible places. We know that$$D_i$$ must come after $$P_i$$. It's obvious that there is only one way to put $$D$$ for the last $$P$$. For the second $$D$$, we can put it right after the corresponding $$P$$ or put it to the left / right of the previous $$D$$. Hence, we have $$3$$ possible places to put. If you keep doing the same thing, you should find the number of ways to put $$D$$ is $$1 * 3 * 5 * .. * (2N - 1)$$.
 
 Hence, the answer is $$N! * \sum_{i=1}^{N} (2 * i - 1)$$. Remember to take $$MOD$$ during the calculation.
+
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

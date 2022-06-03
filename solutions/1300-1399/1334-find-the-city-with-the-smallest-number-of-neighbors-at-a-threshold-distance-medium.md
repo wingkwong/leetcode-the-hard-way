@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 1334 - Find the City With the Smallest Number of Neighbors at a Threshold Distance (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/
 
 ## Problem Statement
 
@@ -60,6 +66,8 @@ The city 0 has 1 neighboring city at a distanceThreshold = 2.
 
 Since $$n$$ is small, we can use Floyd Warshall Algorithm to calculate the distances between each node. Let $$dist[i][j]$$ be the distance beween node $$i$$ and node $$j$$. Once we know all the distances, we can iterate each node $$i$$, and check each node $$j$$ to see if the distance is less than / equal to $$distanceThreshold$$. If so, we count it and check the minimal value.
 
+<Authors names="@wingkwong"/>
+
 ```cpp
 class Solution {
 public:
@@ -103,6 +111,8 @@ public:
 ## Approach 2: Dijkstra's Algorithm
 
 We can perform Dijkstra's algorithm on each node to calculate the distances between that node and other nodes. Iterate them and check if the distance is at most $$distanceThreshold$$. If so, update the minimum counter and the answer.
+
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

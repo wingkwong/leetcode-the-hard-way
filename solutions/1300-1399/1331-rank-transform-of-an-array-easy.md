@@ -53,6 +53,8 @@ Output: [5,3,4,2,8,6,7,1,3]
 
 ## Approach 1: Sorting with Hash Map
 
+<Authors names="@wingkwong"/>
+
 ```cpp
 class Solution {
 public:
