@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/find-the-difference/'
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0389 - Find the Difference (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/find-the-difference/
 
 ## Problem Statement
 
@@ -47,6 +53,8 @@ Let's have a quick review.
 
 Therefore, we apply XOR on each character. The same characters will cancel out each other. What's left is the answer.
 
+<Authors names="@wingkwong"/>
+
 ```cpp
 class Solution {
 public:
@@ -63,6 +71,8 @@ public:
 ## Approach 2: Hash Map
 
 We can store the occurrence for each character. As `t` has one more character, we can count `t` first, iterate `s` to subtract the occurrences. The answer will be the one which has one occurrence.
+
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -88,7 +98,9 @@ public:
 
 ## Approach 3: Sorting
 
-We can sort both input and compare each character one by one. If there is a difference, then return  $$t[i]$$. Otherwise, return the last character of $$t$$ as the first $$len(s)$$characters are same.
+We can sort both input and compare each character one by one. If there is a difference, then return  $$t[i]$$. Otherwise, return the last character of $$t$$ as the first $$len(s)$$ characters are same.
+
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

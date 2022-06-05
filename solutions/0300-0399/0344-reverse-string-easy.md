@@ -2,15 +2,19 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/reverse-string/'
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0344 - Reverse String (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/reverse-string/
 
 ## Problem Statement
 
 Write a function that reverses a string. The input string is given as an array of characters `s`.
 
 You must do this by modifying the input array [in-place](https://en.wikipedia.org/wiki/In-place\_algorithm) with `O(1)` extra memory.
-
-
 
 **Example 1:**
 
@@ -37,6 +41,8 @@ We iterate the array to process two elements at the same time and swap them. Fir
 
 ### C++
 
+<Authors names="@wingkwong"/>
+
 ```cpp
 class Solution {
 public:
@@ -50,6 +56,8 @@ public:
 ```
 
 ### Go
+
+<Authors names="@wingkwong"/>
 
 ```go
 func reverseString(s []byte)  {
@@ -66,6 +74,8 @@ func reverseString(s []byte)  {
 
 ### C++
 
+<Authors names="@wingkwong"/>
+
 ```cpp
 class Solution {
 public:
@@ -77,6 +87,8 @@ public:
 
 ### Python3
 
+<Authors names="@wingkwong"/>
+
 ```python
 class Solution:
     def reverseString(self, s: List[str]) -> None:
@@ -84,6 +96,8 @@ class Solution:
 ```
 
 ### Rust
+
+<Authors names="@wingkwong"/>
 
 ```rust
 impl Solution {

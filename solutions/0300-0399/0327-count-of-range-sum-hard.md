@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/count-of-range-sum/'
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0327 - Count of Range Sum (Hard)
+
+## Problem Link
+
+https://leetcode.com/problems/count-of-range-sum/
 
 ## Problem Statement
 
@@ -33,6 +39,8 @@ Output: 1
 * The answer is **guaranteed** to fit in a **32-bit** integer.
 
 ## Approach 1: Ordered Set
+
+<Authors names="@wingkwong"/>
 
 ```cpp
 #include <ext/pb_ds/assoc_container.hpp>

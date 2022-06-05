@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/guess-number-higher-or-lower/
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0374 - Guess Number Higher or Lower (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/guess-number-higher-or-lower/
 
 ## Problem Statement
 
@@ -51,6 +57,8 @@ Output: 1
 ## Approach 1: Binary Search
 
 See [Binary Search](../../tutorials/basic-topics/binary-search) for basic understanding.
+
+<Authors names="@wingkwong"/>
 
 ```cpp
 /** 
