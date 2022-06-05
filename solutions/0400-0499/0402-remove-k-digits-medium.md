@@ -2,7 +2,13 @@
 description: 'Author: @DoubleSpicy | https://leetcode.com/problems/remove-k-digits/'
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0402 - Remove K Digits (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/remove-k-digits/
 
 ## Problem Statement
 
@@ -51,6 +57,8 @@ After that, if k > 0, i.e. some more digits need to be removed, we remove the tr
 The time and space complexity is $$O(N)$$.
 
 p.s. `vector<char>` is used instead of `stack<char>` because we can get iterator `vector<char>::begin()` and `vector<char>::end()` while stack doesn't have iterators. One line conversion to string could be done by `string ansStr(ans.begin()+idx, ans.end());`.
+
+<Authors names="@DoubleSpicy"/>
 
 ```cpp
 class Solution {

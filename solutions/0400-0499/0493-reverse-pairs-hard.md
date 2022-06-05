@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/reverse-pairs/'
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0493 - Reverse Pairs (Hard)
+
+## Problem Link
+
+https://leetcode.com/problems/reverse-pairs/
 
 ## Problem Statement
 
@@ -30,6 +36,8 @@ Output: 3
 * `-231 <= nums[i] <= 231 - 1`
 
 ## Approach 1: Ordered Set
+
+<Authors names="@wingkwong"/>
 
 ```cpp
 #include <ext/pb_ds/assoc_container.hpp>
@@ -85,6 +93,8 @@ template <class T>
 ```
 
 </details>
+
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

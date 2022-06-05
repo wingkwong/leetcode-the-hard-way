@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/arithmetic-slices/'
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0413 - Arithmetic Slices (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/arithmetic-slices/
 
 ## Problem Statement
 
@@ -39,6 +45,8 @@ Output: 0
 Let's say we have the input $$nums = [1,2,3,4,5,6,7]$$. Starting the third element, we know that $$[1,2,3]$$ is an arithmetic subarrays. If we process the next number $$4$$, we can have a new one $$[2,3,4]$$. Also we can add $$4$$ to previous result $$[1,2,3]$$ to form $$[1,2,3,4]$$. In total, we got $$3$$arithmetic subarrays if we end at number $$4$$. What about ending at number $$5$$? Similarly, we could have a new one $$[3,4,5]$$. It extends the previous results $$[1,2,3]$$, $$[2,3,4]$$,$$[1,2,3,4]$$ and we can add $$5$$to form $$[1,2,3,4,5]$$ and $$[2,3,4,5]$$. We can see that the number of arithmetic subarrays at $$i$$ won't be affected by the indices beyond. Hence, we can use DP to solve it.
 
 Let $$dp[i]$$ be the number of arithmetic subarrays that end at $$i$$. If it can form an arithmetic subarray, then $$dp[i] = dp[i - 1] + 1$$. 
+
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

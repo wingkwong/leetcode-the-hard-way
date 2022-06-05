@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/arranging-coins/'
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0441 - Arranging Coins (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/arranging-coins/
 
 ## Problem Statement
 
