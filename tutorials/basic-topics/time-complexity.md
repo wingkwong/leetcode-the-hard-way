@@ -12,13 +12,15 @@ import TutorialAuthors from '@site/src/components/TutorialAuthors';
 
 <TutorialAuthors names="@wingkwong"/>
 
+## Overview
+
 Time Complexity is one of the important measurements when it comes to writing an efficient solution. It estimates how much time your solution needs based on some input. If your solution is too slow, even it passes some test cases, it will still consider it as a wrong answer.
 
 The time complexity is denoted by Big O notation. Normally, $$n$$ means the input size. For example, if the input is a string $$s$$, then $$n$$ would be the length of $$s$$.
 
 <img width="840" alt="image" src="https://user-images.githubusercontent.com/35857179/171774214-25ca6ee0-a108-482a-ade1-3bb0eacf93ad.png"/>
 
-#### Estimating Time Complexity
+### Estimating Time Complexity
 
 | Input size    | Time Complexity          |
 | ------------- | ------------------------ |
@@ -30,7 +32,7 @@ The time complexity is denoted by Big O notation. Normally, $$n$$ means the inpu
 | $$n <= 10^6$$ | $$O(nlogn)$$, $$O(n)$$   |
 | $$large$$     | $$O(1)$$, $$O(logn)$$    |
 
-#### Example 1:
+### Example 1:
 
 In the following case, the time complexity depends on $$n$$. Therefore, it is $$O(n)$$.
 
@@ -40,7 +42,7 @@ for (int i = 0; i < n; i++) {
 }
 ```
 
-#### Example 2:
+### Example 2:
 
 In the following case, the time complexity depends on $$n$$ and $$m$$. Therefore, it is $$O(n*m)$$.
 
@@ -52,7 +54,7 @@ for (int i = 0; i < n; i++) {
 }
 ```
 
-#### Example 3:
+### Example 3:
 
 In the following case, the time complexity is $$O(\sqrt n)$$. You can see $$i * i <= n$$ as $$i <= \sqrt n$$.
 

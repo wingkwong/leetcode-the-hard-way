@@ -15,6 +15,8 @@ import Table from '@site/src/components/Table';
 
 <TutorialAuthors names="@wingkwong"/>
 
+## Overview
+
 A minimum spanning tree is a subset of the edges of a connected undirected graph with the minimum possible total edge weight and it does not contain any cycles.
 
 ### Kruskal's Algorithm

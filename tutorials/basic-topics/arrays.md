@@ -14,6 +14,8 @@ import Table from '@site/src/components/Table';
 
 <TutorialAuthors names="@heiheihang"/>
 
+## Overview
+
 As there is not much distinction between many data structures in the context of LeetCode. I will use the term `array` to cover the following data structures in these popular languages:
 
 * Python: List

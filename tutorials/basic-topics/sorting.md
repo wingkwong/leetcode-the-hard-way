@@ -14,6 +14,8 @@ import Table from '@site/src/components/Table';
 
 <TutorialAuthors names="@wingkwong"/>
 
+## Overview
+
 Sorting refers to rearranging elements in a specific order. The most common order is either ascending or descending. There are a lot of algorithms to sort the array with different time complexity.
 
 In C++, if define a static array of N elements of type int such as $$a[4]$$ you can sort like as below where $$N$$ is the number of elements to be sorted.

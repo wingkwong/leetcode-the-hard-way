@@ -15,6 +15,8 @@ import Table from '@site/src/components/Table';
 
 <TutorialAuthors names="@heiheihang"/>
 
+## Overview
+
 In Breadth-First Search (BFS), we explore **all** the closest nodes first before going one step further. A good example would be:
 
 > Given a binary tree, find the **closest node** from **root** that has the **value 3**

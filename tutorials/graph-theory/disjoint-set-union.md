@@ -14,6 +14,8 @@ import TutorialAuthors from '@site/src/components/TutorialAuthors';
 
 <TutorialAuthors names="@wingkwong"/>
 
+## Overview
+
 A set is a collection of elements. If two sets have no common elements, then they are called disjoint sets. For example, {1, 2} and {3, 4} are disjoint sets while {1, 2} and {1, 3} are not because they have a common element $1$.
 
 Disjoint Set Union (or DSU or Union Find) is a data structure that allows us to combine any two sets into one. Let's say we have $10$ elements and we initialise an array $root$ with a size of $10$. Here we have $10$ sets and each individual element in the set is the parent.

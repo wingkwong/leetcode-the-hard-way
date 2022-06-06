@@ -13,6 +13,8 @@ import TutorialAuthors from '@site/src/components/TutorialAuthors';
 
 <TutorialAuthors names="@heiheihang"/>
 
+## Overview
+
 We have all played a game to guess a number from 1 to 100. The optimal approach to this game is actually binary search. Binary search is the searching strategy that reduces the search space by half every iteration until you have found the target.
 
 Let's look at the most basic form of binary search:

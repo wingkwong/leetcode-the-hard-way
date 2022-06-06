@@ -15,6 +15,8 @@ import Table from '@site/src/components/Table';
 
 <TutorialAuthors names="@heiheihang"/>
 
+## Overview
+
 In Depth-First Search (DFS), we aim to finish one branch before looking at other branches.
 
 A good example of DFS is the following problem ([LeetCode Link](https://leetcode.com/problems/maximum-depth-of-binary-tree/)):

@@ -14,6 +14,8 @@ import Table from '@site/src/components/Table';
 
 <TutorialAuthors names="@wingkwong"/>
 
+## Overview
+
 Dijkstra's Algorithm is used to find the shortest paths between nodes in a graph. It can only be used when the graphs have non-negative weights for all edges.
 
 Let $$dist[u]$$ be the distance / cost / weight to reach node $$u$$. Initially, we use a priority queue to maintain the pair $$p$$ where $$p.first$$ is the node and $$p.second$$ is the cost. We set the distance from source to source is $$0$$ with $$0$$ cost and push the starting point to the priority queue.
