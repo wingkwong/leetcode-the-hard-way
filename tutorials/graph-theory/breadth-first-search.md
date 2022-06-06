@@ -10,10 +10,10 @@ keywords:
   - algorithm
 ---
 
-import Authors from '@site/src/components/Authors';
+import TutorialAuthors from '@site/src/components/TutorialAuthors';
 import Table from '@site/src/components/Table';
 
-<Authors names="@heiheihang"/>
+<TutorialAuthors names="@heiheihang"/>
 
 In Breadth-First Search (BFS), we explore **all** the closest nodes first before going one step further. A good example would be:
 

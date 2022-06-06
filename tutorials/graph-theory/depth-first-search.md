@@ -10,10 +10,10 @@ keywords:
   - algorithm
 ---
 
-import Authors from '@site/src/components/Authors';
+import TutorialAuthors from '@site/src/components/TutorialAuthors';
 import Table from '@site/src/components/Table';
 
-<Authors names="@heiheihang"/>
+<TutorialAuthors names="@heiheihang"/>
 
 In Depth-First Search (DFS), we aim to finish one branch before looking at other branches.
 

@@ -9,10 +9,10 @@ keywords:
   - algorithm
 ---
 
-import Authors from '@site/src/components/Authors';
+import TutorialAuthors from '@site/src/components/TutorialAuthors';
 import Table from '@site/src/components/Table';
 
-<Authors names="@wingkwong"/>
+<TutorialAuthors names="@wingkwong"/>
 
 Sorting refers to rearranging elements in a specific order. The most common order is either ascending or descending. There are a lot of algorithms to sort the array with different time complexity.
 

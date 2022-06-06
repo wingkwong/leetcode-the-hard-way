@@ -9,10 +9,10 @@ keywords:
   - data structure
 ---
 
-import Authors from '@site/src/components/Authors';
+import TutorialAuthors from '@site/src/components/TutorialAuthors';
 import Table from '@site/src/components/Table';
 
-<Authors names="@heiheihang"/>
+<TutorialAuthors names="@heiheihang"/>
 
 As there is not much distinction between many data structures in the context of LeetCode. I will use the term `array` to cover the following data structures in these popular languages:
 

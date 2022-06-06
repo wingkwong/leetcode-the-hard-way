@@ -9,10 +9,10 @@ keywords:
   - algorithm
 ---
 
-import Authors from '@site/src/components/Authors';
+import TutorialAuthors from '@site/src/components/TutorialAuthors';
 import Table from '@site/src/components/Table';
 
-<Authors names="@heiheihang"/>
+<TutorialAuthors names="@heiheihang"/>
 
 Hash Map provides quick lookup of certain values in $$O(1)$$ time, and it is very useful in many LeetCode questions. Let's take a look at the classic Two Sum question
 

@@ -87,8 +87,12 @@ html[data-theme='dark'] .header-github-link:before {
   );
 }
 
-.tag-wrapper {
-  margin: 10px 0px;
+.tutorial-author-wrapper .author-tag {
+  background-color: #04448c;
+  border-radius: 2px;
+  color: #e6e6e6;
+  padding: 5px;
+  margin: 5px;
 }
 
 .solution-author-wrapper {

@@ -9,10 +9,10 @@ keywords:
   - algorithm
 ---
 
-import Authors from '@site/src/components/Authors';
+import TutorialAuthors from '@site/src/components/TutorialAuthors';
 import Table from '@site/src/components/Table';
 
-<Authors names="@heiheihang"/>
+<TutorialAuthors names="@heiheihang"/>
 
 In some problems, we need to keep track of the elements in a list that satisfy certain conditions. Let's take a look at [1876 - Substrings of Size Three with Distinct Characters](https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters/).
 

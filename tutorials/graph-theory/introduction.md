@@ -9,9 +9,9 @@ keywords:
   - graphs
 ---
 
-import Authors from '@site/src/components/Authors';
+import TutorialAuthors from '@site/src/components/TutorialAuthors';
 
-<Authors names="@heiheihang"/>
+<TutorialAuthors names="@heiheihang"/>
 
 Graphs can solve a plethora of interesting problems!
 
