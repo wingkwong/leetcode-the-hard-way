@@ -158,3 +158,28 @@ export const week2Problems = [
     isSorted={false}
     key="w2"
 />
+
+export const week3Problems = [
+  {
+    "problemName": "1029 - Two City Scheduling",
+    "difficulty": "Medium",
+    "leetCodeLink": "https://leetcode.com/problems/two-city-scheduling/",
+    "solutionLink": "../solutions/1000-1099/two-city-scheduling-medium",
+    "tags": "Sorting"
+  },
+  {
+    "problemName": "0049 - Group Anagrams",
+    "difficulty": "Medium",
+    "leetCodeLink": "https://leetcode.com/problems/group-anagrams/",
+    "solutionLink": "../solutions/0000-0099/group-anagrams-medium",
+    "tags": "Sorting"
+  },
+]
+
+<Table 
+    title="Week 3 (6 June - 10 June)"
+    data={week3Problems}
+    collectionLink="https://leetcode.com/list/eofbf01i"
+    isSorted={false}
+    key="w3"
+/>

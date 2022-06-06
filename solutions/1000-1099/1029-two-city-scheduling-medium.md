@@ -1,8 +1,15 @@
 ---
 description: 'Author: @wingkwong | https://leetcode.com/problems/two-city-scheduling/'
+tags: ['Array', 'Sorting', 'Greedy']
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 1029 - Two City Scheduling (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/two-city-scheduling/
 
 ## Problem Statement
 
@@ -38,8 +45,6 @@ Input: costs = [[515,563],[451,713],[537,709],[343,819],[855,779],[457,60],[650,
 Output: 3086
 ```
 
-
-
 **Constraints:**
 
 * `2 * n == costs.length`
@@ -47,19 +52,19 @@ Output: 3086
 * `costs.length` is even.
 * `1 <= aCosti, bCosti <= 1000`
 
-## Approach 1: Greedy
+## Approach 1: Sorting + Greedy
 
-If we need to spend more money to fly to city B, then we may send it to city A, and vice versa. Therefore, we sort the input by their difference (i.e. how much a company can save) and take the first $$n$$ to city A and the rest of them to city B.
+If we need to spend more money to fly to city B, then it's better to send it to city A, and vice versa. Therefore, we sort the input by their difference (i.e. how much a company can save) and take the first $$n$$ to city A and the rest of them to city B.
 
 ```cpp
 class Solution {
 public:
     int twoCitySchedCost(vector<vector<int>>& costs) {
+        int n = costs.size(), ans = 0;
         // sort by the diff
         sort(costs.begin(), costs.end(), [&](const vector<int>& x, const vector<int>& y) {
            return x[1] - x[0] > y[1] - y[0]; 
         });
-        int n = costs.size(), ans = 0;
         for (int i = 0; i < n / 2; i++) {
             // cost to fly i-th person to city A
             ans += costs[i][0];
