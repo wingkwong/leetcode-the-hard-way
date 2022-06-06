@@ -2,7 +2,7 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/baseball-game/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0682 - Baseball Game (Easy)
 
@@ -72,7 +72,7 @@ Output: 1
 
 Just do what it says.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

@@ -4,7 +4,7 @@ description: >-
   https://leetcode.com/problems/shortest-unsorted-continuous-subarray/
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0581 - Shortest Unsorted Continuous Subarray (Medium)
 
@@ -51,7 +51,7 @@ If the input is sorted, then return $$0$$.
 
 Otherwise, we compare the input with the sorted version to check the first difference $$l$$ and the last difference $$r$$. The answer will be $$r - l + 1$$.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

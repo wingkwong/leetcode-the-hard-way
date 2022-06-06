@@ -2,7 +2,7 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/unique-paths/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0062 - Unique Paths (Medium)
 
@@ -46,7 +46,7 @@ Explanation: From the top-left corner, there are a total of 3 ways to reach the 
 
 We need to make $$n - 1 + m - 1$$ steps in total. How many ways to choose from $$m - 1$$ right steps and $$n - 1$$ down steps out of the total steps?
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

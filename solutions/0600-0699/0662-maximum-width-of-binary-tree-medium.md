@@ -4,7 +4,7 @@ description: >-
   https://leetcode.com/problems/maximum-width-of-binary-tree/
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0662 - Maximum Width of Binary Tree (Medium)
 
@@ -69,7 +69,7 @@ For each level, we calculate the width between the leftmost and rightmost nodes,
 
 For each element in the queue, we check if it has the left node or the right node. If so, we add it to the queue for further processing. We return the answer after we process all the nodes.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

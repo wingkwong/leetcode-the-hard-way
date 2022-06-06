@@ -3,7 +3,7 @@ description: 'Author: @wingkwong | https://leetcode.com/problems/graph-valid-tre
 tags: ['DSU', 'Graph', 'DFS', 'BFS']
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0261 - Graph Valid Tree (Medium)
 
@@ -48,7 +48,7 @@ Output: false
 
 If a graph is a valid tree, it must have exactly `n - 1` edges. Besides, it cannot be fully connected and contain any cycles. Therefore, we just need check if there are n - 1 edges and any cycles. We can use DSU to check if element A and element B share the same parent. If so, it means that they are united, a cycle wound be there. Hence, we can return false immediately as a valid tree cannot have a  cycle. Otherwise, we unite both element. If there is no cycle after iterating all elements, then we can simply check if there are `n - 1` edges. There are other ways such as DFS and BFS to solve it.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class dsu {

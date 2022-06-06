@@ -2,7 +2,7 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/summary-ranges/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0228 - Summary Ranges (Easy)
 
@@ -55,7 +55,7 @@ Explanation: The ranges are:
 
 We take a number as an starting point at $$i$$, then search for the next ending point $$j$$ which satisfies $$nums[j] + 1 \ne nums[j + 1]$$. If both pointer is not same, then we can push $$nums[i]$$->$$nums[j]$$ to our answer array, else we just push $$nums[i]$$.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

@@ -2,7 +2,7 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/water-and-jug-problem'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0365 - Water and Jug Problem (Medium)
 
@@ -52,7 +52,7 @@ Output: true
 
 It's obvious that it is impossible to measure if the target capacity $$z$$ is greater than the total capacity of jug $$x$$ and jug $$y$$. Otherwise, we can express it as a linear combination of $$x$$ and $$y$$ and check if $$z$$ is a linear combination of $$x$$ and $$y$$. In order to do so, $$z$$ has to be a multiple of the gcd of $$x$$ and $$y$$.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

@@ -2,7 +2,7 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/number-of-1-bits/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0191 - Number of 1 Bits (Easy)
 
@@ -53,7 +53,7 @@ Explanation: The input binary string 11111111111111111111111111111101 has a tota
 
 ### C++
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -75,7 +75,7 @@ public:
 
 ### Python 3
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```python
 class Solution:
@@ -85,7 +85,7 @@ class Solution:
 
 ### Go
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```go
 func hammingWeight(num uint32) int {
@@ -99,7 +99,7 @@ We check each parity of teach bit. Increase $$ans$$ by 1 if the bit is set.
 
 ### C++
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -142,7 +142,7 @@ n     n     n - 1  n & (n - 1)
 
 ### C++
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

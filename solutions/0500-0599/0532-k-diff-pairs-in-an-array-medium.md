@@ -2,7 +2,7 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/k-diff-pairs-in-an-array/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0532 - K-diff Pairs in an Array (Medium)
 
@@ -68,7 +68,7 @@ We iterate $$m$$ to check each $$(x, y)$$. There are two cases:
 1. If $$k$$ is $$0$$, that means $$nums[i] == nums[j]$$, so we need at least two occurrences of that number.
 2. If $$k$$is greater than $$0$$, then we need to check if the complement $$x + k$$ exists in hash map or not.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

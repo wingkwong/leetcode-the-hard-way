@@ -2,7 +2,7 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/minimum-average-difference/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 2256 - Minimum Average Difference (Medium)
 
@@ -58,7 +58,7 @@ The average difference of index 0 is: |0 / 1 - 0| = |0 - 0| = 0.
 
 For the example we can see that we need a range of sum of the input. Hence, we can calculate the prefix sum first. Then for each index, we split $$nums$$ into two parts and calculate the average difference.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

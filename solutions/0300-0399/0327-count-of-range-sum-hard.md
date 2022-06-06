@@ -2,7 +2,7 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/count-of-range-sum/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0327 - Count of Range Sum (Hard)
 
@@ -40,7 +40,7 @@ Output: 1
 
 ## Approach 1: Ordered Set
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 #include <ext/pb_ds/assoc_container.hpp>

@@ -2,7 +2,7 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/valid-perfect-square/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0367 - Valid Perfect Square (Easy)
 
@@ -38,7 +38,7 @@ Output: false
 
 Prerequisite: [Binary Search](../../tutorials/basic-topics/binary-search).
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

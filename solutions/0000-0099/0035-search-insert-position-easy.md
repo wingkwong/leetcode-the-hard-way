@@ -2,7 +2,7 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/search-insert-position/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0035 - Search Insert Position (Easy)
 
@@ -48,7 +48,7 @@ Output: 4
 
 We can use STL to get the answer. lower_bound returns the first element which has a value not less than target. We need to subtract `nums.begin()` to get the index.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -63,7 +63,7 @@ public:
 
 Prerequisite: [Binary Search](../../tutorials/basic-topics/binary-search).
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

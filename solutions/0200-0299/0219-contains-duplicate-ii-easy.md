@@ -2,7 +2,7 @@
 description: 'Author: @TBC | https://leetcode.com/problems/contains-duplicate-ii/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0219 - Contains Duplicate II (Easy)
 

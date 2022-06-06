@@ -2,7 +2,7 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/find-the-difference/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0389 - Find the Difference (Easy)
 
@@ -53,7 +53,7 @@ Let's have a quick review.
 
 Therefore, we apply XOR on each character. The same characters will cancel out each other. What's left is the answer.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -72,7 +72,7 @@ public:
 
 We can store the occurrence for each character. As `t` has one more character, we can count `t` first, iterate `s` to subtract the occurrences. The answer will be the one which has one occurrence.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -100,7 +100,7 @@ public:
 
 We can sort both input and compare each character one by one. If there is a difference, then return  $$t[i]$$. Otherwise, return the last character of $$t$$ as the first $$len(s)$$ characters are same.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

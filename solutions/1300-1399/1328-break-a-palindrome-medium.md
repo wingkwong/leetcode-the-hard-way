@@ -2,7 +2,7 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/break-a-palindrome/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 1328 - Break a Palindrome (Medium)
 
@@ -48,7 +48,7 @@ If we need to make it lexicographically smallest one, that means we should repla
 
 If there is no such position, that means all characters are `a`. In this case, the lexicographically smallest one is $$aaaaaab$$. We can simply change the last character to `b`.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

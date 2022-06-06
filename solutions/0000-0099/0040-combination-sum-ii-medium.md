@@ -2,7 +2,7 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/combination-sum-ii/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0040 - Combination Sum II (Medium)
 
@@ -52,7 +52,7 @@ Output:
 
 Similar to [0039 - Combination Sum (Medium)](combination-sum-medium), the only difference is each number can be used once in the combination. To avoid overcounting, we can simply add `i != start && candidates[i] == candidates[i - 1].`
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

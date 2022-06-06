@@ -87,17 +87,14 @@ html[data-theme='dark'] .header-github-link:before {
   );
 }
 
-.author-wrapper,
 .tag-wrapper {
   margin: 10px 0px;
 }
 
-.author-wrapper .author-tag {
-  background-color: #04448c;
-  border-radius: 2px;
-  color: #fff;
-  padding: 5px;
-  margin: 5px;
+.solution-author-wrapper {
+  text-align: center;
+  background-color: #022854;
+  color: #e6e6e6;
 }
 
 .tag-wrapper .topic-tag {

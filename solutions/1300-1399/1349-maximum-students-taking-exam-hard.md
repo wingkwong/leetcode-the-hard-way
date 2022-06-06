@@ -4,7 +4,7 @@ description: >-
   https://leetcode.com/problems/maximum-students-taking-exam/
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 1349 - Maximum Students Taking Exam (Hard)
 
@@ -83,7 +83,7 @@ For $$prevMask$$, we also need to skip some cases.
 
 Otherwise, we can calculate $$dp[row][curMask]$$ by taking the previous row with previous mask value plus the number of students who can seat on $$row$$ (i.e. number of $$1s$$ in $$curMask$$). The answer is the maximum mask of $$dp[n]$$.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

@@ -2,7 +2,7 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/counting-bits/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0338 - Counting Bits (Easy)
 
@@ -52,7 +52,7 @@ Explanation:
 
 If you've solved [0191 - Number of 1 Bits (Easy)](../0100-0199/number-of-1-bits-easy), then you can use that solution in this problem. The time complexity is $$O(n logn)$$.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -81,7 +81,7 @@ $$i & (i  - 1)$$ is a common trick to turn the rightmost set bit to $$0$$. For e
 
 The transition function is simply  $$ans[i] = ans[i & (i - 1)] + 1$$.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

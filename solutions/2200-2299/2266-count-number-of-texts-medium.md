@@ -2,7 +2,7 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/count-number-of-texts/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 2266 - Count Number of Texts (Medium)
 
@@ -61,7 +61,7 @@ Since we need to return the answer modulo 109 + 7, we return 2082876103 % (109 +
 
 Every digit except 7 and 9 has 3 keys. We can iterate the input and check previous 3 results. If it is 7 or 9, then check the previous 4 results.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

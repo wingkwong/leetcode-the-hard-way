@@ -2,7 +2,7 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/find-the-duplicate-number/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0287 - Find the Duplicate Number (Medium)
 
@@ -43,7 +43,7 @@ Output: 3
 
 We iterate each bit one by one. We calculate the expected bit count and the actual bit count. If the actual one is greater than the expected one, then it means this bit is part of the duplicate number.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

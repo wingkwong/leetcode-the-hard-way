@@ -2,7 +2,7 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/count-primes/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0204 - Count Primes
 
@@ -44,7 +44,7 @@ Output: 0
 
 See [Sieve of Eratosthenes](../../tutorials/math/number-theory/sieve-of-eratosthenes).
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

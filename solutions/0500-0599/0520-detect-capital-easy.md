@@ -2,7 +2,7 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/detect-capital/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0520 - Detect Capital (Easy)
 
@@ -43,7 +43,7 @@ Output: false
 
 Just check if it is invalid the conditions. If so, return false immediately.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

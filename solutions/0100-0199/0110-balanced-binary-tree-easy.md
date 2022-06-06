@@ -2,7 +2,7 @@
 description: 'Author: @SkollRyu | https://leetcode.com/problems/balanced-binary-tree/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0110 - Balanced Binary Tree (Easy)
 
@@ -63,7 +63,7 @@ This solution is strictly following the definition of a balanced binary tree.
 
 First, we need to set up the base case for the recursion solution. Then we check if the whole left subtree and right subtree are balanced. If so, then we check if every subtrees are balanced. This solution should give $$O(n^2)$$ time complexity
 
-<Authors names="@SkollRyu"/>
+<SolutionAuthor name="@SkollRyu"/>
 
 ```java
 class Solution {

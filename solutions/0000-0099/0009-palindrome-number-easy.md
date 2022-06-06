@@ -2,7 +2,7 @@
 description: 'Author: @tostream | https://leetcode.com/problems/palindrome-number/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0009 - Palindrome Number (Easy)
 
@@ -50,7 +50,7 @@ Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
 
 Convert the integer value to string format and compare it one by one.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```python
 class Solution:
@@ -64,7 +64,7 @@ class Solution:
 
 Calculate the reversed number.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```python
 class Solution:

@@ -2,7 +2,7 @@
 description: 'Author: @heiheihang | https://leetcode.com/problems/sum-of-left-leaves/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0404 - Sum of Left Leaves (Easy)
 
@@ -40,7 +40,7 @@ Output: 0
 
 Following the template from [DFS Guide](../../tutorials/graph-theory/depth-first-search), we iterate to each node and check if it is a left leaf. If it is a left leaf, we return that value to its parent for cumulating the sum. The trick here is to add a `is_left` parameter to the `dfs` function.
 
-<Authors names="@heiheihang"/>
+<SolutionAuthor name="@heiheihang"/>
 
 ```python
 def sumOfLeftLeaves(self, root: Optional[TreeNode]) -> int:

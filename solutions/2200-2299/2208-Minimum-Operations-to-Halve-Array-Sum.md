@@ -56,7 +56,7 @@ It can be shown that we cannot reduce the sum by at least half in less than 3 op
 
 We can keep track of the current largest number, and perform the division on the largest number while keeping track of the sum
 
-<Authors names="@heiheihang"/>
+<SolutionAuthor name="@heiheihang"/>
 
 ```py
 class Solution:

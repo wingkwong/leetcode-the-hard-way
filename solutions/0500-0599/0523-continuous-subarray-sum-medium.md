@@ -2,7 +2,7 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/continuous-subarray-sum/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0523 - Continuous Subarray Sum (Medium)
 
@@ -53,7 +53,7 @@ A continuous subarray sum can be represented as $$sum_j - sum_i$$ where $$sum_j$
 
 Therefore, we can calculate the prefix sum and store its remainder to a hash map. If we see the same remainder in the hash map, we need to make sure that the length is at least $$2$$. If so, we can return true.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

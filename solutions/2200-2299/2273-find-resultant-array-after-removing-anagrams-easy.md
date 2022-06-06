@@ -4,7 +4,7 @@ description: >-
   https://leetcode.com/problems/find-resultant-array-after-removing-anagrams/
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 2273 - Find Resultant Array After Removing Anagrams (Easy)
 
@@ -58,7 +58,7 @@ No two adjacent strings in words are anagrams of each other, so no operations ar
 
 To check if two strings are anagrams, we can sort them to see if they are same or count the frequency of each letter in both string. The first string cannot be deleted. Starting from the second one, if the current one and the previous one are not anagrams, then add the current one to answer.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

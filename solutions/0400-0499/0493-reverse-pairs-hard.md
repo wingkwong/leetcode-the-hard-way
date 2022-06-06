@@ -2,7 +2,7 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/reverse-pairs/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0493 - Reverse Pairs (Hard)
 
@@ -37,7 +37,7 @@ Output: 3
 
 ## Approach 1: Ordered Set
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 #include <ext/pb_ds/assoc_container.hpp>
@@ -94,7 +94,7 @@ template <class T>
 
 </details>
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

@@ -2,7 +2,7 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/matchsticks-to-square/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0473 - Matchsticks to Square (Medium)
 
@@ -49,7 +49,7 @@ Let $$dp[mask]$$ be the length of matchsticks we have put in the state $$mask$$.
 
 Hence, we iterate the mask. If the mask cannot be used, then skip it. Otherwise, we iterate $$n$$ times to check if $$i$$-th bit is used. If not, it means we may take this matchstick. However, we can only set this bit (take the matchstick) only if putting it won't exceed the length of side, i.e. $$dp[mask] + matchsticks[i] <= side$$. Once we choose it, then we update the new state $$(dp[mask] + matchsticks[i]) \mod side$$. We take $$mod$$ here because if we want to reset it if the prefect match for a side is found. At the end, choosing all $$5$$ matchsticks would give $$dp[(11111_2)] = 0$$.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

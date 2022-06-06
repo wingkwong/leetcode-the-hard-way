@@ -5,7 +5,7 @@ description: >-
 tags: ['Sorting']
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 1859 - Sorting the Sentence (Easy)
 
@@ -49,7 +49,7 @@ Explanation: Sort the words in s to their original positions "Me1 Myself2 and3 I
 
 ## Approach 1: Sorting with Comparator
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -97,7 +97,7 @@ public:
 
 ## Approach 2: Sorting without Comparator
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

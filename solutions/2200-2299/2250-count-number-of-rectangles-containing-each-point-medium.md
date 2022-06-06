@@ -4,7 +4,7 @@ description: >-
   https://leetcode.com/problems/count-number-of-rectangles-containing-each-point/
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 2250 - Count Number of Rectangles Containing Each Point (Medium)
 
@@ -71,7 +71,7 @@ For each $$y$$, we push the corresponding $$x$$ and then we sort all the $$x$$s 
 
 Then iterate each point, and iterate from $$p_y$$ to $$max_y$$to check how many points are greater than $$p_x$$.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

@@ -4,7 +4,7 @@ description: >-
   https://leetcode.com/problems/percentage-of-letter-in-string
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 2278 - Percentage of Letter in String (Easy)
 
@@ -42,7 +42,7 @@ The percentage of characters in s that equal the letter 'k' is 0%, so we return 
 
 ## Approach 1: Counting
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

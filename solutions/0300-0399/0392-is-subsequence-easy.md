@@ -2,7 +2,7 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/is-subsequence/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0392 - Is Subsequence (Easy)
 
@@ -42,7 +42,7 @@ Output: false
 
 We use two pointers $$i$$ and $$j$$ to track the index in $$s$$ and $$t$$ respectively. If $$s[i] == t[j]$$, then we set $$i := i + 1$$ and $$j := j + 1$$ and then check the next character in both string. If they are not same, we move $$j$$ to the next character in $$t$$ while keeping $$i$$ in $$s$$. At the end, pointer $$i$$ would be $$n$$ if $$s$$ is a subsequence of $$t$$.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -65,7 +65,7 @@ public:
 
 We can directly use [0072 - Edit Distance (Hard)](../0000-0099/edit-distance-hard) solution to solve this easy problem since the constraints are not large. Edit distance here means the minimum number of operations required to covert $$s$$ to $$t$$. We just need to check if it is equal to $$m - n$$.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -118,7 +118,7 @@ Then we initialise $$bound$$ which is the starting index. For each character in 
 
 For example, let's say $$s = abc$$ and $$t = aaaabbcde$$. The first character is $$a$$ and we got $$bound = 0$$ and $$j = 0$$. Then we update the bound to $$j + 1$$. Then for the second character $$b$$, we got $$bound = 1$$ and $$j = 4$$. Similarly, we got $$bound = 5$$ and $$j = 6$$ for the last character.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -146,7 +146,7 @@ public:
 
 If $$s$$ is a subsequence of $$t$$, then it means the Longest Common Subsequence (LCS) would be $$n$$. We can directly use [1143 - Longest Common Subsequence (Medium)](../1100-1199/longest-common-subsequence-medium) solution.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

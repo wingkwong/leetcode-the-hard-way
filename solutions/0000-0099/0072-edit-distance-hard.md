@@ -2,7 +2,7 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/edit-distance/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0072 - Edit Distance (Hard)
 
@@ -73,7 +73,7 @@ Time Complexity: $O(m * n)$
 
 Space Complexity: $O(m * n)$
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

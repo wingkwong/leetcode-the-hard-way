@@ -2,7 +2,7 @@
 description: 'Author: @heiheihang | https://leetcode.com/problems/move-zeroes/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0283 - Move Zeroes (Easy)
 
@@ -45,7 +45,7 @@ When we see a non-zero element, we put it in the slot pointed by `left_pointer`,
 
 At the end, we need to set all the unused slots of `nums` to zero.
 
-<Authors names="@heiheihang"/>
+<SolutionAuthor name="@heiheihang"/>
 
 ```python
 def moveZeroes(self, nums: List[int]) -> None:

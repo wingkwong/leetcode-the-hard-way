@@ -3,7 +3,7 @@ description: 'Author: @wingkwong | https://leetcode.com/problems/group-anagrams/
 tags: ['Array', 'Hash Table', 'String', 'Sorting']
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0049 - Group Anagrams (Medium)
 
@@ -50,7 +50,7 @@ To check if $$s$$ and $$t$$ are anagrams, one of the ways is to sort them both a
 
 We can use a hash map to store the sorted string as a key, and push the original value to an array. At the end, we iterate the hash map and push the corresponding array to our final answer.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

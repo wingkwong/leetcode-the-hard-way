@@ -2,7 +2,7 @@
 description: 'Author: @DoubleSpicy | https://leetcode.com/problems/add-binary/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0067 - Add Binary (easy)
 
@@ -48,7 +48,7 @@ For each digit, start from least significant ones, calculate the sum of digits a
 
 The annoying part of this problem is taking care about index out-of-bound.
 
-<Authors names="@DoubleSpicy"/>
+<SolutionAuthor name="@DoubleSpicy"/>
 
 ```cpp
 class Solution {

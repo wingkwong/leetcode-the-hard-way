@@ -5,7 +5,7 @@ description: >-
 tags: ['Sorting']
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 1356 - Sort Integers by The Number of 1 Bits (Easy)
 
@@ -46,7 +46,7 @@ Explantion: All integers have 1 bit in the binary representation, you should jus
 
 ## Approach 1: Sorting + __builtin_popcount
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

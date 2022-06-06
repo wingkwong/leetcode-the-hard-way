@@ -4,7 +4,7 @@ description: >-
   https://leetcode.com/problems/maximum-score-of-a-node-sequence/
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 2242 - Maximum Score of a Node Sequence (Hard)
 
@@ -69,7 +69,7 @@ There are no valid node sequences of length 4, so we return -1.
 
 The key idea is to find the best three neighbours for each node. We need to keep the order based on the scores. We can use priority queue but in C++ it is not convenient to iterate it at the end, instead we use set as it is sorted internally. After that, we just need to iterate them to find out all the combinations. However, we need to check if they are duplicate before updating the answer.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

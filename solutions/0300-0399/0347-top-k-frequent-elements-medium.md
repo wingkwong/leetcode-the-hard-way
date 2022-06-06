@@ -2,7 +2,7 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/top-k-frequent-elements/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0347 - Top K Frequent Elements (Medium)
 
@@ -44,7 +44,7 @@ When you need to solve something started with "Top K ...", priority queue may po
 
 We use priority queue to sort the input by their frequency and pop the top element when the queue size is greater than $$k$$. What's left in the queue would be the top $$k$$ frequent elements and we just list them out in a reverse order.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

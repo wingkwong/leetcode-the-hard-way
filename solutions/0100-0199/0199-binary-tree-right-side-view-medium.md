@@ -2,7 +2,7 @@
 description: 'Author: @TBC | https://leetcode.com/problems/binary-tree-right-side-view/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0199 - Binary Tree Right Side View (Medium)
 

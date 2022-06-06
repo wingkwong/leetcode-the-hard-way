@@ -2,7 +2,7 @@
 description: 'Author: @heiheihang | https://leetcode.com/problems/next-greater-element-i/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0469 - Next Greater Element I (Easy)
 
@@ -58,7 +58,7 @@ Then we need to find the _next greater element_ of all elements in `nums2`. This
 
 After processing `nums2`, we need to assign `-1` to the elements still in the stack (no _next greater element_) with the help of `hash_map`.
 
-<Authors names="@heiheihang"/>
+<SolutionAuthor name="@heiheihang"/>
 
 ```python
 def nextGreaterElement(self, nums1: List[int], nums2: List[int]) -> List[int]:

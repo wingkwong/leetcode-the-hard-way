@@ -4,7 +4,7 @@ description: >-
   https://leetcode.com/problems/increasing-triplet-subsequence/
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0334 - Increasing Triplet Subsequence (Medium)
 
@@ -52,7 +52,7 @@ Explanation: The triplet (3, 4, 5) is valid because nums[3] == 0 < nums[4] == 4 
 
 Find the first two smallest numbers. If there is a number greater than them, then we can return true. Otherwise, return false at the end.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

@@ -4,7 +4,7 @@ description: >-
   https://leetcode.com/problems/number-of-flowers-in-full-bloom/
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 2251 - Number of Flowers in Full Bloom (Hard)
 
@@ -50,7 +50,7 @@ For each person, we return the number of flowers in full bloom during their arri
 
 ## Approach 1: Line Sweep
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

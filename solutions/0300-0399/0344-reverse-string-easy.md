@@ -2,7 +2,7 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/reverse-string/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0344 - Reverse String (Easy)
 
@@ -41,7 +41,7 @@ We iterate the array to process two elements at the same time and swap them. Fir
 
 ### C++
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -57,7 +57,7 @@ public:
 
 ### Go
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```go
 func reverseString(s []byte)  {
@@ -74,7 +74,7 @@ func reverseString(s []byte)  {
 
 ### C++
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -87,7 +87,7 @@ public:
 
 ### Python3
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```python
 class Solution:
@@ -97,7 +97,7 @@ class Solution:
 
 ### Rust
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```rust
 impl Solution {

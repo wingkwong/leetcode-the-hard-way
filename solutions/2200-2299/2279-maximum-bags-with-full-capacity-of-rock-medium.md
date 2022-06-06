@@ -4,7 +4,7 @@ description: >-
   https://leetcode.com/problems/maximum-bags-with-full-capacity-of-rocks
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 2279 - Maximum Bags With Full Capacity of Rocks (Medium)
 
@@ -56,7 +56,7 @@ Note that we did not use all of the additional rocks.
 
 ## Approach 1: Greedy
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

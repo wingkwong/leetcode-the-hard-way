@@ -4,7 +4,7 @@ description: >-
   https://leetcode.com/problems/count-all-valid-pickup-and-delivery-options/
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 1359 - Count All Valid Pickup and Delivery Options (Hard)
 
@@ -57,7 +57,7 @@ Then we need to think how to put $$D_i$$in some possible places. We know that$$D
 
 Hence, the answer is $$N! * \sum_{i=1}^{N} (2 * i - 1)$$. Remember to take $$MOD$$ during the calculation.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

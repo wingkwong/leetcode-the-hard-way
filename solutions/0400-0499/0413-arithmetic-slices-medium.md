@@ -2,7 +2,7 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/arithmetic-slices/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0413 - Arithmetic Slices (Medium)
 
@@ -46,7 +46,7 @@ Let's say we have the input $$nums = [1,2,3,4,5,6,7]$$. Starting the third eleme
 
 Let $$dp[i]$$ be the number of arithmetic subarrays that end at $$i$$. If it can form an arithmetic subarray, then $$dp[i] = dp[i - 1] + 1$$. 
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

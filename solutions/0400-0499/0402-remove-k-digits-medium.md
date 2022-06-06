@@ -2,7 +2,7 @@
 description: 'Author: @DoubleSpicy | https://leetcode.com/problems/remove-k-digits/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0402 - Remove K Digits (Medium)
 
@@ -58,7 +58,7 @@ The time and space complexity is $$O(N)$$.
 
 p.s. `vector<char>` is used instead of `stack<char>` because we can get iterator `vector<char>::begin()` and `vector<char>::end()` while stack doesn't have iterators. One line conversion to string could be done by `string ansStr(ans.begin()+idx, ans.end());`.
 
-<Authors names="@DoubleSpicy"/>
+<SolutionAuthor name="@DoubleSpicy"/>
 
 ```cpp
 class Solution {

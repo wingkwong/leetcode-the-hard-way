@@ -4,7 +4,7 @@ description: >-
   https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 1365 - How Many Numbers Are Smaller Than the Current Number (Easy)
 
@@ -52,7 +52,7 @@ Output: [0,0,0,0]
 
 ## Approach 1: Brute Force
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -81,7 +81,7 @@ public:
 
 ## Approach 2: Sorting
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -118,7 +118,7 @@ public:
 
 ## Approach 3: Sorting + Lower Bound
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

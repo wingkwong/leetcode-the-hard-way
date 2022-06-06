@@ -2,7 +2,7 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/total-appeal-of-a-string/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 2262 - Total Appeal of A String (Hard)
 
@@ -56,7 +56,7 @@ The total sum is 4 + 6 + 6 + 4 = 20.
 
 Observation: The appeal of all substrings ending at $$i$$-th is that ending at $$i - 1$$th  plus the number of substrings that don't contain $$s[i]$$, which can be calculated by tracking the last occurrence.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

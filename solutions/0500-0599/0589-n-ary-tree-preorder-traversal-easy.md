@@ -4,7 +4,7 @@ description: >-
   https://leetcode.com/problems/n-ary-tree-preorder-traversal/
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0589 - N-ary Tree Preorder Traversal (Easy)
 
@@ -46,7 +46,7 @@ Output: [1,2,3,6,7,11,14,4,8,12,5,9,13,10]
 
 Straightforward preorder traversal.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

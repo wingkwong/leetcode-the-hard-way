@@ -2,7 +2,7 @@
 description: 'Author: @heiheihang | https://leetcode.com/problems/valid-anagram/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0242 - Valid Anagram (Easy)
 

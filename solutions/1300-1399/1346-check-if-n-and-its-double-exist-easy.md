@@ -4,7 +4,7 @@ description: >-
   https://leetcode.com/problems/check-if-n-and-its-double-exist/
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 1346 - Check If N and Its Double Exist (Easy)
 
@@ -57,7 +57,7 @@ Prerequisite: [Binary Search](../../tutorials/basic-topics/binary-search)
 
 First we sort the input, and we iterate each element and look for its double using binary search. For the binary search function, we can use the same solution as [0704 - Binary Search (Easy)](../0700-0799/binary-search-easy).
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

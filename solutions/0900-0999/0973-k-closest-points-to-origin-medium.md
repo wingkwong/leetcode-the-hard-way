@@ -2,7 +2,7 @@
 description: 'Author: @wingkwong,@heiheihang | https://leetcode.com/problems/k-closest-points-to-origin/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0973 - K Closest Points to Origin (Medium)
 
@@ -47,7 +47,7 @@ Explanation: The answer [[-2,4],[3,3]] would also be accepted.
 
 ## Approach 1: nth_element
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -72,7 +72,7 @@ public:
 
 ## Approach 2: Heap (Python)
 
-<Authors names="@heiheihang"/>
+<SolutionAuthor name="@heiheihang"/>
 
 We can use a max heap of size `k` to store the `k` points closest to the origin. 
 

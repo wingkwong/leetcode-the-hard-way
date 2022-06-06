@@ -2,7 +2,7 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/compare-version-numbers/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0165 - Compare Version Numbers (Medium)
 
@@ -59,7 +59,7 @@ Explanation: version1's revision 0 is "0", while version2's revision 0 is "1". 0
 
 We split the input strings by "." and store the digit into a list. Then we pad 0s to the shortest list to make the length for both list equal. Then we can compare both list. In Python3, $$cmp(a, b)$$ is gone so the equivalent for it is $$(a > b) - (a < b)$$.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```python
 class Solution:

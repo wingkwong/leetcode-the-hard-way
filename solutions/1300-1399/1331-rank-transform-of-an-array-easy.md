@@ -5,7 +5,7 @@ description: >-
 tags: ['Sorting']
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 1331 - Rank Transform of an Array (Easy)
 
@@ -53,7 +53,7 @@ Output: [5,3,4,2,8,6,7,1,3]
 
 ## Approach 1: Sorting with Hash Map
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -77,7 +77,7 @@ public:
 
 ## Approach 2: Sorting without Hash Map
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

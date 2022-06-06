@@ -2,7 +2,7 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/shortest-palindrome/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0214 - Shortest Palindrome (Hard)
 
@@ -39,7 +39,7 @@ Output: "dcbabcd"
 
 We first concatenate the search pattern and given string with a character that is not in either strings, says $$ $ $$. Hence, we have $$k = s + $ + t$$. Then We built $$Z$$ and iterate $$k$$. If there is a $$i$$ that can satisfy $$Z[i] == n - i$$, then the answer would be $$t'$$+ $$s$$ where $$t'$$ is the first $$n - i$$ characters of $$s$$.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
