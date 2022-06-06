@@ -12,7 +12,11 @@ description: 'Author: @<YOUR_ALIAS>'
 hide_table_of_contents: true
 ---
 
-> This tutorial is written by @<YOUR_ALIAS>
+import TutorialAuthors from '@site/src/components/TutorialAuthors';
+
+<TutorialAuthors names="@<YOUR_ALIAS>"/>
+
+## Overview
 
 // Your content goes here
 ```
