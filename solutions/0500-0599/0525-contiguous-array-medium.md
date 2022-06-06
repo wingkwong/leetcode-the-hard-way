@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/contiguous-array/'
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0525 - Contiguous Array (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/contiguous-array/
 
 ## Problem Statement
 
@@ -31,11 +37,13 @@ Explanation: [0, 1] (or [1, 0]) is a longest contiguous subarray with equal numb
 
 ## Approach 1: Prefix Sum + Hash Map
 
-Since the number only contain either 0 and 1, we can check the balance and calculate the length. Let $$pre$$be the sum with initial value 0. If $$nums[i]$$is 1, then $$sum := sum + 1$$. If $$nums[i]$$is 0, then $$sum := sum - 1$$. We iterate $$nums$$ to calculate $$pre$$. If we get the same $$pre$$ at some point, then it means we have one possible answer.
+Since the number only contain either 0 and 1, we can check the balance and calculate the length. Let $$pre$$ be the sum with initial value 0. If $$nums[i]$$ is 1, then $$sum := sum + 1$$. If $$nums[i]$$ is 0, then $$sum := sum - 1$$. We iterate $$nums$$ to calculate $$pre$$. If we get the same $$pre$$ at some point, then it means we have one possible answer.
 
-For example, given the input $$[0, 0, 0, 1, 1, 1]$$, $$pre$$ would be 0 -> -1 -> -2 -> -3 -> -2 -> -1 -> 0. We can see that there are three contiguous subarrays with an equal number of 0 and 1, which are $$nums[0..5], nums[1..4]$$and $$nums[2..3]$$. The longest contiguous subarray with an equal number of 0 and 1 is $$nums[0..5]$$which has the length of $$5 - 0 + 1 = 6$$.
+For example, given the input $$[0, 0, 0, 1, 1, 1]$$, $$pre$$ would be 0 -> -1 -> -2 -> -3 -> -2 -> -1 -> 0. We can see that there are three contiguous subarrays with an equal number of 0 and 1, which are $$nums[0..5], nums[1..4]$$ and $$nums[2..3]$$. The longest contiguous subarray with an equal number of 0 and 1 is $$nums[0..5]$$ which has the length of $$5 - 0 + 1 = 6$$.
 
 Therefore, the approach is to calculate the prefix sum and put it into a hash map. If the prefix sum can be found, then the we can compare the length with the current maximum answer to see if we update it or not. This solution gives both $$O(n)$$time complexity and space complexity.
+
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

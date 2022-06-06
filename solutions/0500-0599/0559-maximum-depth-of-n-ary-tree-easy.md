@@ -4,9 +4,15 @@ description: >-
   https://leetcode.com/problems/maximum-depth-of-n-ary-tree/
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0559 - Maximum Depth of N-ary Tree (Easy)
 
-## Statement
+## Problem Link
+
+https://leetcode.com/problems/maximum-depth-of-n-ary-tree/
+
+## Problem Statement
 
 Given a n-ary tree, find its maximum depth.
 
@@ -42,6 +48,8 @@ Output: 5
 We should use the DFS template from [DFS Guide](../../tutorials/graph-theory/depth-first-search). Instead of looking at the left and right child, we look at all children in an _n-ary tree._ We find the deepest child and set it to the current `largestDepth`, then we add one for counting the depth of the current level.
 
 _Note: A **binary tree** means each node at most has **2 children** (binary means 2). An **n-ary** tree means each node at most has **n children**_
+
+<Authors names="@heiheihang"/>
 
 ```python
 def maxDepth(self, root: 'Node') -> int:

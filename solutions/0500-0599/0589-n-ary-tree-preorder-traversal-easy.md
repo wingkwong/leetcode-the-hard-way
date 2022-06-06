@@ -4,15 +4,19 @@ description: >-
   https://leetcode.com/problems/n-ary-tree-preorder-traversal/
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0589 - N-ary Tree Preorder Traversal (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/n-ary-tree-preorder-traversal/
 
 ## Problem Statement
 
 Given the `root` of an n-ary tree, return _the preorder traversal of its nodes' values_.
 
 Nary-Tree input serialization is represented in their level order traversal. Each group of children is separated by the null value (See examples)
-
-
 
 **Example 1:**
 
@@ -41,6 +45,8 @@ Output: [1,2,3,6,7,11,14,4,8,12,5,9,13,10]
 ## Approach 1: DFS
 
 Straightforward preorder traversal.
+
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

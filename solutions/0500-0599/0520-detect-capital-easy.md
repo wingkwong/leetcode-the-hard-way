@@ -2,7 +2,15 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/detect-capital/'
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0520 - Detect Capital (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/detect-capital/
+
+## Problem Statement
 
 We define the usage of capitals in a word to be right when one of the following cases holds:
 
@@ -34,6 +42,8 @@ Output: false
 ## Approach 1:
 
 Just check if it is invalid the conditions. If so, return false immediately.
+
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {
