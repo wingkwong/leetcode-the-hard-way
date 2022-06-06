@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/valid-palindrome-ii/'
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0680 - Valid Palindrome II (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/valid-palindrome-ii
 
 ## Problem Statement
 
@@ -38,6 +44,8 @@ Output: false
 ## Approach 1: Brute Force
 
 To check if a string is a palindrome, we can use two pointers to compare the character at pointer $$i$$ and that at pointer $$j$$. If they are not same, then it means it is not a palindrome. However, this problem allows us to delete at most one character from it. Therefore, we do the same way. If there is a difference, that means we can potentially delete the one at pointer $$i$$ or the one at pointer $$j$$. We try both case to see if it is possible to form a palindrome.
+
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/baseball-game/'
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0682 - Baseball Game (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/baseball-game/
 
 ## Problem Statement
 
@@ -16,8 +22,6 @@ At the beginning of the game, you start with an empty record. You are given a li
 4. `"C"` - Invalidate the previous score, removing it from the record. It is guaranteed there will always be a previous score.
 
 Return _the sum of all the scores on the record_.
-
-
 
 **Example 1:**
 
@@ -67,6 +71,8 @@ Output: 1
 ## Approach 1: Simulation
 
 Just do what it says.
+
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {

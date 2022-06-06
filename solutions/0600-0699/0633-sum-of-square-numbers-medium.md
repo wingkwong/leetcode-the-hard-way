@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/sum-of-square-numbers/'
 ---
 
+import Authors from '@site/src/components/Authors';
+
 # 0633 - Sum of Square Numbers (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/sum-of-square-numbers/
 
 ## Problem Statement
 
@@ -34,6 +40,8 @@ Prerequisite: [Binary Search](../../tutorials/basic-topics/binary-search)
 We can rewrite $$a ^ 2 + b ^ 2 = c$$ to $$b ^ 2 = c - a ^ 2$$ so that we can fix $$a$$ and then check if $$c - a ^ 2$$ is a perfect square. If so, we return `true`. If we couldn't find one at the end, return `false`.
 
 To determine if `x` is a perfect square, we can use binary search to look for `[0, x]`. If $$x$$ is greater 2, the range is actually `[2, x / 2]`. In case you have solved [0367 - Valid Perfect Square (Easy)](../0300-0399/valid-perfect-square-easy), we can use the same solution directly.
+
+<Authors names="@wingkwong"/>
 
 ```cpp
 class Solution {
