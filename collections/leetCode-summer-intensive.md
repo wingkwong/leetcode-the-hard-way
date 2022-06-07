@@ -174,6 +174,20 @@ export const week3Problems = [
     "solutionLink": "../solutions/0000-0099/group-anagrams-medium",
     "tags": "Sorting"
   },
+  {
+    "problemName": "0658 - Find K Closest Elements",
+    "difficulty": "Medium",
+    "leetCodeLink": "https://leetcode.com/problems/find-k-closest-elements/",
+    "solutionLink": "",
+    "tags": "Sorting"
+  },
+  {
+    "problemName": "0791 - Custom Sort String",
+    "difficulty": "Medium",
+    "leetCodeLink": "https://leetcode.com/problems/custom-sort-string/",
+    "solutionLink": "",
+    "tags": "Sorting"
+  },
 ]
 
 <Table 
