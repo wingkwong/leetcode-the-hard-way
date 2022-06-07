@@ -17,12 +17,16 @@ export default function Table({title, collectionLink, isSorted = true, data}) {
           </a>
         </td>
         <td>{d.difficulty}</td>
-        <td>
-          {
+        <td style={{textAlign: 'center'}}>
+        {
             d.solutionLink && 
             <a href={d.solutionLink} target="_blank">
               View Solutions
             </a>
+          }
+          {
+            !d.solutionLink && 
+            <span>N/A</span>
           }
         </td>
         {
