@@ -16,7 +16,7 @@ import TutorialAuthors from '@site/src/components/TutorialAuthors';
 
 Binary uses only $0$ and $1$ to represent a number in a base-2 number system. The series of 0 and 1 are called bits. If the bit is $1$, then this bit is set. We read binary number from right to left. For example, the binary representation of number $9$ is $1001_2$ which can be calculated by summing up all the set bit: $2^3 + 2^0 = 9_{10}$. Bit Manipulation utilises different bitwise operations to manipulate bits.
 
-## Basic Operators
+## Bitwise Operators
 
 | X | Y | X & Y | X \| Y | X ^ Y | ~ X |
 |---|---|---|---|---|---|
