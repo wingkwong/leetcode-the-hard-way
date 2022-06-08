@@ -188,6 +188,20 @@ export const week3Problems = [
     "solutionLink": "",
     "tags": "Sorting"
   },
+  {
+    "problemName": "0067 - Add Binary",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/add-binary/",
+    "solutionLink": "../solutions/0000-0099/add-binary-easy",
+    "tags": "Bit Manipulation"
+  },
+  {
+    "problemName": "0231 - Power of Two",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/power-of-two/",
+    "solutionLink": "",
+    "tags": "Bit Manipulation"
+  },
 ]
 
 <Table 
