@@ -46,9 +46,64 @@ For example, $0010_2$ ^ $0011_2 = 0001_2$ because the first bit got $0$ and $1$ 
 #### XOR Properties
 
 - X ^ 0 = X
-- X ^ X = X
+- X ^ X = 0
 - X ^ Y = Y ^ X (Commutativity)
 - (X ^ Y) ^ Z = X ^ (Y ^ Z) (Associativity)
+
+#### Related Problems
+
+#### [0268 - Missing Number](https://leetcode.com/problems/missing-number/)
+
+Given the fact that we know $n$ distinct numbers in the range $[0, n]$, we can find the missing number using the above XOR properties. 
+
+For example, let's say the input is $[0, 1, 3]$ and we know the the missing number is $2$. We can compare the index (0, 1, 2) and the value (0, 1, 3) and write $3$ ^ $(0$ ^ $0)$ ^ $(1$ ^ $1)$ ^ $(2$ ^ $3)$. 
+
+Based on property #2, we know $0$ ^ $0$ and $(1$ ^ $1)$ would be $0$.
+
+Based on property #1, we know that $0$ ^ $1$ would be $1$. Therefore, we got $3$ ^  $(2$ ^ $3)$. 
+
+Based on property #4, we can rewrite as $2$ ^ $(3$ ^ $3)$ and use property #2 again to get $2$ ^ $0$. 
+
+Based on property #1, we have our final answer which is $2$.
+
+```cpp
+class Solution {
+public:
+    int missingNumber(vector<int>& nums) {
+        // index = 0 1 2
+        // value = 0 1 3
+        // n ^ (0 ^ 0) ^ (1 ^ 1) ^ (2 ^ 3)
+        // 3 ^ 0 ^ 0 ^ 2 ^ 3
+        // 0 ^ 0 ^ 2 ^ 3 ^ 3
+        // 2 ^ 0
+        // 2
+        int n = nums.size(), ans = n;
+        for(int i = 0; i < n; i++) ans ^= (i ^ nums[i]);
+        return ans;
+    }
+};
+```
+
+#### [0136 - Single Number](https://leetcode.com/problems/single-number/)
+
+As every element appears twice except for one. We can use property #2 to make all elements which appear twice become $0$. At the end, there would be $0$ and that element which appears once. Then we use property #1 to get the final answer.
+
+```cpp
+class Solution {
+public:
+    int singleNumber(vector<int>& nums) {
+        // nums: [4,1,2,1,2]
+        // 0 ^ 4 ^ 1 ^ 2 ^ 1 ^ 2
+        // 0 ^ (1 ^ 1) ^ (2 ^ 2) ^ 4
+        // 0 ^ 0 ^ 0 ^ 4
+        // 4
+        int ans = 0;
+        for(auto x : nums) ans ^= x;
+        return ans;
+    }
+};
+```
+
 
 ### NOT (~)
 
@@ -67,8 +122,3 @@ And you may find that $1 << n$ is actually $2 ^ n$.
 ### Right-Shift (>>)
 
 $>>$ shifts the bits to the right. For example $3_{10}$ ($0011_2$) $>> 1$ would become $1$ ($0010_2$).
-
-## Basic Usages
-
-<!-- TODO: add basic usages -->
-
