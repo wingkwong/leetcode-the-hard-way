@@ -1,7 +1,7 @@
 ---
 title: 'Bit Manipulation'
 description: 'Bit Manipulation utilises different bitwise operations to manipulate bits'
-hide_table_of_contents: true
+hide_table_of_contents: false
 keywords:
   - leetcode
   - tutorial
