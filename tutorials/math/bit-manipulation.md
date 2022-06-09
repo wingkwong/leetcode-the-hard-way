@@ -113,9 +113,7 @@ For example, $0010_2$ ^ $0011_2 = 0001_2$ because the first bit got $0$ and $1$ 
 - X ^ Y = Y ^ X (Commutativity)
 - (X ^ Y) ^ Z = X ^ (Y ^ Z) (Associativity)
 
-#### Related Problems
-
-#### [0268 - Missing Number](https://leetcode.com/problems/missing-number/)
+#### Example #1: [0268 - Missing Number](https://leetcode.com/problems/missing-number/)
 
 Given the fact that we know $n$ distinct numbers in the range $[0, n]$, we can find the missing number using the above XOR properties. 
 
@@ -147,7 +145,7 @@ public:
 };
 ```
 
-#### [0136 - Single Number](https://leetcode.com/problems/single-number/)
+#### Example #2: [0136 - Single Number](https://leetcode.com/problems/single-number/)
 
 As every element appears twice except for one. We can use property #2 to make all elements which appear twice become $0$. At the end, there would be $0$ and that element which appears once. Then we use property #1 to get the final answer.
 
@@ -208,3 +206,17 @@ public:
 ### Right-Shift (>>)
 
 $>>$ shifts the bits to the right. For example $3_{10}$ ($0011_2$) $>> 1$ would become $1$ ($0010_2$).
+
+#### Example: Check the bits one by one
+
+```cpp
+while (n > 0) {
+    int bit = n & 1;
+    // do something with bit
+    // ...
+
+    // shift bits to the right
+    // which is same as n /= 2
+    n >>= 1;
+}
+```
