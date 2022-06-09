@@ -146,8 +146,8 @@ const config = {
       },
       // https://docusaurus.io/docs/search#using-algolia-docsearch
       algolia: {
-        appId: '3476Z84HTB',
-        apiKey: '55a35f603f206084ba60cc05f22d30a2',
+        appId: 'TSP4XHNA9P',
+        apiKey: '13aa27443cab36b7f20f3a59617607a6',
         indexName: 'leetcodethehardway',
         contextualSearch: false
       },
