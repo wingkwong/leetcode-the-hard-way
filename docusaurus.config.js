@@ -148,7 +148,7 @@ const config = {
       algolia: {
         appId: 'TSP4XHNA9P',
         apiKey: '13aa27443cab36b7f20f3a59617607a6',
-        indexName: 'leetcodethehardway',
+        indexName: 'leetcode-the-hard-way',
         contextualSearch: false
       },
     }),

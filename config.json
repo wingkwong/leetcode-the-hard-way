@@ -1,5 +1,5 @@
 {
-    "index_name": "leetcodethehardway",
+    "index_name": "leetcode-the-hard-way",
     "start_urls": ["https://wingkwong.github.io/leetcode-the-hard-way"],
     "selectors": {
       "lvl0": "",
