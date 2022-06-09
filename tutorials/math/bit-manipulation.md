@@ -206,6 +206,20 @@ public:
 
 For example, if we apply NOT on $~0010_2$, then the resulting value is $1101_2$.
 
+The below code snippets are actually equivalent
+
+```cpp
+for (int i = n; i >= 0; i--) {
+    // i = n, n - 1, n - 2, ..., 2, 1, 0
+}
+```
+
+```cpp
+for (int i = n; ~i; i--) {
+    // i = n, n - 1, n - 2, ..., 2, 1, 0
+}
+```
+
 ### Left-Shift (<<)
 
 $<<$ shifts the bits to the left. For example, $1 << 1 = 2$ because we shift the $1$ ($0001_2$) to the left to become $2$ ($0010_2$). 
