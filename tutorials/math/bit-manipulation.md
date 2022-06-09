@@ -33,7 +33,7 @@ For example, $0010_2 \& 0011_2 = 0010_2$ because only the second bits from the r
 
 #### Usage #1: Check if the rightmost bit is set
 
-Let's say $n$ is $5_{10}$ which is $0101_2$. If we execute $n \& 1$ ($0101_2 \& 0001_2$), the result is $0001_2$ because only the rightmost bit is both 1 and other bits would return 0.
+Let's say $n$ is $5_{10}$ which is $0101_2$. If we execute $n \& 1$, i.e. $0101_2 \& 0001_2$, the result is $0001_2$ because only the rightmost bits are both 1 and other bits would return 0.
 
 #### Usage #2: Check if the i-th bit is set
 
@@ -94,11 +94,46 @@ public:
 };
 ```
 
-### OR (|)
+### OR ($\|$)
 
-$\&$ takes two bit integers to compare. If the bits are either $1$, then the resulting bit is $1$, else $0$. 
+$\|$ takes two bit integers to compare. If either bits are $1$, then the resulting bit is $1$, else $0$. 
 
 For example, $0010_2 | 0011_2 = 0011_2$ because only the first and the second bits from the right are $1$ in either value.
+
+#### Usage #1: Set the rightmost bit
+
+Let's say $n$ is $4_{10}$ which is $0100_2$. If we execute $n \| 1$, i.e. $0100_2 \| 0001_2$, the result is $0101_2$ because $0001_2$ would turn the rightmost bit of $0100_2$ to $1$ since that bit is set.
+
+#### Usage #2: Set the i-th bit
+
+Let's say $n$ is $4_{10}$ which is $0100_2$. How to set other bits? Similar to above example, we can use left shift operator (which will be discussed below), i.e. $n \| (1 << i)$ where $n$ is the i-th bit to be set.
+
+#### Example: [0421 -  Maximum XOR of Two Numbers in an Array](https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/)
+
+```cpp
+class Solution {
+public:
+    int findMaximumXOR(vector<int>& nums) {
+        int ans = 0, mask = 0;
+        for(int i = 31; i >= 0; i--){
+           unordered_set<int> s;
+           // set i-th in mask
+            mask |= (1 << i);
+            for (auto x : nums) s.insert(mask & x);
+            // set i-th in ans
+            int best = ans | (1 << i);
+            for(auto pref : s){
+                if(s.find(pref ^ best) != s.end()){
+                    ans = best;
+                    break;
+                }
+            }
+            
+        }
+        return ans;
+    }
+};
+```
 
 ### XOR (^)
 
