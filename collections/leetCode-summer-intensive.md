@@ -199,7 +199,7 @@ export const week3Problems = [
     "problemName": "0231 - Power of Two",
     "difficulty": "Easy",
     "leetCodeLink": "https://leetcode.com/problems/power-of-two/",
-    "solutionLink": "",
+    "solutionLink": "../solutions/0200-0299/power-of-two-easy",
     "tags": "Bit Manipulation"
   },
 ]
