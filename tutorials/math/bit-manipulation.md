@@ -31,6 +31,69 @@ $\&$ takes two bit integers to compare. If the bits are both $1$, then the resul
 
 For example, $0010_2 \& 0011_2 = 0010_2$ because only the second bits from the right are both $1$.
 
+#### Usage #1: Check if the rightmost bit is set
+
+Let's say $n$ is $5_{10}$ which is $0101_2$. If we execute $n \& 1$ ($0101_2 \& 0001_2$), the result is $0001_2$ because only the rightmost bit is both 1 and other bits would return 0.
+
+#### Usage #2: Check if the i-th bit is set
+
+Let's say $n$ is $5_{10}$ which is $0101_2$. How to check if the 2-nd, 3-rd, or 4-th bit is set? Using the same idea, the mask would be $0010_2$, $0100_2$, $1000_2$ respectively. And you may notice that the mask is always a power of 2. A common way to do it is to use left shift operator (which will be discussed below), i.e. $n \& (1 << i)$ where $n$ is the i-th bit to be checked.
+
+#### Usage #3: Remove the rightmost set bit
+
+We can use $n \& (n - 1)$ to remove the rightmost set bit. 
+
+```
+n     n     n - 1  n & (n - 1)
+--   ----   ----   -------
+ 0   0000   0111    0000
+ 1   0001   0000    0000
+ 2   0010   0001    0000
+ 3   0011   0010    0010
+ 4   0100   0011    0000
+ 5   0101   0100    0100
+ 6   0110   0101    0100
+ 7   0111   0110    0110
+ 8   1000   0111    0000 
+ 9   1001   1000    1000
+10   1010   1001    1000
+11   1011   1010    1010
+12   1100   1011    1000
+13   1101   1100    1100
+14   1110   1101    1100
+15   1111   1110    1110
+```
+
+#### Example #1: [0231 - Power of Two (Easy)](https://leetcode.com/problems/power-of-two/)
+
+We know that a power of 2 is a positive number and only has one bit set. We can use $n \& (n - 1)$ to see the result is 0 or not to determine if the target value is a power of 2 or not.
+
+```cpp
+class Solution {
+public:
+    bool isPowerOfTwo(int n) {
+        // 1. check if it is a positive number
+        // 2. check the value is 0 after removing the rightmost bit
+        return n > 0 && !(n & (n - 1));
+    }
+};
+```
+
+#### Example #2: [0191 - Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/)
+
+Instead of checking the bits one by one, we can use $n \& (n - 1)$ to jump to the next set bit.
+
+```cpp
+class Solution {
+public:
+    int hammingWeight(uint32_t n) {
+        int ans = 0;
+        for (; n; n = n & (n - 1)) ans++;
+        return ans;
+    }
+};
+```
+
 ### OR (|)
 
 $\&$ takes two bit integers to compare. If the bits are either $1$, then the resulting bit is $1$, else $0$. 
@@ -104,7 +167,6 @@ public:
 };
 ```
 
-
 ### NOT (~)
 
 ~ inverts all the bits of a bit intergers, which means $1$ would become $0$ and vice versa. If we apply it on a positive integer $x$, then it is simply $-x-1$.
@@ -118,6 +180,30 @@ $<<$ shifts the bits to the left. For example, $1 << 1 = 2$ because we shift the
 Similarily, $1 << 2 = 4$ because we shift the $1$ ($0001_2$) to the left twice to become $4$ ($0100_2$).
 
 And you may find that $1 << n$ is actually $2 ^ n$.
+
+#### Example #1: [0078 - Subsets](https://leetcode.com/problems/subsets/)
+
+```cpp
+class Solution {
+public:
+    vector<vector<int>> subsets(vector<int>& nums) {
+        int n = nums.size();
+        // number of subsets for n elements would be 2 ^ n
+        // because for each element, you can choose to take it or not
+        // if take = 1, don't take = 0, then we can use bit manipulation 
+        int p = 1 << n; // 1 * 2 ^ n
+        vector<vector<int>> ans;
+        for(int i = 0; i < p; i++){
+            vector<int> t; 
+            for(int j = 0; j < n; j++){
+               if((1 << j) & i) t.emplace_back(nums[j]); 
+            }
+            ans.emplace_back(t);
+        }
+        return ans;
+    }
+};
+```
 
 ### Right-Shift (>>)
 
