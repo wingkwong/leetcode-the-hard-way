@@ -94,7 +94,7 @@ public:
 };
 ```
 
-### OR ($\vert$)
+### OR ($|$)
 
 $\vert$ takes two bit integers to compare. If either bits are $1$, then the resulting bit is $1$, else $0$. 
 
