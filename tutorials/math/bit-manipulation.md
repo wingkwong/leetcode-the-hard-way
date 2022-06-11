@@ -18,7 +18,7 @@ Binary uses only $0$ and $1$ to represent a number in a base-2 number system. Th
 
 ## Bitwise Operators
 
-| X | Y | X & Y | X \| Y | X ^ Y | ~ X |
+| X | Y | X & Y | X \vert Y | X ^ Y | ~ X |
 |---|---|---|---|---|---|
 | 0 | 0 | 0 | 0 | 0 | 1 |
 | 0 | 1 | 0 | 1 | 1 | 1 |
@@ -94,19 +94,19 @@ public:
 };
 ```
 
-### OR ($\|$)
+### OR ($\vert$)
 
-$\|$ takes two bit integers to compare. If either bits are $1$, then the resulting bit is $1$, else $0$. 
+$\vert$ takes two bit integers to compare. If either bits are $1$, then the resulting bit is $1$, else $0$. 
 
 For example, $0010_2 | 0011_2 = 0011_2$ because only the first and the second bits from the right are $1$ in either value.
 
 #### Usage #1: Set the rightmost bit
 
-Let's say $n$ is $4_{10}$ which is $0100_2$. If we execute $n \| 1$, i.e. $0100_2 \| 0001_2$, the result is $0101_2$ because $0001_2$ would turn the rightmost bit of $0100_2$ to $1$ since that bit is set.
+Let's say $n$ is $4_{10}$ which is $0100_2$. If we execute $n \vert 1$, i.e. $0100_2 \vert 0001_2$, the result is $0101_2$ because $0001_2$ would turn the rightmost bit of $0100_2$ to $1$ since that bit is set.
 
 #### Usage #2: Set the i-th bit
 
-Let's say $n$ is $4_{10}$ which is $0100_2$. How to set other bits? Similar to above example, we can use left shift operator (which will be discussed below), i.e. $n \| (1 << i)$ where $n$ is the i-th bit to be set.
+Let's say $n$ is $4_{10}$ which is $0100_2$. How to set other bits? Similar to above example, we can use left shift operator (which will be discussed below), i.e. $n \vert (1 << i)$ where $n$ is the i-th bit to be set.
 
 #### Example: [0421 -  Maximum XOR of Two Numbers in an Array](https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/)
 
