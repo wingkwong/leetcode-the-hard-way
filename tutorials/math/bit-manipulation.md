@@ -18,7 +18,7 @@ Binary uses only $0$ and $1$ to represent a number in a base-2 number system. Th
 
 ## Bitwise Operators
 
-| X | Y | X & Y | X \vert Y | X ^ Y | ~ X |
+| X | Y | X & Y | X \| Y | X ^ Y | ~ X |
 |---|---|---|---|---|---|
 | 0 | 0 | 0 | 0 | 0 | 1 |
 | 0 | 1 | 0 | 1 | 1 | 1 |
