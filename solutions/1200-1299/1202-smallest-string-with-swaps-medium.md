@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/smallest-string-with-swaps'
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 1202 - Smallest String With Swaps (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/smallest-string-with-swaps
 
 ## Problem Statement
 
@@ -101,6 +107,8 @@ class dsu {
 ```
 
 </details>
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

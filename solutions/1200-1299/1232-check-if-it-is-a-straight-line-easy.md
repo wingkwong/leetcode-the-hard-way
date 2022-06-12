@@ -4,13 +4,17 @@ description: >-
   https://leetcode.com/problems/check-if-it-is-a-straight-line/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 1232 - Check If It Is a Straight Line (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/check-if-it-is-a-straight-line/
 
 ## Problem Statement
 
 You are given an array `coordinates`, `coordinates[i] = [x, y]`, where `[x, y]` represents the coordinate of a point. Check if these points make a straight line in the XY plane.
-
-
 
 **Example 1:**
 
@@ -42,6 +46,8 @@ Output: false
 ## Approach 1: Check the Slope
 
 First we calculate the slope between the first two points. Then starting from the third one, we check if the slope with the previous point is same as the target one. To compare the slope, we can use multiplication instead of division to avoid divide-by-zero and precision issue.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

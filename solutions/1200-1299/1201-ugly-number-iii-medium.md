@@ -2,15 +2,19 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/ugly-number-iii/'
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 1201 - Ugly Number III (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/ugly-number-iii/
 
 ## Problem Statement
 
 An **ugly number** is a positive integer that is divisible by `a`, `b`, or `c`.
 
 Given four integers `n`, `a`, `b`, and `c`, return the `nth` **ugly number**.
-
-
 
 **Example 1:**
 
@@ -43,6 +47,8 @@ Explanation: The ugly numbers are 2, 4, 6, 8, 10, 11, 12, 13... The 5th is 10.
 * It is guaranteed that the result will be in range `[1, 2 * 10^9]`.
 
 ## Approach 1: Inclusive-Exclusive + Binary Search
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/number-of-ways-to-stay-in-the-same-place-after-some-steps/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 1269 - Number of Ways to Stay in the Same Place After Some Steps (Hard)
+
+## Problem Link
+
+https://leetcode.com/problems/number-of-ways-to-stay-in-the-same-place-after-some-steps/
 
 ## Problem Statement
 
@@ -49,6 +55,8 @@ Output: 8
 ## Approach 1: Dynamic Programming
 
 The first observation is that the computational complexity does not depend on $$arrLen$$. Instead, it is all about steps. If we have $$n$$ steps, we can only walk at most $$n / 2$$ steps to the left or the right. Therefore, we can use DFS with memoization to find out the answer.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

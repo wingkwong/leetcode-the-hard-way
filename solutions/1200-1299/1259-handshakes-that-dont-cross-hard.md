@@ -2,19 +2,21 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/handshakes-that-dont-cross/'
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 1259 - Handshakes That Don't Cross (Hard)
 
+## Problem Link
+
+https://leetcode.com/problems/handshakes-that-dont-cross/
+
 ## Problem Statement
-
-
 
 You are given an **even** number of people `numPeople` that stand around a circle and each person shakes hands with someone else so that there are `numPeople / 2` handshakes total.
 
 Return _the number of ways these handshakes could occur such that none of the handshakes cross_.
 
 Since the answer could be very large, return it **modulo** `109 + 7`.
-
-
 
 **Example 1:**
 
@@ -45,6 +47,8 @@ Output: 5
 Person 1 can shake hand with person with even number but not with odd number because every time we need to divide the group into two sets. For example, if person 1 shakes hand with person 2, then there is an empty set and a set of people with numbers from 3 to n. If person 1 shakes hand with person 4, then the first set is person 2 + person 3 and the second set is from 5 to n. At the end, we would have a set from person 2 to n - 1 and an empty set.
 
 In general, let $$dp[i]$$ be the number of ways these handshakes could occur such that none of the handshakes cross of for $$i$$ people. If person $$i$$ shakes hand with person $$j$$, then we could divide into two sets - one from 2 to j - 1 and another one from j - 1 to i. The product of them would be the contribution to $$dp[i]$$.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
