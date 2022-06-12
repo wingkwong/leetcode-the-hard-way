@@ -1,8 +1,14 @@
 ---
-description: 'Author: @wingkwong |'
+description: 'Author: @wingkwong | https://leetcode.com/problems/average-salary-excluding-the-minimum-and-maximum-salary/'
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 1491 - Average Salary Excluding the Minimum and Maximum Salary (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/average-salary-excluding-the-minimum-and-maximum-salary/
 
 ## Problem Statement
 
@@ -39,6 +45,8 @@ Average salary excluding minimum and maximum salary is (2000) / 1 = 2000
 We iterate $$salary$$ and calculate the total sum $$sum$$, the minimum value $$mi$$ and the maximum value $$mx$$. The average salary of employees excluding the minimum and maximum salary would be $$sum - mi - mx$$. Since we exclude two items, we just need to divide by $$len(salary) - 2$$.
 
 ### Go
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```go
 func average(salary []int) float64 {

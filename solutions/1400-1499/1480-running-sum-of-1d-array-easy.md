@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/running-sum-of-1d-array/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 1480 - Running Sum of 1d Array (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/running-sum-of-1d-array/
 
 ## Problem Statement
 
@@ -42,11 +48,11 @@ Output: [3,4,6,16,17]
 
 ## Approach 1: Iteration
 
-_Prepared by @heiheihang_
-
 We need to define an accumulator (`running_sum` in this problem) to save the sum of all numbers in `nums`. After calculating the latest `running_sum`, we put that number to our result list.
 
 The trick here is that we need to add the number from `nums` to `running_sum` first before adding `running_sum` to `result`. This is because the `ith` position from `result` should include the `ith` number in `nums` .
+
+<SolutionAuthor name="@heiheihang"/>
 
 ```python
 def runningSum(self, nums: List[int]) -> List[int]:
@@ -75,9 +81,9 @@ def runningSum(self, nums: List[int]) -> List[int]:
 
 ## Approach 2: Partial Sum
 
-_Prepared by @wingkwong_
-
 Using C++ STL.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -91,7 +97,7 @@ public:
 
 ## Approach 3: In-place Modification
 
-_Prepared by @wingkwong_
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
