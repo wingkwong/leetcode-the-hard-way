@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/maximum-ascending-subarray-sum/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 1800 - Maximum Ascending Subarray Sum (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/maximum-ascending-subarray-sum/
 
 ## Problem Statement
 
@@ -13,8 +19,6 @@ Given an array of positive integers `nums`, return the _maximum possible sum of 
 A subarray is defined as a contiguous sequence of numbers in an array.
 
 A subarray `[numsl, numsl+1, ..., numsr-1, numsr]` is **ascending** if for all `i` where `l <= i < r`, `numsi < numsi+1`. Note that a subarray of size `1` is **ascending**.
-
-
 
 **Example 1:**
 
@@ -48,6 +52,8 @@ Explanation: [10,11,12] is the ascending subarray with the maximum sum of 33.
 ## Approach 1: One-Pass
 
 Check each number starting from the second one to see if the current number is greater than the previous one or not. If so, add the current number to total sum and compare with the answer. Else we reset the sum as the current number.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

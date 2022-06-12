@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/maximum-distance-between-a-pair-of-values/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 1855 - Maximum Distance Between a Pair of Values (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/maximum-distance-between-a-pair-of-values/
 
 ## Problem Statement
 
@@ -15,8 +21,6 @@ A pair of indices `(i, j)`, where `0 <= i < nums1.length` and `0 <= j < nums2.le
 Return _the **maximum distance** of any **valid** pair_ `(i, j)`_. If there are no valid pairs, return_ `0`.
 
 An array `arr` is **non-increasing** if `arr[i-1] >= arr[i]` for every `1 <= i < arr.length`.
-
-
 
 **Example 1:**
 
@@ -55,6 +59,8 @@ The maximum distance is 2 with pair (2,4).
 
 As both arrays are sorted, we can use two pointers $$i$$ and $$j$$ to iterate $$nums1$$ and $$nums2$$ respectively. If $$nums1[i] <= nums2[j]$$, we can update the answer and increase pointer $$j$$ by $$1$$, else increase pointer $$i$$ by $$1$$.
 
+<SolutionAuthor name="@wingkwong"/>
+
 ```cpp
 class Solution {
 public:
@@ -78,6 +84,8 @@ public:
 ## Approach 2: Lower Bound
 
 Using the same idea as approach 1 but with lower bound.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
