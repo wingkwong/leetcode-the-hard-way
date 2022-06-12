@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/shortest-path-visiting-all-nodes/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 0847 - Shortest Path Visiting All Nodes (Hard)
+
+## Problem Link
+
+https://leetcode.com/problems/shortest-path-visiting-all-nodes/
 
 ## Problem Statement
 
@@ -54,7 +60,7 @@ We then need to figure out how to keep track of duplication. We can simply store
 
 We can start at any node in the graph initially, and we should update the bitmask accordingly.
 
-### Python3
+<SolutionAuthor name="@heiheihang"/>
 
 ```python
 def shortestPathLength(self, graph: List[List[int]]) -> int:
@@ -110,9 +116,7 @@ def shortestPathLength(self, graph: List[List[int]]) -> int:
         return -1
 ```
 
-## Approach 2: **Floyd-Warshall &** TSP
-
-_This approach is prepared by @wingkwong._
+## Approach 2: Floyd-Warshall & TSP
 
 Since $$n$$ is small, we can use Floyd–Warshall algorithm to calculate the shortest distances between all pairs of nodes in $$O(n ^ 3)$$. Let $$d[i][j]$$ be the distance between node $$i$$ and node $$j$$. First we initialise each distance to be infinity or a large number. Then for each edge, we can set the weight (i.e. distance in this case) to $$0$$ if $$i$$ is same as $$j$$, else we can build $$d$$ based on the input.
 
@@ -122,7 +126,7 @@ What's left is similar to TSP, which is Traveling Salesman Problem. Given a set 
 
 Let $$dp[i][mask]$$ be the shortest distances with visited nodes (marked as $$1$$ in $$mask$$) from the starting point $$i$$. In our function, first we check if $$dp[src][mask]$$ has been calculated before. If so, we can return it immediately. Otherwise, let's set this node in $$mask$$ and compare it with the target mask, which is $$(1 << n) - 1$$, i.e. all 1s with $$n$$ digits. If it matches with target mask, that means we visited all the nodes. Hence, we return $$0$$. Otherwise, we look for the next possible node to visit and calculate the distances recursively. At the end, we memoize the shortest distance at the current state and return it.
 
-### Go
+<SolutionAuthor name="@wingkwong"/>
 
 ```go
 func min(x, y int) int {

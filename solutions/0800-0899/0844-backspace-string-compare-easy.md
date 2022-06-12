@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/backspace-string-compare/'
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 0844 - Backspace String Compare (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/backspace-string-compare/
 
 ## Problem Statement
 
@@ -42,6 +48,8 @@ Explanation: s becomes "c" while t becomes "b".
 ## Approach 1: Simulation
 
 We build the final string for $$s$$ and $$t$$. If we see #, then we can only backspace if the final string is not empty. Otherwise, we add the character to the final string. Since we need to do the same thing on both string, it's better to write a function to build the string.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
