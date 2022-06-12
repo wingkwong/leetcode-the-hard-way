@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/find-smallest-letter-greater-than-target
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 0744 - Find Smallest Letter Greater Than Target (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/find-smallest-letter-greater-than-target
 
 ## Problem Statement
 
@@ -46,6 +52,8 @@ Output: "f"
 ## Approach 1: Binary Search
 
 Prerequisite: [Binary Search](../../tutorials/basic-topics/binary-search)
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

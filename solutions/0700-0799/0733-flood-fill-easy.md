@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/flood-fill/'
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 0733 - Flood Fill (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/flood-fill/
 
 ## Problem Statement
 
@@ -47,7 +53,7 @@ Output: [[2,2,2],[2,2,2]]
 
 First we check if the color at the starting point is same as the target one. If so, we return the input directly. Otherwise, we perform dfs from the starting point to replace the color and do the same thing for four directions. We only perform dfs when the next pixel is within the boundary.
 
-### Python 3
+<SolutionAuthor name="@wingkwong"/>
 
 ```python
 class Solution:
@@ -78,7 +84,7 @@ class Solution:
 
 Similar idea but in BFS way. Use queue to store the points and search for 4 directions to replace if possible.
 
-### C++
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

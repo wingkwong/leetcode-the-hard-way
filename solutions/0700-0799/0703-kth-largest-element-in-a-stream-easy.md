@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/kth-largest-element-in-a-stream/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 0703 - Kth Largest Element in a Stream (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/kth-largest-element-in-a-stream/
 
 ## Problem Statement
 
@@ -45,6 +51,8 @@ kthLargest.add(4);   // return 8
 ## Approach 1: Priority Queue
 
 We can use priority queue to handle the sort order and only maintain at most k element. Return to the top, which is the k-th element in a stream.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class KthLargest {

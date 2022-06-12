@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/champagne-tower/'
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 0799 - Champagne Tower (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/champagne-tower/
 
 ## Problem Statement
 
@@ -48,6 +54,8 @@ Output: 1.00000
 
 Let $$dp[i][j]$$ be the amount poured to a glass located at row $$i$$ and column $$j$$. We know that the topmost glass is $$poured$$ so the base case is $$dp[0][0] = poured$$. If the glass has excess liquid, then it will fall equal to the glass to the left and the right of it. It means if $$dp[i][j]$$ is greater than $$1$$, then the overflow $$dp[i][j] - 1$$will be equally distributed to the glass to the left $$dp[i + 1][j]$$ and to the right $$dp[i + 1][j + 1]$$. We can just simulate it and return the answer. Since $$dp[queryRow][queryGlass]$$ may exceed $$1$$, we need to return $$1$$in this case.
 
+<SolutionAuthor name="@wingkwong"/>
+
 ```cpp
 class Solution {
 public:
@@ -75,6 +83,8 @@ public:
 ```
 
 We can see that the row $$i$$ depends on $$i - 1$$ row so we can use 1D array to store the state. Let $$dp[j]$$ be the amount poured to a glass located at $$j$$ column. We use $$ndp$$ to store the current state while $$dp$$ state stores the previous state. We swap them for every row, i.e. transit the state from row $$i$$ to row $$i + 1$$.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
