@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/minimum-time-to-complete-trips/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2187 - Minimum Time to Complete Trips (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/minimum-time-to-complete-trips/
 
 ## Problem Statement
 
@@ -55,7 +61,7 @@ We can perform binary search on the `time` needed to finish the trips, and we ch
 
 There are many similar problems to this question, and you should know this: [https://leetcode.com/discuss/general-discussion/786126/python-powerful-ultimate-binary-search-template-solved-many-problems](https://leetcode.com/discuss/general-discussion/786126/python-powerful-ultimate-binary-search-template-solved-many-problems)
 
-### Python3 (By @heiheihang)
+<SolutionAuthor name="@heiheihang"/>
 
 ```python
 def minimumTime(self, time: List[int], totalTrips: int) -> int:
@@ -100,7 +106,7 @@ def minimumTime(self, time: List[int], totalTrips: int) -> int:
         return res
 ```
 
-### C++ (By @wingkwong)
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

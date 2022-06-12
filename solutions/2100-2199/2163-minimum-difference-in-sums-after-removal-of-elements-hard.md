@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/minimum-difference-in-sums-after-removal-of-elements/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2163 - Minimum Difference in Sums After Removal of Elements (Hard)
+
+## Problem Link
+
+https://leetcode.com/problems/minimum-difference-in-sums-after-removal-of-elements/
 
 ## Problem Statement
 
@@ -61,6 +67,8 @@ We use two heaps $$p$$ and $$s$$ to record the smallest $$n$$ elements and the l
 Now we handle the middle $$n$$ elements. From left to right, we check if the element $$nums[i]$$ is smaller than the top element $$q$$ from $$p$$. If so, we should take this element instead and ditch the top one. We update $$pre' = pre + nums[i] - q$$. At the same time we keep the prefix sum $$pv[i]$$ in$$[n, 2 * n)$$. Similarly, we do the same thing from right to left to build the suffix sum $$sv[i]$$ in the same range.
 
 At the end, we can find out the minimum difference by checking $$pv[i - 1] - sv[i]$$ between the middle $$n$$ range.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

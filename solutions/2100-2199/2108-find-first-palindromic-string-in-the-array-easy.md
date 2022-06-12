@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/find-first-palindromic-string-in-the-array/
 ---
 
-# 2108 -Find First Palindromic String in the Array (Easy)
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
+# 2108 - Find First Palindromic String in the Array (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/find-first-palindromic-string-in-the-array/
 
 ## Problem Statement
 
@@ -87,7 +93,7 @@ bool isPalindrome(const string &s) {
 
 We just need to iterate each string and check if the target $$s$$s is a palindrome, return the string if so.
 
-### C++
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

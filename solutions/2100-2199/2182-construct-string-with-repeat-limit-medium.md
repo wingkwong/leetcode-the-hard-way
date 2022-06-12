@@ -1,4 +1,12 @@
+---
+description: 'Author: @TBC | https://leetcode.com/problems/construct-string-with-repeat-limit/'
+draft: 'true'
+---
+
+
 # 2182 - Construct String With Repeat Limit (Medium)
+
+## Problem Link
 
 ## Problem Statement
 

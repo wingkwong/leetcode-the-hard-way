@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/counting-words-with-a-given-prefix/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2185 - Counting Words With a Given Prefix (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/counting-words-with-a-given-prefix/
 
 ## Problem Statement
 
@@ -40,7 +46,7 @@ Explanation: There are no strings that contain "code" as a prefix.
 
 We can define the length of the prefix string to be `n` , then we need to grab the first `n` characters of each word and compare their substrings. In the case the word has length less than `n`, we skip the word.
 
-### Python 3 (By @heiheihang)
+<SolutionAuthor name="@heiheihang"/>
 
 ```python
 def prefixCount(self, words: List[str], pref: str) -> int:
@@ -63,7 +69,7 @@ def prefixCount(self, words: List[str], pref: str) -> int:
         return res
 ```
 
-### C++ (By @wingkwong)
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

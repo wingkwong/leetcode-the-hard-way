@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/find-all-k-distant-indices-in-an-array/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2200 - Find All K-Distant Indices in an Array (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/find-all-k-distant-indices-in-an-array/
 
 ## Problem Statement
 
@@ -47,6 +53,8 @@ Hence, we return [0,1,2,3,4].
 ## Approach 1: Brute Force
 
 Just do what it says.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

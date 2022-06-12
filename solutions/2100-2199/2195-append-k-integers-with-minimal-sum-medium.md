@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/append-k-integers-with-minimal-sum/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2195 - Append K Integers With Minimal Sum (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/append-k-integers-with-minimal-sum/
 
 ## Problem Statement
 
@@ -50,6 +56,8 @@ If $$k$$ is greater than / equal to what we need, we update $$k := k - need$$ an
 The other case is we just need to append $$k$$ numbers. Then we simply add $$(prev * 2 + k + 1) * k$$ and return the answer.
 
 In case we still need to append some numbers after the last element of the input $$last$$. Then we add $$((last + 1) + (last + k)) * k / 2$$.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

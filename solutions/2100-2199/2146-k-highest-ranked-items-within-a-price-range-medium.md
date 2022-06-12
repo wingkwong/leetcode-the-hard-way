@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/k-highest-ranked-items-within-a-price-range/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2146 - K Highest Ranked Items Within a Price Range (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/k-highest-ranked-items-within-a-price-range/
 
 ## Problem Statement
 
@@ -102,6 +108,8 @@ First we put our starting point to a queue. Then iterate the current queue and c
 
 After we have the maximum `k` items, we need to sort them based on their rank from highest to lowest. We can apply a custom sorting comparator here. At the end, we output the coordinate of each cell. One thing to note that the reachable items can be less than `k`, hence we need to take the minimum one of `tmp.size()` and `k`.
 
+<SolutionAuthor name="@wingkwong"/>
+
 ```cpp
 class Solution {
 public:
@@ -152,6 +160,8 @@ public:
 ```
 
 In fact, a custom comparator is not necessary if we push the criteria in the same order to `tmp`, i.e. distance, price, row number and column number. This is because the `sort()` will sort them based on this order.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

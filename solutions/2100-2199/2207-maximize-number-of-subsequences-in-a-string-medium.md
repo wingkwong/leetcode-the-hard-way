@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/maximize-number-of-subsequences-in-a-string/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2207 - Maximize Number of Subsequences in a String (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/maximize-number-of-subsequences-in-a-string/
 
 ## Problem Statement
 
@@ -15,8 +21,6 @@ You can add **either** `pattern[0]` **or** `pattern[1]` anywhere in `text` **exa
 Return _the **maximum** number of times_ `pattern` _can occur as a **subsequence** of the modified_ `text`.
 
 A **subsequence** is a string that can be derived from another string by deleting some or no characters without changing the order of the remaining characters.
-
-
 
 **Example 1:**
 
@@ -48,6 +52,8 @@ Some of the strings which can be obtained from text and have 6 subsequences "ab"
 ## Approach 1: Counting
 
 We should add $$pattern[0]$$ to the beginning or add $$pattern[1]$$ to the end of the text. Therefore, we check both case to see which one is better. We iterate the text and check if the character is equal to $$pattern[1]$$, if so, we add the frequency of $$pattern[0]$$. We increase the frequency of the current character by $$1$$.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

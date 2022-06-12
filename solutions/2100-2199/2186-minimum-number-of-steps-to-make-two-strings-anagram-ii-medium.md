@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram-ii/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2186 - Minimum Number of Steps to Make Two Strings Anagram II (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram-ii/
 
 ## Problem Statement
 
@@ -50,7 +56,7 @@ In python `defaultdict`, if we simply perform `for key in d1` , we will miss out
 
 Hence, The simplest way is to visit each character once (by iterating from 0 to 25) and find the differences of characters between 2 dicts.
 
-### Python3 (By @heiheihang)
+<SolutionAuthor name="@heiheihang"/>
 
 ```python
 def minSteps(self, s: str, t: str) -> int:
@@ -85,7 +91,7 @@ def minSteps(self, s: str, t: str) -> int:
 
 We can actually use 1 dictionary with less code. The main idea is that we are only concerned with the **difference** of each characters in both strings, so we can simply take the count of character of `s` as positive and that of `t` as negative.
 
-### Python3 (By @heiheihang)
+<SolutionAuthor name="@heiheihang"/>
 
 ```python
 def minSteps(self, s: str, t: str) -> int:
@@ -112,7 +118,7 @@ def minSteps(self, s: str, t: str) -> int:
     return res
 ```
 
-### C++ (By @wingkwong)
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

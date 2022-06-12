@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/intervals-between-identical-elements/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2121 - Intervals Between Identical Elements (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/intervals-between-identical-elements/
 
 ## Problem Statement
 
@@ -53,11 +59,11 @@ Explanation:
 
 First we need to know the indices for each number. We can easily construct it using `unordered_map<int, vector<int>>`. Then it comes to the math part. Our goal is to calculate the absolute difference for numbers smaller than and greater than or equal to $$k$$ in linear time.
 
-Let's say the list is \[1, 3, 5, 7, 9] and let $$k$$ be $$7$$. The absolute difference for numbers smaller than or equal to $$7$$ is $$(7−1)+(7−3)+(7−5)−(7−7)$$. We can arrange it to $$7∗4−(1−3−5−7)$$which is same as $$k∗(i+1)−pre[i+1]$$.
+Let's say the list is \[1, 3, 5, 7, 9] and let $$k$$ be $$7$$. The absolute difference for numbers smaller than or equal to $$7$$ is $$(7−1)+(7−3)+(7−5)−(7−7)$$. We can arrange it to $$7∗4−(1−3−5−7)$$ which is same as $$k∗(i+1)−pre[i+1]$$.
 
 Similarly, let $$k$$ be $$3$$ and we want to find out the absolute difference for numbers greater than or equal to $$3$$. $$(3−3)+(3−5)+(3−7)+(3−9)$$. We can arrange it to $$3∗4−(3+5+7+9)$$, which is same as $$(pre[n]−pre[i])−k∗(n−i)$$. Therefore, $$ans[k]$$ would be the sum of the left part and the right part.
 
-### C++
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -85,5 +91,4 @@ public:
         return ans;
     }
 };
-
 ```

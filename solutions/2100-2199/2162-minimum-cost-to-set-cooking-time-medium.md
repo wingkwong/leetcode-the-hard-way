@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/minimum-cost-to-set-cooking-time/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2162 - Minimum Cost to Set Cooking Time (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/minimum-cost-to-set-cooking-time/
 
 ## Problem Statement
 
@@ -76,6 +82,8 @@ First let's get the minutes $$m$$ and seconds $$s$$ from $$targetSeconds$$. If t
 To calculate the cost, it is pretty straightforward. Example 2 gives a good hint to remind us to handle leading zeros.
 
 After calculating the first possible minimum cost, we can try the second one. Similarly, we check if $$m'$$ and $$s'$$ are valid. If so, calculate the cost and return the minimum one.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

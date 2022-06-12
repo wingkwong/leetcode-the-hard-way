@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/minimum-weighted-subgraph-with-the-required-paths/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2203 - Minimum Weighted Subgraph With the Required Paths (Hard)
+
+## Problem Link
+
+https://leetcode.com/problems/minimum-weighted-subgraph-with-the-required-paths/
 
 ## Problem Statement
 
@@ -58,6 +64,8 @@ It can be seen that there does not exist any path from node 1 to node 2, hence t
 ## Approach 1: Dijkstra x 3
 
 We calculate the shortest paths for each node from $$src1$$, $$src2$$ and $$dest$$. For $$dest$$, we need to do it in a reversed order. If we cannot reach $$src1$$ or $$src2$$ from $$dest$$, then the answer is $$-1$$. Otherwise, we iterate each node to find the distances and sum them together to take the minimal one.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 using ll = long long;

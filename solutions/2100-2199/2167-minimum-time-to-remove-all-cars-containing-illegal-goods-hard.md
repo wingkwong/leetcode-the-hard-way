@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/minimum-time-to-remove-all-cars-containing-illegal-goods/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2167 - Minimum Time to Remove All Cars Containing Illegal Goods (Hard)
+
+## Problem Link
+
+https://leetcode.com/problems/minimum-time-to-remove-all-cars-containing-illegal-goods/
 
 ## Problem Statement
 
@@ -138,6 +144,8 @@ Let's think about the case from the left to right, the transition is
 * if the character is 1, we can either take $$i$$ or $$dp1[i - 1] + 2$$.
 
 For $$dp2$$, we need to do it in reverse order. We can reverse the string and perform the same logic. At the end, the answer is to find the minimum value from $$dp1[i] + dp2[n - i]$$.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

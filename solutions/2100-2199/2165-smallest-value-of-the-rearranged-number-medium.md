@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/smallest-value-of-the-rearranged-number/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2165 - Smallest Value of the Rearranged Number (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/smallest-value-of-the-rearranged-number/
 
 ## Problem Statement
 
@@ -80,7 +86,7 @@ For the _positive_ case, we need to **minimize** the result. We need to put the 
 
 And we do not forget to multiply -1 in the negative case before returning.
 
-### Python
+<SolutionAuthor name="@heiheihang"/>
 
 ```python
  def smallestNumber(self, num: int) -> int:
@@ -170,7 +176,7 @@ If $$num$$ is positive, we sort it in ascending order to make it smallest value.
 
 To implement it, we first convert $$num$$ from long long to string. Sort the string and swap the first digit with the first non-zero digit. If there is no leading zero, it stays as-is. At the end, we convert the string back to long long type and add minus sign if $$num$$ is negative.
 
-### C++
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

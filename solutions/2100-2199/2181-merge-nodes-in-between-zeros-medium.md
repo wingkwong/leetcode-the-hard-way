@@ -1,8 +1,15 @@
 ---
 description: 'Author: @TBC | https://leetcode.com/problems/merge-nodes-in-between-zeros/'
+draft: 'true'
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2181 - Merge Nodes in Between Zeros (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/merge-nodes-in-between-zeros/
 
 ## Problem Statement
 
@@ -11,8 +18,6 @@ You are given the `head` of a linked list, which contains a series of integers *
 For **every** two consecutive `0`'s, **merge** all the nodes lying in between them into a single node whose value is the **sum** of all the merged nodes. The modified list should not contain any `0`'s.
 
 Return _the_ `head` _of the modified linked list_.
-
-
 
 **Example 1:**
 

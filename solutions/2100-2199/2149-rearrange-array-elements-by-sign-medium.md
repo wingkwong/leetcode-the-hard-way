@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/rearrange-array-elements-by-sign/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2149 - Rearrange Array Elements by Sign (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/rearrange-array-elements-by-sign/
 
 ## Problem Statement
 
@@ -48,7 +54,9 @@ So nums is rearranged to [1,-1].
 
 ## Approach 1: Split and Combine
 
-This problem looks like the one I solved in 2015. The idea is to split the input into two vectors - positive and negative. Then iterate both vector to build the final answer.
+The idea is to split the input into two vectors - positive and negative. Then iterate both vector to build the final answer.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

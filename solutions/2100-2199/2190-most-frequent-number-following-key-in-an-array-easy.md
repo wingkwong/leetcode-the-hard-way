@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/most-frequent-number-following-key-in-an-array/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2190 - Most Frequent Number Following Key In an Array (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/most-frequent-number-following-key-in-an-array/
 
 ## Problem Statement
 
@@ -17,8 +23,6 @@ For every unique integer `target` in `nums`, **count** the number of times `targ
 * `nums[i + 1] == target`.
 
 Return _the_ `target` _with the **maximum** count_. The test cases will be generated such that the `target` with maximum count is unique.
-
-
 
 **Example 1:**
 
@@ -48,6 +52,8 @@ target = 2 has the maximum number of occurrences following an occurrence of key,
 ## Approach 1: Counting
 
 We iterate the input to find the possible $$target$$ and store its occurrence. Return the maximum one.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -80,6 +86,8 @@ public:
 ```
 
 Once we get the idea, we can further optimise the above solution a bit. We only set answer if the current number is $$target$$ and its occurrence is greater than the current max count.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

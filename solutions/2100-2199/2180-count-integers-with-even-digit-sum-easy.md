@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/count-integers-with-even-digit-sum/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2180 - Count Integers With Even Digit Sum (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/count-integers-with-even-digit-sum/
 
 ## Problem Statement
 
@@ -40,6 +46,8 @@ The 14 integers less than or equal to 30 whose digit sums are even are
 ## Approach 1: Brute Force
 
 We try all numbers in $$[1, num]$$ to see its digit sum is even or not.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

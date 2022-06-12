@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/find-substring-with-given-hash-value/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2156 - Find Substring With Given Hash Value (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/find-substring-with-given-hash-value/
 
 ## Problem Statement
 
@@ -77,7 +83,7 @@ for (int i = 1; i < n + 1; i++) p[i] = (p[i - 1] * 1LL * power) % modulo;
 
 $$target$$ is possible to be negative so we need to do the trick$$(target + modulo) \mod modulo$$ before comparing with the hashValue.
 
-### C++
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

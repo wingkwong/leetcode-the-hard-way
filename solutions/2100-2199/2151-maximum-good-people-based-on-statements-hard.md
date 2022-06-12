@@ -4,7 +4,15 @@ description: >-
   https://leetcode.com/problems/maximum-good-people-based-on-statements/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2151 - Maximum Good People Based on Statements (Hard)
+
+## Problem Link
+
+https://leetcode.com/problems/maximum-good-people-based-on-statements/
+
+## Problem Statement
 
 There are two types of persons:
 
@@ -88,6 +96,8 @@ First, let's look at the constraint for n. It is just `2 <= n <= 15`, which mean
 
 If there is no contradiction for `mask`, then we can count the number of 1s in `mask` and update the answer. If you use C++, there is a built-in function called `__builtin_popcount` to count it.
 
+<SolutionAuthor name="@wingkwong"/>
+
 ```cpp
 class Solution {
 public:
@@ -120,6 +130,6 @@ public:
 };
 ```
 
-Time Complexity: O(2 ^ n \* n ^ 2)
+Time Complexity: $O(2 ^ n * n ^ 2)$
 
-Space Complexity: O(1)
+Space Complexity: $O(1)$

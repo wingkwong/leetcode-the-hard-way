@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/minimum-time-to-finish-the-race/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2188 - Minimum Time to Finish the Race (Hard)
+
+## Problem Link
+
+https://leetcode.com/problems/minimum-time-to-finish-the-race/
 
 ## Problem Statement
 
@@ -104,6 +110,7 @@ tires = [2,3], [3,3], [3, 2], changeTime = 5, numLaps = 6
 
 ![image](https://user-images.githubusercontent.com/35857179/168304028-cf195b2c-3e05-4736-b950-a0c5851fcc20.png)
 
+<SolutionAuthor name="@heiheihang"/>
 
 ```python
 def minimumFinishTime(self, tires: List[List[int]], changeTime: int, numLaps: int) -> int:

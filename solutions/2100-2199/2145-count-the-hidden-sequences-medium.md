@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/count-the-hidden-sequences/'
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2145 - Count the Hidden Sequences (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/count-the-hidden-sequences/
 
 ## Problem Statement
 
@@ -64,7 +70,7 @@ If we move the hidden array up (i.e. +1 to each element) until the maximum value
 
 Another way to think about it is that we first include the whole boundary which is `(upper - lower)` and we exclude the fixed area `(max - min)`.  In this case, we will also get the same answer `(upper - lower) - (max - min) + 1`.
 
-### C++
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -82,6 +88,8 @@ public:
 ```
 
 ### Kotlin
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```kotlin
 class Solution {
@@ -101,6 +109,8 @@ class Solution {
 
 ### Python3
 
+<SolutionAuthor name="@wingkwong"/>
+
 ```python
 class Solution:
     def numberOfArrays(self, differences: List[int], lower: int, upper: int) -> int:
@@ -108,6 +118,6 @@ class Solution:
         return max((upper - lower) - (max(hidden) - min(hidden)) + 1, 0)
 ```
 
-Time Complexity: O(n)
+Time Complexity: $O(n)$
 
-Space Complexity: O(1)
+Space Complexity: $O(1)$

@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/count-operations-to-obtain-zero/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2169 - Count Operations to Obtain Zero (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/count-operations-to-obtain-zero/
 
 ## Problem Statement
 
@@ -47,6 +53,8 @@ So the total number of operations required is 1.
 ## Approach 1: Simulation
 
 Just do what it says. If num1 >= num2, we subtract num2 from num1, otherwise subtract num1 from num2. Increase answer by 1 in each iteration.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

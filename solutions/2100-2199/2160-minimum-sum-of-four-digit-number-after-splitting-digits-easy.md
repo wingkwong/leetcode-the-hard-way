@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/minimum-sum-of-four-digit-number-after-splitting-digits/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2160 - Minimum Sum of Four Digit Number After Splitting Digits (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/minimum-sum-of-four-digit-number-after-splitting-digits/
 
 ## Problem Statement
 
@@ -39,6 +45,8 @@ The minimum sum can be obtained by the pair [4, 9]: 4 + 9 = 13.
 ## Approach 1: Sorting & Greedy
 
 We can sort those 4 digits in an increasing order. Let's say $$abcd$$ where $$a <= b <= c <= d$$. We put those two smallest digits to be decimal's place, and those two largest ones in one's place. The answer is simply $$ac + bd$$.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

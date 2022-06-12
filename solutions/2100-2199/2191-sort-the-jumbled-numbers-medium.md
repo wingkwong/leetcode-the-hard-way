@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/sort-the-jumbled-numbers/'
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2191 - Sort the Jumbled Numbers (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/sort-the-jumbled-numbers
 
 ## Problem Statement
 
@@ -54,6 +60,8 @@ Explanation: 789 maps to 789, 456 maps to 456, and 123 maps to 123. Thus, the so
 ## Approach 1: Sorting
 
 For each number, we generate a mapped value. For example, $$991$$ -> $$669$$. We store it in a pair where the key is the original value and the value is the mapped value. Then we sort by the value so  that we could keep the same relative order if the values are same.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

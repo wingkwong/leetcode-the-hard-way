@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/minimum-cost-of-buying-candies-with-discount/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2144 - Minimum Cost of Buying Candies With Discount (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/minimum-cost-of-buying-candies-with-discount/
 
 ## Problem Statement
 
@@ -58,7 +64,7 @@ Hence, the minimum cost to buy all candies is 5 + 5 = 10.
 
 We can take any candy away for free as long as the cost of the chosen candy is less than or equal to the minimum cost of the two candies bought. If we sort the array in a non-increasing order, the candies we can take away to save most cost would be the 3rd, 6th, 9th, and so on. Therefore, we can skip all those costs and add the rest of them to answer.
 
-### C++
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

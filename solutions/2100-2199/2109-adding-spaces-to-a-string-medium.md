@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/adding-spaces-to-a-string/'
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2109 - Adding Spaces to a String (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/adding-spaces-to-a-string/
 
 ## Problem Statement
 
@@ -53,7 +59,7 @@ We are also able to place spaces before the first character of the string.
 
 We iterate the string using pointer `i` and iterate spaces using pointer `j`. If `i` is equal to `spaces[j]` , then we need to add a space there and increase pointer `j`.
 
-### C++
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

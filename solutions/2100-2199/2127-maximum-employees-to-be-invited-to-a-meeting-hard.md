@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/maximum-employees-to-be-invited-to-a-meeting/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2127 - Maximum Employees to Be Invited to a Meeting (Hard)
+
+## Problem Link
+
+https://leetcode.com/problems/maximum-employees-to-be-invited-to-a-meeting/
 
 ## Problem Statement
 
@@ -13,8 +19,6 @@ A company is organizing a meeting and has a list of `n` employees, waiting to be
 The employees are numbered from `0` to `n - 1`. Each employee has a **favorite** person and they will attend the meeting **only if** they can sit next to their favorite person at the table. The favorite person of an employee is **not** themself.
 
 Given a **0-indexed** integer array `favorite`, where `favorite[i]` denotes the favorite person of the `ith` employee, return _the **maximum number of employees** that can be invited to the meeting_.
-
-
 
 **Example 1:**
 
@@ -58,8 +62,6 @@ So the company leaves them out of the meeting.
 The maximum number of employees that can be invited to the meeting is 4.
 ```
 
-
-
 **Constraints:**
 
 * `n == favorite.length`
@@ -77,7 +79,7 @@ However, it would fail for the input \[1,2,0] because it will output $$0$$ inste
 
 The final answer is simple the maximum number of the result of case 1 and case 2.
 
-### C++
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

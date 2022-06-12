@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/recover-the-original-array/'
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2122 - Recover the Original Array (Hard)
+
+## Problem Link
+
+https://leetcode.com/problems/recover-the-original-array/
 
 ## Problem Statement
 
@@ -16,8 +22,6 @@ Unfortunately, Alice lost all three arrays. However, she remembers the integers 
 Given an array `nums` consisting of `2n` integers, where **exactly** `n` of the integers were present in `lower` and the remaining in `higher`, return _the **original** array_ `arr`. In case the answer is not unique, return _**any** valid array_.
 
 **Note:** The test cases are generated such that there exists **at least one** valid array `arr`.
-
-
 
 **Example 1:**
 
@@ -61,6 +65,8 @@ The only possible combination is arr = [220] and k = 215. Using them, we get low
 ## Approach 1: Try all possible k
 
 In short, we just need to try all possible $$k$$. If we sort $$nums$$, the smallest element must be in the lower array. It is easy to see $$k$$k can be $$(nums[i]−nums[0])/2$$. We try each $$k$$ to see if we can match all the pairs. If the size of lower array is same as that of higher array, then the answer would be $$ans[j]=(l[j]+r[j])/2$$.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
