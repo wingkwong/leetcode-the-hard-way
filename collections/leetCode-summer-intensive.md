@@ -202,6 +202,20 @@ export const week3Problems = [
     "solutionLink": "../solutions/0200-0299/power-of-two-easy",
     "tags": "Bit Manipulation"
   },
+  {
+    "problemName": "2220 - Minimum Bit Flips to Convert Number",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/minimum-bit-flips-to-convert-number/",
+    "solutionLink": "",
+    "tags": "Bit Manipulation"
+  },
+  {
+    "problemName": "0476 - Number Complement",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/number-complement/",
+    "solutionLink": "",
+    "tags": "Bit Manipulation"
+  },
 ]
 
 <Table 
