@@ -4,9 +4,15 @@ description: >-
   https://leetcode.com/problems/minimum-number-of-operations-to-convert-time/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2224 - Minimum Number of Operations to Convert Time (Easy)
 
-## Problem Statement:
+## Problem Link
+
+https://leetcode.com/problems/minimum-number-of-operations-to-convert-time/
+
+## Problem Statement
 
 You are given two strings `current` and `correct` representing two **24-hour times**.
 
@@ -45,6 +51,8 @@ Explanation: We only have to add one minute to current, so the minimum number of
 ## Approach 1: Greedy
 
 Choosing $$60$$ 1 time is better than choosing $$15$$ 4 times. We choose from the largest number as many times as we could, then choose the second largest and etc. Since the operation is on minute, we need to convert the input to minute format first. Then we calculate the difference and try each operation to see how many times we could apply and update the difference after each operation.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

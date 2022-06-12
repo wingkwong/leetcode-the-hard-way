@@ -2,9 +2,16 @@
 description: >-
   Author: @TBC |
   https://leetcode.com/problems/find-the-difference-of-two-arrays/
+draft: true
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2215 - Find the Difference of Two Arrays (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/find-the-difference-of-two-arrays/
 
 ## Problem Statement
 

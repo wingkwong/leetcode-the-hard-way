@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/maximum-candies-allocated-to-k-children/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2226 - Maximum Candies Allocated to K Children (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/maximum-candies-allocated-to-k-children/
 
 ## Problem Statement
 
@@ -13,8 +19,6 @@ You are given a **0-indexed** integer array `candies`. Each element in the array
 You are also given an integer `k`. You should allocate piles of candies to `k` children such that each child gets the **same** number of candies. Each child can take **at most one** pile of candies and some piles of candies may go unused.
 
 Return _the **maximum number of candies** each child can get._
-
-
 
 **Example 1:**
 
@@ -41,6 +45,8 @@ Explanation: There are 11 children but only 7 candies in total, so it is impossi
 ## Approach 1: Binary Search
 
 We can use binary search to find out the maximum number of candies in a single pile.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

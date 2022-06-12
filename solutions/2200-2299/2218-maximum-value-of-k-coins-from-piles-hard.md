@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/maximum-value-of-k-coins-from-piles/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2218 - Maximum Value of K Coins From Piles (Hard)
+
+## Problem Link
+
+https://leetcode.com/problems/maximum-value-of-k-coins-from-piles/
 
 ## Problem Statement
 
@@ -13,8 +19,6 @@ There are `n` **piles** of coins on a table. Each pile consists of a **positive 
 In one move, you can choose any coin on **top** of any pile, remove it, and add it to your wallet.
 
 Given a list `piles`, where `piles[i]` is a list of integers denoting the composition of the `ith` pile from **top to bottom**, and a positive integer `k`, return _the **maximum total value** of coins you can have in your wallet if you choose **exactly**_ `k` _coins optimally_.
-
-
 
 **Example 1:**
 
@@ -47,6 +51,8 @@ The maximum total can be obtained if we choose all coins from the last pile.
 ## Approach 1: Dynamic Programming
 
 Let $$dp[i][j]$$ be the maximum total value we can have if we pick $$j$$ elements starting from $$piles[i]$$. The answer is $$dp[0][k]$$. First we calculate the value if we pick any elements in the current pile. Then we try to pick at most $$min((int) piles[i].size(), k)$$ elements and find out the max result.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

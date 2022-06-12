@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/encrypt-and-decrypt-strings'
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2227 - Encrypt and Decrypt Strings (Hard)
+
+## Problem Link
+
+https://leetcode.com/problems/encrypt-and-decrypt-strings
 
 ## Problem Statement
 
@@ -62,6 +68,8 @@ encrypter.decrypt("eizfeiam"); // return 2.
 ## Approach 1: Hash Map
 
 No Tries is required. We can use hash map to store the frequency of the encrypted string. To decrypt, we simply return the count of the target word. To encrypt, we find the corresponding keys to map to the returned string.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Encrypter {

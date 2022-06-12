@@ -2,17 +2,22 @@
 description: >-
   Author: @TBC |
   https://leetcode.com/problems/find-palindrome-with-fixed-length/
+draft: true
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2217 - Find Palindrome With Fixed Length (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/find-palindrome-with-fixed-length/
 
 ## Problem Statement
 
 Given an integer array `queries` and a **positive** integer `intLength`, return _an array_ `answer` _where_ `answer[i]` _is either the_ `queries[i]th` _smallest **positive palindrome** of length_ `intLength` _or_ `-1` _if no such palindrome exists_.
 
 A **palindrome** is a number that reads the same backwards and forwards. Palindromes cannot have leading zeros.
-
-
 
 **Example 1:**
 

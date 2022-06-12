@@ -2,9 +2,16 @@
 description: >-
   Author: @TBC |
   https://leetcode.com/problems/minimum-deletions-to-make-array-beautiful/
+draft: true
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2216 - Minimum Deletions to Make Array Beautiful (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/minimum-deletions-to-make-array-beautiful/
 
 ## Problem Statement
 
@@ -18,8 +25,6 @@ Note that an empty array is considered beautiful.
 You can delete any number of elements from `nums`. When you delete an element, all the elements to the right of the deleted element will be **shifted one unit to the left** to fill the gap created and all the elements to the left of the deleted element will remain **unchanged**.
 
 Return _the **minimum** number of elements to delete from_ `nums` _to make it beautiful._
-
-
 
 **Example 1:**
 

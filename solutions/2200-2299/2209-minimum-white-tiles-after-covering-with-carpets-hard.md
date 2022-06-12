@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/minimum-white-tiles-after-covering-with-carpets/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2209 - Minimum White Tiles After Covering With Carpets (Hard)
+
+## Problem Link
+
+https://leetcode.com/problems/minimum-white-tiles-after-covering-with-carpets/
 
 ## Problem Statement
 
@@ -54,6 +60,8 @@ Let $$dp[i][j]$$ be the minimum number of white tiles still visible covering til
 The base case is if the first tile is white, we set $$dp[i][j]$$ to $$1$$ as there is one white tile visible using $$0$$ carpet. Then iterate each tile and each carpet and do the following logic.
 
 First we take the previous result $$dp[i][j] = dp[i - 1][j]$$. If the current tile is white, we add $$1$$. If we've used a carpet, there are two cases. If the current index is greater / equal to $$carpetLen$$, then we compare the the previous result $$dp[i - carpetLen][numCarpets - 1]$$ with $$dp[i][j]$$ and take the min one. Otherwise, we set $$dp[i][j]$$ to $$0$$ as it is covered by previous carpet.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

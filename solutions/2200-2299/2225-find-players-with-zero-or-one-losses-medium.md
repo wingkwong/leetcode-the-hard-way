@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/find-players-with-zero-or-one-losses/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2225 - Find Players With Zero or One Losses (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/find-players-with-zero-or-one-losses/
 
 ## Problem Statement
 
@@ -56,6 +62,8 @@ Thus, answer[0] = [1,2,5,6] and answer[1] = [].
 ## Approach 1: Hash Map
 
 Check the number of times to lose for each player. If it is $$0$$, then this player belongs to $$ans[0]$$. If it is $$1$$, then it belongs to $$ans[1]$$.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

@@ -1,16 +1,22 @@
 ---
 description: >-
-  Author: @wingkwong |
+  Author: @heiheihang, @wingkwong |
   https://leetcode.com/problems/minimum-operations-to-halve-array-sum/
 ---
 
-# 2208 - Minimum Operations to Halve Array Sum (Medium)
+# 2208 -  Minimum Operations to Halve Array Sum (Medium)
+
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
+## Problem Link
+
+https://leetcode.com/problems/minimum-operations-to-halve-array-sum/
 
 ## Problem Statement
 
-You are given an array `nums` of positive integers. In one operation, you can choose **any** number from `nums` and reduce it to **exactly** half the number. (Note that you may choose this reduced number in future operations.)
+You are given an array nums of positive integers. In one operation, you can choose any number from nums and reduce it to exactly half the number. (Note that you may choose this reduced number in future operations.)
 
-Return _the **minimum** number of operations to reduce the sum of_ `nums` _by **at least** half._
+Return the minimum number of operations to reduce the sum of nums by at least half.
 
 **Example 1:**
 
@@ -45,13 +51,44 @@ It can be shown that we cannot reduce the sum by at least half in less than 3 op
 ```
 
 **Constraints:**
-
 * `1 <= nums.length <= 10^5`
 * `1 <= nums[i] <= 10^7`
 
-## Approach 1: Priority Queue
+## Approach 1: Max Heap
+
+We can keep track of the current largest number, and perform the division on the largest number while keeping track of the sum
+
+<SolutionAuthor name="@heiheihang"/>
+
+```py
+class Solution:
+    def halveArray(self, nums: List[int]) -> int:
+        s = sum(nums)
+        
+        target = s / 2
+        h = []
+        
+        for n in nums:
+            heappush(h, -n)
+            
+        val = s
+        res = 0
+        while(val > target):
+            res += 1
+            top = -(h[0] / 2)
+            val -= top
+            heappop(h)
+            heappush(h, - top)
+
+        return res
+```
+
+
+## Approach 2: Priority Queue
 
 First we calculate $$sum$$ and $$half$$. We use priority queue to store the elements. We pop out the maximum element $$top$$, add the half of it (i.e. $$top / 2$$) to $$reduce$$, and push it to priority queue. We keep doing that until $$reduce$$ is greater than / equal to $$half$$. The answer is how many rounds we have performed.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
