@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/smallest-string-with-a-given-numeric-value/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 1633 - Smallest String With A Given Numeric Value (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/smallest-string-with-a-given-numeric-value/
 
 ## Problem Statement
 
@@ -42,6 +48,8 @@ Output: "aaszz"
 
 To obtain lexicographically smallest string, we should put $$a$$ from the left and $$z$$ from the right if possible and put what's left in the middle. Therefore, we initialise the answer with all $$a$$s. Starting from the right, the best case is to make it to $$z$$ (i.e. $$s[i] + 25$$). If we cannot do it, then we can only make it to the max one (i.e. $$s[i] + k$$).
 
+<SolutionAuthor name="@wingkwong"/>
+
 ```cpp
 class Solution {
 public:
@@ -74,6 +82,8 @@ The answer can be potentially constructed by three segments. The first segment c
 First we calculate the number of characters that are not $$a$$, i.e. the total number of characters in the second and the third segment. Let's call it $$nonA$$. Then we know that there would be $$n - nonA$$ a in the first segment and $$nonA - 1$$ z in the third segment (minus one because we need one for the second segment). So how to get $$nonA$$? We can use above condition to find out $$nonA$$. That is $$(n - nonA) * 1 + nonA * 26 >= k$$ which gives $$nonA >= (k - n) / 25$$.
 
 For the middle segment, how many $$k$$ left we can use? We've used $$(n - nonA) * 1$$ for the first segment and $$(nonA-1)* 26$$ for the last segment. The index of the character in the middle segment would be $$k - (n - nonA) - (nonA - 1) * 26$$.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

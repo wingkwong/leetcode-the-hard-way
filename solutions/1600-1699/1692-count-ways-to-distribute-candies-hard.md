@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/count-ways-to-distribute-candies/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 1692 - Count Ways to Distribute Candies (Hard)
+
+## Problem Link
+
+https://leetcode.com/problems/count-ways-to-distribute-candies/
 
 ## Problem Statement
 
@@ -76,7 +82,7 @@ $$
 dp[i][j] = dp[i][j - 1] * i + dp[i - 1][j - 1]
 $$
 
-### C++ Solution 1:
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -96,7 +102,7 @@ public:
 };
 ```
 
-### C++ Solution 2:
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -128,7 +134,7 @@ $$
 S(n,k)=\frac1{k!}\sum_{j=0}^k(-1)^j\binom{k}j(k-j)^n
 $$
 
-### Python3
+<SolutionAuthor name="@wingkwong"/>
 
 ```python
 class Solution:

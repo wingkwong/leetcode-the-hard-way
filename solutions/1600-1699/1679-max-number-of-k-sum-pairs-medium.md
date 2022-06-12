@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/max-number-of-k-sum-pairs/'
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 1679 - Max Number of K-Sum Pairs (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/max-number-of-k-sum-pairs
 
 ## Problem Statement
 
@@ -46,6 +52,8 @@ We can use hash map to store the occurrences for each number. Just like Two Sum 
 The first case is when $$x$$ is same as $$k - x$$. In this case, we can only take $$m[x] / 2$$ at most, then we update both value with the remainder.
 
 Otherwise, we can only take the minimal value of $$m[x]$$and $$m[k - x]$$, then update the hash map values.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
