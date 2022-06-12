@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/as-far-from-land-as-possible/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 1162 -  As Far from Land as Possible (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/as-far-from-land-as-possible/
 
 ## Problem Statement
 
@@ -42,6 +48,8 @@ Explanation: The cell (2, 2) is as far as possible from all the land with distan
 ## Approach 1: BFS
 
 We use a queue to store all coordinates for each $$1$$. If the size of the queue is $$n * n$$, then we can return $$-1$$. Otherwise, we can walk the grid and mark $$dist$$ for those cells with $$0$$. The answer would be $$dist - 1$$.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
