@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/buildings-with-an-ocean-view/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 1762 - Buildings With an Ocean View (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/buildings-with-an-ocean-view/
 
 ## Problem Statement
 
@@ -48,6 +54,8 @@ Explanation: Only building 3 has an ocean view.
 We iterate $$heights$$ from right to left and track the maximum height. If the current building is taller than the maximum height, it means it has an ocean view and we can set it as the new max height.
 
 Since we do it backwards, we reverse the answer at the end.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended-ii/'
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 1751 - Maximum Number of Events That Can Be Attended II (Hard)
+
+## Problem Link
+
+https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended-ii/
 
 ## Problem Statement
 
@@ -52,6 +58,8 @@ Explanation: Although the events do not overlap, you can only attend 3 events. P
 
 ## Approach 1: Dynamic Programming
 
+<SolutionAuthor name="@wingkwong"/>
+
 ```cpp
 class Solution {
 public:
@@ -83,7 +91,3 @@ public:
     }
 };
 ```
-
-### Similar Problems:
-
-- [1235 - Maximum Profit in Job Scheduling (Hard)](../1200-1299/maximum-profit-in-job-scheduling-hard)

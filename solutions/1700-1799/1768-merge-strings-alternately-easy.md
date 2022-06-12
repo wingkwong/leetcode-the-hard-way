@@ -1,8 +1,14 @@
 ---
-description: 'Author: @TBC | https://leetcode.com/problems/merge-strings-alternately/'
+description: 'Author: @heiheihang | https://leetcode.com/problems/merge-strings-alternately/'
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 1768 - Merge Strings Alternately (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/merge-strings-alternately
 
 ## Problem Statement
 
@@ -51,6 +57,8 @@ merged: a p b q c   d
 ## Approach 1: Two Pointers
 
 We define two pointers, `pointer_for_word1`and `pointer_for_word2` . We then iterate the letters from both words until we have exhausted one of them. After that, we exhaust the remaining word (if both words have different lengths).
+
+<SolutionAuthor name="@heiheihang"/>
 
 ```python
 def mergeAlternately(self, word1: str, word2: str) -> str:
