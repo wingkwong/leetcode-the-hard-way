@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/broken-calculator/'
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 0991 - Broken Calculator (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/broken-calculator/
 
 ## Problem Statement
 
@@ -46,6 +52,8 @@ Explanation: Use double, decrement and double {3 -> 6 -> 5 -> 10}.
 ## Approach 1: Greedy
 
 We solve it backwards. For operation 1, instead of multiplying the number by $$2$$, we divide it by $$2$$ if possible. Similarly, we add $$1$$ to the number for operation 2. At the end, the number may be less than startValue, in this case we can only use operation 2.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

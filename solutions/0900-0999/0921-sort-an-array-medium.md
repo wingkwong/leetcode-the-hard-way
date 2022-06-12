@@ -3,7 +3,13 @@ description: 'Author: @wingkwong | https://leetcode.com/problems/sort-an-array/'
 tags: ['sorting']
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 0921 - Sort an Array (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/sort-an-array/
 
 ## Problem Statement
 
@@ -32,6 +38,8 @@ Output: [0,0,1,1,2,5]
 
 ### Standard STL Sort
 
+<SolutionAuthor name="@wingkwong"/>
+
 ```cpp
 void standardSTLSort(vector<int>& nums) {
     sort(nums.begin(), nums.end());
@@ -39,6 +47,8 @@ void standardSTLSort(vector<int>& nums) {
 ```
 
 ### Stable STL Sort
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 void stableSTLSort(vector<int>& nums) {
@@ -49,6 +59,8 @@ void stableSTLSort(vector<int>& nums) {
 ## Approach 2: Quick Sort
 
 ### Quick Sort with Fixed Pivot (TLE)
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 int partition(vector<int>& nums, int l, int r) {
@@ -74,6 +86,8 @@ void quickSort(vector<int>& nums, int l, int r) {
 ```
 
 ### Quick Sort with Randomised Pivot
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 int partition(vector<int>& nums, int l, int r) {

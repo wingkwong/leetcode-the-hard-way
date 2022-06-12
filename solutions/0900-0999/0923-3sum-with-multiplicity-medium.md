@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/3sum-with-multiplicity/'
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 0923 - 3Sum With Multiplicity (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/3sum-with-multiplicity/
 
 ## Problem Statement
 
@@ -73,6 +79,8 @@ For case 2, we need to choose $$2$$ elements from $$m[i]$$ and multiply by $$m[j
 For case 3, we need to choose $$2$$ elements from $$m[j]$$ and multiply by $$m[i]$$.
 
 For case 4, there are $$m[i] * m[j] * m[k]$$ ways.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 int threeSumMulti(vector<int>& arr, int target) {

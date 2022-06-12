@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/stamping-the-sequence/'
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 0936 - Stamping The Sequence (Hard)
+
+## Problem Link
+
+https://leetcode.com/problems/stamping-the-sequence
 
 ## Problem Statement
 
@@ -54,6 +60,8 @@ Explanation: Initially s = "???????".
 ## Approach 1: Greedy
 
 We first try the first stamp and mark those characters to$$*$$. Then build some new stamps to check if they exist in target, if so mark them and repeat the process until all characters are stamped.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
