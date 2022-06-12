@@ -2,7 +2,13 @@
 description: 'Author: @heiheihang | https://leetcode.com/problems/concatenation-of-array/'
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 1929 - Concatenation of Array (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/concatenation-of-array/
 
 ## Problem Statement
 
@@ -41,6 +47,8 @@ Explanation: The array ans is formed as follows:
 ## Approach 1: Iteration
 
 We need to look at `nums` two times to create the desired result. The simplest approach is to perform two for-loops in `nums` and copy the numbers to `result` .
+
+<SolutionAuthor name="@heiheihang"/>
 
 ```python
 def getConcatenation(self, nums: List[int]) -> List[int]:
