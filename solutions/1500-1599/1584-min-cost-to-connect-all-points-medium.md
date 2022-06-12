@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/min-cost-to-connect-all-points/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 1584 - Min Cost to Connect All Points (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/min-cost-to-connect-all-points/
 
 ## Problem Statement
 
@@ -92,6 +98,8 @@ class dsu {
 ```
 
 </details>
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
