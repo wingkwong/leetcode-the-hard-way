@@ -216,6 +216,13 @@ export const week3Problems = [
     "solutionLink": "",
     "tags": "Bit Manipulation"
   },
+  {
+    "problemName": "0704 - Binary Search",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/binary-search/",
+    "solutionLink": "",
+    "tags": "Binary Search"
+  },
 ]
 
 <Table 
@@ -224,4 +231,31 @@ export const week3Problems = [
     collectionLink="https://leetcode.com/list/eofbf01i"
     isSorted={false}
     key="w3"
+/>
+
+
+
+export const week4Problems = [
+  {
+    "problemName": "0704 - Binary Search",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/binary-search/",
+    "solutionLink": "../solutions/0700-0799/binary-search-easy",
+    "tags": "Binary Search"
+  },
+  {
+    "problemName": "0278 - First Bad Version",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/first-bad-version/",
+    "solutionLink": "../solutions/0200-0299/first-bad-version-easy",
+    "tags": "Binary Search"
+  },
+]
+
+<Table 
+    title="Week 4 (13 June - 17 June)"
+    data={week4Problems}
+    collectionLink="https://leetcode.com/list/eppgvb8s"
+    isSorted={false}
+    key="w4"
 />
