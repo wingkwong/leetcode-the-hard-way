@@ -250,6 +250,20 @@ export const week4Problems = [
     "solutionLink": "../solutions/0200-0299/first-bad-version-easy",
     "tags": "Binary Search"
   },
+  {
+    "problemName": "0367 - Valid Perfect Square",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/valid-perfect-square/",
+    "solutionLink": "../solutions/0300-0399/valid-perfect-square-easy",
+    "tags": "Binary Search"
+  },
+  {
+    "problemName": "0540 - Single Element in a Sorted Array",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/single-element-in-a-sorted-array/",
+    "solutionLink": "",
+    "tags": "Binary Search"
+  },
 ]
 
 <Table 
