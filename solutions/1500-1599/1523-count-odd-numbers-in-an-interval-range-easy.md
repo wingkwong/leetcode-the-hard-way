@@ -52,6 +52,20 @@ func countOdds(low int, high int) int {
 }
 ```
 
+<SolutionAuthor name="@wingkwong"/>
+
+```rs
+impl Solution {
+    pub fn count_odds(low: i32, high: i32) -> i32 {
+        let mut ans = 0;
+        for i in low .. high + 1 {
+            ans += i & 1;
+        }
+        return ans;
+    }
+}
+```
+
 ## Approach 2: Math
 
 Numbers of odd numbers in $$[low, high]$$ is same as $$[1, high] - [1 , low - 1]$$. Therefore, we just find out those two numbers to get the answer. There are $$(high + 1) / 2$$ odd numbers in $$[1, high]$$ and $$low/2$$ odd numbers in $$[1, low - 1]$$.
@@ -61,5 +75,15 @@ Numbers of odd numbers in $$[low, high]$$ is same as $$[1, high] - [1 , low - 1]
 ```go
 func countOdds(low int, high int) int {
     return (high + 1) / 2 - (low / 2);
+}
+```
+
+<SolutionAuthor name="@wingkwong"/>
+
+```rs
+impl Solution {
+    pub fn count_odds(low: i32, high: i32) -> i32 {
+        return (high + 1) / 2 - (low / 2);
+    }
 }
 ```

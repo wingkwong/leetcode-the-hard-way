@@ -44,14 +44,12 @@ Average salary excluding minimum and maximum salary is (2000) / 1 = 2000
 
 We iterate $$salary$$ and calculate the total sum $$sum$$, the minimum value $$mi$$ and the maximum value $$mx$$. The average salary of employees excluding the minimum and maximum salary would be $$sum - mi - mx$$. Since we exclude two items, we just need to divide by $$len(salary) - 2$$.
 
-### Go
-
 <SolutionAuthor name="@wingkwong"/>
 
 ```go
 func average(salary []int) float64 {
     sum, n := 0, len(salary)
-    mi, mx := 1000000, 0
+    mi, mx := 100005, 0
     for _, x := range salary {
         // calculate the total sum
         sum += x
@@ -62,5 +60,26 @@ func average(salary []int) float64 {
     }
     // exclude mi & mx and get the avg 
     return float64(sum - mi - mx) / float64(n - 2)
+}
+```
+
+<SolutionAuthor name="@wingkwong"/>
+
+```rs
+use std::cmp;
+
+impl Solution {
+    pub fn average(salary: Vec<i32>) -> f64 {
+        let mut sum = 0;
+        let mut mx = 0;
+        let mut mi = 100005;
+        let n = salary.len() as f64;
+        for x in salary {
+            sum += x;
+            mx = cmp::max(mx, x);
+            mi = cmp::min(mi, x);
+        }
+        return ((sum - mx - mi) as f64 / (n - 2.0)); 
+    }
 }
 ```
