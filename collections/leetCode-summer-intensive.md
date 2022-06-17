@@ -264,6 +264,20 @@ export const week4Problems = [
     "solutionLink": "",
     "tags": "Binary Search"
   },
+  {
+    "problemName": "1760 - Minimum Limit of Balls in a Bag",
+    "difficulty": "Medium",
+    "leetCodeLink": "https://leetcode.com/problems/minimum-limit-of-balls-in-a-bag/",
+    "solutionLink": "",
+    "tags": "Binary Search"
+  },
+  {
+    "problemName": "0875 - Koko Eating Bananas",
+    "difficulty": "Medium",
+    "leetCodeLink": "https://leetcode.com/problems/koko-eating-bananas/",
+    "solutionLink": "",
+    "tags": "Binary Search"
+  },
 ]
 
 <Table 
