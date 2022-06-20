@@ -287,3 +287,42 @@ export const week4Problems = [
     isSorted={false}
     key="w4"
 />
+
+export const week5Problems = [
+  {
+    "problemName": "1004 - Max Consecutive Ones III",
+    "difficulty": "Medium",
+    "leetCodeLink": "https://leetcode.com/problems/max-consecutive-ones-iii/",
+    "solutionLink": "../solutions/1000-1099/max-consecutive-ones-iii-medium",
+    "tags": "Binary Search"
+  },
+  {
+    "problemName": "1011 - Capacity To Ship Packages Within D Days",
+    "difficulty": "Medium",
+    "leetCodeLink": "https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/",
+    "solutionLink": "../solutions/0000-0099/find-first-and-last-position-of-element-in-sorted-array-medium",
+    "tags": "Binary Search"
+  },
+  {
+    "problemName": "0034 - Find First and Last Position of Element in Sorted Array",
+    "difficulty": "Medium",
+    "leetCodeLink": "https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/",
+    "solutionLink": "",
+    "tags": "Binary Search"
+  },
+  {
+    "problemName": "0209 - Minimum Size Subarray Sum",
+    "difficulty": "Medium",
+    "leetCodeLink": "https://leetcode.com/problems/minimum-size-subarray-sum/",
+    "solutionLink": "",
+    "tags": "Binary Search"
+  },
+]
+
+<Table 
+    title="Week 5 (20 June - 24 June)"
+    data={week5Problems}
+    collectionLink="https://leetcode.com/list/em7rav6v"
+    isSorted={false}
+    key="w5"
+/>
