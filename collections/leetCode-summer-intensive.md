@@ -11,6 +11,48 @@ keywords:
 
 import Table from '@site/src/components/Table';
 
+<Table 
+    title="Week 5 (20 June - 24 June)"
+    data={week5Problems}
+    collectionLink="https://leetcode.com/list/em7rav6v"
+    isSorted={false}
+    key="w5"
+/>
+
+<Table 
+    title="Week 4 (13 June - 17 June)"
+    data={week4Problems}
+    collectionLink="https://leetcode.com/list/eppgvb8s"
+    isSorted={false}
+    key="w4"
+/>
+
+<Table 
+    title="Week 3 (6 June - 10 June)"
+    data={week3Problems}
+    collectionLink="https://leetcode.com/list/eofbf01i"
+    isSorted={false}
+    key="w3"
+/>
+
+<Table 
+    title="Week 2 (30 May - 3 June)"
+    data={week2Problems}
+    collectionLink="https://leetcode.com/list/eeyew3e6"
+    isSorted={false}
+    key="w2"
+/>
+
+<Table 
+    title="Week 1 (24 May - 27 May)"
+    data={week1Problems}
+    collectionLink="https://leetcode.com/list/eeyho3um"
+    isSorted={false}
+    key="w1"
+/>
+
+
+
 export const week1Problems = [
   {
     "problemName": "0169 - Majority Element",
@@ -70,13 +112,7 @@ export const week1Problems = [
   },
 ]
 
-<Table 
-    title="Week 1 (24 May - 27 May)"
-    data={week1Problems}
-    collectionLink="https://leetcode.com/list/eeyho3um"
-    isSorted={false}
-    key="w1"
-/>
+
 
 export const week2Problems = [
   {
@@ -151,13 +187,6 @@ export const week2Problems = [
   },
 ]
 
-<Table 
-    title="Week 2 (30 May - 3 June)"
-    data={week2Problems}
-    collectionLink="https://leetcode.com/list/eeyew3e6"
-    isSorted={false}
-    key="w2"
-/>
 
 export const week3Problems = [
   {
@@ -225,16 +254,6 @@ export const week3Problems = [
   },
 ]
 
-<Table 
-    title="Week 3 (6 June - 10 June)"
-    data={week3Problems}
-    collectionLink="https://leetcode.com/list/eofbf01i"
-    isSorted={false}
-    key="w3"
-/>
-
-
-
 export const week4Problems = [
   {
     "problemName": "0704 - Binary Search",
@@ -280,14 +299,6 @@ export const week4Problems = [
   },
 ]
 
-<Table 
-    title="Week 4 (13 June - 17 June)"
-    data={week4Problems}
-    collectionLink="https://leetcode.com/list/eppgvb8s"
-    isSorted={false}
-    key="w4"
-/>
-
 export const week5Problems = [
   {
     "problemName": "1004 - Max Consecutive Ones III",
@@ -319,10 +330,3 @@ export const week5Problems = [
   },
 ]
 
-<Table 
-    title="Week 5 (20 June - 24 June)"
-    data={week5Problems}
-    collectionLink="https://leetcode.com/list/em7rav6v"
-    isSorted={false}
-    key="w5"
-/>
