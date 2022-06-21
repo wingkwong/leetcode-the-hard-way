@@ -328,5 +328,19 @@ export const week5Problems = [
     "solutionLink": "",
     "tags": "Binary Search"
   },
+  {
+    "problemName": "0219 - Contains Duplicate II",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/contains-duplicate-ii/",
+    "solutionLink": "../solutions/0200-0299/contains-duplicate-ii-easy",
+    "tags": "Sliding Window"
+  },
+  {
+    "problemName": "1876 - Substrings of Size Three with Distinct Characters",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters/",
+    "solutionLink": "",
+    "tags": "Sliding Window"
+  },
 ]
 
