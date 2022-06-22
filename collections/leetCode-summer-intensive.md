@@ -342,5 +342,19 @@ export const week5Problems = [
     "solutionLink": "",
     "tags": "Sliding Window"
   },
+  {
+    "problemName": "1248 - Count Number of Nice Subarrays",
+    "difficulty": "Medium",
+    "leetCodeLink": "https://leetcode.com/problems/count-number-of-nice-subarrays/",
+    "solutionLink": "",
+    "tags": "Sliding Window"
+  },
+  {
+    "problemName": "1695 - Maximum Erasure Value",
+    "difficulty": "Medium",
+    "leetCodeLink": "https://leetcode.com/problems/maximum-erasure-value/",
+    "solutionLink": "",
+    "tags": "Sliding Window"
+  },
 ]
 
