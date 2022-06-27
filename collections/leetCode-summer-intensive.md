@@ -356,5 +356,19 @@ export const week5Problems = [
     "solutionLink": "",
     "tags": "Sliding Window"
   },
+  {
+    "problemName": "0438 - Find All Anagrams in a String",
+    "difficulty": "Medium",
+    "leetCodeLink": "https://leetcode.com/problems/find-all-anagrams-in-a-string/",
+    "solutionLink": "../solutions/0400-0499/find-all-anagrams-in-a-string-medium",
+    "tags": "Sliding Window"
+  },
+  {
+    "problemName": "0567 - Permutation in String",
+    "difficulty": "Medium",
+    "leetCodeLink": "https://leetcode.com/problems/permutation-in-string//",
+    "solutionLink": "../solutions/0500-0599/permutation-in-string-medium",
+    "tags": "Sliding Window"
+  },
 ]
 
