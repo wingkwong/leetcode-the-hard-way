@@ -12,6 +12,14 @@ keywords:
 import Table from '@site/src/components/Table';
 
 <Table 
+    title="Week 6 (27 June - 1 July)"
+    data={week6Problems}
+    collectionLink="https://leetcode.com/list/e2nqid63"
+    isSorted={false}
+    key="w6"
+/>
+
+<Table 
     title="Week 5 (20 June - 24 June)"
     data={week5Problems}
     collectionLink="https://leetcode.com/list/em7rav6v"
@@ -369,6 +377,30 @@ export const week5Problems = [
     "leetCodeLink": "https://leetcode.com/problems/permutation-in-string//",
     "solutionLink": "../solutions/0500-0599/permutation-in-string-medium",
     "tags": "Sliding Window"
+  },
+]
+
+export const week6Problems = [
+  {
+    "problemName": "0303 - Range Sum Query - Immutable",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/range-sum-query-immutable/",
+    "solutionLink": "",
+    "tags": "Prefix Sum"
+  },
+  {
+    "problemName": "0724 - Find Pivot Index",
+    "difficulty": "Easy",
+    "leetCodeLink": " https://leetcode.com/problems/find-pivot-index/",
+    "solutionLink": "",
+    "tags": "Prefix Sum"
+  },
+  {
+    "problemName": "1588 - Sum of All Odd Length Subarrays",
+    "difficulty": "Easy",
+    "leetCodeLink": " https://leetcode.com/problems/sum-of-all-odd-length-subarrays/",
+    "solutionLink": "",
+    "tags": "Prefix Sum"
   },
 ]
 
