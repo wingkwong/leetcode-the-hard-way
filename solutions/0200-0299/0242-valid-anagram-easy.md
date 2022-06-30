@@ -1,5 +1,6 @@
 ---
-description: 'Author: @heiheihang | https://leetcode.com/problems/valid-anagram/'
+description: 'Author: @wingkwong | https://leetcode.com/problems/valid-anagram/'
+tags: ['Hash Map']
 ---
 
 import SolutionAuthor from '@site/src/components/SolutionAuthor';
@@ -15,8 +16,6 @@ https://leetcode.com/problems/valid-anagram/
 Given two strings `s` and `t`, return `true` _if_ `t` _is an anagram of_ `s`_, and_ `false` _otherwise_.
 
 An **Anagram** is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
-
-&#x20;
 
 **Example 1:**
 
@@ -39,6 +38,42 @@ Output: false
 
 **Follow up:** What if the inputs contain Unicode characters? How would you adapt your solution to such a case?
 
-## Python Beginner Approach
+## Approach 1: Sort
 
-TBC
+<SolutionAuthor name="@wingkwong"/>
+
+```cpp
+class Solution {
+public:
+    bool isAnagram(string s, string t) {
+        // s and t are anagrams
+        // if they are same after being sorted
+        sort(begin(s), end(s));
+        sort(begin(t), end(t));
+        return s == t;
+    }
+};
+```
+
+## Approach 2: Hash Map
+
+<SolutionAuthor name="@wingkwong"/>
+
+```cpp
+class Solution {
+public:
+    bool isAnagram(string s, string t) {
+        // if s and t are anagram, 
+        // then the frequency of each number would be same
+        int cnt[26] = {0};
+        for (auto x : s) cnt[x - 'a']++;
+        for (auto x : t) cnt[x - 'a']--;
+        for (int i = 0; i < 26; i++) {
+            if (cnt[i]) {
+                return false;
+            }
+        }
+        return true;
+    }
+};
+```

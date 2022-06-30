@@ -80,35 +80,35 @@ export const week1Problems = [
     "problemName": "2032 - Two Out of Three",
     "difficulty": "Easy",
     "leetCodeLink": "https://leetcode.com/problems/two-out-of-three/",
-    "solutionLink": "",
+    "solutionLink": "../solutions/2000-2099/two-out-of-three-easy",
     "tags": "Hash Table"
   },
   {
     "problemName": "1748 - Sum of Unique Elements",
     "difficulty": "Easy",
     "leetCodeLink": "https://leetcode.com/problems/sum-of-unique-elements/",
-    "solutionLink": "",
+    "solutionLink": "../solutions/1700-1799/sum-of-unique-elements-easy",
     "tags": "Hash Table"
   },
   {
     "problemName": "0242 - Valid Anagram",
     "difficulty": "Easy",
     "leetCodeLink": "https://leetcode.com/problems/valid-anagram/",
-    "solutionLink": "",
+    "solutionLink": "../solutions/0200-0299/valid-anagram-easy",
     "tags": "Hash Table"
   },
   {
     "problemName": "1347 - Minimum Number of Steps to Make Two Strings Anagram",
     "difficulty": "Medium",
     "leetCodeLink": "https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram/",
-    "solutionLink": "",
+    "solutionLink": "../solutions/1300-1399/minimum-number-of-steps-to-make-two-strings-anagram-medium",
     "tags": "Hash Table"
   },
   {
     "problemName": "2225 - Find Players With Zero or One Losses",
     "difficulty": "Medium",
     "leetCodeLink": "https://leetcode.com/problems/find-players-with-zero-or-one-losses/",
-    "solutionLink": "",
+    "solutionLink": "../solutions/2200-2299/find-players-with-zero-or-one-losses-medium",
     "tags": "Hash Table"
   },
   {
