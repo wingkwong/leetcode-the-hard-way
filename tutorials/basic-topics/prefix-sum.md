@@ -35,7 +35,7 @@ $$$
 To generalise, we have 
 
 $$$
-  pref(i) =
+  pref[i] =
 \begin{cases}
 a[0],  & \text{if $i$ is 0} \\
 pref[i - 1] + a[i], & \text{if $i$ >= 1}
