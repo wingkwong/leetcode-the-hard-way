@@ -403,16 +403,16 @@ export const week6Problems = [
     "tags": "Prefix Sum"
   },
   {
-    "problemName": "525 - Contiguous Array",
+    "problemName": "0525 - Contiguous Array",
     "difficulty": "Medium",
-    "leetCodeLink": " https://leetcode.com/problems/contiguous-array/",
-    "solutionLink": "",
+    "leetCodeLink": "https://leetcode.com/problems/contiguous-array/",
+    "solutionLink": "../solutions/0500-0599/contiguous-array-medium",
     "tags": "Prefix Sum"
   },
   {
-    "problemName": "304 - Range Sum Query 2D - Immutable",
+    "problemName": "0304 - Range Sum Query 2D - Immutable",
     "difficulty": "Medium",
-    "leetCodeLink": " https://leetcode.com/problems/range-sum-query-2d-immutable/",
+    "leetCodeLink": "https://leetcode.com/problems/range-sum-query-2d-immutable/",
     "solutionLink": "",
     "tags": "Prefix Sum"
   },
