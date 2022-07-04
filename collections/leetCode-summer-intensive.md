@@ -402,5 +402,19 @@ export const week6Problems = [
     "solutionLink": "",
     "tags": "Prefix Sum"
   },
+  {
+    "problemName": "525 - Contiguous Array",
+    "difficulty": "Medium",
+    "leetCodeLink": " https://leetcode.com/problems/contiguous-array/",
+    "solutionLink": "",
+    "tags": "Prefix Sum"
+  },
+  {
+    "problemName": "304 - Range Sum Query 2D - Immutable",
+    "difficulty": "Medium",
+    "leetCodeLink": " https://leetcode.com/problems/range-sum-query-2d-immutable/",
+    "solutionLink": "",
+    "tags": "Prefix Sum"
+  },
 ]
 
