@@ -12,6 +12,15 @@ keywords:
 import Table from '@site/src/components/Table';
 
 <Table 
+    title="Week 7 (4 June - 8 July)"
+    data={week7Problems}
+    collectionLink="https://leetcode.com/list/en7k8euj"
+    isSorted={false}
+    key="w7"
+/>
+
+
+<Table 
     title="Week 6 (27 June - 1 July)"
     data={week6Problems}
     collectionLink="https://leetcode.com/list/e2nqid63"
@@ -418,3 +427,19 @@ export const week6Problems = [
   },
 ]
 
+export const week7Problems = [
+  {
+    "problemName": "0974 - Subarray Sums Divisible by K",
+    "difficulty": "Medium",
+    "leetCodeLink": "https://leetcode.com/problems/subarray-sums-divisible-by-k/",
+    "solutionLink": "",
+    "tags": "Prefix Sum"
+  },
+  {
+    "problemName": "2055 - Plates Between Candles",
+    "difficulty": "Medium",
+    "leetCodeLink": "https://leetcode.com/problems/plates-between-candles/",
+    "solutionLink": "",
+    "tags": "Prefix Sum"
+  },
+]
