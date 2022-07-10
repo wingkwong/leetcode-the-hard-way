@@ -328,14 +328,14 @@ export const week5Problems = [
     "problemName": "1011 - Capacity To Ship Packages Within D Days",
     "difficulty": "Medium",
     "leetCodeLink": "https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/",
-    "solutionLink": "../solutions/0000-0099/find-first-and-last-position-of-element-in-sorted-array-medium",
+    "solutionLink": "",
     "tags": "Binary Search"
   },
   {
     "problemName": "0034 - Find First and Last Position of Element in Sorted Array",
     "difficulty": "Medium",
     "leetCodeLink": "https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/",
-    "solutionLink": "",
+    "solutionLink": "../solutions/0000-0099/find-first-and-last-position-of-element-in-sorted-array-medium",
     "tags": "Binary Search"
   },
   {
