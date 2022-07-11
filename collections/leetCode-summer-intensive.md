@@ -14,7 +14,7 @@ import Table from '@site/src/components/Table';
 <Table 
     title="Week 8 (11 June - 15 July)"
     data={week8Problems}
-    collectionLink="tbc"
+    collectionLink="https://leetcode.com/list/evwsdprs"
     isSorted={false}
     key="w8"
 />
@@ -419,6 +419,9 @@ export const week6Problems = [
     "solutionLink": "",
     "tags": "Prefix Sum"
   },
+]
+
+export const week7Problems = [
   {
     "problemName": "0525 - Contiguous Array",
     "difficulty": "Medium",
@@ -433,9 +436,6 @@ export const week6Problems = [
     "solutionLink": "",
     "tags": "Prefix Sum"
   },
-]
-
-export const week7Problems = [
   {
     "problemName": "0974 - Subarray Sums Divisible by K",
     "difficulty": "Medium",
@@ -452,16 +452,16 @@ export const week7Problems = [
   },
 ]
 
-export const week7Problems = [
+export const week8Problems = [
   {
-    "problemName": "104 - Maximum Depth of Binary Tree",
+    "problemName": "0104 - Maximum Depth of Binary Tree",
     "difficulty": "Easy",
     "leetCodeLink": "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
-    "solutionLink": "",
+    "solutionLink": "../solutions/0100-0199/maximum-depth-of-binary-tree-easy",
     "tags": "Binary Tree"
   },
   {
-    "problemName": "637 - Average of Levels in Binary Tree",
+    "problemName": "0637 - Average of Levels in Binary Tree",
     "difficulty": "Easy",
     "leetCodeLink": "https://leetcode.com/problems/average-of-levels-in-binary-tree/",
     "solutionLink": "",
