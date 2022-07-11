@@ -12,6 +12,14 @@ keywords:
 import Table from '@site/src/components/Table';
 
 <Table 
+    title="Week 8 (11 June - 15 July)"
+    data={week8Problems}
+    collectionLink="tbc"
+    isSorted={false}
+    key="w8"
+/>
+
+<Table 
     title="Week 7 (4 June - 8 July)"
     data={week7Problems}
     collectionLink="https://leetcode.com/list/en7k8euj"
@@ -328,14 +336,14 @@ export const week5Problems = [
     "problemName": "1011 - Capacity To Ship Packages Within D Days",
     "difficulty": "Medium",
     "leetCodeLink": "https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/",
-    "solutionLink": "../solutions/0000-0099/find-first-and-last-position-of-element-in-sorted-array-medium",
+    "solutionLink": "",
     "tags": "Binary Search"
   },
   {
     "problemName": "0034 - Find First and Last Position of Element in Sorted Array",
     "difficulty": "Medium",
     "leetCodeLink": "https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/",
-    "solutionLink": "",
+    "solutionLink": "../solutions/0000-0099/find-first-and-last-position-of-element-in-sorted-array-medium",
     "tags": "Binary Search"
   },
   {
@@ -441,5 +449,22 @@ export const week7Problems = [
     "leetCodeLink": "https://leetcode.com/problems/plates-between-candles/",
     "solutionLink": "",
     "tags": "Prefix Sum"
+  },
+]
+
+export const week7Problems = [
+  {
+    "problemName": "104 - Maximum Depth of Binary Tree",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
+    "solutionLink": "",
+    "tags": "Binary Tree"
+  },
+  {
+    "problemName": "637 - Average of Levels in Binary Tree",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/average-of-levels-in-binary-tree/",
+    "solutionLink": "",
+    "tags": "Binary Tree"
   },
 ]
