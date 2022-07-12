@@ -336,7 +336,7 @@ export const week5Problems = [
     "problemName": "1011 - Capacity To Ship Packages Within D Days",
     "difficulty": "Medium",
     "leetCodeLink": "https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/",
-    "solutionLink": "./solutions/1000-1099/capacity-to-ship-packages-within-d-days",
+    "solutionLink": "../solutions/1000-1099/capacity-to-ship-packages-within-d-days-medium",
     "tags": "Binary Search"
   },
   {
