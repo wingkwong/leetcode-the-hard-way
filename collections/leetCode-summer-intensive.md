@@ -336,7 +336,7 @@ export const week5Problems = [
     "problemName": "1011 - Capacity To Ship Packages Within D Days",
     "difficulty": "Medium",
     "leetCodeLink": "https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/",
-    "solutionLink": "",
+    "solutionLink": "./solutions/1000-1099/capacity-to-ship-packages-within-d-days",
     "tags": "Binary Search"
   },
   {
@@ -464,6 +464,20 @@ export const week8Problems = [
     "problemName": "0637 - Average of Levels in Binary Tree",
     "difficulty": "Easy",
     "leetCodeLink": "https://leetcode.com/problems/average-of-levels-in-binary-tree/",
+    "solutionLink": "",
+    "tags": "Binary Tree"
+  },
+  {
+    "problemName": "0100 - Same Tree",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/same-tree/",
+    "solutionLink": "",
+    "tags": "Binary Tree"
+  },
+  {
+    "problemName": "0112 - Path Sum",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/path-sum/",
     "solutionLink": "",
     "tags": "Binary Tree"
   },
