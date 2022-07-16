@@ -481,4 +481,18 @@ export const week8Problems = [
     "solutionLink": "",
     "tags": "Binary Tree"
   },
+  {
+    "problemName": "0103 - Binary Tree Zigzag Level Order Traversal",
+    "difficulty": "Medium",
+    "leetCodeLink": "https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/",
+    "solutionLink": "",
+    "tags": "Binary Tree"
+  },
+  {
+    "problemName": "0752 - Open the Lock",
+    "difficulty": "Medium",
+    "leetCodeLink": "https://leetcode.com/problems/open-the-lock/",
+    "solutionLink": "",
+    "tags": "Binary Tree"
+  },
 ]
