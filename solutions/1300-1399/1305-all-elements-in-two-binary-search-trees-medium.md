@@ -41,48 +41,7 @@ Output: [1,1,8,8]
 
 ## Prerequisites
 
-There are different ways to traverse trees - In-order, Pre-order, and Post-order. Supposing we have a binary tree with 5 nodes,
-
-![image](https://user-images.githubusercontent.com/35857179/168303628-5830a3ca-7e36-4751-893b-09443e44bdc7.png)
-
-| Traversal  | Path               | Order               |
-| ---------- | ------------------ | ------------------- |
-| Pre-order  | 1 -> 2-> 4-> 5-> 3 | Root > Left > Right |
-| In-order   | 4 -> 2-> 5-> 1-> 3 | Left > Root > Right |
-| Post-order | 4 -> 5-> 2-> 3-> 1 | Left > Right >Root  |
-
-### Pre-order
-
-```cpp
-void preorder(TreeNode* node) {
-    if (node == NULL) return;
-    s.push_back(node->val);
-    preorder(node->left);
-    preorder(node->right);
-}
-```
-
-### In-order
-
-```cpp
-void inorder(TreeNode* node) {
-    if (node == NULL) return;
-    inorder(node->left);
-    s.push_back(node->val);
-    inorder(node->right);
-}
-```
-
-### Post-order
-
-```cpp
-void postorder(TreeNode* node) {
-    if (node == NULL) return;
-    postorder(node->left);
-    postorder(node->right);
-    s.push_back(node->val);
-}
-```
+[Binary Tree](../../tutorials/graph-theory/binary-tree)
 
 ## Approach 1: DFS Traversal and Sorting
 
