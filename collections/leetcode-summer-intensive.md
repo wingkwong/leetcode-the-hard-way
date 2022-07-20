@@ -14,7 +14,7 @@ import Table from '@site/src/components/Table';
 <Table 
     title="Week 9 (18 June - 22 July)"
     data={week9Problems}
-    collectionLink="https://leetcode.com/list/"
+    collectionLink="https://leetcode.com/list/edmdtdv2"
     isSorted={false}
     key="w9"
 />
@@ -505,7 +505,7 @@ export const week8Problems = [
   },
 ]
 
-export const week8Problems = [
+export const week9Problems = [
   {
     "problemName": "0094 - Binary Tree Inorder Traversal",
     "difficulty": "Easy",
