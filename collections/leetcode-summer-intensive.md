@@ -12,6 +12,14 @@ keywords:
 import Table from '@site/src/components/Table';
 
 <Table 
+    title="Week 9 (18 June - 22 July)"
+    data={week9Problems}
+    collectionLink="https://leetcode.com/list/"
+    isSorted={false}
+    key="w9"
+/>
+
+<Table 
     title="Week 8 (11 June - 15 July)"
     data={week8Problems}
     collectionLink="https://leetcode.com/list/evwsdprs"
@@ -492,6 +500,23 @@ export const week8Problems = [
     "problemName": "0752 - Open the Lock",
     "difficulty": "Medium",
     "leetCodeLink": "https://leetcode.com/problems/open-the-lock/",
+    "solutionLink": "",
+    "tags": "Binary Tree"
+  },
+]
+
+export const week8Problems = [
+  {
+    "problemName": "0094 - Binary Tree Inorder Traversal",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/binary-tree-inorder-traversal/",
+    "solutionLink": "",
+    "tags": "Binary Tree"
+  },
+  {
+    "problemName": "0111 - Minimum Depth of Binary Tree",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/minimum-depth-of-binary-tree/",
     "solutionLink": "",
     "tags": "Binary Tree"
   },
