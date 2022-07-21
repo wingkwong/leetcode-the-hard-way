@@ -520,4 +520,18 @@ export const week9Problems = [
     "solutionLink": "",
     "tags": "Binary Tree"
   },
+  {
+    "problemName": "0543 - Diameter of Binary Tree",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/diameter-of-binary-tree/",
+    "solutionLink": "",
+    "tags": "Binary Tree"
+  },
+  {
+    "problemName": "0226 - Invert Binary Tree",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/invert-binary-tree/",
+    "solutionLink": "",
+    "tags": "Binary Tree"
+  },
 ]
