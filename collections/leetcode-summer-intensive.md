@@ -534,4 +534,18 @@ export const week9Problems = [
     "solutionLink": "",
     "tags": "Binary Tree"
   },
+  {
+    "problemName": "0236 - Lowest Common Ancestor of a Binary Tree",
+    "difficulty": "Medium",
+    "leetCodeLink": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/",
+    "solutionLink": "",
+    "tags": "Binary Tree"
+  },
+  {
+    "problemName": "0695. Max Area of Island",
+    "difficulty": "Medium",
+    "leetCodeLink": "https://leetcode.com/problems/max-area-of-island/",
+    "solutionLink": "",
+    "tags": "Graph"
+  },
 ]
