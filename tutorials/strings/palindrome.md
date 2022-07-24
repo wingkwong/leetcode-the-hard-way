@@ -56,3 +56,17 @@ bool isPalindrome(const string &s) {
     return equal(s.begin(), s.begin() + s.size() / 2, s.rbegin());
 }
 ```
+
+### Palindrome with Range
+
+For a given range, we can follow the same idea to use two pointers to check if a sub-string is a palindrome .
+
+```cpp
+bool palindromeWithRange(string s, int i, int j) {
+    while (i < j) {
+        if (s[i] != s[j]) return false;
+        i++, j--;
+    }
+    return true;
+}
+```
