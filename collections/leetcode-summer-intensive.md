@@ -550,20 +550,6 @@ export const week9Problems = [
 "solutionLink": "",
 "tags": "DFS"
 },
-{
-"problemName": "0934 - Shortest Bridge",
-"difficulty": "Medium",
-"leetCodeLink": "https://leetcode.com/problems/shortest-bridge/",
-"solutionLink": "",
-"tags": "DFS"
-},
-{
-"problemName": "1020 - Number of Enclaves",
-"difficulty": "Medium",
-"leetCodeLink": "https://leetcode.com/problems/number-of-enclaves/",
-"solutionLink": "",
-"tags": "DFS"
-},
 ]
 
 export const week10Problems = [
