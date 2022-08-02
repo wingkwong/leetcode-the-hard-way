@@ -1,8 +1,8 @@
 ---
 description: >-
-  Author: @TBC |
+  Author: @wingkwong |
   https://leetcode.com/problems/first-letter-to-appear-twice
-draft: true
+tags: ['Hash Map']
 ---
 
 # 2351 - First Letter to Appear Twice (Easy)
@@ -50,10 +50,22 @@ The only letter that appears twice is 'd' so we return 'd'.
 * `s` consists of lowercase English letters.
 * `s` has at least one repeated letter.
 
-## Approach: TBC
+## Approach 1: Hash Map
 
-<SolutionAuthor name="@TBC"/>
+<SolutionAuthor name="@wingkwong"/>
 
-```
-// TODO
+```cpp
+class Solution {
+public:
+    char repeatedCharacter(string s) {
+      // store the frequency of each character
+      // alternatively, we can use int cnt[26];
+      unordered_map<char, int> m;
+      // for each character, check the frequency
+      // if it appears twice, return that character
+      for (auto& c: s) if (++m[c] == 2) return c;
+      // return the last one
+      return s.back();
+    }
+};
 ```
