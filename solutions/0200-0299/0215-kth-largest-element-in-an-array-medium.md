@@ -1,5 +1,6 @@
 ---
-description: 'Author: @TBC | https://leetcode.com/problems/kth-largest-element-in-an-array/'
+description: 'Author: @wingkwong | https://leetcode.com/problems/kth-largest-element-in-an-array/'
+tags: ['Priority Queue']
 ---
 
 import SolutionAuthor from '@site/src/components/SolutionAuthor';
@@ -35,4 +36,51 @@ Output: 4
 * `1 <= k <= nums.length <= 10^4`
 * `-10^4 <= nums[i] <= 10^4`
 
-## Approach 1: TBC
+## Approach 1: Priority Queue
+
+When we look for `k-th` elements, we can think of Priority Queue as it internally sorts the container. We can check if the size exceeds $k$. 
+
+<SolutionAuthor name="@wingkwong"/>
+
+```cpp
+class Solution {
+public:
+    int findKthLargest(vector<int>& nums, int k) {
+        priority_queue<int> pq;
+        // push elements to priority queue
+        for (auto &x : nums) pq.push(x);
+        // only keep k largest elements
+        for (int i = 0; i < k - 1; i++) pq.pop();
+        // return the top which is the k-th largest element
+        return pq.top();
+    }
+};
+```
+
+## Approach 2: STL
+
+The following STL functions can partially sort to solve the problem.
+
+<SolutionAuthor name="@wingkwong"/>
+
+```cpp
+class Solution {
+public:
+    int findKthLargest(vector<int>& nums, int k) {
+        partial_sort(nums.begin(), nums.begin() + k, nums.end(), greater<int>());
+        return nums[k - 1];
+    }
+};
+```
+
+<SolutionAuthor name="@wingkwong"/>
+
+```cpp
+class Solution {
+public:
+    int findKthLargest(vector<int>& nums, int k) {
+        nth_element(nums.begin(), nums.begin() + k - 1, nums.end(), greater<int>());
+        return nums[k - 1];
+    }
+};
+```
