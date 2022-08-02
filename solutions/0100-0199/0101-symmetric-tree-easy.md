@@ -1,5 +1,5 @@
 ---
-description: 'Author: @TBC | https://leetcode.com/problems/symmetric-tree/'
+description: 'Author: @wingkwong | https://leetcode.com/problems/symmetric-tree/'
 ---
 
 import SolutionAuthor from '@site/src/components/SolutionAuthor';
@@ -39,4 +39,29 @@ Output: false
 
 **Follow up:** Could you solve it both recursively and iteratively?
 
-## Approach 1: TBC
+## Approach 1: Recursive
+
+A tree is symmetric if the following conditions are satisfied
+
+- two nodes should have the value 
+- the left sub-tree is a reflection of the right sub-tree of the other tree
+
+<SolutionAuthor name="@wingkwong"/>
+
+```cpp
+class Solution {
+public:
+    bool f(TreeNode* r1, TreeNode* r2){
+        // if two nodes r null, they are same
+        if(!r1 && !r2) return true;
+        // if one of them r null, they are not same
+        if(!r1 || !r2) return false;
+        // if their values are same, and the sub-nodes are same
+        return (r1->val == r2->val) && f(r1->left, r2->right) && f(r1->right, r2->left);
+    }
+    
+    bool isSymmetric(TreeNode* root) {
+        return f(root, root);
+    }
+};
+```
