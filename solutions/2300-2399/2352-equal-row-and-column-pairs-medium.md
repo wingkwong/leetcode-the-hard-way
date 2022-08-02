@@ -1,8 +1,8 @@
 ---
 description: >-
-  Author: @TBC |
+  Author: @wingkwong |
   https://leetcode.com/problems/equal-row-and-column-pairs
-draft: true
+tags: ['Hash Map']
 ---
 
 # 2352 - Equal Row and Column Pairs (Medium)
@@ -51,10 +51,34 @@ Explanation: There are 3 equal row and column pairs:
 * `1 <= n <= 200`
 * `1 <= grid[i][j] <= 10^5`
 
-## Approach: TBC
+## Approach 1: Hash Map
 
-<SolutionAuthor name="@TBC"/>
+<SolutionAuthor name="@wingkwong"/>
 
-```
-// TODO
+```cpp
+class Solution {
+public:
+    int equalPairs(vector<vector<int>>& g) {
+        int n = g.size(), ans = 0;
+        // count the frequency of a vector
+        map<vector<int>, int> m;
+        // check all rows
+        for (int i = 0; i < n; i++) {
+            vector<int> tmp;
+            for (int j = 0; j < n; j++) tmp.push_back(g[i][j]);
+            // in example 1, we got {3,2,1}, {1,7,6}, {2,7,7}
+            m[tmp] += 1;
+        }
+        // check all cols
+        for (int j = 0; j < n; j++) {
+            vector<int> tmp;
+            for (int i = 0; i < n; i++) tmp.push_back(g[i][j]);
+            // in example 1, we got {3,1,2}, {2,7,7}, {1,6,7}
+            // since {2,7,7} has frequency of 1, we add it to answer 
+            // otherwise, it would be adding 0
+            ans += m[tmp];
+        }
+        return ans;
+    }
+};
 ```
