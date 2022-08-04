@@ -1,8 +1,7 @@
 ---
 description: >-
-  Author: @TBC |
+  Author: @wingkwong |
   https://leetcode.com/problems/make-array-zero-by-subtracting-equal-amounts
-draft: true
 ---
 
 # 2357 - Make Array Zero by Subtracting Equal Amounts (Easy)
@@ -41,17 +40,29 @@ Output: 0
 Explanation: Each element in nums is already 0 so no operations are needed.
 ```
 
-&#x20;
-
 **Constraints:**
 
 * `1 <= nums.length <= 100`
 * `0 <= nums[i] <= 100`
 
-## Approach: TBC
+## Approach: Counting
 
-<SolutionAuthor name="@TBC"/>
+Observations:
 
-```
-// TODO
+- We can remove all numbers `x` in one go
+- We need $n$ moves to remove $n$ distinct numbers 
+- Hence, the problem is to find out the number of different positive numbers
+
+<SolutionAuthor name="@wingkwong"/>
+
+```go
+func minimumOperations(nums []int) int {
+    s := make(map[int]bool)
+    for _, v := range nums {
+        if v > 0 { 
+            s[v] = true
+        }
+    }
+    return len(s)
+}
 ```
