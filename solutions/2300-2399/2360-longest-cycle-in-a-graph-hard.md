@@ -1,8 +1,7 @@
 ---
 description: >-
-  Author: @TBC |
+  Author: @wingkwong |
   https://leetcode.com/problems/longest-cycle-in-a-graph
-draft: true
 ---
 
 # 2360 - Longest Cycle in a Graph (Hard)
@@ -51,10 +50,51 @@ Explanation: There are no cycles in this graph.
 * `-1 <= edges[i] < n`
 * `edges[i] != i`
 
-## Approach: TBC
+## Approach: Strongly Connected Component
 
-<SolutionAuthor name="@TBC"/>
+We can compute Strongly Connected Component on the graph and find the maximum one. 
 
-```
-// TODO
+<SolutionAuthor name="@wingkwong"/>
+
+```cpp
+class Solution {
+public:
+    struct SCC : vector<int> {
+      vector<vector<int>> comps;
+      vector<int> S;
+
+      SCC() {}
+      SCC(vector<vector<int>>& G) : vector<int>((int)G.size(), -1), S((int)G.size()) {
+        for(int i = 0; i < (int)G.size(); i++) if(!S[i]) dfs(G, i);
+      }
+
+      int dfs(vector<vector<int>>& G, int v) {
+        int low = S[v] = (int)S.size();
+        S.push_back(v);
+        for(auto e : G[v]) if(at(e) < 0) low = min(low, S[e] ?: dfs(G, e));
+        if(low == S[v]) {
+          comps.push_back({});
+          for(int i = S[v]; i < (int)S.size(); i++) {
+            at(S[i]) = (int)comps.size() - 1;
+            comps.back().push_back(S[i]);
+          }
+          S.resize(S[v]);
+        }
+        return low;
+      }
+    };
+    
+    int longestCycle(vector<int>& edges) {
+        int n = edges.size(), ans = -1;
+        vector<vector<int>> g(n);
+		// we only need those nodes with outgoing edge
+        for (int i = 0; i < n; i++) if (edges[i] != -1) g[i].push_back(edges[i]);
+		// compute strongly connected components
+        SCC s = SCC(g);
+		// if the size is greater than 1, that means there is a cycle (which has at least two nodes)
+		// so iterate each possible answer and find the max one
+        for (auto &x : s.comps) if ((int) x.size() > 1) ans = max(ans, (int) x.size());
+        return ans;
+    }
+};
 ```
