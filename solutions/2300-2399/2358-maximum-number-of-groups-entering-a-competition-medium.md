@@ -1,8 +1,7 @@
 ---
 description: >-
-  Author: @TBC |
+  Author: @wingkwong |
   https://leetcode.com/problems/maximum-number-of-groups-entering-a-competition
-draft: true
 ---
 
 # 2358 - Maximum Number of Groups Entering a Competition (Medium)
