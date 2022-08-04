@@ -49,8 +49,17 @@ Explanation: We can only form 1 group, since forming 2 groups would lead to an e
 
 ## Approach: TBC
 
-<SolutionAuthor name="@TBC"/>
+We need to form groups of `1, 2, 3, ...` students in order to maximize the number of groups. We can use the formula `i * (i + 1) / 2` to find out the number of students in `i` groups.
 
-```
-// TODO
+<SolutionAuthor name="@wingkwong"/>
+
+```cpp
+class Solution {
+public:
+    int maximumGroups(vector<int>& grades) {
+        int n = grades.size(), i = 0;
+        while (i * (i + 1) / 2 <= n) i++;
+        return i - 1;
+    }
+};
 ```
