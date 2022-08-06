@@ -89,20 +89,20 @@ export const suggestedProblems = [
   {
     "problemName": "0217 - Contains Duplicate",
     "difficulty": "Easy",
-    "LeetCodeLink": "https://leetcode.com/problems/contains-duplicate/",
-    "SolutionLink": "../../solutions/0200-0299/contains-duplicate-easy"
+    "leetCodeLink": "https://leetcode.com/problems/contains-duplicate/",
+    "solutionLink": "../../solutions/0200-0299/contains-duplicate-easy"
   },
   {
     "problemName": "0219 - Contains Duplicate II",
     "difficulty": "Easy",
-    "LeetCodeLink": "https://leetcode.com/problems/contains-duplicate-ii/",
-    "SolutionLink": "../../solutions/0200-0299/contains-duplicate-ii-easy"
+    "leetCodeLink": "https://leetcode.com/problems/contains-duplicate-ii/",
+    "solutionLink": "../../solutions/0200-0299/contains-duplicate-ii-easy"
   },
   {
     "problemName": "0003 - Longest Substring Without Repeating Characters",
     "difficulty": "Medium",
-    "LeetCodeLink": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
-    "SolutionLink": "../../solutions/0000-0099/longest-substring-without-repeating-characters-medium"
+    "leetCodeLink": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+    "solutionLink": "../../solutions/0000-0099/longest-substring-without-repeating-characters-medium"
   },
 ]
 

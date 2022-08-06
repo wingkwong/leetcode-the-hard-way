@@ -86,14 +86,14 @@ export const suggestedProblems = [
   {
     "problemName": "1135 - Connecting Cities With Minimum Cost",
     "difficulty": "Medium",
-    "LeetCodeLink": "https://leetcode.com/problems/connecting-cities-with-minimum-cost/",
-    "SolutionLink": "../../solutions/1100-1199/connecting-cities-with-minimum-cost-medium"
+    "leetCodeLink": "https://leetcode.com/problems/connecting-cities-with-minimum-cost/",
+    "solutionLink": "../../solutions/1100-1199/connecting-cities-with-minimum-cost-medium"
   },
   {
     "problemName": "1168 - Optimize Water Distribution in a Village",
     "difficulty": "Hard",
-    "LeetCodeLink": "https://leetcode.com/problems/optimize-water-distribution-in-a-village/",
-    "SolutionLink": "../../solutions/1100-1199/optimize-water-distribution-in-a-village-hard"
+    "leetCodeLink": "https://leetcode.com/problems/optimize-water-distribution-in-a-village/",
+    "solutionLink": "../../solutions/1100-1199/optimize-water-distribution-in-a-village-hard"
   },
 ]
 

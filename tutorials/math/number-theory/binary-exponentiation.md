@@ -61,8 +61,8 @@ export const suggestedProblems = [
   {
     "problemName": "0050 - Pow(x, n)",
     "difficulty": "Medium",
-    "LeetCodeLink": "https://leetcode.com/problems/powx-n/",
-    "SolutionLink": "../../../solutions/0000-0099/pow-x-n-medium"
+    "leetCodeLink": "https://leetcode.com/problems/powx-n/",
+    "solutionLink": "../../../solutions/0000-0099/pow-x-n-medium"
   },
 ]
 

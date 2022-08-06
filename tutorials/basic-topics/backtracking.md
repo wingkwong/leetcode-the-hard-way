@@ -63,26 +63,26 @@ export const suggestedProblems = [
   {
     "problemName": "0039 - Combination Sum",
     "difficulty": "Medium",
-    "LeetCodeLink": "https://leetcode.com/problems/running-sum-of-1d-array/",
-    "SolutionLink": "../../solutions/1400-1499/running-sum-of-1d-array-easy"
+    "leetCodeLink": "https://leetcode.com/problems/running-sum-of-1d-array/",
+    "solutionLink": "../../solutions/1400-1499/running-sum-of-1d-array-easy"
   },
   {
     "problemName": "0040 - Combination Sum II",
     "difficulty": "Medium",
-    "LeetCodeLink": "https://leetcode.com/problems/combination-sum-ii/",
-    "SolutionLink": "../../solutions/0000-0099/combination-sum-ii-medium"
+    "leetCodeLink": "https://leetcode.com/problems/combination-sum-ii/",
+    "solutionLink": "../../solutions/0000-0099/combination-sum-ii-medium"
   },
   {
     "problemName": "0046 - Permutations",
     "difficulty": "Medium",
-    "LeetCodeLink": "https://leetcode.com/problems/permutations/",
-    "SolutionLink": "../../solutions/0000-0099/permutations-medium"
+    "leetCodeLink": "https://leetcode.com/problems/permutations/",
+    "solutionLink": "../../solutions/0000-0099/permutations-medium"
   },
   {
     "problemName": "0078 - Subsets",
     "difficulty": "Medium",
-    "LeetCodeLink": "https://leetcode.com/problems/subsets/",
-    "SolutionLink": "../../solutions/0000-0099/subsets-medium"
+    "leetCodeLink": "https://leetcode.com/problems/subsets/",
+    "solutionLink": "../../solutions/0000-0099/subsets-medium"
   },
 ]
 

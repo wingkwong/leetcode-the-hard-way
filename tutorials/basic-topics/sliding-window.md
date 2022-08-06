@@ -91,20 +91,20 @@ export const suggestedProblems = [
   {
     "problemName": "1852 - Distinct Numbers in Each Subarray",
     "difficulty": "Medium",
-    "LeetCodeLink": "https://leetcode.com/problems/distinct-numbers-in-each-subarray",
-    "SolutionLink": "../../solutions/1800-1899/distinct-numbers-in-each-subarray-medium"
+    "leetCodeLink": "https://leetcode.com/problems/distinct-numbers-in-each-subarray",
+    "solutionLink": "../../solutions/1800-1899/distinct-numbers-in-each-subarray-medium"
   },
   {
     "problemName": "1004 - Max Consecutive Ones III",
     "difficulty": "Medium",
-    "LeetCodeLink": "https://leetcode.com/problems/max-consecutive-ones-iii",
-    "SolutionLink": "../../solutions/1000-1099/max-consecutive-ones-iii-medium"
+    "leetCodeLink": "https://leetcode.com/problems/max-consecutive-ones-iii",
+    "solutionLink": "../../solutions/1000-1099/max-consecutive-ones-iii-medium"
   },
   {
     "problemName": "1876 - Substrings of Size Three with Distinct Characters",
     "difficulty": "Medium",
-    "LeetCodeLink": "https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters/",
-    "SolutionLink": ""
+    "leetCodeLink": "https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters/",
+    "solutionLink": ""
   },
 ]
 

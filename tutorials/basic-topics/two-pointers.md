@@ -79,20 +79,20 @@ export const suggestedProblems = [
   {
     "problemName": "1768 - Merge Strings Alternately",
     "difficulty": "Easy",
-    "LeetCodeLink": "https://leetcode.com/problems/merge-strings-alternately/",
-    "SolutionLink": "../../solutions/1700-1799/merge-strings-alternately-easy"
+    "leetCodeLink": "https://leetcode.com/problems/merge-strings-alternately/",
+    "solutionLink": "../../solutions/1700-1799/merge-strings-alternately-easy"
   },
   {
     "problemName": "2108 - Find First Palindromic String in the Array",
     "difficulty": "Easy",
-    "LeetCodeLink": "https://leetcode.com/problems/merge-strings-alternately/",
-    "SolutionLink": "../../solutions/2100-2199/find-first-palindromic-string-in-the-array-easy"
+    "leetCodeLink": "https://leetcode.com/problems/merge-strings-alternately/",
+    "solutionLink": "../../solutions/2100-2199/find-first-palindromic-string-in-the-array-easy"
   },
   {
     "problemName": "0283 - Move Zeroes",
     "difficulty": "Easy",
-    "LeetCodeLink": "https://leetcode.com/problems/move-zeroes/",
-    "SolutionLink": "../../solutions/0200-0299/move-zeroes-easy"
+    "leetCodeLink": "https://leetcode.com/problems/move-zeroes/",
+    "solutionLink": "../../solutions/0200-0299/move-zeroes-easy"
   },
 ]
 

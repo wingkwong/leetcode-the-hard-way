@@ -80,32 +80,32 @@ export const suggestedProblems = [
   {
     "problemName": "1480 - Running Sum of 1d Array",
     "difficulty": "Easy",
-    "LeetCodeLink": "https://leetcode.com/problems/running-sum-of-1d-array/",
-    "SolutionLink": "../../solutions/1400-1499/running-sum-of-1d-array-easy"
+    "leetCodeLink": "https://leetcode.com/problems/running-sum-of-1d-array/",
+    "solutionLink": "../../solutions/1400-1499/running-sum-of-1d-array-easy"
   },
   {
     "problemName": "1929 - Concatenation of Array",
     "difficulty": "Easy",
-    "LeetCodeLink": "https://leetcode.com/problems/concatenation-of-array/",
-    "SolutionLink": "../../solutions/1900-1999/concatenation-of-array-easy"
+    "leetCodeLink": "https://leetcode.com/problems/concatenation-of-array/",
+    "solutionLink": "../../solutions/1900-1999/concatenation-of-array-easy"
   },
   {
     "problemName": "1431 - Kids With the Greatest Number of Candies",
     "difficulty": "Easy",
-    "LeetCodeLink": "https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/",
-    "SolutionLink": "../../solutions/1400-1499/kids-with-the-greatest-number-of-candies-easy"
+    "leetCodeLink": "https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/",
+    "solutionLink": "../../solutions/1400-1499/kids-with-the-greatest-number-of-candies-easy"
   },
   {
     "problemName": "1572 - Matrix Diagonal Sum",
     "difficulty": "Easy",
-    "LeetCodeLink": "https://leetcode.com/problems/matrix-diagonal-sum/",
-    "SolutionLink": "../../solutions/1500-1599/matrix-diagonal-sum-easy"
+    "leetCodeLink": "https://leetcode.com/problems/matrix-diagonal-sum/",
+    "solutionLink": "../../solutions/1500-1599/matrix-diagonal-sum-easy"
   },
   {
     "problemName": "0036 - Valid Sudoku",
     "difficulty": "Medium",
-    "LeetCodeLink": "https://leetcode.com/problems/valid-sudoku/",
-    "SolutionLink": ""
+    "leetCodeLink": "https://leetcode.com/problems/valid-sudoku/",
+    "solutionLink": ""
   },
 ]
 

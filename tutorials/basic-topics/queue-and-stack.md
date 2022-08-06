@@ -210,20 +210,20 @@ export const suggestedProblems = [
   {
     "problemName": "0155 - Min Stack",
     "difficulty": "Easy",
-    "LeetCodeLink": "https://leetcode.com/problems/min-stack/",
-    "SolutionLink": "../../solutions/0100-0199/min-stack-easy"
+    "leetCodeLink": "https://leetcode.com/problems/min-stack/",
+    "solutionLink": "../../solutions/0100-0199/min-stack-easy"
   },
   {
     "problemName": "0496 - Next Greater Element I",
     "difficulty": "Easy",
-    "LeetCodeLink": "https://leetcode.com/problems/next-greater-element-i/",
-    "SolutionLink": "../../solutions/0400-0499/next-greater-element-i-easy"
+    "leetCodeLink": "https://leetcode.com/problems/next-greater-element-i/",
+    "solutionLink": "../../solutions/0400-0499/next-greater-element-i-easy"
   },
   {
     "problemName": "1475 - Final Prices With a Special Discount in a Shop",
     "difficulty": "Easy",
-    "LeetCodeLink": "https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/",
-    "SolutionLink": "../../solutions/1400-1499/final-prices-with-a-special-discount-in-a-shop-easy"
+    "leetCodeLink": "https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/",
+    "solutionLink": "../../solutions/1400-1499/final-prices-with-a-special-discount-in-a-shop-easy"
   },
 ]
 

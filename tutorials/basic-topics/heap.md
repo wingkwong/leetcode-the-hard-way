@@ -231,20 +231,20 @@ export const suggestedProblems = [
   {
     "problemName": "0703 - Kth Largest Element in a Stream",
     "difficulty": "Easy",
-    "LeetCodeLink": "https://leetcode.com/problems/kth-largest-element-in-a-stream/",
-    "SolutionLink": "../../solutions/0700-0799/kth-largest-element-in-a-stream-easy"
+    "leetCodeLink": "https://leetcode.com/problems/kth-largest-element-in-a-stream/",
+    "solutionLink": "../../solutions/0700-0799/kth-largest-element-in-a-stream-easy"
   },
   {
     "problemName": "0215 - Kth Largest Element in an Array",
     "difficulty": "Medium",
-    "LeetCodeLink": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
-    "SolutionLink": "../../solutions/0200-0299/kth-largest-element-in-an-array-medium"
+    "leetCodeLink": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
+    "solutionLink": "../../solutions/0200-0299/kth-largest-element-in-an-array-medium"
   },
   {
     "problemName": "0973 - K Closest Points to Origin",
     "difficulty": "Medium",
-    "LeetCodeLink": "https://leetcode.com/problems/k-closest-points-to-origin/",
-    "SolutionLink": "../../solutions/0900-0999/k-closest-points-to-origin-medium"
+    "leetCodeLink": "https://leetcode.com/problems/k-closest-points-to-origin/",
+    "solutionLink": "../../solutions/0900-0999/k-closest-points-to-origin-medium"
   },
 ]
 

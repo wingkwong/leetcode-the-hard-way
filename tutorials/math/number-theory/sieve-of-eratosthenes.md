@@ -42,8 +42,8 @@ export const suggestedProblems = [
   {
     "problemName": "0204 - Count Primes",
     "difficulty": "Medium",
-    "LeetCodeLink": "https://leetcode.com/problems/count-primes/",
-    "SolutionLink": "../../../solutions/0200-0299/count-primes"
+    "leetCodeLink": "https://leetcode.com/problems/count-primes/",
+    "solutionLink": "../../../solutions/0200-0299/count-primes"
   },
 ]
 
