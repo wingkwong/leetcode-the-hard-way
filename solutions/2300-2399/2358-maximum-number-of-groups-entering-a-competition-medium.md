@@ -46,7 +46,7 @@ Explanation: We can only form 1 group, since forming 2 groups would lead to an e
 * `1 <= grades.length <= 10^5`
 * `1 <= grades[i] <= 10^5`
 
-## Approach: TBC
+## Approach: Math
 
 We need to form groups of `1, 2, 3, ...` students in order to maximize the number of groups. We can use the formula `i * (i + 1) / 2` to find out the number of students in `i` groups.
 
