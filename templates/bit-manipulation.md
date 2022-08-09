@@ -60,3 +60,11 @@ int lowest_bit_index(int x) {
     return __builtin_ffs(x);
 }
 ```
+
+### Enumerating all submasks of a given mask
+
+```cpp
+for (int s = m; s; s = (s - 1) & m) {
+    // use s
+}
+ ```
