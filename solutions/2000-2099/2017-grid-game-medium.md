@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/grid-game/'
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2017 - Grid Game (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/grid-game/
 
 ## Problem Statement
 
@@ -70,6 +76,8 @@ For each index $$i$$, robot 2 could either
 
 We take the maximum one at each $$i$$ and compare with the current answer. As robot 1 plays optimally, which means it would get the maximum point. We take the minimum here.
 
+<SolutionAuthor name="@wingkwong"/>
+
 ```cpp
 class Solution {
 public:
@@ -115,6 +123,8 @@ public:
 <summary>Check Answer</summary>
 
 The idea is similar. Robot 1 can collect all points till $$i$$, then move to the bottom row and go till the end. We can simply check $$pref[i]$$ (collected on the top row) plus $$suff[i]$$ (collected on the bottom row).
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

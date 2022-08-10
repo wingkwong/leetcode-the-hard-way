@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/execution-of-all-suffix-instructions-staying-in-a-grid/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2120 - Execution of All Suffix Instructions Staying in a Grid (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/execution-of-all-suffix-instructions-staying-in-a-grid/
 
 ## Problem Statement
 
@@ -71,7 +77,7 @@ Explanation: No matter which instruction the robot begins execution from, it wou
 
 We can just simulate the whole process. For each $$i−th$$instruction, we have max $$s.size()−i$$steps assuming $$i$$ starts from $$0$$. We keep updating the position $$(x,y)$$and check if it is out of bound. If not, keep increasing $$cnt$$ by 1. If there is no further move we can make, we can break the loop and push the result $$cnt$$ to $$ans$$.
 
-### C++
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -102,7 +108,7 @@ Time Complexity: O(m ^ 2)
 
 ## Approach 2: One Pass
 
-### C++
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -129,4 +135,4 @@ public:
 };
 ```
 
-Time Complexity: O(m)
+Time Complexity: $O(m)$

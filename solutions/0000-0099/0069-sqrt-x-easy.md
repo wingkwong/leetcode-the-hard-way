@@ -2,7 +2,7 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/sqrtx/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0069 - Sqrt(x) (Easy)
 
@@ -41,7 +41,7 @@ Explanation: The square root of 8 is 2.82842..., and since the decimal part is t
 
 Prerequisite: [Binary Search](../../tutorials/basic-topics/binary-search)
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

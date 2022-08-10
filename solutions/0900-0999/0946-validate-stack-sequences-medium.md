@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/validate-stack-sequences/'
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 0946 - Validate Stack Sequences (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/validate-stack-sequences/
 
 ## Problem Statement
 
@@ -39,6 +45,8 @@ Explanation: 1 cannot be popped before 2.
 ## Approach 1: Simulation
 
 We use stack to simulate. For each item in $$pushed$$, we push it to the stack. If the top element of the stack matches the target element in $$popped$$, we pop that and increase the pointer in $$popped$$. At the end, return true if the stack is empty, return false if not.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

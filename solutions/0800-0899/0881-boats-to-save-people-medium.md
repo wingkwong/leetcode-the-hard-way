@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/boats-to-save-people/'
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 0881 - Boats to Save People (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/boats-to-save-people/
 
 ## Problem Statement
 
@@ -43,6 +49,8 @@ Explanation: 4 boats (3), (3), (4), (5)
 
 Let's sort the input. We know that the maximum weight is at most $$limit$$. The best way to choose the maximum weight first. Then we check if we could include one more (the minimum one). We can use two pointers to track the minimum one and the maximum one.
 
+<SolutionAuthor name="@wingkwong"/>
+
 ```cpp
 class Solution {
 public:
@@ -76,6 +84,8 @@ public:
 ```
 
 Once we get the idea, we can further refactor the solution.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

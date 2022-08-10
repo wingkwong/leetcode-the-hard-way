@@ -1,8 +1,9 @@
 ---
-description: 'Author: @TBC | https://leetcode.com/problems/contains-duplicate-ii/'
+description: 'Author: @wingkwong | https://leetcode.com/problems/contains-duplicate-ii/'
+tags: ['Sliding Window']
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0219 - Contains Duplicate II (Easy)
 
@@ -41,4 +42,63 @@ Output: false
 * `-10^9 <= nums[i] <= 10^9`
 * `0 <= k <= 10^5`
 
-## Approach 1: TBC
+## Approach 1: Sliding Window
+
+Since $k$ is provided, we can use a fixed-length sliding window approach. As we need to check if a variable exists before, we use a hash map to store the occurrence of each number. 
+
+We can do the following steps.
+
+1. We push first $min(n, k)$ elements to the hash map. If it exists before, then return true. By specifying $min(n, k)$, we can guarantee that the condition $abs(i - j) <= k$ is always true.
+2. For $[k .. n)$, if we the element exists in hash map, then return false. Otherwise, we remove $nums[i - k]$ from the hash map and include $nums[i]$ to the hash map, i.e. sliding the window to the right.
+
+<SolutionAuthor name="@wingkwong"/>
+
+```cpp
+class Solution {
+public:
+    bool containsNearbyDuplicate(vector<int>& nums, int k) {
+        if (k == 0) return false;
+        unordered_map<int, int> m;
+        int n = nums.size();
+        // include elements in the initial fixed-length sliding window
+        for (int i = 0; i < min(n, k); i++) {
+            // if nums[i] exists in the hash map -> then return true
+            if (m[nums[i]]) return true;
+            // push nums[i] to hash map
+            m[nums[i]]++;
+        }
+        // now shifting the window to the right one by one
+        for (int i = k; i < n; i++) {
+            // if nums[i] exists in the hash map -> then return true
+            if (m[nums[i]]) return true;
+            // remove nums[i - k] from the hash map (i.e the leftmost one in the window)
+            m[nums[i - k]]--;
+            // add nums[i] to the hash map (i.e. the rightmost one in the window)
+            m[nums[i]]++;
+        }
+        return false;
+    }
+};
+```
+
+Once you get the idea, we can combine both into a single for loop.
+
+<SolutionAuthor name="@wingkwong"/>
+
+```cpp
+class Solution {
+public:
+    bool containsNearbyDuplicate(vector<int>& nums, int k) {
+        unordered_map<int, int> m;
+        for (int i = 0; i < nums.size(); i++) {
+            // if nums[i] exists in the hash map -> then return true
+            if (m[nums[i]]) return true;
+            // remove nums[i - k] from the hash map (i.e the leftmost one in the window)
+            if (i >= k) m[nums[i - k]]--;
+            // add nums[i] to the hash map (i.e. the rightmost one in the window)
+            m[nums[i]]++;
+        }
+        return false;
+    }
+};
+```

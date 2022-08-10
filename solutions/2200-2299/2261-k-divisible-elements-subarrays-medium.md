@@ -4,7 +4,7 @@ description: >-
   https://leetcode.com/problems/k-divisible-elements-subarrays/
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 2261 - K Divisible Elements Subarrays (Medium)
 
@@ -57,7 +57,7 @@ Since all subarrays are distinct, the total number of subarrays satisfying all t
 
 Build all subarrays and insert them to set. The answer would be the size of the set.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

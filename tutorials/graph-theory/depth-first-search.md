@@ -10,10 +10,12 @@ keywords:
   - algorithm
 ---
 
-import Authors from '@site/src/components/Authors';
+import TutorialAuthors from '@site/src/components/TutorialAuthors';
 import Table from '@site/src/components/Table';
 
-<Authors names="@heiheihang"/>
+<TutorialAuthors names="@heiheihang"/>
+
+## Overview
 
 In Depth-First Search (DFS), we aim to finish one branch before looking at other branches.
 
@@ -121,20 +123,20 @@ export const suggestedProblems = [
   {
     "problemName": "0404 - Sum of Left Leaves",
     "difficulty": "Easy",
-    "LeetCodeLink": "https://leetcode.com/problems/sum-of-left-leaves/",
-    "SolutionLink": "../../solutions/0400-0499/sum-of-left-leaves-easy"
+    "leetCodeLink": "https://leetcode.com/problems/sum-of-left-leaves/",
+    "solutionLink": "../../solutions/0400-0499/sum-of-left-leaves-easy"
   },
   {
     "problemName": "0110 - Balanced Binary Tree",
     "difficulty": "Easy",
-    "LeetCodeLink": "https://leetcode.com/problems/balanced-binary-tree/",
-    "SolutionLink": "../../solutions/0100-0199/balanced-binary-tree-easy"
+    "leetCodeLink": "https://leetcode.com/problems/balanced-binary-tree/",
+    "solutionLink": "../../solutions/0100-0199/balanced-binary-tree-easy"
   },
   {
     "problemName": "0559 - Maximum Depth of N-ary Tree",
     "difficulty": "Easy",
-    "LeetCodeLink": "https://leetcode.com/problems/maximum-depth-of-n-ary-tree/",
-    "SolutionLink": "../../solutions/0500-0599/maximum-depth-of-n-ary-tree-easy"
+    "leetCodeLink": "https://leetcode.com/problems/maximum-depth-of-n-ary-tree/",
+    "solutionLink": "../../solutions/0500-0599/maximum-depth-of-n-ary-tree-easy"
   },
 ]
 

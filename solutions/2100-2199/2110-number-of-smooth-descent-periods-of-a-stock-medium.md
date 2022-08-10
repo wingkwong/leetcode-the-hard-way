@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/number-of-smooth-descent-periods-of-a-stock/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2110 - Number of Smooth Descent Periods of a Stock (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/number-of-smooth-descent-periods-of-a-stock/
 
 ## Problem Statement
 
@@ -50,7 +56,7 @@ Explanation: There is 1 smooth descent period: [1]
 
 Let `dp[i]` be the number of smooth descent periods ended at day `i`. First we can initialise `dp[i] = 1` for each `i`. This is true because the minimum smooth descent period is 1 which is itself. Then we can iterate `prices` and check if the difference between previous price and current price is exactly 1 or not. If so, we can contribute `dp[i - 1]` to `dp[i]`.
 
-### C++
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -73,6 +79,8 @@ public:
 ## Approach 2: Math
 
 For a non-increasing contiguous segement with length `l`, it contributes `1 + 2 + 3 + ... + l = (l + 1) * l / 2` subarrays.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

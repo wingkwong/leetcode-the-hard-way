@@ -4,7 +4,7 @@ description: >-
   https://leetcode.com/problems/intersection-of-multiple-arrays/
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 2248 - Intersection of Multiple Arrays (Easy)
 
@@ -47,7 +47,7 @@ Observation: Each element of the final output would have a frequency of $$nums.l
 
 We use hash map to store the frequency for each integer. Iterate the map and look for the those with $$occurrence ==nums.length$$.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

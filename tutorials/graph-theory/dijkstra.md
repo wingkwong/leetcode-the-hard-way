@@ -9,10 +9,12 @@ keywords:
   - algorithm
 ---
 
-import Authors from '@site/src/components/Authors';
+import TutorialAuthors from '@site/src/components/TutorialAuthors';
 import Table from '@site/src/components/Table';
 
-<Authors names="@wingkwong"/>
+<TutorialAuthors names="@wingkwong"/>
+
+## Overview
 
 Dijkstra's Algorithm is used to find the shortest paths between nodes in a graph. It can only be used when the graphs have non-negative weights for all edges.
 
@@ -43,14 +45,14 @@ export const suggestedProblems = [
   {
     "problemName": "0743 - Network Delay Time",
     "difficulty": "Medium",
-    "LeetCodeLink": "https://leetcode.com/problems/network-delay-time/",
-    "SolutionLink": "../../solutions/0700-0799/network-delay-time-medium"
+    "leetCodeLink": "https://leetcode.com/problems/network-delay-time/",
+    "solutionLink": "../../solutions/0700-0799/network-delay-time-medium"
   },
   {
     "problemName": "1334 - Find the City With the Smallest Number of Neighbors at a Threshold Distance",
     "difficulty": "Medium",
-    "LeetCodeLink": "https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/",
-    "SolutionLink": "../../solutions/1300-1399/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance-medium"
+    "leetCodeLink": "https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/",
+    "solutionLink": "../../solutions/1300-1399/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance-medium"
   },
 ]
 

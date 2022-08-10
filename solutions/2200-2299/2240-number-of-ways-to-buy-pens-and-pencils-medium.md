@@ -4,7 +4,7 @@ description: >-
   https://leetcode.com/problems/number-of-ways-to-buy-pens-and-pencils/
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 2240 - Number of Ways to Buy Pens and Pencils (Medium)
 
@@ -46,9 +46,9 @@ Explanation: The price of both pens and pencils are 10, which cost more than tot
 
 We try all the cases - if buy 0 pen to $$total / cost1$$ pens, how many pencils we can buy in each round?
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

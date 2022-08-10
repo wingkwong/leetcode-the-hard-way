@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/replace-non-coprime-numbers-in-array/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2197 - Replace Non-Coprime Numbers in Array (Hard)
+
+## Problem Link
+
+https://leetcode.com/problems/replace-non-coprime-numbers-in-array/
 
 ## Problem Statement
 
@@ -20,8 +26,6 @@ Return _the **final** modified array._ It can be shown that replacing adjacent n
 The test cases are generated such that the values in the final array are **less than or equal** to `108`.
 
 Two values `x` and `y` are **non-coprime** if `GCD(x, y) > 1` where `GCD(x, y)` is the **Greatest Common Divisor** of `x` and `y`.
-
-
 
 **Example 1:**
 
@@ -61,6 +65,8 @@ Note that there are other ways to obtain the same resultant array.
 ## Approach 1: Simulation
 
 We iterate each number and check if the gcd of this number $$x$$ and the last element $$y$$ of $$ans$$ is non co-prime, i.e. $$gcd(x, y) > 1$$.  If so, replace them with their LCM and keep doing the same process till they are co-prime.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/count-artifacts-that-can-be-extracted/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2201 - Count Artifacts That Can Be Extracted (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/count-artifacts-that-can-be-extracted/
 
 ## Problem Statement
 
@@ -65,6 +71,8 @@ Explanation: Both the red and blue artifacts have all parts uncovered (labeled w
 ## Approach 1: Loops
 
 Check if each cell from $$(r1_i, c1_i)$$ to $$(r2_i, c2_i)$$ in $$artifacts[i]$$ are all dug or not. If so, increase $$ans$$ by $$1$$.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/consecutive-numbers-sum/'
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 0829 - Consecutive Numbers Sum (Hard)
+
+## Problem Link
+
+https://leetcode.com/problems/consecutive-numbers-sum/
 
 ## Problem Statement
 
@@ -83,6 +89,8 @@ k * (k - 1) < 2 * n
 $$
 
 The upper bound for $$k$$ approximately would be around $$\sqrt {2 * n + k}$$. Therefore, we iterate $$k$$ from $$2$$ to $$\sqrt {2 * n + k}$$ to check if $$n - k * (k - 1) / 2$$ is a multiple of $$k$$. If so, it means we have one sequence so we increase the answer by $$1$$.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

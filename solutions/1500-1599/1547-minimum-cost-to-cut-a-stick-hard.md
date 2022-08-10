@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/minimum-cost-to-cut-a-stick/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 1547 - Minimum Cost to Cut a Stick (Hard)
+
+## Problem Link
+
+https://leetcode.com/problems/minimum-cost-to-cut-a-stick/
 
 ## Problem Statement
 
@@ -19,8 +25,6 @@ You should perform the cuts in order, you can change the order of the cuts as yo
 The cost of one cut is the length of the stick to be cut, the total cost is the sum of costs of all cuts. When you cut a stick, it will be split into two smaller sticks (i.e. the sum of their lengths is the length of the stick before the cut). Please refer to the first example for a better explanation.
 
 Return _the minimum total cost_ of the cuts.
-
-
 
 **Example 1:**
 
@@ -58,6 +62,8 @@ Let $$dp[i][j]$$ be the minimum total cost between cut position $$i$$and $$j$$. 
 Let's think of the base case first. Since the minimum length of a rod is $$1$$, we reach the destination when $$j - i <= 1$$ because we cannot make further cuts anymore. If $$dp[i][j]$$ has been calculated before, we can return it immediately.
 
 Otherwise, we iterate each position$$k$$ and perform each possible cut. We know that the cost is the length of the rod to be cut, i.e. $$cuts[j]  - cuts[i]$$. In example 1, the first cut costs 7. Since we have added $$0$$ and $$n$$to the input, so we have covered that. Once we cut at a certain point, the rod will be split into two parts. We perform the logic to calculate the costs for these two parts until we perform all the cuts.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

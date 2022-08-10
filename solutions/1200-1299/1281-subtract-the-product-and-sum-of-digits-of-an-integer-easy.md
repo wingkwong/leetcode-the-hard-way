@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 1281 - Subtract the Product and Sum of Digits of an Integer (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/
 
 ## Problem Statement
 
@@ -74,6 +80,8 @@ int digitProduct(int n) {
 
 At the end, we just subtract the product and sum.
 
+<SolutionAuthor name="@wingkwong"/>
+
 ```cpp
 class Solution {
 public:
@@ -111,6 +119,8 @@ public:
 
 Once you got the idea, you should realise that they can be combined together.
 
+<SolutionAuthor name="@wingkwong"/>
+
 ```cpp
 class Solution {
 public:
@@ -126,9 +136,9 @@ public:
 };
 ```
 
-### Go
+<SolutionAuthor name="@wingkwong"/>
 
-```mongodb
+```go
 func subtractProductAndSum(n int) int {
     product, sum := 1, 0
     for n > 0 {

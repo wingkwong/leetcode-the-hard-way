@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/partition-array-according-to-given-pivot/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2161 - Partition Array According to Given Pivot (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/partition-array-according-to-given-pivot/
 
 ## Problem Statement
 
@@ -53,6 +59,8 @@ It is same as
 * Pushing the elements equal to the pivot
 * Pushing the elements greater than the pivot
 
+<SolutionAuthor name="@wingkwong"/>
+
 ```cpp
 class Solution {
 public:
@@ -73,6 +81,8 @@ public:
 ## Approach 2: 3 Passes with 1 array
 
 Same idea as Approach 1 but we only use one array.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

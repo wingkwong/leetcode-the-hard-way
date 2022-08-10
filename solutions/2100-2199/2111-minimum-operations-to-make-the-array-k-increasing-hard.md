@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/minimum-operations-to-make-the-array-k-increasing/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2111 - Minimum Operations to Make the Array K-Increasing (Hard)
+
+## Problem Link
+
+https://leetcode.com/problems/minimum-operations-to-make-the-array-k-increasing/
 
 ## Problem Statement
 
@@ -67,7 +73,7 @@ Note that there can be other ways to make the array K-increasing, but none of th
 
 We can break input vector into $$k$$ groups $$ai,ai+k,ai+2∗k,...$$for each $$i<k$$. Calculate the LIS (Longest Increasing Subsequence) on each group and compare the length with the target size. We need to perform $$a.size()−lengthOfLIS(a)$$operations to make it K-increasing.
 
-### C++
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

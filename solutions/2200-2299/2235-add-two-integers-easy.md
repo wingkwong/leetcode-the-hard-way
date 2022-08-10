@@ -2,7 +2,7 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/add-two-integers/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 2235 - Add Two Integers (Easy)
 
@@ -36,7 +36,7 @@ Explanation: num1 + num2 = -6, so -6 is returned.
 
 ## Approach 1: A + B
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -49,7 +49,7 @@ public:
 
 ## Approach 2: Half Adder
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -62,7 +62,7 @@ public:
 
 ## Approach 3: Log & Exp
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

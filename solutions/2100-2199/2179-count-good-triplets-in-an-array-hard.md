@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/count-good-triplets-in-an-array/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2179 - Count Good Triplets in an Array (Hard)
+
+## Problem Link
+
+https://leetcode.com/problems/count-good-triplets-in-an-array/
 
 ## Problem Statement
 
@@ -13,8 +19,6 @@ You are given two **0-indexed** arrays `nums1` and `nums2` of length `n`, both o
 A **good triplet** is a set of `3` **distinct** values which are present in **increasing order** by position both in `nums1` and `nums2`. In other words, if we consider `pos1v` as the index of the value `v` in `nums1` and `pos2v` as the index of the value `v` in `nums2`, then a good triplet will be a set `(x, y, z)` where `0 <= x, y, z <= n - 1`, such that `pos1x < pos1y < pos1z` and `pos2x < pos2y < pos2z`.
 
 Return _the **total number** of good triplets_.
-
-
 
 **Example 1:**
 
@@ -47,9 +51,9 @@ BIT aka fenwick tree is a data structure that can efficiently update elements an
 
 In this problem, we use two BITs to store the number of elements $$l$$ smaller than $$nums[i]$$ and the number of elements $$r$$ greater than $$nums[i]$$. In other word, we fix the middle point and calculate the number of triplets by $$l * r$$ at that point. The answer is the sum of them.
 
-First, we need to know that what is the position of $$nums1[i]$$ in $$nums2[i]$$. Then we iterate the array to get the position in $$nums2$$ for $$nums1[i]$$. We call $$query$$ to get the number of elements smaller than it. It's also the prefix sum or the range query from $$0$$ to it. Then we update the tree for this position. Similarly, we do the same thing for the second BIT in reversed order. This time we are looking for the suffix sum with the range from the target position till the end. At the end, we sum all 
+First, we need to know that what is the position of $$nums1[i]$$ in $$nums2[i]$$. Then we iterate the array to get the position in $$nums2$$ for $$nums1[i]$$. We call $$query$$ to get the number of elements smaller than it. It's also the prefix sum or the range query from $$0$$ to it. Then we update the tree for this position. Similarly, we do the same thing for the second BIT in reversed order. This time we are looking for the suffix sum with the range from the target position till the end. At the end, we sum all $$l[i] * r[i]$$.
 
-$$l[i] * r[i]$$.
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 template <class T>

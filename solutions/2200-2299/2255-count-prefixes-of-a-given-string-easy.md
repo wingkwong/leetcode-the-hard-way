@@ -4,7 +4,7 @@ description: >-
   https://leetcode.com/problems/count-prefixes-of-a-given-string/
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 2255 - Count Prefixes of a Given String (Easy)
 
@@ -49,7 +49,7 @@ Note that the same string can occur multiple times in words, and it should be co
 
 ## Approach 1: STL
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

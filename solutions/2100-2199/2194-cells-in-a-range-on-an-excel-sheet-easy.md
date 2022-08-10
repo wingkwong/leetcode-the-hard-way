@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/cells-in-a-range-on-an-excel-sheet/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2194 - Cells in a Range on an Excel Sheet (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/cells-in-a-range-on-an-excel-sheet/
 
 ## Problem Statement
 
@@ -17,8 +23,6 @@ A cell `(r, c)` of an excel sheet is represented as a string `"<col><row>"` wher
 You are given a string `s` in the format `"<col1><row1>:<col2><row2>"`, where `<col1>` represents the column `c1`, `<row1>` represents the row `r1`, `<col2>` represents the column `c2`, and `<row2>` represents the row `r2`, such that `r1 <= r2` and `c1 <= c2`.
 
 Return _the **list of cells**_ `(x, y)` _such that_ `r1 <= x <= r2` _and_ `c1 <= y <= c2`. The cells should be represented as **strings** in the format mentioned above and be sorted in **non-decreasing** order first by columns and then by rows.
-
-
 
 **Example 1:**
 
@@ -56,6 +60,8 @@ The red arrow denotes the order in which the cells should be presented.
 ## Approach 1: Loops
 
 Iterate each letter from $$s[0]$$ to $$s[3]$$ and iterate each number from $$s[1]$$ to $$s[4]$$ to build the answer.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

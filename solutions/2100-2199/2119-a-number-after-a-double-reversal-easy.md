@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/a-number-after-a-double-reversal/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2119 - A Number After a Double Reversal (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/a-number-after-a-double-reversal/
 
 ## Problem Statement
 
@@ -44,7 +50,7 @@ Explanation: Reverse num to get 0, then reverse 0 to get 0, which equals num.
 
 ## Approach 1: Just do what it says
 
-### C++
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -64,7 +70,7 @@ public:
 
 However, a better way to solve this is to check if there is any trailing zero. No matter how many zeros at the end, after removing them all, it won't be same if you reverse it. The only exceptional case is $$num=0$$.
 
-### C++
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -75,5 +81,6 @@ public:
 };
 ```
 
-Time Complexity : O(1)\
-Space Complexity: O(1)
+Time Complexity : $O(1)$
+
+Space Complexity: $O(1)$

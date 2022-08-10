@@ -9,10 +9,12 @@ keywords:
   - algorithm
 ---
 
-import Authors from '@site/src/components/Authors';
+import TutorialAuthors from '@site/src/components/TutorialAuthors';
 import Table from '@site/src/components/Table';
 
-<Authors names="@wingkwong"/>
+<TutorialAuthors names="@wingkwong"/>
+
+## Overview
 
 Sorting refers to rearranging elements in a specific order. The most common order is either ascending or descending. There are a lot of algorithms to sort the array with different time complexity.
 
@@ -62,8 +64,8 @@ export const suggestedProblems = [
   {
     "problemName": "0921 - Sort an Array",
     "difficulty": "Medium",
-    "LeetCodeLink": "https://leetcode.com/problems/distinct-numbers-in-each-subarray/",
-    "SolutionLink": "../../solutions/0900-0999/sort-an-array-medium"
+    "leetCodeLink": "https://leetcode.com/problems/distinct-numbers-in-each-subarray/",
+    "solutionLink": "../../solutions/0900-0999/sort-an-array-medium"
   },
 ]
 

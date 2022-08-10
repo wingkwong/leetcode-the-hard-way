@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/valid-mountain-array/'
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 0941 - Valid Mountain Array (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/valid-mountain-array/
 
 ## Problem Statement
 
@@ -49,7 +55,7 @@ Output: true
 
 If the array length is less than 3, then it must be false. Otherwise, we can calculate the prefix and suffix.  `prefix[i]` means it is a strictly increasing array from the first mountain till mountain `i`. Similarly, `suffix[j]` means it is a strictly decreasing array from the last mountain till mountain `j`. If there is a certain point `k` where `prefix[k]` and `suffix[k]` both true, then that would be the peak of a valid mountain.
 
-### C++
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -71,7 +77,7 @@ public:
 
 From approach 1, we can see that both prefix and suffix array only record if it is a strictly increasing or decreasing array till certain point. We can optimise it using two pointers `i` and `j`, where pointer `i` is to check the strictly increasing array and pointer `j` is to check the strictly decreasing array.  If they stop at the same point, then that would be the peak of the same mountain.
 
-### C++
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

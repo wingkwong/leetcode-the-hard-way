@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/sort-even-and-odd-indices-independently/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2164 - Sort Even and Odd Indices Independently (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/sort-even-and-odd-indices-independently/
 
 ## Problem Statement
 
@@ -52,6 +58,8 @@ The simplest approach is to store odd-indexed numbers and even-indexed numbers s
 We then sort the two lists. We note that odd-indexed numbers need to be **non-increasing**, so we need to call `reverse`. Another approach to sort in reverse order is `odds.sort(reverse = True)`.
 
 We then put the numbers back to `nums` using a similar method of retrieving the parity of the iterating variable.
+
+<SolutionAuthor name="@heiheihang"/>
 
 ```python
 def sortEvenOdd(self, nums: List[int]) -> List[int]:

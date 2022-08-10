@@ -4,7 +4,7 @@ description: >-
   https://leetcode.com/problems/maximum-consecutive-floors-without-special-floors
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 2274 - Maximum Consecutive Floors Without Special Floors (Medium)
 
@@ -52,7 +52,7 @@ We add $bottom - 1$ and $top + 1$ to the array $special$ and sort the array so t
 
 The answer would be the maximum result of $special[i] - special[i - 1] - 1$ for $i = [1 .. n)$.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

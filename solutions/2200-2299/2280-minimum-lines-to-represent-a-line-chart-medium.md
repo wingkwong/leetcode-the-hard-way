@@ -4,7 +4,7 @@ description: >-
   https://leetcode.com/problems/minimum-lines-to-represent-a-line-chart
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 2280 - Minimum Lines to Represent a Line Chart (Medium)
 
@@ -50,7 +50,7 @@ As shown in the diagram above, the line chart can be represented with a single l
 
 ## Approach 1: Greedy
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

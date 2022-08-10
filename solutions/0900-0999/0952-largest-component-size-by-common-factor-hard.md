@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/largest-component-size-by-common-factor
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 0952 - Largest Component Size by Common Factor (Hard)
+
+## Problem Link
+
+https://leetcode.com/problems/largest-component-size-by-common-factor
 
 ## Problem Statement
 
@@ -41,8 +47,6 @@ Output: 2
 Input: nums = [2,3,6,7,4,12,21,39]
 Output: 8
 ```
-
-
 
 **Constraints:**
 
@@ -121,6 +125,8 @@ class dsu {
 </details>
 
 At the end, we check the size of each group and return the max one.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 int largestComponentSize(vector<int>& nums) {

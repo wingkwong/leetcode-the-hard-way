@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/path-with-minimum-effort/'
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 1631 - Path With Minimum Effort (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/path-with-minimum-effort/
 
 ## Problem Statement
 
@@ -11,8 +17,6 @@ You are a hiker preparing for an upcoming hike. You are given `heights`, a 2D ar
 A route's **effort** is the **maximum absolute difference** in heights between two consecutive cells of the route.
 
 Return _the minimum **effort** required to travel from the top-left cell to the bottom-right cell._
-
-
 
 **Example 1:**
 
@@ -56,6 +60,8 @@ Explanation: This route does not require any effort.
 
 * Use Binary Search to look for the possible absolute difference $$k$$
 * Use DFS to walk the grid to see if the destination can be reached given $$k$$.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

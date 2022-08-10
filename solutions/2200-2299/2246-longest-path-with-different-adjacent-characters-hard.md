@@ -4,7 +4,7 @@ description: >-
   https://leetcode.com/problems/longest-path-with-different-adjacent-characters/
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 2246 - Longest Path With Different Adjacent Characters (Hard)
 
@@ -56,7 +56,7 @@ Explanation: The longest path where each two adjacent nodes have different chara
 
 The first observation is that node can have at most two longest chains from child nodes. If a node have more than two chains, we only need to take the longest two.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

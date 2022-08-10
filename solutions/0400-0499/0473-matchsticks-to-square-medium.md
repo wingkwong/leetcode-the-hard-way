@@ -2,15 +2,19 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/matchsticks-to-square/'
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 0473 - Matchsticks to Square (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/matchsticks-to-square/
 
 ## Problem Statement
 
 You are given an integer array `matchsticks` where `matchsticks[i]` is the length of the `ith` matchstick. You want to use **all the matchsticks** to make one square. You **should not break** any stick, but you can link them up, and each matchstick must be used **exactly one time**.
 
 Return `true` if you can make this square and `false` otherwise.
-
-
 
 **Example 1:**
 
@@ -44,6 +48,8 @@ We can use bitmask to track which matchsticks are used. For example, for matchst
 Let $$dp[mask]$$ be the length of matchsticks we have put in the state $$mask$$. For example, If $$mask := 10001_2$$, $$dp[mask] := 5$$, $$side := 7$$, then it means we have put two matchsticks with the length of $$5$$ in total.
 
 Hence, we iterate the mask. If the mask cannot be used, then skip it. Otherwise, we iterate $$n$$ times to check if $$i$$-th bit is used. If not, it means we may take this matchstick. However, we can only set this bit (take the matchstick) only if putting it won't exceed the length of side, i.e. $$dp[mask] + matchsticks[i] <= side$$. Once we choose it, then we update the new state $$(dp[mask] + matchsticks[i]) \mod side$$. We take $$mod$$ here because if we want to reset it if the prefect match for a side is found. At the end, choosing all $$5$$ matchsticks would give $$dp[(11111_2)] = 0$$.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

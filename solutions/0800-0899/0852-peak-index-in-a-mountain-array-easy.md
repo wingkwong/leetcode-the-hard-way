@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/peak-index-in-a-mountain-array/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 0852 - Peak Index in a Mountain Array (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/peak-index-in-a-mountain-array/
 
 ## Problem Statement
 
@@ -16,8 +22,6 @@ Let's call an array `arr` a **mountain** if the following properties hold:
   * `arr[i] > arr[i+1] > ... > arr[arr.length - 1]`
 
 Given an integer array `arr` that is **guaranteed** to be a mountain, return any `i` such that `arr[0] < arr[1] < ... arr[i - 1] < arr[i] > arr[i + 1] > ... > arr[arr.length - 1]`.
-
-
 
 **Example 1:**
 
@@ -46,14 +50,13 @@ Output: 1
 * `0 <= arr[i] <= 10^6`
 * `arr` is **guaranteed** to be a mountain array.
 
-
-
 **Follow up:** Finding the `O(n)` is straightforward, could you find an `O(log(n))` solution?\
-
 
 ## Approach 1: Binary Search
 
 Prerequisite: [Binary Search](../../tutorials/basic-topics/binary-search).
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/number-of-ways-to-rearrange-sticks-with-k-sticks-visible/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 1866 - Number of Ways to Rearrange Sticks With K Sticks Visible (Hard)
+
+## Problem Link
+
+https://leetcode.com/problems/number-of-ways-to-rearrange-sticks-with-k-sticks-visible/
 
 ## Problem Statement
 
@@ -46,6 +52,8 @@ Explanation: There are 647427950 (mod 109 + 7) ways to rearrange the sticks such
 * `1 <= k <= n`
 
 ## Approach 1: Dynamic Programming
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

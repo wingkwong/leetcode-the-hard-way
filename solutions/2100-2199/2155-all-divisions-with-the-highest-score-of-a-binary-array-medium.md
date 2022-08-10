@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/all-divisions-with-the-highest-score-of-a-binary-array/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2155 - All Divisions With the Highest Score of a Binary Array (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/all-divisions-with-the-highest-score-of-a-binary-array/
 
 ## Problem Statement
 
@@ -68,6 +74,8 @@ Only index 0 has the highest possible division score 2.
 
 Calculate the prefix sum and suffix sum first. Then construct the score (`left[i] + right[i]`) at each index. Find the maximum value and push all indices with such value into the final array. 
 
+<SolutionAuthor name="@wingkwong"/>
+
 ```cpp
 class Solution {
 public:
@@ -87,6 +95,8 @@ public:
 ## Approach 2: Prefix Sum
 
 We don't actually need to calculate suffix sum. Let $$left[i + 1]$$ be $$nums[0] + nums[1] + ... + nums[i]$$. For each index, there are $$i - left[i]$$ zeros in the left and $$left[n] - left[i]$$ ones in the right. Therefore, we can come up with this formula: $$score[i] = i - left[i] + left[n] - left[i]$$.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -113,6 +123,8 @@ public:
 ## Approach 3: Counting ones and zeros
 
 If we look at the last index, we have `accumulate(nums.begin(), nums.end(), 0)` ones and 0 zeros at the beginning. If we move from the right to the left, we can update `zero` and `one` on the fly.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -143,6 +155,8 @@ public:
 ## Approach 4: Counting ones
 
 We can just use one variable instead of two shown in Approach 3.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

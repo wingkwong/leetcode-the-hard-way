@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/decode-the-slanted-ciphertext
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2075 - Decode the Slanted Ciphertext (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/decode-the-slanted-ciphertext
 
 ## Problem Statement
 
@@ -72,6 +78,8 @@ Explanation: Since there is only 1 row, both originalText and encodedText are th
 * The testcases are generated such that there is **only one** possible `originalText`.
 
 ## Approach 1: Simulation
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

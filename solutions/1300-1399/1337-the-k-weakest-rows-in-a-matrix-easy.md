@@ -4,9 +4,13 @@ description: >-
   https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix/
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 1337 - The K Weakest Rows in a Matrix (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix/
 
 ## Problem Statement
 
@@ -69,7 +73,7 @@ The rows ordered from weakest to strongest are [0,2,3,1].
 
 ## Approach 1: Brute Force
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 Iterate each row to find out the number of soldiers, store the count with the row index. Sort it and take the first $$k$$ counts.
 
@@ -101,7 +105,7 @@ public:
 
 ## Approach 2: Heap
 
-<Authors names="@heiheihang"/>
+<SolutionAuthor name="@heiheihang"/>
 
 ```py
 class Solution:
@@ -131,7 +135,7 @@ class Solution:
 
 ## Approach 3: Binary Search
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 Instead of searching linearly, we can use binary search to find out the number of soldiers. The rest is same as approach 1.
 
@@ -171,7 +175,7 @@ public:
 
 ## Approach 4: Binary Search + Priority Queue
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 Instead of using a vector to store and sort, we use priority queue to handle the order.
 

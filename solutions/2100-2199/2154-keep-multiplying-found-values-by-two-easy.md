@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/keep-multiplying-found-values-by-two/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2154 - Keep Multiplying Found Values by Two (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/keep-multiplying-found-values-by-two/
 
 ## Problem Statement
 
@@ -17,8 +23,6 @@ You then do the following steps:
 3. **Repeat** this process with the new number as long as you keep finding the number.
 
 Return _the **final** value of_ `original`.
-
-
 
 **Example 1:**
 
@@ -47,6 +51,8 @@ Explanation:
 * `1 <= nums[i], original <= 1000`
 
 ## Approach 1: Simulation with Set
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

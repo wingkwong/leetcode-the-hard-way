@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/largest-perimeter-triangle/'
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 0976 - Largest Perimeter Triangle (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/largest-perimeter-triangle/
 
 ## Problem Statement
 
@@ -30,6 +36,8 @@ Output: 0
 ## Approach 1: Sort
 
 In order to form a valid triangle, the side lengths of the triangle must satisfy $$a + b > c$$ where $$a \leq b \leq c$$. Therefore, we can sort the array and try each $$(a,b,c)$$ tuples to see if it is satisfied. If so, return the sum of three lengths. Else return 0 at the end.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

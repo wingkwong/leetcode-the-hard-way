@@ -2,7 +2,7 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/swap-nodes-in-pairs/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0024 - Swap Nodes in Pairs (Medium)
 
@@ -50,7 +50,7 @@ For each round, we just need to take care of two nodes to be swapped. The remain
 
 Let's think of the second node first. If two nodes are swapped, the second node will link to the first node after swapping. Therefore, we can simply link the second node to the first node. After swapping, the first one will link to the all nodes linked by the original second node. We just need to call swapPairs again to handle it.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

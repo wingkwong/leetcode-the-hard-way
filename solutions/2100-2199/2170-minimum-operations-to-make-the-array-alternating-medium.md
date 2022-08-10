@@ -1,10 +1,16 @@
 ---
 description: >-
-  Author: @TBC |
+  Author: @heiheihang |
   https://leetcode.com/problems/minimum-operations-to-make-the-array-alternating/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2170 - Minimum Operations to Make the Array Alternating (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/minimum-operations-to-make-the-array-alternating/
 
 ## Problem Statement
 
@@ -63,6 +69,8 @@ Case 2 is trickier, because we have two possibilities now. As we cannot pick the
 2. mostFrequentEven + secondMostFrequentOdd
 
 We pick the larger of the two, and change all other elements to those numbers.
+
+<SolutionAuthor name="@heiheihang"/>
 
 ```python
 def minimumOperations(self, nums: List[int]) -> int:

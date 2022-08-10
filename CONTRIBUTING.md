@@ -12,7 +12,11 @@ description: 'Author: @<YOUR_ALIAS>'
 hide_table_of_contents: true
 ---
 
-> This tutorial is written by @<YOUR_ALIAS>
+import TutorialAuthors from '@site/src/components/TutorialAuthors';
+
+<TutorialAuthors names="@<YOUR_ALIAS>"/>
+
+## Overview
 
 // Your content goes here
 ```
@@ -36,7 +40,7 @@ description: >-
 tags: ['<TAG_1>', '<TAG_2>'] 
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # <PROBLEM_ID> - <PROBLEM_TITLE> (<DIFFICULTY>)
 
@@ -52,7 +56,7 @@ import Authors from '@site/src/components/Authors';
 
 // Your explanation goes here or you can add it to your code
 
-<Authors names="@YOUR_ALIAS>"/>
+<SolutionAuthor name="@YOUR_ALIAS>"/>
 
 // Your code goes here
 
@@ -60,7 +64,7 @@ import Authors from '@site/src/components/Authors';
 
 // Your explanation goes here or you can add it to your code
 
-<Authors names="@YOUR_ALIAS>"/>
+<SolutionAuthor name="@YOUR_ALIAS>"/>
 
 // Your code goes here
 ```

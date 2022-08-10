@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 0452 - Minimum Number of Arrows to Burst Balloons (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/
 
 ## Problem Statement
 

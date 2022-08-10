@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/counting-bits/'
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 0338 - Counting Bits (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/counting-bits/
 
 ## Problem Statement
 
@@ -46,6 +52,8 @@ Explanation:
 
 If you've solved [0191 - Number of 1 Bits (Easy)](../0100-0199/number-of-1-bits-easy), then you can use that solution in this problem. The time complexity is $$O(n logn)$$.
 
+<SolutionAuthor name="@wingkwong"/>
+
 ```cpp
 class Solution {
 public:
@@ -72,6 +80,8 @@ public:
 $$i & (i  - 1)$$ is a common trick to turn the rightmost set bit to $$0$$. For example, if $$i = (1000100)_2$$, then $$i & (i  - 1)$$ would be $$(1000000)_2$$. We can iterate each number and calculate the number of 1s by adding 1 from the previous state.
 
 The transition function is simply  $$ans[i] = ans[i & (i - 1)] + 1$$.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

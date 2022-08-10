@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/kth-missing-positive-number/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 1539 - Kth Missing Positive Number (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/kth-missing-positive-number/
 
 ## Problem Statement
 
@@ -38,6 +44,8 @@ Explanation: The missing positive integers are [5,6,7,...]. The 2nd missing posi
 ## Approach 1: Brute Force
 
 Iterate each number to find out the $$k$$-th missing number.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

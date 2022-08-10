@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/smallest-sufficient-team/'
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 1125 - Smallest Sufficient Team (Hard)
+
+## Problem Link
+
+https://leetcode.com/problems/smallest-sufficient-team/
 
 ## Problem Statement
 
@@ -15,8 +21,6 @@ Consider a sufficient team: a set of people such that for every required skill i
 Return _any sufficient team of the smallest possible size, represented by the index of each person_. You may return the answer in **any order**.
 
 It is **guaranteed** an answer exists.
-
-
 
 **Example 1:**
 
@@ -49,6 +53,8 @@ Output: [1,2]
 ## Approach 1: DP Bit Masking
 
 Since the skills are strings, we need to digitise them first. For example, given req\_skills = \["java","nodejs","reactjs"], we can turn it to \[0, 1, 2] where each number map the corresponding skill. Let $$dp[i]$$ be the number of people for the mask $$i$$ and $$ans[j]$$ be the list of people chosen for mask $$j$$. We iterate each people to calculate its skills and iterate each mask to see if adding this person to the team from the old mask could have a smaller team size for the new mask. If so, update $$dp$$ and add this person to $$ans$$.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

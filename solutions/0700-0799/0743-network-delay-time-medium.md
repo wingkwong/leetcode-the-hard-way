@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/network-delay-time/'
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 0743 - Network Delay Time (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/network-delay-time/
 
 ## Problem Statement
 
@@ -49,6 +55,8 @@ If we know the time between the starting node and other nodes, then the answer w
 
 Therefore, the problem is now asking to find out the max time it takes from the starting node to an arbitrary node. To calculate the shortest path from node A to node B, we can use Dijkstra. Let $$d[i]$$ be the time that is required to reach from the starting point to node $$i$$. We initialise each time as $$1e9$$. After calling dijkstra function, if there is one node that need $$time = 1e9$$ to reach, then it means this node is unreachable. We can return $$-1$$ in this case. Otherwise, return the max one.
 
+<SolutionAuthor name="@wingkwong"/>
+
 ```cpp
 class Solution {
 public:
@@ -81,6 +89,8 @@ public:
 ```
 
 ## Approach 2: Bellman Ford
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/is-graph-bipartite'
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 0785 -  Is Graph Bipartite? (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/is-graph-bipartite
 
 ## Problem Statement
 
@@ -16,8 +22,6 @@ There is an **undirected** graph with `n` nodes, where each node is numbered bet
 A graph is **bipartite** if the nodes can be partitioned into two independent sets `A` and `B` such that **every** edge in the graph connects a node in set `A` and a node in set `B`.
 
 Return `true` _if and only if it is **bipartite**_.
-
-
 
 **Example 1:**
 
@@ -52,6 +56,8 @@ Explanation: We can partition the nodes into two sets: {0, 2} and {1, 3}.
 ## Approach 1: DSF Colouring
 
 We can colour each set, says $$0$$ and $$1$$. For example, in example 2, we can colour {0, 2} to $$0$$ and {1, 3} to $$1$$. Therefore, we greedily colour them - if the current node is marked as $$0$$, then all neighbours would be $$1$$ and so on.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -104,6 +110,8 @@ public:
 ## Approach 2: BFS Colouring
 
 Same idea but using BFS.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -188,10 +196,10 @@ struct is_bipartite {
     return true;
   }
 }; 
-
 ```
-
 </details>
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

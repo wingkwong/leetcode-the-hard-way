@@ -2,9 +2,16 @@
 description: >-
   Author: @TBC |
   https://leetcode.com/problems/distinct-numbers-in-each-subarray/
+draft: 'true'
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 1852 - Distinct Numbers in Each Subarray (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/distinct-numbers-in-each-subarray/
 
 ## Problem Statement
 

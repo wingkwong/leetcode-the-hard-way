@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/moving-average-from-data-stream/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 0346 - Moving Average from Data Stream (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/moving-average-from-data-stream/
 
 ## Problem Statement
 
@@ -53,6 +59,8 @@ for (auto x : nums) {
 ```
 
 In general, for sliding window, we have a pointer to track if it is within the window or not. Here we can check the size of $$d$$. If it already has $$n$$ elements, then we need to remove the one from the front (i.e. the leftmost one) before pushing the next one to the back. We also need to subtract the old value and add the new value to $$sum$$.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class MovingAverage {

@@ -99,6 +99,11 @@ const config = {
             to: '/collections/',
             activeBaseRegex: `/collections/`,
           },
+          {
+            label: 'Templates',
+            to: '/templates/',
+            activeBaseRegex: `/templates/`,
+          },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/wingkwong/leetcode-the-hard-way',
@@ -126,6 +131,10 @@ const config = {
                 label: 'Collections',
                 href: '/collections',
               },
+              {
+                label: 'Templates',
+                href: '/templates',
+              },
             ],
           },
           {
@@ -146,9 +155,9 @@ const config = {
       },
       // https://docusaurus.io/docs/search#using-algolia-docsearch
       algolia: {
-        appId: '3476Z84HTB',
-        apiKey: '55a35f603f206084ba60cc05f22d30a2',
-        indexName: 'leetcodethehardway',
+        appId: 'TSP4XHNA9P',
+        apiKey: '13aa27443cab36b7f20f3a59617607a6',
+        indexName: 'leetcode-the-hard-way',
         contextualSearch: false
       },
     }),
@@ -190,6 +199,22 @@ const config = {
           id: 'collections',
           path: 'collections',
           routeBasePath: 'collections',
+          sidebarPath: require.resolve('./sidebars.js'),
+          remarkPlugins: [math],
+          rehypePlugins: [katex],
+          // showLastUpdateTime: true,
+          // showLastUpdateAuthor: true,
+          editUrl:
+            'https://github.com/wingkwong/leetcode-the-hard-way',
+        }, 
+      ],
+
+      [
+        '@docusaurus/plugin-content-docs',
+        {
+          id: 'templates',
+          path: 'templates',
+          routeBasePath: 'templates',
           sidebarPath: require.resolve('./sidebars.js'),
           remarkPlugins: [math],
           rehypePlugins: [katex],

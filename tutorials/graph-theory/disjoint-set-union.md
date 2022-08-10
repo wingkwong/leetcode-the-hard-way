@@ -10,9 +10,11 @@ keywords:
   - algorithm
 ---
 
-import Authors from '@site/src/components/Authors';
+import TutorialAuthors from '@site/src/components/TutorialAuthors';
 
-<Authors names="@wingkwong"/>
+<TutorialAuthors names="@wingkwong"/>
+
+## Overview
 
 A set is a collection of elements. If two sets have no common elements, then they are called disjoint sets. For example, {1, 2} and {3, 4} are disjoint sets while {1, 2} and {1, 3} are not because they have a common element $1$.
 

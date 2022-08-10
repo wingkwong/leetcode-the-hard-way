@@ -2,7 +2,7 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/combination-sum/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0039 - Combination Sum (Medium)
 
@@ -58,7 +58,7 @@ First, we sort the array and build our candidates incrementally. We iterate from
 
 If we have a valid solution, we push `tmp` to answer and abandon a candidate.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

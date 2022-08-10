@@ -9,10 +9,12 @@ keywords:
   - algorithm
 ---
 
-import Authors from '@site/src/components/Authors';
+import TutorialAuthors from '@site/src/components/TutorialAuthors';
 import Table from '@site/src/components/Table';
 
-<Authors names="@wingkwong"/>
+<TutorialAuthors names="@wingkwong"/>
+
+## Overview
 
 A backtracking algorithm is used to construct a solution recursively by starting with an empty solution and adding solution one by one. Let's take [0046 - Permutations (Medium)](../../solutions/0000-0099/permutations-medium) as an example, if we have an array `nums` of distinct integers, what are all the possible permutations? If the input is `[1,2,3]`, then the permutations would be `[[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]`. In C++, it is easy to solve this problem by using the built-in STL `next_permutation`. However, we can also solve it using backtracking.
 
@@ -61,26 +63,26 @@ export const suggestedProblems = [
   {
     "problemName": "0039 - Combination Sum",
     "difficulty": "Medium",
-    "LeetCodeLink": "https://leetcode.com/problems/running-sum-of-1d-array/",
-    "SolutionLink": "../../solutions/1400-1499/running-sum-of-1d-array-easy"
+    "leetCodeLink": "https://leetcode.com/problems/running-sum-of-1d-array/",
+    "solutionLink": "../../solutions/1400-1499/running-sum-of-1d-array-easy"
   },
   {
     "problemName": "0040 - Combination Sum II",
     "difficulty": "Medium",
-    "LeetCodeLink": "https://leetcode.com/problems/combination-sum-ii/",
-    "SolutionLink": "../../solutions/0000-0099/combination-sum-ii-medium"
+    "leetCodeLink": "https://leetcode.com/problems/combination-sum-ii/",
+    "solutionLink": "../../solutions/0000-0099/combination-sum-ii-medium"
   },
   {
     "problemName": "0046 - Permutations",
     "difficulty": "Medium",
-    "LeetCodeLink": "https://leetcode.com/problems/permutations/",
-    "SolutionLink": "../../solutions/0000-0099/permutations-medium"
+    "leetCodeLink": "https://leetcode.com/problems/permutations/",
+    "solutionLink": "../../solutions/0000-0099/permutations-medium"
   },
   {
     "problemName": "0078 - Subsets",
     "difficulty": "Medium",
-    "LeetCodeLink": "https://leetcode.com/problems/subsets/",
-    "SolutionLink": "../../solutions/0000-0099/subsets-medium"
+    "leetCodeLink": "https://leetcode.com/problems/subsets/",
+    "solutionLink": "../../solutions/0000-0099/subsets-medium"
   },
 ]
 

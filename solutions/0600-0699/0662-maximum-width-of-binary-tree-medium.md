@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/maximum-width-of-binary-tree/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 0662 - Maximum Width of Binary Tree (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/maximum-width-of-binary-tree/
 
 ## Problem Statement
 
@@ -15,8 +21,6 @@ The **maximum width** of a tree is the maximum **width** among all levels.
 The **width** of one level is defined as the length between the end-nodes (the leftmost and rightmost non-null nodes), where the null nodes between the end-nodes are also counted into the length calculation.
 
 It is **guaranteed** that the answer will in the range of **32-bit** signed integer.
-
-
 
 **Example 1:**
 
@@ -64,6 +68,8 @@ First we initialise a queue with a pair of tuple $$(node, idx)$$. Then we append
 For each level, we calculate the width between the leftmost and rightmost nodes, which are the first element $$l$$ in the queue and the last element $$r$$ in the queue respectively, and check if it could be maximum value. The width between those two nodes is simply $$r_{idx} - l_{idx} + 1$$. For example, on the last level, the width between the leftmost node and the rightmost node would be $$7 - 4 + 1 = 4$$.
 
 For each element in the queue, we check if it has the left node or the right node. If so, we add it to the queue for further processing. We return the answer after we process all the nodes.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

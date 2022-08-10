@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/longest-chunked-palindrome-decomposition/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 1147 - Longest Chunked Palindrome Decomposition (Hard)
+
+## Problem Link
+
+https://leetcode.com/problems/longest-chunked-palindrome-decomposition/
 
 ## Problem Statement
 
@@ -48,6 +54,8 @@ Explanation: We can split the string on "(a)(nt)(a)(pre)(za)(tpe)(za)(pre)(a)(nt
 ## Approach 1: Greedy
 
 Build the subtext from the left $$l = l + text[i]$$ and from the right $$r = text[n - 1 - i] + r$$. If at a point they are same, then increase the answer by $$1$$ and reset both $$l$$ and $$r$$.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

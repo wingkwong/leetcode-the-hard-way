@@ -2,7 +2,7 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/subsets/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0078 - Subsets (Medium)
 
@@ -40,7 +40,7 @@ Output: [[],[0]]
 
 We can try all the possible combinations of the numbers. For each number there are only two options - you either take the number or not. If the bit is set as 1, then it means this number needs to be taken. If the bit is set as 0, we don't take this number.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -68,7 +68,7 @@ public:
 
 Standard [Backtracking](../../tutorials/basic-topics/backtracking) problem.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

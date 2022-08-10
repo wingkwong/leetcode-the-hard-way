@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong| https://leetcode.com/problems/max-consecutive-ones-iii/'
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 1004 - Max Consecutive Ones III (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/max-consecutive-ones-iii/
 
 ## Problem Statement
 
@@ -35,6 +41,8 @@ Bolded numbers were flipped from 0 to 1. The longest subarray is underlined.
 ## Approach 1: Sliding Window
 
 We are looking for the longest subarray with $$k$$ zeros. We can use standard sliding windows to solve it.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

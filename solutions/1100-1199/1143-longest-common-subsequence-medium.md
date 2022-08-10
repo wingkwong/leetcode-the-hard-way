@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/longest-common-subsequence/'
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 1143 - Longest Common Subsequence (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/longest-common-subsequence
 
 ## Problem Statement
 
@@ -13,8 +19,6 @@ A **subsequence** of a string is a new string generated from the original string
 * For example, `"ace"` is a subsequence of `"abcde"`.
 
 A **common subsequence** of two strings is a subsequence that is common to both strings.
-
-
 
 **Example 1:**
 
@@ -48,6 +52,8 @@ Explanation: There is no such common subsequence, so the result is 0.
 ## Approach 1: DP
 
 LCS is a classic problem. Let $$dp[i][j]$$ be the LCS for string $$text1$$ends at index $$i$$ and string $$text2$$ends at index $$j$$. If $$text1[i] == text2[j]$$, then $$dp[i][j]$$ would be $$1  +dp[i - 1][j - 1]$$. Otherwise, we target the largest LCS if we skip one character from either text1 or text2, i.e. $$dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])$$.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

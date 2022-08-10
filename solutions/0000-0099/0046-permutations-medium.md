@@ -2,7 +2,7 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/permutations/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0046 - Permutations (Medium)
 
@@ -45,7 +45,7 @@ Output: [[1]]
 
 Use C++ STL `next_permutation` to generate all possible permutations.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -65,7 +65,7 @@ public:
 
 Check out [Backtracking](../../tutorials/basic-topics/backtracking) section for the detailed explanation.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

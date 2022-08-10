@@ -10,10 +10,12 @@ keywords:
   - algorithm
 ---
 
-import Authors from '@site/src/components/Authors';
+import TutorialAuthors from '@site/src/components/TutorialAuthors';
 import Table from '@site/src/components/Table';
 
-<Authors names="@heiheihang"/>
+<TutorialAuthors names="@heiheihang"/>
+
+## Overview
 
 In Breadth-First Search (BFS), we explore **all** the closest nodes first before going one step further. A good example would be:
 
@@ -115,20 +117,20 @@ export const suggestedProblems = [
   {
     "problemName": "0199 -  Binary Tree Right Side View",
     "difficulty": "Medium",
-    "LeetCodeLink": "https://leetcode.com/problems/binary-tree-right-side-view/",
-    "SolutionLink": "../../solutions/0100-0199/binary-tree-right-side-view-medium"
+    "leetCodeLink": "https://leetcode.com/problems/binary-tree-right-side-view/",
+    "solutionLink": "../../solutions/0100-0199/binary-tree-right-side-view-medium"
   },
   {
     "problemName": "0103 - Binary Tree Zigzag Level Order Traversal",
     "difficulty": "Medium",
-    "LeetCodeLink": "https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/",
-    "SolutionLink": "../../solutions/0100-0199/binary-tree-zigzag-level-order-traversal-medium"
+    "leetCodeLink": "https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/",
+    "solutionLink": "../../solutions/0100-0199/binary-tree-zigzag-level-order-traversal-medium"
   },
   {
     "problemName": "0101 - Symmetric Tree",
     "difficulty": "Easy",
-    "LeetCodeLink": "https://leetcode.com/problems/move-zeroes/",
-    "SolutionLink": "../../solutions/0100-0199/symmetric-tree-easy"
+    "leetCodeLink": "https://leetcode.com/problems/move-zeroes/",
+    "solutionLink": "../../solutions/0100-0199/symmetric-tree-easy"
   },
 ]
 

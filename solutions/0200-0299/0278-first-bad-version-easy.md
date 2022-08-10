@@ -2,7 +2,7 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/first-bad-version/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0278 - First Bad Version (Easy)
 
@@ -45,7 +45,7 @@ Output: 1
 
 Prerequisite: [Binary Search](../../tutorials/basic-topics/binary-search)
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 // The API isBadVersion is defined for you.

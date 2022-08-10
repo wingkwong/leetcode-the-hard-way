@@ -4,7 +4,7 @@ description: >-
   https://leetcode.com/problems/sum-of-scores-of-built-strings/
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 2223 - Sum of Scores of Built Strings (Hard)
 
@@ -21,8 +21,6 @@ You are **building** a string `s` of length `n` **one** character at a time, **p
 The **score** of `si` is the length of the **longest common prefix** between `si` and `sn` (Note that `s == sn`).
 
 Given the final string `s`, return _the **sum** of the **score** of every_ `si`.
-
-
 
 **Example 1:**
 
@@ -60,7 +58,7 @@ The sum of the scores is 2 + 3 + 9 = 14, so we return 14.
 
 The sum of the score of every $$s_i$$ would be the sum of the values in $$Z$$ array.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

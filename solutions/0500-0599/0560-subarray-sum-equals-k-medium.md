@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/subarray-sum-equals-k/'
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 0560 - Subarray Sum Equals K (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/subarray-sum-equals-k/
 
 ## Problem Statement
 
@@ -31,6 +37,8 @@ Output: 2
 ## Approach 1: Hash Map
 
 We use hash map to store the cumulative sum $$sum[i]$$ up to index $$i$$. If $$sum[i] - sum[j] = k$$, then it means the sum between indices $$i$$ and $$j$$ is $$k$$. Therefore, we store the cumulative sum, search for $$sum - k$$ in the hash map and add the occurrences if it is found to the answer.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

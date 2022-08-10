@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/connecting-cities-with-minimum-cost/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 1135 - Connecting Cities With Minimum Cost (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/connecting-cities-with-minimum-cost/
 
 ## Problem Statement
 
@@ -13,8 +19,6 @@ There are `n` cities labeled from `1` to `n`. You are given the integer `n` and 
 Return _the minimum **cost** to connect all the_ `n` _cities such that there is at least one path between each pair of cities_. If it is impossible to connect all the `n` cities, return `-1`,
 
 The **cost** is the sum of the connections' costs used.
-
-
 
 **Example 1:**
 
@@ -50,6 +54,8 @@ Explanation: There is no way to connect all cities even if all edges are used.
 If we treat it as a graph problem, it is actually same as finding Minimum Spanning Tree. Hence, we can use Kruskal's Algorithm with DSU to solve it.
 
 In order to get the MST, we sort the edges based on the weights in an increasing order. Then we iterate them one by one, and greedily pick edges which does not result in cycle with the previous edges. At the end, we should have $$N - 1$$edges in MST. Otherwise, we return $$-1$$.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class dsu {

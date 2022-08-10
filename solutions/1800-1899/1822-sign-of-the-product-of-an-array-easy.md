@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/sign-of-the-product-of-an-array/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 1822 - Sign of the Product of an Array (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/sign-of-the-product-of-an-array/
 
 ## Problem Statement
 
@@ -50,6 +56,8 @@ Explanation: The product of all values in the array is -1, and signFunc(-1) = -1
 ## Approach 1: Check the sign
 
 We don't need to calculate the final product. Instead, we check the sign only.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

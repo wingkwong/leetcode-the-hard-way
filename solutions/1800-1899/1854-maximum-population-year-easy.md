@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/maximum-population-year/'
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 1854 - Maximum Population Year (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/maximum-population-year/
 
 ## Problem Statement
 
@@ -37,6 +43,8 @@ The earlier year between them is 1960.
 
 ## Approach 1: Line Sweep
 
+<SolutionAuthor name="@wingkwong"/>
+
 ```cpp
 class Solution {
 public:
@@ -64,6 +72,8 @@ public:
 ```
 
 We can further revise it due to the constraint $$1950 <= birth_i < death_i <= 2050$$.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

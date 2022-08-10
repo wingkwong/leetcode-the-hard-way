@@ -2,7 +2,13 @@
 description: 'Author: @heiheihang | https://leetcode.com/problems/matrix-diagonal-sum/'
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 1572 - Matrix Diagonal Sum (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/matrix-diagonal-sum/
 
 ## Problem Statement
 
@@ -49,6 +55,8 @@ Output: 5
 ## Approach 1: Iteration
 
 We have to first iterate the primary diagonal first. In the primary diagonal, the row number equals to the column number, so it is pretty straightforward to get the numbers on the primary diagonal. On the secondary diagonal, the column number decreases as row number increases, and you should be able to obtain the relation `col = len(mat) - row - 1`. We also have to be mindful to avoid computing the element at `mat[len(mat)//2][len(mat)//2]` twice, so we add a conditional check to skip if it exists. Note that this does not always exist (if the dimension of the matrix is two even numbers)
+
+<SolutionAuthor name="@heiheihang"/>
 
 ```python
 def diagonalSum(self, mat: List[List[int]]) -> int:

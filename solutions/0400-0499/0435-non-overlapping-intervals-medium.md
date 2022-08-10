@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/non-overlapping-intervals/'
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 0435 - Non-overlapping Intervals (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/non-overlapping-intervals/
 
 ## Problem Statement
 

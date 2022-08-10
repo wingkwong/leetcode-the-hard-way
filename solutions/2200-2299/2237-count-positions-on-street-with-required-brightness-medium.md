@@ -4,7 +4,7 @@ description: >-
   https://leetcode.com/problems/count-positions-on-street-with-required-brightness/
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 2237 - Count Positions on Street With Required Brightness (Medium)
 
@@ -65,7 +65,7 @@ Explanation:
 
 ## Approach 1: Line Sweep
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

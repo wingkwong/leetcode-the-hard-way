@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/maximize-the-topmost-element-after-k-moves/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2202 - Maximize the Topmost Element After K Moves (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/maximize-the-topmost-element-after-k-moves/
 
 ## Problem Statement
 
@@ -53,6 +59,8 @@ Since it is not possible to obtain a non-empty pile after one move, we return -1
 ## Approach 1: Check All Cases
 
 If $$k > n$$, then we can remove all elements and put the maximum element back at the end. However, this cannot be done when $$k - n$$ is an even number when $$n$$ is $$1$$. If $$k > 1$$, we can check the maximum value for the top $$k - 1$$ elements so that we put the maximum value in the last move. The last case is we only remove elements and not putting any of them back, i.e. check $$nums[k]$$ is the maximum.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

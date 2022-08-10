@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/delete-and-earn/'
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 0740 - Delete and Earn (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/delete-and-earn/
 
 ## Problem Statement
 
@@ -47,6 +53,8 @@ Let $$dp[i]$$ be the maximum number of points you can earn by apply the operatio
 If we pick $$1$$, we can earn $$dp[1]$$. If we pick $$2$$, we can earn $$dp[2]$$. If we pick $$3$$, then we cannot pick $$2$$ but we can earn $$dp[3]$$ + $$dp[1]$$. If we don't pick it, then the max point we can earn is the previous state which is $$dp[2]$$.
 
 Therefore, the transition will be $$dp[i] = max(dp[i - 1], dp[i - 2] + dp[i])$$. We either take the previous state (i.e. not pick the current number) or take the current number, skip the previous state and get the two states before the current one.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

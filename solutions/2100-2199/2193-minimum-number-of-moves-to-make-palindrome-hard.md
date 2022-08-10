@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/minimum-number-of-moves-to-make-palindrome/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2193 - Minimum Number of Moves to Make Palindrome (Hard)
+
+## Problem Link
+
+https://leetcode.com/problems/minimum-number-of-moves-to-make-palindrome/
 
 ## Problem Statement
 
@@ -57,6 +63,8 @@ The first solution solves it in $$O(N^2)$$ time brute force. The general logic i
 5. If we have skipped the odd character, we need to add its disposition from the middle position to the result
 
 This greedy approach is hard to justify that it produces the smallest amount of move, perhaps a harder analysis is needed.
+
+<SolutionAuthor name="@heiheihang"/>
 
 ```python
 def minMovesToMakePalindrome(self, s: str) -> int:

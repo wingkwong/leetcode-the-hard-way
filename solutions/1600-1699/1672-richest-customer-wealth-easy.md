@@ -2,11 +2,17 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/richest-customer-wealth/'
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 1672 - Richest Customer Wealth (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/richest-customer-wealth
 
 ## Problem Statement
 
-You are given an `m x n` integer grid `accounts` where `accounts[i][j]` is the amount of money the `i​​​​​​​​​​​th​​​​` customer has in the `j​​​​​​​​​​​th`​​​​ bank. Return _the **wealth** that the richest customer has._
+You are given an `m x n` integer grid `accounts` where `accounts[i][j]` is the amount of money the `i-th` customer has in the `j-th` bank. Return _the **wealth** that the richest customer has._
 
 A customer's **wealth** is the amount of money they have in all their bank accounts. The richest customer is the customer that has the maximum **wealth**.
 
@@ -51,6 +57,8 @@ Output: 17
 
 Given a `m x n` grid, we need to find the maximum row sum. We iterate each row and define `wealth = 0`, then iterate each column, add each `accounts[i][j]` to `wealth`. After that, update the answer if the wealth for the current row is greater than the current maximum sum.
 
+<SolutionAuthor name="@wingkwong"/>
+
 ```cpp
 class Solution {
 public:
@@ -70,6 +78,8 @@ public:
 
 Actually we don't need to define `n`, `m`, `i` and `j` if we write in the following style.
 
+<SolutionAuthor name="@wingkwong"/>
+
 ```cpp
 class Solution {
 public:
@@ -88,6 +98,8 @@ public:
 ## Approach 2: Max Row Sum (STL)
 
 Same idea as approach 1 but it is using STL.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

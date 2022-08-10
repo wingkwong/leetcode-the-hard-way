@@ -2,7 +2,7 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/container-with-most-water/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0011 - Container With Most Water (Medium)
 
@@ -47,7 +47,7 @@ Output: 1
 
 We know that the area is $$width * height$$. Given two lines with different heights, we should only take the minimum one and the width is simply their distance. We use two pointers to track the lines, every time we calculate the area and move either one line. If the left line is shorter, then move the left one because we want to keep the maximum one, and vice versa.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

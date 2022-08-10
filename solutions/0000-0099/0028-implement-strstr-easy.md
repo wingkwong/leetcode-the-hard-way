@@ -2,7 +2,7 @@
 description: 'Author: @la-la-Cute | https://leetcode.com/problems/implement-strstr/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0028 - Implement strStr() (Easy)
 
@@ -50,7 +50,7 @@ Output: 0
 
 ## Approach 1: Rolling Hash
 
-<Authors names="@la-la-Cute"/>
+<SolutionAuthor name="@la-la-Cute"/>
 
 ```python
 class Solution:

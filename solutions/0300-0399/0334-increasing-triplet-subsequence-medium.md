@@ -4,12 +4,17 @@ description: >-
   https://leetcode.com/problems/increasing-triplet-subsequence/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 0334 - Increasing Triplet Subsequence (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/increasing-triplet-subsequence/
 
 ## Problem Statement
 
 Given an integer array `nums`, return `true` _if there exists a triple of indices_ `(i, j, k)` _such that_ `i < j < k` _and_ `nums[i] < nums[j] < nums[k]`. If no such indices exists, return `false`.
-
 
 
 **Example 1:**
@@ -46,6 +51,8 @@ Explanation: The triplet (3, 4, 5) is valid because nums[3] == 0 < nums[4] == 4 
 ## Approach 1: Greedy
 
 Find the first two smallest numbers. If there is a number greater than them, then we can return true. Otherwise, return false at the end.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

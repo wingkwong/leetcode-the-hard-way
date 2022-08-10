@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/check-if-one-string-swap-can-make-strings-equal/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 1790 - Check if One String Swap Can Make Strings Equal (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/check-if-one-string-swap-can-make-strings-equal/
 
 ## Problem Statement
 
@@ -45,6 +51,8 @@ Explanation: The two strings are already equal, so no string swap operation is r
 ## Approach 1: Simulation
 
 We iterate each index $$i$$ and look for the first difference, mark the index as $$last$$. If we have another difference at index $$j$$, then swap $$s1[j]$$ with $$s1[last]$$ and check if it is same as $$s2$$ (as we can only make at most one swap). At the end, check if both string is equal to handle the case that we don't swap.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

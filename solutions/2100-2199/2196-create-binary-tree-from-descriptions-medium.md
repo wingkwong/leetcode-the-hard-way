@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/create-binary-tree-from-descriptions/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2196 - Create Binary Tree From Descriptions (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/create-binary-tree-from-descriptions/
 
 ## Problem Statement
 
@@ -16,8 +22,6 @@ You are given a 2D integer array `descriptions` where `descriptions[i] = [parent
 Construct the binary tree described by `descriptions` and return _its **root**_.
 
 The test cases will be generated such that the binary tree is **valid**.
-
-
 
 **Example 1:**
 
@@ -57,7 +61,9 @@ We iterate the input to get the values of parent, child and isLeft. Then we chec
 
 If $$isLeft$$ is $$1$$, that means the child is the left child of parent. Else, the child is the right child of parent.
 
-At the end, we find out the node without parent, return that TreeNode\* because that is the root.
+At the end, we find out the node without parent, return that TreeNode because that is the root.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

@@ -4,7 +4,7 @@ description: >-
   https://leetcode.com/problems/largest-3-same-digit-number-in-string/
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 2264 - Largest 3-Same-Digit Number in String (Easy)
 
@@ -60,7 +60,7 @@ Explanation: No substring of length 3 consists of only one unique digit. Therefo
 
 Iterate num and check if the current character is same as the previous two. If so, store the maximum digit and render at the end.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

@@ -2,7 +2,7 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/add-digits/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0258 - Add Digits (Easy)
 
@@ -61,7 +61,7 @@ We initialise $$sum := 0$$ first. Then we take modulo operation $$n \ mod 10$$ t
 
 Now we just need to calculate the digit sum repeatedly until $$n$$ has only one digit.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

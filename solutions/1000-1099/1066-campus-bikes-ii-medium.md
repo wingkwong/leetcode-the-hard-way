@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/campus-bikes-ii/'
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 1066 - Campus Bikes II (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/campus-bikes-ii/
 
 ## Problem Statement
 
@@ -59,6 +65,8 @@ Output: 4995
 
 Iterate each mask from $$0$$ to $$m$$ where $$m$$ is the size of $$bikes$$. For each mask, we try to find each bike that is not in use and calculate the Manhattan distance and try the next $$workerIdx$$. We memorise the result to speed up the whole process.
 
+<SolutionAuthor name="@wingkwong"/>
+
 ```cpp
 class Solution {
 public:
@@ -92,6 +100,8 @@ public:
 ```
 
 We can also write like this.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

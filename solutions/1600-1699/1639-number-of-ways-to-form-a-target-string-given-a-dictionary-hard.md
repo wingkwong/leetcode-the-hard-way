@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/number-of-ways-to-form-a-target-string-given-a-dictionary/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 1639 - Number of Ways to Form a Target String Given a Dictionary (Hard)
+
+## Problem Link
+
+https://leetcode.com/problems/number-of-ways-to-form-a-target-string-given-a-dictionary/
 
 ## Problem Statement
 
@@ -20,8 +26,6 @@ Your task is to form `target` using the given `words` under the following rules:
 **Notice** that you can use **multiple characters** from the **same string** in `words` provided the conditions above are met.
 
 Return _the number of ways to form `target` from `words`_. Since the answer may be too large, return it **modulo** `109 + 7`.
-
-
 
 **Example 1:**
 
@@ -49,8 +53,6 @@ Explanation: There are 4 ways to form target.
 "bab" -> index 1 ("abba"), index 2 ("baab"), index 3 ("baab")
 ```
 
-
-
 **Constraints:**
 
 * `1 <= words.length <= 1000`
@@ -60,6 +62,8 @@ Explanation: There are 4 ways to form target.
 * `words[i]` and `target` contain only lowercase English letters.
 
 ## Approach 1: Dynamic Programming
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

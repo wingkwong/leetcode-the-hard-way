@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/count-all-possible-routes/'
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 1575 - Count All Possible Routes (Hard)
+
+## Problem Link
+
+https://leetcode.com/problems/count-all-possible-routes/
 
 ## Problem Statement:
 
@@ -13,8 +19,6 @@ At each step, if you are at city `i`, you can pick any city `j` such that `j != 
 Notice that `fuel` **cannot** become negative at any point in time, and that you are **allowed** to visit any city more than once (including `start` and `finish`).
 
 Return _the count of all possible routes from_ `start` _to_ `finish`. Since the answer may be too large, return it modulo `109 + 7`.
-
-
 
 **Example 1:**
 
@@ -58,6 +62,8 @@ Explanation: It is impossible to get from 0 to 2 using only 3 units of fuel sinc
 * `1 <= fuel <= 200`
 
 ## Approach 1:  Dynamic Programming
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

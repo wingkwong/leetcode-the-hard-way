@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 1431 - Kids With the Greatest Number of Candies (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/
 
 ## Problem Statement
 
@@ -53,6 +59,8 @@ Output: [true,false,true]
 ## Approach 1: Iteration
 
 We need to use `max` to find the largest number of candies among the kids. Then we need to iterate the list of candies, and check if the number of candies is greater than the largest number of candies after adding `extra_candies`. We put `True` to `result` if yes, put `False` to `result` otherwise.
+
+<SolutionAuthor name="@heiheihang"/>
 
 ```python
 def kidsWithCandies(self, candies: List[int], extra_candies: int) -> List[bool]:

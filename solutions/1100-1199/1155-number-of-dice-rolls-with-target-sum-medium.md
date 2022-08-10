@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 1155 - Number of Dice Rolls With Target Sum (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/
 
 ## Problem Statement
 
@@ -44,6 +50,8 @@ Explanation: The answer must be returned modulo 109 + 7.
 * `1 <= target <= 1000`
 
 ## Approach 1: Dynamic Programming
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

@@ -10,10 +10,12 @@ keywords:
   - algorithm
 ---
 
-import Authors from '@site/src/components/Authors';
+import TutorialAuthors from '@site/src/components/TutorialAuthors';
 import Table from '@site/src/components/Table';
 
-<Authors names="@wingkwong"/>
+<TutorialAuthors names="@wingkwong"/>
+
+## Overview
 
 Binary Exponentiation is also known as Exponentiation by Squaring or even called Fast Pow in some CP templates. It is used to calculate $$a ^ n$$ using only $$O(logn)$$ multiplications instead of $$O(n)$$using naive approach.
 
@@ -59,8 +61,8 @@ export const suggestedProblems = [
   {
     "problemName": "0050 - Pow(x, n)",
     "difficulty": "Medium",
-    "LeetCodeLink": "https://leetcode.com/problems/powx-n/",
-    "SolutionLink": "../../../solutions/0000-0099/pow-x-n-medium"
+    "leetCodeLink": "https://leetcode.com/problems/powx-n/",
+    "solutionLink": "../../../solutions/0000-0099/pow-x-n-medium"
   },
 ]
 

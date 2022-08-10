@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/maximum-split-of-positive-even-integers/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2178 - Maximum Split of Positive Even Integers (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/maximum-split-of-positive-even-integers/
 
 ## Problem Statement
 
@@ -52,6 +58,8 @@ Note that [10,2,4,12], [6,2,4,16], etc. are also accepted.
 If $$finalSum$$ is odd, then return empty array.
 
 Otherwise, we start from the lowest even number $$x = 2$$. Then add it to our final array. Subtract $$finalSum$$ from $$x$$ and set $$x$$ to the next even number. Do the same logic until $$x$$ cannot be used. At the end, add the remainder to the last element of the array.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

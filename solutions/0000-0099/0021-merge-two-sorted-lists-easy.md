@@ -2,7 +2,7 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/merge-two-sorted-lists/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0021 - Merge Two Sorted Lists (Easy)
 
@@ -55,7 +55,7 @@ We compare a node in list1 and that in list2. If the value of node in list1 is s
 
 In general, we will have $$list1[0] + mergeTwoLists(list1[1:], list2)$$ for $$list1[0] < list2[0]$$ else we have $$list2[0] + mergeTwoLists(list1, list2[1:])$$.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

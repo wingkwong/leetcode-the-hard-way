@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 1475 - Final Prices With a Special Discount in a Shop (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/
 
 ## Problem Statement
 
@@ -52,7 +58,7 @@ Then we initalize a stack and iterate `prices`. If the last element of the stack
 
 We then add the new item to the stack with its value and its index.
 
-
+<SolutionAuthor name="@heiheihang"/>
 
 ```python
 def finalPrices(self, prices: List[int]) -> List[int]:

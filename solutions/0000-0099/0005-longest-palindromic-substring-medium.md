@@ -5,7 +5,7 @@ description: >-
 tags: [String, Dynamic Programming]
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0005 - Longest Palindromic Substring (Medium)
 
@@ -43,7 +43,7 @@ The most efficient solution is using Manacher's Algorithm to solve it in O(n). I
 
 ### C++
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

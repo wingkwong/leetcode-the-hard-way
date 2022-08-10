@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/count-equal-and-divisible-pairs-in-an-array/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2176 - Count Equal and Divisible Pairs in an Array (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/count-equal-and-divisible-pairs-in-an-array/
 
 ## Problem Statement
 
@@ -39,6 +45,8 @@ Explanation: Since no value in nums is repeated, there are no pairs (i,j) that m
 ## Approach 1: Brute Force
 
 Just do what it says.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

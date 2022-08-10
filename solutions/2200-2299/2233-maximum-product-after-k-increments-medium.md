@@ -4,7 +4,7 @@ description: >-
   https://leetcode.com/problems/maximum-product-after-k-increments/
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 2233 - Maximum Product After K Increments (Medium)
 
@@ -53,7 +53,7 @@ We should increase the smallest element every time.
 
 However, we cannot sort it every time after the increment as it takes too much time. Instead, we can use priority queue to maintain the order.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

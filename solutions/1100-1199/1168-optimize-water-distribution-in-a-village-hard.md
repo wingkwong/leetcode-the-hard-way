@@ -4,19 +4,21 @@ description: >-
   https://leetcode.com/problems/optimize-water-distribution-in-a-village/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 1168 - Optimize Water Distribution in a Village (Hard)
 
+## Problem Link
+
+https://leetcode.com/problems/optimize-water-distribution-in-a-village/
+
 ## Problem Statement
-
-
 
 There are `n` houses in a village. We want to supply water for all the houses by building wells and laying pipes.
 
 For each house `i`, we can either build a well inside it directly with cost `wells[i - 1]` (note the `-1` due to **0-indexing**), or pipe in water from another well to it. The costs to lay pipes between houses are given by the array `pipes` where each `pipes[j] = [house1j, house2j, costj]` represents the cost to connect `house1j` and `house2j` together using a pipe. Connections are bidirectional, and there could be multiple valid connections between the same two houses with different costs.
 
 Return _the minimum total cost to supply water to all houses_.
-
-
 
 **Example 1:**
 
@@ -50,8 +52,6 @@ The total cost will be 2.
 Note that we can connect houses 1 and 2 with cost 1 or with cost 2 but we will always choose the cheapest option. 
 ```
 
-
-
 **Constraints:**
 
 * `2 <= n <= 104`
@@ -68,6 +68,8 @@ Note that we can connect houses 1 and 2 with cost 1 or with cost 2 but we will a
 If we add a new house, says house 0, and connect it to each houses with weight $$wells[i]$$. Then this problem is actually same as finding Minimum Spanning Tree. Hence, we can use Kruskal's Algorithm with DSU to solve it.
 
 In order to get the MST, we sort the edges based on the weights in an increasing order. Then we iterate them one by one, and greedily pick edges which does not result in cycle with the previous edges.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class dsu {

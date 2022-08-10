@@ -2,7 +2,7 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/rotate-list/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0061 - Rotate List (Medium)
 
@@ -42,7 +42,7 @@ Output: [2,0,1]
 
 First we iterate each node till the end and connect the tail to the head. At the same time we calculate how many nodes there, says $$n$$. After that, we find a point to cut the list. The point to cut is $$n - k \mod n$$. As $$k$$ can be greater or equal to $$n$$, so the new head will be located at $$n - k \mod n$$. Then we link the new tail->next to null and return the new head.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

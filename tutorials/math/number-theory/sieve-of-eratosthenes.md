@@ -9,10 +9,12 @@ keywords:
   - algorithm
 ---
 
-import Authors from '@site/src/components/Authors';
+import TutorialAuthors from '@site/src/components/TutorialAuthors';
 import Table from '@site/src/components/Table';
 
-<Authors names="@wingkwong"/>
+<TutorialAuthors names="@wingkwong"/>
+
+## Overview
 
 Sieve of Eratosthenes is a way of finding all prime numbers up to $$n$$ (inclusive).
 
@@ -40,8 +42,8 @@ export const suggestedProblems = [
   {
     "problemName": "0204 - Count Primes",
     "difficulty": "Medium",
-    "LeetCodeLink": "https://leetcode.com/problems/count-primes/",
-    "SolutionLink": "../../../solutions/0200-0299/count-primes"
+    "leetCodeLink": "https://leetcode.com/problems/count-primes/",
+    "solutionLink": "../../../solutions/0200-0299/count-primes"
   },
 ]
 

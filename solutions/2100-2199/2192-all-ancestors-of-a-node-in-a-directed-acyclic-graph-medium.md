@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/all-ancestors-of-a-node-in-a-directed-acyclic-graph/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2192 - All Ancestors of a Node in a Directed Acyclic Graph (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/all-ancestors-of-a-node-in-a-directed-acyclic-graph/
 
 ## Problem Statement
 
@@ -61,8 +67,6 @@ The above diagram represents the input graph.
 
 ## Approach 1: Topological Sort
 
-_This approach is prepared by @heiheihang._
-
 This question is quite challenging, and there are multiple ways to do it. Topological sort is one of the less direct way, but the logic is as following:
 
 1. Count the number of parents (In-Degree) of each node
@@ -72,7 +76,7 @@ This question is quite challenging, and there are multiple ways to do it. Topolo
 
 We observe that we can be sure that the ancestors of a node are all found until all of its parents are visited. This is the reason why we only visit a node when its In-Degree (number of unvisited parent) is 0.
 
-### Python 3
+<SolutionAuthor name="@heiheihang"/>
 
 ```python
 def getAncestors(self, n: int, edges: List[List[int]]) -> List[List[int]]:
@@ -143,11 +147,9 @@ def getAncestors(self, n: int, edges: List[List[int]]) -> List[List[int]]:
 
 ## Approach 2: DFS
 
-_This approach is prepared by @wingkwong._
-
 We can start from each node $$u$$ and perform DFS to find out all visited nodes. The ancestors of $$u$$would be those visited nodes excluding $$u$$. Since the searching direction is opposite, we change it from $$u$$ -> $$v$$ to $$v$$ -> $$u$$. In Example 1, if $$u$$ is $$6$$, then $$6$$-> $$3$$ -> $$0$$, $$6$$ -> $$3$$-> $$1$$ and $$6$$-> $$4$$ -> $$2$$, so the visited nodes excluding itself are $$[0, 1, 2, 3,4]$$.
 
-### C++
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

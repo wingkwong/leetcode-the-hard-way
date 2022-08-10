@@ -2,7 +2,13 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/find-unique-binary-string/'
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 1980 - Find Unique Binary String (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/find-unique-binary-string/
 
 ## Problem Statement
 
@@ -60,6 +66,8 @@ for (int i = 0; i < 1 << n; i ++) {
     // s here would be one of the binary string
 }
 ```
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

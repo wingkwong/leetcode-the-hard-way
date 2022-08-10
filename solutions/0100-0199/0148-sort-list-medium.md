@@ -2,7 +2,7 @@
 description: 'Author: @TBC | https://leetcode.com/problems/sort-list/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0148 - Sort List (Medium)
 

@@ -4,7 +4,7 @@ description: >-
   https://leetcode.com/problems/calculate-digit-sum-of-a-string/
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 2243 - Calculate Digit Sum of a String (Easy)
 
@@ -60,7 +60,7 @@ s becomes "0" + "0" + "0" = "000", whose length is equal to k, so we return "000
 
 Just following the instructions.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

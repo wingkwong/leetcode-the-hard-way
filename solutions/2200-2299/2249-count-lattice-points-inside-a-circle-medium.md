@@ -4,7 +4,7 @@ description: >-
   https://leetcode.com/problems/count-lattice-points-inside-a-circle/
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 2249 - Count Lattice Points Inside a Circle (Medium)
 
@@ -59,7 +59,7 @@ Some of them are (0, 2), (2, 0), (2, 4), (3, 2), and (4, 4).
 
 Iterate each point, check if the distance between the center point and the target point is less than or equal to the radius. If so, that means the target point is within the circle.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

@@ -4,7 +4,7 @@ description: >-
   https://leetcode.com/problems/minimum-consecutive-cards-to-pick-up/
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 2260 - Minimum Consecutive Cards to Pick Up (Medium)
 
@@ -43,7 +43,7 @@ Explanation: There is no way to pick up a set of consecutive cards that contain 
 
 Store the index for each number, check each element with size > 1 and find out the minimum gap between them.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

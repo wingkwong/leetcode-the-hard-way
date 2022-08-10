@@ -2,7 +2,7 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/merge-k-sorted-lists/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0023 - Merge k Sorted Lists (Hard)
 
@@ -63,7 +63,7 @@ We can directly use the solution from [0021 - Merge Two Sorted Lists (Easy)](mer
 
 The idea is to merge the $$k$$ lists into $$k / 2$$, then $$k / 4$$, $$k / 8$$ and so on. Therefore, we merge the pairs$$(0, 1), (2,3), (4,5),(6,7)$$, then $$(0, 2), (4,6)$$, then $$(0, 4)$$ and get the final result.
 
-<Authors names="@wingkwong"/>
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 /**

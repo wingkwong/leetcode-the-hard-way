@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/maximum-score-from-performing-multiplication-operations
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 1770 - Maximum Score from Performing Multiplication Operations (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/maximum-score-from-performing-multiplication-operations
 
 ## Problem Statement
 
@@ -64,6 +70,8 @@ Let $$dp[i][j]$$ be the maximum score where $$i$$ is the pointer at $$nums$$ and
 
 * if we pick from the left, we got $$mult[j] * nums[i] + dfs(nums, mult, i + 1, j + 1)$$
 * if we pick from the right, $$mult[j] * nums[n - 1 - j + i] + dfs(nums, mult, i, j + 1)$$
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

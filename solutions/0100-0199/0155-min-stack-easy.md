@@ -2,7 +2,7 @@
 description: 'Author: @heiheihang | https://leetcode.com/problems/min-stack/'
 ---
 
-import Authors from '@site/src/components/Authors';
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
 
 # 0155 - Min Stack (Easy)
 
@@ -59,7 +59,7 @@ Similarly, when we `pop` an element from the stack, we need to update `current_m
 
 `top` and `getMin` are very straightforward implementations.
 
-<Authors names="@heiheihang"/>
+<SolutionAuthor name="@heiheihang"/>
 
 ```python
 class MinStack:

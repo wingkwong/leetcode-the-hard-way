@@ -9,12 +9,14 @@ keywords:
   - algorithm
 ---
 
-import Authors from '@site/src/components/Authors';
+import TutorialAuthors from '@site/src/components/TutorialAuthors';
 import Table from '@site/src/components/Table';
 
-<Authors names="@heiheihang"/>
+<TutorialAuthors names="@heiheihang"/>
 
-For some simple iteration problems, we may be able to get away with a simple one-pass iteration. In some special problems, we have to use the technique **Two Pointers** to strategically move around in our input. Let's take a look at this problem ([LeetCode Link](https://leetcode.com/problems/squares-of-a-sorted-array/))
+## Overview
+
+For some simple iteration problems, we may be able to get away with a simple one-pass iteration. In some special problems, we have to use the technique **Two Pointers** to strategically move around in our input. Let's take a look at [this problem](https://leetcode.com/problems/squares-of-a-sorted-array/).
 
 > Given an integer array `nums` sorted in **non-decreasing** order, return _an array of **the squares of each number** sorted in non-decreasing order_.
 
@@ -77,20 +79,20 @@ export const suggestedProblems = [
   {
     "problemName": "1768 - Merge Strings Alternately",
     "difficulty": "Easy",
-    "LeetCodeLink": "https://leetcode.com/problems/merge-strings-alternately/",
-    "SolutionLink": "../../solutions/1700-1799/merge-strings-alternately-easy"
+    "leetCodeLink": "https://leetcode.com/problems/merge-strings-alternately/",
+    "solutionLink": "../../solutions/1700-1799/merge-strings-alternately-easy"
   },
   {
     "problemName": "2108 - Find First Palindromic String in the Array",
     "difficulty": "Easy",
-    "LeetCodeLink": "https://leetcode.com/problems/merge-strings-alternately/",
-    "SolutionLink": "../../solutions/2100-2199/find-first-palindromic-string-in-the-array-easy"
+    "leetCodeLink": "https://leetcode.com/problems/merge-strings-alternately/",
+    "solutionLink": "../../solutions/2100-2199/find-first-palindromic-string-in-the-array-easy"
   },
   {
     "problemName": "0283 - Move Zeroes",
     "difficulty": "Easy",
-    "LeetCodeLink": "https://leetcode.com/problems/move-zeroes/",
-    "SolutionLink": "../../solutions/0200-0299/move-zeroes-easy"
+    "leetCodeLink": "https://leetcode.com/problems/move-zeroes/",
+    "solutionLink": "../../solutions/0200-0299/move-zeroes-easy"
   },
 ]
 

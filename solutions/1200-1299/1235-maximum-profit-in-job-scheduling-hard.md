@@ -4,7 +4,13 @@ description: >-
   https://leetcode.com/problems/maximum-profit-in-job-scheduling/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 1235 - Maximum Profit in Job Scheduling (Hard)
+
+## Problem Link
+
+https://leetcode.com/problems/maximum-profit-in-job-scheduling/
 
 ## Problem Statement
 
@@ -13,8 +19,6 @@ We have `n` jobs, where every job is scheduled to be done from `startTime[i]` to
 You're given the `startTime`, `endTime` and `profit` arrays, return the maximum profit you can take such that there are no two jobs in the subset with overlapping time range.
 
 If you choose a job that ends at time `X` you will be able to start another job that starts at time `X`.
-
-
 
 **Example 1:**
 
@@ -54,6 +58,8 @@ Output: 6
 * `1 <= profit[i] <= 10^4`
 
 ## Approach 1: Dynamic Programming
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {

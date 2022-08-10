@@ -2,7 +2,13 @@
 description: 'Author: @heiheihang | https://leetcode.com/problems/design-bitset/'
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 2166 - Design Bitset (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/design-bitset/
 
 ## Problem Statement
 
@@ -68,6 +74,8 @@ We then consider `fix` and `unfix`. These two functions require certain conditio
 Then we update the target bit and `ones` accordingly.
 
 Similar logic applies to `toString` that we need to accommodate the state of `flipped`
+
+<SolutionAuthor name="@heiheihang"/>
 
 ```python
 class Bitset:

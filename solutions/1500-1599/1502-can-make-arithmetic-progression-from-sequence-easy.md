@@ -4,15 +4,19 @@ description: >-
   https://leetcode.com/problems/can-make-arithmetic-progression-from-sequence/
 ---
 
+import SolutionAuthor from '@site/src/components/SolutionAuthor';
+
 # 1502 - Can Make Arithmetic Progression From Sequence (Easy)
+
+## Problem Link
+
+https://leetcode.com/problems/can-make-arithmetic-progression-from-sequence/
 
 ## Problem Statement
 
 A sequence of numbers is called an **arithmetic progression** if the difference between any two consecutive elements is the same.
 
 Given an array of numbers `arr`, return `true` _if the array can be rearranged to form an **arithmetic progression**. Otherwise, return_ `false`.
-
-
 
 **Example 1:**
 
@@ -38,6 +42,8 @@ Explanation: There is no way to reorder the elements to obtain an arithmetic pro
 ## Approach 1: Sorting
 
 We sort the array and calculate the first difference. Iterate the rest of the elements to check if they have the same difference between two elements.
+
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
