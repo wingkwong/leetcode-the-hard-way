@@ -79,36 +79,38 @@ When we can separate the tree into different levels, we are just one step before
 The challenge here is how can we separate the tree into different levels. We can use the template above with `currentLevel` and `nextLevel`.
 
 ```python
-def findAverageOfLevels(root):
+def averageOfLevels(self, root: Optional[TreeNode]) -> List[float]:
+        answer = []
 
-    answer = []
-    
-    #saves the nodes in the currentLevel
-    currentLevel = [root]
-    
-    #continue traversing as long as there is still unexplored nodes
-    while(len(level) > 0):
-    
-        #stores the children of the nodes in the currentLevel
-        nextLevel = []
-        
-        #stores the total sum of the currentLevel nodes
-        currentLevelSum = 0
-        for node in currentLevel:
-            if(node is None):
-                continue
-            currentLevelSum += node.val
-            nextLevel.append(node.left)
-            nextLevel.append(node.right)
-        
-        #calculate the level average
-        currentLevelNodeCount = len(currentLevel)
-        currentLevelAverage = currentLevelSum / currentLevelNodeCount
-        answer.append(currnetLevelAverage)
-        
-        #explore the nextLevel
-        currentLevel = nextLevel
-    return answer
+        #saves the nodes in the currentLevel
+        currentLevel = [root]
+
+        #continue traversing as long as there is still unexplored nodes
+        while(len(currentLevel) > 0):
+
+            #stores the children of the nodes in the currentLevel
+            nextLevel = []
+
+            #stores the total sum of the currentLevel nodes
+            currentLevelNodeCount = 0
+            
+            currentLevelSum = 0
+            for node in currentLevel:
+                if(node is None):
+                    continue
+                currentLevelSum += node.val
+                nextLevel.append(node.left)
+                nextLevel.append(node.right)
+                currentLevelNodeCount += 1
+            #calculate the level average
+            if currentLevelNodeCount:
+                currentLevelAverage = currentLevelSum / currentLevelNodeCount
+                
+                answer.append(currentLevelAverage)
+
+            #explore the nextLevel
+            currentLevel = nextLevel
+        return answer
 ```
 
 We should keep practising the this template of BFS in these similar problems.
