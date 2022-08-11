@@ -14,7 +14,7 @@ import Table from '@site/src/components/Table';
 <Table 
     title="Week 10 (25 June - 29 July)"
     data={week10Problems}
-    collectionLink="https://leetcode.com/list/"
+    collectionLink="https://leetcode.com/list/eibcgr4t"
     isSorted={false}
     key="w10"
 />
