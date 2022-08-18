@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 600px;
+    height: 600px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 8px;
+  }
+  
+  .btn-tab {
+    position: relative;
+    top: 1px;
+    border: 1px solid #aaa;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: #fff;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.4s;
+  }
+  
+  .btn-tab:active,
+  .btn-tab:focus {
+    border-top-color: #5B9DD9;
+    box-shadow: 0px -1px 0px 0px #5B9DD9;
+  }
+  
+  .btn-tab.active {
+    border-bottom-color: #fff !important;
+  }
+  
+  .txt {
+    flex: 1;
+    resize: none;
+    padding: 5px;
+  }
