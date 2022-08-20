@@ -175,7 +175,7 @@ const config = {
           // showLastUpdateTime: true,
           // showLastUpdateAuthor: true,
           editUrl:
-            'https://github.com/wingkwong/leetcode-the-hard-way',
+            'https://github.com/wingkwong/leetcode-the-hard-way/tree/main/',
         }, 
       ],
       [
@@ -190,7 +190,7 @@ const config = {
           // showLastUpdateTime: true,
           // showLastUpdateAuthor: true,
           editUrl:
-            'https://github.com/wingkwong/leetcode-the-hard-way',
+            'https://github.com/wingkwong/leetcode-the-hard-way/tree/main/',
         }, 
       ],
       [
@@ -205,7 +205,7 @@ const config = {
           // showLastUpdateTime: true,
           // showLastUpdateAuthor: true,
           editUrl:
-            'https://github.com/wingkwong/leetcode-the-hard-way',
+            'https://github.com/wingkwong/leetcode-the-hard-way/tree/main/',
         }, 
       ],
 
@@ -221,7 +221,7 @@ const config = {
           // showLastUpdateTime: true,
           // showLastUpdateAuthor: true,
           editUrl:
-            'https://github.com/wingkwong/leetcode-the-hard-way',
+            'https://github.com/wingkwong/leetcode-the-hard-way/tree/main/',
         }, 
       ],
   ],
