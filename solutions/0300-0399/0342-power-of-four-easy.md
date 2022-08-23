@@ -76,8 +76,8 @@ public:
         // 16: 10000
         // observation: 
         // count of 1s is 1 and the number of trailing zeros is even
-        return __builtin_popcount(num)==1 && // only 1 bit is set
-              (__builtin_ctz(num)&1)==0;     // with even trailing zeros 
+        return __builtin_popcount(num) == 1 && // only 1 bit is set
+              (__builtin_ctz(num) & 1) == 0;     // with even trailing zeros 
     }
 };
 ```
