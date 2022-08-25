@@ -3,7 +3,7 @@ description: 'Author: @wingkwong | https://leetcode.com/problems/ransom-note/'
 tags: [Hash Table, String, Counting]
 ---
 
-# 383 - Ransom Note (Easy) 
+# 0383 - Ransom Note (Easy) 
 
 ## Problem Statement
 
