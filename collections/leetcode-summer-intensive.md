@@ -315,7 +315,7 @@ export const week4Problems = [
 "problemName": "0540 - Single Element in a Sorted Array",
 "difficulty": "Easy",
 "leetCodeLink": "https://leetcode.com/problems/single-element-in-a-sorted-array/",
-"solutionLink": "",
+"solutionLink": "../solutions/0500-0599/single-element-in-a-sorted-array-medium",
 "tags": "Binary Search"
 },
 {
