@@ -87,3 +87,27 @@ public:
     }
 };
 ```
+
+<SolutionAuthor name="@wingkwong"/>
+
+```py
+class Solution:
+    def numWays(self, steps: int, arrLen: int) -> int:
+        M = 10 ** 9 + 7
+        @lru_cache(None)
+        def dfs(pos, steps):
+            # if we walk outside the array or use all the steps
+            # then return 0
+            if pos < 0 or pos > steps or pos > arrLen - 1: return 0
+            # if we use all the steps, return 1 only if pos is 0
+            if steps == 0: return pos == 0
+            return (
+                # move to the left
+                dfs(pos - 1, steps - 1) +
+                # stay at current position
+                dfs(pos, steps - 1) +
+                # move to the right
+                dfs(pos + 1, steps - 1) 
+            ) % M
+        return dfs(0, steps)
+```
