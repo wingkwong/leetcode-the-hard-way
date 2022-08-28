@@ -50,7 +50,7 @@ Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
 
 Convert the integer value to string format and compare it one by one.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@tostream"/>
 
 ```python
 class Solution:
@@ -64,7 +64,7 @@ class Solution:
 
 Calculate the reversed number.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@tostream"/>
 
 ```python
 class Solution:
