@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wingkwong | https://leetcode.com/problems/richest-customer-wealth/'
+tags: [Array, Matrix]
 ---
 
 import SolutionAuthor from '@site/src/components/SolutionAuthor';
@@ -111,5 +112,5 @@ public:
         }
         return ans;
     }
-}+
+}
 ```
