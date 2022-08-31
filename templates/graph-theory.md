@@ -1,5 +1,5 @@
 ---
-title: 'Graph'
+title: 'Graph Theory'
 description: 'Graph Templates'
 hide_table_of_contents: false
 keywords:
@@ -113,7 +113,7 @@ class dsu {
     }
     cnt = n;
   }
-
+or
   inline int getCount() { return cnt; }
 
   inline int get(int x) { return (x == root[x] ? x : (root[x] = get(root[x]))); }
