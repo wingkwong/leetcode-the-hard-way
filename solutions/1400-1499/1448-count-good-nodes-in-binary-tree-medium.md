@@ -49,6 +49,9 @@ Explanation: Root is considered as good.
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
+// Time complexity: O(N) as we visit every node only once.
+// Space complexity: O(H) where H is the height of the tree.
+// In the worst case, H would be N given that the tree only has one path.
 class Solution {
 public:
     // the idea is to record the max value from the root to the node
