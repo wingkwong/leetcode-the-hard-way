@@ -62,12 +62,14 @@ public:
         // that means the current node is a good node
         // hence we add 1, else add 0
         return (mx <= root->val ? 1 : 0) + 
-                // then we traverse the left sub tree with the updated maximum value at this point
-                // we don't need to check if root->left is null or not
+                // the second part is the result of the left sub-tree
+                // we traverse it with the updated maximum value at the current point
+                // we don't need to check if root->left is null or not here
                 // as we cover the null case in the first line
                 goodNodes(root->left, max(root->val, mx)) + 
-                // then we traverse the right sub tree with the updated maximum value at this point
-                // we don't need to check if root->right is null or not
+                // the last part is the result of the right sub-tree
+                // we traverse it with the updated maximum value at the current point
+                // we don't need to check if root->right is null or not here
                 // as we cover the null case in the first line
                 goodNodes(root->right, max(root->val, mx));
     }
