@@ -160,6 +160,11 @@ const config = {
         ],
         copyright: `Copyright © ${new Date().getFullYear()} LeetCode The Hard Way. Built with Docusaurus.`,
       },
+      announcementBar: {
+        id: 'announcementBar-1', // Increment on change
+        content: `⭐️ If you like LeetCode The Hard Way, give it a star on <a target="_blank" href="https://github.com/wingkwong/leetcode-the-hard-way">GitHub</a> and join us on <a target="_blank" href="https://discord.com/invite/YeYWJ7g3">Discord</a>⭐️`,
+        isCloseable: true,
+      },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
