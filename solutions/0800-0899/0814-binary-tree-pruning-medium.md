@@ -74,6 +74,18 @@ public:
 };
 ```
 
+In case you want to free the deleted root to avoid memory leak. You can change the last line to
+
+```cpp
+if (!root->left && !root->right && !root->val) {
+    // delete will delete the memory of the pointer of root
+	delete root;
+	return nullptr;
+} else {
+	return root;
+}
+```
+
 <SolutionAuthor name="@wingkwong"/>
 
 ```py
