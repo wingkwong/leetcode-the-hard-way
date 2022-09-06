@@ -46,7 +46,59 @@ Output: [3,4,6,16,17]
 * `1 <= nums.length <= 1000`
 * `-10^6 <= nums[i] <= 10^6`
 
-## Approach 1: Iteration
+# Approach 1: Prefix Sum
+
+<SolutionAuthor name="@wingkwong"/>
+
+```cpp
+class Solution {
+public:
+    // for full tutorial, please go to
+    // https://wingkwong.github.io/leetcode-the-hard-way/tutorials/basic-topics/prefix-sum
+    vector<int> generatePrefixSum(vector<int>& a) {
+        int n = a.size();
+		// we need a vector of size n
+        vector<int> pref(n);
+		// the first element is same as that in `a`
+        pref[0] = a[0];
+		// starting the second one, we add the prefix sum `pref[i - 1]` and the current value `a[i]`
+        for (int i = 1; i < n; i++) pref[i] = pref[i - 1] + a[i];
+        return pref;
+    }
+    
+    vector<int> runningSum(vector<int>& nums) {
+	    // use the pre-defined function directly
+        return generatePrefixSum(nums);
+    }
+};
+```
+
+## Approach 2: Partial Sum
+
+Using C++ STL. Bbasically it does the same thing mentioned above. See [here](https://cplusplus.com/reference/numeric/partial_sum/) for more details.
+
+```
+y0 = x0
+y1 = x0 + x1
+y2 = x0 + x1 + x2
+y3 = x0 + x1 + x2 + x3
+y4 = x0 + x1 + x2 + x3 + x4
+```
+
+<SolutionAuthor name="@wingkwong"/>
+
+```cpp
+class Solution {
+public:
+    vector<int> runningSum(vector<int>& nums) {
+		// use STL directly
+        partial_sum(nums.begin(), nums.end(), nums.begin());
+        return nums;
+    }
+};
+```
+
+## Approach 3: Iteration
 
 We need to define an accumulator (`running_sum` in this problem) to save the sum of all numbers in `nums`. After calculating the latest `running_sum`, we put that number to our result list.
 
@@ -79,30 +131,14 @@ def runningSum(self, nums: List[int]) -> List[int]:
         return result
 ```
 
-## Approach 2: Partial Sum
-
-Using C++ STL.
-
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
 public:
     vector<int> runningSum(vector<int>& nums) {
-        partial_sum(nums.begin(), nums.end(), nums.begin());
-        return nums;
-    }
-};
-```
-
-## Approach 3: In-place Modification
-
-<SolutionAuthor name="@wingkwong"/>
-
-```cpp
-class Solution {
-public:
-    vector<int> runningSum(vector<int>& nums) {
+		// we don't actually need to generate a prefix sum vector
+		// instead we can modify the value in place.
         for(int i = 1; i < nums.size(); i++) {
             // add the previous result to the current element.
             nums[i] += nums[i - 1];
