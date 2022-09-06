@@ -419,7 +419,7 @@ export const week6Problems = [
 "problemName": "0724 - Find Pivot Index",
 "difficulty": "Easy",
 "leetCodeLink": " https://leetcode.com/problems/find-pivot-index/",
-"solutionLink": "",
+"solutionLink": "../solutions/0700-0799/find-pivot-index-easy",
 "tags": "Prefix Sum"
 },
 {
