@@ -112,7 +112,7 @@ class Solution:
         if root.left:
             s += '({})'.format(self.tree2str(root.left))
         # handle case 4
-        # alternatively, you can use `else if (root.right) s += "()";`
+        # alternatively, you can use `elif root.right: s += '()'`
         if root.left is None and root.right:
             s += '()'
         # handle case 5
