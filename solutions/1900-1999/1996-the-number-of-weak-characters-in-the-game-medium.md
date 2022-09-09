@@ -140,3 +140,49 @@ class Solution:
             else: maxDefense = defense
         return weakCharacters
 ```
+
+<SolutionAuthor name="@iraycd" />
+
+```golang
+import (
+    "sort"
+)
+
+
+// Idea
+// 1. Sorting order of attack in descending order
+// 2. Count weak characters (those defenses less than the current maximum defense)
+// 3. Update the maximum defense
+
+func numberOfWeakCharacters(properties [][]int) int {
+    
+    // Weak starts at 0, this is the variable which is going to be returned
+    weekCharacterCount := 0
+    maxDefence := 0
+    
+    // Sorting the order of the desending order of the attack
+    sort.Sort(ByAttack(properties))
+    for _, elem := range properties {
+        // Appending the count if the current element is less than the max defense 
+        // Else change the max defence
+        if(elem[1] < maxDefence){
+            weekCharacterCount++;
+        }else {
+            maxDefence = elem[1]
+        }
+    }
+    return weekCharacterCount
+}
+
+
+// Custom sorting Logic by attack
+type ByAttack [][]int
+func (a ByAttack) Len() int           { return len(a) }
+func (a ByAttack) Less(i, j int) bool { 
+    if(a[i][0] == a[j][0]){
+        return a[i][1] < a[j][1]
+    }
+    return a[i][0] > a[j][0] 
+}
+func (a ByAttack) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }
+```
