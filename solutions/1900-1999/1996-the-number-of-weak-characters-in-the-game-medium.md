@@ -1,6 +1,5 @@
 ---
-description: 'Author: @TBC | https://leetcode.com/problems/the-number-of-weak-characters-in-the-game/'
-draft: 'true'
+description: 'Author: @wingkwong, @iraycd | https://leetcode.com/problems/the-number-of-weak-characters-in-the-game/'
 tags: [Array, Stack, Greedy, Sorting, Monotonic Stack]
 ---
 
