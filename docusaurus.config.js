@@ -112,7 +112,7 @@ const config = {
             'aria-label': 'GitHub repository',
           },
           {
-            href: 'https://discord.gg/YeYWJ7g3',
+            href: 'https://discord.com/invite/Nqm4jJcyBf',
             position: 'right',
             className: 'navbar-icon',
             'aria-label': 'Discord channel',
@@ -153,7 +153,7 @@ const config = {
               },
               {
                 label: 'Discord',
-                href: 'https://discord.gg/YeYWJ7g3',
+                href: 'https://discord.com/invite/Nqm4jJcyBf',
               },
             ],
           },
@@ -162,7 +162,7 @@ const config = {
       },
       announcementBar: {
         id: 'announcementBar-1', // Increment on change
-        content: `⭐️ If you like LeetCode The Hard Way, give it a star on <a target="_blank" href="https://github.com/wingkwong/leetcode-the-hard-way">GitHub</a> and join us on <a target="_blank" href="https://discord.com/invite/YeYWJ7g3">Discord</a>⭐️`,
+        content: `⭐️ If you like LeetCode The Hard Way, give it a star on <a target="_blank" href="https://github.com/wingkwong/leetcode-the-hard-way">GitHub</a> and join us on <a target="_blank" href="https://discord.com/invite/Nqm4jJcyBf">Discord</a>⭐️`,
         isCloseable: true,
       },
       prism: {
