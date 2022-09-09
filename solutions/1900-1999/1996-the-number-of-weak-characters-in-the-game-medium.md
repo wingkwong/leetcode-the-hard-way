@@ -144,16 +144,10 @@ class Solution:
 <SolutionAuthor name="@iraycd" />
 
 ```golang
-import (
-    "sort"
-)
-
-
-// Idea
-// 1. Sorting order of attack in descending order
-// 2. Count weak characters (those defenses less than the current maximum defense)
-// 3. Update the maximum defense
-
+// the idea is to
+// 1. rearrange the order of attack and defense
+// 2. count weak characters (those defenses less than the current maximum defense)
+// 3. update the maximum defense
 func numberOfWeakCharacters(properties [][]int) int {
     
     // Weak starts at 0, this is the variable which is going to be returned
@@ -173,7 +167,6 @@ func numberOfWeakCharacters(properties [][]int) int {
     }
     return weekCharacterCount
 }
-
 
 // Custom sorting Logic by attack
 type ByAttack [][]int
