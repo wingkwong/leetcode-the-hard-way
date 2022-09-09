@@ -52,7 +52,7 @@ Explanation: The third character is weak because the second character has a stri
 class Solution {
 public:
     // the idea is to
-    // 1. rearrange the order of attack in ascending order
+    // 1. rearrange the order of attack and defense
     // 2. count weak characters (those defenses less than the current maximum defense)
     // 3. update the maximum defense
     int numberOfWeakCharacters(vector<vector<int>>& p) {
@@ -77,7 +77,7 @@ public:
 };
 ```
 
-## Approach 1: Sort with custom comparator
+## Approach 2: Sort with custom comparator
 
 <SolutionAuthor name="@wingkwong"/>
 
@@ -85,7 +85,7 @@ public:
 class Solution {
 public:
     // the idea is to
-    // 1. rearrange the order of attack in ascending order and  that of defense in descending order 
+    // 1. rearrange the order of attack and defense
     // 2. count weak characters (those defenses less than the current maximum defense)
     // 3. update the maximum defense
     int numberOfWeakCharacters(vector<vector<int>>& p) {
@@ -96,10 +96,11 @@ public:
         int maxDefense = 0;
         // sort properties with custom sort comparator
         sort(p.begin(), p.end(), [](const vector<int>& x, const vector<int>& y) {
-            // if the attack is same, then sort defense in descending order  
-            // otherwise, sort attack in in ascending order 
+            // if the attack is same, then sort defense in ascending order  
+            // otherwise, sort attack in in descending order 
            return x[0] == y[0] ? x[1] < y[1] : x[0] > y[0];
         });
+        // by doing so, we don't need to compare starting from the back
         for (auto& x : p) {
             // x[1] is defense of properties[i]
             // if it is less than current maxDefense, then it means it is a weak character
@@ -117,7 +118,7 @@ public:
 ```py
 class Solution:
     # the idea is to
-    # 1. rearrange the order of attack in ascending order and  that of defense in descending order 
+    # 1. rearrange the order of attack and defense
     # 2. count weak characters (those defenses less than the current maximum defense)
     # 3. update the maximum defense
     def numberOfWeakCharacters(self, p: List[List[int]]) -> int:
@@ -129,24 +130,13 @@ class Solution:
         # sort properties with custom sort comparator
         # if the attack is same, then sort defense in descending order  
         # otherwise, sort attack in in ascending order 
-        p.sort(key = lambda x: (x[0], -x[1]))
-        for _, defense in reversed(p):
+        p.sort(key = lambda x: (x[0], -x[1]), reverse = True)
+		# or we can do it like 
+		# p.sort(key = lambda x: (-x[0], x[1]))
+        for _, defense in p:
             # if it is less than current maxDefense, then it means it is a weak character
             if defense < maxDefense: weakCharacters += 1
             # update maxDefense
-            else: maxDefense = max(maxDefense, defense)
-        return weakCharacters
-```
-
-```py
-class Solution:
-    # same solution as above but sorted in reversed order
-    def numberOfWeakCharacters(self, p: List[List[int]]) -> int:
-        weakCharacters = 0
-        maxDefense = 0
-        p.sort(key = lambda x: (-x[0], x[1]))
-        for _, defense in p:
-            if defense < maxDefense: weakCharacters += 1
             else: maxDefense = defense
         return weakCharacters
 ```
