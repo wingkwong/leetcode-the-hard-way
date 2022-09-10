@@ -3,7 +3,7 @@ description: 'Author: @wingkwong | https://leetcode.com/problems/best-time-to-bu
 tags: [Array, Dynamic Programming]
 ---
 
-# 188 - Best Time to Buy and Sell Stock IV (Hard) 
+# 0188 - Best Time to Buy and Sell Stock IV (Hard) 
 
 ## Problem Statement
 
