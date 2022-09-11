@@ -42,11 +42,11 @@ Output: 72
 
 **Constraints:**
 
-- `1 <= k <= n <= 105`
+- `1 <= k <= n <= 10^5`
 - `speed.length == n`
 - `efficiency.length == n`
-- `1 <= speed[i] <= 105`
-- `1 <= efficiency[i] <= 108`
+- `1 <= speed[i] <= 10^5`
+- `1 <= efficiency[i] <= 10^8`
 
 ## Approach 1: Priority Queue
 
@@ -87,7 +87,7 @@ public:
                 speedSum -= pq.top();
                 pq.pop();
             }
-            // a team is formed now, calculate the performance
+            // calculate the performance
             ans = max(ans, speedSum * e);
         }
         return ans % MOD;
@@ -124,7 +124,7 @@ class Solution:
             if len(heap) > k:
                 # who to remove? of course the one with smallest speed
                 speedSum -= heapq.heappop(heap)
-            # a team is formed now, calculate the performance
+            # calculate the performance
             ans = max(ans, speedSum * e)
         return ans % MOD
 ```
