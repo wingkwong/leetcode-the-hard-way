@@ -134,7 +134,6 @@ class Solution:
 <SolutionAuthor name="@wingkwong"/>
 
 ```golang
-
 // Logic Behind:
 // 1. Join Score and Efficiency
 //    We join both array since they are related, 
@@ -147,7 +146,6 @@ class Solution:
 // 3. Heap of scoring
 //    Using heap here is curial since are need to add and remove all the smallest
 //    So low values are poped until we run the complete array to find the max performance.
-
 
 func maxPerformance(n int, speed []int, efficiency []int, k int) int {
     // Since the answer can be huge, we are usingn 10**9 + 7 as it suggests.
@@ -218,5 +216,4 @@ func (a ByEfficiency) Less(i, j int) bool {
     return a[i][1] > a[j][1] 
 }
 func (a ByEfficiency) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }
-
 ```
