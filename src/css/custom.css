@@ -24,21 +24,18 @@
   --site-color-checkbox-checked-bg: hsl(167deg 56% 73% / 25%);
   --site-color-feedback-background: #fff;
   --docusaurus-highlighted-code-line-bg: rgb(0 0 0 / 10%);
-  /* Use a darker color to ensure contrast, ideally we don't need important */
-  --ifm-breadcrumb-color-active: var(--ifm-color-primary-darker) !important;
-  --ifm-menu-color-active: var(--ifm-color-primary-darker) !important;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
   --ifm-color-primary: #9fdcf7;
-  /* --ifm-color-primary-dark: #00478e;
+  --ifm-color-primary-dark: #00478e;
   --ifm-color-primary-darker: #004284;
   --ifm-color-primary-darkest: #003d7a;
   --ifm-color-primary-light: #0066cc;
   --ifm-color-primary-lighter: #0070e0;
   --ifm-color-primary-lightest: #007af4;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3); */
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
 .navbar-icon {
