@@ -63,8 +63,8 @@ export const suggestedProblems = [
   {
     "problemName": "0039 - Combination Sum",
     "difficulty": "Medium",
-    "leetCodeLink": "https://leetcode.com/problems/running-sum-of-1d-array/",
-    "solutionLink": "../../solutions/1400-1499/running-sum-of-1d-array-easy"
+    "leetCodeLink": "https://leetcode.com/problems/combination-sum/",
+    "solutionLink": "../../solutions/0000-0099/combination-sum-medium"
   },
   {
     "problemName": "0040 - Combination Sum II",
