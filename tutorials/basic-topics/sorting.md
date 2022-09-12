@@ -64,7 +64,7 @@ export const suggestedProblems = [
   {
     "problemName": "0921 - Sort an Array",
     "difficulty": "Medium",
-    "leetCodeLink": "https://leetcode.com/problems/distinct-numbers-in-each-subarray/",
+    "leetCodeLink": "https://leetcode.com/problems/sort-an-array/",
     "solutionLink": "../../solutions/0900-0999/sort-an-array-medium"
   },
 ]
