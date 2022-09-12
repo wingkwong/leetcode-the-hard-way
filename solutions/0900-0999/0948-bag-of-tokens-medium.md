@@ -159,6 +159,9 @@ class Solution:
 <SolutionAuthor name="@wingkwong"/>
 
 ```java
+// Time Complexity: O(NlogN) (O(NlogN) for sorting & O(N) for two pointers.)
+// Space Complexity: O(logN)
+// where N is the number of tokens
 class Solution {
     public int bagOfTokensScore(int[] tokens, int power) {
         // play i-th token face up -> lose tokens[i] power -> choose the smallest one
