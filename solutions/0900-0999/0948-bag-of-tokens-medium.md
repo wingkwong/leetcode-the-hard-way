@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/bag-of-tokens/'
+description: 'Author: @wingkwong, @iraycd | https://leetcode.com/problems/bag-of-tokens/'
 tags: [Array, Two Pointers, Greedy, Sorting]
 ---
 
