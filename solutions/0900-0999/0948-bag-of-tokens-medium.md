@@ -58,7 +58,7 @@ Explanation: Play the tokens in this order to get a score of 2:
 
 <SolutionAuthor name="@wingkwong"/>
 
-```
+```cpp
 // Time Complexity: O(NlogN) (O(NlogN) for sorting & O(N) for two pointers.)
 // Space Complexity: O(logN)
 // where N is the number of tokens
@@ -105,7 +105,6 @@ public:
     }
 };
 ```
-
 
 **Python**
 
@@ -205,7 +204,7 @@ class Solution {
 }
 ```
 
-**Go Lang**
+**Go**
 
 <SolutionAuthor name="@iraycd"/>
 
