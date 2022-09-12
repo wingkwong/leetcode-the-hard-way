@@ -50,12 +50,13 @@ Explanation: Play the tokens in this order to get a score of 2:
 **Constraints:**
 
 - `0 <= tokens.length <= 1000`
-- `0 <= tokens[i], power < 1064`
+- `0 <= tokens[i], power < 10^4`
 
 ## Approach 1: Greedy + Two Pointers
 
-**C++**
+<Tabs>
 
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -105,9 +106,9 @@ public:
     }
 };
 ```
+</TabItem>
 
-**Python**
-
+<TabItem value="py" label="Python">
 <SolutionAuthor name="@wingkwong"/>
 
 ```py
@@ -153,8 +154,9 @@ class Solution:
         return mx_score
 ```
 
-**Java**
+</TabItem>
 
+<TabItem value="java" label="Java">
 <SolutionAuthor name="@wingkwong"/>
 
 ```java
@@ -203,9 +205,8 @@ class Solution {
     }
 }
 ```
-
-**Go**
-
+</TabItem>
+<TabItem value="go" label="Go">
 <SolutionAuthor name="@iraycd"/>
 
 ```golang
@@ -253,3 +254,5 @@ func max(a, b int) int {
 }
 ```
 
+</TabItem>
+</Tabs>
