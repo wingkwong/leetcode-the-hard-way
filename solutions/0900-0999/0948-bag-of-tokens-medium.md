@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/bag-of-tokens/'
+description: 'Author: @wingkwong, @iraycd | https://leetcode.com/problems/bag-of-tokens/'
 tags: [Array, Two Pointers, Greedy, Sorting]
 ---
 
@@ -204,3 +204,53 @@ class Solution {
     }
 }
 ```
+
+**Go Lang**
+
+<SolutionAuthor name="@iraycd"/>
+
+```golang
+// Idea
+// ------------------
+// Sorting:
+// Why sorting?
+// We need max power when we consume score
+// Both lowest power or greatest power gives us same score of 1
+// But 1 score can maximize power, so we have to consume the power in order of descending from score consumed.
+// ------------------
+// 2 Pointer Method:
+// left uses power, right uses score
+// Since there is a chance of consuming score even after maxScore is achieved we record max score.
+// we still append left if it doesn't match the both power and score cases.
+
+func bagOfTokensScore(tokens []int, power int) int {
+	sort.Ints(tokens)
+	score := 0
+	left := 0
+	maxScore := 0
+	right := len(tokens) - 1
+	for left <= right { // Left can be right in the case of [100,200] with power 150
+		if power >= tokens[left] {
+			power = power - tokens[left]
+			score++
+			left++
+		} else if score >= 1 {
+			power = power + tokens[right]
+			right--
+			score--
+		} else { // Needed in the case of [100] with power 50, else it will result in infinite loop
+			break
+		}
+		maxScore = max(maxScore, score)
+	}
+	return maxScore
+}
+
+func max(a, b int) int {
+	if a > b {
+		return a
+	}
+	return b
+}
+```
+
