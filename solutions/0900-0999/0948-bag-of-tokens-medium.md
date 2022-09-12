@@ -207,7 +207,7 @@ class Solution {
 
 **Go Lang**
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@iraycd"/>
 
 ```
 // Idea
