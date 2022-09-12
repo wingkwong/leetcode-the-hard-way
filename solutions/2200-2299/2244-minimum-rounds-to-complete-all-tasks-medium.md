@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/minimum-rounds-to-complete-all-tasks/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2244 - Minimum Rounds to Complete All Tasks (Medium)
 
 ## Problem Link

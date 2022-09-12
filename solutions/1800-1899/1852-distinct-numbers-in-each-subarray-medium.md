@@ -5,8 +5,6 @@ description: >-
 draft: 'true'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1852 - Distinct Numbers in Each Subarray (Medium)
 
 ## Problem Link

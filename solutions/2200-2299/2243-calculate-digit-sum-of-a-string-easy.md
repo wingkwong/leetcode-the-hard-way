@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/calculate-digit-sum-of-a-string/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2243 - Calculate Digit Sum of a String (Easy)
 
 ## Problem Link

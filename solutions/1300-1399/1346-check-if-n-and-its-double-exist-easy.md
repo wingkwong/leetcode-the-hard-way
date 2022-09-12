@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/check-if-n-and-its-double-exist/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1346 - Check If N and Its Double Exist (Easy)
 
 ## Problem Link

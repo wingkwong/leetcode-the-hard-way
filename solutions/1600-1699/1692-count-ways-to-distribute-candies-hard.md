@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/count-ways-to-distribute-candies/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1692 - Count Ways to Distribute Candies (Hard)
 
 ## Problem Link

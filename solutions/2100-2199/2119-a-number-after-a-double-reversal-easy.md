@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/a-number-after-a-double-reversal/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2119 - A Number After a Double Reversal (Easy)
 
 ## Problem Link

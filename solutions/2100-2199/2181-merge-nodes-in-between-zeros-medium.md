@@ -3,8 +3,6 @@ description: 'Author: @TBC | https://leetcode.com/problems/merge-nodes-in-betwee
 draft: 'true'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2181 - Merge Nodes in Between Zeros (Medium)
 
 ## Problem Link

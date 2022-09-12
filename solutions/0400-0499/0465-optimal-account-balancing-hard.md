@@ -2,8 +2,6 @@
 description: 'Author: @TBC | https://leetcode.com/problems/optimal-account-balancing/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0465 - Optimal Account Balancing (Hard)
 
 ## Problem Link

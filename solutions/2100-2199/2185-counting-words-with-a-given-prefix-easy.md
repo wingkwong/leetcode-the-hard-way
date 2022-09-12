@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/counting-words-with-a-given-prefix/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2185 - Counting Words With a Given Prefix (Easy)
 
 ## Problem Link

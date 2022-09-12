@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/maximum-candies-allocated-to-k-children/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2226 - Maximum Candies Allocated to K Children (Medium)
 
 ## Problem Link

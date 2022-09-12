@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/baseball-game/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0682 - Baseball Game (Easy)
 
 ## Problem Link

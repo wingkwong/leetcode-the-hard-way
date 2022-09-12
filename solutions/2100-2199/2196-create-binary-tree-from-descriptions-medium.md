@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/create-binary-tree-from-descriptions/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2196 - Create Binary Tree From Descriptions (Medium)
 
 ## Problem Link

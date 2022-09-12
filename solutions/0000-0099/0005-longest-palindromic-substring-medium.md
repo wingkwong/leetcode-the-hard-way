@@ -5,8 +5,6 @@ description: >-
 tags: [String, Dynamic Programming]
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0005 - Longest Palindromic Substring (Medium)
 
 ## Problem Link

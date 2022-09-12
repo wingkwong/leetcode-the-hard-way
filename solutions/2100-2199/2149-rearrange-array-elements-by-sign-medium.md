@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/rearrange-array-elements-by-sign/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2149 - Rearrange Array Elements by Sign (Medium)
 
 ## Problem Link

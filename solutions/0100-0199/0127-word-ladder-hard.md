@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/word-ladder/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0127 - Word Ladder (Hard)
 
 ## Problem Link

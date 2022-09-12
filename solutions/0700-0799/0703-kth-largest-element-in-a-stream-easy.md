@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/kth-largest-element-in-a-stream/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0703 - Kth Largest Element in a Stream (Easy)
 
 ## Problem Link

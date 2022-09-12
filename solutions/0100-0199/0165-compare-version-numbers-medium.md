@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/compare-version-numbers/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0165 - Compare Version Numbers (Medium)
 
 ## Problem Link

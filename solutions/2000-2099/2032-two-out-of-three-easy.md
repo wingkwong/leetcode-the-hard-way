@@ -5,8 +5,6 @@ description: >-
 tags: ['Hash Map']
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2032 - Two Out of Three (Easy)
 
 ## Problem Link

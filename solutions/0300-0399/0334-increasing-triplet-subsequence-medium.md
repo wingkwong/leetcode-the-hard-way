@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/increasing-triplet-subsequence/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0334 - Increasing Triplet Subsequence (Medium)
 
 ## Problem Link

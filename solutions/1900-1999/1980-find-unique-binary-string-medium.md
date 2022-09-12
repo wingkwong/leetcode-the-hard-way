@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/find-unique-binary-string/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1980 - Find Unique Binary String (Medium)
 
 ## Problem Link

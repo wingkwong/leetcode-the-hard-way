@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/partition-array-according-to-given-pivot/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2161 - Partition Array According to Given Pivot (Medium)
 
 ## Problem Link

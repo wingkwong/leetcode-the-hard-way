@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/find-all-k-distant-indices-in-an-array/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2200 - Find All K-Distant Indices in an Array (Easy)
 
 ## Problem Link

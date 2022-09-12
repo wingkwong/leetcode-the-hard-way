@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/longest-chunked-palindrome-decomposition/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1147 - Longest Chunked Palindrome Decomposition (Hard)
 
 ## Problem Link

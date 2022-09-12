@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/maximum-depth-of-n-ary-tree/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0559 - Maximum Depth of N-ary Tree (Easy)
 
 ## Problem Link

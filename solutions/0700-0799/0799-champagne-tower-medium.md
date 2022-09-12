@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/champagne-tower/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0799 - Champagne Tower (Medium)
 
 ## Problem Link

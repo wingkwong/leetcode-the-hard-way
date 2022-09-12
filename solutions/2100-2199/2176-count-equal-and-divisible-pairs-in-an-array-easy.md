@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/count-equal-and-divisible-pairs-in-an-array/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2176 - Count Equal and Divisible Pairs in an Array (Easy)
 
 ## Problem Link

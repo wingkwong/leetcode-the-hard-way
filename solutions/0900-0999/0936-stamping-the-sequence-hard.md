@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/stamping-the-sequence/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0936 - Stamping The Sequence (Hard)
 
 ## Problem Link

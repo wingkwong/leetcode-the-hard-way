@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/count-odd-numbers-in-an-interval-range/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1523 - Count Odd Numbers in an Interval Range (Easy)
 
 ## Problem Link

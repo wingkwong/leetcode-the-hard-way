@@ -6,8 +6,6 @@ description: >-
 
 # 2357 - Make Array Zero by Subtracting Equal Amounts (Easy)
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 ## Problem Link
 
 https://leetcode.com/problems/make-array-zero-by-subtracting-equal-amounts

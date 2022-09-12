@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/backspace-string-compare/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0844 - Backspace String Compare (Easy)
 
 ## Problem Link

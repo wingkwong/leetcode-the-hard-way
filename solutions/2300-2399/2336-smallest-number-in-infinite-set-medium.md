@@ -7,8 +7,6 @@ draft: true
 
 # 2336 - Smallest Number in Infinite Set (Medium)
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 ## Problem Link
 
 https://leetcode.com/problems/smallest-number-in-infinite-set

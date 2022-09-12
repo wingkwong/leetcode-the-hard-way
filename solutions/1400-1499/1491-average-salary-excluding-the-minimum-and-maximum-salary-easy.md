@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/average-salary-excluding-the-minimum-and-maximum-salary/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1491 - Average Salary Excluding the Minimum and Maximum Salary (Easy)
 
 ## Problem Link

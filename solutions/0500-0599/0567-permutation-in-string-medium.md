@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/permutation-in-string/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0567 - Permutation in String (Medium)
 
 ## Problem Link

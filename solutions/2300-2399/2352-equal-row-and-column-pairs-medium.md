@@ -7,8 +7,6 @@ tags: ['Hash Map']
 
 # 2352 - Equal Row and Column Pairs (Medium)
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 ## Problem Link
 
 https://leetcode.com/problems/equal-row-and-column-pairs

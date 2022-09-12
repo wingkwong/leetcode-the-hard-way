@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/broken-calculator/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0991 - Broken Calculator (Medium)
 
 ## Problem Link

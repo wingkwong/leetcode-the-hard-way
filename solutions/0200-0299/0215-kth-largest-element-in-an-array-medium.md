@@ -3,8 +3,6 @@ description: 'Author: @wingkwong | https://leetcode.com/problems/kth-largest-ele
 tags: ['Priority Queue']
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0215 - Kth Largest Element in an Array (Medium)
 
 ## Problem Link

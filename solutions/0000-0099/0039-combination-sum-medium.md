@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/combination-sum/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0039 - Combination Sum (Medium)
 
 ## Problem Link

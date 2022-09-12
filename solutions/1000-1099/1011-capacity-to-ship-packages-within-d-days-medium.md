@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1011 - Capacity to Ship Packages within d days (Medium)
 
 ## Problem Link

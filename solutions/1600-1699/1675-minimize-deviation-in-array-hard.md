@@ -3,8 +3,6 @@ description: 'Author: @TBC | https://leetcode.com/problems/minimize-deviation-in
 draft: 'true'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1675 - Minimize Deviation in Array (Hard)
 
 ## Problem Link

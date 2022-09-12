@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/maximum-students-taking-exam/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1349 - Maximum Students Taking Exam (Hard)
 
 ## Problem Link

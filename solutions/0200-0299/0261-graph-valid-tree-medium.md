@@ -3,8 +3,6 @@ description: 'Author: @wingkwong | https://leetcode.com/problems/graph-valid-tre
 tags: ['DSU', 'Graph', 'DFS', 'BFS']
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0261 - Graph Valid Tree (Medium)
 
 ## Problem Link

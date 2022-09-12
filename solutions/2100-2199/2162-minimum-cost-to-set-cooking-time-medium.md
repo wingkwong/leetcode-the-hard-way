@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/minimum-cost-to-set-cooking-time/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2162 - Minimum Cost to Set Cooking Time (Medium)
 
 ## Problem Link

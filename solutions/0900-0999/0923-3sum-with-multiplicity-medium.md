@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/3sum-with-multiplicity/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0923 - 3Sum With Multiplicity (Medium)
 
 ## Problem Link

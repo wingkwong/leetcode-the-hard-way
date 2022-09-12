@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/number-of-1-bits/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0191 - Number of 1 Bits (Easy)
 
 ## Problem Link

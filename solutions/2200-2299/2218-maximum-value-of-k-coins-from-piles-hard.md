@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/maximum-value-of-k-coins-from-piles/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2218 - Maximum Value of K Coins From Piles (Hard)
 
 ## Problem Link

@@ -2,8 +2,6 @@
 description: 'Author: @la-la-Cute | https://leetcode.com/problems/implement-strstr/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0028 - Implement strStr() (Easy)
 
 ## Problem Link

@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/all-divisions-with-the-highest-score-of-a-binary-array/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2155 - All Divisions With the Highest Score of a Binary Array (Medium)
 
 ## Problem Link

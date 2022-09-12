@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/path-with-minimum-effort/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1631 - Path With Minimum Effort (Medium)
 
 ## Problem Link

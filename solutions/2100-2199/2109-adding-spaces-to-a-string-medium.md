@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/adding-spaces-to-a-string/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2109 - Adding Spaces to a String (Medium)
 
 ## Problem Link

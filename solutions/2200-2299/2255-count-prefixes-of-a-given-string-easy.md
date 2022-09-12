@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/count-prefixes-of-a-given-string/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2255 - Count Prefixes of a Given String (Easy)
 
 ## Problem Link

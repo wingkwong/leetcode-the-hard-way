@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/stone-game-iv/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1510 - Stone Game IV (Hard)
 
 ## Problem Link

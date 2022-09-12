@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/maximize-the-topmost-element-after-k-moves/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2202 - Maximize the Topmost Element After K Moves (Medium)
 
 ## Problem Link

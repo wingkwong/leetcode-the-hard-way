@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/most-frequent-number-following-key-in-an-array/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2190 - Most Frequent Number Following Key In an Array (Easy)
 
 ## Problem Link

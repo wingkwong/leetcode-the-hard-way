@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1281 - Subtract the Product and Sum of Digits of an Integer (Easy)
 
 ## Problem Link

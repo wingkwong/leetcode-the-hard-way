@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/append-k-integers-with-minimal-sum/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2195 - Append K Integers With Minimal Sum (Medium)
 
 ## Problem Link

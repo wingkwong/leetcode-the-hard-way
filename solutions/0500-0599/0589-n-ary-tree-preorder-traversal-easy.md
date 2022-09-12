@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/n-ary-tree-preorder-traversal/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0589 - N-ary Tree Preorder Traversal (Easy)
 
 ## Problem Link

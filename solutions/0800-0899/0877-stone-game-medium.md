@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/stone-game/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0877 - Stone Game (Medium)
 
 ## Problem Link

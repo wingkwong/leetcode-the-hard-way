@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/top-k-frequent-elements/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0347 - Top K Frequent Elements (Medium)
 
 ## Problem Link

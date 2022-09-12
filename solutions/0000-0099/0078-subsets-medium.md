@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/subsets/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0078 - Subsets (Medium)
 
 ## Problem Link

@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/sign-of-the-product-of-an-array/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1822 - Sign of the Product of an Array (Easy)
 
 ## Problem Link

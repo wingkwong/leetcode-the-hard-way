@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/check-if-it-is-a-straight-line/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1232 - Check If It Is a Straight Line (Easy)
 
 ## Problem Link

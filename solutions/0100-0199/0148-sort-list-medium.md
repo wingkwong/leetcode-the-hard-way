@@ -2,8 +2,6 @@
 description: 'Author: @TBC | https://leetcode.com/problems/sort-list/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0148 - Sort List (Medium)
 
 ## Problem Link

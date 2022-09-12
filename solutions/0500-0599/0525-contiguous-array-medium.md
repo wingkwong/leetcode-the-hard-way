@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/contiguous-array/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0525 - Contiguous Array (Medium)
 
 ## Problem Link

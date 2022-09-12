@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/summary-ranges/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0228 - Summary Ranges (Easy)
 
 ## Problem Link

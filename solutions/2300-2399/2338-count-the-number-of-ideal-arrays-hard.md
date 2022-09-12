@@ -7,8 +7,6 @@ draft: true
 
 # 2338 - Count the Number of Ideal Arrays (Hard)
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 ## Problem Link
 
 https://leetcode.com/problems/count-the-number-of-ideal-arrays

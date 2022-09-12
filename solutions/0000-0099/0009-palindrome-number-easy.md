@@ -2,8 +2,6 @@
 description: 'Author: @tostream | https://leetcode.com/problems/palindrome-number/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0009 - Palindrome Number (Easy)
 
 ## Problem Link

@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/smallest-string-with-swaps'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1202 - Smallest String With Swaps (Medium)
 
 ## Problem Link

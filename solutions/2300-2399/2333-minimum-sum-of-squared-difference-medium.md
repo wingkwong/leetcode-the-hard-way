@@ -7,8 +7,6 @@ draft: true
 
 # 2333 - Minimum Sum of Squared Difference (Medium)
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 ## Problem Link
 
 https://leetcode.com/problems/minimum-sum-of-squared-difference/

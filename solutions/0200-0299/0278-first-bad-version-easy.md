@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/first-bad-version/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0278 - First Bad Version (Easy)
 
 ## Problem Link

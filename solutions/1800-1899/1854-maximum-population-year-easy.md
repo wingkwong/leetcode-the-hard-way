@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/maximum-population-year/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1854 - Maximum Population Year (Easy)
 
 ## Problem Link

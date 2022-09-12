@@ -7,8 +7,6 @@ draft: true
 
 # 2334 - Subarray With Elements Greater Than Varying Threshold (Hard)
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 ## Problem Link
 
 https://leetcode.com/problems/subarray-with-elements-greater-than-varying-threshold

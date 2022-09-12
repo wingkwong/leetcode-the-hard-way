@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/subarrays-with-k-different-integers/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0992 - Subarrays with K Different Integers (Hard)
 
 ## Problem Link

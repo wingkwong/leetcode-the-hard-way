@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/kth-missing-positive-number/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1539 - Kth Missing Positive Number (Easy)
 
 ## Problem Link

@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/find-substring-with-given-hash-value/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2156 - Find Substring With Given Hash Value (Medium)
 
 ## Problem Link

@@ -2,8 +2,6 @@
 description: 'Author: @heiheihang | https://leetcode.com/problems/min-stack/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0155 - Min Stack (Easy)
 
 ## Problem Link

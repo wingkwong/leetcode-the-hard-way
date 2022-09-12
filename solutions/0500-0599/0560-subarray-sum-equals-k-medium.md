@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/subarray-sum-equals-k/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0560 - Subarray Sum Equals K (Medium)
 
 ## Problem Link

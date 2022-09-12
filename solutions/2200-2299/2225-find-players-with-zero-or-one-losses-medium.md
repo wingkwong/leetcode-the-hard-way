@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/find-players-with-zero-or-one-losses/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2225 - Find Players With Zero or One Losses (Medium)
 
 ## Problem Link

@@ -7,8 +7,6 @@ draft: true
 
 # 2332 - The Latest Time to Catch a Bus (Medium)
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 ## Problem Link
 
 https://leetcode.com/problems/the-latest-time-to-catch-a-bus

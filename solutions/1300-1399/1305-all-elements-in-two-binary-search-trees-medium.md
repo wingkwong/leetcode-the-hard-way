@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/all-elements-in-two-binary-search-trees/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1305 - All Elements in Two Binary Search Trees (Medium)
 
 ## Problem Link

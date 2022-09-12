@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/count-of-range-sum/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0327 - Count of Range Sum (Hard)
 
 ## Problem Link

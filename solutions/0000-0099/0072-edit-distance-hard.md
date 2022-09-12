@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/edit-distance/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0072 - Edit Distance (Hard)
 
 ## Problem Link

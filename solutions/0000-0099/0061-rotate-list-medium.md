@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/rotate-list/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0061 - Rotate List (Medium)
 
 ## Problem Link

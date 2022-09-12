@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/4sum-ii/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0454 -  4Sum II (Medium)
 
 ## Problem Link

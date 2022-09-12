@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/count-elements-with-strictly-smaller-and-greater-elements/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2148 - Count Elements With Strictly Smaller and Greater Elements (Easy)
 
 ## Problem Link

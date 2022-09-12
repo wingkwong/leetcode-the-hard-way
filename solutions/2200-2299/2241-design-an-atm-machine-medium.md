@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong| https://leetcode.com/problems/design-an-atm-machine/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2241 - Design an ATM Machine (Medium)
 
 ## Problem Link

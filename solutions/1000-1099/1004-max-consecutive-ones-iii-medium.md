@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong| https://leetcode.com/problems/max-consecutive-ones-iii/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1004 - Max Consecutive Ones III (Medium)
 
 ## Problem Link

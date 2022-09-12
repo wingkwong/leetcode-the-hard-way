@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/largest-perimeter-triangle/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0976 - Largest Perimeter Triangle (Easy)
 
 ## Problem Link

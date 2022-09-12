@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/cells-in-a-range-on-an-excel-sheet/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2194 - Cells in a Range on an Excel Sheet (Easy)
 
 ## Problem Link

@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/add-two-integers/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2235 - Add Two Integers (Easy)
 
 ## Problem Link

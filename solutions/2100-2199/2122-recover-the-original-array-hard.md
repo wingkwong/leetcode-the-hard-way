@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/recover-the-original-array/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2122 - Recover the Original Array (Hard)
 
 ## Problem Link

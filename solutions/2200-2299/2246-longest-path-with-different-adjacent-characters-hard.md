@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/longest-path-with-different-adjacent-characters/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2246 - Longest Path With Different Adjacent Characters (Hard)
 
 ## Problem Link

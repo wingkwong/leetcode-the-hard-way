@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/handshakes-that-dont-cross/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1259 - Handshakes That Don't Cross (Hard)
 
 ## Problem Link

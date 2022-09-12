@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/find-closest-number-to-zero/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2239 - Find Closest Number to Zero (Easy)
 
 ## Problem Link

@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/maximum-profit-in-job-scheduling/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1235 - Maximum Profit in Job Scheduling (Hard)
 
 ## Problem Link

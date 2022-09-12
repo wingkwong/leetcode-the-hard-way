@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/connecting-cities-with-minimum-cost/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1135 - Connecting Cities With Minimum Cost (Medium)
 
 ## Problem Link

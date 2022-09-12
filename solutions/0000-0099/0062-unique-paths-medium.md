@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/unique-paths/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0062 - Unique Paths (Medium)
 
 ## Problem Link

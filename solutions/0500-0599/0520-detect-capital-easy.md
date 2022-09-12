@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/detect-capital/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0520 - Detect Capital (Easy)
 
 ## Problem Link

@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/minimum-difference-in-sums-after-removal-of-elements/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2163 - Minimum Difference in Sums After Removal of Elements (Hard)
 
 ## Problem Link

@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/minimum-sum-of-four-digit-number-after-splitting-digits/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2160 - Minimum Sum of Four Digit Number After Splitting Digits (Easy)
 
 ## Problem Link

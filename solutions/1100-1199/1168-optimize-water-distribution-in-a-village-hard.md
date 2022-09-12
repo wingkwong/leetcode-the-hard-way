@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/optimize-water-distribution-in-a-village/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1168 - Optimize Water Distribution in a Village (Hard)
 
 ## Problem Link

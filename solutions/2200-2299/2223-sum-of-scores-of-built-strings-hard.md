@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/sum-of-scores-of-built-strings/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2223 - Sum of Scores of Built Strings (Hard)
 
 ## Problem Link

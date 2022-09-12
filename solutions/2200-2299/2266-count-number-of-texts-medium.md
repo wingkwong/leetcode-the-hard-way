@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/count-number-of-texts/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2266 - Count Number of Texts (Medium)
 
 ## Problem Link

@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/find-the-duplicate-number/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0287 - Find the Duplicate Number (Medium)
 
 ## Problem Link

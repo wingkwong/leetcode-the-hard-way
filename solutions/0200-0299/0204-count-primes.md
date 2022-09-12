@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/count-primes/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0204 - Count Primes
 
 ## Problem Link

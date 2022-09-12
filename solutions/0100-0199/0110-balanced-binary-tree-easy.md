@@ -2,8 +2,6 @@
 description: 'Author: @SkollRyu | https://leetcode.com/problems/balanced-binary-tree/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0110 - Balanced Binary Tree (Easy)
 
 ## Problem Link

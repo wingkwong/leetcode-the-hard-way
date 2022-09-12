@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/count-operations-to-obtain-zero/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2169 - Count Operations to Obtain Zero (Easy)
 
 ## Problem Link

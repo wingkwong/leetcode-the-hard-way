@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/count-good-triplets-in-an-array/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2179 - Count Good Triplets in an Array (Hard)
 
 ## Problem Link

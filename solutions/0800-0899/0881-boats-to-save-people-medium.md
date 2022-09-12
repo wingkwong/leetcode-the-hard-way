@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/boats-to-save-people/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0881 - Boats to Save People (Medium)
 
 ## Problem Link

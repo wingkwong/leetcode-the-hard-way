@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/minimum-operations-to-make-the-array-alternating/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2170 - Minimum Operations to Make the Array Alternating (Medium)
 
 ## Problem Link

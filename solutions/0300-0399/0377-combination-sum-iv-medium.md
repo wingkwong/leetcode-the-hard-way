@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/combination-sum-iv/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0377 - Combination Sum IV (Medium)
 
 ## Problem Link

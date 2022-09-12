@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/maximum-good-people-based-on-statements/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2151 - Maximum Good People Based on Statements (Hard)
 
 ## Problem Link

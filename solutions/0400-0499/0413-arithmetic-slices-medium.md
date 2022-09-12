@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/arithmetic-slices/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0413 - Arithmetic Slices (Medium)
 
 ## Problem Link

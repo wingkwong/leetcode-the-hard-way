@@ -2,8 +2,6 @@
 description: 'Author: @heiheihang | https://leetcode.com/problems/next-greater-element-i/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0469 - Next Greater Element I (Easy)
 
 ## Problem Link

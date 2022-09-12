@@ -3,8 +3,6 @@ description: 'Author: @wingkwong | https://leetcode.com/problems/sort-an-array/'
 tags: ['sorting']
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0921 - Sort an Array (Medium)
 
 ## Problem Link

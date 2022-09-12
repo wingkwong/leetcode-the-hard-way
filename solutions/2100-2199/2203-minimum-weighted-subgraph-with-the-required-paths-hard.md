@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/minimum-weighted-subgraph-with-the-required-paths/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2203 - Minimum Weighted Subgraph With the Required Paths (Hard)
 
 ## Problem Link

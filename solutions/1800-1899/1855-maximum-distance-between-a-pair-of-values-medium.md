@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/maximum-distance-between-a-pair-of-values/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1855 - Maximum Distance Between a Pair of Values (Medium)
 
 ## Problem Link

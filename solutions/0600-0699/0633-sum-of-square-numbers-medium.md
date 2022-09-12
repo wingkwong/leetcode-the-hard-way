@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/sum-of-square-numbers/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0633 - Sum of Square Numbers (Medium)
 
 ## Problem Link

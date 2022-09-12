@@ -5,8 +5,6 @@ description: >-
 tags: ['Sorting']
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1859 - Sorting the Sentence (Easy)
 
 ## Problem Link

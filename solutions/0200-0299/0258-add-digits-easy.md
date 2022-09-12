@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/add-digits/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0258 - Add Digits (Easy)
 
 ## Problem Link

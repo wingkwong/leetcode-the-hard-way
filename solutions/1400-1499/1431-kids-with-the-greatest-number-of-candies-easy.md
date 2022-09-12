@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1431 - Kids With the Greatest Number of Candies (Easy)
 
 ## Problem Link

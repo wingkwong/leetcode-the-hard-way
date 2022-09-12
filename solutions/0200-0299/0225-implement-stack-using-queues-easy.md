@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/implement-stack-using-queues
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0225 - Implement Stack using Queues (Easy)
 
 ## Problem Link

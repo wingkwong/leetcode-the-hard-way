@@ -5,8 +5,6 @@ description: >-
 tags: ['Hash Map']
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1748 - Sum of Unique Elements (Easy)
 
 ## Problem Link

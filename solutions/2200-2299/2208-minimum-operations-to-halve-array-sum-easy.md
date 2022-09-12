@@ -6,8 +6,6 @@ description: >-
 
 # 2208 -  Minimum Operations to Halve Array Sum (Medium)
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 ## Problem Link
 
 https://leetcode.com/problems/minimum-operations-to-halve-array-sum/

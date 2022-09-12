@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/maximum-and-sum-of-array/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2172 - Maximum AND Sum of Array (Hard)
 
 ## Problem Link

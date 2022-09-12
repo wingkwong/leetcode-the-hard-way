@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1475 - Final Prices With a Special Discount in a Shop (Easy)
 
 ## Problem Link

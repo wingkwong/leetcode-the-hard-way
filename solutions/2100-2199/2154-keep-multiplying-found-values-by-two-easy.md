@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/keep-multiplying-found-values-by-two/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2154 - Keep Multiplying Found Values by Two (Easy)
 
 ## Problem Link

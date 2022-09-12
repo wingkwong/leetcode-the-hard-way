@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong,@heiheihang | https://leetcode.com/problems/k-closest-points-to-origin/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0973 - K Closest Points to Origin (Medium)
 
 ## Problem Link

@@ -5,8 +5,6 @@ description: >-
 draft: true
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2217 - Find Palindrome With Fixed Length (Medium)
 
 ## Problem Link

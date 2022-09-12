@@ -2,8 +2,6 @@
 description: 'Author: @TBC | https://leetcode.com/problems/count-array-pairs-divisible-by-k/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2183 -  Count Array Pairs Divisible by K (Hard)
 
 ## Problem Link

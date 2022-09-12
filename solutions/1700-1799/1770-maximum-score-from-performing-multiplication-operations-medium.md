@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/maximum-score-from-performing-multiplication-operations
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1770 - Maximum Score from Performing Multiplication Operations (Medium)
 
 ## Problem Link

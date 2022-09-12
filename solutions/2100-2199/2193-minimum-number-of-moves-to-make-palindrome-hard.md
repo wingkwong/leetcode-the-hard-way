@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/minimum-number-of-moves-to-make-palindrome/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2193 - Minimum Number of Moves to Make Palindrome (Hard)
 
 ## Problem Link

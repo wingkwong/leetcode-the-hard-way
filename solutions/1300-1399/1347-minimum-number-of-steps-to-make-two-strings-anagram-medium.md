@@ -5,8 +5,6 @@ description: >-
 tags: ['Hash Map']
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1347 - Minimum Number of Steps to Make Two Strings Anagram (Easy)
 
 ## Problem Link

@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/buildings-with-an-ocean-view/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1762 - Buildings With an Ocean View (Medium)
 
 ## Problem Link

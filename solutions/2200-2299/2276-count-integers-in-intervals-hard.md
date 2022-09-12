@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/count-integers-in-intervals
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2276 - Count Integers in Intervals (Hard)
 
 ## Problem Link

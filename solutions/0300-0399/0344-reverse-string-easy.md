@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/reverse-string/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0344 - Reverse String (Easy)
 
 ## Problem Link

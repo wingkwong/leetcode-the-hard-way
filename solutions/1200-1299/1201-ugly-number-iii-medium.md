@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/ugly-number-iii/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1201 - Ugly Number III (Medium)
 
 ## Problem Link

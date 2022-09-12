@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/count-integers-with-even-digit-sum/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2180 - Count Integers With Even Digit Sum (Easy)
 
 ## Problem Link

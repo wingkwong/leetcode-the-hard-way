@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/replace-non-coprime-numbers-in-array/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2197 - Replace Non-Coprime Numbers in Array (Hard)
 
 ## Problem Link

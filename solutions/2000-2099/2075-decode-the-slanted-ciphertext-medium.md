@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/decode-the-slanted-ciphertext
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2075 - Decode the Slanted Ciphertext (Medium)
 
 ## Problem Link

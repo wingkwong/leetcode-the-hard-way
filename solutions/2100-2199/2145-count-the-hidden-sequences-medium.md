@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/count-the-hidden-sequences/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2145 - Count the Hidden Sequences (Medium)
 
 ## Problem Link

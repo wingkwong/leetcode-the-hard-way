@@ -7,8 +7,6 @@ tags: ['Hash Map']
 
 # 2351 - First Letter to Appear Twice (Easy)
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 ## Problem Link
 
 https://leetcode.com/problems/first-letter-to-appear-twice

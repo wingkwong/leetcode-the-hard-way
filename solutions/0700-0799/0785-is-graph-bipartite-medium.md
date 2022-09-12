@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/is-graph-bipartite'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0785 -  Is Graph Bipartite? (Medium)
 
 ## Problem Link

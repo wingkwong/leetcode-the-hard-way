@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/largest-number-after-digit-swaps-by-parity/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2231 -  Largest Number After Digit Swaps by Parity (Easy)
 
 ## Problem Link

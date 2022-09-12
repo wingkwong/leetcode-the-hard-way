@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/binary-search/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0704 - Binary Search (Easy)
 
 ## Problem Link

@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/moving-average-from-data-stream/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0346 - Moving Average from Data Stream (Easy)
 
 ## Problem Link

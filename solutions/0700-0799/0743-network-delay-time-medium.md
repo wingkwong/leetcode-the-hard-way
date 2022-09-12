@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/network-delay-time/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0743 - Network Delay Time (Medium)
 
 ## Problem Link

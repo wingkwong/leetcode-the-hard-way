@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram-ii/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2186 - Minimum Number of Steps to Make Two Strings Anagram II (Medium)
 
 ## Problem Link

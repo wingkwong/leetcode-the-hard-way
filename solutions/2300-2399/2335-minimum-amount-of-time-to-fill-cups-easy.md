@@ -7,8 +7,6 @@ draft: true
 
 # 2335 - Minimum Amount of Time to Fill Cups (Easy)
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 ## Problem Link
 
 https://leetcode.com/problems/minimum-amount-of-time-to-fill-cups

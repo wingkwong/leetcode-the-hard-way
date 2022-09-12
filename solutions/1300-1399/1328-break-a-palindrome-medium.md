@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/break-a-palindrome/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1328 - Break a Palindrome (Medium)
 
 ## Problem Link

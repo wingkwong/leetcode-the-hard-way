@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/continuous-subarray-sum/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0523 - Continuous Subarray Sum (Medium)
 
 ## Problem Link

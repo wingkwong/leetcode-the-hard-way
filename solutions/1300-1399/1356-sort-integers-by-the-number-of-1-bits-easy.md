@@ -5,8 +5,6 @@ description: >-
 tags: ['Sorting']
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1356 - Sort Integers by The Number of 1 Bits (Easy)
 
 ## Problem Link

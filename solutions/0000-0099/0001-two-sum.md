@@ -3,8 +3,6 @@ description: 'Author: @wingkwong | https://leetcode.com/problems/two-sum/'
 tags: [Array, Hash Table]
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0001 - Two Sum (Easy)
 
 ## Problem Link

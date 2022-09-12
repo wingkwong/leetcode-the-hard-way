@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/percentage-of-letter-in-string
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2278 - Percentage of Letter in String (Easy)
 
 ## Problem Link

@@ -3,8 +3,6 @@ description: 'Author: @wingkwong | https://leetcode.com/problems/richest-custome
 tags: [Array, Matrix]
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1672 - Richest Customer Wealth (Easy)
 
 ## Problem Link

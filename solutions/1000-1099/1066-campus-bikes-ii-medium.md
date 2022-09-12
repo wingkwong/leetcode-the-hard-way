@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/campus-bikes-ii/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1066 - Campus Bikes II (Medium)
 
 ## Problem Link

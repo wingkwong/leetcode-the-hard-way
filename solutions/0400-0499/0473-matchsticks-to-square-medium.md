@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/matchsticks-to-square/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0473 - Matchsticks to Square (Medium)
 
 ## Problem Link

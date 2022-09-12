@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/cheapest-flights-within-k-stops/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0787 - Cheapest Flights Within K Stops (Medium)
 
 ## Problem Link

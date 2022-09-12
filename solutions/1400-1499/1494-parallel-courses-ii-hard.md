@@ -5,8 +5,6 @@ description: >-
 tags: ['Dynamic Programming', 'Bit Masking']
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1494 - Parallel Courses II (Hard)
 
 ## Problem Link

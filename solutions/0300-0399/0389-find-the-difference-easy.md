@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/find-the-difference/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0389 - Find the Difference (Easy)
 
 ## Problem Link

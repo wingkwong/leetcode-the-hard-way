@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/valid-palindrome-ii/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0680 - Valid Palindrome II (Easy)
 
 ## Problem Link

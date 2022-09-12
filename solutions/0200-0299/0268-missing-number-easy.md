@@ -3,8 +3,6 @@ description: 'Author: @wingkwong | https://leetcode.com/problems/missing-number/
 tags: ['Array', 'Hash Table', 'Math', 'Bit Manupulation', 'Sorting']
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0268 - Missing Number (Easy)
 
 ## Problem Link

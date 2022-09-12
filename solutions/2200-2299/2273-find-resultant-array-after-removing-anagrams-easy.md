@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/find-resultant-array-after-removing-anagrams/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2273 - Find Resultant Array After Removing Anagrams (Easy)
 
 ## Problem Link

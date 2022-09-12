@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/maximum-product-after-k-increments/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2233 - Maximum Product After K Increments (Medium)
 
 ## Problem Link

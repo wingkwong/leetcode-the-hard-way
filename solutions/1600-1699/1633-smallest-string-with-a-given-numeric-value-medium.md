@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/smallest-string-with-a-given-numeric-value/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1633 - Smallest String With A Given Numeric Value (Medium)
 
 ## Problem Link

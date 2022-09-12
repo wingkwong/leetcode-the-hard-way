@@ -2,8 +2,6 @@
 description: 'Author: @heiheihang | https://leetcode.com/problems/matrix-diagonal-sum/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1572 - Matrix Diagonal Sum (Easy)
 
 ## Problem Link

@@ -6,8 +6,6 @@ description: >-
 
 # 2354 - Number of Excellent Pairs (Hard)
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 ## Problem Link
 
 https://leetcode.com/problems/number-of-excellent-pairs/

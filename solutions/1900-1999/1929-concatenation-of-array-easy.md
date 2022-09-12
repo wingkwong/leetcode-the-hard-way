@@ -2,8 +2,6 @@
 description: 'Author: @heiheihang | https://leetcode.com/problems/concatenation-of-array/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1929 - Concatenation of Array (Easy)
 
 ## Problem Link

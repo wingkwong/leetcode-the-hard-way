@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/minimum-average-difference/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2256 - Minimum Average Difference (Medium)
 
 ## Problem Link

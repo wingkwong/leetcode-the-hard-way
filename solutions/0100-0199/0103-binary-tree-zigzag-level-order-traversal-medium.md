@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0103 -  Binary Tree Zigzag Level Order Traversal (Medium)
 
 ## Problem Link

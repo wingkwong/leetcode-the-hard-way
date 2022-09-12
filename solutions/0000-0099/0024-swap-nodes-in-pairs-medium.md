@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/swap-nodes-in-pairs/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0024 - Swap Nodes in Pairs (Medium)
 
 ## Problem Link

@@ -7,8 +7,6 @@ draft: true
 
 # 2353 - Design a Food Rating System (Medium)
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 ## Problem Link
 
 https://leetcode.com/problems/design-a-food-rating-system

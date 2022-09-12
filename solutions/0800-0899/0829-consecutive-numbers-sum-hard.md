@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/consecutive-numbers-sum/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0829 - Consecutive Numbers Sum (Hard)
 
 ## Problem Link

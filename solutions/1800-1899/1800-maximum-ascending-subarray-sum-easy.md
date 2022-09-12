@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/maximum-ascending-subarray-sum/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1800 - Maximum Ascending Subarray Sum (Easy)
 
 ## Problem Link

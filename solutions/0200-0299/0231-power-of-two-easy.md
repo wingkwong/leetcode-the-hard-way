@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/power-of-two/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0231 - Power of Two (Easy)
 
 ## Problem Link

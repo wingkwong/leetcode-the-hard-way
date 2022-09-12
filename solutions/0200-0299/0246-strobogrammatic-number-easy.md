@@ -3,8 +3,6 @@ description: 'Author: @wingkwong | https://leetcode.com/problems/strobogrammatic
 tags: ['Hash Map']
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0246 - Strobogrammatic Number (Easy)
 
 Given a string `num` which represents an integer, return `true` _if_ `num` _is a **strobogrammatic number**_.

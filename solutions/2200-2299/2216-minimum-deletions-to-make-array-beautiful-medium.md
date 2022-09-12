@@ -5,8 +5,6 @@ description: >-
 draft: true
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2216 - Minimum Deletions to Make Array Beautiful (Medium)
 
 ## Problem Link

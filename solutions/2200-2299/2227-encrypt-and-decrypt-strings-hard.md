@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/encrypt-and-decrypt-strings'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2227 - Encrypt and Decrypt Strings (Hard)
 
 ## Problem Link

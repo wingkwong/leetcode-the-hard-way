@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/distinct-subsequences/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0115 - Distinct Subsequences (Hard)
 
 ## Problem Link

@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/largest-combination-with-bitwise-and-greater-than-zero
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2275 - Largest Combination With Bitwise AND Greater Than Zero (Medium)
 
 ## Problem Link

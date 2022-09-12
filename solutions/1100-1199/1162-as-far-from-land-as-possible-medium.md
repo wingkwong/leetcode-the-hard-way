@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/as-far-from-land-as-possible/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1162 -  As Far from Land as Possible (Medium)
 
 ## Problem Link

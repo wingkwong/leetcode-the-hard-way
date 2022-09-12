@@ -5,8 +5,6 @@ description: >-
 tags: [Hash Table, String, Sliding Window]
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0003 - Longest Substring Without Repeating Characters (Medium)
 
 ## Problem Link

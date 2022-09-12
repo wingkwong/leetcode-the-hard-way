@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/single-number/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0136 - Single Number (Easy)
 
 ## Problem Link

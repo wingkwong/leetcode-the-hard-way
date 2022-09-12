@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/maximum-split-of-positive-even-integers/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2178 - Maximum Split of Positive Even Integers (Medium)
 
 ## Problem Link

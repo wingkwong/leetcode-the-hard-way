@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/find-smallest-letter-greater-than-target
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0744 - Find Smallest Letter Greater Than Target (Easy)
 
 ## Problem Link

@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/longest-common-subsequence/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1143 - Longest Common Subsequence (Medium)
 
 ## Problem Link

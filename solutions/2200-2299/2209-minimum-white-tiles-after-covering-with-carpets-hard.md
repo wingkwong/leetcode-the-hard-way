@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/minimum-white-tiles-after-covering-with-carpets/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2209 - Minimum White Tiles After Covering With Carpets (Hard)
 
 ## Problem Link

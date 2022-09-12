@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/maximum-consecutive-floors-without-special-floors
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2274 - Maximum Consecutive Floors Without Special Floors (Medium)
 
 ## Problem Link

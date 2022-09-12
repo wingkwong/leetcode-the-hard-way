@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/sort-even-and-odd-indices-independently/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2164 - Sort Even and Odd Indices Independently (Easy)
 
 ## Problem Link

@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/find-all-lonely-numbers-in-the-array/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2150 - Find All Lonely Numbers in the Array (Medium)
 
 ## Problem Link

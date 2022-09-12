@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/shortest-palindrome/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0214 - Shortest Palindrome (Hard)
 
 ## Problem Link

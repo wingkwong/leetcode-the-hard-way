@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/merge-two-sorted-lists/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0021 - Merge Two Sorted Lists (Easy)
 
 ## Problem Link

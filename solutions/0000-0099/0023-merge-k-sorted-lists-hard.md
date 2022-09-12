@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/merge-k-sorted-lists/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0023 - Merge k Sorted Lists (Hard)
 
 ## Problem Link

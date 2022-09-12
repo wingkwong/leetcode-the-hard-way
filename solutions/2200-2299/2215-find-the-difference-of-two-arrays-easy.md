@@ -5,8 +5,6 @@ description: >-
 draft: true
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2215 - Find the Difference of Two Arrays (Easy)
 
 ## Problem Link

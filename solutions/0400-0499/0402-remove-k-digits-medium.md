@@ -2,8 +2,6 @@
 description: 'Author: @DoubleSpicy | https://leetcode.com/problems/remove-k-digits/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0402 - Remove K Digits (Medium)
 
 ## Problem Link

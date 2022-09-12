@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/count-artifacts-that-can-be-extracted/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2201 - Count Artifacts That Can Be Extracted (Medium)
 
 ## Problem Link

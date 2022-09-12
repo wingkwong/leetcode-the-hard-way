@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/k-diff-pairs-in-an-array/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0532 - K-diff Pairs in an Array (Medium)
 
 ## Problem Link

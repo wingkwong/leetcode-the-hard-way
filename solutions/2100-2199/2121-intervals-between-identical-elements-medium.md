@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/intervals-between-identical-elements/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2121 - Intervals Between Identical Elements (Medium)
 
 ## Problem Link

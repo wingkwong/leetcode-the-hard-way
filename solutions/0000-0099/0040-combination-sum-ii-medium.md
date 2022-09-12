@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/combination-sum-ii/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0040 - Combination Sum II (Medium)
 
 ## Problem Link

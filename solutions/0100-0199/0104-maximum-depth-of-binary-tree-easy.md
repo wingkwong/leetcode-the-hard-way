@@ -2,8 +2,6 @@
 description: 'Author: @TBC | https://leetcode.com/problems/maximum-depth-of-binary-tree'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0104 - Maximum Depth of Binary Tree (Easy)
 
 ## Problem Link

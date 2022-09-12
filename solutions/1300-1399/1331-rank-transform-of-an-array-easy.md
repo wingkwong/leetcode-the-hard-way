@@ -5,8 +5,6 @@ description: >-
 tags: ['Sorting']
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1331 - Rank Transform of an Array (Easy)
 
 ## Problem Link

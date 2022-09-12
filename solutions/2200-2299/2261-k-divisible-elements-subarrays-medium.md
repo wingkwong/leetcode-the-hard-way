@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/k-divisible-elements-subarrays/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2261 - K Divisible Elements Subarrays (Medium)
 
 ## Problem Link

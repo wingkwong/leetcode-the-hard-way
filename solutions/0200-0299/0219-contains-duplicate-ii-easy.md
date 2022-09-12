@@ -3,8 +3,6 @@ description: 'Author: @wingkwong | https://leetcode.com/problems/contains-duplic
 tags: ['Sliding Window']
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0219 - Contains Duplicate II (Easy)
 
 ## Problem Link

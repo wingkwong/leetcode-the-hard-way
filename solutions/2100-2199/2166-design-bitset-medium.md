@@ -2,8 +2,6 @@
 description: 'Author: @heiheihang | https://leetcode.com/problems/design-bitset/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2166 - Design Bitset (Medium)
 
 ## Problem Link

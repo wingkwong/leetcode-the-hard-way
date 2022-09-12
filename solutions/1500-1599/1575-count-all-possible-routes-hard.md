@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/count-all-possible-routes/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1575 - Count All Possible Routes (Hard)
 
 ## Problem Link

@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/majority-element/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0169 - Majority Element (Easy)
 
 ## Problem Link

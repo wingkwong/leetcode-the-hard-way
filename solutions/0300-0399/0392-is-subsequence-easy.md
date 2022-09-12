@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/is-subsequence/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0392 - Is Subsequence (Easy)
 
 ## Problem Link

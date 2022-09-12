@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/permutations/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0046 - Permutations (Medium)
 
 ## Problem Link

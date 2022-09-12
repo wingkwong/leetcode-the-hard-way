@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/count-all-valid-pickup-and-delivery-options/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1359 - Count All Valid Pickup and Delivery Options (Hard)
 
 ## Problem Link

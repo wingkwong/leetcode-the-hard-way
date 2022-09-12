@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/counting-bits/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0338 - Counting Bits (Easy)
 
 ## Problem Link

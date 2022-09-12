@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/minimum-cost-to-cut-a-stick/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1547 - Minimum Cost to Cut a Stick (Hard)
 
 ## Problem Link

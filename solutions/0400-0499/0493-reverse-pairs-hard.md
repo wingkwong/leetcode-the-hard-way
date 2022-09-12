@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/reverse-pairs/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0493 - Reverse Pairs (Hard)
 
 ## Problem Link

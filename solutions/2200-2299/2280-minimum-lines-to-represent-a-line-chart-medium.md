@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/minimum-lines-to-represent-a-line-chart
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2280 - Minimum Lines to Represent a Line Chart (Medium)
 
 ## Problem Link

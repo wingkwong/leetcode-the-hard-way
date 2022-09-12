@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/can-make-arithmetic-progression-from-sequence/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1502 - Can Make Arithmetic Progression From Sequence (Easy)
 
 ## Problem Link

@@ -2,8 +2,6 @@
 description: 'Author: @DoubleSpicy | https://leetcode.com/problems/add-binary/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0067 - Add Binary (easy)
 
 ## Problem Link

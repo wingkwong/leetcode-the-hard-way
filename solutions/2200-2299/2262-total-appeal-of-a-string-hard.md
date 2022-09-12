@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/total-appeal-of-a-string/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2262 - Total Appeal of A String (Hard)
 
 ## Problem Link

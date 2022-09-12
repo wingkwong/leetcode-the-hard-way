@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/smallest-sufficient-team/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1125 - Smallest Sufficient Team (Hard)
 
 ## Problem Link

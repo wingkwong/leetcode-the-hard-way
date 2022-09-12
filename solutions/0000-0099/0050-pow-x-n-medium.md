@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/powx-n/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0050 - Pow(x, n) (Medium)
 
 ## Problem Link

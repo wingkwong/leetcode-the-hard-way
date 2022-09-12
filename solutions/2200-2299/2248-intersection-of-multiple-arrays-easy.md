@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/intersection-of-multiple-arrays/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2248 - Intersection of Multiple Arrays (Easy)
 
 ## Problem Link

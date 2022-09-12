@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1155 - Number of Dice Rolls With Target Sum (Medium)
 
 ## Problem Link

@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/search-insert-position/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0035 - Search Insert Position (Easy)
 
 ## Problem Link

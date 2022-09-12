@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/guess-number-higher-or-lower/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0374 - Guess Number Higher or Lower (Easy)
 
 ## Problem Link

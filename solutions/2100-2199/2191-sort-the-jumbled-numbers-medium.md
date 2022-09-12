@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/sort-the-jumbled-numbers/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2191 - Sort the Jumbled Numbers (Medium)
 
 ## Problem Link

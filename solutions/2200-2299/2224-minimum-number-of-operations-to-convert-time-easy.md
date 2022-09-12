@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/minimum-number-of-operations-to-convert-time/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2224 - Minimum Number of Operations to Convert Time (Easy)
 
 ## Problem Link

@@ -3,8 +3,6 @@ description: 'Author: @wingkwong | https://leetcode.com/problems/valid-anagram/'
 tags: ['Hash Map']
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0242 - Valid Anagram (Easy)
 
 ## Problem Link

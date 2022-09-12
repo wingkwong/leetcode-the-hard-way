@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/count-lattice-points-inside-a-circle/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2249 - Count Lattice Points Inside a Circle (Medium)
 
 ## Problem Link

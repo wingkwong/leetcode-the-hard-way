@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/container-with-most-water/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0011 - Container With Most Water (Medium)
 
 ## Problem Link

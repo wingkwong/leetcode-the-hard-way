@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/max-number-of-k-sum-pairs/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1679 - Max Number of K-Sum Pairs (Medium)
 
 ## Problem Link

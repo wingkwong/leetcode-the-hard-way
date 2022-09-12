@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/water-and-jug-problem'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0365 - Water and Jug Problem (Medium)
 
 ## Problem Link

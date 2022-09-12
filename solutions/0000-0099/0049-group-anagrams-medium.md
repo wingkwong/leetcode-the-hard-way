@@ -3,8 +3,6 @@ description: 'Author: @wingkwong | https://leetcode.com/problems/group-anagrams/
 tags: ['Array', 'Hash Table', 'String', 'Sorting']
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0049 - Group Anagrams (Medium)
 
 ## Problem Link

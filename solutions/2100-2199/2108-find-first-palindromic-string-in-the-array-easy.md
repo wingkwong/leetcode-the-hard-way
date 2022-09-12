@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/find-first-palindromic-string-in-the-array/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2108 - Find First Palindromic String in the Array (Easy)
 
 ## Problem Link

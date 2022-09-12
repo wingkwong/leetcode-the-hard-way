@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/symmetric-tree/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0101 - Symmetric Tree (Easy)
 
 ## Problem Link

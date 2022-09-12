@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/maximum-employees-to-be-invited-to-a-meeting/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2127 - Maximum Employees to Be Invited to a Meeting (Hard)
 
 ## Problem Link

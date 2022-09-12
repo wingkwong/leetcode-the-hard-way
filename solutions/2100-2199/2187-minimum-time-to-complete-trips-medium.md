@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/minimum-time-to-complete-trips/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2187 - Minimum Time to Complete Trips (Medium)
 
 ## Problem Link

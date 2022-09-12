@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/number-of-islands/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0200 - Number of Islands (Medium)
 
 ## Problem Link

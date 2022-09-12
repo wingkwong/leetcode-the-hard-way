@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/maximum-width-of-binary-tree/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0662 - Maximum Width of Binary Tree (Medium)
 
 ## Problem Link

@@ -2,8 +2,6 @@
 description: 'Author: @heiheihang | https://leetcode.com/problems/move-zeroes/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0283 - Move Zeroes (Easy)
 
 ## Problem Link

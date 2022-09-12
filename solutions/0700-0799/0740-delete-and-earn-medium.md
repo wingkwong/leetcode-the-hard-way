@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/delete-and-earn/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0740 - Delete and Earn (Medium)
 
 ## Problem Link

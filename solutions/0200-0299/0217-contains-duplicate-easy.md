@@ -2,8 +2,6 @@
 description: 'Author: @DoubleSpicy | https://leetcode.com/problems/contains-duplicate/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0217 - Contains Duplicate (Easy)
 
 ## Problem Link

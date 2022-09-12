@@ -6,8 +6,6 @@ description: >-
 
 # 2360 - Longest Cycle in a Graph (Hard)
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 ## Problem Link
 
 https://leetcode.com/problems/longest-cycle-in-a-graph

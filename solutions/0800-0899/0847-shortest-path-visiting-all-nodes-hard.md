@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/shortest-path-visiting-all-nodes/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0847 - Shortest Path Visiting All Nodes (Hard)
 
 ## Problem Link

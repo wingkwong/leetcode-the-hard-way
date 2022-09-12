@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/valid-perfect-square/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0367 - Valid Perfect Square (Easy)
 
 ## Problem Link

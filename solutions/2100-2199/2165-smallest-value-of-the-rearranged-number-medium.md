@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/smallest-value-of-the-rearranged-number/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2165 - Smallest Value of the Rearranged Number (Medium)
 
 ## Problem Link

@@ -6,8 +6,6 @@ description: >-
 
 # 2331 - Evaluate Boolean Binary Tree (Easy)
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 ## Problem Link
 
 https://leetcode.com/problems/evaluate-boolean-binary-tree

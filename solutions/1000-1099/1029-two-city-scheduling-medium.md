@@ -3,8 +3,6 @@ description: 'Author: @wingkwong | https://leetcode.com/problems/two-city-schedu
 tags: ['Array', 'Sorting', 'Greedy']
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1029 - Two City Scheduling (Medium)
 
 ## Problem Link

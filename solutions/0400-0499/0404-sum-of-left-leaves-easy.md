@@ -2,8 +2,6 @@
 description: 'Author: @heiheihang | https://leetcode.com/problems/sum-of-left-leaves/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0404 - Sum of Left Leaves (Easy)
 
 ## Problem Link

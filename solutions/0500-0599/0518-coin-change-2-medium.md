@@ -5,8 +5,6 @@ description: >-
 tags: ['Dynamic Programming']
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0518 - Coin Change 2 (Medium)
 
 ## Problem Link

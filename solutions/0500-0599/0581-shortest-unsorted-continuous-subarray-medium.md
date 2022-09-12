@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/shortest-unsorted-continuous-subarray/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0581 - Shortest Unsorted Continuous Subarray (Medium)
 
 ## Problem Link

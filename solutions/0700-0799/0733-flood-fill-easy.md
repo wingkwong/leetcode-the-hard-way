@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/flood-fill/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0733 - Flood Fill (Easy)
 
 ## Problem Link

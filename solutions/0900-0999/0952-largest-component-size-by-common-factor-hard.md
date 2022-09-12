@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/largest-component-size-by-common-factor
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 0952 - Largest Component Size by Common Factor (Hard)
 
 ## Problem Link

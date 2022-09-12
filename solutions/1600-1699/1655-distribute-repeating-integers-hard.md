@@ -3,8 +3,6 @@ description: 'Author: @TBC | https://leetcode.com/problems/distribute-repeating-
 draft: 'true'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1655 - Distribute Repeating Integers (Hard)
 
 ## Problem Link

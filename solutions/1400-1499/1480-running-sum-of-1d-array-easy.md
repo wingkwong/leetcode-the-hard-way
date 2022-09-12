@@ -4,8 +4,6 @@ description: >-
   https://leetcode.com/problems/running-sum-of-1d-array/
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 1480 - Running Sum of 1d Array (Easy)
 
 ## Problem Link

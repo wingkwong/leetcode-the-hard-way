@@ -7,8 +7,6 @@ draft: true
 
 # 2337 - Move Pieces to Obtain a String (Medium)
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 ## Problem Link
 
 https://leetcode.com/problems/move-pieces-to-obtain-a-string

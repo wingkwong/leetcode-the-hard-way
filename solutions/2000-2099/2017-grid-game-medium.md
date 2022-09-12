@@ -2,8 +2,6 @@
 description: 'Author: @wingkwong | https://leetcode.com/problems/grid-game/'
 ---
 
-import SolutionAuthor from '@site/src/components/SolutionAuthor';
-
 # 2017 - Grid Game (Medium)
 
 ## Problem Link
