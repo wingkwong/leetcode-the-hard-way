@@ -37,8 +37,8 @@ Output: ["h","a","n","n","a","H"]
 
 We iterate the array to process two elements at the same time and swap them. First we swap `s[0]` and `s[n - 1]`. Then swap `s[1]` and `s[n - 2]` and so on. Therefore, we only swap `n / 2` times.
 
-### C++
-
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -53,8 +53,8 @@ public:
 };
 ```
 
-### Go
-
+</TabItem>
+<TabItem value="go" label="Go">
 <SolutionAuthor name="@wingkwong"/>
 
 ```go
@@ -68,10 +68,13 @@ func reverseString(s []byte)  {
 }
 ```
 
+</TabItem>
+</Tabs>
+
 ## Approach 2: STL
 
-### C++
-
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -83,18 +86,18 @@ public:
 };
 ```
 
-### Python3
-
+</TabItem>
+<TabItem value="py" label="Python">
 <SolutionAuthor name="@wingkwong"/>
 
-```python
+```py
 class Solution:
     def reverseString(self, s: List[str]) -> None:
         s.reverse()
 ```
 
-### Rust
-
+</TabItem>
+<TabItem value="rust" label="Rust">
 <SolutionAuthor name="@wingkwong"/>
 
 ```rust
@@ -104,3 +107,6 @@ impl Solution {
     }
 }
 ```
+
+</TabItem>
+</Tabs>

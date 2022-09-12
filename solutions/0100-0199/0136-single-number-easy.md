@@ -53,9 +53,9 @@ Let's have a quick review.
 
 Therefore, if we take XOR of all numbers, what's left would be that single number as every element that appears twice would be cancelled out. For example, $$nums = [4,1,2,1,2]$$, we can reorder it like $$[1,1,2,2,4]$$, and we got $$(1 \oplus 1) \oplus (2 \oplus 2) \oplus 4 = 4$$.
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
-
-### C++
 
 ```cpp
 class Solution {
@@ -68,15 +68,18 @@ public:
 };
 ```
 
-### Python 3
-
+</TabItem>
+<TabItem value="py" label="Python">
 <SolutionAuthor name="@wingkwong"/>
 
-```python
+```py
 class Solution:
     def singleNumber(self, nums: List[int]) -> int:
         return reduce(lambda x, y: x ^ y, nums)
 ```
+</TabItem>
+</Tabs>
+
 
 ## Approach 2: Math
 
@@ -84,6 +87,9 @@ $$2 * sumOfSet - (SumOfNumbers) = answer$$
 
 For example, $$nums = [4,1,2,1,2]$$, $$sumOfSet$$ is $$1 + 2 + 4 = 7$$ and $$sumOfNumbers$$is $$1 + 1 + 2 + 2 + 4 = 10$$. Then the answer is $$2 *7 - 10 = 4$$.
 
+
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -103,3 +109,5 @@ public:
     }
 };
 ```
+</TabItem>
+</Tabs>

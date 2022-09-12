@@ -52,8 +52,8 @@ Output: [0,1]
 
 Since this is an easy problem, most of the time brute force solutions would work due to the loose constraints. However, this solution gives O(n^2) time complexity and O(1) space complexity.
 
-### C++
-
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -73,8 +73,8 @@ public:
 };
 ```
 
-### Python3
-
+</TabItem>
+<TabItem value="py" label="Python">
 <SolutionAuthor name="@wingkwong"/>
 
 ```python
@@ -88,8 +88,9 @@ class Solution:
         return [-1, -1]
 ```
 
-### Go
 
+</TabItem>
+<TabItem value="go" label="Go">
 <SolutionAuthor name="@wingkwong"/>
 
 ```go
@@ -105,13 +106,15 @@ func twoSum(nums []int, target int) []int {
     return []int{-1, -1}
 }
 ```
+</TabItem>
+</Tabs>
 
 ## Approach 2: Hash Table
 
 A better way to do it is using one-pass hash table approach. We iterate each element and insert it into the hash table. We also check if the complement already exists in the hash table or not. If so, we can return the answer immediately. This solution gives O(n) time complexity and O(n) space complexity.
 
-### C++
-
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -132,11 +135,11 @@ public:
 };
 ```
 
-### Python3
-
+</TabItem>
+<TabItem value="py" label="Python">
 <SolutionAuthor name="@wingkwong"/>
 
-```python
+```py
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         n = len(nums)
@@ -149,8 +152,8 @@ class Solution:
         return [-1, -1]
 ```
 
-### Go
-
+</TabItem>
+<TabItem value="go" label="Go">
 <SolutionAuthor name="@wingkwong"/>
 
 ```go
@@ -166,3 +169,5 @@ func twoSum(nums []int, target int) []int {
     return []int{-1, -1}
 }
 ```
+</TabItem>
+</Tabs>

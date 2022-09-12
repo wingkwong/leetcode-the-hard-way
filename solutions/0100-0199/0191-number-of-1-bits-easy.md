@@ -49,40 +49,32 @@ Explanation: The input binary string 11111111111111111111111111111101 has a tota
 
 ## Approach 1: Built-in Function
 
-### C++
-
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
 public:
     int hammingWeight(uint32_t n) {
+        // or return bitset<32>(n).count();
         return __builtin_popcount(n);
     }
 };
 ```
 
-```cpp
-class Solution {
-public:
-    int hammingWeight(uint32_t n) {
-        return bitset<32>(n).count();
-    }
-}
-```
-
-### Python 3
-
+</TabItem>
+<TabItem value="py" label="Python">
 <SolutionAuthor name="@wingkwong"/>
 
-```python
+```py
 class Solution:
     def hammingWeight(self, n: int) -> int:
         return bin(n).count('1')
 ```
 
-### Go
-
+</TabItem>
+<TabItem value="go" label="Go">
 <SolutionAuthor name="@wingkwong"/>
 
 ```go
@@ -91,12 +83,16 @@ func hammingWeight(num uint32) int {
 }
 ```
 
+</TabItem>
+</Tabs>
+
+
 ## Approach 2: Bit Manipulation
 
 We check each parity of teach bit. Increase $$ans$$ by 1 if the bit is set.
 
-### C++
-
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -112,6 +108,9 @@ public:
     }
 };
 ```
+
+</TabItem>
+</Tabs>
 
 ## Approach 3: n & (n - 1)
 
@@ -138,8 +137,8 @@ n     n     n - 1  n & (n - 1)
 15   1111   1110    1110
 ```
 
-### C++
-
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -152,3 +151,5 @@ public:
     }
 };
 ```
+</TabItem>
+</Tabs>
