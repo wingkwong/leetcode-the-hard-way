@@ -59,7 +59,14 @@ function renderMarkdown () {
     content += `## Problem Statement\n\n`
     content += `${meta.problem}\n\n`
     content += `## Approach 1: TBC\n\n`
-    content += `<SolutionAuthor name="@TBC"/>`
+    content += `<Tabs>\n`
+    content += `<TabItem value="cpp" label="C++">\n`
+    content += `<SolutionAuthor name="@wingkwong"/>\n`
+    content += "```cpp\n"
+    content += "\n"
+    content += "```\n"
+    content += `</TabItem>\n`
+    content += `</Tabs>`
   }
 
 
