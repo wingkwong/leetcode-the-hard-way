@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/merge-two-sorted-lists/'
+description: 'Author: @wingkwong, @ganajayant | https://leetcode.com/problems/merge-two-sorted-lists/'
 ---
 
 # 0021 - Merge Two Sorted Lists (Easy)
@@ -53,6 +53,9 @@ We compare a node in list1 and that in list2. If the value of node in list1 is s
 
 In general, we will have $$list1[0] + mergeTwoLists(list1[1:], list2)$$ for $$list1[0] < list2[0]$$ else we have $$list2[0] + mergeTwoLists(list1, list2[1:])$$.
 
+
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -71,3 +74,60 @@ public:
     }
 };
 ```
+</TabItem>
+</Tabs>
+
+## Approach 2: Iterative
+
+we create a head and tail pointer
+The head pointer is created so that we can keep track of the beginning element of our list and return it in O(1)
+Firstly we check if either of the linked list list1 or list2 is empty if it is then we simply return the non-empty list
+Now we compare the first element of both the list in order to find out our beginning element of the merged linked list
+We set head and tail pointer to the above-obtained element and increase the list1 or list2 pointer to the next element accordingly
+Now, we run a while loop until any of the list terminates
+Case 1: if the list1 value is less than l2: then we shift our tail pointer to list1 and set tail as the current list1 now we shift our l1 pointer to the next element of that list
+Case 2: if the list2 value is less than list1: then we shift our tail pointer to list2 and set tail as the current list2 now we shift our list2 pointer to the next element of that list
+Now when these list list1 and list2 are of equal length then the while loop will terminate before traversing whole list
+To handle such cases we will check which list got terminated
+For example, if list1 is null right now then we just shift our tail pointer to the current element of list2 and copy the remaining element of list2
+As we are already having a sorted merged list hence all the remaining elements will be greater than the largest of our current merged list So we can just copy the remaining list
+
+<Tabs>
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@ganajayant"/>
+
+```java
+class Solution {
+    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+        ListNode ll = new ListNode();
+        ListNode tail = ll;
+
+        while (list1 != null && list2 != null) {
+            if (list1.val < list2.val) {
+                tail.next = list1;
+                list1 = list1.next;
+            } else {
+                tail.next = list2;
+                list2 = list2.next;
+            }
+            tail = tail.next;
+        }
+
+        if (list1 != null) {
+            tail.next = list1;
+            tail = tail.next;
+        }
+
+        else if (list2 != null) {
+            tail.next = list2;
+            tail = tail.next;
+        }
+
+        return ll.next;
+    }
+}
+```
+</TabItem>
+</Tabs>
+
+

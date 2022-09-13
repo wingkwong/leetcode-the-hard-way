@@ -1,5 +1,5 @@
 ---
-description: 'Author: @la-la-Cute | https://leetcode.com/problems/implement-strstr/'
+description: 'Author: @la-la-Cute, @ganajayant | https://leetcode.com/problems/implement-strstr/'
 ---
 
 # 0028 - Implement strStr() (Easy)
@@ -48,6 +48,9 @@ Output: 0
 
 ## Approach 1: Rolling Hash
 
+
+<Tabs>
+<TabItem value="py" label="Python">
 <SolutionAuthor name="@la-la-Cute"/>
 
 ```python
@@ -110,3 +113,27 @@ class Solution:
                 return idx
         return -1
 ```
+</TabItem>
+</Tabs>
+
+
+## Approach 2: Index Of 
+
+using method in string indexOf gives the first index of needle if it appeared in haystack
+
+<Tabs>
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@ganajayant"/>
+
+```java
+class Solution {
+    public int strStr(String haystack, String needle) {
+        if (needle.isEmpty()) {
+            return 0;
+        }
+        return haystack.indexOf(needle);
+    }
+}
+```
+</TabItem>
+</Tabs>

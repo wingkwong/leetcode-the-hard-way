@@ -39,6 +39,8 @@ Output: "bb"
 
 The most efficient solution is using Manacher's Algorithm to solve it in O(n). It is faster than other solutions because it exploits when a palindrome happens inside another palindrome.
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -77,5 +79,6 @@ public:
         return manacher(s);
     }
 };
-
 ```
+</TabItem>
+</Tabs>
