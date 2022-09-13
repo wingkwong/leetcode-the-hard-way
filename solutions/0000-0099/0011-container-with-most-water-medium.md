@@ -66,6 +66,7 @@ public:
     }
 };
 ```
+</TabItem>
 
 <TabItem value="java" label="Java">
 <SolutionAuthor name="@ganajayant"/>
