@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/container-with-most-water/'
+description: 'Author: @wingkwong, @ganajayant | https://leetcode.com/problems/container-with-most-water/'
 ---
 
 # 0011 - Container With Most Water (Medium)
@@ -45,6 +45,9 @@ Output: 1
 
 We know that the area is $$width * height$$. Given two lines with different heights, we should only take the minimum one and the width is simply their distance. We use two pointers to track the lines, every time we calculate the area and move either one line. If the left line is shorter, then move the left one because we want to keep the maximum one, and vice versa.
 
+
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -63,3 +66,31 @@ public:
     }
 };
 ```
+
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@ganajayant"/>
+
+```java
+class Solution {
+    public int maxArea(int[] height) {
+        int max = 0;
+        int i = 0;
+        int j = height.length - 1;
+        while (i < j) {
+            int leasth = Math.min(height[i], height[j]);
+            int width = (j - i);
+            if (max < leasth * width) {
+                max = leasth * width;
+            }
+            if (height[i] > height[j]) {
+                j--;
+            } else {
+                i++;
+            }
+        }
+        return max;
+    }
+}
+```
+</TabItem>
+</Tabs>

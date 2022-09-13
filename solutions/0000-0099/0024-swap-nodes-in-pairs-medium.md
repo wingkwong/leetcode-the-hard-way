@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/swap-nodes-in-pairs/'
+description: 'Author: @wingkwong, @ganajayant| https://leetcode.com/problems/swap-nodes-in-pairs/'
 ---
 
 # 0024 - Swap Nodes in Pairs (Medium)
@@ -48,6 +48,8 @@ For each round, we just need to take care of two nodes to be swapped. The remain
 
 Let's think of the second node first. If two nodes are swapped, the second node will link to the first node after swapping. Therefore, we can simply link the second node to the first node. After swapping, the first one will link to the all nodes linked by the original second node. We just need to call swapPairs again to handle it.
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -69,3 +71,53 @@ public:
     }
 };
 ```
+</TabItem>
+</Tabs>
+
+## Approach 2: Iterative
+See, we need to swap adjacent nodes right, So can we see that as a linked list in which we have to swap a linked list of length 2 and then after doing on that, we can move it further.
+Example:
+1->2->3->4
+After swapping first part or linked list of length 2, It would be
+2->1->3->4
+Now we need to go to 3->4 and do on the same on it and final answer would become
+2->1->4->3
+For this new linked list of length 2, We maintain two variables currentnode and nextnode denoting first and last of that linked list.
+Now we need to think how would we connect those linked list of len 2, For this I maintained two variables previousnode which is helping to form this linked list.
+
+<Tabs>
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@ganajayant"/>
+
+```java
+class Solution {
+    public ListNode swapPairs(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+
+        ListNode currentnode = head;
+        ListNode previousnode = null;
+
+        while (currentnode != null && currentnode.next != null) {
+            ListNode nextnode = currentnode.next;
+            if (previousnode == null) {
+                currentnode.next = nextnode.next;
+                nextnode.next = currentnode;
+                head = nextnode;
+            } else {
+                currentnode.next = nextnode.next;
+                previousnode.next = nextnode;
+                nextnode.next = currentnode;
+            }
+
+            previousnode = currentnode;
+            currentnode = currentnode.next;
+        }
+
+        return head;
+    }
+}
+```
+</TabItem>
+</Tabs>

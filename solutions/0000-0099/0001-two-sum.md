@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/two-sum/'
+description: 'Author: @wingkwong, @ganajayant | https://leetcode.com/problems/two-sum/'
 tags: [Array, Hash Table]
 ---
 
@@ -107,6 +107,24 @@ func twoSum(nums []int, target int) []int {
 }
 ```
 </TabItem>
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@ganajayant"/>
+
+```java
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = 0; j < nums.length; j++) {
+                if (i != j && nums[i] + nums[j] == target) {
+                    return new int[]{i, j}
+                }
+            }
+        }
+        return new int[]{-1, -1}; 
+    }
+}
+```
+</TabItem>
 </Tabs>
 
 ## Approach 2: Hash Table
@@ -167,6 +185,24 @@ func twoSum(nums []int, target int) []int {
         m[nums[i]] = i
     }
     return []int{-1, -1}
+}
+```
+</TabItem>
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@ganajayant"/>
+
+```java
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            if (map.containsKey(target - nums[i])) {
+                return new int[] { map.get(target - nums[i]), i };
+            }
+            map.put(nums[i], i);
+        }
+        return new int[]{-1, -1};
+    }
 }
 ```
 </TabItem>
