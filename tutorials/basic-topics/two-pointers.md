@@ -85,7 +85,7 @@ export const suggestedProblems = [
   {
     "problemName": "2108 - Find First Palindromic String in the Array",
     "difficulty": "Easy",
-    "leetCodeLink": "https://leetcode.com/problems/merge-strings-alternately/",
+    "leetCodeLink": "https://leetcode.com/problems/find-first-palindromic-string-in-the-array/",
     "solutionLink": "../../solutions/2100-2199/find-first-palindromic-string-in-the-array-easy"
   },
   {
