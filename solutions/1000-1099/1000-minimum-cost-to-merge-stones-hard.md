@@ -1,5 +1,6 @@
 ---
-description: 'Author: @hwaiting_dk | https://leetcode.com/problems/number-of-1-bits/'
+description: 'Author: @hwaiting_dk | https://leetcode.com/problems/minimum-cost-to-merge-stones/'
+tags: [Array, Dynamic Programming]
 ---
 
 # 1000 - Minimum Cost to Merge Stones (Hard)
