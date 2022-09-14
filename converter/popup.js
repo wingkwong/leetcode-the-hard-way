@@ -56,6 +56,8 @@ function renderMarkdown () {
   content += `# ${meta.title.replace('.', ' -')} (${meta.difficulty}) \n\n`
 
   if (meta.problem) {
+    content += `## Problem Link\n\n`
+    content += `${meta.href}\n\n`
     content += `## Problem Statement\n\n`
     content += `${meta.problem}\n\n`
     content += `## Approach 1: TBC\n\n`
