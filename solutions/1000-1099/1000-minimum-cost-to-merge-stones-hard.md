@@ -70,14 +70,14 @@ we can merge {3, 8, 6} into {17} <br/>
 we can stop here: our total cost = 8 + 17 = 25 <br/>
 
 ### The first thing we need to check can we merge all these piles into 1 pile ?
-we can check this : if((n-1)%(k-1) == 0) then only we can do merging. <br/>
+we can check this : if ((n-1)%(k-1) == 0) then only we can do merging. <br/>
 
 let's see how we can arrive at this formula. <br/>
 
 if there's `n` piles given and `k` piles are to be merged. Then, <br/>
-After the first merge : the length of the array will be `n - (k-1)` <br/>
-After the second merge : the length of the array will be `n - (k-1) - (k-1)` <br/>
-After the third merge : the length of the array will be `n - (k-1) - (k-1) - (k-1)` <br/>
+After the first merge : the length of the array will be `n - (k - 1)` <br/>
+After the second merge : the length of the array will be `n - (k - 1) - (k - 1)` <br/>
+After the third merge : the length of the array will be `n - (k - 1) - (k - 1) - (k - 1)` <br/>
 and so on...<br/><br/>
 
 
@@ -90,28 +90,28 @@ if we do single merge of {5, 1, 2} => {8} <br/>
 
 [0 1 2] -> indexing <br/>
 {3, 8, 6} -> array elements<br/>
-length is 3 : which n - (k-1) = 5 - (k-1) = 5 - (3-1) = 5 - 2 = 3; <br/><br/>
+length is 3 : which n - (k-1) = 5 - (k - 1) = 5 - (3 - 1) = 5 - 2 = 3; <br/><br/>
 
 
 So, we know that after m merges the length must be 1, if we can merge piles <br/>
-So, we can say that Cost for single merge is k-1 and for m merges will be m * (k-1); <br/><br/>
+So, we can say that Cost for single merge is k-1 and for m merges will be m * (k - 1); <br/><br/>
 
-total_merges = m * (k-1); <br/>
+total_merges = m * (k - 1); <br/>
 
 ### Given in the question : A move consists of merging exactly k consecutive piles into one pile and in the end only single pile is left.
 
 So, we can say that: <br/>
 ```
 N - total_merges = 1
-N - m * (k-1) = 1;
-N - 1 = m * (k-1);
-m = (N-1) / (k-1)
+N - m * (k - 1) = 1;
+N - 1 = m * (k - 1);
+m = (N - 1) / (k - 1)
 
 now, `m` must be positive number then only we can merge them
 
 In, this example: {3, 5, 1, 2, 6} here N = 5, k = 3
-m = (N-1) / (k-1)
-m = (5-1) / (3-1) = (4) / (2) = 2
+m = (N - 1) / (k - 1)
+m = (5 - 1) / (3 - 1) = (4) / (2) = 2
 
 2 is positive integer, so here we can merge 2 times, which is actually true in our case. 
 ```
@@ -126,10 +126,10 @@ prefix sum is <br/>
 {0, 3, 8, 9, 11, 17} -> array elements <br/>
 
 if we are merging let's say {5, 1, 2}, then i = 1, j = 3 index. <br/>
-then cost will be prefix[j+1] - prefix[i] = prefix[3+1] - prefix[1] = 11 - 3 = 8 which is true. <br/>
+then cost will be prefix[j + 1] - prefix[i] = prefix[3 + 1] - prefix[1] = 11 - 3 = 8 which is true. <br/>
 
 Also, before calculating cost : for every range we will check, if we can merge this or not <br/>
-if((j - i) % (piles - 1) == 0) here j - i = current range and piles is k. <br/>
+if ((j - i) % (piles - 1) == 0) here j - i = current range and piles is k. <br/>
 
 In the induction step : In the for loop we will increment by k = k + piles - 1; <br/>
 because after merging, k-1 piles will be deleted for sure (in this case 2 piles will be deleted after every merge),  <br/>
@@ -158,11 +158,11 @@ public:
     vector<int> prefixSum = {0};
     int rec(vector<int> &stones, int i, int j, int piles) {
         // Base Case: Invalid Index or For single element answer is always 0
-        if(i >= j) return 0;
+        if (i >= j) return 0;
         
         int mini = INT_MAX;
         
-	for( int k = i; k < j; k = k + piles - 1) {
+	for (int k = i; k < j; k = k + piles - 1) {
             int tempAns = rec(stones, i, k, piles) + rec(stones, k + 1, j, piles);
             mini = min(tempAns, mini);
         }
@@ -178,9 +178,9 @@ public:
         int n = stones.size();
 		
 	// If we can't merge all piles into 1 pile, so we our answer is -1;
-        if((n - 1) % (k - 1) != 0) return -1;
+        if ((n - 1) % (k - 1) != 0) return -1;
         
-        for(int i : stones) prefixSum.emplace_back(prefixSum.back() + i);
+        for (int i : stones) prefixSum.emplace_back(prefixSum.back() + i);
         return rec(stones, 0, n-1, k);
     }
 };
@@ -203,19 +203,19 @@ public:
     int memo[31][31];
     int rec(vector<int> &stones, int i, int j, int piles) {
         // Base Case: Invalid Index or For single element answer is always 0
-        if(i >= j) return 0;
+        if (i >= j) return 0;
         
-        if(memo[i][j] != -1) return memo[i][j];
+        if (memo[i][j] != -1) return memo[i][j];
         
         int mini = INT_MAX;
-        for(int k = i; k < j; k = k + piles - 1) {
+        for (int k = i; k < j; k = k + piles - 1) {
             // Sub Problems
-            int tempAns = rec(stones, i, k, piles) + rec(stones, k+1, j, piles);
+            int tempAns = rec(stones, i, k, piles) + rec(stones, k + 1, j, piles);
             mini = min(tempAns, mini);
         }
         
         // If we can take current segment into our answer: 
-        if((j - i) % (piles - 1) == 0){
+        if ((j - i) % (piles - 1) == 0){
             mini += prefixSum[j + 1] - prefixSum[i];
         }
         
@@ -225,12 +225,12 @@ public:
     int mergeStones(vector<int>& stones, int k) {
         int n = stones.size();
         
-        if((n - 1) % (k - 1) != 0) return -1;
+        if ((n - 1) % (k - 1) != 0) return -1;
         
-        for(int i : stones) prefixSum.emplace_back(prefixSum.back() + i);
+        for (int i : stones) prefixSum.emplace_back(prefixSum.back() + i);
         
         memset(memo, -1, sizeof(memo));
-        return rec(stones, 0, n-1, k);
+        return rec(stones, 0, n - 1, k);
     }
 };  
 ```
@@ -257,45 +257,45 @@ public:
     int mergeStones(vector<int>& stones, int k) {
         int n = stones.size();
         
-        if((n - 1) % (k - 1) != 0) return -1;
+        if ((n - 1) % (k - 1) != 0) return -1;
         
         vector<int> prefixSum = {0};
-        for(int i : stones) prefixSum.emplace_back(prefixSum.back() + i);
+        for (int i : stones) prefixSum.emplace_back(prefixSum.back() + i);
         
         int dp[n][n];
         
-        // Filling the first base case : if(i >= j) return 0;
-        for(int i = 0; i < n; i++) {
-            for(int j = 0; j <= i; j++) {
+        // Filling the first base case : if (i >= j) return 0;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j <= i; j++) {
                 dp[i][j] = 0;
             }
         }
         
-        // As u can see our driver function, call is rec(stones, 0, n-1, k);
-        // here in rec => i starts from 0 : means in tabulation : our ith start from last index which is n-1
+        // As u can see our driver function, call is rec(stones, 0, n - 1, k);
+        // here in rec => i starts from 0 : means in tabulation : our ith start from last index which is n - 1
         // here in rec => j starts from n-1: means in tabulation : out jth starts from starting index which is 0
         
-        // Here we get our answer at rec(stones, 0, n-1, k); means we will get our answer at 0th index in "i" and last index of jth i.e n-1th index: 
+        // Here we get our answer at rec(stones, 0, n - 1, k); means we will get our answer at 0th index in "i" and last index of jth i.e n - 1th index: 
 	// we have to fill them : so for 0th index : we have to fill from last to first : that's how we will reach at 0th index and for jth index : 
 	// we have to start from 0th index then we will reach to the last index in the end...
         
-        // NOTE: Here as u can see in base case if(i >= j) return 0; 
-	// means our answer at i >= j  is always 0 : so we will start our jth loop from i+1 index....
+        // NOTE: Here as u can see in base case if (i >= j) return 0; 
+	// means our answer at i >= j  is always 0 : so we will start our jth loop from i + 1 index....
         
         
         int piles = k;
-        for(int i = n - 1; i >= 0; i--) {
+        for (int i = n - 1; i >= 0; i--) {
             for(int j = i + 1; j < n; j++) {
                 int mini = INT_MAX;
 		
-                for(int k = i; k < j; k = k + piles - 1){
+                for (int k = i; k < j; k = k + piles - 1){
                     // Sub Problems
                     int tempAns = dp[i][k] + dp[k + 1][j];
                     mini = min(tempAns, mini);
                 }
 
                 // If we can take current segment into our answer: 
-                if((j - i) % (piles - 1) == 0){
+                if ((j - i) % (piles - 1) == 0){
                     mini += prefixSum[j + 1] - prefixSum[i];
                 }
                 dp[i][j] = mini;
@@ -323,33 +323,33 @@ public:
     int mergeStones(vector<int>& stones, int k) {
         int n = stones.size();
         
-        if((n - 1) % (k - 1) != 0) return -1;
+        if ((n - 1) % (k - 1) != 0) return -1;
         
         vector<int> prefixSum = {0};
-        for(int i : stones) prefixSum.emplace_back(prefixSum.back() + i);
+        for (int i : stones) prefixSum.emplace_back(prefixSum.back() + i);
         
         int dp[n][n];
         
-        // Filling the first base case : if(i >= j) return 0;
-        for(int i = 0; i < n; i++) {
-            for(int j = 0; j <= i; j++) {
+        // Filling the first base case : if (i >= j) return 0;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j <= i; j++) {
                 dp[i][j] = 0;
             }
         }
         
         int piles = k;
-        for(int i = n - 1; i >= 0; i--) {
+        for (int i = n - 1; i >= 0; i--) {
             for(int j = i + 1; j < n; j++) {
                 int mini = INT_MAX;
 		
-                for(int k = i; k < j; k = k + piles - 1){
+                for (int k = i; k < j; k = k + piles - 1){
                     // Sub Problems
                     int tempAns = dp[i][k] + dp[k + 1][j];
                     mini = min(tempAns, mini);
                 }
 
                 // If we can take current range into our answer: 
-                if((j - i) % (piles - 1) == 0){
+                if ((j - i) % (piles - 1) == 0){
                     mini += prefixSum[j + 1] - prefixSum[i];
                 }
                 dp[i][j] = mini;
