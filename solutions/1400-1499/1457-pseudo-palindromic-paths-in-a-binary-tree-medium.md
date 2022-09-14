@@ -144,4 +144,54 @@ public:
 ```
 
 </TabItem>
+
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@wingkwong"/>
+
+```py
+class Solution:
+    def pseudoPalindromicPaths (self, root: Optional[TreeNode], cnt = 0) -> int:
+        if not root: return 0
+        cnt ^= 1 << (root.val - 1)
+        if root.left is None and root.right is None:
+            return 1 if cnt & (cnt - 1) == 0 else 0
+        return self.pseudoPalindromicPaths(root.left, cnt) + self.pseudoPalindromicPaths(root.right, cnt)
+```
+</TabItem>
+
+<TabItem value="go" label="Go">
+<SolutionAuthor name="@wingkwong"/>
+
+```go
+/**
+ * Definition for a binary tree node.
+ * type TreeNode struct {
+ *     Val int
+ *     Left *TreeNode
+ *     Right *TreeNode
+ * }
+ */
+
+func numberOfOnes(n int) int{
+   res := 0
+   for n > 0 {
+      res += n & 1
+      n >>= 1
+   }
+   return res
+}
+
+func preorder(root *TreeNode, cnt int) int {
+    if root == nil { return 0 }
+    cnt ^= (1 << root.Val)
+    if root.Left == nil && root.Right == nil && numberOfOnes(cnt) <= 1  { return 1 }
+    return preorder(root.Left, cnt) + preorder(root.Right, cnt)
+}
+
+func pseudoPalindromicPaths (root *TreeNode) int {
+    return preorder(root, 0)
+}
+```
+</TabItem>
+
 </Tabs>
