@@ -70,21 +70,21 @@ we can merge {3, 8, 6} into {17} <br/>
 we can stop here: our total cost = 8 + 17 = 25 <br/>
 
 ### The first thing we need to check can we merge all these piles into 1 pile ?
-we can check this : if((n-1)%(k-1) == 0) then only we can do merging.
+we can check this : if((n-1)%(k-1) == 0) then only we can do merging. <br/>
 
-let's see how we can arrive at this formula.
+let's see how we can arrive at this formula. <br/>
 
-if there's `n` piles given and `k` piles are to be merged. Then,
-After the first merge : the length of the array will be `n - (k-1)`
-After the second merge : the length of the array will be `n - (k-1) - (k-1)`
-After the third merge : the length of the array will be `n - (k-1) - (k-1) - (k-1)`
+if there's `n` piles given and `k` piles are to be merged. Then, <br/>
+After the first merge : the length of the array will be `n - (k-1)` <br/>
+After the second merge : the length of the array will be `n - (k-1) - (k-1)` <br/>
+After the third merge : the length of the array will be `n - (k-1) - (k-1) - (k-1)` <br/>
 and so on...<br/><br/>
 
 
 eg: <br/>
 [0 1 2 3 4] -> indexing <br/>
 {3, 5, 1, 2, 6} -> array elements <br/>
-length is 5 <br/> <br/>
+length is 5 <br/>
 
 if we do single merge of {5, 1, 2} => {8} <br/>
 
@@ -131,20 +131,22 @@ then cost will be prefix[j+1] - prefix[i] = prefix[3+1] - prefix[1] = 11 - 3 = 8
 Also, before calculating cost : for every range we will check, if we can merge this or not <br/>
 if((j - i) % (piles - 1) == 0) here j - i = current range and piles is k. <br/>
 
-Also, in the induction step : In the for loop we will increment by k = k + piles - 1; because after merging,  <br/>
-k-1 piles will be deleted for sure (in this case 2 piles will be deleted after every merge),  <br/>
+In the induction step : In the for loop we will increment by k = k + piles - 1; <br/>
+because after merging, k-1 piles will be deleted for sure (in this case 2 piles will be deleted after every merge),  <br/>
 so we just start from next valid (3rd in this case) pile from current. <br/>
 
-Sub Problem will range from : <br/>
-if we rec(stones, i, k) + rec(stones, k + 1, j) : as in our for loop we will loop till second last_index,  <br/>
+### Sub Problem will range from : <br/>
+if we do rec(stones, i, k) + rec(stones, k + 1, j) :  <br/>
+as in our for loop we will loop till second last_index,  <br/>
 so that for rec(k + 1, j) : here k+1 remains valid. <br/>
 
-Driver Function Call : return rec(stones, 0, n - 1, k); : we will start from 0th index and last index n-1 which is the valid range.. <br/>
+### Driver Function Call : <br/>
+return rec(stones, 0, n - 1, k) : we will start from 0th index and last index n-1 which is the valid range.. <br/>
 
 ## Approach 1: Pure Recursion : MCM Pattern | Matrix Chain Multiplication
-**Time Complexity:** O((N*(2^N))/K) here as we increment by k piles in every step and for every element we have 2 options and there are `2^N` ways.
+**Time Complexity:** `O((N*(2^N))/K)` here as we increment by `k` piles in every step and for every element we have 2 options and there are `2^N` ways.
 <br />
-**Space Complexity:** O(N) for prefix sum + O(N^2) for memo + O(N) auxilary stack space
+**Space Complexity:** `O(N)` for prefix sum + `O(N^2)` for memo + `O(N)` auxilary stack space <br/>
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -187,8 +189,8 @@ public:
 </Tabs>
 
 ## Approach 2: Extension of Recursion : Memoization : Just to get AC via Recursion.
-**Time Complexity: O((N^3)/K) here as we increment by k piles in every step**
-**Space Complexity.: O(N) for prefix sum + O(N^2) for memo + O(N) auxilary stack space**
+**Time Complexity: `O((N^3)/K)` here as we increment by `k` piles in every step** <br/>
+**Space Complexity.:`O(N)` for prefix sum + `O(N^2)` for memo + `O(N)` auxilary stack space** <br/>
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -242,8 +244,8 @@ Basically Tabulation is reverse of memoization. Here we have to think reverse of
 2. Adjust pointers for eg: rec(i, j) -> dp[i][j] : valid range.
 3. Copy the reocurrence from the recursion.
 
-**Time Complexity: O((N^3)/K) here as we increment by k piles in every step**
-**Space Complexity.: O(N) for prefix sum + O(N^2) for dp**
+**Time Complexity: `O((N^3)/K)` here as we increment by `k` piles in every step** <br/>
+**Space Complexity.: `O(N)` for prefix sum + `O(N^2)` for dp** <br/>
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -308,8 +310,8 @@ public:
 </Tabs>
 
 ## Concise Version
-**Time Complexity: O((N^3)/K) here as we increment by k piles in every step**
-**Space Complexity: O(N) for prefix sum + O(N^2) for dp**
+**Time Complexity: `O((N^3)/K)` here as we increment by `k` piles in every step** <br/>
+**Space Complexity: `O(N)` for prefix sum + `O(N^2)` for dp** <br/>
 
 <Tabs>
 <TabItem value="cpp" label="C++">
