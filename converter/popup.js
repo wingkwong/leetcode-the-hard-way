@@ -63,10 +63,10 @@ function renderMarkdown () {
     content += `## Approach 1: TBC\n\n`
     content += `<Tabs>\n`
     content += `<TabItem value="cpp" label="C++">\n`
-    content += `<SolutionAuthor name="@wingkwong"/>\n`
+    content += `<SolutionAuthor name="@wingkwong"/>\n\n`
     content += "```cpp\n"
     content += "\n"
-    content += "```\n"
+    content += "```\n\n"
     content += `</TabItem>\n`
     content += `</Tabs>`
   }
