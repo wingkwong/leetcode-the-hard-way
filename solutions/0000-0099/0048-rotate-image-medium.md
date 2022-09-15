@@ -5,6 +5,10 @@ tags: [Array, Math, Matrix]
 
 # 0048 - Rotate Image (Medium) 
 
+## Problem Link
+
+https://leetcode.com/problems/rotate-image/
+
 ## Problem Statement
 
 You are given an `n x n` 2D `matrix` representing an image, rotate the image by **90** degrees (clockwise).

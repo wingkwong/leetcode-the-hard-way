@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
+  Author: @wingkwong, @ganajayant |
   https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
 ---
 
@@ -50,6 +50,8 @@ Output: [-1,-1]
 
 Prerequisite: [Binary Search](../../tutorials/basic-topics/binary-search)
 
+<Tabs>
+<TabItem value="c++" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -89,3 +91,46 @@ public:
     }
 };
 ```
+</TabItem>
+
+
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@ganajayant"/>
+
+```java
+class Solution {
+    public int[] searchRange(int[] nums, int target) {
+        int start = 0, end = nums.length - 1, firstelement = -1;
+        while (start <= end) {
+            int mid = start + (end - start) / 2;
+            if (nums[mid] == target) {
+                firstelement = mid;
+                end = mid - 1;
+            } else if (nums[mid] > target) {
+                end = mid - 1;
+            } else {
+                start = mid + 1;
+            }
+        }
+        start = 0;
+        end = nums.length - 1;
+        int endelement = -1;
+        while (start <= end) {
+            int mid = start + (end - start) / 2;
+            if (nums[mid] == target) {
+                endelement = mid;
+                start = mid + 1;
+            } else if (nums[mid] > target) {
+                end = mid - 1;
+            } else {
+                start = mid + 1;
+            }
+        }
+        return new int[] { firstelement, endelement };
+    }
+}
+```
+</TabItem>
+</Tabs>
+
+
