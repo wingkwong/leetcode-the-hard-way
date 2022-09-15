@@ -55,10 +55,9 @@ Explanation: changed is not a doubled array.
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
-// Time Complexity: O(N + KlogK)
+// Time Complexity: O(N + NlogN)
 // Space Complexity: O(N)
 // where N is the number of elements in `changed` 
-// and K is the number of unqiue elements in `changed`
 class Solution {
 public:
     // hashmap approach
@@ -80,6 +79,46 @@ public:
         changed.erase(unique(changed.begin(), changed.end()), changed.end());
         // so that we can iterate `changed` from smallest to largest
         for (auto x : changed) {
+            // if the number of m[x] is greater than than m[x * 2]
+            // then there would be some m[x] left
+            // therefore, return {} here as changed is not a doubled array
+            if (m[x] > m[x * 2]) return {};
+            for (int i = 0; i < m[x]; i++) {
+                // otherwise, we put the element `x` `m[x]` times to ans
+                ans.push_back(x);
+                // at the same time we decrease the count of m[x * 2] by 1
+                // we don't need to decrease m[x] by 1 as we won't use it again
+                m[x * 2] -= 1;
+            }
+        }
+        return ans;
+    }
+};
+```
+
+```cpp
+// Time Complexity: O(N + KlogK)
+// Space Complexity: O(N)
+// where N is the number of elements in `changed` 
+// and K is the number of elements in `uniqueNumbers`
+class Solution {
+public:
+    // hashmap approach
+    vector<int> findOriginalArray(vector<int>& changed) {
+        // if the length of the input is odd, then return {}
+        // because doubled array must have even length
+        if (changed.size() & 1) return {};
+        // count the frequency of each number
+        unordered_map<int, int> m;
+        for (auto x: changed) m[x]++;
+        vector<int> ans;
+        vector<int> uniqueNumbers;
+		// push all unuque numbers to `uniqueNumbers`
+        for (auto x : m) uniqueNumbers.push_back(x.first);
+        // sort in ascending order
+        sort(uniqueNumbers.begin(), uniqueNumbers.end());
+        // so that we can iterate `changed` from smallest to largest
+        for (auto x : uniqueNumbers) {
             // if the number of m[x] is greater than than m[x * 2]
             // then there would be some m[x] left
             // therefore, return {} here as changed is not a doubled array
