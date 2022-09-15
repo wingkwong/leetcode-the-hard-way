@@ -252,13 +252,13 @@ class Solution {
 	
 ```go
 // Solution:
-// 1. Mapping the numbers with repeations.
+// 1. Mapping the numbers with repetitions.
 // 2. Sort them in ascending order
-// 3. Subtract the doubled from the maps and make original item 0.
+// 3. Subtract the doubled from the maps and make the original item 0.
 // 4. Checking if everything is 0.
 
 func findOriginalArray(changed []int) []int {
-    // As every number has double if it's odd directly return empty.
+    // As every number has double, if it's odd, directly return empty.
     isOdd := len(changed) & 1
     if(isOdd == 1){
         return []int{}
@@ -275,7 +275,7 @@ func findOriginalArray(changed []int) []int {
     }
     
     // Creating a unique set of all the repetitions.
-    // Sorting the set in ascending order as we can easily remove the elements.
+    // Sorting the set/unique array in ascending order as we can easily remove the elements.
     var set []int
     for key := range changedMap {
         set = append(set, key)
