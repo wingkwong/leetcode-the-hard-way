@@ -185,8 +185,7 @@ class Solution:
         # because doubled array must have even length
         if len(changed) % 2: return []
         # sort in ascending order
-        for x in sorted(changed):
-            print(x)
+        for x in sorted(cnt.keys()):
             # if the number of cnt[x] is greater than than cnt[x * 2]
             # then there would be some cnt[x] left
             # therefore, return [] here as changed is not a doubled array
@@ -203,9 +202,6 @@ class Solution:
                 # otherwise, we put the element `x` `cnt[x]` times to ans
                 ans += [x] * cnt[x]
             cnt[2 * x] -= cnt[x]
-            # reset cnt[x] to 0
-            # think about the case like [2,1,2,4,2,4]
-            cnt[x] = 0
         return ans
 ```
 </TabItem>
@@ -220,7 +216,7 @@ class Solution {
         int n = changed.length, j = 0;
         // if the length of the input is odd, then return []
         // because doubled array must have even length
-        if (n % 2 == 1) return new int[0];
+        if (n % 2 == 1) return new int[]{};
         int[] ans = new int[n / 2];
         // alternatively, you can find the max number in `changed`
         // then use new int[2 * mx + 1]
@@ -241,7 +237,7 @@ class Solution {
                     ans[j++] = i--;
                 } else {
                     // cannot pair up, return []
-                    return new int[0];
+                    return new int[]{};
                 }
             }
         }
