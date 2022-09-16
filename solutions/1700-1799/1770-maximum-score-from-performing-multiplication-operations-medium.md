@@ -62,37 +62,84 @@ This is a classic DP problem. You choose one operation out of two. The tricky pa
 
 If we go for a 3D DP solution, it will get TLE given the constraints. Hence we need to reduce it to a 2D solution. We need the pointer at multipliers anyway so we need to think about how to use one pointer to track both starting point and the ending point.
 
-Supposing our multipliers pointer is at index $$j$$ (0-based), that means we have multiplied $$j + 1$$elements already. If our starting point is at index $$i$$ (0-based), the ending point would be at index $$n - 1 - j  +i$$.
+Supposing our multipliers pointer is at index $$j$$ (0-based), that means we have multiplied $$j + 1$$elements already. If our starting point is at index $$i$$ (0-based), the ending point would be at index $$n - 1 - j +i$$.
 
 Let $$dp[i][j]$$ be the maximum score where $$i$$ is the pointer at $$nums$$ and $$j$$ is the pointer at $$mult$$. When $$j$$ reaches the end of $$mult$$, then return $$0$$. If $$dp[i][j]$$has been calculated before, return it immediately. Otherwise, we have two options.
 
 * if we pick from the left, we got $$mult[j] * nums[i] + dfs(nums, mult, i + 1, j + 1)$$
 * if we pick from the right, $$mult[j] * nums[n - 1 - j + i] + dfs(nums, mult, i, j + 1)$$
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
 public:
-    int dp[1005][1005], m, n;
-    int dfs(vector<int>& nums, vector<int>& mult, int i, int j) {
-        // i : pointer at nums. j : pointer at mult
-        // pointer j reaches the end of mult, return 0
-        if (j == m) return 0; 
-        // dp[i][j] has been calculated, return the result 
-        if (dp[i][j] != -1) return dp[i][j];
-        // take the max score from either left or right side
+    int m, n;
+    int dfs(vector<int>& nums, vector<int>& mult, vector<vector<int>>& dp, int i, int j) {
+        // i : pointer at nums
+        // j : pointer at mult
+        // if we have performed all operations, then return 0
+        if (j == m) return 0;
+        // memoizated before - return the value here
+        if (dp[i][j] != INT_MIN) return dp[i][j];
+        // we can either choose an integer in `nums` the start or the end of the array
+        // so we try both case and take the maximum value
+        // then memoize it
         return dp[i][j] = max(
-            // pick from the left
-            mult[j] * nums[i] + dfs(nums, mult, i + 1, j + 1),
-            // pick from the right
-            mult[j] * nums[n - 1 - j + i] + dfs(nums, mult, i, j + 1)
+            // pick from the start
+            mult[j] * nums[i] + dfs(nums, mult, dp, i + 1, j + 1),
+            // pick fromt the end
+            mult[j] * nums[n - 1 - (j - i)] + dfs(nums, mult, dp, i, j + 1)
         ); 
     }
     int maximumScore(vector<int>& nums, vector<int>& multipliers) {
         n = (int) nums.size(), m = (int) multipliers.size();
-        memset(dp, -1, sizeof(dp));
-        return dfs(nums, multipliers, 0, 0);
+		// don't init -1 here. it will cause TLE
+        vector<vector<int>> dp(m, vector<int>(m, INT_MIN));
+        // or u can return dp[0][0] after running dfs
+        return dfs(nums, multipliers, dp, 0, 0);
     }
 };
 ```
+
+** Iterative Approach **
+
+<SolutionAuthor name="@wingkwong"/>
+
+```cpp
+class Solution {
+public:
+    int maximumScore(vector<int>& nums, vector<int>& multipliers) {
+        int n = (int) nums.size(), m = (int) multipliers.size();
+        vector<int> dp(m + 1);
+        // let's think backwards
+        for (int i = 0; i < m; i++) {
+            // at round m, we  pick the m-th multiplier
+            // at round m - 1, we pick the (m - 1)-th multiplier
+            // at round m - 2, we pick the (m - 2)-th multiplier
+            // and so on ... 
+            int mult = multipliers[m - 1 - i];
+            // how many elements we need to process? 
+            // at round m, there are m elements
+            // at round m - 1, there are m - 1 elements
+            // at round m - 2, there are m - 2 elements
+            // and so on ...
+            for (int j = 0; j < m - i; j++) {
+                // so we take the max of
+                dp[j] = max(
+                    // the start
+                    mult * nums[j] + dp[j + 1], 
+                    // the end
+                    mult * nums[j + (n - (m - i))] + dp[j]
+                );
+            }
+        }
+        return dp[0];
+    }
+};
+```
+</TabItem>
+</Tabs>
+
