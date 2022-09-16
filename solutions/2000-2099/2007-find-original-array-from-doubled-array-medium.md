@@ -246,5 +246,71 @@ class Solution {
 }
 ```
 </TabItem>
+	
+<TabItem value="go" label="Go">
+<SolutionAuthor name="@iraycd"/>
+	
+```go
+// Solution:
+// 1. Mapping the numbers with repetitions.
+// 2. Sort them in ascending order
+// 3. Subtract the doubled from the maps and make the original item 0.
+// 4. Checking if everything is 0.
+
+func findOriginalArray(changed []int) []int {
+    // As every number has double, if it's odd, directly return empty.
+    isOdd := len(changed) & 1
+    if(isOdd == 1){
+        return []int{}
+    }
+    
+    // Converting everything to a map, counting the repetitions.
+    changedMap := make(map[int]int)
+    for _, elem := range changed {
+        if _, ok:= changedMap[elem]; ok {
+            changedMap[elem] = changedMap[elem] +1 
+        }else {
+            changedMap[elem] = 1;
+        }
+    }
+    
+    // Creating a unique set of all the repetitions.
+    // Sorting the set/unique array in ascending order as we can easily remove the elements.
+    var set []int
+    for key := range changedMap {
+        set = append(set, key)
+    }
+    sort.Ints(set)
+
+    
+    var original []int;
+    for _, elem := range set {
+        if _, ok:= changedMap[elem*2]; ok {
+            x := changedMap[elem]
+            y := changedMap[elem*2]
+            if(elem == 0){  // In the case of [0,0,0,0] the array has to be [0,0]
+                x = x/2
+            }
+            // We append by the repetitions.
+            for i:=0; i < x; i++ {
+               original = append(original, elem)
+            }
+            // In the case of [2,1,2,4,2,4] we have 2s more than 1s. so we subtract 2s from 1s.
+            changedMap[elem*2] = y - x; 
+            changedMap[elem] = 0;
+        }
+    }
+    
+    // Only if all the changedMap has 0 elements in them we make we consider they are all doubled.
+    for _, elem := range changedMap{
+        if (elem != 0){
+            return []int{}
+        }
+    }
+    
+    return original
+}
+```
+</TabItem>
 
 </Tabs>
