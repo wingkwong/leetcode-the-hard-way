@@ -247,7 +247,7 @@ class Solution {
 ```
 </TabItem>
 	
-<TabItem value="go" label="Go Lang">
+<TabItem value="go" label="Go">
 <SolutionAuthor name="@iraycd"/>
 	
 ```go
@@ -311,5 +311,6 @@ func findOriginalArray(changed []int) []int {
     return original
 }
 ```
+</TabItem>
 
 </Tabs>
