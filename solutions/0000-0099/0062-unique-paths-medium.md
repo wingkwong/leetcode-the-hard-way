@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/unique-paths/'
+description: 'Author: @wingkwong, @ganajayant | https://leetcode.com/problems/unique-paths/'
 ---
 
 # 0062 - Unique Paths (Medium)
@@ -44,6 +44,9 @@ Explanation: From the top-left corner, there are a total of 3 ways to reach the 
 
 We need to make $$n - 1 + m - 1$$ steps in total. How many ways to choose from $$m - 1$$ right steps and $$n - 1$$ down steps out of the total steps?
 
+
+<Tabs>
+<TabItem value="c++" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -65,3 +68,37 @@ public:
     }
 };
 ```
+</TabItem>
+</Tabs>
+
+## Approach 2: Dynamic programming (Top Down) Memoization 
+We begin with the position (0,0).
+At any position (i,j), we make a recursive call to (i+1,j) and (i,j+1) to get the number of paths to the right and below the current node.
+If (i,j) goes out of bound, there can exist no path from it so we simply return 0.
+If we reach (n-1,m-1), we have found a path and so in this case we return 1.
+
+We are using memoization to store already computed value so it will reduce runtime by just accessing the already computed value
+<Tabs>
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@ganajayant"/>
+
+```java
+class Solution {
+    HashMap<String, Integer> hm = new HashMap<String, Integer>();
+    public int uniquePaths(int m, int n) {
+        String search = Integer.toString(m) + "#" + Integer.toString(n);
+        if (hm.containsKey(search)) {
+            return hm.get(search);
+        } else if (m == 1 && n == 1) {
+            return 1;
+        } else if (m == 0 || n == 0) {
+            return 0;
+        } else {
+            hm.put(search, uniquePaths(m - 1, n) + uniquePaths(m, n - 1));
+            return hm.get(search);
+        }
+    }
+}
+```
+</TabItem>
+</Tabs>
