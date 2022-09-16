@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/find-original-array-from-doubled-array/'
+description: 'Author: @wingkwong, @iraycd | https://leetcode.com/problems/find-original-array-from-doubled-array/'
 tags: [Array, Hash Table, Greedy, Sorting]
 ---
 
@@ -249,9 +249,8 @@ class Solution {
 	
 <TabItem value="go" label="Go">
 <SolutionAuthor name="@iraycd"/>
-	
+
 ```go
-// Solution:
 // 1. Mapping the numbers with repetitions.
 // 2. Sort them in ascending order
 // 3. Subtract the doubled from the maps and make the original item 0.
@@ -292,7 +291,7 @@ func findOriginalArray(changed []int) []int {
                 x = x/2
             }
             // We append by the repetitions.
-            for i:=0; i < x; i++ {
+            for i := 0; i < x; i++ {
                original = append(original, elem)
             }
             // In the case of [2,1,2,4,2,4] we have 2s more than 1s. so we subtract 2s from 1s.
@@ -302,7 +301,7 @@ func findOriginalArray(changed []int) []int {
     }
     
     // Only if all the changedMap has 0 elements in them we make we consider they are all doubled.
-    for _, elem := range changedMap{
+    for _, elem := range changedMap {
         if (elem != 0){
             return []int{}
         }
@@ -312,5 +311,4 @@ func findOriginalArray(changed []int) []int {
 }
 ```
 </TabItem>
-
 </Tabs>
