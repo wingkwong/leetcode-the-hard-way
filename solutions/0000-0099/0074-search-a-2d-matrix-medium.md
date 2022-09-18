@@ -70,6 +70,11 @@ public:
 ```
 
 </TabItem>
+</Tabs>
+
+## Approach 2: Binary Search
+Find which row and coloumn the element belongs to by using binarysearch
+<Tabs>
 <TabItem value="java" label="Java">
 <SolutionAuthor name="@ganajayant"/>
 
