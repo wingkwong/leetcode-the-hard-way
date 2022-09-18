@@ -3,7 +3,7 @@ description: 'Author: @ganajayant| https://leetcode.com/problems/sort-colors/'
 tags: [Array, Two Pointers, Sorting]
 ---
 
-# 007 - Sort Colors (Medium) 
+# 0075 - Sort Colors (Medium) 
 
 ## Problem Link
 
