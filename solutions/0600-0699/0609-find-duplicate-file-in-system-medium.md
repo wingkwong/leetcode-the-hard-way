@@ -3,7 +3,7 @@ description: 'Author: @wingkwong | https://leetcode.com/problems/find-duplicate-
 tags: [Array, Hash Table, String]
 ---
 
-# 609 - Find Duplicate File in System (Medium) 
+# 0609 - Find Duplicate File in System (Medium) 
 
 ## Problem Link
 
@@ -130,7 +130,7 @@ class Solution:
             # for each file names with content
             for f in rest:
                 # we retrieve the file name and the file content
-                fileName, fileContent = f[:f.index('(')], f[f.index('(') + 1 : -1]
+                fileName, fileContent = f.split('(')[0], f.split('(')[1][:-1]
                 # then group {directoryPath}/{fileName} by file content
                 m[fileContent].append("{}/{}".format(directoryPath, fileName))
         # return the file list only when the size is greater than 1, meaning they are duplicate files
