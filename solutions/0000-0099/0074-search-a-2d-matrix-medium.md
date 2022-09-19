@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/search-a-2d-matrix/'
+description: 'Author: @wingkwong, @ganajayant| https://leetcode.com/problems/search-a-2d-matrix/'
 tags: [Array, Binary Search, Matrix]
 ---
 
@@ -69,5 +69,35 @@ public:
 };
 ```
 
+</TabItem>
+</Tabs>
+
+## Approach 2: Binary Search
+Find which row and coloumn the element belongs to by using binarysearch
+<Tabs>
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@ganajayant"/>
+
+```java
+class Solution {
+    public boolean searchMatrix(int[][] matrix, int target) {
+        for (int i = 0; i < matrix.length; i++) {
+            int low = 0;
+            int high = matrix[i].length - 1;
+            while (low <= high) {
+                int mid = (low + high) / 2;
+                if (matrix[i][mid] == target) {
+                    return true;
+                } else if (matrix[i][mid] > target) {
+                    high = mid - 1;
+                } else {
+                    low = mid + 1;
+                }
+            }
+        }
+        return false;
+    }
+}
+```
 </TabItem>
 </Tabs>
