@@ -39,7 +39,9 @@ Output: [0,1,2]
 - `nums[i] is either 0, 1, or 2`
 
 ## Approach 1: Counting
+
 Count number of 0's 1's and 2's and add those numbers in array
+
 <Tabs>
 <TabItem value="java" label="Java">
 <SolutionAuthor name="@ganajayant"/>

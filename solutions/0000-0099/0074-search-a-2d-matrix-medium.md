@@ -37,7 +37,7 @@ Output: false
 - `1 <= m, n <= 100`
 - `-104 <= matrix[i][j], target <= 104`
 
-## Approach 1: Searching Row & Col
+## Approach 1: Searching Row & Column
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -73,7 +73,9 @@ public:
 </Tabs>
 
 ## Approach 2: Binary Search
-Find which row and coloumn the element belongs to by using binarysearch
+
+Find which row and coloumn the element belongs to by using Binary Search
+
 <Tabs>
 <TabItem value="java" label="Java">
 <SolutionAuthor name="@ganajayant"/>
