@@ -151,6 +151,54 @@ class Solution:
 ## Approach 2: Binary Search
 
 <Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@wingkwong"/>
+
+```cpp
+// Binary Search + Rolling Hash Approach
+class Solution {
+public:
+    // the idea is to use binary search to find the length `m`
+    // then we check if there is any nums1[i : i + m] == nums2[i : i + m]
+    // for c++, it may get TLE. so we can use rolling hash to speed up
+    // we can see `nums1[i : j]` as a hash, then we insert all the possible hashes to a set
+    // then we do the same on `nums2` to see if the hash exists in the set
+    int findLength(vector<int>& nums1, vector<int>& nums2) {
+        int N = nums1.size(), M = nums2.size();
+        // build hashes for nums1
+        PolyHash H1 = PolyHash(nums1);
+        // build hashes for nums2
+        PolyHash H2 = PolyHash(nums2);
+        
+        int l = 0, r = min(N, M);
+        // binary search
+        while (l < r) {
+            // guess that the length is m
+            int m = l + (r - l + 1) / 2, ok = 0;
+            // use set to store all the possible hashes
+            set<int> s;
+            // for each subarray, we get the hash and store in set
+            for (int i = 0; i < N - m + 1; i++) {
+                s.insert(H1.get_hash(i, i + m - 1));
+            }
+            // see if we can get the same hash
+            for (int i = 0; i < M - m + 1; i++) {
+                if (s.find(H2.get_hash(i, i + m - 1)) != s.end()) {
+                    ok = 1;
+                    break;
+                }
+            }
+            // include m
+            if (ok) l = m;
+            // exclude m
+            else r = m - 1;
+        }
+        return l;
+    }
+};
+```
+</TabItem>
+
 <TabItem value="py" label="Python">
 <SolutionAuthor name="@wingkwong"/>
 
@@ -182,3 +230,4 @@ class Solution:
 ```
 
 </TabItem>
+</Tabs>
