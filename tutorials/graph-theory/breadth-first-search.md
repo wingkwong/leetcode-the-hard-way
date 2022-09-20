@@ -131,7 +131,7 @@ export const suggestedProblems = [
   {
     "problemName": "0101 - Symmetric Tree",
     "difficulty": "Easy",
-    "leetCodeLink": "https://leetcode.com/problems/move-zeroes/",
+    "leetCodeLink": "https://leetcode.com/problems/symmetric-tree/",
     "solutionLink": "../../solutions/0100-0199/symmetric-tree-easy"
   },
 ]
