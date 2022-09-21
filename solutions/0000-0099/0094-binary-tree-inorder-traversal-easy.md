@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/binary-tree-inorder-traversal/'
+description: 'Author: @wingkwong ,ganajayant| https://leetcode.com/problems/binary-tree-inorder-traversal/'
 tags: [Stack, Tree, Depth-First Search, Binary Tree]
 ---
 
@@ -39,6 +39,10 @@ Output: [1]
 
 ## Approach 1: Inorder Traversal
 
+<SolutionAuthor name="@wingkwong"/>
+
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -83,6 +87,9 @@ public:
     }
 };
 ```
+</TabItem>
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@wingkwong"/>
 
 ```py
 # Definition for a binary tree node.
@@ -97,3 +104,41 @@ class Solution:
 		# left -> root -> right
         return self.inorderTraversal(root.left) + [root.val] + self.inorderTraversal(root.right) if root else []
 ```
+</TabItem>
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@ganajayant"/>
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    public List<Integer> inorderTraversal(TreeNode root) {
+        List<Integer> result = new ArrayList<>();
+        inorder(root, result);
+        return result;
+    }
+    private void inorder(TreeNode node, List<Integer> result){
+        if (node == null) {
+            return;
+        }
+        inorder(node.left, result);
+        result.add(node.val);
+        inorder(node.right, result);
+    }
+}
+```
+</TabItem>
+</Tabs>
