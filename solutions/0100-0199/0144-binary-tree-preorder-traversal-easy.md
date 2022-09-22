@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/binary-tree-preorder-traversal/'
+description: 'Author: @wingkwong, @ganajayant | https://leetcode.com/problems/binary-tree-preorder-traversal/'
 tags: [Stack, Tree, Depth-First Search, Binary Tree]
 ---
 
@@ -39,6 +39,8 @@ Output: [1]
 
 ## Approach 1: DFS - Pre-order traversal
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -83,7 +85,8 @@ public:
     }
 };
 ```
-
+</TabItem>
+<TabItem value="py" label="Python">
 <SolutionAuthor name="@wingkwong"/>
 
 ```py
@@ -106,3 +109,42 @@ class Solution:
 		# root -> left  -> right
         return [root.val] + self.preorderTraversal(root.left) + self.preorderTraversal(root.right) if root else []
 ```
+</TabItem>
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@ganajayant"/>
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    public static List<Integer> preorder(TreeNode root, List<Integer> ll) {
+        if (root == null) {
+            return ll;
+        }
+        ll.add(root.val);
+        preorder(root.left, ll);
+        preorder(root.right, ll);
+        return ll;
+    }
+   public static List<Integer> preorderTraversal(TreeNode root) {
+        List<Integer> ll = new LinkedList<Integer>();
+        ll = preorder(root, ll);
+        return ll;
+    }
+}
+```
+</TabItem>
+</Tabs>
