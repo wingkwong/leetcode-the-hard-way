@@ -1,19 +1,19 @@
 ---
-description: 'Author: @wingkwong ,ganajayant| https://leetcode.com/problems/binary-tree-inorder-traversal/'
+description: 'Author: @wingkwong, @ganajayant | https://leetcode.com/problems/binary-tree-postorder-traversal/'
 tags: [Stack, Tree, Depth-First Search, Binary Tree]
 ---
 
-# 0094 - Binary Tree Inorder Traversal (Easy)
+# 0144 - Binary Tree Preorder Traversal (Easy)
 
 ## Problem Statement
 
-Given the `root` of a binary tree, return *the inorder traversal of its nodes' values*.
+Given the `root` of a binary tree, return *the postorder traversal of its nodes' values*.
 
 **Example 1:**
 
 ```
 Input: root = [1,null,2,3]
-Output: [1,3,2]
+Output: [3,2,1]
 ```
 
 **Example 2:**
@@ -37,7 +37,7 @@ Output: [1]
 
 **Follow up:** Recursive solution is trivial, could you do it iteratively?
 
-## Approach 1: Inorder Traversal
+## Approach 1: DFS - Post-order traversal
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -59,28 +59,28 @@ Output: [1]
 // Time Complexity: O(N)
 // Space Complexity: O(N)
 
-// This is a standard in-order traversal problem, I'd suggest to learn pre-order and post-order as well.
+// This is a standard post-order traversal problem, I'd suggest to learn in-order and pre-order as well.
 // Here's a short tutorial if you're interested.
 // https://wingkwong.github.io/leetcode-the-hard-way/tutorials/graph-theory/binary-tree
 // then you may try the following problems 
-// 144. Binary Tree Preorder Traversal: https://leetcode.com/problems/binary-tree-preorder-traversal/
-// 145. Binary Tree Postorder Traversal: https://leetcode.com/problems/binary-tree-postorder-traversal/
+// 94. Binary Tree Inorder Traversal: https://leetcode.com/problems/binary-tree-inorder-traversal/
+// 144. Binary Tree Postorder Traversal: https://leetcode.com/problems/binary-tree-preorder-traversal/
 
 class Solution {
 public:
     vector<int> ans;
-    void inorder(TreeNode* node) {
+    void postoder(TreeNode* node) {
         if (node == NULL) return;
+        postoder(node->left);
         // traverse the left node
-        inorder(node->left);
-        // do something with node value here
-        ans.push_back(node->val);
+        postoder(node->right);
         // traverse the right node
-        inorder(node->right);
+        ans.push_back(node->val);
+        // do something with node value here
     }
     
-    vector<int> inorderTraversal(TreeNode* root) {
-        inorder(root);
+    vector<int> postorderTraversal(TreeNode* root) {
+        postoder(root);
         return ans;
     }
 };
@@ -97,10 +97,17 @@ public:
 #         self.left = left
 #         self.right = right
 
+# This is a standard post-order traversal problem, I'd suggest to learn in-order and pre-order as well.
+# Here's a short tutorial if you're interested.
+# https://wingkwong.github.io/leetcode-the-hard-way/tutorials/graph-theory/binary-tree
+# then you may try the following problems 
+# 94. Binary Tree Inorder Traversal: https://leetcode.com/problems/binary-tree-inorder-traversal/
+# 144. Binary Tree Postorder Traversal: https://leetcode.com/problems/binary-tree-preorder-traversal/
+
 class Solution:
-    def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
-		# left -> root -> right
-        return self.inorderTraversal(root.left) + [root.val] + self.inorderTraversal(root.right) if root else []
+    def postorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+		# root -> left  -> right
+        return self.preorderTraversal(root.left) + self.preorderTraversal(root.right) + [root.val] if root else []
 ```
 </TabItem>
 <TabItem value="java" label="Java">
@@ -123,18 +130,19 @@ class Solution:
  * }
  */
 class Solution {
-    public List<Integer> inorderTraversal(TreeNode root) {
-        List<Integer> result = new ArrayList<>();
-        inorder(root, result);
-        return result;
-    }
-    private void inorder(TreeNode node, List<Integer> result){
-        if (node == null) {
-            return;
+    public static List<Integer> postorder(TreeNode root, List<Integer> ll) {
+        if (root == null) {
+            return ll;
         }
-        inorder(node.left, result);
-        result.add(node.val);
-        inorder(node.right, result);
+        ll.add(root.val);
+        postorder(root.left, ll);
+        postorder(root.right, ll);
+        return ll;
+    }
+   public static List<Integer> postorderTraversal(TreeNode root) {
+        List<Integer> ll = new LinkedList<Integer>();
+        ll = postorder(root, ll);
+        return ll;
     }
 }
 ```
