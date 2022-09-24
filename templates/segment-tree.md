@@ -69,6 +69,8 @@ st.set(index, val);
 st.sum(left, right + 1)
 ```
 
+<!-- 
+TODO: verify
 
 ## Advanced Segment Tree
 
@@ -244,4 +246,4 @@ Segment st(arr);
 st.pointUpdate(index, val);
 st.lazyUpdate(left, right, value);
 st.getSumLazy(left, right);
-```
+``` -->
