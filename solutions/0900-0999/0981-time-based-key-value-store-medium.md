@@ -2,7 +2,7 @@
 description: 'Author: @ganajayant | https://leetcode.com/problems/time-based-key-value-store/'
 ---
 
-# 981 - Time Based Key-Value Store (Medium)
+# 0981 - Time Based Key-Value Store (Medium)
 
 ## Problem Link
 
