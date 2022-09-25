@@ -62,8 +62,8 @@ myCircularQueue.Rear();     // return 4
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
-// Time Complexity: O(N)
-// Space Complexity: O(1)
+// Time Complexity: O(1)
+// Space Complexity: O(N)
 class MyCircularQueue {
 public:
     MyCircularQueue(int k) {
@@ -157,8 +157,8 @@ private:
 <SolutionAuthor name="@wingkwong"/>
 
 ```java
-// Time Complexity: O(N)
-// Space Complexity: O(1)
+// Time Complexity: O(1)
+// Space Complexity: O(N)
 class MyCircularQueue {
 
     public MyCircularQueue(int k) {
@@ -252,8 +252,8 @@ class MyCircularQueue {
 <SolutionAuthor name="@wingkwong"/>
 
 ```py
-# Time Complexity: O(N)
-# Space Complexity: O(1)
+# Time Complexity: O(1)
+# Space Complexity: O(N)
 class MyCircularQueue:
 
     def __init__(self, k: int):
@@ -335,8 +335,8 @@ class MyCircularQueue:
 <SolutionAuthor name="@wingkwong"/>
 
 ```ts
-// Time Complexity: O(N)
-// Space Complexity: O(1)
+// Time Complexity: O(1)
+// Space Complexity: O(N)
 class MyCircularQueue {
     private q: number[]
     private cnt: number
@@ -425,8 +425,8 @@ class MyCircularQueue {
 <SolutionAuthor name="@wingkwong"/>
 
 ```go
-// Time Complexity: O(N)
-// Space Complexity: O(1)
+// Time Complexity: O(1)
+// Space Complexity: O(N)
 
 type MyCircularQueue struct {
     q []int
