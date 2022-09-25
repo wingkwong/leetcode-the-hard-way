@@ -243,10 +243,10 @@ class Solution {
 
 </TabItem>
 
-<TabItem value="cs" label="c#">
+<TabItem value="cs" label="C#">
 <SolutionAuthor name="@lonyehan"/>
 
-```C#
+```c#
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -263,26 +263,23 @@ class Solution {
 public class Solution {
     public List<IList<int>> result;
 
-    public void PreOrder(TreeNode root, int targetSum, List<int> list,int sum = 0){
+    public void PreOrder(TreeNode root, int targetSum, List<int> list, int sum = 0) {
         if(root == null) return;
                 
-        sum += root.val;        
+        sum += root.val;
         list.Add(root.val);
-        
+    
         // Is this node is leaf and sum equal to target?
-        if(sum == targetSum && root.left == null && root.right == null){            
+        if(sum == targetSum && root.left == null && root.right == null) {             
             result.Add(list);
         }
-        
         PreOrder(root.left, targetSum, new List<int>(list), sum);
         PreOrder(root.right, targetSum, new List<int>(list), sum);
     }
 
     public IList<IList<int>> PathSum(TreeNode root, int targetSum) {
         result = new List<IList<int>>();
-        
         PreOrder(root, targetSum, new List<int>());
-                
         return result;
     }
 }
