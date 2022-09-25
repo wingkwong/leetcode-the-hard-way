@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/longest-subarray-with-maximum-bitwise-and/'
+description: 'Author: @wingkwong, @ganajayant | https://leetcode.com/problems/longest-subarray-with-maximum-bitwise-and/'
 ---
 
 # 2419 - Longest Subarray With Maximum Bitwise AND (Medium) 
@@ -72,6 +72,29 @@ public:
         return ans;
     }
 };
+```
+
+</TabItem>
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@ganajayant"/>
+
+```cpp
+class Solution {
+    public int longestSubarray(int[] nums) {
+        int max = 0, longest = 1, current = 0;
+        for (int num : nums) {
+            max = Math.max(max, num);
+        }
+        for (int num : nums) {
+            if (num == max) {
+                longest = Math.max(longest, ++current);
+            } else {
+                current = 0;
+            }
+        }
+        return longest;
+    }
+}
 ```
 
 </TabItem>
