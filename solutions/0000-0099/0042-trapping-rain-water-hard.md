@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/trapping-rain-water/'
+description: "Author: @wingkwong | https://leetcode.com/problems/trapping-rain-water/"
 tags: [Array, Two Pointers, Dynamic Programming, Stack, Monotonic Stack]
 ---
 
-# 0042 - Trapping Rain Water (Hard) 
+# 0042 - Trapping Rain Water (Hard)
 
 ## Problem Link
 
@@ -53,14 +53,14 @@ public:
         vector<int> dp1(n), dp2(n);
         // let's build dp1 first
         dp1[0] = height[0];
-        // for each position i, 
+        // for each position i,
         // if the current height is greater than the max height, then dp1[i] will be height[i]
         // else dp1[i] will be taking the previous result, i.e. dp1[i - 1]
         for (int i = 1; i < n; i++) dp1[i] = max(dp1[i - 1], height[i]);
         // build dp2 in a similar way
         dp2[n - 1] = height[n - 1];
-        // for each position i, 
-        // if the current height is greater than the max height, 
+        // for each position i,
+        // if the current height is greater than the max height,
         // then dp2[i] will be height[i]
         // else dp2[i] will be taking the previous result, i.e. dp2[i + 1]
         for (int i = n - 2; i >= 0; i--) dp2[i] = max(dp2[i + 1], height[i]);
@@ -82,20 +82,20 @@ public:
 ## Approach 2: Two Pointers
 
 <Tabs>
-<TabItem value="cpp" label="C++">
+<TabItem value="java" label="Java">
 <SolutionAuthor name="@wingkwong"/>
 
-```cpp
+```java
 // Time Complexity: O(N)
 // Space Complexity: O(1)
 class Solution {
     public int trap(int[] height) {
         int i = 0, j = height.length - 1, ans = 0, mx = 0, mi = 0;
-        // two pointers 
+        // two pointers
         // pointer i from the left
         // pointer j from the right
         while (i <= j) {
-            // take the min height 
+            // take the min height
             mi = Math.min(height[i], height[j]);
             // find the max min height
             mx = Math.max(mx, mi);
@@ -122,7 +122,7 @@ class Solution {
 class Solution:
     def trap(self, height: List[int]) -> int:
         i, j, ans, mx, mi = 0, len(height) - 1, 0, 0, 0
-        # two pointers 
+        # two pointers
         # pointer i from the left
         # pointer j from the right
         while i <= j:
