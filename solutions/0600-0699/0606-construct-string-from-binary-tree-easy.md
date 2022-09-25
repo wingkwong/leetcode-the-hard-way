@@ -5,6 +5,10 @@ tags: [String, Tree, Depth-First Search, Binary Tree]
 
 # 0606 - Construct String from Binary Tree (Easy) 
 
+## Problem Link
+
+https://leetcode.com/problems/construct-string-from-binary-tree/
+
 ## Problem Statement
 
 Given the `root` of a binary tree, construct a string consisting of parenthesis and integers from a binary tree with the preorder traversal way, and return it.
