@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/'
+description: 'Author: @wingkwong, @lonyehan | https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/'
 tags: [Hash Table, Tree, Depth-First Search, Breadth-First Search, Binary Tree]
 ---
 
@@ -59,6 +59,8 @@ Note that the solution remains the same since 5 and 6 are in the same location a
 
 ## Approach 1: DFS
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -125,3 +127,46 @@ public:
     }
 };
 ```
+</TabItem>
+
+<TabItem value="cs" label="C#">
+<SolutionAuthor name="@lonyehan"/>
+
+```C#
+public class Solution {
+    public IList<IList<int>> VerticalTraversal(TreeNode root) {
+        Dictionary<int, PriorityQueue<int, double>> dict = new Dictionary<int, PriorityQueue<int, double>>();
+		
+        DFS(root, dict);
+        
+        List<IList<int>> result = new List<IList<int>>();
+        foreach(var v in dict.Keys.OrderBy(x => x)){
+            List<int> temp = new List<int>();
+            while(dict[v].Count != 0){
+                temp.Add(dict[v].Dequeue());
+            }
+            result.Add(temp);
+        }
+        return result;
+    }
+    
+    public void DFS(TreeNode node, Dictionary<int, PriorityQueue<int, double>> dict, int row = 0, int col = 0){
+        if(node == null) return;
+        
+        DFS(node.left, dict, row + 1, col - 1);
+        
+        if(!dict.ContainsKey(col)){
+            dict[col] = new PriorityQueue<int, double>();
+            dict[col].Enqueue(node.val, row + 0.00001 * node.val);
+        }
+        else{
+            dict[col].Enqueue(node.val, row + 0.00001 * node.val);
+        }
+        
+        DFS(node.right, dict, row + 1, col + 1);
+    }
+}
+```
+
+</TabItem>
+</Tabs>
