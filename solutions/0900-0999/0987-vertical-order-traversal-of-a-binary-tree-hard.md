@@ -5,6 +5,10 @@ tags: [Hash Table, Tree, Depth-First Search, Breadth-First Search, Binary Tree]
 
 # 0987 - Vertical Order Traversal of a Binary Tree (Hard)
 
+## Problem Link
+
+https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/
+
 ## Problem Statement
 
 Given the `root` of a binary tree, calculate the **vertical order traversal** of the binary tree.
