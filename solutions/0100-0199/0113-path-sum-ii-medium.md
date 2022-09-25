@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/path-sum-ii/'
+description: 'Author: @wingkwong, @lonyehan | https://leetcode.com/problems/path-sum-ii/'
 tags: [Backtracking, Tree, Depth-First Search, Binary Tree]
 ---
 
@@ -239,6 +239,53 @@ class Solution {
     }
 }
 
+```
+
+</TabItem>
+
+<TabItem value="cs" label="c#">
+<SolutionAuthor name="@lonyehan"/>
+
+```C#
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     public int val;
+ *     public TreeNode left;
+ *     public TreeNode right;
+ *     public TreeNode(int val=0, TreeNode left=null, TreeNode right=null) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+public class Solution {
+    public List<IList<int>> result;
+
+    public void PreOrder(TreeNode root, int targetSum, List<int> list,int sum = 0){
+        if(root == null) return;
+                
+        sum += root.val;        
+        list.Add(root.val);
+        
+        // Is this node is leaf and sum equal to target?
+        if(sum == targetSum && root.left == null && root.right == null){            
+            result.Add(list);
+        }
+        
+        PreOrder(root.left, targetSum, new List<int>(list), sum);
+        PreOrder(root.right, targetSum, new List<int>(list), sum);
+    }
+
+    public IList<IList<int>> PathSum(TreeNode root, int targetSum) {
+        result = new List<IList<int>>();
+        
+        PreOrder(root, targetSum, new List<int>());
+                
+        return result;
+    }
+}
 ```
 
 </TabItem>

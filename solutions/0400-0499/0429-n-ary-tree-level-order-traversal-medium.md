@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/n-ary-tree-level-order-traversal/'
+description: 'Author: @wingkwong, @lonyehan | https://leetcode.com/problems/n-ary-tree-level-order-traversal/'
 tags: [Tree, Breadth-First Search]
 ---
 
@@ -32,6 +32,8 @@ Output: [[1],[2,3,4,5],[6,7,8,9,10],[11,12,13],[14]]
 
 ## Approach 1: BFS
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -101,7 +103,9 @@ public:
     }
 };
 ```
+</TabItem>
 
+<TabItem value="py" label="Python">
 <SolutionAuthor name="@wingkwong"/>
 
 ```py
@@ -149,3 +153,55 @@ class Solution:
         # return final ans
         return ans
 ```
+</TabItem>
+
+<TabItem value="cs" label="C#">
+<SolutionAuthor name="@lonyehan"/>
+
+```C#
+/*
+// Definition for a Node.
+public class Node {
+    public int val;
+    public IList<Node> children;
+
+    public Node() {}
+
+    public Node(int _val) {
+        val = _val;
+    }
+
+    public Node(int _val, IList<Node> _children) {
+        val = _val;
+        children = _children;
+    }
+}
+*/
+public class Solution {
+    public IList<IList<int>> LevelOrder(Node root) {        
+        if(root == null) return new List<IList<int>>();
+        
+        List<IList<int>> result = new List<IList<int>>();
+        Queue<Node> queue = new Queue<Node>();
+        queue.Enqueue(root);
+        
+        while(queue.Count != 0){
+            int count = queue.Count;
+            List<int> list = new List<int>();
+            for(int i = 0; i < count; i++){
+                Node q = queue.Dequeue();
+                list.Add(q.val);
+                foreach(var c in q.children){
+                    queue.Enqueue(c);
+                }                
+            }
+            
+            result.Add(list);
+        }
+        
+        return result;
+    }
+}
+```
+</TabItem>
+</Tabs>
