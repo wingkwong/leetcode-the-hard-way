@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @ganajayant | https://leetcode.com/problems/sort-the-people/'
+description: 'Author: @wingkwong, @ganajayant, @lonyehan | https://leetcode.com/problems/sort-the-people/'
 ---
 
 # 2418 - Sort the People (Easy) 
@@ -85,6 +85,34 @@ class Solution {
         }
 
         return result;
+    }
+}
+```
+
+</TabItem>
+</Tabs>
+
+## Approach 2: Heap (Priority Queue)
+
+<Tabs>
+<TabItem value="cs" label="C#">
+<SolutionAuthor name="@lonyehan"/>
+
+```cs
+public class Solution {
+    public string[] SortPeople(string[] names, int[] heights) {
+        PriorityQueue<string, int> pq = new PriorityQueue<string, int>();
+        List<string> list = new List<string>();
+        
+        for(int i = 0; i < names.Length; i++) {
+            pq.Enqueue(names[i], -heights[i]);
+        }
+        
+        while(pq.Count != 0) {
+            list.Add(pq.Dequeue());
+        }
+        
+        return list.ToArray();
     }
 }
 ```

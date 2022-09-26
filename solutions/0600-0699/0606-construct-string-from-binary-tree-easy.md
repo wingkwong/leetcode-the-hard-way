@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/construct-string-from-binary-tree/'
+description: 'Author: @wingkwong, @lonyehan | https://leetcode.com/problems/construct-string-from-binary-tree/'
 tags: [String, Tree, Depth-First Search, Binary Tree]
 ---
 
@@ -38,6 +38,8 @@ Explanation: Almost the same as the first example, except we cannot omit the fir
 
 ## Approach 1: DFS
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -83,6 +85,8 @@ public:
 };
 ```
 
+</TabItem>
+<TabItem value="py" label="Python">
 <SolutionAuthor name="@wingkwong"/>
 
 ```py
@@ -124,3 +128,35 @@ class Solution:
             s += '({})'.format(self.tree2str(root.right))
         return s        
 ```
+
+</TabItem>
+<TabItem value="cs" label="C#">
+<SolutionAuthor name="@lonyehan"/>
+
+```cs
+public class Solution {
+    public string Tree2str(TreeNode root) {
+        if(root == null) return null;
+        
+        string left = Tree2str(root.left);
+        string right = Tree2str(root.right);
+        
+        string result = "";
+        
+        if(left == null && right == null) {
+            result = $"{root.val}";
+        }
+        else if(left != null && right == null) {
+            result = $"{root.val}({left})";
+        }
+        else {
+            result = $"{root.val}({left})({right})";
+        }
+        
+        return result;        
+    }
+}
+```
+
+</TabItem>
+</Tabs>
