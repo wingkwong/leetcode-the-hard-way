@@ -158,7 +158,7 @@ class Solution:
 <TabItem value="cs" label="C#">
 <SolutionAuthor name="@lonyehan"/>
 
-```C#
+```cs
 /*
 // Definition for a Node.
 public class Node {

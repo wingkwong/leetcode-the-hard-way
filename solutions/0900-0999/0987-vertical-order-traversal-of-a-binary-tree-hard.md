@@ -136,7 +136,7 @@ public:
 <TabItem value="cs" label="C#">
 <SolutionAuthor name="@lonyehan"/>
 
-```C#
+```cs
 public class Solution {
     public IList<IList<int>> VerticalTraversal(TreeNode root) {
         Dictionary<int, PriorityQueue<int, double>> dict = new Dictionary<int, PriorityQueue<int, double>>();
