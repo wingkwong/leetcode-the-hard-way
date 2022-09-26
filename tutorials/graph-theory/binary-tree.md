@@ -15,9 +15,12 @@ import Table from '@site/src/components/Table';
 
 ## Overview
 
-Binary Tree is a tree structure in which eacho node only contains at most two children, often referred as left and right child.
+Binary Tree is a tree structure in which each node only contains at most two children, often referred as left and right child.
 
 <!-- TODO: properties -->
+## Properties
+- The number on nodes on level '_l_' is equal to the 2<sup>_l_</sup>, like on level 0 (root node) we got 2<sup>0</sup>=1 node only.
+- The Maximum number of nodes in a binary tree of height ‘h’ is 2<sup>h</sup> – 1. 
 
 ## Traversal 
 
