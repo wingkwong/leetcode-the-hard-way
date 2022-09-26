@@ -52,8 +52,8 @@ We have 3 types of arrays.
 `boys_and_girls_of_classes`: This array is a 2-d array containing the number of boys and girls of each class. For example, the first class has 10 boys and 23 girls. We can access the number of girls in the 3rd class with `boys_and_girls_of_classes[2][1]` . This is useful to obtain specific information. Let's take a look at several operations on this 2-d array:
 
 * `boys_and_girls_of_classes.sort()`: We have two elements in each entry this time. In `python` the pre-built `sort()` sorts by the first element, then the second element, then the third (if it exists) etc...
-* `boys_and_girls_of_classes.sort(key = lambda class : class[1])`: We can use the `key` parameter to change the `sort()` behaviour. We declare that we want to look at the number of girls **FIRST** in each `class` in this case. There are more advanced application of `sort`, and we will learn them in harder problems.
-* `list(map(lambda class: class[0] + class[1], boys_and_girls_of_classes))`: This returns the list of the class size of each size. It is useful if we want to know the total number of students in each class.
+* `boys_and_girls_of_classes.sort(key = lambda Class : Class[1])`: We can use the `key` parameter to change the `sort()` behaviour. We declare that we want to look at the number of girls **FIRST** in each `Class` in this case. There are more advanced application of `sort`, and we will learn them in harder problems.
+* `list(map(lambda Class: Class[0] + Class[1], boys_and_girls_of_classes))`: This returns the list of the class size of each size. It is useful if we want to know the total number of students in each class.
 
 `basketball_matches` : This array is a 2-d array, but it is special that its dimension is `n x n` . These arrays (or better, matrices) usually have a special meaning. In this case, we have the scores of each team competing with each other. For example, team 1 vs team 2 has the score of `76 - 56` . We will use for-loops to iterate these arrays.
 
