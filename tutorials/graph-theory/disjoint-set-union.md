@@ -140,12 +140,7 @@ int main() {
 }
 ```
 export const suggestedProblems = [
-  {
-    "problemName": "Detect Cycle using DSU",
-    "difficulty": "Easy",
-    "leetCodeLink": "https://practice.geeksforgeeks.org/problems/detect-cycle-using-dsu/1",
-    "solutionLink": ""
-  },
+ 
   {
     "problemName": "2421. Number of Good Paths",
     "difficulty": "Hard",
