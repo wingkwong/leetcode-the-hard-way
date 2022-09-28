@@ -174,3 +174,14 @@ bool startsWith(string prefix) {
     return true;
 }
 ```
+Related Problems:
+
+[208. Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)
+
+[139. Word Break](https://leetcode.com/problems/word-break/)
+
+[2416. Sum of Prefix Scores of Strings](https://leetcode.com/problems/sum-of-prefix-scores-of-strings/)
+
+[745. Prefix and Suffix Search](https://leetcode.com/problems/prefix-and-suffix-search/)
+
+[336. Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/)
