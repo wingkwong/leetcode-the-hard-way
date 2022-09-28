@@ -11,6 +11,7 @@ keywords:
 ---
 
 import TutorialAuthors from '@site/src/components/TutorialAuthors';
+import Table from '@site/src/components/Table';
 
 <TutorialAuthors names="@wingkwong"/>
 
