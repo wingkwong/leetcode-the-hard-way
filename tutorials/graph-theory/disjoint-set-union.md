@@ -138,4 +138,27 @@ int main() {
 	return 0;
 }
 ```
+export const suggestedProblems = [
+  {
+    "problemName": "Detect Cycle using DSU",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://practice.geeksforgeeks.org/problems/detect-cycle-using-dsu/1",
+    "solutionLink": ""
+  },
+  {
+    "problemName": "2421. Number of Good Paths",
+    "difficulty": "Hard",
+    "leetCodeLink": "https://leetcode.com/problems/number-of-good-paths/",
+    "solutionLink": ""
+  },
+  {
+    "problemName": "2382. Maximum Segment Sum After Removals",
+    "difficulty": "Hard",
+    "leetCodeLink": "https://leetcode.com/problems/maximum-segment-sum-after-removals/",
+    "solutionLink": ""
+  },
+  
+]
+
+<Table title="Suggested Problems" data={suggestedProblems} />
 
