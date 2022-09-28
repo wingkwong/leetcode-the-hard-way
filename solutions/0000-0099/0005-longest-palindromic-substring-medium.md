@@ -82,3 +82,60 @@ public:
 ```
 </TabItem>
 </Tabs>
+
+## Approach 2: Character Set
+
+With the help of HashSet, add every character while iterating and if the character is found already in the Set, count those characters (+2), and remove the char from the Set. Finally if the Set is not empty, then we can add 1 more character to be in the middle to form a palindrome, so count 1 and return it. 
+
+Time complexity: O(n), where n - # of characters, All HashSet operation are O(1) constant time
+Space complexity: O(n), Maintaining n/2 characters in the Set, Constants are ignored, so its O(n) extra space
+
+<Tabs>
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+public int longestPalindrome(String s) {
+    if (s.length() == 1) return 1;
+    int count = 0;
+    Set<Character> seen = new HashSet<>();
+    for (char c : s.toCharArray()) {
+        if (!seen.add(c)) {
+            count += 2;
+            seen.remove(c);
+        }
+    }
+    return !seen.isEmpty() ? count + 1 : count;
+}
+```
+</TabItem>
+</Tabs>
+
+## Approach 3: ASCII Character Array (Optimal Solution)
+
+As the problems states, constraints are `a-zA-Z`, So optimally we can maintain a char array of size 52. 
+
+Time complexity: O(n), where n - # of characters
+Space complexity: O(1), Maintaining O(52) chars in the array, which is considered O(1) extra space
+
+<Tabs>
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+public int longestPalindrome(String s) {
+    if (s.length() == 1) return 1;
+    int count = 0;
+    int[] chars = new int[52];
+    for (char c : s.toCharArray()) {
+        if (c >= 97) chars[c - 'a' + 26]++;
+        else chars[c - 'A']++;
+    }
+    for (int num : chars) {
+        count += (num / 2) * 2;
+    }
+    return count == s.length() ? count : count + 1;
+}
+```
+</TabItem>
+</Tabs>
