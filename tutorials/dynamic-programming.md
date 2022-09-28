@@ -10,6 +10,8 @@ keywords:
   - algorithm
 ---
 
+<!-- TODO: change the format. See arrays.md -->
+
 ### Suggested Problems
 
 * [0072 - Edit Distance (Hard)](../solutions/0000-0099/edit-distance-hard)

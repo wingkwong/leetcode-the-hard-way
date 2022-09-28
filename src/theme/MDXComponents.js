@@ -4,6 +4,8 @@ import MDXComponents from '@theme-original/MDXComponents';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import SolutionAuthor from '@site/src/components/SolutionAuthor';
+import TutorialAuthors from '@site/src/components/TutorialAuthors';
+import Table from '@site/src/components/Table';
 
 
 export default {
@@ -12,5 +14,6 @@ export default {
   // custom
   SolutionAuthor,
   Tabs,
-  TabItem
+  TabItem,
+  TutorialAuthors,Table
 };

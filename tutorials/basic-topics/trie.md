@@ -10,8 +10,6 @@ keywords:
   - data structure
 ---
 
-import TutorialAuthors from '@site/src/components/TutorialAuthors';
-
 <TutorialAuthors names="@wingkwong"/>
 
 ## Overview
