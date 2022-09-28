@@ -52,7 +52,7 @@ func countOdds(low int, high int) int {
 
 <SolutionAuthor name="@wingkwong"/>
 
-```rs
+```rust
 impl Solution {
     pub fn count_odds(low: i32, high: i32) -> i32 {
         let mut ans = 0;
@@ -78,7 +78,7 @@ func countOdds(low int, high int) int {
 
 <SolutionAuthor name="@wingkwong"/>
 
-```rs
+```rust
 impl Solution {
     pub fn count_odds(low: i32, high: i32) -> i32 {
         return (high + 1) / 2 - (low / 2);
