@@ -14,6 +14,8 @@ import TutorialAuthors from '@site/src/components/TutorialAuthors';
 
 ## Overview
 
+We all know that information is stored in the form of bits in computer memory, which means directly manipulating these bits will yield faster results than performing computation on ordinary data.
+
 Binary uses only $0$ and $1$ to represent a number in a base-2 number system. The series of 0 and 1 are called bits. If the bit is $1$, then this bit is set. We read binary number from right to left. For example, the binary representation of number $9$ is $1001_2$ which can be calculated by summing up all the set bit: $2^3 + 2^0 = 9_{10}$. Bit Manipulation utilises different bitwise operations to manipulate bits.
 
 ## Bitwise Operators
@@ -25,7 +27,7 @@ Binary uses only $0$ and $1$ to represent a number in a base-2 number system. Th
 | 1 | 0 | 0 | 1 | 1 | 0 |
 | 1 | 1 | 1 | 1 | 0 | 0 |
 
-### AND (&)
+### AND (&) Operator
 
 $\&$ takes two bit integers to compare. If the bits are both $1$, then the resulting bit is $1$, else $0$. 
 
@@ -66,7 +68,9 @@ n     n     n - 1  n & (n - 1)
 
 #### Example #1: [0231 - Power of Two (Easy)](https://leetcode.com/problems/power-of-two/)
 
-We know that a power of 2 is a positive number and only has one bit set. We can use $n \& (n - 1)$ to see the result is 0 or not to determine if the target value is a power of 2 or not.
+We know that a power of 2 is a positive number and only has one bit set. We can use $n \& (n - 1)$ to see the result is 0 or not to determine if the target value is a power of 2 or not. 
+
+In short, $n \& (n - 1)$ never have a 1 bit in the same place.
 
 ```cpp
 class Solution {
@@ -94,7 +98,7 @@ public:
 };
 ```
 
-### OR ($|$)
+### OR (|) Operator
 
 $\vert$ takes two bit integers to compare. If either bits are $1$, then the resulting bit is $1$, else $0$. 
 
@@ -145,6 +149,7 @@ For example, $0010_2$ ^ $0011_2 = 0001_2$ because the first bit got $0$ and $1$ 
 
 - X ^ 0 = X
 - X ^ X = 0
+- X ^ 1 = ~X (Compliment of that number)
 - X ^ Y = Y ^ X (Commutativity)
 - (X ^ Y) ^ Z = X ^ (Y ^ Z) (Associativity)
 
@@ -200,9 +205,20 @@ public:
 };
 ```
 
+#### Example #3: Swap 2 numbers
+XOR (^) can be used to swap 2 numbers by changing the bits and reversing it.
+
+Let's say, $a = 4$ ($0100_2$), $b = 6$ ($0110_2$), we want $a = 6$ and $b = 4$ as our answer.
+
+```
+a = a ^ b => (4 ^ 6) => (0100 ^ 0110) => 2 (0010)
+b = b ^ a => (6 ^ 2) => (0110 ^ 0010) => 4 (0100)
+a = a ^ b => (2 ^ 4) => (0010 ^ 0100) => 6 (0110)
+```
+
 ### NOT (~)
 
-~ inverts all the bits of a bit intergers, which means $1$ would become $0$ and vice versa. If we apply it on a positive integer $x$, then it is simply $-x-1$.
+~ inverts (flip) all the bits of a bit intergers, which means $1$ would become $0$ and vice versa. If we apply it on a positive integer $x$, then it is simply $-x-1$.
 
 For example, if we apply NOT on $~0010_2$, then the resulting value is $1101_2$.
 
@@ -226,7 +242,9 @@ $<<$ shifts the bits to the left. For example, $1 << 1 = 2$ because we shift the
 
 Similarily, $1 << 2 = 4$ because we shift the $1$ ($0001_2$) to the left twice to become $4$ ($0100_2$).
 
-And you may find that $1 << n$ is actually $2 ^ n$.
+And you may find that $1 << n$ is actually $2 ^ n$. Also $n << m$ means multiplying n by 2 power m. i.e, $n = n * (2^m)$. 
+
+In simple, $n << m$ _shifting each bit of n to left m times_. Let's say, $n = 8$ and $m = 2$. $n$ can be represented as $1000_2$ in binary, Therefore, $8 << 2$ = $1000_2$ << $2$ = $100000_2$ (32), which is same as $(8 * 2^2)$ = $32$
 
 #### Example #1: [0078 - Subsets](https://leetcode.com/problems/subsets/)
 
@@ -256,6 +274,10 @@ public:
 
 $>>$ shifts the bits to the right. For example $3_{10}$ ($0011_2$) $>> 1$ would become $1$ ($0010_2$).
 
+$4 >> 1$ dividing $4$ by $2$. Also $n >> m$ means dividing $n$ by $2$ power m. i.e, $n = n / (2^m)$
+
+In simple, $n >> m$ _shifting each bit of n to right m times_. Let's say, $n = 8$ and $m = 2$. $n$ can be represented as $1000_2$ in binary, Therefore, $8 >> 2$ = $1000_2$ << $2$$ = $0010_2$ (4), which is same as $(8 / 2^2)$ = $4$
+
 #### Example: Check the bits one by one
 
 ```cpp
@@ -267,5 +289,56 @@ while (n > 0) {
     // shift bits to the right
     // which is same as n /= 2
     n >>= 1;
+}
+```
+
+### Two's Compliment and Negative Numbers
+
+Computers typically store integers in two’s complement representation. A positive number is represented as itself while a negative number is represented as the two’s complement of it’s absolute value (with a 1 in its sign bit to indicate that a negative value). 
+
+Let’s look at the `4-bit` integer $-3$ as an example. _If it’s a 4-bit number, we have one bit for the sign and three bits for the value_. We want the complement with respect to $2^3$, which is $8$. 
+
+The complement of $3$ (the absolute value of $-3$) with respect to $8$ is $5$. Binary value of $5$ is $0101_2$. Therefore, $-3$ in binary as a 4-bit number is $1101_2$, with the first bit being the sign bit. 
+
+In other words, the binary representation of $-K$ (negative K) as a N-bit number is $concat(1, 2^N-1 - K)$
+
+Another way to look at this is that we invert the bits in the positive representation and then add $1$. $3$ is $0011_2$ in binary. 
+
+_Flip the bits_ to get 100, add $1$ to get $101_2$, then prepend the sign bit $1$ to get $1101_2$.
+
+```
+Positive  Values  Negative  Values
+--------  ------  --------  ------
+7         0 111   -1        1 111
+6         0 110   -2        1 110
+5         0 101   -3        1 101
+4         0 100   -4        1 100
+3         0 011   -5        1 011
+2         0 010   -6        1 010
+1         0 001   -7        1 001
+0         0 000 
+```
+
+### Common Bit Tasks
+
+### Get Bit
+It shifts $1$ over by _i_ bits, creating a value that looks like $0100_2$ $(2^i)$. By performing and AND $ (\&) $ with num, we clear all bits other than the bit at bit _i_.
+
+Finally, compare that value to $0$, if that new value is not _zero_, then bit _i_ must have a $1$, otherwise, bit _i_ is a $0$.
+
+```java
+int getBit(int num, int i) {
+    return num & (1 << i);
+}
+```
+
+### Set Bit
+It shits $1$ over by _i_ bits, creating a value that looks like $0100_2$ ( $2$ to the power of $i$ ). By performing an $OR$ with num, only the value at bit _i_ will change. 
+
+All other bits of the mask are _zero_ and will not affect num.
+
+```java
+int setBit(int num, int i) {
+	return num | (1 << i);
 }
 ```
