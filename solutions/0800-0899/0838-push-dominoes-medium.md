@@ -3,7 +3,7 @@ description: 'Author: @wingkwong | https://leetcode.com/problems/push-dominoes/'
 tags: [Two Pointers, String, Dynamic Programming]
 ---
 
-# 838 - Push Dominoes (Medium) 
+# 0838 - Push Dominoes (Medium) 
 
 ## Problem Link
 
