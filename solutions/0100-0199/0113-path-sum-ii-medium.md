@@ -246,7 +246,7 @@ class Solution {
 <TabItem value="cs" label="C#">
 <SolutionAuthor name="@lonyehan"/>
 
-```c#
+```cs
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
