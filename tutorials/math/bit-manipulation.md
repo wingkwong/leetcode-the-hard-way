@@ -29,21 +29,21 @@ Binary uses only $0$ and $1$ to represent a number in a base-2 number system. Th
 
 ### AND (&) Operator
 
-$\&$ takes two bit integers to compare. If the bits are both $1$, then the resulting bit is $1$, else $0$. 
+&amp; takes two bit integers to compare. If the bits are both $1$, then the resulting bit is $1$, else $0$. 
 
-For example, $0010_2 \& 0011_2 = 0010_2$ because only the second bits from the right are both $1$.
+For example, $0010_2$ &amp; $0011_2 = 0010_2$ because only the second bits from the right are both $1$.
 
 #### Usage #1: Check if the rightmost bit is set
 
-Let's say $n$ is $5_{10}$ which is $0101_2$. If we execute $n \& 1$, i.e. $0101_2 \& 0001_2$, the result is $0001_2$ because only the rightmost bits are both 1 and other bits would return 0.
+Let's say $n$ is $5_{10}$ which is $0101_2$. If we execute $n$ &amp; $1$, i.e. $0101_2$ &amp; $0001_2$, the result is $0001_2$ because only the rightmost bits are both 1 and other bits would return 0.
 
 #### Usage #2: Check if the i-th bit is set
 
-Let's say $n$ is $5_{10}$ which is $0101_2$. How to check if the 2-nd, 3-rd, or 4-th bit is set? Using the same idea, the mask would be $0010_2$, $0100_2$, $1000_2$ respectively. And you may notice that the mask is always a power of 2. A common way to do it is to use left shift operator (which will be discussed below), i.e. $n \& (1 << i)$ where $n$ is the i-th bit to be checked.
+Let's say $n$ is $5_{10}$ which is $0101_2$. How to check if the 2-nd, 3-rd, or 4-th bit is set? Using the same idea, the mask would be $0010_2$, $0100_2$, $1000_2$ respectively. And you may notice that the mask is always a power of 2. A common way to do it is to use left shift operator (which will be discussed below), i.e. $n$ &amp; $(1 << i)$ where $n$ is the i-th bit to be checked.
 
 #### Usage #3: Remove the rightmost set bit
 
-We can use $n \& (n - 1)$ to remove the rightmost set bit. 
+We can use $n$ &amp; $(n - 1)$ to remove the rightmost set bit. 
 
 ```
 n     n     n - 1  n & (n - 1)
@@ -68,9 +68,9 @@ n     n     n - 1  n & (n - 1)
 
 #### Example #1: [0231 - Power of Two (Easy)](https://leetcode.com/problems/power-of-two/)
 
-We know that a power of 2 is a positive number and only has one bit set. We can use $n \& (n - 1)$ to see the result is 0 or not to determine if the target value is a power of 2 or not. 
+We know that a power of 2 is a positive number and only has one bit set. We can use $n$ &amp; $(n - 1)$ to see the result is 0 or not to determine if the target value is a power of 2 or not. 
 
-In short, $n \& (n - 1)$ never have a 1 bit in the same place.
+In short, $n$ &amp; $(n - 1)$ never have a 1 bit in the same place.
 
 ```cpp
 class Solution {
@@ -85,7 +85,7 @@ public:
 
 #### Example #2: [0191 - Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/)
 
-Instead of checking the bits one by one, we can use $n \& (n - 1)$ to jump to the next set bit.
+Instead of checking the bits one by one, we can use $n$ &amp; $(n - 1)$ to jump to the next set bit.
 
 ```cpp
 class Solution {
