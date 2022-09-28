@@ -45,35 +45,32 @@ Notice that the answer must be a substring, "pwke" is a subsequence and not a su
 * `0 <= s.length <= 5 * 10^4`
 * `s` consists of English letters, digits, symbols and spaces.
 
-## Approach 1: Set
+## Approach 1: HashSet
 
-Create 2 pointer left and right place them at start of the string.
-Move right (right++) till distinct characters and store them in set.
-If repeated character occurs then move left (left++) until that repeated character is occured in left ans also remove all characters that occur before that character including character itself from set.
+Two pointer _i_ and _j_, initially at the start of the string.
+Move right (j++) till distinct characters and store them in set.
+If repeated character occurs then move left (i++) until that repeated character is occured in left ans also remove all characters that occur before that character including character itself from set.
+
+Time complexity: O(n), where n - # of characters in the string
+Space complexity: O(s), where s is the longest substring
 
 <Tabs>
 <TabItem value="java" label="Java">
 <SolutionAuthor name="@ganajayant"/>
+<SolutionAuthor name="@vigneshshiv"/>
 
 ```java
 class Solution {
-    public String longestPalindrome(String s) {
-        int n = s.length();
-        int max = 0;
-        HashSet<Character> seen = new HashSet<>();
-        int left = 0;
-        int right = 0;
-        while (right < n) {
-            char c = s.charAt(right);
-            if (seen.add(c)) // Add until repeated element is occured
-            {
-                max = Math.max(max, right - left + 1); // length of substring
-                right++;
+    public int lengthOfLongestSubstring(String s) {
+        if (s == null || s.length() == 0) return 0;
+        int i = 0, j = 0, max = 0;
+        Set<Character> seen = new HashSet<>();
+        while (j < s.length()) {
+            if (seen.add(s.charAt(j))) {
+                max = Math.max(max, seen.size());
+                j += 1;
             } else {
-                while (s.charAt(left) != c) {
-                    seen.remove(s.charAt(left++));
-                }
-                seen.remove(s.charAt(left++));
+                seen.remove(s.charAt(i++));
             }
         }
         return max;
