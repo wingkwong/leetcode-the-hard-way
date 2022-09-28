@@ -9,8 +9,6 @@ keywords:
   - graphs
 ---
 
-import TutorialAuthors from '@site/src/components/TutorialAuthors';
-
 <TutorialAuthors names="@heiheihang"/>
 
 ## Overview
