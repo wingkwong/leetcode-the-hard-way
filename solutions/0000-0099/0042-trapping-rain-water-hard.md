@@ -1,5 +1,5 @@
 ---
-description: "Author: @wingkwong | https://leetcode.com/problems/trapping-rain-water/"
+description: "Author: @wingkwong, @vigneshshiv | https://leetcode.com/problems/trapping-rain-water/"
 tags: [Array, Two Pointers, Dynamic Programming, Stack, Monotonic Stack]
 ---
 
@@ -141,4 +141,70 @@ class Solution:
 
 </TabItem>
 
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+// Time Complexity: O(N)
+// Space Complexity: O(N)
+class Solution {
+    public int trap(int[] height) {
+        int i = 0, j = height.length - 1;
+        int level = 0, water = 0;
+        while (i < j) {
+            // Get the minium height and change the index depends on height
+            int lower = height[height[i] < height[j] ? i++ : j--];
+            // Highest peak gives total area to calculate water
+            level = Math.max(level, lower);
+            // How much water can hold from the recently calculated height
+            water += level - lower;
+        }
+        return water;
+    }
+}
+```
+
+</TabItem>
 </Tabs>
+
+## Approach 3: Monotonic Stack
+
+Monotonic stacks are generally used for solving questions of the type - next greater element, next smaller element, previous greater element and previous smaller element. 
+
+This problem one of the problem of solving with the previous heights with the current height.
+
+1. Keep adding the index (referenced to height) into stack, if the current height is higher the last added one (Stack Top)
+
+2. Once we find there's a downward slop, means this is starting position to trap water fill (hold the water). 
+   So keep calculating water trap area with the height and the index. Since we need to find the height and width of water area, indices are required to find the width (the same is maintained in the stack).
+
+3. Keep repeating the process until the we reach last or there's no higher height to calculate the water fill (Stack is empty).
+
+<Tabs>
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+// Time Complexity: O(N)
+// Space Complexity: O(N)
+class Solution {
+    public int trap(int[] height) {
+        int water = 0;
+        Stack<Integer> stack = new Stack<>();
+        for (int i = 0; i < height.length; i++) {
+            while (!stack.isEmpty() && height[stack.peek()] <= height[i]) {
+                int j = stack.pop();
+                if (!stack.isEmpty()) {
+                    int h = Math.min(height[stack.peek()], height[i]) - height[j];
+                    int w = i - (stack.peek() + 1);
+                    water += (h * w);
+                }
+            }
+            stack.push(i);
+        }
+        return water;
+    }
+}
+```
+
+</TabItem>
