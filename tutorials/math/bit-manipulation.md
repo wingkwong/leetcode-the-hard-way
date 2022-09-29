@@ -210,7 +210,7 @@ public:
 #### Example #3: Swap 2 numbers
 XOR (^) can be used to swap 2 numbers by changing the bits and reversing it.
 
-Let's say, $a = 4$ ($0100_2$), $b = 6$ ($0110_2$), we want $a = 6$ and $b = 4$ as our answer.
+Let's say, $a = 4$ $(0100_2)$, $b = 6$ $(0110_2)$, we want $a = 6$ and $b = 4$ as our answer.
 
 ```
 a = a ^ b => (4 ^ 6) => (0100 ^ 0110) => 2 (0010)
@@ -240,9 +240,9 @@ for (int i = n; ~i; i--) {
 
 ### Left-Shift (<<)
 
-$<<$ shifts the bits to the left. For example, $1 << 1 = 2$ because we shift the $1$ ($0001_2$) to the left to become $2$ ($0010_2$). 
+$<<$ shifts the bits to the left. For example, $1 << 1 = 2$ because we shift the $1$ $(0001_2)$ to the left to become $2$ $(0010_2)$. 
 
-Similarily, $1 << 2 = 4$ because we shift the $1$ ($0001_2$) to the left twice to become $4$ ($0100_2$).
+Similarily, $1 << 2 = 4$ because we shift the $1$ $(0001_2)$ to the left twice to become $4$ $(0100_2)$.
 
 And you may find that $1 << n$ is actually $2 ^ n$. Also $n << m$ means multiplying n by 2 power m. i.e, $n = n * (2^m)$. 
 
@@ -274,7 +274,7 @@ public:
 
 ### Right-Shift (>>)
 
-$>>$ shifts the bits to the right. For example $3_{10}$ ($0011_2$) $>> 1$ would become $1$ ($0010_2$).
+$>>$ shifts the bits to the right. For example $3_{10}$ $(0011_2)$ $>> 1$ would become $1$ $(0010_2)$.
 
 $4 >> 1$ dividing $4$ by $2$. Also $n >> m$ means dividing $n$ by $2$ power m. i.e, $n = n / (2^m)$
 
