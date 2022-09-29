@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @ganajayant |
+  Author: @ganajayant, @vigneshshiv |
   https://leetcode.com/problems/longest-substring-without-repeating-characters/
 tags: [Hash Table, String, Sliding Window]
 ---
@@ -119,7 +119,7 @@ class Solution {
 </Tabs>
 
 
-## Approach 2: Sliding Window with ASCII
+## Approach 3: Sliding Window with ASCII
 
 We can solve this problem with Sliding Window and Two pointers _i_ and _j_. Iterate over the string, keep moving the 2nd pointer _j_ forward until the character is not matched with _i_ th character. 
 
