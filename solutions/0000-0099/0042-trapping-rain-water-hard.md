@@ -111,6 +111,27 @@ class Solution {
 }
 ```
 
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+// Time Complexity: O(N)
+// Space Complexity: O(N)
+class Solution {
+    public int trap(int[] height) {
+        int i = 0, j = height.length - 1;
+        int level = 0, water = 0;
+        while (i < j) {
+            // Get the minium height and change the index depends on height
+            int lower = height[height[i] < height[j] ? i++ : j--];
+            // Highest peak gives total area to calculate water
+            level = Math.max(level, lower);
+            // How much water can hold from the recently calculated height
+            water += level - lower;
+        }
+        return water;
+    }
+}
+```
 </TabItem>
 
 <TabItem value="python" label="Python">
@@ -137,31 +158,6 @@ class Solution:
             # else move pointer j
             else: j -= 1
         return ans
-```
-
-</TabItem>
-
-<TabItem value="java" label="Java">
-<SolutionAuthor name="@vigneshshiv"/>
-
-```java
-// Time Complexity: O(N)
-// Space Complexity: O(N)
-class Solution {
-    public int trap(int[] height) {
-        int i = 0, j = height.length - 1;
-        int level = 0, water = 0;
-        while (i < j) {
-            // Get the minium height and change the index depends on height
-            int lower = height[height[i] < height[j] ? i++ : j--];
-            // Highest peak gives total area to calculate water
-            level = Math.max(level, lower);
-            // How much water can hold from the recently calculated height
-            water += level - lower;
-        }
-        return water;
-    }
-}
 ```
 
 </TabItem>
