@@ -276,7 +276,7 @@ $>>$ shifts the bits to the right. For example $3_{10}$ ($0011_2$) $>> 1$ would 
 
 $4 >> 1$ dividing $4$ by $2$. Also $n >> m$ means dividing $n$ by $2$ power m. i.e, $n = n / (2^m)$
 
-In simple, $n >> m$ _shifting each bit of n to right m times_. Let's say, $n = 8$ and $m = 2$. $n$ can be represented as $1000_2$ in binary, Therefore, $8 >> 2$ = $1000_2$ << $2$$ = $0010_2$ (4), which is same as $(8 / 2^2)$ = $4$
+In simple, $n >> m$ _shifting each bit of n to right m times_. Let's say, $n = 8$ and $m = 2$. $n$ can be represented as $1000_2$ in binary, Therefore, $8 >> 2$ = $1000_2$ >> $2$$ = $0010_2$ (4), which is same as $(8 / 2^2)$ = $4$
 
 #### Example: Check the bits one by one
 
@@ -322,7 +322,7 @@ Positive  Values  Negative  Values
 ### Common Bit Tasks
 
 ### Get Bit
-It shifts $1$ over by _i_ bits, creating a value that looks like $0100_2$ $(2^i)$. By performing and AND $ (\&) $ with num, we clear all bits other than the bit at bit _i_.
+It shifts $1$ over by _i_ bits, creating a value that looks like $0100_2$ $(2^i)$. By performing and AND (&amp;) with num, we clear all bits other than the bit at bit _i_.
 
 Finally, compare that value to $0$, if that new value is not _zero_, then bit _i_ must have a $1$, otherwise, bit _i_ is a $0$.
 
@@ -339,6 +339,6 @@ All other bits of the mask are _zero_ and will not affect num.
 
 ```java
 int setBit(int num, int i) {
-	return num | (1 << i);
+    return num | (1 << i);
 }
 ```
