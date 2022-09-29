@@ -72,6 +72,8 @@ We know that a power of 2 is a positive number and only has one bit set. We can 
 
 In short, $n$ &amp; $(n - 1)$ never have a 1 bit in the same place.
 
+For example, 1000 (8), and 0111(7) - never have 1 bit in the same place for `Power of Two`
+
 ```cpp
 class Solution {
 public:
@@ -300,7 +302,7 @@ Let’s look at the `4-bit` integer $-3$ as an example. _If it’s a 4-bit numbe
 
 The complement of $3$ (the absolute value of $-3$) with respect to $8$ is $5$. Binary value of $5$ is $0101_2$. Therefore, $-3$ in binary as a 4-bit number is $1101_2$, with the first bit being the sign bit. 
 
-In other words, the binary representation of $-K$ (negative K) as a N-bit number is $concat(1, 2^N-1 - K)$
+In other words, the binary representation of $-K$ (negative K) as a N-bit number is $concat(1, 2^N-1 - K)$ otherwise _prepend (prefix) the sign bit_ $(1)$ with the value for the calculated complement.
 
 Another way to look at this is that we invert the bits in the positive representation and then add $1$. $3$ is $0011_2$ in binary. 
 
