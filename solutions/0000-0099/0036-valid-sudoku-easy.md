@@ -81,8 +81,9 @@ Every value in the row or column or `3 x 3` block, the value is unique, With the
 
 If the same value repeat again for the same row or column or `3 x 3` block, then the given sudoku is not valid, otherwise is valid.
 
-Time Complexity: O(m * n), where m - # of rows, n - # of cols
-Space complexity: O(1), since the values are fixed for `9 x 9` board
+Time Complexity: $O(m * n)$, where $m$ - # of rows, $n$ - # of columns, 
+
+Space complexity: $O(1)$, since the values are fixed for `9 x 9` board
 
 <Tabs>
 <TabItem value="java" label="Java">
@@ -111,12 +112,22 @@ class Solution {
 </TabItem>
 </Tabs>
 
+
 ## Approach 2: Standard
 
 Iterate over rows and columns and `3 x 3` block to check if the number is repeats. 
 
-Time complexity: O(9^n^2)
-Space complexity: O(n)
+Since, it's easier to find the duplicate number on the same row or column. But how to find the `3 x 3` block for any given index in the grid. 
+
+For example, first `3 x 3` starts and end in the range of $(0, 0)$ to $(2, 2)$. Suppose, if we are in the cell of $(1, 2)$, how to find the start range of this cell which is same above mentioned. 
+
+It's simple, just `row - row % sqrt(board.length)`, Either we can use $sqrt$ approach or just use 3, since we know here Sudoku is `9 x 9` matrix. 
+
+For the above said cell $(1, 2)$, start range of this block is $(0, 0)$, since the start is clear, end is always within `3 x 3` from the start index. 
+
+Time complexity: $O(n^2)$
+
+Space complexity: $O(n)$
 
 <Tabs>
 <TabItem value="java" label="Java">
