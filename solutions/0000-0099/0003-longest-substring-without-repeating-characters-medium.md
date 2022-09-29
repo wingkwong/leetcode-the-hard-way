@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @ganajayant |
+  Author: @ganajayant, @vigneshshiv |
   https://leetcode.com/problems/longest-substring-without-repeating-characters/
 tags: [Hash Table, String, Sliding Window]
 ---
@@ -75,6 +75,81 @@ class Solution {
                 }
                 seen.remove(s.charAt(left++));
             }
+        }
+        return max;
+    }
+}
+```
+</TabItem>
+</Tabs>
+
+
+## Approach 2: HashSet with One Iteration
+
+Two pointer _i_ and _j_, initially at the start of the string. Move right (j++) till distinct characters and store them in set.
+If repeated character occurs then move left (i++) until that repeated character is occured in left, and also remove all characters that occur before that character including character itself from set. This helps to maintain Set with longest substring. 
+
+Time complexity: $O(n)$, where $n$ - # of characters in the string
+
+Space complexity: $O(s)$, where $s$ is the longest substring
+
+<Tabs>
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+class Solution {
+    public int lengthOfLongestSubstring(String s) {
+        if (s == null || s.length() == 0) return 0;
+        int i = 0, j = 0, max = 0;
+        Set<Character> seen = new HashSet<>();
+        while (j < s.length()) {
+            if (seen.add(s.charAt(j))) {
+                max = Math.max(max, seen.size());
+                j += 1;
+            } else {
+                seen.remove(s.charAt(i++));
+            }
+        }
+        return max;
+    }
+}
+```
+</TabItem>
+</Tabs>
+
+
+## Approach 3: Sliding Window with ASCII
+
+We can solve this problem with Sliding Window and Two pointers _i_ and _j_. Iterate over the string, keep moving the 2nd pointer _j_ forward until the character is not matched with _i_ th character. 
+
+Since the input, may contain `English letters, digits, symbols and spaces`, so maintain the [ASCII](https://bluesock.org/~willg/dev/ascii.html) char array of size 128. 
+
+If any of the character occur more than once, then break the loop and find the difference of _j_ and _i_ and that's the longest substring length. 
+
+Time complexity: $O(n)$, where $n$ - # of characters in the string. Since both _i_ and _j_ moving in one direction and it's total is $O(2n)$, constants are ignored, so it's $O(n)$.
+
+Space complexity: $O(1)$ extra space, size of 128 ASCII chars for each iteration, considered as constant space.
+
+<Tabs>
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+class Solution {
+    public int lengthOfLongestSubstring(String s) {
+        if (s == null || s.length() == 0) return 0;
+        if (s.length() == 1) return 1;
+        int max = 0;
+        for (int idx = 0; idx < s.length() - 1; idx++) {
+            int[] seen = new int[128];
+            int i = idx, j = idx + 1;
+            while (j < s.length() && s.charAt(i) != s.charAt(j)) {
+                if (seen[s.charAt(j)] > 0) break;
+                seen[s.charAt(j)]++;
+                j++;
+            }
+            max = Math.max(max, j - i);
         }
         return max;
     }
