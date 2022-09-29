@@ -168,6 +168,7 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+        additionalLanguages: ['csharp', 'java', 'kotlin', 'rust']
       },
       // https://docusaurus.io/docs/search#using-algolia-docsearch
       algolia: {

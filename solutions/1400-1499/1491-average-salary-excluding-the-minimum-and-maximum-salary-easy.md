@@ -63,7 +63,7 @@ func average(salary []int) float64 {
 
 <SolutionAuthor name="@wingkwong"/>
 
-```rs
+```rust
 use std::cmp;
 
 impl Solution {
