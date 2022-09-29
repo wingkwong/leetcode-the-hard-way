@@ -45,11 +45,11 @@ Output: 21
 
 As input can be from `Integer.MIN_VALUE` to `Integer.MAX_VALUE`. 
 
-Reversing any 10 digit number above, will not provide the correct answer, because the integer range overflow, if it does return 0, otherwise the reversed number. 
+Reversing some of the 10 digits number, will not provide the correct answer, because the integer range might overflow, if it does return 0, otherwise the reversed number. 
 
 For example, reversing the last integer number `2147483647` can go out of range, so having `long` primitive in the program can hold the range. 
 
-First, `Get the sign bit value`, and negate the input if it's negative.
+First, get the sign bit value, and negate the input if it's negative.
 Reverse the integer and if it's above max range then return 0 or return the value with sign bit value.
 
 <Tabs>
