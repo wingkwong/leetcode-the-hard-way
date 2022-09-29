@@ -83,12 +83,14 @@ public:
 </TabItem>
 </Tabs>
 
+
 ## Approach 2: Character Set
 
 With the help of HashSet, add every character while iterating and if the character is found already in the Set, count those characters (+2), and remove the char from the Set. Finally if the Set is not empty, then we can add 1 more character to be in the middle to form a palindrome, so count 1 and return it. 
 
-Time complexity: O(n), where n - # of characters, All HashSet operation are O(1) constant time
-Space complexity: O(n), Maintaining n/2 characters in the Set, Constants are ignored, so its O(n) extra space
+Time complexity: $O(n)$, where $n$ - # of characters, All HashSet operation are $O(1)$ constant time
+
+Space complexity: $O(n)$, Maintaining $n/2$ characters in the Set, Constants are ignored, so its $O(n)$ extra space
 
 <Tabs>
 <TabItem value="java" label="Java">
@@ -111,12 +113,22 @@ public int longestPalindrome(String s) {
 </TabItem>
 </Tabs>
 
+
 ## Approach 3: ASCII Character Array (Optimal Solution)
 
-As the problems states, constraints are `a-zA-Z`, So optimally we can maintain a char array of size 52. 
+As the problems states, constraints are `a-zA-Z`, So optimally we can maintain a char array of size $52$. 
 
-Time complexity: O(n), where n - # of characters
-Space complexity: O(1), Maintaining O(52) chars in the array, which is considered O(1) extra space
+[ASCII](https://bluesock.org/~willg/dev/ascii.html) range for `A-Z` range is $65 - 90$ and `a-z` range is $97 - 122$.
+
+Since the ranges are clear and alphabetic char size 26 for each, and the same can be placed in `int[]` array. Convert any `A-Z` char to $0-26$ range. 
+
+Eg: If a char is `D` and subtracting `'A'` from `'D'` find the index, that is $4$ which is same as `c - 'A'`. 
+
+For `a-z` characters ASCII values are $>= 97$, so it's better separate the slots. So first half the array has `A-Z` range and other halfs maintained for `a-z` range. 
+
+Time complexity: $O(n)$, where $n$ - # of characters
+
+Space complexity: $O(1)$, Maintaining $O(52)$ chars in the array, which is considered $O(1)$ extra space
 
 <Tabs>
 <TabItem value="java" label="Java">
