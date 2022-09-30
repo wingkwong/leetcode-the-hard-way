@@ -1,7 +1,8 @@
 ---
-title: 'Sorting'
-description: 'Sorting refers to rearranging elements in a specific order.'
+title: 'Introduction'
+description: 'Introduction and overview of sorting'
 hide_table_of_contents: true
+sidebar_position: 1
 keywords:
   - leetcode
   - tutorial
