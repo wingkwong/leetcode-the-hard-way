@@ -167,7 +167,7 @@ class MyHashMap {
         int _key = hash(key);
         ListNode node = arr[_key];
         if (node == null) return;
-        // System.out.println("has removed for key - " + key);
+        // Key removed from linked list chain
         node.remove(key);
         // If head is null, then remove that item from array
         if (node.head == null) {
