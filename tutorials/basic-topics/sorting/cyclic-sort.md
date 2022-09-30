@@ -11,7 +11,7 @@ keywords:
   - cyclic sort
 ---
 
-<TutorialAuthors names="@TBC"/>
+<TutorialAuthors names="@prishit55"/>
 
 # Overview
 Cycle-Sort is an in-place, unstable-sorting algorithm.
