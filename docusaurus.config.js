@@ -177,6 +177,11 @@ const config = {
         indexName: 'leetcode-the-hard-way',
         contextualSearch: false
       },
+      docs: {
+        sidebar: {
+          hideable: true,
+        },
+      },
     }),
 
     plugins: [
