@@ -239,5 +239,50 @@ When_to_use      :  1. When we don't have random access(linked list) , like as w
 ```
   
 ---
+Merging of n elements takes n time and since each time the array is cut into half it takes log(n) time to reach the top so **total time complexity is** `O(nLog(n))` .
 
+![image](https://cdn.kastatic.org/ka-perseus-images/5fcbebf66560d8fc490de2a0d8a0e5b1d65c5c54.png)
+
+
+
+**Tip : Even though merge sort has the least time complexity in worst case , bubble sort performs better when the array is sorted** . The figure below beautifully illustrates the various time complexities and you can find mergesort almost overlapped by quicksort for a certain interval. 
+
+
+![image](https://titrias.com/files/2015/08/Untitled.png)
+
+## Suggested Problems
+
+export const suggestedProblems = [
+    {
+        "problemName": "912-Sort an Array"
+        "difficulty": "Medium"
+        "leetCodeLink": "https://leetcode.com/problems/sort-an-array/"
+        "solutionLink": "https://leetcode.com/submissions/detail/812272823/"
+    },
+    {
+        "problemName": "56-Merge Intervals"
+        "difficulty": "Medium"
+        "leetCodeLink": "https://leetcode.com/problems/merge-intervals/"
+        "solutionLink": ""
+    },
+    {
+        "problemName" : "148-Sort List"
+        "difficulty" : "Medium"
+        "leetCodeLink" : "https://leetcode.com/problems/sort-list/"
+        solutionLink" : ""
+    },
+    {
+        "problemName" : "327-Count of Range Sum"
+        "difficulty" : "Hard"
+        "leetCodeLink" : "https://leetcode.com/problems/count-of-range-sum/"
+        solutionLink" : ""
+    },
+    {
+        "problemName" : "23-Merge k Sorted Lists"
+        "difficulty" : "Hard"
+        "leetCodeLink" : "https://leetcode.com/problems/merge-k-sorted-lists/"
+        "solutionLink" : ""
+    }
+] 
+<Table title="Suggested Problems" data={suggestedProblems} />
   
