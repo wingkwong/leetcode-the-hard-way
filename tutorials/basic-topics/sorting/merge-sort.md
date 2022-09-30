@@ -79,7 +79,7 @@ Call merge(arr, l, m, r)
     
 ### C++ Implementation 
 
-#### 1. **STL**
+#### 1. **STL** (Most Commonly Practiced)
 
   - Standard Sort  (Accepted in Leetcode)
   
@@ -97,7 +97,7 @@ Call merge(arr, l, m, r)
      }
     ```
 
-#### 2.  Merge Sort (Template) (Recursive Approach)  
+#### 2.  **Merge Sort** (Template) (Recursive Approach)  
 
 ( Accepted solution in Leetcode even when constraints are large
 
@@ -139,9 +139,9 @@ Constraints:
 Call `mergeSort` to use this template to sort by divide and conquer as explained till now. 
 
 
-### Python 
+### Python Implementation
 
-#### 1. Most common practice 
+#### 1. **Most commonly practiced** 
 
 ```
     def sortArray(self, nums):
@@ -186,7 +186,7 @@ Call `mergeSort` to use this template to sort by divide and conquer as explained
 ```
 
 
-### Java
+### Java Implementation
 
 #### 1. Merge Sort (Template)
 
