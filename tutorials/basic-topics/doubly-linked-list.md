@@ -24,8 +24,10 @@ import Table from '@site/src/components/Table';
   
 * **Head** always points to the first node in sequence while **Tail** points to the last node in sequence.
 
+<img  src="https://user-images.githubusercontent.com/84374342/193412857-f0f8450a-5986-4eb0-9a86-524e7bffa2d9.png"/>
+
 **Note**
-* We assume that you already have a basic understanding of **Linked List**.
+* We assume that you already have a basic understanding of [**Linked List**]("./../linked-list.md").
 * The syntax would be different in different language but the core idea remains the same.
 
 * For this article we are using **Java**, if you happen to use an another language please refer to it.
@@ -48,6 +50,8 @@ class Node{
   Node next;
 }
 ```
+
+
 ## Advantages of Doubly Linked List
 * Doubly Linked List can transverse both ways - forward and backward.
 * We can quickly insert a new node before any node.
