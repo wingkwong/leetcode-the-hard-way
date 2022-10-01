@@ -14,21 +14,23 @@ keywords:
 
 <TutorialAuthors names="@Sreetama2001"/>
 
-## Overview
+# Overview
 
-Merge Sort works by recursively breaking down an array into multiple subarrays  and then after comparing each of the sub arrays it arranges them into ascending or desending merges them into a single sorted array . Here I will illustrate `merge sort` along with explaining problems of `Leetcode` in following Languages.
+Merge Sort works by recursively breaking down an array into multiple subarrays  and then after comparing each of the sub arrays it arranges them into ascending or desending order by value and merges them into a single sorted array . Here I will illustrate `merge sort`  `Leetcode` problems 
+in following Languages.
 
-  - Python 
-  - C++
-  - Java
+- Python 
+- C++
+- Java
   
-Let me brief few concepts on merge sort so that we can solve problems on `Leetcode` easily .
+## Few concepts on merge sort
   
 ---
-### Suppose we have an array of integers , 
+Suppose we have an array of integers , 
+
 `6 5 3 1 8 7 2 4`
 
-(In `python` it is  called `list` and in `C++` it can be called either `array or vector` and in `Java` it is cslled `ArrayList`)
+Note : In `python` it is  called `list` and in `C++` it can be called either `array or vector` and in `Java` it is called a `ArrayList` .
 
 Then we can clearly see that merge sort is performed like this way. 
 
@@ -38,46 +40,82 @@ Then we can clearly see that merge sort is performed like this way.
 
 ### Divide ( Dividing is our first step)
 
-  - Calculate the mid point by checking if left index is less than the right index , if yes divide the array . 
-  - Now continue dividing the array until `left index < right index` becomes false , that is until division is not possible.
-    
-    ![image](https://miro.medium.com/max/1400/1*_QpN-m-FTRabFLRvtcc04A.gif)
-  
+- Calculate the mid point by checking if left index is less than the right index , if yes divide the array . 
+- Now continue dividing the array until `left index < right index` becomes false , that is until division is not possible.
+     
 ### Conquer
 
-  - After dividing the array into smallest units, start merging the elements again based on comparison of the elements.
-  
-  -  So we need to compare and merge starting from the last splits or last smallest units. So **Recursion** needs to done here.
+- After dividing the array into smallest units, start merging the elements again by comparing them .
+
+- We need to compare and merge starting from the last splits or last smallest units. So **Recursion** needs to done here.
 
 ### Merge 
 
-  - Compare the element for each subarray /list  and then combine them into another bigger list/array in a sorted manner (Here we need to have an idea of 2 pointer $i.e$ how to merge and increment ).
+- Since each half is already sorted so we need to just sort between 2 halves to **combine/merge** then to make a bigger sorted array
+   
+## [Leetcode Problem 912 Sort an Array](https://leetcode.com/problems/sort-an-array/)
 
-  - Remember each half is already sorted so we need to just sort between 2 halves to **combine/merge** then to make a bigger sorted array
-  
-  
-  ![image](https://miro.medium.com/max/1400/1*_QpN-m-FTRabFLRvtcc04A.gif)
-  
-  
-[*Leetcode Problem 912 Sort an Array*](https://leetcode.com/problems/sort-an-array/)
+**Problem Statement** 
 
-### Problem Statement 
+```
+Given an array of integers nums, sort the array in ascending order and return it.
 
+You must solve the problem without using any built-in functions in O(nlog(n)) time complexity and with the smallest space complexity possible.
+
+```
+
+**Test Cases**
     
-    Given an array of integers nums, sort the array in ascending order and return it.
-
-    You must solve the problem without using any built-in functions in O(nlog(n)) time complexity and with the smallest space complexity possible.
-
-### Test Cases
-    
-*Test case 1*
+*Test case 1* :
      
 ```
-    Input: nums = [5,2,3,1]
-    Output: [1,2,3,5]
-    Explanation: After sorting the array, the positions of some numbers are not changed (for example, 2 and 3), while the positions of other numbers are changed 
-    (for example, 1 and 5).    
+Input: nums = [5,2,3,1]
+Output: [1,2,3,5]
+Explanation: 
+After sorting the array, the positions of some numbers are not changed (for example, 2 and 3), while the positions of other numbers are changed (for example, 1 and 5).
+        
 ```
+**Constraints as given in the problem:**
+
+$1 <= nums.length <= 5 * 10^4
+-5 * 10^4 <= nums[i] <= 5 * 10^4$ 
+
+*Here `insertion sort` , `quick sort` , `selection sort`  and all other sorts in $O(n^2)$ will give **TLE** i.e Time Limit Exceeded*
+
+## STL Approach  
+Note: Not preferred here in this problem , but still you will get a AC in Leetcode
+
+<Tabs>
+<TabItem value="cpp" label="C++">
+
+```cpp
+void stableStlSort(vector<int>& nums) {
+stable_sort(nums.begin(), nums.end());
+}
+```
+</TabItem>
+
+<TabItem value="py" label="Python">
+
+```py
+def sortArray(self, nums):
+    return sorted(nums)
+```
+
+</TabItem>
+<TabItem value="java" label="Java">
+
+```java
+public int[] sortArray(int[] nums) {
+    Arrays.sort(nums);
+    return nums;
+}
+```
+</TabItem>
+</Tabs>
+
+
+## Top Down Approach
 
 ### Algorithm 
     
@@ -93,165 +131,115 @@ Call mergeSort again  for second half for further dividing:
 Call mergeSort(array, middle+ 1, right)
 Merge the two halves sorted in steps 2 and 3:
 Call merge(arrary, left, middle, right)
-
-```
-  
-### C++ Implementation 
-
-#### 1. **STL** (Most Commonly Practiced) 
-
-  - Standard Sort  (Accepted in Leetcode) 
-  
-  *Avoid here in this problem*
-  
-```
-    void stlSort(vector<int>& nums) {
-        sort(nums.begin(), nums.end());
-    }
 ```
 
-  - Stable Sort  (Accepted in Leetcode)
-  
-    ```
-    void stableStlSort(vector<int>& nums) {
-    stable_sort(nums.begin(), nums.end());
-     }
-    ```
+<Tabs>
+<TabItem value="cpp" label="C++">
 
-#### 2.  **Merge Sort**  (Recursive Approach)  
+```cpp
+// call mergeSort(nums, 0, nums.size() - 1) to sort 
 
-Accepted solution in Leetcode even when constraints are large
+void merge(vector<int>& nums, int l, int m, int r){
+vector<int> tmp(r - l + 1); // create a temporary array
+int i = l; // index for left subarray
+int j = m + 1; // index for right subarray
+int k = 0; // index for temporary array
+while(i <= m && j <= r){
+    if(nums[i] <= nums[j]) tmp[k++] = nums[i++];   
+    
+    // increment the left pointer if the right pointer element is bigger since we are sorting in ascending order ,left(smaller element) goes first
+    
+    else tmp[k++] = nums[j++];
+}
+while(i <= m) tmp[k++] = nums[i++];
+while(j <= r) tmp[k++] = nums[j++]; 
+for(i = 0; i < k; i++) nums[l + i] = tmp[i];
+}
 
-For example
 
-Take below Constraints as given int the problem:
+void mergeSort(vector<int>& nums, int l, int r){
+if(l >= r) return;
+int m = l + (r - l) / 2; //middle index, same as (l+r)/2
+mergeSort(nums, l, m);
+mergeSort(nums, m + 1, r);
+merge(nums, l, m, r);
+}
 
-$$1 <= nums.length <= 5 * 10^4
--5 * 10^4 <= nums[i] <= 5 * 10^4$$ 
+```
 
-Here `insertion sort` , `quick sort` , `selection sort`  and all other sorts in $O(n^2)$ will give **TLE** i.e Time Limit Exceeded 
+</TabItem>
 
-<!-- ![image]() -->
-  
-  ```
-    	void merge(vector<int>& nums, int l, int m, int r){
-        vector<int> tmp(r - l + 1); // create a temporary array
-        int i = l; // index for left subarray
-        int j = m + 1; // index for right subarray
-        int k = 0; // index for temporary array
-        while(i <= m && j <= r){
-            if(nums[i] <= nums[j]) tmp[k++] = nums[i++];   
-            
-            // increment the left pointer if the right pointer element is bigger since we are sorting in ascending order ,left(smaller element) goes first
-            
-            else tmp[k++] = nums[j++];
+<TabItem value="py" label="Python">
+
+```py
+def merge_Sort(nums): 
+if len(nums) > 1: 
+    mid = len(nums)//2   # calculate the middle to divide by mid
+    leftArray = nums[:mid]    #slicing 
+    rightArray = nums[mid:]  
+
+    merge_Sort(leftArray)
+    merge_Sort(rightArray)
+
+    i = j = k = 0
+
+    while i < len(leftArray) and j < len(rightArray): 
+        if leftArray[i] < rightArray[j]: 
+            nums[k] = leftArray[i] 
+            i+=1 //incrementing the smaller element side pointer
+        else: 
+            nums[k] = rightArray[j] 
+            j+=1
+        k+=1
+
+    while i < len(leftArray): 
+        nums[k] = leftArray[i] 
+        i+=1
+        k+=1
+
+    while j < len(rightArray): 
+        nums[k] = rightArray[j] 
+        j+=1
+        k+=1
+
+```
+
+</TabItem>
+</TabItem>
+
+<TabItem value="java" label="Java">
+
+```java
+// call mergeSort(nums , 0 ,nums.length -1) in public
+
+private void mergeSort(int[] nums, int l, int r) {   // nums -> ArrayList , l -> starting index , r-> end of the ArrayList
+    if (l >= r) return;
+    int mid = l + (r - l) / 2;
+    mergeSort(nums, l, mid);
+    mergeSort(nums, mid + 1, r);
+    merge(nums, l, r);
+}
+private void merge(int[] nums, int l, int r) {
+    int mid = l + (r - l) / 2;
+    int[] tmp = new int[r - l + 1];
+    int i = l, j = mid + 1, k = 0;
+    while (i <= mid || j <= r) {
+        if (i > mid || j <= r && nums[i] > nums[j]) {
+            tmp[k++] = nums[j++];
+        } else {
+            tmp[k++] = nums[i++];
         }
-        while(i <= m) tmp[k++] = nums[i++];
-        while(j <= r) tmp[k++] = nums[j++]; 
-        for(i = 0; i < k; i++) nums[l + i] = tmp[i];
     }
-	
-	
-    void mergeSort(vector<int>& nums, int l, int r){
-        if(l >= r) return;
-        int m = l + (r - l) / 2; //middle index, same as (l+r)/2
-        mergeSort(nums, l, m);
-        mergeSort(nums, m + 1, r);
-        merge(nums, l, m, r);
-    }
-  ```
-
-Call `mergeSort` to use this template to sort by divide and conquer as explained till now. 
-
-`mergeSort(nums, 0, nums.size() - 1);`
-
-
-### Python Implementation
-
-#### 1. **Most commonly practiced** --Predefined function
-
-        *Avoid here in this problem*
 ```
-    def sortArray(self, nums):
-        return sorted(nums)
-```
+</TabItem>
+</Tabs>
 
 
-#### 2. Merge Sort 
-
-
-```
-        def merge_Sort(nums): 
-        if len(nums) > 1: 
-            mid = len(nums)//2   # calculate the middle to divide by mid
-            leftArray = nums[:mid]    #slicing 
-            rightArray = nums[mid:]  
-
-            merge_Sort(leftArray)
-            merge_Sort(rightArray)
-
-            i = j = k = 0
-
-            while i < len(leftArray) and j < len(rightArray): 
-                if leftArray[i] < rightArray[j]: 
-                    nums[k] = leftArray[i] 
-                    i+=1 //incrementing the smaller element side pointer
-                else: 
-                    nums[k] = rightArray[j] 
-                    j+=1
-                k+=1
- 
-            while i < len(leftArray): 
-                nums[k] = leftArray[i] 
-                i+=1
-                k+=1
-
-            while j < len(rightArray): 
-                nums[k] = rightArray[j] 
-                j+=1
-                k+=1
-
-```
-
-
-### Java Implementation
-
-#### 1. Merge Sort 
-
-```
-    private void mergeSort(int[] nums, int l, int r) {   // nums -> ArrayList , l -> starting index , r-> end of the ArrayList
-        if (l >= r) return;
-        int mid = l + (r - l) / 2;
-        mergeSort(nums, l, mid);
-        mergeSort(nums, mid + 1, r);
-        merge(nums, l, r);
-    }
-    private void merge(int[] nums, int l, int r) {
-        int mid = l + (r - l) / 2;
-        int[] tmp = new int[r - l + 1];
-        int i = l, j = mid + 1, k = 0;
-        while (i <= mid || j <= r) {
-            if (i > mid || j <= r && nums[i] > nums[j]) {
-                tmp[k++] = nums[j++];
-            } else {
-                tmp[k++] = nums[i++];
-            }
-        }
-```
-
-Call the function `mergeSort` in public to get the Template executed  `mergeSort(nums , 0 ,nums.length -1)` 
-
-In all other examples we have seen only top down approach . But merge sort can be implemented in a bottom down approach too ,That will a    **iterative technique**  for sure .
-
-
-
-#### Bottom Up Approach 
-
- ![image](https://www.simplilearn.com/ice9/free_resources_article_thumb/mergesort/merge_sort-bottom-up-img1.png)
-
+## Bottom Up Approach /Iterative technique
 
 ### Algorithm 
 
+```
 1. So it  starts with an  **element** in the array 
 
     It iterative approach it is already considering the fact that one item array is always sorted
@@ -261,10 +249,51 @@ In all other examples we have seen only top down approach . But merge sort can b
     Similarly we merge other sorted subarrays like we have done in top down recursive approach **(two-pointer approach)** 
 
 4. Contines until we a sorted array 
+```
+<Tabs>
+<TabItem value="cpp" label="C++">
 
+```cpp
+// YOUR CODE GOES HERE
+```
+</TabItem>
 
+<TabItem value="java" label="Java">
 
-
+```java
+class Solution {
+    public List<Integer> sortArray(int[] nums) {
+        List<Integer> res = new ArrayList<>();
+        if (nums == null || nums.length == 0) return res;
+        mergeSort2(nums);
+        for (int i : nums) res.add(i);
+        return res;
+    }
+    private void mergeSort2(int[] nums) {
+        for (int size = 1; size < nums.length; size *= 2) {
+            for (int i = 0; i < nums.length - size; i += 2 * size) {
+                int mid = i + size - 1;
+                int end = Math.min(i + 2 * size - 1, nums.length - 1);
+                merge2(nums, i, mid, end);
+            }
+        }
+    }
+    private void merge2(int[] nums, int l, int mid, int r) {
+        int[] tmp = new int[r - l + 1];
+        int i = l, j = mid + 1, k = 0;
+        while (i <= mid || j <= r) {
+            if (i > mid || j <= r && nums[i] > nums[j]) {
+                tmp[k++] = nums[j++];
+            } else {
+                tmp[k++] = nums[i++];
+            }
+        }
+        System.arraycopy(tmp, 0, nums, l, r - l + 1);
+    }
+}
+```
+</TabItem>
+</Tabs>
 
 **Time_Complexity** : Best & Worst & Average is   $O(n \log_{2} n)$
 
@@ -274,12 +303,14 @@ In all other examples we have seen only top down approach . But merge sort can b
 
 **Is In Place**      :  Not-In-Place
 
-**When to use**     :  1. When we don't have random access(linked list) , like as we have an array.
-                       2. When array is not to large
+**When to use**     :  
+1. When we don't have random access (linked list) , like as we have an array.
+2. When array is not to large
 
   
 ---
 Merging of n elements takes n time and since each time the array is cut into half it takes   $\log_{2} n$   time to reach the top so **total time complexity is**    $O(n\log_{2} n)$  .
+
 
 ![image](https://cdn.kastatic.org/ka-perseus-images/5fcbebf66560d8fc490de2a0d8a0e5b1d65c5c54.png)
 
@@ -303,25 +334,27 @@ Output: [1,2,3,4]
 ```
 ![image](https://assets.leetcode.com/uploads/2020/09/14/sort_list_1.jpg)
  
- *Test Case 2*
+*Test Case 2*
 
 ```
 Input: head = [-1,5,3,4,0]
 Output: [-1,0,3,4,5]
 ```
 
-Here we can follow both top down or bottom up merge sort . I have already discussed the algorithms in much needed detail for array .
+Here we can follow both top down or bottom up merge sort . I have already discussed the algorithms in detailed way for array .
 
 **Intuition for the problem**
 
 ```
-    3->8->12->null
-    1->10->23->null
-    after merging:
-    1->3->8->10->12->23->null.
+3->8->12->null
+1->10->23->null
 
-    Of course the two lists must are ordered respectively.So we can only start to merge two lists that only 
-    have one element,then we get a ordered list that have two element,do this again (that is "recursion").
+After merging we get :
+
+1->3->8->10->12->23->null.
+
+Of course the two lists must are ordered respectively.So we can only start to merge two lists that only 
+have one element,then we get a ordered list that have two element,do this again (that is "recursion").
 
     Bottom Up Approach 
 
@@ -350,22 +383,23 @@ Here we can follow both top down or bottom up merge sort . I have already discus
 ```
 
 
-**Leetcode Implementation of Linked List**
+**Leetcode Implementation of Linked List in cpp**
 ```
-    /*
-    * Definition for singly-linked list.
-    * struct ListNode {
-    *     int val;
-    *     ListNode *next;
-    *     ListNode() : val(0), next(nullptr) {}
-    *     ListNode(int x) : val(x), next(nullptr) {}
-    *     ListNode(int x, ListNode *next) : val(x), next(next) {}
-    * };
-    */
+/*
+* Definition for singly-linked list.
+* struct ListNode {
+*     int val;
+*     ListNode *next;
+*     ListNode() : val(0), next(nullptr) {}
+*     ListNode(int x) : val(x), next(nullptr) {}
+*     ListNode(int x, ListNode *next) : val(x), next(next) {}
+* };
+*/
+
  ```
 
 
-### **Approach for top down Merge sort of Linked list**
+## **Approach for top down Merge sort of Linked list**
 
 
 *1. Keep recursively dividing the list until there is only one node in the linked list.* 
@@ -381,9 +415,10 @@ Here we can follow both top down or bottom up merge sort . I have already discus
 2. To Divide, we need to  find mid in linked ling using [tortoise and hare](https://dev.to/alisabaj/floyd-s-tortoise-and-hare-algorithm-finding-a-cycle-in-a-linked-list-39af) method 
 3. Finally, merge the left and the right nodes of linked list
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 
-
-```
+```cpp
 class Solution {
 public:
     void mergeSort(ListNode **head){
@@ -464,10 +499,8 @@ public:
 };
 ```
 
-
-
-
-
+</TabItem>
+</Tabs>
 
 ## Suggested Problems
 
@@ -502,6 +535,7 @@ export const suggestedProblems = [
         "leetCodeLink" : "https://leetcode.com/problems/merge-k-sorted-lists/",
         "solutionLink" : ""
     }
-] 
+]
+
 <Table title="Suggested Problems" data={suggestedProblems} />
   
