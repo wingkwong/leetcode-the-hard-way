@@ -76,9 +76,7 @@ So what are the possibilities 3rd column can have? Well, It can be from `1-9`, S
 2. Check the current column, rows from `1-9`.
 3. Check the current cell block, which is `3 x 3` grid.
 
-How to define `3 x 3` block start and end range for the current cell we are operating on? Let's say our current cell is $(0, 2)$, we know by seeing the board, it's starts from $(0, 0)$ and end in the range of $(2, 2)$. 
-
-We can use a simple idea to get the stand and end position, just use `row - row % sqrt(board.length)`, Either we can use $sqrt$ approach or just use 3, since we know here Sudoku is `9 x 9` matrix and any block is size of 3. 
+How to define `3 x 3` block start and end range for the current cell we are operating on? Let's say our current cell is $(0, 2)$, we know by seeing the board, it's starts from $(0, 0)$ and end in the range of $(2, 2)$. We can use a simple idea to get the stand and end position, just use `row - row % sqrt(board.length)`, Either we can use $sqrt$ approach or just use 3, since we know here Sudoku is `9 x 9` matrix and any block is size of 3. 
 
 For the above said cell $(0, 2)$, start range of this block is $(0, 0)$, since the start is clear, end is always within `3 x 3` from the start index. 
 
@@ -88,11 +86,11 @@ If all $3$ checks is valid, then we can place the number ($1$) in the current ce
 
 So for each cell, we trying with $n$ possibilities, The process continues till for all the rows and columns. If some cases we might end up being not able to place any number and we reached last number that is $9$. **So it means we have placed some wrong order in the past, it requires us to validate the previous placed numbers on the board to solve the current cell problem.** 
 
-Here it comes backtrack, it's a technique to solve the problem. If any current of the current operation or action is going to cause future actions then we need to backtrack the previous cases, like placing next number and next number so on. 
+The types of situation problems can be solved with backtracking technique. If any of the current operation or action is going to cause future actions then we need to backtrack the previous cases, like placing next number and next number so on to solve the current problem. 
 
 At the end, we would have solved all the cells in the board. 
 
-Time complexity: $O(9$^$n^2)$ - Exponential time complexity. 
+Time complexity: O(9^n^2) - Exponential time complexity. 
 
 Space complexity: $O(n)$
 
