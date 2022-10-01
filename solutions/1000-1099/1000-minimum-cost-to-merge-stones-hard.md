@@ -104,7 +104,10 @@ Now, $m$ must be positive number then only we can merge them.
 In this example: $[3, 5, 1, 2, 6]$. Here we got $N = 5$, $k = 3$.
 
 $$
-m = (N - 1) / (k - 1) \\
+m = (N - 1) / (k - 1)
+$$
+
+$$
 m = (5 - 1) / (3 - 1) = (4) / (2) = 2
 $$
 
