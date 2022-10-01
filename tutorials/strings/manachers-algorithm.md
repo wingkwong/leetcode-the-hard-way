@@ -9,20 +9,26 @@ keywords:
   - algorithm
 ---
 
+<TutorialAuthors names="@wizeewig"/>
 
 # Manacher's Algorithm
 
-There are many ways to find the `longest palindromic substring`. One can find it in O(N³) and also in O(N²) time complexity. But using `Manacher's Algorithm` we do it in `O(N) time`. This algorithm was discovered by `Glenn K. Manacher` in 1975.
+There are many ways to find the `longest palindromic substring`. One can find it in $O(N ^ 3)$ and also in $O(N ^ 2)$ time complexity. But using `Manacher's Algorithm` we do it in `O(N) time`. This algorithm was discovered by `Glenn K. Manacher` in 1975.
+
+First of all we need to understand that what is a substring. So, a substring is basically contiguous part of any array or string. For example: "square" is a substring of string "abigsquare"
+
+And secondly what is a palindrome. So, a palindrome is any word or phrase that reads the same backwards as forwards. For example: "madam", "a nut for a jar of tuna" etc.
 
 Given a string, find the longest substring which is palindrome. 
 
-* if the given string is “abaaba”, the output should be “abaaba”
+* if the given string is “iplayracecar”, the output should be “racecar”
+* if the given string is “acacacb”, the output should be “acacacb”
 * if the given string is “abababa”, the output should be “abababa”
-* if the given string is “abcbabcbabcba”, the output should be “abcbabcbabcba”
+* if the given string is “findnishi”, the output should be “indni”
 
-* ## Brute force Approach O(N³) time
+* ## Brute force Approach $O(N ^ 3)$ time
 
-```C++
+```Cpp
 void longestPalSubstring(string str){
     // Getting length of the input string
     int n = str.size();
@@ -57,126 +63,134 @@ void longestPalSubstring(string str){
 }
 ```
 ### Input: 
-daabddfddbegtd
+fabbbccbbbaadz
+
 ### Output: 
-The Longest Palindromic Substring is: bddfddb
-### Time complexity O(N³)
-O(N³)
-In the brute force approach, three nested loops are used to find the longest palindromic substring, so the time complexity will be O(N³).
-### Space complexity O(1)
+The Longest Palindromic Substring is: abbbccbbba
+
+### Time complexity 
+$O(N ^ 3)$
+
+In the brute force approach, three nested loops are used to find the longest palindromic substring, so the time complexity will be $O(N ^ 3)$.
+
+### Space complexity
+O(1)
 No extra space is needed in this approach, so the space complexity will be O(1).
 
-* ## Manacher's Algorithm
-This algorithm is faster than the brute force approach, as it exploits the idea of a palindrome happening inside another palindrome.
+ ## Manacher's Algorithm
+ 
+`Manacher's Algorithm` is way faster than the brute force approach to find the longest substring, because it uses the precomputed data. Hence, making the algorithm run in linear time. 
 
-Manacher's algorithm is designed to find the palindromic substrings with odd lengths only. To use it for even lengths also, we tweak the input string by inserting the character "#" at the beginning and each alternate position after that (changing "abcaac" to "#a#b#c#a#a#c#").
+One important point that we need to keep in mind is that using Manacher's Algorithm we can find the palindromic substrings of odd length string or array only. To find palindromic substrings of even length string or array, we need to do a slight change in the given input i.e. in the given input string we insert "#" character at the beginning and also at each alternate position(changing "level" to "#l#e#v#e#l").
 
-In the case of an odd length palindrome, the middle character will be a character of the original string, surrounded by "#".
+In the case of an odd length palindrome, we will surround the middle character of the string with "#"
 
-<img width="299" alt="MA1" src="https://user-images.githubusercontent.com/89184573/193343997-fa706deb-975d-4cac-933b-832822a3ea08.png">
+Example: string = abbba -> ab#b#ba
 
 In the case of an even length palindrome, the middle character will be a "#" character.
 
-<img width="295" alt="MA2" src="https://user-images.githubusercontent.com/89184573/193344022-033e76fe-5242-4ac1-878c-40eece33092a.png">
+Example: string = aaccccaa -> #a#a#c#c#c#c#a#a# . Here, we can see that the middle character will come out to be a "#"
 
 #### Steps of the `Manacher's algorithm` are as follows:
 
-1. Create an array or a list (sChars) of length strLen which is 2∗n+3 (n being the length of the given string), to modify the given string.
-2. Assign the first and last element of sChars to be "@" and "$", respectively.
-3. Fill the blank spaces in sChars by characters of the given string and "#" alternatively.
-4. Declare variables
-* Implicating maximum detected length of palindrome substring maxLen = 0.
-* Position from where to start searching start=0.
-* Highest position of the extreme right character of all detected palindromes maxRight=0.
-* Center of the detected palindrome center=0.
-5. Create an array or a list p to record the width of each palindrome about their center, center being the corresponding characters in sChars.
-6. Create a for loop iterating from 1 to strLen−1, with i incrementing in each iteration.
-7. In each iteration, check if i < maxRight, if yes, then assign minimum of maxRight-i and p[2*center-i] to p[i].
-8. Nest a while loop inside the for loop, to count with width along the center, condition being, sChars[i+p[i]+1] is equal to sChars[i-p[i]-1], if yes, increment p[i] by 1.
-9. To update center, check if i+p[i] is greater than maxRight, if yes, assign center to be 1, and maxRight to be i+p[i].
-10. For updating the Maximum length detected, check if p[i] is greater than maxLen, if yes, then assign start to be (i-p[i]-1)/2, and maxLen to be p[i].
-11. Come out of the for loop, and print the substring in the given string, starting from start and ending at start+maxLen-1.
+1. Create an array arr of length sLen which is 2∗n+3 (n being the length of the given string s), to modify the given string.
+2. Prepend "@" and append "$" in the string s. This is done to avoid the bounds checking.
+3. Now fill up arr be alternate "#" and characters of the given string s.
+4. We will declare some variables-
+* TO store the maximum length of palindrome declare a variable maxLength
+* Declare S=0, R=0 and C=0 which stores the starting, ending and center position of the palindrome found.
+5. We create an array Plen to store the length of each palindrome found. The length is stored in the array about their centre i.e C.
+6. Create a for loop iterating from i=1 to sLen−1.
+7. Inside the for loop, check if i < R, if yes, then assign minimum of R-i and Plen[2*C-i] to P[i].
+8. After the if condition nest a while loop, to count width along the center, condition being, arr[i+Plen[i]+1] is equal to arr[i-Plen[i]-1], if yes, increment Plen[i] by 1. Here we try to expand the palindrome centered at i.
+9. Now if palindrome centered at i expands past right, we will adjust center(C) based on expanded palindrome. That means, check if i+Plen[i] is greater than R, if yes, assign C to be 1, and R to be i+Plen[i].
+10. Check if Plen[i] comes out to be greater than maxLength, then the starting point S is assigned (i-Plen[i]-1)/2, and maxLength is assigned Plen[i].
+11. End the for loop and return the substring of s starting from S and ending at S+maxLength-1.
 
 #### Implementation -
 
-```c++
-void longestPalSubstring(string s){
-    /*
-        If length of given string is n then its length after
-        inserting n+1 "#", one "@", and one "$" will be
-        (n) + (n+1) + (1) + (1) = 2n+3
-    */
-    int strLen = 2 * s.length() + 3;
-    char* sChars = new char[strLen];
+```cpp
 
-    /*
-        Inserting special characters to ignore special cases
-        at the beginning and end of the array
-        "abc" -> @ # a # b # c # $
-        "" -> @#$
-        "a" -> @ # a # $
-    */
-    sChars[0] = '@';
-    sChars[strLen - 1] = '$';
-    int t = 1;
+#include <bits/stdc++.h>
+using namespace std;
 
-    for (char c : s){
-        sChars[t++] = '#';
-        sChars[t++] = c;
+string longestPalindromicSubstring(string s){
+
+    int sLen = 2 * s.length() + 3;
+    /* The length is 2*s.length()+3 because we inserting one "@", one "$" and n+1 "#" */
+    
+    char* arr= new char[sLen];
+   
+    arr[0] = '@';
+    arr[sLen - 1] = '$';
+    
+    /* @ and $ are prepended and appended to each end to avoid bounds checking:
+        "level" -> @ # l # e # v # e # l # $
+        "car" -> @ # c # a # r # $
+     */
+    int temp = 1;
+
+    for (char ch : s){
+        arr[temp++] = '#';
+        arr[temp++] = ch;
     }
-    sChars[t] = '#';
+    arr[temp] = '#';
 
-    int maxLen = 0;
-    int start = 0;
-    int maxRight = 0;
-    int center = 0;
-    int* p = new int[strLen]; // i's radius, which doesn't include i
+    int maxLength = 0;
+    int S = 0;
+    int R = 0;
+    int C = 0;
+    int* Plen = new int[sLen]; // i's radius, which doesn't include i
 
-    for(int i = 1; i < strLen - 1; i++){
-        if (i < maxRight){
-            p[i] = min(maxRight - i, p[2 * center - i]);
+    for(int i = 1; i < sLen - 1; i++){
+        if (i < R){
+            Plen[i] = min(R-i, Plen[2 *C-i]);
         }
 
         // Expanding along the center
-        while (sChars[i + p[i] + 1] == sChars[i - p[i] - 1]){
-            p[i]++;
+        while (arr[i+Plen[i]+1] == arr[i-Plen[i]-1]){
+            Plen[i]++;
         }
 
         // Updating center and its bound
-        if (i + p[i] > maxRight){
-            center = i;
-            maxRight = i + p[i];
+        if (i+Plen[i]>R){
+            C = i;
+            R = i+Plen[i];
         }
 
         // Updating ans
-        if (p[i] > maxLen){
-            start = (i - p[i] - 1) / 2;
-            maxLen = p[i];
+        if (Plen[i]>maxLength){
+            S = (i-Plen[i]-1)/2;
+            maxLength = Plen[i];
         }
     }
+    return s.substr(S, S+maxLength-1);
+}
 
+int main(){
+
+   string str = "upthelevel";
+   
     // Printing the longest palindromic substring
-    cout << "The Longest Palindromic Substring is: ";
-    for (int i = start; i <= start+maxLength-1; i++)
-        cout << str[i];
+    cout << "The Longest Palindromic Substring is: " << longestPalindromicSubstring(str);
+    
+    return 0;
 }
 ```
 ### Input: 
-daabddfddbegtd
+upthelevel
+
 ### Output: 
-The Longest Palindromic Substring is: bddfddb
+The Longest Palindromic Substring is: level
+
 ### Time Complexity Analysis of Manacher's Algorithm
 O(N)
 
-At the first glance, it may seem that the algorithm has a O(N²) time complexity due to nested loops, but that's not the case, a more careful analysis shows that the algorithm is linear and amortized.
+At first one might think that the algorithm has $O(N ^ 2)$ time complexity beacuase there is a for loop inside which a while loop is nested. But on seeing clearly we can observe that as we move ahead doing the comparisons the R always increases by one, it never decreases.  
 
-Each successful comparison results in maxRight moving one step forward, and it never reduces, therefore, the inner while loop gets executed at most n times. Hence, the time complexity of Manacher's algorithm will be O(N).
+Other parts of Manacher's Algorithm run in O(N) time. So, overall complexity is O(N).
 
 ### Space Complexity
 O(N)
 
-We need O(n) space to create and form p (palindrome width).
-# Author
-
-- [@wizeewig](https://www.github.com/wizeewig)
-
+O(N) because we just need an extra array Plen to store the length of longest Palindromic substring found.
