@@ -9,7 +9,6 @@ keywords:
   - sorting
   - algorithm
   - merge sort
-  - divide and conquer
 ---
 
 <TutorialAuthors names="@Sreetama2001"/>
