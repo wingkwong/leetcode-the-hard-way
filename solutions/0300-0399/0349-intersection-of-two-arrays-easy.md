@@ -32,8 +32,10 @@ Output: [9,4]
 * `0 <= nums1[i], nums2[i] <= 1000` 
 
 ## Approach 1: HashMap
-We are going to add elements of num1 to hashmap now we are going to search in num2 there exist a common element between num1 and num2 using hashmap and add to list
-
+1) Insert all elements from first array into hash table (set).
+2) for each element i in second array
+	i) if it is present in our hash table insert into result list & remove that element from our hash table so we again not insert into result.
+3) return result. 
 <Tabs>
 <TabItem value="java" label="Java">
 <SolutionAuthor name="@ganajayant"/>
