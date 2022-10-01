@@ -12,17 +12,17 @@ keywords:
   - divide and conquer
 ---
 
-<TutorialAuthors names="@TBC"/>
+<TutorialAuthors names="@Sreetama2001"/>
 
 ## Overview
 
-Merge Sort works by continuously cutting down a list into multiple sublists until each has only one item, then merges those sublists into a sorted list. Here I will illustrate `merge sort` along with explaining problems of `Leetcode` in following Languages.
+Merge Sort works by recursively breaking down an array into multiple subarrays  and then after comparing each of the sub arrays it arranges them into ascending or desending merges them into a single sorted array . Here I will illustrate `merge sort` along with explaining problems of `Leetcode` in following Languages.
 
   - Python 
   - C++
   - Java
   
-  Before that let us briefly understand few concepts on merge sort so that we can solve similar problems on `Leetcode` easily .
+Let me brief few concepts on merge sort so that we can solve problems on `Leetcode` easily .
   
 ---
 ### Suppose we have an array of integers , 
@@ -36,7 +36,7 @@ Then we can clearly see that merge sort is performed like this way.
 
 ## Algorithm 
 
-### Divide 
+### Divide ( Dividing is our first step)
 
   - Calculate the mid point by checking if left index is less than the right index , if yes divide the array . 
   - Now continue dividing the array until `left index < right index` becomes false , that is until division is not possible.
@@ -47,47 +47,68 @@ Then we can clearly see that merge sort is performed like this way.
 
   - After dividing the array into smallest units, start merging the elements again based on comparison of the elements.
   
-  -  So we need to compare and merge starting from the last splits. So **Recursion** needs to done here.
+  -  So we need to compare and merge starting from the last splits or last smallest units. So **Recursion** needs to done here.
 
 ### Merge 
 
-  - Compare the element for each list and then combine them into another list in a sorted manner.
-  - Remember each half is already sorted so we need to just **combine/merge** then to make a bigger sorted array
+  - Compare the element for each subarray /list  and then combine them into another bigger list/array in a sorted manner (Here we need to have an idea of 2 pointer $i.e$ how to merge and increment ).
+
+  - Remember each half is already sorted so we need to just sort between 2 halves to **combine/merge** then to make a bigger sorted array
   
   
   ![image](https://miro.medium.com/max/1400/1*_QpN-m-FTRabFLRvtcc04A.gif)
   
   
-  ### Algorithm 
-  
-  For any merge sort problem in Leetcode or any where else you will have the following approach
-  
-  ```
-  MergeSort(arr[], l,  r)
-If r > l
+[*Leetcode Problem 912 Sort an Array*](https://leetcode.com/problems/sort-an-array/)
+
+### Problem Statement 
+
+    
+    Given an array of integers nums, sort the array in ascending order and return it.
+
+    You must solve the problem without using any built-in functions in O(nlog(n)) time complexity and with the smallest space complexity possible.
+
+### Test Cases
+    
+*Test case 1*
+     
+```
+    Input: nums = [5,2,3,1]
+    Output: [1,2,3,5]
+    Explanation: After sorting the array, the positions of some numbers are not changed (for example, 2 and 3), while the positions of other numbers are changed 
+    (for example, 1 and 5).    
+```
+
+### Algorithm 
+    
+```
+MergeSort(array[], left,  right)
+If right > left
 
 Find the middle point to divide the array into two halves: 
-middle m = l + (r – l)/2
-Call mergeSort for first half:   
-Call mergeSort(arr, l, m)
-Call mergeSort for second half:
-Call mergeSort(arr, m + 1, r)
+middle = left + (right – left)/2
+Call mergeSort again for first half for further dividing:   
+Call mergeSort(array, left, middle)
+Call mergeSort again  for second half for further dividing:
+Call mergeSort(array, middle+ 1, right)
 Merge the two halves sorted in steps 2 and 3:
-Call merge(arr, l, m, r)
+Call merge(arrary, left, middle, right)
 
 ```
-    
+  
 ### C++ Implementation 
 
-#### 1. **STL** (Most Commonly Practiced)
+#### 1. **STL** (Most Commonly Practiced) 
 
-  - Standard Sort  (Accepted in Leetcode)
+  - Standard Sort  (Accepted in Leetcode) 
   
-    ```
+  *Avoid here in this problem*
+  
+```
     void stlSort(vector<int>& nums) {
-	  sort(nums.begin(), nums.end());
+        sort(nums.begin(), nums.end());
     }
-    ```
+```
 
   - Stable Sort  (Accepted in Leetcode)
   
@@ -97,20 +118,24 @@ Call merge(arr, l, m, r)
      }
     ```
 
-#### 2.  **Merge Sort** (Template) (Recursive Approach)  
+#### 2.  **Merge Sort**  (Recursive Approach)  
 
-( Accepted solution in Leetcode even when constraints are large
+Accepted solution in Leetcode even when constraints are large
 
-Constraints:
+For example
 
-1 <= nums.length <= 5 * 10^4
--5 * 104 <= nums[i] <= 5 * 10^4 
+Take below Constraints as given int the problem:
 
-)
+$$1 <= nums.length <= 5 * 10^4
+-5 * 10^4 <= nums[i] <= 5 * 10^4$$ 
+
+Here `insertion sort` , `quick sort` , `selection sort`  and all other sorts in $O(n^2)$ will give **TLE** i.e Time Limit Exceeded 
+
+<!-- ![image]() -->
   
   ```
     	void merge(vector<int>& nums, int l, int m, int r){
-        vector<int> tmp(r - l + 1); // temporary array
+        vector<int> tmp(r - l + 1); // create a temporary array
         int i = l; // index for left subarray
         int j = m + 1; // index for right subarray
         int k = 0; // index for temporary array
@@ -126,7 +151,7 @@ Constraints:
         for(i = 0; i < k; i++) nums[l + i] = tmp[i];
     }
 	
-	// mergeSort(nums, 0, nums.size() - 1);
+	
     void mergeSort(vector<int>& nums, int l, int r){
         if(l >= r) return;
         int m = l + (r - l) / 2; //middle index, same as (l+r)/2
@@ -138,48 +163,51 @@ Constraints:
 
 Call `mergeSort` to use this template to sort by divide and conquer as explained till now. 
 
+`mergeSort(nums, 0, nums.size() - 1);`
+
 
 ### Python Implementation
 
-#### 1. **Most commonly practiced** 
+#### 1. **Most commonly practiced** --Predefined function
 
+        *Avoid here in this problem*
 ```
     def sortArray(self, nums):
         return sorted(nums)
 ```
 
 
-#### 2. Merge Sort (Template)
+#### 2. Merge Sort 
 
 
 ```
-        def mergeSort(nums): 
+        def merge_Sort(nums): 
         if len(nums) > 1: 
-            mid = len(nums)//2
-            L = nums[:mid] // slicing 
-            R = nums[mid:]  
+            mid = len(nums)//2   # calculate the middle to divide by mid
+            leftArray = nums[:mid]    #slicing 
+            rightArray = nums[mid:]  
 
-            mergeSort(L)
-            mergeSort(R)
+            merge_Sort(leftArray)
+            merge_Sort(rightArray)
 
             i = j = k = 0
 
-            while i < len(L) and j < len(R): 
-                if L[i] < R[j]: 
-                    nums[k] = L[i] 
+            while i < len(leftArray) and j < len(rightArray): 
+                if leftArray[i] < rightArray[j]: 
+                    nums[k] = leftArray[i] 
                     i+=1 //incrementing the smaller element side pointer
                 else: 
-                    nums[k] = R[j] 
+                    nums[k] = rightArray[j] 
                     j+=1
                 k+=1
  
-            while i < len(L): 
-                nums[k] = L[i] 
+            while i < len(leftArray): 
+                nums[k] = leftArray[i] 
                 i+=1
                 k+=1
 
-            while j < len(R): 
-                nums[k] = R[j] 
+            while j < len(rightArray): 
+                nums[k] = rightArray[j] 
                 j+=1
                 k+=1
 
@@ -188,7 +216,7 @@ Call `mergeSort` to use this template to sort by divide and conquer as explained
 
 ### Java Implementation
 
-#### 1. Merge Sort (Template)
+#### 1. Merge Sort 
 
 ```
     private void mergeSort(int[] nums, int l, int r) {   // nums -> ArrayList , l -> starting index , r-> end of the ArrayList
@@ -211,9 +239,9 @@ Call `mergeSort` to use this template to sort by divide and conquer as explained
         }
 ```
 
-Call the function `mergeSort` in public to get the Template executed `mergeSort(nums , 0 ,nums.length -1)` 
+Call the function `mergeSort` in public to get the Template executed  `mergeSort(nums , 0 ,nums.length -1)` 
 
-In all other examples we have seen only top down approach . But merge sort can be implemented in a bottom approach too 
+In all other examples we have seen only top down approach . But merge sort can be implemented in a bottom down approach too ,That will a    **iterative technique**  for sure .
 
 
 
@@ -221,66 +249,257 @@ In all other examples we have seen only top down approach . But merge sort can b
 
  ![image](https://www.simplilearn.com/ice9/free_resources_article_thumb/mergesort/merge_sort-bottom-up-img1.png)
 
-The iterative technique is used in the Bottom-Up merge sort approach. It starts with a "single-element" array and then merges two nearby items while also sorting them. The combined-sorted arrays are merged and sorted again until only one single unit of the sorted array remains.
+
+### Algorithm 
+
+1. So it  starts with an  **element** in the array 
+
+    It iterative approach it is already considering the fact that one item array is always sorted
+ 
+2. Compares two nearby element to merge a sorted sub array 
+
+    Similarly we merge other sorted subarrays like we have done in top down recursive approach **(two-pointer approach)** 
+
+4. Contines until we a sorted array 
 
 
-```
-Time_Complexity : Best & Worst & Average => O(nLog(n))
 
-Space_Complexity :  O(n) 
 
-Stablitiy        :  Stable
 
-Is_In_Place      :  Not-In-Place
+**Time_Complexity** : Best & Worst & Average is   $O(n \log_{2} n)$
 
-When_to_use      :  1. When we don't have random access(linked list) , like as we have an array.
-                    2. When array is not to large
+**Space_Complexity** :  $O(n)$ 
 
-```
+**Stablitiy**       :  Stable
+
+**Is In Place**      :  Not-In-Place
+
+**When to use**     :  1. When we don't have random access(linked list) , like as we have an array.
+                       2. When array is not to large
+
   
 ---
-Merging of n elements takes n time and since each time the array is cut into half it takes log(n) time to reach the top so **total time complexity is** `O(nLog(n))` .
+Merging of n elements takes n time and since each time the array is cut into half it takes   $\log_{2} n$   time to reach the top so **total time complexity is**    $O(n\log_{2} n)$  .
 
 ![image](https://cdn.kastatic.org/ka-perseus-images/5fcbebf66560d8fc490de2a0d8a0e5b1d65c5c54.png)
 
 
 
-**Tip : Even though merge sort has the least time complexity in worst case , bubble sort performs better when the array is sorted** . The figure below beautifully illustrates the various time complexities and you can find mergesort almost overlapped by quicksort for a certain interval. 
+## **Mergesort is also useful for sorting linked lists**
+
+[*Leetcode Problem 148_Sort List*](https://leetcode.com/problems/sort-list/)
+
+### Problem Statement 
+
+`Given the head of a linked list, return the list after sorting it in ascending order.`
+
+### Test Cases
+ 
+ *Test Case 1*
+
+```
+Input: head = [4,2,1,3]
+Output: [1,2,3,4]
+```
+![image](https://assets.leetcode.com/uploads/2020/09/14/sort_list_1.jpg)
+ 
+ *Test Case 2*
+
+```
+Input: head = [-1,5,3,4,0]
+Output: [-1,0,3,4,5]
+```
+
+Here we can follow both top down or bottom up merge sort . I have already discussed the algorithms in much needed detail for array .
+
+**Intuition for the problem**
+
+```
+    3->8->12->null
+    1->10->23->null
+    after merging:
+    1->3->8->10->12->23->null.
+
+    Of course the two lists must are ordered respectively.So we can only start to merge two lists that only 
+    have one element,then we get a ordered list that have two element,do this again (that is "recursion").
+
+    Bottom Up Approach 
+
+    -1-> 5->  3-> 4->   0-> null
+    \  /       \ /         /
+   -1->5->null 0->3->4->null 
+      \        /         
+-1-> 0->3-> 4-> 5->null   (sorted) 
+
+    Top Down Approach
+
+    -1-> 5->  3-> 4-> 0-> null
+         /        \ 
+-1-> 5->null      3-> 4->0->null
+    /  \          /      \  
+-1->null 5->null 3->null  4->0->null
+     \   /        \        /     \
+    -1-> 5->null  3->null 4->null 0->null
+      \             \        \   /
+                 3->null    0-> 4->null
+        \              \      /  
+                    0->3->4->null
+          \          /
+        -1->0->3->4->5->null    (sorted)
+
+```
 
 
-![image](https://titrias.com/files/2015/08/Untitled.png)
+**Leetcode Implementation of Linked List**
+```
+    /*
+    * Definition for singly-linked list.
+    * struct ListNode {
+    *     int val;
+    *     ListNode *next;
+    *     ListNode() : val(0), next(nullptr) {}
+    *     ListNode(int x) : val(x), next(nullptr) {}
+    *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+    * };
+    */
+ ```
+
+
+### **Approach for top down Merge sort of Linked list**
+
+
+*1. Keep recursively dividing the list until there is only one node in the linked list.* 
+
+*2. Sort each sublist and merge each sorted sublist in a new array.*
+
+
+### **Steps to apply merge sort to a Linked list** 
+    
+**Note. Implementation is basically based on Merge Sort on an array as discussed above.** 
+
+1. Divide the linked list into two equal parts until when only one element is left
+2. To Divide, we need to  find mid in linked ling using [tortoise and hare](https://dev.to/alisabaj/floyd-s-tortoise-and-hare-algorithm-finding-a-cycle-in-a-linked-list-39af) method 
+3. Finally, merge the left and the right nodes of linked list
+
+
+
+```
+class Solution {
+public:
+    void mergeSort(ListNode **head){
+        ListNode *curr = *head ; // create a current pointer
+        // left half 
+        ListNode * left;
+        // right half
+        ListNode * right;
+        // if linked list is null or size is one return back the same
+        
+        if(curr ==NULL || curr ->next==NULL) return;
+        
+        //call to find the middle node between left and right
+        findMiddle(curr, &left,&right);
+        
+        // call merge_sort again to divide left half
+        mergeSort(&left);
+        
+        // call merge_sort again to divide right half
+        mergeSort(&right);
+        
+        //call to merge left and right by sorting them
+        *head=merge(left,right);
+        
+    }
+    void findMiddle(ListNode *curr,ListNode **left, ListNode **right){
+        ListNode* slow = curr; // make a slow pointer
+        ListNode* fast = curr -> next; // make a fast pointer
+        
+    // then we move our fast upto it not become null
+        while(fast != NULL)
+        {
+            fast = fast -> next;
+            if(fast != NULL)
+            {
+                fast = fast -> next;
+                slow = slow -> next;
+            }
+        }
+        *left = curr;
+        *right = slow -> next; // right to slow next
+        slow -> next = NULL; // and slow next to null
+        
+    }
+    ListNode* merge(ListNode* left, ListNode* right){
+      ListNode* res = NULL; // set answer to null
+        
+        if(left == NULL) // Check if left is null,nothing to merge
+        {
+            return right; // return right
+        }
+        
+        if(right == NULL) 
+        {
+            return left; // return left 
+        }
+        
+        // if value of the left <= value of right,then res = left
+        if(left -> val <= right -> val) 
+        {
+            res = left;
+            res -> next = merge(left -> next, right); 
+            // and again call merge for res's next
+        }
+        else // else res = right
+        {
+            res = right;
+            res -> next = merge(left, right -> next); 
+            // and again call merge for res's next
+        }
+        
+        return res; // return the res  
+    }
+    ListNode* sortList(ListNode* head) {
+        mergeSort(&head);
+        return head;
+    }
+};
+```
+
+
+
+
+
 
 ## Suggested Problems
 
 export const suggestedProblems = [
     {
-        "problemName": "912-Sort an Array"
-        "difficulty": "Medium"
-        "leetCodeLink": "https://leetcode.com/problems/sort-an-array/"
-        "solutionLink": "https://leetcode.com/submissions/detail/812272823/"
-    },
-    {
-        "problemName": "56-Merge Intervals"
-        "difficulty": "Medium"
-        "leetCodeLink": "https://leetcode.com/problems/merge-intervals/"
+        "problemName": "912-Sort an Array",
+        "difficulty": "Medium",
+        "leetCodeLink": "https://leetcode.com/problems/sort-an-array/",
         "solutionLink": ""
     },
     {
-        "problemName" : "148-Sort List"
-        "difficulty" : "Medium"
-        "leetCodeLink" : "https://leetcode.com/problems/sort-list/"
+        "problemName": "56-Merge Intervals",
+        "difficulty": "Medium",
+        "leetCodeLink": "https://leetcode.com/problems/merge-intervals/",
+        "solutionLink": ""
+    },
+    {
+        "problemName" : "148-Sort List",
+        "difficulty" : "Medium",
+        "leetCodeLink" : "https://leetcode.com/problems/sort-list/",
         solutionLink" : ""
     },
     {
-        "problemName" : "327-Count of Range Sum"
-        "difficulty" : "Hard"
-        "leetCodeLink" : "https://leetcode.com/problems/count-of-range-sum/"
+        "problemName" : "327-Count of Range Sum",
+        "difficulty" : "Hard",
+        "leetCodeLink" : "https://leetcode.com/problems/count-of-range-sum/",
         solutionLink" : ""
     },
     {
-        "problemName" : "23-Merge k Sorted Lists"
-        "difficulty" : "Hard"
-        "leetCodeLink" : "https://leetcode.com/problems/merge-k-sorted-lists/"
+        "problemName" : "23-Merge k Sorted Lists",
+        "difficulty" : "Hard",
+        "leetCodeLink" : "https://leetcode.com/problems/merge-k-sorted-lists/",
         "solutionLink" : ""
     }
 ] 
