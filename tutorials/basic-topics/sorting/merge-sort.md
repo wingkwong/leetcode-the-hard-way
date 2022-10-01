@@ -525,12 +525,12 @@ export const suggestedProblems = [
     },
     {
         "problemName" : "327-Count of Range Sum",
-        "difficulty" : "Hard",
-        "leetCodeLink" : "https://leetcode.com/problems/count-of-range-sum/",
+        "difficulty"  : "Hard",
+        "leetCodeLink": "https://leetcode.com/problems/count-of-range-sum/",
         solutionLink" : ""
     },
     {
-        "problemName" : "23-Merge k Sorted Lists",
+        "problemName": "23-Merge k Sorted Lists",
         "difficulty" : "Hard",
         "leetCodeLink" : "https://leetcode.com/problems/merge-k-sorted-lists/",
         "solutionLink" : ""
