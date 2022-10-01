@@ -86,7 +86,7 @@ If all $3$ checks is valid, then we can place the number ($1$) in the current ce
 
 So for each cell, we trying with $n$ possibilities, The process continues till for all the rows and columns. If some cases we might end up being not able to place any number and we reached last number that is $9$. **So it means we have placed some wrong order in the past, it requires us to validate the previous placed numbers on the board to solve the current cell problem.** 
 
-The types of situation problems can be solved with backtracking technique. If any of the current operation or action is going to cause future actions then we need to backtrack the previous cases, like placing next number and next number so on to solve the current problem. 
+This types of situation problems can be solved with backtracking technique. If any of the current operation or action is going to cause future actions then we need to backtrack the previous cases, like placing next number and next number so on to solve the current problem. 
 
 At the end, we would have solved all the cells in the board. 
 
