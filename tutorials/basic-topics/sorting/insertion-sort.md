@@ -31,7 +31,7 @@ If you don't know any of the above mentioned languages. Don't worry you can easi
 
 ## Algorithm
 
-The following are the steps that we are going to follow:-
+The following are the steps that we are going to follow:
 
 1. Pick an element from the array, and store it in a variable `nums`.
 2. Now, start comparing the `nums` with all the elements to the left of it.
@@ -39,144 +39,157 @@ The following are the steps that we are going to follow:-
 4. Place the `nums` in current position.
 5. Repeat all the above steps until the `array` is sorted.
 
-Let's achieve the sorted `array` by applying above steps in an example.
+### Problem Link
 
-### Example
+https://leetcode.com/problems/sort-the-people/
 
-Let's apply the insertion sort in an example the You'll get more understanding of the insertion sort algorithm.
+### Problem Statement
 
-We are given with an `array` of height of 5 students (in cm) from a class and we have to sort it.
+Given the array of integers nums, you will choose two different indices i and j of that array. Return the maximum value of `(nums[i]-1)*(nums[j]-1)`.
 
-```python
-height_of_students = [175,180,171,160,168]
+**Example 1:**
+
+```
+Input: nums = [3,4,5,2]
+Output: 12 
+Explanation: If you choose the indices i=1 and j=2 (indexed from 0), you will get the maximum value, that is, (nums[1]-1)*(nums[2]-1) = (4-1)*(5-1) = 3*4 = 12. 
 ```
 
-1. Let's assume the first element is sorted.Take the second Element store it in `nums`. Now, `175` is smaller than `nums`(`185`) so we'll place `nums` in current position and pick next element. The array would look like this:
-```python
-height_of_students = [175,180,171,160,168]
+**Example 2:**
+
 ```
-2. Now the pick next element assign it to `nums` which in this case is `171`. Now `180` is greater than `nums` so it should be at the right of nums, move `180` to right. Again `175` is greater than `nums` so move `175` to the right. Currently there is no element remain to the left so we will place `nums` in the beginning. The array would look like this:
-```python
-height_of_students = [171,175,180,160,168]
-```
-3. We'll assign the next element to `nums` which is `160` . Till now you have already guessed what is the next step. If your answer is same as step number 3 mentioned above, then you are absolutely correct which is compare the elements to the left of `nums` with it. Now, `180` is greater than `nums`, so move `180` to right. Again `175` is greater than `nums` also move it to the right. Again `171` is smaller than `nums` also move it to right. Now there is no element remains to compare with `nums`, so put `nums` in the beginning of the array. The array would look like this:
-```python
-height_of_students = [160,171,175,180,168]
-```
-4. Now assign `168` to `nums` . And compare with all the elements to the left of it and do the operations according to it. Now, I'm sure you already know what the array would look like:
-```python
-height_of_students = [160,168,171,175,180]
+Input: nums = [1,5,4,5]
+Output: 16
+Explanation: Choosing the indices i=1 and j=3 (indexed from 0), you will get the maximum value of (5-1)*(5-1) = 16.
 ```
 
-Congrats, You have finally achieved the sorted array with the help of insertion sort algorithm.
+**Example 3:**
+
+```
+Input: nums = [3,7]
+Output: 12
+```
+
+**Constraints:**
+
+* `2 <= nums.length <= 500`
+* `1 <= nums[i] <= 10^3`
+
+## Approach 1: Sorting using Insertion Sort
+
+The problem wants us to find the maximum value of `(nums[i] - 1) * (nums[j] - 1)`, where `i` and `j` are two different indices of the given array.
+
+By looking at the expression, we can observe that its just a product of two numbers of the given array.
+
+We have to maximize the product. Now, in order to maximize the product of two numbers we have to choose the two largest number possible. So, in order to find the maximum value of `(nums[i] - 1) * (nums[j] - 1)` we just have to take the largest two number in the given array.
+
+Now, we know how can we maximize the value of given expression. But we have to also figure out the how can we get the two largest number present in the given array. Here comes the sorting method, if we sort our array then, the largest number would be present at the last index and second largest number would be present at the second last index of the sorted array. For sorting, we are going to use Insertion Sort Algorithm.
+
+We have figured out the solution of the problem:
+* Sort the given array using insertion sort (Refer to the algorithm section).
+* Take out the last two elements because those are the largest two elements in our array.
+* Put the values in the expression and return it.
 
 ## Implementation
 
-Following are the implementation of insertion sort:-
+Following are the implementation of the above mentioned problem:
 
 ### C++ Implementation
 
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@Shivashish-rwt"/>
+
 ```cpp
-#include<iostream>
-using namespace std;
+class Solution {
+public:
+    void insertionSort(vector<int> &arr, int size_of_arary) {
+        for (int i = 1; i < size_of_arary; i++) {
+            int nums = arr[i];
+            int j = i - 1;
 
-void insertionSort(int height_of_students[], int size_of_arary) {
-    for (int i = 1; i < size_of_arary; i++) {
-        int nums = height_of_students[i];
-        int j = i - 1;
-
-        while (j >= 0 and height_of_students[j] > nums) {
-            height_of_students[j + 1] = height_of_students[j];
-            j--;
+            while (j >= 0 and arr[j] > nums) {
+                arr[j + 1] = arr[j];
+                j--;
+            }
+            arr[j + 1] = nums;
         }
-        height_of_students[j + 1] = nums;
     }
-}
 
-int main()
-{
-    int height_of_students[] = {175, 180, 171, 160, 168};
-    int size_of_arary = sizeof(height_of_students) / sizeof(height_of_students[0]);
-
-    insertionSort(height_of_students, size_of_arary);
-
-    for (auto it : height_of_students) {
-        cout << it << " ";
+    int maxProduct(vector<int>& nums) {
+        insertionSort(nums,nums.size());
+        int n = nums.size()-1;
+        return (nums[n] - 1)*(nums[n-1] - 1);
     }
-}
+};
 ```
+
+</TabItem>
+</Tabs>
 
 ### Java Implementation
 
+<Tabs>
+<TabItem value="java" label="Java">
+<SolutionAuthor name="Shivashish-rwt"/>
+
 ```java
-import java.util.Arrays;
-class InsertionSort {
-	void insertion_sort(int height_of_students[],int size_of_arary) {
+class Solution {
+    void insertion_sort(int arr[],int size_of_arary) {
 		for (int i = 1; i < size_of_arary; ++i) {
-			int nums = height_of_students[i];
+			int nums = arr[i];
 			int j = i - 1;
 
-			while (j >= 0 && height_of_students[j] > nums) {
-				height_of_students[j + 1] = height_of_students[j];
+			while (j >= 0 && arr[j] > nums) {
+				arr[j + 1] = arr[j];
 				j = j - 1;
 			}
-			height_of_students[j + 1] = nums;
+			arr[j + 1] = nums;
 		}
 	}
-
-	public static void main(String args[]) {
-		int height_of_students[] = {175, 180, 171, 160, 168};
-        int size_of_arary = height_of_students.length;
-
-		InsertionSort obj = new InsertionSort();
-		obj.insertion_sort(height_of_students,size_of_arary);
-
-		for(int element : height_of_students){
-			System.out.print(element + " ");
-		}
-	}
+    public int maxProduct(int[] nums) {
+        insertion_sort(nums,nums.length);
+        int n = nums.length - 1;
+        return (nums[n] - 1)*(nums[n-1] - 1);      
+    }
 }
 ```
 
+</TabItem>
+</Tabs>
+
 ### Python Implementation
 
+<Tabs>
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@Shivashish-rwt"/>
+
 ```python
-def insertionSort(height_of_students,size_of_array):
-
-    for i in range(1, size_of_array):
-        nums = height_of_students[i]
-        j = i - 1
-              
-        while j >= 0 and height_of_students[j] > nums:
-            height_of_students[j + 1] = height_of_students[j]
-            j = j - 1
+class Solution:
+    def insertionSort(arr,size_of_array):
         
-        height_of_students[j + 1] = nums
+        for i in range(1, size_of_array):
+            nums = arr[i]
+            j = i - 1
+              
+            while j >= 0 and arr[j] > nums:
+                arr[j + 1] = arr[j]
+                j = j - 1
+        
+            arr[j + 1] = nums
+        
 
-
-height_of_students = [175, 180, 171, 160, 168]
-size_of_array = len(height_of_students)
-insertionSort(height_of_students,size_of_array)
-print(height_of_students)
+    def maxProduct(self, nums: List[int]) -> int:
+        Solution.insertionSort(nums,len(nums))
+        return (nums[-1] - 1) * (nums[-2] - 1)
 ```
+
+</TabItem>
+</Tabs>
 
 ## Time Complexity
 
-### Worst Case Complexity
-
-The worst case would be when we have to compare `nums` with every element in the left of it that would we `(n-1)` comparisons for `n` elements. Means the array would be in descending order.
-
-So, the complexity is = $\mathcal{O}(n^2)$
-
-### Best Case Complexity
-
-The best case would be when the comparisons with `nums` be zero. Means the array already is in sorted order. So, Only outer loop over array would run.
-
-So, the complexity is = $\mathcal{O}(n)$
-
-### Average Case Complexity
-
-The average case would be when the array is neither in ascending order nor in descending order.
+Apart from sorting the the given array we are not doing anything in the solution. The expression would take $\mathcal{O}(1)$ to solve and insertion sort would take $\mathcal{O}(n^2)$ to sort the array.
 
 So, the complexity is = $\mathcal{O}(n^2)$
 
@@ -189,25 +202,25 @@ export const suggestedProblems = [
     "problemName": "1365 - How Many Numbers Are Smaller Than the Current Number",
     "difficulty": "Easy",
     "leetCodeLink": "https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/",
-    "solutionLink": "https://leetcode.com/submissions/detail/812551570/"
+    "solutionLink": ""
   },
   {
     "problemName": "2037 - Minimum Number of Moves to Seat Everyone",
     "difficulty": "Easy",
     "leetCodeLink": "https://leetcode.com/problems/minimum-number-of-moves-to-seat-everyone/",
-    "solutionLink": "https://leetcode.com/submissions/detail/812554474/"
+    "solutionLink": ""
   },
   {
     "problemName": "1913 - Maximum Product Difference Between Two Pairs",
     "difficulty": "Easy",
     "leetCodeLink": "https://leetcode.com/problems/maximum-product-difference-between-two-pairs/",
-    "solutionLink": "https://leetcode.com/submissions/detail/812555513/"
+    "solutionLink": ""
   },
   {
-    "problemName": "1464 - Maximum Product of Two Elements in an Array",
+    "problemName": "2089 - Find Target Indices After Sorting Array",
     "difficulty": "Easy",
-    "leetCodeLink": "https://leetcode.com/problems/maximum-product-of-two-elements-in-an-array/",
-    "solutionLink": "https://leetcode.com/submissions/detail/812556563/"
+    "leetCodeLink": "https://leetcode.com/problems/find-target-indices-after-sorting-array/",
+    "solutionLink": ""
   },
 ]
 
