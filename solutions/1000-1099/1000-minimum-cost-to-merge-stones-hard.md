@@ -84,10 +84,19 @@ We know that after $m$ merges the length must be $1$ if we can merge piles. Ther
 We can say that: <br/>
 
 $$
-N - \text(totalMerges) = 1 \\
-N - m * (k - 1) = 1 \\
-N - 1 = m * (k - 1) \\ 
-m = (N - 1) / (k - 1) \\
+N - \text(totalMerges) = 1 
+$$
+
+$$
+N - m * (k - 1) = 1 
+$$
+
+$$
+N - 1 = m * (k - 1) 
+$$
+
+$$
+m = (N - 1) / (k - 1) 
 $$
 
 Now, $m$ must be positive number then only we can merge them.
@@ -239,7 +248,7 @@ public:
         // we have to start from 0th index then we will reach to the last index in the end
         
         // NOTE: Here as u can see in base case if (i >= j) return 0; 
-	    // means our answer at i >= j  is always 0 : so we will start our jth loop from i + 1 index
+	// means our answer at i >= j  is always 0 : so we will start our jth loop from i + 1 index
         
         int piles = k;
         for (int i = n - 1; i >= 0; i--;) {
