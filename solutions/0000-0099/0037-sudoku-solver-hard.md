@@ -72,8 +72,8 @@ Let's walk through with the given example above, 1st row - `"5","3",".",".","7",
 
 So what are the possibilities 3rd column can have? Well, It can be from `1-9`, So we use 3 types of checks to place a number on the board. 
 
-1. Check the current row, columns from `1-9`.
-2. Check the current column, rows from `1-9`.
+1. Check the current row, columns from `1 - 9`.
+2. Check the current column, rows from `1 - 9`.
 3. Check the current cell block, which is `3 x 3` grid.
 
 How to define `3 x 3` block start and end range for the current cell we are operating on? Let's say our current cell is $(0, 2)$, we know by seeing the board, it's starts from $(0, 0)$ and end in the range of $(2, 2)$. We can use a simple idea to get the stand and end position, just use `row - row % sqrt(board.length)`, Either we can use $sqrt$ approach or just use 3, since we know here Sudoku is `9 x 9` matrix and any block is size of 3. 
