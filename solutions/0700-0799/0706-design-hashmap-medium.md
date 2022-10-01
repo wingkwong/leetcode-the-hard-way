@@ -99,13 +99,13 @@ The implementation of HashMap increase / decrease in size happens in the below c
 
 Initialize ListNode[] array with $16$, it's a default configuration used in languages. We can take other numbers as well, but it's a standard practise to initialize array capacity with $16$. 
 
-The main reason for that, if the capacity is too low (less than $16$), we have increase the size (grow our hashmap) immediately after some elements added, this is not the best implementation. 
+The main reason for that, if the capacity is too low (less than $16$), we have to increase the size (grow our hashmap) immediately after few elements added to HashMap, this is not the best implementation. 
 
-Here another important considerations is when to grow the table or double it's capacity? Since we cannot do that for every add element, so we it's better to keep some ranges like if the table reaches $50$% of capacity, or $75$% capacity or $90$%. As per language implementation is $75$%, so we follow the same here. 
+Here another important considerations is when to grow the table or double it's capacity? Since we cannot do that for every insert new element, so we it's better to keep some ranges like if the table reaches $50$% of capacity, or $75$% capacity or $90$%. As per language implementation is $75$%, so we follow the same here. 
 
-The same goes for reduce or decrease HashMap when we remove elements. When the element size is reach $N/4$ capacity (~$25$%), we will reduce the capacity to half of the size. 
+The same goes for reduce or decrease HashMap when we remove elements. When the element size is reach $N/4$ capacity i.e, $25$%, we will reduce the capacity to half of the size. 
 
-So HashMap Initial Capacity is set to $16$ and `Load Factor` is set to $75$%, As soon as the size reaches $75$%, Hashmap does table doubling and shrink automatically to $50$% when it reaches elements of size ~$25$%.
+So HashMap Initial Capacity is set to $16$ and `Load Factor` is set to $75$%, As soon as the size reaches $75$%, Hashmap does table doubling and shrink automatically to $50$% when it reaches elements of size $25$%.
 
 Let's consider, $m$ is the actual size of the elements in the ListNode array, and $n$ is the threshold range for the bucket capacity, when $m > n$, HashMap allocating the memory for $2*N$ elements and **rehasing the entire array for the newly allocated slots**.
 
