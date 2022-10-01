@@ -251,13 +251,6 @@ private void merge(int[] nums, int l, int r) {
 4. Contines until we a sorted array 
 ```
 <Tabs>
-<TabItem value="cpp" label="C++">
-
-```cpp
-// YOUR CODE GOES HERE
-```
-</TabItem>
-
 <TabItem value="java" label="Java">
 
 ```java
@@ -509,7 +502,7 @@ export const suggestedProblems = [
         "problemName": "912-Sort an Array",
         "difficulty": "Medium",
         "leetCodeLink": "https://leetcode.com/problems/sort-an-array/",
-        "solutionLink": ""
+        "solutionLink": "../solutions/0900-0999/0921-sort-an-array-medium.md"
     },
     {
         "problemName": "56-Merge Intervals",
@@ -521,19 +514,19 @@ export const suggestedProblems = [
         "problemName" : "148-Sort List",
         "difficulty" : "Medium",
         "leetCodeLink" : "https://leetcode.com/problems/sort-list/",
-        solutionLink" : ""
+        solutionLink" : "../solutions/0100-0199/0148-sort-list-medium.md"
     },
     {
         "problemName" : "327-Count of Range Sum",
-        "difficulty"  : "Hard",
-        "leetCodeLink": "https://leetcode.com/problems/count-of-range-sum/",
-        solutionLink" : ""
+        "difficulty" : "Hard",
+        "leetCodeLink" : "https://leetcode.com/problems/count-of-range-sum/",
+        solutionLink" : "../solutions/0300-0399/0327-count-of-range-sum-hard.md"
     },
     {
-        "problemName": "23-Merge k Sorted Lists",
+        "problemName" : "23-Merge k Sorted Lists",
         "difficulty" : "Hard",
         "leetCodeLink" : "https://leetcode.com/problems/merge-k-sorted-lists/",
-        "solutionLink" : ""
+        "solutionLink" : "../solutions/0000-0099/0023-merge-k-sorted-lists-hard.md"
     }
 ]
 
