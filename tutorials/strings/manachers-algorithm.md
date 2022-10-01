@@ -69,7 +69,7 @@ ppasaippuakivikauppiaska
 ### Output: 
 The Longest Palindromic Substring is: saippuakivikauppias
 
-_ `saippuakivikauppias` is the longest known palindromic word (19 letters)_
+> `saippuakivikauppias` is the longest known palindromic word (19 letters)
 
 ### Time complexity 
 $O(N ^ 3)$
@@ -101,7 +101,7 @@ Example: string = aaccccaa -> #a#a#c#c#c#c#a#a# . Here, we can see that the midd
 2. Prepend "@" and append "$" in the string s. This is done to avoid the bounds checking.
 3. Now fill up arr be alternate "#" and characters of the given string s.
 4. We will declare some variables-
-* TO store the maximum length of palindrome declare a variable maxLength
+* To store the maximum length of palindrome declare a variable maxLength
 * Declare S=0, R=0 and C=0 which stores the starting, ending and center position of the palindrome found.
 5. We create an array Plen to store the length of each palindrome found. The length is stored in the array about their centre i.e C.
 6. Create a for loop iterating from i=1 to sLen−1.
