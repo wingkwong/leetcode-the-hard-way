@@ -1,6 +1,6 @@
 ---
 title: 'Dynamic Programming'
-description: 'Dynamic Programming'
+description: 'Dynamic Programming is used to minimize the cost associated with repetitive computations.'
 hide_table_of_contents: true
 draft: true
 keywords:
@@ -26,10 +26,9 @@ Let's take a look at Leetcode problem [70. Climbing Stairs](https://leetcode.com
 >
 
 #### Solution-1 : Recursion 
-We can count number of ways to reach end stairs using recursion, in order to reach nth step we have two options either take $$(n-1)^{th}$$ stair or $$(n-2)^{th}$$ stair.
+We can count number of ways to reach end stairs using recursion, in order to reach nth step we have two options either take $$(n - 1)^{th}$$ stair or $$(n - 2)^{th}$$ stair. i.e.
 
-
-i.e. $$stair(n) = stair(n-1) + stair(n-2)$$ 
+$$stair(n) = stair(n - 1) + stair(n - 2)$$ 
 
 <Tabs>
 <TabItem value="py" label="Python">
@@ -37,9 +36,11 @@ i.e. $$stair(n) = stair(n-1) + stair(n-2)$$
 ```py
 class Solution:
     def climbStairs(self, n):
-        if n == 1: #only one step option is availble
+        #only one step option is availble
+        if n == 1: 
             return 1
-        if n == 2: # two options are possible : to take two 1-stpes or to only take one 2-steps
+        # two options are possible : to take two 1-stpes or to only take one 2-steps
+        if n == 2:
             return 2
         return climb(n - 1) + climb(n - 2)
 ```
@@ -47,28 +48,28 @@ class Solution:
 </TabItem>
 </Tabs>
 
-Time complexity for this approach is $$O(2^n)$$ which is not good for large input size, let's look into this problem at more depth.
+Time complexity for this approach is $$O(2 ^ n)$$ which is not good for large input size, let's look into this problem at more depth.
 
-for reaching  
+For reaching
+
 - $$stair(5)$$ we need to calculate $$stair(4)$$ and $$stair(3)$$
 - $$stair(4)$$ we need to calculate $$stair(3)$$ and $$stair(2)$$
+- ...
+- $$stair(n)$$ we need to calculate $$stair(n - 1)$$ and $$stair(n - 2)$$
 
 As we can see for generating $$stair(5)$$ value of $$stair(3)$$ is generated twice.
 
-
-
 #### Solution-2 : Memorization Technique
-If we can store overlapping sub-problem and use it, we can save our computational resources as well as time.
-We use a hash-table to look-up values of $$climb(n)$$ if we have computed it before then we simple call it, instead of recalculating the value all over again.
 
+If we can store overlapping sub-problem and use it, we can save our computational resources as well as time.
+We use a hash-table to look-up values of $$climb(n)$$ if we have computed it before then we simply call it, instead of recalculating the value all over again.
 
 <Tabs>
 <TabItem value="py" label="Python">
 
 ```py
-
 class Solution :
-def climbStairs(self , n):
+def climbStairs(self, n):
     def climb(n):
         if n == 1 or n == 2:
             return n
@@ -100,7 +101,7 @@ We use a dp array where $$dp[n]$$ will give us the no of ways to reach step $$n$
 
 ```py
 class Solution :
-  def climb(self , n: int) -> int:
+  def climb(self, n: int) -> int:
     if n == 1 or n == 2:
         return n
     dp = [-1] * (n + 1)           # To accomodate for 0-based indexing 
@@ -122,8 +123,8 @@ Let's look at another problem [338. Counting Bits](https://leetcode.com/problems
 >Given an integer n, return an array ans of length n + 1 such that for each i (0 <= i <= n), ans[i] is the number of 1's in the binary representation of i.
 
 #### Solution-1 : Recursion Approach
-Number of 1's of any decimal number is given by recurrence relation 
 
+Number of 1's of any decimal number is given by recurrence relation 
 
 $$f(x)$$ = $$(x/2)$$ + $$(x \& 1)$$
 
@@ -149,9 +150,10 @@ class Solution:
 </TabItem>
 </Tabs>
 
-The Time complexity of this approach is $$O(n  log_2n)$$ since it takes $$O(log_2n)$$ time for calculating total number of set bits in a number.
+The Time complexity of this approach is $$O(nlogn)$$ since it takes $$O(logn)$$ time for calculating total number of set bits in a number.
 
 #### Solution-2 : Using Dynamic Programming
+
 It's clear that our recursion on $$n^{th}$$ element depends on $$n/2^{th}$$, so we could further decrease Time Complexity by using the stored value of $$n/2^{th}$$ element.
 
 <Tabs>
@@ -160,12 +162,10 @@ It's clear that our recursion on $$n^{th}$$ element depends on $$n/2^{th}$$, so 
 ```py
 class Solution:
     def countBits(self, num):
-        setBits = [0] * (num+1)
-
-        for i in range(1 ,num+1):
-            setBits[i] = setBits[i/2] + (i & 1)
-        return setBits
-
+        dp = [0] * (num + 1)
+        for i in range(1 ,num + 1):
+            dp[i] = dp[i / 2] + (i & 1)
+        return dp
 ```
 
 </TabItem>
