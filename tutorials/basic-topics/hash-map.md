@@ -101,6 +101,12 @@ export const suggestedProblems = [
     "leetCodeLink": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
     "solutionLink": "../../solutions/0000-0099/longest-substring-without-repeating-characters-medium"
   },
+  {
+    "problemName": "0706 - Design HashMap",
+    "difficulty": "Medium",
+    "leetCodeLink": "https://leetcode.com/problems/design-hashmap/",
+    "solutionLink": "../../solutions/0700-0799/design-hashmap-medium"
+  },
 ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />
