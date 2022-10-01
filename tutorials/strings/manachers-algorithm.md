@@ -29,24 +29,25 @@ Given a string, find the longest substring which is palindrome.
 * ## Brute force Approach $O(N ^ 3)$ time
 
 ```Cpp
-void longestPalSubstring(string str){
-    // Getting length of the input string
-    int n = str.size();
+void longestPalindromicSubstring(string str){
 
-    // All substrings of length 1 are palindromes
+    // Getting length of the input string
+    int L = str.size();
+
+    // All substrings of length 1 are palindromes, hence the maxLength is assigned to be 1
     int maxLength = 1;
     
     int start = 0;
 
     // Checking all the substrings
-    for (int i = 0; i < n; i++){
-        for (int j = i; j < n; j++){
-            int flag = 1;
+    for (int i = 0; i < L; i++){
+        for (int j = i; j < L; j++){
+            bool flag = true;
 
             // Checking for a palindromic subtring
             for (int k = 0; k < (j - i + 1) / 2; k++)
                 if (str[i + k] != str[j - k])
-                    flag = 0;
+                    flag = false;
 
             // If substring is palindromic
             if (flag && (j - i + 1) > maxLength){
@@ -63,21 +64,24 @@ void longestPalSubstring(string str){
 }
 ```
 ### Input: 
-fabbbccbbbaadz
+ppasaippuakivikauppiaska
 
 ### Output: 
-The Longest Palindromic Substring is: abbbccbbba
+The Longest Palindromic Substring is: saippuakivikauppias
+
+_ `saippuakivikauppias` is the longest known palindromic word (19 letters)_
 
 ### Time complexity 
 $O(N ^ 3)$
 
-In the brute force approach, three nested loops are used to find the longest palindromic substring, so the time complexity will be $O(N ^ 3)$.
+Since, three nested loops are used here so the time complexity of finding longest palindromic substring will be $O(N ^ 3)$.
 
 ### Space complexity
 O(1)
+
 No extra space is needed in this approach, so the space complexity will be O(1).
 
- ## Manacher's Algorithm
+## Manacher's Algorithm
  
 `Manacher's Algorithm` is way faster than the brute force approach to find the longest substring, because it uses the precomputed data. Hence, making the algorithm run in linear time. 
 
@@ -101,7 +105,7 @@ Example: string = aaccccaa -> #a#a#c#c#c#c#a#a# . Here, we can see that the midd
 * Declare S=0, R=0 and C=0 which stores the starting, ending and center position of the palindrome found.
 5. We create an array Plen to store the length of each palindrome found. The length is stored in the array about their centre i.e C.
 6. Create a for loop iterating from i=1 to sLen−1.
-7. Inside the for loop, check if i < R, if yes, then assign minimum of R-i and Plen[2*C-i] to P[i].
+7. Inside the for loop, check if i < R, if yes, then assign minimum of R-i and Plen[2*C-i] to Plen[i].
 8. After the if condition nest a while loop, to count width along the center, condition being, arr[i+Plen[i]+1] is equal to arr[i-Plen[i]-1], if yes, increment Plen[i] by 1. Here we try to expand the palindrome centered at i.
 9. Now if palindrome centered at i expands past right, we will adjust center(C) based on expanded palindrome. That means, check if i+Plen[i] is greater than R, if yes, assign C to be 1, and R to be i+Plen[i].
 10. Check if Plen[i] comes out to be greater than maxLength, then the starting point S is assigned (i-Plen[i]-1)/2, and maxLength is assigned Plen[i].
@@ -186,7 +190,7 @@ The Longest Palindromic Substring is: level
 ### Time Complexity Analysis of Manacher's Algorithm
 O(N)
 
-At first one might think that the algorithm has $O(N ^ 2)$ time complexity beacuase there is a for loop inside which a while loop is nested. But on seeing clearly we can observe that as we move ahead doing the comparisons the R always increases by one, it never decreases.  
+At first one might think that the algorithm has $O(N ^ 2)$ time complexity because there is a for loop inside which a while loop is nested. But on seeing clearly we can observe that as we move ahead doing the comparisons the R always increases by one, it never decreases.  
 
 Other parts of Manacher's Algorithm run in O(N) time. So, overall complexity is O(N).
 
