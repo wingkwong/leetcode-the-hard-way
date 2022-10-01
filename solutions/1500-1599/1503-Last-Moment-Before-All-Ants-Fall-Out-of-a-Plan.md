@@ -82,7 +82,7 @@ public:
 ```
 
 </TabItem>
-<TabItem value="py" label="Python">
+<TabItem value="py" label="Python3">
 <SolutionAuthor name="@WaqarTabish2807"/>
 
 ```py
@@ -93,7 +93,7 @@ class Solution:
 
 </TabItem>
 <TabItem value="go" label="Go">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@WaqarTabish2807"/>
 
 ```go
 func getLastMoment(n int, left []int, right []int) int {
@@ -146,7 +146,7 @@ int getLastMoment(int n, vector& left, vector& right) {
 ```
 
 </TabItem>
-<TabItem value="py" label="Python">
+<TabItem value="py" label="Python3">
 <SolutionAuthor name="@WaqarTabish2807"/>
 
 ```py
