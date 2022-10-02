@@ -1,5 +1,14 @@
 # Contributing
 
+## Quick Start
+
+```bash
+cd leetcode-the-hard-way
+npm i 
+npm run start
+# By default, a browser window will open at http://localhost:3000/.
+```
+
 ## Tutorials
 
 - Go to `./tutorials`
