@@ -84,7 +84,6 @@ Note: Not preferred here in this problem, but still you will get an AC in Leetco
 
 ```cpp
 void stableStlSort(vector<int>& nums){
-    
     stable_sort(nums.begin(), nums.end());
 }
 ```
@@ -102,14 +101,12 @@ def sortArray(self, nums):
 
 ```java
 public int[] sortArray(int[] nums) {
-
     Arrays.sort(nums);
     return nums;
 }
 ```
 </TabItem>
 </Tabs>
-
 
 ## Top Down Approach
 
@@ -136,7 +133,6 @@ Call merge(arrary, left, middle, right)
 // call mergeSort(nums, 0, nums.size() - 1) to sort 
 
 void merge(vector<int>& nums, int l, int m, int r){
-
     vector<int> tmp(r - l + 1); // create a temporary array
     int i = l; // index for left subarray
     int j = m + 1; // index for right subarray
@@ -154,7 +150,6 @@ void merge(vector<int>& nums, int l, int m, int r){
 }
 
 void mergeSort(vector<int>& nums, int l, int r){
-
     if(l >= r) return;
     int m = l + (r - l) / 2; //middle index, same as (l+r)/2
     mergeSort(nums, l, m);
@@ -217,7 +212,6 @@ private void mergeSort(int[] nums, int l, int r) {
 }
 
 private void merge(int[] nums, int l, int r) {
-
     int mid = l + (r - l) / 2;
     int[] tmp = new int[r - l + 1];
     int i = l, j = mid + 1, k = 0;
@@ -233,8 +227,7 @@ private void merge(int[] nums, int l, int r) {
 </TabItem>
 </Tabs>
 
-
-## Bottom Up Approach/ Iterative technique
+## Bottom Up Approach / Iterative technique
 
 ### Algorithm 
 
@@ -255,7 +248,6 @@ private void merge(int[] nums, int l, int r) {
 ```java
 class Solution {
     public List<Integer> sortArray(int[] nums) {
-
         List<Integer> res = new ArrayList<>();
         if (nums == null || nums.length == 0) return res;
         mergeSort2(nums);
@@ -264,7 +256,6 @@ class Solution {
     }
 
     private void mergeSort2(int[] nums) { // iterative only 
-
         for (int size = 1; size < nums.length; size *= 2) {
             for (int i = 0; i < nums.length - size; i += 2 * size) {
                 int mid = i + size - 1;
@@ -275,7 +266,6 @@ class Solution {
     }
 
     private void merge2(int[] nums, int l, int mid, int r) {
-
         int[] tmp = new int[r - l + 1];
         int i = l, j = mid + 1, k = 0;
         while (i <= mid || j <= r) {
@@ -292,9 +282,9 @@ class Solution {
 </TabItem>
 </Tabs>
 
-**Time_Complexity** : Best & Worst & Average is   $O(n \log_{2} n)$
+**Time Complexity** : Best & Worst & Average is   $O(n \log_{2} n)$
 
-**Space_Complexity** :  $O(n)$ 
+**Space Complexity** :  $O(n)$ 
 
 **Stablitiy**       :  Stable
 
@@ -312,7 +302,7 @@ Merging of n elements takes n time and since each time the array is cut into hal
 
 
 
-### **Mergesort is also useful for sorting linked lists**
+Note: **Mergesort is also useful for sorting linked lists**
 
 ## [**Leetcode Problem 148_Sort List**](https://leetcode.com/problems/sort-list/)
 
