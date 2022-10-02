@@ -81,7 +81,7 @@ public:
 				count++;
 			}
 		}
-          // The following will cover case1
+          // The following will cover case2
 		if (n > 2 && flowerbed[n - 2] == 0 && flowerbed[n - 1] == 0)
 			count++;
 
