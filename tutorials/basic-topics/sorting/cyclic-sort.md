@@ -30,6 +30,10 @@ Consider an array with `n` distinct elements. For any element `x` we can find th
 
 This completes one cycle. Repeating the cycle for every element will generate a sorted array.
 
+![1](https://user-images.githubusercontent.com/77775000/193418041-3fe52e97-17e9-4f32-89f8-975b6a7c788c.jpg)
+
+In the above example until and unless the correct element reaches its correct position, variable ' i ' will not get updated. This depicts one cycle. For any element nums[i] its correct position will be nums[nums[i]-1], and if at any index correct element is not present that means its a duplicate element.
+
 ## C++ Implementation
 
 For a better understanding, let us take up a leetcode problem 
@@ -43,35 +47,52 @@ Problem Statement : An array of integers in the range [1,n] is given, each integ
 *Naive Approach* would be to simply use a map or a frequency array to store the frequency of each element and return an array of elements appearing twice. But we require constant space complexity.
 
 *Efficient Approach* is to put each element at its each correct index in the array as we have all integers in the range [1,n], and check if any of the element is not at its correct position then it is a duplicate element. Hence using `Cycle Sort` algorithm for this problem.
+
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@prishit55"/>
+
 ```cpp
-vector<int> findDuplicates(vector<int>& nums) {
-        vector<int> duplicates;
+  class Solution {
+public:
+    vector<int> findDuplicates(vector<int>& nums) {
+         vector<int> duplicates;
         int n = nums.size();
         
         // cyclc sort
         int i = 0;
         while(i < n) {
-            int index = nums[i] - 1;       //correct index
-            if(nums[i] != nums[index]) {   // if correct element is not present at the index
-                swap(nums[i], nums[index]); // we swap the elements
+            //correct index
+            int index = nums[i] - 1;
+            // if correct element is not present at the index        
+            if(nums[i] != nums[index]) {
+                // we swap the elements    
+                swap(nums[i], nums[index]); 
             } else {
-                i++;     //do nothing if element is present at its correct position
+                //do nothing if element is present at its correct position    
+                i++;     
             }
         }
         
         for(int i = 0; i < n; i++) {
-            if(nums[i] != i + 1) {              //extract all those elements which are not present 
-                duplicates.push_back(nums[i]); //at their correct position
+            //extract all those elements which are not present at their correct position
+            if(nums[i] != i + 1) {               
+                duplicates.push_back(nums[i]); 
             }
         }
         return duplicates;
     }
+};
+  
 ```
+
+</TabItem>
+</Tabs>
+
 **Time Complexity : $$O(N)$$**
 
 **Space Complexity : $$O(1)$$**
 
-![1](https://user-images.githubusercontent.com/77775000/193418041-3fe52e97-17e9-4f32-89f8-975b6a7c788c.jpg)
 
 
 Cyclic Sort pattern is very useful to solve problems involving arrays containing numbers in a given range, finding the missing or duplicate numbers.
@@ -82,25 +103,25 @@ export const suggestedProblems = [
         "problemName": "268-Missing Number",
         "difficulty": "Easy",
         "leetCodeLink": "https://leetcode.com/problems/missing-number/",
-        "solutionLink": "https://leetcode.com/submissions/detail/812249568/"
+        "solutionLink": ""
     },
     {
         "problemName": "41-First Missing Positive",
         "difficulty": "Hard",
         "leetCodeLink": "https://leetcode.com/problems/first-missing-positive/",
-        "solutionLink": "https://leetcode.com/submissions/detail/812832354/"
+        "solutionLink": ""
     },
     {
         "problemName" : "448-Find All Numbers Disappeared In An Array",
         "difficulty" : "Easy",
         "leetCodeLink" : "https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/",
-        "solutionLink" : "https://leetcode.com/submissions/detail/812254247/"
+        "solutionLink" : ""
     },
     {
         "problemName" : "645-Set Mismatch",
         "difficulty" : "Easy",
         "leetCodeLink" : "https://leetcode.com/problems/set-mismatch/",
-        "solutionLink" : "https://leetcode.com/submissions/detail/812256354/"
+        "solutionLink" : ""
     },
 ]
 
