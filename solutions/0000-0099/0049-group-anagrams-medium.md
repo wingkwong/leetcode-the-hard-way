@@ -51,6 +51,7 @@ We can use a hash map to store the sorted string as a key, and push the original
 <Tabs>
 <TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
+
 ```cpp
 class Solution {
 public:
@@ -76,6 +77,7 @@ public:
 </TabItem>
 <TabItem value="java" label="Java">
 <SolutionAuthor name="@ganajayant"/>
+
 ```java
 class Solution {
     private String sortString(String str) {

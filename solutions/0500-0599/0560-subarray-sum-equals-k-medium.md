@@ -39,6 +39,7 @@ We use hash map to store the cumulative sum $$sum[i]$$ up to index $$i$$. If $$s
 <Tabs>
 <TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
+
 ```cpp
 class Solution {
 public:
@@ -58,6 +59,7 @@ public:
 </TabItem>
 <TabItem value="java" label="Java">
 <SolutionAuthor name="@ganajayant"/>
+
 ```java
 class Solution {
     public int subarraySum(int[] nums, int k) {
