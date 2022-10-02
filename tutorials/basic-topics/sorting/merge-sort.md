@@ -81,7 +81,7 @@ $1 <= nums.length <= 5 * 10^4
 *Here `insertion sort` , `quick sort` , `selection sort`  and all other sorts in $O(n^2)$ will give **TLE** i.e Time Limit Exceeded*
 
 ## STL Approach  
-Note: Not preferred here in this problem , but still you will get a AC in Leetcode
+Note: Not preferred here in this problem , but still you will get an AC in Leetcode
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -236,13 +236,13 @@ private void merge(int[] nums, int l, int r) {
 ### Algorithm 
 
 ```
-1. So it  starts with an  **element** in the array 
+1. So it  starts with an  element in the array 
 
-    It iterative approach it is already considering the fact that one item array is always sorted
+    It is a iterative approach and considering the fact that one item array is always sorted
  
-2. Compares two nearby element to merge a sorted sub array 
+2. Compares two nearby element to merge into a sorted sub array 
 
-    Similarly we merge other sorted subarrays like we have done in top down recursive approach **(two-pointer approach)** 
+    Similarly we then merge the sorted subarrays like we have done in top down recursive approach (two-pointer approach) 
 
 4. Contines until we a sorted array 
 ```
@@ -258,7 +258,7 @@ class Solution {
         for (int i : nums) res.add(i);
         return res;
     }
-    private void mergeSort2(int[] nums) {
+    private void mergeSort2(int[] nums) { // iterative only 
         for (int size = 1; size < nums.length; size *= 2) {
             for (int i = 0; i < nums.length - size; i += 2 * size) {
                 int mid = i + size - 1;
@@ -292,9 +292,9 @@ class Solution {
 
 **Is In Place**      :  Not-In-Place
 
-**When to use**     :  
-1. When we don't have random access (linked list) , like as we have an array.
-2. When array is not to large
+**When  not to use** : When the array is too large
+
+
 
   
 Merging of n elements takes n time and since each time the array is cut into half it takes   $\log_{2} n$   time to reach the top so **total time complexity is**    $O(n\log_{2} n)$  .
@@ -329,20 +329,21 @@ Input: head = [-1,5,3,4,0]
 Output: [-1,0,3,4,5]
 ```
 
-Here we can follow both top down or bottom up merge sort . I have already discussed the algorithms in detailed way for array .
+Here we can follow both top down or bottom up merge sort . I have already discussed the algorithms in detailed way for arrays .
 
 ### **Intuition for the problem**
 
 ```
+----Example of sorting of Linked List --------
 3->8->12->null
 1->10->23->null
 
 After merging we get :
 
 1->3->8->10->12->23->null.
+------ Hence Sorted---------------------------
 
-Of course the two lists must are ordered respectively.So we can only start to merge two lists that only 
-have one element,then we get a ordered list that have two element,do this again (that is "recursion").
+The two lists to be merged must be ordered respectively.We can only start to merge two lists that only have one element,then we get a ordered list that have two element,do this again (that is "recursion").
 
     Bottom Up Approach 
 
@@ -351,6 +352,7 @@ have one element,then we get a ordered list that have two element,do this again 
    -1->5->null 0->3->4->null 
       \        /         
 -1-> 0->3-> 4-> 5->null   (sorted) 
+----- Finally Sorted ---------------------------------
 
     Top Down Approach
 
@@ -400,8 +402,8 @@ have one element,then we get a ordered list that have two element,do this again 
 **Note. Implementation is basically based on Merge Sort on an array as discussed above.** 
 
 1. Divide the linked list into two equal parts until when only one element is left
-2. To Divide, we need to  find mid in linked ling using [tortoise and hare](https://dev.to/alisabaj/floyd-s-tortoise-and-hare-algorithm-finding-a-cycle-in-a-linked-list-39af) method 
-3. Finally, merge the left and the right nodes of linked list
+2. To Divide, we need to  find mid in linked list using [tortoise and hare](https://dev.to/alisabaj/floyd-s-tortoise-and-hare-algorithm-finding-a-cycle-in-a-linked-list-39af) method 
+3. Then merge the left and the right nodes of linked list
 
 <Tabs>
 <TabItem value="cpp" label="C++">
