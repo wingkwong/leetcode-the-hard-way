@@ -17,17 +17,11 @@ keywords:
 
 Insertion sort is one of the sorting algorithms that sort the elements by placing an unsorted element in correct sorted order one at a time.
 
-First of all, let us understand how an sorted `array` (If you don't what an array is. Please refer to `tutorials/basic-topics/arrays.md`) looks like. Understanding an sorted array will give us the overview of the insertion sort.
+First of all, let us understand how an sorted `array` (If you don't what an array is. Please refer [here](/tutorials/basic-topics/arrays.md)) looks like. Understanding an sorted array will give us the overview of the insertion sort. An sorted array is given below.
+
+Example: [1,2,3,4,5,6,7];
 
 In a sorted `array` all the elements to the left any element are smaller than that. That, means to make the `array` sorted we have to place an element in such a position, so that every element to the left are smaller than that. That is pretty much what we do in a insertion sort.
-
-I'll be providing the code in following language:
-
-* C++
-* Java
-* Python
-
-If you don't know any of the above mentioned languages. Don't worry you can easily code insertion sort, in your choice of programming language, once you understand the logic behind it.
 
 ## Algorithm
 
@@ -103,14 +97,14 @@ class Solution {
 public:
     void insertionSort(vector<int> &arr, int size_of_array) {
         for (int i = 1; i < size_of_array; i++) {
-            int nums = arr[i];
+            int nums = arr[i]; // Picking element from array
             int j = i - 1;
 
-            while (j >= 0 and arr[j] > nums) {
-                arr[j + 1] = arr[j];
+            while (j >= 0 and arr[j] > nums) { // Comparing nums with all the elements left to it
+                arr[j + 1] = arr[j]; // Shifting the greater element to the right
                 j--;
             }
-            arr[j + 1] = nums;
+            arr[j + 1] = nums; // Placing selected element at correct position
         }
     }
 
@@ -131,14 +125,14 @@ public:
 class Solution {
     void insertion_sort(int arr[],int size_of_array) {
 		for (int i = 1; i < size_of_array; ++i) {
-			int nums = arr[i];
+			int nums = arr[i]; // Picking element from array
 			int j = i - 1;
 
-			while (j >= 0 && arr[j] > nums) {
-				arr[j + 1] = arr[j];
+			while (j >= 0 && arr[j] > nums) { // Comparing nums with all the elements left to it
+				arr[j + 1] = arr[j]; // Shifting the greater element to the right
 				j = j - 1;
 			}
-			arr[j + 1] = nums;
+			arr[j + 1] = nums; // Placing selected element at correct position
 		}
 	}
     public int maxProduct(int[] nums) {
@@ -159,14 +153,14 @@ class Solution:
     def insertionSort(arr,size_of_array):
         
         for i in range(1, size_of_array):
-            nums = arr[i]
+            nums = arr[i]  # Picking element from array
             j = i - 1
               
-            while j >= 0 and arr[j] > nums:
-                arr[j + 1] = arr[j]
+            while j >= 0 and arr[j] > nums: # Comparing nums with all the elements left to it
+                arr[j + 1] = arr[j] # Shifting the greater element to the right
                 j = j - 1
         
-            arr[j + 1] = nums
+            arr[j + 1] = nums # Placing selected element at correct position
         
 
     def maxProduct(self, nums: List[int]) -> int:
@@ -193,7 +187,7 @@ export const suggestedProblems = [
     "problemName": "1365 - How Many Numbers Are Smaller Than the Current Number",
     "difficulty": "Easy",
     "leetCodeLink": "https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/",
-    "solutionLink": ""
+    "solutionLink": "([Click for solution](/solutions/1300-1399/1365-how-many-numbers-are-smaller-than-the-current-number-easy.md)"
   },
   {
     "problemName": "2037 - Minimum Number of Moves to Seat Everyone",
