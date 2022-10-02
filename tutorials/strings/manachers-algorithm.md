@@ -85,15 +85,15 @@ No extra space is needed in this approach, so the space complexity will be $O(1)
  
 `Manacher's Algorithm` is way faster than the brute force approach to find the longest substring, because it uses the precomputed data. Hence, making the algorithm run in linear time. 
 
-One important point that we need to keep in mind is that using Manacher's Algorithm we can find the palindromic substrings of odd length string or array only. To find palindromic substrings of even length string or array, we need to do a slight change in the given input i.e. in the given input string we insert "#" character at the beginning and also at each alternate position(changing $level$ to $#l#e#v#e#l$).
+One important point that we need to keep in mind is that using Manacher's Algorithm we can find the palindromic substrings of odd length string or array only. To find palindromic substrings of even length string or array, we need to do a slight change in the given input i.e. in the given input string we insert "#" character at the beginning and also at each alternate position(changing $level$ to _#l#e#v#e#l#_).
 
 In the case of an odd length palindrome, we will surround the middle character of the string with "#"
 
-Example: string = $abbba$ -> $ab#b#ba$
+Example: string = $abbba$ -> _ab#b#ba_
 
 In the case of an even length palindrome, the middle character will be a "#" character.
 
-Example: string = $aaccccaa$ -> $#a#a#c#c#c#c#a#a#$ . Here, we can see that the middle character will come out to be a "#"
+Example: string = $aaccccaa$ -> _#a#a#c#c#c#c#a#a#_ . Here, we can see that the middle character will come out to be a "#"
 
 #### Steps of the `Manacher's algorithm` are as follows:
 
