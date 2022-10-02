@@ -89,10 +89,10 @@ class Solution {
     public List<List<String>> groupAnagrams(String[] strs) {
         HashMap<String, LinkedList<String>> hm = new HashMap<>();
         for (int i = 0; i < strs.length; i++) {
-            if (hm.containsKey(sortString(strs[i]))) {
-                hm.get(sortString(strs[i])).add(strs[i]);
+            String sortedstring = sortString(strs[i]);
+            if (hm.containsKey(sortedstring)) {
+                hm.get(sortedstring).add(strs[i]);
             } else {
-                String sortedstring = sortString(strs[i]);
                 hm.put(sortedstring, new LinkedList<String>());
                 hm.get(sortedstring).add(strs[i]);
             }
