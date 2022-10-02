@@ -1,6 +1,6 @@
 ---
 title: 'Greedy'
-description: 'Designing greedy algorithms to find a greedy strategy that produces an optimal solution to the problem.'
+description: 'Designing greedy algorithms to find a greedy strategy that produces an optimal solution to the problem'
 # hide_table_of_contents: true
 draft: true
 keywords:
@@ -36,55 +36,62 @@ Example 2: You have coins of denomination Rs 10, Rs 7, and Rs 1.Find the minimum
 Solution: 4 coins: 7+7+1+1
 Solution if greedy was used : 7 coins: 10+1+1+1+1+1+1
 ```
-## JOB Scheduling
-Given a set of n jobs along with profits earned if the job is completed by its deadline, order the jobs in such a way that there is maximum profit.
-| JOB        | a | b | c | d |e                                                                                                                                                                                                                          |
-| -----------|---|---|----|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Deadline | 2 | 1 | 3 | 2 |1                                                                                                                                    |
-| Profit           | 60  | 100 | 20|40|20                                                                                                                               |
-
-Solution: Sort the jobs according to their profit in descending order
-| JOB        | b | a | d | c |e                                                                                                                                                                                                                          |
-| -----------|---|---|----|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Deadline | 1 | 2 | 2 | 3 |1                                                                                                                                    |
-| Profit           | 100  | 60 | 40|20|20                                                                                                                               |
+## Example 1: [605 -Can Place Flowers](https://leetcode.com/problems/can-place-flowers/)
 
 ```
-void printJobScheduling (Job arr[], int n)
-{
-sort (arr, arr+n, comparison);
+You have a long flowerbed in which some of the plots are planted, and some are not. However, flowers cannot be planted in adjacent plots.
 
-int result[n]; // To store result (Sequence of jobs) 
-bool slot[n]; // To keep track of free time slots
+Given an integer array flowerbed containing 0's and 1's, where 0 means empty and 1 means not empty, and an integer n, return if n new flowers can be planted in the flowerbed without violating the no-adjacent-flowers rule.
 
-// Initialize all slots to be free 
-for (int i=0; i<n; i++) 
-    slot[i]= false;
-
-// Iterate through all given jobs 
-for (int i=0; i<n; i++)
-{
-// Find a free slot for this job (Note that we start from the last possible slot) 
-  for (int j=min(n, arr[i].dead)-1; j=0; j--)
-  {
-    // Free slot found
-    if (slot[j]==false)
-    {
-      result[j] i;  // Add this job to result 
-      slot[j] true; // Make this slot occupied 
-      break;
-    }
-  }
-}
-
-// Print the result 
-for (int i=0; i<n; i++){
-  if (slot[i]) 
-    cout<<<<< arr[result[i]].id << " ";
-}
+Input: flowerbed = [1,0,0,0,1], n = 1
+Output: true
 ```
 
-Time complexity: O(n^2)
+For a greedy solution, we would solve in such a way that we will always have the best choice at every max.
+Our task is to calculate maximum flowers we can plant.
+Its simple that if there are three consecutive zeroes then the middle one will be planted.But if we have to calculate maximum then we will miss 2 side case this way.
+
+Case 1: 001....
+Here intially we have just 2 consecutive zeroes but we can plant at first place.So we will consuder this case too.
+
+Case 2: ........100
+Here at the end we have just 2 consecutive zeroes but we can plant at last place.So we will consuder this case too.
+
+```cpp
+class Solution {
+public:
+	bool canPlaceFlowers(vector<int>& flowerbed, int p) {
+		int n = flowerbed.size();
+    // count variable will calculate max flowers we can plant.
+		int count = 0; 
+		if (flowerbed[0] == 0 && n == 1)
+			count++;
+      // The following will cover case1
+		if (n > 1 && flowerbed[0] == 0 && flowerbed[1] == 0)
+		{
+			count++;
+			flowerbed[0] = 1;
+		}
+    // MID APPROACH TO CHECK 3 CONSECUTIVE ZEROES.
+		for (int i = 1; i < n - 1; i++)
+		{
+			if (flowerbed[i] == 0 && flowerbed[i - 1] == 0 && flowerbed[i + 1] == 0)
+			{
+				flowerbed[i] = 1;
+				count++;
+			}
+		}
+          // The following will cover case1
+		if (n > 2 && flowerbed[n - 2] == 0 && flowerbed[n - 1] == 0)
+			count++;
+
+		if (count >= p)
+			return true;
+		else
+			return false;
+	}
+};
+```
 
 export const suggestedProblems = [
   {
