@@ -21,11 +21,11 @@ algorithms are usually very efficient.
 
 Rules:
 
-1)Always pick the best choice at any step
+1. Always pick the best choice at any step.
 
-2)Works on the assumption that by picking a local optimum solution at each step we will reach a global optimum
+2. Works on the assumption that by picking a local optimum solution at each step we will reach a global optimum.
 
-3)The greedy algorithm never reconsiders its choices
+3. The greedy algorithm never reconsiders its choices.
 
 ```
 Example 1: You have coins of denomination Rs 10, Rs 5, and Rs 1.Find the minimum number of coins to get a total of 17 Rs.
@@ -51,15 +51,13 @@ Input: flowerbed = [1,0,0,0,1], n = 1
 Output: true
 ```
 
-For a greedy solution, we would solve in such a way that we will always have the best choice at every max.
-Our task is to calculate maximum flowers we can plant.
-Its simple that if there are three consecutive zeroes then the middle one will be planted.But if we have to calculate maximum then we will miss 2 side case this way.
+For a greedy solution, we would solve in such a way that we will always have the best choice at every max.Our task is to calculate maximum flowers we can plant.Its simple that if there are three consecutive zeroes then the middle one will be planted. But if we have to calculate maximum then we will miss 2 side case this way.
 
 Case 1: 001....
-Here intially we have just 2 consecutive zeroes but we can plant at first place.So we will consuder this case too.
+Here intially we have just 2 consecutive zeroes but we can plant at first place.So we will consider this case too.
 
 Case 2: ........100
-Here at the end we have just 2 consecutive zeroes but we can plant at last place.So we will consuder this case too.
+Here at the end we have just 2 consecutive zeroes but we can plant at last place.So we will consider this case too.
 
 ```cpp
 class Solution {
