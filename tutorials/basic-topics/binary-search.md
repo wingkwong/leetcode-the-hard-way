@@ -31,22 +31,27 @@ nums = [-1,0,3,5,9,12], target = 9
 
 The index of the element 9 is 4. We can use the following template to find the target
 
-```python
-def binarySearch(nums, target):
-    
-    lp = 0
-    rp = len(nums) - 1
-    
-    while(lp <= rp):
-        mid = (lp + rp) // 2
-        if(nums[mid] == target):
-            return mid
-        elif(nums[mid] < target):
-            lp = mid + 1
-        else:
-            rp = mid - 1
-    return -1
-    
+```java
+static int searchBinary(int[] arr , int target){
+        //now it is search the target in the  arr
+        int start = 0;
+        int end = arr.length -1 ;
+        while (start <= end){
+
+            // this is actually equal to the start+end/2 (may start + end exceed the range of the int hence use below
+            int mid = start + (end-start)/2;
+
+            if (target<arr[mid]){
+                end = mid-1;
+            }else if (target>arr[mid]){
+                start = mid+1;
+            }else {
+                return mid;
+            }
+        }
+        // in case element is not found in the array then the while loop is not run then hit on this statement
+        return -1;
+    }
 ```
 
 There can be very challenging questions using binary search, but we should focus on the basic application first.
