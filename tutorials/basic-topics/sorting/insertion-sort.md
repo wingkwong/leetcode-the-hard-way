@@ -41,7 +41,7 @@ The following are the steps that we are going to follow:
 
 ### Problem Link
 
-https://leetcode.com/problems/sort-the-people/
+https://leetcode.com/problems/maximum-product-of-two-elements-in-an-array/
 
 ### Problem Statement
 
@@ -75,7 +75,7 @@ Output: 12
 * `2 <= nums.length <= 500`
 * `1 <= nums[i] <= 10^3`
 
-## Approach 1: Sorting using Insertion Sort
+## Approach: Sorting using Insertion Sort
 
 The problem wants us to find the maximum value of `(nums[i] - 1) * (nums[j] - 1)`, where `i` and `j` are two different indices of the given array.
 
@@ -101,8 +101,8 @@ Following are the implementation of the above mentioned problem:
 ```cpp
 class Solution {
 public:
-    void insertionSort(vector<int> &arr, int size_of_arary) {
-        for (int i = 1; i < size_of_arary; i++) {
+    void insertionSort(vector<int> &arr, int size_of_array) {
+        for (int i = 1; i < size_of_array; i++) {
             int nums = arr[i];
             int j = i - 1;
 
@@ -116,8 +116,8 @@ public:
 
     int maxProduct(vector<int>& nums) {
         insertionSort(nums,nums.size());
-        int n = nums.size()-1;
-        return (nums[n] - 1)*(nums[n-1] - 1);
+        int n = nums.size();
+        return (nums[n - 1] - 1)*(nums[n - 2] - 1);
     }
 };
 ```
@@ -129,8 +129,8 @@ public:
 
 ```java
 class Solution {
-    void insertion_sort(int arr[],int size_of_arary) {
-		for (int i = 1; i < size_of_arary; ++i) {
+    void insertion_sort(int arr[],int size_of_array) {
+		for (int i = 1; i < size_of_array; ++i) {
 			int nums = arr[i];
 			int j = i - 1;
 
@@ -143,8 +143,8 @@ class Solution {
 	}
     public int maxProduct(int[] nums) {
         insertion_sort(nums,nums.length);
-        int n = nums.length - 1;
-        return (nums[n] - 1)*(nums[n-1] - 1);      
+        int n = nums.length;
+        return (nums[n - 1] - 1)*(nums[n - 2] - 1);      
     }
 }
 ```
