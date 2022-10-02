@@ -371,23 +371,6 @@ The two lists to be merged must be ordered respectively. We can only start to me
 
 ```
 
-
-**Leetcode Implementation of Linked List in cpp**
-```
-/*
-* Definition for singly-linked list.
-* struct ListNode {
-*     int val;
-*     ListNode *next;
-*     ListNode() : val(0), next(nullptr) {}
-*     ListNode(int x) : val(x), next(nullptr) {}
-*     ListNode(int x, ListNode *next) : val(x), next(next) {}
-* };
-*/
-
- ```
-
-
 ## **Approach for top-down Merge sort of Linked list**
 
 *1. Keep recursively dividing the list until there is only one node in the linked list.* 
@@ -400,20 +383,29 @@ The two lists to be merged must be ordered respectively. We can only start to me
 **Note. Implementation is based on Merge Sort on an array as discussed above.** 
 
 1. Divide the linked list into two equal parts until when only one element is left
-2. To Divide, we need to  find mid in the linked list using [tortoise and hare](https://dev.to/alisabaj/floyd-s-tortoise-and-hare-algorithm-finding-a-cycle-in-a-linked-list-39af) method 
+2. To Divide, we need to  find mid in the linked list using **slow and fast pointers** method 
 3. Then merge the left and the right nodes of the linked list
 
 <Tabs>
 <TabItem value="cpp" label="C++">
 
 ```cpp
+/*
+* Definition for singly-linked list.
+* struct ListNode {
+*     int val;
+*     ListNode *next;
+*     ListNode() : val(0), next(nullptr) {}
+*     ListNode(int x) : val(x), next(nullptr) {}
+*     ListNode(int x, ListNode *next) : val(x), next(next) {}
+* };
+*/
 class Solution {
 public:
     void mergeSort(ListNode **head){
         ListNode *curr = *head ; // create a current pointer
-        // left half 
+
         ListNode * left;
-        // right half
         ListNode * right;
         // if the linked list is null or the size is one return back the same
         
@@ -456,12 +448,12 @@ public:
         
         if(left == NULL) // Check if left is null,nothing to merge
         {
-            return right; // return right
+            return right; 
         }
         
         if(right == NULL) 
         {
-            return left; // return left 
+            return left;  
         }
         
         // if value of the left <= value of right,then res = left
@@ -478,7 +470,7 @@ public:
             // and again call merge for res's next
         }
         
-        return res; // return the res  
+        return res;
     }
     ListNode* sortList(ListNode* head) {
         mergeSort(&head);
