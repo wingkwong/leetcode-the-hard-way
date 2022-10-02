@@ -1,6 +1,6 @@
 ---
 title: 'Merge Sort'
-description: 'A efficient sorting algorithm based on  divide-and-conquer strategy'
+description: 'An efficient sorting algorithm based on  divide-and-conquer strategy'
 hide_table_of_contents: true
 draft: true
 keywords:
@@ -13,10 +13,9 @@ keywords:
 
 <TutorialAuthors names="@Sreetama2001"/>
 
-# Overview
+## Overview
 
-Merge Sort works by recursively breaking down an array into multiple subarrays  and then after comparing each of the sub arrays it arranges them into ascending or desending order by value and merges them into a single sorted array . Here I will illustrate `merge sort`  `Leetcode` problems 
-in following Languages.
+Merge Sort works by recursively breaking down an array into multiple subarrays and then after comparing each of the subarrays it arranges them into ascending or descending order by value and merges them into a single sorted array. Here I will illustrate `merge sort`  Leetcode problems in the following Languages.
 
 - Python 
 - C++
@@ -24,32 +23,32 @@ in following Languages.
   
 ## Few concepts on merge sort
 
-Suppose we have an array of integers , 
+Suppose we have an array of integers, 
 
 `6 5 3 1 8 7 2 4`
 
-Note : In `python` it is  called `list` and in `C++` it can be called either `array or vector` and in `Java` it is called a `ArrayList` .
+Note: In ``Python`` it is called **list** and in ``C++`` it can be called either **array or vector** and in ``Java`` it is called a **ArrayList**.
 
-Then we can clearly see that merge sort is performed like this way. 
+Then we can see that merge sort is performed in this way. 
 
 ![image](https://miro.medium.com/max/600/1*opwN0BhtH4zvPF697fPlow.gif)
 
 ## Algorithm 
 
-### Divide ( Dividing is our first step)
+### Divide (Dividing is our first step)
 
-- Calculate the mid point by checking if left index is less than the right index , if yes divide the array . 
-- Now continue dividing the array until `left index < right index` becomes false , that is until division is not possible.
+- Calculate the midpoint by checking if the left index is less than the right index, if yes divide the array. 
+- Now continue dividing the array until `left index < right index` becomes false, that is until the division is not possible.
      
 ### Conquer
 
-- After dividing the array into smallest units, start merging the elements again by comparing them .
+- After dividing the array into the smallest units, start merging the elements again by comparing them.
 
-- We need to compare and merge starting from the last splits or last smallest units. So **Recursion** needs to done here.
+- We need to compare and merge starting from the last splits or last smallest units. So **Recursion** needs to be done here.
 
 ### Merge 
 
-- Since each half is already sorted so we need to just sort between 2 halves to **combine/merge** then to make a bigger sorted array
+- Since each half is already sorted so we need to just sort between 2 halves to **combine/merge** than to make a bigger sorted array.
    
 ## [Leetcode Problem 912 Sort an Array](https://leetcode.com/problems/sort-an-array/)
 
@@ -78,10 +77,10 @@ After sorting the array, the positions of some numbers are not changed (for exam
 $1 <= nums.length <= 5 * 10^4
 -5 * 10^4 <= nums[i] <= 5 * 10^4$ 
 
-*Here `insertion sort` , `quick sort` , `selection sort`  and all other sorts in $O(n^2)$ will give **TLE** i.e Time Limit Exceeded*
+*Here `insertion sort`, `quick sort`, `selection sort` and all other sorts in $O(n^2)$ will give **TLE** i.e Time Limit Exceeded*
 
 ## STL Approach  
-Note: Not preferred here in this problem , but still you will get an AC in Leetcode
+Note: Not preferred here in this problem, but still you will get an AC in Leetcode
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -145,7 +144,7 @@ int k = 0; // index for temporary array
 while(i <= m && j <= r){
     if(nums[i] <= nums[j]) tmp[k++] = nums[i++];   
     
-    // increment the left pointer if the right pointer element is bigger since we are sorting in ascending order ,left(smaller element) goes first
+    // increment the left pointer if the right pointer element is bigger since we are sorting in ascending order,left(smaller element) goes first
     
     else tmp[k++] = nums[j++];
 }
@@ -238,13 +237,13 @@ private void merge(int[] nums, int l, int r) {
 ```
 1. So it  starts with an  element in the array 
 
-    It is a iterative approach and considering the fact that one item array is always sorted
+    It is an iterative approach and because one item array is always sorted
  
-2. Compares two nearby element to merge into a sorted sub array 
+2. Compares two nearby elements to merge into a sorted sub array 
 
-    Similarly we then merge the sorted subarrays like we have done in top down recursive approach (two-pointer approach) 
+    Similarly, we then merge the sorted subarrays like we have done in top-down recursive approach (two-pointer approach) 
 
-4. Contines until we a sorted array 
+4. Continues until we have a sorted array 
 ```
 <Tabs>
 <TabItem value="java" label="Java">
@@ -292,12 +291,12 @@ class Solution {
 
 **Is In Place**      :  Not-In-Place
 
-**When  not to use** : When the array is too large
+**When  not to use**: When the array is too large
 
 
 
   
-Merging of n elements takes n time and since each time the array is cut into half it takes   $\log_{2} n$   time to reach the top so **total time complexity is**    $O(n\log_{2} n)$  .
+Merging of n elements takes n time and since each time the array is cut into half it takes   $\log_{2} n$   time to reach the top so **total time complexity is**    $O(n\log_{2} n)$.
 
 
 ![image](https://cdn.kastatic.org/ka-perseus-images/5fcbebf66560d8fc490de2a0d8a0e5b1d65c5c54.png)
@@ -314,7 +313,7 @@ Merging of n elements takes n time and since each time the array is cut into hal
 
 **Test Cases**
  
- *Test Case 1*
+*Test Case 1*
 
 ```
 Input: head = [4,2,1,3]
@@ -329,7 +328,7 @@ Input: head = [-1,5,3,4,0]
 Output: [-1,0,3,4,5]
 ```
 
-Here we can follow both top down or bottom up merge sort . I have already discussed the algorithms in detailed way for arrays .
+Here we can follow both top-down and bottom-up merge sort. I have already discussed the algorithms in a detailed way for arrays.
 
 ### **Intuition for the problem**
 
@@ -343,9 +342,9 @@ After merging we get :
 1->3->8->10->12->23->null.
 ------ Hence Sorted---------------------------
 
-The two lists to be merged must be ordered respectively.We can only start to merge two lists that only have one element,then we get a ordered list that have two element,do this again (that is "recursion").
+The two lists to be merged must be ordered respectively. We can only start to merge two lists that only have one element, then we get an ordered list that has two elements, do this again (that is "recursion").
 
-    Bottom Up Approach 
+    Bottom-Up Approach 
 
     -1-> 5->  3-> 4->   0-> null
     \  /       \ /         /
@@ -389,8 +388,7 @@ The two lists to be merged must be ordered respectively.We can only start to mer
  ```
 
 
-## **Approach for top down Merge sort of Linked list**
-
+## **Approach for top-down Merge sort of Linked list**
 
 *1. Keep recursively dividing the list until there is only one node in the linked list.* 
 
@@ -399,11 +397,11 @@ The two lists to be merged must be ordered respectively.We can only start to mer
 
 ### **Steps to apply merge sort to a Linked list** 
     
-**Note. Implementation is basically based on Merge Sort on an array as discussed above.** 
+**Note. Implementation is based on Merge Sort on an array as discussed above.** 
 
 1. Divide the linked list into two equal parts until when only one element is left
-2. To Divide, we need to  find mid in linked list using [tortoise and hare](https://dev.to/alisabaj/floyd-s-tortoise-and-hare-algorithm-finding-a-cycle-in-a-linked-list-39af) method 
-3. Then merge the left and the right nodes of linked list
+2. To Divide, we need to  find mid in the linked list using [tortoise and hare](https://dev.to/alisabaj/floyd-s-tortoise-and-hare-algorithm-finding-a-cycle-in-a-linked-list-39af) method 
+3. Then merge the left and the right nodes of the linked list
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -417,7 +415,7 @@ public:
         ListNode * left;
         // right half
         ListNode * right;
-        // if linked list is null or size is one return back the same
+        // if the linked list is null or the size is one return back the same
         
         if(curr ==NULL || curr ->next==NULL) return;
         
@@ -438,7 +436,7 @@ public:
         ListNode* slow = curr; // make a slow pointer
         ListNode* fast = curr -> next; // make a fast pointer
         
-    // then we move our fast upto it not become null
+    // then we move our fast up to it not become null
         while(fast != NULL)
         {
             fast = fast -> next;
@@ -487,6 +485,7 @@ public:
         return head;
     }
 };
+
 ```
 
 </TabItem>
