@@ -1,6 +1,7 @@
 ---
 description: >-
-  Author: @luiz290788
+  Author: @luiz290788 | 
+  https://leetcode.com/problems/sum-of-all-odd-length-subarrays/
 ---
 
 # 1588 - Sum Of All Odd Length Subarrays (Easy)
@@ -59,15 +60,13 @@ Could you solve this problem in $O(n)$ time complexity?
 
 ## Approach 1: Brute Force
 
-Brute force solution for this problem is to generate every subarray with odd length and sum all its members.
-
-Starting from the position one, we and sum all subarray of odd length that starts in the current position. We repeat this process to all positions.
+For a brute force solution, we generate every subarray with odd length and sum all its members. Starting from the position one, we and sum all subarray of odd length that starts in the current position. We repeat this process to all positions.
 
 <Tabs>
 <TabItem value="java" label="Java">
 <SolutionAuthor name="@luiz290788"/>
 
-```Java
+```java
 class Solution {
   public int sumOddLengthSubarrays(int[] arr) {
     int totalSum = 0;
@@ -102,7 +101,7 @@ As each of the processes stated above are nested into each other the total compl
 
 The only extra memory we are using is the result sum.
 
-## Approach 2: Sliding window
+## Approach 2: Sliding Window
 
 The second approach uses a sliding window. We can create a window of each odd size that fits the array and move the window removing the value of the first element and adding the value of the next element. With this approach we save an extra loop avoiding to calculate the window from scratch every time.
 
@@ -110,7 +109,7 @@ The second approach uses a sliding window. We can create a window of each odd si
 <TabItem value="java" label="Java">
 <SolutionAuthor name="@luiz290788"/>
 
-```Java
+```java
 class Solution {
   public int sumOddLengthSubarrays(int[] arr) {
     int totalSum = 0;
@@ -188,7 +187,7 @@ As we are only interested in the odd-length arrays, we can divide this number by
 <TabItem value="java" label="Java">
 <SolutionAuthor name="@luiz290788"/>
 
-```Java
+```java
 class Solution {
   public int sumOddLengthSubarrays(int[] arr) {
     int totalSum = 0;
