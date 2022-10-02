@@ -54,12 +54,9 @@ Then we can see that merge sort is performed in this way.
 
 **Problem Statement** 
 
-```
 Given an array of integers nums, sort the array in ascending order and return it.
 
 You must solve the problem without using any built-in functions in O(nlog(n)) time complexity and with the smallest space complexity possible.
-
-```
 
 **Test Cases**
     
@@ -86,8 +83,9 @@ Note: Not preferred here in this problem, but still you will get an AC in Leetco
 <TabItem value="cpp" label="C++">
 
 ```cpp
-void stableStlSort(vector<int>& nums) {
-stable_sort(nums.begin(), nums.end());
+void stableStlSort(vector<int>& nums){
+    
+    stable_sort(nums.begin(), nums.end());
 }
 ```
 </TabItem>
@@ -104,6 +102,7 @@ def sortArray(self, nums):
 
 ```java
 public int[] sortArray(int[] nums) {
+
     Arrays.sort(nums);
     return nums;
 }
@@ -137,29 +136,30 @@ Call merge(arrary, left, middle, right)
 // call mergeSort(nums, 0, nums.size() - 1) to sort 
 
 void merge(vector<int>& nums, int l, int m, int r){
-vector<int> tmp(r - l + 1); // create a temporary array
-int i = l; // index for left subarray
-int j = m + 1; // index for right subarray
-int k = 0; // index for temporary array
-while(i <= m && j <= r){
-    if(nums[i] <= nums[j]) tmp[k++] = nums[i++];   
-    
-    // increment the left pointer if the right pointer element is bigger since we are sorting in ascending order,left(smaller element) goes first
-    
-    else tmp[k++] = nums[j++];
-}
-while(i <= m) tmp[k++] = nums[i++];
-while(j <= r) tmp[k++] = nums[j++]; 
-for(i = 0; i < k; i++) nums[l + i] = tmp[i];
-}
 
+    vector<int> tmp(r - l + 1); // create a temporary array
+    int i = l; // index for left subarray
+    int j = m + 1; // index for right subarray
+    int k = 0; // index for temporary array
+    while(i <= m && j <= r){
+        if(nums[i] <= nums[j]) tmp[k++] = nums[i++];   
+        
+        // increment the left pointer if the right pointer element is bigger since we are sorting in ascending order,left(smaller element) goes first
+        
+        else tmp[k++] = nums[j++];
+    }
+    while(i <= m) tmp[k++] = nums[i++];
+    while(j <= r) tmp[k++] = nums[j++]; 
+    for(i = 0; i < k; i++) nums[l + i] = tmp[i];
+}
 
 void mergeSort(vector<int>& nums, int l, int r){
-if(l >= r) return;
-int m = l + (r - l) / 2; //middle index, same as (l+r)/2
-mergeSort(nums, l, m);
-mergeSort(nums, m + 1, r);
-merge(nums, l, m, r);
+
+    if(l >= r) return;
+    int m = l + (r - l) / 2; //middle index, same as (l+r)/2
+    mergeSort(nums, l, m);
+    mergeSort(nums, m + 1, r);
+    merge(nums, l, m, r);
 }
 
 ```
@@ -207,14 +207,17 @@ if len(nums) > 1:
 ```java
 // call mergeSort(nums , 0 ,nums.length -1) in public
 
-private void mergeSort(int[] nums, int l, int r) {   // nums -> ArrayList , l -> starting index , r-> end of the ArrayList
+private void mergeSort(int[] nums, int l, int r) {   
+    // nums -> ArrayList , l -> starting index , r-> end of the ArrayList
     if (l >= r) return;
     int mid = l + (r - l) / 2;
     mergeSort(nums, l, mid);
     mergeSort(nums, mid + 1, r);
     merge(nums, l, r);
 }
+
 private void merge(int[] nums, int l, int r) {
+
     int mid = l + (r - l) / 2;
     int[] tmp = new int[r - l + 1];
     int i = l, j = mid + 1, k = 0;
@@ -225,12 +228,13 @@ private void merge(int[] nums, int l, int r) {
             tmp[k++] = nums[i++];
         }
     }
+}
 ```
 </TabItem>
 </Tabs>
 
 
-## Bottom Up Approach /Iterative technique
+## Bottom Up Approach/ Iterative technique
 
 ### Algorithm 
 
@@ -243,7 +247,7 @@ private void merge(int[] nums, int l, int r) {
 
     Similarly, we then merge the sorted subarrays like we have done in top-down recursive approach (two-pointer approach) 
 
-4. Continues until we have a sorted array 
+3. Continues until we have a sorted array 
 ```
 <Tabs>
 <TabItem value="java" label="Java">
@@ -251,13 +255,16 @@ private void merge(int[] nums, int l, int r) {
 ```java
 class Solution {
     public List<Integer> sortArray(int[] nums) {
+
         List<Integer> res = new ArrayList<>();
         if (nums == null || nums.length == 0) return res;
         mergeSort2(nums);
         for (int i : nums) res.add(i);
         return res;
     }
+
     private void mergeSort2(int[] nums) { // iterative only 
+
         for (int size = 1; size < nums.length; size *= 2) {
             for (int i = 0; i < nums.length - size; i += 2 * size) {
                 int mid = i + size - 1;
@@ -266,7 +273,9 @@ class Solution {
             }
         }
     }
+
     private void merge2(int[] nums, int l, int mid, int r) {
+
         int[] tmp = new int[r - l + 1];
         int i = l, j = mid + 1, k = 0;
         while (i <= mid || j <= r) {
@@ -309,7 +318,7 @@ Merging of n elements takes n time and since each time the array is cut into hal
 
 **Problem Statement** 
 
-`Given the head of a linked list, return the list after sorting it in ascending order.`
+Given the head of a linked list, return the list after sorting it in ascending order.
 
 **Test Cases**
  
@@ -334,12 +343,14 @@ Here we can follow both top-down and bottom-up merge sort. I have already discus
 
 ```
 ----Example of sorting of Linked List --------
+
 3->8->12->null
 1->10->23->null
 
 After merging we get :
 
 1->3->8->10->12->23->null.
+
 ------ Hence Sorted---------------------------
 
 The two lists to be merged must be ordered respectively. We can only start to merge two lists that only have one element, then we get an ordered list that has two elements, do this again (that is "recursion").
@@ -351,6 +362,7 @@ The two lists to be merged must be ordered respectively. We can only start to me
    -1->5->null 0->3->4->null 
       \        /         
 -1-> 0->3-> 4-> 5->null   (sorted) 
+
 ----- Finally Sorted ---------------------------------
 
     Top Down Approach
@@ -380,7 +392,7 @@ The two lists to be merged must be ordered respectively. We can only start to me
 
 ### **Steps to apply merge sort to a Linked list** 
     
-**Note. Implementation is based on Merge Sort on an array as discussed above.** 
+**Note: Implementation is based on Merge Sort on an array as discussed above.** 
 
 1. Divide the linked list into two equal parts until when only one element is left
 2. To Divide, we need to  find mid in the linked list using **slow and fast pointers** method 
@@ -403,6 +415,7 @@ The two lists to be merged must be ordered respectively. We can only start to me
 class Solution {
 public:
     void mergeSort(ListNode **head){
+
         ListNode *curr = *head ; // create a current pointer
 
         ListNode * left;
@@ -422,9 +435,11 @@ public:
         
         //call to merge left and right by sorting them
         *head=merge(left,right);
-        
+
     }
+
     void findMiddle(ListNode *curr,ListNode **left, ListNode **right){
+
         ListNode* slow = curr; // make a slow pointer
         ListNode* fast = curr -> next; // make a fast pointer
         
@@ -443,7 +458,9 @@ public:
         slow -> next = NULL; // and slow next to null
         
     }
+
     ListNode* merge(ListNode* left, ListNode* right){
+
       ListNode* res = NULL; // set answer to null
         
         if(left == NULL) // Check if left is null,nothing to merge
@@ -472,7 +489,9 @@ public:
         
         return res;
     }
+
     ListNode* sortList(ListNode* head) {
+    
         mergeSort(&head);
         return head;
     }
