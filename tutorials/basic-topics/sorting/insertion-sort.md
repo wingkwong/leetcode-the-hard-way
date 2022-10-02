@@ -19,7 +19,7 @@ Insertion sort is one of the sorting algorithms that sort the elements by placin
 
 First of all, let us understand how an sorted `array` (If you don't what an array is. Please refer [here](/tutorials/basic-topics/arrays.md)) looks like. Understanding an sorted array will give us the overview of the insertion sort. An sorted array is given below.
 
-Example: [1,2,3,4,5,6,7];
+Example: [1,2,3,4,5,6,7]
 
 In a sorted `array` all the elements to the left any element are smaller than that. That, means to make the `array` sorted we have to place an element in such a position, so that every element to the left are smaller than that. That is pretty much what we do in a insertion sort.
 
