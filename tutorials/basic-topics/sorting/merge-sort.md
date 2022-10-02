@@ -497,7 +497,7 @@ export const suggestedProblems = [
         "problemName": "912-Sort an Array",
         "difficulty": "Medium",
         "leetCodeLink": "https://leetcode.com/problems/sort-an-array/",
-        "solutionLink": "../solutions/0900-0999/0921-sort-an-array-medium.md"
+        "solutionLink": "../../../solutions/0900-0999/sort-an-array-medium"
     },
     {
         "problemName": "56-Merge Intervals",
@@ -509,19 +509,19 @@ export const suggestedProblems = [
         "problemName" : "148-Sort List",
         "difficulty" : "Medium",
         "leetCodeLink" : "https://leetcode.com/problems/sort-list/",
-        "solutionLink" : "../solutions/0100-0199/0148-sort-list-medium.md"
+        "solutionLink" : "../../../solutions/0100-0199/sort-list-medium"
     },
     {
         "problemName" : "327-Count of Range Sum",
         "difficulty" : "Hard",
         "leetCodeLink" : "https://leetcode.com/problems/count-of-range-sum/",
-        "solutionLink" : "../solutions/0300-0399/0327-count-of-range-sum-hard.md"
-    },
+        "solutionLink" : "../../../solutions/0300-0399/count-of-range-sum-hard"
+    }, 
     {
         "problemName" : "23-Merge k Sorted Lists",
         "difficulty" : "Hard",
         "leetCodeLink" : "https://leetcode.com/problems/merge-k-sorted-lists/",
-        "solutionLink" : "../solutions/0000-0099/0023-merge-k-sorted-lists-hard.md"
+        "solutionLink" : "../../../solutions/0000-0099/merge-k-sorted-lists-hard"
     }
 ]
 
