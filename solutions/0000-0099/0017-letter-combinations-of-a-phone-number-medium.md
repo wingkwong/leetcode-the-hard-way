@@ -16,7 +16,7 @@ Given a string containing digits from `2-9` inclusive, return all possible lette
 
 A mapping of digits to letters (just like on the telephone buttons) is given below. Note that $1$ does not map to any letters.
 
-<img src="https://assets.leetcode.com/uploads/2022/03/15/1200px-telephone-keypad2svg.png" width="300" height="243">
+<img src="https://assets.leetcode.com/uploads/2022/03/15/1200px-telephone-keypad2svg.png" width="300" height="243" />
 
 **Example 1:**
 
