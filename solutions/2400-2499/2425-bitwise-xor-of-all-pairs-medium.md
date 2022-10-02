@@ -40,41 +40,34 @@ Thus, one possible nums3 array is [2,5,1,6].
 - `0 <= nums1[i], nums2[j] <= 10^9`
 
 ## Approach 1: XOR Properties
-Concept used:-
+**Concepts**
+* XOR of even times of a number is zero (0)
+* XOR of odd times of a number is number itself
 
-XOR of even times of a number is zero (0);
+**Understanding** <br />
+let n = nums1.size() and m = nums2.size();
 
-XOR of odd times of a number is number itself;
+**Case 1: when n and m are even** <br />
+suppose `nums1`={a, b}, `nums2`={c, d}
+taking xor results in {a^c, a^d, b^c, b^d} <br />
+finally taking xor of all results in {a^c^a^d^b^c^b^d} <br />
+we know that x^x=0(even times xor with self = 0) <br />
+Now, the above xor becomes {a^a^b^b^c^c^d^d} => {0^0^0^0} =0<br />
+result = 0
 
-here, n=nums1.size() and m=nums2.size();
+**Case 2 : when n and m are odd** <br />
+Let x1= xor of all elements of nums1, x2=xor of all elements of nums2 <br />
+suppose `nums1`={a}, `nums2`={c}<br /> 
+taking xor results in {a^c}<br />
+result = (x1 ^ x2)
 
-Case 1: when n and m is even
-
-suppose nums1={a,b}, nums2={c,d}
-taking xor => {a^c,a^d,b^c,b^d }
-finally taking xor of all => {a^c^a^d^b^c^b^d}
-we know that x^x=0(even times xor with self = 0)
-Now, the above xor becomes => {a^a^b^b^c^c^d^d} => {0^0^0^0} =0
-
-RESULT = 0
-
-Case 2 : when both are odd
-
-Let's x1= xor of all elements of nums1, x2=xor of all elements of nums2
-suppose nums1={a}, nums2={c} (you can deduce by yourself, I am taking the easier one , take nums1={a,b,c}, nums2={d,e,f} and solve it)
-taking xor => {a^c}
-
-RESULT = (x1 ^x2)
-
-Case 3/4: when one of them is odd and other is even
-
-nums1={a,b,c}, nums2={d,e}
-Here, all terms of nums1 comes even times(m times) in final xorr => so, we can take them as zero
-And, all terms of nums2 comes odd times(n times) so, we can take odd=(even+1) 1 times x2
-
-x1=a^b^c, x2=d^e
-
-RESULT = x2(if m is even) , = x1 (if n is even)
+**Case 3/4: when one of them is odd and other is even**<br />
+let `nums1`={a, b, c}, `nums2`={d, e} <br />
+Let's x1= xor of all elements of nums1, x2=xor of all elements of nums2 <br />
+that is x1 be x1=a^b^c, x2=d^e<br />
+Since in this case n is even we can clearly see that each element of `nums1` repeat even times that makes xor are 0<br />
+and m is odd we get resultant xor of nums2 which x2 that is d^e<br />
+RESULT = x2(if m is even) , x1 (if n is even)
 
 <Tabs>
 <TabItem value="java" label="Java">
