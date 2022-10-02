@@ -34,15 +34,15 @@ Explanation: The smallest multiple of both 6 and 2 is 6. Note that a number is a
 
 ## Approach 1: If-else statement
 
-<Tabs>
-<TabItem value="java" label="Java">
-<SolutionAuthor name="@kat-kan"/>
-
 The smallest multiple of 2 and a number will be either:
 - the number if it is even or
 - the number multiplied by 2.
 
 In solution we need to first check if the number is even and return the correct result.
+
+<Tabs>
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@kat-kan"/>
 
 ```java
 class Solution {
@@ -57,20 +57,27 @@ class Solution {
     }
 }
 ```
-
 </TabItem>
 </Tabs>
 
-## Approach 2: Ternary operator
+**Time complexity** :
 
-<Tabs>
-<TabItem value="java" label="Java">
-<SolutionAuthor name="@kat-kan"/>
+`O(1)` - as this is very simple algorithm
+
+**Space complexity** :
+
+`O(1)` - the only extra variable used in this solution is `result`
+
+## Approach 2: Ternary operator
 
 We can make our solution much shorter using ternary operator:
 - `n % 2 ` is a condition
 - `n` is returned when condition is true
 - `n * 2` is returned when condition is false
+
+<Tabs>
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@kat-kan"/>
 
 ```java
 class Solution {
@@ -79,6 +86,13 @@ class Solution {
     }
 }
 ```
-
 </TabItem>
 </Tabs>
+
+**Time complexity** : 
+
+`O(1)` - as this is very simple algorithm
+
+**Space complexity** : 
+
+`O(1)` - no extra variables used in this solution
