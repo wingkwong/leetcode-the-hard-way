@@ -67,13 +67,12 @@ vector<int> findDuplicates(vector<int>& nums) {
         return duplicates;
     }
 ```
-**Time Complexity : <img src="https://latex.codecogs.com/svg.image?\begin{document}&space;$$&space;\color{white}&space;\mathcal{O}(n)&space;$$\end{document}&space;" title="https://latex.codecogs.com/svg.image?\begin{document} $$ \color{white} \mathcal{O}(n) $$\end{document} " />**
+**Time Complexity : $$O(N)$$**
 
-**Space Complexity : <img src="https://latex.codecogs.com/svg.image?\begin{document}&space;$$&space;\color{white}&space;\mathcal{O}(1)&space;$$\end{document}&space;" title="https://latex.codecogs.com/svg.image?\begin{document} $$ \color{white} \mathcal{O}(1) $$\end{document} " />**
+**Space Complexity : $$O(1)$$**
 
 ![1](https://user-images.githubusercontent.com/77775000/193418041-3fe52e97-17e9-4f32-89f8-975b6a7c788c.jpg)
 
-## Suggested Problems
 
 Cyclic Sort pattern is very useful to solve problems involving arrays containing numbers in a given range, finding the missing or duplicate numbers.
 
@@ -95,7 +94,7 @@ export const suggestedProblems = [
         "problemName" : "448-Find All Numbers Disappeared In An Array",
         "difficulty" : "Easy",
         "leetCodeLink" : "https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/",
-        solutionLink" : "https://leetcode.com/submissions/detail/812254247/"
+        "solutionLink" : "https://leetcode.com/submissions/detail/812254247/"
     },
     {
         "problemName" : "645-Set Mismatch",
@@ -104,4 +103,5 @@ export const suggestedProblems = [
         "solutionLink" : "https://leetcode.com/submissions/detail/812256354/"
     },
 ]
+
 <Table title="Suggested Problems" data={suggestedProblems} />
