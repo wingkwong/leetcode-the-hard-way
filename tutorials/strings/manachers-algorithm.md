@@ -11,20 +11,20 @@ keywords:
 
 <TutorialAuthors names="@wizeewig"/>
 
-# Manacher's Algorithm
+# Overview
 
 There are many ways to find the `longest palindromic substring`. One can find it in $O(N ^ 3)$ and also in $O(N ^ 2)$ time complexity. But using `Manacher's Algorithm` we do it in `O(N) time`. This algorithm was discovered by `Glenn K. Manacher` in 1975.
 
-First of all we need to understand that what is a substring. So, a substring is basically contiguous part of any array or string. For example: "square" is a substring of string "abigsquare"
+First of all we need to understand that what is a substring. So, a substring is basically contiguous part of any array or string. For example: $square$ is a substring of string $abigsquare$
 
-And secondly what is a palindrome. So, a palindrome is any word or phrase that reads the same backwards as forwards. For example: "madam", "a nut for a jar of tuna" etc.
+And secondly what is a palindrome. So, a palindrome is any word or phrase that reads the same backwards as forwards. For example: $madam$, $a nut for a jar of tuna$ etc.
 
 Given a string, find the longest substring which is palindrome. 
 
-* if the given string is “iplayracecar”, the output should be “racecar”
-* if the given string is “acacacb”, the output should be “acacacb”
-* if the given string is “abababa”, the output should be “abababa”
-* if the given string is “findnishi”, the output should be “indni”
+* if the given string is $iplayracecar$, the output should be $racecar$
+* if the given string is $acacacb$, the output should be $acacacb$
+* if the given string is $abababa$, the output should be $abababa$
+* if the given string is $findnishi$, the output should be $indni$
 
 * ## Brute force Approach $O(N ^ 3)$ time
 
@@ -77,23 +77,23 @@ $O(N ^ 3)$
 Since, three nested loops are used here so the time complexity of finding longest palindromic substring will be $O(N ^ 3)$.
 
 ### Space complexity
-O(1)
+$O(1)$
 
-No extra space is needed in this approach, so the space complexity will be O(1).
+No extra space is needed in this approach, so the space complexity will be $O(1)$.
 
 ## Manacher's Algorithm
  
 `Manacher's Algorithm` is way faster than the brute force approach to find the longest substring, because it uses the precomputed data. Hence, making the algorithm run in linear time. 
 
-One important point that we need to keep in mind is that using Manacher's Algorithm we can find the palindromic substrings of odd length string or array only. To find palindromic substrings of even length string or array, we need to do a slight change in the given input i.e. in the given input string we insert "#" character at the beginning and also at each alternate position(changing "level" to "#l#e#v#e#l").
+One important point that we need to keep in mind is that using Manacher's Algorithm we can find the palindromic substrings of odd length string or array only. To find palindromic substrings of even length string or array, we need to do a slight change in the given input i.e. in the given input string we insert "#" character at the beginning and also at each alternate position(changing $level$ to $#l#e#v#e#l$).
 
 In the case of an odd length palindrome, we will surround the middle character of the string with "#"
 
-Example: string = abbba -> ab#b#ba
+Example: string = $abbba$ -> $ab#b#ba$
 
 In the case of an even length palindrome, the middle character will be a "#" character.
 
-Example: string = aaccccaa -> #a#a#c#c#c#c#a#a# . Here, we can see that the middle character will come out to be a "#"
+Example: string = $aaccccaa$ -> $#a#a#c#c#c#c#a#a#$ . Here, we can see that the middle character will come out to be a "#"
 
 #### Steps of the `Manacher's algorithm` are as follows:
 
@@ -123,7 +123,7 @@ string longestPalindromicSubstring(string s){
     int sLen = 2 * s.length() + 3;
     /* The length is 2*s.length()+3 because we inserting one "@", one "$" and n+1 "#" */
     
-    char* arr= new char[sLen];
+    char* arr= new char[sLen]; // To modify the array so as to avoid bounds checking 
    
     arr[0] = '@';
     arr[sLen - 1] = '$';
@@ -144,7 +144,7 @@ string longestPalindromicSubstring(string s){
     int S = 0;
     int R = 0;
     int C = 0;
-    int* Plen = new int[sLen]; // i's radius, which doesn't include i
+    int* Plen = new int[sLen]; // To store the maximum length of palindromic substring
 
     for(int i = 1; i < sLen - 1; i++){
         if (i < R){
@@ -188,13 +188,109 @@ upthelevel
 The Longest Palindromic Substring is: level
 
 ### Time Complexity Analysis of Manacher's Algorithm
-O(N)
+$O(N)$
 
 At first one might think that the algorithm has $O(N ^ 2)$ time complexity because there is a for loop inside which a while loop is nested. But on seeing clearly we can observe that as we move ahead doing the comparisons the R always increases by one, it never decreases.  
 
-Other parts of Manacher's Algorithm run in O(N) time. So, overall complexity is O(N).
+Other parts of Manacher's Algorithm run in $O(N)$ time. So, overall complexity is $O(N)$.
 
 ### Space Complexity
-O(N)
+$O(N)$
 
-O(N) because we just need an extra array Plen to store the length of longest Palindromic substring found.
+$O(N)$ because we just need an extra array Plen to store the length of longest Palindromic substring found.
+
+----
+
+To make you understand better `Manacher's Algorithm`, we can do one `Leetcode question` on it.
+
+<ins>Problem Title</ins> : Longest Palindromic Substring
+
+<ins>Difficulty Level</ins> : Medium
+
+<ins>Problem Link</ins> : https://leetcode.com/problems/longest-palindromic-substring/
+
+<ins>Problem Statement</ins> : Given a string s, return the longest palindromic substring in s.
+
+A string is called a palindrome string if the reverse of that string is the same as the original string.
+
+<ins>Example 1</ins> :
+
+Input: s = $babad$
+
+Output: $bab$
+
+Explanation: $aba$ is also a valid answer.
+
+<ins>Example 2</ins> :
+
+Input: s = $cbbd$
+
+Output: $bb$
+
+<ins>Solution</ins> : We can do this problem using the same approach as mentioned in the above algorithm. This problem states to find the longest palindromic substring which indeed is the `Manacher's Algorithm`. Hence, we can directly apply it here.
+
+Here we will try to implement the algorithm using a dynamic vector array(cpp) and following the same algorithm as stated above. Instead of vector array one can also use arrays or list to implement it.
+
+``` cpp
+
+class Solution {
+public:
+    string longestPalindrome(string s) 
+    {
+       
+        int Slen= s.length();
+        vector <int> arr;  // To modify the array so as to avoid bounds checking   
+        vector <int> Plen; // To store the maximum length of palindromic substring
+        int C=0, R=0, maxLength=0;
+        
+        arr.push_back('$');
+        arr.push_back('#');
+        
+        for(int i=0;i<Slen;i++)
+        {
+            arr.push_back(s[i]);
+            arr.push_back('#');
+        }
+        arr.push_back('@');
+        
+        int L=arr.size();
+        
+        for(int i=1;i<L+1;i++)
+        {
+            Plen.push_back(0);
+        }
+      
+        //Implementation of Manachers Algorithm//
+        
+        for(int i=1;i<L;i++)
+        {
+
+            if(i<R)
+            Plen[i] = min((R-i),Plen[(2*C)-i]);
+        
+            // Expanding along the center
+            while( arr[i+(1+Plen[i])] == arr[i-(1+Plen[i])])
+            Plen[i]++;
+        
+            // Updating center and its bound
+            if((i+Plen[i])>R)
+            {
+                C=i;
+                R= i+Plen[i];   
+            }
+        }
+        
+        //finding out the maxLength of palindromic substring
+        C = max_element(Plen.begin(), Plen.end()) - (Plen.begin()+1); 
+        
+        return s.substr((C - Plen[C+1])/2, Plen[C+1]);
+        
+    }
+};
+
+```
+* Some suggested problems for `Manacher's Algorithm`-
+
+| Problem Title        | Difficulty | Solution Link                                                                                                                                                                                                                          |
+| ---------------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 214 - Shortest Palindrome https://leetcode.com/problems/shortest-palindrome/| Hard   | https://leetcode.com/problems/shortest-palindrome/discuss/2649819/Using-Manacher's-Algorithm-O(N)                                                                                                                                           |
