@@ -33,8 +33,9 @@ Output: [9,4]
 
 ## Approach 1: HashMap
 1) Insert all elements from first array into hash table (set).
-2) for each element i in second array
-	i) if it is present in our hash table insert into result list & remove that element from our hash table so we again not insert into result.
+
+2) for each element i in second array if it is present in our hash table insert into result list & remove that element from our hash table so we again not insert into result.
+
 3) return result. 
 <Tabs>
 <TabItem value="java" label="Java">

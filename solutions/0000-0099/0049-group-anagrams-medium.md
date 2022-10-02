@@ -92,8 +92,9 @@ class Solution {
             if (hm.containsKey(sortString(strs[i]))) {
                 hm.get(sortString(strs[i])).add(strs[i]);
             } else {
-                hm.put(sortString(strs[i]), new LinkedList<String>());
-                hm.get(sortString(strs[i])).add(strs[i]);
+                String sortedstring = sortString(strs[i]);
+                hm.put(sortedstring, new LinkedList<String>());
+                hm.get(sortedstring).add(strs[i]);
             }
         }
         List<List<String>> ll = new LinkedList<List<String>>();
