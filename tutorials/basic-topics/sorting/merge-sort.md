@@ -1,6 +1,6 @@
 ---
 title: 'Merge Sort'
-description: 'A most efficient sorting algorithm based on  divide-and-conquer strategy'
+description: 'A efficient sorting algorithm based on  divide-and-conquer strategy'
 hide_table_of_contents: true
 draft: true
 keywords:
@@ -23,8 +23,7 @@ in following Languages.
 - Java
   
 ## Few concepts on merge sort
-  
----
+
 Suppose we have an array of integers , 
 
 `6 5 3 1 8 7 2 4`
@@ -204,8 +203,6 @@ if len(nums) > 1:
 ```
 
 </TabItem>
-</TabItem>
-
 <TabItem value="java" label="Java">
 
 ```java
@@ -300,7 +297,6 @@ class Solution {
 2. When array is not to large
 
   
----
 Merging of n elements takes n time and since each time the array is cut into half it takes   $\log_{2} n$   time to reach the top so **total time complexity is**    $O(n\log_{2} n)$  .
 
 
@@ -308,15 +304,15 @@ Merging of n elements takes n time and since each time the array is cut into hal
 
 
 
-## **Mergesort is also useful for sorting linked lists**
+### **Mergesort is also useful for sorting linked lists**
 
-[*Leetcode Problem 148_Sort List*](https://leetcode.com/problems/sort-list/)
+## [**Leetcode Problem 148_Sort List**](https://leetcode.com/problems/sort-list/)
 
-### Problem Statement 
+**Problem Statement** 
 
 `Given the head of a linked list, return the list after sorting it in ascending order.`
 
-### Test Cases
+**Test Cases**
  
  *Test Case 1*
 
@@ -335,7 +331,7 @@ Output: [-1,0,3,4,5]
 
 Here we can follow both top down or bottom up merge sort . I have already discussed the algorithms in detailed way for array .
 
-**Intuition for the problem**
+### **Intuition for the problem**
 
 ```
 3->8->12->null
@@ -513,13 +509,13 @@ export const suggestedProblems = [
         "problemName" : "148-Sort List",
         "difficulty" : "Medium",
         "leetCodeLink" : "https://leetcode.com/problems/sort-list/",
-        solutionLink" : "../solutions/0100-0199/0148-sort-list-medium.md"
+        "solutionLink" : "../solutions/0100-0199/0148-sort-list-medium.md"
     },
     {
         "problemName" : "327-Count of Range Sum",
         "difficulty" : "Hard",
         "leetCodeLink" : "https://leetcode.com/problems/count-of-range-sum/",
-        solutionLink" : "../solutions/0300-0399/0327-count-of-range-sum-hard.md"
+        "solutionLink" : "../solutions/0300-0399/0327-count-of-range-sum-hard.md"
     },
     {
         "problemName" : "23-Merge k Sorted Lists",
