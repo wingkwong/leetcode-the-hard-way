@@ -94,8 +94,6 @@ We have figured out the solution of the problem:
 
 Following are the implementation of the above mentioned problem:
 
-### C++ Implementation
-
 <Tabs>
 <TabItem value="cpp" label="C++">
 <SolutionAuthor name="@Shivashish-rwt"/>
@@ -125,13 +123,9 @@ public:
 ```
 
 </TabItem>
-</Tabs>
 
-### Java Implementation
-
-<Tabs>
 <TabItem value="java" label="Java">
-<SolutionAuthor name="Shivashish-rwt"/>
+<SolutionAuthor name="@Shivashish-rwt"/>
 
 ```java
 class Solution {
@@ -156,15 +150,11 @@ class Solution {
 ```
 
 </TabItem>
-</Tabs>
 
-### Python Implementation
-
-<Tabs>
 <TabItem value="py" label="Python">
 <SolutionAuthor name="@Shivashish-rwt"/>
 
-```python
+```py
 class Solution:
     def insertionSort(arr,size_of_array):
         
@@ -185,6 +175,7 @@ class Solution:
 ```
 
 </TabItem>
+
 </Tabs>
 
 ## Time Complexity
