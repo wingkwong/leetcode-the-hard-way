@@ -14,7 +14,7 @@ keywords:
 
 ## Overview
 
-Greedy is a strategy to solve various problems optimally.A greedy algorithm constructs a solution to the problem by always making a
+Greedy is a strategy to solve various problems optimally. A greedy algorithm constructs a solution to the problem by always making a
 choice that looks the best at the moment. A greedy algorithm never takes back
 its choices, but directly constructs the final solution. For this reason, greedy
 algorithms are usually very efficient.
@@ -38,13 +38,17 @@ Input: flowerbed = [1,0,0,0,1], n = 1
 Output: true
 ```
 
-For a greedy solution, we would solve in such a way that we will always have the best choice at every max.Our task is to calculate maximum flowers we can plant.Its simple that if there are three consecutive zeroes then the middle one will be planted. But if we have to calculate maximum then we will miss 2 side case this way.
+For a greedy solution, we would solve in such a way that we will always have the best choice at every max. Our task is to calculate maximum flowers we can plant. Its simple that if there are three consecutive zeroes then the middle one will be planted. But if we have to calculate maximum then we will miss 2 side case this way.
 
 Case 1: 001....
-Here intially we have just 2 consecutive zeroes but we can plant at first place.So we will consider this case too.
+Here intially we have just 2 consecutive zeroes but we can plant at first place. So we will consider this case too.
 
 Case 2: ........100
-Here at the end we have just 2 consecutive zeroes but we can plant at last place.So we will consider this case too.
+Here at the end we have just 2 consecutive zeroes but we can plant at last place. So we will consider this case too.
+
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@abhishek-sultaniya"/>
 
 ```cpp
 class Solution {
@@ -74,6 +78,9 @@ public:
 	}
 };
 ```
+</TabItem>
+</Tabs>
+
 ## Example 2: [455 - Assign Cookies](https://leetcode.com/problems/assign-cookies/)
 
 ```
@@ -82,7 +89,11 @@ Assume you are an awesome parent and want to give your children some cookies. Bu
 Each child i has a greed factor g[i], which is the minimum size of a cookie that the child will be content with; and each cookie j has a size s[j]. If s[j] >= g[i], we can assign the cookie j to the child i, and the child i will be content. Your goal is to maximize the number of your content children and output the maximum number
 ```
 
-This problem uses the concept of greedy.our aim is to just assign the cookies starting from the child with less greediness to maximize the number of happy children.So we will sort greediness of child and size of cookies too.Then as soon as a child gets the cookie,we move to next child.We are using greedy in such a way that if child will less greediness cannot get a cookie,then all children with higher greediness will also not get that cookie.
+This problem uses the concept of greedy. Our aim is to just assign the cookies starting from the child with less greediness to maximize the number of happy children. So we will sort greediness of child and size of cookies too. Then as soon as a child gets the cookie, we move to next child. We are using greedy in such a way that if child will less greediness cannot get a cookie, then all children with higher greediness will also not get that cookie.
+
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@abhishek-sultaniya"/>
 
 ```cpp
 class Solution {
@@ -94,12 +105,16 @@ public:
 		for (int j = 0; j < s.size(); ++j) {
 			if (g[ans] <= s[j]) {
 				ans++;
+				if (ans == g.size())
+					break;
 			}
 		}
 		return ans;
 	}
 };
 ```
+</TabItem>
+</Tabs>
 
 export const suggestedProblems = [
   {
