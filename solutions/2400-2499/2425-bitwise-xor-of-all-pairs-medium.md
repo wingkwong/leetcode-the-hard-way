@@ -45,29 +45,29 @@ Thus, one possible nums3 array is [2,5,1,6].
 * XOR of odd times of a number is number itself
 
 **Understanding** <br />
-let n = nums1.size() and m = nums2.size();
+let n = nums1.length and m = nums2.length;
 
 **Case 1: when n and m are even** <br />
-suppose `nums1`={a, b}, `nums2`={c, d}
-taking xor results in {a^c, a^d, b^c, b^d} <br />
-finally taking xor of all results in {a^c^a^d^b^c^b^d} <br />
-we know that x^x=0(even times xor with self = 0) <br />
-Now, the above xor becomes {a^a^b^b^c^c^d^d} => {0^0^0^0} =0<br />
+suppose $nums1=[a, b]$, $nums2=[c, d]$
+taking xor results in $[a \oplus{} c, a \oplus{} d, b \oplus{} c, b \oplus{} d]$ <br />
+finally taking xor of all results in $[a \oplus{} c \oplus{} a \oplus{} d \oplus{} b \oplus{} c \oplus{} b \oplus{} d ]$ <br />
+we know that x $\oplus{}$ x=0(even times xor with self = 0) <br />
+Now, the above xor becomes $[a \oplus{} a \oplus{} b \oplus{} b \oplus{} c \oplus{} c \oplus{} d \oplus{} d]$ => $[0 \oplus{} 0 \oplus{} 0 \oplus{} 0]$ = 0<br />
 result = 0
 
 **Case 2 : when n and m are odd** <br />
-Let x1= xor of all elements of nums1, x2=xor of all elements of nums2 <br />
-suppose `nums1`={a}, `nums2`={c}<br /> 
-taking xor results in {a^c}<br />
-result = (x1 ^ x2)
+Let $x_1$= xor of all elements of $nums1$, $x_2$=xor of all elements of $nums2$ <br />
+suppose $nums1=[a]$, $nums2=[c]$<br /> 
+taking xor results in $[a \oplus{} c]$<br />
+result = $x_1 \oplus{} x_2$
 
 **Case 3/4: when one of them is odd and other is even**<br />
-let `nums1`={a, b, c}, `nums2`={d, e} <br />
-Let's x1= xor of all elements of nums1, x2=xor of all elements of nums2 <br />
-that is x1 be x1=a^b^c, x2=d^e<br />
-Since in this case n is even we can clearly see that each element of `nums1` repeat even times that makes xor are 0<br />
-and m is odd we get resultant xor of nums2 which x2 that is d^e<br />
-RESULT = x2(if m is even) , x1 (if n is even)
+let $nums1=[a, b, c]$, $nums2=[d, e]$<br />
+Let's $x_1$= xor of all elements of $nums1$, $x_2$=xor of all elements of $nums2$ <br />
+that is $x_1=a \oplus{} b \oplus{} c$, $x_2=d \oplus{} e$<br />
+Since in this case n is even we can clearly see that each element of $nums1$ repeat even times that makes xor as 0<br />
+and m is odd we get resultant xor of $nums2$ which is $x_2$ that is d $\oplus{}$ e<br />
+result = $x_2$(if m is even) , $x_1$ (if n is even)
 
 <Tabs>
 <TabItem value="java" label="Java">
@@ -88,10 +88,13 @@ class Solution {
             return 0;
         }
         int xorone = xor(nums1), xortwo = xor(nums2);
-        // if both arrays have odd length then xor of both arrays is the answer or else
-        // xor of one even length array is the answer
-        return nums1.length % 2 == 1 && nums2.length % 2 == 1 ? xorone ^ xortwo
-                : (nums1.length % 2 != 0 ? xortwo : xorone);
+        if (nums1.length % 2 == 1 && nums2.length % 2 == 1) { // if both arrays have odd length
+            return xorone ^ xortwo;
+        } else if (nums1.length % 2 != 0) { // if nums1 has odd length
+            return xortwo;
+        } else { // if nums2 has odd length
+            return xorone;
+        }
     }
 }
 ```
