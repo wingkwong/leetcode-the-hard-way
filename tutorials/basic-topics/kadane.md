@@ -1,8 +1,7 @@
 ---
 title: 'Kadane Algorithm'
-# TODO description: 'Kadane 2D algorithm is a elegant way of finding maximum sum submatrix in a matrix using the logic of Kadane 1D algorithm'
-description: 'Kadane algorithm finds the maximum sum subarray in an array of integers'
-hide_table_of_contents: true
+description: 'Kadane 1D algorithm finds the maximum sum subarray in an array of integers. Kadane 2D algorithm finds the maximum sum subarray in a 2D array of integers.'
+hide_table_of_contents: false
 keywords:
   - leetcode
   - tutorial
@@ -39,28 +38,37 @@ If the array consists of positive integers(need not be all positive integers). T
 
 The main idea of Kadane's algorithm is to neglect the negative sum subarrays and take maximum among the positive sum subarrays.
 
-```cpp
-int maxSubArraySum(int arr[], int size)
-{   
-    // maxSum is where the maximum sum of subarray is stored
-    // curSum is where the sum of current subarray is stored
-    int maxSum = INT_MIN, curSum = 0;
- 
-    for (int i = 0; i < size; i++) {
-        // Add current element to current sum 
-        curSum = curSum + arr[i];
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@ShivaRapolu01"/>
 
-        // If current sum is greater than maxSum, update maxSum
-        if (maxSum < curSum)
-            maxSum = curSum;
+```cpp
+int maxSubArraySum(vector<int>& nums)
+{   
+    int n=nums.size(); 
+    // globalSum is where the maximum sum of subarray is stored
+    // localSum is where the sum of current subarray is stored
+    int globalSum = INT_MIN, localSum = 0;
  
-        // If upon adding ith element current sum is becoming less than 0, it cannot contribute to the maximum sum subarray so we neglect it and reset our current sum to 0 to start another subarray freshly
-        if (curSum < 0)
-            curSum = 0;
+    for (int i = 0; i < n; i++) {
+        // Add current element to current sum 
+        localSum = localSum + nums[i];
+
+        // If current sum is greater than globalSum, update globalSum
+        if (globalSum < localSum)
+            globalSum = localSum;
+ 
+        // If upon adding ith element current sum is becoming less than 0
+        // it cannot contribute to the maximum sum subarray so we neglect it 
+        // and reset our current sum to 0 to start another subarray freshly
+        if (localSum < 0)
+            localSum = 0;
     }
-    return maxSum;
+    return globalSum;
 }
 ```
+</TabItem>
+</Tabs>
 
 ## Steps in Kadane's Algorithm
 
@@ -68,7 +76,7 @@ int maxSubArraySum(int arr[], int size)
 2. Keep updating the maximum sum of subarray found so far by checking if the current sum is greater than the maximum sum found so far or not.
 3. If the current sum is less than 0, then we can neglect the current subarray and start a new subarray from the next element.
 
-export const KadanesuggestedProblems = [
+export const kadaneSuggestedProblems = [
     {
         "problemName": "152 - Maximum Product Subarray",
         "difficulty": "Medium",
@@ -90,7 +98,7 @@ export const KadanesuggestedProblems = [
     
 ]
 
-<Table title="Suggested Problems" data={KadanesuggestedProblems} />
+<Table title="Suggested Problems" data={kadaneSuggestedProblems} />
 
 # Variations of Kadane's Algorithm
 
@@ -101,12 +109,14 @@ export const KadanesuggestedProblems = [
 We know about Kadane's algorithm which is a O(N) algorithm that finds the maximum sum of a contiguous subarray in an array. It can be extended to find maximum sum submatrix in a 2D matrix.                                        
 Consider the below problem statement:
 
-> Given a 2D array, find the maximum sum submatrix in it              
+### Example 1: [85 - Maximal Rectangle](https://leetcode.com/problems/maximal-rectangle/)
+
+> Given a rows x cols binary matrix filled with 0's and 1's, find the largest rectangle containing only 1's and return its area.              
 > You must write an algorithm with `O(rows*cols^2)` runtime complexity.
 
 For example, given the input:
 
-```cpp
+```
 grid= [
         [ -1   -2   -3  -13   -21 ],
         [ -4    5    6   14   -20 ],
@@ -118,6 +128,10 @@ grid= [
 It is easy to notice that the maximum sum submatrix is the 57. Which is the submatrix enclosed by zero-indexed vertices (1,1),(1,3),(2,1),(2,3). 
 
 > Hint: The problem statement resonates with Kadane's algorithm. The main thing is how to extend the 1D Kadane's algorithm to 2D. General Kadane's algorithm works on a 1D array, so first we need to convert the submatrix into 1D array in such a way that we can uniquely identify the boundaries of maximum sum submatrix. Then we can apply Kadane's algorithm on this 1D array to find the maximum sum subarray.
+
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@ShivaRapolu01"/>
 
 ```cpp
 int ModifiedKadane(vector<int> arr, int &cursumLeft, int &cursumRight, int n)
@@ -212,12 +226,14 @@ void findMaxSumIn2DMatrix(vector<vector<int>> grid, int rows, int cols)
     cout << "Bottom: " << finalBottom << " Right: " << finalRight  << endl;
     cout << "Max sum of Submatrix is: " << maxSum << endl;
 }
-
 ```
+
+</TabItem>
+</Tabs>
 
 > For grid given in example finalLeft=1, finalRight=3, finalTop=1, finalBottom=2.
 
-## Code Flow
+### Code Flow
 
 1. Any submatrix has 4 sides so we need 4 variables to uniquely identify and store the boundaries of the maximum sum submatrix.
 2. Using the 1D kadane's algorithm we can find the maximum sum subarray in a 1D array and with some modifications we can retrieve the boundaries(starting index and ending index) of this maximum sum subarray.
@@ -225,7 +241,7 @@ void findMaxSumIn2DMatrix(vector<vector<int>> grid, int rows, int cols)
 4. Now we can apply Modified 1D Kadane's algorithm on this 1D array to find the maximum sum subarray and we retrieve the boundaries of this maximum sum subarray.
 5. The boundaries retrieved from this 1D Kadane's algorithm are the final Top and FinalBottom boundaries of the maximum sum submatrix in the original 2D matrix.
 
-export const kadane2DsuggestedProblems = [
+export const kadane2DSuggestedProblems = [
     {
         "problemName": "85 - Maximal Rectangle",
         "difficulty": "Hard",
@@ -240,4 +256,4 @@ export const kadane2DsuggestedProblems = [
     }
 ]
 
-<Table title="Suggested Problems" data={kadane2DsuggestedProblems} />
+<Table title="Suggested Problems" data={kadane2DSuggestedProblems} />
