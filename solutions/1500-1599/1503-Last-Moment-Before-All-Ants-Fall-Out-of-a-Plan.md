@@ -82,7 +82,7 @@ public:
 ```
 
 </TabItem>
-<TabItem value="py" label="Python">
+<TabItem value="py" label="Python3">
 <SolutionAuthor name="@WaqarTabish2807"/>
 
 ```py
@@ -146,7 +146,7 @@ int getLastMoment(int n, vector& left, vector& right) {
 ```
 
 </TabItem>
-<TabItem value="py" label="Python">
+<TabItem value="py" label="Python3">
 <SolutionAuthor name="@WaqarTabish2807"/>
 
 ```py
