@@ -12,6 +12,73 @@ keywords:
   - topological sort
 ---
 
+
+
+### Depth First Search
+
+Go to [Tutorial](../tutorials/graph-theory/depth-first-search)
+
+```cpp
+def dfs(node):
+    if(node == None):
+        # we stop when node is invalid
+        return
+        
+    # explore left branch first
+    dfs(node.left)
+    
+    # evalute current node
+    print("I just visited the left branch!")
+    print("I am number: " + str(node.val))
+    print("I am visiting the right branch now!")
+    
+    # explore right branch
+    dfs(node.right)
+
+```
+
+
+
+### Breadth First Search
+
+Go to [Tutorial](../tutorials/graph-theory/breadth-first-search)
+
+```cpp
+def findTargetNode(root, targetValue):
+    if(root is None):
+        return None
+    
+    #currentLevel contains the nodes with the same distance to root (closest so far)
+    currentLevel = [root]
+    
+    #we increase our depth one by one as long as there is still node
+    while(len(level) > 0):
+    
+        #we store the current level node's children in nextLevel
+        nextLevel = []
+        
+        for node in currentLevel:
+            #skip if the node is None
+            if(node is None):
+                continue
+            #we can be sure the target node is the CLOSEST so we can return
+            #because we are traversing the tree level by level
+            if(node.val == targetValue):
+                return node
+                
+            #add the children to nextLevel
+            nextLevel.append(node.left)
+            nextLevel.append(node.right)
+        #change the currentLevel to nextLevel (no target node in this level, go next)
+        currentLevel = nextLevel
+    
+    #if no target node has been returned    
+    return None
+    
+```
+
+
+
 ### Bellman Ford Algorithm
 
 Go to [Tutorial](../tutorials/graph-theory/bellman-ford-algorithm)
