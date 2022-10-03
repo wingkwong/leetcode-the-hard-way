@@ -9,7 +9,7 @@ keywords:
   - algorithm
 ---
 
-<!-- import TutorialAuthors from '@site/src/components/TutorialAuthors'; -->
+import TutorialAuthors from '@site/src/components/TutorialAuthors';
 
 <TutorialAuthors names="@ShivaRapolu01"/>
 
@@ -18,12 +18,11 @@ keywords:
 We know about Kadane's algorithm which is a O(N) algorithm that finds the maximum sum of a contiguous subarray in an array. Now consider the below problem statement:
 
 > Given a 2D array, find the maximum sum submatrix in it
->
 > You must write an algorithm with `O(rows*cols^2)` runtime complexity.
 
 For example, given the input:
 
-```C++
+```cpp
 grid= [
         [-1   -2   -3],
         [ 4    5    6],
