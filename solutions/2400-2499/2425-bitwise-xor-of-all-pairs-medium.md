@@ -40,34 +40,39 @@ Thus, one possible nums3 array is [2,5,1,6].
 - `0 <= nums1[i], nums2[j] <= 10^9`
 
 ## Approach 1: XOR Properties
+
 **Concepts**
-* XOR of even times of a number is zero (0)
-* XOR of odd times of a number is number itself
 
-**Understanding** <br />
-let n = nums1.length and m = nums2.length;
+* XOR of even times of a number is zero. e.g. $x \oplus x = 0$
+* XOR of odd times of a number is number itself. e.g. $x \oplus x \oplus x = x$
 
-**Case 1: when n and m are even** <br />
-suppose $nums1=[a, b]$, $nums2=[c, d]$
-taking xor results in $[a \oplus{} c, a \oplus{} d, b \oplus{} c, b \oplus{} d]$ <br />
-finally taking xor of all results in $[a \oplus{} c \oplus{} a \oplus{} d \oplus{} b \oplus{} c \oplus{} b \oplus{} d ]$ <br />
-we know that x $\oplus{}$ x=0(even times xor with self = 0) <br />
-Now, the above xor becomes $[a \oplus{} a \oplus{} b \oplus{} b \oplus{} c \oplus{} c \oplus{} d \oplus{} d]$ => $[0 \oplus{} 0 \oplus{} 0 \oplus{} 0]$ = 0<br />
-result = 0
+**Understanding**
 
-**Case 2 : when n and m are odd** <br />
-Let $x_1$= xor of all elements of $nums1$, $x_2$=xor of all elements of $nums2$ <br />
+let $n$ be the length of $num1$ and $m$ be the length of $nums2$
+
+**Case 1: when n and m are even**
+
+suppose $nums1=[a, b]$, $nums2=[c, d]$ <br />
+taking xor results in $[a \oplus{} c, a \oplus{} d, b \oplus{} c, b \oplus{} d]$ results in $[a \oplus{} c \oplus{} a \oplus{} d \oplus{} b \oplus{} c \oplus{} b \oplus{} d ]$ <br />
+Given that $x \oplus x = 0$ (even times xor with self = 0), <br />
+the above xor becomes $[a \oplus{} a \oplus{} b \oplus{} b \oplus{} c \oplus{} c \oplus{} d \oplus{} d]$ => $[0 \oplus{} 0 \oplus{} 0 \oplus{} 0]$ = 0<br />
+Hence, $result = 0$
+
+**Case 2 : when n and m are odd**
+
+Let $x_1$ = xor of all elements of $nums1$ and $x_2$ = xor of all elements of $nums2$ <br />
 suppose $nums1=[a]$, $nums2=[c]$<br /> 
 taking xor results in $[a \oplus{} c]$<br />
-result = $x_1 \oplus{} x_2$
+Hence, $result = x_1 \oplus x_2$
 
-**Case 3/4: when one of them is odd and other is even**<br />
+**Case 3 / 4: when one of them is odd and other is even**
+
 let $nums1=[a, b, c]$, $nums2=[d, e]$<br />
-Let's $x_1$= xor of all elements of $nums1$, $x_2$=xor of all elements of $nums2$ <br />
-that is $x_1=a \oplus{} b \oplus{} c$, $x_2=d \oplus{} e$<br />
-Since in this case n is even we can clearly see that each element of $nums1$ repeat even times that makes xor as 0<br />
-and m is odd we get resultant xor of $nums2$ which is $x_2$ that is d $\oplus{}$ e<br />
-result = $x_2$(if m is even) , $x_1$ (if n is even)
+Let's $x_1$= xor of all elements of $nums1$, $x_2$ = xor of all elements of $nums2$ <br />
+that is $x_1=a \oplus{} b \oplus{} c$, $x_2 = d \oplus{} e$<br />
+Since in this case $n$ is even we can clearly see that each element of $nums1$ repeat even times that makes xor as $0$<br />
+and $m$ is odd we get resultant xor of $nums2$ which is $x_2$ that is $d \oplus e$<br />
+Hence, $result = x_2$ (if $m$ is even) or $x_1$ (if $n$ is even)
 
 <Tabs>
 <TabItem value="java" label="Java">
@@ -75,6 +80,7 @@ result = $x_2$(if m is even) , $x_1$ (if n is even)
 
 ```java
 class Solution {
+    // calculate the XOR of given nums
     private int xor(int[] nums) {
         int res = 0;
         for (int num : nums) {
@@ -84,17 +90,20 @@ class Solution {
     }
 
     public int xorAllNums(int[] nums1, int[] nums2) {
-        if (nums1.length % 2 == 0 && nums2.length % 2 == 0) { // if both arrays have even length
+        if (nums1.length % 2 == 0 && nums2.length % 2 == 0) {
+            // both arrays have even length
             return 0;
         }
         int xorone = xor(nums1), xortwo = xor(nums2);
-        if (nums1.length % 2 == 1 && nums2.length % 2 == 1) { // if both arrays have odd length
+        if (nums1.length % 2 == 1 && nums2.length % 2 == 1) {
+            // both arrays have odd length
             return xorone ^ xortwo;
-        } else if (nums1.length % 2 != 0) { // if nums1 has odd length
+        } else if (nums1.length % 2 != 0) {
+            // nums1 has odd length
             return xortwo;
-        } else { // if nums2 has odd length
-            return xorone;
         }
+        // nums2 has odd length
+        return xorone;
     }
 }
 ```
