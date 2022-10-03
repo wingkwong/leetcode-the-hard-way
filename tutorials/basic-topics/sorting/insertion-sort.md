@@ -47,7 +47,7 @@ https://leetcode.com/problems/maximum-product-of-two-elements-in-an-array/
 
 ### Problem Statement
 
-Given the array of integers nums, you will choose two different indices i and j of that array. Return the maximum value of `(nums[i]-1)*(nums[j]-1)`.
+Given the array of integers nums, you will choose two different indices i and j of that array. Return the maximum value of $(nums[i] - 1) * (nums[j] - 1)$.
 
 **Example 1:**
 
@@ -79,11 +79,11 @@ Output: 12
 
 ## Approach: Sorting using Insertion Sort
 
-The problem wants us to find the maximum value of `(nums[i] - 1) * (nums[j] - 1)`, where `i` and `j` are two different indices of the given array.
+The problem wants us to find the maximum value of $(nums[i] - 1) * (nums[j] - 1)$, where `i` and `j` are two different indices of the given array.
 
 By looking at the expression, we can observe that its just a product of two numbers of the given array.
 
-We have to maximize the product. Now, in order to maximize the product of two numbers we have to choose the two largest number possible. So, in order to find the maximum value of `(nums[i] - 1) * (nums[j] - 1)` we just have to take the largest two number in the given array.
+We have to maximize the product. Now, in order to maximize the product of two numbers we have to choose the two largest number possible. So, in order to find the maximum value of $(nums[i] - 1) * (nums[j] - 1)$ we just have to take the largest two number in the given array.
 
 Now, we know how can we maximize the value of given expression. But we have to also figure out the how can we get the two largest number present in the given array. Here comes the sorting method, if we sort our array then, the largest number would be present at the last index and second largest number would be present at the second last index of the sorted array. For sorting, we are going to use Insertion Sort Algorithm.
 
@@ -194,13 +194,13 @@ class Solution:
 
 ## Time Complexity
 
-Apart from sorting the the given array we are not doing anything in the solution. The insertion sort would take $\mathcal{O}(n^2)$ to sort the array.
+Apart from sorting the the given array we are not doing anything in the solution. The insertion sort would take $O(n^2)$ to sort the array.
 
-So, the Time complexity is = $\mathcal{O}(n^2)$
+So, the Time complexity is = $O(n^2)$
 
 ## Space Complexity
 
-We are not using any extra space apart from the array we have to sort. So, the space complexity is = $\mathcal{O}(1)$
+We are not using any extra space apart from the array we have to sort. So, the space complexity is = $O(1)$
 
 export const suggestedProblems = [
   {
