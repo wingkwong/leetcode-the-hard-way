@@ -11,9 +11,12 @@ https://leetcode.com/problems/remove-duplicates-from-sorted-array/
 
 ## Problem Statement
 
-Given an integer array nums sorted in non-decreasing order, `remove the duplicates` in-place such that each unique element appears only once. The relative order of the elements should be kept the same.
+Given an integer array nums sorted in non-decreasing order, `remove the duplicates` in-place such that each unique element appears only once.
+The relative order of the elements should be kept the same.
 
-Since it is impossible to change the length of the array in some languages, you must instead have the result be placed in the first part of the array nums. More formally, if there are k elements after removing the duplicates, then the first k elements of nums should hold the final result. It does not matter what you leave beyond the first k elements.
+Since it is impossible to change the length of the array in some languages, you must instead have the result be placed in the first part of the array nums. 
+More formally, if there are k elements after removing the duplicates, then the first k elements of nums should hold the final result. 
+It does not matter what you leave beyond the first k elements.
 
 Return k after placing the final result in the first k slots of nums.
 
@@ -44,12 +47,19 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 - `-100 <= nums[i] <= 100`
 - `nums is sorted in **non-decreasing** order.`
 
-## Approach : Java Solution
-We have to remove duplicates so we will check if the next element is greater or not.
-In the array, check whether element at the next index is greater than the curr element or not. If it is greater than curr element, means it can be kept in the array, place it at the index of count.
+## Approach :
 
-** Time complexity : O(n)**
-**Space Complexity : O(1)**
+In this problem, we have to count the number of distinct elements and it does not matter what elements are present other than those distinct elements.
+So, we will take a index count starting from 1 and traverse the array, keeping the distinct elements at the front. At last we will return the count.
+
+## Explanation:
+As the array is sorted, it means all the duplicates of a number will be next to each other.
+So, basically while traversing the array we will check if next element is greater or not.
+If it is greater, then it means duplicate is not there and we will put it at the count index and increment the count.
+If not greater, then no change.
+At last we will return the count.
+
+**As we are traversing the array once so, time complexity is O(n) and no extra space is required so space complexity is O(1).**
 
 <Tabs>
 <TabItem value="java" label="Java">
@@ -58,16 +68,17 @@ In the array, check whether element at the next index is greater than the curr e
 ```java
 class Solution {
     public int removeDuplicates(int[] arr) {
-        int n = arr.length;	//Array length
-        int ct = 1;	// Count starting from index 1 bcz 1st element at index 0 will be kept as it is.
+        int n = arr.length;
+        int count = 1;
         
-        for(int i = 0; i+1 < n; i++) {
-            if(arr[i] < arr[i+1])  {		// if next element is not equal to current element, then put that next element at ct index which keeps the count of distinct elements.
-                arr[ct] = arr[i+1];	
-                ct++;
+        for(int i = 0; i + 1 < n; i++) {
+            
+            if(arr[i] < arr[i + 1])  {
+                arr[count] = arr[i + 1];	
+                count++;
             }
         }
-        return ct;	//returns  the count of distinct elements
+        return count;
     }
 }
     
