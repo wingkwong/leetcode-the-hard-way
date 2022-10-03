@@ -1,6 +1,6 @@
 ---
 description: 'Author: @deepanshu-rawat6 | https://leetcode.com/problems/merge-sorted-array/'
-tags: [Array, Sorting]
+tags: [Array, Sorting,Two Pointers]
 ---
 
 # 0088 - Merge Sorted Array (Easy)
@@ -60,7 +60,7 @@ Note that because m = 0, there are no elements in nums1. The 0 is only there to 
 
 Since, this problem is under easy category, we know `nums1` has length `m+n` so we add the elements of `nums2` in the empty spaces of `nums1`. Finally, we sort the `nums1` with any standard sorting algorithm. This solution gives O(N logN) time complexity and O(1) space complexity.
 
-</TabItem>
+<Tabs>
 <TabItem value="java" label="Java">
 <SolutionAuthor name="@deepanshu-rawat6"/>
 
@@ -82,7 +82,7 @@ class Solution {
 A better way to do it is using one-pass two pointer approach. We make a copy of `nums1` into `temp`, then iterate through both arrays `nums2` and `temp` comparing their elements in **ascending fashion** with the help of two pointers `i` and `j`,simultaneouslty adding the smaller elements into `nums1`. Finally, the bigger elements out of either `nums2` or `temp` are going to be added by seperately iterating over them if `i` or `j` satisfies the conditions.
 This solution gives O(m+n) or O(N) time complexity and O(m) or O(N) space complexity.
 
-</TabItem>
+<Tabs>
 <TabItem value="java" label="Java">
 <SolutionAuthor name="@deepanshu-rawat6"/>
 
