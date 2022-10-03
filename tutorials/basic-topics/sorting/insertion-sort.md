@@ -33,6 +33,14 @@ The following are the steps that we are going to follow:
 4. Place the `nums` in current position.
 5. Repeat all the above steps until the `array` is sorted.
 
+If we apply the above steps for the array `[3,2,5,10,9]`, it would be:
+* First of all, we will pick the first element which is `3` in our case.
+* Now, we will compare with all the elements left to it, in this case there is nothing left to `3` so, we will do nothing.
+* Now, pick the next element which is `2` and start comparing with all the elements left to it.
+* First element left to `2` is `3` , which is greater than selected element `2`. So, we will move `3` to right. If the element left to selected element is less than selected element then, our selected element have reached it's correct position so, we will place selected element there only.
+* Now, there is nothing no more element further left to our selected element `2`. So, we will place `2` at the beginning of array.
+* We will proceed with the same way for all the elements. Then, at last we will get our array as sorted.
+
 ### Problem Link
 
 https://leetcode.com/problems/maximum-product-of-two-elements-in-an-array/
@@ -97,14 +105,18 @@ class Solution {
 public:
     void insertionSort(vector<int> &arr, int size_of_array) {
         for (int i = 1; i < size_of_array; i++) {
-            int nums = arr[i]; // Picking element from array
+            // Picking element from array
+            int nums = arr[i]; 
             int j = i - 1;
-
-            while (j >= 0 and arr[j] > nums) { // Comparing nums with all the elements left to it
-                arr[j + 1] = arr[j]; // Shifting the greater element to the right
+            
+            // Comparing nums with all the elements left to it
+            while (j >= 0 and arr[j] > nums) { 
+                // Shifting the greater element to the right
+                arr[j + 1] = arr[j]; 
                 j--;
             }
-            arr[j + 1] = nums; // Placing selected element at correct position
+            // Placing selected element at correct position
+            arr[j + 1] = nums; 
         }
     }
 
@@ -125,14 +137,18 @@ public:
 class Solution {
     void insertion_sort(int arr[],int size_of_array) {
 		for (int i = 1; i < size_of_array; ++i) {
-			int nums = arr[i]; // Picking element from array
+            // Picking element from array
+			int nums = arr[i]; 
 			int j = i - 1;
 
-			while (j >= 0 && arr[j] > nums) { // Comparing nums with all the elements left to it
-				arr[j + 1] = arr[j]; // Shifting the greater element to the right
+            // Comparing nums with all the elements left to it
+			while (j >= 0 && arr[j] > nums) { 
+                // Shifting the greater element to the right
+				arr[j + 1] = arr[j]; 
 				j = j - 1;
 			}
-			arr[j + 1] = nums; // Placing selected element at correct position
+            // Placing selected element at correct position
+			arr[j + 1] = nums; 
 		}
 	}
     public int maxProduct(int[] nums) {
@@ -153,14 +169,18 @@ class Solution:
     def insertionSort(arr,size_of_array):
         
         for i in range(1, size_of_array):
-            nums = arr[i]  # Picking element from array
+            # Picking element from array
+            nums = arr[i]  
             j = i - 1
               
-            while j >= 0 and arr[j] > nums: # Comparing nums with all the elements left to it
-                arr[j + 1] = arr[j] # Shifting the greater element to the right
+            # Comparing nums with all the elements left to it  
+            while j >= 0 and arr[j] > nums: 
+                # Shifting the greater element to the right
+                arr[j + 1] = arr[j] 
                 j = j - 1
-        
-            arr[j + 1] = nums # Placing selected element at correct position
+
+            # Placing selected element at correct position
+            arr[j + 1] = nums 
         
 
     def maxProduct(self, nums: List[int]) -> int:
@@ -174,9 +194,9 @@ class Solution:
 
 ## Time Complexity
 
-Apart from sorting the the given array we are not doing anything in the solution. The expression would take $\mathcal{O}(1)$ to solve and insertion sort would take $\mathcal{O}(n^2)$ to sort the array.
+Apart from sorting the the given array we are not doing anything in the solution. The insertion sort would take $\mathcal{O}(n^2)$ to sort the array.
 
-So, the complexity is = $\mathcal{O}(n^2)$
+So, the Time complexity is = $\mathcal{O}(n^2)$
 
 ## Space Complexity
 
