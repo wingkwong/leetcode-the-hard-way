@@ -102,11 +102,9 @@ public:
 		sort(s.begin(), s.end());
 		sort(g.begin(), g.end());
 		int ans = 0;
-		for (int j = 0; j < s.size(); ++j) {
+		for (int j = 0; j < s.size() && ans < g.size(); ++j) {
 			if (g[ans] <= s[j]) {
 				ans++;
-				if (ans == g.size())
-					break;
 			}
 		}
 		return ans;
