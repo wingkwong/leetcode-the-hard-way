@@ -24,14 +24,14 @@ For example, given the input:
 
 ```cpp
 grid= [
-        [-1   -2   -3],
-        [ 4    5    6],
-        [ 7    8    9],
-        [-10  -11  -12]
+        [ -1   -2   -3  -13   -21 ],
+        [ -4    5    6   14   -20 ],
+        [ -7    8    9   15   -19 ],
+        [-10   -11  -12   16  -18 ]
       ]
 ```
 
-It is easy to notice that the maximum sum submatrix is the 39. Which is the submatrix enclosed by vertices (1,0),(1,2),(2,0),(2,2).
+It is easy to notice that the maximum sum submatrix is the 57. Which is the submatrix enclosed by zero-indexed vertices (1,1),(1,3),(2,1),(2,3). 
 
 > Hint: The problem statement resonates with Kadane's algorithm. The main thing is how to extend the 1D Kadane's algorithm to 2D. General Kadane's algorithm works on a 1D array, so first we need to convert the submatrix into 1D array in such a way that we can uniquely identify the boundaries of maximum sum submatrix. Then we can apply Kadane's algorithm on the 1D array to find this maximum sum subarray.
 
@@ -131,7 +131,7 @@ void findMaxSumIn2DMatrix(vector<vector<int>> grid, int rows, int cols)
 
 ```
 
-> For grid given in example finalLeft=0, finalRight=2, finalTop=1, finalBottom=2.
+> For grid given in example finalLeft=1, finalRight=3, finalTop=1, finalBottom=2.
 
 ## Code Flow
 
