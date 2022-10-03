@@ -1,11 +1,12 @@
 ---
-title: 'Kadane 2D Algorithm'
-description: 'Kadane 2D algorithm is a elegant way of finding maximum sum submatrix in a matrix using the logic of Kadane 1D algorithm'
+title: 'Kadane Algorithm'
+# TODO description: 'Kadane 2D algorithm is a elegant way of finding maximum sum submatrix in a matrix using the logic of Kadane 1D algorithm'
+description: 'Kadane algorithm finds the maximum sum subarray in an array of integers'
 hide_table_of_contents: true
 keywords:
   - leetcode
   - tutorial
-  - Kadane's 2D
+  - Kadane
   - algorithm
 ---
 
@@ -15,8 +16,90 @@ import TutorialAuthors from '@site/src/components/TutorialAuthors';
 
 ## Overview
 
-We know about Kadane's algorithm which is a O(N) algorithm that finds the maximum sum of a contiguous subarray in an array.                          
-Now consider the below problem statement:
+Kadane’s algorithm is an iterative algorithm in which we search for a maximum sum contiguous subarray within 1D array.
+
+## Example 1: [53 - Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
+
+```
+Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
+
+A subarray is a contiguous part of an array.
+Input: nums = [-2,1,-3,4,-1,2,1,-5,4]
+Output: 6
+Explanation: [4,-1,2,1] has the largest sum = 6.
+```
+
+> A subarray is a contiguous part of an array maintaining the order of elements.            
+>[1,2,3] is a subarray of [1,2,3,4,5] but [1,3,2] & [1,3,5] are not.
+
+Consider an array of positive integers only, the maximum sum subarray will be the entire array itself. If the array contains negative integers only, then the maximum sum subarray will be the maximum element of the array. 
+It gets tricker when we have both positive and negative numbers. 
+
+If the array consists of positive integers(need not be all positive integers). Then there definitely exists a subarray which has positive sum, because I can choose one positive element in worst case and it would be my subarray with positive sum. 
+
+The main idea of Kadane's algorithm is to neglect the negative sum subarrays and take maximum among the positive sum subarrays.
+
+```cpp
+int maxSubArraySum(int arr[], int size)
+{   
+    // maxSum is where the maximum sum of subarray is stored
+    // curSum is where the sum of current subarray is stored
+    int maxSum = INT_MIN, curSum = 0;
+ 
+    for (int i = 0; i < size; i++) {
+        // Add current element to current sum 
+        curSum = curSum + arr[i];
+
+        // If current sum is greater than maxSum, update maxSum
+        if (maxSum < curSum)
+            maxSum = curSum;
+ 
+        // If upon adding ith element current sum is becoming less than 0, it cannot contribute to the maximum sum subarray so we neglect it and reset our current sum to 0 to start another subarray freshly
+        if (curSum < 0)
+            curSum = 0;
+    }
+    return maxSum;
+}
+```
+
+## Steps in Kadane's Algorithm
+
+1. Store the sum of elements of the current subarray found so far. 
+2. Keep updating the maximum sum of subarray found so far by checking if the current sum is greater than the maximum sum found so far or not.
+3. If the current sum is less than 0, then we can neglect the current subarray and start a new subarray from the next element.
+
+export const KadanesuggestedProblems = [
+    {
+        "problemName": "152 - Maximum Product Subarray",
+        "difficulty": "Medium",
+        "leetCodeLink": "https://leetcode.com/problems/maximum-product-subarray/",
+        "solutionLink": ""
+    },
+    {
+        "problemName": "121 - Best Time to Buy and Sell Stock",
+        "difficulty": "Easy",
+        "leetCodeLink": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
+        "solutionLink": ""
+    },
+    {
+        "problemName": "918 - Maximum-sum-circular-subarray",
+        "difficulty": "Medium",
+        "leetCodeLink": "https://leetcode.com/problems/maximum-sum-circular-subarray/",
+        "solutionLink": ""
+    }
+    
+]
+
+<Table title="Suggested Problems" data={KadanesuggestedProblems} />
+
+# Variations of Kadane's Algorithm
+
+## Kadane's 2D Algorithm 
+
+### Overview
+
+We know about Kadane's algorithm which is a O(N) algorithm that finds the maximum sum of a contiguous subarray in an array. It can be extended to find maximum sum submatrix in a 2D matrix.                                        
+Consider the below problem statement:
 
 > Given a 2D array, find the maximum sum submatrix in it              
 > You must write an algorithm with `O(rows*cols^2)` runtime complexity.
@@ -141,3 +224,20 @@ void findMaxSumIn2DMatrix(vector<vector<int>> grid, int rows, int cols)
 3. We need to convert the submatrix into 1D array in such a way that we can identify the boundaries of maximum sum submatrix. For this we can try fixing the left and right boundaries (finalLeft and finalRight) of the submatrix and then we calculate the cummulative sum in each row and store it as 1D array.
 4. Now we can apply Modified 1D Kadane's algorithm on this 1D array to find the maximum sum subarray and we retrieve the boundaries of this maximum sum subarray.
 5. The boundaries retrieved from this 1D Kadane's algorithm are the final Top and FinalBottom boundaries of the maximum sum submatrix in the original 2D matrix.
+
+export const kadane2DsuggestedProblems = [
+    {
+        "problemName": "85 - Maximal Rectangle",
+        "difficulty": "Hard",
+        "leetCodeLink": "https://leetcode.com/problems/maximal-rectangle/",
+        "solutionLink": ""
+    },
+    {
+        "problemName": "363 - Max Sum of Rectangle No Larger Than K",
+        "difficulty": "Hard",
+        "leetCodeLink": "https://leetcode.com/problems/max-sum-of-rectangle-no-larger-than-k/",
+        "solutionLink": ""
+    }
+]
+
+<Table title="Suggested Problems" data={kadane2DsuggestedProblems} />
