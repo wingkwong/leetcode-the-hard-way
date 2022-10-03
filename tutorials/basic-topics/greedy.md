@@ -27,19 +27,6 @@ Rules:
 
 3. The greedy algorithm never reconsiders its choices.
 
-```
-Example 1: You have coins of denomination Rs 10, Rs 5, and Rs 1.Find the minimum number of coins to get a total of 17 Rs.
-
-Solution: 4 coins: 10+5+1+1
-We are using greedy.Firstly taking Rs 10 coin then if will take Rs 10 coin total will exceed 17.So we consider Rs 5 coin.It satifies so we take it.Again we try to take Rs 5 coin but the sum will exceed 17 so we move to next least coin that is 1.This is how we approach greedy.
-
-Example 2: You have coins of denomination Rs 10, Rs 7, and Rs 1.Find the minimum number of coins to get a total of 16 Rs.
-
-Best Solution: 4 coins: 7+7+1+1
-Solution if greedy was used like example 1 : 7 coins: 10+1+1+1+1+1+1
-So this shows we cannot always use greedy directly on problems.We have to think of all side cases and implement the best solution.
-The below LC problem will teach us better.
-```
 ## Example 1: [605 -Can Place Flowers](https://leetcode.com/problems/can-place-flowers/)
 
 ```
@@ -84,6 +71,34 @@ public:
 		if (n > 2 && flowerbed[n - 2] == 0 && flowerbed[n - 1] == 0)
 			count++;
         return count>=p;
+	}
+};
+```
+## Example 2: [322 - Coin Change](https://leetcode.com/problems/coin-change/)
+
+```
+You are given an integer array coins representing coins of different denominations and an integer amount representing a total amount of money.
+
+Return the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
+
+You may assume that you have an infinite number of each kind of coin.
+```
+
+This problem uses the concept of dynamic programming along with greedy.Here, we want to choose such coins whose sum of coins selected equals amount and count_coins is minimized.
+See, Right from here we can say it is a DP problem, as it requires minimization (optimization).The naive idea for the problem would be to choose coins in all possible ways including duplicates (as number of each coin is infinite) that sums upto amount and then from all the possible ways, we select the way with minimum number of coins. But this simple naive idea of greedy will lead to TLE.Sowe must use DP.
+
+```cpp
+class Solution {
+public:
+	int coinChange(vector<int>& coins, int amount) {
+		vector<int> dp(amount+1,amount+1);
+		dp[0]=0;
+		for(auto x:coins){
+			for(int i=x;i<=amount;i++){
+				dp[i]=min(dp[i],dp[i-x]+1);
+			}
+		}
+		return dp[amount]>=amount+1 ? -1:dp[amount];
 	}
 };
 ```
