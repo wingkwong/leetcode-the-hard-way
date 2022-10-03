@@ -23,7 +23,7 @@ We know about Kadane's algorithm which is a O(N) algorithm that finds the maximu
 >
 > You must write an algorithm with `O(rows*cols^2)` runtime complexity.
 
-For example, given the sorted input:
+For example, given the input:
 
 ```C++
 grid= [
@@ -43,28 +43,26 @@ It is easy to notice that the maximum sum submatrix is the 39. Which is the subm
 ```C++
 int ModifiedKadane(vector<int> arr, int &cursumLeft, int &cursumRight, int n)
 {
-    // initialize sum, maxSum and
-    int sum = 0, maxSum = INT_MIN;
+    int cursum = 0, maxSum = INT_MIN;
 
-    // Just some initial value to check
-    // for all negative values case
+    // Just some initial value to check whether a positive maximum sum subarray exists or not 
     cursumRight = -1;
 
     // variable to store starting index of intermediate subarrays
-    int local_start = 0;
+    int curStart = 0;
 
     for (int i = 0; i < n; ++i)
     {
-        sum += arr[i];
-        if (sum < 0)
+        cursum += arr[i];
+        if (cursum < 0)
         {
-            sum = 0;
-            local_start = i + 1;
+            cursum = 0;
+            curStart = i + 1;
         }
-        else if (sum > maxSum)
+        else if (cursum > maxSum)
         {
-            maxSum = sum;
-            cursumLeft = local_start;
+            maxSum = cursum;
+            cursumLeft = curStart;
             cursumRight = i;
         }
     }
@@ -98,14 +96,13 @@ void findMaxSumIn2DMatrix(vector<vector<int>> grid, int rows, int cols)
     int finalLeft, finalRight, finalTop, finalBottom;
 
     int left, right;
-    vector<int> temp(rows, 0); // temp is used to store sum between current left and right for every row.
+    vector<int> temp(rows, 0); // temp is used to store sum between current left and right boundaries for every row.
 
-    // Set the left colsumn
+    // Set the left column
     for (left = 0; left < cols; ++left)
     {
 
-        // Set the right colsumn for the left
-        // colsumn set by outer loop
+        // Set the right column corresponding to  left
         for (right = left; right < cols; ++right)
         {
 
