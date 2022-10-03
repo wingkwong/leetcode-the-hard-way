@@ -1,5 +1,7 @@
 ---
-description: 'Author: @deepanshu-rawat6 | https://leetcode.com/problems/merge-sorted-array/'
+description: >-
+  Author: @deepanshu-rawat6 |
+  https://leetcode.com/problems/merge-sorted-array/
 tags: [Array, Sorting,Two Pointers]
 ---
 
@@ -56,9 +58,9 @@ Note that because m = 0, there are no elements in nums1. The 0 is only there to 
 
 **Follow up:** Can you come up with an algorithm that runs in `O(m + n)` time?
 
-## Approach 1: Brute Force(Sorting)
+## Approach 1: Brute Force
 
-Since, this problem is under easy category, we know `nums1` has length `m+n` so we add the elements of `nums2` in the empty spaces of `nums1`. Finally, we sort the `nums1` with any standard sorting algorithm. This solution gives O(N logN) time complexity and O(1) space complexity.
+Since, this problem is under easy category, we know $nums1$ has length $m + n$ so we add the elements of $nums2$ in the empty spaces of $nums1$. Finally, we sort the $nums1$ with any standard sorting algorithm. This solution gives $O(N log N)$ time complexity and $O(1)$ space complexity.
 
 <Tabs>
 <TabItem value="java" label="Java">
@@ -67,9 +69,11 @@ Since, this problem is under easy category, we know `nums1` has length `m+n` so 
 ```java
 class Solution {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
-        for(int i=0;i<n;i++){
-            nums1[m+i]=nums2[i];
+        // adding elements of nums2 at empty places of nums1
+        for(int i = 0; i < n; i++){
+            nums1[m + i] = nums2[i];
         }
+        // sorting nums1 (using Java standard sorting)
         Arrays.sort(nums1);
     }
 }
@@ -77,10 +81,10 @@ class Solution {
 </TabItem>
 </Tabs>
 
-## Approach 2: Two Pointer Approach
+## Approach 2: Two Pointers
 
-A better way to do it is using one-pass two pointer approach. We make a copy of `nums1` into `temp`, then iterate through both arrays `nums2` and `temp` comparing their elements in **ascending fashion** with the help of two pointers `i` and `j`,simultaneouslty adding the smaller elements into `nums1`. Finally, the bigger elements out of either `nums2` or `temp` are going to be added by seperately iterating over them if `i` or `j` satisfies the conditions.
-This solution gives O(m+n) or O(N) time complexity and O(m) or O(N) space complexity.
+A better way to do it is using one-pass two pointer approach. We make a copy of $nums1$ into $temp$, then iterate through both arrays $nums2$ and $temp$ comparing their elements in **ascending fashion** with the help of two pointers $i$ and $j$,simultaneouslty adding the smaller elements into $nums1$. Finally, the bigger elements out of either $nums2$ or $temp$ are going to be added by seperately iterating over them if $i$ or $j$ satisfies the conditions.
+This solution gives $O(m + n)$ or $O(N)$ time complexity and $O(m)$ or $O(N)$ space complexity.
 
 <Tabs>
 <TabItem value="java" label="Java">
@@ -88,26 +92,32 @@ This solution gives O(m+n) or O(N) time complexity and O(m) or O(N) space comple
 
 ```java
 class Solution {
-    public void merge(int[] nums1, int m, int[] nums2, int n) {
-        int i=0,j=0,k=0;
-        int[] temp= Arrays.copyOfRange(nums1, 0, m);
-        while(i<m && j<n){
-            if(temp[i]<nums2[j]){
-                nums1[k]=temp[i];
+    public void merge(int[] nums1 , int m , int[] nums2 , int n) {
+        int i = 0, j = 0, k = 0;
+        // making a temp copy of nums1, for easier swapping of elements
+        int[] temp= Arrays.copyOfRange( nums1 , 0 , m);
+        // loop till anyone array elements exhausts
+        while( i < m && j < n){
+            // adding the elements into nums1 in ascending order
+            if( temp[i] < nums2[j]){
+                nums1[k] = temp[i];
                 i++;
             }else{
-                nums1[k]=nums2[j];
+                nums1[k] = nums2[j];
                 j++;
             }
             k++;
         }
-        while(i<m){
-            nums1[k]=temp[i];
+        // now adding the left out elements either of temp or nums2
+        // Either one of the loops will execute because every time one array's length
+        // would come out to be shorter than the other one.
+        while( i < m){
+            nums1[k] = temp[i];
             k++;
             i++;
         }
-        while(j<n){
-            nums1[k]=nums2[j];
+        while( j < n){
+            nums1[k] = nums2[j];
             k++;
             j++;
         }
