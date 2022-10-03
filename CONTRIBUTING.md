@@ -9,6 +9,14 @@ npm run start
 # By default, a browser window will open at http://localhost:3000/.
 ```
 
+## Before Creating a PR 
+
+- Make sure you've followed the template format
+- Make sure you've verified your work locally
+- Make sure you've applied LaTex for variables or formulas
+- Make sure you've formatted your code well
+- Make sure you've formatted your explaination well
+
 ## Tutorials
 
 - Go to `./tutorials`
@@ -25,8 +33,6 @@ description: 'Author: @<YOUR_ALIAS>'
 hide_table_of_contents: true
 ---
 
-import TutorialAuthors from '@site/src/components/TutorialAuthors';
-
 <TutorialAuthors names="@<YOUR_ALIAS>"/>
 
 ## Overview
@@ -34,6 +40,7 @@ import TutorialAuthors from '@site/src/components/TutorialAuthors';
 // Your content goes here
 
 // Walk through the topic using LC problems (if applicable)
+// Do not use random examples or examples from other sites
 
 // Suggested Problems
 ```
@@ -51,9 +58,11 @@ Examples:
 - Create a new page called `<PROBLEM_ID>-<PROBLEM_TITLE>-<DIFFICULTY>.md`, e.g. `0202-happy-number-easy.md`
 - Include basic meta info such as `description` and `tags`. 
 - Use `<Tabs>` to wrap your code block. See below example.
-- Add Time Complexity and Space Complexity for each solution
+- Add Time Complexity and Space Complexity for each solution 
 - Add beginner-friendly explanations 
+- Appy LaTex to make it look better
 - Format the code well
+- Do not write comment inline with the code. Write the comment above the line instead
 
 Template
 
