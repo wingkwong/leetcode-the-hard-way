@@ -74,40 +74,38 @@ public:
 	}
 };
 ```
-## Example 2: [322 - Coin Change](https://leetcode.com/problems/coin-change/)
+## Example 2: [455 - Assign Cookies](https://leetcode.com/problems/assign-cookies/)
 
 ```
-You are given an integer array coins representing coins of different denominations and an integer amount representing a total amount of money.
+Assume you are an awesome parent and want to give your children some cookies. But, you should give each child at most one cookie.
 
-Return the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
-
-You may assume that you have an infinite number of each kind of coin.
+Each child i has a greed factor g[i], which is the minimum size of a cookie that the child will be content with; and each cookie j has a size s[j]. If s[j] >= g[i], we can assign the cookie j to the child i, and the child i will be content. Your goal is to maximize the number of your content children and output the maximum number
 ```
 
-This problem uses the concept of dynamic programming along with greedy.Here, we want to choose such coins whose sum of coins selected equals amount and count_coins is minimized.
-See, Right from here we can say it is a DP problem, as it requires minimization (optimization).The naive idea for the problem would be to choose coins in all possible ways including duplicates (as number of each coin is infinite) that sums upto amount and then from all the possible ways, we select the way with minimum number of coins. But this simple naive idea of greedy will lead to TLE.Sowe must use DP.
+This problem uses the concept of greedy.our aim is to just assign the cookies starting from the child with less greediness to maximize the number of happy children.So we will sort greediness of child and size of cookies too.Then as soon as a child gets the cookie,we move to next child.We are using greedy in such a way that if child will less greediness cannot get a cookie,then all children with higher greediness will also not get that cookie.
 
 ```cpp
 class Solution {
 public:
-	int coinChange(vector<int>& coins, int amount) {
-		vector<int> dp(amount+1,amount+1);
-		dp[0]=0;
-		for(auto x:coins){
-			for(int i=x;i<=amount;i++){
-				dp[i]=min(dp[i],dp[i-x]+1);
+	int findContentChildren(vector<int>& g, vector<int>& s) {
+		sort(s.begin(), s.end());
+		sort(g.begin(), g.end());
+		int ans = 0;
+		for (int j = 0; j < s.size(); ++j) {
+			if (g[ans] <= s[j]) {
+				ans++;
 			}
 		}
-		return dp[amount]>=amount+1 ? -1:dp[amount];
+		return ans;
 	}
 };
 ```
 
 export const suggestedProblems = [
   {
-    "problemName": "455- Assign Cookies",
+    "problemName": "561 - Array Partition",
     "difficulty": "Easy",
-    "leetCodeLink": "https://leetcode.com/problems/assign-cookies/",
+    "leetCodeLink": "https://leetcode.com/problems/array-partition/",
     "solutionLink": ""
   },
   {
