@@ -54,19 +54,20 @@ You must solve the problem without using any built-in functions in O(nlog(n)) ti
 
 **Test Cases**
     
-*Test case 1* :
+Test case 1 :
      
 ```
 Input: nums = [5,2,3,1]
 Output: [1,2,3,5]
 Explanation: 
-After sorting the array, the positions of some numbers are not changed (for example, 2 and 3), while the positions of other numbers are changed (for example, 1 and 5).       
+    After sorting the array, the positions of some numbers are not changed (for example, 2 and 3). 
+    While the positions of other numbers are changed (for example, 1 and 5).       
 ```
 **Constraints as given in the problem:**
-
-$1 <= nums.length <= 5 * 10^4
--5 * 10^4 <= nums[i] <= 5 * 10^4$ 
-
+```
+1 <= nums.length <= 5 * 10^4
+-5 * 104 <= nums[i] <= 5 * 10^4
+```
 *Here `insertion sort`, `quick sort`, `selection sort` and all other sorts in $O(n^2)$ will give **TLE** i.e Time Limit Exceeded*
 
 ## STL Approach  
@@ -224,7 +225,6 @@ private void merge(int[] nums, int l, int r) {
 ## Bottom Up Approach / Iterative technique
 
 ### Algorithm 
-
 ```
 1. So it  starts with an  element in the array 
     It is an iterative approach and because one item array is always sorted
@@ -242,22 +242,22 @@ class Solution {
     public List<Integer> sortArray(int[] nums) {
         List<Integer> res = new ArrayList<>();
         if (nums == null || nums.length == 0) return res;
-        mergeSort2(nums);
+        mergeSort(nums);
         for (int i : nums) res.add(i);
         return res;
-    }
+    }    
     // iterative only 
-    private void mergeSort2(int[] nums) { 
+    private void mergeSort(int[] nums) { 
         for (int size = 1; size < nums.length; size *= 2) {
             for (int i = 0; i < nums.length - size; i += 2 * size) {
                 int mid = i + size - 1;
                 int end = Math.min(i + 2 * size - 1, nums.length - 1);
-                merge2(nums, i, mid, end);
+                merge(nums, i, mid, end);
             }
         }
     }
 
-    private void merge2(int[] nums, int l, int mid, int r) {
+    private void merge(int[] nums, int l, int mid, int r) {
         int[] tmp = new int[r - l + 1];
         int i = l, j = mid + 1, k = 0;
         while (i <= mid || j <= r) {
@@ -278,9 +278,9 @@ class Solution {
 
 **Space Complexity** :  $O(n)$ 
 
-**Stablitiy**       :  Stable
+**Stablity**       :  Stable
 
-**Is In Place**      :  Not-In-Place
+**Is In Place**      :  Not in place
 
 **When  not to use**: When the array is too large
 
@@ -303,14 +303,14 @@ Given the head of a linked list, return the list after sorting it in ascending o
 
 **Test Cases**
  
-*Test Case 1*
+Test Case 1
 ```
 Input: head = [4,2,1,3]
 Output: [1,2,3,4]
 ```
 ![image](https://assets.leetcode.com/uploads/2020/09/14/sort_list_1.jpg)
  
-*Test Case 2*
+Test Case 2
 
 ```
 Input: head = [-1,5,3,4,0]
