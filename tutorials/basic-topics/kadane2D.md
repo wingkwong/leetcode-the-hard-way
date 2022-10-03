@@ -15,9 +15,10 @@ import TutorialAuthors from '@site/src/components/TutorialAuthors';
 
 ## Overview
 
-We know about Kadane's algorithm which is a O(N) algorithm that finds the maximum sum of a contiguous subarray in an array. Now consider the below problem statement:
+We know about Kadane's algorithm which is a O(N) algorithm that finds the maximum sum of a contiguous subarray in an array.                          
+Now consider the below problem statement:
 
-> Given a 2D array, find the maximum sum submatrix in it
+> Given a 2D array, find the maximum sum submatrix in it              
 > You must write an algorithm with `O(rows*cols^2)` runtime complexity.
 
 For example, given the input:
@@ -33,7 +34,7 @@ grid= [
 
 It is easy to notice that the maximum sum submatrix is the 57. Which is the submatrix enclosed by zero-indexed vertices (1,1),(1,3),(2,1),(2,3). 
 
-> Hint: The problem statement resonates with Kadane's algorithm. The main thing is how to extend the 1D Kadane's algorithm to 2D. General Kadane's algorithm works on a 1D array, so first we need to convert the submatrix into 1D array in such a way that we can uniquely identify the boundaries of maximum sum submatrix. Then we can apply Kadane's algorithm on the 1D array to find this maximum sum subarray.
+> Hint: The problem statement resonates with Kadane's algorithm. The main thing is how to extend the 1D Kadane's algorithm to 2D. General Kadane's algorithm works on a 1D array, so first we need to convert the submatrix into 1D array in such a way that we can uniquely identify the boundaries of maximum sum submatrix. Then we can apply Kadane's algorithm on this 1D array to find the maximum sum subarray.
 
 ```cpp
 int ModifiedKadane(vector<int> arr, int &cursumLeft, int &cursumRight, int n)
@@ -136,7 +137,7 @@ void findMaxSumIn2DMatrix(vector<vector<int>> grid, int rows, int cols)
 ## Code Flow
 
 1. Any submatrix has 4 sides so we need 4 variables to uniquely identify and store the boundaries of the maximum sum submatrix.
-2. Using the 1D kadane's algorithm we can find the maximum sum subarray in a 1D array and with some modifications we can retrieve the boundaries of this maximum sum subarray.
+2. Using the 1D kadane's algorithm we can find the maximum sum subarray in a 1D array and with some modifications we can retrieve the boundaries(starting index and ending index) of this maximum sum subarray.
 3. We need to convert the submatrix into 1D array in such a way that we can identify the boundaries of maximum sum submatrix. For this we can try fixing the left and right boundaries (finalLeft and finalRight) of the submatrix and then we calculate the cummulative sum in each row and store it as 1D array.
 4. Now we can apply Modified 1D Kadane's algorithm on this 1D array to find the maximum sum subarray and we retrieve the boundaries of this maximum sum subarray.
 5. The boundaries retrieved from this 1D Kadane's algorithm are the final Top and FinalBottom boundaries of the maximum sum submatrix in the original 2D matrix.
