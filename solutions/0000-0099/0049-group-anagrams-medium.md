@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/group-anagrams/'
+description: 'Author: @wingkwong, @ganajayant | https://leetcode.com/problems/group-anagrams/'
 tags: ['Array', 'Hash Table', 'String', 'Sorting']
 ---
 
@@ -48,6 +48,8 @@ To check if $$s$$ and $$t$$ are anagrams, one of the ways is to sort them both a
 
 We can use a hash map to store the sorted string as a key, and push the original value to an array. At the end, we iterate the hash map and push the corresponding array to our final answer.
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -72,3 +74,36 @@ public:
     }
 };
 ```
+</TabItem>
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@ganajayant"/>
+
+```java
+class Solution {
+    private String sortString(String str) {
+        char[] chars = str.toCharArray();
+        java.util.Arrays.sort(chars);
+        return new String(chars);
+    }
+
+    public List<List<String>> groupAnagrams(String[] strs) {
+        HashMap<String, LinkedList<String>> hm = new HashMap<>();
+        for (int i = 0; i < strs.length; i++) {
+            String sortedstring = sortString(strs[i]);
+            if (hm.containsKey(sortedstring)) {
+                hm.get(sortedstring).add(strs[i]);
+            } else {
+                hm.put(sortedstring, new LinkedList<String>());
+                hm.get(sortedstring).add(strs[i]);
+            }
+        }
+        List<List<String>> ll = new LinkedList<List<String>>();
+        for (Map.Entry<String, LinkedList<String>> entry : hm.entrySet()) {
+            ll.add((List<String>) entry.getValue());
+        }
+        return ll;
+    }
+}
+```
+</TabItem>
+</Tabs>
