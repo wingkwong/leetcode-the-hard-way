@@ -63,7 +63,7 @@ Explanation: All ants are going to the left, the ant at index 7 needs 7 seconds 
 * 1 <= left.length + right.length <= n + 1
 * All values of left and right are unique, and each value can appear **only in one** of the two arrays.
 
-## Approach 1: <One-liner>
+## Approach 1:
 
 // Your explanation goes here or you can add it to your code
 
@@ -93,7 +93,7 @@ class Solution:
 
 </TabItem>
 <TabItem value="go" label="Go">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@WaqarTabish2807"/>
 
 ```go
 func getLastMoment(n int, left []int, right []int) int {
