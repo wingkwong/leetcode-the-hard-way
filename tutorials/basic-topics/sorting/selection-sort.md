@@ -50,35 +50,25 @@ We keep doing this until we reach end of the array, and print out the array.
 <SolutionAuthor name="@Bobliuuu"/>
 
 ```cpp
-#include <bits/stdc++.h>
-
-using namespace std;
-
-const int MM = 1e5+5;
-int N, midx, a[MM];
-
-int main()
-{
-    cin >> N;
-    for (int i = 0; i < N; i++){
-        cin >> a[i];
-    }
-    for (int i = 0; i < N-1; i++){
-        midx = i;
-        for (int j = i+1; j < N; j++){
-            if (a[j] < a[midx]){
-                midx = j;
+class Solution {
+public:
+    void sortColors(vector<int>& nums) {
+        int N = nums.size(); 
+        for (int i = 0; i < N - 1; i++){
+            int midx = i;
+            for (int j = i+1; j < N; j++){
+                if (nums[j] < nums[midx]){
+                    midx = j;
+                }
             }
+            swap(nums[i], nums[midx]);
         }
-        swap(a[i], a[midx]);
     }
-    for (int i = 0; i < N; i++){
-        cout << a[i] << " ";
-    }
-    cout << "\n";
-    return 0;
 }
 ```
+
+</TabItem>
+</Tabs>
 
 ### Complexity
 
@@ -91,10 +81,10 @@ Now that you know a bit more about how selection sort works, try these problems!
 
 export const suggestedProblems = [
     {
-        "problemName": "075 - Missing Number",
+        "problemName": "0075 - Sort Colors",
         "difficulty": "Easy",
         "leetCodeLink": "https://leetcode.com/problems/sort-colors/",
-        "solutionLink": ""
+        "solutionLink": "0075-sort-colors-medium.md"
     },
     {
         "problemName": "0268 - Missing Number",
