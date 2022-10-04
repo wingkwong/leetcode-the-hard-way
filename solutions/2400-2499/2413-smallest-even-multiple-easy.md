@@ -32,7 +32,7 @@ Explanation: The smallest multiple of both 6 and 2 is 6. Note that a number is a
 
 - `1 <= n <= 150`
 
-## Approach 1: If-else statement
+## Approach 1: n or 2n
 
 The smallest multiple of 2 and a number $n$ will be either
 
@@ -67,9 +67,9 @@ $O(1)$ : There is one int variable (4 bytes of memory) and algorithm will always
 ## Approach 2: Ternary operator
 
 We can make our solution much shorter using ternary operator:
-- `n % 2 ` is a condition
-- `n` is returned when condition is true
-- `n * 2` is returned when condition is false
+- $n \% 2$ is a condition
+- $n$ is returned when condition is true
+- $n * 2$ is returned when condition is false
 
 <Tabs>
 <TabItem value="java" label="Java">
@@ -85,10 +85,10 @@ class Solution {
 </TabItem>
 </Tabs>
 
-**Time complexity** :
+**Time Complexity**
 
 $O(1)$ : It takes a constant time. There is one input variable and the algorithm will take the same time no matter of value.
 
-**Space complexity** :
+**Space Complexity**
 
 $O(1)$ : There is one int variable (4 bytes of memory) and algorithm will always take 4 bytes of memory to complete. The space complexity is constant.
