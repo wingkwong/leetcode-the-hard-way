@@ -15,7 +15,7 @@ npm run start
 - Make sure you've verified your work locally
 - Make sure you've applied LaTex for variables or formulas
 - Make sure you've formatted your code well
-- Make sure you've formatted your explaination well
+- Make sure you've formatted your explanation well
 
 ## Tutorials
 
@@ -141,4 +141,4 @@ Examples:
 
 - For images, please copy and paste to Github editor (the image will be uploaded to github content) to get the image link (e.g. https://user-images.githubusercontent.com/35857179/168304432-fa9ac8bb-0eb9-49d9-bdcf-5e3509c1f835.png). Do not upload any images to this repository.
 
-- If your content includes variables or math equations, please highlight it with katex syntax. See [binary-exponentiation.md](https://raw.githubusercontent.com/wingkwong/leetcode-the-hard-way/main/tutorials/math/number-theory/binary-exponentiation.md) as an example.
+- If your content includes variables or math equations, please highlight it with LaTex syntax. See [binary-exponentiation.md](https://raw.githubusercontent.com/wingkwong/leetcode-the-hard-way/main/tutorials/math/number-theory/binary-exponentiation.md) as an example.
