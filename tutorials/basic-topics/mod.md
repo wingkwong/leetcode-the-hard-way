@@ -33,7 +33,6 @@ $(a\,−\,b)\,mod\,m$ $=$ $(a\,mod\,m\, − \,b\,mod\,m\,+\,m)\,mod\,m$
 #### 3. Multiplication  
 $(a * b)\,mod\,m$ $=$ $(a\,mod\,m * b\,mod\,m)\,mod\,m$
 
-
 #### 4. Division  
 The modular division is completely different from modular addition, subtraction and multiplication. It also does not always exist. It requires a concept called the "modular multiplicative inverse". The modular multiplicative inverse of a number $a$ is the number $a^{−1}$ such that $a ⋅ a^{−1} \,mod\, m = 1$. You may notice that this is similar to the concept of a reciprocal of a number, but here we don't want a fraction; we want an integer, specifically an integer between $0$ and $m−1$ inclusive.  
 
