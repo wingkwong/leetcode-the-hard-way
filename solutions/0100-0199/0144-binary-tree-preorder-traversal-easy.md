@@ -178,7 +178,7 @@ class Solution {
         List<Integer> result = new LinkedList<>();
         Stack<TreeNode> stack = new Stack<>();
         while (root != null) {
-            // Keeping add top and left node values, while keep traversing left
+            // Keep adding top and left node values, while traversing on left subtree
             result.add(root.val);
             // If Root has right subtree, add it to stack
             if (root.right != null) {
