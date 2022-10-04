@@ -89,6 +89,9 @@ public:
  */
 // Time complexity: O(n), where n - # nodes in the tree
 // Space complexity: O(log(n))
+// Suppose, we have perfectly balanced binary tree, we start with root that N, 
+// then next layer we have left & right subtrees so N/2, then next layer is N/4 and so on... 
+// Roughly the pattern is (N)+(N/2)+(N/4) +... + (N/N) which is O(logN) same as height O(h) of the tree. 
 class Solution {
     public boolean isSymmetric(TreeNode root) {
         if (root == null) return true;
