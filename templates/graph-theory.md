@@ -18,24 +18,39 @@ keywords:
 
 Go to [Tutorial](../tutorials/graph-theory/depth-first-search)
 
+<Tabs>
+<TabItem value="cpp" label="C++">
+
 ```cpp
+// Your code goes here
+```
+
+</TabItem>
+<TabItem value="py" label="Python">
+
+```py
 def dfs(node):
     if(node == None):
-        # we stop when node is invalid
         return
         
-    # explore left branch first
     dfs(node.left)
     
-    # evalute current node
     print("I just visited the left branch!")
     print("I am number: " + str(node.val))
     print("I am visiting the right branch now!")
     
-    # explore right branch
     dfs(node.right)
-
 ```
+
+</TabItem>
+<TabItem value="java" label="Java">
+
+```java
+// Your code goes here
+```
+
+</TabItem>
+</Tabs>
 
 
 
@@ -43,45 +58,60 @@ def dfs(node):
 
 Go to [Tutorial](../tutorials/graph-theory/breadth-first-search)
 
+<Tabs>
+<TabItem value="cpp" label="C++">
+
 ```cpp
+// Your code goes here
+```
+
+</TabItem>
+<TabItem value="py" label="Python">
+
+```py
 def findTargetNode(root, targetValue):
     if(root is None):
         return None
     
-    #currentLevel contains the nodes with the same distance to root (closest so far)
     currentLevel = [root]
     
-    #we increase our depth one by one as long as there is still node
     while(len(level) > 0):
     
-        #we store the current level node's children in nextLevel
         nextLevel = []
         
         for node in currentLevel:
-            #skip if the node is None
             if(node is None):
                 continue
-            #we can be sure the target node is the CLOSEST so we can return
-            #because we are traversing the tree level by level
             if(node.val == targetValue):
                 return node
                 
-            #add the children to nextLevel
             nextLevel.append(node.left)
             nextLevel.append(node.right)
-        #change the currentLevel to nextLevel (no target node in this level, go next)
+       
         currentLevel = nextLevel
-    
-    #if no target node has been returned    
+      
     return None
-    
+
 ```
+
+</TabItem>
+<TabItem value="java" label="Java">
+
+```java
+// Your code goes here
+```
+
+</TabItem>
+</Tabs>
 
 
 
 ### Bellman Ford Algorithm
 
 Go to [Tutorial](../tutorials/graph-theory/bellman-ford-algorithm)
+
+<Tabs>
+<TabItem value="cpp" label="C++">
 
 ```cpp
 template<typename T_a3, typename T_vector>
@@ -98,9 +128,29 @@ void bellman_ford(T_a3 &g, T_vector &dist, int src, int mx_edges) {
 }
 ```
 
+</TabItem>
+<TabItem value="py" label="Python">
+
+```py
+# Your code goes here
+```
+
+</TabItem>
+<TabItem value="java" label="Java">
+
+```java
+// Your code goes here
+```
+
+</TabItem>
+</Tabs>
+
 ### Dijkstra
 
 Go to [Tutorial](../tutorials/graph-theory/dijkstra)
+
+<Tabs>
+<TabItem value="cpp" label="C++">
 
 ```cpp
 template<typename T_pair, typename T_vector>
@@ -121,9 +171,29 @@ void dijkstra(T_pair &g, T_vector &dist, int start) {
 }
 ```
 
+</TabItem>
+<TabItem value="py" label="Python">
+
+```py
+# Your code goes here
+```
+
+</TabItem>
+<TabItem value="java" label="Java">
+
+```java
+// Your code goes here
+```
+
+</TabItem>
+</Tabs>
+
 ### Topological Sorting
 
 Go to [Tutorial](../tutorials/graph-theory/topological-sorting)
+
+<Tabs>
+<TabItem value="cpp" label="C++">
 
 ```cpp
 struct TopologicalSort {
@@ -160,9 +230,29 @@ struct TopologicalSort {
 };
 ```
 
+</TabItem>
+<TabItem value="py" label="Python">
+
+```py
+# Your code goes here
+```
+
+</TabItem>
+<TabItem value="java" label="Java">
+
+```java
+// Your code goes here
+```
+
+</TabItem>
+</Tabs>
+
 ### Disjoin Set Union (DSU)
 
 Go to [Tutorial](../tutorials/graph-theory/disjoint-set-union)
+
+<Tabs>
+<TabItem value="cpp" label="C++">
 
 ```cpp
 class dsu {
@@ -204,3 +294,20 @@ or
   }
 };
 ```
+
+</TabItem>
+<TabItem value="py" label="Python">
+
+```py
+# Your code goes here
+```
+
+</TabItem>
+<TabItem value="java" label="Java">
+
+```java
+// Your code goes here
+```
+
+</TabItem>
+</Tabs>
