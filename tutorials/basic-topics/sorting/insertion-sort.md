@@ -123,7 +123,7 @@ public:
     int maxProduct(vector<int>& nums) {
         insertionSort(nums,nums.size());
         int n = nums.size();
-        return (nums[n - 1] - 1)*(nums[n - 2] - 1);
+        return (nums[n - 1] - 1) * (nums[n - 2] - 1);
     }
 };
 ```
@@ -154,7 +154,7 @@ class Solution {
     public int maxProduct(int[] nums) {
         insertion_sort(nums,nums.length);
         int n = nums.length;
-        return (nums[n - 1] - 1)*(nums[n - 2] - 1);      
+        return (nums[n - 1] - 1) * (nums[n - 2] - 1);      
     }
 }
 ```
