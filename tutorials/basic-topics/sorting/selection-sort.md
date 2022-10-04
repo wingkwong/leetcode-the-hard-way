@@ -90,7 +90,7 @@ export const suggestedProblems = [
         "problemName": "0268 - Missing Number",
         "difficulty": "Easy",
         "leetCodeLink": "https://leetcode.com/problems/missing-number/",
-        "solutionLink": ""
+        "solutionLink": "0268-missing-number-easy.md"
     },
     {
         "problemName" : "0448 - Find All Numbers Disappeared In An Array",
