@@ -137,17 +137,17 @@ public:
 class Solution {
     void insertion_sort(int arr[],int size_of_array) {
 		for (int i = 1; i < size_of_array; ++i) {
-            // Picking element from array
+                        // Picking element from array
 			int nums = arr[i]; 
 			int j = i - 1;
 
-            // Comparing nums with all the elements left to it
+                        // Comparing nums with all the elements left to it
 			while (j >= 0 && arr[j] > nums) { 
-                // Shifting the greater element to the right
+                                // Shifting the greater element to the right
 				arr[j + 1] = arr[j]; 
 				j = j - 1;
 			}
-            // Placing selected element at correct position
+                        // Placing selected element at correct position
 			arr[j + 1] = nums; 
 		}
 	}
