@@ -270,7 +270,7 @@ class dsu {
     }
     cnt = n;
   }
-or
+
   inline int getCount() { return cnt; }
 
   inline int get(int x) { return (x == root[x] ? x : (root[x] = get(root[x]))); }
