@@ -207,7 +207,7 @@ export const suggestedProblems = [
     "problemName": "1365 - How Many Numbers Are Smaller Than the Current Number",
     "difficulty": "Easy",
     "leetCodeLink": "https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/",
-    "solutionLink": "([Click for solution](/solutions/1300-1399/1365-how-many-numbers-are-smaller-than-the-current-number-easy.md)"
+    "solutionLink": "../../solutions/1300-1399/how-many-numbers-are-smaller-than-the-current-numbers-easy"
   },
   {
     "problemName": "2037 - Minimum Number of Moves to Seat Everyone",
