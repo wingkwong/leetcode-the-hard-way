@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @ganajayant | https://leetcode.com/problems/binary-tree-postorder-traversal/'
+description: 'Author: @wingkwong, @ganajayant, @vigneshshiv | https://leetcode.com/problems/binary-tree-postorder-traversal/'
 tags: [Stack, Tree, Depth-First Search, Binary Tree]
 ---
 
@@ -150,5 +150,71 @@ class Solution {
     }
 }
 ```
+</TabItem>
+</Tabs>
+
+## Approach 2: Iterative
+
+<Tabs>
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+// Time complexity: O(n), where n - # of nodes in tree
+// Space complexity: O(n)
+class Solution {
+    /**
+     * Sample binary tree
+     * 
+     *    1
+     *   / \
+     *  2   3
+     *
+     */
+    public List<Integer> postorderTraversal(TreeNode root) {
+        List<Integer> result = new LinkedList<>();
+        Stack<TreeNode> stack = new Stack<>();
+        // Reference for last visited right node, for when parent is on top of the stack
+        TreeNode last = null;
+        while (root != null || !stack.isEmpty()) {
+            // Keep pushing left nodes, all the way down onto stack
+            if (root != null) {
+                stack.push(root);
+                root = root.left;
+            } else {
+                TreeNode node = stack.peek();
+                // When Parent is on top stack, it checks with right node which has a refence in last variable
+                // If both are same, it will not add repeated reference onto stack
+                // Pops out stack top, i.e parent node, and level up higher for other nodes.
+                if (node.right != null && node.right != last) {
+                    root = node.right;
+                } else {
+                    // If any of the right node is empty, the block executes and add value from top of stack
+                    result.add(node.val);
+                    // Pops out stock top
+                    last = stack.pop();
+                }
+            }
+        }
+        return result;
+    }
+}
+```
+
 </TabItem>
 </Tabs>

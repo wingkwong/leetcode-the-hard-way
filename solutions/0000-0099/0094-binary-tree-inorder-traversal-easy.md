@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong ,ganajayant| https://leetcode.com/problems/binary-tree-inorder-traversal/'
+description: 'Author: @wingkwong, @ganajayant, @vigneshshiv | https://leetcode.com/problems/binary-tree-inorder-traversal/'
 tags: [Stack, Tree, Depth-First Search, Binary Tree]
 ---
 
@@ -135,6 +135,59 @@ class Solution {
         inorder(node.left, result);
         result.add(node.val);
         inorder(node.right, result);
+    }
+}
+```
+</TabItem>
+</Tabs>
+
+## Approach 2: Iterative
+
+<Tabs>
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+// Time complexity: O(n), where n - # of nodes in the tree
+// Space complexity: O(n)
+class Solution {
+    public List<Integer> inorderTraversal(TreeNode root) {
+        List<Integer> result = new LinkedList<>();
+        Stack<TreeNode> stack = new Stack<>();
+        while (root != null || !stack.isEmpty()) {
+            // Keep traversing to left and add it to stack till last
+            if (root != null) {
+                stack.push(root);
+                root = root.left;
+            } else {
+                //   1
+                //  / \
+                // 2   3
+                // All left tree traversed and currently root is NULL 
+                // 2 is added to result, Stack is only having 1
+                // If current node is 2, and it's popped out, 2's right is assigned to root which is NULL
+                // So in the next iteration root still be NULL. 
+                // Stack top value 1 added to result and 1 popped out and 1's right 3 assigned to root. 
+                result.add(stack.peek().val);
+                root = stack.pop().right;
+            }
+        }
+        return result;
     }
 }
 ```

@@ -9,6 +9,14 @@ npm run start
 # By default, a browser window will open at http://localhost:3000/.
 ```
 
+## Before Creating a PR 
+
+- Make sure you've followed the template format
+- Make sure you've verified your work locally
+- Make sure you've applied LaTex for variables or formulas
+- Make sure you've formatted your code well
+- Make sure you've formatted your explanation well
+
 ## Tutorials
 
 - Go to `./tutorials`
@@ -25,8 +33,6 @@ description: 'Author: @<YOUR_ALIAS>'
 hide_table_of_contents: true
 ---
 
-import TutorialAuthors from '@site/src/components/TutorialAuthors';
-
 <TutorialAuthors names="@<YOUR_ALIAS>"/>
 
 ## Overview
@@ -34,6 +40,7 @@ import TutorialAuthors from '@site/src/components/TutorialAuthors';
 // Your content goes here
 
 // Walk through the topic using LC problems (if applicable)
+// Do not use random examples or examples from other sites
 
 // Suggested Problems
 ```
@@ -51,9 +58,11 @@ Examples:
 - Create a new page called `<PROBLEM_ID>-<PROBLEM_TITLE>-<DIFFICULTY>.md`, e.g. `0202-happy-number-easy.md`
 - Include basic meta info such as `description` and `tags`. 
 - Use `<Tabs>` to wrap your code block. See below example.
-- Add Time Complexity and Space Complexity for each solution
+- Add Time Complexity and Space Complexity for each solution 
 - Add beginner-friendly explanations 
+- Appy LaTex to make it look better
 - Format the code well
+- Do not write comment inline with the code. Write the comment above the line instead
 
 Template
 
@@ -132,4 +141,4 @@ Examples:
 
 - For images, please copy and paste to Github editor (the image will be uploaded to github content) to get the image link (e.g. https://user-images.githubusercontent.com/35857179/168304432-fa9ac8bb-0eb9-49d9-bdcf-5e3509c1f835.png). Do not upload any images to this repository.
 
-- If your content includes variables or math equations, please highlight it with katex syntax. See [binary-exponentiation.md](https://raw.githubusercontent.com/wingkwong/leetcode-the-hard-way/main/tutorials/math/number-theory/binary-exponentiation.md) as an example.
+- If your content includes variables or math equations, please highlight it with LaTex syntax. See [binary-exponentiation.md](https://raw.githubusercontent.com/wingkwong/leetcode-the-hard-way/main/tutorials/math/number-theory/binary-exponentiation.md) as an example.
