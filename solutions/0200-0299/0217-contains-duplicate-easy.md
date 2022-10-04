@@ -1,5 +1,5 @@
 ---
-description: 'Author: @DoubleSpicy | https://leetcode.com/problems/contains-duplicate/'
+description: 'Author: @DoubleSpicy, @vigneshshiv | https://leetcode.com/problems/contains-duplicate/'
 ---
 
 # 0217 - Contains Duplicate (Easy)
@@ -46,6 +46,8 @@ Some further optimizations could be done. First, we could stop early once we hav
 
 Both time and space complexity is $$O(N)$$.
 
+<Tabs>
+<TabItem value="c++" label="C++">
 <SolutionAuthor name="@DoubleSpicy"/>
 
 ```cpp
@@ -69,12 +71,37 @@ public:
 };
 ```
 
+</TabItem>
+
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+class Solution {
+    public boolean containsDuplicate(int[] nums) {
+        // HashSet for efficient lookup / add method itself provides true or false based on the key.
+        Set<Integer> table = new HashSet<>();
+        for (int num : nums) {
+            // Returns true - if key is added to the Set 
+            // otherwise false if the key is already present.
+            if (!table.add(num)) return true;
+        }
+        return false;
+    }
+}
+```
+
+</TabItem>
+</Tabs>
+
 ## Approach 2: Sort, then see if next element is the same
 
 Another approach is to sort `nums` and then see for each element, whether next element has the same value. For example sorting `1, 2, 5, 5, 4` gives `1, 2, 4, 5, 5`.
 
 This approach is more memory efficient ($$O(logN)$$) then approach 1 since it doesn't need to make copies of input values stored in a set but comes at a price of $$O(NlogN)$$ time complexity.
 
+<Tabs>
+<TabItem value="c++" label="C++">
 <SolutionAuthor name="@DoubleSpicy"/>
 
 ```cpp
@@ -97,6 +124,9 @@ public:
 };
 ```
 
+</TabItem>
+</Tabs>
+
 ## Beginner Python Solution
 
 In general, we want to make use of `defaultdict` in python.
@@ -109,6 +139,9 @@ You might be thinking: Why can't we simply loop the array for each element to ch
 ![3](https://user-images.githubusercontent.com/24492138/170910863-48ac46bf-dae8-423e-809a-22ec32466b06.jpg)
 ![4](https://user-images.githubusercontent.com/24492138/170910866-22f6ed1d-b58c-4e6a-8e32-11ba7e0b6b29.jpg)
 
+
+<Tabs>
+<TabItem value="py" label="Python">
 <SolutionAuthor name="@DoubleSpicy"/>
 
 ```python
@@ -120,3 +153,6 @@ for i in nums:
     return True
 return False
 ```
+
+</TabItem>
+</Tabs>
