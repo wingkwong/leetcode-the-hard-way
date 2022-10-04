@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/valid-anagram/'
+description: 'Author: @wingkwong, @vigneshshiv | https://leetcode.com/problems/valid-anagram/'
 tags: ['Hash Map']
 ---
 
@@ -38,6 +38,8 @@ Output: false
 
 ## Approach 1: Sort
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -53,8 +55,34 @@ public:
 };
 ```
 
+</TabItem>
+
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+class Solution {
+    public boolean isAnagram(String s, String t) {
+        char[] s_chars = s.toCharArray();
+        char[] t_chars = t.toCharArray();
+        // Sorting with char array
+        Arrays.sort(s_chars);
+        Arrays.sort(t_chars);
+        // Convert to string
+        s = new String(s_chars);
+        t = new String(t_chars);
+        return s.equals(t);
+    }
+}
+```
+
+</TabItem>
+</Tabs>
+
 ## Approach 2: Hash Map
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -75,3 +103,31 @@ public:
     }
 };
 ```
+
+</TabItem>
+
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+class Solution {
+    public boolean isAnagram(String s, String t) {
+        int[] chars = new int[26];
+        for (char c : s.toCharArray()) {
+            chars[c - 'a']++;
+        }
+        for (char c : t.toCharArray()) {
+            chars[c - 'a']--;
+            // If any char is occurred more than "s string" char, then immediately return false. 
+            if (chars[c - 'a'] < 0) return false;
+        }
+        for (int num : chars) {
+            if (num != 0) return false;
+        }
+        return true;
+    }
+}
+```
+
+</TabItem>
+</Tabs>
