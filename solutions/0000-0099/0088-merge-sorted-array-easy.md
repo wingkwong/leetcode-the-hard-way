@@ -2,7 +2,7 @@
 description: >-
   Author: @deepanshu-rawat6 |
   https://leetcode.com/problems/merge-sorted-array/
-tags: [Array, Sorting,Two Pointers]
+tags: [Array, Two Pointers, Sorting]
 ---
 
 # 0088 - Merge Sorted Array (Easy)
@@ -70,10 +70,11 @@ Since, this problem is under easy category, we know $nums1$ has length $m + n$ s
 class Solution {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         // adding elements of nums2 at empty places of nums1
-        for(int i = 0; i < n; i++){
+        // starting at index m
+        for(int i = 0; i < n; i++) {
             nums1[m + i] = nums2[i];
         }
-        // sorting nums1 (using Java standard sorting)
+        // sorting nums1 in an ascending order
         Arrays.sort(nums1);
     }
 }
@@ -84,7 +85,7 @@ class Solution {
 ## Approach 2: Two Pointers
 
 A better way to do it is using one-pass two pointer approach. We make a copy of $nums1$ into $temp$, then iterate through both arrays $nums2$ and $temp$ comparing their elements in **ascending fashion** with the help of two pointers $i$ and $j$,simultaneouslty adding the smaller elements into $nums1$. Finally, the bigger elements out of either $nums2$ or $temp$ are going to be added by seperately iterating over them if $i$ or $j$ satisfies the conditions.
-This solution gives $O(m + n)$ or $O(N)$ time complexity and $O(m)$ or $O(N)$ space complexity.
+This solution gives $O(m + n)$ or $O(n)$ time complexity and $O(m)$ or $O(n)$ space complexity.
 
 <Tabs>
 <TabItem value="java" label="Java">
@@ -95,14 +96,14 @@ class Solution {
     public void merge(int[] nums1 , int m , int[] nums2 , int n) {
         int i = 0, j = 0, k = 0;
         // making a temp copy of nums1, for easier swapping of elements
-        int[] temp= Arrays.copyOfRange( nums1 , 0 , m);
+        int[] temp = Arrays.copyOfRange(nums1 , 0 , m);
         // loop till anyone array elements exhausts
-        while( i < m && j < n){
+        while (i < m && j < n) {
             // adding the elements into nums1 in ascending order
-            if( temp[i] < nums2[j]){
+            if (temp[i] < nums2[j]) {
                 nums1[k] = temp[i];
                 i++;
-            }else{
+            } else {
                 nums1[k] = nums2[j];
                 j++;
             }
@@ -110,13 +111,13 @@ class Solution {
         }
         // now adding the left out elements either of temp or nums2
         // Either one of the loops will execute because every time one array's length
-        // would come out to be shorter than the other one.
-        while( i < m){
+        // would come out to be shorter than the other one
+        while (i < m) {
             nums1[k] = temp[i];
             k++;
             i++;
         }
-        while( j < n){
+        while (j < n) {
             nums1[k] = nums2[j];
             k++;
             j++;
