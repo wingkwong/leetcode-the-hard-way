@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/single-number/'
+description: 'Author: @wingkwong, @vigneshshiv | https://leetcode.com/problems/single-number/'
 ---
 
 # 0136 - Single Number (Easy)
@@ -76,6 +76,29 @@ public:
 class Solution:
     def singleNumber(self, nums: List[int]) -> int:
         return reduce(lambda x, y: x ^ y, nums)
+```
+</TabItem>
+
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+// Time complexity: O(n), where n - # of elements in the array
+// Space complexity: O(1)
+class Solution {
+    /**
+     * Given a list of integers where all integers occur even times, expect one which occur odd times
+     *
+     * Solution - XOR of any two same numbers will always be 0, and XOR of any number with 0 is the number itself.
+     */
+    public int singleNumber(int[] nums) {
+        int x = 0;
+        for (int num : nums) {
+            x ^= num;
+        }
+        return x;
+    }
+}
 ```
 </TabItem>
 </Tabs>

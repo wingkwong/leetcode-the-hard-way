@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @deepanshu-rawat6 |
+  Author: @deepanshu-rawat6, @vigneshshiv |
   https://leetcode.com/problems/merge-sorted-array/
 tags: [Array, Two Pointers, Sorting]
 ---
@@ -121,6 +121,40 @@ class Solution {
             nums1[k] = nums2[j];
             k++;
             j++;
+        }
+    }
+}
+```
+</TabItem>
+</Tabs>
+
+## Approach 3: Two Pointers In-place (Optimal)
+
+As we know, $nums1$ can hold size of $m + n$ array, which can have empty slots at the end to move $nums2$ array. 
+
+Since the array is already sorted, we can place the elements from highest to lowest in $nums1$ by moving from last slot to first. 
+
+Time Complexity: $O(m + n)$, where, $m$ - length of nums1, $n$ - length of nums2
+
+Space complexity: $O(1)$
+
+<Tabs>
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+class Solution {
+    public void merge(int[] nums1, int m, int[] nums2, int n) {
+        // index position for array placements
+        int idx = nums1.length - 1; m -= 1; n -= 1;
+        while (n >= 0) {
+            // Place elements from right direction to left. 
+            if (m >= 0 && nums1[m] > nums2[n]) {
+                nums1[idx] = nums1[m--];
+            } else {
+                nums1[idx] = nums2[n--];
+            }
+            idx--;
         }
     }
 }
