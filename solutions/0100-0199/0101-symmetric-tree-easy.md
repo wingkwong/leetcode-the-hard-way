@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/symmetric-tree/'
+description: 'Author: @wingkwong, @vigneshshiv | https://leetcode.com/problems/symmetric-tree/'
 ---
 
 # 0101 - Symmetric Tree (Easy)
@@ -44,6 +44,8 @@ A tree is symmetric if the following conditions are satisfied
 - two nodes should have the value 
 - the left sub-tree is a reflection of the right sub-tree of the other tree
 
+<Tabs>
+<TabItem value="c++" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -63,3 +65,118 @@ public:
     }
 };
 ```
+
+</TabItem>
+
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+// Time complexity: O(n), where n - # nodes in the tree
+// Space complexity: O(log(n))
+class Solution {
+    public boolean isSymmetric(TreeNode root) {
+        if (root == null) return true;
+        return areSymmetric(root.left, root.right);
+    }
+    
+    public boolean areSymmetric(TreeNode root1, TreeNode root2) {
+        if (root1 == null && root2 == null) return true;
+        // Both nodes should not be null and values should be equal
+        // If not, both are not a valid symmetric tree
+        if (!(root1 != null && root2 != null) || root1.val != root2.val) {
+            return false;
+        }
+        return areSymmetric(root1.left, root2.right) && areSymmetric(root1.right, root2.left);
+    }
+}
+```
+
+</TabItem>
+</Tabs>
+
+## Approach 2: Iterative
+
+A tree is symmetric if the following conditions are satisfied
+
+- two nodes should have the value 
+- the left sub-tree is a reflection of the right sub-tree of the other tree
+
+<Tabs>
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+// Time complexity: O(n), where n - # nodes in the tree
+// Space complexity: O(n)
+class Solution {
+    public boolean isSymmetric(TreeNode root) {
+        if (root == null) return true;
+        // ArrayDeque acts as head & tail pointers
+        // Add and remove elements from both sides
+        Deque<TreeNode> stack = new ArrayDeque<>();
+        if (root.left == null && root.right == null) {
+            return true;
+        }
+        if (root.left == null || root.right == null) {
+            return false;
+        }
+        // Add left to head & right to tail in deque
+        stack.offerFirst(root.left);
+        stack.offerLast(root.right);
+        while (!stack.isEmpty()) {
+            TreeNode left = stack.pollFirst();
+            TreeNode right = stack.pollLast();
+            // Compare the value, if not same, not a valid symmetric tree
+            if (left.val != right.val) return false;
+            // Mirror view elements check of both left and right subtree's
+            // If any left and right has one node exists and other doesn't, then it's not valid symmetric tree
+            if ((left.left == null && right.right != null) || (left.left != null && right.right == null)
+                    || (left.right != null && right.left == null) || (left.right == null && right.left != null)) {
+                return false;
+            }
+            if (left.right != null && right.left != null) {
+                stack.offerFirst(left.right);
+                stack.offerLast(right.left);
+            }
+            if (left.left != null && right.right != null) {
+                stack.offerFirst(left.left);
+                stack.offerLast(right.right);
+            }
+        }
+        return true;    
+    }
+}
+```
+</TabItem>
+</Tabs>
