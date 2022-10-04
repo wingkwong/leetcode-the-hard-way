@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @ganajayant | https://leetcode.com/problems/binary-tree-preorder-traversal/'
+description: 'Author: @wingkwong, @ganajayant, @vigneshshiv | https://leetcode.com/problems/binary-tree-preorder-traversal/'
 tags: [Stack, Tree, Depth-First Search, Binary Tree]
 ---
 
@@ -143,6 +143,59 @@ class Solution {
         List<Integer> ll = new LinkedList<Integer>();
         ll = preorder(root, ll);
         return ll;
+    }
+}
+```
+</TabItem>
+</Tabs>
+
+## Approach 2: Iterative
+
+<Tabs>
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+// Time complexity: O(n), where n - # of nodes in the tree
+// Space complexity: O(n)
+class Solution {
+    public List<Integer> preorderTraversal(TreeNode root) {
+        List<Integer> result = new LinkedList<>();
+        Stack<TreeNode> stack = new Stack<>();
+        while (root != null) {
+            // Keeping add top and left node values, while keep traversing left
+            result.add(root.val);
+            // If Root has right subtree, add it to stack
+            if (root.right != null) {
+                stack.push(root.right);
+            }
+            //   1
+            //  / \
+            // 2   3
+            // If 1 & 2 is added to result, Stack is only having 3
+            // If current node is 2, the 2's left is null, 
+            // So Pops out stack top, i.e, current node's (2's) parent (1) right subtree
+            root = root.left;
+            if (root == null && !stack.isEmpty()) {
+                root = stack.pop();
+            }
+        }
+        return result;
     }
 }
 ```
