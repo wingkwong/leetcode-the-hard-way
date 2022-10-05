@@ -16,11 +16,12 @@ keywords:
 
 ### Depth First Traversal
 
-Go to [Tutorial](../tutorials/graph-theory/binary-tree#traversal)
+Please refer the [tutorial](../tutorials/graph-theory/binary-tree#traversal) guide for more details. 
 
 
 #### Preorder traversal
 
+First visit the root,then traverse the left sub-tree and then traverse the right sub-tree.
 <Tabs>
 
 <TabItem value="cpp" label="C++">
@@ -51,6 +52,8 @@ def preorder(node):
 
 
 #### Inorder traversal
+
+First traverse the left sub-tree,then visit the root and then traverse the right sub-tree.
 <Tabs>
 
 <TabItem value="cpp" label="C++">
@@ -81,6 +84,9 @@ def inorder(node):
 
 
 #### Postorder traversal
+
+First traverse the left sub-tree,then traverse the right sub-tree and then visit the root.
+
 <Tabs>
 
 <TabItem value="cpp" label="C++">
@@ -112,7 +118,9 @@ def postorder(node):
 
 ### Breadth First Search
 
-Go to [Tutorial](../tutorials/graph-theory/breadth-first-search)
+In Breadth First Search, we explore all the closest nodes first before going one step further.
+
+Please refer the [tutorial](../tutorials/graph-theory/breadth-first-search) guide for more details. 
 
 <Tabs>
 
@@ -150,7 +158,9 @@ def findTargetNode(root, targetValue):
 
 ### Bellman Ford Algorithm
 
-Go to [Tutorial](../tutorials/graph-theory/bellman-ford-algorithm)
+Bellman Ford Algorithm computes shortest paths from a single source vertex to all of the other vertices in a weighted directed graph.
+
+Please refer the [tutorial](../tutorials/graph-theory/bellman-ford-algorithm) guide for more details. 
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -175,7 +185,9 @@ void bellman_ford(T_a3 &g, T_vector &dist, int src, int mx_edges) {
 
 ### Dijkstra
 
-Go to [Tutorial](../tutorials/graph-theory/dijkstra)
+Dijkstra's Algorithm is used to find the shortest paths between nodes in a graph.
+
+Please refer the [tutorial](../tutorials/graph-theory/dijkstra) guide for more details.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -204,7 +216,9 @@ void dijkstra(T_pair &g, T_vector &dist, int start) {
 
 ### Topological Sorting
 
-Go to [Tutorial](../tutorials/graph-theory/topological-sorting)
+Topological Sorting is a linear ordering of its vertices such that for every directed edge (u,v) from vertex u to vertex v, u come before v in the ordering.
+
+Please refer the [tutorial](../tutorials/graph-theory/topological-sorting) guide for more details.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -249,7 +263,9 @@ struct TopologicalSort {
 
 ### Disjoin Set Union (DSU)
 
-Go to [Tutorial](../tutorials/graph-theory/disjoint-set-union)
+Disjoint Set Union is a data structure that allows us to combine any two sets into one.
+
+Please refer the [tutorial](../tutorials/graph-theory/disjoint-set-union) guide for more details.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
