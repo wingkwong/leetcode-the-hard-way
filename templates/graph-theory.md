@@ -16,16 +16,12 @@ keywords:
 
 ### Depth First Search
 
+
 Go to [Tutorial](../tutorials/graph-theory/depth-first-search)
 
+#### Inorder traversal
 <Tabs>
-<TabItem value="cpp" label="C++">
 
-```cpp
-// Your code goes here
-```
-
-</TabItem>
 <TabItem value="py" label="Python">
 
 ```py
@@ -41,14 +37,6 @@ def dfs(node):
     
     dfs(node.right)
 ```
-
-</TabItem>
-<TabItem value="java" label="Java">
-
-```java
-// Your code goes here
-```
-
 </TabItem>
 </Tabs>
 
@@ -59,13 +47,7 @@ def dfs(node):
 Go to [Tutorial](../tutorials/graph-theory/breadth-first-search)
 
 <Tabs>
-<TabItem value="cpp" label="C++">
 
-```cpp
-// Your code goes here
-```
-
-</TabItem>
 <TabItem value="py" label="Python">
 
 ```py
@@ -93,14 +75,6 @@ def findTargetNode(root, targetValue):
     return None
 
 ```
-
-</TabItem>
-<TabItem value="java" label="Java">
-
-```java
-// Your code goes here
-```
-
 </TabItem>
 </Tabs>
 
@@ -126,20 +100,6 @@ void bellman_ford(T_a3 &g, T_vector &dist, int src, int mx_edges) {
         dist = ndist;
     }
 }
-```
-
-</TabItem>
-<TabItem value="py" label="Python">
-
-```py
-# Your code goes here
-```
-
-</TabItem>
-<TabItem value="java" label="Java">
-
-```java
-// Your code goes here
 ```
 
 </TabItem>
@@ -169,20 +129,6 @@ void dijkstra(T_pair &g, T_vector &dist, int start) {
     }
   }
 }
-```
-
-</TabItem>
-<TabItem value="py" label="Python">
-
-```py
-# Your code goes here
-```
-
-</TabItem>
-<TabItem value="java" label="Java">
-
-```java
-// Your code goes here
 ```
 
 </TabItem>
@@ -228,20 +174,6 @@ struct TopologicalSort {
         isTopologicalSorted = res == n;
     }
 };
-```
-
-</TabItem>
-<TabItem value="py" label="Python">
-
-```py
-# Your code goes here
-```
-
-</TabItem>
-<TabItem value="java" label="Java">
-
-```java
-// Your code goes here
 ```
 
 </TabItem>
@@ -293,20 +225,6 @@ class dsu {
     return false;
   }
 };
-```
-
-</TabItem>
-<TabItem value="py" label="Python">
-
-```py
-# Your code goes here
-```
-
-</TabItem>
-<TabItem value="java" label="Java">
-
-```java
-// Your code goes here
 ```
 
 </TabItem>
