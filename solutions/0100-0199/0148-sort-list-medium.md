@@ -1,5 +1,5 @@
 ---
-description: 'Author: @TBC | https://leetcode.com/problems/sort-list/'
+description: 'Author: @vigneshshiv | https://leetcode.com/problems/sort-list/'
 ---
 
 # 0148 - Sort List (Medium)
@@ -44,4 +44,89 @@ Output: []
 
 **Follow up:** Can you sort the linked list in `O(n logn)` time and `O(1)` memory (i.e. constant space)?
 
-## Approach 1: TBC
+## Approach 1: Recursive Merge Sort
+
+* Find the middle node and cut the head reference till middle node
+* Keep reducing the nodes size to smaller for comparison (same as like merge sort)
+* Once we reduce nodes size to 1, merge the nodes in sorted (ascending) order.
+* Keep merging the nodes till last, to build the sorted list.
+
+Time Complexity: $O(n log(n))$, where $n$ - # of nodes in the list
+
+Space complexity: $O(n)$, $n$ - recursive call stack
+
+<Tabs>
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public ListNode sortList(ListNode head) {
+        if (Objects.isNull(head) || Objects.isNull(head.next)) {
+            return head;
+        }
+        // Middle node
+        ListNode mid = middleNode(head);
+        // Keep traversing left to get the smallest nodes for comparison (smallest we can get is 1 node)
+        ListNode left = sortList(head);
+        // Starting from middle, to find the smallest nodes for comparison
+        ListNode right = sortList(mid);
+        // Compare the list and return the merged nodes
+        return mergeTwoLists(left, right);
+    }
+    
+    public ListNode middleNode(ListNode head) {
+        ListNode midPrev = null;
+        //
+        while (head != null && head.next != null) {
+            midPrev = (midPrev == null) ? head : midPrev.next;
+            head = head.next.next;
+        }
+        ListNode mid = midPrev.next;
+        // Cut the reference to the next pointer (mid), so that head remains from start to mid.
+        midPrev.next = null;
+        return mid;
+    }
+    
+    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+        // Base case
+        if (Objects.isNull(list1) && Objects.isNull(list2)) {
+            return list1;
+        }
+        if (Objects.isNull(list1)) {
+            return list2;
+        }
+        if (Objects.isNull(list2)) {
+            return list1;
+        }
+        ListNode head = new ListNode();
+        ListNode node = head;
+        while (Objects.nonNull(list1) && Objects.nonNull(list2)) {
+            if (list1.val <= list2.val) {
+                node.next = list1;
+                list1 = list1.next;
+            } else {
+                node.next = list2;
+                list2 = list2.next;
+            }
+            node = node.next;
+        }
+        // If either of half is not empty then append it
+        node.next = Objects.nonNull(list1) ? list1 : list2;
+        return head.next;
+    }
+}
+```
+
+</TabItem>
+</Tabs>

@@ -1,5 +1,5 @@
 ---
-description: 'Author: @lonyehan | https://leetcode.com/problems/linked-list-cycle/'
+description: 'Author: @lonyehan, @vigneshshiv | https://leetcode.com/problems/linked-list-cycle/'
 tags: [Hash Table, Linked List, Two Pointers]
 ---
 
@@ -93,6 +93,46 @@ public class Solution {
             if(slowPointer == quickPointer) return true;
         }
         
+        return false;
+    }
+}
+```
+
+</TabItem>
+
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+/**
+ * Definition for singly-linked list.
+ * class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) {
+ *         val = x;
+ *         next = null;
+ *     }
+ * }
+ */
+// Time complexity: O(n), where n - # of nodes in the list
+// Space complexity: O(1)
+public class Solution {
+    public boolean hasCycle(ListNode head) {
+        if (head == null) return false;
+        // Fast & Slow pointer
+        ListNode slow = head;
+        ListNode fast = head;
+        // Fast Reference to check if it's not null, because it's traverse twice as fast as slow
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+            // If both meet at the same node then there is a loop
+            if (slow == fast) {
+                return true;
+            }
+        }
+        // If no loop, fast pointer at the end reached it's last node null pointer
         return false;
     }
 }
