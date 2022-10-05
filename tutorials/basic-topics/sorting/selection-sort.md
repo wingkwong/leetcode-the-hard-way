@@ -41,7 +41,7 @@ We loop through the array once.
 For each iteration, we keep the index of seperation of the sorted and unsorted subarrays. 
 Then, we loop through the array, keeping the index of the minimum element. 
 Finally, we move that element to the end of the sorted subarray, and increment the index of seperation.
-We keep doing this until we reach end of the array, and print out the array. 
+We keep doing this until we reach the end of the array, and print out the resulting array. 
 
 ## Example Run
 
@@ -70,13 +70,16 @@ class Solution {
 public:
     void sortColors(vector<int>& nums) {
         int n = nums.size(); 
+        // Loop once through the array, keeping the seperation index of the sorted and unsorted subarray
         for (int i = 0; i < n - 1; i++){
             int midx = i;
+            // Loop through array again to find the index of the minimum value in the unsorted subarray
             for (int j = i + 1; j < n; j++){
                 if (nums[j] < nums[midx]){
                     midx = j;
                 }
             }
+            // Swap the minimum value with the current array element (the end of the sorted subarray)
             swap(nums[i], nums[midx]);
         }
     }
