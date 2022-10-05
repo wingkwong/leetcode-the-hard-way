@@ -13,11 +13,11 @@ keywords:
 
 ## Overview
 
-When the answer to a problem is a very large number, problem setters expect you to output it "modulo m", that is, the remainder after dividing the answer by $m$ (for example, "modulo 1e9 + 7"). So if the actual answer is very large, with the use of modulo $m$, it would be sufficient to use the data types int and long long. Since many languages do not support large-integer arithmetic, this method avoids integer overflow.
+When the answer to a problem is a very large number, problem setters expect you to output it "modulo $m$", that is, the remainder after dividing the answer by $m$ (for example, "modulo $1e9 + 7$"). So if the actual answer is very large, with the use of modulo $m$, it would be sufficient to use the data types int and long long. Since many languages do not support large-integer arithmetic, this method avoids integer overflow.
 
 ## MOD
 
-The task of modulo operator $\%$, also know as the remainder operator, is to give the remainder. We denote it by $x\,mod\,m$, the remainder when $x$ is divided by $m$. For example, 17 mod 5 = 2 because 17 = 3*5 + 2.
+The task of modulo operator $\%$, also know as the remainder operator, is to give the remainder. We denote it by $x\,mod\,m$, the remainder when $x$ is divided by $m$. For example, $17$ $mod$ $5$ $=$ $2$ because $17$ $=$ $3*5 + 2$.
 
 ### Modular Arithmetic   
 An important property of the modulo is that in addition, subtraction and multiplication, the remainder can be taken before the operation:  
@@ -34,10 +34,10 @@ $(a\,−\,b)\,mod\,m$ $=$ $(a\,mod\,m\, − \,b\,mod\,m\,+\,m)\,mod\,m$
 $(a * b)\,mod\,m$ $=$ $(a\,mod\,m * b\,mod\,m)\,mod\,m$
 
 #### 4. Division  
-The modular division is completely different from modular addition, subtraction and multiplication. It also does not always exist. It requires a concept called the "modular multiplicative inverse". The modular multiplicative inverse of a number $a$ is the number $a^{−1}$ such that $a ⋅ a^{−1} \,mod\, m = 1$. You may notice that this is similar to the concept of a reciprocal of a number, but here we don't want a fraction; we want an integer, specifically an integer between $0$ and $m−1$ inclusive.  
+The modular division is completely different from modular addition, subtraction and multiplication. It also does not always exist. It requires a concept called the "Modular Multiplicative Inverse". The modular multiplicative inverse of a number $a$ is the number $a^{−1}$ such that $a ⋅ a^{−1} \,mod\, m = 1$. You may notice that this is similar to the concept of a reciprocal of a number, but here we don't want a fraction; we want an integer, specifically an integer between $0$ and $m−1$ inclusive.  
 
 There are **two** faster ways to calculate the inverse: 
-1. The extended GCD algorithm 
+1. Extended GCD algorithm 
 2. Fermat's little theorem
 
 The extended GCD algorithm may be more versatile and sometimes faster, but Fermat's little theorem method is more popular, since it's almost free once you implement exponentiation, which we will cover here. 
@@ -89,11 +89,11 @@ int factorial(int n){
 </TabItem>
 </Tabs>
 
-## Why 1e9+7?
+## Why 1e9 + 7?
 
 The number $1e9 + 7$ fits nicely into a signed 32-bit integer. It is also the first 10-digit prime number. In some problems we need to compute the Modular Multiplicative Inverse and it helps very much that this number is prime. 
 
-In fact any prime number less then 2^30 will be fine in order to prevent possible overflows. But this one can be easily written as $1e9 + 7$. This reasoning almost uniquely determined this number.
+In fact any prime number less then $2^{30}$ will be fine in order to prevent possible overflows. But this one can be easily written as $1e9 + 7$. This reasoning almost uniquely determined this number.
 
 ## References
 
