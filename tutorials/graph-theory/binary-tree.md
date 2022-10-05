@@ -46,6 +46,10 @@ void preorder(TreeNode* node) {
 - Visit the root
 - Traverse the right sub-tree
 
+<Tabs>
+
+<TabItem value="cpp" label="C++">
+
 ```cpp
 void inorder(TreeNode* node) {
     if (node == NULL) return;
@@ -54,6 +58,25 @@ void inorder(TreeNode* node) {
     inorder(node->right);
 }
 ```
+</TabItem>
+
+<TabItem value="py" label="Python">
+
+```py
+def dfs(node):
+    if(node == None):
+        return
+        
+    dfs(node.left)
+    
+    print("I just visited the left branch!")
+    print("I am number: " + str(node.val))
+    print("I am visiting the right branch now!")
+    
+    dfs(node.right)
+```
+</TabItem>
+</Tabs>
 
 ### Post-order
 

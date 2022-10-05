@@ -14,13 +14,42 @@ keywords:
 
 
 
-### Depth First Search
+### Depth First Traversal
+
+Go to [Tutorial](../tutorials/graph-theory/binary-tree#traversal)
 
 
-Go to [Tutorial](../tutorials/graph-theory/depth-first-search)
+#### Preorder traversal
+<Tabs>
+
+<TabItem value="cpp" label="C++">
+
+```cpp
+void preorder(TreeNode* node) {
+    if (node == NULL) return;
+    s.push_back(node->val);
+    preorder(node->left);
+    preorder(node->right);
+}
+```
+</TabItem>
+</Tabs>
+
 
 #### Inorder traversal
 <Tabs>
+
+<TabItem value="cpp" label="C++">
+
+```cpp
+void inorder(TreeNode* node) {
+    if (node == NULL) return;
+    inorder(node->left);
+    s.push_back(node->val);
+    inorder(node->right);
+}
+```
+</TabItem>
 
 <TabItem value="py" label="Python">
 
@@ -41,6 +70,21 @@ def dfs(node):
 </Tabs>
 
 
+#### Postorder traversal
+<Tabs>
+
+<TabItem value="cpp" label="C++">
+
+```cpp
+void postorder(TreeNode* node) {
+    if (node == NULL) return;
+    postorder(node->left);
+    postorder(node->right);
+    s.push_back(node->val);
+}
+```
+</TabItem>
+</Tabs>
 
 ### Breadth First Search
 
