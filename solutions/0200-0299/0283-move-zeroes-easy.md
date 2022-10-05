@@ -1,5 +1,7 @@
 ---
-description: 'Author: @heiheihang | https://leetcode.com/problems/move-zeroes/'
+description: >-
+  Author: @heiheihang, @vigneshshiv |
+  https://leetcode.com/problems/move-zeroes/
 ---
 
 # 0283 - Move Zeroes (Easy)
@@ -43,6 +45,8 @@ When we see a non-zero element, we put it in the slot pointed by `left_pointer`,
 
 At the end, we need to set all the unused slots of `nums` to zero.
 
+<Tabs>
+<TabItem value="py" label="Python">
 <SolutionAuthor name="@heiheihang"/>
 
 ```python
@@ -73,3 +77,58 @@ def moveZeroes(self, nums: List[int]) -> None:
             nums[i] = 0
             
 ```
+
+</TabItem>
+
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+class Solution {
+    public void moveZeroes(int[] nums) {
+        if (nums.length == 1) return;
+        int idx = 0;
+        for (int num : nums) {
+            if (num != 0) {
+                nums[idx++] = num;
+            }
+        }
+        while (idx < nums.length) {
+            nums[idx++] = 0;
+        }
+    }
+}
+```
+
+</TabItem>
+</Tabs>
+
+## Approach 2: Two pointers Optimal
+
+Iterate through numbers and count the $0$ occurances, while doing so, if any non-zero number present and if the zero's count more than $0$, shift the current number to current $index - count0$ count index. This solves the problem in linear time and optimally.  
+
+For example, the given input is $[1, 3, 0, 0, 12]$, right now $12$ has to be placed in first $0$ th position. While iterating, we have count $2$ zero's and we are at the last index. Shift $12$ present in current index $4$ to index $2$, apply $nums[i - count0] = nums[i]$ and set $0$ in the current index. 
+
+<Tabs>
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+class Solution {
+    public void moveZeroes(int[] nums) {
+        if (nums.length == 1) return;
+        int count0 = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == 0) {
+                count0 += 1;
+            } else if (count0 > 0) {
+                nums[i - count0] = nums[i];
+                nums[i] = 0;
+            }
+        }
+    }
+}
+```
+
+</TabItem>
+</Tabs>
