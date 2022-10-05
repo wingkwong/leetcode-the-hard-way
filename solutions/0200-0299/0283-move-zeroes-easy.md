@@ -105,7 +105,7 @@ class Solution {
 
 ## Approach 2: Two pointers Optimal
 
-Iterate through numbers and count the $0$ occurances, while doing so, if any non-zero number present and if the zero's count more than $0$, shift the current number to current $index - 0's$ count` index. This solves the problem in linear time and optimally.  
+Iterate through numbers and count the $0$ occurances, while doing so, if any non-zero number present and if the zero's count more than $0$, shift the current number to current $index - count0$ count index. This solves the problem in linear time and optimally.  
 
 For example, the given input is $[1, 3, 0, 0, 12]$, right now $12$ has to be placed in first $0$ th position. While iterating, we have count $2$ zero's and we are at the last index. Shift $12$ present in current index $4$ to index $2$, apply $nums[i - count0] = nums[i]$ and set $0$ in the current index. 
 
