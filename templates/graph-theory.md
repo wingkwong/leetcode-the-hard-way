@@ -20,6 +20,7 @@ Go to [Tutorial](../tutorials/graph-theory/binary-tree#traversal)
 
 
 #### Preorder traversal
+
 <Tabs>
 
 <TabItem value="cpp" label="C++">
@@ -31,6 +32,19 @@ void preorder(TreeNode* node) {
     preorder(node->left);
     preorder(node->right);
 }
+```
+</TabItem>
+
+<TabItem value="py" label="Python">
+
+```py
+def preorder(node):
+    if(node == None):
+        return
+        
+    s.append(node.val)    
+    preorder(node.left)
+    preorder(node.right)
 ```
 </TabItem>
 </Tabs>
@@ -54,17 +68,13 @@ void inorder(TreeNode* node) {
 <TabItem value="py" label="Python">
 
 ```py
-def dfs(node):
+def inorder(node):
     if(node == None):
         return
         
-    dfs(node.left)
-    
-    print("I just visited the left branch!")
-    print("I am number: " + str(node.val))
-    print("I am visiting the right branch now!")
-    
-    dfs(node.right)
+    inorder(node.left)
+    s.append(node.val)
+    inorder(node.right)
 ```
 </TabItem>
 </Tabs>
@@ -83,6 +93,20 @@ void postorder(TreeNode* node) {
     s.push_back(node->val);
 }
 ```
+</TabItem>
+
+<TabItem value="py" label="Python">
+
+```py
+def postorder(node):
+    if(node == None):
+        return
+          
+    postorder(node.left)
+    postorder(node.right)
+    s.append(node.val)  
+```
+
 </TabItem>
 </Tabs>
 
