@@ -15,11 +15,11 @@ keywords:
 
 ## Overview
 
-Selection sort is a commonly used comparison-based sorting algorithm, that is also very simple to implement. 
+Selection sort is a commonly used comparison-based sorting algorithm. It's very simple to implement. 
 Selection sort works on the premise that two subarrays are maintained: one which is **sorted**, and one which is **unsorted**. 
 Each step, one more element of the array gets sorted, until the entire array is sorted. 
 
-- **subarray**: A subsequence or slice of an array
+**subarray**: A subsequence or slice of an array
 
 ## Algorithm
 
@@ -37,26 +37,26 @@ In order to achieve this, we can use selection sort.
 
 ## Pseudocode
 
-We loop through the array once. 
-For each iteration, we keep the index of seperation of the sorted and unsorted subarrays. 
-Then, we loop through the array, keeping the index of the minimum element. 
-Finally, we move that element to the end of the sorted subarray, and increment the index of seperation.
-We keep doing this until we reach the end of the array, and print out the resulting array. 
+We loop through the array once. <br />
+For each iteration, we keep the index of seperation of the sorted and unsorted subarrays. <br />
+Then, we loop through the array, keeping the index of the minimum element. <br />
+Finally, we move that element to the end of the sorted subarray, and increment the index of seperation. <br />
+We keep doing this until we reach the end of the array, and print out the resulting array. <br />
 
 ## Example Run
 
 Let's see the algorithm work on the first test case: `nums = [2, 0, 2, 1, 1, 0]`. This means `n = 6`.
 In the first iteration, we find the minimum value from index 0 to 5, which is 0. This value is moved to the 0th index. <br/>
 The array is now `nums = [0, 2, 2, 1, 1, 0]`. 
-In the second iteration, we find the minimum value from index 1 to 5, which is 0. This value is moved to the 0th index. <br/>
+In the second iteration, we find the minimum value from index 1 to 5, which is 0. This value is moved to the 1st index. <br/>
 The array is now `nums = [0, 0, 2, 1, 1, 2]`. 
-In the third iteration, we find the minimum value from index 2 to 5, which is 1. This value is moved to the 0th index. <br/>
+In the third iteration, we find the minimum value from index 2 to 5, which is 1. This value is moved to the 2nd index. <br/>
 The array is now `nums = [0, 0, 1, 2, 1, 2]`. 
-In the fourth iteration, we find the minimum value from index 3 to 5, which is 1. This value is moved to the 0th index. <br/>
+In the fourth iteration, we find the minimum value from index 3 to 5, which is 1. This value is moved to the 3th index. <br/>
 The array is now `nums = [0, 0, 1, 1, 2, 2]`. 
-In the fiftt iteration, we find the minimum value from index 4 to 5, which is 2. This value is moved to the 0th index. <br/>
+In the fiftt iteration, we find the minimum value from index 4 to 5, which is 2. This value is moved to the 4th index. <br/>
 The array is still `nums = [0, 0, 1, 1, 2, 2]`. 
-In the last iteration, we find the minimum value from index 5 to 5, which is 2. This value is moved to the 0th index. <br/>
+In the last iteration, we find the minimum value from index 5 to 5, which is 2. This value is moved to the 5th index. <br/>
 The array is still `nums = [0, 0, 1, 1, 2, 2]`. 
 
 Now, let's look at the solution to the example question!  
@@ -71,11 +71,13 @@ public:
     void sortColors(vector<int>& nums) {
         int n = nums.size(); 
         // Loop once through the array, keeping the seperation index of the sorted and unsorted subarray
-        for (int i = 0; i < n - 1; i++){
+        for (int i = 0; i < n - 1; i++) {
             int midx = i;
             // Loop through array again to find the index of the minimum value in the unsorted subarray
-            for (int j = i + 1; j < n; j++){
-                if (nums[j] < nums[midx]){
+            for (int j = i + 1; j < n; j++) {
+                // If the current element is smaller than the current minimum element
+                if (nums[j] < nums[midx]) {
+                    // Keep the index of the actual minimum element
                     midx = j;
                 }
             }
