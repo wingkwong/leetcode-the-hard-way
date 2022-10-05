@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/missing-number/'
+description: 'Author: @wingkwong, @vigneshshiv | https://leetcode.com/problems/missing-number/'
 tags: ['Array', 'Hash Table', 'Math', 'Bit Manupulation', 'Sorting']
 ---
 
@@ -46,6 +46,8 @@ Explanation: n = 9 since there are 9 numbers, so all numbers are in the range [0
 
 ## Approach 1: Sorting
 
+<Tabs>
+<TabItem value="c++" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -72,7 +74,38 @@ public:
 };
 ```
 
+</TabItem>
+
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+class Solution {
+    public int missingNumber(int[] nums) {
+        int n = nums.length;
+        // Sort the numbers
+        // After sorting, if any number is not the same as the index then that's the missing number
+        Arrays.sort(nums);
+        // Search for first missing number
+        if (nums[0] != 0) return 0;
+        for (int i = 0; i < n; i++) {
+            if (nums[i] != i) {
+                return i;
+            }
+        }
+        return n;
+    }
+}
+```
+
+</TabItem>
+</Tabs>
+
 ## Approach 2: Bit Manupulation
+
+<Tabs>
+<TabItem value="c++" label="C++">
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -94,17 +127,66 @@ public:
 };
 ```
 
+</TabItem>
+
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+class Solution {
+    public int missingNumber(int[] nums) {
+        int n = nums.length;
+        int ans = n;
+        // we can utilise the properties of XOR:
+        // a ^ a = 0
+        // a ^ 0 = a
+        // a ^ b ^ c = a ^ c ^ b
+        for (int i = 0; i < n; i++) {
+            ans ^= (nums[i] ^ i);
+        }
+        return ans;
+    }
+}
+```
+
+</TabItem>
+</Tabs>
+
 ## Approach 3: Math
 
 To calculate the sum of first n element, we can use Gauss' Formula - $n * (n + 1) / 2$. The missing number would be the expected sum minus the sum of $nums$.
+
+<Tabs>
+<TabItem value="c++" label="C++">
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
 public:
     int missingNumber(vector<int>& nums) {
+        int n = (int) nums.size();
         int sum = 0;
         for(int x : nums) sum += x;
         return (n * (n + 1) / 2) - sum; 
     }
 };
 ```
+
+</TabItem>
+
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+class Solution {
+    public int missingNumber(int[] nums) {
+        int n = nums.length;
+        int sum = 0;
+        for (int x : nums) sum += x;
+        return (n * (n + 1) / 2) - sum;
+    }
+}
+```
+
+</TabItem>
+</Tabs>

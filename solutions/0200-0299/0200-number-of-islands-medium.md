@@ -49,6 +49,8 @@ Output: 3
 
 We can use [0733 - Flood Fill (Easy)](../0700-0799/flood-fill-easy) solution in this problem. The idea is to search for $$1$$ and paint the entire island with different character that  does not exist in the grid (says $$2$$). Every time we start flood fill, we increase our answer by $$1$$.
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -107,3 +109,67 @@ public:
     }
 };
 ```
+
+</TabItem>
+
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+// r - # of rows
+// c - # of cols
+// Time complexity: O(rc)
+// Space complexity: O(rc)
+class Solution {
+    
+    public final int NO_DIRS = 4;
+    public int[] DIRS = {0, 1, 0, -1, 0};
+    
+    public int numIslands(char[][] grid) {
+        int count = 0;
+        // Visited set for string row and col, like "row # col"
+        // This helps to avoid to revisiting the same cell again
+        Set<String> visited = new HashSet<>();
+        //
+        for (int r = 0; r < grid.length; r++) {
+            for (int c = 0; c < grid[0].length; c++) {
+                // Explore area only if it's a land, i.e '1'
+                if (grid[r][c] == '1' && exploreGrid(grid, r, c, visited)) {
+                    count += 1;
+                }
+            }
+        }
+        return count;
+    }
+    
+    public boolean exploreGrid(char[][] grid, int row, int col, Set<String> visited) {
+        boolean rowInbounds = 0 <= row && row < grid.length;
+        boolean colInbounds = 0 <= col && col < grid[0].length;
+        // If row or col out of range, then simply return
+        if (!rowInbounds || !colInbounds) {
+            return false;
+        }
+        // Current cell is water, so no need to explore surrounding cells
+        if (grid[row][col] == '0') {
+            return false;
+        }
+        String pos = row + "#" + col;
+        // Check for already visited cells, if found, then no need to traverse
+        if (visited.contains(pos)) {
+            return false;
+        }
+        // Mark as visited
+        visited.add(pos);
+        for (int dir = 0; dir < NO_DIRS; dir++) {
+            // Explore near by cells, by traversing all directions, move UP, DOWN, LEFT, RIGHT
+            // Directions can be formed by above mentioned array
+            exploreGrid(grid, row + DIRS[dir], col + DIRS[dir + 1], visited);
+        }
+        return true;
+    }
+}
+
+```
+
+</TabItem>
+</Tabs>
