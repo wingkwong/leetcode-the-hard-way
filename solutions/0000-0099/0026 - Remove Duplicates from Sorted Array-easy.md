@@ -47,7 +47,7 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 - `-100 <= nums[i] <= 100`
 - `nums is sorted in **non-decreasing** order.`
 
-## Approach :
+## Approach : Using Two Pointers
 
 In this problem, we have to count the number of distinct elements and it does not matter what elements are present other than those distinct elements.
 So, we will take a index count starting from 1 and traverse the array, keeping the distinct elements at the front. At last we will return the count.
@@ -69,15 +69,18 @@ At last we will return the count.
 class Solution {
     public int removeDuplicates(int[] arr) {
         int n = arr.length;
+        // Count variable is used as an index to keep the track of distinct variables and it starts from 1.
         int count = 1;
         
         for(int i = 0; i + 1 < n; i++) {
-            
+            // To Check if next element is greater or not
             if(arr[i] < arr[i + 1])  {
+                // If it is greater, means next element is distinct, so add it to count index and increment count by 1.
                 arr[count] = arr[i + 1];	
                 count++;
             }
         }
+        // Returns count i.e. total number of distinct elements.
         return count;
     }
 }
