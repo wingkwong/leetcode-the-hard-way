@@ -8,4 +8,9 @@ keywords:
   - collection
 ---
 
-Here you can find some highlighted LeetCode problems in different categories. More content will be added soon.
+Collections is the section for group of problems sorted in differnt categories to help you get started in a specific topic or way with your coding journey and not get overwhelmed from the sheer number of problems available in Leetcode. You can find different topics in left side bar or you can also navigate with the list given below.
+
+- [Leetcode Summer Intensive](leetcode-summer-intensive.md)
+- [Dynamic Programming](dynamic-programming.md)
+- [Heap](heap.md)
+- More content will be added soon 

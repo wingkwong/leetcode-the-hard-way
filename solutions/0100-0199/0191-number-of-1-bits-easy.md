@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/number-of-1-bits/'
+description: 'Author: @wingkwong, @vigneshshiv | https://leetcode.com/problems/number-of-1-bits/'
 ---
 
 # 0191 - Number of 1 Bits (Easy)
@@ -64,6 +64,7 @@ public:
 ```
 
 </TabItem>
+
 <TabItem value="py" label="Python">
 <SolutionAuthor name="@wingkwong"/>
 
@@ -74,6 +75,7 @@ class Solution:
 ```
 
 </TabItem>
+
 <TabItem value="go" label="Go">
 <SolutionAuthor name="@wingkwong"/>
 
@@ -82,10 +84,22 @@ func hammingWeight(num uint32) int {
     return bits.OnesCount32(num);
 }
 ```
+</TabItem>
+
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+public class Solution {
+    // you need to treat n as an unsigned value
+    public int hammingWeight(int n) {
+        return Integer.bitCount(n);
+    }
+}
+```
 
 </TabItem>
 </Tabs>
-
 
 ## Approach 2: Bit Manipulation
 
@@ -107,6 +121,31 @@ public:
         return ans;
     }
 };
+```
+
+</TabItem>
+
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+public class Solution {
+    // you need to treat n as an unsigned value
+    // 
+    public int hammingWeight(int n) {
+        int ones = 0;
+        // n > 0, fails to return the correct the answer because of Integer MAX_VALUE. 
+        // Integer.MAX_VALUE + 1 is -2147483648, so it's not greater than 0, so n will not enter into loop
+        while (n != 0) {
+            ones += (n & 1);
+            // Why can't we use n >>= 1?
+            // Since n is 32 bit binary number, >> operator does shift by keeping signed bit position same as before
+            // Take a look at SO reference - https://stackoverflow.com/questions/2811319/difference-between-and
+            n >>>= 1;
+        }
+        return ones;
+    }
+}
 ```
 
 </TabItem>
@@ -152,4 +191,24 @@ public:
 };
 ```
 </TabItem>
+
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+public class Solution {
+    // you need to treat n as an unsigned value
+    public int hammingWeight(int n) {
+        int ones = 0;
+        // Since n is 32 bit binary number, count 1's till that range
+        for (int i = 0; i < 32; i++) {
+            ones += (n & 1);
+            n >>= 1;
+        }
+        return ones;
+    }
+}
+```
+</TabItem>
+
 </Tabs>

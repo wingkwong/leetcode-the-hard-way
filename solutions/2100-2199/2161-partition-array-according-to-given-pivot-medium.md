@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
+  Author: @wingkwong, @ganajayant |
   https://leetcode.com/problems/partition-array-according-to-given-pivot/
 ---
 
@@ -57,6 +57,8 @@ It is same as
 * Pushing the elements equal to the pivot
 * Pushing the elements greater than the pivot
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -76,10 +78,41 @@ public:
 };
 ```
 
+</TabItem>
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@ganajayant"/>
+
+```java
+class Solution {
+    public int[] pivotArray(int[] nums, int pivot) {
+        LinkedList<Integer> l = new LinkedList<>();
+        LinkedList<Integer> r = new LinkedList<>();
+        LinkedList<Integer> m = new LinkedList<>();
+        for (int x : nums) {
+            if (x < pivot) {
+                l.add(x);
+            } else if (x > pivot) {
+                m.add(x);
+            } else {
+                r.add(x);
+            }
+        }
+        l.addAll(r);
+        l.addAll(m);
+        return l.stream().mapToInt(i -> i).toArray();
+    }
+}
+```
+</TabItem>
+</Tabs>
+
+
 ## Approach 2: 3 Passes with 1 array
 
 Same idea as Approach 1 but we only use one array.
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -94,3 +127,30 @@ public:
     }
 };
 ```
+
+</TabItem>
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@ganajayant"/>
+
+```java
+class Solution {
+    public int[] pivotArray(int[] nums, int pivot) {
+        LinkedList<Integer> ll = new LinkedList<>();
+        for (int x : nums)
+            if (x < pivot)
+                ll.add(x);
+        for (int x : nums)
+            if (x == pivot)
+                ll.add(x);
+        for (int x : nums)
+            if (x > pivot)
+                ll.add(x);
+        return ll.stream().mapToInt(i -> i).toArray();
+    }
+}
+```
+</TabItem>
+</Tabs>
+
+
+

@@ -1,5 +1,5 @@
 ---
-description: 'Author: @TBC | https://leetcode.com/problems/maximum-depth-of-binary-tree'
+description: 'Author: @vigneshshiv | https://leetcode.com/problems/maximum-depth-of-binary-tree'
 ---
 
 # 0104 - Maximum Depth of Binary Tree (Easy)
@@ -35,4 +35,38 @@ Output: 2
 * The number of nodes in the tree is in the range `[0, 104]`.
 * `-100 <= Node.val <= 100`
 
-## Approach 1: TBC
+## Approach 1: Recursive
+
+Traverse left and right nodes till last, and at every level keep find the maximum between left and right nodes and add 1.
+
+<Tabs>
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+// Time complexity: O(n), where n - # of nodes in the tree
+// Space complexity: O(h), where h - height of the tree from root
+class Solution {
+    public int maxDepth(TreeNode root) {
+        if (root == null) return 0;
+        return 1 + Math.max(maxDepth(root.left), maxDepth(root.right));
+    }
+}
+```
+</TabItem>
+</Tabs>
