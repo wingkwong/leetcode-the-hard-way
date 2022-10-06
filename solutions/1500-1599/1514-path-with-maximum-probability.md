@@ -61,6 +61,12 @@ Explanation: There is no path between 0 and 2.
 * `There is at most one edge between every two nodes.`
 
 ## Approach - Using Dijkstra's Algorithm:   
+First, we will create adjanacy list `graph` from given input. Now we have to find maximum `success probability` from soruce node to every node. 
+
+In standard djikstra algorithm, we will find the shortest path from start to end and update the "minimum distance" array accordingly for each "from -> to" pair.
+
+In this problem, we have to find maximum probability so we create a max heap `pq` and an array `sp` which will store success probability for every node. Now, we will iterate for top node of `pq` priority queue and upadate the `sp` array. After iterating, we will check if `sp[end]` is zero then it is impossible to reach from
+source to target node and return 0 else we will return `sp[end]`.
 
 <Tabs>
 
@@ -68,16 +74,14 @@ Explanation: There is no path between 0 and 2.
 <SolutionAuthor name="@Kavita613"/>
 
 ```cpp
-double maxProbability(int n, vector<vector<int>>& edges, vector<double>& succProb, int start, int end) 
-  {    
-        int total_edges = edges.size();  
+double maxProbability(int n, vector<vector<int>>& edges, vector<double>& succProb, int start, int end){    
+        int e = edges.size();  
   
         // First, Create Adjanacy list   
   
         vector<vector<pair<int, double>>> graph(n);    
         
-        for(int i = 0; i < total_edges; i++)
-        {
+        for(int i = 0; i < e; i++){
             graph[edges[i][0]].push_back({edges[i][1], succProb[i]});
             graph[edges[i][1]].push_back({edges[i][0], succProb[i]});
         }
@@ -94,8 +98,7 @@ double maxProbability(int n, vector<vector<int>>& edges, vector<double>& succPro
   
         pq.push({(double)1.0, start});      
         
-        while(!pq.empty())
-        {
+        while(!pq.empty()){
             int node = pq.top().second;
             double prob = pq.top().first;
             
@@ -107,17 +110,17 @@ double maxProbability(int n, vector<vector<int>>& edges, vector<double>& succPro
                 
                 // we have to find maximum success probability path from source to target   
   
-                if((prob)*(x.second) > dis[x.first]){   
+                if((prob)*(x.second) > sp[x.first]){   
                     
-                    dis[x.first] = (double)((prob)*(x.second));
-                    pq.push({dis[x.first], x.first});
+                    sp[x.first] = (double)((prob)*(x.second));
+                    pq.push({sp[x.first], x.first});
                 }
             }
         }
         
         // Checking if there any path exists or not from source to target node
         
-        if(dis[end] != 0.0) return dis[end];   
+        if(sp[end] != 0.0) return sp[end];   
         else return 0;
     }
 ```
@@ -128,7 +131,8 @@ double maxProbability(int n, vector<vector<int>>& edges, vector<double>& succPro
 
 ## Time complexity:    
 
-O(total_edges * log(n))  
+Time Complexity of this solution is $O(e * log(n))$, where $e$ is the length of `edges` array and $n$ is total nodes in given graph.  
   
-## Space complexity:
-O(n)
+## Space complexity:  
+  
+Space Complexityof this solution is $O(n)$, since we use `sp` array of length $n$.
