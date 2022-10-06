@@ -79,7 +79,7 @@ Output: 12
 
 ## Approach: Sorting using Insertion Sort
 
-The problem wants us to find the maximum value of $(nums[i] - 1) * (nums[j] - 1)$, where `i` and `j` are two different indices of the given array.
+The problem wants us to find the maximum value of $(nums[i] - 1) * (nums[j] - 1)$, where $i$ and $j$ are two different indices of the given array.
 
 By looking at the expression, we can observe that its just a product of two numbers of the given array.
 
@@ -135,28 +135,28 @@ public:
 
 ```java
 class Solution {
-	void insertion_sort(int arr[], int size_of_array) {
-		for (int i = 1; i < size_of_array; ++i) {
-			// Picking element from array
-			int nums = arr[i];
-			int j = i - 1;
+    void insertion_sort(int arr[], int size_of_array) {
+        for (int i = 1; i < size_of_array; i++) {
+            // Picking element from array
+            int nums = arr[i];
+            int j = i - 1;
 
-			// Comparing nums with all the elements left to it
-			while (j >= 0 && arr[j] > nums) {
-				// Shifting the greater element to the right
-				arr[j + 1] = arr[j];
-				j = j - 1;
-			}
-			// Placing selected element at correct position
-			arr[j + 1] = nums;
-		}
-	}
+            // Comparing nums with all the elements left to it
+            while (j >= 0 and arr[j] > nums) {
+                // Shifting the greater element to the right
+                arr[j + 1] = arr[j];
+                j--;
+            }
+            // Placing selected element at correct position
+            arr[j + 1] = nums;
+        }
+    }
 
-	public int maxProduct(int[] nums) {
-		insertion_sort(nums, nums.length);
-		int n = nums.length;
-		return (nums[n - 1] - 1) * (nums[n - 2] - 1);
-	}
+    public int maxProduct(int[] nums) {
+        insertion_sort(nums, nums.length);
+        int n = nums.length;
+        return (nums[n - 1] - 1) * (nums[n - 2] - 1);
+    }
 };
 ```
 
