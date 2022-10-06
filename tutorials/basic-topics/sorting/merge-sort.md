@@ -72,38 +72,6 @@ Explanation:
 ```
 *Here `insertion sort`, `quick sort`, `selection sort` and all other sorts in $O(n^2)$ will give **TLE** i.e Time Limit Exceeded*
 
-## STL Approach  
-Note: Since the problem statement clearly tells us not to use a built-in function avoid STL, but still you will get an AC in Leetcode.
-
-<Tabs>
-<TabItem value="cpp" label="C++">
-
-```cpp
-void stableStlSort(vector<int>& nums){
-    stable_sort(nums.begin(), nums.end());
-}
-```
-</TabItem>
-
-<TabItem value="py" label="Python3">
-
-```py
-def sortArray(self, nums):
-    return sorted(nums)
-```
-
-</TabItem>
-<TabItem value="java" label="Java">
-
-```java
-public int[] sortArray(int[] nums) {
-    Arrays.sort(nums);
-    return nums;
-}
-```
-</TabItem>
-</Tabs>
-
 ## Top Down Approach
 
 ### Algorithm    
@@ -128,7 +96,7 @@ If right > left
 ```cpp
 class Solution {
 public:
-	void merge(vector<int>& nums, int l, int m, int r){
+    void merge(vector<int>& nums, int l, int m, int r) {
     // create a temporary array
     vector<int> tmp(r - l + 1);
     // index for left subarray 
@@ -137,25 +105,25 @@ public:
     int j = m + 1; 
     // index for temporary array
     int k = 0; 
-    while(i <= m && j <= r){
-        // increment the left pointer 
-        // if the right pointer element is bigger 
-        // Since we are sorting in ascending order,left(smaller element) goes first
-        if(nums[i] <= nums[j]) tmp[k++] = nums[i++];   
-        else tmp[k++] = nums[j++];
+       while(i <= m && j <= r) {
+           // increment the left pointer 
+           // if the right pointer element is bigger 
+           // Since we are sorting in ascending order,left(smaller element) goes first
+           if(nums[i] <= nums[j]) tmp[k++] = nums[i++];   
+           else tmp[k++] = nums[j++];
+       }
+
+       // Since in the above while loop if one condition stop satisfying loop breaks 
+       // Then we need to take care of  next / remaining  elements  
+       // Hence adding remaining elements of left half
+       while(i <= m) tmp[k++] = nums[i++];
+       // adding remaining elements of right half
+       while(j <= r) tmp[k++] = nums[j++]; 
+       // Copy data to nums
+       for(i = 0; i < k; i++) nums[l + i] = tmp[i];
     }
 
-    // Since in the above while loop if one condition stop satisfying loop breaks 
-    // Then we need to take care of  next / remaining  elements  
-    // Hence adding remaining elements of left half
-    while(i <= m) tmp[k++] = nums[i++];
-    // adding remaining elements of right half
-    while(j <= r) tmp[k++] = nums[j++]; 
-    // Copy data to nums
-    for(i = 0; i < k; i++) nums[l + i] = tmp[i];
-    }
-
-    void mergeSort(vector<int>& nums, int l, int r){
+    void mergeSort(vector<int>& nums, int l, int r) {
         if(l >= r) return;
         // middle index, same as (l + r) / 2
         int m = l + (r - l) / 2;
@@ -165,7 +133,7 @@ public:
     }
     // function to return sorted array in leetcode
     vector<int> sortArray(vector<int>& nums) {
-        mergeSort(nums,0,nums.size() - 1);
+        mergeSort(nums, 0, nums.size() - 1);
         return nums;
     }
 };
@@ -225,34 +193,34 @@ class Solution:
 class Solution {
     public int[] sortArray(int[] nums) {
         int N = nums.length;
-        mergeSort(nums, 0, N-1);
+        mergeSort(nums, 0, N - 1);
         return nums;
     }
     
     
-    void mergeSort(int[] nums, int start, int end){
+    void mergeSort(int[] nums, int start, int end) {
         //Already if sorted.
-        if (end - start+1 <= 1) return; 
-        int mi = start + (end - start)/ 2;
+        if (end - start + 1 <= 1) return; 
+        int mi = start + (end - start) / 2;
         mergeSort(nums, start, mi);
-        mergeSort(nums, mi+1, end);
-        merge(nums, start,mi, end);
+        mergeSort(nums, mi + 1, end);
+        merge(nums, start, mi, end);
     }
     
-    void merge(int[] nums, int start, int mi, int end){
+    void merge(int[] nums, int start, int mi, int end) {
         int lp = start;
         int rp = mi + 1;
-        int[] buffer = new int[end-start+1];
+        int[] buffer = new int[end - start + 1];
         //buffer pointer
         int t = 0; 
-        while (lp <= mi && rp <= end){
+        while (lp <= mi && rp <= end) {
            // increment the left pointer 
            // if the right pointer element is bigger 
-           // Since we are sorting in ascending order,left(smaller element) goes first
-            if (nums[lp] < nums[rp]){
+           // Since we are sorting in ascending order, left(smaller element) goes first
+            if (nums[lp] < nums[rp]) {
                 buffer[t++] = nums[lp++];
             }
-            else{
+            else {
                 buffer[t++] = nums[rp++];
             }
         }
@@ -264,8 +232,8 @@ class Solution {
         // Merging remaining elements of right half
         while (rp <= end) buffer[t++] = nums[rp++];
         // copy sorted buffer into original array
-        for (int i = start; i <= end; i++){
-            nums[i] = buffer[i-start];
+        for (int i = start; i <= end; i++) {
+            nums[i] = buffer[i - start];
         }
     }
 }
@@ -317,7 +285,8 @@ class Solution {
         while (i <= mid || j <= r) {
             if (i > mid || j <= r && nums[i] > nums[j]) {
                 tmp[k++] = nums[j++];
-            } else {
+            } 
+	    else {
                 tmp[k++] = nums[i++];
             }
         }
@@ -379,50 +348,14 @@ Output: [-1, 0, 3, 4, 5]
 
 Here we can follow both **top-down and bottom-up merge sort**. [I have already discussed the algorithm for arrays in a detailed way](#algorithm).
 
-<!-- ### Intuition for the problem
-```
-----Example of sorting of Linked List --------
+## Illustration
+	
+### Bottom Up Approach for the Test case 1	
+![bottom_up](https://user-images.githubusercontent.com/73426684/194309297-280720ca-b0fe-47be-a083-e0231336814d.jpg)
+	
+### Top Down Approach for the Test case 1
+![top_down_image](https://user-images.githubusercontent.com/73426684/194311820-3cbf873e-1e57-4ebb-b336-4d6dc4475863.jpg)	
 
-3->8->12->null
-1->10->23->null
-
-After merging we get :
-
-1->3->8->10->12->23->null.
-
------- Hence Sorted---------------------------
-
-1. The two lists to be merged must be ordered respectively.
-2. We can only start to merge two lists that only have one element.
-3. Then we get an ordered list that has two elements
-4. Do this again (that is "recursion").
-
- Bottom-Up Approach 
-
-    -1-> 5->  3-> 4->   0-> null
-      \  /       \ /         /
-   -1->5->null 0->3->4->null 
-      \        /         
-    -1-> 0->3-> 4-> 5->null   (sorted) 
-
------ Finally Sorted ---------------------------------
-
- Top Down Approach
-
-   -1-> 5->  3-> 4-> 0-> null
-      /          \ 
--1-> 5->null      3-> 4->0->null
- /       \           /      \  
--1->null 5->null 3->null   4->0->null
-  \   /        \          /     \
- -1-> 5->null  3->null   4->null 0->null
-   \             \        \   /
-    \           3->null     0-> 4->null
-     \              \      /  
-      \           0->3->4->null
-       \          /
-    -1->0->3->4->5->null    (sorted)
-``` -->
 ## Approach for Bottom-Up Approach Merge sort of Linked list
 1. The two lists to be merged must be ordered respectively.
 2. We can only start to merge two lists that only have one element.
@@ -458,7 +391,7 @@ After merging we get :
 */
 class Solution {
 public:
-    void mergeSort(ListNode **head){
+    void mergeSort(ListNode **head) {
         // create a current pointer
         ListNode *curr = *head ; 
         
@@ -482,7 +415,7 @@ public:
         *head=merge(left, right);
     }
 
-    void findMiddle(ListNode *curr, ListNode **left, ListNode **right){
+    void findMiddle(ListNode *curr, ListNode **left, ListNode **right) {
         // make a slow pointer
         ListNode* slow = curr;
 
@@ -507,7 +440,7 @@ public:
         slow-> next = NULL;         
     }
 
-    ListNode* merge(ListNode* left, ListNode* right){
+    ListNode* merge(ListNode* left, ListNode* right) {
       
         ListNode* res = NULL; 
         // Check if left is null,nothing to merge
