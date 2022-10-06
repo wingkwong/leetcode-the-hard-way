@@ -126,7 +126,9 @@ If right > left
 <TabItem value="cpp" label="C++">
 
 ```cpp
-void merge(vector<int>& nums, int l, int m, int r){
+class Solution {
+public:
+	void merge(vector<int>& nums, int l, int m, int r){
     // create a temporary array
     vector<int> tmp(r - l + 1);
     // index for left subarray 
@@ -142,77 +144,91 @@ void merge(vector<int>& nums, int l, int m, int r){
         if(nums[i] <= nums[j]) tmp[k++] = nums[i++];   
         else tmp[k++] = nums[j++];
     }
-    // adding remaining elements of left half
+
+    // Since in the above while loop if one condition stop satisfying loop breaks 
+    // Then we need to take care of  next / remaining  elements  
+    // Hence adding remaining elements of left half
     while(i <= m) tmp[k++] = nums[i++];
     // adding remaining elements of right half
     while(j <= r) tmp[k++] = nums[j++]; 
     // Copy data to nums
     for(i = 0; i < k; i++) nums[l + i] = tmp[i];
-}
+    }
 
-void mergeSort(vector<int>& nums, int l, int r){
-    if(l >= r) return;
-    // middle index, same as (l + r) / 2
-    int m = l + (r - l) / 2;
-    mergeSort(nums, l, m);
-    mergeSort(nums, m + 1, r);
-    merge(nums, l, m, r);
-}
-// function to return sorted array in leetcode
-vector<int> sortArray(vector<int>& nums) {
-    mergeSort(nums,0,nums.size() - 1);
-    return nums;
-}
+    void mergeSort(vector<int>& nums, int l, int r){
+        if(l >= r) return;
+        // middle index, same as (l + r) / 2
+        int m = l + (r - l) / 2;
+        mergeSort(nums, l, m);
+        mergeSort(nums, m + 1, r);
+        merge(nums, l, m, r);
+    }
+    // function to return sorted array in leetcode
+    vector<int> sortArray(vector<int>& nums) {
+        mergeSort(nums,0,nums.size() - 1);
+        return nums;
+    }
+};
 ```
 </TabItem>
 <TabItem value="py" label="Python3">
 
 ```py
- def sortArray(self, nums: List[int]) -> List[int]:
-     self.merge_Sort(nums)
-     return nums
- 
- def merge_Sort(self,nums: List[int]) -> List[int]:
-    if len(nums) > 1:
-        # calculate the middle to divide by mid 
-        mid = len(nums) // 2  
-        leftArray = nums[:mid]  
-        rightArray = nums[mid:]  
+class Solution:
 
-        self.merge_Sort(leftArray)
-        self.merge_Sort(rightArray)
+    def sortArray(self, nums: List[int]) -> List[int]:
+        self.merge_Sort(nums)
+        return nums
+    
+    def merge_Sort(self,nums: List[int]) -> List[int]:
+       if len(nums) > 1:
+           # calculate the middle to divide by mid 
+           mid = len(nums) // 2  
+           leftArray = nums[:mid]  
+           rightArray = nums[mid:]  
 
-        i = j = k = 0
+           self.merge_Sort(leftArray)
+           self.merge_Sort(rightArray)
 
-        while i < len(leftArray) and j < len(rightArray): 
-            if leftArray[i] < rightArray[j]: 
-                nums[k] = leftArray[i] 
-                #incrementing the pointer to the smaller element
-                i +=1 
-            else: 
-                nums[k] = rightArray[j] 
-                j +=1
-            k +=1
+           i = j = k = 0
 
-        while i < len(leftArray): 
-            nums[k] = leftArray[i] 
-            i +=1
-            k +=1
+           while i < len(leftArray) and j < len(rightArray): 
+               if leftArray[i] < rightArray[j]:
+                   # smaller element is merged first
+                   # remember we are sorting in ascending order  
+                   nums[k] = leftArray[i] 
+                   # incrementing the pointer of the smaller element
+                   i +=1 
+               else: 
+                   nums[k] = rightArray[j]
+                   # incrementing the pointer of the larger element 
+                   j +=1
+               k +=1
 
-        while j < len(rightArray): 
-            nums[k] = rightArray[j] 
-            j +=1
-            k +=1
+           # for the left out elements we are performing it seperately 
+           # Since in the above while loop if one condition stop satisfying loop breaks 
+           # Then we need to merge next / remaining  elements   
+           while i < len(leftArray): 
+               nums[k] = leftArray[i] 
+               i +=1
+               k +=1
+           # merging remaining elements of right half
+           while j < len(rightArray): 
+               nums[k] = rightArray[j] 
+               j +=1
+               k +=1
 ```
 </TabItem>
 <TabItem value="java" label="Java">
 
 ```java
+class Solution {
     public int[] sortArray(int[] nums) {
         int N = nums.length;
         mergeSort(nums, 0, N-1);
         return nums;
     }
+    
     
     void mergeSort(int[] nums, int start, int end){
         //Already if sorted.
@@ -220,18 +236,19 @@ vector<int> sortArray(vector<int>& nums) {
         int mi = start + (end - start)/ 2;
         mergeSort(nums, start, mi);
         mergeSort(nums, mi+1, end);
-        merge(nums, start, mi, end);
+        merge(nums, start,mi, end);
     }
     
     void merge(int[] nums, int start, int mi, int end){
         int lp = start;
         int rp = mi + 1;
-        // temporay array
-        int[] buffer = new int[end - start + 1];
-        // temporary array pointer
+        int[] buffer = new int[end-start+1];
+        //buffer pointer
         int t = 0; 
-        
         while (lp <= mi && rp <= end){
+           // increment the left pointer 
+           // if the right pointer element is bigger 
+           // Since we are sorting in ascending order,left(smaller element) goes first
             if (nums[lp] < nums[rp]){
                 buffer[t++] = nums[lp++];
             }
@@ -239,14 +256,19 @@ vector<int> sortArray(vector<int>& nums) {
                 buffer[t++] = nums[rp++];
             }
         }
-        
+
+        // Since in the above while loop if one condition stop satisfying loop breaks 
+        // Then we need to take care of  next / remaining  elements
+        // merging remaining elements of left half 
         while (lp <= mi) buffer[t++] = nums[lp++];
+        // Merging remaining elements of right half
         while (rp <= end) buffer[t++] = nums[rp++];
         // copy sorted buffer into original array
         for (int i = start; i <= end; i++){
             nums[i] = buffer[i-start];
         }
     }
+}
 ```
 </TabItem>
 </Tabs>
@@ -277,6 +299,9 @@ class Solution {
     }    
     // iterative only 
     private void mergeSort(int[] nums) { 
+        // here the size is doubled by 2
+        // Since we are taking 2 elements at a time
+        // That is the size of elements to be merged are becoming 2, 4, 8, 16 ...
         for (int size = 1; size < nums.length; size *= 2) {
             for (int i = 0; i < nums.length - size; i += 2 * size) {
                 int mid = i + size - 1;
@@ -285,7 +310,7 @@ class Solution {
             }
         }
     }
-
+    // Same as the merge function of the top down approach
     private void merge(int[] nums, int l, int mid, int r) {
         int[] tmp = new int[r - l + 1];
         int i = l, j = mid + 1, k = 0;
@@ -296,6 +321,8 @@ class Solution {
                 tmp[k++] = nums[i++];
             }
         }
+        // merging rest of the elements 
+        // this code is same as that of top down approach of merging remaining elements
         System.arraycopy(tmp, 0, nums, l, r - l + 1);
     }
 }
@@ -350,7 +377,7 @@ Input: head = [-1, 5, 3, 4, 0]
 Output: [-1, 0, 3, 4, 5]
 ```
 
-Here we can follow both **top-down and bottom-up merge sort**. I have already discussed the algorithm for arrays in a detailed way.
+Here we can follow both **top-down and bottom-up merge sort**. [I have already discussed the algorithm for arrays in a detailed way](#algorithm).
 
 <!-- ### Intuition for the problem
 ```
