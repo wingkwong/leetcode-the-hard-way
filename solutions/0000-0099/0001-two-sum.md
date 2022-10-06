@@ -206,4 +206,22 @@ class Solution {
 }
 ```
 </TabItem>
+
+<TabItem value="javascript" label="JavaScript">
+<SolutionAuthor name="@MithunPrabhu777"/>
+
+```javascript
+var twoSum = function(nums, target) {
+    const hashMap = {};
+    
+    for (let i = 0; i < nums.length; i++) {
+        const difference = target - nums[i];
+
+        if (hashMap[difference] >= 0) return [hashMap[difference], i];
+
+        hashMap[nums[i]] = i;
+    }
+};
+```
+</TabItem>
 </Tabs>
