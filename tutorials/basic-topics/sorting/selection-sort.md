@@ -119,4 +119,4 @@ export const suggestedProblems = [
     },
 ]
 
-<Table title="Suggested Problems" data={suggestedProblems} />
+<Table title="Suggested Problems" data={suggestedProblems} /> 
