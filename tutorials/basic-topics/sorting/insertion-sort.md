@@ -1,8 +1,7 @@
 ---
 title: 'Insertion Sort'
 description: 'An sorting algorithm based on picking one element at a time and inserting it in sorted order.'
-hide_table_of_contents: true
-draft: true
+hide_table_of_contents: false
 keywords:
   - leetcode
   - tutorial
@@ -17,23 +16,20 @@ keywords:
 
 Insertion sort is one of the sorting algorithms that sort the elements by placing an unsorted element in correct sorted order one at a time.
 
-A sorted [array](../arrays.md) is an array in which elements are sorted either in ascending or descending order.
+A sorted [array](../arrays.md) is an array in which elements are sorted either in ascending or descending order, e.g $[1, 2, 3, 4, 5, 6, 7]$.
 
-Example: [1,2,3,4,5,6,7]
-
-In a sorted `array` all the elements to the left of any element are smaller than that. That, means to make the `array` sorted we have to place an element in such a position, so that every element to the left are smaller than that. That is pretty much what we do in a insertion sort.
+In a sorted array, all the elements to the left of any element are smaller than that. To make the array sorted, we have to place an element in such a position, so that every element to the left are smaller than that. That is pretty much what we do in a insertion sort.
 
 ## Algorithm
-
-The following are the steps that we are going to follow:
 
 1. Pick an element from the array, and store it in a variable $nums$.
 2. Now, start comparing the $nums$ with all the elements to the left of it.
 3. If the $nums$ is less than the current element shift the current element to right until you find an element smaller than $nums$.
 4. Place the $nums$ in current position.
-5. Repeat all the above steps until the $array$ is sorted.
+5. Repeat all the above steps until the array is sorted.
 
-If we apply the above steps for the array $[3,2,5,10,9]$, it would be:
+For the array $[3,2,5,10,9]$, the steps would be
+
 * First of all, we will pick the first element which is $3$ in our case.
 * Now, we will compare with all the elements left to it, in this case there is nothing left to $3$ so, we will do nothing.
 * Now, pick the next element which is $2$ and start comparing with all the elements left to it.
@@ -41,43 +37,9 @@ If we apply the above steps for the array $[3,2,5,10,9]$, it would be:
 * Now, there is nothing no more element further left to our selected element $2$. So, we will place $2$ at the beginning of array.
 * We will proceed with the same way for all the elements. Then, at last we will get our array as sorted.
 
-### Problem Link
+## Example: [1464. Maximum Product of Two Elements in an Array](https://leetcode.com/problems/maximum-product-of-two-elements-in-an-array/)
 
-https://leetcode.com/problems/maximum-product-of-two-elements-in-an-array/
-
-### Problem Statement
-
-Given the array of integers nums, you will choose two different indices i and j of that array. Return the maximum value of $(nums[i] - 1) * (nums[j] - 1)$.
-
-**Example 1:**
-
-```
-Input: nums = [3,4,5,2]
-Output: 12 
-Explanation: If you choose the indices i=1 and j=2 (indexed from 0), you will get the maximum value, that is, (nums[1]-1)*(nums[2]-1) = (4-1)*(5-1) = 3*4 = 12. 
-```
-
-**Example 2:**
-
-```
-Input: nums = [1,5,4,5]
-Output: 16
-Explanation: Choosing the indices i=1 and j=3 (indexed from 0), you will get the maximum value of (5-1)*(5-1) = 16.
-```
-
-**Example 3:**
-
-```
-Input: nums = [3,7]
-Output: 12
-```
-
-**Constraints:**
-
-* `2 <= nums.length <= 500`
-* `1 <= nums[i] <= 10^3`
-
-## Approach: Sorting using Insertion Sort
+> Given the array of integers nums, you will choose two different indices i and j of that array. Return the maximum value of $(nums[i] - 1) * (nums[j] - 1)$.
 
 The problem wants us to find the maximum value of $(nums[i] - 1) * (nums[j] - 1)$, where $i$ and $j$ are two different indices of the given array.
 
@@ -100,8 +62,8 @@ We have figured out the solution of the problem:
 ```cpp
 class Solution {
 public:
-    void insertionSort(vector<int> &arr, int size_of_array) {
-        for (int i = 1; i < size_of_array; i++) {
+    void insertionSort(vector<int> &arr, int n) {
+        for (int i = 1; i < n; i++) {
             // Picking element from array
             int nums = arr[i];
             int j = i - 1;
@@ -118,8 +80,8 @@ public:
     }
 
     int maxProduct(vector<int>& nums) {
-        insertionSort(nums, nums.size());
         int n = nums.size();
+        insertionSort(nums, n);
         return (nums[n - 1] - 1) * (nums[n - 2] - 1);
     }
 };
@@ -132,8 +94,8 @@ public:
 
 ```java
 class Solution {
-    void insertion_sort(int arr[], int size_of_array) {
-        for (int i = 1; i < size_of_array; i++) {
+    void insertion_sort(int arr[], int n) {
+        for (int i = 1; i < n; i++) {
             // Picking element from array
             int nums = arr[i];
             int j = i - 1;
@@ -150,8 +112,8 @@ class Solution {
     }
 
     public int maxProduct(int[] nums) {
-        insertion_sort(nums, nums.length);
         int n = nums.length;
+        insertion_sort(nums, n);
         return (nums[n - 1] - 1) * (nums[n - 2] - 1);
     }
 };
@@ -164,9 +126,8 @@ class Solution {
 
 ```py
 class Solution:
-    def insertionSort(arr, size_of_array):
-        
-        for i in range(1, size_of_array):
+    def insertionSort(arr, n):
+        for i in range(1, n):
             # Picking element from array
             nums = arr[i]  
             j = i - 1
@@ -189,15 +150,13 @@ class Solution:
 
 </Tabs>
 
-## Time Complexity
+### Time Complexity
 
-Apart from sorting the the given array we are not doing anything in the solution. The insertion sort would take $O(n^2)$ to sort the array.
+Apart from sorting the the given array we are not doing anything in the solution. The insertion sort would take $O(n ^ 2)$ to sort the array. Therefore, the Time complexity is $O(n ^ 2)$
 
-So, the Time complexity is = $O(n^2)$
+### Space Complexity
 
-## Space Complexity
-
-We are not using any extra space apart from the array we have to sort. So, the space complexity is = $O(1)$
+We are not using any extra space apart from the array we have to sort. So, the space complexity is $O(1)$.
 
 export const suggestedProblems = [
   {
