@@ -33,10 +33,10 @@ Provide summary of changes with issue number if any.
 - [ ] Make sure you've explained your code well (write comments above each line - not inline)
 - [ ] Make sure you've written your explanation well and it is easy to understand for beginners
 - [ ] Make sure you've included Time & Space Complexity Analysis
+- [ ] Make sure you've included a meaningful approach name for your solution. Don't leave it blank. e.g. `## Approach 1: Two Pointers`.
 
 ### For Tutorial Articles
 
 - [ ] Make sure you've explained your topic using 1 - 3 LC problems rather than using external problems. Solutions must be taken with explanations as well.
 - [ ] Make sure you've provided suggested problems at the end using the given format. See [here](https://raw.githubusercontent.com/wingkwong/leetcode-the-hard-way/main/tutorials/math/number-theory/binary-exponentiation.md) as an example. If the target solution is not available, leave `solutionLink` blank.
 - [ ] Make sure you've given credits / references if you use external resources. For an image, give credit under it. Otherwise, add a new section called References at the end (after Suggested Problems).
-- [ ] Make sure you've included a meaningful approach name
