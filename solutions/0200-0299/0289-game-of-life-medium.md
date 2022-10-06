@@ -3,7 +3,7 @@ description: 'Author: @Pranathi-star | https://leetcode.com/problems/game-of-lif
 tags: [2-D Array, Iteration]
 ---
 
-# 0994 - Rotting Oranges
+# 0289 - Game of Life
 
 ## Problem Statement
 
