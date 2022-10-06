@@ -74,14 +74,14 @@ source to target node and return 0 else we will return `sp[end]`.
 <SolutionAuthor name="@Kavita613"/>
 
 ```cpp
-double maxProbability(int n, vector<vector<int>>& edges, vector<double>& succProb, int start, int end){    
+double maxProbability(int n, vector<vector<int>>& edges, vector<double>& succProb, int start, int end) {    
         int e = edges.size();  
   
         // First, Create Adjanacy list   
   
         vector<vector<pair<int, double>>> graph(n);    
         
-        for(int i = 0; i < e; i++){
+        for(int i = 0; i < e; i++) {
             graph[edges[i][0]].push_back({edges[i][1], succProb[i]});
             graph[edges[i][1]].push_back({edges[i][0], succProb[i]});
         }
@@ -98,7 +98,7 @@ double maxProbability(int n, vector<vector<int>>& edges, vector<double>& succPro
   
         pq.push({(double)1.0, start});      
         
-        while(!pq.empty()){
+        while(!pq.empty()) {
             int node = pq.top().second;
             double prob = pq.top().first;
             
@@ -106,11 +106,11 @@ double maxProbability(int n, vector<vector<int>>& edges, vector<double>& succPro
             
             // Now, we will iterate for adj nodes of our priority_queue's top node
             
-            for(auto x : graph[node]){    
+            for(auto x : graph[node]) {    
                 
-                // we have to find maximum success probability path from source to target   
-  
-                if((prob)*(x.second) > sp[x.first]){   
+                // we have to find maximum success probability path from source to target  
+                
+                if((prob)*(x.second) > sp[x.first]) {   
                     
                     sp[x.first] = (double)((prob)*(x.second));
                     pq.push({sp[x.first], x.first});
