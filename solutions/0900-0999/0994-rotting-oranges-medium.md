@@ -1,15 +1,62 @@
-<!-- Question goes here -->
+---
+description: 'Author: @Pranathi-star | https://leetcode.com/problems/rotting-oranges/'
+tags: [2-D Array, Breadth First Search]
+---
+
+# 0994 - Rotting Oranges
+
+## Problem Statement
+
+You are given an **m x n** `grid` where each cell can have one of three values:
+
+`0` representing an empty cell,
+`1` representing a fresh orange, or
+`2` representing a rotten orange.
+**Every minute, any fresh orange that is 4-directionally adjacent to a rotten orange becomes rotten.**
+
+Return the `minimum` number of minutes that must elapse until no cell has a fresh orange. If this is impossible, return `-1`.
+
+**Example 1:**
+
+```
+Input: grid = [[2,1,1],[0,1,1],[1,0,1]]
+Output: -1
+Explanation: The orange in the bottom left corner (row 2, column 0) is never rotten, because rotting only happens 4-directionally.
+```
+
+**Example 2:**
+
+```
+Input: grid = [[0,2]]
+Output: 0
+Explanation: Since there are already no fresh oranges at minute 0, the answer is just 0.
+```
+
+
+**Constraints:**
+
+- `m == grid.length`
+- `n == grid[i].length`
+- `1 <= m, n <= 10`
+- `grid[i][j] is 0, 1, or 2.`
 
 ## Approach 1: Breadth First Search
 
 <!-- Intuition -->
 The line "any fresh orange that is 4-directionally adjacent to a rotten orange becomes rotten." hints towards a very efficient Breadth First Search based solution as BFS algorithm also first visits the immediate neighbours of any given node. The code is provided below.
 
+
 <Tabs>
 <TabItem value="py" label="Python">
 <SolutionAuthor name="@pranathi_kodich"/>
 
 ```py
+# Time Complexity: O(R * C). 
+# Each element of the matrix can be inserted into the queue only once so the upper bound of iteration is O(R*C), i.e. the number of elements. So time complexity is O(R *C).
+# Space Complexity: O(R * C). 
+# To store the elements in a queue O(R * C) space is needed.
+# where R is the number of rows, C is the number of columns in the grid.
+
 from collections import deque
 
 class Solution:
