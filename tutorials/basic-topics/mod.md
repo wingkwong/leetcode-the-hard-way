@@ -55,7 +55,7 @@ Let's understand this with the factorial of a number program. The following code
 <TabItem value="cpp" label="C++">
 
 ```cpp
-int factorial(int n){
+int factorial(int n) {
     int M = 1e9 + 7;
     long long fact = 1;
     for (int i = 2; i <= n; ++i)
@@ -75,7 +75,7 @@ Thus, we can take the remainder after every operation and the numbers will never
 <TabItem value="cpp" label="C++">
 
 ```cpp
-int factorial(int n){
+int factorial(int n) {
     int M = 1e9 + 7;
     long long fact = 1;
     for (int i = 2; i <= n; ++i)
