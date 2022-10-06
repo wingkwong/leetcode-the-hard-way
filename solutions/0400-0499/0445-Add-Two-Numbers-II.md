@@ -5,7 +5,7 @@ description: >-
 tags: [Linked List, Math, Stack]
 ---
 
-# 445 - Add two Numbers || (Medium) 
+# 445 - Add two Numbers II (Medium) 
 
 ## Problem Link
 
@@ -50,12 +50,11 @@ Output: [0]
 Could you solve it without reversing the input lists?
 
 ## Approach 1: Recursion
-First, we will add zeros to the start of the smaller list such that both the lists become of equal size and then use recursion to perform digit by digit 
-addition (starting from the last digits, obviously).  
-Now, we will use recursion to dive to the end of both the lists and start addition from the end. After each recursion ends, $l1$ and $l2$ will be waiting 
-at the previous nodes, so an indirect reverse traversal is obtained without the use of $a$ $doubly$ $linked$ $list$. The key is being able to pass $carry$ 
-from current recursive function to the previous recursive function, for which we can pass the reference variable $carry$ to function calls so that the changes made 
-to $carry$ reflect through all the recursive calls made.
+First, we will add zeros to the start of the smaller linked list such that both the lists become of equal size and then we will use recursion to perform 
+addition start to end.  
+Now, we will use recursion(like reverse traversal) to the end of both the lists and start addition from the end. After each recursion ends, $l1$ and $l2$ will be 
+waiting at the previous nodes. Here we will pass $carry$ from current recursive function to the previous recursive function, for which we can pass the reference 
+variable $carry$ to function calls so that the changes made to $carry$ reflect through all the recursive calls made.
 
 
 <Tabs>
@@ -74,6 +73,18 @@ to $carry$ reflect through all the recursive calls made.
  *     ListNode(int x, ListNode * next) : val(x), next(next) {}
  * };
  */
+ ListNode * addDigits (ListNode * l1, ListNode * l2, int &carry) {
+        if (l1 == NULL && l2 == NULL) 
+            return NULL;
+        
+        ListNode * new_node = new ListNode(-1);
+        new_node -> next = addDigits(l1 -> next, l2 -> next, carry);
+        
+        new_node -> val = (l1 -> val + l2 -> val + carry) % 10;
+        carry = (l1 -> val + l2 -> val + carry) / 10;
+        
+        return new_node;
+ }
   
 class Solution {
 public:
@@ -85,16 +96,16 @@ public:
         
         while (first != NULL || second != NULL) {
             if (first == NULL) {
-                ListNode * newNode = new ListNode(0);
-                newNode -> next = l1;
-                l1 = newNode;
+                ListNode * new_node = new ListNode(0);
+                new_node -> next = l1;
+                l1 = new_node;
                 
                 second = second -> next;
             }
             else if (second == NULL) {
-                ListNode * newNode = new ListNode(0);
-                newNode -> next = l2;
-                l2 = newNode;
+                ListNode * new_node = new ListNode(0);
+                new_node -> next = l2;
+                l2 = new_node;
                 
                 first = first -> next;
             }
@@ -108,28 +119,15 @@ public:
         
         ListNode * temp = new ListNode(-1);
         
-        temp -> next = addTwoDigit(l1, l2, carry);
+        temp -> next = addDigits(l1, l2, carry);
         
         if (carry != 0) {
-            ListNode * newNode = new ListNode(carry);
-            newNode -> next = temp -> next;
-            temp -> next = newNode;
+            ListNode * new_node = new ListNode(carry);
+            new_node -> next = temp -> next;
+            temp -> next = new_node;
         }
         
         return temp -> next;
-    }
-    
-    ListNode * addTwoDigit (ListNode * l1, ListNode * l2, int &carry) {
-        if (l1 == NULL && l2 == NULL) 
-            return NULL;
-        
-        ListNode * newNode = new ListNode(-1);
-        newNode -> next = addTwoDigit(l1 -> next, l2 -> next, carry);
-        
-        newNode -> val = (l1 -> val + l2 -> val + carry) % 10;
-        carry = (l1 -> val + l2 -> val + carry) / 10;
-        
-        return newNode;
     }
 }; 
   
