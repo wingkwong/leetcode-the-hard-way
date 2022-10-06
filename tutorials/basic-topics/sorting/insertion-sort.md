@@ -151,7 +151,7 @@ class Solution {
 			arr[j + 1] = nums;
 		}
 	}
-    
+
 	public int maxProduct(int[] nums) {
 		insertion_sort(nums, nums.length);
 		int n = nums.length;

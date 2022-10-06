@@ -42,6 +42,8 @@ Output: true
 
 ## Approach 1: Hash Map
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -77,3 +79,31 @@ public:
     }
 };
 ```
+
+</TabItem>
+
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+class Solution {
+    public boolean isIsomorphic(String s, String t) {
+        // ASCII char range, partitioning first half for s and 2nd half for t.
+        // Partition can be done by ascii + 128 (range) for the 2nd half. 
+        int[] table = new int[256];
+        for (int i = 0; i < s.length(); i++) {
+            // If the char count from s & t is not match, then return false
+            if (table[s.charAt(i)] != table[t.charAt(i) + 128]) {
+                return false;
+            }
+            // Char similarity found (non matching char, but can help to transform to other char) 
+            // so just keeping the index reference
+            table[s.charAt(i)] = table[t.charAt(i) + 128] = i + 1;
+        }
+        return true;
+    }
+}
+```
+
+</TabItem>
+</Tabs>
