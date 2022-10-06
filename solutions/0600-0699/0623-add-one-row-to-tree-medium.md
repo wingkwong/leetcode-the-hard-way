@@ -50,7 +50,9 @@ Output: [4,2,null,1,1,3,null,null,1]
 
 ## Approach 1: Recursion (DFS)
 
-We just run a dfs-like approach where we just follow the rules line-by-line as asked in the problem statement. Whenever we reach depth-1, we create two new nodes, and change the links.
+We start DFS from root node and go into depth till we reach current depth = `depth-1`. Then we follow the rules given in problem statement i.e. create two new nodes, and insert these two new nodes between current node and its child node according to whether it is left or right child.
+
+When we reach `depth-1` and change the links, we do not go further into depth and just return from that DFS call.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -58,7 +60,7 @@ We just run a dfs-like approach where we just follow the rules line-by-line as a
 
 ```cpp
 // Time Complexity: O(n). A total of n nodes of the given tree will be considered in worst case.
-// Space Complexity: O(N). The depth of the recursion tree can go upto n in the worst case(skewed tree).
+// Space Complexity: O(n). The depth of the recursion tree can go upto n in the worst case (skewed tree).
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
