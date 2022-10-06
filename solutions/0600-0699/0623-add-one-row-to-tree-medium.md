@@ -57,6 +57,8 @@ We just run a dfs-like approach where we just follow the rules line-by-line as a
 <SolutionAuthor name="@divyansh_0602"/>
 
 ```cpp
+// Time Complexity: O(n). A total of n nodes of the given tree will be considered in worst case.
+// Space Complexity: O(N). The depth of the recursion tree can go upto n in the worst case(skewed tree).
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
