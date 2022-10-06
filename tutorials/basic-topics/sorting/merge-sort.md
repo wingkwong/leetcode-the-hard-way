@@ -291,7 +291,7 @@ So is an **out of place algorithm**.
 
 Here we can follow both top-down and bottom-up merge sort.
 
-### Approach for Bottom-Up Approach Merge sort of Linked list
+### Approach for Bottom-Up Merge Sort of Linked list
 
 1. The two lists to be merged must be ordered respectively.
 2. We can only start to merge two lists that only have one element.
@@ -300,7 +300,7 @@ Here we can follow both top-down and bottom-up merge sort.
 
 ![bottom_up](https://user-images.githubusercontent.com/73426684/194309297-280720ca-b0fe-47be-a083-e0231336814d.jpg)
    
-### Approach for Top-down Merge sort of Linked list
+### Approach for Top-down Merge Sort of Linked list
 
 1. Keep recursively dividing the list until there is only one node in the linked list. 
 2. Sort each sublist and merge each sorted sublist in a new array.
