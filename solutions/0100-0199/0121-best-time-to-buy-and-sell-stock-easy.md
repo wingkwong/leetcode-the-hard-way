@@ -38,7 +38,7 @@ Explanation: In this case, no transactions are done and the max profit = 0.
 - `1 <= prices.length <= 10 ^ 5`
 - `0 <= prices[i] <= 10 ^ 4`
 
-## Approach: Linear Iteration
+## Approach 1 : Linear Iteration
 
 We are going to iterate through the `prices` array.
 
@@ -46,6 +46,7 @@ In this example, we use $buyPrice$ variable to store the minimum price so far an
 
 While finding the minimum value of price as the $buyPrice$. We are going to check on each day's profit and save the maximum profit as the $currentMaxProfit$. Since we could only sell after we buy the stock, we don't have to check back the previous days' profits.
 
+Solving this in linear time is also known as **Kadane's algorithm.**
 
 #### Time Complexity
 
