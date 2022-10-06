@@ -291,7 +291,41 @@ class Solution {
 </TabItem>
 </Tabs>
 
-## Approach 5: Stack
+## Approach 5: Dynamic Programming with Memoization
+
+We can apply the same recurrance relation which is used in DP Bottom-up with DP Recursive with memoization. 
+
+<Tabs>
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+class Solution {
+    public boolean isSubsequence(String s, String t) {
+        int m = s.length(), n = t.length();
+        int[][] memo = new int[m][n];
+        int length = lcs(s, t, m - 1, n - 1, memo);
+        return length == m;
+    }
+    
+    private int lcs(String s, String t, int i, int j, int[][] memo) {
+        int result = 0;
+        if (i < 0 || j < 0) return result;
+        if (memo[i][j] > 0) return memo[i][j];
+        if (s.charAt(i) == t.charAt(j)) {
+            result = 1 + lcs(s, t, i - 1, j - 1, memo);
+        } else {
+            result = Math.max(lcs(s, t, i - 1, j, memo), lcs(s, t, i, j - 1, memo));
+        }
+        memo[i][j] = result;
+        return result;
+    }
+}
+```
+</TabItem>
+</Tabs>
+
+## Approach 6: Stack
 
 Just a build a stack with S string in reversing order, and iterate over T string and pops out stack if Stack top and T characters are matching, once Stack becomes empty then we find the answer as true. 
 
@@ -319,7 +353,7 @@ class Solution {
 </TabItem>
 </Tabs>
 
-## Approach 6: STL (indexOf)
+## Approach 7: STL (indexOf)
 
 String class provides, built-in method called `indexOf`, just pass **fromIndex** argument to define the search space, and it keeps searching for a character from that position. This solution is optimal and efficient for smaller strings. 
 
