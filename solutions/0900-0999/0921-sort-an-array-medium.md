@@ -115,6 +115,8 @@ void quickSort(vector<int>& nums, int l, int r) {
 
 ### Merge Sort with Outplace Merging
 
+<Tabs>
+<TabItem value="java" label="Java">
 <SolutionAuthor name="@deepanshu-rawat6"/>
 
 ```java
@@ -166,9 +168,13 @@ public static int[] merge(int[] first, int[] second) {
     return mix;
 }
 ```
+</TabItem>
+</Tabs>
 
 ### Merge Sort using In-place Merging
 
+<Tabs>
+<TabItem value="java" label="Java">
 <SolutionAuthor name="@deepanshu-rawat6"/>
 
 ```java
@@ -222,3 +228,5 @@ public static void mergeInPlace(int[] arr, int s, int m, int e) {
     }
 }
 ```
+</TabItem>
+</Tabs>
