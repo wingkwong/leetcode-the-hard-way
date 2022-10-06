@@ -66,30 +66,29 @@ Image by Brian Hans via [Medium](https://medium.com/@brianhans/merge-sort-a1d031
 class Solution {
 public:
     void merge(vector<int>& nums, int l, int m, int r) {
-    // create a temporary array
-    vector<int> tmp(r - l + 1);
-    // index for left subarray 
-    int i = l;
-    // index for right subarray 
-    int j = m + 1; 
-    // index for temporary array
-    int k = 0; 
-       while (i <= m && j <= r) {
-           // increment the left pointer 
-           // if the right pointer element is bigger 
-           // Since we are sorting in ascending order,left(smaller element) goes first
-           if(nums[i] <= nums[j]) tmp[k++] = nums[i++];   
-           else tmp[k++] = nums[j++];
-       }
-
-       // Since in the above while loop if one condition stop satisfying loop breaks 
-       // Then we need to take care of  next / remaining  elements  
-       // Hence adding remaining elements of left half
-       while (i <= m) tmp[k++] = nums[i++];
-       // adding remaining elements of right half
-       while (j <= r) tmp[k++] = nums[j++]; 
-       // Copy data to nums
-       for (i = 0; i < k; i++) nums[l + i] = tmp[i];
+        // create a temporary array
+        vector<int> tmp(r - l + 1);
+        // index for left subarray 
+        int i = l;
+        // index for right subarray 
+        int j = m + 1; 
+        // index for temporary array
+        int k = 0; 
+        while (i <= m && j <= r) {
+            // increment the left pointer 
+            // if the right pointer element is bigger 
+            // Since we are sorting in ascending order,left(smaller element) goes first
+            if(nums[i] <= nums[j]) tmp[k++] = nums[i++];   
+            else tmp[k++] = nums[j++];
+        }
+        // Since in the above while loop if one condition stop satisfying loop breaks 
+        // Then we need to take care of  next / remaining  elements  
+        // Hence adding remaining elements of left half
+        while (i <= m) tmp[k++] = nums[i++];
+        // adding remaining elements of right half
+        while (j <= r) tmp[k++] = nums[j++]; 
+        // Copy data to nums
+        for (i = 0; i < k; i++) nums[l + i] = tmp[i];
     }
 
     void mergeSort(vector<int>& nums, int l, int r) {
@@ -100,6 +99,7 @@ public:
         mergeSort(nums, m + 1, r);
         merge(nums, l, m, r);
     }
+
     // function to return sorted array in leetcode
     vector<int> sortArray(vector<int>& nums) {
         mergeSort(nums, 0, nums.size() - 1);
@@ -166,7 +166,6 @@ class Solution {
         return nums;
     }
     
-    
     void mergeSort(int[] nums, int start, int end) {
         if (end - start + 1 <= 1) return; 
         int mi = start + (end - start) / 2;
@@ -179,20 +178,18 @@ class Solution {
         int lp = start;
         int rp = mi + 1;
         int[] buffer = new int[end - start + 1];
-        //buffer pointer
+        // buffer pointer
         int t = 0; 
         while (lp <= mi && rp <= end) {
-           // increment the left pointer 
-           // if the right pointer element is bigger 
-           // Since we are sorting in ascending order, left(smaller element) goes first
+            // increment the left pointer 
+            // if the right pointer element is bigger 
+            // Since we are sorting in ascending order, left(smaller element) goes first
             if (nums[lp] < nums[rp]) {
                 buffer[t++] = nums[lp++];
-            }
-            else {
+            } else {
                 buffer[t++] = nums[rp++];
             }
         }
-
         // Since in the above while loop if one condition stop satisfying loop breaks 
         // Then we need to take care of  next / remaining  elements
         // merging remaining elements of left half 
@@ -245,6 +242,7 @@ class Solution {
             }
         }
     }
+
     // Same as the merge function of the top down approach
     private void merge(int[] nums, int l, int mid, int r) {
         int[] tmp = new int[r - l + 1];
@@ -252,8 +250,7 @@ class Solution {
         while (i <= mid || j <= r) {
             if (i > mid || j <= r && nums[i] > nums[j]) {
                 tmp[k++] = nums[j++];
-            } 
-	    else {
+            } else {
                 tmp[k++] = nums[i++];
             }
         }
