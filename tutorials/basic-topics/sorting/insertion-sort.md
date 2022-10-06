@@ -17,7 +17,7 @@ keywords:
 
 Insertion sort is one of the sorting algorithms that sort the elements by placing an unsorted element in correct sorted order one at a time.
 
-First of all, let us understand how an sorted `array` (**[Here is a reference for you to check](../arrays.md)**) looks like. Understanding an sorted array will give us the overview of the insertion sort. An sorted array is given below.
+A sorted [array](../arrays.md) is an array in which elements are sorted either in ascending or descending order.
 
 Example: [1,2,3,4,5,6,7]
 
@@ -92,9 +92,6 @@ We have figured out the solution of the problem:
 * Take out the last two elements because those are the largest two elements in our array.
 * Put the values in the expression and return it.
 
-## Implementation
-
-Following are the implementation of the above mentioned problem:
 
 <Tabs>
 <TabItem value="cpp" label="C++">
