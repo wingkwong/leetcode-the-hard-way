@@ -13,6 +13,7 @@ https://leetcode.com/problems/burst-balloons/
 
 You are given `n` balloons, indexed from `0` to `n - 1`. Each balloon is painted with a number on it represented by an array `nums`. You are asked to burst all the balloons.
 If you burst the ith balloon, you will get `nums[i - 1] * nums[i] * nums[i + 1]` coins. If `i - 1` or `i + 1` goes out of bounds of the array, then treat it as if there is a balloon with a 1 painted on it.
+
 *Return the maximum coins you can collect by bursting the balloons wisely.*
 
 
@@ -43,8 +44,71 @@ n == nums.length
 1 <= n <= 300
 0 <= nums[i] <= 100
 ```
+## Approach 1: Brute Force Recursion
 
-## Approach 1: Dynamic Programming
+<Tabs>
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@AnshikaAnand222"/>
+
+```python
+  
+class Solution:
+    def maxCoins(self, nums: List[int]) -> int:
+        nums = [1] + nums + [1]
+        return self.recurse(nums, 0, len(nums)-1)
+    
+    def recurse(self, nums, left, right):
+        
+        res = 0
+        for i in range(left+1, right):
+            coins = nums[left] * nums[i] * nums[right]
+            leftRes = self.recurse(nums, left, i)
+            rightRes = self.recurse(nums, i, right)
+            res = max(res, coins + leftRes + rightRes)
+        
+        return res
+  
+```
+				     
+
+</TabItem>
+</Tabs>
+
+
+## Approach 2: Brute Better Memoization
+
+<Tabs>
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@AnshikaAnand222"/>
+
+```python
+class Solution:
+    def maxCoins(self, nums: List[int]) -> int:
+        nums = [1] + nums + [1]
+        self.dp = [[-1 for _ in range(len(nums))] for _ in range(len(nums))]
+        return self.recurse(nums, 0, len(nums)-1)
+    
+    def recurse(self, nums, left, right):
+        
+        if self.dp[left][right] != -1:
+            return self.dp[left][right]
+        
+        res = 0
+        for i in range(left+1, right):
+            coins = nums[left] * nums[i] * nums[right]
+            leftRes = self.recurse(nums, left, i)
+            rightRes = self.recurse(nums, i, right)
+            res = max(res, coins + leftRes + rightRes)
+        
+        self.dp[left][right] = res
+        return res
+```
+
+</TabItem>
+</Tabs>
+
+
+## Approach 3: Dynamic Programming
 
 <Tabs>
 <TabItem value="python" label="Python">
@@ -61,6 +125,7 @@ class Solution(object):
         return search(tuple([1] + nums + [1]))
   
 ```
+				     
 
 </TabItem>
 </Tabs>
