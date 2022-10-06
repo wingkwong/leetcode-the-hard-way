@@ -17,28 +17,28 @@ keywords:
 
 Insertion sort is one of the sorting algorithms that sort the elements by placing an unsorted element in correct sorted order one at a time.
 
-First of all, let us understand how an sorted `array` (If you don't what an array is. Please refer [here](/tutorials/basic-topics/arrays.md)) looks like. Understanding an sorted array will give us the overview of the insertion sort. An sorted array is given below.
+First of all, let us understand how an sorted `array` (**[Here is a reference for you to check](../arrays.md)**) looks like. Understanding an sorted array will give us the overview of the insertion sort. An sorted array is given below.
 
 Example: [1,2,3,4,5,6,7]
 
-In a sorted `array` all the elements to the left any element are smaller than that. That, means to make the `array` sorted we have to place an element in such a position, so that every element to the left are smaller than that. That is pretty much what we do in a insertion sort.
+In a sorted `array` all the elements to the left of any element are smaller than that. That, means to make the `array` sorted we have to place an element in such a position, so that every element to the left are smaller than that. That is pretty much what we do in a insertion sort.
 
 ## Algorithm
 
 The following are the steps that we are going to follow:
 
-1. Pick an element from the array, and store it in a variable `nums`.
-2. Now, start comparing the `nums` with all the elements to the left of it.
-3. If the `nums` is less than the current element shift the current element to right until you find an element smaller than `nums`.
-4. Place the `nums` in current position.
-5. Repeat all the above steps until the `array` is sorted.
+1. Pick an element from the array, and store it in a variable $nums$.
+2. Now, start comparing the $nums$ with all the elements to the left of it.
+3. If the $nums$ is less than the current element shift the current element to right until you find an element smaller than $nums$.
+4. Place the $nums$ in current position.
+5. Repeat all the above steps until the $array$ is sorted.
 
-If we apply the above steps for the array `[3,2,5,10,9]`, it would be:
-* First of all, we will pick the first element which is `3` in our case.
-* Now, we will compare with all the elements left to it, in this case there is nothing left to `3` so, we will do nothing.
-* Now, pick the next element which is `2` and start comparing with all the elements left to it.
-* First element left to `2` is `3` , which is greater than selected element `2`. So, we will move `3` to right. If the element left to selected element is less than selected element then, our selected element have reached it's correct position so, we will place selected element there only.
-* Now, there is nothing no more element further left to our selected element `2`. So, we will place `2` at the beginning of array.
+If we apply the above steps for the array $[3,2,5,10,9]$, it would be:
+* First of all, we will pick the first element which is $3$ in our case.
+* Now, we will compare with all the elements left to it, in this case there is nothing left to $3$ so, we will do nothing.
+* Now, pick the next element which is $2$ and start comparing with all the elements left to it.
+* First element left to $2$ is $3$ , which is greater than selected element $2$. So, we will move $3$ to right. If the element left to selected element is less than selected element then, our selected element have reached it's correct position so, we will place selected element there only.
+* Now, there is nothing no more element further left to our selected element $2$. So, we will place $2$ at the beginning of array.
 * We will proceed with the same way for all the elements. Then, at last we will get our array as sorted.
 
 ### Problem Link
@@ -106,22 +106,22 @@ public:
     void insertionSort(vector<int> &arr, int size_of_array) {
         for (int i = 1; i < size_of_array; i++) {
             // Picking element from array
-            int nums = arr[i]; 
+            int nums = arr[i];
             int j = i - 1;
-            
+
             // Comparing nums with all the elements left to it
-            while (j >= 0 and arr[j] > nums) { 
+            while (j >= 0 and arr[j] > nums) {
                 // Shifting the greater element to the right
-                arr[j + 1] = arr[j]; 
+                arr[j + 1] = arr[j];
                 j--;
             }
             // Placing selected element at correct position
-            arr[j + 1] = nums; 
+            arr[j + 1] = nums;
         }
     }
 
     int maxProduct(vector<int>& nums) {
-        insertionSort(nums,nums.size());
+        insertionSort(nums, nums.size());
         int n = nums.size();
         return (nums[n - 1] - 1) * (nums[n - 2] - 1);
     }
@@ -135,28 +135,29 @@ public:
 
 ```java
 class Solution {
-    void insertion_sort(int arr[],int size_of_array) {
+	void insertion_sort(int arr[], int size_of_array) {
 		for (int i = 1; i < size_of_array; ++i) {
-            // Picking element from array
-			int nums = arr[i]; 
+			// Picking element from array
+			int nums = arr[i];
 			int j = i - 1;
 
-            // Comparing nums with all the elements left to it
-			while (j >= 0 && arr[j] > nums) { 
-                // Shifting the greater element to the right
-				arr[j + 1] = arr[j]; 
+			// Comparing nums with all the elements left to it
+			while (j >= 0 && arr[j] > nums) {
+				// Shifting the greater element to the right
+				arr[j + 1] = arr[j];
 				j = j - 1;
 			}
-            // Placing selected element at correct position
-			arr[j + 1] = nums; 
+			// Placing selected element at correct position
+			arr[j + 1] = nums;
 		}
 	}
-    public int maxProduct(int[] nums) {
-        insertion_sort(nums,nums.length);
-        int n = nums.length;
-        return (nums[n - 1] - 1) * (nums[n - 2] - 1);      
-    }
-}
+    
+	public int maxProduct(int[] nums) {
+		insertion_sort(nums, nums.length);
+		int n = nums.length;
+		return (nums[n - 1] - 1) * (nums[n - 2] - 1);
+	}
+};
 ```
 
 </TabItem>
@@ -166,7 +167,7 @@ class Solution {
 
 ```py
 class Solution:
-    def insertionSort(arr,size_of_array):
+    def insertionSort(arr, size_of_array):
         
         for i in range(1, size_of_array):
             # Picking element from array
@@ -182,7 +183,6 @@ class Solution:
             # Placing selected element at correct position
             arr[j + 1] = nums 
         
-
     def maxProduct(self, nums: List[int]) -> int:
         Solution.insertionSort(nums,len(nums))
         return (nums[-1] - 1) * (nums[-2] - 1)
