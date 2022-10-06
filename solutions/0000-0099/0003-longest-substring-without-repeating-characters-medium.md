@@ -116,6 +116,42 @@ class Solution {
 }
 ```
 </TabItem>
+
+<TabItem value="javascript" label="JavaScript">
+<SolutionAuthor name="@MithunPrabhu777"/>
+
+```javascript
+var lengthOfLongestSubstring = function (s) {
+    const letterCountMap = new Map();
+    
+    let [left,right,max] = [0,0,0];
+    
+    while(right < s.length){
+        
+        const currentValue = s[right];
+        
+        const canSlide = letterCountMap.has(currentValue);
+        
+        if(canSlide){
+            
+            const rightSlide = letterCountMap.get(currentValue) + 1;
+            
+            left = Math.max(left,rightSlide);
+        }
+        
+        const window = (right - left) + 1;
+        
+        max = Math.max(window,max);
+        
+        letterCountMap.set(currentValue,right);
+        
+        right++;
+    }
+    
+    return max;
+};
+```
+</TabItem>
 </Tabs>
 
 
