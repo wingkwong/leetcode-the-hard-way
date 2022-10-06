@@ -50,9 +50,15 @@ Output: [4,2,null,1,1,3,null,null,1]
 
 ## Approach 1: Recursion (DFS)
 
-We start DFS from root node and go into depth till we reach current depth = `depth-1`. Then we follow the rules given in problem statement i.e. create two new nodes, and insert these two new nodes between current node and its child node according to whether it is left or right child.
+If the given depth `depth` happens to be equal to 1, we can directly put the whole current tree as a left child of the newly added node. Otherwise, we need to put the new node at appropriate levels.
 
-When we reach `depth-1` and change the links, we do not go further into depth and just return from that DFS call.
+To do so, we make use of a recursive function `insert(node, currDepth, val, depth)`. Here, `val` refers to the value of the new node to be inserted, `currDepth` refers to the depth of the node currently considered, `node` refers to the node calling the current function for its child subtrees and `depth` refers to the height at which the new node needs to be inserted.
+
+For inserting the new node at appropriate level, we can start by making a call to `insert` with the root node and 1 as the current level. Inside every such call, we check if we've reached one level prior to the level where the new node needs to be inserted i.e. `depth-1`.
+
+From this level, we can create two new nodes one for left subtree and one for right subtree, and assign the current left and right subtrees to newly created nodes' left and right subtrees respectively. Then we assign these two new nodes as left and right childs of current node `node` respectively;
+
+But, if we haven't reached the destined level, we keep on continuing the recursive calling process with the left and right children of the current node respectively. At every such call, we also incrmenet the depth of the current level to reflect the depth change appropriately.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
