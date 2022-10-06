@@ -12,7 +12,7 @@ https://leetcode.com/problems/count-subarrays-with-score-less-than-k/
 
 ## Problem Statement
 
-The `score` of an array is defined as the `product` of its sum and its length.
+The $score$ of an array is defined as the $product$ of its sum and its length.
 
 For example, the score of [1, 2, 3, 4, 5] is (1 + 2 + 3 + 4 + 5) * 5 = 75.
 Given a positive integer array nums and an integer k, return the number of non-empty subarrays of nums whose score is strictly less than k.
@@ -50,19 +50,29 @@ Thus, there are 5 subarrays having scores less than 5.
 
 **Constraints:**
 
-* `1 <= nums.length <= 105`
-* `1 <= nums[i] <= 105`
-* `1 <= k <= 1015`
+* $1 <= nums.length <= 105$
+* $1 <= nums[i] <= 105$
+* $1 <= k <= 1015$
 
 
 ## Approach : Sliding Window
+ 
+In this approach we will maintain a sliding window from $nums[i]$ to $nums[j]$, subarray starting with i and ending at j which has score less than $k$.
+sum contains the current sum of element between the window.  
 
-In this approach, we will maintain two points `i` and `j` both initialized with 0 and go on incrementing j until the `score` is less than k, where score is defined as product of length and sum of subarray.  
-Since we need to count number of subarrays which have score less than k, we will add `j-i+1` number of arrays to our `ans` each time, as it adds all the subarrays that starts at i and ends at j.  
+We will start iterating j from 0 to nums.size() - 1, first we will add nums[j] to sum.  
 
-*example [1,2,3,4,5] and let i = 0, j = 2  
-Total subarrays will be 3  
-[1,2,3,4,5] , [1,2,3,4] , and [1,2,3]*
+The current sum is denoted by $sum$ and length is $j - i + 1$,
+If the score $sum * (j - i + 1) >= k$, the window is too big, we will remove $nums[i]$ and update $i++$.
+We continue doing this until the score is less than k.  
+
+If we find a subarray nums[i] to nums[j] which has score less than k, we will update answer $ans += j - i + 1$ as there will be j - i + 1 total subarrays in total.
+
+```
+example [1,2,3,4,5] and let i = 0, j = 2  
+Total subarrays will be 3
+[1,2,3,4,5] , [1,2,3,4] , and [1,2,3]
+```
 
 
 Time Complexity: $O(n)$, where $n$ - size of array
@@ -85,19 +95,19 @@ long long countSubarrays(vector<int>& nums, long long k) {
             sum += nums[j];
            
             // increment j if score is less than k
-            if(sum*(j-i+1) < k) {
-                ans += j-i+1;
+            if(sum * (j - i + 1) < k) {
+                ans += j - i + 1;
                 j++;
             }
             
             else {
                 // go on incrementing i until score becomes less than k again
-                while((sum)*(j-i+1) >=k) {
+                while(sum * (j - i + 1) >=k) {
                     sum -= nums[i];
                     i++;
                 }
                 
-                ans += j-i+1;
+                ans += j - i + 1;
                 j++;
             }
         }
