@@ -59,8 +59,8 @@ You must solve the problem without using any built-in functions in O(nlog(n)) ti
 Test case 1 :
      
 ```
-Input: nums = [5,2,3,1]
-Output: [1,2,3,5]
+Input: nums = [5, 2, 3, 1]
+Output: [1, 2, 3, 5]
 Explanation: 
     After sorting the array, the positions of some numbers are not changed (for example, 2 and 3). 
     While the positions of other numbers are changed (for example, 1 and 5).       
@@ -160,7 +160,7 @@ void mergeSort(vector<int>& nums, int l, int r){
 }
 // function to return sorted array in leetcode
 vector<int> sortArray(vector<int>& nums) {
-    mergeSort(nums,0,nums.size()-1);
+    mergeSort(nums,0,nums.size() - 1);
     return nums;
 }
 ```
@@ -220,14 +220,14 @@ vector<int> sortArray(vector<int>& nums) {
         int mi = start + (end - start)/ 2;
         mergeSort(nums, start, mi);
         mergeSort(nums, mi+1, end);
-        merge(nums, start,mi, end);
+        merge(nums, start, mi, end);
     }
     
     void merge(int[] nums, int start, int mi, int end){
         int lp = start;
         int rp = mi + 1;
         // temporay array
-        int[] buffer = new int[end-start+1];
+        int[] buffer = new int[end - start + 1];
         // temporary array pointer
         int t = 0; 
         
@@ -338,16 +338,16 @@ Given the head of a linked list, return the list after sorting it in ascending o
  
 Test Case 1
 ```
-Input: head = [4,2,1,3]
-Output: [1,2,3,4]
+Input: head = [4, 2, 1, 3]
+Output: [1, 2, 3, 4]
 ```
 ![image](https://assets.leetcode.com/uploads/2020/09/14/sort_list_1.jpg)
  
 Test Case 2
 
 ```
-Input: head = [-1,5,3,4,0]
-Output: [-1,0,3,4,5]
+Input: head = [-1, 5, 3, 4, 0]
+Output: [-1, 0, 3, 4, 5]
 ```
 
 Here we can follow both **top-down and bottom-up merge sort**. I have already discussed the algorithm for arrays in a detailed way.
@@ -452,7 +452,7 @@ public:
         mergeSort(&right);
         
         // call to merge left and right by sorting them
-        *head=merge(left,right);
+        *head=merge(left, right);
     }
 
     void findMiddle(ListNode *curr, ListNode **left, ListNode **right){
@@ -465,7 +465,7 @@ public:
         // then we move our fast up to it not become null
         while(fast != NULL)
         {
-            fast = fast -> next;
+            fast = fast-> next;
             if(fast != NULL)
             {
                 fast = fast-> next;
