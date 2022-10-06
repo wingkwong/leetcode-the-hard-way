@@ -2,6 +2,8 @@
 
 ## Quick Start
 
+Don't reply on markdown editor. Start the application locally to make your changes.
+
 ```bash
 cd leetcode-the-hard-way
 npm i 
@@ -11,24 +13,15 @@ npm run start
 
 ## Before Creating a PR 
 
-- Make sure you've read [CONTRIBUTING.md](https://github.com/wingkwong/leetcode-the-hard-way/blob/main/CONTRIBUTING.md) 
-- Make sure you've followed the template format
-- Make sure you've started the app locally and verified the content and links (if applicable)
-- Make sure you've applied LaTex for variables or formulas
-- Make sure you've formatted your code well (using `<Tabs/>`)
-- Make sure you've explained your code well (write comments above each line)
-- Make sure you've written your explanation well and it is easy to understand for beginners
-- Make sure you've explained your topic using 1 - 3 LC problems (for tutorial writeup)
-- Make sure you've provided suggested problems at the end (for tutorial writeup)
-- Make sure you've given credits / references if you use external resources
+See the [Checklist](https://github.com/wingkwong/leetcode-the-hard-way/blob/main/.github/pull_request_template.md#checklist).
 
-## Tutorials
+## How to Contribute Tutorials
 
 - Go to `./tutorials`
 - Use the below template
-- Use LC problems to walk through the topic
+- Use 1 - 3 LC problems (with solutions with explanations) to walk through the topic
 - Don't copy content / code from other sites
-- Add references if necessary
+- Add References if necessary
 - Add Suggested Problems at the end
 
 ```bash
@@ -43,6 +36,7 @@ hide_table_of_contents: true
 ## Overview
 
 // Your content goes here
+// DO NOT COPY FROM OTHER EXTERNAL SITES
 
 // Walk through the topic using 1 - 3 LC problems (if applicable)
 // Do not use random examples or examples from other sites
@@ -62,12 +56,11 @@ Examples:
 
 - Go to `./solutions`
 - Create a new page called `<PROBLEM_ID>-<PROBLEM_TITLE>-<DIFFICULTY>.md`, e.g. `0202-happy-number-easy.md`
-- Include basic meta info such as `description` and `tags`. 
 - Use `<Tabs>` to wrap your code block. See below example.
 - Add Time Complexity and Space Complexity for each solution 
 - Add beginner-friendly explanations 
-- Appy LaTex to make it look better
-- Format the code well
+- Appy LaTex for variables and formulas in your explanation
+- Format the code well (prefer K&R coding style)
 - Do not write comment inline with the code. Write the comment above the line instead
 
 Template
