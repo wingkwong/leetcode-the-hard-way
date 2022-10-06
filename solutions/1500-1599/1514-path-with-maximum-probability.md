@@ -63,7 +63,12 @@ The code for this approach is below :
 
 ## Code:  
 
-```
+<Tabs>
+
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@YOUR_ALIAS"/>
+
+```cpp
 double maxProbability(int n, vector<vector<int>>& edges, vector<double>& succProb, int start, int end) {
         vector<vector<pair<int,double>>> graph(n);    // First, Create Adjanacy list
         
@@ -102,3 +107,12 @@ double maxProbability(int n, vector<vector<int>>& edges, vector<double>& succPro
     }
 ```
 
+</TabItem>
+
+</Tabs>
+
+## Time complexity:  
+O(e*log(n)) where n -> nodes, e->edges  
+  
+## Space complexity:
+O(n) where n->nodes
