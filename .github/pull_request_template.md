@@ -11,9 +11,9 @@ Provide summary of changes with issue number if any.
 - [ ] Make sure you've read [CONTRIBUTING.md](https://github.com/wingkwong/leetcode-the-hard-way/blob/main/CONTRIBUTING.md) 
 - [ ] Make sure you've followed the template format
 - [ ] Make sure you've started the app locally and verified all the content and all links (if applicable) must be accessible correctly
-- [ ] Make sure you've applied LaTex for variables or formulas
-- [ ] Make sure you've formatted your code well (Code Block is rendered using `<Tabs/>`). 
-      Below is a C++ example. You can include multiple langs using `<TabItem/>` if necessary.
+- [ ] Make sure you've applied LaTex for variables, formulas and time / space complexity instead of using backticks
+- [ ] Make sure you've formatted your code well (Code Block is rendered using `<Tabs/>`)
+      Below is a C++ example. You can include multiple langs using `<TabItem/>` if necessary
       
 ````
 <Tabs>
@@ -30,9 +30,9 @@ Provide summary of changes with issue number if any.
 
 </Tabs>
 ````
-- [ ] Make sure you've explained your code well (write comments above each line)
+- [ ] Make sure you've explained your code well (write comments above each line - not inline)
 - [ ] Make sure you've written your explanation well and it is easy to understand for beginners
-- [ ] Make sure you've included Time & Space Complexity Analysis 
+- [ ] Make sure you've included Time & Space Complexity Analysis
 
 ### For Tutorial Articles
 
