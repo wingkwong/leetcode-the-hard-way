@@ -63,7 +63,7 @@ Explanation: There is no path between 0 and 2.
 ## Approach - Using Dijkstra's Algorithm:   
 First, we will create adjanacy list $graph$ from given input. Now we have to find maximum $success probability$ from soruce node to every node.  
 In standard djikstra algorithm, we will find the shortest path from start to end and update the "minimum distance" array accordingly for each "from -> to" pair.  
-In this problem, we have to find maximum probability so we create a max heap $pq$ and an array $sp$ which will store success probability for every node. Now, we will iterate for top node of $pq$ priority queue and upadate the $sp$ array. After iterating through $graph$, we will return $sp[end]$ 
+In this problem, we have to find maximum probability so we create a max heap $pq$ and an array $sp$ which will store success probability for every node. Now, we will iterate for top node of $pq$ priority queue and upadate the $sp$ array. After iterating through $graph$, we will return $sp[end]$.
 
 <Tabs>
 
