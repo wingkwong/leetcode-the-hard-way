@@ -91,20 +91,16 @@ long long countSubarrays(vector<int>& nums, long long k) {
             if (sum * (j - i + 1) < k) {
                 ans += j - i + 1;
                 j++;
-            }
-            
-            else {
+            } else {
                 // go on incrementing i until score becomes less than k again
                 while (sum * (j - i + 1) >=k) {
                     sum -= nums[i];
                     i++;
                 }
-                
                 ans += j - i + 1;
                 j++;
             }
-        }
-        
+        } 
         return ans;
     }
 ```
