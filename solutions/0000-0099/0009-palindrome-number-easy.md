@@ -79,6 +79,16 @@ class Solution {
 
 Calculate the reversed number.
 
+In JavaScript, we have used `Object.is(..)` for value comparison, It's a ES6 feature and makes value comparisons in an even more strict fashion than the === comparison.
+
+References from MDN and You Don't Know JS (Behind the scenes polyfills of `Object.is`). 
+
+> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
+
+> https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/es6%20%26%20beyond/ch6.md#objectis-static-function
+
+> https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/es6%20%26%20beyond/ch1.md#shimspolyfills
+
 <Tabs>
 <TabItem value="py" label="Python">
 <SolutionAuthor name="@tostream"/>
