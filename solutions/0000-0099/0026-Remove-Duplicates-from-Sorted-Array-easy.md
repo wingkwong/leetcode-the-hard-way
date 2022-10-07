@@ -3,7 +3,7 @@ description: 'Author: @pankajsirari222 | https://leetcode.com/problems/remove-du
 tags: [Array, Two Pointers]
 ---
 
-# 0026-Remove-Duplicates-from-Sorted-Array-easy
+# 0026 - Remove Duplicates from Sorted Array (Easy) 
 
 ## Problem Link
 
@@ -64,21 +64,15 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 - `-100 <= nums[i] <= 100`
 - `nums` is sorted in **non-decreasing** order.
 
-## Approach : Two Pointers
+## Approach 1: Two Pointers
 
-In this problem, we have to count the number of distinct elements and it does not matter what elements are present other than those distinct elements.
-So, we will take a index count starting from 1 and traverse the array, keeping the distinct elements at the front. At last we will return the count.
+In this problem, we have to count the number of distinct elements and it does not matter what elements are present other than those distinct elements. So, we will take a index count starting from 1 and traverse the array, keeping the distinct elements at the front. At last we will return the count.
 
-## Explanation:
-As the array is sorted, it means all the duplicates of a number will be next to each other.
-So, basically while traversing the array we will check if next element is greater or not.
-If it is greater, then it means duplicate is not there and we will put it at the count index and increment the count.
-If not greater, then no change.
-At last we will return the count.
+As the array is sorted, it means all the duplicates of a number will be next to each other. So, basically while traversing the array we will check if next element is greater or not. If it is greater, then it means duplicate is not there and we will put it at the count index and increment the count. If it's not greater, then there will be no change. At last we will return the count.
 
-**Time complexity** is $O(n)$ (As we are traversing the array only once)
+**Time complexity** is $O(n)$ - As we are traversing the array only once
 
-**Space complexity** is $O(1)$ (As No extra space is required) 
+**Space complexity** is $O(1)$ - As No extra space is required
 
 <Tabs>
 <TabItem value="java" label="Java">
@@ -88,23 +82,22 @@ At last we will return the count.
 class Solution {
     public int removeDuplicates(int[] arr) {
         int n = arr.length;
-        // Count variable is used as an index to keep the track of distinct variables and it starts from 1.
+        // index to keep the track of distinct variables and it starts from 1
         int count = 1;
         
-        for(int i = 0; i + 1 < n; i++) {
-            // To Check if next element is greater or not
-            if(arr[i] < arr[i + 1])  {
-                // If it is greater, means next element is distinct, so add it to count index and increment count by 1.
+        for (int i = 0; i + 1 < n; i++) {
+            // to Check if next element is greater or not
+            if (arr[i] < arr[i + 1])  {
+                // if it is greater, means next element is distinct, 
+                // so add it to count index and increment count by 1
                 arr[count] = arr[i + 1];	
                 count++;
             }
         }
-        // Returns count i.e. total number of distinct elements.
+        // returns the total number of distinct elements
         return count;
     }
 }
-    
-    
 ```
 
 </TabItem>
