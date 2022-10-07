@@ -74,3 +74,13 @@ int main(){
   cout << "Number of even digits are :- " << answer << endl;
 } 
 ```
+
+export const suggestedProblems = [
+  {
+    "problemName": "1672 - Richest Customer Wealth",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/richest-customer-wealth/",
+    "solutionLink": "/1600-1699/1672-richest-customer-wealth-easy.md"
+  },]
+  
+<Table title="Suggested Problems" data={suggestedProblems} />
