@@ -54,7 +54,7 @@ First, we will add zeros to the start of the smaller linked list such that both 
 addition start to end.  
 Now, we will use recursion(like reverse traversal) to the end of both the lists and start addition from the end. After each recursion ends, $l1$ and $l2$ will be 
 waiting at the previous nodes. Here we will pass $carry$ from current recursive function to the previous recursive function, for which we can pass the reference 
-variable $carry$ to function calls so that the changes made to $carry$ reflect through all the recursive calls made.
+variable $carry$ to function so that the changes made to $carry$ reflect through all the recursive calls made.
 
 
 <Tabs>
@@ -101,15 +101,13 @@ public:
                 l1 = new_node;
                 
                 second = second -> next;
-            }
-            else if (second == NULL) {
+            } else if (second == NULL) {
                 ListNode * new_node = new ListNode(0);
                 new_node -> next = l2;
                 l2 = new_node;
                 
                 first = first -> next;
-            }
-            else {
+            } else {
                 first = first -> next;
                 second = second -> next;
             }
