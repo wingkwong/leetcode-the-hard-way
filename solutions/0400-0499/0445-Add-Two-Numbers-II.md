@@ -5,7 +5,7 @@ description: >-
 tags: [Linked List, Math, Stack]
 ---
 
-# 445 - Add two Numbers II (Medium) 
+# 0445 - Add two Numbers II (Medium) 
 
 ## Problem Link
 
@@ -86,60 +86,48 @@ final $linkedlist$ is $7->8->0->7$
 <TabItem value="cpp" label="C++">
 <SolutionAuthor name="@Kavita613"/>
 
-```cpp
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode * next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode * next) : val(x), next(next) {}
- * };
- */
+```cpp  
+  /**  
+  * Definition for singly-linked list.  
+  * struct ListNode {  
+  *     int val;  
+  *     ListNode * next;  
+  *     ListNode() : val(0), next(nullptr) {}  
+  *     ListNode(int x) : val(x), next(nullptr) {}  
+  *     ListNode(int x, ListNode * next) : val(x), next(next) {}  
+  * };  
+  */
   
 class Solution {
 public:
+  ListNode * addDigits (ListNode * l1, ListNode * l2, int &carry) {
   
-    ListNode * addDigits (ListNode * l1, ListNode * l2, int &carry) {
-  
-        // first, we will check if our both linked list's node is NULL or not
-  
+        // First, we will check if our both linked list's node is NULL or not
         if (l1 == NULL && l2 == NULL) 
-            // if NULL then we are at the end of our both linked lists and return NULL
             return NULL;
         
         // Creating new_node for store the sum of digits
-  
         ListNode * new_node = new ListNode(-1);
   
-        // here, we are making link between nodes which are having the sum of digits 
-  
+        // Here, we are making link between nodes which are having the sum of digits 
         new_node -> next = addDigits(l1 -> next, l2 -> next, carry);
         
-        // when we are at the end of our both list's then we will assign value to our node and respective recursive function call will return
+        // When we are at the end of our both list's then we will assign value to our node and respective recursive function call will return
         new_node -> val = (l1 -> val + l2 -> val + carry) % 10;
   
-        // also we are calculating carry for each time when adding digits and passing it through recursive function
-        carry = (l1 -> val + l2 -> val + carry) / 10;
-        
+        // Also we are calculating carry for each time when adding digits and passing it through recursive function
+        carry = (l1 -> val + l2 -> val + carry) / 10;  
         return new_node;
     }
   
     ListNode * addTwoNumbers (ListNode * l1, ListNode * l2) {
-        
-        //Adding zeros to the start of the smaller list:
-        
+        // Adding zeros to the start of the smaller list:
         ListNode * first = l1, * second = l2;
         
         while (first != NULL || second != NULL) {
-  
-            /*we are traversing through both linkedlist first and second, and find which one is smaller and add zeros starting of that linked list*/
-            
+            // We are traversing through both linkedlist first and second, and find which one is smaller and add zeros starting of that linked list
             if (first == NULL) {
-  
-                // Create new node ( value of new node is 0)
-  
+                // Create new node ( value of new node is 0  
                 ListNode * new_node = new ListNode(0);
                 
                 // Connecting new node to head of linkedlist l1
@@ -150,13 +138,11 @@ public:
                 
                 second = second -> next;
             } else if (second == NULL) {
-  
                 // Same as above 
-  
                 ListNode * new_node = new ListNode(0);
                 new_node -> next = l2;
-                l2 = new_node;
-                
+                l2 = new_node;  
+  
                 first = first -> next;
             } else {
                 first = first -> next;
@@ -165,25 +151,20 @@ public:
         }
         
         // we create carry variable 
-  
         int carry = 0;
         
         // here we create a new_node temp(Head node of linked list) for sum of two linked list's l1 and l2
-        
         ListNode * temp = new ListNode(-1);
         
         // Call recursion function for traversing of the linked list and Calculating the sum of digits 
-  
         temp -> next = addDigits(l1, l2, carry);
         
         // At the end, if our carry is not equal to zero then we will add this into our linked list temp
-  
         if (carry != 0) {
             ListNode * new_node = new ListNode(carry);
             new_node -> next = temp -> next;
             temp -> next = new_node;
         }
-        
         return temp -> next;
     }
 }; 
