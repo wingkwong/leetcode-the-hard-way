@@ -6,7 +6,7 @@ https://leetcode.com/problems/binary-tree-level-order-traversal/
 
 ## Problem Statement
 
-Given the `root` of a binary tree, return _the level order traversal of its nodes' values_. (i.e., from left to right, level by level).
+Given the $root$ of a binary tree, return _the level order traversal of its nodes' values_. (i.e., from left to right, level by level).
 
 
 **Example 1:**
@@ -40,13 +40,16 @@ Output: []
 
 ## Approach 1: Using Queue Data Structure
 
-- Take one 2D vector `ans` to return the final tree-traversal, and another vector `v` to store seperate levels.
-- Take a queue, store `root` node inside it and a `NULL` node for seperating levels.
-- Until the queue is not empty, pop one by one nodes from queue. if the node is `NULL` and queue is not empty, push the `NULL` again inside the queue. Push `v` into `ans` as one level is completed and clear `v`.
-- If the node is not null, push the value into `v` and push its left and right nodes into queue (if not null).
+- Take one 2D vector $ans$ to return the final tree-traversal, and another vector $v$ to store seperate levels.
+- Take a queue, store $root$ node inside it and a _NULL_ node for seperating levels.
+- Until the queue is not empty, pop one by one nodes from queue. if the node is _NULL_ and queue is not empty, push the _NULL_ again inside the queue. Push $v$ into $ans$ as one level is completed and clear $v$.
+- If the node is not null, push the value into $v$ and push its left and right nodes into queue (if not null).
 
 **Time Complexity:**  O(N)
 
+
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@Srijita-mandal"/>
 
 ```cpp
@@ -54,18 +57,23 @@ class Solution {
 public:
     vector<vector<int>> levelOrder(TreeNode* root) {
         vector<vector<int>> ans;
-        vector<int> v;  //for storing each level
+        //for storing each level
+        vector<int> v;  
         if(root==NULL) return ans;
         queue<TreeNode*> q;
         q.push(root);
-        q.push(NULL);  //for sepearting levels
+        //for sepearting levels
+        q.push(NULL);  
         while(!q.empty()){
             TreeNode* cur = q.front();
             q.pop();
             if(cur==NULL){
-                ans.push_back(v);  //storing each level into ans vector
-                v.clear();  //clearing v vector to insert next level
-                if(!q.empty()) q.push(NULL);  //storing NULL at the end of queue
+                //storing each level into ans vector
+                ans.push_back(v);  
+                //clearing v vector to insert next level
+                v.clear();  
+                //storing NULL at the end of queue
+                if(!q.empty()) q.push(NULL);  
             }
             else{
                 v.push_back(cur->val);
@@ -77,3 +85,4 @@ public:
     }
 };
 ```
+</Tabs>
