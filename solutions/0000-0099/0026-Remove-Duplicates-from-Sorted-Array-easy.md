@@ -1,5 +1,5 @@
 ---
-description: 'Author: @pankajsirari222| https://leetcode.com/problems/remove-duplicates-from-sorted-array/'
+description: 'Author: @pankajsirari222 | https://leetcode.com/problems/remove-duplicates-from-sorted-array/'
 tags: [Array, Two Pointers]
 ---
 
@@ -11,16 +11,16 @@ https://leetcode.com/problems/remove-duplicates-from-sorted-array/
 
 ## Problem Statement
 
-Given an integer array `nums` sorted in non-decreasing order, **remove the duplicates** in-place such that each unique element appears only **once**.
+Given an integer array $nums$ sorted in non-decreasing order, **remove the duplicates** in-place such that each unique element appears only **once**.
 The **relative order** of the elements should be kept the **same**.
 
-Since it is impossible to change the length of the array in some languages, you must instead have the result be placed in the **first part** of the array `nums`. 
-More formally, if there are `k` elements after removing the duplicates, then the first `k` elements of `nums` should hold the final result. 
-It does not matter what you leave beyond the first `k` elements.
+Since it is impossible to change the length of the array in some languages, you must instead have the result be placed in the **first part** of the array $nums$. 
+More formally, if there are $k$ elements after removing the duplicates, then the first $k$ elements of $nums$ should hold the final result. 
+It does not matter what you leave beyond the first $k$ elements.
 
-Return `k` _after placing the final result in the first_ `k` _slots of_ `nums`.
+Return $k$ _after placing the final result in the first_ $k$ _slots of_ $nums$.
 
-Do `not` allocate extra space for another array. You must do this by `modifying the input array` in-place with O(1) extra memory.
+Do `not` allocate extra space for another array. You must do this by `modifying the input array` in-place with $O(1)$ extra memory.
 
 **Custom Judge:**
 
@@ -60,11 +60,11 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 
 **Constraints:**
 
-- `1 <= nums.length <= 3 * 104`
+- `1 <= nums.length <= 3 * 10^4`
 - `-100 <= nums[i] <= 100`
 - `nums` is sorted in **non-decreasing** order.
 
-## Approach : Using Two Pointers
+## Approach : Two Pointers
 
 In this problem, we have to count the number of distinct elements and it does not matter what elements are present other than those distinct elements.
 So, we will take a index count starting from 1 and traverse the array, keeping the distinct elements at the front. At last we will return the count.
@@ -76,9 +76,9 @@ If it is greater, then it means duplicate is not there and we will put it at the
 If not greater, then no change.
 At last we will return the count.
 
-**Time complexity** is O(n) (As we are traversing the array only once)
+**Time complexity** is $O(n)$ (As we are traversing the array only once)
 
-**Space complexity** is O(1) (As No extra space is required) 
+**Space complexity** is $O(1)$ (As No extra space is required) 
 
 <Tabs>
 <TabItem value="java" label="Java">
