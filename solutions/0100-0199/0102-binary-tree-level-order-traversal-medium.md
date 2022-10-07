@@ -45,7 +45,9 @@ Output: []
 - Until the queue is not empty, pop one by one nodes from queue. if the node is _NULL_ and queue is not empty, push the _NULL_ again inside the queue. Push $v$ into $ans$ as one level is completed and clear $v$.
 - If the node is not null, push the value into $v$ and push its left and right nodes into queue (if not null).
 
-**Time Complexity:**  O(N)
+**Time Complexity:**  $O(N)$
+
+**Space Complexity:**  $O(N)$
 
 
 <Tabs>
@@ -57,27 +59,37 @@ class Solution {
 public:
     vector<vector<int>> levelOrder(TreeNode* root) {
         vector<vector<int>> ans;
+
         //for storing each level
         vector<int> v;  
+
         if(root==NULL) return ans;
+
         queue<TreeNode*> q;
         q.push(root);
+
         //for sepearting levels
         q.push(NULL);  
+
         while(!q.empty()){
             TreeNode* cur = q.front();
             q.pop();
+            
             if(cur==NULL){
                 //storing each level into ans vector
                 ans.push_back(v);  
+
                 //clearing v vector to insert next level
                 v.clear();  
+
                 //storing NULL at the end of queue
                 if(!q.empty()) q.push(NULL);  
             }
             else{
                 v.push_back(cur->val);
+
                 if(cur->left!=NULL) q.push(cur->left);
+
                 if(cur->right!=NULL) q.push(cur->right);
             }
         }
@@ -85,4 +97,6 @@ public:
     }
 };
 ```
+
+</TabItem>
 </Tabs>
