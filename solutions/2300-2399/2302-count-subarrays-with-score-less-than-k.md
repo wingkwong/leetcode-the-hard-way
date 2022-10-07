@@ -55,19 +55,15 @@ Thus, there are 5 subarrays having scores less than 5.
 
 ## Approach 1: Sliding Window
  
-In this approach we will maintain a sliding window from $nums[i]$ to $nums[j]$, subarray starting with $i$ and ending at $j$ which has score less than $k$.
-sum contains the current sum of element between the window.  
+In this approach we will maintain a sliding window from $nums[i]$ to $nums[j]$, subarray starting with $i$ and ending at $j$ which has score less than $k$. $sum$ contains the current sum of element between the window.  
 
 We will start iterating $j$ from 0 to $nums.size() - 1$, first we will add $nums[j]$ to $sum$.  
 
-The current sum is denoted by $sum$ and length is $j - i + 1$,
-If the score $sum * (j - i + 1) >= k$, the window is too big, we will remove $nums[i]$ and update $i++$.
-We continue doing this until the score is less than $k$.  
+The current sum is denoted by $sum$ and length is $j - i + 1$. If the score $sum * (j - i + 1) >= k$, the window is too big, we will remove $nums[i]$ and update i++. We continue doing this until the score is less than $k$.  
 
 If we find a subarray $nums[i]$ to $nums[j]$ which has score less than $k$, we will update answer $ans += j - i + 1$ as there will be $j - i + 1$ total subarrays in total.
 
-
-Time Complexity: $O(n)$, where $n$ - size of array
+Time Complexity: $O(n)$, where $n$ is the size of array
 
 Space complexity: $O(1)$ 
 
@@ -81,12 +77,10 @@ long long countSubarrays(vector<int>& nums, long long k) {
         int n = nums.size();
         long long sum = 0;
         long long ans = 0;
-        
         int i = 0,j = 0;
         
         while (j < n) {
             sum += nums[j];
-           
             // increment j if score is less than k
             if (sum * (j - i + 1) < k) {
                 ans += j - i + 1;
