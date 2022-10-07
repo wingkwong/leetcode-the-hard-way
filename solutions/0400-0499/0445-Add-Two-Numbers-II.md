@@ -70,11 +70,12 @@ For the above example -
 First, we traversed our both linked list's and reach at the end of list's.  
 Now, Calculating the sum of Digits-  
 
-sum = l1->val + l2->val + $carry$,   new_node -> val = sum%10,   $carry$ = sum/10  
-sum = $3$ + $4$ + $0$ = $7$,   new_node -> val = $7$  and  recursive function will return with carry = $0$  (last node of final linked list)  
-sum = $6$ + $4$ + $0$ = $10$,   new_node -> val = $0$  and  recursive function will return with carry = $1$  
-sum = $5$ + $2$ + $1$ = $8$,   new_node -> val = $8$  and  recursive function will return with carry = $0$  
-sum = $7$ + $0$ + $0$ = $7$,   new_node -> val = $7$  and  recursive function will return with carry = $0$  (Head node of final linked list)
+sum = l1->val + l2->val + $carry$, and new_node -> val = sum%10, and $carry$ = sum/10  
+
+sum = $3$ + $4$ + $0$ = $7$, and new_node -> val = $7$, and  recursive function will return with carry = $0$  (last node of final linked list)  
+sum = $6$ + $4$ + $0$ = $10$, and new_node -> val = $0$, and  recursive function will return with carry = $1$  
+sum = $5$ + $2$ + $1$ = $8$, and new_node -> val = $8$, and  recursive function will return with carry = $0$  
+sum = $7$ + $0$ + $0$ = $7$, and new_node -> val = $7$, and  recursive function will return with carry = $0$  (Head node of final linked list)
 
 final $linkedlist$ is $7->8->0->7$
 
