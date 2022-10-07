@@ -1,6 +1,6 @@
 ---
 title: 'Linear search'
-description: 'Author: Soumya deep sarkar'
+description: 'Linear search is a searching technique that works in a linear/sequential fashion. It traverses whole of the data structure and returns the position(s) where the value is found. If not found then it simple returns nothing.'
 hide_table_of_contents: true
 ---
 
@@ -8,7 +8,7 @@ hide_table_of_contents: true
 
 ## Overview
 
-Lets say we have a linear data structure - array, linked list - and we need to search something out of it. To do so there are mainly two searching techniques, one being linear search. In linear search we traverse the whole array and then while traversing we check for the particular item. If there's a match then we return that position( we can return multiple positions too).
+Lets say we have a linear data structure - array, linked list - and we need to search for a certain element. To search there are mainly two searching techniques, one being linear search. In linear search we traverse the whole array and then while traversing we check for the particular item. If there's a match then we return that position( we can return multiple positions too).
 
 Example:
 ``` 
