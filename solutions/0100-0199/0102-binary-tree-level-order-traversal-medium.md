@@ -63,7 +63,8 @@ public:
         //for storing each level
         vector<int> v;  
 
-        if(root==NULL) return ans;
+        if(root==NULL) 
+            return ans;
 
         queue<TreeNode*> q;
         q.push(root);
@@ -83,14 +84,17 @@ public:
                 v.clear();  
 
                 //storing NULL at the end of queue
-                if(!q.empty()) q.push(NULL);  
+                if(!q.empty()) 
+                    q.push(NULL);  
             }
             else{
                 v.push_back(cur->val);
 
-                if(cur->left!=NULL) q.push(cur->left);
+                if(cur->left!=NULL)
+                    q.push(cur->left);
 
-                if(cur->right!=NULL) q.push(cur->right);
+                if(cur->right!=NULL)
+                    q.push(cur->right);
             }
         }
         return ans;
