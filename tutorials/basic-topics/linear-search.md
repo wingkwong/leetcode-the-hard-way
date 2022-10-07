@@ -23,8 +23,7 @@ Example:
         
    Hence the final output will be - 2 4
 ```
-
-This will take time complexity of **O(n)** i.e., it will take `linear` time complexity - as it's name.
+To achive this, we need to employ a for loop and traverse over the entire array/linked list. And check each element of the data structure for the desired value. If found then we will output that value. This will take time complexity of **O(n)** i.e., it will take `linear` time complexity as we have run the for loop once for all covering all elements.
 
 Code in c++ :-
 ```cpp
@@ -32,8 +31,10 @@ Code in c++ :-
 using namespace std;
 
 int main(){
-  int arr[5] = {1,2,3,4,5}; // Array
-  int item = 3; // Item to be searched 
+  // Array to keep the values
+  int arr[5] = {1,2,3,4,5};
+  // Item to be searched 
+  int item = 3; 
   for(int i = 0; i < 5; i++){
     if(arr[i] == item){  // checking if item is arr[i]
       cout << "Found at " << i << endl;
@@ -68,7 +69,7 @@ int main(){
   int arr[5] = {1,2,3,4,5}; // Array
   int answer = 0; // Initially the answer is zero
   for(int i = 0; i < 5; i++){
-    if(arr[i]%2 == 0)  // Divided by 2 i.e., even number
+    if(arr[i]%2 == 0)  // check for division by 2 i.e., whether an even number
       answer++;
   }
   cout << "Number of even digits are :- " << answer << endl;
