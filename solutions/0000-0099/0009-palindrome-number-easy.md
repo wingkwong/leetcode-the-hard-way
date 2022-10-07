@@ -1,5 +1,5 @@
 ---
-description: 'Author: @tostream , @ganajayant | https://leetcode.com/problems/palindrome-number/'
+description: 'Author: @tostream, @ganajayant, @vigneshshiv | https://leetcode.com/problems/palindrome-number/'
 ---
 
 # 0009 - Palindrome Number (Easy)
@@ -121,20 +121,14 @@ class Solution {
 
 ```javascript
 var isPalindrome = function(x) {
-   let result = 0;
-    
-   if(x < 0){
-       return false;
-   } else{
-       let number = x;
-       while(number > 0){ 
-           const remainder = number % 10; 
-           result = result * 10 + remainder; 
-           number = Math.floor(number / 10); 
-       }
-   }
-    
-   return result === x; 
+    if (x < 0 || x > 0 && Object.is(x % 10, 0)) return false;
+    let n = x;
+    let num = 0;
+    while (x > 0) {
+        num = (num * 10) + (x % 10);
+		x = Math.floor(x / 10);
+    }
+    return Object.is(n, num);
 };
 ```
 </TabItem>
