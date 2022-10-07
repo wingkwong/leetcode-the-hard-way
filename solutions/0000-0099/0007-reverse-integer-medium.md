@@ -77,4 +77,28 @@ class Solution {
 }
 ```
 </TabItem>
+<TabItem value="javascript" label="JavaScript">
+<SolutionAuthor name="@MithunPrabhu777"/>
+
+```javascript
+var reverse = function(x) {
+    let [number,sign,remainder] = [0,1,0];
+    
+    const RANGE = 2**31-1;
+    
+    if(x < 0){
+        x *= -1;
+        sign = -1;
+    }
+    
+    while(x > 0){
+        remainder = x % 10;
+        number = (number * 10) + remainder;
+        x = Math.floor(x / 10);
+    }
+    
+    return number > RANGE ? 0 : number * sign;
+};
+```
+</TabItem>
 </Tabs>
