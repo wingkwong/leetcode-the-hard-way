@@ -23,7 +23,7 @@ Example:
         
    Hence the final output will be - 2 4
 ```
-To achive this, we need to employ a for loop and traverse over the entire array/linked list. And check each element of the data structure for the desired value. If found then we will output that value. This will take time complexity of **O(n)** i.e., it will take `linear` time complexity as we have run the for loop once for all covering all elements.
+To achive this, we need to employ a for loop and traverse over the entire array/linked list. And check each element of the data structure for the desired value. If found then we will output that value. This will take time complexity of **O(n)** i.e., it will take `linear` time complexity as we have run the for loop once to traverse all elements.
 
 Code in c++ :-
 ```cpp
