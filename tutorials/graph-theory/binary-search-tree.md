@@ -18,8 +18,8 @@ A valid binary search tree is defined as follows:
 
 1. The left node is smaller (or equal) to the root node.
 2. The right node is greater (or equal) to the root node.
-3. All the node of left subtree(tree left side of root node) are smaller (or equal) to the root node.
-4. And All the node of right subtree (tree right side of the root node) are greater (or equal) to the root node.
+3. All the nodes of left subtree(tree left side of root node) are smaller (or equal) to the root node.
+4. And All the nodes of right subtree (tree right side of the root node) are greater (or equal) to the root node.
 
 <!-- Diagram of BST -->
 
@@ -192,10 +192,10 @@ void inorder(Node *root){
 
 int main(){
 int target = 80;
-  Node* searchedNode = bstSearch(target,createTree());
+  Node* root = bstInsertion(target,createTree());
 
-  if(searchedNode){
-      inorder(searchedNode);
+  if(root){
+      inorder(root);
   }
 
   return 0;
@@ -206,14 +206,14 @@ int target = 80;
 
 **Algorithm**
 
-In order to delete any node in BST there are three cases we need to cover some scenario
+In order to delete any node in BST there are some scenarios we need to cover
 
 1. First of all we need to search that node in BST. Same step as we followed above for search.
 2. Now there are three cases for node we got after search that needs to be deleted.
 
 **Case 1**
 
-The node to be deleted is the leaf node.In such a case simply delete that node from tree.
+If the node to be deleted is a leaf node. In such case simply delete that node from tree.
 
 **Case 2**
 
@@ -309,12 +309,12 @@ int main(){
 int target = 15
 cout<<"Inorder before deletion"<<endl;
 inorder(createBST());
-Node* searchedNode = deleteNode(createBST(),target);
+Node* root = deleteNode(createBST(),target);
 
-  if(searchedNode){
+  if(root){
       cout<<"\n";
   cout<<"Inorder after deletion"<<endl;
-      inorder(searchedNode);
+      inorder(root);
   }
 
   return 0;
