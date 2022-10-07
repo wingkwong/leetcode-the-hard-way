@@ -31,6 +31,11 @@ There are different ways to traverse trees - In-order, Pre-order, and Post-order
 - Traverse the left sub-tree
 - Traverse the right sub-tree
 
+
+<Tabs>
+
+<TabItem value="cpp" label="C++">
+
 ```cpp
 void preorder(TreeNode* node) {
     if (node == NULL) return;
@@ -39,12 +44,31 @@ void preorder(TreeNode* node) {
     preorder(node->right);
 }
 ```
+</TabItem>
+
+<TabItem value="py" label="Python">
+
+```py
+def preorder(node):
+    if(node == None):
+        return
+        
+    s.append(node.val)    
+    preorder(node.left)
+    preorder(node.right)
+```
+</TabItem>
+</Tabs>
 
 ### In-order
 
 - Traverse the left sub-tree
 - Visit the root
 - Traverse the right sub-tree
+
+<Tabs>
+
+<TabItem value="cpp" label="C++">
 
 ```cpp
 void inorder(TreeNode* node) {
@@ -54,12 +78,31 @@ void inorder(TreeNode* node) {
     inorder(node->right);
 }
 ```
+</TabItem>
+
+<TabItem value="py" label="Python">
+
+```py
+def inorder(node):
+    if(node == None):
+        return
+        
+    inorder(node.left)
+    s.append(node.val)
+    inorder(node.right)
+```
+</TabItem>
+</Tabs>
 
 ### Post-order
 
 - Traverse the left sub-tree
 - Traverse the right sub-tree
 - Visit the root
+
+<Tabs>
+
+<TabItem value="cpp" label="C++">
 
 ```cpp
 void postorder(TreeNode* node) {
@@ -69,6 +112,23 @@ void postorder(TreeNode* node) {
     s.push_back(node->val);
 }
 ```
+</TabItem>
+
+<TabItem value="py" label="Python">
+
+```py
+def postorder(node):
+    if(node == None):
+        return
+          
+    postorder(node.left)
+    postorder(node.right)
+    s.append(node.val)  
+```
+
+</TabItem>
+</Tabs>
+
 
 ### Summary
 
