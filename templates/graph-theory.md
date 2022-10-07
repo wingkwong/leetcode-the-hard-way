@@ -22,14 +22,14 @@ Please refer the [tutorial](../tutorials/graph-theory/binary-tree#traversal) gui
 #### Preorder traversal
 
 First visit the root,then traverse the left sub-tree and then traverse the right sub-tree.
-<Tabs>
 
+<Tabs>
 <TabItem value="cpp" label="C++">
 
 ```cpp
 void preorder(TreeNode* node) {
     if (node == NULL) return;
-    s.push_back(node->val);
+    // do something with node.val here
     preorder(node->left);
     preorder(node->right);
 }
@@ -40,10 +40,8 @@ void preorder(TreeNode* node) {
 
 ```py
 def preorder(node):
-    if(node == None):
-        return
-        
-    s.append(node.val)    
+    if(node == None): return
+    # do something with node.val here
     preorder(node.left)
     preorder(node.right)
 ```
@@ -62,7 +60,7 @@ First traverse the left sub-tree,then visit the root and then traverse the right
 void inorder(TreeNode* node) {
     if (node == NULL) return;
     inorder(node->left);
-    s.push_back(node->val);
+    // do something with node.val here
     inorder(node->right);
 }
 ```
@@ -72,11 +70,9 @@ void inorder(TreeNode* node) {
 
 ```py
 def inorder(node):
-    if(node == None):
-        return
-        
+    if(node == None): return
     inorder(node.left)
-    s.append(node.val)
+    # do something with node.val here
     inorder(node.right)
 ```
 </TabItem>
@@ -96,7 +92,7 @@ void postorder(TreeNode* node) {
     if (node == NULL) return;
     postorder(node->left);
     postorder(node->right);
-    s.push_back(node->val);
+    // do something with node.val here
 }
 ```
 </TabItem>
@@ -105,12 +101,10 @@ void postorder(TreeNode* node) {
 
 ```py
 def postorder(node):
-    if(node == None):
-        return
-          
+    if(node == None): return
     postorder(node.left)
     postorder(node.right)
-    s.append(node.val)  
+    # do something with node.val here
 ```
 
 </TabItem>
@@ -123,7 +117,6 @@ In Breadth First Search, we explore all the closest nodes first before going one
 Please refer the [tutorial](../tutorials/graph-theory/breadth-first-search) guide for more details. 
 
 <Tabs>
-
 <TabItem value="py" label="Python">
 
 ```py
