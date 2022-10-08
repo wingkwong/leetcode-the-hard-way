@@ -53,10 +53,10 @@ Output: [4,2,null,1,1,3,null,null,1]
 This approach uses a simple DFS approach. The recursive function $insert(node, currDepth, val, depth)$ can be used to recursively reach a node where we need to insert two nodes.
 
 The parameters used in the function are:
-- node -> the current node on which DFS is called upon
-- currDepth -> the depth of current node $node$
-- val -> value of nodes to be inserted
-- depth -> the depth at which nodes are to be inserted
+- node: the current node on which DFS is called upon
+- currDepth: the depth of current node $node$
+- val: value of nodes to be inserted
+- depth: the depth at which nodes are to be inserted
 
 Note: the parameters $val$ and $depth$ never change during program execution and hence can be made global
 
@@ -84,18 +84,20 @@ One special case to be taken care of is when $depth$ is 1 because here the origi
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
-class Solution {
+class Solution
+{
 public:
-    void insert(TreeNode* node, int currDepth, int val, int depth)
+    void insert(TreeNode *node, int currDepth, int val, int depth)
     {
-        if(!node) return;
+        if (!node)
+            return;
 
-        //if we reach the node where we need to create two nodes
-        if(currDepth == depth-1)
+        // if we reach the node where we need to create two nodes
+        if (currDepth == depth - 1)
         {
             // create two new nodes
-            TreeNode* l = new TreeNode(val);
-            TreeNode* r = new TreeNode(val);
+            TreeNode *l = new TreeNode(val);
+            TreeNode *r = new TreeNode(val);
 
             // link the new nodes
             l->left = node->left;
@@ -110,15 +112,16 @@ public:
         }
 
         // if we do not reach desired depth, go deep in the tree
-        insert(node->left, currDepth+1, val, depth);
-        insert(node->right, currDepth+1, val, depth);
+        insert(node->left, currDepth + 1, val, depth);
+        insert(node->right, currDepth + 1, val, depth);
     }
 
-    TreeNode* addOneRow(TreeNode* root, int val, int depth) {
+    TreeNode *addOneRow(TreeNode *root, int val, int depth)
+    {
         // since root is changed in this case, handle this case seperately
-        if(depth==1)
+        if (depth == 1)
         {
-            TreeNode* newNode = new TreeNode(val);
+            TreeNode *newNode = new TreeNode(val);
             newNode->left = root;
             return newNode;
         }
