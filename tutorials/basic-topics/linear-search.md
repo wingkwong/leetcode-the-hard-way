@@ -51,8 +51,6 @@ Explaination = We have 2, 4, 6 which are even numbers and therfore the output is
 We can think this problem as a linear search problem, where we are supposed to search for all the `even` numbers. Thats' it. Now to do so we will run a for loop
 and traverse every element and check it. If found then we will simply increase the count of even digits by 1.
 
-Code in c++ :-
-
 <Tabs>
 <TabItem value="cpp" label="C++">
 <SolutionAuthor name="@siddoinghisjob"/>
