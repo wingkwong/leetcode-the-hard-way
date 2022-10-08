@@ -50,15 +50,15 @@ Explanation: Here the sum is 6. which is already divisible by 3. Thus we do not 
 ## Approach 1: Using A Hash Map
 
 
-We first compute the sum of array an then take its modulo wtih given interger p, if this number is 0, that's awesome return 0 else we somehow have to make this number 0. For this we will remove some part of array ans make sum %p=0. 
+We first compute the sum of array an then take its modulo wtih given interger p, if this number is 0, that's awesome return 0 else we somehow have to make this number 0. For this we will remove some part of array ans make $sum %p=0$. 
 
-Firstly we take a suffix array of (current sum up to i) % modulo, then we make a unordered_map (HashMap) to store (modulo as key and its last index as value), now if we have to remove an subarray that ends at i, then out ans for current i will be difference of index of (complement for suff[i+1]) in hashmap.
-i.e curr = index of (p - suff[i+1])%p
+Firstly we take a suffix array of ($sum$ $from$ $n-1$ $to$ $i$) % $p$, then we will iterate from $0$ $to$ $n$ and make a unordered_map (HashMap) to store (remainder as key and its last index as value), now if we have to remove an subarray that ends at i, then our ans for current i will be difference of index of $complement$ $for$ $suff[i + 1]$ in hashmap.
+i.e $curr$ = $index$ $of$ ($p$ - $suff[i + 1]$) % $p$
 
 
 **Time Complexity: $O(n)$**
-Calculating and storing suffix array will be done in O(n).
-Since we are using unordered_map so it will give avg O(1) for inserting and fetching.  
+Calculating and storing suffix array will be done in $O(n)$.
+Since we are using unordered_map so it will give average $O(1)$ for inserting and fetching.  
 
 **Space Complexity: $O(n)$**
 
