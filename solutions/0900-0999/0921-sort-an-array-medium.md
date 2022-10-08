@@ -36,10 +36,9 @@ Output: [0,0,1,1,2,5]
 
 ### Standard STL Sort
 
-<SolutionAuthor name="@wingkwong"/>
-
 <Tabs>
 <TabItem value="cpp" label="C++">
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 void standardSTLSort(vector<int>& nums) {
@@ -66,6 +65,7 @@ void stableSTLSort(vector<int>& nums) {
 ## Approach 2: java.util.Arrays
 
 ### Arrays.sort()
+Java standard sorting. In this solution gives $O(n log n)$ time complexity and $O(1)$ space complexity.
 
 <Tabs>
 <TabItem value="java" label="Java">
@@ -151,7 +151,8 @@ reaches one, then merging parts by either out-place or in-place merging.
 
 ### Merge Sort with Outplace Merging
 
-In this approach, merging happen in $seperate array$, then it is passed on in the above function calls.
+In this approach, merging happen in $seperate array$, then it is passed on in the above function calls. This solution gives $O(n log n)$
+time complexity and $O(n)$ space complexity.
 
 <Tabs>
 <TabItem value="java" label="Java">
@@ -211,7 +212,8 @@ public static int[] merge(int[] first, int[] second) {
 
 ### Merge Sort using In-place Merging
 
-In this approach, merging happens $in-place$, changes are made in the original arrays itself by modifying the reference variables.
+In this approach, merging happens $in-place$, changes are made in the original arrays itself by modifying the reference variables. This 
+solution gives $O(n log n)$ time complexity and $O(1)$ space complexity.
 
 <Tabs>
 <TabItem value="java" label="Java">
