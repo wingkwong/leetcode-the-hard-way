@@ -47,14 +47,16 @@ Explanation: The only possible triplet sums up to 0.
 * $-10^5 <= nums[i] <= 10^5$
 
 ## Approach 1: Two Pointers
- 
-* We are required to find triplets which will have sum equal to zero.  
-* Since the array contains positive and negative numbers both, first we will sort the array, by doing this our searching will become easy.  
-* We need to find three numbers whose sum will be zero hence we will run a loop from $0$ to $n-2$ and fix a number each time, and find other two numbers after it.  
-* If the fixed number is repeated again, we will skip the $for$ loop and move to next number.  
-* Now, to find remaining two numbers, we will intialize two pointers $j$ and $k$ by $j = i + 1$ and $k = n - 1$ where $i$ is the index of fixed number and start our search similar to binary search method.  
-* If $nums[i] + nums[j] + nums[k] == 0$ and this triplet is not present in our set (in order to remove duplicates) we will insert this triplet in our $ans$ vector.  
-* If $nums[j] + nums[k] < target$, we need more positive numbers to make it 0, we will increament $j$ else we need more -negative numbers to make it 0, hence decreament $k$.
+- We are required to find triplets which will have sum equal to zero.  
+- Since the array contains positive and negative numbers both, first we will sort the array, by doing this our searching will become easy.  
+- We need to find three numbers whose sum will be zero hence we will run a loop from $0$ to $n-2$ and fix a number each time, and find other two numbers after it.  
+- If the fixed number is repeated again, we will skip the $for$ loop and move to next number.  
+- Now, to find remaining two numbers, we will intialize two pointers $j$ and $k$ by $j = i + 1$ and $k = n - 1$ where $i$ is the index of fixed number and start our search similar to binary search method.  
+- If $nums[i] + nums[j] + nums[k] == 0$ and this triplet is not present in our set (in order to remove duplicates) we will insert this triplet in our $ans$ vector.  
+- If $nums[j] + nums[k] < target$, we need more positive numbers to make it 0, we will increament $j$ else we need more -negative numbers to make it 0, hence decreament $k$.  
+
+Time Complexity : The time complexity of this algortihm is $O(n^2)$ where $n$ is size of array.  
+Space Complexity : The space complexity is $O(n)$ where $n$ is size of array.
 
 <Tabs>
   
@@ -81,14 +83,18 @@ vector<vector<int>> threeSum(vector<int>& nums) {
             
             // start pointer
             int j = i + 1;
+  
             // end pointer
             int k = n - 1;
+  
             int target = -nums[i];
             
             while (j < k) {
+                         
                 // checking the condition 
                 if (nums[j] + nums[k] == target) {
                     vector<int> temp;
+  
                     // inserting this triplet in temp array
                     temp = {nums[i], nums[j], nums[k]};
   
@@ -97,12 +103,16 @@ vector<vector<int>> threeSum(vector<int>& nums) {
                         st.insert(temp);
                         ans.push_back(temp);
                     }
+  
                     k--;
+  
                     while (j < k && nums[j+1] == nums[j])
                         j++;
+                                
                   // we will increment j, because we need more positive number so that nums[i] + nums[j] + nums[k] = 0
                 } else if (nums[j] + nums[k] < target) {
                     j++;
+  
                   // otherwise we will decrement k
                 } else {
                     k--;
@@ -115,9 +125,3 @@ vector<vector<int>> threeSum(vector<int>& nums) {
 ```
 </TabItem>
 </Tabs>
-  
-## Time Complexity  
-The time complexity of this algortihm is $O(n^2)$ where $n$ is size of array.
-  
-## Space Complexity
-The space complexity is $O(n)$ where $n$ is size of array.
