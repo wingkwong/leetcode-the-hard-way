@@ -80,16 +80,23 @@ class Solution:
                     # finding the number of fresh oranges initially
                     fresh += 1 
 
-        #list has the x_shift, y_shift required to move in all 4 directions (Left, Right, Up, Down). For eg: If current position is 0, 0, to move to the cell on the right I need to shift 1 unit in +ve x direction and 0 units in the y direction. 
+        #list has the x_shift, y_shift required to move in all
+        # 4 directions (Left, Right, Up, Down). For eg: If 
+        # current position is 0, 0, to move to the cell on the 
+        # right I need to shift 1 unit in +ve x direction and 0
+        # units in the y direction. 
         dirs = [(-1, 0), (1, 0), (0, 1), (0, -1)] 
 
         # the required answer
         time_elapsed = 0
 
-        # There are 2 possibe outcomes - either all oranges become rotton or some of them still remain fresh and we have visited all cells. Checking both conditions.
+        # There are 2 possibe outcomes - either all oranges become
+        # rotton or some of them still remain fresh and we have 
+        # visited all cells. Checking both conditions.
         while fresh and len(q):
 
-            # each cycle of BFS corresponds to one minute as per the question 
+            # each cycle of BFS corresponds to one minute
+            # as per the question 
             time_elapsed += 1 
 
             for i in range(len(q)):
@@ -106,7 +113,8 @@ class Solution:
                             # changing fresh to rotten if initially fresh
                             grid[new_x][new_y] = 2 
 
-                            # adding the rotten orange to queue as it can rot other oranges in next iteration
+                            # adding the rotten orange to queue as it
+                            # can rot other oranges in next iteration
                             q.append((new_x, new_y))
 
                              # updating count of remaining fresh fruit 
