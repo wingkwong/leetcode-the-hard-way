@@ -53,26 +53,28 @@ Output: [4,2,null,1,1,3,null,null,1]
 This approach uses a simple DFS approach. The recursive function $insert(node, currDepth, val, depth)$ can be used to recursively reach a node where we need to insert two nodes.
 
 The parameters used in the function are:
-- node: the current node on which DFS is called upon
-- currDepth: the depth of current node $node$
-- val: value of nodes to be inserted
-- depth: the depth at which nodes are to be inserted
+- $node$: the current node on which DFS is called upon
+- $currDepth$: the depth of current node $node$
+- $val$: value of nodes to be inserted
+- $depth$: the depth at which nodes are to be inserted
 
-Note: the parameters $val$ and $depth$ never change during program execution and hence can be made global
+> Note: the parameters $val$ and $depth$ never change during program execution and hence can be made global
 
 Now, whenever we reach a node with depth $depth-1$ we create two new nodes $l$ and $r$ and link $l$'s and $r$'s left and right children to be $node$'s left and right children respectively, and then we re-assign $node$'s left and right children as $l$ and $r$ respectively. 
 
-If $node$ is at a depth < $depth$ we recursively call $insert$ for $node->right$ and $node->left$ with increased depths.
+If $node$ is at a depth < $depth$ we recursively call $insert$ for $node$->$right$ and $node$->$left$ with increased depths.
 
 One special case to be taken care of is when $depth$ is 1 because here the original root of tree is changed so we create a new node, assign this new node's left child as root and return this new node as root of tree.
+
+Time Complexity: $O(n)$. A total of n nodes of the given tree will be considered in worst case.
+
+Space Complexity: $O(n)$. The depth of the recursion tree can go upto n in the worst case (skewed tree).
 
 <Tabs>
 <TabItem value="cpp" label="C++">
 <SolutionAuthor name="@divyansh_0602"/>
 
 ```cpp
-// Time Complexity: O(n). A total of n nodes of the given tree will be considered in worst case.
-// Space Complexity: O(n). The depth of the recursion tree can go upto n in the worst case (skewed tree).
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
@@ -84,17 +86,13 @@ One special case to be taken care of is when $depth$ is 1 because here the origi
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
-class Solution
-{
+class Solution {
 public:
-    void insert(TreeNode *node, int currDepth, int val, int depth)
-    {
-        if (!node)
-            return;
+    void insert(TreeNode *node, int currDepth, int val, int depth) {
+        if (!node) return;
 
         // if we reach the node where we need to create two nodes
-        if (currDepth == depth - 1)
-        {
+        if (currDepth == depth - 1) {
             // create two new nodes
             TreeNode *l = new TreeNode(val);
             TreeNode *r = new TreeNode(val);
@@ -116,17 +114,14 @@ public:
         insert(node->right, currDepth + 1, val, depth);
     }
 
-    TreeNode *addOneRow(TreeNode *root, int val, int depth)
-    {
+    TreeNode *addOneRow(TreeNode *root, int val, int depth) {
         // since root is changed in this case, handle this case seperately
-        if (depth == 1)
-        {
+        if (depth == 1) {
             TreeNode *newNode = new TreeNode(val);
             newNode->left = root;
             return newNode;
         }
-
-        // recursive function for insertion of new nodes (similar to dfs)
+        // recursive function for insertion of new nodes
         insert(root, 1, val, depth);
         return root;
     }
