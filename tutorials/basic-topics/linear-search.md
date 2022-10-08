@@ -103,7 +103,7 @@ int main(){
   
  <hr/>
   
-  **Leetcode #1295 : Find Numbers with Even Number of Digits**
+  **Leetcode #2089 : Find target Indices after sorting array**
 
 You are given a 0-indexed integer array nums and a target element target.A target index is an index i such that nums[i] == target.
 Return a list of the target indices of nums after sorting nums in non-decreasing order. If there are no target indices, return an empty list. The returned list must be sorted in increasing order.
@@ -118,7 +118,7 @@ The indices where nums[i] == 2 are 1 and 2.
 ***Solution -***
 If we sort this array using library sorting functions then this problem is reduced to a simple linear search question. Where we are supposed to search for the target. Thats' it. Now to do so we will create a vetor for storing the answers, and the run a for loop and traverse every element and check it. If found then we will add that index to the vector.
 Finally we will return the vector and its' done!
-This will take $$O(nlogn)$$ time complexity as we will be using sort function (and that takes *O(nlogn)*) time complexity.
+This will take **O(nlogn)** time complexity as we will be using sort function (and that takes *O(nlogn)*) time complexity.
 
 Code in c++ :-
 
