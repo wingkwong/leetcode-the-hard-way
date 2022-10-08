@@ -49,9 +49,11 @@ Output: []
 - Until the queue is not empty, pop one by one nodes from queue. if the node is _NULL_ and queue is not empty, push the _NULL_ again inside the queue. Push $v$ into $ans$ as one level is completed and clear $v$.
 - If the node is not null, push the value into $v$ and push its left and right nodes into queue (if not null).
 
-**Time Complexity:**  $O(N)$
+**Time Complexity:**  $O(N)$  
+All the nodes of the binary tree _(N nodes)_ are traversed once at a time.  So, $O(N)$ time complexity is needed to traverse all the $N$ nodes.
 
-**Space Complexity:**  $O(N)$
+**Space Complexity:**  $O(N)$   
+A queue data structure is taken to store the next level nodes. For the worst case, the queue is stored with all the $N$ nodes. That's why the space complexity is $O(N)$.
 
 
 <Tabs>
@@ -60,7 +62,7 @@ Output: []
 
 ```cpp
 class Solution {
-public:
+    public:
     vector<vector<int>> levelOrder(TreeNode* root) {
         vector<vector<int>> ans;
 
