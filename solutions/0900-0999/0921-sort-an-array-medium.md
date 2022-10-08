@@ -38,14 +38,21 @@ Output: [0,0,1,1,2,5]
 
 <SolutionAuthor name="@wingkwong"/>
 
+<Tabs>
+<TabItem value="cpp" label="C++">
+
 ```cpp
 void standardSTLSort(vector<int>& nums) {
     sort(nums.begin(), nums.end());
 }
 ```
+</TabItem>
+</Tabs>
 
 ### Stable STL Sort
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -53,11 +60,31 @@ void stableSTLSort(vector<int>& nums) {
     stable_sort(nums.begin(), nums.end());
 }
 ```
+</TabItem>
+</Tabs>
 
-## Approach 2: Quick Sort
+## Approach 2: java.util.Arrays
+
+### Arrays.sort()
+
+<Tabs>
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@deepanshu-rawat6"/>
+
+```java
+void sort(int[] nums){
+    Arrays.sort(nums);
+}
+```
+</TabItem>
+</Tabs>
+
+## Approach 3: Quick Sort
 
 ### Quick Sort with Fixed Pivot (TLE)
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -82,9 +109,13 @@ void quickSort(vector<int>& nums, int l, int r) {
     }
 }
 ```
+</TabItem>
+</Tabs>
 
 ### Quick Sort with Randomised Pivot
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -110,10 +141,17 @@ void quickSort(vector<int>& nums, int l, int r) {
     }
 }
 ```
+</TabItem>
+</Tabs>
 
-### Approach 3: Merge Sort
+### Approach 4: Merge Sort
+
+Standard merge sort algorithm, following a divide and conquer approach, division of sub-array by mid values till sub-array length
+reaches one, then merging parts by either out-place or in-place merging. 
 
 ### Merge Sort with Outplace Merging
+
+In this approach, merging happen in $seperate array$, then it is passed on in the above function calls.
 
 <Tabs>
 <TabItem value="java" label="Java">
@@ -172,6 +210,8 @@ public static int[] merge(int[] first, int[] second) {
 </Tabs>
 
 ### Merge Sort using In-place Merging
+
+In this approach, merging happens $in-place$, changes are made in the original arrays itself by modifying the reference variables.
 
 <Tabs>
 <TabItem value="java" label="Java">
