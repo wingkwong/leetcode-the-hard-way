@@ -62,20 +62,29 @@ class Solution:
 			for i in range(r):
 				for j in range(c):
 					if board[i][j] == 0:
-						#cnt1 indicates no of 1's in 8 neighbor cells. used to check condition 4
+						#cnt1 indicates no of 1's in 
+                        # 8 neighbor cells. used to check condition 4
 						cnt1 = 0
 
 						# checking all 8 neighbor cells
 						for k in range(8):
-							# checking if the coordinate is within bounds. useful for boundry cells.
+							# checking if the coordinate is within bounds. 
+                            # useful for boundry cells.
 							if i + dirx[k] < 0 or i + dirx[k] >= r or j + diry[k] < 0 or j + diry[k] >= c:
 								continue
-							# checking if the neighbor within bounds has value 1. Since it is happening simultaneously, in a previous operation a cell initially alive may have been changed to Dead (indicated by D). that cell should be considered as 1 only.
+							# checking if the neighbor within bounds has 
+                            # value 1. Since it is happening simultaneously, 
+                            # in a previous operation a cell initially alive 
+                            # may have been changed to Dead (indicated by D). 
+                            # that cell should be considered as 1 only.
 
 							elif board[i + dirx[k]][j + diry[k]] == 1 or board[i + dirx[k]][j + diry[k]] == 'D':
 								cnt1 += 1
 
-						# instead of changing 0 cell with 3 neighbor 1's as 1 directly, we change it to L or live. because operations are simultaneous, their original state must be considered even though modification happened.
+						# instead of changing 0 cell with 3 neighbor 1's as 1
+                        # directly, we change it to L or live. because 
+                        # operations are simultaneous, their original 
+                        # state must be considered even though modification happened.
 						if cnt1 == 3:
 							board[i][j] = 'L'
 
@@ -84,22 +93,31 @@ class Solution:
 						cnt0 = 0
 						# checking all 8 neighbor cells
 						for k in range(8):
-							# checking if the coordinate is within bounds. useful for boundry cells.
+							# checking if the coordinate is within bounds. 
+                            # useful for boundry cells.
 							if i + dirx[k] < 0 or i + dirx[k] >= r or j + diry[k] < 0 or j + diry[k] >= c:
 								continue
-							# checking if the neighbor within bounds has value 1. Since it is happening simultaneously, in a previous operation a cell initially alive may have been changed to Dead (indicated by D). that cell should be considered as 1 only.
+							# checking if the neighbor within bounds has 
+                            # value 1. Since it is happening simultaneously,
+                            # in a previous operation a cell initially alive
+                            # may have been changed to Dead (indicated by D). 
+                            # that cell should be considered as 1 only.
 							elif board[i + dirx[k]][j + diry[k]] == 1 or board[i + dirx[k]][j + diry[k]] == 'D':
 								cnt1 += 1
 							elif board[i + dirx[k]][j + diry[k]] == 0:
 								cnt0 += 1
 
-						# because operations are simultaneous, their original state must be considered even though modification happened. hence to differentiate modified cells from original, using D for Dead 
+						# because operations are simultaneous, their original
+                        # state must be considered even though modification
+                        # happened. hence to differentiate modified cells
+                        # from original, using D for Dead 
 						if cnt1 > 3:
 							board[i][j] = 'D'
 						elif cnt1 < 2:
 							board[i][j] = 'D'
 
-			# finally changing L to 1 and D to 0 to return the result
+			# finally changing L to 1 and D 
+            # to 0 to return the result
 			for i in range(r):
 				for j in range(c):
 					if board[i][j] == 'L':
