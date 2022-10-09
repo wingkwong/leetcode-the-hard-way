@@ -1,5 +1,5 @@
 ---
-title: '<Rabin Karp Algorothm>'
+title: 'Rabin Karp Algorothm'
 description: 'Rabin Karp Algorithm used for searching pattern.'
 hide_table_of_contents: true
 ---
