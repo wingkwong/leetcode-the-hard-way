@@ -4,7 +4,7 @@ Provide summary of changes with issue number if any.
 
 ## Checklist
 
-**If you haven't fulfilled the below requirements, your PR won't be reviewed.**
+**Ideally all of them should be checked. If you haven't fulfilled the below requirements or even delete the entire checklist, your PR won't be reviewed.**
 
 ### General 
 
@@ -24,6 +24,7 @@ Provide summary of changes with issue number if any.
 ```cpp
 // Your code goes here
 // Prefer K&R Coding style
+// See https://gist.github.com/jesseschalken/0f47a2b5a738ced9c845#why-kr for example
 ```
 
 </TabItem>
