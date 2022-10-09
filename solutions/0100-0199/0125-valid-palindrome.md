@@ -89,4 +89,36 @@ var isPalindrome = function(s) {
 ```
 
 </TabItem>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@vale-c"/>
+
+```cpp
+class Solution {
+public:
+    bool isPalindrome(string s) {
+        /* discard all non-alphanumeric characters and convert all uppercase letters to lowercase */
+        string alpha = "";
+        for (char c : s) {
+            if (isalnum(c)) {
+                alpha += tolower(c);
+            }
+        }
+
+        int start = 0;
+        int end = alpha.length()-1;
+
+        while (start < end) {
+            if (alpha[start] != alpha[end]) {
+                return false;
+            } else {
+                start += 1;
+                end -= 1;
+            }
+        }
+        return true;
+    }
+};
+```
+
+</TabItem>
 </Tabs>
