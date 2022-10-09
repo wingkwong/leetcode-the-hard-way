@@ -1,5 +1,5 @@
 ---
-description: 'Author: @TBC | https://leetcode.com/problems/happy-number/'
+description: 'Author: @vigneshshiv | https://leetcode.com/problems/happy-number/'
 ---
 
 # 0202 - Happy Number (Easy)
@@ -43,4 +43,42 @@ Output: false
 
 * `1 <= n <= 2^31 - 1`
 
-## Approach 1: TBC
+## Approach 1: Floyd's Tortoise and Hare
+
+As stated clearly in the problem, **loops endlessly in a cycle**, So we can solve this by using Floyd's Tortoise and Hare algorithm.
+
+It's a simple cycle detection algorithm, where one pointer traverses twice as fast as another, once two pointers meet, we can trace back to where the cycle begins.
+
+Time Complexity: $O(m)$, where $m$ - # of cycles
+
+Space complexity: $O(1)$
+
+<Tabs>
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+class Solution {
+    public boolean isHappy(int n) {
+        int slow = n, fast = n;
+        do {
+            slow = digitSquareSum(slow);
+            fast = digitSquareSum(digitSquareSum(fast));
+        } while (slow != fast);
+        return slow == 1 ? true : false;
+    }
+    
+    public int digitSquareSum(int num) {
+        int ans = 0;
+        while (num > 0) {
+            int digit = num % 10;
+            ans += digit * digit;
+            num /= 10;
+        }
+        return ans;
+    }
+}
+```
+
+</TabItem>
+</Tabs>

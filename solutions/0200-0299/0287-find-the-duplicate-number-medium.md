@@ -1,5 +1,7 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/find-the-duplicate-number/'
+description: >- 
+  Author: @wingkwong, @vigneshshiv | 
+  https://leetcode.com/problems/find-the-duplicate-number/
 ---
 
 # 0287 - Find the Duplicate Number (Medium)
@@ -41,6 +43,8 @@ Output: 3
 
 We iterate each bit one by one. We calculate the expected bit count and the actual bit count. If the actual one is greater than the expected one, then it means this bit is part of the duplicate number.
 
+<Tabs>
+<TabItem value="c++" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -64,3 +68,80 @@ public:
     }
 };
 ```
+
+</TabItem>
+</Tabs>
+
+## Approach 2: Index based
+
+As per problem constraint, all numbers starting from `1 to N`. So shift all numbers to the exact index (`num - 1`) positions and find the duplicate. Here, $1$ can be placed in index $0$, like wise shift all the numbers one by one, at last, in the last index we will be having the duplicate number.
+
+Time complexity: $O(n)$, where n is the number of elements in the array
+
+Space complexity: $O(1)$
+
+<Tabs>
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+class Solution {
+    public int findDuplicate(int[] nums) {
+        int i = 0;
+        while (i < arr.length) {
+            if (arr[i] != i + 1) {
+                if (arr[arr[i] - 1] != arr[i]) {
+                    int j = arr[i] - 1;
+                    int temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                } else {
+                    return arr[i];
+                }
+            } else {
+                i++;
+            }
+        }
+        return -1;
+    }
+}
+```
+
+</TabItem>
+</Tabs>
+
+## Approach 3: Floyd's Tortoise and Hare (cycle detection)
+
+Solving this in linear time and constant space requires Floyd's Tortoise and Hare algorithm. 
+
+It's a simple cycle detection algorithm, where one pointer traverses twice as fast as another, once two pointers meet, we can trace back to where the cycle begins.
+
+Time complexity: $O(n)$, where n is the number of elements in the array
+
+Space complexity: $O(1)$
+
+<Tabs>
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+class Solution {
+    public int findDuplicate(int[] nums) {
+        int slow = nums[0];
+        int fast = nums[nums[0]];
+        while (slow != fast) {
+            slow = nums[slow];
+            fast = nums[nums[fast]];
+        }
+        fast = 0;
+        while (slow != fast) {
+            slow = nums[slow];
+            fast = nums[fast];
+        }
+        return slow;
+    }
+}
+```
+
+</TabItem>
+</Tabs>

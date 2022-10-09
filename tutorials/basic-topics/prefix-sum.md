@@ -40,6 +40,10 @@ pref[i - 1] + a[i], & \text{if $i$ >= 1}
 \end{cases}
 $$$
 
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@wingkwong"/>
+
 ```cpp
 vector<int> generatePrefixSum(vector<int>& a) {
     int n = a.size();
@@ -49,6 +53,9 @@ vector<int> generatePrefixSum(vector<int>& a) {
     return pref;
 }
 ```
+</TabItem>
+</Tabs>
+
 
 ### Example : [1480 -Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/)
 
@@ -62,6 +69,10 @@ Explanation: Running sum is obtained as follows: [1, 1 + 2, 1 + 2 + 3, 1 + 2 + 3
 ```
 
 Let's start with a brute force solution, we iterate each element $a[i]$ and we iterate from $j = [0 .. i]$ to add $a[j]$ to $sum$. This solution is acceptable but it is slow as we have two for-loops here.
+
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -80,8 +91,14 @@ public:
     }
 };
 ```
+</TabItem>
+</Tabs>
 
 However, if we utilise the idea of Prefix sum, we know the result at some point has been calculated. Therefore, we can just do it in a $O(n)$ way.
+
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -98,8 +115,14 @@ public:
     }
 };
 ```
+</TabItem>
+</Tabs>
 
 As we don't actually need $pref$ for further process in this question, we can just write it inline instead.
+
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -112,6 +135,8 @@ public:
     }
 };
 ```
+</TabItem>
+</Tabs>
 
 Prefix Sum is useful when we want to find the sum of all elements in a given range or something related to subarray problems. Besides, it doesn't have to be sum. We can make it like product ($pref[i] = pref[i - 1] * a[i]$) or even XOR ($pref[i] = pref[i - 1] \oplus a[i]$). 
 
@@ -141,6 +166,10 @@ numArray.sumRange(0, 5); // return (-2) + 0 + 3 + (-5) + 2 + (-1) = -3
 
 Sometimes we may pad a zero as the first element in prefix sum as we want to exclude the first element. For example, let's say we have an input $[1, 2, 3, 4, 5]$, the prefix sum array would be $[0, 1, 3, 6, 10, 15]$. In this case, we can write as follows:
 
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@wingkwong"/>
+
 ```cpp
 vector<int> generatePrefixSum(vector<int>& a) {
     int n = a.size();
@@ -149,6 +178,8 @@ vector<int> generatePrefixSum(vector<int>& a) {
     return pref;
 }
 ```
+</TabItem>
+</Tabs>
 
 Given $l$ and $r$, if we want to calculate the sum of the elements of $nums$ between $l$ and $r$ inclusive. The answer is simply $pref[r + 1] - pref[l]$. 
 
@@ -162,6 +193,10 @@ rangeSum(1, 3) = pref[4] - pref[1] \\
 = (a + b + c + d) - (a) \\ 
 = b + c + d
 $$$
+
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class NumArray {
@@ -185,3 +220,35 @@ public:
     }
 };
 ```
+
+</TabItem>
+</Tabs>
+
+export const suggestedProblems = [
+  {
+    "problemName": "1480 - Running Sum of 1d Array",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/running-sum-of-1d-array",
+    "solutionLink": "../../solutions/1400-1499/running-sum-of-1d-array-easy"
+  },
+  {
+    "problemName": "0303 - Range Sum Query - Immutable",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/range-sum-query-immutable/",
+    "solutionLink": ""
+  },
+  {
+    "problemName": "1004 - Max Consecutive Ones III",
+    "difficulty": "Medium",
+    "leetCodeLink": "https://leetcode.com/problems/max-consecutive-ones-iii/",
+    "solutionLink": "../../solutions/1000-1099/max-consecutive-ones-iii-medium"
+  },
+  {
+    "problemName": "0974 - Subarray Sums Divisible by K",
+    "difficulty": "Medium",
+    "leetCodeLink": "https://leetcode.com/problems/subarray-sums-divisible-by-k/",
+    "solutionLink": "../../solutions/0900-0999/subarray-sums-divisible-by-k-medium"
+  },
+]
+
+<Table title="Suggested Problems" data={suggestedProblems} />
