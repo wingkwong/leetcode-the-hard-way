@@ -22,7 +22,7 @@ Primes less than 10 are 2, 3, 5 and 7. So, the count is 4.
 The general approach is to check for every integer less than N and increment the result if they are prime. For example, consider N = 10. Now, we can run a check from 2 to N – 1 to find how many primes lie in this range.
 
 ### Algorithm
-We can check if each number is a prime or not. To check if the number 'i' is prime we will traverse all the numbers till[2,sqrt(i)] can check if tehy divide N or not.
+We can check if each number is a prime or not. To check if the number 'i' is prime we will traverse all the numbers till[2,sqrt(i)] can check if they divide N or not.
 Similarly, we do this for all the N numbers.
 
 ### C++ Program
