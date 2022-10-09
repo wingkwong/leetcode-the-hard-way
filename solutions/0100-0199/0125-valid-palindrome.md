@@ -61,4 +61,31 @@ class Solution:
 ```
 
 </TabItem>
+
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vale-c"/>
+
+```java
+class Solution {
+    public boolean isPalindrome(String s) {
+        /* discard all non-alphanumeric characters and convert all uppercase letters to lowercase */
+        String alpha = s.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+        
+        int start = 0;
+        int end = alpha.length()-1;
+
+        while (start < end) {
+            if (alpha.charAt(start) != alpha.charAt(end)) {
+                return false;
+            } else {
+                start += 1;
+                end -= 1;
+            }
+        }
+        return true;
+    }
+}
+```
+
+</TabItem>
 </Tabs>
