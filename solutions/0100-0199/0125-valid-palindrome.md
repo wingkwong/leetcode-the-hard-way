@@ -61,34 +61,6 @@ class Solution:
 ```
 
 </TabItem>
-<TabItem value="javascript" label="JavaScript">
-<SolutionAuthor name="@vale-c"/>
-
-```js
-/**
- * @param {string} s
- * @return {boolean}
- */
-var isPalindrome = function(s) {
-    /* discard all non-alphanumeric characters and convert all uppercase letters to lowercase */
-    let alpha = s.toLowerCase().replace(/[^a-z0-9]/g, ''); 
-
-    let start = 0;
-    let end = alpha.length-1;
-
-    while (start < end) {
-        if (alpha[start] != alpha[end]) {
-            return false;
-        } else {
-            start += 1;
-            end -= 1;
-        }
-    }
-    return true;
-};
-```
-
-</TabItem>
 <TabItem value="cpp" label="C++">
 <SolutionAuthor name="@vale-c"/>
 
