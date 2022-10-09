@@ -8,7 +8,22 @@ hide_table_of_contents: true
 
 ## Overview
 
-Lets say we have a linear data structure - array, linked list - and we need to search for a certain element. To search there are mainly two searching techniques, one being linear search and the other is [binary search](./binary-search). In linear search we traverse the whole array and then while traversing we check for the particular item. If there's a match then we return that position (we can return multiple positions too by using an array or vector or by simply printing all the postions).
+Lets say we have a linear data structure - array, linked list - and we need to search for a certain element. We can use linear search here. In linear search we traverse the whole array and then while traversing we check for the particular item. If there's a match then we print that position(s).
+To elaborate there are three main steps in performing linear search -
+  1. Traverse the data structure
+  2. Check for the required element while traversing
+  3. Print out the position(s) 
+
+Here we can have three cases :
+
+- **Case I - Best Case** *When the element we are looking for is at index-0 i.e., first position :*<br/>
+In this case we can break the loop as soon as we find the element and as here that is the 0 index, we can break the loop on the 0 index itself. This results in $O(1)$ time complexity.
+
+- **Case II - Average Case** *When the element we are looking for is at middle position i.e., length/2 index :*<br/>
+In this case we will have to traverse the data structure for the half of length. This means that the time complexity is $O(n)$.
+
+- **Case III - Worst Case** *When the element we are looking for is at last index :*<br/>
+Here we have traverse the whole data structure. In this case the time complexity is $O(n)$.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -43,7 +58,7 @@ array[] = {11,2,3456}
 Answer = 2
 Explaination = We have 11, 3456 which have even number of digits and therfore the output is 2.
 ```
-We can think this problem as a linear search problem, where we are supposed to search for all the numbers that have `even` number of digits. Thats' it. Now to do so we will traverse the array and find the length of each number and check it for being even. To find the number of digits of a number, we will use some basic mathematical logic - we will take the number's log base 10 and add one to it i.e., `log10 + 1`. And if even length numbers are found then we will simply increase the count of even digits by 1. 
+We can think this problem as a linear search problem, where we are supposed to search for all the numbers that have `even` number of digits. Thats' it. Now to do so we will traverse the array and find the length of each number and check it for being even. To find the number of digits of a number, we will use some basic mathematical logic - we will take the number's log base 10 and add one to it i.e., $log10 + 1$. And if even length numbers are found then we will simply increase the count of even digits by 1. 
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -53,16 +68,17 @@ We can think this problem as a linear search problem, where we are supposed to s
 class Solution {
 public:
     int findNumbers(vector<int>& nums) {
-        // Initially the answer is zero
-        int answer = 0; 
-        for(int i = 0; i < nums.size(); i++){
+        // initially the answer is zero
+        int ans = 0; 
+        for (int i = 0; i < nums.size(); i++) {
             // calculate the length of the number using log10 function 
-            int len = log10(nums[i])+1;
-            // check for division by 2 i.e., whether an even number
-            if(len%2 == 0) 
-                answer++;
+            int len = log10(nums[i]) + 1;
+            // check whether len is an even number
+            if(len % 2 == 0) {
+                ans++;
+            }
         }
-        return answer;
+        return ans;
     }
 };
 ```
@@ -83,7 +99,7 @@ The indices where nums[i] == 2 are 1 and 2.
 ```
 If we sort this array using library sorting functions then this problem is reduced to a simple linear search question. Where we are supposed to search for the target. Thats' it. Now to do so we will create a vetor for storing the answers, and the run a for loop and traverse every element and check it. If found then we will add that index to the vector.
 Finally we will return the vector and its' done!
-This will take **O(nlogn)** time complexity as we will be using sort function (and that takes *O(nlogn)*) time complexity.
+This will take $O(nlogn)$ time complexity as we will be using sort function (and that takes $O(nlogn)$) time complexity.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -95,13 +111,15 @@ public:
     vector<int> targetIndices(vector<int>& nums, int target) {
         // sorting the vector using stl function
         sort(nums.begin(),nums.end());
-        // vector to store the required indeices
-        vector<int> answer;
-  
+        // vector to store the required indices
+        vector<int> ans;
         // linear searching to find the target
-        for(int i = 0; i < nums.size(); i++)
-             if(nums[i] == target) answer.push_back(i);
-        return answer;
+        for (int i = 0; i < nums.size(); i++) {
+             if (nums[i] == target) {
+                 ans.push_back(i);
+             }
+        }
+        return ans;
     }
 };
 ```
