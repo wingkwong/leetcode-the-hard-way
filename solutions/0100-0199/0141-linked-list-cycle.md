@@ -99,4 +99,42 @@ public class Solution {
 ```
 
 </TabItem>
+
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@vale-c"/>
+
+```py
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution:
+    def hasCycle(self, head: ListNode) -> bool:
+        slowPointer = head
+        quickPointer = head
+        
+        if head == None:
+            return False
+        
+        while head != None:
+            # slow pointer, move one step each time.
+            slowPointer = slowPointer.next
+            if slowPointer == None:
+                return False
+            
+            # quick pointer, move two steps each time.
+            quickPointer = quickPointer.next.next if quickPointer.next != None else None
+            if quickPointer == None:
+                return False
+            
+            # slow pointer meets quick pointer means that there is a cycle in this linked list
+            if slowPointer == quickPointer:
+                return True
+        
+        return False
+```
+
+</TabItem>
 </Tabs>
