@@ -37,7 +37,7 @@ We can simply sort the given array and compare consecutive elements. Following c
 
 - nums[i-1]+1==nums[i]: This means the current element is consecutive to previous.
 - nums[i-1]==nums[i]: We have found the same element as previous. Skip it, and see if we can still extend the sequence with next elements.
-- None of above : We can't extend the sequence any further. Update longest to store longest formed streak till now and reset curlongest.
+- None of above : We can't extend the sequence any further. Update longest to store longest formed streak till now and reset count.
 <Tabs>
 <TabItem value="c++" label="C++">
 <SolutionAuthor name="@tandrimasingha"/>
@@ -48,7 +48,7 @@ public:
     int longestConsecutive(vector<int>& nums) {
         if(nums.size()==0) return 0;
         sort(nums.begin(),nums.end());
-        int c=1;
+        int count=1;
         int mx=0;
         for(int i=1;i<nums.size();i++)
         {
@@ -56,12 +56,12 @@ public:
             else if(nums[i-1]+1==nums[i])
                 c++;
            else{
-               mx=max(c,mx);
-               c=1;
+               mx=max(count,mx);
+               count=1;
            }
         }
       
-        return max(c,mx);
+        return max(count,mx);
     }
 };
 ```
@@ -72,7 +72,8 @@ Time Complexity : O(1), ignoring the space required by sorting algorithm
 </Tabs>
 
 ## Approach 2: Using Hashset
-
+	
+Once we have inserted all the elements, we can just iterate over the hashset to find longest consecutive sequence involving the current element under iteration. This can simply be done by iterating over elements that are consecutive to num till we keep finding them in the set. Each time we will also delete those elements from set to ensure we only visit them once.
 
 <Tabs>
 <TabItem value="c++" label="c++">
@@ -95,6 +96,6 @@ int longestConsecutive(vector<int>& nums) {
 </TabItem>
 </Tabs>
   
-  Time Complexity : O(N)
+Time Complexity : O(N)
   
 Space Complexity : O(N)
