@@ -49,17 +49,17 @@ class Solution {
 public:
     int longestConsecutive(vector<int>& nums) {
         if(nums.size()==0) return 0;
-        sort(nums.begin(),nums.end());
+        sort(nums.begin(),nums.end()); // sorting the elements
         int count=1;
         int mx=0;
         for(int i=1;i<nums.size();i++)
         {
-            if(nums[i-1]==nums[i]) continue;
-            else if(nums[i-1]+1==nums[i])
-                c++;
+            if(nums[i-1]==nums[i]) continue; //if numbers are equal continue
+            else if(nums[i-1]+1==nums[i]) // checking whether it is consequetive or not
+                count++; // increase count
            else{
-               mx=max(count,mx);
-               count=1;
+               mx=max(count,mx); // find the max length of subsequence
+               count=1; // reset count to one
            }
         }
       
