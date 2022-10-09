@@ -1,4 +1,3 @@
-
 ---
 description: 'Author: @tandrimasingha | https://leetcode.com/problems/longest-consecutive-sequence/'
 ---
