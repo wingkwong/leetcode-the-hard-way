@@ -478,7 +478,7 @@ export const week7Problems = [
     problemName: "0974 - Subarray Sums Divisible by K",
     difficulty: "Medium",
     leetCodeLink: "https://leetcode.com/problems/subarray-sums-divisible-by-k/",
-    solutionLink: "../solutions/0900/0999/subarray-sums-divisible-by-k-medium",
+    solutionLink: "../solutions/0900-0999/subarray-sums-divisible-by-k-medium",
     tags: "Prefix Sum",
   },
   {
