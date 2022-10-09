@@ -35,11 +35,10 @@ description: 'Author: @tandrimasingha | https://leetcode.com/problems/longest-co
 
 We can simply sort the given array and compare consecutive elements. Following cases exists:
 
-- `nums[i-1]+1==nums[i]`: This means the current element is consecutive to previous.
-- `nums[i-1]==nums[i]`: We have found the same element as previous. Skip it, and see if we can still extend the sequence with next elements.
-- None of above : We can't extend the sequence any further. Update longest to store longest formed streak till now and reset count.
-- Time Complexity : `O(NlogN)`, where N is the number of elements in nums
-- Space Complexity : `O(1)`, ignoring the space required by sorting algorithm
+- Firstly we check the current element is consecutive to previous.
+- If We have found the same element as previous. Skip it, and see if we can still extend the sequence with next elements.
+- If None of above gets satisfied : We can't extend the sequence any further. Update longest to store longest formed streak till now and reset count.
+
 <Tabs>
 <TabItem value="c++" label="C++">
 <SolutionAuthor name="@tandrimasingha"/>
@@ -73,8 +72,6 @@ public:
 ## Approach 2: Using Hashset
 	
 Once we have inserted all the elements, we can just iterate over the hashset to find longest consecutive sequence involving the current element under iteration. This can simply be done by iterating over elements that are consecutive to num till we keep finding them in the set. Each time we will also delete those elements from set to ensure we only visit them once.
-- Time Complexity : `O(N)`
-- Space Complexity : `O(N)`
 
 <Tabs>
 <TabItem value="c++" label="c++">
