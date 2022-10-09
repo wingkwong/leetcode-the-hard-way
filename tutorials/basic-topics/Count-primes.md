@@ -113,8 +113,14 @@ class count_primes
 }
 ```
 ```
+Output:
 4
 ```
+#### Time Complexity: 
+We run a loop for N/2 times. In every check, a time of complexity O(N / 2) (taking average as N / 2) is spent. So, the time complexity of this algorithm is O(N√N).
+
+#### Auxiliary Space: 
+O(1), Only constant space is used for constant variables.
 
 ## Approach(Optimal Method)
 
@@ -218,6 +224,7 @@ class count_primes
 }
 ```
 ```
+Output:
 4
 ```
 #### Time Complexity: O(Nlog(logN))
