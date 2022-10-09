@@ -1,7 +1,7 @@
 ---
 title: 'Binary Search'
 description: 'Binary search is the searching strategy that reduces the search space by half every iteration until you have found the target.'
-hide_table_of_contents: true
+hide_table_of_contents: false
 keywords:
   - leetcode
   - tutorial
@@ -19,6 +19,8 @@ We have all played a game to guess a number from 1 to 100. The optimal approach 
 
 Let's look at the most basic form of binary search:
 
+## Example: [0704. Binary Search](https://leetcode.com/problems/binary-search/)
+
 > Given an array of integers `nums` which is sorted in ascending order, and an integer `target`, write a function to search `target` in `nums`. If `target` exists, then return its index. Otherwise, return `-1`.
 >
 > You must write an algorithm with `O(log n)` runtime complexity.
@@ -31,23 +33,25 @@ nums = [-1,0,3,5,9,12], target = 9
 
 The index of the element 9 is 4. We can use the following template to find the target
 
+<Tabs>
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@heiheihang"/>
+
 ```python
 def binarySearch(nums, target):
-    
-    lp = 0
-    rp = len(nums) - 1
-    
-    while(lp <= rp):
+    lp, rp = 0, len(nums) - 1
+    while (lp <= rp):
         mid = (lp + rp) // 2
-        if(nums[mid] == target):
+        if (nums[mid] == target):
             return mid
-        elif(nums[mid] < target):
+        elif (nums[mid] < target):
             lp = mid + 1
         else:
             rp = mid - 1
-    return -1
-    
+    return -1 
 ```
+</TabItem>
+</Tabs>
 
 There can be very challenging questions using binary search, but we should focus on the basic application first.
 
@@ -74,3 +78,33 @@ There can be very challenging questions using binary search, but we should focus
     m = l + x \\
     m = l + (r - l) / 2
     $$$
+
+
+export const suggestedProblems = [
+  {
+    "problemName": "0704 - Binary Search",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/binary-search/",
+    "solutionLink": "../../solutions/0700-0799/binary-search-easy"
+  },
+  {
+    "problemName": "0153 - Find Minimum in Rotated Sorted Array",
+    "difficulty": "Medium",
+    "leetCodeLink": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/",
+    "solutionLink": ""
+  },
+  {
+    "problemName": "0154 - Find Minimum in Rotated Sorted Array II",
+    "difficulty": "Hard",
+    "leetCodeLink": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/",
+    "solutionLink": ""
+  },
+  {
+    "problemName": "0162 - Find Peak Element",
+    "difficulty": "Medium",
+    "leetCodeLink": "https://leetcode.com/problems/find-peak-element/",
+    "solutionLink": ""
+  }
+]
+
+<Table title="Suggested Problems" data={suggestedProblems} />
