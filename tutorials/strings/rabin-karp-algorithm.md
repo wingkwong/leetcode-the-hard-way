@@ -17,7 +17,7 @@ Problem: there are 2 strings, pattern A and text B. You have the determine wheat
 <TabItem value="cpp" label="C++">
 <SolutionAuthor name="Yash Gautam"/>
 
-```cpp
+C++ Implemenation
 
     const int N = 1e5+7, M = 1e9+7;
     vector<int> power(N,0);
@@ -52,8 +52,9 @@ Problem: there are 2 strings, pattern A and text B. You have the determine wheat
         }
         return occurences;
     }
-    ```
     
+</TabItem>
+</Tabs>    
     
   Algorithm: 
   
