@@ -61,4 +61,87 @@ class Solution:
 ```
 
 </TabItem>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@vale-c"/>
+
+```cpp
+class Solution {
+public:
+    bool isPalindrome(string s) {
+        /* discard all non-alphanumeric characters and convert all uppercase letters to lowercase */
+        string alpha = "";
+        for (char c : s) {
+            if (isalnum(c)) {
+                alpha += tolower(c);
+            }
+        }
+
+        int start = 0;
+        int end = alpha.length()-1;
+
+        while (start < end) {
+            if (alpha[start] != alpha[end]) {
+                return false;
+            } else {
+                start += 1;
+                end -= 1;
+            }
+        }
+        return true;
+    }
+};
+```
+
+</TabItem>
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vale-c"/>
+
+```java
+class Solution {
+    public boolean isPalindrome(String s) {
+        /* discard all non-alphanumeric characters and convert all uppercase letters to lowercase */
+        String alpha = s.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+        
+        int start = 0;
+        int end = alpha.length()-1;
+        while (start < end) {
+            if (alpha.charAt(start) != alpha.charAt(end)) {
+                return false;
+            } else {
+                start += 1;
+                end -= 1;
+            }
+        }
+        return true;
+    }
+}
+```
+
+</TabItem>
+<TabItem value="javascript" label="JavaScript">
+<SolutionAuthor name="@vale-c"/>
+
+```js
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+var isPalindrome = function(s) {
+    /* discard all non-alphanumeric characters and convert all uppercase letters to lowercase */
+    let alpha = s.toLowerCase().replace(/[^a-z0-9]/g, ''); 
+    let start = 0;
+    let end = alpha.length-1;
+    while (start < end) {
+        if (alpha[start] != alpha[end]) {
+            return false;
+        } else {
+            start += 1;
+            end -= 1;
+        }
+    }
+    return true;
+};
+```
+
+</TabItem>
 </Tabs>
