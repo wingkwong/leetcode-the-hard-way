@@ -1,10 +1,19 @@
+---
+title: '<Rabin Karp Algorothm>'
+description: 'Rabin Karp Algorithm used for searching pattern.'
+hide_table_of_contents: true
+---
+
+<TutorialAuthors names="@<Yash Gautam>"/>
+
+## Overview
 
 Rabin Karp Algorithm is based on Hashing.
 
-Rabin Karp Algorithm used for searching pattern.
 
 Problem: there are 2 strings, pattern A and text B. You have the determine wheather the pattern appear in text or not.
 
+Code:
 
     const int N = 1e5+7, M = 1e9+7;
     vector<int> power(N,0);
@@ -42,8 +51,10 @@ Problem: there are 2 strings, pattern A and text B. You have the determine wheat
     
     
     
-  Algorithm: Calculate the hash of pattern A and calculate the hash of all the prefixes of the text B. Now compare the hash of substring B with A.
-  Time Complexity = O(|A| + |B|). O(|A|) is used for calculationg the hash of the pattern and O(|B|) for comparing each substring of length B with the pattern. 
+  Algorithm: 
+  
+     Calculate the hash of pattern A and calculate the hash of all the prefixes of the text B. Now compare the hash of substring B with A.
+     Time Complexity = O(|A| + |B|). O(|A|) is used for calculationg the hash of the pattern and O(|B|) for comparing each substring of length B with the pattern. 
 
 
 Problem: 
