@@ -95,7 +95,9 @@ class Solution {
 public:
     int subsetXORSum(vector<int>& nums) {
         int arrayOR = 0;
+        // Do OR of whole array to obtain bits which are set atleast once
         for(int num:nums) arrayOR |= num;
+        // Compute the final answer using the formula discussed
         return arrayOR*(1<<(nums.size() - 1));
     }
 };
@@ -126,3 +128,6 @@ export const suggestedProblems = [
 ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />
+
+## References
+1. [cp-algorithms](https://cp-algorithms.com/) 
