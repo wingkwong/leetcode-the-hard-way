@@ -1,0 +1,57 @@
+/* This is the Node class definition
+
+class Node {
+public:
+    Node* left;
+    Node* right;
+    int data;
+
+    Node(int data) {
+        this->left = NULL;
+        this->right = NULL;
+        this->data = data;
+    }
+};
+*/
+
+vector<int> zigzagLevelOrderTraversal(Node* root) {
+    vector<int> traversal;
+	queue<Node*> treeNodes;
+	stack<Node*> currLevelNodes;
+	treeNodes.push(root);
+	int leftToRight = 1;
+	while (!treeNodes.empty()) {
+		if (leftToRight == 1) {
+			int n = treeNodes.size();
+			for (int i = 0; i < n; i++) {
+				Node* currentNode = treeNodes.front();
+				treeNodes.pop();
+				traversal.push_back(currentNode->data);
+				if (currentNode->left != NULL) {
+					treeNodes.push(currentNode->left);
+					currLevelNodes.push(currentNode->left);
+				}
+				if (currentNode->right != NULL) {
+					treeNodes.push(currentNode->right);
+					currLevelNodes.push(currentNode->right);
+				}
+			}
+		} else {
+			int n = treeNodes.size();
+			for (int i = 0; i < n; i++) {
+				Node* currentNode = treeNodes.front();
+				treeNodes.pop();
+				traversal.push_back(currLevelNodes.top()->data);
+				currLevelNodes.pop();
+				if (currentNode->left != NULL) {
+					treeNodes.push(currentNode->left);
+				}
+				if (currentNode->right != NULL) {
+					treeNodes.push(currentNode->right);
+				}
+			}
+		}
+		leftToRight = 1 - leftToRight;
+	}
+	return traversal;
+}
