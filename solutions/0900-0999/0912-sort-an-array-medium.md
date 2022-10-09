@@ -175,15 +175,25 @@ void quickSort(vector<int>& nums, int l, int r) {
 </TabItem>
 </Tabs>
 
-### Approach 3: Merge Sort
+## Approach 3: Merge Sort
 
 Standard merge sort algorithm, following a divide and conquer approach, division of sub-array by mid values till sub-array length
-reaches one, then merging parts by either out-place or in-place merging. 
+reaches one, then merging parts by either out-place or in-place merging in either ascending or descending order. 
 
 ### Merge Sort with Outplace Merging
 
-In this approach, merging happen in $seperate array$, then it is passed on in the above function calls. This solution gives $O(n log n)$
-time complexity and $O(n)$ space complexity.
+In this approach, merging happen in $seperate array$ of size, then it is passed on in the above function calls.
+
+In mergeSort() function:
+    Dividing the array into 2 subarrays(one is $left[]$ and other is $right[]$ ) till their length reaches one.
+
+In merge() function:
+    We merge the two subarrays( $left[]$ and $right[]$ ) into another array $mix[]$ . This merge operation stores elements from 
+    $left[]$ and $right[]$ in an ascending order, by comparing elements from individual subarrays.
+    Finally, since one subarray would have greater elements then the other one, so we add those elements seperately.
+    Then, we return the sorted subarray into the above function call.
+
+This solution gives $O(n log n)$ time complexity and $O(n)$ space complexity.
 
 <Tabs>
 <TabItem value="java" label="Java">
@@ -200,6 +210,7 @@ public static int[] mergeSort(int[] arr) {
     int[] left = mergeSort(Arrays.copyOfRange(arr, 0, mid));
     int[] right = mergeSort(Arrays.copyOfRange(arr, mid, arr.length));
 
+    // now merging the two subarrays into one sorted subarray
     return merge(left, right);
 }
 
@@ -243,8 +254,17 @@ public static int[] merge(int[] first, int[] second) {
 
 ### Merge Sort using In-place Merging
 
-In this approach, merging happens $in-place$, changes are made in the original arrays itself by modifying the reference variables. This 
-solution gives $O(n log n)$ time complexity and $O(1)$ space complexity.
+In this approach, merging happens $in-place$, changes are made in the original arrays itself by modifying the reference variables. 
+
+In mergeSort() function:
+    Dividing the array into 2 subarrays(by calling mergeSort() function recursively) till their length reaches one.
+
+In mergeInPlace() function:
+    We merge the two subarrays( one from s to mid and another from mid to e ) into another array $mix[]$ . This merge operation stores elements from the two sub-arrays in an ascending order, by comparing elements from individual subarrays.
+    Finally, since one subarray would have greater elements then the other one, so we add those elements seperately.
+    Then, we place the sorted elements from $mix[]$ into $arr[]$ , finally changes in $arr[]$ have been made in-place.
+
+This solution gives $O(n log n)$ time complexity and $O(1)$ space complexity.
 
 <Tabs>
 <TabItem value="java" label="Java">
@@ -261,6 +281,7 @@ public void mergeSort(int[] arr, int s, int e) {
     mergeSort(arr, s, mid);
     mergeSort(arr, mid, e);
 
+    // sorting the left portion(s to mid) and right portion(mid to e) into the same array arr
     mergeInPlace(arr, s, mid, e);
 }
 
