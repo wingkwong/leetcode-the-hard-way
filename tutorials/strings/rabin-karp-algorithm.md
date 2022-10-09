@@ -13,7 +13,11 @@ Rabin Karp Algorithm is based on Hashing.
 
 Problem: there are 2 strings, pattern A and text B. You have the determine wheather the pattern appear in text or not.
 
-Code:
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="Yash Gautam"/>
+
+```cpp
 
     const int N = 1e5+7, M = 1e9+7;
     vector<int> power(N,0);
@@ -48,7 +52,7 @@ Code:
         }
         return occurences;
     }
-    
+    ```
     
     
   Algorithm: 
