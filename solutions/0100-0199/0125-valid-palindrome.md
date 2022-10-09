@@ -77,7 +77,7 @@ public:
         }
 
         int start = 0;
-        int end = alpha.length()-1;
+        int end = alpha.length() - 1;
 
         while (start < end) {
             if (alpha[start] != alpha[end]) {
@@ -103,7 +103,8 @@ class Solution {
         String alpha = s.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
         
         int start = 0;
-        int end = alpha.length()-1;
+        int end = alpha.length() - 1;
+
         while (start < end) {
             if (alpha.charAt(start) != alpha.charAt(end)) {
                 return false;
@@ -128,9 +129,11 @@ class Solution {
  */
 var isPalindrome = function(s) {
     /* discard all non-alphanumeric characters and convert all uppercase letters to lowercase */
-    let alpha = s.toLowerCase().replace(/[^a-z0-9]/g, ''); 
+    const alpha = s.toLowerCase().replace(/[^a-z0-9]/g, ''); 
+    
     let start = 0;
-    let end = alpha.length-1;
+    let end = alpha.length - 1;
+
     while (start < end) {
         if (alpha[start] != alpha[end]) {
             return false;
