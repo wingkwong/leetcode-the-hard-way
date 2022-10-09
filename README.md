@@ -14,6 +14,12 @@ Everyone who wants to improve their programming skills or learn how to LeetCode.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md).
 
+## Thanks to all Contributors <a name = "contributors"></a>
+
+<a href="https://github.com/wingkwong/leetcode-the-hard-way/graphs/contributors"> 
+<img src="https://contrib.rocks/image?repo=wingkwong/leetcode-the-hard-way" /> 
+</a>
+
 ### Outro
 
 GLHF.
