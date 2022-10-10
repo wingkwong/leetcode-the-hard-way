@@ -1,5 +1,6 @@
 ---
 description: 'Author: @Srijita-Mandal | https://leetcode.com/problems/binary-tree-level-order-traversal/'
+tags: [Tree, Breadth-First Search, Binary Tree]
 ---
 
 # 0102 - Binary Tree Level Order Traversal (Medium)
@@ -42,7 +43,7 @@ Output: []
 *  `-1000 <= Node.val <= 1000`
 
 
-## Approach 1: Using Queue Data Structure
+## Approach 1: BFS
 
 - Take one 2D vector $ans$ to return the final tree-traversal, and another vector $v$ to store seperate levels.
 - Take a queue, store $root$ node inside it and a _NULL_ node for seperating levels.
@@ -65,42 +66,32 @@ class Solution {
     public:
     vector<vector<int>> levelOrder(TreeNode* root) {
         vector<vector<int>> ans;
-
+        // return [] if the input is null
+        if (root == NULL) return ans;
+        
         //for storing each level
         vector<int> v;  
-
-        if(root==NULL) 
-            return ans;
-
         queue<TreeNode*> q;
+        // starting point
         q.push(root);
-
-        //for sepearting levels
+        // for sepearting levels
         q.push(NULL);  
 
+        // BFS
         while(!q.empty()){
             TreeNode* cur = q.front();
             q.pop();
-            
-            if(cur==NULL){
-                //storing each level into ans vector
+            if (cur == NULL) {
+                // storing each level into ans vector
                 ans.push_back(v);  
-
-                //clearing v vector to insert next level
+                // clearing v vector to insert next level
                 v.clear();  
-
-                //storing NULL at the end of queue
-                if(!q.empty()) 
-                    q.push(NULL);  
-            }
-            else{
+                // storing NULL at the end of queue
+                if (!q.empty()) q.push(NULL); 
+            } else{
                 v.push_back(cur->val);
-
-                if(cur->left!=NULL)
-                    q.push(cur->left);
-
-                if(cur->right!=NULL)
-                    q.push(cur->right);
+                if (cur->left != NULL) q.push(cur->left);
+                if (cur->right != NULL) q.push(cur->right);
             }
         }
         return ans;
