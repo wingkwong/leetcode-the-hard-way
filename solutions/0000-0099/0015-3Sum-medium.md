@@ -71,42 +71,43 @@ vector<vector<int>> threeSum(vector<int>& nums) {
         set<vector<int>> st;
         int n = nums.size();
         
-        // sorted array
+        // sort the array so that searching would become easier
         sort (nums.begin(), nums.end());
         
         // traversing the array
-        for (int i = 0 ; i < n-2 ; i++) {
+        for (int i = 0 ; i < n - 2 ; i++) {
             
-            // skip the below code if i and i-1 element are same
-            if (i > 0 && nums[i] == nums[i-1])
+            // skip the below code so that we can get unique triplets each time
+            if (i > 0 && nums[i] == nums[i - 1])
                 continue;
             
-            // start pointer
+            // initializing start pointer
             int j = i + 1;
   
-            // end pointer
+            // initializing end pointer
             int k = n - 1;
   
-            int target = -nums[i];
+            int target = - nums[i];
             
             while (j < k) {
                          
-                // checking the condition 
+                // checking the condition whether triplet with indices i, j, k is valid or not
                 if (nums[j] + nums[k] == target) {
                     vector<int> temp;
   
                     // inserting this triplet in temp array
                     temp = {nums[i], nums[j], nums[k]};
   
-                    // checking if particular triplet is already in ans in order to avoid duplicate 
+                    // if particular triplet is already inserted in our answer so we will exclude that one
                     if (st.find(temp) == st.end()) {
                         st.insert(temp);
                         ans.push_back(temp);
                     }
   
                     k--;
-  
-                    while (j < k && nums[j+1] == nums[j])
+                    
+                    // we will continue incrementing j pointer until we get a unique value
+                    while (j < k && nums[j + 1] == nums[j])
                         j++;
                                 
                   // we will increment j, because we need more positive number so that nums[i] + nums[j] + nums[k] = 0
