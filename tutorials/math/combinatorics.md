@@ -27,6 +27,7 @@ We can precompute all the required values using the above formula in $O(n^2)$ an
 The important insight here is that the figure provided is nothing but an inverted Pascal's Triangle and contribution of each cell in the final sum is $value\,of\,cell$ $*$ $binomial\,coefficient\,at\,the\,particular\,position\,in\,Pascal's\,Triangle$
 
 Thus for the cell at $i^{th}$ index in the topmost row, it's value is multiplied by $n - 1 \choose i$ and added to the final sum $modulo\,10$.
+Time Complexity of the program is $O(n^2)$ for computing the binomial coefficient and $O(n)$ Space complexity.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -61,6 +62,55 @@ public:
 
 Sometimes it is not possible to calculate the entirety of Pascal's Triangle due to larger values of $n$. In this case, we begin by precomputing $x!$   $\forall$ $x \in [{0, n}]$. Similarly, we will also [precompute](https://cp-algorithms.com/algebra/module-inverse.html#mod-inv-all-num) the modular inverses. This can be achieved in $O(n)$ time. Thus we can now compute $n \choose r$ using the analytical equation presented earlier. You can read about modular inverses [here](../../tutorials/basic-topics/mod.md)
 
+The implementation of above can be as follows:-
+
+<Tabs>
+<TabItem value="cpp" label="C++">
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+// Set the maximum value of n
+int N = 1e5;
+int mod = 1e9 + 7;
+
+// Making arrays to store the factorial and inverse factorial modulo m
+vector<long long int> factorial;
+vector<long long int> inverse_factorial;
+
+// Function to calculate nCr(n, r)
+long long int nCr(int n, int r){
+    if((r < 0) || (r > n)) return 0;
+    return ((factorial[n] * inverse_factorial[r])%mod * inverse_factorial[n - r])%mod;
+}
+
+int main(){
+    // Calculate values for factorial
+    factorial.push_back(1);
+    for(int i = 1; i <= N; i++) factorial.push_back((factorial.back()*i)%mod);
+
+    // Calculate values for inverse factorial
+    // For explanation and proof of this method, visit https://cp-algorithms.com/algebra/module-inverse.html#mod-inv-all-num
+    vector<long long int> inverse;
+    inverse.push_back(1);
+    inverse.push_back(1);
+    inverse_factorial.push_back(1);
+    inverse_factorial.push_back(1);
+    for(int i = 2; i <= N; i++){
+        inverse.push_back((mod - ((mod/i) * inverse[mod%i])%mod)%mod);
+        inverse_factorial.push_back((inverse_factorial[i - 1] * inverse[i])%mod);
+    }
+
+    cout << nCr(5, 0) << "\n";
+
+    return 0;
+}
+```
+
+</TabItem>
+</Tabs>
+
 For further reading, you can visit [cp-algorithms](https://cp-algorithms.com/combinatorics/binomial-coefficients.html).
 
 ## Finding the $n^{th}$ catalan number
@@ -75,6 +125,8 @@ This is a very famous sequence of natural numbers and has a variety of applicati
 The $n^{th}$ Catalan number can be found using the formula:
 $C_n$ $=$ $\frac{1}{n + 1}$$2n \choose n$
 
+## Few more examples
+
 ### Example #2 [1863 - Sum of All Subset XOR Totals](https://leetcode.com/problems/sum-of-all-subset-xor-totals/description/)
 
 This is an example of a very tricky problem which heavily simplifies after using some Combinatorics and [Bit Manipulation](../../tutorials/math/bit-manipulation.md)
@@ -86,6 +138,7 @@ Hence if there are $m$ numbers out of $n$ with $i^{th}$ bit set, then the contri
 Thus we can find $\sum_{k = 1}^{k <= m}$ $m \choose k$ for all odd values of $k$, which comes out to $2^{m - 1}$. Furthermore, we can choose the remaining elements in the subset in $2^{n - m}$ ways by similar logic. Hence total ways to get odd values of $k$ are $2^{n - 1}$, which is independent of both $m$ and $k$.
 
 Hence all we need to do is find bits which are set atleast once (by computing OR) and then multiply the final answer with $2^{n - 1}$.
+Time Complexity of the program is $O(n)$ with $O(1)$ Space Complexity.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -105,6 +158,92 @@ public:
 
 </TabItem>
 </Tabs>
+
+### Example #3 [62 - Unique Paths](https://leetcode.com/problems/unique-paths/)
+
+This question is a good example of how combinatorics problems can be solved using [Dynamic Programming](../../tutorials/dynamic-programming.md) approaches, just by observing the relations involved. 
+
+Here we observe that a cell can be visited only from the square above or from one to the left. Thus, we can write DP to represent the number of ways to reach the square from $(0, 0)$ as $dp_{i, j}$ = $dp_{i - 1, j}$ $+$ $dp_{i, j - 1}$ 
+
+This algorithm can be implemented in $O(mn)$ time complexity and $O(min(n, m))$ space complexity (Implemented below in $O(mn)$ space in favor of readability).
+
+<Tabs>
+<TabItem value="cpp" label="C++">
+
+```cpp
+class Solution {
+public:
+    int uniquePaths(int m, int n) {
+      // Make a 2-dimensional DP array with state i, j representing the number of ways to reach the cell (i, j)
+      // The problem can be solved using 1-dimensional DP array using space optimisation 
+      // (not implemented in favour of readablity)
+      vector<vector<int>> dp(m, vector<int> (n, 0));
+      // There is only one way to reach the topmost and leftmost square (base case)
+      dp[0][0] = 1;
+      for(int i = 0; i < m; i++){
+          for(int j = 0; j < n; j++){
+              // Transition: dp[i][j] = dp[i - 1][j] + dp[i][j - 1] 
+              if(i > 0) dp[i][j] += dp[i - 1][j];
+              if(j > 0) dp[i][j] += dp[i][j - 1];
+          }
+      }
+      return dp[m - 1][n - 1];
+    }
+};
+```
+
+</TabItem>
+</Tabs>
+
+You can check the complete solution for this problem [here](../../solutions/0000-0099/unique-paths-medium)
+
+### Example #4 [2400 - Number of Ways to Reach a Position After Exactly k Steps](https://leetcode.com/problems/number-of-ways-to-reach-a-position-after-exactly-k-steps/)
+
+If you found this problem difficult, you can try [a similar problem](https://cses.fi/problemset/task/1746) in CSES Problem set.
+
+This is another problem where using DP can help as we are provided with a simple recurrence relation and are asked to find number of ways to arrive at some final state.
+
+We define $dp_{i, j}$ to define number of ways to reach $j^{th}$ position with $i$ moves, where $i$ iterates from $0$ to $k$ and $j$ represents the current position. 
+
+Then the recurrence relation can be written as $dp_{i, j}$ $=$ $dp_{i - 1, j - 1}$ $+$ $dp_{i - 1, j + 1}$
+
+Thus the time complexity of the solution is $O(k^2)$ with $O(k)$ space complexity.
+
+<Tabs>
+<TabItem value="cpp" label="C++">
+
+```cpp
+class Solution {
+public:
+    int numberOfWays(int startPos, int endPos, int k) {
+        int mod = 1e9 + 7;
+        // Find the min and max position we can reach in k steps.
+        int min_pos = min(min(startPos, endPos) - (k - abs(startPos - endPos) + 1)/2, min(startPos, endPos));
+        int max_pos = max(max(startPos, endPos) + (k - abs(startPos - endPos) + 1)/2, max(startPos, endPos));
+        // Making DP table with to store from min position to max position 
+        vector<int> dp(max_pos - min_pos + 1, 0);
+        // Initialize the current location at startPos
+        dp[startPos - min_pos] = 1;
+        for(int i = 0; i < k; i++){
+            // Create a new DP array to store the values for next step
+            vector<int> new_dp(max_pos - min_pos + 1, 0);
+            for(int j = 0; j < (max_pos - min_pos + 1); j++){
+                if(j > 0) new_dp[j] += dp[j - 1];
+                if(j < (max_pos - min_pos)) new_dp[j] += dp[j + 1];
+                new_dp[j] %= mod;
+            }
+            // Update the DP array with the calculated values
+            dp = new_dp;
+        }
+        return dp[endPos - min_pos];
+    }
+};
+```
+
+</TabItem>
+</Tabs>
+
+You can check the complete solution for this problem [here](../../solutions/2400-2499/number-of-ways-to-reach-a-position-after-exactly-k-steps-medium)
 
 export const suggestedProblems = [
   {
