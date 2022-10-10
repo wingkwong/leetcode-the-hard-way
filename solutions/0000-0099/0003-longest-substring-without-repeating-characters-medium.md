@@ -149,6 +149,7 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 <TabItem value="javascript" label="JavaScript">
 <SolutionAuthor name="@AnshikaAnand222"/>
