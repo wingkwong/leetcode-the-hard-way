@@ -182,14 +182,14 @@ reaches one, then merging parts by either out-place or in-place merging in eithe
 
 ### Merge Sort with Outplace Merging
 
-In this approach, merging happen in $seperate array$ of size, then it is passed on in the above function calls.
+In this approach, merging happen in `seperate array` of size, then it is passed on in the above function calls.
 
 In mergeSort() function:
-    Dividing the array into 2 subarrays(one is $left[]$ and other is $right[]$ ) till their length reaches one.
+    Dividing the array into 2 subarrays(one is $left$ and other is $right$) till their length reaches one(because no futher division can take place), then passing left and right parts into merge() function for sorting in correct order.
 
 In merge() function:
-    We merge the two subarrays( $left[]$ and $right[]$ ) into another array $mix[]$ . This merge operation stores elements from 
-    $left[]$ and $right[]$ in an ascending order, by comparing elements from individual subarrays.
+    We merge the two subarrays( $left$ and $right$ ) into another array $mix$ . This merge operation stores elements from 
+    $left$ and $right$ in an ascending order, by comparing elements from individual subarrays.
     Finally, since one subarray would have greater elements then the other one, so we add those elements seperately.
     Then, we return the sorted subarray into the above function call.
 
@@ -206,7 +206,7 @@ public static int[] mergeSort(int[] arr) {
     }
 
     int mid = arr.length / 2;
-    // coppying and sorting sub-array by division on the basis of mid value
+    // copying and sorting sub-array by division on the basis of mid value
     int[] left = mergeSort(Arrays.copyOfRange(arr, 0, mid));
     int[] right = mergeSort(Arrays.copyOfRange(arr, mid, arr.length));
 
@@ -254,15 +254,15 @@ public static int[] merge(int[] first, int[] second) {
 
 ### Merge Sort using In-place Merging
 
-In this approach, merging happens $in-place$, changes are made in the original arrays itself by modifying the reference variables. 
+In this approach, merging happens `in-place`, changes are made in the original arrays itself by modifying the reference variables. 
 
 In mergeSort() function:
     Dividing the array into 2 subarrays(by calling mergeSort() function recursively) till their length reaches one.
 
 In mergeInPlace() function:
-    We merge the two subarrays( one from s to mid and another from mid to e ) into another array $mix[]$ . This merge operation stores elements from the two sub-arrays in an ascending order, by comparing elements from individual subarrays.
+    We merge the two subarrays(one from s to mid and another from mid to e) into another array $mix$ . This merge operation stores elements from the two sub-arrays in an ascending order, by comparing elements from individual subarrays.
     Finally, since one subarray would have greater elements then the other one, so we add those elements seperately.
-    Then, we place the sorted elements from $mix[]$ into $arr[]$ , finally changes in $arr[]$ have been made in-place.
+    Then, we place the sorted elements from $mix$ into $arr$ , finally changes in $arr$ have been made in-place.
 
 This solution gives $O(n log n)$ time complexity and $O(1)$ space complexity.
 
