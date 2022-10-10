@@ -68,44 +68,37 @@ The implementation of above can be as follows:-
 <TabItem value="cpp" label="C++">
 
 ```cpp
-#include <bits/stdc++.h>
-using namespace std;
+struct comb{
+    int mod;
+    // Making arrays to store the factorial and inverse factorial modulo m
+    vector<long long int> factorial;
+    vector<long long int> inverse_factorial;
 
-// Set the maximum value of n
-int N = 1e5;
-int mod = 1e9 + 7;
+    // N is the maximum value possible of input
+    comb(int N, int mod_in = 1e9 + 7){
+        // Calculate values for factorial
+        mod = mod_in;
+        factorial.push_back(1);
+        for(int i = 1; i <= N; i++) factorial.push_back((factorial.back()*i)%mod);
 
-// Making arrays to store the factorial and inverse factorial modulo m
-vector<long long int> factorial;
-vector<long long int> inverse_factorial;
-
-// Function to calculate nCr(n, r)
-long long int nCr(int n, int r){
-    if((r < 0) || (r > n)) return 0;
-    return ((factorial[n] * inverse_factorial[r])%mod * inverse_factorial[n - r])%mod;
-}
-
-int main(){
-    // Calculate values for factorial
-    factorial.push_back(1);
-    for(int i = 1; i <= N; i++) factorial.push_back((factorial.back()*i)%mod);
-
-    // Calculate values for inverse factorial
-    // For explanation and proof of this method, visit https://cp-algorithms.com/algebra/module-inverse.html#mod-inv-all-num
-    vector<long long int> inverse;
-    inverse.push_back(1);
-    inverse.push_back(1);
-    inverse_factorial.push_back(1);
-    inverse_factorial.push_back(1);
-    for(int i = 2; i <= N; i++){
-        inverse.push_back((mod - ((mod/i) * inverse[mod%i])%mod)%mod);
-        inverse_factorial.push_back((inverse_factorial[i - 1] * inverse[i])%mod);
+        // Calculate values for inverse factorial
+        vector<long long int> inverse;
+        inverse.push_back(1);
+        inverse.push_back(1);
+        inverse_factorial.push_back(1);
+        inverse_factorial.push_back(1);
+        for(int i = 2; i <= N; i++){
+            inverse.push_back((mod - ((mod/i) * inverse[mod%i])%mod)%mod);
+            inverse_factorial.push_back((inverse_factorial[i - 1] * inverse[i])%mod);
+        }
     }
 
-    cout << nCr(5, 0) << "\n";
-
-    return 0;
-}
+    // Function to calculate nCr(n, r)
+    long long int nCr(int n, int r){
+        if((r < 0) || (r > n)) return 0;
+        return ((factorial[n] * inverse_factorial[r])%mod * inverse_factorial[n - r])%mod;
+    }
+};
 ```
 
 </TabItem>
@@ -161,35 +154,17 @@ public:
 
 ### Example #3 [62 - Unique Paths](https://leetcode.com/problems/unique-paths/)
 
-This question is a good example of how combinatorics problems can be solved using [Dynamic Programming](../../tutorials/dynamic-programming.md) approaches, just by observing the relations involved. 
+Here our robot always goes either down or left. We know that we have to go down $m - 1$ times and go left $n - 1$ times. Thus we need to find the number of ways to arrange these. One way to visualize this is if we have $m + n - 2$ blank spaces, and we have to fill $n - 1$ of them using $L$ and remaining using $D$. Then we can just choose the number of spaces to fill with $L$ from total number of spaces. The the final solution is simply $m + n - 2 \choose n - 1$.
 
-Here we observe that a cell can be visited only from the square above or from one to the left. Thus, we can write DP to represent the number of ways to reach the square from $(0, 0)$ as $dp_{i, j}$ = $dp_{i - 1, j}$ $+$ $dp_{i, j - 1}$ 
-
-This algorithm can be implemented in $O(mn)$ time complexity and $O(min(n, m))$ space complexity (Implemented below in $O(mn)$ space in favor of readability).
+To implement the above, use the template provided above, along with the following code:
 
 <Tabs>
 <TabItem value="cpp" label="C++">
 
 ```cpp
-class Solution {
-public:
-    int uniquePaths(int m, int n) {
-      // Make a 2-dimensional DP array with state i, j representing the number of ways to reach the cell (i, j)
-      // The problem can be solved using 1-dimensional DP array using space optimisation 
-      // (not implemented in favour of readablity)
-      vector<vector<int>> dp(m, vector<int> (n, 0));
-      // There is only one way to reach the topmost and leftmost square (base case)
-      dp[0][0] = 1;
-      for(int i = 0; i < m; i++){
-          for(int j = 0; j < n; j++){
-              // Transition: dp[i][j] = dp[i - 1][j] + dp[i][j - 1] 
-              if(i > 0) dp[i][j] += dp[i - 1][j];
-              if(j > 0) dp[i][j] += dp[i][j - 1];
-          }
-      }
-      return dp[m - 1][n - 1];
-    }
-};
+// Uppper limit for m + n - 2 is 198
+comb c = comb(200);
+return c.nCr(m + n - 2, n - 1);
 ```
 
 </TabItem>
@@ -199,49 +174,17 @@ You can check the complete solution for this problem [here](../../solutions/0000
 
 ### Example #4 [2400 - Number of Ways to Reach a Position After Exactly k Steps](https://leetcode.com/problems/number-of-ways-to-reach-a-position-after-exactly-k-steps/)
 
-If you found this problem difficult, you can try [a similar problem](https://cses.fi/problemset/task/1746) in CSES Problem set.
+Let's represent going left as $-1$ and going right as $+1$. Thus, following the same idea as before, we have $k$ blanks to fill with $+1$ and $-1$ such that there sum is equal to $startPos - endPos$.
 
-This is another problem where using DP can help as we are provided with a simple recurrence relation and are asked to find number of ways to arrive at some final state.
+Here we can immediately see that such will be impossible in only 2 cases:
+- The parity of $k$ and $startPos - endPos$ is different.
+- The magnitude of $k$ is less than magnitude of $startPos - endPos$.
 
-We define $dp_{i, j}$ to define number of ways to reach $j^{th}$ position with $i$ moves, where $i$ iterates from $0$ to $k$ and $j$ represents the current position. 
+After checking for above 2 cases, we know for sure that there exists a solution. Now we can just find the number of $1's$ and $-1's$ required to sum to $startPos - endPos$. Let them be $a$ and $b$ respectively. Then the solution is $startPos - endPos \choose a$ $=$ $startPos - endPos \choose b$
 
-Then the recurrence relation can be written as $dp_{i, j}$ $=$ $dp_{i - 1, j - 1}$ $+$ $dp_{i - 1, j + 1}$
+If we assume that $endPos >= startPos$, then number of $-1$ is $(k - (endPos - startPos))/2$. If $endPos < startPos$, then we can count the number of $+1$, which will be the same. 
 
-Thus the time complexity of the solution is $O(k^2)$ with $O(k)$ space complexity.
-
-<Tabs>
-<TabItem value="cpp" label="C++">
-
-```cpp
-class Solution {
-public:
-    int numberOfWays(int startPos, int endPos, int k) {
-        int mod = 1e9 + 7;
-        // Find the min and max position we can reach in k steps.
-        int min_pos = min(min(startPos, endPos) - (k - abs(startPos - endPos) + 1)/2, min(startPos, endPos));
-        int max_pos = max(max(startPos, endPos) + (k - abs(startPos - endPos) + 1)/2, max(startPos, endPos));
-        // Making DP table with to store from min position to max position 
-        vector<int> dp(max_pos - min_pos + 1, 0);
-        // Initialize the current location at startPos
-        dp[startPos - min_pos] = 1;
-        for(int i = 0; i < k; i++){
-            // Create a new DP array to store the values for next step
-            vector<int> new_dp(max_pos - min_pos + 1, 0);
-            for(int j = 0; j < (max_pos - min_pos + 1); j++){
-                if(j > 0) new_dp[j] += dp[j - 1];
-                if(j < (max_pos - min_pos)) new_dp[j] += dp[j + 1];
-                new_dp[j] %= mod;
-            }
-            // Update the DP array with the calculated values
-            dp = new_dp;
-        }
-        return dp[endPos - min_pos];
-    }
-};
-```
-
-</TabItem>
-</Tabs>
+Thus, we need to find $k \choose \frac{n - endPos + startPos}{2}$.
 
 You can check the complete solution for this problem [here](../../solutions/2400-2499/number-of-ways-to-reach-a-position-after-exactly-k-steps-medium)
 
