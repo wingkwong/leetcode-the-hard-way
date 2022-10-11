@@ -62,6 +62,35 @@ C++ Implemenation
      Time Complexity = O(|A| + |B|). O(|A|) is used for calculationg the hash of the pattern and O(|B|) for comparing each substring of length B with the pattern. 
 
 
+Examples:
+
+Problem link: https://leetcode.com/problems/longest-duplicate-substring/
+
+In this problem you have to find the lenght of longest substring which occur atleast 2 times in string.
+
+Approach:
+As we have to find the longest lenght of substring we can use binary search for finding the lenght of longest substring.
+
+1) If a string of length n is invalid then there is no need to check for lenght greater than n
+
+2) If a string of length n is valid then there is no need to check for lenght smaller than n.
+
+We will compare sliding window of strings for that we can calculate the hash value of all string and start comparison character by character if hash value of two strings is same.
+
+
+Problem link: https://leetcode.com/problems/shortest-palindrome/
+
+In this problem you have to find the longest lenght of prefix palindrome.
+Ex: abadg 
+longest plaindrome is aba. So you have to add gd in front of string to make shortest palindrome.
+
+Naive Approach: Compute all the prefix of string and its reverse and then find the longest prefix palindrome.
+
+Approac 2: By using hasing we can optimised the solution in linear time. for that we can use Rabin Karp Algorithm.
+Ex: hash value of string s and reverse of string s is same.
+
+
+
 Problem: 
 1) https://practice.geeksforgeeks.org/problems/31272eef104840f7430ad9fd1d43b434a4b9596b/1
 2) https://leetcode.com/problems/longest-duplicate-substring/
