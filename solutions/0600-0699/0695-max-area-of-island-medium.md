@@ -1,6 +1,6 @@
 ---
 title: 'Max Area Of Island (Medium)'
-description: 'Author: @<kondekarshubham123 | https://leetcode.com/problems/max-area-of-island/>'
+description: 'Author: @kondekarshubham123 | https://leetcode.com/problems/max-area-of-island/'
 ---
 
 # 695 - Max Area of Island (Medium)
@@ -216,6 +216,6 @@ class Solution {
 
 ### Complexity Analysis
 
-- Time Complexity: O(R*C), where RR is the number of rows in the given grid, and CC is the number of columns. We visit every square once.
+- Time Complexity: O(R*C), where R is the number of rows in the given grid, and C is the number of columns. We visit every square once.
 
 - Space complexity: O(R*C), the space used by seen to keep track of visited squares, and the space used by stack.
