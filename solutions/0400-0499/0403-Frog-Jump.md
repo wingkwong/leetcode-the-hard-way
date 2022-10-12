@@ -46,9 +46,10 @@ Explanation: There is no way to jump to the last stone as the gap between the $5
 
 ## Approach 1: HashMap
 
-- First, we make $hashmap$ of each stone, which would contain a set(stores viable moves that can be made)
-- Traversing the $stones$ array from index $1$ which is our first stone(Current Position)
-- Populate the sets of stones that can be reached from current position using a viable move which are $k-1$, $k$ and $k+1$. And also we will calculate next viable move using previous move 
+- First, we make hashmap of each stone, which would contain a set(stores viable moves that can be made)
+- Traversing the $stones$ array from index $0$ which is our 0th positions(only one move at 0th position made by frog)
+- Populate the sets of stones that can be reached from current position using a viable move which are $k-1$, $k$ and $k+1$. And also we will  
+  calculate next viable move using previous move 
 - At the end we will return true if we reach at the end of posiions which is $stones[n-1]$
 
 Time Complexity is $O(n*n)$, where $n$ is the length of $stones$ array.
@@ -66,36 +67,39 @@ public:
         
         int n = stones.size();
         
-        // Create map <stone positions, set<moves we can make at this stone position>>
+        // create map <stone positions, set<moves we can make at this stone position>>
         unordered_map<int, set<int>> map;
         
-        //Intializing map
+        // intializing map
         for (int i = 0; i < n; i++) {
-            map[stones[i]]={};
+            map[stones[i]] = {};
         }
         
-        // When we are at Zero position, there is only one move which is equal to 1
+        // when we are at Zero position, there is only one move which is equal to 1
         map[0].insert(1);
         
-        //Iterating every stone positions through $stones$ array
+        // iterating every stone positions through $stones$ array
         for (int i = 0; i < n; i++) {
             int currstone = stones[i];
             
-            // Iterating each moves
+            // iterating each moves
             set<int> st = map[currstone];
             
             for (auto x : st) {
-                // pos is stone positons after applying move x
+                // pos is stone's positon after applying move x
                 int pos = currstone + x;
                 
                 // if position of stone is equal to final position then frog will win 
-                if (pos == stones[stones.size() - 1]) return true;
-                
+                if (pos == stones[stones.size() - 1]) {
+                     return true;
+                }
+  
                 // first we will check pos is available in our stones array
                 if (map.find(pos) != map.end()) {
-                    // If the frog's last jump was x units, its next jump must be either x - 1, x, or x + 1 units
-                    if (x - 1 > 0)
-                        map[pos].insert(x - 1);
+                    // if the frog's last jump was x units, its next jump must be either x - 1, x, or x + 1 units
+                    if (x - 1 > 0) {  
+                        map[pos].insert(x - 1);  
+                    }
                     
                     map[pos].insert(x);
                     map[pos].insert(x + 1); 
@@ -111,17 +115,15 @@ public:
 </TabItem>
 </Tabs>
 
-## Approach 2: Dynamic Programming
-
-We apply Recursion + Memoization to find out the solution. There are three possible recursion call for $k-1$, $k$, $k+1$ moves.  
-There are some base condtions, we have to facus on 
+## Approach 2: Dynamic Programming  
+  We apply Recursion + Memoization to find out the solution. There are three possible recursion call for $k-1$, $k$, $k+1$ moves.  
+  There are some base condtions, we have to facus on 
 - if move k is less then zero, then we can not make a jump at that position.
 - Now, we have to find that whatever $move$ $(stones[idx-1] + k)$ that has been made is present in our $stones$ array or not
 - Also we are answer in our dp and if $dp[idx][k]!=-1$, it means our answer is already present in dp
-- Now, final base condition will check if we reach last position or not
+- Now, final base condition will check if we reach last position or not  
   
-Time Complexity is $O(n*n)$, where $n$ is the length of the $stones$ array.
-
+Time Complexity is $O(n*n)$, where $n$ is the length of the $stones$ array.  
 Space Complexity is $O(n*n)$
 
 
@@ -129,8 +131,8 @@ Space Complexity is $O(n*n)$
 <TabItem value="cpp" label="C++">
 <SolutionAuthor name="@Kavita613"/>
 
-```cpp
-class Solution {
+```cpp  
+class Solution {  
 public:
     // Create Globally 2d dp array 
     int dp[2002][2002];
@@ -138,41 +140,45 @@ public:
     bool solve(int idx, int k, vector<int>& stones, unordered_map<int, int>& m)
     {   
         // k is number of moves 
-        if(k<=0) return false;
+        if (k <= 0) return false;
         
-        // Checking k+stones[idx-1] is available position in our stones array or not
-        if(m.find(k + stones[idx - 1]) == m.end()) 
-            return false;
-        else
+        // checking k + stones[idx - 1] is available position in our stones array or not
+        if (m.find(k + stones[idx - 1]) == m.end()) {
+            return false;  
+        } else {
             idx = m[k + stones[idx - 1]];
-        
-        if(dp[idx][k] != -1) return dp[idx][k];
-
-        // When we reach at end of the positions we will return true
-        if(idx == stones.size() - 1) return true;
-        
-        //Calling recursive function for k-1, k, k+1 moves
+        }
+        if (dp[idx][k] != -1) {
+            return dp[idx][k];
+        }
+                  
+        // when we reach at end of the positions we will return true
+        if (idx == stones.size() - 1) {
+            return true;
+        }
+        // calling recursive function for k-1, k, k+1 moves
         dp[idx][k]  = solve(idx + 1, k-1, stones, mp) ||  solve(idx + 1, k, stones, mp) ||  solve(idx + 1, k+1, stones, mp);
         
         return dp[idx][k];
-    }
+  }
     
-    bool canCross(vector<int>& stones) {
+  bool canCross(vector<int>& stones) {
         
-        // Create unordered_map to store position of stone and index
+        // create unordered_map to store position of stone and index
         unordered_map<int, int> m;
         
-        //Intializing dp
+        // intializing dp
         memset(dp, -1, sizeof(dp));
         
-        //Intializing map
-        for(int i = 0; i < stones.size(); i++)
+        // intializing map
+        for (int i = 0; i < stones.size(); i++) {
             m.insert({stones[i], i});
-    
+        }
         // stones[1] must be 1 because at position zero we one move which is one
-        if(stones[1] != 1) return false;
-        
-        // Calling recursive function, passing index 1 and at index privous move is one
+        if (stones[1] != 1) {
+            return false;
+        }
+        // calling recursive function, passing index 1 and at index privous move is one
         return solve(1, 1, stones, m);
     }
 };
