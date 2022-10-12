@@ -1,6 +1,6 @@
 ---
 title: 'Combinatorics'
-description: 'nCr and its applications'
+description: 'Combinatorics is the branch of mathematics dealing with counting and enumerating the possibilities for a certain event to occur. It is heavily used as it enables us to find very short and concise answers to many problems.'
 hide_table_of_contents: false
 draft: true
 keywords:
@@ -24,7 +24,7 @@ We can precompute all the required values using the above formula in $O(n^2)$ an
 
 ### Example #1 [2221 - Find Triangular Sum of an Array](https://leetcode.com/problems/find-triangular-sum-of-an-array/)
 
-The important insight here is that the figure provided is nothing but an inverted Pascal's Triangle and contribution of each cell in the final sum is $value\,of\,cell$ $*$ $binomial\,coefficient\,at\,the\,particular\,position\,in\,Pascal's\,Triangle$
+The important insight here is that the figure provided is nothing but an inverted Pascal's Triangle and contribution of each cell in the final sum is the value of cell multiplied by the binomial coefficient at the particular position in Pascal's Triangle.
 
 Thus for the cell at $i^{th}$ index in the topmost row, it's value is multiplied by $n - 1 \choose i$ and added to the final sum $modulo\,10$.
 Time Complexity of the program is $O(n^2)$ for computing the binomial coefficient and $O(n)$ Space complexity.
@@ -39,18 +39,18 @@ public:
         int n = nums.size();
         vector<int> pascalTriangleRow = {1};
         // Calculate the ith row using (i - 1)th row
-        for(int i = 0; i < n; i++){
+        for (int i = 0; i < n; i++) {
             vector<int> nextRow = {1};
             for(int j = 1; j < i; j++){
-                nextRow.push_back((pascalTriangleRow[j] + pascalTriangleRow[j - 1])%10);
+                nextRow.push_back((pascalTriangleRow[j] + pascalTriangleRow[j - 1]) % 10);
             }
             nextRow.push_back(1);
             pascalTriangleRow = nextRow;
         }
         // Calculate the final answer as discussed above
         int ans = 0;
-        for(int i = 0; i < n; i++){
-            ans += (nums[i]*pascalTriangleRow[i])%10;
+        for (int i = 0; i < n; i++) {
+            ans += (nums[i] * pascalTriangleRow[i]) % 10;
         }
         return ans%10;
     }
@@ -60,7 +60,10 @@ public:
 </TabItem>
 </Tabs>
 
-Sometimes it is not possible to calculate the entirety of Pascal's Triangle due to larger values of $n$. In this case, we begin by precomputing $x!$   $\forall$ $x \in [{0, n}]$. Similarly, we will also [precompute](https://cp-algorithms.com/algebra/module-inverse.html#mod-inv-all-num) the modular inverses. This can be achieved in $O(n)$ time. Thus we can now compute $n \choose r$ using the analytical equation presented earlier. You can read about modular inverses [here](../../tutorials/basic-topics/mod.md)
+Sometimes it is not possible to calculate the entirety of Pascal's Triangle due to larger values of $n$. In this case, we begin by precomputing
+$x!$$\,$ $\forall$$\,$$x \in [{0, n}]$. 
+Similarly, we will also [precompute](https://cp-algorithms.com/algebra/module-inverse.html#mod-inv-all-num) the modular inverses. 
+This can be achieved in $O(n)$ time. Thus we can now compute $n \choose r$ using the analytical equation presented earlier. You can read about modular inverses [here](../../tutorials/basic-topics/mod.md)
 
 The implementation of above can be as follows:-
 
@@ -75,11 +78,11 @@ struct comb{
     vector<long long int> inverse_factorial;
 
     // N is the maximum value possible of input
-    comb(int N, int mod_in = 1e9 + 7){
+    comb (int N, int mod_in = 1e9 + 7) {
         // Calculate values for factorial
         mod = mod_in;
         factorial.push_back(1);
-        for(int i = 1; i <= N; i++) factorial.push_back((factorial.back()*i)%mod);
+        for(int i = 1; i <= N; i++) factorial.push_back((factorial.back() * i) % mod);
 
         // Calculate values for inverse factorial
         vector<long long int> inverse;
@@ -87,16 +90,16 @@ struct comb{
         inverse.push_back(1);
         inverse_factorial.push_back(1);
         inverse_factorial.push_back(1);
-        for(int i = 2; i <= N; i++){
-            inverse.push_back((mod - ((mod/i) * inverse[mod%i])%mod)%mod);
-            inverse_factorial.push_back((inverse_factorial[i - 1] * inverse[i])%mod);
+        for (int i = 2; i <= N; i++) {
+            inverse.push_back((mod - ((mod/i) * inverse[mod%i]) % mod) % mod);
+            inverse_factorial.push_back((inverse_factorial[i - 1] * inverse[i]) % mod);
         }
     }
 
     // Function to calculate nCr(n, r)
     long long int nCr(int n, int r){
-        if((r < 0) || (r > n)) return 0;
-        return ((factorial[n] * inverse_factorial[r])%mod * inverse_factorial[n - r])%mod;
+        if ((r < 0) || (r > n)) return 0;
+        return ((factorial[n] * inverse_factorial[r]) % mod * inverse_factorial[n - r]) % mod;
     }
 };
 ```
@@ -142,9 +145,9 @@ public:
     int subsetXORSum(vector<int>& nums) {
         int arrayOR = 0;
         // Do OR of whole array to obtain bits which are set atleast once
-        for(int num:nums) arrayOR |= num;
+        for (int num:nums) arrayOR |= num;
         // Compute the final answer using the formula discussed
-        return arrayOR*(1<<(nums.size() - 1));
+        return arrayOR * (1<<(nums.size() - 1));
     }
 };
 ```
@@ -154,33 +157,59 @@ public:
 
 ### Example #3 [62 - Unique Paths](https://leetcode.com/problems/unique-paths/)
 
-Here our robot always goes either down or left. We know that we have to go down $m - 1$ times and go left $n - 1$ times. Thus we need to find the number of ways to arrange these. One way to visualize this is if we have $m + n - 2$ blank spaces, and we have to fill $n - 1$ of them using $L$ and remaining using $D$. Then we can just choose the number of spaces to fill with $L$ from total number of spaces. The the final solution is simply $m + n - 2 \choose n - 1$.
+Here our robot always goes either down or right. We know that we have to go down $m - 1$ times and go left $n - 1$ times. Thus we need to find the number of ways to arrange these. One way to visualize this is if we have $m + n - 2$ blank spaces, and we have to fill $n - 1$ of them using $R$ (representing going right) and remaining using $D$ (representing going down). Then we can just choose the number of spaces to fill with $L$ from total number of spaces. The the final solution is simply $m + n - 2 \choose n - 1$.
 
-To implement the above, use the template provided above, along with the following code:
+Notice that we are not required to return the value after taking modulo and the constraints allow for a $O(n^2)$ precomputation. Thus, we will
+simply construct the entire Pascal's Triangle and query it everytime to calculate the answer.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
 
 ```cpp
-// Uppper limit for m + n - 2 is 198
-comb c = comb(200);
-return c.nCr(m + n - 2, n - 1);
+class Solution {
+public:
+    int uniquePaths(int m, int n) {
+        // The upper limit is m + n - 2 = 198
+        vector<vector<long long int>> PascalTriangle(199, vector<long long int> ());
+        PascalTriangle[0] = {1};
+        // Calculating every row of the triangle
+        for (int i = 1; i <= 198; i++) {
+            PascalTriangle[i].push_back(1);
+            // Using the recurrence relation.
+            for (int j = 1; j < i; j++) {
+                // Take mod with INT_MAX as otherwise some values may overflow.
+                PascalTriangle[i].push_back((PascalTriangle[i - 1][j] + PascalTriangle[i - 1][j - 1]) % INT_MAX);
+            }
+            PascalTriangle[i].push_back(1);
+        }
+        // Query the final answer
+        return PascalTriangle[m + n - 2][n - 1];
+    }
+};
 ```
 
 </TabItem>
 </Tabs>
 
+NOTE: Since every testcase only asks us to find $n \choose r$ for particular values of $n$ and $r$, we can instead of precomputing the entire
+Pascal's Triangle, just compute the paricular value of $n \choose r$ using the recurrence relation and memoization. This will lead to less time
+and space complexity, as we only calculate the values we need. Also, then we no longer need to take modulo with INT_MAX as all the values will
+fit in the "int" type as mentioned in the question.
+
 You can check the complete solution for this problem [here](../../solutions/0000-0099/unique-paths-medium)
 
 ### Example #4 [2400 - Number of Ways to Reach a Position After Exactly k Steps](https://leetcode.com/problems/number-of-ways-to-reach-a-position-after-exactly-k-steps/)
 
-Let's represent going left as $-1$ and going right as $+1$. Thus, following the same idea as before, we have $k$ blanks to fill with $+1$ and $-1$ such that there sum is equal to $startPos - endPos$.
+Let's represent going left as $-1$ and going right as $+1$. Thus, following the same idea as before, we have $k$ blanks to fill with $+1$ and
+$-1$ such that there sum is equal to $startPos - endPos$.
 
 Here we can immediately see that such will be impossible in only 2 cases:
 - The parity of $k$ and $startPos - endPos$ is different.
 - The magnitude of $k$ is less than magnitude of $startPos - endPos$.
 
-After checking for above 2 cases, we know for sure that there exists a solution. Now we can just find the number of $1's$ and $-1's$ required to sum to $startPos - endPos$. Let them be $a$ and $b$ respectively. Then the solution is $startPos - endPos \choose a$ $=$ $startPos - endPos \choose b$
+After checking for above 2 cases, we know for sure that there exists a solution. Now we can just find the number of $1's$ and $-1's$ required
+to sum to $startPos - endPos$. Let them be $a$ and $b$ respectively. Then the solution is $startPos - endPos \choose a$ $=$ $startPos - endPos 
+\choose b$
 
 If we assume that $endPos >= startPos$, then number of $-1$ is $(k - (endPos - startPos))/2$. If $endPos < startPos$, then we can count the number of $+1$, which will be the same. 
 
