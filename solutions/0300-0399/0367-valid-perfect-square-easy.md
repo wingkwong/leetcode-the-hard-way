@@ -36,6 +36,9 @@ Output: false
 
 Prerequisite: [Binary Search](../../tutorials/basic-topics/binary-search).
 
+This approach is similar to Standard Binary Search, just need check for $mid*mid$ and $num$ . Finally, we also need to check for overflow, for that its better to use $long long$ in $C++$ or $long$ in $java$.
+This solution gives $O( n )$ time complexity and $O( 1 )$ space complexity.
+
 <Tabs>
 <TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
