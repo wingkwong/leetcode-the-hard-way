@@ -213,7 +213,7 @@ to sum to $startPos - endPos$. Let them be $a$ and $b$ respectively. Then the so
 
 If we assume that $endPos >= startPos$, then number of $-1$ is $(k - (endPos - startPos))/2$. If $endPos < startPos$, then we can count the number of $+1$, which will be the same. 
 
-Thus, we need to find $k \choose \frac{n - endPos + startPos}{2}$.
+Thus, we need to find $nCr$$(k, \frac{n - endPos + startPos}{2})$.
 
 You can check the complete solution for this problem [here](../../solutions/2400-2499/number-of-ways-to-reach-a-position-after-exactly-k-steps-medium)
 
