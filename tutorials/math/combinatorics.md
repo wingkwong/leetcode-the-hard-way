@@ -145,9 +145,9 @@ public:
     int subsetXORSum(vector<int>& nums) {
         int arrayOR = 0;
         // Do OR of whole array to obtain bits which are set atleast once
-        for (int num:nums) arrayOR |= num;
+        for (int num : nums) arrayOR |= num;
         // Compute the final answer using the formula discussed
-        return arrayOR * (1<<(nums.size() - 1));
+        return arrayOR * (1 << (nums.size() - 1));
     }
 };
 ```
@@ -201,19 +201,38 @@ You can check the complete solution for this problem [here](../../solutions/0000
 ### Example #4 [2400 - Number of Ways to Reach a Position After Exactly k Steps](https://leetcode.com/problems/number-of-ways-to-reach-a-position-after-exactly-k-steps/)
 
 Let's represent going left as $-1$ and going right as $+1$. Thus, following the same idea as before, we have $k$ blanks to fill with $+1$ and
-$-1$ such that there sum is equal to $startPos - endPos$.
+$-1$ such that there sum is equal to $endPos - startPos$.
 
 Here we can immediately see that such will be impossible in only 2 cases:
-- The parity of $k$ and $startPos - endPos$ is different.
-- The magnitude of $k$ is less than magnitude of $startPos - endPos$.
+- The parity of $k$ and $endPos - startPos$ is different.
+- The magnitude of $k$ is less than magnitude of $endPos - startPos$.
 
 After checking for above 2 cases, we know for sure that there exists a solution. Now we can just find the number of $1's$ and $-1's$ required
-to sum to $startPos - endPos$. Let them be $a$ and $b$ respectively. Then the solution is $startPos - endPos \choose a$ $=$ $startPos - endPos 
-\choose b$
+to sum to $endPos - startPos$. Expressing this as an equation:
 
-If we assume that $endPos >= startPos$, then number of $-1$ is $(k - (endPos - startPos))/2$. If $endPos < startPos$, then we can count the number of $+1$, which will be the same. 
+$(1)$$*$$a$ $+$ $(-1)$$*$$b$ $=$ $endPos - startPos$, such that $a$ $+$ $b$ $=$ $k$
 
-Thus, we need to find $nCr$$(k, \frac{n - endPos + startPos}{2})$.
+Here $a$ represents the number of $1$, i.e., the right steps and similarly $b$ represents number of $-1$, i.e., the number of left steps. We
+are now interested in finding the number of possible values of $a$ and $b$ such that the above equations are satisfied.
+
+Adding both equations, 
+
+$2a$ $=$ $endPos - startPos + k$
+
+Thus, 
+
+$a$ $=$ $\frac{k \, + \, endPos \, - \, startPos}{2}$
+
+Similarly, by subtracting the equations and simplifying,
+
+$b$ $=$ $\frac{k \, - \, endPos \, + \, startPos}{2}$
+
+
+Then the solution is $k \choose a$ $=$ $k \choose b$ as we need to find number of ways to choose $a$ or $b$ moves, out of $k$ moves.
+
+Thus, we need to find $nCr$$(k, \frac{k - endPos + startPos}{2})$.
+
+To implement this, you can both precompute the entire Pascal's Triangle, or use concept of mudular inverses to find the required value.
 
 You can check the complete solution for this problem [here](../../solutions/2400-2499/number-of-ways-to-reach-a-position-after-exactly-k-steps-medium)
 
