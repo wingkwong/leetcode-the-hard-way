@@ -36,6 +36,8 @@ Output: false
 
 Prerequisite: [Binary Search](../../tutorials/basic-topics/binary-search).
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -57,3 +59,32 @@ public:
     }
 };
 ```
+
+</TabItem>
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@deepanshu-rawat6"/>
+
+```java
+class Solution {
+    public boolean isPerfectSquare(int num) {
+        // Standard Binary Search 
+        // choosing long because of overflow 
+        long s=0,e=num;
+        while(s<=e){
+            long mid=s+(e-s)/2;
+            // check if it's a perfect square
+            if(mid*mid==num){ 
+                return true;
+            }
+            // checks where num lies above or below mid*mid
+            // then change the values of s or e accordingly
+            if(mid*mid<num) s=mid+1;
+            else e=mid-1;
+        }
+        // return false if no result found
+        return false;
+    }
+}
+```
+</TabItem>
+</Tabs>
