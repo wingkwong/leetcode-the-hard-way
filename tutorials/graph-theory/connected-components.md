@@ -1,9 +1,18 @@
-## Connected Components <br> 
+---
+title: 'Connected-Components'
+description: 'Author: @adityabisht02'
+hide_table_of_contents: true
+---
+
+<TutorialAuthors names="Aditya Bisht"/>
+
+## Overview
 In a graph, sometimes all nodes might not be connected with each other. Let's take an example of a graph with 5 nodes-
 
-![image](https://user-images.githubusercontent.com/89146189/195824494-2476426d-1f1b-4079-b098-b7db371c5cef.png)
 
-Here you can see that 1-2-3 are connected and 4-5 are connected. <br>
+![image](https://user-images.githubusercontent.com/89146189/195919108-2e06dbbe-717a-4f86-9ba1-90cbdf5c119c.png)
+
+Here you can see that 1-2-3 are connected and 4-5 are connected.
 Here , 1-2-3 is called one connected component.
 
 ## How to determine if a connected component is present ?
@@ -17,10 +26,12 @@ Here , 1-2-3 is called one connected component.
 3. While traversing the list do not do BFS on the nodes which have already been visited.
 4. Hence everytime you do a BFS/DFS you are traversing a connected component so you can count the number of times you do a BFS/DFS.
 
+
 ## Sample question:
 https://leetcode.com/problems/number-of-provinces/
 
 Solution:
+
 class Solution {
     
     //bfs function
