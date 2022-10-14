@@ -73,3 +73,34 @@ class Solution {
 ```
 </TabItem>
 </Tabs>
+    
+## Approach 2: Bubble Sort
+
+We want all integers together. One way of doing this is sorting the array so that we will get all 0 initially, then all 1 and 2. We can use bubble sort for sorting.
+
+<Tabs>
+<TabItem value="c++" label="C++">
+<SolutionAuthor name="@RadhikaChhabra17"/>
+
+```c++
+class Solution {
+    void sortColors(vector<int>& nums) {
+        int n = nums.size();
+        bool check = true;
+        for(int i=0; i<n-1 && check; i++) {
+            check = false;
+            for(int j=0; j<n-i-1; j++) {
+                if(nums[j] > nums[j+1]) {
+                    int temp = nums[j];
+                    nums[j] = nums[j+1];
+                    nums[j+1] = temp;
+                    check = true;
+                }
+            }
+        }
+    }
+}
+
+```
+</TabItem>
+</Tabs>
