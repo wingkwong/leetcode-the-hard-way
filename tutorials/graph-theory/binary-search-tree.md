@@ -16,18 +16,26 @@ keywords:
 
 A valid binary search tree is defined as follows:
 
-1. The left node is smaller (or equal) to the root node.
-2. The right node is greater (or equal) to the root node.
+1. The left node of the tree is smaller (or equal) to the root node.
+2. The right node of the tree is greater (or equal) to the root node.
 3. All the nodes of left subtree(tree left side of root node) are smaller (or equal) to the root node.
 4. And All the nodes of right subtree (tree right side of the root node) are greater (or equal) to the root node.
 
 <!-- Diagram of BST -->
+
+![image](https://user-images.githubusercontent.com/30936607/195894102-11f3d201-e1ef-4fd7-83de-5e00e6d66eb7.png)
+
+![image](https://user-images.githubusercontent.com/30936607/195677540-23c39b0f-ce06-4c7d-bffa-468b6c1b3f79.png)
 
 Like binary tree. We can also traverse BST in **pre**,**post** and **inorder** traversal.
 But the amazing fact is that **inorder** traversal
 of `BST` will give **sorted data**.
 
 ### Inorder traversal in BST
+
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@utkarsh"/>
 
 ```cpp
 #include<bits/stdc++.h>
@@ -49,7 +57,8 @@ void inOrder(Node *root){
   if(root==NULL)
     return;
   inOrder(root->left);
-  cout<<root->data<<" "; //output: 4 6 7 12 13 15 16
+  //output: 4 6 7 12 13 15 16
+  cout<<root->data<<" ";
   inOrder(root->right);
 }
 
@@ -64,7 +73,12 @@ int main(){
   inorder(root);
   return 0;
 }
+
 ```
+
+</TabItem>
+
+</Tabs>
 
 ### Operations on BST
 
@@ -78,129 +92,73 @@ There are three main operation in BST:
 
 ##### Algorithm
 
-1. Return node if the target value is equal to the value of the node.
+1. Return node if the target value is equal to the value of node.
 2. keep searching in left subtree if target value is less than the value of node.
 3. keep searching in right subtree if target value is greater than the value of node.
 
+`target value: value of node you want to search in tree`
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@utkarsh"/>
+
 ```cpp
-#include<bits/stdc++.h>
-using namespace std;
-
-class Node{
-  public:
-    int data;
-    Node* left;
-    Node* right;
-    Node(int d){
-        data = d;
-        left = NULL;
-        right = NULL;
-    }
-};
-
-Node *createBST(){
-Node *root = new Node(12);
-  root->left = new Node(6);
-  root->left->left = new Node(4);
-  root->left->right = new Node(7);
-  root->right = new Node(15);
-  root->right->left = new Node(13);
-  root->right->right = new Node(16);
-  return root;
-}
 // For BST search
 Node *bstSearch(int target,Node* root){
     if(root == NULL)
         return root;
-    if(root->data == target)
+    // If target value matches with node value
+    if(root->data == target)c
+    // Return node
         return root;
-    if(root->data<target)
+    if(root->data<target){
+      // search target node in right subtree
         return bstSearch(target,root->right);
-    else
+    }
+    else{
+       // search target node in left subtree
         return bstSearch(target,root->left);
-}
-int main(){
-int target = 4;
-  Node* searchedNode = bstSearch(target,createTree());
-
-  if(searchedNode){
-      cout<<"Node "<<searchedNode->data<<"present in BST"<<endl; // output: Node 4 present in BST
-  }else{
-      cout<<"Node "<<target<<"not present in BST"<<endl;
-  }
-
-  return 0;
+    }
 }
 ```
+
+</TabItem>
+</Tabs>
 
 ### 2. Insertion
 
 **Algorithm**
 
 1. Insertion begin with searh operation.
-2. Search left or right subtree according to the relation between node value and the value of our target node.
-3. repeat step 1 until reach into NULL or external node of tree.
+2. Search left or right subtree according to the relation between node value and the value of our target node as we did in search.
+3. Repeat step 1 until reach into NULL or external node of tree.
 4. Add a new node as a right or left child according to the node value and our target node value.
 
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@utkarsh"/>
+
 ```cpp
-
-#include<bits/stdc++.h>
-using namespace std;
-
-class Node{
-  public:
-    int data;
-    Node* left;
-    Node* right;
-    Node(int d){
-        data = d;
-        left = NULL;
-        right = NULL;
-    }
-};
-
-Node *createBST(){
-Node *root = new Node(12);
-  root->left = new Node(6);
-  root->left->left = new Node(4);
-  root->left->right = new Node(7);
-  root->right = new Node(15);
-  root->right->left = new Node(13);
-  root->right->right = new Node(16);
-  return root;
-}
-
 // For BST insertion
 Node *bstInsertion(int val,Node *node){
-    if(node==NULL)
+  // Reaches to NULL or external node of tree
+    if(node==NULL){
+      // Insert new node
         node = new Node(val);
-    else if(node->data>val)
+    }
+    else if(node->data>val){
+        // Search correct place to insert in left subtree
         node->left = bstInsertion(val,node->left);
-    else if(node->data<val)
+    }
+    else if(node->data<val){
+      // Search correct place to insert in right subtree
         node->right = bstInsertion(val,node->right);
+    }
     return node;
 }
-// For Inorder traversal
-void inorder(Node *root){
-    if(root == NULL)
-    return;
-    inorder(root->left);
-    cout<<root->data<<" "; // output 4 6 7 12 13 15 16 80 -> 80 added at right most node of BST
-    inorder(root->right);
-}
-
-
-int main(){
-int target = 80;
-  Node* root = bstInsertion(target,createTree());
-
-  if(root){
-      inorder(root);
-  }
-
-  return 0;
-}
 ```
+
+</TabItem>
+</Tabs>
 
 ### 3. Deletion
 
@@ -230,60 +188,37 @@ The node to be deleted has two child node. Then in that case:
 - Replace that node with inorder successor.
 - Delete inorder successor from it's original position.
 
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@utkarsh"/>
+
 ```cpp
-#include<bits/stdc++.h>
-using namespace std;
-
-class Node{
-  public:
-    int data;
-    Node* left;
-    Node* right;
-    Node(int d){
-        data = d;
-        left = NULL;
-        right = NULL;
-    }
-};
-
-Node *createBST(){
-Node *root = new Node(12);
-  root->left = new Node(6);
-  root->left->left = new Node(4);
-  root->left->right = new Node(7);
-  root->right = new Node(15);
-  root->right->left = new Node(13);
-  root->right->left->right = new Node(14);
-  root->right->right = new Node(16);
-  return root;
-}
-
-void inorder(Node *root){
-    if(root == NULL)
-    return;
-    inorder(root->left);
-    cout<<root->data<<" ";
-    inorder(root->right);
-}
 Node *inorderSuccessor(Node* root){
     Node* currentNode = root;
-    while(currentNode->left != NULL)
+    while(currentNode->left != NULL){
+      // Go to left most
         currentNode = currentNode->left;
+    }
     return currentNode;
 }
 Node* deleteNode(Node *node,int target){
     if(node==NULL)
         return node;
     if(node->data>target)
+      // Search target node in left subtree
         node->left = deleteNode(node->left,target);
-    else if(node->data<target)
+    else if(node->data<target){
+      // Search target node in right subtree
         node->right = deleteNode(node->right,target);
+    }
     else{
-        if(node->right == NULL && node->left == NULL){ // for leaf node
+      // for leaf node
+        if(node->right == NULL && node->left == NULL){
             node = NULL;
             return node;
         }
-        if(node->right == NULL || node->left == NULL){ // for node which have only one child
+        // for node which have only one child
+        if(node->right == NULL || node->left == NULL){
             Node *temp;
             if(node->right){
                 temp = node->right;
@@ -298,38 +233,21 @@ Node* deleteNode(Node *node,int target){
         }
         // for node which have two child
         Node* temp;
+        // Find inorder Successor
         temp = inorderSuccessor(node->right);
+        // Replace node with it's inorder sucessor
         node->data = temp->data;
+        // Delete that  node
         node->right = deleteNode(node->right,temp->data);
 
     }
     return node;
 }
-int main(){
-int target = 15
-cout<<"Inorder before deletion"<<endl;
-inorder(createBST());
-Node* root = deleteNode(createBST(),target);
-
-  if(root){
-      cout<<"\n";
-  cout<<"Inorder after deletion"<<endl;
-      inorder(root);
-  }
-
-  return 0;
-}
-```
-
-**Result**
 
 ```
-  Inorder before deletion
-  4 6 7 12 13 14 15 16
-  Inorder after deletion
-  4 6 7 12 13 14 16 // 15 deleted successfully
 
-```
+</TabItem>
+</Tabs>
 
 ## Complexity
 
@@ -374,4 +292,4 @@ export const suggestedProblems = [
 }
 ]
 
-<Table title="Suggested Problems" data={suggestedProblems} />
+<Table title="Suggested Problems" data={suggestedProblems}/>
