@@ -141,11 +141,11 @@ class Solution {
 ```c++
 class Solution {
     ListNode* sortList(ListNode* head) {
-		// Already sorted
+	// Already sorted
        if(head==NULL || head->next==NULL ){   
             return head;
         }
-		for(ListNode* i=head; i->next!=NULL; i=i->next){
+	for(ListNode* i=head; i->next!=NULL; i=i->next){
             for(ListNode* j=head; j->next!=NULL; j=j->next){
                 if(j->val > j->next->val){
                     int temp=j->val;
@@ -155,7 +155,7 @@ class Solution {
             }
         }
         return head;
-	}
+    }
 }
 
 ```
