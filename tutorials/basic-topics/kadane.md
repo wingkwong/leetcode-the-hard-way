@@ -45,21 +45,18 @@ The main idea of Kadane's algorithm is to neglect the negative sum subarrays and
 ```cpp
 class Solution {
 public:
-    int maxSubArraySum(vector<int>& nums){
+    int maxSubArray(vector<int>& nums){
         int n=nums.size(); 
         // globalSum is where the maximum sum of subarray is stored
         // localSum is where the sum of current subarray is stored
         int globalSum = INT_MIN, localSum = 0;
-    
         for (int i = 0; i < n; i++){
             // Add current element to current sum 
             localSum = localSum + nums[i];
-
             // If current sum is greater than globalSum, update globalSum
             if (globalSum < localSum){
                 globalSum = localSum;
             }
-    
             // If upon adding ith element current sum is becoming less than 0
             // it cannot contribute to the maximum sum subarray so we neglect it 
             // and reset our current sum to 0 to start another subarray freshly
@@ -143,13 +140,10 @@ public:
         // function returns maxiumum sum of subarray and also updates 
         // the left and right indices of the subarray in cursumLeft and cursumRight respectively
         int localSum = 0, globalSum = 0;
-
         // variable to store the right index of current subarray
         int localSumRight = 0;
-
         // variable to store starting index of intermediate subarrays
         int localCurStart = 0;
-
         for (int i = 0; i < n; ++i){
             localSum += arr[i];
             if (localSum < 0){
@@ -188,7 +182,6 @@ public:
             
             // Set the right column corresponding to  left
             for (int right = left; right < cols; ++right){
-
                 // Calculate sum between current left and right for each row
                 for (int i = 0; i < rows; ++i){
                     if(matrix[i][right]=='1'){
@@ -197,11 +190,9 @@ public:
                         temp[i]+=INF; 
                     }
                 }
-
                 // Find the maximum sum subarray in this created temp array using Kadane's 1D algorithm.
                 int localSum, localSumLeft, localSumRight;
                 localSum = Kadane(temp, localSumLeft, localSumRight, rows);
-
                 // Compare sum with maximum sum so far.
                 // If sum is more, then update globalMaxSum
                 // and also update boundaries of maximum sum submatrix
