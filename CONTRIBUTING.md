@@ -59,7 +59,7 @@ Examples:
 - Use `<Tabs>` to wrap your code block. See below example.
 - Add Time Complexity and Space Complexity for each solution 
 - Add beginner-friendly explanations 
-- Appy LaTex for variables and formulas in your explanation
+- Use LaTex for variables and formulas in your explanation
 - Format the code well (prefer K&R coding style)
 - Do not write comment inline with the code. Write the comment above the line instead
 
