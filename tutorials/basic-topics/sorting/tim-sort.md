@@ -140,8 +140,8 @@ public:
 
 </TabItem>
 </Tabs>
-                                       
-### Complexity
+
+## Complexity
 
 The time complexity of this program is $$O(n log n)$$, since the merging takes $logn$ steps, and merges $n$ values each time. 
 
