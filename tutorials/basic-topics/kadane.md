@@ -43,8 +43,7 @@ The main idea of Kadane's algorithm is to neglect the negative sum subarrays and
 <SolutionAuthor name="@ShivaRapolu01"/>
 
 ```cpp
-int maxSubArraySum(vector<int>& nums)
-{   
+int maxSubArraySum(vector<int>& nums){   
     int n=nums.size(); 
     // globalSum is where the maximum sum of subarray is stored
     // localSum is where the sum of current subarray is stored
@@ -55,14 +54,16 @@ int maxSubArraySum(vector<int>& nums)
         localSum = localSum + nums[i];
 
         // If current sum is greater than globalSum, update globalSum
-        if (globalSum < localSum)
+        if (globalSum < localSum){
             globalSum = localSum;
+        }
  
         // If upon adding ith element current sum is becoming less than 0
         // it cannot contribute to the maximum sum subarray so we neglect it 
         // and reset our current sum to 0 to start another subarray freshly
-        if (localSum < 0)
+        if (localSum < 0){
             localSum = 0;
+        }
     }
     return globalSum;
 }
@@ -133,8 +134,7 @@ If noticed properly we can see that maximum sum submatrix is the 6. Which is the
 <SolutionAuthor name="@ShivaRapolu01"/>
 
 ```cpp
-int Kadane(vector<int> arr, int &cursumLeft, int &cursumRight, int n)
-{
+int Kadane(vector<int> arr, int &cursumLeft, int &cursumRight, int n){
     // function returns maxiumum sum of subarray and also updates 
     // the left and right indices of the subarray in cursumLeft and cursumRight respectively
     int localSum = 0, globalSum = 0;
@@ -145,16 +145,12 @@ int Kadane(vector<int> arr, int &cursumLeft, int &cursumRight, int n)
     // variable to store starting index of intermediate subarrays
     int localCurStart = 0;
 
-    for (int i = 0; i < n; ++i)
-    {
+    for (int i = 0; i < n; ++i){
         localSum += arr[i];
-        if (localSum < 0)
-        {
+        if (localSum < 0){
             localSum = 0;
             localCurStart = i + 1;
-        }
-        else if (localSum > globalSum)
-        {
+        }else if (localSum > globalSum){
             globalSum = localSum;
             cursumLeft = localCurStart;
             cursumRight = i;
@@ -181,14 +177,12 @@ int maximalRectangle(vector<vector<char>>& matrix) {
     // hence we add INF to temp array before passing it to Kadane's algorithm
 
     // Set the left column
-    for (int left = 0; left < cols; ++left)
-    {
+    for (int left = 0; left < cols; ++left){
         vector<int> temp(rows, 0); 
         // temp is used to store sum between current left and right boundaries for every row.
         
         // Set the right column corresponding to  left
-        for (int right = left; right < cols; ++right)
-        {
+        for (int right = left; right < cols; ++right){
 
             // Calculate sum between current left and right for each row
             for (int i = 0; i < rows; ++i){
@@ -206,8 +200,7 @@ int maximalRectangle(vector<vector<char>>& matrix) {
             // Compare sum with maximum sum so far.
             // If sum is more, then update globalMaxSum
             // and also update boundaries of maximum sum submatrix
-            if (localSum > globalMaxSum)
-            {
+            if (localSum > globalMaxSum){
                 globalMaxSum = localSum;
                 finalLeft = left;
                 finalRight = right;
