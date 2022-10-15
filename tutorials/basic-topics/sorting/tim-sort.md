@@ -1,6 +1,6 @@
 ---
 title: 'Tim Sort'
-description: ''
+description: 'Timsort is a fast stable sorting algorithm based upon insertion sort and merge sort.'
 hide_table_of_contents: true
 draft: true
 keywords:
@@ -15,7 +15,7 @@ keywords:
 
 ## Overview
 
-Timsort is a fast stable sorting algorithm based upon both [insertion sort]() and [merge sort](). The algorithm was first created by Tim Peters in 2002, and is now being used in Python’s `sort()` and Java’s `Arrays.sort()`. 
+Timsort is a fast stable sorting algorithm based upon both [insertion sort](insertion-sort.md) and [merge sort](merge-sort.md). The algorithm was first created by Tim Peters in 2002, and is now being used in Python’s `sort()` and Java’s `Arrays.sort()`. 
 The reason this algorithm is so fast is because it leverages the benefits of both merge sort and insertion sort. Let’s see how it works!
 
 ## Algorithm
@@ -25,9 +25,9 @@ These runs are generated using merge sort (each run has a standard size of 32-64
 
 Basically, to run timsort: 
 
-We split the array into runs.
-For each run, run insertion sort to sort that section.
-Merge runs together one by one using merge sort, by comparing values in each sorted list and combining them. 
+- We split the array into runs.
+- For each run, run insertion sort to sort that section.
+- Merge runs together one by one using merge sort, by comparing values in each sorted list and combining them. 
 
 This algorithm works because each run is sorted using insertion sort, and merge sort makes sure that each subarray is merged to the original array in the correct position. 
 
@@ -49,11 +49,11 @@ For this sort of problem, we can use timsort to lower our space complexity!
 
 Let’s do a dry run of timsort with the array `[5, 4, 3, 1, 2, 6, 7, 4]`, and a run size of 2. . 
 
-Each run is sorted using insertion sort. The array becomes `[4, 5, 1, 3, 2, 6, 4, 7]`. 
-The merges happen using recursion. We first attempt to split the array into two parts, and merge the left part. 
-First, the left part is merged, meaning the first two runs are merged. Then the array becomes `[1, 3, 4, 5, 2, 6, 4, 7]`. 
-Then, the right part is merged, meaning the next two runs are merged. The the array becomes `[1, 3, 4, 5, 2, 4, 6, 7]`. 
-Finally, the entire array is merged. The array is finally sorted: `[1, 2, 3, 4, 4, 5, 6, 7]`.
+- Each run is sorted using insertion sort. The array becomes `[4, 5, 1, 3, 2, 6, 4, 7]`. 
+- The merges happen using recursion. We first attempt to split the array into two parts, down the middle. 
+- First, the left part is merged, meaning the first two runs are merged. Then the array becomes `[1, 3, 4, 5, 2, 6, 4, 7]`. 
+- Then, the right part is merged, meaning the next two runs are merged. The the array becomes `[1, 3, 4, 5, 2, 4, 6, 7]`. 
+- Finally, the entire array is merged. The array is finally sorted: `[1, 2, 3, 4, 4, 5, 6, 7]`.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -118,8 +118,8 @@ public:
                 int mid = left + size - 1;
                 int right = min((left + 2 * size - 1), (n - 1));
                 // Merge the two runs if needed
-                if(mid < right){
-	        // Use recursion to merge the array
+                if(mid < right) {
+	                // Use recursion to merge the array
                     merge(nums, left, mid, right);
                 }
             }
@@ -127,9 +127,9 @@ public:
     }
     int findDuplicate(vector<int>& nums) {
         timSort(nums); // Use timsort to sort the array
-        for (int i = 0; i < nums.size() - 1; i++){
+        for (int i = 0; i < nums.size() - 1; i++) {
             // Return the duplicate if found
-            if (nums[i] == nums[i+1]){
+            if (nums[i] == nums[i+1]) {
                 return nums[i];
             }
         }
@@ -143,7 +143,7 @@ public:
                                        
 ### Complexity
 
-The time complexity of this program is $$O(n log n)$$, since the merging takes $logn$ steps, and merges n values each time. 
+The time complexity of this program is $$O(n log n)$$, since the merging takes $logn$ steps, and merges $n$ values each time. 
 
 The space complexity of this program is $$O(1)$$, since we don't need any extra space other than our original array. 
 
