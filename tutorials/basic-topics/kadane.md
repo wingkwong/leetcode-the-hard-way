@@ -46,25 +46,25 @@ The main idea of Kadane's algorithm is to neglect the negative sum subarrays and
 class Solution {
 public:
     int maxSubArray(vector<int>& nums) {
-        int n=nums.size(); 
-        // globalSum is where the maximum sum of subarray is stored
-        // localSum is where the sum of current subarray is stored
-        int globalSum = INT_MIN, localSum = 0;
-        for (int i = 0; i < n; i++) {
-          // Add current element to current sum 
-          localSum = localSum + nums[i];
-          // If current sum is greater than globalSum, update globalSum
-          if (globalSum < localSum) {
-            globalSum = localSum;
-          }
-          // If upon adding ith element current sum is becoming less than 0
-          // it cannot contribute to the maximum sum subarray so we neglect it 
-          // and reset our current sum to 0 to start another subarray freshly
-          if (localSum < 0) {
-            localSum = 0;
-          }
+      int n=nums.size(); 
+      // globalSum is where the maximum sum of subarray is stored
+      // localSum is where the sum of current subarray is stored
+      int globalSum = INT_MIN, localSum = 0;
+      for (int i = 0; i < n; i++) {
+        // Add current element to current sum 
+        localSum = localSum + nums[i];
+        // If current sum is greater than globalSum, update globalSum
+        if (globalSum < localSum) {
+          globalSum = localSum;
         }
-        return globalSum;
+        // If upon adding ith element current sum is becoming less than 0
+        // it cannot contribute to the maximum sum subarray so we neglect it 
+        // and reset our current sum to 0 to start another subarray freshly
+        if (localSum < 0) {
+          localSum = 0;
+        }
+      }
+      return globalSum;
     }
 };
 ```
