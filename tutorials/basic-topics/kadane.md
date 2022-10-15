@@ -138,7 +138,7 @@ class Solution {
 public:
     int Kadane(vector<int> arr, int &cursumLeft, int &cursumRight, int n) {
       // function returns maxiumum sum of subarray and also updates 
-     // the left and right indices of the subarray in cursumLeft and  cursumRight respectively
+      // the left and right indices of the subarray in cursumLeft and  cursumRight respectively
       int localSum = 0, globalSum = 0;
       // variable to store the right index of current subarray
       int localSumRight = 0;
