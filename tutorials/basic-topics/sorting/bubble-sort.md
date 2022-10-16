@@ -30,14 +30,14 @@ keywords:
 
   
 
-Bubble Sort is a sorting algorithm which compares the adjacent elements and swap their positions if they are placed in wrong order. At max, we need compare adjacent elements for (n-1) iterations where n is the size of array to be sorted. At the end of each iteration, larger value is sorted and placed at correct positions.
+Bubble Sort is a sorting algorithm which compares the adjacent elements and swap their positions if they are placed in wrong order. At max, we need to compare adjacent elements for (n-1) iterations where n is the size of array to be sorted. At the end of each iteration, larger(or smaller, as required) value is sorted and placed at correct positions.
 
   
 
 The syntax that we are using is `cpp`, please refer to your own language of preference if needed.
 
-Steps :
-1. Make two nested loop, the 1st loop would be for passes, total n-1 pass and second would be for comparison in that pass. In each pass, one element is sorted, largest or smallest and rest are compared in next passes.
+Algorithm :
+1. Make two nested loop, the 1st loop would be for number of pass the algorithm woud run, total n-1 passes and second would be for comparison in that pass. In each pass, one element is sorted (largest or smallest, as required) and placed in correct position and rest are compared in further passes.
 2. If one element is bigger(or smaller in decreasing order case) than its next element, then both should be swapped. 
 
 
@@ -50,6 +50,8 @@ Consider the example of unsorted list and see how the algorithm works.
 ```c++
 
 arr = {3,6,4,2,5}
+
+Working of bubble sort on this example : 
 
 1st pass =
 	i = 0 -> 3,6,4,2,5
@@ -97,6 +99,7 @@ If there is no change in any iterations, next iterations will not occurs, this r
 
 Space Complexity :
 Since there is no extra space, Space Complexity = O(1)
+This shows that it is an inline sorting.
 
 ## Example: [2164. Sort Even and Odd Indices Independently](https://leetcode.com/problems/sort-even-and-odd-indices-independently/)
 
@@ -112,19 +115,19 @@ Since there is no extra space, Space Complexity = O(1)
 class Solution {
 public:
     vector<int> sortEvenOdd(vector<int>& nums) {
-        //Even indices
+        //Working for even indices
         for (int i = 0; i < nums.size(); i += 2){
             for (int j = i+2; j < nums.size(); j += 2){
-                //in non-decreasing order
+                //sorting in non-decreasing order
                 if (nums[i] > nums[j]){
                     swap(nums[i], nums[j]);
                 }
             }
         }
-        // Odd indicies
+        //Working for odd indicies
         for (int i = 1; i < nums.size(); i += 2){
            for (int j = i+2; j < nums.size(); j += 2){
-               //in non-increasing order
+               //sorting in non-increasing order
                 if (nums[i] < nums[j]){
                     swap(nums[i], nums[j]);
                 }
