@@ -133,7 +133,11 @@ class Solution {
     
  # Approach 2: Bubble Sort
 
- We can use the same concept of bubble sort and code it in context of linked list.
+We can use the same concept of bubble sort and code it in context of linked list.
+
+Time Complexity: $O(n^2)$, where $n$ - # of nodes in the list
+
+Space complexity: $O(1)$
  <Tabs>
 <TabItem value="c++" label="C++">
 <SolutionAuthor name="@RadhikaChhabra17"/>
