@@ -77,6 +77,10 @@ class Solution {
 ## Approach 2: Bubble Sort
 
 We want all integers together. One way of doing this is sorting the array so that we will get all 0 initially, then all 1 and 2. We can use bubble sort for sorting.
+    
+Time Complexity: $O(n^2)$, where $n$ - elements in array
+
+Space complexity: $O(1)$
 
 <Tabs>
 <TabItem value="c++" label="C++">
