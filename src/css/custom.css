@@ -23,6 +23,8 @@
   --site-color-svg-icon-favorite: #e9669e;
   --site-color-checkbox-checked-bg: hsl(167deg 56% 73% / 25%);
   --site-color-feedback-background: #fff;
+  --ifm-hero-background-color: #04448c;
+  --ifm-hero-text-color: #f6fdfd;
   --docusaurus-highlighted-code-line-bg: rgb(0 0 0 / 10%);
 }
 
@@ -36,6 +38,8 @@
   --ifm-color-primary-light: #0066cc;
   --ifm-color-primary-lighter: #0070e0;
   --ifm-color-primary-lightest: #007af4;
+  --ifm-hero-background-color: #353738;
+  --ifm-hero-text-color: #f6fdfd;
 }
 
 .navbar-icon {
