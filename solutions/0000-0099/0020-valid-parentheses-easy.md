@@ -101,23 +101,30 @@ class Solution {
 ```python
 class Solution:
     def isValid(self, s: str) -> bool:
-        if not s or len(s) < 2: # if string is empty or has only one character
+        # if string is empty or has only one character
+        if not s or len(s) < 2:
             return False
         stack = []
-        for c in s: # iterate over the string
-            if c in ['(', '[', '{']: # if the character is an opening bracket
-                stack.append(c) # push it to the stack
+        # iterate over the string
+        for c in s:
+            # if the character is an opening bracket
+            if c in ['(', '[', '{']:
+                # push it to the stack
+                stack.append(c)
             else:
-                if not stack: # if the stack is empty there is no opening bracket to match
+                # if the stack is empty there is no opening bracket to match
+                if not stack:
                     return False
-                last = stack.pop() 
-                if c == ')' and last != '(': # if the character is a closing bracket and the last element in the stack is not the corresponding opening bracket
+                last = stack.pop()
+                # if the character is a closing bracket and the last element in the stack is not the corresponding opening bracket
+                if c == ')' and last != '(':
                     return False
                 if c == ']' and last != '[':
                     return False
                 if c == '}' and last != '{':
                     return False
-        return not stack # if the stack is empty it means that all the brackets were matched
+        # if the stack is empty it means that all the brackets were matched
+        return not stack
 ```
 </TabItem>
 <TabItem value="javascript" label="JavaScript">
@@ -129,19 +136,25 @@ class Solution:
  * @return {boolean}
  */
 var isValid = function(s) {
-    if (!s || s.length < 2) { // if string is empty or has only one character
+    // if string is empty or has only one character
+    if (!s || s.length < 2) {
         return false;
     }
     let stack = [];
-    for (let c of s) { // iterate over the string
-        if (c === '(' || c === '[' || c === '{') { // if the character is an opening bracket
-            stack.push(c); // push it to the stack
+    // iterate over the string
+    for (let c of s) {
+        // if the character is an opening bracket
+        if (c === '(' || c === '[' || c === '{') {
+            // push it to the stack
+            stack.push(c);
         } else {
-            if (!stack.length) { // if the stack is empty there is no opening bracket to match
+            // if the stack is empty there is no opening bracket to match
+            if (!stack.length) {
                 return false;
             }
             let last = stack.pop();
-            if (c === ')' && last !== '(') { // if the character is a closing bracket and the last element in the stack is not the corresponding opening bracket
+            // if the character is a closing bracket and the last element in the stack is not the corresponding opening bracket
+            if (c === ')' && last !== '(') {
                 return false;
             }
             if (c === ']' && last !== '[') {
@@ -152,7 +165,8 @@ var isValid = function(s) {
             }
         }
     }
-    return !stack.length; // if the stack is empty it means that all the brackets were matched
+    // if the stack is empty it means that all the brackets were matched
+    return !stack.length;
 };
 ```
 </TabItem>
@@ -163,20 +177,26 @@ var isValid = function(s) {
 class Solution {
 public:
     bool isValid(string s) {
-        if (s.empty() || s.length() < 2) { // if string is empty or has only one character
+        // if string is empty or has only one character
+        if (s.empty() || s.length() < 2) {
             return false;
         }
         stack<char> stack;
-        for (char c : s) { // iterate over the string
-            if (c == '(' || c == '[' || c == '{') { // if the character is an opening bracket
-                stack.push(c); // push it to the stack
+        // iterate over the string
+        for (char c : s) {
+            // if the character is an opening bracket
+            if (c == '(' || c == '[' || c == '{') {
+                // push it to the stack
+                stack.push(c); 
             } else {
-                if (stack.empty()) { // if the stack is empty there is no opening bracket to match
+                // if the stack is empty there is no opening bracket to match
+                if (stack.empty()) {
                     return false;
                 }
                 char last = stack.top();
                 stack.pop();
-                if (c == ')' && last != '(') { // if the character is a closing bracket and the last element in the stack is not the corresponding opening bracket
+                // if the character is a closing bracket and the last element in the stack is not the corresponding opening bracket
+                if (c == ')' && last != '(') { 
                     return false;
                 }
                 if (c == ']' && last != '[') {
@@ -187,7 +207,8 @@ public:
                 }
             }
         }
-        return stack.empty(); // if the stack is empty it means that all the brackets were matched
+        // if the stack is empty it means that all the brackets were matched
+        return stack.empty();
     }
 };
 ```
