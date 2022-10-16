@@ -2,7 +2,6 @@
 title: 'Combinatorics'
 description: 'Combinatorics is the branch of mathematics dealing with counting and enumerating the possibilities for a certain event to occur. It is heavily used as it enables us to find very short and concise answers to many problems.'
 hide_table_of_contents: false
-draft: true
 keywords:
   - leetcode
   - tutorial
@@ -13,16 +12,17 @@ keywords:
 
 ## Overview
 
-Combinatorics is primarily involved with art of counting. This includes counting no. of ways for a certain position to occur, to arrange some objects according to given rules or choosing some objects from a collection. Quite often, the required number takes a very large value, thus it is a very common practice to return the answer by taking modulo with some prime number $p$ (which is $1e9 + 7$ quite often, and quite recently $998244353$ also has become prominent). You can read more about modulo [here](../../tutorials/basic-topics/mod.md)
+Combinatorics is primarily involved with art of counting. This includes counting number of ways for a certain position to occur, to arrange some objects according to given rules or choosing some objects from a collection. Quite often, the required number takes a very large value, thus it is a very common practice to return the answer by taking modulo with some prime number $p$ (which is $1e9 + 7$ quite often, and quite recently $998244353$ also has become prominent). You can read more about modulo [here](../../tutorials/basic-topics/mod.md).
 
 ## Finding $n \choose r$
 
 Pronounced "n choose r", this is the mathematical notation to represent number of ways to choose r objects out of a collection of n objects. The analytical formula can be written as $n \choose r$ $=$ $\frac{n!}{r!\,(n - r)!}$.
 
-This leads to a neat recurrence relation :-  $n \choose r$ $=$ $n - 1 \choose r$ + $n - 1 \choose r - 1$ $\\$
+This leads to a neat recurrence relation: $n \choose r$ $=$ $n - 1 \choose r$ + $n - 1 \choose r - 1$ $\\$
+
 We can precompute all the required values using the above formula in $O(n^2)$ and then perform lookup in $O(1)$ time. The resulting values also form [Pascal's Triangle](https://en.wikipedia.org/wiki/Pascal%27s_triangle).
 
-### Example #1 [2221 - Find Triangular Sum of an Array](https://leetcode.com/problems/find-triangular-sum-of-an-array/)
+### Example #1: [2221 - Find Triangular Sum of an Array](https://leetcode.com/problems/find-triangular-sum-of-an-array/)
 
 The important insight here is that the figure provided is nothing but an inverted Pascal's Triangle and contribution of each cell in the final sum is the value of cell multiplied by the binomial coefficient at the particular position in Pascal's Triangle.
 
@@ -38,7 +38,7 @@ public:
     int triangularSum(vector<int>& nums) {
         int n = nums.size();
         vector<int> pascalTriangleRow = {1};
-        // Calculate the ith row using (i - 1)th row
+        // calculate the ith row using (i - 1)th row
         for (int i = 0; i < n; i++) {
             vector<int> nextRow = {1};
             for(int j = 1; j < i; j++){
@@ -47,7 +47,7 @@ public:
             nextRow.push_back(1);
             pascalTriangleRow = nextRow;
         }
-        // Calculate the final answer as discussed above
+        // calculate the final answer as discussed above
         int ans = 0;
         for (int i = 0; i < n; i++) {
             ans += (nums[i] * pascalTriangleRow[i]) % 10;
@@ -61,11 +61,9 @@ public:
 </Tabs>
 
 Sometimes it is not possible to calculate the entirety of Pascal's Triangle due to larger values of $n$. In this case, we begin by precomputing
-$x!$$\,$ $\forall$$\,$$x \in [{0, n}]$. 
-Similarly, we will also [precompute](https://cp-algorithms.com/algebra/module-inverse.html#mod-inv-all-num) the modular inverses. 
-This can be achieved in $O(n)$ time. Thus we can now compute $n \choose r$ using the analytical equation presented earlier. You can read about modular inverses [here](../../tutorials/basic-topics/mod.md)
+$x!$$\,$ $\forall$$\,$$x \in [{0, n}]$. Similarly, we will also [precompute](https://cp-algorithms.com/algebra/module-inverse.html#mod-inv-all-num) the modular inverses.  This can be achieved in $O(n)$ time. Thus we can now compute $n \choose r$ using the analytical equation presented earlier. You can read about modular inverses [here](../../tutorials/basic-topics/mod.md)
 
-The implementation of above can be as follows:-
+The implementation of above can be as follows:
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -73,18 +71,18 @@ The implementation of above can be as follows:-
 ```cpp
 struct comb{
     int mod;
-    // Making arrays to store the factorial and inverse factorial modulo m
+    // make arrays to store the factorial and inverse factorial modulo m
     vector<long long int> factorial;
     vector<long long int> inverse_factorial;
 
     // N is the maximum value possible of input
     comb (int N, int mod_in = 1e9 + 7) {
-        // Calculate values for factorial
+        // calculate values for factorial
         mod = mod_in;
         factorial.push_back(1);
         for(int i = 1; i <= N; i++) factorial.push_back((factorial.back() * i) % mod);
 
-        // Calculate values for inverse factorial
+        // calculate values for inverse factorial
         vector<long long int> inverse;
         inverse.push_back(1);
         inverse.push_back(1);
@@ -96,7 +94,7 @@ struct comb{
         }
     }
 
-    // Function to calculate nCr(n, r)
+    // function to calculate nCr(n, r)
     long long int nCr(int n, int r){
         if ((r < 0) || (r > n)) return 0;
         return ((factorial[n] * inverse_factorial[r]) % mod * inverse_factorial[n - r]) % mod;
@@ -121,9 +119,7 @@ This is a very famous sequence of natural numbers and has a variety of applicati
 The $n^{th}$ Catalan number can be found using the formula:
 $C_n$ $=$ $\frac{1}{n + 1}$$2n \choose n$
 
-## Few more examples
-
-### Example #2 [1863 - Sum of All Subset XOR Totals](https://leetcode.com/problems/sum-of-all-subset-xor-totals/description/)
+### Example #2: [1863 - Sum of All Subset XOR Totals](https://leetcode.com/problems/sum-of-all-subset-xor-totals/description/)
 
 This is an example of a very tricky problem which heavily simplifies after using some Combinatorics and [Bit Manipulation](../../tutorials/math/bit-manipulation.md)
 
@@ -144,9 +140,9 @@ class Solution {
 public:
     int subsetXORSum(vector<int>& nums) {
         int arrayOR = 0;
-        // Do OR of whole array to obtain bits which are set atleast once
+        // do OR of whole array to obtain bits which are set atleast once
         for (int num : nums) arrayOR |= num;
-        // Compute the final answer using the formula discussed
+        // compute the final answer using the formula discussed
         return arrayOR * (1 << (nums.size() - 1));
     }
 };
@@ -155,7 +151,7 @@ public:
 </TabItem>
 </Tabs>
 
-### Example #3 [62 - Unique Paths](https://leetcode.com/problems/unique-paths/)
+### Example #3: [0062 - Unique Paths](https://leetcode.com/problems/unique-paths/)
 
 Here our robot always goes either down or right. We know that we have to go down $m - 1$ times and go left $n - 1$ times. Thus we need to find the number of ways to arrange these. One way to visualize this is if we have $m + n - 2$ blank spaces, and we have to fill $n - 1$ of them using $R$ (representing going right) and remaining using $D$ (representing going down). Then we can just choose the number of spaces to fill with $L$ from total number of spaces. The the final solution is simply $m + n - 2 \choose n - 1$.
 
@@ -169,20 +165,20 @@ simply construct the entire Pascal's Triangle and query it everytime to calculat
 class Solution {
 public:
     int uniquePaths(int m, int n) {
-        // The upper limit is m + n - 2 = 198
+        // the upper limit is m + n - 2 = 198
         vector<vector<long long int>> PascalTriangle(199, vector<long long int> ());
         PascalTriangle[0] = {1};
-        // Calculating every row of the triangle
+        // calculating every row of the triangle
         for (int i = 1; i <= 198; i++) {
             PascalTriangle[i].push_back(1);
-            // Using the recurrence relation.
+            // using the recurrence relation.
             for (int j = 1; j < i; j++) {
-                // Take mod with INT_MAX as otherwise some values may overflow.
+                // take mod with INT_MAX as otherwise some values may overflow.
                 PascalTriangle[i].push_back((PascalTriangle[i - 1][j] + PascalTriangle[i - 1][j - 1]) % INT_MAX);
             }
             PascalTriangle[i].push_back(1);
         }
-        // Query the final answer
+        // query the final answer
         return PascalTriangle[m + n - 2][n - 1];
     }
 };
@@ -198,7 +194,7 @@ fit in the "int" type as mentioned in the question.
 
 You can check the complete solution for this problem [here](../../solutions/0000-0099/unique-paths-medium)
 
-### Example #4 [2400 - Number of Ways to Reach a Position After Exactly k Steps](https://leetcode.com/problems/number-of-ways-to-reach-a-position-after-exactly-k-steps/)
+### Example #4: [2400 - Number of Ways to Reach a Position After Exactly k Steps](https://leetcode.com/problems/number-of-ways-to-reach-a-position-after-exactly-k-steps/)
 
 Let's represent going left as $-1$ and going right as $+1$. Thus, following the same idea as before, we have $k$ blanks to fill with $+1$ and
 $-1$ such that there sum is equal to $endPos - startPos$.
@@ -210,7 +206,7 @@ Here we can immediately see that such will be impossible in only 2 cases:
 After checking for above 2 cases, we know for sure that there exists a solution. Now we can just find the number of $1's$ and $-1's$ required
 to sum to $endPos - startPos$. Expressing this as an equation:
 
-$(1)$$*$$a$ $+$ $(-1)$$*$$b$ $=$ $endPos - startPos$, such that $a$ $+$ $b$ $=$ $k$
+$(1) * a + (-1) * b = endPos - startPos$, such that $a + b = k$
 
 Here $a$ represents the number of $1$, i.e., the right steps and similarly $b$ represents number of $-1$, i.e., the number of left steps. We
 are now interested in finding the number of possible values of $a$ and $b$ such that the above equations are satisfied.
