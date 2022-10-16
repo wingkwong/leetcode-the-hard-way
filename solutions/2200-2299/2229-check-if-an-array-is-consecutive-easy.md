@@ -54,11 +54,17 @@ Therefore, nums is consecutive.
 
 ## Approach 1: Sort and Compare
 
-We can sort the array using the default sort method and compare the consecutive elements. It's easy to compare the elements in one loop run.
+The problem statements require you to check for consecutive elements in a range, which means the element next to the current element should be one number higher. For example, [1,2,3] are consecutive elements while [1,3,4] or [1,2,2,3,4] are not. That means the **current element + 1 = next element**.
+
+The elements are given in random order, and it's mentioned that the elements are in a range [x,x+n-1] with x as the minimum element. To find the minimum element, you can sort the array in ascending order, and the first element will be the minimum element.
+
+However, we simply have to check the consecutive elements, and even if they are repeating like [1, 1, 2, 3, 4], they are not consecutive as they don't satisfy the condition nums[i]+1 == nums[i+1]. The primary focus is on the first statement, as the other one may confuse you to think of ambiguous corner cases. You can easily check for consecutive elements after sorting the array.
+
+
 
 Time Complexity: $O(n*log(n))$. The Time complexity of the default sort function in C++
 
-Space Complexity: $O(n)$. An array is passed to the function whose size scales with the input
+Space Complexity: $O(1)$. No extra space is used
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -68,14 +74,12 @@ Space Complexity: $O(n)$. An array is passed to the function whose size scales w
 class Solution {
 public:
     bool isConsecutive(vector<int>& nums) {
-    // Using the default sort function   
-    sort(nums.begin(),nums.end());
-    // Strictly checking the problem statement
-    for(int i=0;i<nums.size()-1;i++){
-                if(nums[i]+1!=nums[i+1]){
-                return false;
-                }
-        }
+        // using sort from C++ STL to order the elements in ascending order 
+        sort(nums.begin(),nums.end());
+        // run a loop to check elements till size-1 to avoid overflow
+        for(int i=0;i<nums.size()-1;i++)
+            // check current element +1 == next element
+            if(nums[i]+1!=nums[i+1]) return false;
         return true;
     }
 };
