@@ -21,7 +21,7 @@ The reason this algorithm is so fast is because it leverages the benefits of bot
 ## Algorithm
 
 Timsort works by first splitting an array into **runs**. A **run** is a subarray of data spliced from the original array. 
-These runs are generated using merge sort (each run has a standard size of 32-64), and insertion sort is used to sort each run. Finally, merge sort combines these sorted arrays together recursively. 
+These runs are generated using merge sort (each run has a standard size of 32-64, to split the array into small enough pieces for insertion sort to be fast on each one), and insertion sort is used to sort each run. Finally, merge sort combines these sorted arrays together recursively. 
 
 Basically, to run timsort: 
 
@@ -31,7 +31,7 @@ Basically, to run timsort:
 
 This algorithm works because each run is sorted using insertion sort, and merge sort makes sure that each subarray is merged to the original array in the correct position. 
 
-## Example: 
+## Example: [442. Find All Duplicates in an Array](https://leetcode.com/problems/find-all-duplicates-in-an-array/)
 
 > An array of integers in the range [1, n] is given, where each integer appears once or twice. We have to find all the integers that appear twice in the array.
 
@@ -47,13 +47,13 @@ For this sort of problem, we can use timsort to lower our space complexity!
 
 ### Dry Run
 
-Let’s do a dry run of timsort with the array `[5, 4, 3, 1, 2, 6, 7, 4]`, and a run size of 2. . 
+Let’s do a dry run of timsort with the array $[5, 4, 3, 1, 2, 6, 7, 4]$, and a run size of 2. . 
 
-- Each run is sorted using insertion sort. The array becomes `[4, 5, 1, 3, 2, 6, 4, 7]`. 
+- Each run is sorted using insertion sort. The array becomes $[4, 5, 1, 3, 2, 6, 4, 7]$. 
 - The merges happen using recursion. We first attempt to split the array into two parts, down the middle. 
-- First, the left part is merged, meaning the first two runs are merged. Then the array becomes `[1, 3, 4, 5, 2, 6, 4, 7]`. 
-- Then, the right part is merged, meaning the next two runs are merged. The the array becomes `[1, 3, 4, 5, 2, 4, 6, 7]`. 
-- Finally, the entire array is merged. The array is finally sorted: `[1, 2, 3, 4, 4, 5, 6, 7]`.
+- First, the left part is merged, meaning the first two runs are merged. Then the array becomes $[1, 3, 4, 5, 2, 6, 4, 7]$. 
+- Then, the right part is merged, meaning the next two runs are merged. The the array becomes $[1, 3, 4, 5, 2, 4, 6, 7]$. 
+- Finally, the entire array is merged. The array is finally sorted: $[1, 2, 3, 4, 4, 5, 6, 7]$.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -62,7 +62,8 @@ Let’s do a dry run of timsort with the array `[5, 4, 3, 1, 2, 6, 7, 4]`, and a
 ```cpp
 class Solution {
 public:
-    const int RUN = 32; // Initalize the size of each run
+    // initalize the size of each run
+    const int RUN = 32; 
     void insertionSort(vector<int>& nums, int left, int right) {
         for (int i = left; i <= right; i++) {
             int tmp = nums[i];
@@ -75,7 +76,7 @@ public:
         }
     }
     void merge(vector<int>& nums, int left, int mid, int right) {
-        // Maintain the two previous lists 
+        // maintain the two previous lists 
         vector<int> lt, rt;
         int lenlt = mid - left + 1, lenrt = right - mid;
         for (int i = 0; i < lenlt; i++) {
@@ -84,7 +85,7 @@ public:
         for (int i = 0; i < lenrt; i++) {
             rt.push_back(nums[mid + 1 + i]);
         }
-        // Start recreating the correct list, putting the smaller one each time 
+        // start recreating the correct list, putting the smaller one each time 
         int i = 0, j = 0, k = left;
         while (i < lenlt && j < lenrt) {
             if (lt[i] <= rt[j]) {
@@ -108,28 +109,28 @@ public:
     }
     void timSort(vector<int>& nums) {
         int n = nums.size();
-        // Insertion sort on each run
+        // insertion sort on each run
         for (int i = 0; i < n; i += RUN) {
             insertionSort(nums, i, min((i + RUN-1), (n - 1))); 
         }
         for (int size = RUN; size < n; size = 2 * size) {
             for (int left = 0; left < n; left += 2 * size) {
-                // Determine indices for each run for merging
-                int mid = left + size - 1;
-                int right = min((left + 2 * size - 1), (n - 1));
-                // Merge the two runs if needed
+                // determine indices for each run for merging
+                int mid = left + size - 1, right = min((left + 2 * size - 1), (n - 1));
+                // merge the two runs if needed
                 if(mid < right) {
-	                // Use recursion to merge the array
+	                // use recursion to merge the array
                     merge(nums, left, mid, right);
                 }
             }
         }
     }
     int findDuplicate(vector<int>& nums) {
-        timSort(nums); // Use timsort to sort the array
+        // use timsort to sort the array
+        timSort(nums); 
         for (int i = 0; i < nums.size() - 1; i++) {
-            // Return the duplicate if found
-            if (nums[i] == nums[i+1]) {
+            // return the duplicate if found
+            if (nums[i] == nums[i + 1]) {
                 return nums[i];
             }
         }
