@@ -119,7 +119,7 @@ public:
                 int mid = left + size - 1, right = min((left + 2 * size - 1), (n - 1));
                 // merge the two runs if needed
                 if(mid < right) {
-	                // use recursion to merge the array
+	            // use recursion to merge the array
                     merge(nums, left, mid, right);
                 }
             }
