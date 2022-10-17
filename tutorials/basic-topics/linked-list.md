@@ -20,8 +20,8 @@ In this tutorial you will learn about Linked Lists, and its implementation using
 
 Problem with using Arrays was that we have to have some idea about the size of the array that we require. To counter this we learnt about dynamic arrays. Linked list is another approach to tackle this problem. In linked lists we do not have to worry about the size at all.
 
-A linked list is a linear data structure that has a series of connected nodes. Each node has two fields, `data` and `address`.
-We call the start of a linked list, `HEAD`. We can all it anything but by convention, we'll call it `HEAD`. 
+A linked list is a linear data structure that has a series of connected nodes. Each node has two fields, $data$ and $address$.
+We call the start of a linked list, $Head$. We can all it anything but by convention, we'll call it $Head$. 
 
 ## Representation of a Linked List
 
@@ -102,7 +102,7 @@ That is the advantage linked lists have over array when it comes to memory. We h
 
   ![image](https://user-images.githubusercontent.com/44477975/193444559-c57fa2ed-81cb-4039-924d-494b64f0c79d.png)
 
-Numbers with # behind them are the addresses in memory where these nodes are stored. Here, `head` stores the address for `node1` and `node1` stores the address for `node2`. Notice that the address are not sequential.
+Numbers with # behind them are the addresses in memory where these nodes are stored. Here, $head$ stores the address for $node1$ and $node1$ stores the address for $node2$. Notice that the address are not sequential.
 
 ## Basic Linked list operations
 
@@ -114,8 +114,8 @@ Numbers with # behind them are the addresses in memory where these nodes are sto
 Let's see their implementation in a linked list.
 
 ## Traversal
-We have to access each element of the linked list. Remember, the `head` points to the first node, and the `next` pointer of the last node points to `null`.
-Traversing through the linked list is fairly simple. We keep moving from the head towards the end of the list. We would know we have reached the last node when `next` points to `null`.
+We have to access each element of the linked list. Remember, the $head$ points to the first node, and the $next$ pointer of the last node points to $null$.
+Traversing through the linked list is fairly simple. We keep moving from the head towards the end of the list. We would know we have reached the last node when $next$ points to $null$.
 
 
 <Tabs
@@ -177,14 +177,14 @@ We can add element to the beginning, middle or at the end of the linked list.
 
 **Problem:**
 
-Let's say, we are given a linked list `[3] --> [4] --> [5] --> null` and we have to add another node `[1]` to the front. How would you do this?
+Let's say, we are given a linked list $[3] --> [4] --> [5] --> null$ and we have to add another node $[1]$ to the front. How would you do this?
 
 **Approach:**
 
 * Allocate memory for a new node
 * Store the data
-* Point `next` of new node to `head`
-* Point `head` to the **new** node
+* Point $next$ of new node to $head$
+* Point $head$ to the **new** node
 
 **Solution:**
 
@@ -213,7 +213,7 @@ head = newNode;
 
 **Problem:** 
 
-You are given a linked list `[3] --> [4] --> [5] --> [6] --> null`. Insert a new node `[7]` at the 3rd place to make the final list as `[3] --> [4] --> [7] --> [5] --> [6] --> null`. 
+You are given a linked list $[3] --> [4] --> [5] --> [6] --> null$. Insert a new node $[7]$ at the 3rd place to make the final list as $[3] --> [4] --> [7] --> [5] --> [6] --> null$. 
 
 **Approach:**
 
@@ -259,14 +259,14 @@ One important thing to note here is that before breaking any connection in the l
 
 **Problem:** 
 
-You are given a linked list `[3] --> [4] --> [5] --> [6] --> null`. Insert a new node `[7]` at the end to make the final list as `[3] --> [4] --> [5] --> [6] --> [7] --> null`
+You are given a linked list $[3] --> [4] --> [5] --> [6] --> null$. Insert a new node $[7]$ at the end to make the final list as $[3] --> [4] --> [5] --> [6] --> [7] --> null$
 
 **Approach:**
 
 * Allocate memory for the new node
 * Store the data in the new node
 * Traverse till the end of the list
-* Make the `next` of the last node point to the new node
+* Make the $next$ of the last node point to the new node
 
 **Solution:**
 
@@ -289,7 +289,7 @@ while(temp.next != null){
 }
 
 // temp is now at the last node.
-// point `next` of the last node to the new node 
+// point $next$ of the last node to the new node 
 temp.next = newNode; 
 ``` 
 </TabItem>
@@ -301,7 +301,7 @@ We can delete the first node, or the last node, or some other position in the mi
 
 **1. Delete from the beginning**
 
-To delete from the beginning we just have to move the `head` to its next, so that no pointer would be pointing to the first node.
+To delete from the beginning we just have to move the $head$ to its next, so that no pointer would be pointing to the first node.
 
 <Tabs
     defaultValue="java"
@@ -322,7 +322,7 @@ head = head.next;
 **2. Delete from the end**
 
 * Move the pointer to the second last node
-* Set the `next` pointer of second last node to point to `null`
+* Set the $next$ pointer of second last node to point to $null$
 
 <Tabs
     defaultValue="java"
@@ -371,14 +371,14 @@ temp.next = temp.next.next;
 
 **Leetcode 237. Delete Node in a Linked List:** 
 
-There is a singly linked list. You have to delete a `node` from the list. You are given the `node` to delete but not the `head` of the list. Delete the given `node`. Note that by deleting the `node`, we `do not` mean removing it from memory. We mean:
+There is a singly linked list. You have to delete a $node$ from the list. You are given the $node$ to delete but not the $head$ of the list. Delete the given $node$. Note that by deleting the $node$, we $do not$ mean removing it from memory. We mean:
 
 *The value of the given node should not exist in the linked list.
 *The number of nodes in the linked list should decrease by one.
 *All the values before node should be in the same order.
 *All the values after node should be in the same order.
 
-**Approach:** Change the value of the `current node` to the value of the `next` node. Do this until the last node.
+**Approach:** Change the value of the $current node$ to the value of the $next$ node. Do this until the last node.
 
 **Solution:**
 
@@ -414,10 +414,10 @@ class Solution {
 
 ## Search for an item in the list
 
-* Make a temporary pointer `ptr` point to `head`
-* Move `ptr` to next node until `ptr` is `null`
-* At each iteration, check if the data in `ptr` is same as the number we want. If yes, then return `true`
-* Return `false` if number not found
+* Make a temporary pointer $ptr$ point to $head$
+* Move $ptr$ to next node until $ptr$ is $null$
+* At each iteration, check if the data in $ptr$ is same as the number we want. If yes, then return $true$
+* Return $false$ if number not found
 
 <Tabs
     defaultValue="java"
@@ -447,12 +447,12 @@ return false;
 
 **Leetcode 19. Remove Nth Node From End of List**
 
-Given the head of a linked list, remove the nth node from the end of the list and return its head. Given Linked list: `[1] -> [2] -> [3] -> [4] -> [5]` for `n=2` change the list to `[1] -> [2] -> [3] ->     [5]`.
+Given the head of a linked list, remove the nth node from the end of the list and return its head. Given Linked list: $[1] -> [2] -> [3] -> [4] -> [5]$ for $n=2$ change the list to $[1] -> [2] -> [3] ->     [5]$.
 
 **Approach:**
 
 * First we find the size of the list
-* `nth` node from the `end` is the `size-(n+1)th` node from the `front`
+* $nth$ node from the $end$ is the $size-(n+1)th$ node from the $front$
 * Once we have the size, we can iterate over the list till the node just before the node to remove
 * change the pointers to remove the node
 
@@ -514,24 +514,24 @@ class Solution {
 
 **234. Palindrome Linked List**
 
-Given the `head` of a singly linked list, return `true` if it is a `palindrome` or `false` otherwise. 
+Given the $head$ of a singly linked list, return $true$ if it is a $palindrome$ or $false$ otherwise. 
 
 Example: 
 
 
 ![image](https://user-images.githubusercontent.com/44477975/196033584-ca91cbc9-0126-40d2-8788-4fbe3b50d55a.png)
 
-`Output: true`
+$Output: true$
 
 **Approach:**
 
-* We use `two pointer` method and `recursion` to solve this problem
-* We keep a `global` left pointer, that points to the current left node
-* As we go deep in recursion we move our `right` pointer forward towards the end of the list
-* When `right` pointer is at the end we compare its value to the `left` node
-* If they are same we move `left` pointer forward and come out of the recursion
-* As we come out of the recursive call, out `right` pointer would move towards `left`
-* If at any point the values are not same, we return `false`
+* We use $two pointer$ method and $recursion$ to solve this problem
+* We keep a $global$ left pointer, that points to the current left node
+* As we go deep in recursion we move our $right$ pointer forward towards the end of the list
+* When $right$ pointer is at the end we compare its value to the $left$ node
+* If they are same we move $left$ pointer forward and come out of the recursion
+* As we come out of the recursive call, out $right$ pointer would move towards $left$
+* If at any point the values are not same, we return $false$
 
 **Solution:**
 
@@ -586,9 +586,9 @@ class Solution {
 
 **328. Odd Even Linked List:**
 
-Given the `head` of a singly linked list, group all the nodes with odd indices together followed by the nodes with even indices, and return the reordered list.
+Given the $head$ of a singly linked list, group all the nodes with odd indices together followed by the nodes with even indices, and return the reordered list.
 
-The `first` node is considered `odd`, and the `second` node is `even`, and so on.
+The $first$ node is considered $odd$, and the $second$ node is $even$, and so on.
 
 Note that the relative order inside both the even and odd groups should remain as it was in the input.
 
@@ -596,11 +596,11 @@ You must solve the problem in O(1) extra space complexity and O(n) time complexi
 
 **Approach:**
 
-* We maintain three pointers, `odd` at the first node, `even` at the second node and `evenhead` also at the second node.
-* `evenhead` will not be changed. It will point to the starting of the list of even nodes.
+* We maintain three pointers, $odd$ at the first node, $even$ at the second node and $evenhead$ also at the second node.
+* $evenhead$ will not be changed. It will point to the starting of the list of even nodes.
 * The node after every even node, is an odd node. 
-* So, `next` node for current `odd` node, would be `next` node of the current `even` node.
-* And `next` node for the current `even` node, would be `next` node of the just changed `odd` node.
+* So, $next$ node for current $odd$ node, would be $next$ node of the current $even$ node.
+* And $next$ node for the current $even$ node, would be $next$ node of the just changed $odd$ node.
   
 **Solution:**
 
