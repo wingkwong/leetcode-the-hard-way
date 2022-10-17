@@ -672,15 +672,15 @@ export const suggestedProblems = [
     "solutionLink": ""
   },
   {
-    "problemName": "160. Intersection of Two Linked Lists",
-    "difficulty": "Easy",
-    "leetCodeLink": "https://leetcode.com/problems/intersection-of-two-linked-lists/",
+    "problemName": "86. Partition List",
+    "difficulty": "Medium",
+    "leetCodeLink": "https://leetcode.com/problems/partition-list/",
     "solutionLink": ""
   },
   {
-    "problemName": "237. Delete Node in a Linked List",
+    "problemName": "148. Sort List",
     "difficulty": "Medium",
-    "leetCodeLink": "https://leetcode.com/problems/delete-node-in-a-linked-list/",
+    "leetCodeLink": "https://leetcode.com/problems/sort-list/",
     "solutionLink": ""
   },
 ]
