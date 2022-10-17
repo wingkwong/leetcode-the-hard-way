@@ -1,6 +1,6 @@
 ---
 title: "Binary Search Tree (BST)"
-description: "Author: @utkarsh"
+description: "BST is setup in a way that it will skip half of the tree. Due to this it will mostly take logrithm time for each operations."
 draft: true
 hide_table_of_contents: true
 keywords:
@@ -58,7 +58,7 @@ class Node{
         data = d;
         left = NULL;
         right = NULL;
-    }
+     }
 };
 
 void inOrder(Node *root){
@@ -117,15 +117,12 @@ There are three main operation in BST:
 Node *bstSearch(int target,Node* root){
     if(root == NULL)
         return root;
-    // If target value matches with node value
-    if(root->data == target)c
-    // Return node
+    if(root->data == target)
         return root;
     if(root->data<target){
       // search target node in right subtree
         return bstSearch(target,root->right);
-    }
-    else{
+    } else{
        // search target node in left subtree
         return bstSearch(target,root->left);
     }
@@ -151,16 +148,13 @@ Node *bstSearch(int target,Node* root){
 ```cpp
 // For BST insertion
 Node *bstInsertion(int val,Node *node){
-  // Reaches to NULL or external node of tree
     if(node==NULL){
       // Insert new node
         node = new Node(val);
-    }
-    else if(node->data>val){
+    } else if(node->data>val){
         // Search correct place to insert in left subtree
         node->left = bstInsertion(val,node->left);
-    }
-    else if(node->data<val){
+    } else if(node->data<val){
       // Search correct place to insert in right subtree
         node->right = bstInsertion(val,node->right);
     }
@@ -215,14 +209,13 @@ Node *inorderSuccessor(Node* root){
 Node* deleteNode(Node *node,int target){
     if(node==NULL)
         return node;
-    if(node->data>target)
-      // Search target node in left subtree
+    if(node->data>target){
+        // Search target node in left subtree
         node->left = deleteNode(node->left,target);
-    else if(node->data<target){
+    } else if(node->data<target){
       // Search target node in right subtree
         node->right = deleteNode(node->right,target);
-    }
-    else{
+    } else{
       // for leaf node
         if(node->right == NULL && node->left == NULL){
             node = NULL;
@@ -235,7 +228,7 @@ Node* deleteNode(Node *node,int target){
                 temp = node->right;
                 node->data = temp->data;
                 node->right = NULL;
-            }else if(node->left){
+            } else if(node->left){
                 temp = node->left;
                 node->data = temp->data;
                 node->left = NULL;
@@ -250,7 +243,6 @@ Node* deleteNode(Node *node,int target){
         node->data = temp->data;
         // Delete that  node
         node->right = deleteNode(node->right,temp->data);
-
     }
     return node;
 }
@@ -275,91 +267,6 @@ Here **n** is number of node in the tree
 ### Space complexity
 
 Space complexity for all the operations is $$O(n)$$
-
-### Example
-
-We learn alot now we will apply this knowledge to solve this problem ([LeetCode Link](https://leetcode.com/problems/validate-binary-search-tree/))
-
-> Given the root of a binary tree, determine if it is a valid binary search tree (BST)
-
-So in order to solve this problem. We need to recap the property of BST.
-As i explained in overview of BST.
-
-Condition that run on each nodes:
-
-```cpp
-node.value<node.right.value
-        and
-node.value>node.left.value
-```
-
-But we also need to check that all the node in left subtree is lessThan or equal to the rootNode and all the node in right subtree is greaterThan or equal to the rootNode.
-
-So here we also need to maintain upper and lower limits so while traversing the tree need to compare above condition as well as these limit values.
-
-<Tabs>
-<TabItem value="cpp" label="C++">
-<SolutionAuthor name="@utkarsh"/>
-
-```cpp
-class Node{
-  public:
-    int val;
-    Node* left;
-    Node* right;
-    Node(int d){
-        val = d;
-        left = NULL;
-        right = NULL;
-    }
-};
-
-Node *createBST(){
-Node *root = new Node(12);
-  root->left = new Node(6);
-  root->left->left = new Node(4);
-  root->left->right = new Node(7);
-  root->right = new Node(15);
-  root->right->left = new Node(13);
-  root->right->right = new Node(16);
-  return root;
-}
-
-bool validate(Node* root, Node* low, Node* high) {
-        // Empty trees are valid BSTs.
-        if (root == nullptr) {
-            return true;
-        }
-
-        // The current node's value must be between low and high.
-        if ((low != nullptr and root->val <= low->val) or
-            (high != nullptr and root->val >= high->val)) {
-            return false;
-        }
-
-        // The left and right subtree must also be valid.
-        return validate(root->right, root, high) and
-               validate(root->left, low, root);
-    }
-
-    int main(){
-        Node *root = createBST();
-        if(validate(root,nullptr,nullptr)){
-          // Output: Tree is BST
-            cout<<"Tree is BST"<<endl;
-        }else{
-            cout<<"Tree is not BST"<<endl;
-
-        }
-      return 0;
-    }
-
-```
-
-</TabItem>
-</Tabs>
-
-Suggesting some LC problems. Please try to solve it by using above learnings.
 
 export const suggestedProblems = [
 {
@@ -389,3 +296,9 @@ export const suggestedProblems = [
 ]
 
 <Table title="Suggested Problems" data={suggestedProblems}/>
+
+## References
+
+1. https://www.freecodecamp.org/news/binary-search-tree-what-is-it/
+2. https://www.freecodecamp.org/news/binary-search-trees-bst-explained-with-examples/
+3. https://www.programiz.com/dsa/binary-search-tree
