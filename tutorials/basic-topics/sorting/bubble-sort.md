@@ -24,31 +24,37 @@ Algorithm :
 
 Consider the example of unsorted list and see how the algorithm works.
 
-Working of bubble sort for the array  arr = {3,6,4,2,5}: 
+arr = {3,6,4,2,5}: 
 
-1st pass =
-	index = 0 -> 3,6,4,2,5
+1st pass =>
+    
+	index = 0 -> 3,6,4,2,5 
 	index = 1 -> 3,4,6,2,5
 	index = 2 -> 3,4,2,6,5
-	index = 3 -> 3,4,2,5,6
+    index = 3 -> 3,4,2,5,6
 
-2nd pass = 
+2nd pass => 
+
 	index = 0 -> 3,4,2,5,6
 	index = 1 -> 3,2,4,5,6
 	index = 2 -> 3,2,4,5,6
 
-3rd pass = 
+3rd pass => 
+
 	index = 0 -> 2,3,4,5,6
 	index = 1 -> 2,3,4,5,6
 
-4th pass =
+4th pass =>
+
 	index = 0 -> 2,3,4,5,6  
 	
-We can use a variable check to see if there is swap in one pass or not. If there is no swapping in one pass, they we don't have to check for other pass.
+We can use a variable *check* to see if there is swap in one pass or not. If there is no swapping in one pass, they we don't have to check for other pass.
+
+ <Tabs>
+<TabItem value="c++" label="C++">
+<SolutionAuthor name="@RadhikaChhabra17"/>
 
 ```c++
-Code :
-
 void bubblesort(vector<int> &arr) {
 	int n = arr.size();
 	bool check = true;
@@ -56,20 +62,24 @@ void bubblesort(vector<int> &arr) {
 		check = false;
 		for(int j = 0; j < n - i - 1; j++) {
 			if(arr[j] > arr[j + 1]) {
-				swap(arr[j], arr[j + 1]);
+                swap(arr[j], arr[j + 1]);
 				check = true;
 			}
 		}
 	}
 }
 ```
+</TabItem>
+</Tabs>
 
 ### Time and Space Complexity
 
 Time Complexity :
+
 For first iteration, loop will run ($n-1$) times, for second it will run ($n-2$) times and so on.
+
 So, Worst Case Time Complexity = $$(n - 1)$$ + $$(n - 2)$$ + $$(n - 3)$$ + ... + 1 = $$O(n^2)$$
-If there is no change in any iterations, next iterations will not occurs, this reduces the time complexity.
+Use of variable If there is no change in any iterations, next iterations will not occurs, this reduces the time complexity.
 
 Space Complexity :
 Since there is no extra space, Space Complexity = $$O(1)$$
@@ -83,25 +93,32 @@ This shows that it is an inline sorting.
 >
 >Return the array formed after rearranging the values of nums.
 
-*Approach* : Run two bubble sort. One for even indices with non decreasing order and one for odd indices with non increasing order.
+
+*Approach* : 
+
+Run two bubble sort. One for even indices with non decreasing order and one for odd indices with non increasing order.
+
+<Tabs>
+<TabItem value="c++" label="C++">
+<SolutionAuthor name="@RadhikaChhabra17"/>
 
 ```c++
 class Solution {
 public:
     vector<int> sortEvenOdd(vector<int>& nums) {
-        //Working for even indices
+        //For even indices
         for (int i = 0; i < nums.size(); i += 2){
-            for (int j = i+2; j < nums.size(); j += 2){
-                //sorting in non-decreasing order
+            for (int j = i + 2; j < nums.size(); j += 2){
+                //Sort in non-decreasing order
                 if (nums[i] > nums[j]){
                     swap(nums[i], nums[j]);
                 }
             }
         }
-        //Working for odd indicies
+        //For odd indicies
         for (int i = 1; i < nums.size(); i += 2){
-           for (int j = i+2; j < nums.size(); j += 2){
-               //sorting in non-increasing order
+           for (int j = i + 2; j < nums.size(); j += 2){
+               //Sort in non-increasing order
                 if (nums[i] < nums[j]){
                     swap(nums[i], nums[j]);
                 }
@@ -111,19 +128,21 @@ public:
     }
 };
 ```
+</TabItem>
+</Tabs>
 
 export const suggestedProblems = [
   {
     "problemName": "75 -  Sort Colors ",
     "difficulty": "Medium",
     "leetCodeLink": "https://leetcode.com/problems/sort-colors/",
-    "solutionLink": "../../solutions/0000-0099/0075-sort-colors-medium"
+    "solutionLink": "../../../solutions/0000-0099/sort-colors-medium"
   },
   {
     "problemName": "148 - Sort List",
     "difficulty": "Medium",
     "leetCodeLink": "https://leetcode.com/problems/sort-list/",
-    "solutionLink": "../../solutions/0100-0199/0148-sort-list-medium.md"
+    "solutionLink": "../../../solutions/0100-0199/sort-list-medium"
   }
 ]
 
