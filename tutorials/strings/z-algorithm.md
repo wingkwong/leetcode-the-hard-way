@@ -80,3 +80,5 @@ class Solution:
 
 #### Time Complexity 
 Since we are searching building our z-array of $$m$$ sized pattern in one iteration by comparing and updating it  with $$n$$ sized prefix it takes $$O(m+n)$$ time.
+
+For a detailed explanation [Click here](https://www.scaler.com/topics/data-structures/z-algorithm/)
