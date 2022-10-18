@@ -42,6 +42,7 @@ As we know what the goal's length is, and it's in our z-array, therefore we've f
 ### Implementation
 <Tabs>
 <TabItem value="py" label="Python">
+<SolutionAuthor name="@Cyber-Machine"/>
 
 ```py
 class Solution:
