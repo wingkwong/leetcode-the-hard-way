@@ -116,4 +116,26 @@ class Solution {
 }
 ```
 </TabItem>
+<TabItem value="javascript" label="JavaScript">
+<SolutionAuthor name="@MithunPrabhu777"/>
+
+```javascript
+var isPalindrome = function(x) {
+   let result = 0;
+    
+   if(x < 0){
+       return false;
+   } else{
+       let number = x;
+       while(number > 0){ 
+           const remainder = number % 10; 
+           result = result * 10 + remainder; 
+           number = Math.floor(number / 10); 
+       }
+   }
+    
+   return result === x; 
+};
+```
+</TabItem>
 </Tabs>

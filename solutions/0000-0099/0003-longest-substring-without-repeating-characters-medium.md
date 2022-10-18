@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @ganajayant, @vigneshshiv |
+  Author: @@vigneshshiv, @MithunPrabhu777 |
   https://leetcode.com/problems/longest-substring-without-repeating-characters/
 tags: [Hash Table, String, Sliding Window]
 ---
@@ -45,46 +45,7 @@ Notice that the answer must be a substring, "pwke" is a subsequence and not a su
 * `0 <= s.length <= 5 * 10^4`
 * `s` consists of English letters, digits, symbols and spaces.
 
-## Approach 1: Set
-
-Create 2 pointer left and right place them at start of the string.
-Move right (right++) till distinct characters and store them in set.
-If repeated character occurs then move left (left++) until that repeated character is occured in left ans also remove all characters that occur before that character including character itself from set.
-
-<Tabs>
-<TabItem value="java" label="Java">
-<SolutionAuthor name="@ganajayant"/>
-
-```java
-class Solution {
-    public String longestPalindrome(String s) {
-        int n = s.length();
-        int max = 0;
-        HashSet<Character> seen = new HashSet<>();
-        int left = 0;
-        int right = 0;
-        while (right < n) {
-            char c = s.charAt(right);
-            if (seen.add(c)) // Add until repeated element is occured
-            {
-                max = Math.max(max, right - left + 1); // length of substring
-                right++;
-            } else {
-                while (s.charAt(left) != c) {
-                    seen.remove(s.charAt(left++));
-                }
-                seen.remove(s.charAt(left++));
-            }
-        }
-        return max;
-    }
-}
-```
-</TabItem>
-</Tabs>
-
-
-## Approach 2: HashSet with One Iteration
+## Approach 1: HashSet with One Iteration
 
 Two pointer _i_ and _j_, initially at the start of the string. Move right (j++) till distinct characters and store them in set.
 If repeated character occurs then move left (i++) until that repeated character is occured in left, and also remove all characters that occur before that character including character itself from set. This helps to maintain Set with longest substring. 
@@ -116,10 +77,43 @@ class Solution {
 }
 ```
 </TabItem>
+
+<TabItem value="javascript" label="JavaScript">
+<SolutionAuthor name="@MithunPrabhu777"/>
+
+```javascript
+var lengthOfLongestSubstring = function (s) {
+    const letterCountMap = new Map();
+
+    // Destructuring assignment syntax is a JavaScript expression that pulls out values from array
+    // Here we are assigning initial values to variables
+    let [left, right, max] = [0, 0, 0];
+
+    while (right < s.length) {
+        const currentValue = s[right];
+        const canSlide = letterCountMap.has(currentValue);
+
+        // We can slide left pointer only when we find duplicate number from map
+        if (canSlide) {
+            const rightSlide = letterCountMap.get(currentValue) + 1;
+            left = Math.max(left, rightSlide);
+        }
+
+        // We are finding window from left to right of non repeating characters
+        const window = (right - left) + 1;
+        max = Math.max(window, max);
+        letterCountMap.set(currentValue, right);
+        right++;
+    }
+
+    return max;
+};
+```
+</TabItem>
 </Tabs>
 
 
-## Approach 3: Sliding Window with ASCII
+## Approach 2: Sliding Window with ASCII
 
 We can solve this problem with Sliding Window and Two pointers _i_ and _j_. Iterate over the string, keep moving the 2nd pointer _j_ forward until the character is not matched with _i_ th character. 
 

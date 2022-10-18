@@ -2,7 +2,6 @@
 title: 'Cyclic Sort'
 description: 'Cyclic Sort is a comparison sort algorithm that is theoretically optimal in terms of the total number of writes to the original array.'
 hide_table_of_contents: false
-draft: true
 keywords:
   - leetcode
   - tutorial

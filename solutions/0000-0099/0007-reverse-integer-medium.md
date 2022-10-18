@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @vigneshshiv |
+  Author: @vigneshshiv, @MithunPrabhu777 |
   https://leetcode.com/problems/reverse-integer/
 ---
 
@@ -75,6 +75,33 @@ class Solution {
         return num > Integer.MAX_VALUE ? 0 : (int) num * sign;
     }
 }
+```
+</TabItem>
+<TabItem value="javascript" label="JavaScript">
+<SolutionAuthor name="@MithunPrabhu777"/>
+
+```javascript
+/**
+ * @param {number} x
+ * @return {number}
+ */
+var reverse = function(x) {
+    let [number, sign, remainder] = [0, 1, 0];
+    
+    const RANGE = 2 ** 31 - 1;
+    
+    if (x < 0) {
+        x *= -1;
+        sign = -1;
+    }
+    
+    while (x > 0) {
+        remainder = x % 10;
+        number = (number * 10) + remainder;
+        x = Math.floor(x / 10);
+    }
+    return number > RANGE ? 0 : number * sign;
+};
 ```
 </TabItem>
 </Tabs>
