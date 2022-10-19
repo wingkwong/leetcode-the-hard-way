@@ -10,7 +10,7 @@ keywords:
 - bubble sort
 ---
 
-<TutorialAuthors  names="@RadhikaChhabra17"/>
+<TutorialAuthors  names = "@RadhikaChhabra17"/>
 
 ## Overview
 
@@ -24,14 +24,14 @@ Algorithm :
 
 Consider the example of unsorted list and see how the algorithm works.
 
-arr = {3,6,4,2,5}: 
+arr = {5, 1, 4, 2, 8}: 
 
 1st pass =>
     
 	index = 0 -> 3,6,4,2,5 
 	index = 1 -> 3,4,6,2,5
 	index = 2 -> 3,4,2,6,5
-    index = 3 -> 3,4,2,5,6
+    	index = 3 -> 3,4,2,5,6
 
 2nd pass => 
 
@@ -50,9 +50,9 @@ arr = {3,6,4,2,5}:
 	
 We can use a variable *check* to see if there is swap in one pass or not. If there is no swapping in one pass, they we don't have to check for other pass.
 
- <Tabs>
-<TabItem value="c++" label="C++">
-<SolutionAuthor name="@RadhikaChhabra17"/>
+<Tabs>
+<TabItem value = "c++" label = "C++">
+<SolutionAuthor name = "@RadhikaChhabra17"/>
 
 ```c++
 void bubblesort(vector<int> &arr) {
@@ -78,12 +78,12 @@ Time Complexity :
 
 For first iteration, loop will run ($n-1$) times, for second it will run ($n-2$) times and so on.
 
-So, Worst Case Time Complexity = $$(n - 1)$$ + $$(n - 2)$$ + $$(n - 3)$$ + ... + 1 = $$O(n^2)$$
-Use of variable If there is no change in any iterations, next iterations will not occurs, this reduces the time complexity.
+So, Worst Case Time Complexity = $$(n - 1) + (n - 2) + (n - 3) + ... + 1 = O(n^2)$$
+Use of variable check will reduce the time complexity further. If there is no change in any iterations, next iterations will not occurs, this reduces the time complexity.
 
 Space Complexity :
-Since there is no extra space, Space Complexity = $$O(1)$$
-This shows that it is an inline sorting.
+
+Since there is no extra space, Space Complexity = $$O(1)$$. This shows that it is an inline sorting.
 
 ## Example: [2164. Sort Even and Odd Indices Independently](https://leetcode.com/problems/sort-even-and-odd-indices-independently/)
 
@@ -106,19 +106,19 @@ Run two bubble sort. One for even indices with non decreasing order and one for 
 class Solution {
 public:
     vector<int> sortEvenOdd(vector<int>& nums) {
-        //For even indices
+        // work for even indices
         for (int i = 0; i < nums.size(); i += 2){
             for (int j = i + 2; j < nums.size(); j += 2){
-                //Sort in non-decreasing order
+                // sort in non-decreasing order
                 if (nums[i] > nums[j]){
                     swap(nums[i], nums[j]);
                 }
             }
         }
-        //For odd indicies
+        // work for odd indicies
         for (int i = 1; i < nums.size(); i += 2){
            for (int j = i + 2; j < nums.size(); j += 2){
-               //Sort in non-increasing order
+               // sort in non-increasing order
                 if (nums[i] < nums[j]){
                     swap(nums[i], nums[j]);
                 }
