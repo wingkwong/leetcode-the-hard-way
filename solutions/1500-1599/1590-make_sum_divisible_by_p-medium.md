@@ -2,6 +2,7 @@
 description: >-
   Author: @darkhope |
   https://leetcode.com/problems/make-sum-divisible-by-p/
+tags: [Array, Hash Table, Prefix Sum]
 ---
 
 # 1590 - Make Sum Divisible by P (Medium)
@@ -47,15 +48,14 @@ Explanation: Here the sum is 6. which is already divisible by 3. Thus we do not 
 * `1 <= nums[i] <= 10^9`
 * `1 <= p <= 10^9`
 
-## Approach 1: Using A Hash Map
-
+## Approach 1: Hash Map
 
 We first compute the sum of array an then take its modulo wtih given interger $p$, if this number is $0$, that's awesome return $0$ else we somehow have to make this number $0$. For this we will remove some subarray and make remainder of sum of array = $0$
 
-Firstly we take a suffix array of sum from $n-1$ to $i$ % $p$, then we will iterate from $0$ to $n$ and make a unordered_map (HashMap) to store (remainder as key and its last index as value), now if we have to remove an subarray that ends at $i$, then our ans for current $i$ will be difference of $i$ and index of complement for $suff[i + 1]$ in hashmap i.e $i$ - $index$ $of$ $( p - suff[i + 1]) % p$
-
+Firstly we take a suffix array of sum from $n-1$ to $i$ % $p$, then we will iterate from $0$ to $n$ and make a unordered_map (HashMap) to store (remainder as key and its last index as value), now if we have to remove an subarray that ends at $i$, then our ans for current $i$ will be difference of $i$ and index of complement for $suff[i + 1]$ in hashmap i.e $i$ - $index$ $of$ $( p - suff[i + 1]) % p$.
 
 **Time Complexity: $O(n)$**
+
 Calculating and storing suffix array will be done in $O(n)$.
 Since we are using unordered_map so it will give average $O(1)$ for inserting and fetching.  
 
@@ -69,39 +69,40 @@ The only extra memory we are using is the suffix array and a HashMap.
 ```cpp
 class Solution {
 public:
-    int minSubarray(vector<int> &nums, int p){
+    int minSubarray(vector<int> &nums, int p) {
         int n = nums.size();
         // suffix array of modulo
         vector<int> suff(n);
         long long sum = 0;
-        for (int i = n - 1; i >= 0; i--){
+        for (int i = n - 1; i >= 0; i--) {
             sum += nums[i];
             suff[i] = sum % p;
         }
         // if array is already divisible by p
-        if (sum % p == 0)
-            return 0;
+        if (sum % p == 0) return 0;
         unordered_map<int, int> m;
         // defualt sum of arrayis 0 as none element is selected.
         m[0] = -1;
         sum = 0;
         // Final answer to be stored in this
         int ans = INT_MAX;
-        for (int i = 0; i < n; i++){
+        for (int i = 0; i < n; i++) {
             sum += nums[i];
             sum %= p;
-            if (i + 1 < n){
+            if (i + 1 < n) {
                 // removing a subarray that doesn't involve last element
                 // complement of suff[i + 1]
                 int curr = (p - suff[i + 1]) % p;
                 // if we get complement
-                if (m.find(curr) != m.end())
+                if (m.find(curr) != m.end()) {
                     // remove elements from m[curr] + 1 to i
                     ans = min(ans, i - m[curr]);
+                }
             }
             // this case will cover if we have to remove some last part of array.
-            if (sum % p == 0)
+            if (sum % p == 0) {
                 ans = min(ans, n - 1 - i);
+            }
             m[sum] = i;
         }
         return ans >= n ? -1 : ans;
@@ -115,12 +116,12 @@ public:
 
 ```java
 class Solution {
-    int minSubarray(int[] nums, int p){
+    int minSubarray(int[] nums, int p) {
         int n = nums.length;
         // suffix array of modulo
         long suff[] = new long[n];
         long sum = 0;
-        for (int i = n - 1; i >= 0; i--){
+        for (int i = n - 1; i >= 0; i--) {
             sum += nums[i];
             suff[i] = sum % p;
         }
@@ -133,28 +134,29 @@ class Solution {
         sum = 0;
         // Final answer to be stored in ans.
         int ans = Integer.MAX_VALUE;
-        for (int i = 0; i < n; i++){
+        for (int i = 0; i < n; i++) {
             sum += nums[i];
             sum %= p;
-            if (i + 1 < n){
+            if (i + 1 < n) {
                 // removing a subarray that doesn't involve last element
                 // complement of suff[i+1]
                 long curr = (p - suff[i + 1]) % p;
                 // if we get complement
-                if (m.containsKey(curr))
+                if (m.containsKey(curr)) {
                     // remove elements from m[curr]+1 to i
                     ans = Math.min(ans, i - m.get(curr));
+                }
             }
             // this case will cover if we have to remove some last part of array.
-            if (sum == 0)
+            if (sum == 0) {
                 ans = Math.min(ans, n - 1 - i);
+            }
             m.put(sum, i);
         }
         return ans >= n ? -1 : ans;
     }
 }
 ```
-
 
 </TabItem>
 </Tabs>
