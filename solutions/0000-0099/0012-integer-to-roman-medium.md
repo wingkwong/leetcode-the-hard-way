@@ -62,32 +62,32 @@ Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 
 - `1 <= num <= 3999`
 
-## Approach 1: Iterating over the dictionary entries
+## Approach 1: Iterating over a list
 
-The solution used was iterating over the entries of a dictionary and for each entry, while the $remaining$ value is greater than or equal to the key value of the dictionary, append the corresponding character(s) to the $result$ and subtract the key from the $remaining$ value.
+The solution used was iterating over a tuples list created to map the integers and their respective Roman numerals. So when iterating over the list, while the $remaining$ value is greater than or equal to the first tuple element (which is the integer value), append the corresponding character(s) (the second tuple element) to $result$ and subtract the value from $remaining$.
 
-For example, if we consider the given integer $num = 17$, after starting the iteration over the dictionary, the algorithm checks if the integer `17` is greater than or equal to the first integer value in the dictionary, which is `1000`. Since it's not, the code in the while loop is not executed and the next iteration starts checking if `17` is greater than or equal to `900` and so on until the iteration checks if `17` is greater than or equal to `10`. In this iteration the code in the while loop is executed so that the $result$ variable is concatenated with the respective Roman numeral which is `'X'` and the $remaining$ value becomes `7`. For the next iteration, `7` is not greater than or equal to `9` but on the next one, when it's greater than `5`, $result$ becomes `'XV'` and the $remaining$ value becomes `2`. So keeping that logic, after the final iteration the final result will be `'XVII'`.
+For example, if we consider the given integer $num = 17$, after starting the iteration over the list, the algorithm checks if the integer `17` is greater than or equal to the first integer value from the first list element, which is `1000`. Since it's not, the code in the while loop is not executed and the next iteration starts checking if `17` is greater than or equal to `900` and so on until the iteration checks if `17` is greater than or equal to `10`. In this iteration the code in the while loop is executed so that the $result$ variable is concatenated with the respective Roman numeral which is `'X'` and $remaining$ becomes `7`. For the next iteration, `7` is not greater than or equal to `9` but on the next one, when it's greater than `5`, $result$ becomes `'XV'` and $remaining$ becomes `2`. So keeping that logic, after the final iteration $result$ will be `'XVII'`.
 
 <Tabs>
 <TabItem value="py" label="Python">
 <SolutionAuthor name="@jessicaribeiroalves"/>
 
 ```py
-numbersDict = {
-    1000: 'M',
-    900: 'CM',
-    500: 'D',
-    400: 'CD',
-    100: 'C',
-    90: 'XC',
-    50: 'L',
-    40: 'XL',
-    10: 'X',
-    9: 'IX',
-    5: 'V',
-    4: 'IV',
-    1: 'I'
-}
+numbersDict = [
+    (1000, 'M'),
+    (900, 'CM'),
+    (500, 'D'),
+    (400, 'CD'),
+    (100, 'C'),
+    (90, 'XC'),
+    (50, 'L'),
+    (40, 'XL'),
+    (10, 'X'),
+    (9, 'IX'),
+    (5, 'V'),
+    (4, 'IV'),
+    (1, 'I')
+]
 
 class Solution(object):
     def intToRoman(self, num):
