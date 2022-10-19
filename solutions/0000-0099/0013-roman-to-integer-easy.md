@@ -68,12 +68,12 @@ Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 
 The solution used was iterating over the string and executing a condition that meets the subtraction principles described above in the problem statement, in order to return the result corresponding to the final sum.
 
-The condition says: if the current character is greater than the previous character then subtract the previous character value from the result, otherwise increment the value of the previous char to the result.
+The condition says: if the current character is greater than the previous character then subtract the previous character value from the $result$, otherwise increment the value of the previous character to the $result$.
 
-For example, if we consider the string `s = 'XIV'`, the first character `'X'` whose value is `10` will satisfy the condition, since the `previous_char` variable is initialized with `0`, then `result` still remains `0`.
-The second character `'I'` whose value is `1` won't satisfy the condition once `1` isn't greater than `previous_char` which is now `10`. So `result` is incremented by `10` and `previous_char` is updated to `1`.
-Finally, the third character `'V'` whose value is `5` will satisfy the condition because is greater than `previous_char`. So from the `result` is subtracted `1` and `previous_char` is updated to 5.
-The code finishes the loop with `result = 9` and finally increments the value of `previous char` to the `result`. So our final result becomes `14`.
+For example, if we consider the string $s = 'XIV'$, the first character `'X'` whose value is `10` will satisfy the condition, since the $previousChar$ variable is initialized with `0`, then $result$ still remains `0`.
+The second character `'I'` whose value is `1` won't satisfy the condition once `1` isn't greater than $previousChar$ which is now `10`. So $result$ is incremented by `10` and $previousChar$ is updated to `1`.
+Finally, the third character `'V'` whose value is `5` will satisfy the condition because is greater than $previousChar$. So from the $result$ is subtracted `1` and $previousChar$ is updated to 5.
+The code finishes the loop with $result = 9$ and finally increments the value of $previousChar$ to the $result$. So our final $result$ becomes `14`.
 
 <Tabs>
 <TabItem value="py" label="Python">
@@ -93,17 +93,17 @@ romanNumeralsDict = {
 class Solution(object):    
     def romanToInt(self, s):
         result = 0
-        previous_char = 0
+        previousChar = 0
 
         for char in s:
-            if romanNumeralsDict[char] > previous_char:
-                result -= previous_char
+            if romanNumeralsDict[char] > previousChar:
+                result -= previousChar
             else:
-                result += previous_char
+                result += previousChar
 
-            previous_char = romanNumeralsDict[char]
+            previousChar = romanNumeralsDict[char]
 
-        result += previous_char
+        result += previousChar
         return result
 
 ```
