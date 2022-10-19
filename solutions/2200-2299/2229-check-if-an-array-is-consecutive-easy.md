@@ -1,7 +1,7 @@
 ---
 description: >-
   Author: @hiverkiya | https://leetcode.com/problems/check-if-an-array-is-consecutive/
-  tags: [Array]
+tags: [Array]
 ---
 
 # 2229 - Check if an Array is Consecutive (Easy)
@@ -49,8 +49,8 @@ Therefore, nums is consecutive.
 
 **Constraints:**
 
-- $1 <= nums.length <= 105$
-- $0 <= nums[i] <= 105$
+- $1 <= nums.length <= 10^5$
+- $0 <= nums[i] <= 10^5$
 
 ## Approach 1: Sort and Compare
 
@@ -59,8 +59,6 @@ The problem statements require you to check for consecutive elements in a range,
 The elements are given in random order, and it's mentioned that the elements are in a range $[x , x + n - 1]$ with $x$ as the minimum element. To find the minimum element, you can sort the array in ascending order, and the first element will be the minimum element.
 
 However, we simply have to check the consecutive elements, and even if they are repeating like $[1, 1, 2, 3, 4]$, they are not consecutive as they don't satisfy the condition $nums[i] + 1 == nums[i + 1]$. The primary focus is on the first statement, as the other one may confuse you to think of ambiguous corner cases. You can easily check for consecutive elements after sorting the array.
-
-
 
 Time Complexity: $O(n*log(n))$. The Time complexity of the default sort function in C++
 
@@ -77,9 +75,10 @@ public:
         // using sort from C++ STL to order the elements in ascending order 
         sort(nums.begin(), nums.end());
         // run a loop to check elements till size-1 to avoid overflow
-        for(int i = 0; i < nums.size() - 1; i++)
-            // check current element +1 == next element
+        for(int i = 0; i < nums.size() - 1; i++) {
+            // check if current element + 1 equals to the next element
             if(nums[i] + 1 != nums[i + 1]) return false;
+        }
         return true;
     }
 };
