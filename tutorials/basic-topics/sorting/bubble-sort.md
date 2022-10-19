@@ -24,7 +24,7 @@ Algorithm :
 
 Consider the example of unsorted list and see how the algorithm works.
 
-arr = {5, 1, 4, 2, 8}: 
+$$arr = {5, 1, 4, 2, 8}$$ 
 
 ![image](https://user-images.githubusercontent.com/77332750/196658633-a3b735de-820b-45de-a0cc-b7933d67d75c.png)
 	
