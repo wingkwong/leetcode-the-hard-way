@@ -138,20 +138,21 @@ We can use the same concept of bubble sort and code it in context of linked list
 Time Complexity: $O(n^2)$, where $n$ - # of nodes in the list
 
 Space complexity: $O(1)$
- <Tabs>
+	
+<Tabs>
 <TabItem value="c++" label="C++">
 <SolutionAuthor name="@RadhikaChhabra17"/>
 
 ```c++
 class Solution {
     ListNode* sortList(ListNode* head) {
-	// Already sorted
-       if(head == NULL || head->next == NULL){   
+	// already sorted
+       if (head == NULL || head->next == NULL) {   
             return head;
         }
-	for(ListNode* i = head; i->next != NULL; i = i->next){
-            for(ListNode* j = head; j->next != NULL; j = j->next){
-                if(j->val > j->next->val){
+	for (ListNode* i = head; i->next != NULL; i = i->next) {
+            for (ListNode* j = head; j->next != NULL; j = j->next) {
+                if (j->val > j->next->val) {
                     int temp = j->val;
                     j->val = j->next->val;
                     j->next->val = temp;
@@ -161,7 +162,6 @@ class Solution {
         return head;
     }
 }
-
 ```
 </TabItem>
 </Tabs>
