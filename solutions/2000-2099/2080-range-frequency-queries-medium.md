@@ -47,62 +47,66 @@ rangeFreqQuery.query(0, 11, 33); // return 2. The value 33 occurs 2 times in the
 ## Approach 1: Using Segment Tree.
 We are using a standard segement tree with each node consisting of a map which store frequency of the elements in the interval corresponding to that node.
 
+<Tabs>
+<TabItem value="CPP" label="CPP">
 <SolutionAuthor name="@DhruvilLakhtaria"/>
 
 ```cpp
 class RangeFreqQuery {
 public:
     int n;
-    // Every node is segment tree keeps a hashmap of count of array items for the given range.
+    // every node is segment tree keeps a hashmap of count of array items for the given range.
     unordered_map<int,int> *seg;
+
     RangeFreqQuery(vector<int>& arr) {
         n = arr.size(); 
-        seg = new unordered_map<int,int>[4*n]; // Because max nodes or indexes in segment tree can be 4*n [There is a proof for that].
+        // because max nodes or indexes in segment tree can be 4*n
+        seg = new unordered_map<int,int>[4*n]; 
         build(0, 0, n - 1, arr);
     }
     
-    void build(int ind,int low,int high,vector<int>& arr) {
-        if(low == high){
+    void build(int ind, int low, int high, vector<int>& arr) {
+        if (low == high) {
             seg[ind][arr[low]]++;
             return;
         }
 
         int mid = (low + high)/2;
         
-        // Recursively build for left and right subtree.
+        // recursively build for left and right subtree.
         build(2*ind + 1, low, mid, arr);
         build(2*ind + 2, mid + 1, high, arr);
         
         unordered_map<int,int> map;
         
-        for(auto it = seg[2*ind + 1].begin(); it != seg[2*ind + 1].end(); it++){
+        for(auto it = seg[2*ind + 1].begin(); it != seg[2*ind + 1].end(); it++) {
             map[it->first] += it->second;
         }
         
-        for(auto it = seg[2*ind + 2].begin(); it != seg[2*ind + 2].end(); it++){
+        for(auto it = seg[2*ind + 2].begin(); it != seg[2*ind + 2].end(); it++) {
             map[it->first] += it->second;
         }
-        // Merging the right and left subtree solutions.
+        // merging the right and left subtree solutions.
         seg[ind] = map;
     } 
     
     int queryH(int ind, int low, int high, int l, int r, int value) {
-        // No overlap
+        // no overlap
         // [l r] [low high] or [low high] [l r]
-        if(r < low || high < l) {
+        if (r < low || high < l) {
             return 0;
         }
 
-        // Complete overlap
+        // complete overlap
         // [l low high r]
-        if(l <= low && high <= r) {
+        if( l <= low && high <= r) {
             return seg[ind][value];
         }
 
-        // Partial overlap
+        // partial overlap
         int mid = (low + high)/2;
 
-        // Querying the answer from left and right subtree.
+        // querying the answer from left and right subtree.
         int left = queryH(2*ind + 1, low, mid, l, r, value);
         int right = queryH(2*ind + 2, mid + 1, high, l, r, value);    
         return left + right;
@@ -113,3 +117,5 @@ public:
     }
 };
 ```
+</TabItem>
+</Tabs>

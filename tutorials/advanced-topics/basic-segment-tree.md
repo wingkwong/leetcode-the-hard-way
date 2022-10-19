@@ -36,26 +36,23 @@ Lets look at [307. Range Sum Query - Mutable](https://leetcode.com/problems/rang
 > 1. Get sum of values in range $$[L-R]$$.
 > 2. Update ith element to new value. 
 
-<SolutionAuthor name="@DhruvilLakhtaria"/>
 <Tabs>
 <TabItem value="CPP" label="CPP">
+<SolutionAuthor name="@DhruvilLakhtaria"/>
 
 ```CPP
 class Solution:
-    class  SegmentTree{
-    
-    vector<int>v;
-    SegmentTree(vector<int>& arr, int n)
-    {
+    class SegmentTree{
+
+    vector<int> v;
+    SegmentTree (vector<int>& arr, int n) {
 	    v = vector<int>(4*n);
-	    buildTree(arr, 0, n-1, 0);
+	    buildTree(arr, 0, n - 1, 0);
     }          
     
-    void buildTree(vector<int>& arr,int l,int r,int loc) 
-    {    
+    void buildTree(vector<int>& arr, int l, int r, int loc) {    
 	    // we have reached the leaf node
-	    if(l == r)
-	    {
+	    if (l == r) {
 		    v[loc] = arr[l];
 		    return;
 	    } 
@@ -64,48 +61,43 @@ class Solution:
 	    
 	    // build for left child
 	    buildTree(arr, l, mid, 2*loc + 1);
-	    //build for right child
+	    // build for right child
 	    buildTree(arr, mid + 1, r, 2*loc + 2);
  
-	    //use above result for getting current answer.  
+	    // use above result for getting current answer.  
 	    v[loc] = v[2*loc + 1] + v[2*loc + 2];
-    
     } 
       
-    int query(int loc,int l,int r,int query_l,int query_r)
-    {
-	    //case-1: requested query interval within l-r 
-	    if(query_l <= l && query_r >= r)
-		    return  v[loc];      
+    int query(int loc, int l, int r, int query_l, int query_r) {
+	    // case-1: requested query interval within l-r 
+	    if (query_l <= l && query_r >= r)
+		    return v[loc];      
 	    // case-2: requested query interval is outside l-r
-	    else  if(query_l > r || query_r < l)
-		    return  INT_MAX;
+	    else if (query_l > r || query_r < l)
+		    return INT_MAX;
 	    // case-3: requested query is intersecting its child.
-	    int  mid = l + (r - l)/2;
-	    int  left = query(2*loc + 1,l,mid,query_l, query_r);
-	    int  right = query(2*loc + 2,mid + 1,r,query_l, query_r);
-	    return  left + right;
+	    int mid = l + (r - l)/2;
+	    int left = query(2*loc + 1,l,mid,query_l, query_r);
+	    int right = query(2*loc + 2,mid + 1,r,query_l, query_r);
+	    return left + right;
     }
-
-    void update(int loc, int l, int r, int update_at, int value)
-    {
-	    if(l == r)
-	    {
-		    //Update leaf node
+    void update(int loc, int l, int r, int update_at, int value) {
+	    if (l == r) {
+		    // update leaf node
 		    v[loc] = value;
 		    return ;
 	    }
-	    int  mid = (l+r)/2;
+	    int  mid = (l + r) / 2;
 	   
-	    //if index lies in the left child call update() for left child
-	    if(update_at <= mid)
+	    // if index lies in the left child call update() for left child
+	    if (update_at <= mid)
 		    update(2*loc + 1, l, mid, update_at, value);
 	    
-		//else index would lie in the right child, call update() for the right child 
+		// else index would lie in the right child, call update() for the right child 
 	    else
 		    update(2*loc + 2, mid + 1, r, update_at, value);
 	    
-	    //after updating the children,update the current node as smallest of its children
+	    // after updating the children,update the current node as smallest of its children
 	    v[loc] = v[2*loc + 1] + v[2*loc + 2];
 	 	return;  
     }
@@ -117,20 +109,26 @@ class Solution:
 
 ### Sample Usage
 
-```cpp
 
-vector<int>nums = {3, 1, 3, 4, 212, 4, 21};
+<Tabs>
+<TabItem value="CPP" label="CPP">
+<SolutionAuthor name="@DhruvilLakhtaria"/>
+
+```cpp
+vector<int> nums = {3, 1, 3, 4, 212, 4, 21};
 int n = nums.size();
 
 SegmentTree st = SegementTree(arr, n);
 // operation - 1 sum of 0-3
-st.query(0, 0, n-1, 0, 3);
+st.query(0, 0, n - 1, 0, 3);
 // operation - 2 update i = 4 to 21.
-st.update(0, 0, n-1, 4, 21);
+st.update(0, 0, n - 1, 4, 21);
 // operation - 3 sum of 3-6
-st.query(0, 0, n-1, 3, 6);
+st.query(0, 0, n - 1, 3, 6);
 
 ```
+</TabItem>
+</Tabs>
 
 
 ### Time Complexity and Space Complexity Analysis 

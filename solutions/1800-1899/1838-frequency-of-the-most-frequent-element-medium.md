@@ -54,6 +54,8 @@ Output: 1
 ## Approach 1: Using Lazy Propagation and Segment Tree.
 We are using a standard segement tree with each node consisting of a map which store frequency of the elements in the interval corresponding to that node.
 
+<Tabs>
+<TabItem value="CPP" label="CPP">
 <SolutionAuthor name="@DhruvilLakhtaria"/>
 
 ```cpp
@@ -63,7 +65,7 @@ class tree{
     ll sum, start, end, lazy;
     tree* left;
     tree* right;
-    tree(ll i, ll j){
+    tree(ll i, ll j) {
         start = i, end = j, lazy = 0;
         left = NULL, right = NULL;
     }
@@ -84,20 +86,20 @@ public:
     #define pb push_back
     #define parr(arr) for(auto x: arr)cout<<x<<" ";cout<<endl
 
-    tree* build(vll &v, ll i, ll j){
+    tree* build(vll &v, ll i, ll j) {
         tree* node = new tree(i, j);
-        if(i == j) {
+        if (i == j) {
           node->sum = v[i];
           return node;
         }
-        ll mid = (i+j)/2;
+        ll mid = (i + j) / 2;
         node->left = build(v, i, mid);
         node->right = build(v, mid + 1, j);
         node->sum = node->left->sum + node->right->sum;
         return node;
     }
 
-    ll pgate(tree *&node){
+    ll pgate(tree *&node) {
         node->sum += (node->lazy)*((node->end - node->start) + 1);
         if(!node->right) {
             node->lazy = 0;
@@ -109,7 +111,7 @@ public:
         return node->sum;
     }
 
-    ll update(tree* &node, ll i, ll j, ll val){
+    ll update(tree* &node, ll i, ll j, ll val) {
         if(node->start>j || node->end < i) return node->sum;
         if(node->lazy){
             pgate(node);    
@@ -122,20 +124,26 @@ public:
     }
 
 
-    pair<ll,ll> query(tree* &node, ll i, ll j, ll k){
-        if(node->start>j || node->end < i || k<0) return {0, 0};
-        if(node->lazy){
+    pair<ll,ll> query(tree* &node, ll i, ll j, ll k) {
+        if (node->start>j || node->end < i || k<0)
+            return {0, 0};
+        
+        if (node->lazy) {
             pgate(node);
         }
-        if(node->start >= i and node->end <= j) {
-            if(node->start == node->end){
-                if(node->sum > k) return {INT_MAX,0};
+
+        if (node->start >= i and node->end <= j) {
+            if (node->start == node->end){
+                if (node->sum > k)
+                    return {INT_MAX,0};
                 return {node->sum, 1};
             }
-            if(node->sum <= k) return {node->sum,(node->end-node->start) + 1};
+            if (node->sum <= k) 
+                return {node->sum,(node->end-node->start) + 1};
         } 
         pair<ll,ll> right = query(node->right, i, j, k);
-        if(right.F == INT_MAX) return right;
+        if (right.F == INT_MAX)
+            return right;
         pair<ll,ll> left = query(node->left, i, j, k - right.F);
         return {min((ll)INT_MAX, left.F + right.F), left.S + right.S};
     }
@@ -145,7 +153,7 @@ public:
         vll v(nums.size());
         tree* root = build(v,0,nums.size()-1);
         ll maxi = 1;
-        for(int i = 1; i < nums.size(); i++){
+        for (int i = 1; i < nums.size(); i++) {
             update(root, 0, i - 1, nums[i] - nums[i - 1]); 
             
             //update the range 0, i-1 with nums[i]-nums[i-1]
@@ -157,3 +165,5 @@ public:
     }
 };
 ```
+</TabItem>
+</Tabs>

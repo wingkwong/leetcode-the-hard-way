@@ -21,64 +21,58 @@ The idea behind the algorithm is don’t not update a node until needed which wi
 
 Updating the interval represented by a node is similar to update the subtree of that node in segment tree. Suppose we have to update subtree of **Node X**, instead of updating all the values at that instant we will only update that node and mark its children that their subtree has to be updated and for maintaining this record we will use **Lazy array**. Size of Lazy array would be same as the size of segment tree. We will initialize the Lazy array with **0** which indicates there is no pending updates. While processing a node, let say **u**, if **Lazy[u] is non-zero**, it implies there is a pending update so before doing any further operation we will first update node u and if its children exist make them lazy.
 
-<SolutionAuthor name="@DhruvilLakhtaria"/>
+
 <Tabs>
 <TabItem value="CPP" label="CPP">
+<SolutionAuthor name="@DhruvilLakhtaria"/>
 
 ```CPP
 class Solution:
-    class SegmentTree{
+    class SegmentTree {
 
-    vector<int>v, Lazy;
-    SegmentTree(vector<int>& arr,int n)
-    {
+    vector<int> v, Lazy;
+    SegmentTree(vector<int>& arr, int n) {
 	    v = vector<int>(4*n);
         Lazy = vector<int>(4*n, 0);
-	    buildTree(arr, 0, n-1, 0);
+	    buildTree(arr, 0, n - 1, 0);
     }
 
-    void buildTree(vector<int>&arr,int l,int r,int node)
-    {
+    void buildTree(vector<int>& arr, int l, int r, int node) {
 	    // we have reached the leaf node
-	    if(l == r)
-	    {
+	    if (l == r) {
 		    v[node] = arr[l];
 		    return;
 	    }
 
-	    int  mid = l + (r-l)/2;
+	    int  mid = l + (r - l) / 2;
 
 	    // build for left child
-	    buildTree(arr,l,mid,2*node+1);
-	    //build for right child
-	    buildTree(arr,mid+1,r,2*node+2);
+	    buildTree(arr, l, mid, 2*node + 1);
+	    // build for right child
+	    buildTree(arr, mid + 1, r, 2*node + 2);
 
-	    //use above result for getting current answer.
-	    v[node] = v[2*node+1] + v[2*node+2];
+	    // use above result for getting current answer.
+	    v[node] = v[2*node + 1] + v[2*node + 2];
     }
-    void RangeUpdate(int node, int st, int end, int query_l, int query_r, int val)
-    {
+    void RangeUpdate(int node, int st, int end, int query_l, int query_r, int val) {
         // if node is lazy then update it
-        if(Lazy[node] != 0)
-        {
+        if (Lazy[node] != 0) {
             v[node] += (r - l + 1)*Lazy[node];
 
             // if its children exist then mark them lazy
-            if(l != r)
-            {
+            if (l != r) {
                 Lazy[2*node + 1] += Lazy[node];
                 Lazy[2*node + 2] += Lazy[node];
             }
             // No longer lazy
             Lazy[node] = 0;
         }
-        // If current range doesn't lie inside query range.
-        if( (r < query_l) || (l > query_r) )
-            return ;
+        // if current range doesn't lie inside query range.
+        if ( (r < query_l) || (l > query_r) )
+            return;
 
         // if current range lies completely inside query range.
-        if(l >= query_l && r <= query_r)
-        {
+        if (l >= query_l && r <= query_r) {
             v[node] += (r - l + 1)*val;
             if(l != r)
             {
@@ -88,69 +82,65 @@ class Solution:
             }
             return;
         }
-        //Now current range partially overlaps with given range
-        int mid = (l + r)/2;
+        // now current range partially overlaps with given range
+        int mid = (l + r) / 2;
 
-         //update left child
+        // update left child
         RangeUpdate(2*node + 1, l, mid, query_l, query_r, val);
-         //update right child
+        
+        // update right child
         RangeUpdate(2*node + 2, mid + 1, r, query_l, query_r, val);
 
-        //change the current node value
+        // change the current node value
         v[node] = (v[2*node + 1] + v[2*node + 2]);
         return;
     }
-    int  query(int node,int l,int r,int query_l,int query_r)
-    {
+    int query(int node, int l, int r, int query_l, int query_r) {
         //Before processing the current node we need to check if its lazy and relax it
-        /*If node is lazy, update it*/
-	    if(Lazy[node] != 0)
-	    {
+        // if node is lazy, update it
+	    if (Lazy[node] != 0) {
 		    v[node] += (r - l + 1)*Lazy[node];
-            /*Check if the children exist*/
-		    if(l != r)
-		    {
-                /*mark child lazy*/
+            // check if the children exist
+		    if (l != r) {
+                //mark child lazy
 			    Lazy[2*node + 1] += Lazy[node];
 			    Lazy[2*node + 2] += Lazy[node];
 		    }
-            /* no longer lazy */
-		    Lazy[node]=0;
+            // no longer lazy
+		    Lazy[node] = 0;
 	    }
 
-	    //case-1: requested query interval within l-r
-	    if(query_l <= l && query_r >= r)
-		    return  v[node];
+	    // case-1: requested query interval within l-r
+	    if (query_l <= l && query_r >= r)
+		    return v[node];
 	    // case-2: requested query interval is outside l-r
-	    else  if(query_l > r || query_r < l)
-		    return  INT_MAX;
+	    else if (query_l > r || query_r < l)
+		    return INT_MAX;
 
 	    // case-3: requested query is intersecting its child.
-	    int  mid = l + (r - l)/2;
+	    int mid = l + (r - l)/2;
 
-	    int  left = query(2*node + 1, l, mid, query_l, query_r);
-	    int  right = query(2*node + 2, mid + 1, r, query_l, query_r);
-	    return  left+right;
+	    int left = query(2*node + 1, l, mid, query_l, query_r);
+	    int right = query(2*node + 2, mid + 1, r, query_l, query_r);
+	    return  left + right;
     }
 
-    void update(int node, int l, int r, int update_at, int value)
-    {
-	    if(l == r)
-	    {
-		    //Update leaf node
+    void update(int node, int l, int r, int update_at, int value) {
+	    if (l == r) {
+		    // update leaf node
 		    v[node] = value;
 		    return;
 	    }
-	    int  mid = (l + r)/2;
 
-	    //if index lies in the left child call update() for left child
-	    if(update_at <= mid)
+	    int  mid = (l + r)/2;
+	    // if index lies in the left child call update() for left child
+	    if (update_at <= mid)
 		    update(2*node + 1, l, mid, update_at, value);
-		//else index would lie in the right child, call update() for the right child
+		// else index would lie in the right child, call update() for the right child
 	    else
 		    update(2*node + 2, mid + 1,r,update_at, value);
 
-	    //after updating the children,update the current node as smallest of its children
+	    // after updating the children,update the current node as smallest of its children
 	    v[node] = v[2*node + 1]  + v[2*node+2];
 	 	return;
     }
