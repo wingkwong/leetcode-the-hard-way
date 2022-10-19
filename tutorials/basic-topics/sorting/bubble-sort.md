@@ -26,27 +26,7 @@ Consider the example of unsorted list and see how the algorithm works.
 
 arr = {5, 1, 4, 2, 8}: 
 
-1st pass =>
-    
-	index = 0 -> 3,6,4,2,5 
-	index = 1 -> 3,4,6,2,5
-	index = 2 -> 3,4,2,6,5
-    	index = 3 -> 3,4,2,5,6
-
-2nd pass => 
-
-	index = 0 -> 3,4,2,5,6
-	index = 1 -> 3,2,4,5,6
-	index = 2 -> 3,2,4,5,6
-
-3rd pass => 
-
-	index = 0 -> 2,3,4,5,6
-	index = 1 -> 2,3,4,5,6
-
-4th pass =>
-
-	index = 0 -> 2,3,4,5,6  
+![image](https://user-images.githubusercontent.com/77332750/196658633-a3b735de-820b-45de-a0cc-b7933d67d75c.png)
 	
 We can use a variable *check* to see if there is swap in one pass or not. If there is no swapping in one pass, they we don't have to check for other pass.
 
