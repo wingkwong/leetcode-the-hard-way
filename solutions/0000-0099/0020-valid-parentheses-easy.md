@@ -116,14 +116,16 @@ class Solution:
                 if not stack:
                     return False
                 last = stack.pop()
-                # if the character is a closing bracket and the last element in the stack is not the corresponding opening bracket
+                # if the character is a closing bracket and the last element
+                # in the stack is not the corresponding opening bracket
                 if c == ')' and last != '(':
                     return False
                 if c == ']' and last != '[':
                     return False
                 if c == '}' and last != '{':
                     return False
-        # if the stack is empty it means that all the brackets were matched
+        # if the stack is empty it means
+        # that all the brackets were matched
         return not stack
 ```
 </TabItem>
@@ -153,7 +155,8 @@ var isValid = function(s) {
                 return false;
             }
             let last = stack.pop();
-            // if the character is a closing bracket and the last element in the stack is not the corresponding opening bracket
+            // if the character is a closing bracket and the last element
+            // in the stack is not the corresponding opening bracket
             if (c === ')' && last !== '(') {
                 return false;
             }
@@ -165,7 +168,8 @@ var isValid = function(s) {
             }
         }
     }
-    // if the stack is empty it means that all the brackets were matched
+    // if the stack is empty it means
+    // that all the brackets were matched
     return !stack.length;
 };
 ```
@@ -195,7 +199,8 @@ public:
                 }
                 char last = stack.top();
                 stack.pop();
-                // if the character is a closing bracket and the last element in the stack is not the corresponding opening bracket
+                // if the character is a closing bracket and the last element 
+                // in the stack is not the corresponding opening bracket
                 if (c == ')' && last != '(') { 
                     return false;
                 }
@@ -207,7 +212,8 @@ public:
                 }
             }
         }
-        // if the stack is empty it means that all the brackets were matched
+        // if the stack is empty it means
+        // that all the brackets were matched
         return stack.empty();
     }
 };
