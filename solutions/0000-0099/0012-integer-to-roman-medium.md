@@ -62,11 +62,11 @@ Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 
 - `1 <= num <= 3999`
 
-## Approach 1: Iterating over the dictionary
+## Approach 1: Iterating over the dictionary entries
 
-The solution used was iterating over the entries of a dictionary and for each entry, while the remaining value is greater than or equals to the key value of the dictionary, append the corresponding character(s) to the `result` and subtract the key from the remaining value.
+The solution used was iterating over the entries of a dictionary and for each entry, while the remaining value is greater than or equal to the key value of the dictionary, append the corresponding character(s) to the `result` and subtract the key from the remaining value.
 
-For example, if we consider the given integer `num = 17`, after starting the iteration over the dictionary, the algorithm checks if the integer `17` is greater than or equals to the first integer value in the dictionary, which is `1000`. Since it's not, the code in the while loop is not executed and the next iteration starts checking if `17` is greater than or equals to `900` and so on until the iteration checks if `17` is greater than or equals to `10`. In this iteration the code in the while loop is executed so that the `result` variable is concatenated with the respective Roman numeral which is `'X'` and the remaining value becomes `7`. For next iteration, `7` is not greater than or equals to `9` but on the next one, when it's greater than `5`, `result` becomes `'XV'` and the remaining value becomes `2`. So keeping that logic, after the final iteration the final result will be `'XVII'`.
+For example, if we consider the given integer `num = 17`, after starting the iteration over the dictionary, the algorithm checks if the integer `17` is greater than or equal to the first integer value in the dictionary, which is `1000`. Since it's not, the code in the while loop is not executed and the next iteration starts checking if `17` is greater than or equal to `900` and so on until the iteration checks if `17` is greater than or equal to `10`. In this iteration the code in the while loop is executed so that the `result` variable is concatenated with the respective Roman numeral which is `'X'` and the remaining value becomes `7`. For the next iteration, `7` is not greater than or equal to `9` but on the next one, when it's greater than `5`, `result` becomes `'XV'` and the remaining value becomes `2`. So keeping that logic, after the final iteration the final result will be `'XVII'`.
 
 <Tabs>
 <TabItem value="py" label="Python">
@@ -105,7 +105,7 @@ class Solution(object):
 <TabItem value="js" label="JavaScript">
 <SolutionAuthor name="@jessicaribeiroalves"/>
 
-```JavaScript
+```js
 const numbersDict = [
     [1000, 'M'],
     [900, 'CM'],
@@ -145,4 +145,4 @@ The time complexity for this solution is $O(1)$ as the algorithm execution time 
 
 **Space Complexity: $O(1)$**
 
-The space complexity for this solution is $O(1)$.
+The space complexity for this solution is also $O(1)$.
