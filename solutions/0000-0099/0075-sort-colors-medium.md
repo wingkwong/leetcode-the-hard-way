@@ -101,7 +101,7 @@ class Solution {
             }
         }
     }
-}
+};
 
 ```
 </TabItem>
