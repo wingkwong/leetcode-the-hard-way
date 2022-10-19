@@ -54,14 +54,15 @@ void bubblesort(vector<int> &arr) {
 
 ### Time and Space Complexity
 
-Time Complexity :
+*Time Complexity :*
 
 For first iteration, loop will run $$(n-1)$$ times, for second it will run $$(n-2)$$ times and so on.
 
 So, Worst Case Time Complexity = $$(n - 1) + (n - 2) + (n - 3) + ... + 1 = O(n^2)$$
-Use of variable check will reduce the time complexity further. If there is no change in any iterations, next iterations will not occurs, this reduces the time complexity.
+	
+Use of variable check will reduce the time complexity further as if there is no change in any iterations, next iterations will not occurs, this reduces the time complexity.
 
-Space Complexity :
+*Space Complexity :*
 
 Since there is no extra space, Space Complexity = $$O(1)$$. This shows that it is an inline sorting.
 
