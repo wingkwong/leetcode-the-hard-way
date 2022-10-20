@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/valid-perfect-square/'
+description: 'Author: @wingkwong, @deepanshu-rawat6 | https://leetcode.com/problems/valid-perfect-square/'
 ---
 
 # 0367 - Valid Perfect Square (Easy)
@@ -36,6 +36,11 @@ Output: false
 
 Prerequisite: [Binary Search](../../tutorials/basic-topics/binary-search).
 
+This approach is similar to Standard Binary Search, just need check for $mid*mid$ and $num$ . Finally, we also need to check for overflow, for that its better to use $long long$ in $Cpp$ or $long$ in $Java$.
+This solution gives $O( log n )$ time complexity and $O( 1 )$ space complexity.
+
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -57,3 +62,32 @@ public:
     }
 };
 ```
+
+</TabItem>
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@deepanshu-rawat6"/>
+
+```java
+class Solution {
+    public boolean isPerfectSquare(int num) {
+        // Binary Search 
+        // choosing long because of overflow 
+        long s = 0, e = num;
+        while(s <= e){
+            long mid= s + (e - s) / 2;
+            // check if it's a perfect square
+            if(mid * mid == num){ 
+                return true;
+            }
+            // checks where num lies above or below mid*mid
+            // then change the values of s or e accordingly
+            if(mid * mid < num) s = mid + 1;
+            else e = mid - 1;
+        }
+        // return false if no result found
+        return false;
+    }
+}
+```
+</TabItem>
+</Tabs>
