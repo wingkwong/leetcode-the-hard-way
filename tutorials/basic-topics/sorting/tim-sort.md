@@ -2,7 +2,6 @@
 title: 'Tim Sort'
 description: 'Timsort is a fast stable sorting algorithm based upon insertion sort and merge sort.'
 hide_table_of_contents: true
-draft: true
 keywords:
   - leetcode
   - tutorial
@@ -15,8 +14,8 @@ keywords:
 
 ## Overview
 
-Timsort is a fast stable sorting algorithm based upon both [insertion sort](insertion-sort.md) and [merge sort](merge-sort.md). The algorithm was first created by Tim Peters in 2002, and is now being used in Python’s `sort()` and Java’s `Arrays.sort()`. 
-The reason this algorithm is so fast is because it leverages the benefits of both merge sort and insertion sort. Let’s see how it works!
+Timsort is a fast stable sorting algorithm based upon both [insertion sort](insertion-sort.md) and [merge sort](merge-sort.md). The algorithm was first created by Tim Peters in 2002, and is now being used in Python's `sort()` and Java's `Arrays.sort()`. 
+The reason this algorithm is so fast is because it leverages the benefits of both merge sort and insertion sort. Let's see how it works!
 
 ## Algorithm
 
@@ -31,7 +30,7 @@ Basically, to run timsort:
 
 This algorithm works because each run is sorted using insertion sort, and merge sort makes sure that each subarray is merged to the original array in the correct position. 
 
-## Example: [287. Find The Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)
+## Example: [0287 - Find The Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)
 
 > An array of integers in the range [1, n] is given, where one integer is repeated. We have to find this repeated number.
 
@@ -47,7 +46,7 @@ For this sort of problem, we can use timsort to lower our space complexity!
 
 ### Dry Run
 
-Let’s do a dry run of timsort with the array $[5, 4, 3, 1, 2, 6, 7, 4]$, and a run size of 2. . 
+Let's do a dry run of timsort with the array $[5, 4, 3, 1, 2, 6, 7, 4]$, and a run size of $2$. 
 
 - Each run is sorted using insertion sort. The array becomes $[4, 5, 1, 3, 2, 6, 4, 7]$. 
 - The merges happen using recursion. We first attempt to split the array into two parts, down the middle. 
@@ -75,6 +74,7 @@ public:
             nums[j + 1] = tmp;
         }
     }
+
     void merge(vector<int>& nums, int left, int mid, int right) {
         // maintain the two previous lists 
         vector<int> lt, rt;
@@ -91,8 +91,7 @@ public:
             if (lt[i] <= rt[j]) {
                 nums[k] = lt[i];
                 i++;
-            }
-            else{
+            } else {
                 nums[k] = rt[j];
                 j++;
             }
@@ -118,7 +117,7 @@ public:
                 // determine indices for each run for merging
                 int mid = left + size - 1, right = min((left + 2 * size - 1), (n - 1));
                 // merge the two runs if needed
-                if(mid < right) {
+                if (mid < right) {
 	            // use recursion to merge the array
                     merge(nums, left, mid, right);
                 }
