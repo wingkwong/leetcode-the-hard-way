@@ -31,11 +31,11 @@ Basically, to run timsort:
 
 This algorithm works because each run is sorted using insertion sort, and merge sort makes sure that each subarray is merged to the original array in the correct position. 
 
-## Example: [442. Find All Duplicates in an Array](https://leetcode.com/problems/find-all-duplicates-in-an-array/)
+## Example: [Find The Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/]
 
-> An array of integers in the range [1, n] is given, where each integer appears once or twice. We have to find all the integers that appear twice in the array.
+> An array of integers in the range [1, n] is given, where one integer is repeated. We have to find this repeated number.
 
-*Naive Approach*: Using a Hashmap or a frequency array, we can store the number of times each element comes up. We then return an array by looping through the frequency array and adding all values that appear twice. However, this requires $$O(n)$$ spaces complexity, and the problem requires us to have $O(1)$ space complexity. 
+*Naive Approach*: Using a Hashmap or a frequency array, we can store the number of times each element comes up. We then return an array by looping through the frequency array finding the value that appears twice. However, this requires $$O(n)$$ space complexity, and the problem requires us to have $O(1)$ space complexity. 
 
 For this sort of problem, we can use timsort to lower our space complexity! 
 
