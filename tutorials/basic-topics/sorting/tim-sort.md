@@ -31,7 +31,7 @@ Basically, to run timsort:
 
 This algorithm works because each run is sorted using insertion sort, and merge sort makes sure that each subarray is merged to the original array in the correct position. 
 
-## Example: [Find The Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/]
+## Example: [Find The Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)
 
 > An array of integers in the range [1, n] is given, where one integer is repeated. We have to find this repeated number.
 
