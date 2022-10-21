@@ -45,3 +45,10 @@
 .gitHubButton {
   overflow: hidden;
 }
+
+.highlightedColor {
+  /* color: #FFA116 */
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(45deg,#ffd18b,#FFA116 80%);
+  -webkit-background-clip: text;
+}
