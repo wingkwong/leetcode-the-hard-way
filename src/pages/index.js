@@ -21,7 +21,7 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
+      title={`${siteConfig.title}`}
       description="LeetCode The Hard Way - From Absolute Beginner to Quitter">
       <HomepageHeader />
       <main>
