@@ -22,7 +22,26 @@
 }
 
 .buttons {
-  display: flex;
+  --ifm-button-size-multiplier: 1.6;
+  display: inline-flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+}
+
+.buttons a,
+.buttons a:hover {
+  color: black;
+}
+
+.buttons a:last-of-type {
+  margin: 20px 36px;
+}
+
+
+.gitHubButtonWrapper {
+  display: flex;
+}
+
+.gitHubButton {
+  overflow: hidden;
 }
