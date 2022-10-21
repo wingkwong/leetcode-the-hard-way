@@ -93,7 +93,7 @@ class Solution(object):
     def intToRoman(self, num):
         remaining = num
         result = ''
-        for integerValue, romanNumeral in numbersDict.items():
+        for integerValue, romanNumeral in numbersDict:
             while remaining >= integerValue:
                 result += romanNumeral
                 remaining -= integerValue
