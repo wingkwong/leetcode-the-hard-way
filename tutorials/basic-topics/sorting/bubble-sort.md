@@ -1,7 +1,7 @@
 ---
 title: 'Bubble Sort'
 description: 'It is sorting algorithm based on the idea of repeatedly comparing pairs of adjacent elements and then swapping their positions if they exist in the wrong order.'
-hide_table_of_contents: true
+hide_table_of_contents: false
 keywords:
 - leetcode
 - tutorial
@@ -10,31 +10,35 @@ keywords:
 - bubble sort
 ---
 
-<TutorialAuthors  names = "@RadhikaChhabra17"/>
+<TutorialAuthors names="@RadhikaChhabra17"/>
 
 ## Overview
 
 Bubble Sort is a sorting algorithm which compares the adjacent elements and swap their positions if they are placed in wrong order. At max, we need to compare adjacent elements for $$(n - 1)$$ iterations where $n$ is the size of array to be sorted. At the end of each iteration, larger (or smaller, as required) value is sorted and placed at correct positions.
 
-The syntax that we are using is `cpp`, please refer to your own language of preference if needed.
+The language that we are using is C++, please refer to your own language of preference if needed.
 
-Algorithm :
-1. Make two nested loop, the 1st loop would be for number of pass the algorithm woud run, total $n-1$ passes and second would be for comparison in that pass. In each pass, one element is sorted (largest or smallest, as required) and placed in correct position and rest are compared in further passes.
-2. If one element is bigger (or smaller in decreasing order case) than its next element, then both should be swapped. 
+## Algorithm
+
+Make two nested loop, the 1st loop would be for number of pass the algorithm woud run, total $n-1$ passes and second would be for comparison in that pass. In each pass, one element is sorted (largest or smallest, as required) and placed in correct position and rest are compared in further passes.
+
+If one element is bigger (or smaller in decreasing order case) than its next element, then both should be swapped. 
 
 Consider the example of unsorted list and see how the algorithm works.
 
-$$arr = {5, 1, 4, 2, 8}$$ 
+$$
+arr = {5, 1, 4, 2, 8}
+$$ 
 
 ![image](https://user-images.githubusercontent.com/77332750/196658633-a3b735de-820b-45de-a0cc-b7933d67d75c.png)
 	
-We can use a variable *check* to see if there is swap in one pass or not. If there is no swapping in one pass, they we don't have to check for other pass.
+We can use a variable $check$ to see if there is swap in one pass or not. If there is no swapping in one pass, they we don't have to check for other pass.
 
 <Tabs>
-<TabItem value = "c++" label = "C++">
-<SolutionAuthor name = "@RadhikaChhabra17"/>
+<TabItem value="c++" label="C++">
+<SolutionAuthor name="@RadhikaChhabra17"/>
 
-```c++
+```cpp
 void bubblesort(vector<int> &arr) {
 	int n = arr.size();
 	bool check = true;
@@ -42,7 +46,7 @@ void bubblesort(vector<int> &arr) {
 		check = false;
 		for (int j = 0; j < n - i - 1; j++) {
 			if (arr[j] > arr[j + 1]) {
-                		swap(arr[j], arr[j + 1]);
+                swap(arr[j], arr[j + 1]);
 				check = true;
 			}
 		}
@@ -52,17 +56,17 @@ void bubblesort(vector<int> &arr) {
 </TabItem>
 </Tabs>
 
-### Time and Space Complexity
+## Complexity Analysis
 
-*Time Complexity :*
+### Time Complexity
 
-For first iteration, loop will run $$(n-1)$$ times, for second it will run $$(n-2)$$ times and so on.
+For first iteration will run $$(n-1)$$ times. For the second one, it will run $$(n-2)$$ times and so on.
 
-So, Worst Case Time Complexity = $$(n - 1) + (n - 2) + (n - 3) + ... + 1 = O(n^2)$$
+Therefore, the Time Complexity for the worst case $= (n - 1) + (n - 2) + (n - 3) + ... + 1 = O(n^2)$
 	
-Use of variable check will reduce the time complexity further as if there is no change in any iterations, next iterations will not occurs, this reduces the time complexity.
+Use of variable $check$ will reduce the time complexity further as if there is no change in any iterations, next iterations will not occurs, this reduces the time complexity.
 
-*Space Complexity :*
+### Space Complexity
 
 Since there is no extra space, Space Complexity = $$O(1)$$. This shows that it is an inline sorting.
 
@@ -74,16 +78,13 @@ Since there is no extra space, Space Complexity = $$O(1)$$. This shows that it i
 >
 >Return the array formed after rearranging the values of nums.
 
-
-*Approach* : 
-
-Run two bubble sort. One for even indices with non decreasing order and one for odd indices with non increasing order.
+In this problem, we can run two bubble sort. One for even indices with non decreasing order and one for odd indices with non increasing order.
 
 <Tabs>
 <TabItem value="c++" label="C++">
 <SolutionAuthor name="@RadhikaChhabra17"/>
 
-```c++
+```cpp
 class Solution {
 public:
     vector<int> sortEvenOdd(vector<int>& nums) {
@@ -114,13 +115,13 @@ public:
 
 export const suggestedProblems = [
   {
-    "problemName": "75 -  Sort Colors ",
+    "problemName": "0075 -  Sort Colors ",
     "difficulty": "Medium",
     "leetCodeLink": "https://leetcode.com/problems/sort-colors/",
     "solutionLink": "../../../solutions/0000-0099/sort-colors-medium"
   },
   {
-    "problemName": "148 - Sort List",
+    "problemName": "0148 - Sort List",
     "difficulty": "Medium",
     "leetCodeLink": "https://leetcode.com/problems/sort-list/",
     "solutionLink": "../../../solutions/0100-0199/sort-list-medium"
