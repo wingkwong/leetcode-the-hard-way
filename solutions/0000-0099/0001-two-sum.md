@@ -1,6 +1,6 @@
 ---
-description: 'Author: @wingkwong, @ganajayant | https://leetcode.com/problems/two-sum/'
-tags: [Array, Hash Table]
+description: "Author: @wingkwong, @ganajayant, @skoden | https://leetcode.com/problems/two-sum/"
+tags: [Array, Two Pointer, Hash Table]
 ---
 
 # 0001 - Two Sum (Easy)
@@ -41,10 +41,10 @@ Output: [0,1]
 
 **Constraints:**
 
-* `2 <= nums.length <= 10^4`
-* `-10^9 <= nums[i] <= 10^9`
-* `-10^9 <= target <= 10^9`
-* **Only one valid answer exists.**
+-   `2 <= nums.length <= 10^4`
+-   `-10^9 <= nums[i] <= 10^9`
+-   `-10^9 <= target <= 10^9`
+-   **Only one valid answer exists.**
 
 **Follow-up:** Can you come up with an algorithm that is less than `O(n^2)` time complexity?
 
@@ -88,7 +88,6 @@ class Solution:
         return [-1, -1]
 ```
 
-
 </TabItem>
 <TabItem value="go" label="Go">
 <SolutionAuthor name="@wingkwong"/>
@@ -106,6 +105,7 @@ func twoSum(nums []int, target int) []int {
     return []int{-1, -1}
 }
 ```
+
 </TabItem>
 <TabItem value="java" label="Java">
 <SolutionAuthor name="@ganajayant"/>
@@ -120,14 +120,53 @@ class Solution {
                 }
             }
         }
-        return new int[]{-1, -1}; 
+        return new int[]{-1, -1};
     }
 }
 ```
+
 </TabItem>
 </Tabs>
 
-## Approach 2: Hash Table
+## Approach 2: Sorting and Two Pointer
+
+Make a vector of pairs of the original vector elements and the indices of the elements in the original vector. Sort this new formed vector. Using two pointer approach, find the sum of the elements pointed by the left and right pointers. If this sum is less than the target increment the left pointer by one, if the sum is greater than the target decrement the right pointer by one, and if the sum is equal to the target return the positions of the elements in the original array. This solution gives O(nlogn) time complexity and O(n) space complexity.
+
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@skoden">
+
+```cpp
+class Solution{
+public:
+    vector<int> twoSum(vector<int>& nums, int target){
+        int n = (int) (nums.size());
+        vector<pair<int,int>> pairs;
+        for(int i = 0; i < n; i++){
+            pairs.push_back({nums[i],i});
+        }
+        sort(pairs.begin(), pairs.end());
+        int left = 0, right = n-1;
+        vector<int> ans;
+        while(left < right){
+            int sum = pairs[left].first + pairs[right].first;
+            if(sum == target){
+                ans.push_back(pairs[left].second);
+                ans.push_back(pairs[right].second);
+                break;
+            }
+            else if(sum < target)   left++;
+            else    right--;
+        }
+        return ans;
+    }
+};
+```
+
+</TabItem>
+</Tabs>
+
+## Approach 3: Hash Table
 
 A better way to do it is using one-pass hash table approach. We iterate each element and insert it into the hash table. We also check if the complement already exists in the hash table or not. If so, we can return the answer immediately. This solution gives O(n) time complexity and O(n) space complexity.
 
@@ -187,6 +226,7 @@ func twoSum(nums []int, target int) []int {
     return []int{-1, -1}
 }
 ```
+
 </TabItem>
 <TabItem value="java" label="Java">
 <SolutionAuthor name="@ganajayant"/>
@@ -205,15 +245,16 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 
 <TabItem value="javascript" label="JavaScript">
 <SolutionAuthor name="@MithunPrabhu777"/>
 
 ```javascript
-var twoSum = function(nums, target) {
+var twoSum = function (nums, target) {
     const hashMap = {};
-    
+
     for (let i = 0; i < nums.length; i++) {
         const difference = target - nums[i];
 
@@ -223,5 +264,6 @@ var twoSum = function(nums, target) {
     }
 };
 ```
+
 </TabItem>
 </Tabs>
