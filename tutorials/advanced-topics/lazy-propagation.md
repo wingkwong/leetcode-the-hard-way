@@ -21,7 +21,6 @@ The idea behind the algorithm is don’t not update a node until needed which wi
 
 Updating the interval represented by a node is similar to update the subtree of that node in segment tree. Suppose we have to update subtree of **Node X**, instead of updating all the values at that instant we will only update that node and mark its children that their subtree has to be updated and for maintaining this record we will use **Lazy array**. Size of Lazy array would be same as the size of segment tree. We will initialize the Lazy array with **0** which indicates there is no pending updates. While processing a node, let say **u**, if **Lazy[u] is non-zero**, it implies there is a pending update so before doing any further operation we will first update node u and if its children exist make them lazy.
 
-
 <Tabs>
 <TabItem value="CPP" label="CPP">
 <SolutionAuthor name="@DhruvilLakhtaria"/>
@@ -178,10 +177,10 @@ We are using a two arrays of size $$4*n$$ to implement the data structure and he
 
 export const suggestedProblems = [
 {
-"problemName": "1838. Frequency of the Most Frequent Element",
-"difficulty": "Medium",
-"leetCodeLink": "https://leetcode.com/problems/frequency-of-the-most-frequent-element/",
-"solutionLink": "../../solutions/1800-1899/frequency-of-the-most-frequent-element-medium/"
+"problemName": "732. My Calendar III",
+"difficulty": "Hard",
+"leetCodeLink": "https://leetcode.com/problems/my-calendar-iii/",
+"solutionLink": "../../solutions/0700-0799/my-calendar-iii-hard/"
 },
 ]
 

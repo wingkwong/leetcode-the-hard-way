@@ -36,6 +36,21 @@ Lets look at [307. Range Sum Query - Mutable](https://leetcode.com/problems/rang
 > 1. Get sum of values in range $$[L-R]$$.
 > 2. Update ith element to new value. 
 
+### Approach Using Segment Tree.
+The question asks us to do 2 operations with the query operation having the logic to get sum of that operation. Seeing this only we can decide to use a segment tree data structure to solve the problem.
+
+### Building Segment tree for this question. 
+We start from the root denoting the entire array. Now we need information of $(0 - mid)$ and $(mid + 1 - n)$ for building current root. so we recursively call them. We know left child id equivalent to $2*i + 1$ array index and right child is $2*i + 2$.
+This recursive call stop when we reach a leaf denoting the single element. So we just update the array value to the elements value and backtrack.
+
+### Point updating the value.
+The logic for point update is pretty much the same involving recursive calls and backtracking. We reach till a leaf node where we need to update the value and while backtracking all the nodes that come into path needs to be checked for updation.
+
+For example, Analyse the image below.
+![Point Update](https://cdn.codespeedy.com/wp-content/uploads/2019/12/Node-or-Point-updates.png)
+
+Here we are update 2nd index and adding 3 to it.So all the nodes on the path back to root from it must also be updated.
+
 <Tabs>
 <TabItem value="CPP" label="CPP">
 <SolutionAuthor name="@DhruvilLakhtaria"/>
@@ -108,7 +123,7 @@ class Solution:
 </Tabs>
 
 ### Sample Usage
-
+The leetcode question demands to just fill the functions but we can also analyse our code by sample usage. 
 
 <Tabs>
 <TabItem value="CPP" label="CPP">
