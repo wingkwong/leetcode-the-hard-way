@@ -1,5 +1,5 @@
 ---
-description: 'Author: @ganajayant| https://leetcode.com/problems/sort-colors/'
+description: 'Author: @ganajayant, @RadhikaChhabra17 | https://leetcode.com/problems/sort-colors/'
 tags: [Array, Two Pointers, Sorting]
 ---
 
@@ -70,6 +70,39 @@ class Solution {
         }
     }
 }
+```
+</TabItem>
+</Tabs>
+
+
+## Approach 2: Bubble Sort
+
+We want all integers together. One way of doing this is sorting the array so that we will get all $0$ initially, then all $1$ and $2$. We can use bubble sort for sorting.
+    
+Time Complexity: $O(n ^ 2)$, where $n$ is the number of elements in array
+
+Space complexity: $O(1)$
+
+<Tabs>
+<TabItem value="c++" label="C++">
+<SolutionAuthor name="@RadhikaChhabra17"/>
+
+```cpp
+class Solution {
+    void sortColors(vector<int>& nums) {
+        int n = nums.size();
+        bool check = true;
+        for (int i = 0; i < n - 1 && check; i++) {
+            check = false;
+            for (int j = 0; j < n - i - 1; j++) {
+                if (nums[j] > nums[j + 1]) {
+                    swap(nums[j], nums[j + 1]);
+                    check = true;
+                }
+            }
+        }
+    }
+};
 ```
 </TabItem>
 </Tabs>

@@ -6,7 +6,7 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #04448c;
+  --ifm-color-primary: #343955;
   --ifm-color-primary-dark: #033670;
   --ifm-color-primary-darker: #022854;
   --ifm-color-primary-darkest: #03448c;
@@ -23,19 +23,24 @@
   --site-color-svg-icon-favorite: #e9669e;
   --site-color-checkbox-checked-bg: hsl(167deg 56% 73% / 25%);
   --site-color-feedback-background: #fff;
+  --ifm-hero-background-color: #353738;
+  --ifm-hero-text-color: #f6fdfd;
   --docusaurus-highlighted-code-line-bg: rgb(0 0 0 / 10%);
+  --ifm-footer-background-color: #353738;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #9fdcf7;
+  --ifm-heading-color: #F7F8F8;
+  --ifm-color-primary: #F7F8F8;
   --ifm-color-primary-dark: #00478e;
   --ifm-color-primary-darker: #004284;
   --ifm-color-primary-darkest: #003d7a;
   --ifm-color-primary-light: #0066cc;
   --ifm-color-primary-lighter: #0070e0;
   --ifm-color-primary-lightest: #007af4;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-hero-background-color: #000000;
+  --ifm-hero-text-color: #f6fdfd;
 }
 
 .navbar-icon {
@@ -74,19 +79,9 @@ html[data-theme='dark'] .header-github-link:before {
 }
 
 div[class^='announcementBar_'] {
-  --site-announcement-bar-stripe-color1: hsl(
-    var(--site-primary-hue-saturation) 85%
-  );
-  --site-announcement-bar-stripe-color2: hsl(
-    var(--site-primary-hue-saturation) 95%
-  );
-  background: repeating-linear-gradient(
-    35deg,
-    var(--site-announcement-bar-stripe-color1),
-    var(--site-announcement-bar-stripe-color1) 20px,
-    var(--site-announcement-bar-stripe-color2) 10px,
-    var(--site-announcement-bar-stripe-color2) 40px
-  );
+  background: #1d2428;
+  color: #ffffff;
+  border-bottom: 1px dotted #eeeeee;
   font-weight: bold;
 }
 
@@ -106,6 +101,7 @@ div[class^='announcementBar_'] {
   --docsearch-hit-background: var(--ifm-color-white);
   /* Footer */
   --docsearch-footer-background: var(--ifm-color-white);
+  --docsearch-highlight-color: var(--ifm-color-black);
 }
 
 [data-theme='dark'] .DocSearch {
@@ -119,7 +115,7 @@ div[class^='announcementBar_'] {
   --docsearch-searchbox-focus-background: var(--ifm-color-black);
   /* Hit */
   --docsearch-hit-color: var(--ifm-font-color-base);
-  --docsearch-hit-active-color: var(--ifm-color-white);
+  --docsearch-hit-active-color: var(--ifm-color-black);
   --docsearch-hit-background: var(--ifm-color-emphasis-100);
   /* Footer */
   --docsearch-footer-background: var(--ifm-background-surface-color);
@@ -131,7 +127,7 @@ div[class^='announcementBar_'] {
 }
 
 .tutorial-author-wrapper .author-tag {
-  background-color: #04448c;
+  background-color: #282A36;
   border-radius: 2px;
   color: #e6e6e6;
   padding: 5px;
@@ -140,12 +136,12 @@ div[class^='announcementBar_'] {
 
 .solution-author-wrapper {
   text-align: center;
-  background-color: #022854;
+  background-color: #343955;
   color: #e6e6e6;
 }
 
 .tag-wrapper .topic-tag {
-  background-color: #483D8B;
+  background-color: #4b5270;
   border-radius: 2px;
   color: #fff;
   padding: 5px;
