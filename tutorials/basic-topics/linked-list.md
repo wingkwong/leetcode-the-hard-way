@@ -1,7 +1,7 @@
 ---
 title: 'Linked List'
 description: 'A linked list is a linear data structure that consists of nodes. Each node stores some data as well as the address of the next node.'
-hide_table_of_contents: true
+hide_table_of_contents: false
 keywords:
   - leetcode
   - tutorial
@@ -11,17 +11,14 @@ keywords:
 
 <TutorialAuthors names="@itsmenikhill"/>
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 ## Overview
 
 In this tutorial you will learn about Linked Lists, and its implementation using Java. 
 
 Problem with using Arrays was that we have to have some idea about the size of the array that we require. To counter this we learnt about dynamic arrays. Linked list is another approach to tackle this problem. In linked lists we do not have to worry about the size at all.
 
-A linked list is a linear data structure that has a series of connected nodes. Each node has two fields, $data$ and $address$.
-We call the start of a linked list, $Head$. We can all it anything but by convention, we'll call it $Head$. 
+A linked list is a linear data structure that has a series of connected nodes. Each node has two fields, $data$ and an $address$.
+We call the start of a linked list, $head$. We can all it anything but by convention, we'll call it $head$. 
 
 ## Representation of a Linked List
 
@@ -31,12 +28,8 @@ Each node in a linked list contains:
 
 Both of these items are wrapped together in a class:
 
-<Tabs
-    defaultValue="java"
-    values={[
-        {label: 'Java', value: 'java'},
-    ]}>
-<TabItem value="java">
+<Tabs>
+<TabItem value="java" label="Java">
 
 ```java
 class Node {
@@ -55,12 +48,8 @@ class Node {
 
 Now we will create a Linked list using this Node class:
 
-<Tabs
-    defaultValue="java"
-    values={[
-        {label: 'Java', value: 'java'},
-    ]}>
-<TabItem value="java">
+<Tabs>
+<TabItem value="java" label="Java">
 
 ```java
 class LinkedList {
@@ -89,7 +78,7 @@ class LinkedList {
 
 So now we have our first linked list.
 
-  ![image](https://user-images.githubusercontent.com/44477975/193444696-85afce38-ebd3-4be0-94eb-f1a3a9fe2d3a.png)
+![image](https://user-images.githubusercontent.com/44477975/197191483-6b75032c-503c-42e6-9b23-171c090e6974.png)
 
 The asterisk (*) signifies the address of the node, and not the value of that node.
 
@@ -100,7 +89,7 @@ When we declare an integer array of size 15, we would require 60 bytes of contig
 
 That is the advantage linked lists have over array when it comes to memory. We have to look for smaller spaces to store the items, rather than chunks of contiguous space.
 
-  ![image](https://user-images.githubusercontent.com/44477975/193444559-c57fa2ed-81cb-4039-924d-494b64f0c79d.png)
+![image](https://user-images.githubusercontent.com/44477975/197190434-c302adcf-72de-4192-98d1-3df4339215d4.png)
 
 Numbers with # behind them are the addresses in memory where these nodes are stored. Here, $head$ stores the address for $node1$ and $node1$ stores the address for $node2$. Notice that the address are not sequential.
 
@@ -118,12 +107,8 @@ We have to access each element of the linked list. Remember, the $head$ points t
 Traversing through the linked list is fairly simple. We keep moving from the head towards the end of the list. We would know we have reached the last node when $next$ points to $null$.
 
 
-<Tabs
-    defaultValue="java"
-    values={[
-        {label: 'Java', value: 'java'},
-    ]}>
-<TabItem value="java">
+<Tabs>
+<TabItem value="java" label="Java">
 
 ```java
 // temp pointer that points to head initially
@@ -139,17 +124,14 @@ while(temp.next!=null){
 
 </TabItem>
 </Tabs>
-**Problem:** You are given the head of a linked list and a number. Check if the given number is present in the linked list or not. Return true if present, else return false.
+
+**Problem: ** You are given the head of a linked list and a number. Check if the given number is present in the linked list or not. Return true if present, else return false.
 
 **Approach:** We will traverse the list and at each node we will check if we have the required element in the current node or not. If we found the element, return true. If we have iterated over the list and not not found the number, we will return false.
 
 **Solution:** 
-<Tabs
-    defaultValue="java"
-    values={[
-        {label: 'Java', value: 'java'},
-    ]}>
-<TabItem value="java">
+<Tabs>
+<TabItem value="java" label="Java">
 
 ```java
 public static boolean findElement(Node head, int target){
@@ -177,7 +159,7 @@ We can add element to the beginning, middle or at the end of the linked list.
 
 **Problem:**
 
-Let's say, we are given a linked list $[3] --> [4] --> [5] --> null$ and we have to add another node $[1]$ to the front. How would you do this?
+Let's say, we are given a linked list $[3]$ -> $[4]$ -> $[5]$ -> $null$ and we have to add another node $[1]$ to the front. How would you do this?
 
 **Approach:**
 
@@ -188,12 +170,8 @@ Let's say, we are given a linked list $[3] --> [4] --> [5] --> null$ and we have
 
 **Solution:**
 
-<Tabs
-    defaultValue="java"
-    values={[
-        {label: 'Java', value: 'java'},
-    ]}>
-<TabItem value="java">
+<Tabs>
+<TabItem value="java" label="Java">
 
 ```java
 // allocate memory
@@ -213,7 +191,7 @@ head = newNode;
 
 **Problem:** 
 
-You are given a linked list $[3] --> [4] --> [5] --> [6] --> null$. Insert a new node $[7]$ at the 3rd place to make the final list as $[3] --> [4] --> [7] --> [5] --> [6] --> null$. 
+You are given a linked list $[3]$ -> $[4]$ -> $[5]$ -> $[6]$ -> $null$. Insert a new node $[7]$ at the 3rd place to make the final list as $[3]$ -> $[4]$ -> $[7]$ -> $[5]$ -> $[6]$ -> $null$. 
 
 **Approach:**
 
@@ -224,12 +202,8 @@ You are given a linked list $[3] --> [4] --> [5] --> [6] --> null$. Insert a new
 
 **Solution:**
 
-<Tabs
-    defaultValue="java"
-    values={[
-        {label: 'Java', value: 'java'},
-    ]}>
-<TabItem value="java">
+<Tabs>
+<TabItem value="java" label="Java">
 
 ```java
 Node newNode = new Node();
@@ -259,7 +233,7 @@ One important thing to note here is that before breaking any connection in the l
 
 **Problem:** 
 
-You are given a linked list $[3] --> [4] --> [5] --> [6] --> null$. Insert a new node $[7]$ at the end to make the final list as $[3] --> [4] --> [5] --> [6] --> [7] --> null$
+You are given a linked list $[3]$ -> $[4]$ -> $[5]$ -> $[6]$ -> $null$. Insert a new node $[7]$ at the end to make the final list as $[3]$ -> $[4]$ -> $[5]$ -> $[6]$ -> $[7]$ -> $null$
 
 **Approach:**
 
@@ -270,12 +244,8 @@ You are given a linked list $[3] --> [4] --> [5] --> [6] --> null$. Insert a new
 
 **Solution:**
 
-<Tabs
-    defaultValue="java"
-    values={[
-        {label: 'Java', value: 'java'},
-    ]}>
-<TabItem value="java">
+<Tabs>
+<TabItem value="java" label="Java">
 
 ```java
 Node newNode = new Node();
@@ -303,12 +273,8 @@ We can delete the first node, or the last node, or some other position in the mi
 
 To delete from the beginning we just have to move the $head$ to its next, so that no pointer would be pointing to the first node.
 
-<Tabs
-    defaultValue="java"
-    values={[
-        {label: 'Java', value: 'java'},
-    ]}>
-<TabItem value="java">
+<Tabs>
+<TabItem value="java" label="Java">
 
 ```java
 // change the pointer from the head node, to the next node.
@@ -324,12 +290,8 @@ head = head.next;
 * Move the pointer to the second last node
 * Set the $next$ pointer of second last node to point to $null$
 
-<Tabs
-    defaultValue="java"
-    values={[
-        {label: 'Java', value: 'java'},
-    ]}>
-<TabItem value="java">
+<Tabs>
+<TabItem value="java" label="Java">
 
 ```java
 Node temp = head;
@@ -349,12 +311,8 @@ temp.next = null;
 * Traverse to the element just before the node to delete
 * Change the next of this node to point to next of the node to delete
 
-<Tabs
-    defaultValue="java"
-    values={[
-        {label: 'Java', value: 'java'},
-    ]}>
-<TabItem value="java">
+<Tabs>
+<TabItem value="java" label="Java">
 
 ```java
 Node temp = head;
@@ -369,7 +327,7 @@ temp.next = temp.next.next;
 </TabItem>
 </Tabs>
 
-**Leetcode 237. Delete Node in a Linked List:** 
+### Example: [237 - Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list/) 
 
 There is a singly linked list. You have to delete a $node$ from the list. You are given the $node$ to delete but not the $head$ of the list. Delete the given $node$. Note that by deleting the $node$, we $do not$ mean removing it from memory. We mean:
 
@@ -382,12 +340,8 @@ There is a singly linked list. You have to delete a $node$ from the list. You ar
 
 **Solution:**
 
-<Tabs
-    defaultValue="java"
-    values={[
-        {label: 'Java', value: 'java'},
-    ]}>
-<TabItem value="java">
+<Tabs>
+<TabItem value="java" label="Java">
 
 ```java
 class Solution {
@@ -419,12 +373,8 @@ class Solution {
 * At each iteration, check if the data in $ptr$ is same as the number we want. If yes, then return $true$
 * Return $false$ if number not found
 
-<Tabs
-    defaultValue="java"
-    values={[
-        {label: 'Java', value: 'java'},
-    ]}>
-<TabItem value="java">
+<Tabs>
+<TabItem value="java" label="Java">
 
 ```java
 Node ptr = head;  
@@ -443,27 +393,21 @@ return false;
 </TabItem>
 </Tabs>
 
-## Let's take a look at some Leetcode problems:
+### Example: 19 - [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)
 
-**Leetcode 19. Remove Nth Node From End of List**
-
-Given the head of a linked list, remove the nth node from the end of the list and return its head. Given Linked list: $[1] -> [2] -> [3] -> [4] -> [5]$ for $n=2$ change the list to $[1] -> [2] -> [3] ->     [5]$.
+Given the head of a linked list, remove the nth node from the end of the list and return its head. Given Linked list: $[1]$ -> $[2]$ -> $[3]$ -> $[4]$ -> $[5]$ for $n = 2$ change the list to $[1]$ -> $[2]$ -> $[3]$ -> $[5]$.
 
 **Approach:**
 
 * First we find the size of the list
 * $nth$ node from the $end$ is the $size-(n+1)th$ node from the $front$
 * Once we have the size, we can iterate over the list till the node just before the node to remove
-* change the pointers to remove the node
+* Change the pointers to remove the node
 
 **Solution:**
 
-<Tabs
-    defaultValue="java"
-    values={[
-        {label: 'Java', value: 'java'},
-    ]}>
-<TabItem value="java">
+<Tabs>
+<TabItem value="java" label="Java">
 
 ```java
 class Solution {
@@ -512,16 +456,10 @@ class Solution {
 </TabItem>
 </Tabs>
 
-**234. Palindrome Linked List**
+****
+### Example: 234 - [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/)
 
 Given the $head$ of a singly linked list, return $true$ if it is a $palindrome$ or $false$ otherwise. 
-
-Example: 
-
-
-![image](https://user-images.githubusercontent.com/44477975/196033584-ca91cbc9-0126-40d2-8788-4fbe3b50d55a.png)
-
-$Output: true$
 
 **Approach:**
 
@@ -535,12 +473,8 @@ $Output: true$
 
 **Solution:**
 
-<Tabs
-    defaultValue="java"
-    values={[
-        {label: 'Java', value: 'java'},
-    ]}>
-<TabItem value="java">
+<Tabs>
+<TabItem value="java" label="Java">
 
 ```java
 class Solution {
@@ -584,7 +518,7 @@ class Solution {
 </TabItem>
 </Tabs>
 
-**328. Odd Even Linked List:**
+### Example: 328 - [Odd Even Linked List](https://leetcode.com/problems/odd-even-linked-list/)
 
 Given the $head$ of a singly linked list, group all the nodes with odd indices together followed by the nodes with even indices, and return the reordered list.
 
@@ -604,12 +538,8 @@ You must solve the problem in O(1) extra space complexity and O(n) time complexi
   
 **Solution:**
 
-<Tabs
-    defaultValue="java"
-    values={[
-        {label: 'Java', value: 'java'},
-    ]}>
-<TabItem value="java">
+<Tabs>
+<TabItem value="java" label="Java">
 
 ```java
 class Solution {
