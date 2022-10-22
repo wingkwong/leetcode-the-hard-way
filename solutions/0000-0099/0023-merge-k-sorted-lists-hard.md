@@ -1,5 +1,5 @@
 ---
-description: "Author: @wingkwong | https://leetcode.com/problems/merge-k-sorted-lists/"
+description: "Author: @wingkwong,@rahulvarma5297 | https://leetcode.com/problems/merge-k-sorted-lists/"
 ---
 
 # 0023 - Merge k Sorted Lists (Hard)
