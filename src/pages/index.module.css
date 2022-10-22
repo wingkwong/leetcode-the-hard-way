@@ -22,7 +22,33 @@
 }
 
 .buttons {
-  display: flex;
+  --ifm-button-size-multiplier: 1.6;
+  display: inline-flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+}
+
+.buttons a,
+.buttons a:hover {
+  color: black;
+}
+
+.buttons a:last-of-type {
+  margin: 20px 36px;
+}
+
+
+.gitHubButtonWrapper {
+  display: flex;
+}
+
+.gitHubButton {
+  overflow: hidden;
+}
+
+.highlightedColor {
+  /* color: #FFA116 */
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(45deg,#ffd18b,#FFA116 80%);
+  -webkit-background-clip: text;
 }
