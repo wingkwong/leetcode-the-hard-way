@@ -76,7 +76,7 @@ class Solution {
         while (s <= e) {
             long mid = s + (e - s) / 2;
             // check if it's a perfect square
-            if( mid * mid == num) { 
+            if (mid * mid == num) { 
                 return true;
             }
             // checks where num lies above or below mid*mid
