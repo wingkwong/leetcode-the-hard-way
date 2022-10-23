@@ -31,6 +31,8 @@ Both of these items are wrapped together in a class:
 <Tabs>
 <TabItem value="java" label="Java">
 
+<SolutionAuthor name="@itsmenikhill"/>
+
 ```java
 class Node {
   int data;  
@@ -51,23 +53,24 @@ Now we will create a Linked list using this Node class:
 <Tabs>
 <TabItem value="java" label="Java">
 
+<SolutionAuthor name="@itsmenikhill"/>
+
 ```java
 class LinkedList {
-
   Node node1 = new Node();
   Node node2 = new Node();
   Node node3 = new Node();
   // set 10 as the value for 1st node
   node1.data = 10;  
-  // set node2 as the next node for node1.
+  // set node2 as the next node for node1
   node1.next = node2;  
   // set 20 as the value for 2nd node
   node2.data = 20;  
-  // set node3 as the next node for node2.
+  // set node3 as the next node for node2
   node2.next = node3;  
   // set 30 as the value for 3rd node
   node3.data = 30;  
-  // this is not required. By default next of a node is NULL.
+  // this is not required. By default next of a node is NULL
   node3.next = null; 
 
 }
@@ -82,10 +85,11 @@ So now we have our first linked list.
 
 The asterisk (*) signifies the address of the node, and not the value of that node.
 
-## Linked list in memory
+## Linked List in Memory
+
 In arrays the elements are contiguous, which means they are placed one after the other in the memory. However, in linked lists, the elements are scattered in the memory.
 
-When we declare an integer array of size 15, we would require 60 bytes of contiguous space in the memory to store the elements of that array. But in linked list we would only have to find 4 bytes to store the first element and from there, we look for another 4 bytes to store the next element. So, we see that the linked list items are scattered in memory unlike arrays.
+When we declare an integer array of size $15$, we would require 60 bytes of contiguous space in the memory to store the elements of that array. But in linked list we would only have to find $4$ bytes to store the first element and from there, we look for another $4$ bytes to store the next element. So, we see that the linked list items are scattered in memory unlike arrays.
 
 That is the advantage linked lists have over array when it comes to memory. We have to look for smaller spaces to store the items, rather than chunks of contiguous space.
 
@@ -103,12 +107,16 @@ Numbers with # behind them are the addresses in memory where these nodes are sto
 Let's see their implementation in a linked list.
 
 ## Traversal
+
 We have to access each element of the linked list. Remember, the $head$ points to the first node, and the $next$ pointer of the last node points to $null$.
+
 Traversing through the linked list is fairly simple. We keep moving from the head towards the end of the list. We would know we have reached the last node when $next$ points to $null$.
 
 
 <Tabs>
 <TabItem value="java" label="Java">
+
+<SolutionAuthor name="@itsmenikhill"/>
 
 ```java
 // temp pointer that points to head initially
@@ -125,21 +133,22 @@ while(temp.next!=null){
 </TabItem>
 </Tabs>
 
-**Problem: ** You are given the head of a linked list and a number. Check if the given number is present in the linked list or not. Return true if present, else return false.
+>  You are given the head of a linked list and a number. Check if the given number is present in the linked list or not. Return true if present, else return false.
 
-**Approach:** We will traverse the list and at each node we will check if we have the required element in the current node or not. If we found the element, return true. If we have iterated over the list and not not found the number, we will return false.
+We will traverse the list and at each node we will check if we have the required element in the current node or not. If we found the element, return true. If we have iterated over the list and not not found the number, we will return false.
 
-**Solution:** 
 <Tabs>
 <TabItem value="java" label="Java">
+
+<SolutionAuthor name="@itsmenikhill"/>
 
 ```java
 public static boolean findElement(Node head, int target){
   Node ptr = head;
-  while(ptr!=null){
+  while (ptr != null) {
     // compare the node element and the target number
-    if(ptr.data == target){ 
-      // number found 
+    if (ptr.data == target) { 
+        // number found 
         return true; 
     }
     // move pointer to the next node
@@ -152,14 +161,13 @@ public static boolean findElement(Node head, int target){
 </TabItem>
 </Tabs>
 
-## Insertion
+## Inserting an element to the Linked list
+
 We can add element to the beginning, middle or at the end of the linked list.
 
-**1. Inserting element at the beginning** 
+### Inserting at the beginning
 
-**Problem:**
-
-Let's say, we are given a linked list $[3]$ -> $[4]$ -> $[5]$ -> $null$ and we have to add another node $[1]$ to the front. How would you do this?
+You are given a linked list $[3]$ -> $[4]$ -> $[5]$ -> $null$ and we have to add another node $[1]$ to the front. How would you do this?
 
 **Approach:**
 
@@ -168,10 +176,10 @@ Let's say, we are given a linked list $[3]$ -> $[4]$ -> $[5]$ -> $null$ and we h
 * Point $next$ of new node to $head$
 * Point $head$ to the **new** node
 
-**Solution:**
-
 <Tabs>
 <TabItem value="java" label="Java">
+
+<SolutionAuthor name="@itsmenikhill"/>
 
 ```java
 // allocate memory
@@ -187,9 +195,7 @@ head = newNode;
 </Tabs>
 
 
-**2. Insertion at the middle**
-
-**Problem:** 
+### Inserting at the middle
 
 You are given a linked list $[3]$ -> $[4]$ -> $[5]$ -> $[6]$ -> $null$. Insert a new node $[7]$ at the 3rd place to make the final list as $[3]$ -> $[4]$ -> $[7]$ -> $[5]$ -> $[6]$ -> $null$. 
 
@@ -200,10 +206,10 @@ You are given a linked list $[3]$ -> $[4]$ -> $[5]$ -> $[6]$ -> $null$. Insert a
 * Traverse to the node just before the required index
 * Change the pointers
 
-**Solution:**
-
 <Tabs>
 <TabItem value="java" label="Java">
+
+<SolutionAuthor name="@itsmenikhill"/>
 
 ```java
 Node newNode = new Node();
@@ -229,9 +235,7 @@ temp.next = newNode;
 
 One important thing to note here is that before breaking any connection in the linked list, we must first make the new connections. Make first, break later.
 
-**3. Insertion at the end**
-
-**Problem:** 
+### Inserting at the end
 
 You are given a linked list $[3]$ -> $[4]$ -> $[5]$ -> $[6]$ -> $null$. Insert a new node $[7]$ at the end to make the final list as $[3]$ -> $[4]$ -> $[5]$ -> $[6]$ -> $[7]$ -> $null$
 
@@ -242,10 +246,10 @@ You are given a linked list $[3]$ -> $[4]$ -> $[5]$ -> $[6]$ -> $null$. Insert a
 * Traverse till the end of the list
 * Make the $next$ of the last node point to the new node
 
-**Solution:**
-
 <Tabs>
 <TabItem value="java" label="Java">
+
+<SolutionAuthor name="@itsmenikhill"/>
 
 ```java
 Node newNode = new Node();
@@ -269,12 +273,14 @@ temp.next = newNode;
 
 We can delete the first node, or the last node, or some other position in the middle.
 
-**1. Delete from the beginning**
+### Deleting from the beginning
 
 To delete from the beginning we just have to move the $head$ to its next, so that no pointer would be pointing to the first node.
 
 <Tabs>
 <TabItem value="java" label="Java">
+
+<SolutionAuthor name="@itsmenikhill"/>
 
 ```java
 // change the pointer from the head node, to the next node.
@@ -283,9 +289,7 @@ head = head.next;
 </TabItem>
 </Tabs>
 
-
-
-**2. Delete from the end**
+### Deleting from the end
 
 * Move the pointer to the second last node
 * Set the $next$ pointer of second last node to point to $null$
@@ -293,20 +297,22 @@ head = head.next;
 <Tabs>
 <TabItem value="java" label="Java">
 
+<SolutionAuthor name="@itsmenikhill"/>
+
 ```java
 Node temp = head;
-  // move the pointer to the second last node
-  while(temp.next.next!=null){
-    // move the current pointer to the next node
-    temp = temp.next;
-  }
+// move the pointer to the second last node
+while(temp.next.next!=null){
+  // move the current pointer to the next node
+  temp = temp.next;
+}
 temp.next = null;
 ```
 </TabItem>
 </Tabs>
 
 
-**3. Delete from any position in the middle**
+### Deleting from any position in the middle
 
 * Traverse to the element just before the node to delete
 * Change the next of this node to point to next of the node to delete
@@ -314,34 +320,75 @@ temp.next = null;
 <Tabs>
 <TabItem value="java" label="Java">
 
+<SolutionAuthor name="@itsmenikhill"/>
+
 ```java
 Node temp = head;
-  // we are running the loop from 2 node because we have to move to the node 
-  // just before the node we want to remove
-  for(int i=2; i<pos; i++){
-    // change pointer from current node to the next node
-    temp = temp.next;
-  }
+// we are running the loop from 2 node because we have to move to the node 
+// just before the node we want to remove
+for(int i = 2; i < pos; i++){
+  // change pointer from current node to the next node
+  temp = temp.next;
+}
 temp.next = temp.next.next;
 ```
 </TabItem>
 </Tabs>
 
-### Example: [237 - Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list/) 
+## Search for an item in the list
 
-There is a singly linked list. You have to delete a $node$ from the list. You are given the $node$ to delete but not the $head$ of the list. Delete the given $node$. Note that by deleting the $node$, we $do not$ mean removing it from memory. We mean:
-
-*The value of the given node should not exist in the linked list.
-*The number of nodes in the linked list should decrease by one.
-*All the values before node should be in the same order.
-*All the values after node should be in the same order.
-
-**Approach:** Change the value of the $current node$ to the value of the $next$ node. Do this until the last node.
-
-**Solution:**
+* Make a temporary pointer $ptr$ point to $head$
+* Move $ptr$ to next node until $ptr$ is $null$
+* At each iteration, check if the data in $ptr$ is same as the number we want. If yes, then return $true$
+* Return $false$ if number not found
 
 <Tabs>
 <TabItem value="java" label="Java">
+
+<SolutionAuthor name="@itsmenikhill"/>
+
+```java
+Node ptr = head;  
+while(ptr!=null){
+  // check if data in current node matches the number we are looking for
+  if(ptr.data == num){  
+    // return true if number found
+    return true;   
+  }
+  // move ptr to the next node
+  ptr = ptr.next;  
+}
+// return false if number not found
+return false;  
+``` 
+</TabItem>
+</Tabs>
+
+## Complexity Analysis
+
+| Operation        | Complexity | Explanation  
+| ---------------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|Look up | $$O(N)$$ | We will have to iterate from head till the element we want|
+|Insertion at beginning | $$O(1)$$ | Simply change the head pointer |
+|Insertion at the end | $$O(N)$$ | Move from the head to the last item then change the pointers|
+|Deletion from the beginning | $$O(1)$$ | Simply change the head pointer|
+|Deletion from the end | $$O(N)$$ | Move from the head to the node just before the item you want to delete|
+
+## Example: [0237 - Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list/) 
+
+> There is a singly linked list. You have to delete a $node$ from the list. You are given the $node$ to delete but not the $head$ of the > list. Delete the given $node$. Note that by deleting the $node$, we $do not$ mean removing it from memory. We mean:
+>
+> * The value of the given node should not exist in the linked list.
+> * The number of nodes in the linked list should decrease by one.
+> * All the values before node should be in the same order.
+> * All the values after node should be in the same order.
+
+Change the value of the $current node$ to the value of the $next$ node. Do this until the last node.
+
+<Tabs>
+<TabItem value="java" label="Java">
+
+<SolutionAuthor name="@itsmenikhill"/>
 
 ```java
 class Solution {
@@ -366,48 +413,21 @@ class Solution {
 </TabItem>
 </Tabs>
 
-## Search for an item in the list
+## Example: [0019 - Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)
 
-* Make a temporary pointer $ptr$ point to $head$
-* Move $ptr$ to next node until $ptr$ is $null$
-* At each iteration, check if the data in $ptr$ is same as the number we want. If yes, then return $true$
-* Return $false$ if number not found
+> Given the head of a linked list, remove the nth node from the end of the list and return its head. Given Linked list: $[1]$ -> $[2]$ -> $[3]$ -> $[4]$ -> $[5]$ for $n = 2$ change the list to $[1]$ -> $[2]$ -> $[3]$ -> $[5]$.
 
-<Tabs>
-<TabItem value="java" label="Java">
-
-```java
-Node ptr = head;  
-while(ptr!=null){
-  // check if data in current node matches the number we are looking for
-  if(ptr.data == num){  
-    // return true if number found
-    return true;   
-  }
-  // move ptr to the next node
-  ptr = ptr.next;  
-}
-// return false if number not found
-return false;  
-``` 
-</TabItem>
-</Tabs>
-
-### Example: 19 - [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)
-
-Given the head of a linked list, remove the nth node from the end of the list and return its head. Given Linked list: $[1]$ -> $[2]$ -> $[3]$ -> $[4]$ -> $[5]$ for $n = 2$ change the list to $[1]$ -> $[2]$ -> $[3]$ -> $[5]$.
-
-**Approach:**
+#### Approach
 
 * First we find the size of the list
-* $nth$ node from the $end$ is the $size-(n+1)th$ node from the $front$
+* $nth$ node from the $end$ is the $size - (n + 1)th$ node from the $front$
 * Once we have the size, we can iterate over the list till the node just before the node to remove
 * Change the pointers to remove the node
 
-**Solution:**
-
 <Tabs>
 <TabItem value="java" label="Java">
+
+<SolutionAuthor name="@itsmenikhill"/>
 
 ```java
 class Solution {
@@ -415,39 +435,38 @@ class Solution {
         ListNode ptr = head;
         // find the size
         int size = findSize(head);
-        ptr=head;
+        ptr = head;
 
         // if size is equal to the n, remove node at head
-        if(size==n){
-            ptr=ptr.next;
-            head=ptr;
+        if (size == n) {
+            ptr = ptr.next;
+            head = ptr;
             return head;
         }
 
         // move ptr to the node just before the node to remove
-        for(int i=0; i<size-n-1; i++){
+        for (int i = 0; i< size - n - 1; i++) {
             ptr = ptr.next;
         }
 
         // check if the node to remove is the last node
-        if(ptr.next.next!=null){
+        if (ptr.next.next != null){
             ptr.next = ptr.next.next;
-        }
-        else{
+        } else {
             ptr.next=null;
         }
         return head;
     }
     
     // method to find the size of the list
-    public int findSize(ListNode head){
+    public int findSize(ListNode head) {
       // temporary pointer at head
         ListNode ptr = head;
         int size = 0;
         // increase the size till we reach the end of the list
-        while(ptr!=null){
-            size+=1;
-            ptr=ptr.next;
+        while (ptr != null) {
+            size += 1;
+            ptr = ptr.next;
         }
         return size;
     }
@@ -456,12 +475,11 @@ class Solution {
 </TabItem>
 </Tabs>
 
-****
-### Example: 234 - [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/)
+## Example: [0234 - Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/)
 
-Given the $head$ of a singly linked list, return $true$ if it is a $palindrome$ or $false$ otherwise. 
+> Given the $head$ of a singly linked list, return $true$ if it is a $palindrome$ or $false$ otherwise. 
 
-**Approach:**
+#### Approach
 
 * We use $two pointer$ method and $recursion$ to solve this problem
 * We keep a $global$ left pointer, that points to the current left node
@@ -471,10 +489,10 @@ Given the $head$ of a singly linked list, return $true$ if it is a $palindrome$ 
 * As we come out of the recursive call, out $right$ pointer would move towards $left$
 * If at any point the values are not same, we return $false$
 
-**Solution:**
-
 <Tabs>
 <TabItem value="java" label="Java">
+
+<SolutionAuthor name="@itsmenikhill"/>
 
 ```java
 class Solution {
@@ -497,18 +515,16 @@ class Solution {
         boolean b = check(right.next);
         // if at any point b is false, we return false. If this happens even once, 
         // no further comparisons would happen and each recursive call would return false
-        if(b==false){
+        if(b == false){
             return false;
-        }
-        // else compare the values 
-        else{
-          // if values are equal, move left towards right and return true to the previous call
-            if(left.val == right.val){
+        } else {
+            // else compare the values 
+            // if values are equal, move left towards right and return true to the previous call
+            if (left.val == right.val) {
                 left = left.next;
                 return true;
-            } 
-            else{
-              // if values not same, return false
+            }  else {
+                // if values not same, return false
                 return false;
             }
         }
@@ -518,38 +534,37 @@ class Solution {
 </TabItem>
 </Tabs>
 
-### Example: 328 - [Odd Even Linked List](https://leetcode.com/problems/odd-even-linked-list/)
+## Example: [0328 - Odd Even Linked List](https://leetcode.com/problems/odd-even-linked-list/)
 
-Given the $head$ of a singly linked list, group all the nodes with odd indices together followed by the nodes with even indices, and return the reordered list.
+> Given the $head$ of a singly linked list, group all the nodes with odd indices together followed by the nodes with even indices, and return the reordered list.
+>
+> The $first$ node is considered $odd$, and the $second$ node is $even$, and so on.
+>
+> Note that the relative order inside both the even and odd groups should remain as it was in the input.
+>
+> You must solve the problem in O(1) extra space complexity and O(n) time complexity.
 
-The $first$ node is considered $odd$, and the $second$ node is $even$, and so on.
-
-Note that the relative order inside both the even and odd groups should remain as it was in the input.
-
-You must solve the problem in O(1) extra space complexity and O(n) time complexity.
-
-**Approach:**
+#### Approach
 
 * We maintain three pointers, $odd$ at the first node, $even$ at the second node and $evenhead$ also at the second node.
 * $evenhead$ will not be changed. It will point to the starting of the list of even nodes.
 * The node after every even node, is an odd node. 
 * So, $next$ node for current $odd$ node, would be $next$ node of the current $even$ node.
 * And $next$ node for the current $even$ node, would be $next$ node of the just changed $odd$ node.
-  
-**Solution:**
 
 <Tabs>
 <TabItem value="java" label="Java">
 
+<SolutionAuthor name="@itsmenikhill"/>
+
 ```java
 class Solution {
     public ListNode oddEvenList(ListNode head) {
-
         // we check if there are at least three nodes in the list
         // if there are only two nodes, then first node is even and second node is odd
         // if only one node, then first node is odd 
         // so just return head
-        if(head==null || head.next==null || head.next.next==null){
+        if (head == null || head.next == null || head.next.next == null) {
             return head;
         }
         
@@ -562,7 +577,7 @@ class Solution {
         
         // we have to move odd to next of even
         // so we check is even.next is null of even is null
-        while(even!=null && even.next!=null){
+        while (even != null && even.next != null) {
             // if not, then make odd.next point to even.next
             odd.next = even.next;
             // move odd to odd.next
@@ -582,17 +597,6 @@ class Solution {
 ``` 
 </TabItem>
 </Tabs>
-
-## Complexity
-
-| Operation        | Complexity | Explanation  
-| ---------------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|Look up | $$O(N)$$ | We will have to iterate from head till the element we want|
-|Insertion at beginning | $$O(1)$$ | Simply change the head pointer |
-|Insertion at the end | $$O(N)$$ | Move from the head to the last item then change the pointers|
-|Deletion from the beginning | $$O(1)$$ | Simply change the head pointer|
-|Deletion from the end | $$O(N)$$ | Move from the head to the node just before the item you want to delete|
-
 
 export const suggestedProblems = [
   {
