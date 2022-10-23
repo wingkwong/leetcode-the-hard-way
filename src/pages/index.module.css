@@ -15,6 +15,16 @@
   margin: 0px 20px;
 }
 
+@media only screen and (max-width: 768px) {
+  .buttons a {
+    margin: 5px 36px;
+  }
+
+  .gitHubButtonWrapper {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 996px) {
   .heroBanner {
     padding: 2rem;
@@ -31,15 +41,11 @@
 .buttons a,
 .buttons a:hover {
   color: black;
+  width: 350px;
 }
 
 .buttons a:last-of-type {
   margin: 20px 36px;
-}
-
-
-.gitHubButtonWrapper {
-  display: flex;
 }
 
 .gitHubButton {
