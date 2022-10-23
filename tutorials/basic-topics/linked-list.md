@@ -122,7 +122,7 @@ Traversing through the linked list is fairly simple. We keep moving from the hea
 // temp pointer that points to head initially
 Node temp = head; 
 // check if next points to null
-while(temp.next!=null){ 
+while (temp.next != null) { 
   // print the data stored in the current node
   System.out.println(temp.data); 
   // move temp to the next node
@@ -220,8 +220,8 @@ Node temp = head;
 int pos = 3;  
 
 // loop runs only for i=2. when i=3, pos=3 as well, hence loop terminates.
-for(int i=2; i<pos; i++){ 
-  if(temp.next!=null){ 
+for (int i = 2; i < pos; i++) { 
+  if(temp.next!=null) { 
     temp = temp.next;
   }
 }
@@ -257,7 +257,7 @@ newNode.data = 7;
 Node temp = head;
 
 // when temp.next is null, we'll know we are at the last node
-while(temp.next != null){ 
+while (temp.next != null) { 
   // move pointer to the next node
   temp = temp.next; 
 }
@@ -302,7 +302,7 @@ head = head.next;
 ```java
 Node temp = head;
 // move the pointer to the second last node
-while(temp.next.next!=null){
+while (temp.next.next != null) {
   // move the current pointer to the next node
   temp = temp.next;
 }
@@ -326,7 +326,7 @@ temp.next = null;
 Node temp = head;
 // we are running the loop from 2 node because we have to move to the node 
 // just before the node we want to remove
-for(int i = 2; i < pos; i++){
+for (int i = 2; i < pos; i++) {
   // change pointer from current node to the next node
   temp = temp.next;
 }
@@ -349,9 +349,9 @@ temp.next = temp.next.next;
 
 ```java
 Node ptr = head;  
-while(ptr!=null){
+while (ptr != null) {
   // check if data in current node matches the number we are looking for
-  if(ptr.data == num){  
+  if (ptr.data == num) {  
     // return true if number found
     return true;   
   }
