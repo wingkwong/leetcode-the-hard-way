@@ -11,6 +11,7 @@ keywords:
 ---
 
 <TutorialAuthors names="@RadhikaChhabra17"/>
+<Contributors names="@wingkwong" />
 
 ## Overview
 
