@@ -1,6 +1,6 @@
 ---
 description: 'Author: @BlackPanther112358 | https://leetcode.com/problems/count-ways-to-build-rooms-in-an-ant-colony/'
-tags: [Tree, Depth-First Search, Combinatorics]
+tags: [Math, Dynamic Programming, Tree, Graph, Topological Sort, Combinatorics]
 ---
 
 # 1916 - Count Ways to Build Rooms in an Ant Colony (Hard)
