@@ -72,65 +72,72 @@ Here we are update 2nd index and adding 3 to it.So all the nodes on the path bac
 <SolutionAuthor name="@DhruvilLakhtaria"/>
 
 ```CPP
-class Solution:
-    class SegmentTree{
+class NumArray {
+	public:
+    vector<int> segment;
+    int n;
+    NumArray(vector<int>& nums) {
+        n = nums.size(); 
+        segment = vector<int> (4*n,0);
+        int sum = buildSegTree(nums, 0, 0, n - 1);
 
-    vector<int> v;
-    SegmentTree (vector<int>& arr, int n) {
-	    v = vector<int>(4*n);
-	    buildTree(arr, 0, n - 1, 0);
-    }          
-    
-    void buildTree(vector<int>& arr, int l, int r, int loc) {    
-	    // we have reached the leaf node
-	    if (l == r) {
-		    v[loc] = arr[l];
-		    return;
-	    } 
-	    
-	    int  mid = l + (r - l)/2;
-	    
-	    // build for left child
-	    buildTree(arr, l, mid, 2 * loc + 1);
-	    // build for right child
-	    buildTree(arr, mid + 1, r, 2 * loc + 2);
- 
-	    // use above result for getting current answer.  
-	    v[loc] = v[2 * loc + 1] + v[2 * loc + 2];
-    } 
-      
-    int query(int loc, int l, int r, int query_l, int query_r) {
-	    // case-1: requested query interval within l-r 
-	    if (query_l <= l && query_r >= r)
-		    return v[loc];      
-	    // case-2: requested query interval is outside l-r
-	    else if (query_l > r || query_r < l)
-		    return INT_MAX;
-	    // case-3: requested query is intersecting its child.
-	    int mid = l + (r - l)/2;
-	    int left = query(2 * loc + 1, l, mid,query_l,  query_r);
-	    int right = query(2*loc + 2, mid + 1, r, query_l, query_r);
-	    return left + right;
     }
-    void update(int loc, int l, int r, int update_at, int value) {
-	    if (l == r) {
-		    // update leaf node
-		    v[loc] = value;
-		    return ;
-	    }
-	    int  mid = (l + r) / 2;
-	   
-	    // if index lies in the left child call update() for left child
-	    if (update_at <= mid)
-		    update(2 * loc + 1, l, mid, update_at, value);
-	    
+    int buildSegTree(vector<int> &nums, int idx, int l, int r)
+    {
+		// we have reached the leaf node
+        if (l == r) {
+            segment[idx] = nums[l]; 
+            return segment[idx];
+        }
+        int mid = l + (r - l) / 2;
+
+		// build for left child and right child.
+        int left = buildSegTree(nums, 2 * idx + 1, l, mid);
+        int right = buildSegTree(nums, 2 * idx + 2, mid + 1, r);
+
+		// use above result for getting current answer. 
+        segment[idx] = left + right;
+        return segment[idx];
+    }
+    int changeNode(int index, int idx, int l, int r, int val)
+    {
+        if (l == r && l == index) {
+			// update leaf node
+            int diff = val - segment[idx];
+            segment[idx] = val;
+            return diff;
+        }
+        int mid = l + (r - l) / 2;
+        int diff;
+		// if index lies in the left child call update() for left child
+        if (index >= l && index <= mid)
+            diff = changeNode(index, 2 * idx + 1, l, mid, val);
 		// else index would lie in the right child, call update() for the right child 
-	    else
-		    update(2 * loc + 2, mid + 1, r, update_at, value);
-	    
-	    // after updating the children,update the current node as smallest of its children
-	    v[loc] = v[2 * loc + 1] + v[2 * loc + 2];
-	 	return;  
+        else
+            diff = changeNode(index, 2 * idx + 2, mid + 1, r, val);
+			
+        segment[idx] += diff;
+        return diff;
+    }
+    void update(int index, int val) {
+        int change = changeNode(index,0,0,n-1,val);
+    }
+    int getSum(int idx,int l,int r,int ll,int rr)
+    {
+        if (ll == l && rr == r)
+            return segment[idx];
+
+        int mid = l + (r - l) / 2;
+
+        if(ll >= l && rr <= mid)
+            return getSum(2 * idx + 1, l, mid, ll, rr);
+        else if (ll > mid && rr <= r)
+            return getSum(2 * idx + 2, mid + 1, r, ll, rr);
+        else
+            return getSum(2 * idx + 1, l, mid, ll, mid) + getSum(2 * idx + 2, mid + 1, r, mid + 1, rr);
+    }
+    int sumRange(int left, int right) {
+        return getSum(0, 0, n - 1, left, right);
     }
 };
 ```
