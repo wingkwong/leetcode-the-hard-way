@@ -52,7 +52,7 @@ Explanation: There is no way to jump to the last stone as the gap between the $5
   calculate next viable move using previous move 
 - At the end we will return true if we reach at the end of posiions which is $stones[n-1]$
 
-Time Complexity is $O(n*n)$, where $n$ is the length of $stones$ array.
+Time Complexity is $O(n * n)$, where $n$ is the length of $stones$ array.
 
 Space Complexity is $O(n)$.
 
@@ -123,8 +123,8 @@ public:
 - Also we are answer in our dp and if $dp[idx][k]!=-1$, it means our answer is already present in dp
 - Now, final base condition will check if we reach last position or not  
   
-Time Complexity is $O(n*n)$, where $n$ is the length of the $stones$ array.  
-Space Complexity is $O(n*n)$
+Time Complexity is $O(n * n)$, where $n$ is the length of the $stones$ array.  
+Space Complexity is $O(n * n)$
 
 
 <Tabs>
@@ -157,7 +157,7 @@ public:
             return true;
         }
         // calling recursive function for k-1, k, k+1 moves
-        dp[idx][k]  = solve(idx + 1, k-1, stones, mp) ||  solve(idx + 1, k, stones, mp) ||  solve(idx + 1, k+1, stones, mp);
+        dp[idx][k] = solve(idx + 1, k-1, stones, m) || solve(idx + 1, k, stones, m) || solve(idx + 1, k+1, stones, m);
         
         return dp[idx][k];
   }
