@@ -1,5 +1,5 @@
 ---
-description: 'Author: @heiheihang | https://leetcode.com/problems/concatenation-of-array/'
+description: 'Author: @BlackPanther112358 | https://leetcode.com/problems/count-ways-to-build-rooms-in-an-ant-colony/'
 tags: [Tree, Depth-First Search, Combinatorics]
 ---
 
