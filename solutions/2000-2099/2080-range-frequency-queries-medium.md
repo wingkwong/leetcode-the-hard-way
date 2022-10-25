@@ -48,7 +48,7 @@ rangeFreqQuery.query(0, 11, 33); // return 2. The value 33 occurs 2 times in the
 We are using a standard segement tree with each node consisting of a map which store frequency of the elements in the interval corresponding to that node.
 
 <Tabs>
-<TabItem value="CPP" label="CPP">
+<TabItem value="cpp" label="c++">
 <SolutionAuthor name="@DhruvilLakhtaria"/>
 
 ```cpp
