@@ -106,9 +106,6 @@ binary-tree-right-side-view
 
 Output: [3, 20, 7]
 """
-from __future__ import annotations
-from typing import List, Optional
-
 class TreeNode:
     def __init__(
         self, val: int = 0, left: TreeNode | None = None, right: TreeNode | None = None
