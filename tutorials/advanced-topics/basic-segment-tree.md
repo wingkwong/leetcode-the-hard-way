@@ -76,14 +76,14 @@ class NumArray {
 	public:
     vector<int> segment;
     int n;
+    
     NumArray(vector<int>& nums) {
         n = nums.size(); 
         segment = vector<int> (4*n,0);
         int sum = buildSegTree(nums, 0, 0, n - 1);
-
     }
-    int buildSegTree(vector<int> &nums, int idx, int l, int r)
-    {
+
+    int buildSegTree(vector<int> &nums, int idx, int l, int r) {
 		// we have reached the leaf node
         if (l == r) {
             segment[idx] = nums[l]; 
@@ -99,8 +99,8 @@ class NumArray {
         segment[idx] = left + right;
         return segment[idx];
     }
-    int changeNode(int index, int idx, int l, int r, int val)
-    {
+    int changeNode(int index, int idx, int l, int r, int val) {
+
         if (l == r && l == index) {
 			// update leaf node
             int diff = val - segment[idx];
@@ -119,11 +119,13 @@ class NumArray {
         segment[idx] += diff;
         return diff;
     }
+
     void update(int index, int val) {
         int change = changeNode(index,0,0,n-1,val);
     }
-    int getSum(int idx,int l,int r,int ll,int rr)
-    {
+
+    int getSum(int idx,int l,int r,int ll,int rr) {
+        
         if (ll == l && rr == r)
             return segment[idx];
 
