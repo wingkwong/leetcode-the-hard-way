@@ -11,6 +11,7 @@ keywords:
 ---
 
 <TutorialAuthors names="@Bobliuuu"/>
+<Contributors names="@wingkwong" />
 
 ## Overview
 

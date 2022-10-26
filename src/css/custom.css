@@ -126,12 +126,16 @@ div[class^='announcementBar_'] {
   );
 }
 
-.tutorial-author-wrapper .author-tag {
+.tutorial-tag-wrapper .tag {
   background-color: #282A36;
   border-radius: 2px;
   color: #e6e6e6;
   padding: 5px;
   margin: 5px;
+}
+
+.tutorial-tag-wrapper.contributors {
+  margin-top: 20px;
 }
 
 .solution-author-wrapper {
