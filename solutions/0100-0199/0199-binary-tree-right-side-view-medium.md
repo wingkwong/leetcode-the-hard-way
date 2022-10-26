@@ -119,23 +119,6 @@ class TreeNode:
 
 class Solution:
     def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
-        """
-        Function returns the right side view of binary tree.
-
-
-        >>> obj = Solution()
-        >>> root = TreeNode(3)
-        >>> root.left = TreeNode(9)
-        >>> root.right = TreeNode(20)
-        >>> root.right.left = TreeNode(15)
-        >>> root.right.right = TreeNode(7)
-        >>> obj.rightSideView(root)
-        [3, 20, 7]
-        
-        >>> obj.rightSideView(None)
-        []
-
-        """
         def dfs(root: Optional[TreeNode], depth, right_view):
             if not root:
                 return
@@ -152,10 +135,6 @@ class Solution:
         dfs(root, 0, right_view)
         return right_view
 
-# if __name__ == "__main__":
-#     import doctest
-
-#     doctest.testmod()
 ```
 
 </TabItem>
