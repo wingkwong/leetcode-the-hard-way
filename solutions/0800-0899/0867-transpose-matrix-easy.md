@@ -15,6 +15,8 @@ Given a 2D integer array `matrix`, return _the **transpose** of_ `matrix`.
 
 The **transpose** of a matrix is the matrix flipped over its main diagonal, switching the matrix's row and column indices.
 
+![Representation of matrix transposition](https://assets.leetcode.com/uploads/2021/02/10/hint_transpose.png)
+
 **Example 1:**
 
 ```Python
@@ -37,11 +39,11 @@ The **transpose** of a matrix is the matrix flipped over its main diagonal, swit
 - `1 <= m * n <= 105`
 - `-109 <= matrix[i][j] <= 109`
 
-## Approach 1: Iterating over each row and transforming it in columns
+## Approach 1: Iterating over the columns and rows
 
-Starting from the assumption that transposing a matrix means switching the row and columns indices of the matrix by producing another matrix, the solution used was iterating over the columns of the given matrix (which are the elements inside each subarray) to create a new row for each of these columns.
+The solution used was iterating over the columns and rows of the original matrix switching their indexes and creating a new row for each column from the original matrix in order to obtain its transposed matrix.
 
-So for example, considering the given matrix $[[1, 2], [3, 4]]$ our solution will put the elements 1 and 3 - corresponding to the first column - on the positions of the first row and do the same for second column 2 and 4, putting on the position of the second row. To do that we first iterate over the first element of the matrix, which contains the row elements $[1, 2]$. And for each of these elements, we add an empty array to $transposedMatrix$ - representing the new row - and iterate over the matrix elements (which define the numbers of columns of the transposed matrix) to add the element at its new corresponding position until until we get the final result of $transposedMatrix$ which will be $[[1, 3], [2, 4]]$.
+For example, consider the given matrix $[[1, 2, 4], [5, 7, 8]]$ as the input. Starting from the first element of the first column we assign it to the first element of the first row of the transposed matrix $transposed[0][0] = matrix[0][0]$. Then we go to the second element of the first column and assign it to the second element of the first row of the transposed matrix $transposed[0][1] = matrix[1][0]$. And we repeat this process for every column of the original matrix until we get the final result of $transposed$ which will be $[[1, 5], [2, 7], [4, 8]]$.
 
 <Tabs>
 <TabItem value="py" label="Python">
@@ -50,13 +52,12 @@ So for example, considering the given matrix $[[1, 2], [3, 4]]$ our solution wil
 ```py
 class Solution:
     def transpose(self, matrix: List[List[int]]) -> List[List[int]]:
-        transposedMatrix = []
+        transposed = []
         for row in range(len(matrix[0])):
-            transposedMatrix.append([])
+            transposed.append([])
             for column in range(len(matrix)):
-                transposedMatrix[row].append(matrix[column][row])
-
-        return transposedMatrix
+                transposed[row].append(matrix[column][row])
+        return transposed
 ```
 
 </TabItem>
@@ -66,25 +67,24 @@ class Solution:
 
 ```js
 const transpose = (matrix) => {
-    const transposedMatrix = [];
-    for (const column in matrix[0]) {
-        transposedMatrix.push([]);
-        for (const row of matrix) {
-            transposedMatrix[column].push(row[column]);
+    const transposed = [];
+    for (const row in matrix[0]) {
+        transposed.push([]);
+        for (const column of matrix) {
+            transposed[row].push(column[row]);
         }
     }
-    return transposedMatrix;
+    return transposed;
 };
 ```
 
 </TabItem>
 </Tabs>
 
-**Time Complexity: $O(mxn)$**
+**Time Complexity: $O(m*n)$**
 
-The time complexity for this solution is $O(mxn)$ considering $m$ as the number of rows and $n$ as the number of columns in the original matrix.
+The time complexity for this solution is $O(m*n)$ considering $m$ as the number of rows and $n$ as the number of columns in the original matrix.
 
-**Space Complexity: $O(mxn)$**
+**Space Complexity: $O(m*n)$**
 
-The space complexity for this solution is also $O(mxn)$ considering $m$ as the number of rows and $n$ as the number of columns in the original matrix.
-once we are creating a new matrix based on the number of rows and columns from the original matrix, considering m as the number of rows and n as the number of columns.
+The space complexity for this solution is also $O(m*n)$ considering $m$ as the number of rows and $n$ as the number of columns in the original matrix.
