@@ -40,7 +40,13 @@ And generating Close brackets ( `)` ) is the Logical problem we need to device w
 
 This is Done using `if( open < close )` condition below.
 
-Since Solution deviced is using Recursion the `Time Complexity = O ( 2 ^ n )` where `n` is the Number of Brackets Given.
+Since Solution deviced is using Recursion the 
+- `Time Complexity = O ( 2 ^ n )`
+- `Space Complexity = O ( Recursion Stack Space == n )`, where `n` is the Number of Brackets Given.
+
+## References 
+
+Refer to this Youtube Video for Detailed Explaination with Implementation [here](https://www.youtube.com/watch?v=4KpSXSIPH2s)
 
 <Tabs>
 <TabItem value="cpp" label="C++">
