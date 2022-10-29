@@ -231,18 +231,15 @@ public:
 </TabItem>
 </Tabs>
 
+## Using Tarjan's algorithm to find articulation points in a Undirected Graph
+
+Similar to bridges, articulation points are vertices which if removed will disconnect the graph. Once again, we can modify the Tarjan's algorithm to find such vertices in a given undirected graph.
+
 ### Example #2: [1568 - Minimum Number of Days to Disconnect Island](https://leetcode.com/problems/minimum-number-of-days-to-disconnect-island/)
 
-This is an example of a very tricky problem which heavily simplifies after using some Combinatorics and [Bit Manipulation](../../tutorials/math/bit-manipulation.md)
+Notice that the answer cannot be more than $2$. Any rectangular shape will have atleast 4 corner cells, and if we remove the vertical neighbour and horizontal neighbour cells of anyone one of these, we have disconnected the graph. Thus, we need to check when the answer can $0$ or $1$, and we are done.
 
-Here we will consider the $i^{th}$ bit from the right. Let's say that the $i^{th}$ bit is set in $k$ out of $n$ numbers in some given subset. If $k$ is odd, then $i^{th}$ bit is set in the XOR of all numbers of the subset, otherwise, it is not set.
-
-Hence if there are $m$ numbers out of $n$ with $i^{th}$ bit set, then the contribution of the bit is $Place\,value\,of\,the\,bit$ $*$ $number\,of\,ways\,to\,get\,odd\,k$ 
-
-Thus we can find $\sum_{k = 1}^{k <= m}$ $m \choose k$ for all odd values of $k$, which comes out to $2^{m - 1}$. Furthermore, we can choose the remaining elements in the subset in $2^{n - m}$ ways by similar logic. Hence total ways to get odd values of $k$ are $2^{n - 1}$, which is independent of both $m$ and $k$.
-
-Hence all we need to do is find bits which are set atleast once (by computing OR) and then multiply the final answer with $2^{n - 1}$.
-Time Complexity of the program is $O(n)$ with $O(1)$ Space Complexity.
+The answer will be $0$ if the islands are initially disconnected. This can be checked using basic DFS. The answer will be $1$ when the graph has atleast 1 [articulation point](https://cp-algorithms.com/graph/cutpoints.html). The condition for articulation points is similar to that for finding bridges, except we also check for presence of parents.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -250,61 +247,86 @@ Time Complexity of the program is $O(n)$ with $O(1)$ Space Complexity.
 ```cpp
 class Solution {
 public:
-    int subsetXORSum(vector<int>& nums) {
-        int arrayOR = 0;
-        // do OR of whole array to obtain bits which are set atleast once
-        for (int num : nums) arrayOR |= num;
-        // compute the final answer using the formula discussed
-        return arrayOR * (1 << (nums.size() - 1));
-    }
-};
-```
+    // Initializing the variables
+    int n, m, cnt_islands = 0;
+    int timer = 0;
+    vector<vector<int>> tin, low_link;
 
-</TabItem>
-</Tabs>
+    // Recursive function to perform DFS, return true if an articulation point is detected
+    bool dfs (pair<int, int> u, vector<vector<int>>& grid, pair<int, int> p = {-1, -1}) {
 
-### Example #3: [1489 - Find Critical and Pseudo-Critical Edges in Minimum Spanning Tree](https://leetcode.com/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/)
+        int i = u.first, j = u.second;
+        tin[i][j] = low_link[i][j] = timer++;
+        cnt_islands++;
+        // variable to check for articulation point in DFS subtree of the node
+        bool has_articulation_point = false;
+        // variable to count number of children visited first by the node
+        int cnt_children = 0;
 
-Here our robot always goes either down or right. We know that we have to go down $m - 1$ times and go left $n - 1$ times. Thus we need to find the number of ways to arrange these. One way to visualize this is if we have $m + n - 2$ blank spaces, and we have to fill $n - 1$ of them using $R$ (representing going right) and remaining using $D$ (representing going down). Then we can just choose the number of spaces to fill with $L$ from total number of spaces. The the final solution is simply $m + n - 2 \choose n - 1$.
+        // Find all neighbours from the grid
+        vector<pair<int, int>> neighbours;
+        if ((i > 0) && (grid[i - 1][j])) neighbours.push_back({i - 1, j});
+        if ((i < (n - 1)) && (grid[i + 1][j])) neighbours.push_back({i + 1, j});
+        if ((j > 0) && (grid[i][j - 1])) neighbours.push_back({i, j - 1});
+        if ((j < (m - 1)) && (grid[i][j + 1])) neighbours.push_back({i, j + 1});
 
-Notice that we are not required to return the value after taking modulo and the constraints allow for a $O(n^2)$ precomputation. Thus, we will
-simply construct the entire Pascal's Triangle and query it everytime to calculate the answer.
-
-<Tabs>
-<TabItem value="cpp" label="C++">
-
-```cpp
-class Solution {
-public:
-    int uniquePaths(int m, int n) {
-        // the upper limit is m + n - 2 = 198
-        vector<vector<long long int>> PascalTriangle(199, vector<long long int> ());
-        PascalTriangle[0] = {1};
-        // calculating every row of the triangle
-        for (int i = 1; i <= 198; i++) {
-            PascalTriangle[i].push_back(1);
-            // using the recurrence relation.
-            for (int j = 1; j < i; j++) {
-                // take mod with INT_MAX as otherwise some values may overflow.
-                PascalTriangle[i].push_back((PascalTriangle[i - 1][j] + PascalTriangle[i - 1][j - 1]) % INT_MAX);
+        for (auto v : neighbours) {
+            // If the neighbour is a parent, ignore it
+            if(v == p) continue;
+            // If the neighbour was already visited
+            else if (tin[v.first][v.second] != -1) low_link[i][j] = min(low_link[i][j], tin[v.first][v.second]);
+            // If the neighbour is a new node
+            else{
+                // If the subtree has an articulation point
+                if (dfs(v, grid, u)) has_articulation_point = true;
+                // Update the low-link value
+                low_link[i][j] = min(low_link[i][j], low_link[v.first][v.second]);
+                // If the point itself is an articulation point
+                if ( (low_link[v.first][v.second] >= tin[i][j]) && (p != (pair<int, int>){-1, -1}) ) has_articulation_point = true;
+                cnt_children++;
             }
-            PascalTriangle[i].push_back(1);
         }
-        // query the final answer
-        return PascalTriangle[m + n - 2][n - 1];
+
+        // If it has an articulation point, return true
+        if (( (p == (pair<int, int>){-1, -1}) && (cnt_children > 1)) || has_articulation_point) return true;
+        // Else return false
+        return false;
+
+    }
+
+    int minDays(vector<vector<int>>& grid) {
+        
+        n = grid.size();
+        m = grid[0].size();
+        int connected_comp = 0;
+        bool has_articulation_point = false;
+
+        tin.resize(n, vector<int> (m, -1));
+        low_link.resize(n, vector<int> (m, -1));
+
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < m; j++){
+                // Ignore the cells of grid with water, or who have been visited
+                if((grid[i][j] == 0) || (tin[i][j] != -1)) continue;
+                // We already have found a connected component, and this will be a new one, thus we directly return 0
+                if(connected_comp > 0) return 0;
+                if(dfs({i, j}, grid)) has_articulation_point = true;
+                connected_comp++;
+            }
+        }
+
+        // If there are no cells with land
+        if(cnt_islands == 0) return 0;
+        // If there is only one cell with land
+        else if(cnt_islands == 1) return 1;
+        if(has_articulation_point) return 1;
+        return 2;
     }
 };
 ```
 
 </TabItem>
 </Tabs>
-
-NOTE: Since every testcase only asks us to find $n \choose r$ for particular values of $n$ and $r$, we can instead of precomputing the entire
-Pascal's Triangle, just compute the paricular value of $n \choose r$ using the recurrence relation and memoization. This will lead to less time
-and space complexity, as we only calculate the values we need. Also, then we no longer need to take modulo with INT_MAX as all the values will
-fit in the "int" type as mentioned in the question.
-
-You can check the complete solution for this problem [here](../../solutions/0000-0099/unique-paths-medium)
 
 ## References
 1. [Tarjan's Algorithm For Strongly Connected Components](https://www.topcoder.com/thrive/articles/tarjans-algorithm-for-strongly-connected-components) 
