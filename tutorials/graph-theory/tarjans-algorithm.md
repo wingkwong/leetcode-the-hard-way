@@ -30,56 +30,143 @@ $tin(u) =$ time at which node $u$ was reached for the first time or the in time 
 
 $low(u) =$ smallest time reachable of a node reachable from the DFS subtree of node u
 
+We also need to ensure that we don't mix 2 different SCC's due to a cross-edge between them. To counter this issue, we will use a stack to store the nodes which have not been assigned to an SCC and have been visited so far.
+
+Thus, whenever we find an SCC, we will pop the corresponding nodes from the stack.
+
+We will call the first node we discovered of an SCC the route node for sake of simplicity. Thus, we will identify the SCC by its root node. To check when we have reached a root node, we just check if $low(u)$ and $tin(u)$ are equal.
+
 The pseudo-code for the algorithm can be found [here](https://en.wikipedia.org/wiki/Tarjan%27s_strongly_connected_components_algorithm#The_algorithm_in_pseudocode)
 
-The implementation of above can be as follows:
+The implementation of above can be as follows (along with above graph as example) :
 
 <Tabs>
 <TabItem value="cpp" label="C++">
 
 ```cpp
-struct comb{
-    int mod;
-    // make arrays to store the factorial and inverse factorial modulo m
-    vector<long long int> factorial;
-    vector<long long int> inverse_factorial;
+#include <bits/stdc++.h>
+using namespace std;
 
-    // N is the maximum value possible of input
-    comb (int N, int mod_in = 1e9 + 7) {
-        // calculate values for factorial
-        mod = mod_in;
-        factorial.push_back(1);
-        for(int i = 1; i <= N; i++) factorial.push_back((factorial.back() * i) % mod);
+struct tarjans_algo{
+    // Recursive function to do the DFS search on the graph
+    void dfs(int u, int &timer, vector<int> &tin, vector<int> &low_link, vector<bool> &on_stack, stack<int> &stk, vector<vector<int>> &graph, vector<vector<int>> &res){
 
-        // calculate values for inverse factorial
-        vector<long long int> inverse;
-        inverse.push_back(1);
-        inverse.push_back(1);
-        inverse_factorial.push_back(1);
-        inverse_factorial.push_back(1);
-        for (int i = 2; i <= N; i++) {
-            inverse.push_back((mod - ((mod/i) * inverse[mod%i]) % mod) % mod);
-            inverse_factorial.push_back((inverse_factorial[i - 1] * inverse[i]) % mod);
+        // set the values for tin and low_link, and put the node on stack
+        tin[u] = low_link[u] = timer;
+        timer++;
+        stk.push(u);
+        on_stack[u] = true;
+
+        // DFS to neighbours of current node
+        for (int v : graph[u]) {
+            // If the node is unvisited
+            if (tin[v] == -1) {
+                dfs(v, timer, tin, low_link, on_stack, stk, graph, res);
+                // Update the low-link value for node u
+                low_link[u] = min(low_link[u], low_link[v]);
+            // Else if the node was visited before, and is still on the stack
+            }else if (on_stack[v]) {
+                // Update the low-link for node u
+                low_link[u] = min(low_link[u], tin[v]);
+            }
         }
+
+        // Check if u is the root node for a SCC
+        if (low_link[u] == tin[u]) {
+
+            vector<int> SCC;
+            // All the nodes above u in the stack are in SCC of u
+            while (stk.top() != u) {
+                int v = stk.top();
+                stk.pop();
+                SCC.push_back(v);
+                on_stack[v] = false;
+            }
+            // Now removing u from stack and adding it to the SCC
+            stk.pop();
+            SCC.push_back(u);
+            on_stack[u] = false;
+
+            // Adding the SCC to the answer
+            res.push_back(SCC);
+        }
+
+        return;
+
     }
 
-    // function to calculate nCr(n, r)
-    long long int nCr(int n, int r){
-        if ((r < 0) || (r > n)) return 0;
-        return ((factorial[n] * inverse_factorial[r]) % mod * inverse_factorial[n - r]) % mod;
+    // Takes input of graph as adjacency list and returns the SCC of graph as vectors
+    vector<vector<int>> tarjans (vector<vector<int>> &adjacencyList) {
+
+        int n = adjacencyList.size(), timer = 0;
+        // Store the in-time for DFS search
+        vector<int> tin(n, -1);
+        // Stores the low-link value for every node
+        vector<int> low_link(n, -1);
+        // Checks whether a node is on the stack or not
+        vector<bool> on_stack(n, false);
+        // Stack to store the currently available nodes
+        stack<int> data;
+        // To store the final answer
+        vector<vector<int>> res;
+
+        for (int u = 0; u < n; u++) {
+            if (tin[u] == -1) dfs(u, timer, tin, low_link, on_stack, data, adjacencyList, res); 
+        }
+
+        return res;
+
     }
 };
+
+int main(){
+
+    // Constructing adjacency list for example graph shown, mapping node a to 0, b to 1 and so on...
+    vector<vector<int>> graph(8);
+    graph[0].push_back(1);
+    graph[1].push_back(2);
+    graph[1].push_back(4);
+    graph[1].push_back(5);
+    graph[2].push_back(3);
+    graph[2].push_back(6);
+    graph[3].push_back(2);
+    graph[3].push_back(7);
+    graph[4].push_back(0);
+    graph[4].push_back(5);
+    graph[5].push_back(6);
+    graph[6].push_back(5);
+    graph[7].push_back(3);
+    graph[7].push_back(6);
+
+    // Using the tarjan's algo
+    tarjans_algo t = tarjans_algo();
+    vector<vector<int>> res = t.tarjans(graph);
+
+    // Output the final result
+    cout << "The Strongly Connected Components for the graph are:-" << endl;
+    for (vector<int> i : res) {
+        for (int j : i) {
+            cout << (char)('a' + j) << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
 ```
 
 </TabItem>
 </Tabs>
 
+We can further cluster all the nodes belonging to an SCC into one node, and represent all the edges from and to a constituent node of the SCC to this new node. The resulting graph is called the [Condensation Graph](https://cp-algorithms.com/graph/strongly-connected-components.html)
+
+## Using Tarjan's algorithm to find bridges in a Undirected Graph
+
+Here, we are searching in an undirected graph, and also we don't need to remove the cross-edges. Thus, the stack is no longer required. An edge between node $u$ to $v$ will be considered a bridge if there is no other way to reach $v$ from $u$ if the edge is removed. We can check for this by using the properties of the low-link time. If the low-link time of $v$ is less than that of $u$, we can conclude that we can reach $v$ from some other path, otherwise the edge between them is a bridge. Here is an example for same.
+
 ### Example #1: [1192 - Critical Connections in a Network](https://leetcode.com/problems/critical-connections-in-a-network/)
 
-The important insight here is that the figure provided is nothing but an inverted Pascal's Triangle and contribution of each cell in the final sum is the value of cell multiplied by the binomial coefficient at the particular position in Pascal's Triangle.
-
-Thus for the cell at $i^{th}$ index in the topmost row, it's value is multiplied by $n - 1 \choose i$ and added to the final sum $modulo\,10$.
-Time Complexity of the program is $O(n^2)$ for computing the binomial coefficient and $O(n)$ Space complexity.
+This problem directly asks us to find bridges in the given graph. The input is provided in form of pairs of nodes with an edge between them. Thus, we will first convert this to an adjacency list and apply the same algorithm discussed above.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -87,24 +174,56 @@ Time Complexity of the program is $O(n^2)$ for computing the binomial coefficien
 ```cpp
 class Solution {
 public:
-    int triangularSum(vector<int>& nums) {
-        int n = nums.size();
-        vector<int> pascalTriangleRow = {1};
-        // calculate the ith row using (i - 1)th row
-        for (int i = 0; i < n; i++) {
-            vector<int> nextRow = {1};
-            for(int j = 1; j < i; j++){
-                nextRow.push_back((pascalTriangleRow[j] + pascalTriangleRow[j - 1]) % 10);
+    // Initializing the variables
+    int timer = 0;
+    vector<int> tin, low_link;
+    vector<vector<int>> graph;
+    vector<vector<int>> res;
+
+    // Recursive function to perform DFS
+    void dfs(int u, int p = -1){
+
+        tin[u] = low_link[u] = timer;
+        timer++;
+
+        for (int v : graph[u]) {
+            // We ignore the parent node
+            if (v == p) continue;
+            // If we discover a new node
+            if (tin[v] == -1) {
+                dfs(v, u);
+                low_link[u] = min(low_link[u], low_link[v]);
+                // Check if the edge is a bridge
+                if (low_link[v] > tin[u]) {
+                    res.push_back({u, v});
+                }
+            // If we visit a node which already has been visited
+            } else {
+                low_link[u] = min(low_link[u], tin[v]);
             }
-            nextRow.push_back(1);
-            pascalTriangleRow = nextRow;
         }
-        // calculate the final answer as discussed above
-        int ans = 0;
-        for (int i = 0; i < n; i++) {
-            ans += (nums[i] * pascalTriangleRow[i]) % 10;
+
+        return;
+
+    }
+
+    vector<vector<int>> criticalConnections(int n, vector<vector<int>>& connections) {
+
+        tin.resize(n, -1);
+        low_link.resize(n, -1);
+        graph.resize(n);
+
+        // Make an adjacency list from the input
+        for (auto i : connections) {
+            graph[i[0]].push_back(i[1]);
+            graph[i[1]].push_back(i[0]);
         }
-        return ans%10;
+
+        // As the entire graph is connected, just call dfs on 0
+        dfs(0);
+
+        return res;
+
     }
 };
 ```
