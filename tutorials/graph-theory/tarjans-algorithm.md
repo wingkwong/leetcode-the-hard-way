@@ -38,6 +38,8 @@ We will call the first node we discovered of an SCC the route node for sake of s
 
 The pseudo-code for the algorithm can be found [here](https://en.wikipedia.org/wiki/Tarjan%27s_strongly_connected_components_algorithm#The_algorithm_in_pseudocode)
 
+The Time and Space Complexity of the algorithm is $O(V + E)$, where $V$ represents the number of vertices and $E$ represents the number of edges, same as that os DFS.
+
 The implementation of above can be as follows (along with above graph as example) :
 
 <Tabs>
@@ -327,6 +329,17 @@ public:
 
 </TabItem>
 </Tabs>
+
+export const suggestedProblems = [
+  {
+    "problemName": "1489 - Find Critical and Pseudo-Critical Edges in Minimum Spanning Tree",
+    "difficulty": "Hard",
+    "leetCodeLink": "https://leetcode.com/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree",
+    "solutionLink": ""
+  },
+]
+
+<Table title="Suggested Problems" data={suggestedProblems} />
 
 ## References
 1. [Tarjan's Algorithm For Strongly Connected Components](https://www.topcoder.com/thrive/articles/tarjans-algorithm-for-strongly-connected-components) 
