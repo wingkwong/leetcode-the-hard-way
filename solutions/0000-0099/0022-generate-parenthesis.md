@@ -44,7 +44,7 @@ Since Solution deviced is using Recursion the `Time Complexity = O ( 2 ^ n )` wh
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@VetlaPavanKalyan"/>
 
 ```cpp
 class Solution {
