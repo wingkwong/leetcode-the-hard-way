@@ -10,13 +10,13 @@ For those who don't know, [LeetCode](https://leetcode.com/) is one of the most w
 
 Learn Data Structures and Algorithms ranged from basic to advanced via LeetCode Problems
 
-#### 🔶 Line By Line Explanations
+#### 🔶 Detailed Explanations
 
-Unlike most of posts in Discussion, we tend to provide detailed explanations via Line By Line fashion
+Unlike most of posts in Discussion, we tend to provide detailed explanations (Line By Line / Article)
 
 #### 🔶 LeetCode Community
 
-Join the Discord to discuss Leetcode Topics with the Community in real time
+Join the Discord to have a live discussion on Leetcode Topics with the Community memebers
 
 ## Target Audience
 
