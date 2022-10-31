@@ -63,13 +63,13 @@ class Solution {
 public:
     bool searchMatrix(vector<vector<int>>& matrix, int target) {
         int m = matrix.size();
-        if(m == 0) {
+        if (m == 0) {
             return false;
         }
         int n = matrix[0].size();
-        for(int i = 0; i < m; i++) {
-            for(int j = 0; j < n; j++) {
-                if(matrix[i][j] == target) {
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (matrix[i][j] == target) {
                     return true;
                 }
             }
@@ -100,13 +100,13 @@ class Solution:
 class Solution {
     public boolean searchMatrix(int[][] matrix, int target) {
         int m = matrix.length;
-        if(m == 0) {
+        if (m == 0) {
             return false;
         }
         int n = matrix[0].length;
-        for(int i = 0; i < m; i++) {
-            for(int j = 0; j < n; j++) {
-                if(matrix[i][j] == target) {
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (matrix[i][j] == target) {
                     return true;
                 }
             }
@@ -138,16 +138,16 @@ class Solution {
 public:
     bool searchMatrix(vector<vector<int>>& matrix, int target) {
         int m = matrix.size();
-        if(m == 0) {
+        if (m == 0) {
             return false;
         }
         int n = matrix[0].size();
         int row = 0, col = n - 1;
-        while(row < m && col >= 0) {
-            if(matrix[row][col] == target) {
+        while (row < m && col >= 0) {
+            if (matrix[row][col] == target) {
                 return true;
             }
-            if(matrix[row][col] > target) {
+            if (matrix[row][col] > target) {
                 col--;
             } else {
                 row++;
@@ -183,16 +183,16 @@ class Solution:
 class Solution {
     public boolean searchMatrix(int[][] matrix, int target) {
         int m = matrix.length;
-        if(m == 0) {
+        if (m == 0) {
             return false;
         }
         int n = matrix[0].length;
         int row = 0, col = n - 1;
-        while(row < m && col >= 0) {
-            if(matrix[row][col] == target) {
+        while (row < m && col >= 0) {
+            if (matrix[row][col] == target) {
                 return true;
             }
-            if(matrix[row][col] > target) {
+            if (matrix[row][col] > target) {
                 col--;
             } else {
                 row++;
