@@ -118,7 +118,7 @@ bool findPath(Node* root, vector<int>& current_path, int value) {
 </TabItem>
 </Tabs>
 
-### Example : [235 -Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
+## Example: [0235 -Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
 
 ```
 Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.
@@ -175,7 +175,7 @@ class Solution {
 </TabItem>
 </Tabs>
 
-### Example : [2096. Step-By-Step Directions From a Binary Tree Node to Another](https://leetcode.com/problems/step-by-step-directions-from-a-binary-tree-node-to-another/)
+## Example: [2096. Step-By-Step Directions From a Binary Tree Node to Another](https://leetcode.com/problems/step-by-step-directions-from-a-binary-tree-node-to-another/)
 
 ```
 You are given the root of a binary tree with n nodes. Each node is uniquely assigned a value from 1 to n. You are also given an integer startValue representing the value of the start node s, and a different integer destValue representing the value of the destination node t.
@@ -272,8 +272,6 @@ class Solution {
 ```
 </TabItem>
 </Tabs>
-
-
 
 export const suggestedProblems = [
   {
