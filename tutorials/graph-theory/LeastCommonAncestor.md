@@ -1,7 +1,7 @@
 ---
 title: 'Lowest Common Ancestor(LCA)'
 description: 'Lowest common ancestor (LCA) of two nodes x and y is the deepest(lowest) node that has both x and y as descendants'
-hide_table_of_contents: true
+hide_table_of_contents: false
 keywords:
   - leetcode
   - tutorial
@@ -10,35 +10,35 @@ keywords:
 ---
 
 <TutorialAuthors names="@RohitTaparia"/>
+<Contributors names="@wingkwong" />
 
 ## Overview
 
-Lowest common ancestor (LCA) of two nodes x and y in a tree or directed acyclic graph (DAG) is the deepest(lowest) node that has both x and y as descendants. Hence, LCA is the ancestor of x and y which is the farthest from the root node in a tree. In most cases, we also consider a node to be a descendant of itself. We have assumed this fact for this article,i.e, $$LCA(x,x)=x$$. Also, the $$LCA(x,y)$$ is a node that surely lies on the shortest path between $$x$$ and $$y$$, since if there was a smaller path, there would surely be a node at a lower depth which is their mutual ancestor, and this cannot be possible as if it was, this node would have been the LCA.
+Lowest common ancestor (LCA) of two nodes $x$ and $y$ in a tree or directed acyclic graph (DAG) is the deepest(lowest) node that has both $x$ and $y$ as descendants. Hence, LCA is the ancestor of x and y which is the farthest from the root node in a tree. In most cases, we also consider a node to be a descendant of itself. We have assumed this fact for this article,i.e, $$LCA(x,x)=x$$. Also, the $$LCA(x,y)$$ is a node that surely lies on the shortest path between $$x$$ and $$y$$, since if there was a smaller path, there would surely be a node at a lower depth which is their mutual ancestor, and this cannot be possible as if it was, this node would have been the LCA.
 
 ![image](https://user-images.githubusercontent.com/79581359/196247356-4eba006f-8be1-44cb-a146-cb36ebaa44a4.png)
 
-In this example, for nodes 7 and 4, the LCA is 2.
-For nodes 6 and 4, the LCA is 5.
-For nodes 4 and 8, the LCA is the root itself,that is, 3. 
+In this example, for nodes $7$ and $4$, the LCA is $2$.
+
+For nodes $6$ and $4$, the LCA is $5$.
+
+For nodes $4$ and $8$, the LCA is the root itself, i.e. $3$. 
 
 $$NOTE:$$ The LCA in a binary tree for the root with any other node will be the root itself.
 
-One of the most common applications of LCA is to determine the distance between pairs of nodes in a binary tree(or any other tree for that matter).In the above example, the distance between 6 and 4 can be computed as can be computed as the distance from 6 to root(3), plus the distance from the 4 to root(3), minus twice the distance from the root to their lowest common ancestor(LCA),that is,
+One of the most common applications of LCA is to determine the distance between pairs of nodes in a binary tree(or any other tree for that matter).In the above example, the distance between $6$ and $4$ can be computed as can be computed as the distance from $6$ to $root(3)$, plus the distance from the $4$ to $root(3)$, minus twice the distance from the root to their lowest common ancestor(LCA), that is,
 
-$$dist(x,y)$$= $$dist(x,root)+$$  $$dist(y,root)-$$  $$2*dist(LCA,root)$$
+$$
+dist(x,y) = dist(x, root) + dist(y, root)-  2 * dist(LCA, root)
+$$
 
+## Implementation
 
-
-### Implementation
-
-
-
-We can notice from the definition of LCA that the LCA of two nodes $$x$$ and $$y$$ is nothing but the node of the intersection of the paths from $$x$$ and $$y$$ to the root node. In the tree above, the paths from 7 and 6 to the root node have their first intersection at 5. Hence, $$LCA(7, 6) = 5$$. We can calculate the paths using DFS and find the intersection using a stack based approach, or using a recursive approach. This is the general(naive) solution, and takes $$O(N)$$ time and $$O(N)$$ space. Below is the code for the iterative approach using stacks.
+We can notice from the definition of LCA that the LCA of two nodes $$x$$ and $$y$$ is nothing but the node of the intersection of the paths from $$x$$ and $$y$$ to the root node. In the tree above, the paths from $7$ and $6$ to the root node have their first intersection at $5$. Hence, $$LCA(7, 6) = 5$$. We can calculate the paths using DFS and find the intersection using a stack based approach, or using a recursive approach. This is the general(naive) solution, and takes $$O(N)$$ time and $$O(N)$$ space. Below is the code for the iterative approach using stacks.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
 <SolutionAuthor name="@RohitTaparia"/>
-
 
 ```cpp
 
@@ -47,14 +47,14 @@ int findingLCA(int x, int y, vector<int>& adj) {
   int root = 0;
   stack<int> x_path, y_path;
 
-  // finding first path
+  // find first path
   while (x != root) {
     x_path.push(x);
     x = adj[x];
   }
   x_path.push(x);
 
-  // finding second path
+  // find second path
   while (y != root) {
     y_path.push(y);
     y = adj[y];
@@ -62,7 +62,7 @@ int findingLCA(int x, int y, vector<int>& adj) {
   y_path.push(y);
 
   int lca = -1;
-  // finding the last common node
+  // find the last common node
   while ((!x_path.empty() && !y_path.empty()) &&
          (x_path.top() == y_path.top())) {
     lca = x_path.top();
@@ -71,22 +71,18 @@ int findingLCA(int x, int y, vector<int>& adj) {
   }
   return lca;
 }
-
 ```
 </TabItem>
 </Tabs>
 
 The same logic can be implemented using recursion, so that we do not need to use stacks explicitly. We store paths from root to node $$x$$ and from root to node $$y$$ and then check iterate to the last common node, which is the LCA. Explicitly, what we are trying to do here is to find which is the last common node while traversing both the paths. Obviously the root will be common in both paths, since we assume that both nodes are present. Then we need to go to the common node which is the farthest from the root node. This we can do if we traverse both the paths. The last common node gives us the LCA.
 
-
 <Tabs>
 <TabItem value="cpp" label="C++">
 <SolutionAuthor name="@RohitTaparia"/>
 
-
 ```cpp
- 
-// will return LCA only if both node x, y are present, else -1
+// findLCA will return LCA only if both node x, y are present, else -1
 int findLCA(Node* root, int x, int y) {
   vector<int> path_root_to_x, path_root_to_y;
 
@@ -94,7 +90,7 @@ int findLCA(Node* root, int x, int y) {
   if (!findPath(root, path_root_to_x, x) || !findPath(root, path_root_to_y, y))
     return -1;
 
-  // checking for LCA now, which is farthest common node from root in both paths
+  // check for LCA now, which is farthest common node from root in both paths
   for (int i = 0; i < path_root_to_x.size() && i < path_root_to_y.size(); i++)
     if (path_root_to_x[i] != path_root_to_y[i]) break;
   return path_root_to_x[i - 1];
@@ -113,7 +109,7 @@ bool findPath(Node* root, vector<int>& current_path, int value) {
       (root->right && findPath(root->right, current_path, value)))
     return true;
 
-  // removing root since not found in subtree
+  // remove root since not found in subtree
   current_path.pop_back();
   return false;
 }
@@ -121,7 +117,6 @@ bool findPath(Node* root, vector<int>& current_path, int value) {
 ```
 </TabItem>
 </Tabs>
-
 
 ### Example : [235 -Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
 
@@ -160,9 +155,9 @@ class Solution {
     if (root == p || root == q) {
       return root;
     }
-    // recursing for the left subtree, basically dfs
+    // recurse for the left subtree, basically dfs
     TreeNode* left = lowestCommonAncestor(root->left, p, q);
-    // recursing for the right subtree
+    // recurse for the right subtree
     TreeNode* right = lowestCommonAncestor(root->right, p, q);
 
     // if one of them is NULL means we need to return the other one
@@ -196,7 +191,7 @@ Output: "UURL"
 Explanation: The shortest path is: 3 → 1 → 5 → 2 → 6.
 ```
 
-In this problem, we need to find the closest point(from nodes), where path from root to nodes intersect, which is LCA of both the nodes. Hence, we first find the LCA node of start and destination. Then we need to get path from LCA to the starting node($$lcaS$$) and from LCA to destination($$laD$$). This method has also been explained above. In this we simply do a simple DFS and first explore the left path, and then the right path. Whenever we find the node, we return true, otherwise we backtrack and explore the right path. Now that we have both paths, we will convert all chars in $$lcaS$$ to $$U$$, since we need to move upward.
+In this problem, we need to find the closest point(from nodes), where path from root to nodes intersect, which is LCA of both the nodes. Hence, we first find the LCA node of start and destination. Then we need to get path from LCA to the starting node($$lca_s$$) and from LCA to destination($$lca_d$$). This method has also been explained above. In this we simply do a simple DFS and first explore the left path, and then the right path. Whenever we find the node, we return true, otherwise we backtrack and explore the right path. Now that we have both paths, we will convert all chars in $$lca_s$$ to $$U$$, since we need to move upward.
 
 At last, we concatenate both strings and return the combined path.
 
@@ -223,9 +218,9 @@ class Solution {
 
     if (root->val == start || root->val == dest) return root;
 
-    // recursing for left subtree
+    // recurse for left subtree
     TreeNode* left = getLCA(root->left, start, dest);
-    // recursing for right subtree
+    // recurse for right subtree
     TreeNode* right = getLCA(root->right, start, dest);
 
     // if both are not null, this node is LCA
@@ -244,12 +239,12 @@ class Solution {
     // if node is found, we can return true
     if (root->val == val) return true;
 
-    // trying to find node for left
+    // try to find node for left
     path.push_back('L');
     if (findPath(root->left, path, val)) return true;
     path.pop_back();
 
-    // trying to find node for right
+    // try to find node for right
     path.push_back('R');
     if (findPath(root->right, path, val)) return true;
     path.pop_back();
@@ -263,13 +258,14 @@ class Solution {
 
     string lcaS = "", lcaD = "";
 
-    // finding both paths
+    // find both paths
     findPath(lca, lcaS, initialValue);
     findPath(lca, lcaD, finalValue);
 
     for (auto& c : lcaS) c = 'U';
 
-    // merge both paths, Start node -> Destination node
+    // merge both paths,
+    // i.e. start node -> destination node
     return lcaS + lcaD;
   }
 };
