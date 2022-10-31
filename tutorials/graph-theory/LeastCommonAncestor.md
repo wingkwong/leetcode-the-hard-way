@@ -238,7 +238,7 @@ class Solution {
     return right;
   }
 
-  bool path(TreeNode* root, string& path, int val) {
+  bool findPath(TreeNode* root, string& path, int val) {
     if (!root) return false;
 
     // if node is found, we can return true
@@ -246,12 +246,12 @@ class Solution {
 
     // trying to find node for left
     path.push_back('L');
-    if (path(root->left, path, val)) return true;
+    if (findPath(root->left, path, val)) return true;
     path.pop_back();
 
     // trying to find node for right
     path.push_back('R');
-    if (path(root->right, path, val)) return true;
+    if (findPath(root->right, path, val)) return true;
     path.pop_back();
 
     return false;
@@ -264,8 +264,8 @@ class Solution {
     string lcaS = "", lcaD = "";
 
     // finding both paths
-    path(lca, lcaS, initialValue);
-    path(lca, lcaD, finalValue);
+    findPath(lca, lcaS, initialValue);
+    findPath(lca, lcaD, finalValue);
 
     for (auto& c : lcaS) c = 'U';
 
