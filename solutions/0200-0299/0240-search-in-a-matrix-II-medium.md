@@ -48,7 +48,6 @@ Output: false
 * Matrix
 
 ## Approach 1: Brute Force
-
 Traversal through the matrix and check if the target is present or not.
 
 Time Complexity: $O(m * n)$, where $m$ - number of rows and $n$ - number of columns
@@ -60,66 +59,66 @@ Space complexity: $O(1)$, using contant space
 <SolutionAuthor name="@A-Spiral-Forge"/>
 
 ```cpp
-bool searchMatrix(vector<vector<int>>& matrix, int target) {
-    int m = matrix.size();
-    if(m == 0) {
-        return false;
-    }
-    
-    int n = matrix[0].size();
-    
-    for(int i = 0; i < m; i++) {
-        for(int j = 0; j < n; j++) {
-            if(matrix[i][j] == target) {
-                return true;
+class Solution {
+public:
+    bool searchMatrix(vector<vector<int>>& matrix, int target) {
+        int m = matrix.size();
+        if(m == 0) {
+            return false;
+        }
+        int n = matrix[0].size();
+        for(int i = 0; i < m; i++) {
+            for(int j = 0; j < n; j++) {
+                if(matrix[i][j] == target) {
+                    return true;
+                }
             }
         }
+        return false;
     }
-    
-    return false;
-}
+};
 ```
 </TabItem>
 <TabItem value="py" label="Python">
 <SolutionAuthor name="@A-Spiral-Forge"/>
 
 ```py
-def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
-    m, n = len(matrix), len(matrix) and len(matrix[0])
-    for i in range(m):
-        for j in range(n):
-            if matrix[i][j] == target:
-                return True
-    return False
+class Solution:
+    def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
+        m, n = len(matrix), len(matrix) and len(matrix[0])
+        for i in range(m):
+            for j in range(n):
+                if matrix[i][j] == target:
+                    return True
+        return False
 ```
 </TabItem>
 <TabItem value="java" label="Java">
 <SolutionAuthor name="@A-Spiral-Forge"/>
 
 ```java
-public boolean searchMatrix(int[][] matrix, int target) {
-    int m = matrix.length;
-    if(m == 0) {
-        return false;
-    }
-    
-    int n = matrix[0].length;
-    
-    for(int i = 0; i < m; i++) {
-        for(int j = 0; j < n; j++) {
-            if(matrix[i][j] == target) {
-                return true;
+class Solution {
+    public boolean searchMatrix(int[][] matrix, int target) {
+        int m = matrix.length;
+        if(m == 0) {
+            return false;
+        }
+        int n = matrix[0].length;
+        for(int i = 0; i < m; i++) {
+            for(int j = 0; j < n; j++) {
+                if(matrix[i][j] == target) {
+                    return true;
+                }
             }
         }
+        return false;
     }
-    return false;
 }
 ```
 </TabItem>
 </Tabs>
 
 ## Approach 2: Optimized Brute Force
-
 * Start iterating the matrix from top right corner of the matrix, that is `matrix[0][size of column -1]`.
 * If `matrix[i][j] == target`, return `true`.
 * If the target is less than `matrix[i][j]`, then move leftwards (decrease the column), that is `--j`.
@@ -135,81 +134,78 @@ Space complexity: $O(1)$, using contant space
 <SolutionAuthor name="@A-Spiral-Forge"/>
 
 ```cpp
-bool searchMatrix(vector<vector<int>>& matrix, int target) {
-    int m = matrix.size();
-    if(m == 0) {
+class Solution {
+public:
+    bool searchMatrix(vector<vector<int>>& matrix, int target) {
+        int m = matrix.size();
+        if(m == 0) {
+            return false;
+        }
+        int n = matrix[0].size();
+        int row = 0, col = n - 1;
+        while(row < m && col >= 0) {
+            if(matrix[row][col] == target) {
+                return true;
+            }
+            if(matrix[row][col] > target) {
+                col--;
+            } else {
+                row++;
+            }
+        }
         return false;
     }
-    
-    int n = matrix[0].size();
-    int row = 0, col = n - 1;
-    
-    while(row < m && col >= 0) {
-        if(matrix[row][col] == target) {
-            return true;
-        }
-        
-        if(matrix[row][col] > target) {
-            col--;
-        } else {
-            row++;
-        }
-    }
-    
-    return false;
-}
+};
 ```
 </TabItem>
 <TabItem value="py" label="Python">
 <SolutionAuthor name="@A-Spiral-Forge"/>
 
 ```py
-def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
-    m, n = len(matrix), len(matrix) and len(matrix[0])
-    r, c = 0, n - 1
-    while r < m and c >= 0:
-        if target > matrix[r][c]:
-            r += 1
-        elif target < matrix[r][c]:
-            c -= 1
-        else: 
-            return True
-    return False
+class Solution:
+    def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
+        m, n = len(matrix), len(matrix) and len(matrix[0])
+        r, c = 0, n - 1
+        while r < m and c >= 0:
+            if target > matrix[r][c]:
+                r += 1
+            elif target < matrix[r][c]:
+                c -= 1
+            else: 
+                return True
+        return False
 ```
 </TabItem>
 <TabItem value="java" label="Java">
 <SolutionAuthor name="@A-Spiral-Forge"/>
 
 ```java
-public boolean searchMatrix(int[][] matrix, int target) {
-    int m = matrix.length;
-    if(m == 0) {
+class Solution {
+    public boolean searchMatrix(int[][] matrix, int target) {
+        int m = matrix.length;
+        if(m == 0) {
+            return false;
+        }
+        int n = matrix[0].length;
+        int row = 0, col = n - 1;
+        while(row < m && col >= 0) {
+            if(matrix[row][col] == target) {
+                return true;
+            }
+            if(matrix[row][col] > target) {
+                col--;
+            } else {
+                row++;
+            }
+        }
         return false;
     }
-    
-    int n = matrix[0].length;
-    int row = 0, col = n - 1;
-    
-    while(row < m && col >= 0) {
-        if(matrix[row][col] == target) {
-            return true;
-        }
-        
-        if(matrix[row][col] > target) {
-            col--;
-        } else {
-            row++;
-        }
-    }
-    
-    return false;
 }
 ```
 </TabItem>
 </Tabs>
 
 ## Approach 3: Binary Search
-
 * We can apply binary search to the matrix to find the target element.
 * First, we determine the first row where the target might occur (here we implement lower_bound binary search).
 * Then we calculate the end row (not included) where the target might occur (using upper_bound binary search).
@@ -224,129 +220,128 @@ Space complexity: $O(1)$, using contant space
 <SolutionAuthor name="@A-Spiral-Forge"/>
 
 ```cpp
-bool searchMatrix(vector<vector<int>>& matrix, int target) {
-    int row = matrix.size(), col = row ? matrix[0].size() : 0;
-
-    int start = 0, end = row, mid, endRow, startRow;
-    while (start < end) {
-        mid = start + (end - start) / 2;
-        if (matrix[mid][col-1] >= target) {
-            end = mid;
-        } else {
-            start = mid + 1;
-        }
-    }
-
-    startRow = start;
-    start = 0, end = row;
-    while (start < end) {
-        mid = start + (end - start) / 2;
-        if (matrix[mid][0] > target) {
-            end = mid;
-        } else {
-            start = mid + 1;
-        }
-    }
-
-    endRow = start;
-    for (int i = startRow; i < endRow; ++i) {
-        start = 0, end = col;
+class Solution {
+public:
+    bool searchMatrix(vector<vector<int>>& matrix, int target) {
+        int row = matrix.size(), col = row ? matrix[0].size() : 0;
+        int start = 0, end = row, mid, endRow, startRow;
         while (start < end) {
             mid = start + (end - start) / 2;
-            if (matrix[i][mid] >= target) {
+            if (matrix[mid][col-1] >= target) {
                 end = mid;
             } else {
                 start = mid + 1;
             }
         }
-        if (start < col && matrix[i][start] == target)
-            return true;
+        startRow = start;
+        start = 0, end = row;
+        while (start < end) {
+            mid = start + (end - start) / 2;
+            if (matrix[mid][0] > target) {
+                end = mid;
+            } else {
+                start = mid + 1;
+            }
+        }
+        endRow = start;
+        for (int i = startRow; i < endRow; ++i) {
+            start = 0, end = col;
+            while (start < end) {
+                mid = start + (end - start) / 2;
+                if (matrix[i][mid] >= target) {
+                    end = mid;
+                } else {
+                    start = mid + 1;
+                }
+            }
+            if (start < col && matrix[i][start] == target) {
+                return true;
+            }
+        }
+        return false;
     }
-    return false;
-}
+};
 ```
 </TabItem>
 <TabItem value="python" label="Python">
 <SolutionAuthor name="@A-Spiral-Forge"/>
 
 ```py
-def searchMatrix(matrix, target):
-    m, n = len(matrix), len(matrix) and len(matrix[0])
-
-    start, end = 0, m
-    while start < end:
-        mid = start + (end - start) // 2
-        if matrix[mid][n-1] >= target:
-            end = mid
-        else:
-            start = mid + 1
-    
-    startRow = start
-    start, end = 0, m
-    while start < end:
-        mid = start + (end - start) // 2
-        if matrix[mid][0] > target:
-            end = mid
-        else:
-            start = mid + 1
-    
-    endRow = start
-    for i in range(startRow, endRow):
-        start, end = 0, n
+class Solution:
+    def searchMatrix(matrix, target):
+        m, n = len(matrix), len(matrix) and len(matrix[0])
+        start, end = 0, m
         while start < end:
             mid = start + (end - start) // 2
-            if matrix[i][mid] >= target:
+            if matrix[mid][n-1] >= target:
                 end = mid
             else:
                 start = mid + 1
-        if start < n and matrix[i][start] == target:
-            return True
-    return False
+        startRow = start
+        start, end = 0, m
+        while start < end:
+            mid = start + (end - start) // 2
+            if matrix[mid][0] > target:
+                end = mid
+            else:
+                start = mid + 1
+        endRow = start
+        for i in range(startRow, endRow):
+            start, end = 0, n
+            while start < end:
+                mid = start + (end - start) // 2
+                if matrix[i][mid] >= target:
+                    end = mid
+                else:
+                    start = mid + 1
+            if start < n and matrix[i][start] == target:
+                return True
+        return False
 ```
 </TabItem>
 <TabItem value="java" label="Java">
 <SolutionAuthor name="@A-Spiral-Forge"/>
 
 ```java
-public boolean searchMatrix(int[][] matrix, int target) {
-    int row = matrix.length, col = row > 0 ? matrix[0].length : 0;
-
-    int start = 0, end = row, mid, endRow, startRow;
-    while (start < end) {
-        mid = start + (end - start) / 2;
-        if (matrix[mid][col-1] >= target) {
-            end = mid;
-        } else {
-            start = mid + 1;
-        }
-    }
-    
-    startRow = start;
-    start = 0, end = row;
-    while (start < end) {
-        mid = start + (end - start) / 2;
-        if (matrix[mid][0] > target) {
-            end = mid;
-        } else {
-            start = mid + 1;
-        }
-    }
-
-    endRow = start;
-    for (int i = startRow;i < endRow;++i) {
-        start = 0, end = col;
+class Solution {
+    public boolean searchMatrix(int[][] matrix, int target) {
+        int row = matrix.length, col = row > 0 ? matrix[0].length : 0;
+        int start = 0, end = row, mid, endRow, startRow;
         while (start < end) {
             mid = start + (end - start) / 2;
-            if (matrix[i][mid] >= target) {
+            if (matrix[mid][col-1] >= target) {
                 end = mid;
             } else {
                 start = mid + 1;
             }
         }
-        if (start < col && matrix[i][start] == target)
-            return true;
+        startRow = start;
+        start = 0, end = row;
+        while (start < end) {
+            mid = start + (end - start) / 2;
+            if (matrix[mid][0] > target) {
+                end = mid;
+            } else {
+                start = mid + 1;
+            }
+        }
+        endRow = start;
+        for (int i = startRow;i < endRow;++i) {
+            start = 0, end = col;
+            while (start < end) {
+                mid = start + (end - start) / 2;
+                if (matrix[i][mid] >= target) {
+                    end = mid;
+                } else {
+                    start = mid + 1;
+                }
+            }
+            if (start < col && matrix[i][start] == target) {
+                return true;
+            }
+        }
+        return false;
     }
-    return false;
 }
 ```
 </TabItem>
