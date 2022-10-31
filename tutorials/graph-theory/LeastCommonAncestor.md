@@ -33,7 +33,7 @@ $$dist(x,y)$$= $$dist(x,root)+$$  $$dist(y,root)-$$  $$2*dist(LCA,root)$$
 
 
 
-We can notice from the definition of LCA that the LCA of two nodes $$x$$ and $$y$$ is nothing but the node of the intersection of the paths from $$x$$ and $$y$$ to the root node.In the tree above, the paths from 7 and 6 to the root node have their first intersection at 5. Hence, $$LCA(7, 6) = 5$$. We can calculate the paths using DFS and find the intersection using a stack based approach, or using a recursive approach.This is the general(naive) solution, and takes $$O(N)$$ time and $$O(N)$$ space. Below is the code for the iterative approach using stacks.
+We can notice from the definition of LCA that the LCA of two nodes $$x$$ and $$y$$ is nothing but the node of the intersection of the paths from $$x$$ and $$y$$ to the root node. In the tree above, the paths from 7 and 6 to the root node have their first intersection at 5. Hence, $$LCA(7, 6) = 5$$. We can calculate the paths using DFS and find the intersection using a stack based approach, or using a recursive approach. This is the general(naive) solution, and takes $$O(N)$$ time and $$O(N)$$ space. Below is the code for the iterative approach using stacks.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -42,18 +42,18 @@ We can notice from the definition of LCA that the LCA of two nodes $$x$$ and $$y
 
 ```cpp
 
-int findingLCA(int x, int y, vector<int>& adj) {
+int findingLCA (int x, int y, vector<int>& adj) {
     // adj[i] represents parent node of i
     int root = 0;
     stack<int> x_path, y_path;
 
-    while(x != root) {
+    while (x != root) {
         x_path.push(x);
         x= adj[x];
     }
     x_path.push(x);
 
-    while(y != root) {
+    while (y != root) {
         y_path.push(y);
         y = adj[y];
     }
@@ -61,7 +61,7 @@ int findingLCA(int x, int y, vector<int>& adj) {
 
     int lca = -1;
 
-    while((!x_path.empty() && !y_path.empty()) && (x_path.top() == y_path.top())) {
+    while ( (!x_path.empty() && !y_path.empty()) && (x_path.top() == y_path.top()) ) {
         lca = x_path.top();
         x_path.pop();
         y_path.pop();
@@ -73,7 +73,7 @@ int findingLCA(int x, int y, vector<int>& adj) {
 </TabItem>
 </Tabs>
 
-The same logic can be implemented using recursion, so that we do not need to use stacks explicitly. We store paths from root to node $$x$$ and from root to node $$y$$ and then check iterate to the last common node, which is the LCA.
+The same logic can be implemented using recursion, so that we do not need to use stacks explicitly. We store paths from root to node $$x$$ and from root to node $$y$$ and then check iterate to the last common node, which is the LCA. Explicitly, what we are trying to do here is to find which is the last common node while traversing both the paths. Obviously the root will be common in both paths, since we assume that both nodes are present. Then we need to go to the common node which is the farthest from the root node. This we can do if we traverse both the paths. The last common node gives us the LCA.
 
 
 <Tabs>
@@ -82,16 +82,14 @@ The same logic can be implemented using recursion, so that we do not need to use
 
 
 ```cpp
-bool func(Node* root, vector<int>& current_path, int value);
+bool func (Node* root, vector<int>& current_path, int value);
  
 // will return LCA only if both node x, y are present, else -1
-int findLCA(Node* root, int x, int y)
-{
+int findLCA (Node* root, int x, int y){
     vector<int> path_root_to_x, path_root_to_y;
  
     // if either x or y is not present return -1 
-    if (!findPath(root, path_root_to_x, x)
-        || !findPath(root, path_root_to_y, y))
+    if ( !findPath(root, path_root_to_x, x) || !findPath(root, path_root_to_y, y))
         return -1;
     
     // checking for LCA now, which is farthest common node from root in both paths
@@ -101,8 +99,7 @@ int findLCA(Node* root, int x, int y)
     return path_root_to_x[i - 1];
 }
 
-bool func(Node* root, vector<int>& current_path, int value);
-{
+bool func(Node* root, vector<int>& current_path, int value){
     // if root is NULL, then no paths
     if (root == NULL)
         return false;
@@ -136,7 +133,7 @@ Output: 3
 Explanation: The LCA of nodes 5 and 1 is 3.
 ```
 
-Let's start with a recursive solution. The idea is simple. We start from the root and start checking in the left and right subtree of every node(basically DFS).If the current subtree contains both p and q,i.e, neither of them is $$NULL$$, then the function will reuurn the root of this subtree which will be the LCA. If any one of them is $$NULL$$, then the functio returns the other one. If both are $$NULL$$, then the result will also be $$NULL$$. The time complexity will be $$O(N)$$ and space somplexity would be $$O(N)$$,sincee maximum height for a binary tree(skewed) will be $$N$$.
+Let's start with a recursive solution. The idea is simple. We start from the root and start checking in the left and right subtree of every node(basically DFS). If the current subtree contains both p and q, i.e, neither of them is $$NULL$$, then the function will reuurn the root of this subtree which will be the LCA. If any one of them is $$NULL$$, then the function returns the other one. If both are $$NULL$$, then the result will also be $$NULL$$. The time complexity will be $$O(N)$$ and space somplexity would be $$O(N)$$, since maximum height for a binary tree(skewed) will be $$N$$.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -154,7 +151,7 @@ Let's start with a recursive solution. The idea is simple. We start from the roo
  */
 class Solution {
 public:
-    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
+    TreeNode* lowestCommonAncestor (TreeNode* root, TreeNode* p, TreeNode* q) {
         // base case to check if the root is null or
         // one of the required nodes is the root itself
         // used the recursive implementation discussed earlier
@@ -164,7 +161,7 @@ public:
         if(root == p || root == q){
             return root;
         }
-        // recursing for the left subtree
+        // recursing for the left subtree, basically dfs
         TreeNode* left = lowestCommonAncestor(root->left,p,q);
         // recursing for the right subtree
         TreeNode* right = lowestCommonAncestor(root->right,p,q);
@@ -202,7 +199,7 @@ Output: "UURL"
 Explanation: The shortest path is: 3 → 1 → 5 → 2 → 6.
 ```
 
-In this problem, we need to find the closest point(from nodes), where path from root to nodes intersect, which is LCA of both the nodes.Hence,we first find the LCA node of start and destination.Then we need to get path from LCA to the starting node($$lcaS$$) and from LCA to destination($$laD$$). This method has also been explained above.In this we simply do a simple DFS and first explore the left path, and then the right path. Whenever we find the node, we return true, otherwise we backtrack and explore the right path. Now that we have both paths, we will convert all chars in $$lcaS$$ to $$U$$, since we need to move upward.
+In this problem, we need to find the closest point(from nodes), where path from root to nodes intersect, which is LCA of both the nodes. Hence, we first find the LCA node of start and destination. Then we need to get path from LCA to the starting node($$lcaS$$) and from LCA to destination($$laD$$). This method has also been explained above. In this we simply do a simple DFS and first explore the left path, and then the right path. Whenever we find the node, we return true, otherwise we backtrack and explore the right path. Now that we have both paths, we will convert all chars in $$lcaS$$ to $$U$$, since we need to move upward.
 
 At last, we concatenate both strings and return the combined path.
 
@@ -225,41 +222,48 @@ public:
         
 	// function to get LCA of given two nodes
     // used the recursive implementation discussed earlier
-    TreeNode* getLCA(TreeNode* root, int start, int dest) {
-        if(!root) return NULL;
+    TreeNode* getLCA (TreeNode* root, int start, int dest) {
+        if (!root) return NULL;
         
-        if(root->val == start || root->val == dest) return root;
+        if (root->val == start || root->val == dest) return root;
         
-        TreeNode* left = getLCA(root->left, start, dest);
-        TreeNode* right = getLCA(root->right, start, dest);
+        // recursing for left subtree
+        TreeNode* left = getLCA (root->left, start, dest);
+        // recursing for right subtree
+        TreeNode* right = getLCA (root->right, start, dest);
         
-        if(left && right) return root;
+        // if both are not null, this node is LCA
+        if (left && right) return root;
         
-        return left ? left : right;
+        //else return the node which is not NULL
+        else if (left){
+            return left;
+        }
+        return right;
     }
     
-    bool func(TreeNode* root, string& path, int val) {
-        if(!root) 
+    bool func (TreeNode* root, string& path, int val) {
+      if (!root) 
             return false;
         
 		// if node is found, we can return true
-        if(root->val == val) return true;
+        if (root->val == val) return true;
         
 		// trying to find node for left
         path.push_back('L');
-        if(func(root->left, path, val)) 
+        if (func(root->left, path, val)) 
             return true;  
         path.pop_back(); 
         
 		// trying to find node for right
         path.push_back('R');
-        if(func(root->right, path, val)) return true;
+        if (func(root->right, path, val)) return true;
         path.pop_back();
 
         return false;
     }
     
-    string getDirections(TreeNode* root, int initialValue, int finalValue) {
+    string getDirections (TreeNode* root, int initialValue, int finalValue) {
         
 		// get LCA of start and destination node
         TreeNode* lca = getLCA(root, initialValue, finalValue);
@@ -270,7 +274,7 @@ public:
         func(lca, lcaS, initialValue);
         func(lca, lcaD, finalValue);
         
-        for(auto& c : lcaS) c = 'U';
+        for (auto& c : lcaS) c = 'U';
        
 	   // merge both paths, Start node -> Destination node
         return lcaS + lcaD;
