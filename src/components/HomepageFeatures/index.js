@@ -5,28 +5,28 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     title: 'DSA Topics Tutorials',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Svg: require('@site/static/img/undraw_learning_sketching_nd4f.svg').default,
     description: (
       <>
-        Learn Data Structures and Algorithms ranged from basic to advanced via LeetCode Problems
+        Learn Data Structures and Algorithms ranged from basic to advanced through LeetCode Problems
       </>
     ),
   },
   {
-    title: 'Line By Line Explanations',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Detailed Explanations',
+    Svg: require('@site/static/img/undraw_onboarding_re_6osc.svg').default,
     description: (
       <>
-        Unlike most of posts in Discussion, we tend to provide detailed explanations via Line By Line fashion
+        Unlike most of posts in Discussion, we tend to provide detailed explanations (Line By Line / Article)
       </>
     ),
   },
   {
     title: 'LeetCode Community',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/undraw_community_re_cyrm.svg').default,
     description: (
       <>
-        Join the Discord to discuss Leetcode Topics with the Community in real time
+        Join the Discord to discuss have a live discussion on Leetcode Topics with the Community members
       </>
     ),
   },
@@ -36,6 +36,9 @@ function Feature({Svg, title, description}) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
+        <Svg className={styles.featureSvg} role="img" />
+      </div>
+      <div className="text--center padding-horiz--md">
         <h3>{title}</h3>
         <p>{description}</p>
       </div>
