@@ -42,31 +42,34 @@ We can notice from the definition of LCA that the LCA of two nodes $$x$$ and $$y
 
 ```cpp
 
-int findingLCA (int x, int y, vector<int>& adj) {
-    // adj[i] represents parent node of i
-    int root = 0;
-    stack<int> x_path, y_path;
+int findingLCA(int x, int y, vector<int>& adj) {
+  // adj[i] represents parent node of i
+  int root = 0;
+  stack<int> x_path, y_path;
 
-    while (x != root) {
-        x_path.push(x);
-        x= adj[x];
-    }
+  // finding first path
+  while (x != root) {
     x_path.push(x);
+    x = adj[x];
+  }
+  x_path.push(x);
 
-    while (y != root) {
-        y_path.push(y);
-        y = adj[y];
-    }
+  // finding second path
+  while (y != root) {
     y_path.push(y);
+    y = adj[y];
+  }
+  y_path.push(y);
 
-    int lca = -1;
-
-    while ( (!x_path.empty() && !y_path.empty()) && (x_path.top() == y_path.top()) ) {
-        lca = x_path.top();
-        x_path.pop();
-        y_path.pop();
-    }
-    return lca;
+  int lca = -1;
+  // finding the last common node
+  while ((!x_path.empty() && !y_path.empty()) &&
+         (x_path.top() == y_path.top())) {
+    lca = x_path.top();
+    x_path.pop();
+    y_path.pop();
+  }
+  return lca;
 }
 
 ```
@@ -84,38 +87,35 @@ The same logic can be implemented using recursion, so that we do not need to use
 ```cpp
  
 // will return LCA only if both node x, y are present, else -1
-int findLCA (Node* root, int x, int y) {
-    vector<int> path_root_to_x, path_root_to_y;
- 
-    // if either x or y is not present return -1 
-    if ( !findPath(root, path_root_to_x, x) || !findPath(root, path_root_to_y, y))
-        return -1;
-    
-    // checking for LCA now, which is farthest common node from root in both paths
-    for (int i = 0; i < path_root_to_x.size() && i < path_root_to_y.size(); i++)
-        if (path_root_to_x[i] != path_root_to_y[i])
-            break;
-    return path_root_to_x[i - 1];
+int findLCA(Node* root, int x, int y) {
+  vector<int> path_root_to_x, path_root_to_y;
+
+  // if either x or y is not present return -1
+  if (!findPath(root, path_root_to_x, x) || !findPath(root, path_root_to_y, y))
+    return -1;
+
+  // checking for LCA now, which is farthest common node from root in both paths
+  for (int i = 0; i < path_root_to_x.size() && i < path_root_to_y.size(); i++)
+    if (path_root_to_x[i] != path_root_to_y[i]) break;
+  return path_root_to_x[i - 1];
 }
 
 bool findPath(Node* root, vector<int>& current_path, int value) {
-    // if root is NULL, then no paths
-    if (root == NULL)
-        return false;
- 
-    current_path.push_back(root->key);
+  // if root is NULL, then no paths
+  if (root == NULL) return false;
 
-    if (root->key == value)
-        return true;
- 
-    // check if value is found in left or right sub-tree
-    if ((root->left && findPath(root->left, current_path, value))
-        || (root->right && findPath(root->right, current_path, value)))
-        return true;
- 
-    // removing root since not found in subtree
-    current_path.pop_back();
-    return false;
+  current_path.push_back(root->key);
+
+  if (root->key == value) return true;
+
+  // check if value is found in left or right sub-tree
+  if ((root->left && findPath(root->left, current_path, value)) ||
+      (root->right && findPath(root->right, current_path, value)))
+    return true;
+
+  // removing root since not found in subtree
+  current_path.pop_back();
+  return false;
 }
 
 ```
@@ -149,34 +149,32 @@ Let's start with a recursive solution. The idea is simple. We start from the roo
  * };
  */
 class Solution {
-public:
-    TreeNode* lowestCommonAncestor (TreeNode* root, TreeNode* p, TreeNode* q) {
-        // base case to check if the root is null or
-        // one of the required nodes is the root itself
-        // used the recursive implementation discussed earlier
-        if (root==NULL) {
-            return root;
-        }
-        if(root == p || root == q){
-            return root;
-        }
-        // recursing for the left subtree, basically dfs
-        TreeNode* left = lowestCommonAncestor(root->left,p,q);
-        // recursing for the right subtree
-        TreeNode* right = lowestCommonAncestor(root->right,p,q);
-        
-        // if one of them is NULL means we need to return the other one
-        if(left == NULL) {
-            return right;
-        }
-        else if(right == NULL) {
-            return left;
-        }
-        else { 
-            // when both left and right are not null, we can say that this is the LCA 
-            return root;
-        }
+ public:
+  TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
+    // base case to check if the root is null or
+    // one of the required nodes is the root itself
+    // used the recursive implementation discussed earlier
+    if (root == NULL) {
+      return root;
     }
+    if (root == p || root == q) {
+      return root;
+    }
+    // recursing for the left subtree, basically dfs
+    TreeNode* left = lowestCommonAncestor(root->left, p, q);
+    // recursing for the right subtree
+    TreeNode* right = lowestCommonAncestor(root->right, p, q);
+
+    // if one of them is NULL means we need to return the other one
+    if (left == NULL) {
+      return right;
+    } else if (right == NULL) {
+      return left;
+    } else {
+      // when both left and right are not null, we can say that this is the LCA
+      return root;
+    }
+  }
 };
 ```
 </TabItem>
@@ -217,67 +215,63 @@ At last, we concatenate both strings and return the combined path.
  * };
  */
 class Solution {
-public:
-        
-	// function to get LCA of given two nodes
-    // used the recursive implementation discussed earlier
-    TreeNode* getLCA (TreeNode* root, int start, int dest) {
-        if (!root) return NULL;
-        
-        if (root->val == start || root->val == dest) return root;
-        
-        // recursing for left subtree
-        TreeNode* left = getLCA (root->left, start, dest);
-        // recursing for right subtree
-        TreeNode* right = getLCA (root->right, start, dest);
-        
-        // if both are not null, this node is LCA
-        if (left && right) return root;
-        
-        //else return the node which is not NULL
-        else if (left){
-            return left;
-        }
-        return right;
-    }
-    
-    bool func (TreeNode* root, string& path, int val) {
-        if (!root) 
-            return false;
-        
-		// if node is found, we can return true
-        if (root->val == val) return true;
-        
-        // trying to find node for left
-        path.push_back('L');
-        if (func(root->left, path, val)) 
-            return true;  
-        path.pop_back(); 
-        
-		// trying to find node for right
-        path.push_back('R');
-        if (func(root->right, path, val)) return true;
-        path.pop_back();
+ public:
+  // function to get LCA of given two nodes
+  // used the recursive implementation discussed earlier
+  TreeNode* getLCA(TreeNode* root, int start, int dest) {
+    if (!root) return NULL;
 
-        return false;
+    if (root->val == start || root->val == dest) return root;
+
+    // recursing for left subtree
+    TreeNode* left = getLCA(root->left, start, dest);
+    // recursing for right subtree
+    TreeNode* right = getLCA(root->right, start, dest);
+
+    // if both are not null, this node is LCA
+    if (left && right) return root;
+
+    // else return the node which is not NULL
+    else if (left) {
+      return left;
     }
-    
-    string getDirections (TreeNode* root, int initialValue, int finalValue) {
-        
-		// get LCA of start and destination node
-        TreeNode* lca = getLCA(root, initialValue, finalValue);
-        
-        string lcaS = "", lcaD = "";
-        
-		// finding both paths
-        func(lca, lcaS, initialValue);
-        func(lca, lcaD, finalValue);
-        
-        for (auto& c : lcaS) c = 'U';
-       
-	   // merge both paths, Start node -> Destination node
-        return lcaS + lcaD;
-    }
+    return right;
+  }
+
+  bool path(TreeNode* root, string& path, int val) {
+    if (!root) return false;
+
+    // if node is found, we can return true
+    if (root->val == val) return true;
+
+    // trying to find node for left
+    path.push_back('L');
+    if (path(root->left, path, val)) return true;
+    path.pop_back();
+
+    // trying to find node for right
+    path.push_back('R');
+    if (path(root->right, path, val)) return true;
+    path.pop_back();
+
+    return false;
+  }
+
+  string getDirections(TreeNode* root, int initialValue, int finalValue) {
+    // get LCA of start and destination node
+    TreeNode* lca = getLCA(root, initialValue, finalValue);
+
+    string lcaS = "", lcaD = "";
+
+    // finding both paths
+    path(lca, lcaS, initialValue);
+    path(lca, lcaD, finalValue);
+
+    for (auto& c : lcaS) c = 'U';
+
+    // merge both paths, Start node -> Destination node
+    return lcaS + lcaD;
+  }
 };
 ```
 </TabItem>
