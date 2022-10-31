@@ -82,10 +82,9 @@ The same logic can be implemented using recursion, so that we do not need to use
 
 
 ```cpp
-bool func (Node* root, vector<int>& current_path, int value);
  
 // will return LCA only if both node x, y are present, else -1
-int findLCA (Node* root, int x, int y){
+int findLCA (Node* root, int x, int y) {
     vector<int> path_root_to_x, path_root_to_y;
  
     // if either x or y is not present return -1 
@@ -99,7 +98,7 @@ int findLCA (Node* root, int x, int y){
     return path_root_to_x[i - 1];
 }
 
-bool func(Node* root, vector<int>& current_path, int value){
+bool findPath(Node* root, vector<int>& current_path, int value) {
     // if root is NULL, then no paths
     if (root == NULL)
         return false;
@@ -243,13 +242,13 @@ public:
     }
     
     bool func (TreeNode* root, string& path, int val) {
-      if (!root) 
+        if (!root) 
             return false;
         
 		// if node is found, we can return true
         if (root->val == val) return true;
         
-		// trying to find node for left
+        // trying to find node for left
         path.push_back('L');
         if (func(root->left, path, val)) 
             return true;  
