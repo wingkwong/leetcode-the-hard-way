@@ -1,7 +1,7 @@
 ---
 title: "Tarjan's Algorithm"
 description: "Tarjan's algorithm can be used to determine the Strongly Connected Components of a directed graph."
-hide_table_of_contents: true
+hide_table_of_contents: false
 keywords:
   - leetcode
   - tutorial
@@ -10,6 +10,7 @@ keywords:
 ---
 
 <TutorialAuthors names="@BlackPanther112358"/>
+<Contributors names="@wingkwong" />
 
 ## Overview
 
@@ -49,125 +50,120 @@ The implementation of above can be as follows (along with above graph as example
 #include <bits/stdc++.h>
 using namespace std;
 
-struct find_SCC{
+struct find_SCC {
+  int timer = 0;
+  // store the in-time for DFS search
+  vector<int> in_time;
+  // stores the low-link value for every node
+  vector<int> low_link;
+  // checks whether a node is on the stack or not
+  vector<bool> on_stack;
+  // stack to store the currently available nodes
+  stack<int> stk;
+  // to store the final answer
+  vector<vector<int>> res;
 
-    int timer = 0;
-    // store the in-time for DFS search
-    vector<int> in_time;
-    // stores the low-link value for every node
-    vector<int> low_link;
-    // checks whether a node is on the stack or not
-    vector<bool> on_stack;
-    // stack to store the currently available nodes
-    stack<int> stk;
-    // to store the final answer
-    vector<vector<int>> res;
+  // recursive function to do the DFS search on the graph
+  void dfs(int u, vector<vector<int>> &graph) {
+    // set the values for in_time and low_link, and put the node on stack
+    in_time[u] = low_link[u] = timer;
+    timer++;
+    stk.push(u);
+    on_stack[u] = true;
 
-    // recursive function to do the DFS search on the graph
-    void dfs(int u, vector<vector<int>> &graph){
-
-        // set the values for in_time and low_link, and put the node on stack
-        in_time[u] = low_link[u] = timer;
-        timer++;
-        stk.push(u);
-        on_stack[u] = true;
-
-        // DFS to neighbours of current node
-        for (int v : graph[u]) {
-            // if the node is unvisited
-            if (in_time[v] == -1) {
-                dfs(v, graph);
-                // update the low-link value for node u
-                low_link[u] = min(low_link[u], low_link[v]);
-            // else if the node was visited before, and is still on the stack
-            }else if (on_stack[v]) {
-                // update the low-link for node u
-                low_link[u] = min(low_link[u], in_time[v]);
-            }
-        }
-
-        // check if u is the root node for a SCC
-        if (low_link[u] == in_time[u]) {
-
-            vector<int> SCC;
-            // all the nodes above u in the stack are in SCC of u
-            while (stk.top() != u) {
-                int v = stk.top();
-                stk.pop();
-                SCC.push_back(v);
-                on_stack[v] = false;
-            }
-            // now removing u from stack and adding it to the SCC
-            stk.pop();
-            SCC.push_back(u);
-            on_stack[u] = false;
-
-            // adding the SCC to the answer
-            res.push_back(SCC);
-        }
-
-        return;
-
+    // DFS to neighbours of current node
+    for (int v : graph[u]) {
+      // if the node is unvisited
+      if (in_time[v] == -1) {
+        dfs(v, graph);
+        // update the low-link value for node u
+        low_link[u] = min(low_link[u], low_link[v]);
+        // else if the node was visited before, and is still on the stack
+      } else if (on_stack[v]) {
+        // update the low-link for node u
+        low_link[u] = min(low_link[u], in_time[v]);
+      }
     }
 
-    // takes input of graph as adjacency list and returns the SCC of graph as vectors
-    vector<vector<int>> tarjans (vector<vector<int>> &adjacencyList) {
+    // check if u is the root node for a SCC
+    if (low_link[u] == in_time[u]) {
+      vector<int> SCC;
+      // all the nodes above u in the stack are in SCC of u
+      while (stk.top() != u) {
+        int v = stk.top();
+        stk.pop();
+        SCC.push_back(v);
+        on_stack[v] = false;
+      }
+      // now removing u from stack and adding it to the SCC
+      stk.pop();
+      SCC.push_back(u);
+      on_stack[u] = false;
 
-        int n = adjacencyList.size();
-        in_time.resize(n, -1);
-        low_link.resize(n, -1);
-        on_stack.resize(n, false);
-
-        for (int u = 0; u < n; u++) {
-            if (in_time[u] == -1) dfs(u, adjacencyList); 
-        }
-
-        return res;
-
+      // adding the SCC to the answer
+      res.push_back(SCC);
     }
+
+    return;
+  }
+
+  // takes input of graph as adjacency list and returns the SCC of graph as
+  // vectors
+  vector<vector<int>> tarjans(vector<vector<int>> &adjacencyList) {
+    int n = adjacencyList.size();
+    in_time.resize(n, -1);
+    low_link.resize(n, -1);
+    on_stack.resize(n, false);
+
+    for (int u = 0; u < n; u++) {
+      if (in_time[u] == -1) dfs(u, adjacencyList);
+    }
+
+    return res;
+  }
 };
 
-int main(){
+int main() {
+  // constructing adjacency list for example graph shown, mapping node a to 0, b
+  // to 1 and so on...
+  vector<vector<int>> graph(8);
+  graph[0].push_back(1);
+  graph[1].push_back(2);
+  graph[1].push_back(4);
+  graph[1].push_back(5);
+  graph[2].push_back(3);
+  graph[2].push_back(6);
+  graph[3].push_back(2);
+  graph[3].push_back(7);
+  graph[4].push_back(0);
+  graph[4].push_back(5);
+  graph[5].push_back(6);
+  graph[6].push_back(5);
+  graph[7].push_back(3);
+  graph[7].push_back(6);
 
-    // constructing adjacency list for example graph shown, mapping node a to 0, b to 1 and so on...
-    vector<vector<int>> graph(8);
-    graph[0].push_back(1);
-    graph[1].push_back(2);
-    graph[1].push_back(4);
-    graph[1].push_back(5);
-    graph[2].push_back(3);
-    graph[2].push_back(6);
-    graph[3].push_back(2);
-    graph[3].push_back(7);
-    graph[4].push_back(0);
-    graph[4].push_back(5);
-    graph[5].push_back(6);
-    graph[6].push_back(5);
-    graph[7].push_back(3);
-    graph[7].push_back(6);
+  // using the tarjan's algo
+  find_SCC t = find_SCC();
+  vector<vector<int>> res = t.tarjans(graph);
 
-    // using the tarjan's algo
-    find_SCC t = find_SCC();
-    vector<vector<int>> res = t.tarjans(graph);
-
-    // output the final result
-    cout << "The Strongly Connected Components for the graph are:" << endl;
-    for (vector<int> i : res) {
-        for (int j : i) {
-            cout << (char)('a' + j) << " ";
-        }
-        cout << endl;
+  // output the final result
+  cout << "The Strongly Connected Components for the graph are:" << endl;
+  for (vector<int> i : res) {
+    for (int j : i) {
+      cout << (char)('a' + j) << " ";
     }
+    cout << endl;
+  }
 
-    /*
-    output of the above code is:
-    The Strongly Connected Components for the graph are:
-    f g
-    h d c
-    e b a
-    */
+  /*
+  output of the above code is:
+  The Strongly Connected Components for the graph are:
+  f g
+  h d c
+  e b a
+  */
 
-    return 0;
+  return 0;
 }
 ```
 
@@ -189,58 +185,54 @@ This problem directly asks us to find bridges in the given graph. The input is p
 
 ```cpp
 class Solution {
-public:
-    // initializing the variables
-    int timer = 0;
-    vector<int> in_time, low_link;
-    vector<vector<int>> graph;
-    vector<vector<int>> res;
+ public:
+  // initializing the variables
+  int timer = 0;
+  vector<int> in_time, low_link;
+  vector<vector<int>> graph;
+  vector<vector<int>> res;
 
-    // recursive function to perform DFS
-    void dfs(int u, int p = -1){
+  // recursive function to perform DFS
+  void dfs(int u, int p = -1) {
+    in_time[u] = low_link[u] = timer;
+    timer++;
 
-        in_time[u] = low_link[u] = timer;
-        timer++;
-
-        for (int v : graph[u]) {
-            // we ignore the parent node
-            if (v == p) continue;
-            // if we discover a new node
-            if (in_time[v] == -1) {
-                dfs(v, u);
-                low_link[u] = min(low_link[u], low_link[v]);
-                // check if the edge is a bridge
-                if (low_link[v] > in_time[u]) {
-                    res.push_back({u, v});
-                }
-            // if we visit a node which already has been visited
-            } else {
-                low_link[u] = min(low_link[u], in_time[v]);
-            }
+    for (int v : graph[u]) {
+      // we ignore the parent node
+      if (v == p) continue;
+      // if we discover a new node
+      if (in_time[v] == -1) {
+        dfs(v, u);
+        low_link[u] = min(low_link[u], low_link[v]);
+        // check if the edge is a bridge
+        if (low_link[v] > in_time[u]) {
+          res.push_back({u, v});
         }
-
-        return;
-
+      } else {
+        // if we visit a node which already has been visited
+        low_link[u] = min(low_link[u], in_time[v]);
+      }
     }
 
-    vector<vector<int>> criticalConnections(int n, vector<vector<int>>& connections) {
+    return;
+  }
 
-        in_time.resize(n, -1);
-        low_link.resize(n, -1);
-        graph.resize(n);
+  vector<vector<int>> criticalConnections(int n, vector<vector<int>>& connections) {
+    in_time.resize(n, -1);
+    low_link.resize(n, -1);
+    graph.resize(n);
 
-        // make an adjacency list from the input
-        for (auto connection : connections) {
-            graph[connection[0]].push_back(connection[1]);
-            graph[connection[1]].push_back(connection[0]);
-        }
-
-        // as the entire graph is connected, just call dfs on 0
-        dfs(0);
-
-        return res;
-
+    // make an adjacency list from the input
+    for (auto connection : connections) {
+      graph[connection[0]].push_back(connection[1]);
+      graph[connection[1]].push_back(connection[0]);
     }
+
+    // as the entire graph is connected, just call dfs on 0
+    dfs(0);
+
+    return res;
+  }
 };
 ```
 
@@ -262,82 +254,88 @@ The answer will be $0$ if the islands are initially disconnected. This can be ch
 
 ```cpp
 class Solution {
-public:
-    // initializing the variables
-    int n, m, cnt_islands = 0;
-    int timer = 0;
-    vector<vector<int>> in_time, low_link;
+ public:
+  // initializing the variables
+  int n, m, cnt_islands = 0;
+  int timer = 0;
+  vector<vector<int>> in_time, low_link;
 
-    // recursive function to perform DFS, return true if an articulation point is detected
-    bool dfs (pair<int, int> u, vector<vector<int>>& grid, pair<int, int> p = {-1, -1}) {
+  // recursive function to perform DFS, return true if an articulation point is
+  // detected
+  bool dfs(pair<int, int> u, vector<vector<int>>& grid,
+           pair<int, int> p = {-1, -1}) {
+    int i = u.first, j = u.second;
+    in_time[i][j] = low_link[i][j] = timer++;
+    cnt_islands++;
+    // variable to check for articulation point in DFS subtree of the node
+    bool has_articulation_point = false;
+    // variable to count number of children visited first by the node
+    int cnt_children = 0;
 
-        int i = u.first, j = u.second;
-        in_time[i][j] = low_link[i][j] = timer++;
-        cnt_islands++;
-        // variable to check for articulation point in DFS subtree of the node
-        bool has_articulation_point = false;
-        // variable to count number of children visited first by the node
-        int cnt_children = 0;
+    // find all neighbours from the grid
+    vector<pair<int, int>> neighbours;
+    if ((i > 0) && (grid[i - 1][j])) neighbours.push_back({i - 1, j});
+    if ((i < (n - 1)) && (grid[i + 1][j])) neighbours.push_back({i + 1, j});
+    if ((j > 0) && (grid[i][j - 1])) neighbours.push_back({i, j - 1});
+    if ((j < (m - 1)) && (grid[i][j + 1])) neighbours.push_back({i, j + 1});
 
-        // find all neighbours from the grid
-        vector<pair<int, int>> neighbours;
-        if ((i > 0) && (grid[i - 1][j])) neighbours.push_back({i - 1, j});
-        if ((i < (n - 1)) && (grid[i + 1][j])) neighbours.push_back({i + 1, j});
-        if ((j > 0) && (grid[i][j - 1])) neighbours.push_back({i, j - 1});
-        if ((j < (m - 1)) && (grid[i][j + 1])) neighbours.push_back({i, j + 1});
-
-        for (auto v : neighbours) {
-            // if the neighbour is a parent, ignore it
-            if(v == p) continue;
-            // if the neighbour was already visited
-            else if (in_time[v.first][v.second] != -1) low_link[i][j] = min(low_link[i][j], in_time[v.first][v.second]);
-            // if the neighbour is a new node
-            else{
-                // if the subtree has an articulation point
-                if (dfs(v, grid, u)) has_articulation_point = true;
-                // update the low-link value
-                low_link[i][j] = min(low_link[i][j], low_link[v.first][v.second]);
-                // if the point itself is an articulation point
-                if ( (low_link[v.first][v.second] >= in_time[i][j]) && (p != (pair<int, int>){-1, -1}) ) has_articulation_point = true;
-                cnt_children++;
-            }
-        }
-
-        // if it has an articulation point, return true
-        if (( (p == (pair<int, int>){-1, -1}) && (cnt_children > 1)) || has_articulation_point) return true;
-        // else return false
-        return false;
-
+    for (auto v : neighbours) {
+      // if the neighbour is a parent, ignore it
+      if (v == p) continue;
+      // if the neighbour was already visited
+      else if (in_time[v.first][v.second] != -1)
+        low_link[i][j] = min(low_link[i][j], in_time[v.first][v.second]);
+      // if the neighbour is a new node
+      else {
+        // if the subtree has an articulation point
+        if (dfs(v, grid, u)) has_articulation_point = true;
+        // update the low-link value
+        low_link[i][j] = min(low_link[i][j], low_link[v.first][v.second]);
+        // if the point itself is an articulation point
+        if ((low_link[v.first][v.second] >= in_time[i][j]) &&
+            (p != (pair<int, int>){-1, -1}))
+          has_articulation_point = true;
+        cnt_children++;
+      }
     }
 
-    int minDays(vector<vector<int>>& grid) {
-        
-        n = grid.size();
-        m = grid[0].size();
-        int connected_comp = 0;
-        bool has_articulation_point = false;
+    // if it has an articulation point, return true
+    if (((p == (pair<int, int>){-1, -1}) && (cnt_children > 1)) ||
+        has_articulation_point)
+      return true;
+    // else return false
+    return false;
+  }
 
-        in_time.resize(n, vector<int> (m, -1));
-        low_link.resize(n, vector<int> (m, -1));
+  int minDays(vector<vector<int>>& grid) {
+    n = grid.size();
+    m = grid[0].size();
+    int connected_comp = 0;
+    bool has_articulation_point = false;
 
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                // ignore the cells of grid with water, or who have been visited
-                if ((grid[i][j] == 0) || (in_time[i][j] != -1)) continue;
-                // we already have found a connected component, and this will be a new one, thus we directly return 0
-                if (connected_comp > 0) return 0;
-                if (dfs({i, j}, grid)) has_articulation_point = true;
-                connected_comp++;
-            }
-        }
+    in_time.resize(n, vector<int>(m, -1));
+    low_link.resize(n, vector<int>(m, -1));
 
-        // if there are no cells with land
-        if (cnt_islands == 0) return 0;
-        // if there is only one cell with land
-        else if (cnt_islands == 1) return 1;
-        if (has_articulation_point) return 1;
-        return 2;
+    for (int i = 0; i < n; i++) {
+      for (int j = 0; j < m; j++) {
+        // ignore the cells of grid with water, or who have been visited
+        if ((grid[i][j] == 0) || (in_time[i][j] != -1)) continue;
+        // we already have found a connected component, and this will be a new
+        // one, thus we directly return 0
+        if (connected_comp > 0) return 0;
+        if (dfs({i, j}, grid)) has_articulation_point = true;
+        connected_comp++;
+      }
     }
+
+    // if there are no cells with land
+    if (cnt_islands == 0) return 0;
+    // if there is only one cell with land
+    else if (cnt_islands == 1)
+      return 1;
+    if (has_articulation_point) return 1;
+    return 2;
+  }
 };
 ```
 
