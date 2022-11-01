@@ -1,5 +1,6 @@
 ---
 description: "Author: @aryankashyap7 | https://leetcode.com/problems/climbing-stairs/"
+tags: [Math, Dynamic Programming, Memoization]
 ---
 
 # 0070 - Climbing Stairs (Easy)
@@ -41,44 +42,36 @@ Explanation: There are three ways to climb to the top.
 
 ## Approach 1: Fibonacci Series
 
-We can apply the concept of Fibonacci Numbers to solve this problem. The number of ways to reach the `n^{th}` step is equal to the sum of ways of reaching `(n-1)^{th}` step and ways of reaching `(n-2)^{th}` step. The base cases for this problem are `n = 1` and `n = 2`.
+We can apply the concept of Fibonacci Numbers to solve this problem. The number of ways to reach the $n^{th}$ step is equal to the sum of ways of reaching $(n-1)^{th}$ step and ways of reaching $(n-2)^{th}$ step. The base cases for this problem are $n = 1$ and $n = 2$.
 
-We can see that for `n = 1`, the number of ways to reach the `1^{st}` step is `1` and for `n = 2`, the number of ways to reach the `2^{nd}` step is `2`. Similarly, for `n = 3`, the number of ways to reach the `3^{rd}` step is `3` and for `n = 4`, the number of ways to reach the `4^{th}` step is `5`. This follows the Fibonacci Series(1, 2, 3, 5, 8, 13, ...).
-
-<Tabs>
-<TabItem value="cpp" label="C++">
-<SolutionAuthor name="@aryankashyap7"/>
+We can see that for $n = 1$, the number of ways to reach the $1^{st}$ step is $1$ and for $n = 2$, the number of ways to reach the $2^{nd}$ step is $2$. Similarly, for $n = 3$, the number of ways to reach the $3^{rd}$ step is $3$ and for $n = 4$, the number of ways to reach the $4^{th}$ step is $5$. This follows the Fibonacci Series(1, 2, 3, 5, 8, 13, ...).
 
 Time Complexity: $O(n)$, where $n$ is the number of steps to reach the top.
 
 Space complexity: $O(1)$
 
+<Tabs>
+<TabItem value="cpp" label="C++">
+
+<SolutionAuthor name="@aryankashyap7"/>
+
 ```cpp
-class Solution
-{
+class Solution {
 public:
     int climbStairs(int n){
-        // Base cases
-        if (n < 4)
-            return n;
-
-        // Applying Fibonacci Series where a and b are the previous two numbers
-        int a = 2;
-        int b = 3;
+        // base cases
+        if (n < 4) return n;
+        // apply Fibonacci Series where a and b are the previous two numbers
+        int a = 2, b = 3;
         int res = 0;
-
-        // Calculating the number of ways to reach the n^{th} step
-        for (int i = 4; i <= n; i++){
+        // calculate the number of ways to reach the n^{th} step
+        for (int i = 4; i <= n; i++) {
             res = a + b;
-
             // Updating the values of a and b
-            if (i % 2 == 0)
-                a = res;
-            else
-                b = res;
+            if (i % 2 == 0) a = res;
+            else b = res;
         }
-
-        // Returning the number of ways possible
+        // return the number of ways possible
         return res;
     }
 };
