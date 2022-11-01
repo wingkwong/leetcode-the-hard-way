@@ -1,13 +1,14 @@
 ---
 description: >-
   Author: @jessicaribeiroalves | https://leetcode.com/problems/transpose-matrix/
+tags: [Array, Matrix, Simulation]
 ---
 
 # 0867 - Transpose Matrix (Easy)
 
 ## Problem Link
 
-<https://leetcode.com/problems/transpose-matrix/>
+https://leetcode.com/problems/transpose-matrix/
 
 ## Problem Statement
 
@@ -36,8 +37,8 @@ The **transpose** of a matrix is the matrix flipped over its main diagonal, swit
 - `m == matrix.length`
 - `n == matrix[i].length`
 - `1 <= m, n <= 1000`
-- `1 <= m * n <= 105`
-- `-109 <= matrix[i][j] <= 109`
+- `1 <= m * n <= 10 ^ 5`
+- `-10 ^ 9 <= matrix[i][j] <= 10 ^ 9`
 
 ## Approach 1: Iterating over the columns and rows
 
