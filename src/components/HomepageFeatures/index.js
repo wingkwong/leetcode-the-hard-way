@@ -4,32 +4,29 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'DSA Topics Tutorials',
+    Svg: require('@site/static/img/undraw_learning_sketching_nd4f.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Learn Data Structures and Algorithms ranged from basic to advanced through LeetCode Problems
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Detailed Explanations',
+    Svg: require('@site/static/img/undraw_onboarding_re_6osc.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Unlike most of posts in Discussion, we tend to provide detailed explanations (Line By Line / Article)
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'LeetCode Community',
+    Svg: require('@site/static/img/undraw_community_re_cyrm.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Join the Discord to discuss have a live discussion on Leetcode Topics with the Community members
       </>
     ),
   },

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/merge-k-sorted-lists/'
+description: "Author: @wingkwong, @rahulvarma5297 | https://leetcode.com/problems/merge-k-sorted-lists/"
+tags: [Linked List, Divide and Conquer, Heap (Priority Queue), Merge Sort]
 ---
 
 # 0023 - Merge k Sorted Lists (Hard)
@@ -45,15 +46,14 @@ Output: []
 
 **Constraints:**
 
-* `k == lists.length`
-* `0 <= k <= 10^4`
-* `0 <= lists[i].length <= 500`
-* `-10^4 <= lists[i][j] <= 10^4`
-* `lists[i]` is sorted in **ascending order**.
-* The sum of `lists[i].length` won't exceed `10^4`.
+- `k == lists.length`
+- `0 <= k <= 10^4`
+- `0 <= lists[i].length <= 500`
+- `-10^4 <= lists[i][j] <= 10^4`
+- `lists[i]` is sorted in **ascending order**.
+- The sum of `lists[i].length` won't exceed `10^4`.
 
 ## Approach 1: Divide and Conquer
-
 
 > It is recommended to solve [0021 - Merge Two Sorted Lists (Easy)](merge-two-sorted-lists-easy) first.
 
@@ -92,8 +92,8 @@ public:
         }
         return lists[0];
     }
-    
-    // Solution from 0021 - Merge Two Sorted Lists (Easy) 
+
+    // Solution from 0021 - Merge Two Sorted Lists (Easy)
     ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
         if (list1 == nullptr) return list2;
         else if (list2 == nullptr) return list1;
@@ -107,5 +107,63 @@ public:
     }
 };
 ```
+
 </TabItem>
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@rahulvarma5297"/>
+
+```java
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public ListNode mergeKLists(ListNode[] lists) {
+        int len = lists.length;
+        if (len == 0) {
+            return null;
+        }
+
+        return mergeKLists(lists, 0, len - 1);
+    }
+
+    public ListNode mergeKLists(ListNode[] lists, int start, int end) {
+        if (end - start == 0) {
+            return lists[start];
+        }
+        if (end - start == 1) {
+            return mergeLists(lists[start], lists[end]);
+        }
+        int mid = start + ((end - start) / 2);
+        ListNode listA = mergeKLists(lists, start, mid);
+        ListNode listB = mergeKLists(lists, mid + 1, end);
+        return mergeLists(listA, listB);
+    }
+
+    public ListNode mergeLists(ListNode listA, ListNode listB) {
+        if (listA == null) {
+            return listB;
+        }
+        if (listB == null) {
+            return listA;
+        }
+        if (listA.val < listB.val) {
+            listA.next = mergeLists(listA.next, listB);
+            return listA;
+        } else {
+            listB.next = mergeLists(listA, listB.next);
+            return listB;
+        }
+    }
+}
+```
+
+</TabItem>
+
 </Tabs>

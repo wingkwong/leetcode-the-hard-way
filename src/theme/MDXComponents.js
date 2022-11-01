@@ -5,6 +5,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import SolutionAuthor from '@site/src/components/SolutionAuthor';
 import TutorialAuthors from '@site/src/components/TutorialAuthors';
+import Contributors from '@site/src/components/Contributors';
 import Table from '@site/src/components/Table';
 
 
@@ -15,5 +16,7 @@ export default {
   SolutionAuthor,
   Tabs,
   TabItem,
-  TutorialAuthors,Table
+  TutorialAuthors,
+  Table,
+  Contributors
 };

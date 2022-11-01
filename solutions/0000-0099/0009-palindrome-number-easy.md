@@ -1,5 +1,5 @@
 ---
-description: 'Author: @tostream , @ganajayant | https://leetcode.com/problems/palindrome-number/'
+description: 'Author: @tostream, @ganajayant, @vigneshshiv | https://leetcode.com/problems/palindrome-number/'
 ---
 
 # 0009 - Palindrome Number (Easy)
@@ -79,6 +79,16 @@ class Solution {
 
 Calculate the reversed number.
 
+In JavaScript, we have used `Object.is(..)` for value comparison, It's a ES6 feature and makes value comparisons in an even more strict fashion than the === comparison.
+
+References from MDN and You Don't Know JS (Behind the scenes polyfills of `Object.is`). 
+
+> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
+
+> https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/es6%20%26%20beyond/ch6.md#objectis-static-function
+
+> https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/es6%20%26%20beyond/ch1.md#shimspolyfills
+
 <Tabs>
 <TabItem value="py" label="Python">
 <SolutionAuthor name="@tostream"/>
@@ -121,20 +131,14 @@ class Solution {
 
 ```javascript
 var isPalindrome = function(x) {
-   let result = 0;
-    
-   if(x < 0){
-       return false;
-   } else{
-       let number = x;
-       while(number > 0){ 
-           const remainder = number % 10; 
-           result = result * 10 + remainder; 
-           number = Math.floor(number / 10); 
-       }
-   }
-    
-   return result === x; 
+    if (x < 0 || x > 0 && Object.is(x % 10, 0)) return false;
+    let n = x;
+    let num = 0;
+    while (x > 0) {
+        num = (num * 10) + (x % 10);
+        x = Math.floor(x / 10);
+    }
+    return Object.is(n, num);
 };
 ```
 </TabItem>
