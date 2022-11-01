@@ -27,13 +27,12 @@ Here , 1-2-3 is called one connected component.
 4. Hence everytime you do a BFS/DFS you are traversing a connected component so you can count the number of times you do a BFS/DFS.
 
 
-## Sample question:
-https://leetcode.com/problems/number-of-provinces/
 
-Solution:
+If the given graph is in the form of an adjacency list, the following way can be used to find connected components :
 
-class Solution {
-    
+
+   
+
     //bfs function
     public void bfs(int isConnected[][],int visited[],int node){
  
@@ -81,9 +80,23 @@ class Solution {
         
         return provincecount;
     }
-}
 
-## Similar problems on leetcode:
-1. Number of Islands - https://leetcode.com/problems/number-of-islands/
-2. Number of Connected Components- https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/
 
+
+
+export const suggestedProblems = [
+  {
+    "problemName": "0200 - Number of Islands",
+    "difficulty": "Medium",
+    "leetCodeLink": " https://leetcode.com/problems/number-of-islands/",
+    "solutionLink": "../../solutions/0200-0299/number-of-islands-medium"
+  },
+  {
+    "problemName": "0547 - Number of Provinces",
+    "difficulty": "Medium",
+    "leetCodeLink": "https://leetcode.com/problems/number-of-provinces/",
+    "solutionLink": "../../solutions/category/0500---0599/"
+  },
+]
+
+<Table title="Suggested Problems" data={suggestedProblems} />
