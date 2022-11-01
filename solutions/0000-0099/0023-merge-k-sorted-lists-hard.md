@@ -1,5 +1,6 @@
 ---
-description: "Author: @wingkwong,@rahulvarma5297 | https://leetcode.com/problems/merge-k-sorted-lists/"
+description: "Author: @wingkwong, @rahulvarma5297 | https://leetcode.com/problems/merge-k-sorted-lists/"
+tags: [Linked List, Divide and Conquer, Heap (Priority Queue), Merge Sort]
 ---
 
 # 0023 - Merge k Sorted Lists (Hard)
