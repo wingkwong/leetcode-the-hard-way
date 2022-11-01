@@ -200,53 +200,58 @@ This solution gives $O(n log n)$ time complexity and $O(n)$ space complexity.
 <SolutionAuthor name="@deepanshu-rawat6"/>
 
 ```java
-public static int[] mergeSort(int[] arr) {
-    if (arr.length == 1) {
-        return arr;
+class Solution {
+    public int[] sortArray(int[] nums) {
+        return mergeSort(nums);
+    }
+    public static int[] mergeSort(int[] arr) {
+        if (arr.length == 1) {
+            return arr;
+        }
+
+        int mid = arr.length / 2;
+        // copying and sorting sub-array by division on the basis of mid value
+        int[] left = mergeSort(Arrays.copyOfRange(arr, 0, mid));
+        int[] right = mergeSort(Arrays.copyOfRange(arr, mid, arr.length));
+
+        // now merging the two subarrays into one sorted subarray
+        return merge(left, right);
     }
 
-    int mid = arr.length / 2;
-    // copying and sorting sub-array by division on the basis of mid value
-    int[] left = mergeSort(Arrays.copyOfRange(arr, 0, mid));
-    int[] right = mergeSort(Arrays.copyOfRange(arr, mid, arr.length));
+    public static int[] merge(int[] first, int[] second) {
+        int[] mix = new int[first.length + second.length];
 
-    // now merging the two subarrays into one sorted subarray
-    return merge(left, right);
-}
+        int i = 0;
+        int j = 0;
+        int k = 0;
+        // adding elements in the mix array in ascending order
+        while (i < first.length && j < second.length) {
+            if (first[i] < second[j]) {
+                mix[k] = first[i];
+                i++;    
+            } else {
+                mix[k] = second[j];
+                j++;
+            }
+            k++;
+        }
 
-public static int[] merge(int[] first, int[] second) {
-    int[] mix = new int[first.length + second.length];
-
-    int i = 0;
-    int j = 0;
-    int k = 0;
-    // adding elements in the mix array in ascending order
-    while (i < first.length && j < second.length) {
-        if (first[i] < second[j]) {
+        // it may be possible that one of the arrays is not complete
+        // copy the remaining elements
+        while (i < first.length) {
             mix[k] = first[i];
             i++;
-        } else {
+            k++;
+        }
+
+        while (j < second.length) {
             mix[k] = second[j];
             j++;
+            k++;
         }
-        k++;
-    }
 
-    // it may be possible that one of the arrays is not complete
-    // copy the remaining elements
-    while (i < first.length) {
-        mix[k] = first[i];
-        i++;
-        k++;
+        return mix;
     }
-
-    while (j < second.length) {
-        mix[k] = second[j];
-        j++;
-        k++;
-    }
-
-    return mix;
 }
 ```
 </TabItem>
@@ -271,55 +276,60 @@ This solution gives $O(n log n)$ time complexity and $O(1)$ space complexity.
 <SolutionAuthor name="@deepanshu-rawat6"/>
 
 ```java
-public void mergeSort(int[] arr, int s, int e) {
-    if (e - s == 1) {
-        return;
+class Solution {
+    public int[] sortArray(int[] nums) {
+        return mergeSort(nums);
+    }
+    public void mergeSort(int[] arr, int s, int e) {
+        if (e - s == 1) {
+            return;
+        }
+
+        int mid = (s + e) / 2;
+        // dividing sub-arrays by mid values till, sub-array length reaches one
+        mergeSort(arr, s, mid);
+        mergeSort(arr, mid, e);
+
+        // sorting the left portion(s to mid) and right portion(mid to e) into the same array arr
+        mergeInPlace(arr, s, mid, e);
     }
 
-    int mid = (s + e) / 2;
-    // dividing sub-arrays by mid values till, sub-array length reaches one
-    mergeSort(arr, s, mid);
-    mergeSort(arr, mid, e);
+    public static void mergeInPlace(int[] arr, int s, int m, int e) {
+        int[] mix = new int[e - s];
 
-    // sorting the left portion(s to mid) and right portion(mid to e) into the same array arr
-    mergeInPlace(arr, s, mid, e);
-}
+        int i = s;
+        int j = m;
+        int k = 0;
+        // adding elements in the mix array in ascending order
+        while (i < m && j < e) {
+            if (arr[i] < arr[j]) {
+                mix[k] = arr[i];
+                i++;
+            } else {
+                mix[k] = arr[j];
+                j++;
+            }
+            k++;
+        }
 
-public static void mergeInPlace(int[] arr, int s, int m, int e) {
-    int[] mix = new int[e - s];
-
-    int i = s;
-    int j = m;
-    int k = 0;
-    // adding elements in the mix array in ascending order
-    while (i < m && j < e) {
-        if (arr[i] < arr[j]) {
+        // it may be possible that one of the arrays is not complete
+        // copy the remaining elements
+        while (i < m) {
             mix[k] = arr[i];
             i++;
-        } else {
+            k++;
+        }
+
+        while (j < e) {
             mix[k] = arr[j];
             j++;
+            k++;
         }
-        k++;
-    }
 
-    // it may be possible that one of the arrays is not complete
-    // copy the remaining elements
-    while (i < m) {
-        mix[k] = arr[i];
-        i++;
-        k++;
-    }
-
-    while (j < e) {
-        mix[k] = arr[j];
-        j++;
-        k++;
-    }
-
-    // modifying the original arrays by replacing elements into their correct indices
-    for (int l = 0; l < mix.length; l++) {
-        arr[s + l] = mix[l];
+        // modifying the original arrays by replacing elements into their correct indices
+        for (int l = 0; l < mix.length; l++) {
+            arr[s + l] = mix[l];
+        }
     }
 }
 ```
