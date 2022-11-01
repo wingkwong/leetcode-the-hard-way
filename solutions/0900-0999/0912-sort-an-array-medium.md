@@ -278,7 +278,8 @@ This solution gives $O(n log n)$ time complexity and $O(1)$ space complexity.
 ```java
 class Solution {
     public int[] sortArray(int[] nums) {
-        return mergeSort(nums);
+        mergeSort(nums, 0, nums.length);
+        return nums;
     }
     public void mergeSort(int[] arr, int s, int e) {
         if (e - s == 1) {
