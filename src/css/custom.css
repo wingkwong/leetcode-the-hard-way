@@ -27,6 +27,8 @@
   --ifm-hero-text-color: #f6fdfd;
   --docusaurus-highlighted-code-line-bg: rgb(0 0 0 / 10%);
   --ifm-footer-background-color: #353738;
+  --ifm-footer-link-hover-color: #FFA116;
+  --ifm-link-color: #bb8027;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -83,6 +85,10 @@ div[class^='announcementBar_'] {
   color: #ffffff;
   border-bottom: 1px dotted #eeeeee;
   font-weight: bold;
+}
+
+div[class^='announcementBar_'] a {
+    color: #eea840;
 }
 
 [data-theme='light'] .DocSearch {
