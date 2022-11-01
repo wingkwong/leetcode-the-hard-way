@@ -87,4 +87,52 @@ class Solution {
 }
 ```
 </TabItem>
+
+
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@kondekarshubham123"/>
+
+```py
+
+"""
+
+binary-tree-right-side-view
+
+    3       <-  3
+   / \
+  9   20    <-  20
+     /  \
+    15   7  <-  7
+
+Output: [3, 20, 7]
+"""
+class TreeNode:
+    def __init__(
+        self, val: int = 0, left: TreeNode | None = None, right: TreeNode | None = None
+    ) -> None:
+        self.val = val
+        self.left = left
+        self.right = right
+
+class Solution:
+    def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
+        def dfs(root: Optional[TreeNode], depth, right_view):
+            if not root:
+                return
+
+            if depth == len(right_view):
+                right_view.append(root.val)
+
+            dfs(root.right, depth + 1, right_view)
+            dfs(root.left, depth + 1, right_view)
+
+        right_view: list = []
+        if not root:
+            return right_view
+        dfs(root, 0, right_view)
+        return right_view
+
+```
+
+</TabItem>
 </Tabs>
