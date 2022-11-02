@@ -128,9 +128,6 @@ class Solution {
 }
 ```
 </TabItem>
-</Tabs>
-    
-    
 
 <TabItem value="python" label="python">
 <SolutionAuthor name="@sourav"/>
@@ -157,6 +154,4 @@ class Solution:
         return dummy.next
 ```
 </TabItem>
-
-
-
+</Tabs>
