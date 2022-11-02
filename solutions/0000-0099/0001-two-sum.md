@@ -134,7 +134,7 @@ Make a vector of pairs of the original vector elements and the indices of the el
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@skoden">
+<SolutionAuthor name="@skoden" />
 
 ```cpp
 class Solution{
