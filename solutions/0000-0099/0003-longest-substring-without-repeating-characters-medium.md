@@ -110,6 +110,33 @@ var lengthOfLongestSubstring = function (s) {
 };
 ```
 </TabItem>
+  
+<TabItem value="python" label="python">
+<SolutionAuthor name="@mrsourav1"/>
+
+```python
+class Solution:
+  def lengthOfLongestSubstring(self, s: str) -> int:
+    hashset = set() 
+    l = 0 #first pointer
+    res = 0
+    for r in range(len(s)):  #r working as second pointer
+      while s[r] in hashset:
+        hashset.remove(s[l])
+        l += 1
+      hashset.add(s[r])
+      res = max(res,r-l+1)
+    return res
+#lets say our s = "pwwkew" now our l pointer pointing to l and our r pointer pointing to 
+# r and we're at point p right now and p not in hashset so we'll add p to the hashset
+# and now p in hashset and res will be 1 remember we're in for loop so my r pointer is at w
+# as per our example and w is not in hashset so we will add w in hashset and now our res is 2
+# so now we are at index 2 which is w again but w in hashset so we will try to remove w so what 
+# we will do is our l pointer is at index 0 so we will remove p first and then w now we have only
+# w in our hashset and but our res will be 2 because we're using max function and updating our result
+# so our result will not update and so on... hope you got the idea how this algorithm working.
+```
+</TabItem>  
 </Tabs>
 
 
