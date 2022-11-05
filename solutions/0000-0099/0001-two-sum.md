@@ -137,29 +137,30 @@ Make a vector of pairs of the original vector elements and the indices of the el
 <SolutionAuthor name="@skoden" />
 
 ```cpp
-class Solution{
+class Solution {
 public:
-    vector<int> twoSum(vector<int>& nums, int target){
-        int n = (int) (nums.size());
-        vector<pair<int,int>> pairs;
-        for(int i = 0; i < n; i++){
-            pairs.push_back({nums[i],i});
-        }
-        sort(pairs.begin(), pairs.end());
-        int left = 0, right = n-1;
-        vector<int> ans;
-        while(left < right){
-            int sum = pairs[left].first + pairs[right].first;
-            if(sum == target){
-                ans.push_back(pairs[left].second);
-                ans.push_back(pairs[right].second);
-                break;
-            }
-            else if(sum < target)   left++;
-            else    right--;
-        }
-        return ans;
+  vector<int> twoSum(vector<int>& nums, int target) {
+    int n = (int)(nums.size());
+    vector<pair<int, int>> pairs;
+    for (int i = 0; i < n; i++) {
+      pairs.push_back({nums[i], i});
     }
+    sort(pairs.begin(), pairs.end());
+    int left = 0, right = n - 1;
+    vector<int> ans;
+    while (left < right) {
+      int sum = pairs[left].first + pairs[right].first;
+      if (sum == target) {
+        ans.push_back(pairs[left].second);
+        ans.push_back(pairs[right].second);
+        break;
+      } else if (sum < target)
+        left++;
+      else
+        right--;
+    }
+    return ans;
+  }
 };
 ```
 
