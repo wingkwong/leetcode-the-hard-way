@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @ganajayant | https://leetcode.com/problems/merge-two-sorted-lists/'
+description: 'Author: @wingkwong, @ganajayant, @sourav | https://leetcode.com/problems/merge-two-sorted-lists/'
 ---
 
 # 0021 - Merge Two Sorted Lists (Easy)
@@ -129,10 +129,10 @@ class Solution {
 ```
 </TabItem>
 
-<TabItem value="python" label="python">
+<TabItem value="py" label="Python">
 <SolutionAuthor name="@sourav"/>
 
-```python
+```py
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
         dummy = ListNode() 
@@ -150,7 +150,6 @@ class Solution:
             tail.next = list1
         if list2:
             tail.next = list2
-
         return dummy.next
 ```
 </TabItem>
