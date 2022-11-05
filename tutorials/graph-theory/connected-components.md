@@ -52,6 +52,7 @@ we get one connected component. To make sure we get all connected components we 
 <SolutionAuthor name="@adityabisht02"/>
 
 ```Java
+class Solution {
   public void bfs(int isConnected[][],int visited[],int node){
  
         Queue<Integer> q=new LinkedList<>();
@@ -98,6 +99,7 @@ we get one connected component. To make sure we get all connected components we 
         
         return provincecount;
     }
+}
 
 ```
 </TabItem>
