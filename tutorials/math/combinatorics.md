@@ -243,7 +243,7 @@ export const suggestedProblems = [
     "problemName": "1916 - Count Ways to Build Rooms in an Ant Colony",
     "difficulty": "Hard",
     "leetCodeLink": "https://leetcode.com/problems/count-ways-to-build-rooms-in-an-ant-colony/",
-    "solutionLink": ""
+    "solutionLink": "../../solutions/1900-1999/count-ways-to-build-rooms-in-an-ant-colony"
   },
   {
     "problemName": "1467 - Probability of a Two Boxes Having The Same Number of Distinct Balls",
