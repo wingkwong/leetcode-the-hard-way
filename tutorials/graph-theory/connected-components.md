@@ -2,6 +2,10 @@
 title: 'Connected-Components'
 description: 'Author: @adityabisht02'
 hide_table_of_contents: true
+keywords:
+  - leetcode
+  - tutorial
+  - prefix sum
 ---
 
 <TutorialAuthors names="Aditya Bisht"/>
@@ -26,15 +30,29 @@ Here , 1-2-3 is called one connected component.
 3. While traversing the list do not do BFS on the nodes which have already been visited.
 4. Hence everytime you do a BFS/DFS you are traversing a connected component so you can count the number of times you do a BFS/DFS.
 
+Let's understand with the help of an example:
 
+### Example : [0547 - Number Of Provinces](https://leetcode.com/problems/number-of-provinces/)
 
-If the given graph is in the form of an adjacency list, the following way can be used to find connected components :
+```
+There are n cities. Some of them are connected, while some are not. If city a is connected directly with city b, and city b is connected directly with city c, then city a is connected indirectly with city c.
 
+A province is a group of directly or indirectly connected cities and no other cities outside of the group.
 
-   
+You are given an n x n matrix isConnected where isConnected[i][j] = 1 if the ith city and the jth city are directly connected, and isConnected[i][j] = 0 otherwise.
 
-    //bfs function
-    public void bfs(int isConnected[][],int visited[],int node){
+Return the total number of provinces.
+```
+
+Here, the given graph is in the form of an adjacency list. When we perform bfs/dfs starting from one particular node,
+we get one connected component. To make sure we get all connected components we need to traverse the adjacency list and make sure all nodes have been visited.
+
+<Tabs>
+<TabItem value="Java" label="Java">
+<SolutionAuthor name="@adityabisht02"/>
+
+```Java
+  public void bfs(int isConnected[][],int visited[],int node){
  
         Queue<Integer> q=new LinkedList<>();
         q.offer(node);
@@ -81,6 +99,10 @@ If the given graph is in the form of an adjacency list, the following way can be
         return provincecount;
     }
 
+```
+</TabItem>
+</Tabs>
+The time complexity of the above solution is O(n) where n is the number of elements in the isConnected list. We have also used an array with size equal to the number of nodes in the graph (not the number of elements in isConnected).  
 
 
 
