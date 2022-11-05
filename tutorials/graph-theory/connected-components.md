@@ -117,7 +117,7 @@ export const suggestedProblems = [
     "problemName": "0547 - Number of Provinces",
     "difficulty": "Medium",
     "leetCodeLink": "https://leetcode.com/problems/number-of-provinces/",
-    "solutionLink": "../../solutions/category/0500---0599/"
+    "solutionLink": ""
   },
 ]
 
