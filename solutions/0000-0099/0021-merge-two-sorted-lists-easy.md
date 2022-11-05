@@ -79,18 +79,25 @@ public:
 
 ## Approach 2: Iterative
 
-we create a head and tail pointer
-The head pointer is created so that we can keep track of the beginning element of our list and return it in O(1)
-Firstly we check if either of the linked list list1 or list2 is empty if it is then we simply return the non-empty list
+We create a head and tail pointer.
+
+The head pointer is created so that we can keep track of the beginning element of our list and return it in $O(1)$
+Firstly we check if either of the linked list $list1$ or $list2$ is empty if it is then we simply return the non-empty list
 Now we compare the first element of both the list in order to find out our beginning element of the merged linked list
-We set head and tail pointer to the above-obtained element and increase the list1 or list2 pointer to the next element accordingly
-Now, we run a while loop until any of the list terminates
-Case 1: if the list1 value is less than l2: then we shift our tail pointer to list1 and set tail as the current list1 now we shift our l1 pointer to the next element of that list
-Case 2: if the list2 value is less than list1: then we shift our tail pointer to list2 and set tail as the current list2 now we shift our list2 pointer to the next element of that list
-Now when these list list1 and list2 are of equal length then the while loop will terminate before traversing whole list
-To handle such cases we will check which list got terminated
-For example, if list1 is null right now then we just shift our tail pointer to the current element of list2 and copy the remaining element of list2
-As we are already having a sorted merged list hence all the remaining elements will be greater than the largest of our current merged list So we can just copy the remaining list
+We set head and tail pointer to the above-obtained element and increase the $list1$ or $list2$ pointer to the next element accordingly.
+
+Now, we run a while loop until any of the list terminates.
+
+Case 1: if the $list1$ value is less than l2: then we shift our tail pointer to $list1$ and set tail as the current $list1$ now we shift our l1 pointer to the next element of that list.
+
+Case 2: if the $list2$ value is less than $list1$: then we shift our tail pointer to $list2$ and set tail as the current $list2$ now we shift our $list2$ pointer to the next element of that list.
+
+Now when these list $list1$ and $list2$ are of equal length then the while loop will terminate before traversing whole list
+To handle such cases we will check which list got terminated.
+
+For example, if $list1$ is null right now then we just shift our tail pointer to the current element of $list2$ and copy the remaining element of $list2$.
+
+As we are already having a sorted merged list, hence all the remaining elements will be greater than the largest of our current merged list. So we can just copy the remaining list.
 
 <Tabs>
 <TabItem value="java" label="Java">
