@@ -63,6 +63,9 @@ Here, we are using ASCII key based character store in tree, since the constraint
 
 > Wiki Reference - https://en.wikipedia.org/wiki/Trie
 
+Time Complexity for insert and search: $O(L)$, where $L$ is the length of the word
+Space Complexity: $O(K*N)$, where $K$ is the no. of characters and $N$ is the no. of nodes in the tree. 
+
 Side note, all of our Google searches performs similar to Trie structure implementation and Google search autocomplete is a great example. 
 
 ![Alt text](https://assets.leetcode.com/users/images/1d1bc396-05a2-4d8c-b8b0-e707c5790fde_1604920548.2461913.png)
