@@ -188,7 +188,7 @@ class Solution:
 </TabItem>
 </Tabs>
 
-## Approach 2: 
+## Approach 2: Booth's Algorithm
 
 <Tabs>
 <TabItem value="cpp" label="C++">
