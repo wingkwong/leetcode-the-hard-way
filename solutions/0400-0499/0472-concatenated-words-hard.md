@@ -45,10 +45,17 @@ Output: ["catdog"]
 
 Construct a list of string as a tree (similar to trie) and check whether larger string consist of atleast two or more than two strings. 
 
-- First, builds a trie structure
-- Iterate through the list of words and check the prefix and suffix forms a complete word either two or more than two strings. 
+So lets break down problem statement, a concatenated words is combined with $2$ or more than $2$ words from the list to forms a large string. Let's take above example $2$, _catdog_ is concatenated strings of _cat_ and _dog_ from the list. 
+
+Simpler appraoch to solve this, by taking larger string, check index by index with other strings in the list to _match prefix of larger string to forms a complete word_. If larger string has a remaining substring, iterate through the same process to find the next half of the string in the list. 
+
+Here, the second string may be a another string in the list (_dog_) or it may be on the same string then the larger consist of $3$ strings. 
+
+- First, builds a trie structure, to forms string tree structure.
+- Iterate through the list of words and check the prefix and suffix forms a complete word either two or more than two strings (as mentioned above). 
 
 Time Complexity: $O(n * s^3)$, where $n$ - # of words, $s$ - the highest length of the word
+
 Space Complexity: $O(n)$
 
 <Tabs>
@@ -140,10 +147,18 @@ class Solution {
 
 Construct a list of string as a collection store in Set, and check whether larger string consist of atleast two or more than two strings. 
 
+HashSet preferred instead of list, it avoids duplicate string in the collection of objects when we iterate through the list and store suffix string as a memoization for faster lookup. Consider the below example why suffix stored as a memoized value in the list, 
+
+`["cat","cats","rat","ratcatsdog","dog","dogcatsdog"]`
+
+When iterating on `ratcatsdog` string, as soon as the `rat` get matched, the suffix `catsdog` string is look for matching string. Since it can be formed by `cats` and `dog` and string, this suffix `catsdog` will be added to the HashSet. So when, `dogcatsdog` iteration, the prefix `dog` is found the list, so the suffix `catsdog` is also available in the list, since we added as memoized record for future conditions to run as optimal solution.
+
+Solve this by,
 - First, builds a HashSet store with all the words
 - Iterate through the list of words and check the prefix and suffix forms a complete word either two or more than two strings. 
 
 Time Complexity: $O(n * s^3)$, where $n$ - # of words, $s$ - the highest length of the word
+
 Space Complexity: $O(n^2)$
 
 <Tabs>
