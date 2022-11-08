@@ -1,5 +1,5 @@
 ---
-description: 'Author: @vigneshshiv | https://leetcode.com/problems/sort-list/'
+description: 'Author: @vigneshshiv, @radojicic23 | https://leetcode.com/problems/sort-list/'
 ---
 
 # 0148 - Sort List (Medium)
@@ -126,6 +126,53 @@ class Solution {
         return head.next;
     }
 }
+```
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def sortList(self, head):
+        if not head or not head.next: # Base case
+            return head
+        
+        # split the list into two halfs
+        slow, fast = head, head.next 
+        while fast and fast.next:
+            slow = slow.next 
+            fast = fast.next.next
+        start = slow.next 
+        slow.next = None 
+        
+        left = self.sortList(head)  # sort left portion
+        right = self.sortList(start) # sort right portion
+        return self.merge(left, right) # merge them and return
+
+    def merge(self, list1, list2):
+        tail = dummy = ListNode()
+        while list1 and list2: # while list1 and list2 are not empty
+            if list1.val < list2.val: # find smaller value
+                tail.next = list1
+                list1 = list1.next 
+            else:
+                tail.next = list2
+                list2 = list2.next 
+            tail = tail.next
+        # it's possible that one of two lists are not empty
+        if list1: 
+            tail.next = list1
+        if list2:
+            tail.next = list2
+        
+        return dummy.next
 ```
 
 </TabItem>
