@@ -1,5 +1,6 @@
 ---
-description: "Author: @Dhanu084 | https://leetcode.com/problems/maximum-sum-of-distinct-subarrays-with-length-k/description/"
+description: "Author: @Dhanu084 | https://leetcode.com/problems/maximum-sum-of-distinct-subarrays-with-length-k/"
+tags: [Array, Hash Table, Sliding Window]
 ---
 
 # 2461 - Maximum Sum of Distinct Subarrays With Length K (Medium)
@@ -57,7 +58,7 @@ Space complexity: $$O(k)$$, where k is the length of the dictionary/hashmap
 <TabItem value="py" label="Python">
 <SolutionAuthor name="@dhanu084"/>
 
-```python
+```py
 class Solution:
     def maximumSubarraySum(self, nums: List[int], k: int) -> int:
         left = 0
@@ -66,7 +67,7 @@ class Solution:
         # use dictionary instead of set to store frequencies, as the array can consist duplicates
         seen = {}
         for right in range(n):
-            seen[nums[right]] = seen.get(nums[right], 0)+1
+            seen[nums[right]] = seen.get(nums[right], 0) + 1
             # current sum keeps track of the sum of the subarray of size k
             current_sum += nums[right]
             '''
@@ -82,7 +83,7 @@ class Solution:
                 when moved to next k range remove the first 1 resulting in {5:1,4:1}
 
             '''
-            if right-left+1 == k:
+            if right - left + 1 == k:
                 '''
                     if length of seen == k, this check is necessary to ensure
                     that we have no duplicates in the current subarray
@@ -90,8 +91,8 @@ class Solution:
                 '''
                 if len(seen) == k:
                     max_sum = max(max_sum, current_sum)
-                if seen[nums[left]]>1:
-                    seen[nums[left]]-=1
+                if seen[nums[left]] > 1:
+                    seen[nums[left]] -= 1
                 else:
                     seen.pop(nums[left])
                 '''
@@ -99,8 +100,8 @@ class Solution:
                     from dictionary , remove its value from current sum
                     and increase left pointer
                 '''
-                current_sum-=nums[left]
-                left+=1
+                current_sum -= nums[left]
+                left += 1
         return max_sum
 ```
 
