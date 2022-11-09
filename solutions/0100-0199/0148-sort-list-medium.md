@@ -141,7 +141,8 @@ class Solution {
 #         self.next = next
 class Solution:
     def sortList(self, head):
-        if not head or not head.next: # Base case
+        # Base case 
+        if not head or not head.next:
             return head
         
         # split the list into two halfs
@@ -152,14 +153,19 @@ class Solution:
         start = slow.next 
         slow.next = None 
         
-        left = self.sortList(head)  # sort left portion
-        right = self.sortList(start) # sort right portion
-        return self.merge(left, right) # merge them and return
+        # Sort left portion
+        left = self.sortList(head)
+        # Sort right portion
+        right = self.sortList(start)
+        # Merge them and return
+        return self.merge(left, right)
 
     def merge(self, list1, list2):
         tail = dummy = ListNode()
-        while list1 and list2: # while list1 and list2 are not empty
-            if list1.val < list2.val: # find smaller value
+        # while list1 and list2 are not empty
+        while list1 and list2:
+            # Find smaller value 
+            if list1.val < list2.val:
                 tail.next = list1
                 list1 = list1.next 
             else:
