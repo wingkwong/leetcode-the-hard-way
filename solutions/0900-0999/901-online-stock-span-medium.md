@@ -3,7 +3,7 @@ description: "Author: @Dhanu084 | https://leetcode.com/problems/online-stock-spa
 tags: [Array, Stack]
 ---
 
-# 2461 - Online Stock Span (Medium)
+# 901 - Online Stock Span (Medium)
 
 ## Problem Link
 

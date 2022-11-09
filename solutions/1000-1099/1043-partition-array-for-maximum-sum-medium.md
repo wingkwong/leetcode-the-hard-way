@@ -125,7 +125,7 @@ Space complexity: $$O(n)$$
 
 ```py
 class Solution:
-def maxSumAfterPartitioning(self, arr: List[int], k: int) -> int:
+    def maxSumAfterPartitioning(self, arr: List[int], k: int) -> int:
         n = len(arr)
         dp = [0]*(n+1)
         ans = 0
