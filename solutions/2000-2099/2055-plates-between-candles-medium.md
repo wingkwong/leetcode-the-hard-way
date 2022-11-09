@@ -62,12 +62,10 @@ class Solution:
         '''
             In this approach we will use three arrays
             left_candle, right_candle and candle_count.
-            * left candle is to store the number of candles
-              left of a plate
-            * right candle is to store the number of candles
-              right of a plate
+            * left candle is to store the last left candle index
+            * right candle is to store the last right candle index
             * candle count is to store the number of candles
-              at a given index
+              till a given index
         '''
         n = len(s)
         left_candle, right_candle = [0]*n,[0]*n
