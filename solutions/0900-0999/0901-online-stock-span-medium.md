@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/online-stock-span/'
+description: "Author: @wingkwong | https://leetcode.com/problems/online-stock-span/"
 tags: [Stack, Design, Monotonic Stack, Data Stream]
 ---
 
-# 0901 - Online Stock Span (Medium) 
+# 0901 - Online Stock Span (Medium)
 
 ## Problem Link
 
@@ -75,6 +75,55 @@ class StockSpanner() {
 ```
 
 </TabItem>
+
+<TabItem value = "py" label="Python">
+<SolutionAuthor name="@dhanu084"/>
+
+```py
+class StockSpanner:
+
+    def __init__(self):
+        self.span = []
+
+    def next(self, price: int) -> int:
+        '''
+            * if current price is lesser than the last element at
+              stack then it can't expand its span so just return 1
+            * Return 1 as minimum span as each price is greater
+              for current day
+                * eg if span is [(100,1), (80,1)] and current price is 60
+                  then the span will change to [(100,1), (80,1), (60,1)]
+                  and return 1
+                * in tuple (100,1) 100 represents price
+                  and 1 represents its span
+        '''
+        current_span = 1
+        if not self.span or self.span[-1][0] > price:
+            # adding tuples to the span array eg [(75,1),(60,1)]
+            self.span.append((price, 1))
+            return current_span
+
+        '''
+            * Keep popping the stack if current price is greater
+              than or equal to the top of the span stack
+            * while popping always add the span of the popped item and not 1
+            * Once popped keep in mind to add the (price, current_span) of
+            the current price
+                * eg when span is [(100,1), (80,1), (60,1)]
+                  and current price is 70 then span of 70 will be 1 + span
+                  of the top of stack which is 1from 60 so the span
+                  will be [(100,1), (80,1), (70,2)]
+        '''
+
+        while self.span and self.span[-1][0] <= price:
+            current_span += self.span.pop()[1]
+        self.span.append((price, current_span))
+
+        return current_span
+
+```
+
+</TabItem>
 </Tabs>
 
 ## Approach 2: Segment Tree
@@ -88,13 +137,13 @@ class StockSpanner() {
 struct segtree {
     vector<long long> sums;
     int size;
-    
+
     void init(int n) {
         size = 1;
         while (size < n) size *= 2;
         sums.assign(size * 2, 0LL);
     }
-    
+
     void set(int i, int v, int x, int lx, int rx) {
         if (rx - lx == 1) {
             sums[x] = v;
@@ -105,18 +154,18 @@ struct segtree {
         else set(i, v, 2 * x + 2, m, rx);
         sums[x] = max(sums[2 * x + 1], sums[2 * x + 2]);
     }
-    
+
     void set(int i, int v) {
         set(i, v, 0, 0, size);
     }
-    
+
     long long sum(int l, int r, int x, int lx, int rx) {
         if (lx >= r || l >= rx) return 0;
         if (lx >= l && rx <= r) return sums[x];
         int m = (lx + rx) / 2;
         return max(sum(l, r, 2 * x + 1, lx, m), sum(l, r, 2 * x + 2, m, rx));
     }
-    
+
     long long sum(int l, int r) {
         return sum(l, r, 0, 0, size);
     }
@@ -127,11 +176,11 @@ public:
     int mxN = 1e5;
     int p = 1;
     segtree st;
-    
-    StockSpanner() { 
+
+    StockSpanner() {
         st.init(mxN);
     }
-    
+
     int next(int price) {
         st.set(price, p);
         return p++ - st.sum(price + 1, mxN);
