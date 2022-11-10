@@ -7,7 +7,7 @@ tags: [Array, Stack]
 
 ## Problem Link
 
-https://leetcode.com/problems/online-stock-span/description/
+https://leetcode.com/problems/online-stock-span/
 
 ## Problem Statement
 
@@ -94,8 +94,8 @@ class StockSpanner:
                   will be [(100,1), (80,1), (70,2)]
         '''
 
-        while self.span and self.span[-1][0]<=price:
-            current_span+=self.span.pop()[1]
+        while self.span and self.span[-1][0] <= price:
+            current_span += self.span.pop()[1]
         self.span.append((price, current_span))
 
         return current_span
