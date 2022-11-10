@@ -67,19 +67,19 @@ class Solution:
 
             '''
                 for eg Input : [1,15,7,9,2,5,10]
-                From every index loop till index+k
+                From every index loop till index + k
                 Find the maximum in the subarray [index : index+k]
                 multiply it with the current subarray length to get the current sum
                 If current sum is greater than maximum sum , update it
 
                 there are lot of decisions in recursion, below is the working of the optimal one:
                 for subarray [1,15,7] of size k , the maximum in the subarray is 15 and length is 3
-                so the sum will be 15*3 = 45
-                for the next Partition keep just [9] as a subarray with sum 9*1 = 9
+                so the sum will be 15 * 3 = 45
+                for the next Partition keep just [9] as a subarray with sum 9 * 1 = 9
                 for the next partition keep subarray [2,5,10], the maximum is 10 and length is 3
-                so the sum is 10*3 = 30
+                so the sum is 10 * 3 = 30
 
-                So the total sum is 45+9+30 = 84
+                So the total sum is 45 + 9 + 30 = 84
 
                 Please try out other partitions like
                 [1] [15] [7,9,2,5,10] = (1 * 1) + (15 * 1) + (10 * 5) = 67
