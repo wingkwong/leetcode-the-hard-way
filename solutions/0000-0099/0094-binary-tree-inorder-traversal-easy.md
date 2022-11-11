@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @ganajayant, @vigneshshiv | https://leetcode.com/problems/binary-tree-inorder-traversal/'
+description: 'Author: @wingkwong, @ganajayant, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/binary-tree-inorder-traversal/'
 tags: [Stack, Tree, Depth-First Search, Binary Tree]
 ---
 
@@ -191,5 +191,41 @@ class Solution {
     }
 }
 ```
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+        stack = []
+        res = []
+        curr = root
+        
+        # If either of these are not empty
+        while curr or stack:
+            # If our current node is not None
+            while curr:
+                # Add it to the stack
+                stack.append(curr)
+                # Move down to the left and 
+                # keep doing it as long as it's possible
+                curr = curr.left
+            
+            curr = stack.pop()
+            res.append(curr.val)
+            # Shift to the right
+            curr = curr.right
+        
+        return res 
+```
+
 </TabItem>
 </Tabs>
