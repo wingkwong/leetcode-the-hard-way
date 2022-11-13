@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @@vigneshshiv, @MithunPrabhu777, @AnshikaAnand222 |
+  Author: @@vigneshshiv, @MithunPrabhu777, @AnshikaAnand222, @radojicic23 |
   https://leetcode.com/problems/longest-substring-without-repeating-characters/
 tags: [Hash Table, String, Sliding Window]
 ---
@@ -172,5 +172,33 @@ var lengthOfLongestSubstring = function(s) {
   return maxSize;
 };
 ```
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```python
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        # HashSet
+        char_set = set()
+        # left pointer at position zero
+        l = 0  
+        res = 0
+        # Right pointer is going through every char
+        for r in range(len(s)):
+            # If we get to a duplicate
+            while s[r] in char_set:
+                # Remove left most
+                char_set.remove(s[l])
+                # Shift left pointer by one
+                l += 1  
+            char_set.add(s[r])
+            # If the current window size is greater than what it's now
+            # Update
+            res = max(res, r - l + 1)
+        return res
+```
+
 </TabItem>
 </Tabs>
