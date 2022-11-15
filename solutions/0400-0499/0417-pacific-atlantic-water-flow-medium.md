@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/pacific-atlantic-water-flow/'
+description: 'Author: @wingkwong, @radojicic23 | https://leetcode.com/problems/pacific-atlantic-water-flow/'
 tags: [Array, Depth-First Search, Breadth-First Search, Matrix]
 ---
 
@@ -55,6 +55,8 @@ Explanation: The water can flow from the only cell to the Pacific and Atlantic o
 
 ## Approach 1: DFS
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwonmg"/>
 
 ```cpp
@@ -110,3 +112,51 @@ public:
     }
 };
 ```
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```python
+class Solution:
+    def pacificAtlantic(self, heights: List[List[int]]) -> List[List[int]]:
+        rows, cols = len(heights), len(heights[0]) 
+        # 2 hashsets to maintain all the positions that can reach two oceans
+        pac, atl = set(), set() 
+        
+        def dfs(r, c, visit, prev_height):
+            # if position is already been visited or 
+            # if it's out of bounds or if height is to small
+            if ((r, c) in visit or 
+                r < 0 or c < 0 or r == rows or c == cols or
+                heights[r][c] < prev_height): 
+                return
+            # visit new cell
+            visit.add((r, c)) 
+            # run dfs on all four of those neighbours
+            dfs(r + 1, c, visit, heights[r][c])
+            dfs(r - 1, c, visit, heights[r][c])
+            dfs(r, c + 1, visit, heights[r][c])   
+            dfs(r, c - 1, visit, heights[r][c])         
+        
+        # go through every single column in the first row
+        # for the first row and the last row
+        for c in range(cols): 
+            dfs(0, c, pac, heights[0][c])
+            dfs(rows - 1, c, atl, heights[rows - 1][c])
+        # for the first column and the last column
+        for r in range(rows): 
+            dfs(r, 0, pac, heights[r][0])
+            dfs(r, cols - 1, atl, heights[r][cols - 1])
+        
+        res = []
+        for r in range(rows):
+            for c in range(cols):
+                if (r, c) in pac and (r, c) in atl:
+                    res.append([r, c])
+        return res
+```
+
+</TabItem>
+</Tabs>
