@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
+  Author: @wingkwong, @dhanu084 |
   https://leetcode.com/problems/minimum-consecutive-cards-to-pick-up/
 ---
 
