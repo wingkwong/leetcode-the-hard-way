@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
+  Author: @wingkwong, @dhanu084 |
   https://leetcode.com/problems/minimum-consecutive-cards-to-pick-up/
 ---
 
@@ -34,13 +34,19 @@ Explanation: There is no way to pick up a set of consecutive cards that contain 
 
 **Constraints:**
 
-* `1 <= cards.length <= 10^5`
-* `0 <= cards[i] <= 10^6`
+- `1 <= cards.length <= 10^5`
+- `0 <= cards[i] <= 10^6`
 
 ## Approach 1: Hash Map
 
+Time complexity: $$O(n)$$
+
+Space complexity: $$O(n)$$ if there are no pairs
+
 Store the index for each number, check each element with size > 1 and find out the minimum gap between them.
 
+<Tabs>
+<TabItem value = "cpp" label = "C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -62,3 +68,31 @@ public:
     }
 };
 ```
+
+</TabItem>
+
+<TabItem value = "py" label ="Python">
+<SolutionAuthor name="@dhanu084"/>
+
+```py
+class Solution:
+    def minimumCardPickup(self, cards: List[int]) -> int:
+        seen = {}
+        length = inf
+        n = len(cards)
+
+        for i in range(n):
+            # check if there exists a card with same number
+            if cards[i] in seen:
+                # if present, then it represents a pair
+                # calculate the current lenth and update min length
+                length = min(length, i - seen.get(cards[i]) + 1)
+            # add the card with the index in the dictionary
+            seen[cards[i]] = i
+
+        # if no pair is found length will be inf so return -1
+        return length if length != inf else -1
+```
+
+</TabItem>
+</Tabs>
