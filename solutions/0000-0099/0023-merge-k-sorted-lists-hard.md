@@ -177,27 +177,27 @@ class Solution {
 #         self.next = next
 class Solution:
     def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
-            # Edgecases: if length is 0 and lists is None
+        # edgecases: if length is 0 and lists is None
         if not lists or len(lists) == 0:
             return None
-        # Taking pairs of LL and merging them each time and 
+        # take pairs of LL and merge them each time and 
         # keep doing it until there is one LL remaining 
         while len(lists) > 1: 
             merged_lists = []
-            #Iterate through each of these lists
+            # iterate through each of these lists
             for i in range(0, len(lists), 2): 
                 l1 = lists[i]
-                # Make sure if i + 1 is in bounds because l2 might be out of bound 
+                # make sure if i + 1 is in bounds because l2 might be out of bound 
                 # maybe we can have odd number of lists 
                 l2 = lists[i + 1] if (i + 1) < len(lists) else None 
-                # Merge them together and add to merged lists
+                # merge them together and add to merged lists
                 merged_lists.append(self.mergeLists(l1, l2)) 
-            # Update lists variable
+            # update lists variable
             lists = merged_lists
-            # keep doing that until there is one list and that is it
+            # keep doing that until there is one list
         return lists[0]
             
-    # Solution from 0021 - Merge Two Sorted Lists (Easy)         
+    # solution from 0021 - Merge Two Sorted Lists (Easy)         
     def mergeLists(self, l1, l2):
         dymmy = ListNode()
         tail = dymmy
