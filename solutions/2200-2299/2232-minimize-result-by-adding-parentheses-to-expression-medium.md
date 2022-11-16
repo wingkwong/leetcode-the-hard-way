@@ -71,14 +71,17 @@ close parenthesis.
 
 Return the expression.
 
-Complexity: O(m * n) where m and n are the length of the left and right operands of the input sum.
+Time Complexity: $O(a * b)$
+
+Space Complexity: $O(n * a * b)$
+
+where $a$ and $b$ are the length of the left and right operands of the input sum
 
 <Tabs>
 <TabItem value="cpp" label="C++">
 <SolutionAuthor name="@1SundayMorning"/>
 
 ```cpp
-using namespace std;
 class Solution {
 public:
     string minimizeResult(string expression) {
@@ -107,8 +110,8 @@ public:
                 string right_sum_str = right.substr(0, p2);
                 string right_mul_str = right.substr(p2);
                 
-                // in the case where the entire expression is enclosed in
-                // parenthesis, set left mul and right mul to none.
+                // in the case where the entire expression is enclosed in parenthesis, 
+                // set left mul and right mul to none.
                 // This will be the case when their respective substrings are empty.
                 int left_mul = 1;
                 int left_sum = stoi(left_sum_str);
