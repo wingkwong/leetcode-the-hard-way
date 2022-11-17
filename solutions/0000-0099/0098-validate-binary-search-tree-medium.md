@@ -2,7 +2,7 @@
 description: "Author: @dhanu084 | https://leetcode.com/problems/validate-binary-search-tree/"
 ---
 
-# 98 - Validate Binary Search Tree (Medium)
+# 0098 - Validate Binary Search Tree (Medium)
 
 ## Problem Link
 
