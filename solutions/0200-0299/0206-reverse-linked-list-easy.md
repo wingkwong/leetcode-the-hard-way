@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @vigneshshiv |
+  Author: @vigneshshiv, @radojicic23 |
   https://leetcode.com/problems/reverse-linked-list/
 ---
 
@@ -88,6 +88,29 @@ class Solution {
 }
 ```
 </TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        prev = None
+        
+        while head:
+            curr = head
+            head = head.next
+            curr.next = prev
+            prev = curr
+        return prev
+```
+
+</TabItem>
 </Tabs>
 
 
@@ -134,5 +157,29 @@ class Solution {
     }
 }
 ```
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        if not head:
+            return None
+    
+        new_head = head
+        if head.next:
+            new_head = self.reverseList(head.next)
+            head.next.next = head
+        head.next = None
+        return new_head
+```
+
 </TabItem>
 </Tabs>
