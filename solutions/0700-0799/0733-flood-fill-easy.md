@@ -132,11 +132,11 @@ class Solution:
             for i in range(size):
                 x, y = queue.popleft()
                 image[x][y] = color
-                for r,c in [(0,1), (1,0), (-1,0), (0,-1)]:
-                    row = x+r
-                    col = y+c
+                for r,c in [(0, 1), (1, 0), (-1, 0), (0, -1)]:
+                    row = x + r
+                    col = y + c
 
-                    if row<0 or row >= n or col < 0 or col >= m or image[row][col] != source_color or (row, col) in visited:
+                    if row < 0 or row >= n or col < 0 or col >= m or image[row][col] != source_color or (row, col) in visited:
                         continue
                     visited.add((row, col))
                     queue.append((row, col))
