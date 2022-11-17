@@ -132,7 +132,7 @@ class Solution:
             for i in range(size):
                 x, y = queue.popleft()
                 image[x][y] = color
-                for r,c in [(0, 1), (1, 0), (-1, 0), (0, -1)]:
+                for r, c in [(0, 1), (1, 0), (-1, 0), (0, -1)]:
                     row = x + r
                     col = y + c
 
