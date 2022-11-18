@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/palindrome-linked-list/'
+description: 'Author: @wingkwong, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/palindrome-linked-list/'
 tags: [Linked List, Two Pointers, Stack, Recursion]
 ---
 
@@ -68,6 +68,45 @@ public:
         return true;
     }
 };
+```
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def isPalindrome(self, head: Optional[ListNode]) -> bool:
+        slow, fast = head, head 
+
+        # find middle value(slow)
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+
+        # reverse second portion 
+        prev = None # dummy
+        while slow:
+            tmp = slow.next
+            slow.next = prev 
+            prev = slow 
+            slow = tmp
+
+        # check if it's palindrome 
+        left, right = head, prev
+        while right:
+            if left.val != right.val:
+                return False 
+            left = left.next
+            right = right.next
+        
+        return True 
 ```
 
 </TabItem>
