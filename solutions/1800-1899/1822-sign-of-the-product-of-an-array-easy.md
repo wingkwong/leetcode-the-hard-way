@@ -77,6 +77,7 @@ public:
 };
 ```
 
+</TabItem>
 
 <TabItem value="rs" label="Rust">
 <SolutionAuthor name="@wingkwong"/>
