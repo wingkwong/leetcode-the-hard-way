@@ -1,5 +1,5 @@
 ---
-description: "Author: @dhanu084 | https://leetcode.com/problems/validate-binary-search-tree/"
+description: "Author: @dhanu084, @vigneshshiv | https://leetcode.com/problems/validate-binary-search-tree/"
 ---
 
 # 0098 - Validate Binary Search Tree (Medium)
@@ -75,3 +75,45 @@ class Solution:
         # pass -inf as the left minimum and inf as right maximum initially
         return validate(root, -inf, inf)
 ```
+
+<Tabs>
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    public boolean isValidBST(TreeNode root) {
+        if (root == null) return true;
+        return checkBST(root, null, null);
+    }
+    
+    public boolean checkBST(TreeNode root, Integer min, Integer max) {
+        if (root == null) return true;
+        // Check the node value with it's parent
+        // If node is left, then value should be less than or equal to it's parent
+        // If node is right, then value should be greater than or equal to it's parent
+        if ((min != null && root.val <= min) || (max != null && root.val >= max)) {
+            return false;
+        }
+        return checkBST(root.left, min, root.val) && checkBST(root.right, root.val, max);
+    }
+}
+```
+
+</TabItem>
+</Tabs>
