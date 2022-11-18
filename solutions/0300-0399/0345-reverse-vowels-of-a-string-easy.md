@@ -136,7 +136,10 @@ class Solution {
         // return c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U' || 
         //        c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u'
         c = Character.toLowerCase(c);
-        return c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u';
+        return switch (c) {
+            case 'a', 'e', 'i', 'o', 'u' -> true;
+            default -> false;
+        };
     }
     
     public String reverseVowels(String s) {
