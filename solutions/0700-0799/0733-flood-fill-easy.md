@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/flood-fill/'
+description: "Author: @wingkwong | https://leetcode.com/problems/flood-fill/"
 ---
 
 # 0733 - Flood Fill (Easy)
@@ -18,8 +18,6 @@ To perform a **flood fill**, consider the starting pixel, plus any pixels connec
 
 Return _the modified image after performing the flood fill_.
 
-
-
 **Example 1:**
 
 ![](https://assets.leetcode.com/uploads/2021/06/01/flood1-grid.jpg)
@@ -35,17 +33,17 @@ Note the bottom corner is not colored 2, because it is not 4-directionally conne
 
 ```
 Input: image = [[0,0,0],[0,0,0]], sr = 0, sc = 0, newColor = 2
-Output: [[2,2,2],[2,2,2]] 
+Output: [[2,2,2],[2,2,2]]
 ```
 
 **Constraints:**
 
-* `m == image.length`
-* `n == image[i].length`
-* `1 <= m, n <= 50`
-* `0 <= image[i][j], newColor < 2^16`
-* `0 <= sr < m`
-* `0 <= sc < n`
+- `m == image.length`
+- `n == image[i].length`
+- `1 <= m, n <= 50`
+- `0 <= image[i][j], newColor < 2^16`
+- `0 <= sr < m`
+- `0 <= sc < n`
 
 ## Approach 1: DFS
 
@@ -82,6 +80,8 @@ class Solution:
 
 Similar idea but in BFS way. Use queue to store the points and search for 4 directions to replace if possible.
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -111,4 +111,38 @@ public:
         return image;
     }
 };
+```
+
+</TabItem>
+
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@dhanu084"/>
+
+```py
+class Solution:
+    def floodFill(self, image: List[List[int]], sr: int, sc: int, color: int) -> List[List[int]]:
+        queue = deque([(sr, sc)])
+        visited = set([(sr, sc)])
+        n,m = len(image), len(image[0])
+        source_color = image[sr][sc]
+
+        while queue:
+            size = len(queue)
+
+            for i in range(size):
+                x, y = queue.popleft()
+                image[x][y] = color
+                for r, c in [(0, 1), (1, 0), (-1, 0), (0, -1)]:
+                    row = x + r
+                    col = y + c
+
+                    if row < 0 or row >= n or col < 0 or col >= m or image[row][col] != source_color or (row, col) in visited:
+                        continue
+                    visited.add((row, col))
+                    queue.append((row, col))
+        return image
+```
+
+</TabItem>
+</Tabs>
 ```
