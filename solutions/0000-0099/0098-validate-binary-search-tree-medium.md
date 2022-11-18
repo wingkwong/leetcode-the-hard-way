@@ -50,6 +50,8 @@ Time Complexity: $$O(n)$$
 
 Space Complexity: $$O(n)$$ for recursive stack space
 
+<Tabs>
+<TabItem value="py" label="Python">
 <SolutionAuthor name="@dhanu084" />
 
 ```python
@@ -75,8 +77,8 @@ class Solution:
         # pass -inf as the left minimum and inf as right maximum initially
         return validate(root, -inf, inf)
 ```
+</TabItem>
 
-<Tabs>
 <TabItem value="java" label="Java">
 <SolutionAuthor name="@vigneshshiv"/>
 
