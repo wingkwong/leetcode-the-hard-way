@@ -35,6 +35,8 @@ Output: 0
 
 In order to form a valid triangle, the side lengths of the triangle must satisfy $$a + b > c$$ where $$a \leq b \leq c$$. Therefore, we can sort the array and try each $$(a,b,c)$$ tuples to see if it is satisfied. If so, return the sum of three lengths. Else return 0 at the end.
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -55,3 +57,41 @@ public:
     }
 };
 ```
+
+</TabItem>
+
+<TabItem value="rs" label="Rust">
+<SolutionAuthor name="@wingkwong"/>
+
+```rs
+impl Solution {
+    pub fn largest_perimeter(mut nums: Vec<i32>) -> i32 {
+        nums.sort_unstable();
+        for i in (2 .. nums.len()).rev() {
+            if (nums[i - 2] + nums[i - 1] > nums[i]) {
+                return nums[i - 2] + nums[i - 1] + nums[i];
+            }
+        }
+        0
+    }
+}
+```
+
+<SolutionAuthor name="@wingkwong"/>
+
+```rs
+impl Solution {
+    pub fn largest_perimeter(mut nums: Vec<i32>) -> i32 {
+        nums.sort_unstable();
+        for w in nums.windows(3).rev() {
+            if (w[0] + w[1] > w[2]) {
+                return w[0] + w[1] + w[2];
+            }
+        }
+        0
+    }
+}
+```
+
+</TabItem>
+</Tabs>

@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @luiz290788 | 
+  Author: @luiz290788, @wingkwong | 
   https://leetcode.com/problems/sum-of-all-odd-length-subarrays/
 ---
 
@@ -81,6 +81,26 @@ class Solution {
 
     return totalSum;
   }
+}
+```
+
+</TabItem>
+
+<TabItem value="rs" label="Rust">
+<SolutionAuthor name="@wingkwong"/>
+
+```rs
+impl Solution {
+    pub fn sum_odd_length_subarrays(arr: Vec<i32>) -> i32 {
+        let n = arr.len();
+        let mut ans = 0;
+        for i in (1..=n).step_by(2) {
+            for w in arr.windows(i) {
+                ans += w.iter().sum::<i32>();
+            }
+        }
+        ans
+    }
 }
 ```
 

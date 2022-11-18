@@ -53,8 +53,10 @@ Explanation: The product of all values in the array is -1, and signFunc(-1) = -1
 
 ## Approach 1: Check the sign
 
-We don't need to calculate the final product. Instead, we check the sign only.
+We don't need to calculate the final product. Instead, we check the sign only. We can exit early if we meet $0$.
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -65,9 +67,34 @@ public:
         for (auto x : nums) {
             if (x > 0) ans *= 1;
             else if (x < 0) ans *= -1;
-            else ans = 0;
+            else {
+                ans = 0;
+                break;
+            }
         }
         return ans;
     }
 };
 ```
+
+
+<TabItem value="rs" label="Rust">
+<SolutionAuthor name="@wingkwong"/>
+
+```rs
+impl Solution {
+    pub fn array_sign(nums: Vec<i32>) -> i32 {
+        let mut ans = 1;
+        for x in nums.into_iter() {
+            if x == 0 {
+                return 0;
+            } 
+            ans *= x.signum();
+        }
+        ans
+    }
+}
+```
+
+</TabItem>
+</Tabs>
