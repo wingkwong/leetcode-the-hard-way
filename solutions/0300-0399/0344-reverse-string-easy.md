@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/reverse-string/'
+description: 'Author: @wingkwong, @vigneshshiv | https://leetcode.com/problems/reverse-string/'
 ---
 
 # 0344 - Reverse String (Easy)
@@ -64,6 +64,23 @@ func reverseString(s []byte)  {
         s[i], s[j] = s[j], s[i]
         i += 1
         j -= 1
+    }
+}
+```
+
+</TabItem>
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+class Solution {
+    public void reverseString(char[] s) {
+        int i = 0, j = s.length - 1;
+        while (i < j) {
+            char c = s[i];
+            s[i++] = s[j];
+            s[j--] = c;
+        }
     }
 }
 ```
