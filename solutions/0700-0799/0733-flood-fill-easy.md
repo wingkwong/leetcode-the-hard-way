@@ -1,5 +1,5 @@
 ---
-description: "Author: @wingkwong | https://leetcode.com/problems/flood-fill/"
+description: "Author: @wingkwong, @vigneshshiv | https://leetcode.com/problems/flood-fill/"
 ---
 
 # 0733 - Flood Fill (Easy)
@@ -49,6 +49,8 @@ Output: [[2,2,2],[2,2,2]]
 
 First we check if the color at the starting point is same as the target one. If so, we return the input directly. Otherwise, we perform dfs from the starting point to replace the color and do the same thing for four directions. We only perform dfs when the next pixel is within the boundary.
 
+<Tabs>
+<TabItem value="py" label="Python">
 <SolutionAuthor name="@wingkwong"/>
 
 ```python
@@ -75,6 +77,49 @@ class Solution:
         dfs(sr, sc)
         return image
 ```
+
+</TabItem>
+
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+class Solution {
+    
+    public final int NO_DIRS = 4;
+    public int[] DIRS = {0, 1, 0, -1, 0};
+    
+    public int[][] floodFill(int[][] image, int sr, int sc, int color) {
+        if (image[sr][sc] == color) return image;
+        Set<String> visited = new HashSet<>();
+        fill(image, sr, sc, image[sr][sc], color, visited);
+        return image;
+    }
+    
+    public void fill(int[][] image, int sr, int sc, int color, int newColor, Set<String> visited) {
+        boolean rowInbounds = (0 <= sr && sr < image.length);
+        boolean colInbounds = (0 <= sc && sc < image[0].length);
+        // Check row and column bounds
+        if (!rowInbounds || !colInbounds) return;
+        // If color is not same as existing then skip
+        if (image[sr][sc] != color) return;
+        // Change the color
+        image[sr][sc] = newColor;
+        String key = sr + "#" + sc;
+        // Mark as visited, so that the same row and column won't be repeated
+        visited.add(key);
+        for (int idx = 0; idx < NO_DIRS; idx++) {
+            key = sr + DIRS[idx] + "#" + sc + DIRS[idx + 1];
+            if (!visited.contains(key)) {
+                fill(image, sr + DIRS[idx], sc + DIRS[idx + 1], color, newColor, visited);
+            }
+        }
+    }
+}
+```
+
+</TabItem>
+</Tabs>
 
 ## Approach 2: BFS
 
