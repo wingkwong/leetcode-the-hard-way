@@ -85,17 +85,17 @@ class Solution:
 
 ```java
 class Solution {
-    
+
     public final int NO_DIRS = 4;
     public int[] DIRS = {0, 1, 0, -1, 0};
-    
+
     public int[][] floodFill(int[][] image, int sr, int sc, int color) {
         if (image[sr][sc] == color) return image;
         Set<String> visited = new HashSet<>();
         fill(image, sr, sc, image[sr][sc], color, visited);
         return image;
     }
-    
+
     public void fill(int[][] image, int sr, int sc, int color, int newColor, Set<String> visited) {
         boolean rowInbounds = (0 <= sr && sr < image.length);
         boolean colInbounds = (0 <= sc && sc < image[0].length);

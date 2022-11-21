@@ -77,6 +77,7 @@ class Solution:
         # pass -inf as the left minimum and inf as right maximum initially
         return validate(root, -inf, inf)
 ```
+
 </TabItem>
 
 <TabItem value="java" label="Java">
@@ -103,7 +104,7 @@ class Solution {
         if (root == null) return true;
         return checkBST(root, null, null);
     }
-    
+
     public boolean checkBST(TreeNode root, Integer min, Integer max) {
         if (root == null) return true;
         // Check the node value with it's parent
