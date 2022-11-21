@@ -57,7 +57,6 @@ Space Complexity: $$O(n)$$
 ```python
 class Solution:
     def getHint(self, secret: str, guess: str) -> str:
-        bulls_map = set()
         secret_freq = Counter(secret)
         bulls = cows = 0
         n = len(secret)
@@ -67,11 +66,9 @@ class Solution:
                 if letter and position matches with secret increase
                 the bulls count and decrease the frequency of the
                 matched number to handle duplicates
-                Use set (bulls_map) to keep track of the matched
             '''
             if secret[i] == guess[i]:
                 bulls += 1
-                bulls_map.add(i)
                 secret_freq[secret[i]] -= 1
 
         for i in range(n):
@@ -80,10 +77,9 @@ class Solution:
                 with frequency greater than 0 and if itsn't a bull
                 only then increase cows count
             '''
-            if guess[i] in secret_freq and secret_freq[guess[i]] > 0 and i not in bulls_map:
+            if guess[i] in secret_freq and secret_freq[guess[i]] > 0 and guess[i] != secret[i]:
                 cows += 1
                 secret_freq[guess[i]] -= 1
-
 
         return f'{bulls}A{cows}B'
 ```
