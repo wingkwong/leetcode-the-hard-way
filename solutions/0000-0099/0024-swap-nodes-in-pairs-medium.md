@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @ganajayant| https://leetcode.com/problems/swap-nodes-in-pairs/'
+description: 'Author: @wingkwong, @ganajayant, @radojicic23| https://leetcode.com/problems/swap-nodes-in-pairs/'
 ---
 
 # 0024 - Swap Nodes in Pairs (Medium)
@@ -119,5 +119,36 @@ class Solution {
     }
 }
 ```
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def swapPairs(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        # initialize dummy node (dummy -> head)
+        dummy = ListNode(0, next=head)
+        prev, curr = dummy, head
+        
+        while curr and curr.next:
+            # save pointers
+            nxtPair = curr.next.next
+            second = curr.next
+            # reverse this pair
+            second.next = curr
+            curr.next = nxtPair
+            prev.next = second
+            # update pointers
+            prev = curr
+            curr = nxtPair
+        return dummy.next
+```
+
 </TabItem>
 </Tabs>

@@ -86,6 +86,19 @@ func hammingWeight(num uint32) int {
 ```
 </TabItem>
 
+<TabItem value="rs" label="Rust">
+<SolutionAuthor name="@wingkwong"/>
+
+```rs
+impl Solution {
+    pub fn hammingWeight (n: u32) -> i32 {
+        n.count_ones() as i32
+    }
+}
+```
+
+</TabItem>
+
 <TabItem value="java" label="Java">
 <SolutionAuthor name="@vigneshshiv"/>
 

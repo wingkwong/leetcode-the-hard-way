@@ -50,6 +50,8 @@ Explanation: The two strings are already equal, so no string swap operation is r
 
 We iterate each index $$i$$ and look for the first difference, mark the index as $$last$$. If we have another difference at index $$j$$, then swap $$s1[j]$$ with $$s1[last]$$ and check if it is same as $$s2$$ (as we can only make at most one swap). At the end, check if both string is equal to handle the case that we don't swap.
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -76,3 +78,33 @@ public:
     }
 };
 ```
+
+</TabItem>
+
+<TabItem value="rs" label="Rust">
+<SolutionAuthor name="@wingkwong"/>
+
+```rs
+impl Solution {
+    pub fn are_almost_equal(s1: String, s2: String) -> bool {
+        let n = s1.len();
+        let mut last = usize::MAX;
+        let mut c1: Vec<_> = s1.chars().collect();
+        let c2: Vec<_> = s2.chars().collect();
+        for i in 0 .. n { 
+            if c1[i] != c2[i] {
+                if last == usize::MAX {
+                    last = i;
+                } else {
+                    c1.swap(i, last);
+                    return c1 == c2;
+                }
+            }
+        }
+        c1 == c2
+    }
+}
+```
+
+</TabItem>
+</Tabs>

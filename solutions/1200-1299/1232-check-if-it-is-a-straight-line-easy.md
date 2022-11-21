@@ -45,6 +45,9 @@ Output: false
 
 First we calculate the slope between the first two points. Then starting from the third one, we check if the slope with the previous point is same as the target one. To compare the slope, we can use multiplication instead of division to avoid divide-by-zero and precision issue.
 
+
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -68,5 +71,30 @@ public:
         return true;
     }
 };
+```
+
+</TabItem>
+
+<TabItem value="rs" label="Rust">
+<SolutionAuthor name="@wingkwong"/>
+
+```rs
+impl Solution {
+    pub fn check_straight_line(coordinates: Vec<Vec<i32>>) -> bool {
+        // y2 - y1 / x2 - x1 = y3 - y2 / x3 - x2
+        // = (y2 - y1) * (x3 - x2) = (y3 - y2) * (x2 - x1)
+        for w in coordinates.windows(3) {
+            if ((w[1][1] - w[0][1]) * (w[2][0] - w[1][0]) != (w[2][1] - w[1][1]) * (w[1][0] - w[0][0])) {
+                return false;
+            }
+        }
+        true
+    }
+}
+```
+
+</TabItem>
+
+</Tabs>
 ```
 

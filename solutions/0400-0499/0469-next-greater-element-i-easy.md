@@ -1,5 +1,5 @@
 ---
-description: 'Author: @heiheihang | https://leetcode.com/problems/next-greater-element-i/'
+description: 'Author: @heiheihang, @wingkwong | https://leetcode.com/problems/next-greater-element-i/'
 ---
 
 # 0469 - Next Greater Element I (Easy)
@@ -56,6 +56,8 @@ Then we need to find the _next greater element_ of all elements in `nums2`. This
 
 After processing `nums2`, we need to assign `-1` to the elements still in the stack (no _next greater element_) with the help of `hash_map`.
 
+<Tabs>
+<TabItem value="py" label="Python">
 <SolutionAuthor name="@heiheihang"/>
 
 ```python
@@ -114,3 +116,38 @@ def nextGreaterElement(self, nums1: List[int], nums2: List[int]) -> List[int]:
         #return result
         return result
 ```
+
+</TabItem>
+
+<TabItem value="rs" label="Rust">
+<SolutionAuthor name="@wingkwong"/>
+
+```rs
+use std::collections::HashMap;
+
+impl Solution {
+    pub fn next_greater_element(nums1: Vec<i32>, nums2: Vec<i32>) -> Vec<i32> {
+        let mut s = Vec::new();
+        let mut m = HashMap::new();
+        let mut ans = Vec::new();
+        for x in nums2 {
+            while let Some(&top) = s.last() {
+                if x <= top {
+                    break;
+                } 
+                m.insert(top, x);
+                s.pop();
+            }
+            s.push(x);
+        }
+        for x in nums1 { 
+            ans.push(m.get(&x).copied().unwrap_or(-1));
+        }
+        ans
+    }
+}
+```
+
+</TabItem>
+
+</Tabs>

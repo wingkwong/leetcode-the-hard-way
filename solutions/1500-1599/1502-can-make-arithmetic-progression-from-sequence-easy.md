@@ -41,6 +41,8 @@ Explanation: There is no way to reorder the elements to obtain an arithmetic pro
 
 We sort the array and calculate the first difference. Iterate the rest of the elements to check if they have the same difference between two elements.
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -63,3 +65,29 @@ public:
     }
 };
 ```
+
+</TabItem>
+
+<TabItem value="rs" label="Rust">
+<SolutionAuthor name="@wingkwong"/>
+
+```rs
+impl Solution {
+    pub fn can_make_arithmetic_progression(mut arr: Vec<i32>) -> bool {
+		// sort the arr first
+        arr.sort();
+		// then we focus on a window of size of 3
+        for w in arr.windows(3) {
+			// check if the difference between w[0] and w[1] and that between w[1] and w[2]  is same
+			// if not, then we cannot make an AP
+            if w[2] - w[1] != w[1] - w[0] {
+                return false;
+            }
+        }
+        true
+    }
+}
+```
+
+</TabItem>
+</Tabs>
