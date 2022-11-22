@@ -149,21 +149,20 @@ class Solution:
             if target == nums[mid]: 
                 return mid
             
-            # left sorted portion
+            # are we in left sorted portion or right sorted portion
             if nums[mid] >= nums[l]:
+                # we are in right sorted portion in this case
                 if target > nums[mid] or target < nums[l]:
-                    # search left
                     l = mid + 1
+                # we are in left sorted portion in this case
                 else:
-                    # search right
                     r = mid - 1 
-            # right sorted portion
             else:
+                # we are in left sorted portion in this case
                 if target < nums[mid] or target > nums[r]:
-                    # search left
                     r = mid - 1
+                # we are in right sorted portion in this case
                 else:
-                    # search right
                     l = mid + 1 
             
         return -1
