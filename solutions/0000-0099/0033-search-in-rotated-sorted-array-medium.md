@@ -131,13 +131,9 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
-</Tabs>
 
-
-## Approach 2: Two Pointers
-
-<Tabs>
 <TabItem value="python" label="Python">
 <SolutionAuthor name="@radojicic23"/>
 
@@ -155,7 +151,6 @@ class Solution:
             
             # left sorted portion
             if nums[mid] >= nums[l]:
-                # are we in left sorted portion or right sorted portion
                 if target > nums[mid] or target < nums[l]:
                     # search left
                     l = mid + 1
@@ -165,10 +160,10 @@ class Solution:
             # right sorted portion
             else:
                 if target < nums[mid] or target > nums[r]:
-                    #search left
+                    # search left
                     r = mid - 1
                 else:
-                    #search right
+                    # search right
                     l = mid + 1 
             
         return -1
