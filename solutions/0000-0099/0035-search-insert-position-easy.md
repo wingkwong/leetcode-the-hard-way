@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @ganajayant | https://leetcode.com/problems/search-insert-position/'
+description: 'Author: @wingkwong, @ganajayant, @radojicic23 | https://leetcode.com/problems/search-insert-position/'
 ---
 
 # 0035 - Search Insert Position (Easy)
@@ -46,6 +46,8 @@ Output: 4
 
 We can use STL to get the answer. lower_bound returns the first element which has a value not less than target. We need to subtract `nums.begin()` to get the index.
 
+<Tabs>
+<TabItem value="c++" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -56,6 +58,9 @@ public:
     }
 };
 ```
+
+</TabItem>
+</Tabs>
 
 ## Approach 2: Binary Search
 
@@ -110,5 +115,32 @@ class Solution {
     }
 }
 ```
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```python
+class Solution:
+    def searchInsert(self, nums: List[int], target: int) -> int:
+        left, right = 0, len(nums) - 1
+
+        while left <= right:
+            # find mid value
+            mid = (left + right) // 2
+            if nums[mid] == target:
+                return mid
+            # if mid value is less than target
+            elif nums[mid] < target:
+                # we are in right sorted portion
+                left = mid + 1
+            # if mid value is greater than target
+            else:
+                # we are in left sorted portion
+                right = mid - 1 
+        
+        return left 
+```
+
 </TabItem>
 </Tabs>
