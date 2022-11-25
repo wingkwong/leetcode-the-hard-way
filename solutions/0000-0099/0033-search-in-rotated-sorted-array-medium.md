@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @vigneshshiv |
+  Author: @vigneshshiv, @radojicic23 |
   https://leetcode.com/problems/search-in-rotated-sorted-array/
 ---
 
@@ -131,7 +131,42 @@ class Solution {
     }
 }
 ```
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```python
+class Solution:
+    def search(self, nums: List[int], target: int) -> int:
+        l, r = 0, len(nums) - 1
+    
+        while l <= r:
+            # mid value
+            mid = (l + r) // 2  
+            # if mid is target
+            if target == nums[mid]: 
+                return mid
+            
+            # are we in left sorted portion or right sorted portion
+            if nums[mid] >= nums[l]:
+                # we are in right sorted portion in this case
+                if target > nums[mid] or target < nums[l]:
+                    l = mid + 1
+                # we are in left sorted portion in this case
+                else:
+                    r = mid - 1 
+            else:
+                # we are in left sorted portion in this case
+                if target < nums[mid] or target > nums[r]:
+                    r = mid - 1
+                # we are in right sorted portion in this case
+                else:
+                    l = mid + 1 
+            
+        return -1
+```
+
 </TabItem>
 </Tabs>
-
-
