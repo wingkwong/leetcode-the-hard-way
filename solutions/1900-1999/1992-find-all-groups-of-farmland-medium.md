@@ -83,26 +83,36 @@ class Solution:
 
         def dfs(r, c , max_coords):
 
+            # if the row or col is out of bounds or already visited or is a forest just resturn
             if r < 0 or c < 0 or r >= n or c >= m or (r, c) in visited or land[r][c] == 0:
                 return
 
+            # update the visited coordinates in the set
             visited.add((r, c))
-            # update the ending coordinate of the farmland group
+            '''
+                update the ending coordinates in the array when ever
+                we find more connected farmlands and increase coordinates
+            '''
             max_coords[0] = max(max_coords[0], r)
             max_coords[1] = max(max_coords[1], c)
 
-            dfs(r + 1, c, max_coords)
-            dfs(r, c + 1, max_coords)
-            dfs(r - 1, c, max_coords)
-            dfs(r, c - 1, max_coords)
+            # traverse all 4 adjacent directions to find connected farmlands
+            for (del_row, del_col) in [(1, 0), (0, 1), (-1, 0), (0, -1)]:
+                dfs(del_row + r, del_col + c, max_coords)
 
         for i in range(n):
             for j in range(m):
                 # whenever we find a land, mark all its group as visited using dfs
                 if land[i][j] == 1 and (i, j) not in visited:
+                    # start is the array of indices where the farm land starts
                     start = [i, j]
+                    '''
+                        end is the array of indices where the farm land ends
+                        It gets updated in the dfs call
+                    '''
                     end = [-1, -1]
                     dfs(i, j, end)
+                    # once we have our start and end corrdinates just concantenate and add it to results
                     res.append(start + end)
         return res
 
