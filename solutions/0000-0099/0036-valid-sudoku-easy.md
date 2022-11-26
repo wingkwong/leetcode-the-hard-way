@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @vigneshshiv |
+  Author: @vigneshshiv, @radojicic23 |
   https://leetcode.com/problems/valid-sudoku/
 ---
 
@@ -110,8 +110,37 @@ class Solution {
 ```
 
 </TabItem>
-</Tabs>
 
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```python
+class Solution:
+    def isValidSudoku(self, board: List[List[str]]) -> bool:
+        cols = collections.defaultdict(set)
+        rows = collections.defaultdict(set)
+        squares = collections.defaultdict(set)
+        
+        for r in range(9):
+            for c in range(9):
+                # if it's empty skip it
+                if board[r][c] == ".":
+                    continue
+                # have we found a duplicate 
+                if (board[r][c] in rows[r] or 
+                    board[r][c] in cols[c] or 
+                    board[r][c] in squares[(r // 3, c // 3)]):
+                    return False
+                # if it is valid
+                cols[c].add(board[r][c])
+                rows[r].add(board[r][c])
+                squares[(r // 3, c // 3)].add(board[r][c])
+        # if we never detect duplicates
+        return True
+```
+
+</TabItem>
+</Tabs>
 
 ## Approach 2: Standard
 
