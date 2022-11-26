@@ -83,7 +83,7 @@ class Solution:
 
         def dfs(r, c , max_coords):
 
-            # if the row or col is out of bounds or already visited or is a forest just resturn
+            # if the row or col is out of bounds or already visited or is a forest just return
             if r < 0 or c < 0 or r >= n or c >= m or (r, c) in visited or land[r][c] == 0:
                 return
 
