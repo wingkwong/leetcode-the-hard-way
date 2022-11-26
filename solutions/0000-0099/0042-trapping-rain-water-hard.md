@@ -204,4 +204,46 @@ class Solution {
 ```
 
 </TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@ColeB2"/>
+
+```py
+# Time Complexity: O(N)
+# Space Complexity: O(N)
+class Solution:
+    def trap(self, height: List[int]) -> int:
+        # Utilize a monotonic decreasing stack, meaning everything in the stack
+        # will be ordered from tallest to shortest, and any incoming element
+        # taller than the top of the stack, has the potential to trap water.
+        # Note. We can only trap water if their are at least 2 items on the stack.
+        # 1 to provide the space to be filled, and 1 to the left of it to provide
+        # a boundary to hold the water.
+        stack = []
+        total_water = 0
+        # loop through height -> tracking right wall x coord, and right wall height.
+        for right_x, right_h in enumerate(height):
+            # stack exists & incoming wall height > top of the stacks wall height.
+            while stack and stack[-1][1] < right_h:
+                # get the floor of the area to be filled, to prevent double 
+                # filling already filled holes or filling an area that should be a wall.
+                _,floor = stack.pop()                  
+                # Empty stack means no left wall to trap water, so water runs off.
+                if stack:
+                    # left wall x pos, left wall height.
+                    left_x, left_h = stack[-1]
+                    # distance between both walls.
+                    w = (right_x-left_x)-1
+                    # height of area to be filled.   
+                    h = min(left_h, right_h) - floor
+                    # water created
+                    water = w*h
+                    #add water to total water variable.
+                    total_water += water
+            # Add incoming wall to the stack.
+            stack.append((right_x,right_h)) 
+        return total_water
+```
+
+</TabItem>
 </Tabs>
