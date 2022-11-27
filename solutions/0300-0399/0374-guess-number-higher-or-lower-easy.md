@@ -56,6 +56,8 @@ Output: 1
 
 See [Binary Search](../../tutorials/basic-topics/binary-search) for basic understanding.
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -88,3 +90,48 @@ public:
     }
 };
 ```
+
+</TabItem>
+
+<TabItem value="rs" label="Rust">
+<SolutionAuthor name="@wingkwong"/>
+
+```rs
+impl Solution {
+    unsafe fn guessNumber(n: i32) -> i32 {
+        let mut l = 1;
+        let mut r = n;
+        while l < r {
+            let m = l + (r - l) / 2;
+            let x = guess(m);
+            if x == 1 {
+                l = m + 1;
+            } else {
+                r = m;
+            }
+        }
+        l
+    }
+}
+```
+
+```rs
+impl Solution {
+    unsafe fn guessNumber(n: i32) -> i32 {
+        let mut l = 1;
+        let mut r = n;
+        loop {
+            let m = l + (r - l) / 2;
+            match guess(m) {
+                -1 => r = m - 1,
+                1 => l = m + 1,
+                _ => return m
+                
+            };
+        }
+    }
+}
+```
+
+</TabItem>
+</Tabs>
