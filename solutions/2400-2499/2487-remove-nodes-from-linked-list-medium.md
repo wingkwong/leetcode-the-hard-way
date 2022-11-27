@@ -1,6 +1,6 @@
 ---
 description: "Author: @dhanu084 | https://leetcode.com/problems/remove-nodes-from-linked-list/"
-tags: [Linked List]
+tags: [Linked List, Stack]
 ---
 
 # 2487 - Remove Nodes From Linked List (Medium)
@@ -92,6 +92,42 @@ class Solution:
         head = reverse(reverse_head)
         return head
 
+```
+
+</TabItem>
+</Tabs>
+
+## Approach 2: Stack
+
+Time Complexity: $$O(n)$$
+
+Space Complexity: $$O(n)$$ if all nodes have same value
+
+<Tabs>
+<TabItem value="py" label="Python">
+
+<SolutionAuthor name="@dhanu084" />
+
+```python
+class Solution:
+    def removeNodes(self, head: Optional[ListNode]) -> Optional[ListNode]:
+
+        '''
+            * Idea here is to create a stack which is monotonously decreasing,
+            any thing that defers are popped from the stack
+            * as and when we append or remove from stack we update
+            next pointer appropriately
+        '''
+        dummy = ListNode(inf)
+        stack = [dummy]
+
+        while head:
+            while stack and stack[-1].val < head.val:
+                stack.pop()
+            stack[-1].next = head
+            stack.append(head)
+            head = head.next
+        return dummy.next
 ```
 
 </TabItem>
