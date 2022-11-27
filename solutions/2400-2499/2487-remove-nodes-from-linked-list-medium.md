@@ -113,7 +113,7 @@ class Solution:
     def removeNodes(self, head: Optional[ListNode]) -> Optional[ListNode]:
 
         '''
-            * Idea here is to create a stack which is monotonously increasing,
+            * Idea here is to create a stack which is monotonously decreasing,
             any thing that defers are popped from the stack
             * as and when we append or remove from stack we update
             next pointer appropriately
