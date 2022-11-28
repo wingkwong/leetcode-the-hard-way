@@ -89,4 +89,30 @@ class Solution {
 ```
 
 </TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@ColeB2"/>
+
+```py
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        # initialize buy_price as first price in prices, and a max_profit of 0.
+        buy_price = prices[0]
+        max_profit = 0
+        # iterate through all prices.
+        # note we start at 1, as we already "bought" the first stock.
+        for i in range(1, len(prices)):
+            # get current price we are looking at.
+            cur_price = prices[i]
+            # calculate current profit, by subtracting our buy price from our current price.
+            cur_profit = cur_price - buy_price
+            # update our max profit, using max profit, and current profit we calculated.
+            max_profit = max(max_profit, cur_profit)
+            # update the price to be the minimum of the price we bought at, and current price.
+            buy_price = min(buy_price, cur_price)
+        # return our answer.
+        return max_profit
+```
+
+</TabItem>
 </Tabs>
