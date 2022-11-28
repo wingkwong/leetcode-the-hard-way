@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/permutations/'
+description: 'Author: @wingkwong, @radojicic23 | https://leetcode.com/problems/permutations/'
 ---
 
 # 0046 - Permutations (Medium)
@@ -43,6 +43,8 @@ Output: [[1]]
 
 Use C++ STL `next_permutation` to generate all possible permutations.
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -59,10 +61,15 @@ public:
 };
 ```
 
+</TabItem>
+</Tabs>
+
 ## Approach 2: Backtracking
 
 Check out [Backtracking](../../tutorials/basic-topics/backtracking) section for the detailed explanation.
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -90,3 +97,31 @@ public:
     }
 };
 ```
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```python 
+class Solution:
+    def permute(self, nums: List[int]) -> List[List[int]]:
+        res = []
+
+        if (len(nums) == 1):
+            return [nums.copy()]
+        
+        for i in range(len(nums)):
+            n = nums.pop(0)
+            perms = self.permute(nums)
+
+            for perm in perms:
+                perm.append(n)
+            res.extend(perms)
+            nums.append(n)
+        
+        return res 
+```
+
+</TabItem>
+</Tabs>
