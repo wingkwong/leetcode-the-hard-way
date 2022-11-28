@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/combination-sum/'
+description: 'Author: @wingkwong, @radojicic23 | https://leetcode.com/problems/combination-sum/'
 ---
 
 # 0039 - Combination Sum (Medium)
@@ -56,6 +56,8 @@ First, we sort the array and build our candidates incrementally. We iterate from
 
 If we have a valid solution, we push `tmp` to answer and abandon a candidate.
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -81,3 +83,31 @@ public:
     }
 };
 ```
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```python
+class Solution:
+    def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
+        res = []
+
+        def dfs(i, curr, total):
+            if total == target:
+                res.append(curr.copy())
+                return 
+            if i >= len(candidates) or total > target:
+                return 
+            curr.append(candidates[i])
+            dfs(i, curr, total + candidates[i])
+            curr.pop()
+            dfs(i + 1, curr, total)
+        
+        dfs(0, [], 0)
+        return res 
+```
+
+</TabItem>
+</Tabs>
