@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @ganajayant | https://leetcode.com/problems/group-anagrams/'
+description: 'Author: @wingkwong, @ganajayant, @radojicic23 | https://leetcode.com/problems/group-anagrams/'
 tags: ['Array', 'Hash Table', 'String', 'Sorting']
 ---
 
@@ -117,6 +117,26 @@ class Solution {
     }
 }
 ```
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```python
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        hashmap = defaultdict(list)
+        res = []
+
+        for word in strs:
+            sorted_word = ''.join(sorted(word))
+            hashmap[sorted_word].append(word)
+
+        for i in hashmap:
+            res.append(hashmap[i])
+        return res
+```
+
 </TabItem>
 </Tabs>
 
