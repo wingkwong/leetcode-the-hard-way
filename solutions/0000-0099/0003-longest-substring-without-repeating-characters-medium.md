@@ -110,6 +110,44 @@ var lengthOfLongestSubstring = function (s) {
 };
 ```
 </TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@ColeB2"/>
+
+```py
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        # initiate variables, left pointer of our window, right pointer of 
+        # our window, and longest to track longest length of our window.
+        l, r, longest = 0,0,0
+        # create a hash set for O(1) access of letters inside our window.
+        window = set()
+        # While loop to expand right side of our sliding window.
+        while r < len(s):
+            # character @ right isn't in window, add it to the window.
+            if s[r] not in window:
+                # add character to the window set.
+                window.add(s[r])
+                # update our longest 
+                # note: we add 1 as a window of size 1, will share indexes,
+                # ex. 0-0 = 0.
+                longest = max(longest, (r-l)+1)
+                # slide right side of our window forward.
+                r += 1
+            # else handles the condition of the character is in our window set.
+            # so we remove the left character and slide left side pointer forward.
+            # If the left isn't the repeating digit, it will be handled by this condition
+            # as the if statement will be false again, so we will return here to continually
+            # pop left character until we have a non-duplicate unique character set.
+            else:
+                # remove left character of window
+                window.remove(s[l])
+                # move left side of window forward.
+                l += 1
+        # return answer.
+        return longest
+```
+</TabItem>
 </Tabs>
 
 
