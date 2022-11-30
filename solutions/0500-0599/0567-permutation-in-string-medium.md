@@ -40,6 +40,8 @@ The solution is almost same as [0438 - Find All Anagrams in a String (Medium)](.
 
 We first use a hash map $$target$$ count the occurrences for each character in $$s1$$. Then we apply sliding window. We use a pointer $$i$$ to track the window starting point and use a pointer $$j$$ to track the window ending point in $$s2$$. We increase the pointer $$j$$ to count the occurrences in $$s2$$ and put the result in another hash map $$now$$ until the window size $$j - i + 1$$ is equal to the length of $$s1$$. Then we compare if both hash maps are identical. If so, return the answer immediately. If not, then we need to remove the leftmost element within this window. Continue the same process until the pointer $$i$$ reaches the end of the string.
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -95,3 +97,76 @@ public:
     }
 };
 ```
+
+</TabItem>
+</Tabs>
+
+
+## Approach 2: Sliding Window - Track Matches
+
+Similar to Approach 1 but with a slight improvement. We will still create a sliding window, and a hash map to count the characters in $$s1$$. But, instead of creating a second hash map to count the characters in $$s2$$, we will use the first hash map, and just decrement the count every time a character comes into our window, and increment a $$matches$$ variable when ever the counter's character count for that character reaches 0. (Must also then decrement $$matches$$ when the character count is no longer 0). Thus removing the need to do a worst case, $O(26)$ check of both counters on each iteration to check that they are equal.
+
+
+Time Complexity: $O(n+m)$ where $$n$$ is the length of $$s2$$, and $$m$$ is the length of $$s1$$.
+
+Space Complexity: $O(c)$ where $$c$$ is the unique number of characters in $$s1$$ to create our hash map.
+
+<Tabs>
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@ColeB2"/>
+
+```py
+class Solution:
+    def checkInclusion(self, s1: str, s2: str) -> bool:
+        # We are going to create a counter to count the letters of s1, then
+        # as we come accross them in s2, decrement them. If we ever reach
+        # a point, where all out values in the counter reach 0, we know we
+        # have a window with all the proper character in it and can return True.
+        # 1. Build a hash map that contains count of all characters in s1.
+        # Note: we could also use collections.Counter(s1) as a python built
+        # in, both should take O(m) time, where m is the length of s1.
+        counter = {}
+        for ch in s1:
+            if ch not in counter:
+                counter[ch] = 0
+            counter[ch] += 1
+        # Initialize variables to track number of matches, that our window
+        # has with s1, and window_size, length of s1.
+        matches = 0
+        window_size = len(s1)
+        # Loop through all the letters in s2, tracking i, the index and ch
+        # which is the character directly coming into our sliding window.
+        for i, ch in enumerate(s2):
+            # check that the incoming character is a character in our counter.
+            if ch in counter:
+                # decrement the counter, as it matches with our window.
+                counter[ch] -= 1
+                # if number of characters reaches 0, we know we have the same amount
+                # of characters in s1, as we do our window sliding across s2. 
+                if counter[ch] == 0:
+                    # So we increment matches.
+                    matches += 1
+            # Check that window we created is proper size to have letters start leaving window.
+            if i >= window_size:
+                # Set variable to left character, which is character leaving the window.
+                left_ch = s2[i-window_size]
+                # Check that the leaving character is in our counter, if not, we don't need to do anything.
+                if left_ch in counter:
+                    # Leaving character is in s1, so now we check if our count of characters is 0.
+                    # If it is 0, we know that the leaving character caused our
+                    # window to no longer have same number of ch as s1. 
+                    if counter[left_ch] == 0:
+                        # So we decrement matches.
+                        matches -= 1
+                    # Increment counter, since the letter we needed, left the window.
+                    counter[left_ch] += 1
+            # check that the number of matches is equal to the size of our counter.
+            # Note we use len(counter) as string "aabbcc" produce a counter of size 3.
+            if matches == len(counter):
+                return True
+        # We made it through without triggering true, return False.
+        return False
+```
+
+</TabItem>
+</Tabs>
