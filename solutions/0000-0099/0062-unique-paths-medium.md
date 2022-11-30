@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @ganajayant | https://leetcode.com/problems/unique-paths/'
+description: 'Author: @wingkwong, @ganajayant, @radojicic23 | https://leetcode.com/problems/unique-paths/'
 ---
 
 # 0062 - Unique Paths (Medium)
@@ -100,5 +100,26 @@ class Solution {
     }
 }
 ```
+</TabItem>
+</Tabs>
+
+## Approach 3: Dynamic programming (Bottom Up)
+
+<Tabs>
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```python
+class Solution:
+    def uniquePaths(self, m: int, n: int) -> int:
+        row = [1] * n
+        for i in range(m - 1):
+            new_row = [1] * n
+            for j in range(n - 2, -1, -1):
+                new_row[j] = new_row[j + 1] + row[j]
+            row = new_row
+        return row[0]
+```
+
 </TabItem>
 </Tabs>
