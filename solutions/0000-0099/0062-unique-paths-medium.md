@@ -118,7 +118,7 @@ class Solution:
         # go through all rows exept the last one
         for i in range(m - 1):
             new_row = [1] * n
-            # go through every column exept the right most column 
+            # go through every column except the right most column 
             # because the last value in every row is 1
             # start at second to last position and 
             # keep going until we get to the beginning (reverse order)
