@@ -110,13 +110,22 @@ class Solution {
 <SolutionAuthor name="@radojicic23"/>
 
 ```python
+# Time Complexity: O(n * m)
+# Space Complexity: O(n)
 class Solution:
     def uniquePaths(self, m: int, n: int) -> int:
         row = [1] * n
+        # go through all rows exept the last one
         for i in range(m - 1):
             new_row = [1] * n
+            # go through every column exept the right most column 
+            # because the last value in every row is 1
+            # start at second to last position and 
+            # keep going until we get to the beginning (reverse order)
             for j in range(n - 2, -1, -1):
+                # right value + value below
                 new_row[j] = new_row[j + 1] + row[j]
+            # update the row
             row = new_row
         return row[0]
 ```
