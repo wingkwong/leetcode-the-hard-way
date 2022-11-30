@@ -1,5 +1,5 @@
 ---
-description: "Author: @aryankashyap7 | https://leetcode.com/problems/climbing-stairs/"
+description: "Author: @aryankashyap7, @radojicic23 | https://leetcode.com/problems/climbing-stairs/"
 tags: [Math, Dynamic Programming, Memoization]
 ---
 
@@ -75,6 +75,33 @@ public:
         return res;
     }
 };
+```
+
+</TabItem>
+</Tabs>
+
+## Approach 2: Dynamic programming (Bottom Up)
+
+<Tabs>
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```python
+# Time Complexity: O(n)
+# Space Complexity: O(1)
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        p1, p2 = 1, 1 
+        
+        # loop through n - 1 times 
+        for i in range(n - 1):
+            # temporary variable
+            temp = p1 
+            # update p1 variable
+            p1 = p1 + p2 
+            # shift p2 to whatever the previous value of p1 was
+            p2 = temp 
+        return p1
 ```
 
 </TabItem>
