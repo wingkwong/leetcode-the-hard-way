@@ -123,6 +123,87 @@ class Solution {
 ```
 
 </TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@ColeB2"/>
+
+```py
+class Solution:
+    # We are going to create a counter to count the characters of t, then as 
+    # we come across them in s, decrement the count in our counter. If count
+    # for that character is <= 0, we have more than enough characters in our
+    # window to equal t. so we can increment a matches variable to track that.
+    # Knowing that our goal is to:
+    # 1. add characters to our window, and then update the counter, and matches.
+    # remembering that matches increments when the count of the characters in our
+    # window reaches 0.
+    # 2. Check to see if our window has all characters we need.
+    # If so, we set our window to the current window, and start shrinking it to see
+    # if it still remains true while shrinking. While shrinking, if the count of
+    # the characters ever goes back positive, we know that we no longer have enough
+    # characters inside our window to match t, so we can decrement matches, and stop
+    # shrinking the window.
+    # Repeat the above process until our window's right side expands to larger than s.
+    def minWindow(self, s: str, t: str) -> str:
+        # Early Return if t is larger than s, we obviously can't find t in s.
+        if len(t) > len(s): return ""
+        #Create counter to count all characters in t. O(n) time where n length of t.
+        counter = {}
+        for ch in t:
+            if ch not in counter:
+                counter[ch] = 0
+            counter[ch] += 1
+        # Initialize variables create out sliding window. l to track left
+        # side of our window starting at 0, matches to track the characters
+        # we have enough of inside our window to match t, and an initial variable
+        # to where our window will start, and how large it is. We use -1 to show
+        # we don't have a window started that is valid yet, and len(s) + 1 as a 
+        # window that will be large enough than any window we find, if we find one
+        # will be smaller than it, and therefore trigger our update condition.
+        l = 0
+        matches = 0
+        window_start = -1
+        window_size = len(s) + 1
+        # Expand our window tracking r, right side window, and incoming character, ch.
+        # O(m) time to look through the string s. Where m is length of s.
+        for r, ch in enumerate(s):
+            # Check expanded window incoming character is in counter so we can add it.
+            if ch in counter:
+                counter[ch] -= 1
+                # If count for ch reaches 0, we have more than enough character to match it.
+                if counter[ch] == 0:
+                    matches += 1
+            # Check that the window has all the characters it needs, while it does,
+            # shrink the window until it doesn't have all characters it needs.
+            while len(counter) == matches:
+                # get current window size
+                current_window_size = (r-l) + 1
+                # check current window < smallest window found.
+                if current_window_size < window_size:
+                    # update size of smallest window we found.
+                    window_size = current_window_size
+                    # update start of window we found.
+                    window_start = l
+                # start the removal of the left character, ie moving window forward.
+                left_ch = s[l]
+                # if left ch is a character we need to match t, 
+                if left_ch in counter:
+                    # check to see if we have 0 for a count of that character.
+                    # if we do, we know by removing it, we will no longer have enough
+                    # characters to match to t.
+                    if counter[left_ch] == 0:
+                        matches -= 1
+                    # remove ch from window, by incrementing its count.
+                    counter[left_ch] += 1
+                # move the window forward.
+                l += 1
+        # return the answer by slicing. string from our start point to start point + size
+        # only do this if we found a valid window. Note slicing in python takes O(n)
+        # where n is length of s, to copy the string, then slice it properly.
+        return s[window_start: window_start + window_size] if window_start != -1 else ""
+```
+
+</TabItem>
 </Tabs>
 
 
