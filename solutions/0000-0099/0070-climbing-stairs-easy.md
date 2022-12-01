@@ -82,6 +82,10 @@ public:
 
 ## Approach 2: Dynamic programming (Bottom Up)
 
+![Drawing Explanation](https://user-images.githubusercontent.com/104728490/205086934-34540b19-07b6-4655-9337-d295a4b368d3.png)
+
+In this explanation we are using extra memory (we are having an entire array) and that's going to be $O(n)$ extra memory, but in reality we don't need to have an entire array we just need to have two different variables. If we initialize two variables ($p1$, $p2$) as values $1$, we have to compute $n - 1$ values (we have to loop through $n - 1$ times). This is always going to be the case no matter what the $n$ input value is (if we have something like for example 10, 100, 1000, ...).
+
 <Tabs>
 <TabItem value="python" label="Python">
 <SolutionAuthor name="@radojicic23"/>
