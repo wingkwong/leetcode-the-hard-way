@@ -61,7 +61,7 @@ A possible solution can be based on three main checks:
 
 1. Making sure both strings $word1$ and $word2$ have the same length as neither operation would work correctly if they had different lengths.
 
-2. Checking if the occurrences of each characters frequency are the same for both strings. For example, $word1 = 'aabbcccc'$ and $word2 = 'aabcbcaa'$ have the same number of occurrences in their character frequencies or, in other words, the same frequency of frequencies. So we would have the characters frequency of $word1$ as ${'c': 4, 'a': 2, 'b': 2}$ and the frequency of its frequencies would be ${2: 2, 4: 1}$. For $word2$ the characters frequency would be ${'a': 4, 'b': 2, 'c': 2}$ and its frequency of frequencies would be the same as $word1$, ${2: 2, 4: 1}$.
+2. Checking if the occurrences of each characters frequency are the same for both strings. For example, $word1 = 'aabbcccc'$ and $word2 = 'aabcbcaa'$ have the same number of occurrences in their character frequencies or, in other words, the same frequency of frequencies. So the characters frequency of $word1$ would be {'c': 4, 'a': 2, 'b': 2} and the frequency of its frequencies would be {2: 2, 4: 1}. For $word2$ the characters frequency would be {'a': 4, 'b': 2, 'c': 2} and its frequency of frequencies would be the same as $word1$, { 2: 2, 4: 1 }.
 
 3. The last one is checking if all existing characters in one string also exist in the other string. For example, $word1 = 'aabbzzzz'$ and $word2 = 'aabcbcaa'$ attend the second check related to the characters frequency. However the strings are not composed of the same characters ('z' doesn't exist in $word2$ just as 'c' doesn't exist in $word1$) and this is something that none of the operations described in the problem statement can solve.
 
