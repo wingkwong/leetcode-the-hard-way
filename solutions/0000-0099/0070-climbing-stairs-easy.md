@@ -78,34 +78,28 @@ public:
 ```
 
 </TabItem>
-</Tabs>
 
-## Approach 2: Dynamic programming (Bottom Up)
-
-![Drawing Explanation](https://user-images.githubusercontent.com/104728490/205086934-34540b19-07b6-4655-9337-d295a4b368d3.png)
-
-In this explanation we are using extra memory (we are having an entire array) and that's going to be $O(n)$ extra memory, but in reality we don't need to have an entire array we just need to have two different variables. If we initialize two variables ($p1$, $p2$) as values $1$, we have to compute $n - 1$ values (we have to loop through $n - 1$ times). This is always going to be the case no matter what the $n$ input value is (if we have something like for example 10, 100, 1000, ...).
-
-<Tabs>
 <TabItem value="python" label="Python">
 <SolutionAuthor name="@radojicic23"/>
 
 ```python
-# Time Complexity: O(n)
-# Space Complexity: O(1)
 class Solution:
     def climbStairs(self, n: int) -> int:
-        p1, p2 = 1, 1 
-        
-        # loop through n - 1 times 
-        for i in range(n - 1):
-            # temporary variable
-            temp = p1 
-            # update p1 variable
-            p1 = p1 + p2 
-            # shift p2 to whatever the previous value of p1 was
-            p2 = temp 
-        return p1
+        # base case 
+        if n < 4: 
+            return n
+        # apply Fibonacci Series where a and b are the previous two numbers
+        a, b = 2, 3
+        res = 0
+        # calculate the number of ways to reach the n^{th} step
+        for i in range(4, n+1):
+            res = a + b
+            # updating the values of a and b
+            if (i % 2 == 0):
+                a = res 
+            else:
+                b = res 
+        return res 
 ```
 
 </TabItem>
