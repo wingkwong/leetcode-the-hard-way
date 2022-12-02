@@ -55,9 +55,9 @@ Apply Operation 2: "baaccc" -> "abbccc"
 - `1 <= word1.length, word2.length <= 105`
 - `word1` and `word2` contain only lowercase English letters.
 
-## Approach 1: Comparing the strings: length, characters frequency and existing characters
+## Approach 1: Comparing the strings (length, frequency and existing characters)
 
-A possible solution is based on three main checks:
+A possible solution can be based on three main checks:
 
 1. Making sure both strings $word1$ and $word2$ have the same length as neither operation would work correctly if they had different lengths.
 
