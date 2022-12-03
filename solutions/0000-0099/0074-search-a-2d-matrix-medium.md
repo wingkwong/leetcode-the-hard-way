@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @ganajayant| https://leetcode.com/problems/search-a-2d-matrix/'
+description: 'Author: @wingkwong, @ganajayant, @radojicic23| https://leetcode.com/problems/search-a-2d-matrix/'
 tags: [Array, Binary Search, Matrix]
 ---
 
@@ -101,5 +101,58 @@ class Solution {
     }
 }
 ```
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```python
+# Time Complexity: O(log n)
+# Space Complexity: O(1)
+class Solution:
+    def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
+        # initialize rows and cols 
+        rows, cols = len(matrix), len(matrix[0]) 
+        # top row and bottom row
+        top, bot = 0, rows - 1
+        
+        # binary search
+        while top <= bot: 
+            # compute the middle row
+            mid = (top + bot) // 2
+            # if this target value is greater then 
+            # the largest value in the middle row
+            if target > matrix[mid][-1]:
+                # look at rows with larger value
+                top = mid + 1
+            # if this target value is smaller then 
+            # the smallest value in this row
+            elif target < matrix[mid][0]:
+                # look at rows with smaller value
+                bot = mid - 1
+            else:
+                break 
+            
+        if not (top <= bot):
+            return False
+        
+        # second binary search portion
+        # run binary search on the current (middle row)
+        mid = (top + bot) // 2
+        # leftmost value and rightmost value
+        l, r = 0, cols - 1
+        while l <= r:
+            # compute the middle value
+            m = (l + r) // 2
+            if target > matrix[mid][m]:
+                l = m + 1
+            elif target < matrix[mid][m]:
+                r = m - 1
+            else:
+                return True
+        
+        return False
+```
+
 </TabItem>
 </Tabs>
