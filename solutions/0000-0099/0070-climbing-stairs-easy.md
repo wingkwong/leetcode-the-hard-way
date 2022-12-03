@@ -1,5 +1,5 @@
 ---
-description: "Author: @aryankashyap7 | https://leetcode.com/problems/climbing-stairs/"
+description: "Author: @aryankashyap7, @radojicic23 | https://leetcode.com/problems/climbing-stairs/"
 tags: [Math, Dynamic Programming, Memoization]
 ---
 
@@ -75,6 +75,31 @@ public:
         return res;
     }
 };
+```
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```python
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        # base case 
+        if n < 4: 
+            return n
+        # apply Fibonacci Series where a and b are the previous two numbers
+        a, b = 2, 3
+        res = 0
+        # calculate the number of ways to reach the n^{th} step
+        for i in range(4, n+1):
+            res = a + b
+            # updating the values of a and b
+            if (i % 2 == 0):
+                a = res 
+            else:
+                b = res 
+        return res 
 ```
 
 </TabItem>
