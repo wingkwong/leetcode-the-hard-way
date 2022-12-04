@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wingkwong | https://leetcode.com/problems/minimum-average-difference/'
+tags: [Array, Prefix Sum]
 ---
 
 # 2256 - Minimum Average Difference (Medium)
@@ -63,15 +64,20 @@ class Solution {
 public:
     int minimumAverageDifference(vector<int>& nums) {
         int ans = 0, n = nums.size(), mi = INT_MAX;
-        // calculate prefix sum
-        vector<long long> prev(n + 1);
-        prev[0] = nums[0];
-        for (int i = 1; i < n; i++) prev[i] = prev[i - 1] + nums[i];
+        // since we need the sum for first i + 1 and last n - i - 1 elements
+        // we can pre-calculate it first
+        // it is called prefix sum and suffix sum
+        vector<long long> pref(n);
+        // prev[0] is the first element
+        pref[0] = nums[0];
+        // starting from i = 1, pref[i] is the sum + the current element
+        for (int i = 1; i < n; i++) pref[i] = pref[i - 1] + nums[i];
+        // then we can iterate each number
         for (int i = 0; i < n; i++) {
-            // split into two parts
-            long long k = abs((prev[i] / (i + 1)) - 
-                ((prev[n - 1] - prev[i]) / max(n - i - 1, 1)));
-            // track the min avg difference
+            // now we know the prefix sum
+            // the suffix sum is simply pref[n - 1] - pref[i]
+            long long k = abs((pref[i] / (i + 1)) - ((pref[n - 1] - pref[i]) / max(n - i - 1, 1)));
+            // check the min and update ans
             if (k < mi) {
                 mi = k;
                 ans = i;
