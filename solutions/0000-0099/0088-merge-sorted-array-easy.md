@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @deepanshu-rawat6, @vigneshshiv |
+  Author: @deepanshu-rawat6, @vigneshshiv, @radojicic23 |
   https://leetcode.com/problems/merge-sorted-array/
 tags: [Array, Two Pointers, Sorting]
 ---
@@ -80,6 +80,21 @@ class Solution {
 }
 ```
 </TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```python
+class Solution:
+    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+        # adding elements of nums2 at empty places of nums1
+        for i in range(n):
+            nums1[m + i] = nums2[i]
+        # sort nums1
+        nums1.sort()
+```
+
+</TabItem>
 </Tabs>
 
 ## Approach 2: Two Pointers
@@ -126,6 +141,35 @@ class Solution {
 }
 ```
 </TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```python
+class Solution:
+    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+        # last element of nums1
+        last = m + n - 1
+
+        # merge them in reverse order 
+        while m > 0 and n > 0:
+            # find the largest value 
+            if nums1[m - 1] > nums2[n - 1]:
+                nums1[last] = nums1[m - 1]
+                m -= 1
+            else:
+                nums1[last] = nums2[n - 1]
+                n -= 1
+            last -= 1
+        # edge case 
+        # fill nums1 with leftover nums2 elements
+        while n > 0:
+            nums1[last] = nums2[n - 1]
+            n -= 1
+            last -= 1
+```
+
+</TabItem>
 </Tabs>
 
 ## Approach 3: Two Pointers In-place (Optimal)
@@ -161,4 +205,3 @@ class Solution {
 ```
 </TabItem>
 </Tabs>
-
