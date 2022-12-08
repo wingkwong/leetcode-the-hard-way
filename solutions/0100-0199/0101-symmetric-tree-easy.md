@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @vigneshshiv | https://leetcode.com/problems/symmetric-tree/'
+description: 'Author: @wingkwong, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/symmetric-tree/'
 ---
 
 # 0101 - Symmetric Tree (Easy)
@@ -108,6 +108,35 @@ class Solution {
         return areSymmetric(root1.left, root2.right) && areSymmetric(root1.right, root2.left);
     }
 }
+```
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def isSymmetric(self, root: Optional[TreeNode]) -> bool:
+        if not root:
+            return True 
+        def is_mirror(left, right):
+            # if both nodes are None
+            if not left and not right: return True
+            # if one of them are None
+            if not left or not right: return False
+            # if their values and sub nodes are same
+            if left.val == right.val:
+                return (is_mirror(left.left, right.right) and 
+                        is_mirror(left.right, right.left))
+            return False
+        return is_mirror(root.left, root.right)
 ```
 
 </TabItem>
