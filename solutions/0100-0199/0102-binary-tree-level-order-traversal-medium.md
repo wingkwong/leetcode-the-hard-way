@@ -1,5 +1,5 @@
 ---
-description: 'Author: @Srijita-Mandal | https://leetcode.com/problems/binary-tree-level-order-traversal/'
+description: 'Author: @Srijita-Mandal, @radojicic23 | https://leetcode.com/problems/binary-tree-level-order-traversal/'
 tags: [Tree, Breadth-First Search, Binary Tree]
 ---
 
@@ -97,6 +97,49 @@ class Solution {
         return ans;
     }
 };
+```
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
+        res = []
+        # initialize queue
+        q = collections.deque()
+        # add root node that we are given in queue
+        q.append(root)
+        
+        # BFS
+        while q:
+            level = []
+            # going through one level at a time 
+            # with those nodes from that level
+            # we are going to add them to it's own list (level)
+            # and we are going to add that list to the result 
+            for i in range(len(q)):
+                # pop nodes from the left of the queue
+                node = q.popleft()
+                # if node is not empty 
+                if node:
+                    level.append(node.val)
+                    # add children of this node to queue
+                    q.append(node.left)
+                    q.append(node.right)
+            # if level is not empty
+            if level:
+                # add level to the result 
+                res.append(level)
+        return res 
 ```
 
 </TabItem>
