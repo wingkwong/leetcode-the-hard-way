@@ -147,6 +147,40 @@ class Solution {
 }
 ```
 </TabItem>
+
+<TabItem value="javascript" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```javascript
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number[]}
+ */
+var res = []
+var preorderTraversal = function(root) {
+    let res = [];
+    function dfs(node) {
+        if (node == null) {
+            return;
+        }
+        res.push(node.val);
+        dfs(node.left);
+        dfs(node.right);
+    }
+    dfs(root);
+    return res;
+};
+```
+
+</TabItem>
 </Tabs>
 
 ## Approach 2: Iterative
