@@ -49,8 +49,10 @@ Explanation: There is no such common subsequence, so the result is 0.
 
 ## Approach 1: DP
 
-LCS is a classic problem. Let $$dp[i][j]$$ be the LCS for string $$text1$$ends at index $$i$$ and string $$text2$$ends at index $$j$$. If $$text1[i] == text2[j]$$, then $$dp[i][j]$$ would be $$1  +dp[i - 1][j - 1]$$. Otherwise, we target the largest LCS if we skip one character from either text1 or text2, i.e. $$dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])$$.
+LCS is a classic problem. Let $dp[i][j]$ be the LCS for string $text1$ ends at index $i$ and string $text2$ ends at index $j$. If $text1[i] == text2[j]$, then $dp[i][j]$ would be $1 + dp[i - 1][j - 1]$. Otherwise, we target the largest LCS if we skip one character from either $text1$ or $text2$, i.e. $dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])$.
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -72,3 +74,43 @@ public:
     }
 };
 ```
+
+</TabItem>
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@deepanshu-rawat6"/>
+
+```java
+class Solution {
+    public int longestCommonSubsequence(String text1, String text2) {
+        int m = text1.length();
+        int n = text2.length();
+        // dp[][] array for storing records of every charcters
+        int[][] dp = new int[m + 1][n + 1];
+        for (int i = 0; i <= m; i++) {
+            for (int j = 0; j <= n; j++) {
+                if (i == 0 || j ==0) {
+                    // setting first row and first column to be zero(initial readings)
+                    dp[i][j] = 0;
+                } else if (text1.charAt(i - 1) == text2.charAt(j - 1)) {
+                    /*
+                    if match found, then store value of previous diagonal element(dp[i - 1][j - 1]) 
+                    and increase the value by 1 i.e. a new character match is found
+                    */
+                    dp[i][j] = dp[i - 1][j - 1] + 1;
+                } else {
+                    /*
+                    otherwise, choose maximum of either previous element, either in 
+                    row(dp[i][j -1]) or column(dp[i][j - 1])
+                    */
+                    dp[i][j] = Math.max(dp[i][j - 1],dp[i - 1][j]);
+                }
+            }
+        }
+        // dp[m][n] would hold the value of the LCS obtained
+        return dp[m][n];
+    }
+}
+```
+
+</TabItem>
+</Tabs>
