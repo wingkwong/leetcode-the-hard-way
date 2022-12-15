@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/longest-common-subsequence/'
+description: 'Author: @wingkwong , @deepanshu-rawat6 | https://leetcode.com/problems/longest-common-subsequence/'
+tags: [String, Dynamic Programming]
 ---
 
 # 1143 - Longest Common Subsequence (Medium)
