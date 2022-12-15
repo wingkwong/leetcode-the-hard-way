@@ -2,7 +2,7 @@
 description: 'Author: @ColeB2 | https://leetcode.com/problems/koko-eating-bananas/'
 ---
 
-# 0875 Koko Eating Bananas
+# 0875 - Koko Eating Bananas
 
 ## Problem Link
 
