@@ -143,4 +143,48 @@ class Solution:
 ```
 
 </TabItem>
+
+<TabItem value="javascript" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```javascript
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number[][]}
+ */
+var levelOrder = function(root) {
+    let q = [root];
+    let res = [];
+    // BFS
+    while (q[0]) {
+        let level = [];
+        let q_len = q.length;
+        // going through one level at a time 
+        // with those nodes from that level
+        // we are going to add them to it's own list (level)
+        // and we are going to add that list to the result
+        for (let i = 0; i < q_len; i++) {
+            // pop nodes from the left of the queue
+            let node = q.shift();
+            level.push(node.val);
+            // add children of this node to queue
+            if (node.left) q.push(node.left);
+            if (node.right) q.push(node.right)
+        }
+        // add level to the result 
+        res.push(level);
+    }
+    return res;
+};
+```
+
+</TabItem>
 </Tabs>
