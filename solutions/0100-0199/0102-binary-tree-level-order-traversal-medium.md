@@ -177,7 +177,7 @@ var levelOrder = function(root) {
             level.push(node.val);
             // add children of this node to queue
             if (node.left) q.push(node.left);
-            if (node.right) q.push(node.right)
+            if (node.right) q.push(node.right);
         }
         // add level to the result 
         res.push(level);
