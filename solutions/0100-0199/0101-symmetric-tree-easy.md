@@ -140,6 +140,44 @@ class Solution:
 ```
 
 </TabItem>
+
+<TabItem value="javascript" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```javascript
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {boolean}
+ */
+var isSymmetric = function(root) {
+    if (!root) {
+        return false;
+    }
+    function is_mirror(left, right) {
+        // if both nodes are None
+        if (!left && !right) return true;
+        // if one of them is None 
+        if (!left || !right) return false;
+        // if their values and sub nodes are same
+        if (left.val == right.val) {
+            return (is_mirror(left.left, right.right) &&
+                    is_mirror(left.right, right.left));
+        }
+        return false;   
+    }
+    return is_mirror(root.left, root.right);
+};
+```
+
+</TabItem>
 </Tabs>
 
 ## Approach 2: Iterative
