@@ -182,4 +182,63 @@ class Solution:
 ```
 
 </TabItem>
+
+<TabItem value="javascript" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```javascript
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
+/**
+ * @param {ListNode} head
+ * @return {ListNode}
+ */
+var sortList = function(head) {
+    // base case 
+    if (!head || !head.next) return head;
+    // split the list into two halfs
+    // two pointers
+    let slow = head;
+    let fast = head.next;
+    while (fast && fast.next) {
+        slow = slow.next;
+        fast = fast.next.next;
+    }
+    let start = slow.next
+    slow.next = null
+    // sort left portion
+    let left = sortList(head);
+    // sort right portion
+    let right = sortList(start);
+    // merge them and return 
+    return merge(left, right);
+};
+// merge sort function
+function merge(list1, list2) {
+    let tail = dummy = new ListNode;
+    // while list1 and list2 are not empty
+    while (list1 && list2) {
+        // find smaller value 
+        if (list1.val < list2.val) {
+            tail.next = list1;
+            list1 = list1.next;
+        } else {
+            tail.next = list2;
+            list2 = list2.next;
+        }
+        tail = tail.next;
+    }
+    // it's possible that one of two lists are not empty
+    if (list1) tail.next = list1;
+    if (list2) tail.next = list2;
+    return dummy.next;
+};
+```
+
+</TabItem>
 </Tabs>
