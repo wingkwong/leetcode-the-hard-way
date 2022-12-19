@@ -103,7 +103,7 @@ var majorityElement = function(nums) {
         else if (n == res) count++;
         else count--;
     }
-    return res 
+    return res; 
 };
 ```
 
