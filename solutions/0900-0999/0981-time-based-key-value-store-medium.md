@@ -149,7 +149,7 @@ class TimeMap:
         while l < r:
             # calculate middle, m. Do it this way as good practice
             # for languages that might overflow max integer.
-            m = l + (r-l) // 2
+            m = l + (r - l) // 2
             time = arr[m][0]
             # found time, return early
             if time == timestamp:
@@ -165,7 +165,7 @@ class TimeMap:
         # our binary search will always either return the proper answer
         # or finish with left pointer 1 above the answer, as it didn't
         # exactly find the answer, so we can return:
-        return arr[l-1][1]
+        return arr[l - 1][1]
 ```
 </TabItem>
 </Tabs>
