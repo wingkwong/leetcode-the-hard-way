@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/majority-element/'
+description: 'Author: @wingkwong, @radojicic23 | https://leetcode.com/problems/majority-element/'
 ---
 
 # 0169 - Majority Element (Easy)
@@ -44,6 +44,9 @@ The Boyer-Moore Voting Algorithm is used to find the majority of a sequence of e
 
 Reference: [Boyer-Moore Voting Algorithm](https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore\_majority\_vote\_algorithm)
 
+
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -65,10 +68,54 @@ public:
 };
 ```
 
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```python
+class Solution:
+    def majorityElement(self, nums: List[int]) -> int:
+        res, count = 0, 0
+
+        for n in nums:
+            if count == 0:
+                res = n
+            count += (1 if n == res else -1)
+        return res 
+```
+
+</TabItem>
+
+<TabItem value="javascript" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```javascript
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var majorityElement = function(nums) {
+    let res = 0;
+    let count = 0;
+    for (n of nums) {
+        if (count == 0) res = n, count = 1;
+        else if (n == res) count++;
+        else count--;
+    }
+    return res; 
+};
+```
+
+</TabItem>
+</Tabs>
+
 ## Approach 2: Bit Manipulation
 
 If the majority number appears more than $$[n / 2]$$ times, each of its bits will also appear more than $$[n / 2]$$ times. Therefore, we iterate each bit on each number to see if condition is true. If so, we set this bit as 1.
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -90,3 +137,5 @@ public:
     }
 };
 ```
+</TabItem>
+</Tabs>
