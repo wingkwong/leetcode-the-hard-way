@@ -111,8 +111,36 @@ class Solution:
 ```
 
 </TabItem>
-</Tabs>
 
+<TabItem value="javascript" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```javascript
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
+/**
+ * @param {ListNode} head
+ * @return {ListNode}
+ */
+var reverseList = function(head) {
+    let prev = null;
+    while (head) {
+        let curr = head;
+        head = head.next;
+        curr.next = prev;
+        prev = curr;
+    }
+    return prev;
+};
+```
+
+</TabItem>
+</Tabs>
 
 ## Approach 2: Recursive
 
@@ -179,6 +207,36 @@ class Solution:
             head.next.next = head
         head.next = None
         return new_head
+```
+
+</TabItem>
+
+<TabItem value="javascript" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```javascript
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
+/**
+ * @param {ListNode} head
+ * @return {ListNode}
+ */
+var reverseList = function(head) {
+    function reverse(node, prev) {
+        if (!node) {
+            return prev;
+        }
+        let curr = node.next;
+        node.next = prev;
+        return reverse(curr, node);
+    }
+    return reverse(head, null);
+};
 ```
 
 </TabItem>
