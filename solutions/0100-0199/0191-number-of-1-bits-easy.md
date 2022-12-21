@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @vigneshshiv | https://leetcode.com/problems/number-of-1-bits/'
+description: 'Author: @wingkwong, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/number-of-1-bits/'
 ---
 
 # 0191 - Number of 1 Bits (Easy)
@@ -112,6 +112,21 @@ public class Solution {
 ```
 
 </TabItem>
+
+<TabItem value="javascript" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```javascript
+/**
+ * @param {number} n - a positive integer
+ * @return {number}
+ */
+var hammingWeight = function(n) {
+    return n.toString(2).split('1').length - 1
+};
+```
+
+</TabItem>
 </Tabs>
 
 ## Approach 2: Bit Manipulation
@@ -159,6 +174,42 @@ public class Solution {
         return ones;
     }
 }
+```
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```python
+class Solution:
+    def hammingWeight(self, n: int) -> int:
+        res = 0
+        while n:
+            if (n & 1): res += 1
+            # same as --> n //= 2
+            n >>= 1
+        return res 
+```
+
+</TabItem>
+
+<TabItem value="javascript" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```javascript
+/**
+ * @param {number} n - a positive integer
+ * @return {number}
+ */
+var hammingWeight = function(n) {
+    let res = 0;
+    while (n != 0) {
+        if (n & 1) res++;
+        n /= 2
+    }
+    return res;
+};
 ```
 
 </TabItem>
@@ -224,4 +275,18 @@ public class Solution {
 ```
 </TabItem>
 
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```python
+class Solution:
+    def hammingWeight(self, n: int) -> int:
+        res = 0        
+        while n:
+            n = n & (n - 1)
+            res += 1
+        return res
+```
+
+</TabItem>
 </Tabs>
