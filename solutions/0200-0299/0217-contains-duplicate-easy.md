@@ -1,5 +1,5 @@
 ---
-description: 'Author: @DoubleSpicy, @vigneshshiv | https://leetcode.com/problems/contains-duplicate/'
+description: 'Author: @DoubleSpicy, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/contains-duplicate/'
 ---
 
 # 0217 - Contains Duplicate (Easy)
@@ -92,6 +92,42 @@ class Solution {
 ```
 
 </TabItem>
+
+<TabItem value="javascript" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```javascript
+/**
+ * @param {number[]} nums
+ * @return {boolean}
+ */
+var containsDuplicate = function(nums) {
+    let hash_set = new Set();
+    for (n of nums) {
+        if (hash_set.has(n)) return true;
+        hash_set.add(n);
+    }
+    return false;
+};
+```
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```python
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        hash_set = set()
+        for n in nums:
+            if n in hash_set:
+                return True
+            hash_set.add(n)
+        return False 
+```
+
+</TabItem>
 </Tabs>
 
 ## Approach 2: Sort, then see if next element is the same
@@ -125,6 +161,45 @@ public:
 ```
 
 </TabItem>
+
+<TabItem value="javascript" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```javascript
+/**
+ * @param {number[]} nums
+ * @return {boolean}
+ */
+var containsDuplicate = function(nums) {
+    nums.sort();
+    let last_num = nums[0];
+    for (i = 1; i < nums.length; i++) {
+        if (last_num == nums[i]) return true;
+        else last_num = nums[i];
+    }
+    return false;
+};
+```
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```python
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        nums.sort()
+        last_num = nums[0]
+        for i in range(1, len(nums)):
+            if last_num == nums[i]:
+                return True
+            else:
+                last_num = nums[i]
+        return False 
+```
+
+</TabItem>
 </Tabs>
 
 ## Beginner Python Solution
@@ -152,6 +227,26 @@ for i in nums:
   else:
     return True
 return False
+```
+
+</TabItem>
+
+<TabItem value="javascript" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```javascript
+/**
+ * @param {number[]} nums
+ * @return {boolean}
+ */
+var containsDuplicate = function(nums) {
+    let hash_map = new Object();
+    for (n of nums) {
+        if (hash_map.hasOwnProperty(n)) return true;
+        hash_map[n] = 1;
+    }
+    return false;
+};
 ```
 
 </TabItem>
