@@ -184,6 +184,57 @@ public:
 ```
 
 </TabItem>
+
+<TabItem value="javascript" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```javascript
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
+/**
+ * @param {ListNode} head
+ * @return {boolean}
+ */
+var isPalindrome = function(head) {
+    let head_str = new String();
+    // convert to string
+    while (head) {
+        head_str += head.val;
+        head = head.next;
+    }
+    // return true if it's palindrome 
+    return head_str == head_str.split('').reverse().join('');
+};
+```
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def isPalindrome(self, head: Optional[ListNode]) -> bool:
+        head_str = ''
+        # convert to string
+        while head:
+            head_str += str(head.val)
+            head = head.next
+        # return true if it's palindrome
+        return head_str == head_str[::-1]
+```
+
+</TabItem>
 </Tabs>
 
 ## Approach 3: Stack
