@@ -6,6 +6,7 @@
 
 /* You can override the default Infima variables here. */
 :root {
+  --ifm-heading-color: #203320;
   --ifm-color-primary: #343955;
   --ifm-color-primary-dark: #033670;
   --ifm-color-primary-darker: #022854;
@@ -23,12 +24,13 @@
   --site-color-svg-icon-favorite: #e9669e;
   --site-color-checkbox-checked-bg: hsl(167deg 56% 73% / 25%);
   --site-color-feedback-background: #fff;
-  --ifm-hero-background-color: #353738;
-  --ifm-hero-text-color: #f6fdfd;
+  --ifm-hero-background-color: #fff;
+  --ifm-hero-text-color: #203320;
   --docusaurus-highlighted-code-line-bg: rgb(0 0 0 / 10%);
   --ifm-footer-background-color: #353738;
-  --ifm-footer-link-hover-color: #FFA116;
-  --ifm-link-color: #bb8027;
+  --ifm-footer-link-hover-color: #203320;
+  --ifm-link-color: #203320;
+  --ifm-announcement-color: #9da0e2;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -43,6 +45,8 @@
   --ifm-color-primary-lightest: #007af4;
   --ifm-hero-background-color: #000000;
   --ifm-hero-text-color: #f6fdfd;
+  --ifm-link-color: #9da0e2;
+  --ifm-announcement-color: #eff4ef;
 }
 
 .navbar-icon {
@@ -88,7 +92,7 @@ div[class^='announcementBar_'] {
 }
 
 div[class^='announcementBar_'] a {
-    color: #eea840;
+    color: var(--ifm-announcement-color);
 }
 
 [data-theme='light'] .DocSearch {

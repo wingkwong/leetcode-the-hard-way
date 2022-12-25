@@ -24,7 +24,7 @@ function HomepageHeader() {
             to="/solutions/category/0000---0099">
             ✍️ Solution Explanations
           </Link>
-          <span className={styles.gitHubButtonWrapper}>
+          {/* <span className={styles.gitHubButtonWrapper}>
             <iframe
               className={styles.gitHubButton}
               src="https://ghbtns.com/github-btn.html?user=wingkwong&amp;repo=leetcode-the-hard-way&amp;type=star&amp;count=true&amp;size=large"
@@ -32,7 +32,7 @@ function HomepageHeader() {
               height={30}
               title="GitHub Stars"
             />
-          </span>
+          </span> */}
         </div>
       </div>
     </header>
