@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @vigneshshiv | https://leetcode.com/problems/valid-anagram/'
+description: 'Author: @wingkwong, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/valid-anagram/'
 tags: ['Hash Map']
 ---
 
@@ -74,6 +74,38 @@ class Solution {
         return s.equals(t);
     }
 }
+```
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```python
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        # if they are same after sorting they are anagrams
+        return sorted(t) == sorted(s)
+```
+
+</TabItem>
+
+<TabItem value="javascript" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```javascript
+/**
+ * @param {string} s
+ * @param {string} t
+ * @return {boolean}
+ */
+var isAnagram = function(s, t) {
+    // sort strings 
+    const sorted_s = s.split('').sort().join('');
+    const sorted_t = t.split('').sort().join('');
+    // if they are same after sorting they are anagrams
+    return sorted_s == sorted_t;
+};
 ```
 
 </TabItem>
