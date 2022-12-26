@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @vigneshshiv | https://leetcode.com/problems/missing-number/'
+description: 'Author: @wingkwong, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/missing-number/'
 tags: ['Array', 'Hash Table', 'Math', 'Bit Manupulation', 'Sorting']
 ---
 
@@ -99,6 +99,56 @@ class Solution {
 ```
 
 </TabItem>
+
+<TabItem value="javascript" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```javascript
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var missingNumber = function(nums) {
+    const n = nums.length;
+    // sort numbers (increasing order)
+    nums.sort((a, b) => a - b);
+    // check the first value 
+    if (nums[0] != 0) return 0;
+    // iterate through list of numbers
+    // if they are not equal (number and index of that number)
+    // that index is the missing number
+    for (let i = 1; i < n; i++) {
+        if (nums[i] != i) {
+            return i;
+        }
+    }
+    return n;
+};
+```
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```python
+class Solution:
+    def missingNumber(self, nums: List[int]) -> int:
+        n = len(nums)
+        # sort list
+        nums.sort()
+        # check the first value
+        if nums[0] != 0: return 0
+        # loop through list of numbers
+        # if they are not equal (number and index of that number)
+        # that index is the missing number
+        for i in range(len(nums)):
+            if nums[i] != i:
+                return i
+        return n 
+```
+
+</TabItem>
 </Tabs>
 
 ## Approach 2: Bit Manupulation
@@ -186,6 +236,37 @@ class Solution {
         return (n * (n + 1) / 2) - sum;
     }
 }
+```
+
+</TabItem>
+
+<TabItem value="javascript" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```javascript
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var missingNumber = function(nums) {
+    const nums_len = nums.length;
+    let nums_sum = 0;
+    for (n of nums) nums_sum += n;
+    return (nums_len * (nums_len + 1) / 2) - nums_sum;
+};
+```
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```python 
+class Solution:
+    def missingNumber(self, nums: List[int]) -> int:
+        nums_len = len(nums)
+        nums_sum = sum(nums)
+        return (nums_len * (nums_len + 1) // 2) - nums_sum
 ```
 
 </TabItem>
