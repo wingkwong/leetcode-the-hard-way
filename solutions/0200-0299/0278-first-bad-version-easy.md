@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/first-bad-version/'
+description: 'Author: @wingkwong, @radojicic23 | https://leetcode.com/problems/first-bad-version/'
 ---
 
 # 0278 - First Bad Version (Easy)
@@ -43,6 +43,8 @@ Output: 1
 
 Prerequisite: [Binary Search](../../tutorials/basic-topics/binary-search)
 
+<Tabs>
+<TabItem value="c++" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -66,3 +68,65 @@ public:
     }
 };
 ```
+
+</TabItem>
+
+<TabItem value="javascript" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```javascript
+/**
+ * Definition for isBadVersion()
+ * 
+ * @param {integer} version number
+ * @return {boolean} whether the version is bad
+ * isBadVersion = function(version) {
+ *     ...
+ * };
+ */
+
+/**
+ * @param {function} isBadVersion()
+ * @return {function}
+ */
+var solution = function(isBadVersion) {
+    /**
+     * @param {integer} n Total versions
+     * @return {integer} The first bad version
+     */
+    return function(n) {
+        let l = 1;
+        let r = n;
+        while (l < r) {
+            let mid = Math.floor((l + r) / 2);
+            if (!isBadVersion(mid)) l = mid + 1;
+            else r = mid;
+        }
+        return l;
+    };
+};
+```
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```python
+# The isBadVersion API is already defined for you.
+# def isBadVersion(version: int) -> bool:
+
+class Solution:
+    def firstBadVersion(self, n: int) -> int:
+        l, r = 1, n
+        while l < r:
+            mid = (l + r) // 2
+            if (isBadVersion(mid)):
+                r = mid
+            else:
+                l = mid + 1
+        return l 
+```
+
+</TabItem>
+</Tabs>
