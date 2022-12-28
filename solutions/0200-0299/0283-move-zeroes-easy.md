@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @heiheihang, @vigneshshiv |
+  Author: @heiheihang, @vigneshshiv, @radojicic23 |
   https://leetcode.com/problems/move-zeroes/
 ---
 
@@ -54,21 +54,16 @@ def moveZeroes(self, nums: List[int]) -> None:
         """
         Do not return anything, modify nums in-place instead.
         """
-        
         #initialize left pointer to keep track of spaces for non-zero elements
         left_pointer = 0
-        
         #iterate all numbers in nums
         for i in range(len(nums)):
-            
             #we skip if we see a 0
             if(nums[i] == 0):
                 continue
             else:
-                
                 #we put the current number to the empty space if its non-zero
                 nums[left_pointer] = nums[i]
-                
                 #as the current position is filled, move to the next one
                 left_pointer += 1
         
@@ -128,6 +123,58 @@ class Solution {
         }
     }
 }
+```
+
+</TabItem>
+
+<TabItem value="javascript" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```javascript
+/**
+ * @param {number[]} nums
+ * @return {void} Do not return anything, modify nums in-place instead.
+ */
+var moveZeroes = function(nums) {
+    let count_zero = 0;
+    // iterate through array
+    for (i = 0; i < nums.length; i++) {
+        // count the zeros
+        if (nums[i] == 0) count_zero++;
+        // if the current number is not zero and
+        // if zero's count is one or more
+        else if (count_zero > 0) {
+            // swap them
+            nums[i - count_zero] = nums[i];
+            nums[i] = 0
+        }
+    }
+};
+```
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```python
+class Solution:
+    def moveZeroes(self, nums: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        count_zero = 0
+        # iterate through array
+        for i in range(len(nums)):
+            # count the zeros
+            if nums[i] == 0:
+                count_zero += 1
+            # if the current number is not 0 and 
+            # if zero's count is 1 or more
+            elif count_zero > 0:
+                # swap them 
+                nums[i - count_zero] = nums[i]
+                nums[i] = 0
 ```
 
 </TabItem>
