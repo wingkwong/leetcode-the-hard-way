@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
+  Author: @wingkwong, @radojicic23|
   https://leetcode.com/problems/increasing-triplet-subsequence/
 ---
 
@@ -50,6 +50,8 @@ Explanation: The triplet (3, 4, 5) is valid because nums[3] == 0 < nums[4] == 4 
 
 Find the first two smallest numbers. If there is a number greater than them, then we can return true. Otherwise, return false at the end.
 
+<Tabs>
+<TabItem value="c++" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -69,3 +71,53 @@ public:
     }
 };
 ```
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```python 
+class Solution:
+    def increasingTriplet(self, nums: List[int]) -> bool:        
+        threshold1 = threshold2 = float("inf")
+        for num in nums:
+            # update the first smallest threshold
+            if num <= threshold1:
+                threshold1 = num
+            # update the second smallest threshold
+            elif num <= threshold2:
+                threshold2 = num
+            # if it's greater than both thresholds
+            else:
+                return True
+        return False
+```
+
+</TabItem>
+
+<TabItem value="javascript" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```javascript 
+/**
+ * @param {number[]} nums
+ * @return {boolean}
+ */
+var increasingTriplet = function(nums) {
+    let threshold1 = Infinity;
+    let threshold2 = Infinity;
+    for (n of nums) {
+        // update the first smallest threshold
+        if (n <= threshold1) threshold1 = n;
+        // update the second smallest threshold
+        else if (n <= threshold2) threshold2 = n;
+        // if it's greater than both tresholds
+        else return true;
+    }
+    return false;
+};
+```
+
+</TabItem>
+</Tabs>
