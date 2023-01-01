@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @vigneshshiv | https://leetcode.com/problems/reverse-string/'
+description: 'Author: @wingkwong, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/reverse-string/'
 ---
 
 # 0344 - Reverse String (Easy)
@@ -86,6 +86,48 @@ class Solution {
 ```
 
 </TabItem>
+
+<TabItem value="javascript" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```javascript
+/**
+ * @param {character[]} s
+ * @return {void} Do not return anything, modify s in-place instead.
+ */
+var reverseString = function(s) {
+    let left = 0;
+    let right = s.length - 1;
+    while (left < right) {
+        char = s[left];
+        s[left] = s[right];
+        s[right] = char;
+        left++;
+        right--;
+    }
+};
+```
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```python
+class Solution:
+    def reverseString(self, s: List[str]) -> None:
+        """
+        Do not return anything, modify s in-place instead.
+        """
+        
+        left, right = 0, len(s) - 1
+        while left < right:
+            s[left], s[right] = s[right], s[left]
+            left += 1
+            right -= 1
+```
+
+</TabItem>
 </Tabs>
 
 ## Approach 2: STL
@@ -104,6 +146,7 @@ public:
 ```
 
 </TabItem>
+
 <TabItem value="py" label="Python">
 <SolutionAuthor name="@wingkwong"/>
 
@@ -114,10 +157,24 @@ class Solution:
 ```
 
 </TabItem>
+
 <TabItem value="rust" label="Rust">
 <SolutionAuthor name="@wingkwong"/>
 
 ```rust
+impl Solution {
+    pub fn reverse_string(s: &mut Vec<char>) {
+       s.reverse()
+    }
+}
+```
+
+</TabItem>
+
+<TabItem value="javascript" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```javascript
 impl Solution {
     pub fn reverse_string(s: &mut Vec<char>) {
        s.reverse()
