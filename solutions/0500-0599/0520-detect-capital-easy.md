@@ -37,10 +37,12 @@ Output: false
 * `1 <= word.length <= 100`
 * `word` consists of lowercase and uppercase English letters.
 
-## Approach 1:
+## Approach 1: One Pass
 
 Just check if it is invalid the conditions. If so, return false immediately.
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -55,3 +57,37 @@ public:
     }
 };
 ```
+
+</TabItem>
+
+</Tabs>
+
+
+## Approach 2: Case By Case 
+
+Count the number of characters with upper case and try those 3 cases.
+
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@wingkwong"/>
+
+```cpp
+class Solution {
+public:
+    bool detectCapitalUse(string word) {
+        int upper = 0;
+		// count number of characters with upper case
+        for (auto x : word) upper += isupper(x) ? 1 : 0;
+            // case 1: All letters in this word are capitals, like "USA".
+        return upper == word.size() ||
+            // case 2: All letters in this word are not capitals, like "leetcode".
+               upper == 0 ||
+            // case 3: Only the first letter in this word is capital, like "Google".
+               (upper == 1 && isupper(word.front()));
+    }
+};
+```
+
+</TabItem>
+
+</Tabs>
