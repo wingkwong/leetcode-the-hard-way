@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
+  Author: @wingkwong, @radojicic23 |
   https://leetcode.com/problems/n-ary-tree-preorder-traversal/
 ---
 
@@ -44,6 +44,8 @@ Output: [1,2,3,6,7,11,14,4,8,12,5,9,13,10]
 
 Straightforward preorder traversal.
 
+<Tabs>
+<TabItem value="c++" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -62,3 +64,66 @@ public:
 };
 ```
 
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```python
+"""
+# Definition for a Node.
+class Node:
+    def __init__(self, val=None, children=None):
+        self.val = val
+        self.children = children
+"""
+
+class Solution:
+    def preorder(self, root: 'Node') -> List[int]:
+        output = []
+        self.dfs(root, output)
+        return output
+        
+    def dfs(self, root, output):
+        if not root:
+            return 
+        output.append(root.val)
+        for child in root.children:
+            self.dfs(child, output)
+```
+
+</TabItem>
+
+<TabItem value="javascript" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```javascript
+/**
+ * // Definition for a Node.
+ * function Node(val, children) {
+ *    this.val = val;
+ *    this.children = children;
+ * };
+ */
+
+/**
+ * @param {Node|null} root
+ * @return {number[]}
+ */
+var preorder = function(root) {
+    let output = new Array();
+    dfs(root, output);
+    return output;
+
+    function dfs(root, output) {
+        if (!root) return;
+        output.push(root.val);
+        for (child of root.children) {
+            dfs(child, output);
+        }
+    }
+};
+```
+
+</TabItem>
+</Tabs>
