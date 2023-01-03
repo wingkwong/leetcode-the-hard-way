@@ -156,7 +156,7 @@ var search = function(nums, target) {
         // search right
         else l = mid + 1;
     }
-    return - 1;
+    return -1;
 };
 ```
 
@@ -246,7 +246,7 @@ var search = function(nums, target) {
         // search left
         else r = mid - 1;
     }
-    return - 1;
+    return -1;
 };
 ```
 
