@@ -1,5 +1,5 @@
 ---
-description: "Author: @wingkwong, @vigneshshiv | https://leetcode.com/problems/flood-fill/"
+description: "Author: @wingkwong, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/flood-fill/"
 ---
 
 # 0733 - Flood Fill (Easy)
@@ -119,6 +119,38 @@ class Solution {
 ```
 
 </TabItem>
+
+<TabItem value="javascript" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```javascript
+/**
+ * @param {number[][]} image
+ * @param {number} sr
+ * @param {number} sc
+ * @param {number} color
+ * @return {number[][]}
+ */
+var floodFill = function(image, sr, sc, color) {
+    if (image == null || image[sr][sc] == color) return image;
+    dfs(image, sr, sc, image[sr][sc], color);
+    return image;
+
+    function dfs(image, r, c, initial, color) {
+        if (r < 0 || r >= image.length || 
+            c < 0 || c >= image[0].length || image[r][c] != initial) {
+                return;
+        }
+        image[r][c] = color;
+        dfs(image, r + 1, c, initial, color);
+        dfs(image, r - 1, c, initial, color);
+        dfs(image, r, c + 1, initial, color);
+        dfs(image, r, c - 1, initial, color);
+    }
+};
+```
+
+</TabItem>
 </Tabs>
 
 ## Approach 2: BFS
@@ -190,4 +222,3 @@ class Solution:
 
 </TabItem>
 </Tabs>
-```
