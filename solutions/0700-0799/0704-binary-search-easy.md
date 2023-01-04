@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @ColeB2 | https://leetcode.com/problems/binary-search/'
+description: 'Author: @wingkwong, @ColeB2, @radojicic23 | https://leetcode.com/problems/binary-search/'
 ---
 
 # 0704 - Binary Search (Easy)
@@ -131,6 +131,36 @@ class Solution:
 ```
 
 </TabItem>
+
+<TabItem value="javascript" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```javascript
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number}
+ */
+var search = function(nums, target) {
+    // initialize left and right boundary
+    let l = 0;
+    let r = nums.length - 1;
+    while (l <= r) {
+        // find mid value 
+        let mid = Math.floor((l + r) / 2) 
+        if (nums[mid] == target) return mid;
+        // if mid value is greater than target
+        // search left
+        else if (nums[mid] > target) r = mid - 1;
+        // if mid value is less than target
+        // search right
+        else l = mid + 1;
+    }
+    return -1;
+};
+```
+
+</TabItem>
 </Tabs>
 
 > How about taking the lower element if the number of elements is even?
@@ -191,5 +221,34 @@ class Solution:
 ```
 
 </TabItem>
-</Tabs>
 
+<TabItem value="javascript" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```javascript
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number}
+ */
+var search = function(nums, target) {
+    // initialize left and right boundary
+    let l = 0;
+    let r = nums.length - 1;
+    while (l <= r) {
+        // find mid value 
+        let mid = Math.floor((l + r) / 2) 
+        if (nums[mid] == target) return mid;
+        // if mid value is less than target
+        // search right
+        else if (nums[mid] < target) l = mid + 1;
+        // if mid value is greater than target
+        // search left
+        else r = mid - 1;
+    }
+    return -1;
+};
+```
+
+</TabItem>
+</Tabs>
