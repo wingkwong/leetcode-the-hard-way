@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/keys-and-rooms/'
+description: 'Author: @wingkwong, @radojicic23 | https://leetcode.com/problems/keys-and-rooms/'
 tags: [Depth-First Search, Breadth-First Search, Graph]
 ---
 
@@ -104,6 +104,50 @@ impl Solution {
         vis.iter().all(|&x| x)
     }
 }
+```
+
+</TabItem>
+
+<TabItem value="javascript" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```javascript
+/**
+ * @param {number[][]} rooms
+ * @return {boolean}
+ */
+var canVisitAllRooms = function(rooms) {
+    let visited = new Set();
+    dfs(0);
+    return visited.size == rooms.length;
+    
+    function dfs(room) {
+        if (!visited.has(room)) {
+            visited.add(room);
+            for (i of rooms[room]) {
+                dfs(i);
+            }
+        }
+    }
+};
+```
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```python
+class Solution:
+    def canVisitAllRooms(self, rooms: List[List[int]]) -> bool:
+        visited = set()
+        def dfs(room):
+            if room not in visited:
+                visited.add(room)
+                for i in rooms[room]:
+                    dfs(i)
+        dfs(0)
+        return len(rooms) == len(visited)
 ```
 
 </TabItem>
