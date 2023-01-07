@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/boats-to-save-people/'
+description: 'Author: @wingkwong, @radojicic23 | https://leetcode.com/problems/boats-to-save-people/'
 ---
 
 # 0881 - Boats to Save People (Medium)
@@ -47,6 +47,8 @@ Explanation: 4 boats (3), (3), (4), (5)
 
 Let's sort the input. We know that the maximum weight is at most $$limit$$. The best way to choose the maximum weight first. Then we check if we could include one more (the minimum one). We can use two pointers to track the minimum one and the maximum one.
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -83,8 +85,6 @@ public:
 
 Once we get the idea, we can further refactor the solution.
 
-<SolutionAuthor name="@wingkwong"/>
-
 ```cpp
 class Solution {
 public:
@@ -102,3 +102,59 @@ public:
     }
 };
 ```
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```python
+class Solution:
+    def numRescueBoats(self, people: List[int], limit: int) -> int:
+        people.sort()
+        l, r = 0, len(people) - 1
+        res = 0 
+
+        while l <= r:
+            if people[l] + people[r] <= limit:
+                res += 1 
+                l += 1
+                r -= 1
+            else:
+                res += 1
+                r -= 1
+        return res 
+```
+
+</TabItem>
+
+<TabItem value="javascript" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```javascript
+/**
+ * @param {number[]} people
+ * @param {number} limit
+ * @return {number}
+ */
+var numRescueBoats = function(people, limit) {
+    people.sort(function(a, b) {return a - b});
+    let l = 0;
+    let r = people.length - 1;
+    let res = 0;
+    while (l <= r) {
+        if (people[l] + people[r] <= limit) {
+            res += 1;
+            l += 1;
+            r -= 1;
+        } else {
+            res += 1;
+            r -= 1;
+        }
+    }
+    return res;
+};
+```
+
+</TabItem>
+</Tabs>
