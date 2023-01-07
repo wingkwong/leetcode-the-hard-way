@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/backspace-string-compare/'
+description: 'Author: @wingkwong, @radojicic23 | https://leetcode.com/problems/backspace-string-compare/'
 ---
 
 # 0844 - Backspace String Compare (Easy)
@@ -47,6 +47,8 @@ Explanation: s becomes "c" while t becomes "b".
 
 We build the final string for $$s$$ and $$t$$. If we see #, then we can only backspace if the final string is not empty. Otherwise, we add the character to the final string. Since we need to do the same thing on both string, it's better to write a function to build the string.
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -68,3 +70,52 @@ public:
     }
 };
 ```
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```python
+class Solution:
+    def backspaceCompare(self, s: str, t: str) -> bool:
+        
+        def get_result(st):
+            new_st = []
+            for c in st:
+                if c == "#":
+                    if new_st:
+                        new_st.pop()
+                else:
+                    new_st.append(c)
+            return "".join(new_st)
+        return get_result(s) == get_result(t)
+```
+
+</TabItem>
+
+<TabItem value="javascript" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```javascript
+/**
+ * @param {string} s
+ * @param {string} t
+ * @return {boolean}
+ */
+var backspaceCompare = function(s, t) {
+    function get_result(st) {
+        let new_st = [];
+        for (c of st) {
+            if (c == "#") {
+                if (new_st != null) new_st.pop();
+            } else new_st.push(c);
+        }
+        return new_st.join("");
+    }
+    return get_result(s) == get_result(t);
+};
+```
+
+</TabItem>
+</Tabs>
