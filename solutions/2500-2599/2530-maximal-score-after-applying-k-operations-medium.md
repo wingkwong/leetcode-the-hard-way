@@ -77,6 +77,37 @@ public:
     }
 };
 ```
+```
+JAVA 
+    
+  class Solution {
+    public long maxKelements(int[] nums, int k) {
+        
+        long score =0;
+        PriorityQueue<Integer> pq = new PriorityQueue<>((a,b)->(b-a));
+        int n = nums.length;
+        //add all value to prority Queue
+        for(int i =0;i<n;i++){
+            pq.add(nums[i]);
+        }
+         // perform k times
+        for(int i =0;i<k;i++){
+            // get max value
+            int max = pq.poll();
+            score+=max;
+            
+            double d = (double) max/3;
+            //convert into ceil value
+            d = Math.ceil(d);
+            //pushing ceil value
+            pq.add((int) d);
+        }
+        return score;
+    }
+    
+}
+    
+```
 
 </TabItem>
 </Tabs>
