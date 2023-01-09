@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/valid-mountain-array/'
+description: 'Author: @wingkwong, @radojicic23 | https://leetcode.com/problems/valid-mountain-array/'
 ---
 
 # 0941 - Valid Mountain Array (Easy)
@@ -53,6 +53,8 @@ Output: true
 
 If the array length is less than 3, then it must be false. Otherwise, we can calculate the prefix and suffix.  `prefix[i]` means it is a strictly increasing array from the first mountain till mountain `i`. Similarly, `suffix[j]` means it is a strictly decreasing array from the last mountain till mountain `j`. If there is a certain point `k` where `prefix[k]` and `suffix[k]` both true, then that would be the peak of a valid mountain.
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -71,10 +73,15 @@ public:
 };
 ```
 
+</TabItem>
+</Tabs>
+
 ## Approach 2: One Pass
 
 From approach 1, we can see that both prefix and suffix array only record if it is a strictly increasing or decreasing array till certain point. We can optimise it using two pointers `i` and `j`, where pointer `i` is to check the strictly increasing array and pointer `j` is to check the strictly decreasing array.  If they stop at the same point, then that would be the peak of the same mountain.
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -88,3 +95,44 @@ public:
     }
 };
 ```
+
+</TabItem>
+
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```py
+class Solution:
+    def validMountainArray(self, arr: List[int]) -> bool:
+        l, r = 0, len(arr) - 1
+        if len(arr) < 3: return False
+        while l + 1 < len(arr) - 1 and arr[l] < arr[l + 1]:
+            l += 1
+        while r - 1 > 0 and arr[r] < arr[r - 1]:
+            r -= 1
+        return l == r
+        
+```
+
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * @param {number[]} arr
+ * @return {boolean}
+ */
+var validMountainArray = function(arr) {
+    let left = 0;
+    let right = arr.length - 1;
+    if (arr.length < 3) return false;
+    while (left + 1 < arr.length - 1 && arr[left] < arr[left + 1]) left++;
+    while (right - 1 > 0 && arr[right] < arr[right - 1]) right--;
+    return left == right;
+};     
+```
+
+</TabItem>
+</Tabs>
