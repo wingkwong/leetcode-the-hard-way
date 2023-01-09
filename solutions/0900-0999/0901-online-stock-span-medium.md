@@ -1,5 +1,5 @@
 ---
-description: "Author: @wingkwong | https://leetcode.com/problems/online-stock-span/"
+description: "Author: @wingkwong, @dhanu084, @radojicic23| https://leetcode.com/problems/online-stock-span/"
 tags: [Stack, Design, Monotonic Stack, Data Stream]
 ---
 
@@ -102,7 +102,6 @@ class StockSpanner:
             # adding tuples to the span array eg [(75,1),(60,1)]
             self.span.append((price, 1))
             return current_span
-
         '''
             * Keep popping the stack if current price is greater
               than or equal to the top of the span stack
@@ -114,13 +113,11 @@ class StockSpanner:
                   of the top of stack which is 1from 60 so the span
                   will be [(100,1), (80,1), (70,2)]
         '''
-
         while self.span and self.span[-1][0] <= price:
             current_span += self.span.pop()[1]
         self.span.append((price, current_span))
 
         return current_span
-
 ```
 
 </TabItem>
@@ -191,6 +188,37 @@ public:
  * Your StockSpanner object will be instantiated and called as such:
  * StockSpanner* obj = new StockSpanner();
  * int param_1 = obj->next(price);
+ */
+```
+
+</TabItem>
+
+<TabItem value="javascript" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```javascript
+var StockSpanner = function() {
+    this.stack = [];
+};
+
+/** 
+ * @param {number} price
+ * @return {number}
+ */
+StockSpanner.prototype.next = function(price) {
+    let span = 1;
+    while (this.stack.length && this.stack[this.stack.length - 1][0] <= price) {
+        span += this.stack[this.stack.length - 1][1];
+        this.stack.pop();
+    }
+    this.stack.push([price, span]);
+    return span;
+};
+
+/** 
+ * Your StockSpanner object will be instantiated and called as such:
+ * var obj = new StockSpanner()
+ * var param_1 = obj.next(price)
  */
 ```
 
