@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/'
+description: 'Author: @wingkwong, @radojicic23 | https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/'
 tags: [String, Stack]
 ---
 
@@ -176,6 +176,29 @@ impl Solution {
         return ans;
     }
 }
+```
+
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * @param {string} s
+ * @return {string}
+ */
+var removeDuplicates = function(s) {
+    let stack = [];
+    for (let c = 0; c < s.length; c++) {
+        if (stack.length > 0 && stack[stack.length - 1] == s[c]) {
+            stack.pop();
+        } else {
+            stack.push(s[c]);
+        }
+    }
+    return stack.join("");
+};
 ```
 
 </TabItem>
