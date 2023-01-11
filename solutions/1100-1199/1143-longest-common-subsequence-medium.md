@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong , @deepanshu-rawat6 | https://leetcode.com/problems/longest-common-subsequence/'
+description: 'Author: @wingkwong , @deepanshu-rawat6, @radojicic23 | https://leetcode.com/problems/longest-common-subsequence/'
 tags: [String, Dynamic Programming]
 ---
 
@@ -111,6 +111,53 @@ class Solution {
         return dp[m][n];
     }
 }
+```
+
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * @param {string} text1
+ * @param {string} text2
+ * @return {number}
+ */
+var longestCommonSubsequence = function(text1, text2) {
+    let n = text1.length;
+    let m = text2.length;
+    let dp = new Array(n + 1).fill(0).map(x => new Array(m + 1).fill(0));
+    for (i = 1; i <= n; i++) {
+        for (j = 1; j <= m; j++) {
+            if (text1[i - 1] != text2[j - 1]) {
+                dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
+            } else {
+                dp[i][j] = 1 + dp[i - 1][j - 1];
+            }
+        }
+    }
+    return dp[n][m];
+};  
+```
+
+</TabItem>
+
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```py
+class Solution:
+    def longestCommonSubsequence(self, text1: str, text2: str) -> int:
+        dp = [[0 for _ in range(len(text2) + 1)] for _ in range(len(text1) + 1)]
+        
+        for i in range(len(text1) - 1, -1, -1):
+            for j in range(len(text2) - 1, -1, -1):
+                if text1[i] == text2[j]:
+                    dp[i][j] = 1 + dp[i + 1][j + 1]
+                else:
+                    dp[i][j] = max(dp[i + 1][j], dp[i][j + 1])
+        return dp[0][0]
 ```
 
 </TabItem>
