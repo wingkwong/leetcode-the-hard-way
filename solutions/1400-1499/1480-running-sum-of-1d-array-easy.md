@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @heiheihang, @wingkwong |
+  Author: @heiheihang, @wingkwong, @radojicic23 |
   https://leetcode.com/problems/running-sum-of-1d-array/
 ---
 
@@ -46,6 +46,9 @@ Output: [3,4,6,16,17]
 
 # Approach 1: Prefix Sum
 
+
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -71,6 +74,9 @@ public:
 };
 ```
 
+</TabItem>
+</Tabs>
+
 ## Approach 2: Partial Sum
 
 Using C++ STL. Bbasically it does the same thing mentioned above. See [here](https://cplusplus.com/reference/numeric/partial_sum/) for more details.
@@ -83,6 +89,8 @@ y3 = x0 + x1 + x2 + x3
 y4 = x0 + x1 + x2 + x3 + x4
 ```
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -96,12 +104,17 @@ public:
 };
 ```
 
+</TabItem>
+</Tabs>
+
 ## Approach 3: Iteration
 
 We need to define an accumulator (`running_sum` in this problem) to save the sum of all numbers in `nums`. After calculating the latest `running_sum`, we put that number to our result list.
 
 The trick here is that we need to add the number from `nums` to `running_sum` first before adding `running_sum` to `result`. This is because the `ith` position from `result` should include the `ith` number in `nums` .
 
+<Tabs>
+<TabItem value="py" label="Python">
 <SolutionAuthor name="@heiheihang"/>
 
 ```python
@@ -129,6 +142,9 @@ def runningSum(self, nums: List[int]) -> List[int]:
         return result
 ```
 
+</TabItem>
+
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -145,3 +161,27 @@ public:
     }
 };
 ```
+
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var runningSum = function(nums) {
+    let total = 0;
+    let res =  [];
+    for (let i = 0; i < nums.length; i++) {
+        total += nums[i];
+        res.push(total);
+    }
+    return res;
+};
+```
+
+</TabItem>
+</Tabs>
