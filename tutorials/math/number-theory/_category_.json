@@ -3,6 +3,6 @@
   "position": 2,
   "link": {
     "type": "generated-index",
-    "description": "This section covers Number Theory topics."
+    "description": "Welcome to our Number Theory tutorial page for LeetCode problems! Number theory is a branch of mathematics that deals with the properties and relationships of integers, which is very important in computer science. This tutorial will cover a range of topics in number theory that are commonly used to solve problems on LeetCode. We will be focusing on important algorithms and techniques such as modular arithmetic, prime numbers, gcd and more."
   }
 }

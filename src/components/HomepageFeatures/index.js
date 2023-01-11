@@ -8,7 +8,7 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_learning_sketching_nd4f.svg').default,
     description: (
       <>
-        Learn Data Structures and Algorithms ranged from basic to advanced through LeetCode Problems
+        Acquire knowledge of Data Structures and Algorithms, covering a range from fundamental to advanced level, by working through problems on LeetCode.
       </>
     ),
   },
@@ -17,7 +17,7 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_onboarding_re_6osc.svg').default,
     description: (
       <>
-        Unlike most of posts in Discussion, we tend to provide detailed explanations (Line By Line / Article)
+        In contrast to many discussions posts, our approach is to offer in-depth explanations, both in-line and in the form of articles.
       </>
     ),
   },
@@ -26,7 +26,7 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_community_re_cyrm.svg').default,
     description: (
       <>
-        Join the Discord to discuss have a live discussion on Leetcode Topics with the Community members
+        Join our Discord group to engage in live conversations about Leetcode topics with other community members.
       </>
     ),
   },

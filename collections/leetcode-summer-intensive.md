@@ -9,6 +9,8 @@ keywords:
   - LeetCode Summer Intensive
 ---
 
+The LeetCode Summer Intensive is a course that was held in the summer of 2022. The live section of the course lasted between 15 and 30 minutes, during which 1 - 2 problems were discussed. The course was hosted by @heiheihang.
+
 import Table from '@site/src/components/Table';
 
 <Table 
