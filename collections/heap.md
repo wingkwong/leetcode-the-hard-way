@@ -1,5 +1,5 @@
 ---
-title: 'Heap (Priority Queue)'
+title: 'LTHW - Heap (Priority Queue)'
 description: 'Collections of Heap (Priority Queue) Problems'
 hide_table_of_contents: true
 keywords:

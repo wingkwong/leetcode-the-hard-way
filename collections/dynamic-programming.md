@@ -1,5 +1,5 @@
 ---
-title: 'Dynamic Programming'
+title: 'LTHW - Dynamic Programming'
 description: 'Collections of DP Problems in different categories'
 hide_table_of_contents: true
 keywords:
