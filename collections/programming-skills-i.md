@@ -1,0 +1,226 @@
+---
+title: 'Study Plan - Programming Skills - I'
+description: 'https://leetcode.com/study-plan/programming-skills'
+hide_table_of_contents: true
+keywords:
+  - leetcode
+  - study plan
+  - Programming Skills - I
+---
+
+import Table from '@site/src/components/Table';
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLBu4Bche1aEXiiHTKYwGD2m_7MEU6ECfj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+export const problems = [
+  {
+    "problemName": "1523. Count Odd Numbers in an Interval Range",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/count-odd-numbers-in-an-interval-range",
+    "solutionLink": ""
+  },
+  {
+    "problemName": "1491. Average Salary Excluding the Minimum and Maximum Salary",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/average-salary-excluding-the-minimum-and-maximum-salary",
+    "solutionLink": ""
+  },
+  {
+    "problemName": "191. Number of 1 Bits",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/number-of-1-bits",
+    "solutionLink": ""
+  },
+  {
+    "problemName": "1281. Subtract the Product and Sum of Digits of an Integer",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer",
+    "solutionLink": ""
+  },
+  {
+    "problemName": "976. Largest Perimeter Triangle",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/largest-perimeter-triangle",
+    "solutionLink": ""
+  },
+  {
+    "problemName": "1779. Find Nearest Point That Has the Same X or Y Coordinate",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/find-nearest-point-that-has-the-same-x-or-y-coordinate",
+    "solutionLink": ""
+  },
+  {
+    "problemName": "1822. Sign of the Product of an Array",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/sign-of-the-product-of-an-array",
+    "solutionLink": ""
+  },
+  {
+    "problemName": "1502. Can Make Arithmetic Progression From Sequence",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/can-make-arithmetic-progression-from-sequence",
+    "solutionLink": ""
+  },
+  {
+    "problemName": "202. Happy Number",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/happy-number/",
+    "solutionLink": ""
+  },
+  {
+    "problemName": "1790. Check if One String Swap Can Make Strings Equal",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/check-if-one-string-swap-can-make-strings-equal",
+    "solutionLink": ""
+  },
+  {
+    "problemName": "589. N-ary Tree Preorder Traversal",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/n-ary-tree-preorder-traversal",
+    "solutionLink": ""
+  },
+  {
+    "problemName": "496. Next Greater Element I",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/next-greater-element-i",
+    "solutionLink": ""
+  },
+  {
+    "problemName": "1232. Check If It Is a Straight Line",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/check-if-it-is-a-straight-line",
+    "solutionLink": ""
+  },
+  {
+    "problemName": "1588. Sum of All Odd Length Subarrays",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/sum-of-all-odd-length-subarrays/",
+    "solutionLink": ""
+  },
+  {
+    "problemName": "283. Move Zeroes",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/move-zeroes/",
+    "solutionLink": ""
+  },
+  {
+    "problemName": "1672. Richest Customer Wealth",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/richest-customer-wealth",
+    "solutionLink": ""
+  },
+  {
+    "problemName": "1572. Matrix Diagonal Sum",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/matrix-diagonal-sum",
+    "solutionLink": ""
+  },
+  {
+    "problemName": "566. Reshape the Matrix",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/reshape-the-matrix",
+    "solutionLink": ""
+  },
+  {
+    "problemName": "1768. Merge Strings Alternately",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/merge-strings-alternately",
+    "solutionLink": ""
+  },
+  {
+    "problemName": "1678. Goal Parser Interpretation",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/goal-parser-interpretation",
+    "solutionLink": ""
+  },
+  {
+    "problemName": "389. Find the Difference",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/find-the-difference",
+    "solutionLink": ""
+  },
+  {
+    "problemName": "709. To Lower Case",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/to-lower-case",
+    "solutionLink": ""
+  },
+  {
+    "problemName": "1309. Decrypt String from Alphabet to Integer Mapping",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/decrypt-string-from-alphabet-to-integer-mapping",
+    "solutionLink": ""
+  },
+  {
+    "problemName": "953. Verifying an Alien Dictionary",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/verifying-an-alien-dictionary",
+    "solutionLink": ""
+  },
+  {
+    "problemName": "1290. Convert Binary Number in a Linked List to Integer",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer",
+    "solutionLink": ""
+  },
+  {
+    "problemName": "876. Middle of the Linked List",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/middle-of-the-linked-list",
+    "solutionLink": ""
+  },
+  {
+    "problemName": "104. Maximum Depth of Binary Tree",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
+    "solutionLink": ""
+  },
+  {
+    "problemName": "404. Sum of Left Leaves",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/sum-of-left-leaves",
+    "solutionLink": ""
+  },
+  {
+    "problemName": "1356. Sort Integers by The Number of 1 Bits",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/sort-integers-by-the-number-of-1-bits",
+    "solutionLink": ""
+  },
+  {
+    "problemName": "232. Implement Queue using Stacks",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/implement-queue-using-stacks",
+    "solutionLink": ""
+  },
+  {
+    "problemName": "242. Valid Anagram",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/valid-anagram/",
+    "solutionLink": ""
+  },
+  {
+    "problemName": "217. Contains Duplicate",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/contains-duplicate",
+    "solutionLink": ""
+  },
+  {
+    "problemName": "1603. Design Parking System",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/design-parking-system/",
+    "solutionLink": ""
+  },
+  {
+    "problemName": "303. Range Sum Query - Immutable",
+    "difficulty": "Easy",
+    "leetCodeLink": "https://leetcode.com/problems/range-sum-query-immutable",
+    "solutionLink": ""
+  }
+]
+
+<Table 
+    title=""
+    data={problems}
+    collectionLink="https://leetcode.com/study-plan/programming-skills"
+/>
