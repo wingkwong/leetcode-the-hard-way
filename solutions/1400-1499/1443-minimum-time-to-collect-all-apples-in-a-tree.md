@@ -1,5 +1,5 @@
 ---
-description: "Author: @hirotake111 | https://leetcode.com/problems/minimum-time-to-collect-all-apples-in-a-tree/"
+description: "Author: @hirotake111, @wingkwong | https://leetcode.com/problems/minimum-time-to-collect-all-apples-in-a-tree/"
 tags: [Tree, Depth-First Search, Backtracking]
 ---
 
@@ -160,6 +160,46 @@ func contains(edges []int, target int) bool {
 	return false
 }
 
+```
+
+</TabItem>
+
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@wingkwong"/>
+
+```cpp
+class Solution {
+public:
+    int minTime(int n, vector<vector<int>>& edges, vector<bool>& hasApple) {
+        vector<vector<int>> g(n);
+        for (auto x : edges) {
+            g[x[0]].push_back(x[1]);
+            g[x[1]].push_back(x[0]);
+        }
+        // u = currenct vertex
+        // p = parent vertex
+        function<int(int, int)> dfs = [&] (int u, int p) {
+            int res = 0, t = 0;
+            for (auto v : g[u]) {
+                // if v is not same as p
+                if (p ^ v) {
+                    // calculate the child time
+                    t = dfs(v, u);
+                    // if there is an apple in the subtree, we need 2 seconds to collect it and head back
+                    // if we are in vertex 1, we need 4 seconds to collect all the apples in 4 & 5 
+                    // i.e. (1 -> 4, 4 -> 1, 1 -> 5, 5 -> 1)
+                    // how does 0 know that 1 has collected the apple? check the time, i.e. `t`
+                    // if t > 0, it means we got some apples in sub trees
+                    if (t > 0 || hasApple[v]) {
+                        res += t + 2;
+                    }
+                }
+            }
+            return res;
+        };
+        return dfs(0, -1);
+    }
+};
 ```
 
 </TabItem>
