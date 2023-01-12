@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/richest-customer-wealth/'
+description: 'Author: @wingkwong, @radojicic23 | https://leetcode.com/problems/richest-customer-wealth/'
 tags: [Array, Matrix]
 ---
 
@@ -56,6 +56,8 @@ Output: 17
 
 Given a `m x n` grid, we need to find the maximum row sum. We iterate each row and define `wealth = 0`, then iterate each column, add each `accounts[i][j]` to `wealth`. After that, update the answer if the wealth for the current row is greater than the current maximum sum.
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -94,10 +96,15 @@ public:
 };
 ```
 
+</TabItem>
+</Tabs>
+
 ## Approach 2: Max Row Sum (STL)
 
 Same idea as approach 1 but it is using STL.
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -112,3 +119,47 @@ public:
     }
 }
 ```
+
+</TabItem>
+
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```py
+class Solution:
+    def maximumWealth(self, accounts: List[List[int]]) -> int:
+        res = 0
+        for i in accounts:
+            res = max(res, sum(i))
+        return res
+```
+
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * @param {number[][]} accounts
+ * @return {number}
+ */
+var maximumWealth = function(accounts) {
+    let ans = 0;
+    for (i of accounts) {
+        ans = Math.max(ans, sum(i));
+    }
+    return ans;
+};
+
+function sum(arr) {
+    let res = 0;
+    for (i of arr) {
+        res += i;
+    }
+    return res;
+};
+```
+
+</TabItem>
+</Tabs>
