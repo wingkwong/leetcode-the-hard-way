@@ -105,6 +105,18 @@ public:
 ```
 
 </TabItem>
+
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```py
+class Solution:
+    def runningSum(self, nums: List[int]) -> List[int]:
+        return accumulate(nums)
+
+```
+
+</TabItem>
 </Tabs>
 
 ## Approach 3: Iteration
