@@ -13,15 +13,16 @@ keywords:
 
 ## Overview
 
-Sieve of Eratosthenes is a way of finding all prime numbers up to $$n$$ (inclusive).
+The Sieve of Eratosthenes is an algorithm used to find all prime numbers up to a given limit. It works by iteratively marking as composite (i.e., not prime) the multiples of each prime, starting with 2. The algorithm starts by creating a list of all integers from 2 to the limit. It then marks the first number, 2, as prime and removes all multiples of 2 from the list. The next unmarked number in the list is 3, which is also prime, so it marks it and removes all multiples of 3 from the list. This process continues until all numbers in the list have been marked as prime or composite. The remaining unmarked numbers are the prime numbers up to the given limit.
 
-First we mark all integers as true except 0 and 1. Then starting from 2, we mark out all multiples of 2 that are bigger than itself because they are composite. The next integer that is not marked out is 3 and it is prime. We mark out all multiples of 3 that are bigger than itself. Similarly, we search for the next integer $$k$$ that is not marked out and is prime, then mark out all multiples of $$k$$.
+## Implementation
 
-### C++ Implementation
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 vector<bool> sieveOfEratosthenes(const int n) {
-  assert(n >= 2 && "N must be greater or equal to 2");
   vector<bool> isPrime(n + 1, true);
   isPrime[0] = isPrime[1] = false;
   for (int i = 2; i * i <= n; i++) {
@@ -34,6 +35,10 @@ vector<bool> sieveOfEratosthenes(const int n) {
   return isPrime;
 }
 ```
+
+</TabItem>
+
+</Tabs>
 
 export const suggestedProblems = [
   {
