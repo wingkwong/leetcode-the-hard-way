@@ -95,6 +95,11 @@ const config = {
             activeBaseRegex: `/solutions/`,
           },
           {
+            label: 'Tags',
+            to: '/solutions/tags/',
+            activeBaseRegex: `/solutions/tags/`,
+          },
+          {
             label: 'Collections',
             to: '/collections/',
             activeBaseRegex: `/collections/`,
@@ -142,6 +147,10 @@ const config = {
               {
                 label: 'Solutions',
                 href: '/solutions/category/0000---0099/',
+              },
+              {
+                label: 'Tags',
+                href: '/solutions/tags',
               },
               {
                 label: 'Collections',
