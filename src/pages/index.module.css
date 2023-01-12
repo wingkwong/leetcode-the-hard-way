@@ -15,22 +15,6 @@
   margin: 0px 20px;
 }
 
-@media only screen and (max-width: 768px) {
-  .buttons a {
-    margin: 5px 36px;
-  }
-
-  .gitHubButtonWrapper {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
-}
-
 .buttons {
   --ifm-button-size-multiplier: 1.6;
   display: inline-flex;
@@ -42,11 +26,12 @@
 .buttons a:hover {
   color: #fff !important;
   background: #032341;
-  width: 350px;
+  width: 100%;
+  padding: 10px;
 }
 
 .buttons a:last-of-type {
-  margin: 20px 36px;
+  margin-top: 20px;
 }
 
 .gitHubButton {
@@ -55,4 +40,11 @@
 
 .highlightedColor {
   color: var(--ifm-heading-color)
+}
+
+
+@media only screen and (max-width: 768px) {
+  .gitHubButtonWrapper {
+    display: none;
+  }
 }
