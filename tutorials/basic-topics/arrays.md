@@ -9,24 +9,21 @@ keywords:
   - data structure
 ---
 
-<TutorialAuthors names="@heiheihang"/>
+<TutorialAuthors names="@heiheihang, @wingkwong"/>
 
 ## Overview
 
-As there is not much distinction between many data structures in the context of LeetCode. I will use the term `array` to cover the following data structures in these popular languages:
+Arrays are a common data structure used in many programming languages such as Python, C++, Java, and Javascript. They are used to store a collection of items and can be one-dimensional or multi-dimensional.
 
-* Python: List
-* C++: Array, Vector
-* Java: Array, ArrayList
-* Javascript: Array
-
-Note that there are differences in all of them in different languages, but these differences are not important in the context of LeetCode. Just be mindful they are different.
-
-The syntax that we are using is `python`, please refer to your own language of preference if needed.
+In the context of LeetCode, the term "array" can refer to different data structures in different languages, such as a List in Python, Array or Vector in C++, Array or ArrayList in Java, and Array in Javascript.
 
 Let's take a look at some examples of array:
 
-```python
+<Tabs>
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@heiheihang"/>
+
+```py
 scores_of_students = [86, 76, 67, 98, 95]
 
 boys_and_girls_of_classes = [[10,23], [20,20], [15,12], [13,16]]
@@ -36,8 +33,39 @@ basketball_matches = [[0, 76, 86, 100],
                        [65, 34, 0, 86],
                        [72, 65, 78, 0]]
 ```
+</TabItem>
 
-We have 3 types of arrays.
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@wingkwong"/>
+
+```cpp
+vector<int> scores_of_students = {86, 76, 67, 98, 95};
+vector<vector<int>> boys_and_girls_of_classes = {{10,23}, {20,20}, {15,12}, {13,16}};
+vector<vector<int>> basketball_matches = {{0, 76, 86, 100},
+                                          {56, 0, 87, 65},
+                                          {65, 34, 0, 86},
+                                          {72, 65, 78, 0}};
+```
+</TabItem>
+
+
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@wingkwong"/>
+
+```java
+int[] scores_of_students = {86, 76, 67, 98, 95};
+int[][] boys_and_girls_of_classes = {{10,23}, {20,20}, {15,12}, {13,16}};
+int[][] basketball_matches = {{0, 76, 86, 100},
+                              {56, 0, 87, 65},
+                              {65, 34, 0, 86},
+                              {72, 65, 78, 0}};
+```
+</TabItem>
+</Tabs>
+
+We have 3 types of arrays. 
+
+> The syntax that we are using is Python, please refer to your own language of preference if needed.
 
 `scores_of_students`: This array is an 1-d array containing the scores of each student. We can perform the following operations to obtain different information of the scores:
 
@@ -54,13 +82,49 @@ We have 3 types of arrays.
 
 `basketball_matches` : This array is a 2-d array, but it is special that its dimension is `n x n` . These arrays (or better, matrices) usually have a special meaning. In this case, we have the scores of each team competing with each other. For example, team 1 vs team 2 has the score of `76 - 56` . We will use for-loops to iterate these arrays.
 
-```python
+
+<Tabs>
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@heiheihang"/>
+
+```py
 for i in range(len(basketball_matches)):
     for j in range(len(basketball_matches[0])):
         print("Team " + str(i) + " " + basketball_matches[i][j])
         print("Against")
         print("Team " + str(j) + " " + basketball_matches[j][i])
 ```
+</TabItem>
+
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@wingkwong"/>
+
+```cpp
+for (int i = 0; i < basketball_matches.size(); i++) {
+    for (int j = 0; j < basketball_matches[0].size(); j++) {
+        cout << "Team " << i << " " << basketball_matches[i][j] << endl;
+        cout << "Against" << endl;
+        cout << "Team " << j << " " << basketball_matches[j][i] << endl;
+    }
+}
+```
+</TabItem>
+
+
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@wingkwong"/>
+
+```java
+for (int i = 0; i < basketball_matches.length; i++) {
+    for (int j = 0; j < basketball_matches[0].length; j++) {
+        System.out.println("Team " + i + " " + basketball_matches[i][j]);
+        System.out.println("Against");
+        System.out.println("Team " + j + " " + basketball_matches[j][i]);
+    }
+}
+```
+</TabItem>
+</Tabs>
 
 ### Complexity
 
