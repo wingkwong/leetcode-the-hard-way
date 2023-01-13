@@ -54,9 +54,16 @@ Explanation: The longest path where each two adjacent nodes have different chara
 
 The first observation is that node can have at most two longest chains from child nodes. If a node have more than two chains, we only need to take the longest two.
 
-<SolutionAuthor name="@wingkwong"/>
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@wingkwong" />
 
 ```cpp
+// observation:
+// a node can have at most two longest chains from child nodes
+// if a node have more than two chains, take the longest two
+// i.e. one parent node + longest + second longest
+
 class Solution {
 public:
     int longestPath(vector<int>& parent, string s) {
@@ -69,24 +76,24 @@ public:
             }
         }
         function<int(int)> dfs = [&](int u) {
-            // store the largest one and the second largest
-            int largest = 0, secondLargest = 0;
+            // store the longest one and the second longest
+            int longest = 0, secondLongest = 0;
             for (auto v : g[u]) {
                 // calculate the value first
                 int val = dfs(v);
                 // if their charachters are not same
                 if (s[u] ^ s[v]) {
-                    // then find out largest & secondLargest
-                    if (val > secondLargest) secondLargest = val;
-                    if (secondLargest > largest) swap(largest, secondLargest);
+                    // then find out longest & secondLongest
+                    if (val > secondLongest) secondLongest = val;
+                    if (secondLongest > longest) swap(longest, secondLongest);
                 }
             }
             // update ans 
-            // the value would be largest + secondLargest + 1, i.e.
-            // the length of both chain (largest & secondLargest) + itself
-            ans = max(ans, largest + secondLargest + 1);
-            // take the largest one plus itself
-            return largest + 1;
+            // the value would be longest + secondLongest + 1, i.e.
+            // the length of both chain (longest & secondLongest) + itself
+            ans = max(ans, longest + secondLongest + 1);
+            // take the longest one plus itself
+            return longest + 1;
         };
         // 0 must be the root
         dfs(0);
@@ -94,3 +101,50 @@ public:
     }
 };
 ```
+
+</TabItem>
+
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@wingkwong"/>
+
+```py
+class Solution:
+    def longestPath(self, parent: List[int], s: str) -> int:
+        ans = 0
+        n = len(parent)
+        g = [[] for _ in range(n)]
+        # build the graph
+        for i in range(n):
+            if parent[i] != -1:
+                g[parent[i]].append(i)
+                
+        def dfs(u):
+            nonlocal ans
+            # store the longest one and the second longest
+            longest = 0
+            secondLongest = 0
+            for v in g[u]:
+                # calculate the value first
+                val = dfs(v)
+                # if their charachters are not same
+                if s[u] != s[v]:
+                    # then find out longest & secondLongest
+                    if val > secondLongest:
+                        secondLongest = val
+                    if secondLongest > longest:
+                        longest, secondLongest = secondLongest, longest
+                        
+            # update ans 
+            # the value would be longest + secondLongest + 1, i.e.
+            # the length of both chain (longest & secondLongest) + itself
+            ans = max(ans, longest + secondLongest + 1)
+            # take the longest one plus itself
+            return longest + 1
+        
+        # 0 must be the root
+        dfs(0)
+        return ans
+```
+
+</TabItem>
+</Tabs>
