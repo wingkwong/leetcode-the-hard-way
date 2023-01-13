@@ -9,22 +9,19 @@ keywords:
   - algorithm
 ---
 
-<TutorialAuthors names="@abhishek-sultaniya"/>
+<TutorialAuthors names="@abhishek-sultaniya, @wingkwong"/>
 
 ## Overview
 
-Greedy is a strategy to solve various problems optimally. A greedy algorithm constructs a solution to the problem by always making a choice that looks the best at the moment. A greedy algorithm never takes back its choices, but directly constructs the final solution. For this reason, greedy algorithms are usually very efficient.
+A greedy algorithm is a type of algorithmic approach that follows the problem-solving heuristic of making the locally optimal choice at each stage with the hope of finding a global optimum. In other words, at each step, it chooses the option that looks the best at that moment without considering the potential impact of the decision on future steps.
 
-Here're the rules:
+This algorithm is mainly used for optimization problems where the goal is to find the best solution among a set of possibilities. The solutions are constructed incrementally, with the algorithm making the locally optimal choice at each stage.
 
-- Always pick the best choice at any step.
+A Greedy algorithm is simple and easy to implement, but it doesn't always give an optimal solution. It can be used to solve problems such as scheduling, Huffman coding, and finding the shortest path in a graph.
 
-- Works on the assumption that by picking a local optimum solution at each step we will reach a global optimum.
-
-- The greedy algorithm never reconsiders its choices.
+Overall, the Greedy algorithm is a useful approach for solving optimization problems, but it should be used with caution, as it may not always lead to the best global solution.
 
 ## Example 1: [0605 - Can Place Flowers](https://leetcode.com/problems/can-place-flowers/)
-
 
 > You have a long flowerbed in which some of the plots are planted, and some are not. However, flowers cannot be planted in adjacent plots.
 >
