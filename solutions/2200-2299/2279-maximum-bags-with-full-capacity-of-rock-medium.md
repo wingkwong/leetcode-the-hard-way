@@ -103,4 +103,30 @@ class Solution:
 ```
 
 </TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * @param {number[]} capacity
+ * @param {number[]} rocks
+ * @param {number} additionalRocks
+ * @return {number}
+ */
+var maximumBags = function(capacity, rocks, additionalRocks) {
+    for (let i = 0; i < capacity.length; i++) {
+        capacity[i] -= rocks[i];
+    }
+    let res = 0;
+    capacity.sort(function(a, b) {return a - b});
+    while (res < capacity.length && additionalRocks - capacity[res] >= 0) {
+        additionalRocks -= capacity[res];
+        res += 1;
+    }
+    return res;
+};
+```
+
+</TabItem>
 </Tabs>
