@@ -9,17 +9,21 @@ keywords:
   - algorithm
 ---
 
-<TutorialAuthors names="@ShivaRapolu01"/>
+<TutorialAuthors names="@ShivaRapolu01, @wingkwong"/>
 
 ## Overview
 
-Kadane's algorithm is an iterative algorithm in which we search for a maximum sum contiguous subarray within 1D array.
+The Kadane's algorithm is a well-known method for solving the problem of finding the maximum sum of a contiguous subarray of a given array of numbers. The basic idea behind the algorithm is to iterate through the array, keeping track of the maximum sum seen so far and the current sum, and updating the maximum sum whenever a new maximum is found. The algorithm has a time complexity of $O(n)$.
 
 ## Algorithm
 
-1. Store the sum of elements of the current subarray found so far. 
-2. Keep updating the maximum sum of subarray found so far by checking if the current sum is greater than the maximum sum found so far or not.
-3. If the current sum is less than $0$, then we can neglect the current subarray and start a new subarray from the next element.
+1. Initialize variables to keep track of the current sum and maximum sum, setting them both to the first element of the array.
+2. Starting from the second element, iterate through the rest of the array.
+3. At each element, calculate the current sum by adding the current element to the previous current sum. If the current sum is less than zero, set the current sum to zero.
+4. Compare the current sum to the maximum sum and update the maximum sum if the current sum is greater.
+5. Return the maximum sum as the result of the algorithm.
+
+> Note: Algorithm will work for an array of integers where all numbers in the array are non-negative. If the array contains negative numbers, a variant of this algorithm called "Maximum subarray problem" should be used.
 
 ## Example 1: [0053 - Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
 
@@ -102,7 +106,7 @@ export const kadaneSuggestedProblems = [
 
 ### Overview
 
-We know about Kadane's algorithm which is a $O(N)$ algorithm that finds the maximum sum of a contiguous subarray in an array. It can be extended to find maximum sum submatrix in a 2D matrix.
+Kadane's 2D Algorithm is a variation of the original Kadane's algorithm that is used to find the maximum sum of a submatrix in a given 2D array. It is a powerful tool for solving problems related to image processing, such as finding the maximum sum of a sub-image in a larger image. The basic idea behind the algorithm is to first find the maximum sum of each row of the submatrix by using the original Kadane's algorithm, then find the maximum sum of all the rows by using the same algorithm again. The algorithm has a time complexity of $O(n^4)$ and is often used in conjunction with other techniques such as dynamic programming to improve the performance.
 
 ### Algorithm
 
