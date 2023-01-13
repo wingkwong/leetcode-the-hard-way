@@ -12,7 +12,16 @@ keywords:
 
 ## Overview
 
-Brute Force is a straightforward method of solving a problem. It is used when the problem size is limited as we try each possible answer one at a time. Usually it works in Easy problems or the first problem in contests. Moreover, sometimes if we get stuck in a problem, we may think of a brute force solution first and optimize it bit by bit.
+The brute force method for solving a problem involves using a simple and straightforward approach to solve the problem, without worrying about optimization. This method is often used as a starting point for solving a problem, as it can help to understand the problem better and develop a basic understanding of its requirements.
+
+The steps for using the brute force method are as follows:
+
+1. Understand the problem and its requirements by reading the problem statement and examples.
+2. Develop a simple and straightforward solution that solves the problem by using a nested loop (or loops) to iterate through all possible combinations of the input.
+3. Test the solution on the provided test cases to check if it works correctly and returns the expected output.
+4. Optimize the solution if necessary, by analyzing its time and space complexity and identifying areas where it can be improved.
+
+Note that the brute force approach often results in a solution that has a high time complexity, it is important to analyze the solution and optimize it, or come up with a more efficient algorithm that solves the problem, because the brute force method is not a good solution for problems that have a large input size or a large number of test cases.
 
 ## Example 1: [1480 -Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/)
 
