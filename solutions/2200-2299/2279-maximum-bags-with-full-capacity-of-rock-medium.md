@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
+  Author: @wingkwong, @radojicic23 |
   https://leetcode.com/problems/maximum-bags-with-full-capacity-of-rocks
 ---
 
@@ -54,6 +54,8 @@ Note that we did not use all of the additional rocks.
 
 ## Approach 1: Greedy
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -80,3 +82,25 @@ public:
     }
 };
 ```
+
+</TabItem>
+
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```py
+class Solution:
+    def maximumBags(self, capacity: List[int], rocks: List[int], additionalRocks: int) -> int:
+        for i in range(len(capacity)):
+            capacity[i] -= rocks[i]
+        
+        capacity.sort()
+        count = 0
+        while count < len(capacity) and additionalRocks - capacity[count] >= 0:
+            additionalRocks -= capacity[count]
+            count += 1
+        return count 
+```
+
+</TabItem>
+</Tabs>
