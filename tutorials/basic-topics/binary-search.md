@@ -9,13 +9,25 @@ keywords:
   - algorithm
 ---
 
-import TutorialAuthors from '@site/src/components/TutorialAuthors';
-
 <TutorialAuthors names="@heiheihang, @wingkwong"/>
 
 ## Overview
 
-We have all played a game to guess a number from 1 to 100. The optimal approach to this game is actually binary search. Binary search is the searching strategy that reduces the search space by half every iteration until you have found the target.
+Binary search is a widely used algorithm for searching an element in a sorted array or list. The basic idea of binary search is to divide the search space in half with each iteration and compare the middle element with the target element. If the middle element is greater than the target element, the search space is reduced to the left half of the array, otherwise, it is reduced to the right half. This process is repeated until the target element is found or the search space is exhausted.
+
+The time complexity of binary search is $O(log n)$, which is more efficient than the linear search algorithm $O(n)$, which checks all elements one by one. However, for binary search to work, the array or list must be sorted.
+
+Binary search can be implemented using a while loop, recursion, or a combination of both. The implementation details may vary, but the basic idea remains the same. The basic steps for a binary search algorithm are:
+
+1. Initialize two pointers, one pointing to the start of the array and the other pointing to the end.
+2. Find the middle element of the array by calculating the average of the two pointers.
+3. Compare the middle element with the target element.
+4. If the middle element is equal to the target element, the search is complete and the index of the target element is returned.
+5. If the middle element is less than the target element, move the left pointer to the middle element + 1 and repeat step 2.
+6. If the middle element is greater than the target element, move the right pointer to the middle element - 1 and repeat step 2.
+7. If the left pointer is greater than the right pointer, the target element is not found and the function returns -1.
+
+In conclusion, binary search is a fast and efficient algorithm for searching an element in a sorted array or list. Its time complexity is $O(log n)$, which is much better than the linear search algorithm. However, it requires the array or list to be sorted for it to work.
 
 Let's look at the most basic form of binary search:
 
@@ -49,6 +61,50 @@ def binarySearch(nums, target):
         else:
             rp = mid - 1
     return -1 
+```
+</TabItem>
+
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@wingkwong"/>
+
+```cpp
+int binarySearch(vector<int>& nums, int target) {
+    int lp = 0, rp = nums.size() - 1;
+    while (lp <= rp) {
+        int mid = lp + (rp - lp) / 2;
+        if (nums[mid] == target) {
+            return mid;
+        } else if (nums[mid] < target) {
+            lp = mid + 1;
+        } else {
+            rp = mid - 1;
+        }
+    }
+    return -1;
+}
+```
+</TabItem>
+
+
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@wingkwong"/>
+
+```java
+int binarySearch(int[] nums, int target) {
+    int lp = 0, rp = nums.length - 1;
+    while (lp <= rp) {
+        int mid = lp + (rp - lp) / 2;
+        if (nums[mid] == target) {
+            return mid;
+        } else if (nums[mid] < target) {
+            lp = mid + 1;
+        } else {
+            rp = mid - 1;
+        }
+    }
+    return -1;
+}
+
 ```
 </TabItem>
 </Tabs>
