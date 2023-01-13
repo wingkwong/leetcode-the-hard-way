@@ -12,7 +12,19 @@ keywords:
 
 ## Overview
 
-Prefix Sum is the sums of prefixes of the input sequence. Let's say the input $a$ is $[1, 2, 3, 4, 5]$. The prefix sum array $pref$ would be $[1, 3, 6, 10, 15]$ which can be calculated as follows:
+The prefix sum is a technique used to efficiently calculate the sum of all elements in an array up to a certain index. It is also known as cumulative sum, and it is often used in various computational problems such as range sum queries or dynamic programming.
+
+The basic idea behind the prefix sum is to pre-compute the sum of all elements up to each index in the array and then use these pre-computed sums to quickly calculate the sum of any sub-array in the array.
+
+The steps for implementing the prefix sum technique are as follows:
+
+1. Create a new array of the same length as the original array, and initialize the first element to the value of the first element of the original array.
+2. Starting from the second element, iterate through the rest of the original array, and at each element, calculate the prefix sum by adding the current element to the previous prefix sum, and store this value in the corresponding element of the new array.
+3. To find the sum of any sub-array, we can use the pre-computed prefix sum array, by subtracting the prefix sum of the starting index of the sub-array from the prefix sum of the ending index + 1.
+
+The prefix sum has a time complexity of O(n) and a space complexity of O(n), it is efficient and widely used in various computational problems such as range sum queries, dynamic programming and more.
+
+Let's say the input $a$ is $[1, 2, 3, 4, 5]$. The prefix sum array $pref$ would be $[1, 3, 6, 10, 15]$ which can be calculated as follows:
 
 $$$
 pref[0] = a[0] \\
@@ -57,7 +69,7 @@ vector<int> generatePrefixSum(vector<int>& a) {
 </Tabs>
 
 
-### Example : [1480 -Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/)
+### Example : [1480 - Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/)
 
 ```
 Given an array nums. We define a running sum of an array as runningSum[i] = sum(nums[0] ... nums[i]).
