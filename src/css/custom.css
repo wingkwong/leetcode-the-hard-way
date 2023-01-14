@@ -87,14 +87,22 @@ html[data-theme='dark'] .header-github-link:before {
 }
 
 div[class^='announcementBar_'] {
-  background: #1d2428;
+  background: #303846;
   color: #ffffff;
   border-bottom: 1px dotted #eeeeee;
   font-weight: bold;
+  font-size: 18px;
+  height: 55px;
+  padding: 10px;
 }
 
 div[class^='announcementBar_'] a {
     color: var(--ifm-announcement-color);
+}
+
+div[class^='announcementBar_'] .clean-btn {
+  color: #ffffff;
+  opacity: 100%;
 }
 
 [data-theme='light'] .DocSearch {
