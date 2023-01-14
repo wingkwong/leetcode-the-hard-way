@@ -12,7 +12,7 @@ keywords:
 
 ## Overview
 
-Binary Tree is a tree structure in which each node only contains at most two children, often referred as left and right child.
+A binary tree is a tree data structure in which each node has at most two children, which are referred to as the left child and the right child. The root node is the topmost node in the tree and the leaf nodes are the nodes at the bottom with no children. Binary trees are commonly used to implement data structures such as binary search trees, which are used for efficient searching and sorting. The height of the binary tree is the number of edges from the root to the deepest leaf node. The depth of a node is the number of edges from the root to that node.
 
 ## Properties
 
