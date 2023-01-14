@@ -1,5 +1,5 @@
 ---
-description: "Author: @wingkwong, @ganajayant, @skoden | https://leetcode.com/problems/two-sum/"
+description: "Author: @wingkwong, @ganajayant, @skoden, @radojicic23 | https://leetcode.com/problems/two-sum/"
 tags: [Array, Two Pointer, Hash Table]
 ---
 
@@ -123,6 +123,29 @@ class Solution {
         return new int[]{-1, -1};
     }
 }
+```
+
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+var twoSum = function(nums, target) {
+    for (let i = 0; i < nums.length; i++) {
+        for (let j = i + 1; j < nums.length; j++) {
+            if (nums[i] + nums[j] == target) {
+                return [i, j];
+            }
+        }
+    }
+    return [-1, -1];
+};
 ```
 
 </TabItem>
