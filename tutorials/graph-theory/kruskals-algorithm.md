@@ -35,8 +35,6 @@ Prerequisite: [Disjoint Set Union](../graph-theory/disjoint-set-union)
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
-
-```cpp
 class dsu {
  public:
   vector<int> root, rank;
