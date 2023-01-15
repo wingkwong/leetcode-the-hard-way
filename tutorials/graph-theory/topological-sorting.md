@@ -27,6 +27,12 @@ The following implementation is using BFS.
 - `orders` is the topologically sorted order
 - `isTopologicalSorted` is used to determine if the graph can be topologically sorted or not
 
+
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@wingkwong"/>
+
+
 ```cpp
 struct TopologicalSort {
     int n;
@@ -61,8 +67,15 @@ struct TopologicalSort {
     }
 };
 ```
+</TabItem>
+</Tabs>
 
 ## Example 1: [0207 - Course Schedule](https://leetcode.com/problems/course-schedule/)
+
+
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 // ...
@@ -91,7 +104,14 @@ public:
 };
 ```
 
+</TabItem>
+</Tabs>
+
 ## Example 2: [0210 - Course Schedule II](https://leetcode.com/problems/course-schedule-ii/)
+
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 // ...
@@ -122,3 +142,6 @@ public:
     }
 };
 ```
+
+</TabItem>
+</Tabs>
