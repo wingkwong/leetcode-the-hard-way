@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @vigneshshiv, @MithunPrabhu777 |
+  Author: @vigneshshiv, @MithunPrabhu777, @radojicic23 |
   https://leetcode.com/problems/reverse-integer/
 ---
 
@@ -77,6 +77,7 @@ class Solution {
 }
 ```
 </TabItem>
+
 <TabItem value="javascript" label="JavaScript">
 <SolutionAuthor name="@MithunPrabhu777"/>
 
@@ -87,14 +88,11 @@ class Solution {
  */
 var reverse = function(x) {
     let [number, sign, remainder] = [0, 1, 0];
-    
     const RANGE = 2 ** 31 - 1;
-    
     if (x < 0) {
         x *= -1;
         sign = -1;
     }
-    
     while (x > 0) {
         remainder = x % 10;
         number = (number * 10) + remainder;
@@ -102,6 +100,25 @@ var reverse = function(x) {
     }
     return number > RANGE ? 0 : number * sign;
 };
+```
+</TabItem>
+
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```py
+class Solution:
+    def reverse(self, x: int) -> int:
+        number, remainder, sign = 0, 0, 1
+        MAX = 2 ** 31 - 1
+        if x < 0:
+            x *= -1
+            sign = -1
+        while x > 0:
+            remainder = x % 10
+            number = (number * 10) + remainder
+            x //= 10
+        return 0 if number > MAX else int(number) * sign
 ```
 </TabItem>
 </Tabs>
