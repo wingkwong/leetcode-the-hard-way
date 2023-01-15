@@ -142,7 +142,7 @@ export const suggestedProblems = [
     "problemName": "2421. Number of Good Paths",
     "difficulty": "Hard",
     "leetCodeLink": "https://leetcode.com/problems/number-of-good-paths/",
-    "solutionLink": ""
+    "solutionLink": "../../solutions/2400-2499/number-of-good-paths-hard"
   },
   {
     "problemName": "2382. Maximum Segment Sum After Removals",
