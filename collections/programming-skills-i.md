@@ -17,31 +17,31 @@ export const problems = [
     "problemName": "1523. Count Odd Numbers in an Interval Range",
     "difficulty": "Easy",
     "leetCodeLink": "https://leetcode.com/problems/count-odd-numbers-in-an-interval-range",
-    "solutionLink": ""
+    "solutionLink": "../../solutions/1500-1599/count-odd-numbers-in-an-interval-range-easy"
   },
   {
     "problemName": "1491. Average Salary Excluding the Minimum and Maximum Salary",
     "difficulty": "Easy",
     "leetCodeLink": "https://leetcode.com/problems/average-salary-excluding-the-minimum-and-maximum-salary",
-    "solutionLink": ""
+    "solutionLink": "../../solutions/1400-1499/average-salary-excluding-the-minimum-and-maximum-salary-easy"
   },
   {
     "problemName": "191. Number of 1 Bits",
     "difficulty": "Easy",
     "leetCodeLink": "https://leetcode.com/problems/number-of-1-bits",
-    "solutionLink": ""
+    "solutionLink": "../../solutions/0100-0199/number-of-1-bits-easy"
   },
   {
     "problemName": "1281. Subtract the Product and Sum of Digits of an Integer",
     "difficulty": "Easy",
     "leetCodeLink": "https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer",
-    "solutionLink": ""
+    "solutionLink": "../../solutions/1200-1299/subtract-the-product-and-sum-of-digits-of-an-integer-easy"
   },
   {
     "problemName": "976. Largest Perimeter Triangle",
     "difficulty": "Easy",
     "leetCodeLink": "https://leetcode.com/problems/largest-perimeter-triangle",
-    "solutionLink": ""
+    "solutionLink": "../../solutions/0900-0999/largest-perimeter-triangle-easy"
   },
   {
     "problemName": "1779. Find Nearest Point That Has the Same X or Y Coordinate",
@@ -59,7 +59,7 @@ export const problems = [
     "problemName": "1502. Can Make Arithmetic Progression From Sequence",
     "difficulty": "Easy",
     "leetCodeLink": "https://leetcode.com/problems/can-make-arithmetic-progression-from-sequence",
-    "solutionLink": ""
+    "solutionLink": "../../solutions/1500-1599/can-make-arithmetic-progression-from-sequence-easy"
   },
   {
     "problemName": "202. Happy Number",
@@ -71,13 +71,13 @@ export const problems = [
     "problemName": "1790. Check if One String Swap Can Make Strings Equal",
     "difficulty": "Easy",
     "leetCodeLink": "https://leetcode.com/problems/check-if-one-string-swap-can-make-strings-equal",
-    "solutionLink": ""
+    "solutionLink": "../../solutions/0200-0299/happy-number-easy"
   },
   {
     "problemName": "589. N-ary Tree Preorder Traversal",
     "difficulty": "Easy",
     "leetCodeLink": "https://leetcode.com/problems/n-ary-tree-preorder-traversal",
-    "solutionLink": ""
+    "solutionLink": "../../solutions/0500-0599/n-ary-tree-preorder-traversal-easy"
   },
   {
     "problemName": "496. Next Greater Element I",
@@ -89,31 +89,31 @@ export const problems = [
     "problemName": "1232. Check If It Is a Straight Line",
     "difficulty": "Easy",
     "leetCodeLink": "https://leetcode.com/problems/check-if-it-is-a-straight-line",
-    "solutionLink": ""
+    "solutionLink": "../../solutions/1200-1299/check-if-it-is-a-straight-line-easy"
   },
   {
     "problemName": "1588. Sum of All Odd Length Subarrays",
     "difficulty": "Easy",
     "leetCodeLink": "https://leetcode.com/problems/sum-of-all-odd-length-subarrays/",
-    "solutionLink": ""
+    "solutionLink": "../../solutions/1500-1599/sum-of-all-odd-length-subarrays-easy"
   },
   {
     "problemName": "283. Move Zeroes",
     "difficulty": "Easy",
     "leetCodeLink": "https://leetcode.com/problems/move-zeroes/",
-    "solutionLink": ""
+    "solutionLink": "../../solutions/0200-0299/move-zeroes-easy"
   },
   {
     "problemName": "1672. Richest Customer Wealth",
     "difficulty": "Easy",
     "leetCodeLink": "https://leetcode.com/problems/richest-customer-wealth",
-    "solutionLink": ""
+    "solutionLink": "../../solutions/1600-1699/richest-customer-wealth-easy"
   },
   {
     "problemName": "1572. Matrix Diagonal Sum",
     "difficulty": "Easy",
     "leetCodeLink": "https://leetcode.com/problems/matrix-diagonal-sum",
-    "solutionLink": ""
+    "solutionLink": "../../solutions/1500-1599/matrix-diagonal-sum-easy"
   },
   {
     "problemName": "566. Reshape the Matrix",
@@ -173,19 +173,19 @@ export const problems = [
     "problemName": "104. Maximum Depth of Binary Tree",
     "difficulty": "Easy",
     "leetCodeLink": "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
-    "solutionLink": ""
+    "solutionLink": "../../solutions/0100-0199/maximum-depth-of-binary-tree-easy"
   },
   {
     "problemName": "404. Sum of Left Leaves",
     "difficulty": "Easy",
     "leetCodeLink": "https://leetcode.com/problems/sum-of-left-leaves",
-    "solutionLink": ""
+    "solutionLink": "../../solutions/0400-0499/sum-of-left-leaves-easy"
   },
   {
     "problemName": "1356. Sort Integers by The Number of 1 Bits",
     "difficulty": "Easy",
     "leetCodeLink": "https://leetcode.com/problems/sort-integers-by-the-number-of-1-bits",
-    "solutionLink": ""
+    "solutionLink": "../../solutions/1300-1399/sort-integers-by-the-number-of-1-bits-easy"
   },
   {
     "problemName": "232. Implement Queue using Stacks",
@@ -203,7 +203,7 @@ export const problems = [
     "problemName": "217. Contains Duplicate",
     "difficulty": "Easy",
     "leetCodeLink": "https://leetcode.com/problems/contains-duplicate",
-    "solutionLink": ""
+    "solutionLink": "../../solutions/0200-0299/contains-duplicate-easy"
   },
   {
     "problemName": "1603. Design Parking System",
