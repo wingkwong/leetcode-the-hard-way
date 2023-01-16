@@ -9,8 +9,6 @@ keywords:
   - dynamic programming
 ---
 
-import Table from '@site/src/components/Table';
-
 export const DPBitManipulationProblems = [
   {
     "problemName": "0464 - Can I Win",

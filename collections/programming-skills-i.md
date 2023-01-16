@@ -9,8 +9,6 @@ keywords:
   - Programming Skills - I
 ---
 
-import Table from '@site/src/components/Table';
-
 <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLBu4Bche1aEXiiHTKYwGD2m_7MEU6ECfj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 export const problems = [

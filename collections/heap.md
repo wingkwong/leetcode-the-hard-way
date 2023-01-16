@@ -10,8 +10,6 @@ keywords:
   - Priority Queue
 ---
 
-import Table from '@site/src/components/Table';
-
 export const problems = [
   {
     "problemName": "1046 - Last Stone Weight",
