@@ -3,7 +3,7 @@ description: 'Author: @wingkwong | https://leetcode.com/problems/single-element-
 tags: [Array, Binary Search]
 ---
 
-# 540 - Single Element in a Sorted Array (Medium) 
+# 0540 - Single Element in a Sorted Array (Medium) 
 
 ## Problem Statement
 

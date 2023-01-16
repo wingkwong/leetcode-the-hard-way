@@ -4,7 +4,7 @@ description: >-
   https://leetcode.com/problems/gas-station/
 ---
 
-# 134 - Gas Station (Medium)
+# 0134 - Gas Station (Medium)
 
 ## Problem Link
 
