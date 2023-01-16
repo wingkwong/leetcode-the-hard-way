@@ -1,5 +1,5 @@
 ---
-description: 'Author: @tostream, @ganajayant, @vigneshshiv | https://leetcode.com/problems/palindrome-number/'
+description: 'Author: @tostream, @ganajayant, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/palindrome-number/'
 ---
 
 # 0009 - Palindrome Number (Easy)
@@ -60,6 +60,7 @@ class Solution:
         return str(x) == str(x)[::-1]
 ```
 </TabItem>
+
 <TabItem value="java" label="Java">
 <SolutionAuthor name="@ganajayant"/>
 
@@ -71,6 +72,21 @@ class Solution {
         return rev.toString().equals(str);
     }
 }
+```
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * @param {number} x
+ * @return {boolean}
+ */
+var isPalindrome = function(x) {
+    var str = x.toString();
+    return str.split("").reverse().join("") == x.toString();
+};
 ```
 </TabItem>
 </Tabs>
