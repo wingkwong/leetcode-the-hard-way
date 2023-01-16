@@ -3,8 +3,6 @@ description: 'Author: @wingkwong | https://leetcode.com/problems/shortest-path-i
 tags: [Array, Breadth-First Search, Matrix]
 ---
 
-<!-- 3304199 -->
-
 # 1293 - Shortest Path in a Grid with Obstacles Elimination (Hard) 
 
 ## Problem Link
@@ -108,3 +106,5 @@ public:
 
 </TabItem>
 </Tabs>
+
+<!-- 3304199 -->
