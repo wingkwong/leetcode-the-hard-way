@@ -1,6 +1,7 @@
 ---
 title: 'LTHW - Heap (Priority Queue)'
 description: 'Collections of Heap (Priority Queue) Problems'
+sidebar_position: 3
 hide_table_of_contents: true
 keywords:
   - leetcode

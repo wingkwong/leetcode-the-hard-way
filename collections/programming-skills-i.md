@@ -2,6 +2,7 @@
 title: 'Study Plan - Programming Skills - I'
 description: 'https://leetcode.com/study-plan/programming-skills'
 hide_table_of_contents: true
+sidebar_position: 5
 keywords:
   - leetcode
   - study plan
