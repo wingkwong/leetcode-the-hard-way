@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @jessicaribeiroalves | https://leetcode.com/problems/roman-to-integer/
+  Author: @jessicaribeiroalves, @radojicic23 | https://leetcode.com/problems/roman-to-integer/
 ---
 
 # 0013 - Roman to Integer (Easy)
@@ -75,6 +75,15 @@ The second character `'I'` whose value is `1` won't satisfy the condition once `
 Finally, the third character `'V'` whose value is `5` will satisfy the condition because is greater than $previousChar$. So from the $result$ is subtracted `1` and $previousChar$ is updated to 5.
 The code finishes the loop with $result = 9$ and finally increments the value of $previousChar$ to the $result$. So our final $result$ becomes `14`.
 
+**Time Complexity: $O(n)$**
+
+This solution will be $O(n)$ as the time varies proportionally to the length of the string.
+
+**Space Complexity: $O(1)$**
+
+The space complexity for this solution is $O(1)$ as we only created variables for the counters and they're not related to the input size.
+
+
 <Tabs>
 <TabItem value="py" label="Python">
 <SolutionAuthor name="@jessicaribeiroalves"/>
@@ -109,12 +118,35 @@ class Solution(object):
 ```
 
 </TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var romanToInt = function(s) {
+    const roman = {
+        "I": 1, 
+        "V": 5, 
+        "X": 10, 
+        "L": 50, 
+        "C": 100, 
+        "D": 500, 
+        "M": 1000};
+    let res = 0;
+    for (i = 0; i < s.length; i++) {
+        if (i + 1 < s.length && roman[s[i]] < roman[s[i + 1]]) {
+            res -= roman[s[i]];
+        } else {
+            res += roman[s[i]];
+        }
+    }
+    return res;
+};
+```
+
+</TabItem>
 </Tabs>
-
-**Time Complexity: $O(n)$**
-
-This solution will be $O(n)$ as the time varies proportionally to the length of the string.
-
-**Space Complexity: $O(1)$**
-
-The space complexity for this solution is $O(1)$ as we only created variables for the counters and they're not related to the input size.
