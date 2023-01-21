@@ -108,6 +108,26 @@ var longestCommonPrefix = function(strs) {
 ```
 
 </TabItem>
+
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```py
+class Solution:
+    def longestCommonPrefix(self, strs: List[str]) -> str:
+        if len(strs) == 0: return 
+        strs.sort()
+        first, last = strs[0], strs[-1]
+        i = 0
+        while i < len(first):
+            if first[i] == last[i]:
+                i += 1
+            else:
+                break
+        return "" if i == 0 else first[:i]
+```
+
+</TabItem>
 </Tabs>
 
 <br />
