@@ -63,7 +63,7 @@ public:
         }
         // 2. find all potential candidates
         for (int i = start; i < s.size(); i++) {
-            // we want test all substrings, each substring is a potential candidate
+            // we want to test all substrings, each substring is a potential candidate
             // e.g. "aab" -> "a", "a", "b", "ab", "aa", "b", "aab"
             string candidate = s.substr(start, i - start + 1);
             // 3. check if the current candidate is palindrome or not 
@@ -115,7 +115,7 @@ class Solution {
         }
         // 2. find all potential candidates
         for (int i = start; i < s.length(); i++) {
-            // we want test all substrings, each substring is a potential candidate
+            // we want to test all substrings, each substring is a potential candidate
             // e.g. "aab" -> "a", "a", "b", "ab", "aa", "b", "aab"
             String candidate = s.substring(start, i + 1);
             // 3. check if the current candidate is palindrome or not 
@@ -158,7 +158,7 @@ class Solution:
                 return
             # 2. find all potential candidates
             for i in range(start, len(s)):
-                # we want test all substrings, each substring is a potential candidate
+                # we want to test all substrings, each substring is a potential candidate
                 # e.g. "aab" -> "a", "a", "b", "ab", "aa", "b", "aab"
                 candidate = s[start:i+1]
                 # 3. check if the current candidate is palindrome or not 
@@ -212,7 +212,7 @@ impl Solution {
         }
         // 2. find all potential candidates
         for i in start..s.len() {
-            // we want test all substrings, each substring is a potential candidate
+            // we want to test all substrings, each substring is a potential candidate
             // e.g. "aab" -> "a", "a", "b", "ab", "aa", "b", "aab"
             let candidate = &s[start .. i + 1];
             // 3. check if the current candidate is palindrome or not 
