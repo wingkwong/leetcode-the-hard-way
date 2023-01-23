@@ -61,7 +61,7 @@ This solution is strictly following the definition of a balanced binary tree.
 
 First, we need to set up the base case for the recursion solution. Then we check if the whole left subtree and right subtree are balanced. If so, then we check if every subtrees are balanced.
 
-Time Complexity: $$O(n)$$ as recursively we are going to going to have to process each node inside the tree at least once using a depth-first approach.
+Time Complexity: $$O(n)$$ as recursively we are going to have to process each node inside the tree at least once using a depth-first approach.
 
 Space Complexity: $$O(h)$$ as using a recursive DFS solution will only ever hold the current path inside our call stack, which will scale with the height of the tree.
 
