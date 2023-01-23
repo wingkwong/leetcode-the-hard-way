@@ -134,6 +134,43 @@ class Solution:
 ```
 
 </TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * @param {string} digits
+ * @return {string[]}
+ */
+var letterCombinations = function(digits) {
+    let res = [];
+    const hashmap = {'2': 'abc', 
+               '3': 'def', 
+               '4': 'ghi', 
+               '5': 'jkl', 
+               '6': 'mno', 
+               '7': 'pqrs', 
+               '8': 'tuv', 
+               '9': 'wxyz'};
+    
+    function backtrack(i, curr_str) {
+        if (curr_str.length == digits.length) {
+            res.push(curr_str);
+            return;
+        }
+        for (c of hashmap[digits[i]]) {
+            backtrack(i + 1, curr_str + c);
+        }
+    }
+    if (digits) {
+        backtrack(0, "");
+    }
+    return res;
+};
+```
+
+</TabItem>
 </Tabs>
 
 
