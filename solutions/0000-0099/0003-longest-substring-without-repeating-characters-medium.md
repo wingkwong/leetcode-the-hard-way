@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @@vigneshshiv, @MithunPrabhu777, @AnshikaAnand222, @radojicic23 |
+  Author: @vigneshshiv, @MithunPrabhu777, @AnshikaAnand222, @radojicic23 |
   https://leetcode.com/problems/longest-substring-without-repeating-characters/
 tags: [Hash Table, String, Sliding Window]
 ---
