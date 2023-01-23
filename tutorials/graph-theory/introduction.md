@@ -9,13 +9,19 @@ keywords:
   - graphs
 ---
 
-<TutorialAuthors names="@heiheihang"/>
+<TutorialAuthors names="@heiheihang, @wingkwong"/>
 
 ## Overview
 
-Graphs can solve a plethora of interesting problems!
+A graph is made up of a collection of points or objects called vertices and connections between some of those vertices called edges. The edges can be either one-way (can only be traversed in one direction), two-way, have a numerical value associated with traversing them, or without any value. We can use graphs to solve a plethora of interesting problems!
 
-For example, we have five people :
+Here is a undirected graph with 4 vertices (or nodes) and 5 edges. 
+
+![image](https://assets.leetcode.com/uploads/2020/10/21/bi2.jpg)
+
+## Example
+
+In real life, we may use graphs. Let's say we have six people:
 
 * Alice
 * Bob
@@ -24,9 +30,11 @@ For example, we have five people :
 * Ethan
 * Fiona
 
-We are also given a list of friends. For example:
+and we are also given a list of friends.
 
-`[["Alice", Bob"], ["Cathy", "Danny"], ["Alice", "Cathy"], ["Ethan", "Fiona"]]`
+```
+[["Alice", Bob"], ["Cathy", "Danny"], ["Alice", "Cathy"], ["Ethan", "Fiona"]]
+```
 
 Here, we know that:
 
