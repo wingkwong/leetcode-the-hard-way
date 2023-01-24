@@ -12,12 +12,9 @@ keywords:
   - topological sort
 ---
 
-
-
-### Depth First Traversal
+### Tree Traversal
 
 Please refer the [tutorial](../tutorials/graph-theory/binary-tree#traversal) guide for more details. 
-
 
 #### Preorder traversal
 
@@ -48,7 +45,6 @@ def preorder(node):
 </TabItem>
 </Tabs>
 
-
 #### Inorder traversal
 
 First traverse the left sub-tree,then visit the root and then traverse the right sub-tree.
@@ -77,7 +73,6 @@ def inorder(node):
 ```
 </TabItem>
 </Tabs>
-
 
 #### Postorder traversal
 
@@ -123,31 +118,21 @@ Please refer the [tutorial](../tutorials/graph-theory/breadth-first-search) guid
 def findTargetNode(root, targetValue):
     if(root is None):
         return None
-    
     currentLevel = [root]
-    
     while(len(level) > 0):
-    
         nextLevel = []
-        
         for node in currentLevel:
             if(node is None):
                 continue
             if(node.val == targetValue):
                 return node
-                
             nextLevel.append(node.left)
             nextLevel.append(node.right)
-       
         currentLevel = nextLevel
-      
     return None
-
 ```
 </TabItem>
 </Tabs>
-
-
 
 ### Bellman Ford Algorithm
 

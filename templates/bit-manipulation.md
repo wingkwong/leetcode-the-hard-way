@@ -10,6 +10,9 @@ keywords:
 
 ### Sum of Submask
 
+<Tabs>
+<TabItem value="cpp" label="C++">
+
 ```cpp
 template<typename T_out, typename T_in>
 vector<T_out> submask_sums(int n, const vector<T_in> &values) {
@@ -23,7 +26,13 @@ vector<T_out> submask_sums(int n, const vector<T_in> &values) {
 }
 ```
 
+</TabItem>
+</Tabs>
+
 ### Sum of Super Mask
+
+<Tabs>
+<TabItem value="cpp" label="C++">
 
 ```cpp
 template<typename T_out, typename T_in>
@@ -35,7 +44,13 @@ vector<T_out> supermask_sums(int n, vector<T_in> values) {
 }
 ```
 
+</TabItem>
+</Tabs>
+
 ### Largest Bit Set
+
+<Tabs>
+<TabItem value="cpp" label="C++">
 
 ```cpp
 int largest_bit(int x) {
@@ -43,7 +58,13 @@ int largest_bit(int x) {
 }
 ```
 
+</TabItem>
+</Tabs>
+
 ### Lowest Bit Set
+
+<Tabs>
+<TabItem value="cpp" label="C++">
 
 ```cpp
 int lowest_bit(int x) {
@@ -51,7 +72,13 @@ int lowest_bit(int x) {
 }
 ```
 
+</TabItem>
+</Tabs>
+
 ### Index of Lowest Bit Set
+
+<Tabs>
+<TabItem value="cpp" label="C++">
 
 ```cpp
 int lowest_bit_index(int x) {
@@ -61,10 +88,19 @@ int lowest_bit_index(int x) {
 }
 ```
 
+</TabItem>
+</Tabs>
+
 ### Enumerating all submasks of a given mask
+
+<Tabs>
+<TabItem value="cpp" label="C++">
 
 ```cpp
 for (int s = m; s; s = (s - 1) & m) {
     // use s
 }
  ```
+
+ </TabItem>
+</Tabs>

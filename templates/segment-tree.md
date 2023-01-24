@@ -15,6 +15,8 @@ keywords:
 - Find sum in particular range [l, r)
 - Point Update
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 
 ```cpp
 struct segtree {
@@ -54,8 +56,16 @@ struct segtree {
     }
 };
 ```
+</TabItem>
+</Tabs>
+
 
 ### Sample Usage
+
+
+<Tabs>
+<TabItem value="cpp" label="C++">
+
 
 ```cpp
 int n = nums.size();
@@ -68,6 +78,9 @@ st.set(index, val);
 // ...
 st.sum(left, right + 1)
 ```
+</TabItem>
+</Tabs>
+
 
 <!-- 
 TODO: verify

@@ -8,6 +8,9 @@ keywords:
   - sparse table
 ---
 
+<Tabs>
+<TabItem value="cpp" label="C++">
+
 ```cpp
 template<typename it, typename bin_op>
 struct sparse_table {
@@ -30,8 +33,14 @@ struct sparse_table {
     }
 };
 ```
+</TabItem>
+</Tabs>
+
 
 Usage: Range Queries finding min, max, gcd, lcm, and etc. The array cannot be changed between two queries.
+
+<Tabs>
+<TabItem value="cpp" label="C++">
 
 ```cpp
 void main() {
@@ -41,3 +50,5 @@ void main() {
 	cout << g.query(j, i) << "\n";
 }
 ```
+</TabItem>
+</Tabs>

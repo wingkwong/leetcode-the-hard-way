@@ -8,6 +8,11 @@ keywords:
   - binary search
 ---
 
+Please refer the [tutorial](../tutorials/basic-topics/binary-search) guide for more details. 
+
+<Tabs>
+<TabItem value="cpp" label="C++">
+
 ```cpp
 // ---------------------------------
 // target < nums[m]
@@ -27,8 +32,14 @@ int search(vector<int>& nums, int target) {
     }
     return nums[l] == target ? l : -1;
 }
-
 ```
+
+</TabItem>
+</Tabs>
+
+
+<Tabs>
+<TabItem value="cpp" label="C++">
 
 ```cpp
 // ---------------------------------
@@ -50,3 +61,6 @@ int search(vector<int>& nums, int target) {
     return nums[l] == target ? l : -1;
 }
 ```
+
+</TabItem>
+</Tabs>

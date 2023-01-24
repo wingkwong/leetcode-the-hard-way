@@ -10,6 +10,10 @@ keywords:
 ---
 
 
+<Tabs>
+<TabItem value="cpp" label="C++">
+
+
 ```cpp
 #include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/tree_policy.hpp>
@@ -30,3 +34,6 @@ void solve() {
 	x.find_by_order(k);
 }
 ```
+
+</TabItem>
+</Tabs>
