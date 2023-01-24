@@ -33,7 +33,11 @@ Output: false
 
 ## Approach 1: Binary Search
 
-Prerequisite: [Binary Search](../../tutorials/basic-topics/binary-search)
+:::info Prerequisite
+
+- [Binary Search](../../tutorials/basic-topics/binary-search)
+
+:::
 
 We can rewrite $$a ^ 2 + b ^ 2 = c$$ to $$b ^ 2 = c - a ^ 2$$ so that we can fix $$a$$ and then check if $$c - a ^ 2$$ is a perfect square. If so, we return `true`. If we couldn't find one at the end, return `false`.
 
