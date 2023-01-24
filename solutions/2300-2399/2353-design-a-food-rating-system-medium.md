@@ -65,7 +65,7 @@ foodRatings.highestRated("japanese"); // return "ramen"
 * All the strings in `foods` are **distinct**.
 * `food` will be the name of a food item in the system across all calls to `changeRating`.
 * `cuisine` will be a type of cuisine of **at least one** food item in the system across all calls to `highestRated`.
-* At most `2 * 104` calls **in total** will be made to `changeRating` and `highestRated`.
+* At most `2 * 10^4` calls **in total** will be made to `changeRating` and `highestRated`.
 
 ## Approach: TBC
 

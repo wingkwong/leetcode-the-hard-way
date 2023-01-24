@@ -48,10 +48,10 @@ We made 2 refueling stops along the way, so we return 2.
 
 **Constraints:**
 
-- `1 <= target, startFuel <= 109`
+- `1 <= target, startFuel <= 10^9`
 - `0 <= stations.length <= 500`
 - `0 <= positioni <= positioni+1 < target`
-- `1 <= fueli < 109`
+- `1 <= fueli < 10^9`
 
 ## Approach 1: TBC
 

@@ -38,7 +38,7 @@ Explanation: None of the intervals overlap, so we can put all of them in one gro
 
 - `1 <= intervals.length <= 105`
 - `intervals[i].length == 2`
-- `1 <= lefti <= righti <= 106`
+- `1 <= lefti <= righti <= 10^6`
 
 ## Approach 1: Line Sweep
 

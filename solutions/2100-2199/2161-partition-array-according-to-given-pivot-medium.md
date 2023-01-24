@@ -46,7 +46,7 @@ The relative ordering of the elements less than and greater than pivot is also m
 **Constraints:**
 
 * `1 <= nums.length <= 105`
-* `-106 <= nums[i] <= 106`
+* `-10^6 <= nums[i] <= 10^6`
 * `pivot` equals to an element of `nums`.
 
 ## Approach 1: Push elements to 3 arrays

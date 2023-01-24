@@ -40,7 +40,7 @@ Explanation: The length of the longest nice subarray is 1. Any subarray of lengt
 **Constraints:**
 
 - `1 <= nums.length <= 105`
-- `1 <= nums[i] <= 109`
+- `1 <= nums[i] <= 10^9`
 
 ## Approach 1: Sliding Window + Bit Manipulation
 

@@ -60,7 +60,7 @@ The second robot will collect 0 + 1 + 3 + 3 + 0 = 7 points.
 
 * `grid.length == 2`
 * `n == grid[r].length`
-* `1 <= n <= 5 * 104`
+* `1 <= n <= 5 * 10^4`
 * `1 <= grid[r][c] <= 10^5`
 
 ## Approach 1: Prefix & Suffix Sum

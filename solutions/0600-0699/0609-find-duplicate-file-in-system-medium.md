@@ -41,7 +41,7 @@ Output: [["root/a/2.txt","root/c/d/4.txt"],["root/a/1.txt","root/c/3.txt"]]
 
 **Constraints:**
 
-- `1 <= paths.length <= 2 * 104`
+- `1 <= paths.length <= 2 * 10^4`
 - `1 <= paths[i].length <= 3000`
 - `1 <= sum(paths[i].length) <= 5 * 105`
 - `paths[i]` consist of English letters, digits, `'/'`, `'.'`, `'('`, `')'`, and `' '`.

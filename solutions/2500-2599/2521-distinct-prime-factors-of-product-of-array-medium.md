@@ -39,7 +39,7 @@ There is 1 distinct prime factor so we return 1.
 
 **Constraints:**
 
-- `1 <= nums.length <= 104`
+- `1 <= nums.length <= 10^4`
 - `2 <= nums[i] <= 1000`
 
 ## Approach 1: Prime Factorization + Set

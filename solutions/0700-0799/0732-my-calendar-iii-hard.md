@@ -41,7 +41,7 @@ myCalendarThree.book(25, 55); // return 3
 
 **Constraints:**
 
-- `0 <= start < end <= 109`
+- `0 <= start < end <= 10^9`
 - At most `400` calls will be made to `book`.
 
 ## Approach 1: Line Sweeping

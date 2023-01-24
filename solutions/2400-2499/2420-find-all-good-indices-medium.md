@@ -42,7 +42,7 @@ Explanation: There are no good indices in this array.
 
 - `n == nums.length`
 - `3 <= n <= 105`
-- `1 <= nums[i] <= 106`
+- `1 <= nums[i] <= 10^6`
 - `1 <= k <= n / 2`
 
 ## Approach 1: Prefix & Suffix

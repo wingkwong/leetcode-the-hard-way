@@ -54,7 +54,7 @@ atm.withdraw(550);        // Returns [0,1,0,0,1]. The machine uses 1 $50 banknot
 
 * `banknotesCount.length == 5`
 * `0 <= banknotesCount[i] <= 10^9`
-* `1 <= amount <= 109`
+* `1 <= amount <= 10^9`
 * At most `5000` calls **in total** will be made to `withdraw` and `deposit`.
 * At least **one** call will be made to each function `withdraw` and `deposit`.
 

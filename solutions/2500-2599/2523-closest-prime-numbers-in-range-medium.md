@@ -40,7 +40,7 @@ Explanation: There exists only one prime number in the given range, so the condi
 
 **Constraints:**
 
-- `1 <= left <= right <= 106`
+- `1 <= left <= right <= 10^6`
 
 .spoilerbutton {display:block; border:dashed; padding: 0px 0px; margin:10px 0px; font-size:150%; font-weight: bold; color:#000000; background-color:cyan; outline:0; 
 }

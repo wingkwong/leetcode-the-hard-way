@@ -30,7 +30,7 @@ Output: 0
 **Constraints:**
 
 - `1 <= nums.length <= 3 * 10^4`
-- `-104 <= nums[i] <= 10^4`
+- `-10^4 <= nums[i] <= 10^4`
 - `2 <= k <= 10^4`
 
 ## Approach 1: Hash Map + Prefix Sum

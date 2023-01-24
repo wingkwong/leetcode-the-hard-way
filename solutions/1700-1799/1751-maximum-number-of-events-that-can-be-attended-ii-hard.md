@@ -52,7 +52,7 @@ Explanation: Although the events do not overlap, you can only attend 3 events. P
 * `1 <= k <= events.length`
 * `1 <= k * events.length <= 10^6`
 * `1 <= startDayi <= endDayi <= 10^9`
-* `1 <= valuei <= 106`
+* `1 <= valuei <= 10^6`
 
 ## Approach 1: Dynamic Programming
 

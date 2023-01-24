@@ -49,7 +49,7 @@ No matrix can satisfy all the conditions, so we return the empty matrix.
 **Constraints:**
 
 - `2 <= k <= 400`
-- `1 <= rowConditions.length, colConditions.length <= 104`
+- `1 <= rowConditions.length, colConditions.length <= 10^4`
 - `rowConditions[i].length == colConditions[i].length == 2`
 - `1 <= abovei, belowi, lefti, righti <= k`
 - `abovei != belowi`

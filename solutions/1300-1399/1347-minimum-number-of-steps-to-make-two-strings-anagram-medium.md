@@ -45,7 +45,7 @@ Explanation: "anagram" and "mangaar" are anagrams.
 
 **Constraints:**
 
-* `1 <= s.length <= 5 * 104`
+* `1 <= s.length <= 5 * 10^4`
 * `s.length == t.length`
 * `s` and `t` consist of lowercase English letters only.
 

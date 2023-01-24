@@ -44,7 +44,7 @@ Explanation: Reverse num to get 0, then reverse 0 to get 0, which equals num.
 
 **Constraints:**
 
-* `0 <= num <= 106`
+* `0 <= num <= 10^6`
 
 ## Approach 1: Just do what it says
 

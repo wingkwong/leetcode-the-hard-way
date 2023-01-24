@@ -35,7 +35,7 @@ Explanation: There is no way to reorder the elements to obtain an arithmetic pro
 **Constraints:**
 
 * `2 <= arr.length <= 1000`
-* `-106 <= arr[i] <= 10^6`
+* `-10^6 <= arr[i] <= 10^6`
 
 ## Approach 1: Sorting
 

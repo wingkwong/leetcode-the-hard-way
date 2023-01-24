@@ -40,7 +40,7 @@ Explanation: 1248 is divisible by all of its digits, hence the answer is 4.
 
 **Constraints:**
 
-- `1 <= num <= 109`
+- `1 <= num <= 10^9`
 - `num` does not contain `0` as one of its digits.
 
 ## Approach 1: Convert to String

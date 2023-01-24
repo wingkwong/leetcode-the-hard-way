@@ -38,10 +38,10 @@ Output: [0]
 
 **Constraints:**
 
-- `1 <= nums.length <= 104`
-- `-104 <= nums[i] <= 104`
-- `1 <= queries.length <= 104`
-- `-104 <= vali <= 104`
+- `1 <= nums.length <= 10^4`
+- `-10^4 <= nums[i] <= 10^4`
+- `1 <= queries.length <= 10^4`
+- `-10^4 <= vali <= 10^4`
 - `0 <= indexi < nums.length`
 
 ## Approach 1: Simulation

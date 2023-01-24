@@ -56,7 +56,7 @@ Output: [[3,null],[3,0],[3,null]]
 **Constraints:**
 
 - `0 <= n <= 1000`
-- `-104 <= Node.val <= 10^4`
+- `-10^4 <= Node.val <= 10^4`
 - `Node.random` is `null` or is pointing to some node in the linked list.
 
 

@@ -38,9 +38,9 @@ Output: 4
 **Constraints:**
 
 * `1 <= nums.length <= 10^4`
-* `-104 <= nums[i] <= 10^4`
+* `-10^4 <= nums[i] <= 10^4`
 * `nums` contains **distinct** values sorted in **ascending** order.
-* `-104 <= target <= 10^4`
+* `-10^4 <= target <= 10^4`
 
 ## Approach 1: Lower Bound
 

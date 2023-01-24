@@ -27,7 +27,7 @@ Output: false
 
 **Constraints:**
 
-- `1 <= n <= 109`
+- `1 <= n <= 10^9`
 
 ## Approach 1: Sorting
 

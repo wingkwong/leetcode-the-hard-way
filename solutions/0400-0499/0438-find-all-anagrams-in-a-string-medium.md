@@ -39,7 +39,7 @@ The substring with start index = 2 is "ab", which is an anagram of "ab".
 
 **Constraints:**
 
-* `1 <= s.length, p.length <= 3 * 104`
+* `1 <= s.length, p.length <= 3 * 10^4`
 * `s` and `p` consist of lowercase English letters.
 
 ## Approach 1: Sliding Window

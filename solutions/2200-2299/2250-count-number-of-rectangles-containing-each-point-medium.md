@@ -54,7 +54,7 @@ Therefore, we return [1, 3].
 
 **Constraints:**
 
-* `1 <= rectangles.length, points.length <= 5 * 104`
+* `1 <= rectangles.length, points.length <= 5 * 10^4`
 * `rectangles[i].length == points[j].length == 2`
 * `1 <= li, xj <= 10^9`
 * `1 <= hi, yj <= 100`
