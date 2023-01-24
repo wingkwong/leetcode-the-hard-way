@@ -221,5 +221,6 @@ export const problems = [
 <Table 
     title=""
     data={problems}
+    isSorted={false}
     collectionLink="https://leetcode.com/study-plan/programming-skills"
 />
