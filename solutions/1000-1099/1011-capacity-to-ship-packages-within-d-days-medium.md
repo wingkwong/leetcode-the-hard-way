@@ -63,7 +63,11 @@ Explanation:
 
 ## Approach 1: Binary Seach
 
-Prerequisite: [Binary Search](../../tutorials/basic-topics/binary-search)
+:::info Prerequisite
+
+- [Binary Tree](../../tutorials/graph-theory/binary-tree)
+
+:::
 
 We set the boundary from the largest package weight to the sum of the packages' weights. In each round, we try the middle value (ship capacity) $$m = l + ((r - l) / 2)$$ with the function $$count_days$$. This helper function helps us to count how many days are needed to ship packages with specific capacity (middle value). If the `days_needed` is less than `days`, it means the ship capacity is too large and we need to reduce it, then move the right pointer to $$m$$, else move the left pointer to $$m + 1$$. At the end, the index would be $$l$$.
 

@@ -37,9 +37,11 @@ Output: [1,1,8,8]
 * The number of nodes in each tree is in the range `[0, 5000]`.
 * `-10^5 <= Node.val <= 10^5`
 
-## Prerequisites
+:::info Prerequisite
 
-[Binary Tree](../../tutorials/graph-theory/binary-tree)
+- [Binary Tree](../../tutorials/graph-theory/binary-tree)
+
+:::
 
 ## Approach 1: DFS Traversal and Sorting
 

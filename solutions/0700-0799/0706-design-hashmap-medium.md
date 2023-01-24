@@ -44,7 +44,6 @@ myHashMap.remove(2); // remove the mapping for 2, The map is now [[1,1]]
 myHashMap.get(2);    // return -1 (i.e., not found), The map is now [[1,1]]
 ```
 
-
 **Constraints:**
 
 * `0 <= key, value <= 10^6`
@@ -54,7 +53,11 @@ myHashMap.get(2);    // return -1 (i.e., not found), The map is now [[1,1]]
 
 ## Approach 1: With Array and LinkedList
 
-Prerequisite: [HashMap](../../tutorials/basic-topics/hash-map)
+:::info Prerequisite
+
+- [HashMap](../../tutorials/basic-topics/hash-map)
+
+:::
 
 As a problem stated, Design HashMap, but what is HashMap or HashTable ?
 

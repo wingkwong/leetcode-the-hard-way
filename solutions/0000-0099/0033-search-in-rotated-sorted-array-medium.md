@@ -51,7 +51,11 @@ Output: -1
 
 ## Approach 1: Binary Search
 
-Prerequisite: [Binary Search](../../tutorials/basic-topics/binary-search)
+:::info Prerequisite
+
+- [Binary Search](../../tutorials/basic-topics/binary-search)
+
+:::
 
 As a problem stated, the array is rotated, How do we apply a binary search?
 

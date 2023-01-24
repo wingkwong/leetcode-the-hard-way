@@ -75,7 +75,11 @@ Note we found our insight above that the array is sorted. Since the array is sor
 
 ## Approach 2: Binary Search
 
-Prerequisite: [Binary Search](../../tutorials/basic-topics/binary-search)
+:::info Prerequisite
+
+- [Binary Search](../../tutorials/basic-topics/binary-search)
+
+:::
 
 We set the boundary from the first index to the last index of the array. In each round, we try the middle one $$m = l + (r - l + 1) / 2$$. The reason we add $$1$$ here is that we need to take the upper one if there are even number of elements. If the target is less than $$nums[m]$$, then move the right pointer to $$m - 1$$, else move the left pointer to $$m$$. At the end, if the target is found, the index would be $$l$$.
 

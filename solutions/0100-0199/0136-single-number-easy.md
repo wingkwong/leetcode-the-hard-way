@@ -43,7 +43,11 @@ Output: 1
 
 ## Approach 1: Bit Manipulation
 
-Prerequisite:  You should understand properties of XOR.
+:::info Prerequisite
+
+You should understand properties of XOR.
+
+:::
 
 Let's have a quick review.
 

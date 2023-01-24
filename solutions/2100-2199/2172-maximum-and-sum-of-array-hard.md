@@ -151,7 +151,11 @@ class Solution:
 
 ## Approach 3: MCMF
 
-**Prerequisite**: MCMF
+:::info Prerequisite
+
+- MCMF
+
+:::
 
 > MCMF tutorial will not be included here. Please check out [https://cp-algorithms.com/graph/min\_cost\_flow.html](https://cp-algorithms.com/graph/min\_cost\_flow.html) for more.
 

@@ -27,7 +27,11 @@ The time complexity of Kruskal's algorithm is $O(E log E)$ where $E$ is the numb
 
 #### Implementation
 
-Prerequisite: [Disjoint Set Union](../graph-theory/disjoint-set-union)
+:::info Prerequisite
+
+- [Disjoint Set Union](../graph-theory/disjoint-set-union)
+
+:::
 
 <Tabs>
 

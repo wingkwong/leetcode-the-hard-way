@@ -41,7 +41,11 @@ Output: 1
 
 ## Approach 1: Binary Search
 
-Prerequisite: [Binary Search](../../tutorials/basic-topics/binary-search)
+:::info Prerequisite
+
+- [Binary Search](../../tutorials/basic-topics/binary-search)
+
+:::
 
 <Tabs>
 <TabItem value="c++" label="C++">
