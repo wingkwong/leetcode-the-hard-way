@@ -95,4 +95,55 @@ class Solution {
 ```
 
 </TabItem>
+
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@ColeB2"/>
+
+```py
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    # Time O(mn) - for every node in tree, n, we may have to check it against subRoot, m.
+    # Space: O(hm+hn) - height of m, subRoot and height of n, root.
+    # isSubtree is DFS solution which with our stack holding the current path
+    # which will scale with hn, and the isSameTree function will hold up to hm
+    # calls inside the call stack as it scales with the height of subRoot.
+    def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
+        # check p and q exists and the values are equal.
+        if p and q and p.val == q.val:
+            # are equal, recursively check corresponding left and right children.
+            return self.isSameTree(p.left, q.left) and self.isSameTree(p.right,q.right)
+        # aren't equal. p is q handles both are None -> return True else 1 is None
+        # and the other a node -> return False
+        return p is q
+
+    def isSubtree(self, root: Optional[TreeNode], subRoot: Optional[TreeNode]) -> bool:
+        # initialize stack with our root
+        stack = [root]
+        # traverse the root tree.
+        while stack:
+            # pop current node off.
+            node = stack.pop()
+            # node matches subRoot root node, check same tree.
+            if node.val == subRoot.val:
+                # check if same tree.
+                if self.isSameTree(node, subRoot):
+                    # they are, we can return True
+                    return True
+            # add left subtree child node to the stack
+            if node.left:
+                stack.append(node.left)
+            # add right subtree child node to the stack
+            if node.right:
+                stack.append(node.right)
+        # made it through without finding subtree inside, return False.
+        return False
+```
+
+</TabItem>
 </Tabs>
