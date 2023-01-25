@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @vigneshshiv, @wingkwong |
+  Author: @vigneshshiv, @wingkwong, @radojicic23 |
   https://leetcode.com/problems/remove-nth-node-from-end-of-list/
 ---
 
@@ -39,15 +39,14 @@ Output: [1]
 
 **Constraints:**
 
-* The number of nodes in the list is `sz`.
-* `1 <= sz <= 30`
-* `0 <= Node.val <= 100`
-* `1 <= n <= sz`
+- The number of nodes in the list is `sz`.
+- `1 <= sz <= 30`
+- `0 <= Node.val <= 100`
+- `1 <= n <= sz`
 
 **Follow up:** Could you do this in one pass?
 
 ## Approach 1: Fast and Slow Pointer
-
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -85,7 +84,7 @@ public:
         // now the distance between slow and fast pointer is n nodes
         while (n--) fast = fast->next;
         // if fast reached the end, we need to remove the first element
-        // e.g. head = [1], n = 1 
+        // e.g. head = [1], n = 1
         if (fast == nullptr) return head->next;
         // move both pointers at the same time until the fast pointer reaches the end
         while (fast->next != nullptr) {
@@ -127,9 +126,9 @@ class Solution {
         // now the distance between slow and fast pointer is n nodes
         for (int i = 0; i < n; i++) fast = fast.next;
         // if fast reached the end, we need to remove the first element
-        // e.g. head = [1], n = 1 
+        // e.g. head = [1], n = 1
         if (fast == null) return head.next;
-        // move both pointers at the same time until 
+        // move both pointers at the same time until
         // the fast pointer reaches the end
         while (fast.next != null) {
             fast = fast.next;
@@ -178,11 +177,11 @@ func removeNthFromEnd(head *ListNode, n int) *ListNode {
         fast = fast.Next
     }
     // if fast reached the end, we need to remove the first element
-    // e.g. head = [1], n = 1 
+    // e.g. head = [1], n = 1
     if fast == nil {
         return head.Next
     }
-    // move both pointers at the same time until 
+    // move both pointers at the same time until
     // the fast pointer reaches the end
     for fast.Next != nil {
         fast = fast.Next
@@ -225,7 +224,7 @@ class Solution:
         # now the distance between slow and fast pointer is n nodes
         for i in range(n): fast = fast.next
         # if fast reached the end, we need to remove the first element
-        # e.g. head = [1], n = 1 
+        # e.g. head = [1], n = 1
         if fast is None: return head.next
         # move both pointers at the same time until the fast pointer reaches the end
         while fast.next:
@@ -238,8 +237,43 @@ class Solution:
 ```
 
 </TabItem>
-</Tabs>
 
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
+/**
+ * @param {ListNode} head
+ * @param {number} n
+ * @return {ListNode}
+ */
+var removeNthFromEnd = function (head, n) {
+  let slow = head;
+  let fast = head;
+  for (i = 0; i < n; i++) {
+    fast = fast.next;
+  }
+  if (fast == null) {
+    return head.next;
+  }
+  while (fast.next) {
+    slow = slow.next;
+    fast = fast.next;
+  }
+  slow.next = slow.next.next;
+  return head;
+};
+```
+
+</TabItem>
+</Tabs>
 
 ## Approach 2: Iteration with One Pass Solution
 
@@ -247,7 +281,7 @@ Decrement N and iterate fast and slow pointers, but only start slow pointer once
 
 As stated in Example 1: `1 -> 2 -> 3 -> 4 -> 5`, and `n = 2`
 
-Size of the linked list is $5$, and remove 2nd Node ($4$) from the last, so we need to stop at 3rd Node ($3$) from first when we iterate. 
+Size of the linked list is $5$, and remove 2nd Node ($4$) from the last, so we need to stop at 3rd Node ($3$) from first when we iterate.
 
 Iterate with fast pointer, till `N` becomes $0$, fast pointer move to 3rd Node ($3$) then start with slow pointer.
 
