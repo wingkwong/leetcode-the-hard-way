@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @ganajayant, @sourav, @radojicic23 | https://leetcode.com/problems/merge-two-sorted-lists/'
+description: "Author: @wingkwong, @ganajayant, @sourav, @radojicic23 | https://leetcode.com/problems/merge-two-sorted-lists/"
 ---
 
 # 0021 - Merge Two Sorted Lists (Easy)
@@ -18,7 +18,7 @@ Return _the head of the merged linked list_.
 
 **Example 1:**
 
-![](https://assets.leetcode.com/uploads/2020/10/03/merge\_ex1.jpg)
+![](https://assets.leetcode.com/uploads/2020/10/03/merge_ex1.jpg)
 
 ```
 Input: list1 = [1,2,4], list2 = [1,3,4]
@@ -41,9 +41,9 @@ Output: [0]
 
 **Constraints:**
 
-* The number of nodes in both lists is in the range `[0, 50]`.
-* `-100 <= Node.val <= 100`
-* Both `list1` and `list2` are sorted in **non-decreasing** order.
+- The number of nodes in both lists is in the range `[0, 50]`.
+- `-100 <= Node.val <= 100`
+- Both `list1` and `list2` are sorted in **non-decreasing** order.
 
 ## Approach 1: Recursion
 
@@ -52,7 +52,6 @@ Let's think of the edge cases first. If either list is null, there is no way to 
 We compare a node in list1 and that in list2. If the value of node in list1 is smaller than that in list2, then we can set the next node to the result of next merge result. Otherwise, we set it in list2.
 
 In general, we will have $$list1[0] + mergeTwoLists(list1[1:], list2)$$ for $$list1[0] < list2[0]$$ else we have $$list2[0] + mergeTwoLists(list1, list2[1:])$$.
-
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -74,6 +73,7 @@ public:
     }
 };
 ```
+
 </TabItem>
 
 <TabItem value="python" label="Python">
@@ -159,6 +159,7 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 
 <TabItem value="py" label="Python">
@@ -167,7 +168,7 @@ class Solution {
 ```py
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
-        dummy = ListNode() 
+        dummy = ListNode()
         tail = dummy
         while list1 and list2:
             if list1.val< list2.val:
@@ -184,5 +185,43 @@ class Solution:
             tail.next = list2
         return dummy.next
 ```
+
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
+/**
+ * @param {ListNode} list1
+ * @param {ListNode} list2
+ * @return {ListNode}
+ */
+var mergeTwoLists = function (list1, list2) {
+  const dummy = new ListNode();
+  let tail = dummy;
+  while (list1 && list2) {
+    if (list1.val < list2.val) {
+      tail.next = list1;
+      list1 = list1.next;
+    } else {
+      tail.next = list2;
+      list2 = list2.next;
+    }
+    tail = tail.next;
+  }
+  if (list1) tail.next = list1;
+  if (list2) tail.next = list2;
+  return dummy.next;
+};
+```
+
 </TabItem>
 </Tabs>
