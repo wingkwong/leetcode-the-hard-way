@@ -65,16 +65,67 @@ The optimal path with no stops from city 0 to 2 is marked in red and has cost 50
 * `0 <= src, dst, k < n`
 * `src != dst`
 
-## Approach 1: Bellman Ford
+## Approach 1: DP
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
+// TC: O(F * K)
+// SC: O(N * K) 
+// where 
+// - F is the number of flights
+// - K is the number of stops
+// - N is the number of cities and K is the number of stops
 class Solution {
 public:
+    int findCheapestPrice(int n, vector<vector<int>>& flights, int src, int dst, int k) {
+        // dp[i][j]: min cost to reach city j using at most i edges from src
+        vector<vector<int>> dp(k + 2, vector<int>(n, INT_MAX));
+        // base case
+        for (int i = 0; i <= k + 1; i++) dp[i][src] = 0;
+        // iterate each stop
+        for (int i = 1; i <= k + 1; i++) {
+            // iterate each flight
+            for (auto f : flights) {
+                int from = f[0], to = f[1], cost = f[2];
+                // ensure city `from` is reachable 
+                if (dp[i - 1][from] != INT_MAX) {
+                    // from + cost -> to
+                    dp[i][to] = min(dp[i][to], dp[i - 1][from] + cost);   
+                }
+            }
+        }
+        // if dp[k + 1][dst] == INT_MAX, it means it is unreachable
+        // else return the cost
+        return dp[k + 1][dst] == INT_MAX ? -1 : dp[k + 1][dst];
+    }
+};
+```
+
+</TabItem>
+</Tabs>
+
+
+## Approach 1: Bellman Ford
+
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@wingkwong"/>
+
+```cpp
+// TC: O(F * K + N * K)
+// SC: O(F) 
+// where 
+// - F is the number of flights
+// - K is the number of stops
+// - N is the number of cities and K is the number of stops
+class Solution {
+public:
+    // https://leetcodethehardway.com/tutorials/graph-theory/bellman-ford-algorithm
     template<typename T_a3, typename T_vector>
     void bellman_ford(T_a3 &g, T_vector &dist, int src, int mx_edges) {
-	// dist[i] : dist to reach node j using at most i edges from src
         dist[src] = 0;
         for (int i = 0; i <= mx_edges; i++) {
             T_vector ndist = dist;
@@ -87,11 +138,21 @@ public:
     }
     
     int findCheapestPrice(int n, vector<vector<int>>& flights, int src, int dst, int k) {
+        // we can directly use bellman ford template here (prerequisite: you need to understand bellman ford algo)
+        // bellman ford algo is used to find the shortest paths from source node to other nodes in a weighted graph
         vector<array<int, 3>> g;
-        vector<int> dist(n, 1e9);
+        // initially cost with a large value
+        // cost[i] means the cheapest price from src to city i
+        vector<int> cost(n, 1e9);
+        // reconstruct a bit - {src, dst, cost}
         for (auto f : flights) g.push_back({f[0], f[1], f[2]});
-        bellman_ford(g, dist, src, k);
-        return dist[dst] == 1e9 ? -1 : dist[dst];
+        bellman_ford(g, cost, src, k);
+        // if cost[dst] == 1e9, it means it is unreachable
+        // else we can show cost[dst]
+        return cost[dst] == 1e9 ? -1 : cost[dst];
     }
 };
 ```
+
+</TabItem>
+</Tabs>
