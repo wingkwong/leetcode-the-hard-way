@@ -1,5 +1,5 @@
 ---
-description: 'Author: @ganajayant | https://leetcode.com/problems/binary-tree-right-side-view/'
+description: 'Author: @ganajayant, @ColeB2 | https://leetcode.com/problems/binary-tree-right-side-view/'
 ---
 
 # 0199 - Binary Tree Right Side View (Medium)
@@ -134,5 +134,63 @@ class Solution:
 
 ```
 
+</TabItem>
+</Tabs>
+
+
+## Approach 2: Breadth-First Search
+
+A level order traversal, selecting the far right node in each level makes a lot of sense. We can perform a level order traversal using a queue and performing a breadth-first search.
+
+A [level order traversal](https://leetcodethehardway.com/solutions/0100-0199/binary-tree-level-order-traversal-medium) can be started by placing the root into the queue. Then for each iteration, we can loop over the length of the queue, $$n$$. By looping over $$n$$ it means we only ever loop over the current level, meaning we can add nodes to the queue, and will never reach them as our for loop will stop, maintaining a perfect level order traversal.
+
+We can place the nodes from left to right, or right to left. If we place nodes right first, then left. Then on each iteration, our rightmost node will be first in the queue. If we place them left to right, then on each iteration the rightmost node will be last in our queue.
+
+Time Complexity: $$O(n)$$ we have to process each node once. If we only tried to process the right node, and skip nodes when the rightmost node exists, we would be skipping nodes in the left subtree in the cases where the right subtree is shorter in height than the left subtree.
+
+Space Complexity: $$O(n)$$. In the worst case, that is a full binary tree, the last level of our traversal will fill our queue with $$n/2$$ nodes, leading us to a $$O(n)$$ space complexity.
+
+<Tabs>
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@ColeB2"/>
+
+```py
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
+        # Base case for early termination.
+        if not root:
+            return []
+        # Initialize our queue with the root node inside.
+        q = deque([root])
+        # initialize an empty list to return later.
+        right_view = []
+        # while the queue contains nodes.
+        while q:
+            # Since we are placing nodes inside the queue from right to left
+            # it means the first node will always be rightmost node.
+            # Note we could do it left to right, then the rightmost will always
+            # be the last node in the queue at position [-1]
+            right_view.append(q[0].val)
+            # loop through each node in the current level. By looping over len(q)
+            # it allows us to add children nodes, whilst also only processing
+            # the nodes in the current level.
+            for i in range(len(q)):
+                # pop the node.
+                node = q.popleft()
+                # if node has a right child, add it to the queue.
+                if node.right:
+                    q.append(node.right)
+                # if node has a left child, add it to the queue.
+                if node.left:
+                    q.append(node.left)
+        # return our answer.
+        return right_view
+```
 </TabItem>
 </Tabs>
