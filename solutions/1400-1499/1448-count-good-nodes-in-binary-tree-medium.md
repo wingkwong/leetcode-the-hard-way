@@ -46,6 +46,8 @@ Explanation: Root is considered as good.
 
 ## Approach 1: DFS
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -78,3 +80,57 @@ public:
     }
 };
 ```
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@ColeB2"/>
+
+```py
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    # Iterative Depth-First Search
+    # We can simply solve this problem by running a DFS, and passing down a max
+    # value to each node. A node is only good of it is >= to this max value.
+    # Time Complexity: O(n). We are going to have to precess each node.
+    # Space Complexity: O(h). Using a stack, we only ever have the current path
+    # inside our stack.
+    def goodNodes(self, root: TreeNode) -> int:
+        # Early termination
+        if not root:
+            return 0
+        # initialize return integer
+        num_good_nodes = 0
+        # initialize our stack, each item will be a tuple (node, max_value)
+        # where the max value is the max value we have seen thus far going down
+        # the path to the node.
+        stack = [(root, root.val)]
+        # while our stack still has nodes inside.
+        while stack:
+            # pop off the node and the highest value we have seen thus far.
+            node, high = stack.pop()
+            # Increment our num_good_nodes integer iff our current nodes value
+            # is greater than or equal to the highest node we have seen.
+            if node.val >= high:
+                num_good_nodes += 1
+            # if node has a left child
+            if node.left:
+                # add left child to the stack with the highest value.
+                # highest value will be larger of the current nodes value and
+                # the highest value that was passed to this iteration.
+                stack.append((node.left, max(node.val,high)))
+            # if the node has a right child
+            if node.right:
+                # add right child, make sure to update the high value.
+                stack.append((node.right, max(node.val, high)))
+        # return the number of good nodse that we calculated above.
+        return num_good_nodes
+```
+
+</TabItem>
+</Tabs>
