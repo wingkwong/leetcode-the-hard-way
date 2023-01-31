@@ -3,7 +3,7 @@ description: 'Author: @ColeB2 | https://leetcode.com/problems/construct-binary-t
 tags: [Array, Hash Table, Divide and Conquer, Tree, Binary Tree]
 ---
 
-# 0105 - Construct Binary Tree from Preorder and Inorder Traversal
+# 0105 - Construct Binary Tree from Preorder and Inorder Traversal (Medium)
 
 ## Problem Link
 
