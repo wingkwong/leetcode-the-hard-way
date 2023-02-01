@@ -71,6 +71,29 @@ public:
 ```
 
 </TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def swapPairs(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        if not head or not head.next:
+            return head
+        v1 = head
+        v2 = head.next
+        v3 = head.next.next
+        v2.next = v1
+        v1.next = self.swapPairs(v3)
+        return v2
+```
+
+</TabItem>
 </Tabs>
 
 ## Approach 2: Iterative
