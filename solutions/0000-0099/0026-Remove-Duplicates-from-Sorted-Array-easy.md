@@ -1,9 +1,9 @@
 ---
-description: 'Author: @pankajsirari222 | https://leetcode.com/problems/remove-duplicates-from-sorted-array/'
+description: "Author: @pankajsirari222, @radojicic23 | https://leetcode.com/problems/remove-duplicates-from-sorted-array/"
 tags: [Array, Two Pointers]
 ---
 
-# 0026 - Remove Duplicates from Sorted Array (Easy) 
+# 0026 - Remove Duplicates from Sorted Array (Easy)
 
 ## Problem Link
 
@@ -14,8 +14,8 @@ https://leetcode.com/problems/remove-duplicates-from-sorted-array/
 Given an integer array $nums$ sorted in non-decreasing order, **remove the duplicates** in-place such that each unique element appears only **once**.
 The **relative order** of the elements should be kept the **same**.
 
-Since it is impossible to change the length of the array in some languages, you must instead have the result be placed in the **first part** of the array $nums$. 
-More formally, if there are $k$ elements after removing the duplicates, then the first $k$ elements of $nums$ should hold the final result. 
+Since it is impossible to change the length of the array in some languages, you must instead have the result be placed in the **first part** of the array $nums$.
+More formally, if there are $k$ elements after removing the duplicates, then the first $k$ elements of $nums$ should hold the final result.
 It does not matter what you leave beyond the first $k$ elements.
 
 Return $k$ _after placing the final result in the first_ $k$ _slots of_ $nums$.
@@ -25,6 +25,7 @@ Do `not` allocate extra space for another array. You must do this by `modifying 
 **Custom Judge:**
 
 The judge will test your solution with the following code:
+
 ```
 int[] nums = [...];  // Input array
 int[] expectedNums = [...];  // The expected answer with correct length
@@ -57,7 +58,6 @@ Explanation: Your function should return k = 5, with the first five elements of 
 It does not matter what you leave beyond the returned k (hence they are underscores).
 ```
 
-
 **Constraints:**
 
 - `1 <= nums.length <= 3 * 10^4`
@@ -84,13 +84,13 @@ class Solution {
         int n = arr.length;
         // index to keep the track of distinct variables and it starts from 1
         int count = 1;
-        
+
         for (int i = 0; i + 1 < n; i++) {
             // to Check if next element is greater or not
             if (arr[i] < arr[i + 1])  {
-                // if it is greater, means next element is distinct, 
+                // if it is greater, means next element is distinct,
                 // so add it to count index and increment count by 1
-                arr[count] = arr[i + 1];	
+                arr[count] = arr[i + 1];
                 count++;
             }
         }
@@ -98,6 +98,44 @@ class Solution {
         return count;
     }
 }
+```
+
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var removeDuplicates = function (nums) {
+  let count = 1;
+  for (i = 1; i < nums.length; i++) {
+    if (nums[i] != nums[i - 1]) {
+      nums[count] = nums[i];
+      count++;
+    }
+  }
+  return count;
+};
+```
+
+</TabItem>
+
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```py
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int:
+        count = 1
+        for i in range(1, len(nums)):
+            if nums[i] != nums[i - 1]:
+                nums[count] = nums[i]
+                count += 1
+        return count
 ```
 
 </TabItem>
