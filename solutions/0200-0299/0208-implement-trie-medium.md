@@ -2,6 +2,7 @@
 description: >-
   Author: @vigneshshiv |
   https://leetcode.com/problems/implement-trie-prefix-tree/
+tags: [Hash Table, String, Design, Trie]
 ---
 
 # 0208 - Implement Trie (Prefix Tree) (Medium)
@@ -129,5 +130,87 @@ class Trie {
     }
 }
 ```
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@ColeB2"/>
+
+```py
+class TrieNode:
+    # Utilize a linked list DS --> One where the next
+    # nodes can be reached via a hash map
+    # Contains a char as an optional parameter
+    # Also utilizes attributes of is_word to denote
+    # whether it is a word. 
+    # Ex: If we have the word apple in our trie. a->p->p->l->e
+    # 'e' node will have is_word = True, to denote that
+    # apple is a word in our map. Letters, a,p,p,l,e won't be True
+    # as they are not complete words in our Trie.
+    def __init__(self, char=None):
+        self.char = char
+        self.is_word = False
+        self.nodes = {}
+        
+class Trie:
+    # Total Space Complexity
+    # O(k*n) where k is the number of characters we insert into our hashmap.
+    # where n is the number of nodes in our Trie.
+    def __init__(self):
+        # initialize root as a TrieNode with None char.
+        self.root = TrieNode()
+        
+
+    def insert(self, word: str) -> None:
+        # Time: O(l) where l is the length of the word.
+        # a current node pointer to trace our linked list
+        node = self.root
+        # iterate through every character in the word, word.
+        for ch in word:
+            # current character is not in current TrieNode's
+            # hashmap of nodes -> create that node and add
+            # it to the hash map.
+            if ch not in node.nodes:
+                node.nodes[ch] = TrieNode(ch)
+            # move our current node pointer to the character
+            # we are looking at's node.
+            node = node.nodes[ch]
+        # When we reached the end set the is_word boolean to True.
+        node.is_word = True
+        
+
+    def search(self, word: str) -> bool:
+        # Time: O(l) where l is the length of the word.
+        # current node pointer to trace our linked list.
+        node = self.root
+        # iterate each character in word.
+        for ch in word:
+            # if character is not in the current nodes hashmap of nodes.
+            if ch not in node.nodes:
+                # That means word won't be in the Trie, return False
+                return False
+            # move our current node pointer to next ch node.
+            node = node.nodes[ch]
+        # Reached end of word, return boolean is_word.
+        return node.is_word
+        
+
+    def startsWith(self, prefix: str) -> bool:
+        # Time: O(l) where l is length of the prefix
+        # current node pointer to track our linked list/
+        node = self.root
+        # iterate each character in prefix
+        for ch in prefix:
+            # character is not in the nodes hash map
+            if ch not in node.nodes:
+                # return false isn't a prefix
+                return False
+            # move our current node pointer
+            node = node.nodes[ch]
+        # Reached the end, it means all characters of prefix exist
+        # inside our Trie --> return True.
+        return True
+```
+
 </TabItem>
 </Tabs>
