@@ -34,5 +34,17 @@ void bellman_ford(T_a3 &g, T_vector &dist, int src, int mx_edges) {
     }
 }
 ```
+
+```py
+def bellman_ford(g, dist, src, mx_edges):
+    dist[src] = 0
+    for i in range(mx_edges+1):
+        ndist = dist.copy()
+        for x in g:
+            from_, to, cost = x
+            ndist[to] = min(ndist[to], dist[from_] + cost)
+        dist = ndist
+
+```
 </TabItem>
 </Tabs>
