@@ -16,7 +16,7 @@ A binary tree is a tree data structure in which each node has at most two childr
 
 ## Properties
 
-- The number on nodes on level $l$ is equal to the $2^l$, like on level $0$ (root node) we got $2 ^ 0 >= 1$ node only.
+- The number of nodes on level $l$ is equal to the $2^l$, like on level $0$ (root node) we got $2 ^ 0 >= 1$ node only.
 - The Maximum number of nodes in a binary tree of height $h$ is $2^h - 1$. 
 
 ## Traversal 
