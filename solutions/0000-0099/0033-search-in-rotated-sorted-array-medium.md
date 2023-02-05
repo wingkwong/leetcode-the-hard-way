@@ -43,11 +43,11 @@ Output: -1
 
 **Constraints:**
 
-* `1 <= nums.length <= 5000`
-* `-10^4 <= nums[i] <= 10^4`
-* All values of `nums` are **unique**.
-* `nums` is a non-decreasing array.
-* `-10^4 <= target <= 10^4`
+- `1 <= nums.length <= 5000`
+- `-10^4 <= nums[i] <= 10^4`
+- All values of `nums` are **unique**.
+- `nums` is a non-decreasing array.
+- `-10^4 <= target <= 10^4`
 
 ## Approach 1: Binary Search
 
@@ -59,9 +59,9 @@ Output: -1
 
 As a problem stated, the array is rotated, How do we apply a binary search?
 
-Since the array is rotated in `Example #1` assume first half from index $0-3$ is in ascending order, the second half is decending order from the first half. 
+Since the array is rotated in `Example #1` assume first half from index $0-3$ is in ascending order, the second half is decending order from the first half.
 
-With this approach we can solve the problem by finding the pivot index. Here, pivot is the maximum element in the array. 
+With this approach we can solve the problem by finding the pivot index. Here, pivot is the maximum element in the array.
 
 If the given target is greater than the start index element, then the element must be with in the highest element. So reduce the space of the array to $0$ to $pivot-1$, otherwise search in $pivot+1$ to $nums.length - 1$.
 
@@ -92,7 +92,7 @@ class Solution {
         }
         return binarySearch(nums, target, pivot + 1, nums.length - 1);
     }
-    
+
 
     public int findPivot(int[] nums) {
         int low = 0, high = nums.length - 1;
@@ -145,14 +145,14 @@ class Solution {
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
         l, r = 0, len(nums) - 1
-    
+
         while l <= r:
             # mid value
-            mid = (l + r) // 2  
+            mid = (l + r) // 2
             # if mid is target
-            if target == nums[mid]: 
+            if target == nums[mid]:
                 return mid
-            
+
             # are we in left sorted portion or right sorted portion
             if nums[mid] >= nums[l]:
                 # we are in right sorted portion in this case
@@ -160,16 +160,58 @@ class Solution:
                     l = mid + 1
                 # we are in left sorted portion in this case
                 else:
-                    r = mid - 1 
+                    r = mid - 1
             else:
                 # we are in left sorted portion in this case
                 if target < nums[mid] or target > nums[r]:
                     r = mid - 1
                 # we are in right sorted portion in this case
                 else:
-                    l = mid + 1 
-            
+                    l = mid + 1
+
         return -1
+```
+
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number}
+ */
+var search = function (nums, target) {
+  let l = 0;
+  let r = nums.length - 1;
+  while (l <= r) {
+    //mid value
+    let mid = Math.floor((l + r) / 2);
+    // if mid is target -> return mid index
+    if (nums[mid] == target) return mid;
+    // are we in left or right sorted portion
+    if (nums[mid] >= nums[l]) {
+      // we are in right sorted portion
+      if (target > nums[mid] || target < nums[l]) {
+        l = mid + 1;
+        // we are in left sorted portion
+      } else {
+        r = mid - 1;
+      }
+    } else {
+      // we are in left sorted portion
+      if (target < nums[mid] || target > nums[r]) {
+        r = mid - 1;
+        // we are in right sorted portion
+      } else {
+        l = mid + 1;
+      }
+    }
+  }
+  return -1;
+};
 ```
 
 </TabItem>
