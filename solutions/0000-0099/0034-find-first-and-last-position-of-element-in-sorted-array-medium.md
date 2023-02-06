@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong, @ganajayant, @vigneshshiv |
+  Author: @wingkwong, @ganajayant, @vigneshshiv, @radojicic23 |
   https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
 ---
 
@@ -41,10 +41,10 @@ Output: [-1,-1]
 
 **Constraints:**
 
-* `0 <= nums.length <= 10^5`
-* `-10^9 <= nums[i] <= 10^9`
-* `nums` is a non-decreasing array.
-* `-10^9 <= target <= 10^9`
+- `0 <= nums.length <= 10^5`
+- `-10^9 <= nums[i] <= 10^9`
+- `nums` is a non-decreasing array.
+- `-10^9 <= target <= 10^9`
 
 ## Approach 1: Binary Search
 
@@ -70,7 +70,7 @@ public:
         }
         return nums[l] == target ? l : -1;
     }
-    
+
     int getLastPosition(vector<int>& nums, int target) {
         int n = nums.size(), l = 0, r = n - 1;
         while (l < r) {
@@ -80,7 +80,7 @@ public:
         }
         return nums[l] == target ? l : -1;
     }
-    
+
     vector<int> searchRange(vector<int>& nums, int target) {
         int n = nums.size();
         // handle edge case
@@ -89,14 +89,14 @@ public:
         // return the lower bound and upper bound - 1
         return vector<int> {
             // if the first position is -1, we can return ans directly
-            getFirstPosition(nums, target), 
+            getFirstPosition(nums, target),
             getLastPosition(nums, target)
         };
     }
 };
 ```
-</TabItem>
 
+</TabItem>
 
 <TabItem value="java" label="Java">
 <SolutionAuthor name="@ganajayant"/>
@@ -134,15 +134,47 @@ class Solution {
     }
 }
 ```
+
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+var searchRange = function (nums, target) {
+  let l = 0;
+  let r = nums.length - 1;
+  while (l <= r) {
+    let mid = Math.floor((l + r) / 2);
+    if (nums[l] == target && nums[r] == target) {
+      return [l, r];
+    }
+    if (nums[mid] > target) {
+      r = mid - 1;
+    } else if (nums[mid] < target) {
+      l = mid + 1;
+    } else {
+      if (nums[l] != target) l++;
+      if (nums[r] != target) r--;
+    }
+  }
+  return [-1, -1];
+};
+```
+
 </TabItem>
 </Tabs>
 
-
 ## Approach 2: Binary Search Optimal
 
-To find the start and end indices, try to find the start index first, if it doesn't exist then the array not having the given element. So added a condition to check if the first index is not found then skip the end index block. 
+To find the start and end indices, try to find the start index first, if it doesn't exist then the array not having the given element. So added a condition to check if the first index is not found then skip the end index block.
 
-Instead of having two loops for both cases, have a flag that differentiates between the start and end index search space. 
+Instead of having two loops for both cases, have a flag that differentiates between the start and end index search space.
 
 Time complexity: $O(log n)$
 
@@ -162,7 +194,7 @@ class Solution {
         }
         return result;
     }
-    
+
     private int searchIndex(int[] nums, int target, boolean startIndex) {
         int low = 0, high = nums.length - 1;
         int index = -1;
@@ -185,7 +217,6 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 </Tabs>
-
-
