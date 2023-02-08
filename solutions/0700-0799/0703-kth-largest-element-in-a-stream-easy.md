@@ -2,6 +2,7 @@
 description: >-
   Author: @wingkwong |
   https://leetcode.com/problems/kth-largest-element-in-a-stream/
+tags: [Tree, Design, Binary Search Tree, Heap (Priority Queue), Binary  Tree, Data Stream]
 ---
 
 # 0703 - Kth Largest Element in a Stream (Easy)
@@ -50,6 +51,8 @@ kthLargest.add(4);   // return 8
 
 We can use priority queue to handle the sort order and only maintain at most k element. Return to the top, which is the k-th element in a stream.
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -86,3 +89,48 @@ private:
  * int param_1 = obj->add(val);
  */
 ```
+
+</TabItem>
+
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@ColeB2"/>
+
+```py
+class KthLargest:
+    # Utilizes Pythons HeapQ --> Minheap implementation
+    # Time Complexity: O(n*logk + A*logk) where n is the length of nums,
+    # as we have to loop through all the nums initially to create our
+    # heap. A is the number of calls made to self.add method.
+    # and logk is the time it takes to add values to the heap.
+    # Space Complexity: O(k). Only need to maintain a k-sized heap.
+    def __init__(self, k: int, nums: List[int]):
+        # Python heap utilizes an array, initialize empty array
+        self.heap = []
+        # initialize self.k for access inside our add method.
+        self.k = k
+        # loop through each num, calling self.add to add to heap.
+        for num in nums:
+            self.add(num)
+        
+
+    def add(self, val: int) -> int:
+        # length of heap < k --> push it to the heap.
+        if len(self.heap) < self.k:
+            # Python heapq, works by calling heapq.heappush and
+            # supplying 2 parameters, the heap you want to add values
+            # to and the number you want to add to the heap.
+            heapq.heappush(self.heap, val)
+        # Heap already has k elements we push then pop.
+        else:
+            # Similar to heappush, takes a heap and a number to push
+            # to the heap. heappushpop pushes first, then pops, and in
+            # Python it is more efficient than using
+            # heappush first, then using heappop.
+            heapq.heappushpop(self.heap, val)
+        # return the first/top value of our heap.
+        return self.heap[0]
+```
+
+</TabItem>
+</Tabs>
