@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @ganajayant, @radojicic23 | https://leetcode.com/problems/search-insert-position/'
+description: "Author: @wingkwong, @ganajayant, @radojicic23 | https://leetcode.com/problems/search-insert-position/"
 ---
 
 # 0035 - Search Insert Position (Easy)
@@ -37,10 +37,10 @@ Output: 4
 
 **Constraints:**
 
-* `1 <= nums.length <= 10^4`
-* `-10^4 <= nums[i] <= 10^4`
-* `nums` contains **distinct** values sorted in **ascending** order.
-* `-10^4 <= target <= 10^4`
+- `1 <= nums.length <= 10^4`
+- `-10^4 <= nums[i] <= 10^4`
+- `nums` contains **distinct** values sorted in **ascending** order.
+- `-10^4 <= target <= 10^4`
 
 ## Approach 1: Lower Bound
 
@@ -79,7 +79,7 @@ class Solution {
 public:
     int searchInsert(vector<int>& nums, int target) {
         // init the possible range
-        // as we insert at the end of the array, 
+        // as we insert at the end of the array,
         // use nums.size() instead of nums.size() - 1
         int l = 0, r = nums.size();
         while (l < r) {
@@ -94,6 +94,7 @@ public:
     }
 };
 ```
+
 </TabItem>
 
 <TabItem value="java" label="Java">
@@ -119,6 +120,7 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 
 <TabItem value="python" label="Python">
@@ -141,9 +143,37 @@ class Solution:
             # if mid value is greater than target
             else:
                 # we are in left sorted portion
-                right = mid - 1 
-        
-        return left 
+                right = mid - 1
+
+        return left
+```
+
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number}
+ */
+var searchInsert = function (nums, target) {
+  let left = 0;
+  let right = nums.length - 1;
+  while (left <= right) {
+    let mid = Math.floor((left + right) / 2);
+    if (target == nums[mid]) {
+      return mid;
+    } else if (target < nums[mid]) {
+      right = mid - 1;
+    } else {
+      left = mid + 1;
+    }
+  }
+  return left;
+};
 ```
 
 </TabItem>
