@@ -41,7 +41,7 @@ Output: false
 
 ## Approach 1: Depth First Search
 
-Perform a depth first search in the binary search tree to search for the node with the target value. The nodes are added to the hashmap recursively as the tree is travelled in a DFS fashion and the node with the target value is searched within the hashmap for each recursive call. The left subtree is traversed followed by the right subtree in order to determine the pair of nodes with sum 'k' and return true for any match.
+Perform a depth first search in the binary search tree to search for the node with the target value. The values of the nodes are added to the hashset recursively as the tree is travelled in a DFS fashion and the node with the target value is searched within the hashset for each recursive call. The left subtree is traversed followed by the right subtree in order to determine the pair of nodes with sum 'k' and return true for any match.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -50,16 +50,8 @@ Perform a depth first search in the binary search tree to search for the node wi
 ```cpp
 class Solution {
 public:
-    // hashmap keeps track of all the nodes and corresponding values traversed in a DFS fashion
-    unordered_map<TreeNode*,int>node;
-    TreeNode* fun(TreeNode* root,int target){
-        // find node having target value
-        for(auto i:node){
-            if(i.first!=root and i.second==target)
-             return i.first;
-        }
-        return NULL;
-    }
+    // set keeps track of the corresponding values of nodes traversed in a DFS fashion
+    unordered_set<int>node;
 
     bool findTarget(TreeNode* root, int k) {
         // DFS approach
@@ -67,12 +59,12 @@ public:
         if(!root)
          return false;
 
-        // add new node to map 
-        node[root]=root->val;
-
         // if target pair found return
-        if(fun(root,k-root->val)!=NULL)
+        if(node.find(k-root->val)!=node.end())
          return true;
+        
+        // add new node to hashset 
+        node.insert(root->val);
 
         // search left and right subtree 
         return findTarget(root->left,k) || findTarget(root->right,k);      
