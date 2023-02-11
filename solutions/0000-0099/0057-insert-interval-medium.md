@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/insert-interval/'
+description: "Author: @wingkwong, @radojicic23 | https://leetcode.com/problems/insert-interval/"
 tags: [Array]
 ---
 
-# 0057 - Insert Interval (Medium) 
+# 0057 - Insert Interval (Medium)
 
 ## Problem Link
 
@@ -15,7 +15,7 @@ You are given an array of non-overlapping intervals `intervals` where `intervals
 
 Insert `newInterval` into `intervals` such that `intervals` is still sorted in ascending order by `starti` and `intervals` still does not have any overlapping intervals (merge overlapping intervals if necessary).
 
-Return `intervals`*after the insertion*.
+Return `intervals`_after the insertion_.
 
 **Example 1:**
 
@@ -160,7 +160,7 @@ class Solution:
                 newInterval[0] = min(newInterval[0], intervals[i][0])
                 newInterval[1] = max(newInterval[1], intervals[i][1])
         # add the last interval
-        ans.append(newInterval) 
+        ans.append(newInterval)
         return ans
 
 ```
@@ -208,6 +208,35 @@ impl Solution {
         ans
     }
 }
+```
+
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * @param {number[][]} intervals
+ * @param {number[]} newInterval
+ * @return {number[][]}
+ */
+var insert = function (intervals, newInterval) {
+  let res = [];
+  for (i = 0; i < intervals.length; i++) {
+    if (newInterval[1] < intervals[i][0]) {
+      res.push(newInterval);
+      return res.concat(intervals.slice(i, intervals.length));
+    } else if (newInterval[0] > intervals[i][1]) {
+      res.push(intervals[i]);
+    } else {
+      newInterval[0] = [Math.min(newInterval[0], intervals[i][0])];
+      newInterval[1] = [Math.max(newInterval[1], intervals[i][1])];
+    }
+  }
+  res.push(newInterval);
+  return res;
+};
 ```
 
 </TabItem>
