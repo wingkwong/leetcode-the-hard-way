@@ -1,5 +1,6 @@
 ---
 description: 'Author: @madhu915 | https://leetcode.com/problems/two-sum-iv-input-is-a-bst/'
+tags: [Hash Table, Two Pointers, Tree, Depth-First Search, Breadth-First Search, Binary Search Tree, Binary Tree]
 ---
 
 # 0653 - Two Sum IV - Input is a BST (Easy)
@@ -10,9 +11,7 @@ https://leetcode.com/problems/two-sum-iv-input-is-a-bst/
 
 ## Problem Statement
 
-Given the ``root`` of a binary search tree and an integer ``k``, return ``true`` if there exist two elements in the BST such that their sum is equal to ``k``, or ``false`` otherwise.
-
- 
+Given the `root` of a binary search tree and an integer `k`, return `true` *if there exist two elements in the BST such that their sum is equal to* `k`, *or* `false` *otherwise*.
 
 **Example 1:**
 
@@ -34,14 +33,14 @@ Output: false
 
 **Constraints:**
 
-- The number of nodes in the tree is in the range `[1, 104]`.
-- `-104 <= Node.val <= 104`
-- `root` is guaranteed to be a valid binary search tree.
-- `-105 <= k <= 105`
+- The number of nodes in the tree is in the range `[1, 10 ^ 4]`.
+- `-10 ^ 4 <= Node.val <= 10 ^ 4`
+- `root` is guaranteed to be a **valid** binary search tree.
+- `-10 ^ 5 <= k <= 10 ^ 5`
 
 ## Approach 1: Depth First Search
 
-Perform a depth first search in the binary search tree to search for the node with the target value. The values of the nodes are added to the hashset recursively as the tree is travelled in a DFS fashion and the node with the target value is searched within the hashset for each recursive call. The left subtree is traversed followed by the right subtree in order to determine the pair of nodes with sum 'k' and return true for any match.
+Perform a depth first search in the binary search tree to search for the node with the target value. The values of the nodes are added to the hashset recursively as the tree is travelled in a DFS fashion and the node with the target value is searched within the hashset for each recursive call. The left subtree is traversed followed by the right subtree in order to determine the pair of nodes with sum $k$ and return true for any match.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -50,25 +49,19 @@ Perform a depth first search in the binary search tree to search for the node wi
 ```cpp
 class Solution {
 public:
-    // set keeps track of the corresponding values of nodes traversed in a DFS fashion
-    unordered_set<int>node;
+  // set keeps track of the corresponding values of nodes traversed in a DFS fashion
+  unordered_set<int> node;
 
-    bool findTarget(TreeNode* root, int k) {
-        // DFS approach
-        
-        if(!root)
-         return false;
-
-        // if target pair found return
-        if(node.find(k-root->val)!=node.end())
-         return true;
-        
-        // add new node to hashset 
-        node.insert(root->val);
-
-        // search left and right subtree 
-        return findTarget(root->left,k) || findTarget(root->right,k);      
-    }
+  bool findTarget(TreeNode* root, int k) {
+    // DFS approach
+    if (!root) return false;
+    // if the target pair is found, then return true
+    if (node.find(k - root->val) != node.end()) return true;
+    // add node value to hashset
+    node.insert(root->val);
+    // search left and right subtrees
+    return findTarget(root->left, k) || findTarget(root->right, k);
+  }
 };
 ```
 
