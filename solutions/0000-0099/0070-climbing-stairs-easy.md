@@ -85,8 +85,8 @@ public:
 ```python
 class Solution:
     def climbStairs(self, n: int) -> int:
-        # base case 
-        if n < 4: 
+        # base case
+        if n < 4:
             return n
         # apply Fibonacci Series where a and b are the previous two numbers
         a, b = 2, 3
@@ -96,10 +96,43 @@ class Solution:
             res = a + b
             # updating the values of a and b
             if (i % 2 == 0):
-                a = res 
+                a = res
             else:
-                b = res 
-        return res 
+                b = res
+        return res
+```
+
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var climbStairs = function (n) {
+  // base case
+  if (n < 4) {
+    return n;
+  }
+  // apply Fibonacci Series where a and b are the previous two numbers
+  let a = 2;
+  let b = 3;
+  let res = 0;
+  // calculate the number of ways to reach the n^{th} step
+  for (i = 4; i < n + 1; i++) {
+    res = a + b;
+    // updating values of a and b
+    if (i % 2 == 0) {
+      a = res;
+    } else {
+      b = res;
+    }
+  }
+  return res;
+};
 ```
 
 </TabItem>
