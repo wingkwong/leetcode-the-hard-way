@@ -87,4 +87,31 @@ class Solution:
 ```
 
 </TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * @param {number} x
+ * @return {number}
+ */
+var mySqrt = function (x) {
+  let left = 0;
+  let right = x;
+  while (left <= right) {
+    let mid = Math.floor((left + right) / 2);
+    if (x < mid * mid) {
+      right = mid - 1;
+    } else if (x > mid * mid) {
+      left = mid + 1;
+    } else {
+      return mid;
+    }
+  }
+  return right;
+};
+```
+
+</TabItem>
 </Tabs>
