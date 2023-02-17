@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wingkwong, @vigneshshiv | https://leetcode.com/problems/subsets/'
+tags: [Array, Backtracking, Bit Manipulation]
 ---
 
 # 0078 - Subsets (Medium)
@@ -137,6 +138,45 @@ class Solution {
     }
 }
 ```
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@ColeB2"/>
+
+```py
+class Solution:
+    # Iterative Back Tracking approach using a set to catch any dupes.
+    # Initialize with empty tuple, and during each iteration of our 
+    # nums array, choose to both add the current number to the tuple,
+    # and not add the number to the tuple.
+    # Time: O(n*2^n) to generate all subsets and copy them into our
+    # power set.
+    # Space: O(n*2^n) for all of our subsets.
+    def subsets(self, nums: List[int]) -> List[List[int]]:
+        # initialize our set to prevent duplicates.
+        power_set = set()
+        # initialize our stack for backtracking
+        # we start with an empty tuple for hashing and idx of where 
+        # we are at in our nums array.
+        stack = [((),0)]
+        while stack:
+            # pop off the current subset and index inside nums.
+            subset, idx = stack.pop()
+            # add it to our power set, since its a set it will ignore dupes.
+            power_set.add(subset)
+            # only if our idx is in bounds.
+            if idx < len(nums):
+                # add the current subset when we don't take the
+                # number to the stack for backtracking.
+                stack.append((subset, idx+1))
+                # add the subset when we do add the number to the stack
+                # for backtracking.
+                stack.append((subset + (nums[idx],), idx+ 1))
+        # Convert powerset back to a list and return.
+        return list(power_set)
+```
+
 </TabItem>
 </Tabs>
 
