@@ -155,4 +155,50 @@ class Solution:
 ```
 
 </TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * @param {number[][]} matrix
+ * @param {number} target
+ * @return {boolean}
+ */
+var searchMatrix = function(matrix, target) {
+    let row = matrix.length;
+    let col = matrix[0].length;
+    let top = 0;
+    let bottom = row - 1;
+    while (top <= bottom) {
+        let mid = Math.floor((top + bottom) / 2);
+        if (target > matrix[mid][col - 1]) {
+            top = mid + 1;
+        } else if (target < matrix[mid][0]) {
+            bottom = mid - 1;
+        } else {
+            break;
+        }
+    }
+    if (!(top <= bottom)) {
+        return false;
+    }
+    let l = 0;
+    let r = col - 1;
+    let mid = Math.floor((top + bottom) / 2);
+    while (l <= r) {
+        let m = Math.floor((l + r) / 2);
+        if (target > matrix[mid][m]) {
+            l = m + 1;
+        } else if (target < matrix[mid][m]) {
+            r = m - 1;
+        } else {
+            return true;
+        }
+    }
+    return false;
+};
+```
+
+</TabItem>
 </Tabs>
