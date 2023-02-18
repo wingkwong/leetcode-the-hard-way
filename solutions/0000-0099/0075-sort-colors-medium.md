@@ -1,5 +1,5 @@
 ---
-description: 'Author: @ganajayant, @RadhikaChhabra17 | https://leetcode.com/problems/sort-colors/'
+description: 'Author: @ganajayant, @RadhikaChhabra17, @radojicic23 | https://leetcode.com/problems/sort-colors/'
 tags: [Array, Two Pointers, Sorting]
 ---
 
@@ -100,6 +100,33 @@ class Solution {
                     check = true;
                 }
             }
+        }
+    }
+};
+```
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * @param {number[]} nums
+ * @return {void} Do not return anything, modify nums in-place instead.
+ */
+var sortColors = function(nums) {
+    let swapped = false;
+    for (i = 0; i < nums.length - 1; i++) {
+        for (j = 0; j < nums.length - i - 1; j++) {
+            if (nums[j] > nums[j + 1]) {
+                swapped = true;
+                let tmp = nums[j];
+                nums[j] = nums[j + 1];
+                nums[j + 1] = tmp;
+            }
+        }
+        if (swapped === false) {
+            return;
         }
     }
 };
