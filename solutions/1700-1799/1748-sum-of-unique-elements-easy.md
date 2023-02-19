@@ -1,7 +1,7 @@
 ---
 description: >-
   Author: @wingkwong |
-  https://leetcode.com/problems/check-if-one-string-swap-can-make-strings-equal/
+  https://leetcode.com/problems/sum-of-unique-elements/
 tags: ['Hash Map']
 ---
 
@@ -9,7 +9,7 @@ tags: ['Hash Map']
 
 ## Problem Link
 
-https://leetcode.com/problems/check-if-one-string-swap-can-make-strings-equal/
+https://leetcode.com/problems/sum-of-unique-elements/
 
 ## Problem Statement
 
