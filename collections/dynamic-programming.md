@@ -79,7 +79,7 @@ export const DPBitManipulationProblems = [
   {
     "problemName": "1723 - Find Minimum Time to Finish All Jobs",
     "difficulty": "Hard",
-    "leetCodeLink": "https://leetcode.com/problems/distribute-repeating-integers/",
+    "leetCodeLink": "https://leetcode.com/problems/find-minimum-time-to-finish-all-jobs/",
     "solutionLink": ""
   },
 ]
