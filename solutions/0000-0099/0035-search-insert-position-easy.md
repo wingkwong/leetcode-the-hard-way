@@ -42,7 +42,7 @@ Output: 4
 - `nums` contains **distinct** values sorted in **ascending** order.
 - `-10^4 <= target <= 10^4`
 
-## Approach 1: Lower Bound
+## Approach 1: Built-in Function
 
 We can use STL to get the answer. lower_bound returns the first element which has a value not less than target. We need to subtract `nums.begin()` to get the index.
 
@@ -57,6 +57,17 @@ public:
         return lower_bound(nums.begin(), nums.end(), target) - nums.begin();
     }
 };
+```
+
+</TabItem>
+
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@wingkwong"/>
+
+```py
+class Solution:
+    def searchInsert(self, nums: List[int], target: int) -> int:
+        return bisect.bisect_left(nums, target)
 ```
 
 </TabItem>
