@@ -26,7 +26,7 @@ export const DPBitManipulationProblems = [
     "problemName": "0698 - Partition to K Equal Sum Subsets",
     "difficulty": "Medium",
     "leetCodeLink": "https://leetcode.com/problems/partition-to-k-equal-sum-subsets/",
-    "solutionLink": ""
+    "solutionLink": "../solutions/0600-0699/cpartition-to-k-equal-sum-subsets-medium"
   },
   {
     "problemName": "0847 -  Shortest Path Visiting All Nodes",
