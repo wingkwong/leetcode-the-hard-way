@@ -14,7 +14,7 @@ export const DPBitManipulationProblems = [
     "problemName": "0464 - Can I Win",
     "difficulty": "Medium",
     "leetCodeLink": "https://leetcode.com/problems/can-i-win/",
-    "solutionLink": ""
+    "solutionLink": "../solutions/0400-0499/an-i-win-medium"
   },
   {
     "problemName": "0691 - Stickers to Spell Word",
