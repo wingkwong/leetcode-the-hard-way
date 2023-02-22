@@ -171,7 +171,6 @@ class Solution:
     def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
         # last element of nums1
         last = m + n - 1
-
         # merge them in reverse order 
         while m > 0 and n > 0:
             # find the largest value 
@@ -183,11 +182,49 @@ class Solution:
                 n -= 1
             last -= 1
         # edge case 
-        # fill nums1 with leftover nums2 elements
+        # fill nums1 with leftover of nums2 elements
         while n > 0:
             nums1[last] = nums2[n - 1]
             n -= 1
             last -= 1
+```
+
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * @param {number[]} nums1
+ * @param {number} m
+ * @param {number[]} nums2
+ * @param {number} n
+ * @return {void} Do not return anything, modify nums1 in-place instead.
+ */
+var merge = function(nums1, m, nums2, n) {
+    // last element of nums1
+    let last = m + n - 1;
+    // merge them in reverse order
+    while (m > 0 && n > 0) {
+        // find the largest value 
+        if (nums1[m - 1] > nums2[n - 1]) {
+            nums1[last] = nums1[m - 1];
+            m--;
+        } else {
+            nums1[last] = nums2[n - 1];
+            n--;
+        }
+        last--;
+    }
+    // edge case
+    // fill nums1 with leftover of nums2 elements
+    while (n > 0) {
+        nums1[last] = nums2[n - 1];
+        n--;
+        last--;
+    }
+};
 ```
 
 </TabItem>
