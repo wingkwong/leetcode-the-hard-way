@@ -86,6 +86,7 @@ public:
 };
 ```
 </TabItem>
+
 <TabItem value="py" label="Python">
 <SolutionAuthor name="@wingkwong"/>
 
@@ -103,6 +104,7 @@ class Solution:
         return self.inorderTraversal(root.left) + [root.val] + self.inorderTraversal(root.right) if root else []
 ```
 </TabItem>
+
 <TabItem value="java" label="Java">
 <SolutionAuthor name="@ganajayant"/>
 
@@ -137,6 +139,38 @@ class Solution {
         inorder(node.right, result);
     }
 }
+```
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number[]}
+ */
+var inorderTraversal = function(root) {
+    let res = [];
+    function inorder(root) {
+        if (!root) {
+            return;
+        }
+        inorder(root.left);
+        res.push(root.val);
+        inorder(root.right);
+    }
+    inorder(root);
+    return res;
+};
 ```
 </TabItem>
 </Tabs>
