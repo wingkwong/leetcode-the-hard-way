@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/palindrome-partitioning/'
+description: 'Author: @wingkwong, @ColeB2 | https://leetcode.com/problems/palindrome-partitioning/'
 tags: [String, Dynamic Programming, Backtracking]
 ---
 
@@ -233,6 +233,70 @@ impl Solution {
         s.chars().eq(s.chars().rev())
     }
 }
+
+```
+
+</TabItem>
+</Tabs>
+
+## Approach 2: Iterative Backtracking
+
+We can do a similar approach, but iteratively. That is create our own stack to track our processes. That process is to generate all possible partitions of the input string by considering each character as a potential starting point and exploring all possible substrings from those starting points, which are palindromes.
+
+In the example of $$"aaab"$$, we can see that $$"a"$$, $$"aa"$$, $$"aaa"$$ would all be palindrome partitions we would want to check if we started at index, $$i == 0$$. We also see $$"aaab"$$ is not a palindrome, so we wouldn't further check that partition.
+
+If we further follow our example, we can see for $$"aaa"$$, we would check if "b" was a palindrome, then add it to the partition, and that would be 1 complete partition $$["aaa", "b"]$$
+
+For $$"aa"$$, we would check $$"a"$$, and $$"ab"$$, and only add $$["aa", "a"]$$ to our stack. Then again finish with $$["aa", "a", "b"]$$
+
+Finally for $$"a"$$, we would check the substrings, $$"a"$$, $$"aa"$$, and $$"aab"$$ and would and would create partitions using the first two as: $$["a", "a"]$$ and $$["a", "aa"]$$. If we continued to follow the same logic, you could see we would eventually finish the question off with 4 partitions:
+$$["aaa", "b"]$$, $$["aa", "a", "b"]$$, $$["a", "aa", "b"]$$ and $$["a", "a", "a", "b"]$$
+
+<Tabs>
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@ColeB2"/>
+
+```py
+class Solution:
+    def is_palindrome(self, s, l, r):
+        # palidrome function, start at both ends, checking
+        # the characters are equal to each other. O(n) where
+        # n is the length of the string.
+        while l < r:
+            if s[l] != s[r]:
+                return False
+            l += 1
+            r -= 1
+        return True
+
+    def partition(self, s: str) -> List[List[str]]:
+        # initialize empty list to store all partitions of input string.
+        palindromes = []
+        # initialize our stack for backtracking purposes.
+        # The stack will track all partitions of the string.
+        # initialize and index, 0 as a starting point, and empty list
+        # as our partitions.
+        stack = [(0, [])]
+        while stack:
+            # pop off our index in string, s and current partition list.
+            i, partition = stack.pop()
+            # if the index is at the end of the string, we have explored
+            # all possible substrings in the current partition.
+            if i >= len(s):
+                # Add to our palindromes list, and continue.
+                palindromes.append(partition)
+                continue
+            # loop through all possible substrings starting at index i.
+            for j in range(i, len(s)):
+                # if the string, s from i to j is a palindrome:
+                if self.is_palindrome(s, i, j):
+                    # create a copy of current partition and add the 
+                    # palindromic string section for i to j+1
+                    part = partition[:] + [s[i:j+1]]
+                    # add the index we are going to leave off of,
+                    # as well as the copy of the partition to the stack.
+                    stack.append((j + 1, part))
+        return palindromes
 
 ```
 
