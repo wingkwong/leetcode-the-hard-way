@@ -252,6 +252,10 @@ For $$"aa"$$, we would check $$"a"$$, and $$"ab"$$, and only add $$["aa", "a"]$$
 Finally for $$"a"$$, we would check the substrings, $$"a"$$, $$"aa"$$, and $$"aab"$$ and would and would create partitions using the first two as: $$["a", "a"]$$ and $$["a", "aa"]$$. If we continued to follow the same logic, you could see we would eventually finish the question off with 4 partitions:
 $$["aaa", "b"]$$, $$["aa", "a", "b"]$$, $$["a", "aa", "b"]$$ and $$["a", "a", "a", "b"]$$
 
+Time Complexity: $$O(n*2^n)$$. For each character in string, we have 2 choices, to include it or don't include it in the current partition, creating up to $$2^n$$ partitions. We also do our palindrome check in $$O(n)$$ time.
+
+Space Complexity: $$(n*2^n)$$, in the worst case, we will have $$2^n$$ partitions of size $$n$$
+
 <Tabs>
 <TabItem value="python" label="Python">
 <SolutionAuthor name="@ColeB2"/>
