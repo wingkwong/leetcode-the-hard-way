@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wingkwong | https://leetcode.com/problems/edit-distance/'
+tags: [String, Dynamic Programming]
 ---
 
 # 0072 - Edit Distance (Hard)
@@ -71,6 +72,8 @@ Time Complexity: $O(m * n)$
 
 Space Complexity: $O(m * n)$
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -101,3 +104,33 @@ public:
     }
 };
 ```
+
+
+</TabItem>
+
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@wingkwong"/>
+
+```py
+class Solution:
+    def minDistance(self, word1: str, word2: str) -> int:
+        m, n = len(word1), len(word2)
+        dp = [[0] * (n + 1) for _ in range(m + 1)]
+        for i in range(1, m + 1): dp[i][0] = i
+        for j in range(1, n + 1): dp[0][j] = j
+        for i in range(1, m + 1):
+            for j in range(1, n + 1):
+                if word1[i - 1] == word2[j - 1]:
+                    # a == b
+                    dp[i][j] = dp[i - 1][j - 1]
+                else:
+                    # find out the min cost for all three actions
+                    # dp[i - 1][j - 1]: replace a with b
+                    # dp[i - 1][j]: delete a
+                    # dp[i - 1][j]: insert b after a
+                    dp[i][j] = 1 + min(dp[i - 1][j - 1], dp[i - 1][j], dp[i][j - 1])
+        return dp[m][n]
+```
+
+</TabItem>
+</Tabs>
