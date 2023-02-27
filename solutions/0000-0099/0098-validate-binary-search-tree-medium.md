@@ -1,5 +1,5 @@
 ---
-description: "Author: @dhanu084, @vigneshshiv | https://leetcode.com/problems/validate-binary-search-tree/"
+description: "Author: @dhanu084, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/validate-binary-search-tree/"
 ---
 
 # 0098 - Validate Binary Search Tree (Medium)
@@ -61,19 +61,15 @@ class Solution:
         def validate(root, left, right):
             if root is None:
                 return True
-
             # Validate the condition for each subtree
             if root.val <= left or root.val >= right:
                 return False
-
             # all subtrees left of root should be less than right so pass root.val as right
             left = validate(root.left, left, root.val)
             # all subtrees right of root should be greater than right so pass root.val as left
             right = validate(root.right, root.val, right)
-
             # only if left and right subtrees are valid return true
             return left and right
-
         # pass -inf as the left minimum and inf as right maximum initially
         return validate(root, -inf, inf)
 ```
@@ -115,6 +111,42 @@ class Solution {
         return checkBST(root.left, min, root.val) && checkBST(root.right, root.val, max);
     }
 }
+```
+
+</TabItem>
+
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@radojicic23"/>
+
+```cpp
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    bool valid(TreeNode* node, long left, long right) {
+        if (!node) {
+            return true;
+        }
+        if (!(node->val > left && node->val < right)) {
+            return false;
+        }
+        return (valid(node->left, left, node->val) && 
+                valid(node->right, node->val, right));
+    }
+
+    bool isValidBST(TreeNode* root) {
+        return valid(root, LONG_MIN, LONG_MAX);
+    }
+};
 ```
 
 </TabItem>
