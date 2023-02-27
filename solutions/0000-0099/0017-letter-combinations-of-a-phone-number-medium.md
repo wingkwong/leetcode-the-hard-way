@@ -2,6 +2,7 @@
 description: >-
   Author: @vigneshshiv, @radojicic23, @ColeB2 |
   https://leetcode.com/problems/letter-combinations-of-a-phone-number/
+tags: [Hash Table, String, Backtracking]
 ---
 
 # 0017 - Letter Combinations of a Phone Number (Hard)
