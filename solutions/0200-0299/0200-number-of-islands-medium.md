@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/number-of-islands/'
+description: 'Author: @wingkwong, @ColeB2 | https://leetcode.com/problems/number-of-islands/'
+tags: [Array, Depth-First Search, Breadth-First Search, Union Find, Matrix]
 ---
 
 # 0200 - Number of Islands (Medium)
@@ -48,6 +49,10 @@ Output: 3
 ## Approach 1: Flood Fill
 
 We can use [0733 - Flood Fill (Easy)](../0700-0799/flood-fill-easy) solution in this problem. The idea is to search for $$1$$ and paint the entire island with different character that  does not exist in the grid (says $$2$$). Every time we start flood fill, we increase our answer by $$1$$.
+
+Time Complexity: $$O(m*n)$$ where m is the number of rows, and n is the number of columns in the grid. We must traverse the whole grid in order to determine the number of islands.
+
+Space Complexity: $$(m*n)$$ where m is the number of rows, and n is the number of columns in the grid. In the worst case, our queue/stack/recursive stack/visited set will grow in direct proportion to the size of the grid.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -169,6 +174,56 @@ class Solution {
     }
 }
 
+```
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@ColeB2"/>
+
+```py
+class Solution:
+    # Time: O(m*n) as we must traverse each position in the grid.
+    # Space: O(m*n) our queue in worst case maybe all land and
+    # will grow in proportion to the size of the grid.
+    def bfs(self, r: int, c: int, grid: List[List[str]]) -> List[List[str]]:
+        # BFS implementation of flood fill, initialize queue with
+        # the row and column we passed as first starting point
+        q = deque([(r,c)])
+        while q:
+            # pop off our row and column
+            row, col = q.popleft()
+            # check we are in bounds, and land.
+            if (row < 0 or col < 0 
+                or row >= len(grid) or col >= len(grid[0])
+                or grid[row][col] != '1'
+                ):
+                # out of bounds/not land  -> continue
+                continue
+            # 'colour' our land a different colour. We will set it to -1
+            grid[row][col] = -1
+            # loop our directions, and add them to the queue
+            for (x,y) in ((1,0),(-1,0),(0,1),(0,-1)):
+                    q.append((row + x, col + y))
+        # return our grid since we changed it.
+        return grid
+
+
+    def numIslands(self, grid: List[List[str]]) -> int:
+        # initialize our row, cols and number of islands counter.
+        ROWS, COLS = len(grid), len(grid[0])
+        num_islands = 0
+        # loop through the grid.
+        for r in range(ROWS):
+            for c in range(COLS):
+                # if we find land
+                if grid[r][c] == '1':
+                    # flood fill it, making sure to overwrite our 
+                    # grid as we will change it during our algorithm.
+                    grid = self.bfs(r, c, grid)
+                    num_islands += 1
+        
+        return num_islands
 ```
 
 </TabItem>
