@@ -336,7 +336,7 @@ class Solution {
 </TabItem>
 </Tabs>
 
-## Approach 5: Couting Sort
+## Approach 4: Couting Sort
 
 <Tabs>
 <TabItem value="py" label="Python">
