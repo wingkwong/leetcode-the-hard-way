@@ -121,4 +121,26 @@ class Solution:
         return 0 if number > MAX else int(number) * sign
 ```
 </TabItem>
+
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@radojicic23"/>
+
+```cpp
+class Solution {
+public:
+    int reverse(int x) {
+        int number = 0;
+        while (x != 0) {
+            if (number > INT_MAX / 10 || number < INT_MIN / 10) {
+                return 0;
+            }
+            int carry = x % 10;
+            number = number * 10 + carry;
+            x /= 10;
+        }
+        return number;
+    }
+};
+```
+</TabItem>
 </Tabs>
