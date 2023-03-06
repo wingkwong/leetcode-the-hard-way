@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @radojicic23 | https://leetcode.com/problems/pacific-atlantic-water-flow/'
+description: 'Author: @wingkwong, @radojicic23, @ColeB2 | https://leetcode.com/problems/pacific-atlantic-water-flow/'
 tags: [Array, Depth-First Search, Breadth-First Search, Matrix]
 ---
 
@@ -156,6 +156,73 @@ class Solution:
                 if (r, c) in pac and (r, c) in atl:
                     res.append([r, c])
         return res
+```
+
+</TabItem>
+</Tabs>
+
+## Approach 2: Breadth-First Search
+
+We will start at the "beaches" of each ocean, and find the highest point they reach using BFS. By storing those values in a set and doing it for both oceans, we can return the intersecting points of each set as we know if it rained, those high points will run off into both oceans.
+
+Note: Since we are finding the highest point we can reach from the beaches, we need to check that the cell we are looking at is either taller, or even in height than the cell we came from. If it is shorter, we would avoid continuing.
+
+Time Complexity: $$O(m*n)$$ where m is the number of rows, and n is the number of columns. Our BFS will traverse each cell, check where they can reach, and will use a set to avoid repeated work.
+
+Space Complexity: $$O(m*n)$$. We will maintain 2 hash sets of points we can reach, as well as our queue will take up to $$O(m*n)$$ space.
+
+
+<Tabs>
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@ColeB2"/>
+
+```py
+class Solution:
+    def pacificAtlantic(self, heights: List[List[int]]) -> List[List[int]]:
+        # initialize the number of rows, cols and our visited sets.
+        ROWS, COLS = len(heights), len(heights[0])
+        pacific = set()
+        atlantic = set()
+        # BFS algorithm, takes an initial row, column starting point
+        # as well as a reference to which visited set we are using.
+        def bfs(r, c, visited):
+            # initialize q with starting row, col and the height
+            # of the current cell.
+            q = deque([(r,c, heights[r][c])])
+
+            while q:
+                # get row, col of current cell, and height of prev cell.
+                row, col, height = q.popleft()
+                # check we are in bounds, that we haven't visited the
+                # cell before and that if the current cells height
+                # is shorter than the previous cells height.
+                if (row < 0 or row >= ROWS
+                    or col < 0 or col >= COLS
+                    or (row,col) in visited
+                    or heights[row][col] < height):
+                    continue
+                # passed our check above we can add cell to visited
+                visited.add((row,col))
+                # check 4 adjacent cells to add to the queue.
+                for dr, dc in ((1,0), (-1,0), (0,1), (0,-1)):
+                    q.append((row + dr, col + dc, heights[row][col]))
+        # Our 2 loops here start our algorithm only from  the "beach squares.
+        # Every column in the first/last rows
+        for col in range(COLS):
+            # BFS for each column at the pacific and atlantic "beach".
+            # Pass a reference of the set we are starting our bfs from
+            # to our algorithm.
+            bfs(0, col, pacific)
+            bfs(ROWS - 1, col, atlantic)
+        # Every row in the first and last columns.
+        for row in range(ROWS):
+            # BFS for each row at the pacific and atlantic "beach."
+            bfs(row, 0, pacific)
+            bfs(row, COLS - 1, atlantic)
+        # Return the intersection of points inside our row.
+        # If they both reached the same high point, we know rain would
+        # run off into either ocean.
+        return pacific.intersection(atlantic)
 ```
 
 </TabItem>
