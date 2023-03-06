@@ -213,12 +213,12 @@ class Solution:
             # Pass a reference of the set we are starting our bfs from
             # to our algorithm.
             bfs(0, col, pacific)
-            bfs(ROWS-1, col, atlantic)
+            bfs(ROWS - 1, col, atlantic)
         # Every row in the first and last columns.
         for row in range(ROWS):
             # BFS for each row at the pacific and atlantic "beach."
             bfs(row, 0, pacific)
-            bfs(row, COLS-1, atlantic)
+            bfs(row, COLS - 1, atlantic)
         # Return the intersection of points inside our row.
         # If they both reached the same high point, we know rain would
         # run off into either ocean.
