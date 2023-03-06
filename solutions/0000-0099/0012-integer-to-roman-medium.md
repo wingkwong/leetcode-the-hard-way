@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @jessicaribeiroalves | https://leetcode.com/problems/integer-to-roman/
+  Author: @jessicaribeiroalves, @radojicic23 | https://leetcode.com/problems/integer-to-roman/
 ---
 
 # 0012 - Integer to Roman (Medium)
@@ -67,6 +67,14 @@ Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 The solution used was iterating over a tuples list created to map the integers and their respective Roman numerals. So when iterating over the list, while the $remaining$ value is greater than or equal to the first tuple element (which is the integer value), append the corresponding character(s) (the second tuple element) to $result$ and subtract the value from $remaining$.
 
 For example, if we consider the given integer $num = 17$, after starting the iteration over the list, the algorithm checks if the integer $17$ is greater than or equal to the first integer value from the first list element, which is $1000$. Since it's not, the code in the while loop is not executed and the next iteration starts checking if $17$ is greater than or equal to $900$ and so on until the iteration checks if $17$ is greater than or equal to $10$. In this iteration the code in the while loop is executed so that the $result$ variable is concatenated with the respective Roman numeral which is $'X'$ and $remaining$ becomes $7$. For the next iteration, $7$ is not greater than or equal to $9$ but on the next one, when it's greater than $5$, $result$ becomes $'XV'$ and $remaining$ becomes $2$. So keeping that logic, after the final iteration $result$ will be $'XVII'$.
+
+**Time Complexity: $O(1)$**
+
+The time complexity for this solution is $O(1)$ as the algorithm execution time is independent of the size of the input.
+
+**Space Complexity: $O(1)$**
+
+The space complexity for this solution is also $O(1)$.
 
 <Tabs>
 <TabItem value="py" label="Python">
@@ -137,12 +145,43 @@ const intToRoman = (num) => {
 ```
 
 </TabItem>
+
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@radojicic23"/>
+
+```cpp
+class Solution {
+public:
+    string intToRoman(int num) {
+        vector<pair<int, string>> numbers = {
+            {1000, "M"}, 
+            {900, "CM"}, 
+            {500, "D"},
+            {400, "CD"}, 
+            {100, "C"}, 
+            {90, "XC"}, 
+            {50, "L"}, 
+            {40, "XL"}, 
+            {10, "X"}, 
+            {9, "IX"}, 
+            {5, "V"}, 
+            {4, "IV"}, 
+            {1, "I"} 
+        };
+        string ans = "";
+        while (num > 0) {
+            for (auto [integer, roman] : numbers) {
+                if (num >= integer) {
+                    ans += roman;
+                    num -= integer;
+                    break;
+                }
+            }
+        }
+        return ans;
+    }
+};
+```
+
+</TabItem>
 </Tabs>
-
-**Time Complexity: $O(1)$**
-
-The time complexity for this solution is $O(1)$ as the algorithm execution time is independent of the size of the input.
-
-**Space Complexity: $O(1)$**
-
-The space complexity for this solution is also $O(1)$.
