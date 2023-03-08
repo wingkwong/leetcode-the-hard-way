@@ -3,7 +3,7 @@ description: 'Author: @ColeB2 | https://leetcode.com/problems/rotting-oranges/'
 tags: [Array, Breadth-First Search, Matrix]
 ---
 
-# 0994 Rotting Oranges (Medium)
+# 0994 - Rotting Oranges (Medium)
 
 ## Problem Link
 
@@ -111,7 +111,7 @@ class Solution:
                     # add new rotten orange to the queue. We won't reach
                     # it on this iteration, as we are only iterating
                     # through the rotten from the last iteration.
-                    q.append((r,c))
+                    q.append((r, c))
             # Since we only looped through the rotten oranges inside the
             # queue, and not the adjacent ones, we can increment the time
             # now, and on the next iteration we will check those adjacent ones.
