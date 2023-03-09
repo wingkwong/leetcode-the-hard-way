@@ -41,6 +41,8 @@ To take course 1 you should have finished course 0, and to take course 0 you sho
 
 ## Approach 1: Topological Sorting
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -100,3 +102,59 @@ public:
     }
 };
 ```
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@ColeB2"/>
+
+```py
+class Solution:
+    # Time: O(V + E) where V is the number of vertexes, numCourses
+    #  and E is the number of Edges inside our graph - prerequisites.
+    # Space: O(V + E). We must maintain an indegrees of size V, and
+    # we must build our ADJ list which will contain V lists of size E.
+    def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
+        # initialize indegrees to track how many prerequisites left
+        # before we can take the courses at the index.
+        indegrees = [0] * numCourses
+        # define our graph, list of lists, where the index will be
+        # course 2, the prerequisite course, and it will contain a list
+        # of courses that we can potentially take after we take course2.
+        adj_list = [[] for _ in range(numCourses)]
+        # build our indegrees, and adj_list, loop all prerequisites
+        for c1, c2 in prerequisites:
+            indegrees[c1] += 1
+            adj_list[c2].append(c1)
+        # Build our queue. We can take any courses that have an indegree
+        # of 0, so we add it to our queue to handle.
+        q = deque()
+        for i in range(len(indegrees)):
+            if indegrees[i] == 0:
+                q.append(i)
+        # Topologically sort.
+        # instead of build a top sort array, we can just count a course
+        # as completed as the question only wants if it is possible,
+        # not any given order.
+        courses = 0
+        while q:
+            # pop our course off the queue
+            c = q.popleft()
+            # finised the courses, increment our courses finished counter
+            courses += 1
+            # since we finished c, we now look through all the possible
+            # courses that it was a prerequisite for to decrement its
+            # indegrees.
+            for c2 in adj_list[c]:
+                # decrement indegrees
+                indegrees[c2] -= 1
+                # indegrees reach 0, we have all prerequisites, we can
+                # take the course, add it to the queue.
+                if indegrees[c2] == 0:
+                    q.append(c2)
+        # Only return true if all courses can be finished.
+        return courses == numCourses
+```
+
+</TabItem>
+</Tabs>
