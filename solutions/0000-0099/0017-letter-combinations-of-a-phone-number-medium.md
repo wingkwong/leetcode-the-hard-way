@@ -169,6 +169,45 @@ var letterCombinations = function(digits) {
 ```
 
 </TabItem>
+
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@radojicic23"/>
+
+```cpp
+class Solution {
+public:
+    vector<string> letterCombinations(string digits) {
+        vector<string> ans;
+        string currStr = "";
+        map<char, string> hashMap = {
+                {'2', "abc"}, 
+                {'3', "def"}, 
+                {'4', "ghi"}, 
+                {'5', "jkl"}, 
+                {'6', "mno"}, 
+                {'7', "pqrs"}, 
+                {'8', "tuv"}, 
+                {'9', "wxyz"}
+        };
+        if (digits == "") return ans;
+        backtrack(digits, hashMap, ans, currStr, 0);
+        return ans;
+    }
+    void backtrack(string& digits, map<char, string>& hashMap, vector<string>& ans, string& currStr, int i) {
+        if (digits.size() == currStr.size()) {
+            ans.push_back(currStr);
+            return;
+        }
+        for (char c : hashMap[digits[i]]) {
+            currStr.push_back(c);
+            backtrack(digits, hashMap, ans, currStr, i + 1);
+            currStr.pop_back();
+        }
+    }
+};
+```
+
+</TabItem>
 </Tabs>
 
 
