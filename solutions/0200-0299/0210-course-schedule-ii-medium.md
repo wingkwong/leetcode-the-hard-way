@@ -48,6 +48,8 @@ Output: [0]
 
 ## Approach 1: Topological Sorting
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -110,3 +112,55 @@ public:
     }
 };
 ```
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@ColeB2"/>
+
+```py
+class Solution:
+    # Time Complexity: O(V + E) where v is number of vertexes/courses and
+    # E is the number of edges in our graph, preqrequisite connections.
+    # Space Complexity: O(V + E). V size indegrees, V+E adj_list, 
+    # V sized top_sort list, and our queue could reach size V
+    # in the worst case scenario.
+    def findOrder(self, numCourses: int, prerequisites: List[List[int]]) -> List[int]:
+        # initialize our indegrees -> idx = course, value = number of
+        # courses we must take before we can take that course.
+        indegrees = [0] * numCourses
+        # adjacency list -> idx = course, list = courses we can take
+        # we we take this one.
+        adj_list = [[] for _ in range(numCourses)]
+        # loop our courses in prerequisites
+        for c1, c2 in prerequisites:
+            # must take c2 before c1, increment c1's indegrees
+            indegrees[c1] += 1
+            # after we take c2, we can take c1, add c1 to c2's adj_list.
+            adj_list[c2].append(c1)
+        # initialize queue, and find all courses without prerequisites.
+        q = deque()
+        for i in range(numCourses):
+            if indegrees[i] == 0:
+                q.append(i)
+        # topological sort
+        top_sort = []
+        while q:
+            # pop the course off the queue
+            course = q.popleft()
+            # add it to our top_sort list
+            top_sort.append(course)
+            # loop all courses we can take after this course in adj_list.
+            for c in adj_list[course]:
+                # decrement indegrees and check if it reached 0.
+                indegrees[c] -= 1
+                if indegrees[c] == 0:
+                    # reached 0, we can take the courses
+                    q.append(c)
+        # return our top sort list if we completed all courses
+        return top_sort if len(top_sort) == numCourses else []
+
+```
+
+</TabItem>
+</Tabs>
