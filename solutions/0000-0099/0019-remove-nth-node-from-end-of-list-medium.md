@@ -352,4 +352,38 @@ class Solution:
 ```
 
 </TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
+/**
+ * @param {ListNode} head
+ * @param {number} n
+ * @return {ListNode}
+ */
+var removeNthFromEnd = function(head, n) {
+    let dummy = new ListNode();
+    dummy.next = head;
+    let slow = dummy, fast = dummy;
+    while (fast.next) {
+        fast = fast.next;
+        if (n <= 0) {
+            slow = slow.next;
+        }
+        n--;
+    }
+    slow.next = slow.next.next;
+    return dummy.next;
+};
+```
+
+</TabItem>
 </Tabs>
