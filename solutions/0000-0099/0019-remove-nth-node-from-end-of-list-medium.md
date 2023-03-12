@@ -386,4 +386,39 @@ var removeNthFromEnd = function(head, n) {
 ```
 
 </TabItem>
+
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@radojicic23"/>
+
+```cpp
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* removeNthFromEnd(ListNode* head, int n) {
+        ListNode* dummy = new ListNode();
+        dummy->next = head;
+        auto slow = dummy, fast = dummy;
+        while (fast->next) {
+            fast = fast->next;
+            if (n <= 0) {
+                slow = slow->next;
+            }
+            n--;
+        }
+        slow->next= slow->next->next;
+        return dummy->next;
+    }
+};
+```
+
+</TabItem>
 </Tabs>
