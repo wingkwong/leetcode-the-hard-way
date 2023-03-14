@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/word-ladder/'
+description: 'Author: @wingkwong, @ColeB2 | https://leetcode.com/problems/word-ladder/'
+tags: [Hash Table, String, Breadth-First Search]
 ---
 
 # 0127 - Word Ladder (Hard)
@@ -50,6 +51,16 @@ Imaginate $$beginWord$$ is a starting node and $$endWord$$ is the ending node of
 
 Since we are looking for the shortest path, then we should use BFS instead of DFS. Before that, we need to pre-process on the words of the given $$wordList$$. If a word is $$hot$$, then there could be three forms which are $$*ot$$, $$h*t$$, and $$ho*$$ where $$*$$ can be any alphabet. To implement this, we can use a hash map where the key is the form and the value is the list of word which has the same form. Example: $$*ot: [hot , dot, lot]$$.
 
+```
+Graph:
+hit----hot---dot---dog---cog
+        |   /        |   / 
+        |  /         |  /
+        lot----------log
+```
+
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -65,7 +76,31 @@ for (auto s : wordList) {
 }
 ```
 
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@ColeB2"/>
+
+```py
+wordList.append(beginWord)
+# word map will be formatted in the format key:value
+# key: combinations of words, ie hit: --> '_it', 'h_t', 'hi_'
+# value: word from word list, 'hit'
+word_map = defaultdict(list)
+for word in wordList:
+    for i in range(len(word)):
+        string = word[:i] + '_' + word[i + 1:]
+        word_map[string].append(word)
+```
+
+</TabItem>
+</Tabs>
+
 Then, we can perform BFS using queue. We take the word, build its form and get the list of next nodes. If the next word is $$endWord$$, then we can return the answer which is $$level + 1$$. Otherwise, we check if the next word is visited or not, then push it to the queue and mark it as visited if it hasn't been reached before.
+
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 // 2. BFS 
@@ -99,7 +134,54 @@ while (!q.empty()) {
 }
 ```
 
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@ColeB2"/>
+
+```py
+# visited set initialized with beingWord
+visited = set([beginWord])
+# queue formatted as (word, level) where the level.
+q = deque([(beginWord, 1)])
+while q:
+    # get first word, level in queue.
+    word, level = q.popleft()
+    # check if we reached the end node, endWord.
+    if word == endWord:
+        return level
+    # iterated each character in word
+    for i in range(len(word)):
+        # recreate all words options ie hit: _it, h_t, hi_
+        string = word[:i] + '_' + word[i + 1:]
+        # all word combinations are our keys to our hash map, use those
+        # to access the word lists held inside our map.
+        for new_word in word_map[string]:
+            # if we haven't visited the word
+            if new_word not in visited:
+                # add word to visited so we don't return twice, if we
+                # visited at a later time, we know it will take longer
+                # to reach the end node from there anyway, and add to queue.
+                visited.add(new_word)
+                q.append((new_word, level + 1))
+```
+
+</TabItem>
+</Tabs>
+
 Full version
+
+Time Complexity: $$O(M^2 * N)$$ where $$M$$ is the length of each word, and $$N$$ is the total number of words in $$wordList$$.
+- For each word in word list, we iterate each character, $$M * N$$ and to recreate each combination of each word to add to our hash map takes $$M$$ time -> $$O(M^2 * N)$$
+- BFS might traverse every node $$N$$, and similarily, we must check each character $$M$$ and recreated the intermediate words --> $$O(M^2 * N)$$
+
+Space Complexity: $$O(M^2 * N)$$. The space will be dominated by our hash map as each word $$N$$, has $$M$$ combinations of words which will be our keys, and each key will have the original word of sized $$M$$ as a value. Meaning each word will need $$M^2$$ space, and we need to do that for $$N$$ words.
+
+
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@wingkwong"/>
+
 
 ```cpp
 class Solution {
@@ -139,3 +221,42 @@ public:
     }
 };
 ```
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@ColeB2"/>
+
+```py
+class Solution:
+    def ladderLength(self, beginWord: str, endWord: str, wordList: List[str]) -> int:
+        # Early termination, endWord isn't in wordList, return 0
+        if endWord not in wordList:
+            return 0
+        # Add all words in wordlist to defaultdict
+        # Ex word hit, keys: _it, h_t, hi_, value: hit
+        wordList.append(beginWord)
+        word_map = defaultdict(list)
+        for word in wordList:
+            for i in range(len(word)):
+                string = word[:i] + '_' + word[i + 1:]
+                word_map[string].append(word)
+        # BFS -> visited set to prevent visiting same word twice.
+        visited = set([beginWord])
+        # Queue formatted as (word, level)
+        q = deque([(beginWord, 1)])
+        while q:
+            word, level = q.popleft()
+            if word == endWord:
+                return level
+            for i in range(len(word)):
+                string = word[:i] + '_' + word[i + 1:]
+                for new_word in word_map[string]:
+                    if new_word not in visited:
+                        visited.add(new_word)
+                        q.append((new_word, level + 1))
+        return 0
+```
+
+</TabItem>
+</Tabs>
