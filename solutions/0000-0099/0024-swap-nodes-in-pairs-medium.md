@@ -244,4 +244,44 @@ var swapPairs = function (head) {
 ```
 
 </TabItem>
+
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@radojicic23"/>
+
+```cpp
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* swapPairs(ListNode* head) {
+        // initialize dummy node (dummy -> head)
+        ListNode* dummy = new ListNode(0);
+        dummy->next = head;
+        auto prev = dummy, curr = head;
+        while (curr && curr->next) {
+            // initialize pointers
+            auto second = curr->next;
+            auto nxtPair = curr->next->next;
+            // swap this pair 
+            second->next = curr;
+            curr->next = nxtPair;
+            prev->next = second;
+            // update pointers
+            prev = curr ;
+            curr = nxtPair;
+        }
+        return dummy->next;
+    }
+};
+```
+
+</TabItem>
 </Tabs>
