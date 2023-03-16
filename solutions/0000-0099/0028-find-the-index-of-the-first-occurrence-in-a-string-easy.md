@@ -1,5 +1,5 @@
 ---
-description: 'Author: @la-la-Cute, @ganajayant, @radojicic23 | https://leetcode.com/problems/implement-strstr/'
+description: 'Author: @la-la-Cute, @ganajayant, @radojicic23 | https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/'
 ---
 
 # 0028 - Find the Index of the First Occurrence in a String (Easy)
