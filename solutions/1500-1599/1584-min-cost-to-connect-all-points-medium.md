@@ -1,7 +1,8 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/min-cost-to-connect-all-points/
+  Author: @wingkwong, @ColeB2 |
+  https://leetcode.com/problems/min-cost-to-connect-all-points/''
+tags: [Array, Union Find, Graph, Minimum Spanning Tree]
 ---
 
 # 1584 - Min Cost to Connect All Points (Medium)
@@ -97,6 +98,8 @@ class dsu {
 
 </details>
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -126,3 +129,67 @@ public:
     }
 };
 ```
+
+</TabItem>
+</Tabs>
+
+## Approach 2: Prim's Algorithm
+
+[Prim's Algorithm](https://en.wikipedia.org/wiki/Prim%27s_algorithm) to create a minimum spanning tree. Prim's algorithm works by building a tree vertex by vertex, selecting the minimum weighted edge of the next vertex not in the tree.
+
+There are multiple ways to solve which edge it the min edge to select for the next vertex. We can use an adjaceny matrix, which would matrix that holds the weight of all edges between all vertices.
+
+<Tabs>
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@ColeB2"/>
+
+```py
+class Solution:
+    # Prim's Algorithm
+    # For this version of Prim's algorithm, we will use a hash map to map
+    # our vertex to the distance of the closest point. We will then use
+    # this hash map to track which point is closest to our MST.
+    # Time: O(n^2). Where n is the number of points. For each point
+    # we are going to have to check its distance to all other points.
+    # Space: O(n) our adjancency list will only hold n points inside.
+    def minCostConnectPoints(self, points: List[List[int]]) -> int:
+        # function to calculate manhattan distances.
+        manhattan = lambda x1, x2, y1, y2: abs(x1 - x2) + abs(y1 - y2)
+        # Adjaceny list --> dictionary that maps key:value
+        # key: (x,y) coords. Dictionary gives up O(1) acces to points.
+        # value: Distance to the closest point.
+        # initialize distance of 0 for first point, as that is our
+        # starting point, and then infinity for the remaining points.
+        adj_list = {(x,y): float('inf') if i else 0 for i, (x,y) in enumerate(points)}
+        min_cost = 0
+        # While our adjacency list still has points inside it.
+        while adj_list:
+            # Initialize x,y and min_point variables to help us
+            # track which point we need to select to add to our tree.
+            x, y, min_point = None, None, float('inf')
+            # loop through all our points in the adjacency list.
+            # k = (x,y) coords of that point. 
+            # v = manhattan distance of nearest point.
+            for k, v in adj_list.items():
+                # If this point is closer than selected point.
+                if v < min_point:
+                    # Select this point instead.
+                    (x, y), min_point = k, v
+            # Looped all points and selected closest, update min_cost and
+            # remove it from our adjacency list.
+            min_cost += min_point
+            adj_list.pop((x,y))
+            # Loop the remaining points, and update manhattan distances.
+            for xi, yi in adj_list.keys():
+                # Get (xi,yi) manhattan distance value
+                current_val = adj_list[(xi,yi)]
+                # calculate how close (xi,yi) is to (x,y) we found above.
+                updated_val = manhattan(xi,x,yi,y)
+                # update manhattan distance to the smaller of too values.
+                adj_list[(xi,yi)] = min(current_val,  updated_val)
+        return min_cost
+```
+
+</TabItem>
+</Tabs>
+
