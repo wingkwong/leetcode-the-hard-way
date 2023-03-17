@@ -215,4 +215,46 @@ var search = function (nums, target) {
 ```
 
 </TabItem>
+
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@radojicic23"/>
+
+```cpp
+class Solution {
+public:
+    int search(vector<int>& nums, int target) {
+        int l = 0;
+        int r = nums.size() - 1;
+        while (l <= r) {
+            // mid value
+            int mid = l + (r - l) / 2;
+            // if mid is target return mid index
+            if (nums[mid] == target) {
+                return mid;
+            }
+            // are we in right or left sorted portion
+            if (nums[mid] >= nums[l]) {
+                // we are in right sorted portion
+                if (target > nums[mid] || target < nums[l]) {
+                    l = mid + 1;
+                // we are in left sorted portion
+                } else {
+                    r = mid - 1;
+                }
+            } else {
+                // we are in left sorted portion 
+                if (target < nums[mid] || target > nums[r]) {
+                    r = mid - 1;
+                // we are in right sorted portion
+                } else {
+                    l = mid + 1;
+                }
+            }
+        }
+        return -1;
+    }
+};
+```
+
+</TabItem>
 </Tabs>
