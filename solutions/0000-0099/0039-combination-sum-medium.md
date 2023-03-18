@@ -111,7 +111,40 @@ class Solution:
 ```
 
 </TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * @param {number[]} candidates
+ * @param {number} target
+ * @return {number[][]}
+ */
+var combinationSum = function(candidates, target) {
+    candidates.sort((a, b) => a - b);
+    let res = [];
+    backtrack(0, [], target);
+    return res;
+
+    function backtrack(i, curr, target) {
+        if (target == 0) {
+            res.push(curr.slice());
+        }
+        if (target <= 0 || i == candidates.length) {
+            return;
+        }
+        curr.push(candidates[i]);
+        backtrack(i, curr, target - candidates[i]);
+        curr.pop();
+        backtrack(i + 1, curr, target);
+    }
+};
+```
+
+</TabItem>
 </Tabs>
+
 
 ## Approach 2: Dynamic Programming - Tabulation
 
