@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/combination-sum-ii/'
+description: 'Author: @wingkwong, @ColeB2, @radojicic23 | https://leetcode.com/problems/combination-sum-ii/'
 tags: [Array, Backtracking]
 ---
 
@@ -135,6 +135,38 @@ class Solution:
                 # set new previous for subsequent loops.
                 prev = candidates[i]
         return combinations
+```
+
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * @param {number[]} candidates
+ * @param {number} target
+ * @return {number[][]}
+ */
+var combinationSum2 = function(candidates, target) {
+    res = []
+    candidates.sort((a, b) => a - b);
+    function backtrack(index, curr, target) {
+        if (target < 0) return;
+        if (target == 0) {
+            res.push(curr.slice());
+            return;
+        }
+        for (let i = index; i < candidates.length; i++) {
+            if (i != index && candidates[i] === candidates[i - 1]) continue;
+            curr.push(candidates[i]);
+            backtrack(i + 1, curr, target - candidates[i]);
+            curr.pop()
+        }
+    }
+    backtrack(0, [], target);
+    return res;
+};
 ```
 
 </TabItem>
