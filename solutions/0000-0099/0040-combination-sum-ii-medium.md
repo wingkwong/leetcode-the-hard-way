@@ -149,7 +149,7 @@ class Solution:
  * @return {number[][]}
  */
 var combinationSum2 = function(candidates, target) {
-    res = []
+    res = [];
     candidates.sort((a, b) => a - b);
     function backtrack(index, curr, target) {
         if (target < 0) return;
@@ -161,7 +161,7 @@ var combinationSum2 = function(candidates, target) {
             if (i != index && candidates[i] === candidates[i - 1]) continue;
             curr.push(candidates[i]);
             backtrack(i + 1, curr, target - candidates[i]);
-            curr.pop()
+            curr.pop();
         }
     }
     backtrack(0, [], target);
