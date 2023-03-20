@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wingkwong | https://leetcode.com/problems/network-delay-time/'
+tags: [Depth-First Search, Breadth-First Search, Graph, Heap (Priority Queue), Shortest Path]
 ---
 
 # 0743 - Network Delay Time (Medium)
@@ -53,6 +54,8 @@ If we know the time between the starting node and other nodes, then the answer w
 
 Therefore, the problem is now asking to find out the max time it takes from the starting node to an arbitrary node. To calculate the shortest path from node A to node B, we can use Dijkstra. Let $$d[i]$$ be the time that is required to reach from the starting point to node $$i$$. We initialise each time as $$1e9$$. After calling dijkstra function, if there is one node that need $$time = 1e9$$ to reach, then it means this node is unreachable. We can return $$-1$$ in this case. Otherwise, return the max one.
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -86,8 +89,60 @@ public:
 };
 ```
 
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@ColeB2"/>
+
+```py
+class Solution:
+    # Time: O(E log V) where E is the number of Edges and V is the
+    # number of vertices in the graph. We use a heap to maintain the
+    # shortest paths of each node, and each edge is added at most once.
+    # Results in O(E log E) operations, since E is at most O(V^2)
+    # we can simplify: ElogV^2 -> 2ElogV -> ElogV
+    # Space Complexity: O(V). Algorithm uses a set to track visited nodes
+    # Have at most V elements, and a heap to store distances, which can
+    # at most hold V elements.
+    def networkDelayTime(self, times: List[List[int]], n: int, k: int) -> int:
+        # Build our adjacency list to traverse graph
+        adj_list = [[] for _ in range(n + 1)]
+        for (u,v,w) in times:
+            adj_list[u].append((v,w))
+        # initialize our heap, visited set.
+        # Heap items (time, node) Where time is current time.
+        heap = [(0,k)]
+        visited = set()
+        # Loop through all our values in the heap.
+        while heap:
+            # pop the current time and node
+            t, node = heapq.heappop(heap)
+            # Add node to our visited set, and check if we reached all
+            visited.add(node)
+            if len(visited) == n:
+                # reached all nodes, return the time.
+                return t
+            # Loop through all nodes neighbours.
+            for ni, ti in adj_list[node]:
+                # If we haven't processed node before.
+                if ni not in visited:
+                    # Push time and node to heap.
+                    # Times from our times list are times from previous
+                    # node to now, and time we track is global time.
+                    # So we add time to the node, with the global time.
+                    heapq.heappush(heap, (t + ti, ni))
+        # If we went through our whole heap without our visited ever
+        # reaching n, it means we can't visit all nodes, so return -1.
+        return -1
+```
+
+</TabItem>
+</Tabs>
+
 ## Approach 2: Bellman Ford
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -117,3 +172,6 @@ public:
     }
 };
 ```
+
+</TabItem>
+</Tabs>
