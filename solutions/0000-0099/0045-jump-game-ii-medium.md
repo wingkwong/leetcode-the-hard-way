@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/jump-game-ii/'
+description: 'Author: @wingkwong, @radojicic23 | https://leetcode.com/problems/jump-game-ii/'
 tags: [Array, Dynamic Programming, Greedy]
 ---
 
@@ -118,6 +118,30 @@ class Solution:
             # update nxt_end - take the max index
             nxt_end = max(nxt_end, i + nums[i])
         return steps
+```
+
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var jump = function(nums) {
+    let steps = 0;
+    let currEnd = 0, maxEnd = 0;
+    for (let i = 0; i < nums.length; i++) {
+        if (i > currEnd) {
+            steps++;
+            currEnd = maxEnd;
+        }
+        maxEnd = Math.max(maxEnd, i + nums[i]);
+    }
+    return steps;
+};
 ```
 
 </TabItem>
