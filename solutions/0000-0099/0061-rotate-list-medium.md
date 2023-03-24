@@ -101,4 +101,42 @@ class Solution:
 ```
 
 </TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
+/**
+ * @param {ListNode} head
+ * @param {number} k
+ * @return {ListNode}
+ */
+var rotateRight = function(head, k) {
+    let curr = head;
+    let n = 1;
+    if (!head) return null;
+    while (curr.next) {
+        curr = curr.next;
+        n++;
+    }
+    curr.next = head;
+    k = n - k % n;
+    while (k) {
+        curr = curr.next;
+        k--;
+    }
+    head = curr.next;
+    curr.next = null;
+    return head;
+}
+```
+
+</TabItem>
 </Tabs>
