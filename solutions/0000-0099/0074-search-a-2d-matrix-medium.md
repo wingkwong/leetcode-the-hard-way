@@ -70,7 +70,28 @@ public:
 ```
 
 </TabItem>
+
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```py
+class Solution:
+    def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
+        rows, cols = len(matrix), len(matrix[0])
+        r = 0
+        for i in range(rows):
+            if target >= matrix[i][0] and target <= matrix[i][-1]:
+                r = i
+                break
+        for i in range(cols):
+            if (matrix[r][i] == target):
+                return True
+        return False
+```
+
+</TabItem>
 </Tabs>
+
 
 ## Approach 2: Binary Search
 
