@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/permutation-in-string/'
+description: 'Author: @wingkwong, @ColeB2 | https://leetcode.com/problems/permutation-in-string/'
+tags: [Hash Table, Two Pointers, String, Sliding Window]
 ---
 
 # 0567 - Permutation in String (Medium)
@@ -165,6 +166,41 @@ class Solution:
             if matches == len(counter):
                 return True
         # We made it through without triggering true, return False.
+        return False
+```
+
+<SolutionAuthor name="@wingkwong"/>
+
+```py
+# idea:
+# permutation -> same frequency of each character
+# e.g. ab & ba - they both have 1 `a` and 1 `b`
+# which implies we can count the frequency of s1
+# and check if there is a substring of length of `n` (window)
+# containing the same set of frequency of characters
+# which implies we can use sliding window
+class Solution:
+    def checkInclusion(self, s1: str, s2: str) -> bool:
+        n, m = len(s1), len(s2)
+        # if s1 got more characters, 
+        # then s2 can never contain a permutation of s1
+        if n > m: return False
+        # cnt_s1: frequency of character in s1
+        # cnt_s2: frequency of character in s2
+        cnt_s1, cnt_s2 = [0] * 26, [0] * 26
+        # count the frequency of characters in s1 first
+        for i in range(n):
+            cnt_s1[ord(s1[i]) - ord('a')] += 1
+        # for each character in s2
+        for i in range(m):
+            # we increase the frequency in cnt_s2
+            cnt_s2[ord(s2[i]) - ord('a')] += 1
+            # given the window size `n`,
+            # if the current index >= n, it means we need to pop the leftmost element out
+            # e.g. window size = 2 - now it includes `eid` - we need to pop `e` out
+            if i >= n: cnt_s2[ord(s2[i - n]) - ord('a')] -= 1
+            # check if both frequency count matches or not
+            if cnt_s1 == cnt_s2: return True
         return False
 ```
 

@@ -2,7 +2,7 @@
 description: 'Author: @heiheihang, @wingkwong | https://leetcode.com/problems/next-greater-element-i/'
 ---
 
-# 0469 - Next Greater Element I (Easy)
+# 0496 - Next Greater Element I (Easy)
 
 ## Problem Link
 

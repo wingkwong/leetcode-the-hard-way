@@ -1,7 +1,8 @@
 ---
 description: >-
-  Author: @wingkwong |
+  Author: @wingkwong, @ColeB2 |
   https://leetcode.com/problems/cheapest-flights-within-k-stops/
+tags: [Dynamic Programming, Depth-First Search, Breadth-First Search, Graph, Heap (Priority Queue), Shortest Path]
 ---
 
 # 0787 - Cheapest Flights Within K Stops (Medium)
@@ -108,7 +109,7 @@ public:
 </Tabs>
 
 
-## Approach 1: Bellman Ford
+## Approach 2: Bellman Ford
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -152,6 +153,61 @@ public:
         return cost[dst] == 1e9 ? -1 : cost[dst];
     }
 };
+```
+
+</TabItem>
+</Tabs>
+
+## Approach 3: Dijkstra's Algorithm
+
+We can use Dijkstra's Algorithm to find the shortest path. Dijkstra's Algorithm uses a heap for weights of distance we travelled, meaning with a min heap we can always check the path that is currently the shortest. One key difference though is instead of a visited set, we will use a hash map, as we might visit a city early, but run out of stops and a set would prevent us from reaching this city again. So to prevent this we can use a hash map that maps cities to stops, and if we reach a city with fewer stops than last time, we can visit this city again.
+
+Time Complexity: $$O((F + C)logC)$$ Where $$F$$ is the number of flights, and $$C$$ is the number of cities. Worst case we must take all flights and visit all cities, updating our heap $$logC$$ times at each city.
+
+Space Complexity: $$O(C)$$ Where $$C$$ is the number of cities. We must create an adjacency list, a heap, and a visited dictionary, all of which scale proportionally to the number of cities.
+
+
+<Tabs>
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@ColeB2"/>
+
+```py
+class Solution:
+    def findCheapestPrice(self, n: int, flights: List[List[int]], src: int, dst: int, k: int) -> int:
+        # create an adjacency list
+        adj_list = [[] for _ in range(n)]
+        # adjacenty list will be a list for cities and prices
+        # we can fly to from a desitination, i, in the list.
+        for from_i, to_i, price_i in flights:
+            adj_list[from_i].append((to_i, price_i))
+        # heap (price, stops, destination)
+        heap = [(0, 0, src)]
+        visited = defaultdict(int)
+
+        while heap:
+            # pop off the lowest price destination in our heap.
+            # Tracking price, # of stops we took, and destination.
+            price, stops, dest = heapq.heappop(heap)
+            # if we reached the destination, return the total price.
+            if dest == dst:
+                return price
+            # Track the destination as visited, and stops to reach it.
+            visited[dest] = stops
+            # Loop through all potential flights from current destination.
+            for to_i, price_i in adj_list[dest]:
+                # stops > k, it means this path doesn't work.
+                # also if to destination isn't visited, or it is
+                # visited, but the # of stops < # of stops it took us
+                # to reach the city the last time:
+                if stops <= k and (to_i not in visited or stops < visited[to_i]):
+                    # add that destination to the queue.
+                    # price, stops, to destination. Where price is the
+                    # current running price + price to fly there.
+                    # The stops should be incremented by 1, and
+                    # the destination is the to_i value.
+                    heapq.heappush(heap, (price + price_i, stops + 1, to_i))
+        # process everything but never reach destination, return -1
+        return -1
 ```
 
 </TabItem>

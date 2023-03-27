@@ -1,5 +1,5 @@
 ---
-description: "Author: @wingkwong, @vigneshshiv | https://leetcode.com/problems/trapping-rain-water/"
+description: "Author: @wingkwong, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/trapping-rain-water/"
 tags: [Array, Two Pointers, Dynamic Programming, Stack, Monotonic Stack]
 ---
 
@@ -132,6 +132,7 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 
 <TabItem value="python" label="Python">
@@ -161,17 +162,82 @@ class Solution:
 ```
 
 </TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+// Time Complexity: O(N)
+// Space Complexity: O(1)
+/**
+ * @param {number[]} height
+ * @return {number}
+ */
+var trap = function (height) {
+  let res = 0;
+  let left = 0;
+  let right = height.length - 1;
+  let leftMax = height[left];
+  let rightMax = height[right];
+  if (!height) {
+    return 0;
+  }
+  while (left < right) {
+    if (leftMax < rightMax) {
+      left++;
+      leftMax = Math.max(leftMax, height[left]);
+      res += leftMax - height[left];
+    } else {
+      right--;
+      rightMax = Math.max(rightMax, height[right]);
+      res += rightMax - height[right];
+    }
+  }
+  return res;
+};
+```
+
+</TabItem>
+
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@radojicic23"/>
+
+```cpp
+// Time Complexity: O(N)
+// Space Complexity: O(1)
+class Solution {
+public:
+    int trap(vector<int>& height) {
+        int res = 0, left = 0, right = height.size() - 1;
+        int leftMax = height[left], rightMax = height[right];
+        while (left < right) {
+            if (leftMax < rightMax) {
+                left++;
+                leftMax = max(leftMax, height[left]);
+                res += leftMax - height[left];
+            } else {
+                right--;
+                rightMax = max(rightMax, height[right]);
+                res += rightMax - height[right];
+            }
+        }
+        return res;
+    }
+};
+```
+
+</TabItem>
 </Tabs>
 
 ## Approach 3: Monotonic Stack
 
-Monotonic stacks are generally used for solving questions of the type - next greater element, next smaller element, previous greater element and previous smaller element. 
+Monotonic stacks are generally used for solving questions of the type - next greater element, next smaller element, previous greater element and previous smaller element.
 
 This problem one of the problem of solving with the previous heights with the current height.
 
 1. Keep adding the index (referenced to height) into stack, if the current height is higher the last added one (Stack Top)
 
-2. Once we find there's a downward slop, means this is starting position to trap water fill (hold the water). 
+2. Once we find there's a downward slop, means this is starting position to trap water fill (hold the water).
    So keep calculating water trap area with the height and the index. Since we need to find the height and width of water area, indices are required to find the width (the same is maintained in the stack).
 
 3. Keep repeating the process until the we reach last or there's no higher height to calculate the water fill (Stack is empty).
@@ -225,23 +291,23 @@ class Solution:
         for right_x, right_h in enumerate(height):
             # stack exists & incoming wall height > top of the stacks wall height.
             while stack and stack[-1][1] < right_h:
-                # get the floor of the area to be filled, to prevent double 
+                # get the floor of the area to be filled, to prevent double
                 # filling already filled holes or filling an area that should be a wall.
-                _,floor = stack.pop()                  
+                _,floor = stack.pop()
                 # Empty stack means no left wall to trap water, so water runs off.
                 if stack:
                     # left wall x pos, left wall height.
                     left_x, left_h = stack[-1]
                     # distance between both walls.
                     w = (right_x-left_x)-1
-                    # height of area to be filled.   
+                    # height of area to be filled.
                     h = min(left_h, right_h) - floor
                     # water created
                     water = w*h
                     #add water to total water variable.
                     total_water += water
             # Add incoming wall to the stack.
-            stack.append((right_x,right_h)) 
+            stack.append((right_x,right_h))
         return total_water
 ```
 

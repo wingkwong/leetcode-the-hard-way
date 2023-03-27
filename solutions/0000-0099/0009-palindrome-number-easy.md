@@ -89,6 +89,21 @@ var isPalindrome = function(x) {
 };
 ```
 </TabItem>
+
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@radojicic23"/>
+
+```cpp
+class Solution {
+public:
+    bool isPalindrome(int x) {
+        string strX = to_string(x);
+        reverse(strX.begin(), strX.end());
+        return to_string(x) == strX;
+    }
+};
+```
+</TabItem>
 </Tabs>
 
 ## Approach 2: Calculation
@@ -155,6 +170,29 @@ var isPalindrome = function(x) {
         x = Math.floor(x / 10);
     }
     return Object.is(n, num);
+};
+```
+</TabItem>
+
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@radojicic23"/>
+
+```cpp
+class Solution {
+public:
+    bool isPalindrome(int x) {
+        long int res = 0, carry, n = x;
+        if (x < 0) {
+            return false;
+        } else {
+            while (n > 0) {
+                carry = n % 10;
+                res = res * 10 + carry;
+                n /= 10;
+            }
+        }
+        return res == x;
+    }
 };
 ```
 </TabItem>

@@ -1,12 +1,12 @@
 ---
-description: 'Author: @la-la-Cute, @ganajayant | https://leetcode.com/problems/implement-strstr/'
+description: 'Author: @la-la-Cute, @ganajayant, @radojicic23 | https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/'
 ---
 
-# 0028 - Implement strStr() (Easy)
+# 0028 - Find the Index of the First Occurrence in a String (Easy)
 
 ## Problem Link
 
-https://leetcode.com/problems/implement-strstr/
+https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/
 
 ## Problem Statement
 
@@ -134,6 +134,52 @@ class Solution {
         return haystack.indexOf(needle);
     }
 }
+```
+</TabItem>
+
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@radojicic23"/>
+
+```cpp
+class Solution {
+public:
+    int strStr(string haystack, string needle) {
+        if (needle.empty()) {
+            return 0;
+        }
+        return haystack.find(needle);
+    }
+};
+```
+</TabItem>
+
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```py
+class Solution:
+    def strStr(self, haystack: str, needle: str) -> int:
+        if len(needle) == 0:
+            return 0
+        return haystack.find(needle)
+```
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * @param {string} haystack
+ * @param {string} needle
+ * @return {number}
+ */
+var strStr = function(haystack, needle) {
+    if (needle.length == 0) {
+        return 0;
+    }
+    return haystack.indexOf(needle);
+};
 ```
 </TabItem>
 </Tabs>

@@ -95,6 +95,27 @@ class Solution:
 ```
 
 </TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * @param {number[]} nums1
+ * @param {number} m
+ * @param {number[]} nums2
+ * @param {number} n
+ * @return {void} Do not return anything, modify nums1 in-place instead.
+ */
+var merge = function(nums1, m, nums2, n) {
+    for (i = 0; i < n; i++) {
+        nums1[m + i] = nums2[i];
+    }
+    nums1.sort(function(a, b) {return a - b});
+};
+```
+
+</TabItem>
 </Tabs>
 
 ## Approach 2: Two Pointers
@@ -150,7 +171,6 @@ class Solution:
     def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
         # last element of nums1
         last = m + n - 1
-
         # merge them in reverse order 
         while m > 0 and n > 0:
             # find the largest value 
@@ -162,11 +182,49 @@ class Solution:
                 n -= 1
             last -= 1
         # edge case 
-        # fill nums1 with leftover nums2 elements
+        # fill nums1 with leftover of nums2 elements
         while n > 0:
             nums1[last] = nums2[n - 1]
             n -= 1
             last -= 1
+```
+
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * @param {number[]} nums1
+ * @param {number} m
+ * @param {number[]} nums2
+ * @param {number} n
+ * @return {void} Do not return anything, modify nums1 in-place instead.
+ */
+var merge = function(nums1, m, nums2, n) {
+    // last element of nums1
+    let last = m + n - 1;
+    // merge them in reverse order
+    while (m > 0 && n > 0) {
+        // find the largest value 
+        if (nums1[m - 1] > nums2[n - 1]) {
+            nums1[last] = nums1[m - 1];
+            m--;
+        } else {
+            nums1[last] = nums2[n - 1];
+            n--;
+        }
+        last--;
+    }
+    // edge case
+    // fill nums1 with leftover of nums2 elements
+    while (n > 0) {
+        nums1[last] = nums2[n - 1];
+        n--;
+        last--;
+    }
+};
 ```
 
 </TabItem>
@@ -204,4 +262,52 @@ class Solution {
 }
 ```
 </TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * @param {number[]} nums1
+ * @param {number} m
+ * @param {number[]} nums2
+ * @param {number} n
+ * @return {void} Do not return anything, modify nums1 in-place instead.
+ */
+var merge = function(nums1, m, nums2, n) {
+    let index = m + n - 1;
+    let a = m - 1;
+    let b = n - 1;
+    while (b >= 0) {
+        if (a >= 0 && nums1[a] > nums2[b]) {
+            nums1[index] = nums1[a--];
+        } else {
+            nums1[index] = nums2[b--];
+        }
+        index--;
+    }
+}
+```
+</TabItem>
+
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```py
+class Solution:
+    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+        index = m + n - 1
+        a = m - 1
+        b = n - 1
+        while b >= 0:
+            if a >= 0 and nums1[a] > nums2[b]:
+                nums1[index] = nums1[a]
+                a -= 1
+            else:
+                nums1[index] = nums2[b]
+                b -= 1
+            index -= 1
+```
+</TabItem>
 </Tabs>
+

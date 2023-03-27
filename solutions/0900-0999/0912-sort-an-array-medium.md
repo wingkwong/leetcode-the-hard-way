@@ -61,7 +61,6 @@ class Solution {
 </Tabs>
 
 
-
 ### Stable STL Sort
 
 <Tabs>
@@ -143,7 +142,7 @@ class Solution {
 </Tabs>
 
 
-### Quick Sort with Randomised Pivot
+### Quick Sort with Randomised Pivot (TLE)
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -333,6 +332,26 @@ class Solution {
         }
     }
 }
+```
+</TabItem>
+</Tabs>
+
+## Approach 4: Couting Sort
+
+<Tabs>
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@wingkwong"/>
+
+```py
+class Solution:
+    def sortArray(self, nums: List[int]) -> List[int]:
+        b = [0] * 100005
+        for x in nums:
+            b[x + 50000] += 1
+        ans = []
+        for i, v in enumerate(b, -50000):
+            ans.extend([i] * v)
+        return ans
 ```
 </TabItem>
 </Tabs>

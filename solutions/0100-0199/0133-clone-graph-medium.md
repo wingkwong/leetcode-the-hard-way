@@ -1,6 +1,6 @@
 ---
-description: 'Author: @TBC | https://leetcode.com/problems/clone-graph/'
-draft: true
+description: 'Author: @ColeB2 | https://leetcode.com/problems/clone-graph/'
+tags: [Hash Table, Depth-First Search, Breadth-First Search, Graph]
 ---
 
 # 0133 - Clone Graph (Medium)
@@ -76,4 +76,58 @@ Explanation: This an empty graph, it does not have any nodes.
 * There are no repeated edges and no self-loops in the graph.
 * The Graph is connected and all nodes can be visited starting from the given node.
 
-## Approach 1: TBC
+## Approach 1: Iterative Depth/Breadth-First Search
+
+We need to traverse all the nodes in the graph, create copies, and connect the copies. Iteratively we can use a stack or a queue to traverse nodes we haven't visited already.
+
+Starting at the first node, we will traverse by checking all the neighbors of the nodes. For each neighbor, we will get/create ae copy of that neighbor and add the copied neighbour to the neighbour of the node we are looking at.
+
+We will also want to check if the neighbour has been added to our hash map. If not, we can add it to our queue/stack to visit it and its neighbors, as well as add it to the hash map with its copy.
+
+
+Time Complexity: $$O(V + E)$$. Where $$V$$ is the number of nodes, and $$E$$ is the number of edges in the graph. We will visit each vertex/node once during our BFS/DFS, and while looking through the neighbors, we will check on each edge twice. Once for each neighbor.
+
+Space: $$O(V)$$ Our hash map, and stack/queue will take $$O(V)$$ space.
+
+
+<Tabs>
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@ColeB2"/>
+
+```py
+class Solution:
+    def cloneGraph(self, node: 'Node') -> 'Node':
+        # Base case, return early
+        if not node:
+            return None
+        # initialize our nodes hash map. This track whether we have
+        # visited a node or node, as well as gives us access to the 
+        # copies. Key: Value -> node.val, node copy.
+        nodes = {node.val : Node(node.val)}
+        # Stack/Queue containing node we are traversing and the copy.
+        stack = [(node, nodes[node.val])]
+        while stack:
+            # pop off the node, and the copy
+            n1, c1 = stack.pop()
+            # traverse the node we popped, neighbors.
+            for n in n1.neighbors:
+                # Get our copy from our hash map, if it doesn't exist
+                # we will create it based on the neighbors value.
+                c2 = nodes.get(n.val, Node(n.val))
+                # if neighbor hasn't been visited yet.
+                if n.val not in nodes:
+                    # add it to the stack to process later
+                    stack.append((n, c2))
+                    # add it to our visited hash map, with reference
+                    # to the copy.
+                    nodes[n.val] = c2
+                # add the neighbor copies to our node copy.
+                c1.neighbors.append(c2)
+        # return the copy of our node. Above we created an undirected
+        # graph, and the copies should all now point to the proper copies.
+        return nodes[node.val]
+```
+
+</TabItem>
+</Tabs>
+

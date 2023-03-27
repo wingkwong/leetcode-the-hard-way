@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/rotate-list/'
+description: 'Author: @wingkwong, @radojicic23 | https://leetcode.com/problems/rotate-list/'
 ---
 
 # 0061 - Rotate List (Medium)
@@ -40,6 +40,8 @@ Output: [2,0,1]
 
 First we iterate each node till the end and connect the tail to the head. At the same time we calculate how many nodes there, says $$n$$. After that, we find a point to cut the list. The point to cut is $$n - k \mod n$$. As $$k$$ can be greater or equal to $$n$$, so the new head will be located at $$n - k \mod n$$. Then we link the new tail->next to null and return the new head.
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -68,3 +70,73 @@ public:
     }
 };
 ```
+
+</TabItem>
+
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```py
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def rotateRight(self, head: Optional[ListNode], k: int) -> Optional[ListNode]:
+        curr = head
+        n = 1
+        if not head: return None
+        while curr.next:
+            curr = curr.next
+            n += 1
+        curr.next = head
+        k = n - k % n
+        while k:
+            curr = curr.next
+            k -= 1
+        head = curr.next
+        curr.next = None
+        return head
+```
+
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
+/**
+ * @param {ListNode} head
+ * @param {number} k
+ * @return {ListNode}
+ */
+var rotateRight = function(head, k) {
+    let curr = head;
+    let n = 1;
+    if (!head) return null;
+    while (curr.next) {
+        curr = curr.next;
+        n++;
+    }
+    curr.next = head;
+    k = n - k % n;
+    while (k) {
+        curr = curr.next;
+        k--;
+    }
+    head = curr.next;
+    curr.next = null;
+    return head;
+}
+```
+
+</TabItem>
+</Tabs>

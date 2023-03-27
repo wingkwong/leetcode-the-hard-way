@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @ganajayant, @radojicic23 | https://leetcode.com/problems/unique-paths/'
+description: "Author: @wingkwong, @ganajayant, @radojicic23 | https://leetcode.com/problems/unique-paths/"
 ---
 
 # 0062 - Unique Paths (Medium)
@@ -18,7 +18,7 @@ The test cases are generated so that the answer will be less than or equal to `2
 
 **Example 1:**
 
-![](https://assets.leetcode.com/uploads/2018/10/22/robot\_maze.png)
+![](https://assets.leetcode.com/uploads/2018/10/22/robot_maze.png)
 
 ```
 Input: m = 3, n = 7
@@ -38,12 +38,11 @@ Explanation: From the top-left corner, there are a total of 3 ways to reach the 
 
 **Constraints:**
 
-* `1 <= m, n <= 100`
+- `1 <= m, n <= 100`
 
 ## Approach 1 : Math
 
 We need to make $$n - 1 + m - 1$$ steps in total. How many ways to choose from $$m - 1$$ right steps and $$n - 1$$ down steps out of the total steps?
-
 
 <Tabs>
 <TabItem value="c++" label="C++">
@@ -62,16 +61,18 @@ public:
       }
       return ret;
     }
-    
+
     int uniquePaths(int m, int n) {
         return binomial<long long>(m + n - 2, min(m - 1, n - 1));
     }
 };
 ```
+
 </TabItem>
 </Tabs>
 
-## Approach 2: Dynamic programming (Top Down) Memoization 
+## Approach 2: Dynamic programming (Top Down) Memoization
+
 We begin with the position (0,0).
 At any position (i,j), we make a recursive call to (i+1,j) and (i,j+1) to get the number of paths to the right and below the current node.
 If (i,j) goes out of bound, there can exist no path from it so we simply return 0.
@@ -100,6 +101,7 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 </Tabs>
 
@@ -118,9 +120,9 @@ class Solution:
         # go through all rows exept the last one
         for i in range(m - 1):
             new_row = [1] * n
-            # go through every column except the right most column 
+            # go through every column except the right most column
             # because the last value in every row is 1
-            # start at second to last position and 
+            # start at second to last position and
             # keep going until we get to the beginning (reverse order)
             for j in range(n - 2, -1, -1):
                 # right value + value below
@@ -128,6 +130,37 @@ class Solution:
             # update the row
             row = new_row
         return row[0]
+```
+
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * @param {number} m
+ * @param {number} n
+ * @return {number}
+ */
+var uniquePaths = function (m, n) {
+  let row = Array(n).fill(1);
+  // go through every column except last one
+  for (let i = 0; i < m - 1; i++) {
+    let new_row = Array(n).fill(1);
+    // go through every column except the right most column
+    // because the last value in every row is 1
+    // start at second to last position and
+    // keep going until we get to the beginning (reverse order)
+    for (j = n - 2; j >= 0; j--) {
+      // right value + value before
+      new_row[j] = new_row[j + 1] + row[j];
+    }
+    // update row
+    row = new_row;
+  }
+  return row[0];
+};
 ```
 
 </TabItem>

@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/sqrtx/'
+description: "Author: @wingkwong, @radojicic23 | https://leetcode.com/problems/sqrtx/"
 ---
 
 # 0069 - Sqrt(x) (Easy)
@@ -33,7 +33,7 @@ Explanation: The square root of 8 is 2.82842..., and since the decimal part is t
 
 **Constraints:**
 
-* `0 <= x <= 2^31 - 1`
+- `0 <= x <= 2^31 - 1`
 
 ## Approach 1: Binary Search
 
@@ -43,6 +43,8 @@ Explanation: The square root of 8 is 2.82842..., and since the decimal part is t
 
 :::
 
+<Tabs>
+<TabItem value="c++" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -62,3 +64,54 @@ public:
     }
 };
 ```
+
+</TabItem>
+
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```py
+class Solution:
+    def mySqrt(self, x: int) -> int:
+        left = 0
+        right = x
+        while left <= right:
+            mid = (left + right) // 2
+            if x < mid * mid:
+                right = mid - 1
+            elif x > mid * mid:
+                left = mid + 1
+            else:
+                return mid
+        return right
+```
+
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * @param {number} x
+ * @return {number}
+ */
+var mySqrt = function (x) {
+  let left = 0;
+  let right = x;
+  while (left <= right) {
+    let mid = Math.floor((left + right) / 2);
+    if (x < mid * mid) {
+      right = mid - 1;
+    } else if (x > mid * mid) {
+      left = mid + 1;
+    } else {
+      return mid;
+    }
+  }
+  return right;
+};
+```
+
+</TabItem>
+</Tabs>

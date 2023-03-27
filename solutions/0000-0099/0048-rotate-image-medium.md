@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong, @radojicic23 | https://leetcode.com/problems/rotate-image/'
+description: "Author: @wingkwong, @radojicic23 | https://leetcode.com/problems/rotate-image/"
 tags: [Array, Math, Matrix]
 ---
 
-# 0048 - Rotate Image (Medium) 
+# 0048 - Rotate Image (Medium)
 
 ## Problem Link
 
@@ -46,7 +46,7 @@ Output: [[15,13,2,5],[14,3,4,1],[12,6,8,9],[16,7,10,11]]
 class Solution {
 public:
     void rotate(vector<vector<int>>& matrix) {
-        // round 1: 
+        // round 1:
         // -------------------
         // tmp <- 1
         // top left cell matrix[i][j] (1) <- bottom left 7 cell (matrix[n - j - 1][i])
@@ -79,7 +79,7 @@ public:
 				matrix[j][n - i - 1] = tmp;
 			}
         }
-			
+
     }
 };
 
@@ -94,7 +94,7 @@ public:
 class Solution:
     def rotate(self, matrix: List[List[int]]) -> None:
         left, right = 0, len(matrix) - 1
-    
+
         while left < right:
             for i in range(right - left):
                 top, bottom = left, right
@@ -110,6 +110,41 @@ class Solution:
                 matrix[top + i][right] = topleft
             left += 1
             right -= 1
+```
+
+</TabItem>
+
+<TabItem value="js" label="JavaScrip">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * @param {number[][]} matrix
+ * @return {void} Do not return anything, modify matrix in-place instead.
+ */
+var rotate = function (matrix) {
+  let left = 0;
+  let right = matrix.length - 1;
+  while (left < right) {
+    for (i = 0; i < right - left; i++) {
+      let top = left;
+      let bottom = right;
+      // save the top left value
+      let top_left = matrix[top][left + i];
+      // move bottom left into top left
+      matrix[top][left + i] = matrix[bottom - i][left];
+      // move bottom right into bottom left
+      matrix[bottom - i][left] = matrix[bottom][right - i];
+      // move top right into bottom right
+      matrix[bottom][right - i] = matrix[top + i][right];
+      // move top left into top right
+      matrix[top + i][right] = top_left;
+    }
+    // update pointers
+    left++;
+    right--;
+  }
+};
 ```
 
 </TabItem>

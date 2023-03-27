@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @ganajayant, @radojicic23| https://leetcode.com/problems/swap-nodes-in-pairs/'
+description: "Author: @wingkwong, @ganajayant, @radojicic23| https://leetcode.com/problems/swap-nodes-in-pairs/"
 ---
 
 # 0024 - Swap Nodes in Pairs (Medium)
@@ -14,7 +14,7 @@ Given a linked list, swap every two adjacent nodes and return its head. You must
 
 **Example 1:**
 
-![](https://assets.leetcode.com/uploads/2020/10/03/swap\_ex1.jpg)
+![](https://assets.leetcode.com/uploads/2020/10/03/swap_ex1.jpg)
 
 ```
 Input: head = [1,2,3,4]
@@ -35,12 +35,10 @@ Input: head = [1]
 Output: [1]
 ```
 
-
-
 **Constraints:**
 
-* The number of nodes in the list is in the range `[0, 100]`.
-* `0 <= Node.val <= 10`
+- The number of nodes in the list is in the range `[0, 100]`.
+- `0 <= Node.val <= 10`
 
 ## Approach 1: Recursive
 
@@ -65,16 +63,71 @@ public:
         // the first node links to all nodes originally linked by the second node
         f->next = swapPairs(s->next);
         // the second node links to the first node
-        s->next = f; 
+        s->next = f;
         // return head
         return s;
     }
 };
 ```
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def swapPairs(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        if not head or not head.next:
+            return head
+        v1 = head
+        v2 = head.next
+        v3 = head.next.next
+        v2.next = v1
+        v1.next = self.swapPairs(v3)
+        return v2
+```
+
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
+/**
+ * @param {ListNode} head
+ * @return {ListNode}
+ */
+var swapPairs = function (head) {
+  if (!head || !head.next) {
+    return head;
+  }
+  let v1 = head;
+  let v2 = head.next;
+  let v3 = head.next.next;
+  v2.next = v1;
+  v1.next = swapPairs(v3);
+  return v2;
+};
+```
+
 </TabItem>
 </Tabs>
 
 ## Approach 2: Iterative
+
 See, we need to swap adjacent nodes right, So can we see that as a linked list in which we have to swap a linked list of length 2 and then after doing on that, we can move it further.
 Example:
 1->2->3->4
@@ -119,6 +172,7 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 
 <TabItem value="python" label="Python">
@@ -135,7 +189,7 @@ class Solution:
         # initialize dummy node (dummy -> head)
         dummy = ListNode(0, next=head)
         prev, curr = dummy, head
-        
+
         while curr and curr.next:
             # save pointers
             nxtPair = curr.next.next
@@ -148,6 +202,85 @@ class Solution:
             prev = curr
             curr = nxtPair
         return dummy.next
+```
+
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
+/**
+ * @param {ListNode} head
+ * @return {ListNode}
+ */
+var swapPairs = function (head) {
+  // initialize dummy node (dummy -> head)
+  const dummy = new ListNode(-1);
+  dummy.next = head;
+  let curr = head;
+  let prev = dummy;
+  while (curr && curr.next) {
+    // save pointers
+    let nxt_pair = curr.next.next;
+    let second = curr.next;
+    // reverse this pair
+    second.next = curr;
+    curr.next = nxt_pair;
+    prev.next = second;
+    // update pointers
+    prev = curr;
+    curr = nxt_pair;
+  }
+  return dummy.next;
+};
+```
+
+</TabItem>
+
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@radojicic23"/>
+
+```cpp
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* swapPairs(ListNode* head) {
+        // initialize dummy node (dummy -> head)
+        ListNode* dummy = new ListNode(0);
+        dummy->next = head;
+        auto prev = dummy, curr = head;
+        while (curr && curr->next) {
+            // initialize pointers
+            auto second = curr->next;
+            auto nxtPair = curr->next->next;
+            // swap this pair 
+            second->next = curr;
+            curr->next = nxtPair;
+            prev->next = second;
+            // update pointers
+            prev = curr ;
+            curr = nxtPair;
+        }
+        return dummy->next;
+    }
+};
 ```
 
 </TabItem>

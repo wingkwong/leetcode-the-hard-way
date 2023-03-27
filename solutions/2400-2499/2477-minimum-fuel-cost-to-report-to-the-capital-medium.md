@@ -115,4 +115,44 @@ public:
 ```
 
 </TabItem>
+
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@wingkwong"/>
+
+```py
+class Solution:
+    def minimumFuelCost(self, roads: List[List[int]], seats: int) -> int:
+        # build the graph
+        g = defaultdict(list)
+        for u, v in roads:
+            # bidirectional
+            # u can go to v
+            g[u].append(v)
+            # v can go to u
+            g[v].append(u)
+            
+        # u is the source
+        # v is the parent
+        def dfs(u, p):
+            nonlocal ans
+            cnt = 1
+            # v is the city that is accessible from city u
+            for v in g[u]:
+                # make sure we are not entering a cycle
+                # i.e. not visiting the source back
+                if v != p:
+                    # if not, then move to city v with parent city u
+                    cnt += dfs(v, u)
+            if u != 0:
+                # we need ceil(cnt / seats) liters of fuel from the current city to parent city
+                # ceil(cnt / seats) can be written as `(cnt + seats - 1) // seats`
+                ans += (cnt + seats - 1) // seats
+            return cnt
+        ans = 0
+        # start from city 0 with parent city -1
+        dfs(0, -1)
+        return ans
+```
+
+</TabItem>
 </Tabs>

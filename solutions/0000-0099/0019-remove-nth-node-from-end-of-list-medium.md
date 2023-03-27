@@ -328,4 +328,97 @@ class Solution {
 ```
 
 </TabItem>
+
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```py
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
+        dummy = ListNode(next=head)
+        slow, fast = dummy, dummy
+        while fast.next:
+            fast = fast.next
+            if n <= 0:
+                slow = slow.next
+            n -= 1
+        slow.next = slow.next.next
+        return dummy.next
+```
+
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
+/**
+ * @param {ListNode} head
+ * @param {number} n
+ * @return {ListNode}
+ */
+var removeNthFromEnd = function(head, n) {
+    let dummy = new ListNode();
+    dummy.next = head;
+    let slow = dummy, fast = dummy;
+    while (fast.next) {
+        fast = fast.next;
+        if (n <= 0) {
+            slow = slow.next;
+        }
+        n--;
+    }
+    slow.next = slow.next.next;
+    return dummy.next;
+};
+```
+
+</TabItem>
+
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@radojicic23"/>
+
+```cpp
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* removeNthFromEnd(ListNode* head, int n) {
+        ListNode* dummy = new ListNode();
+        dummy->next = head;
+        auto slow = dummy, fast = dummy;
+        while (fast->next) {
+            fast = fast->next;
+            if (n <= 0) {
+                slow = slow->next;
+            }
+            n--;
+        }
+        slow->next= slow->next->next;
+        return dummy->next;
+    }
+};
+```
+
+</TabItem>
 </Tabs>

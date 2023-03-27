@@ -503,14 +503,14 @@ export const week8Problems = [
     difficulty: "Easy",
     leetCodeLink:
       "https://leetcode.com/problems/average-of-levels-in-binary-tree/",
-    solutionLink: "",
+    solutionLink: "../solutions/0600-0699/average-of-levels-in-binary-tree-medium",
     tags: "BFS,Binary Tree",
   },
   {
     problemName: "0100 - Same Tree",
     difficulty: "Easy",
     leetCodeLink: "https://leetcode.com/problems/same-tree/",
-    solutionLink: "",
+    solutionLink: "../solutions/0100-0199/same-tree-easy",
     tags: "BFS,Binary Tree",
   },
   {
@@ -523,9 +523,8 @@ export const week8Problems = [
   {
     problemName: "0103 - Binary Tree Zigzag Level Order Traversal",
     difficulty: "Medium",
-    leetCodeLink:
-      "https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/",
-    solutionLink: "",
+    leetCodeLink: "https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/",
+    solutionLink: "../solutions/0100-0199/binary-tree-zigzag-level-order-traversal-medium",
     tags: "BFS,Binary Tree",
   },
   {
@@ -543,7 +542,7 @@ export const week9Problems = [
     difficulty: "Easy",
     leetCodeLink:
       "https://leetcode.com/problems/binary-tree-inorder-traversal/",
-    solutionLink: "",
+    solutionLink: "../solutions/0000-0099/binary-tree-inorder-traversal-easy",
     tags: "DFS,Binary Tree",
   },
   {
@@ -557,14 +556,14 @@ export const week9Problems = [
     problemName: "0543 - Diameter of Binary Tree",
     difficulty: "Easy",
     leetCodeLink: "https://leetcode.com/problems/diameter-of-binary-tree/",
-    solutionLink: "",
+    solutionLink: "../solutions/0500-0599/diameter-of-binary-tree-easy",
     tags: "DFS,Binary Tree",
   },
   {
     problemName: "0226 - Invert Binary Tree",
     difficulty: "Easy",
     leetCodeLink: "https://leetcode.com/problems/invert-binary-tree/",
-    solutionLink: "",
+    solutionLink: "../solutions/0200-0299/invert-binary-tree-easy",
     tags: "DFS,Binary Tree",
   },
   {

@@ -1,5 +1,5 @@
 ---
-description: 'Author: @ganajayant, @RadhikaChhabra17 | https://leetcode.com/problems/sort-colors/'
+description: 'Author: @ganajayant, @RadhikaChhabra17, @radojicic23 | https://leetcode.com/problems/sort-colors/'
 tags: [Array, Two Pointers, Sorting]
 ---
 
@@ -103,6 +103,53 @@ class Solution {
         }
     }
 };
+```
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * @param {number[]} nums
+ * @return {void} Do not return anything, modify nums in-place instead.
+ */
+var sortColors = function(nums) {
+    let swapped = false;
+    for (i = 0; i < nums.length - 1; i++) {
+        for (j = 0; j < nums.length - i - 1; j++) {
+            if (nums[j] > nums[j + 1]) {
+                swapped = true;
+                let tmp = nums[j];
+                nums[j] = nums[j + 1];
+                nums[j + 1] = tmp;
+            }
+        }
+        if (swapped === false) {
+            return;
+        }
+    }
+};
+```
+</TabItem>
+
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```py
+class Solution:
+    def sortColors(self, nums: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        swapped = False
+        for i in range(len(nums) - 1):
+            for j in range(len(nums) - i - 1):
+                if nums[j] > nums[j + 1]:
+                    swapped = True
+                    nums[j], nums[j + 1] = nums[j + 1], nums[j]
+            if not swapped:
+                return 
 ```
 </TabItem>
 </Tabs>

@@ -64,13 +64,13 @@ export const problems = [
     "problemName": "202. Happy Number",
     "difficulty": "Easy",
     "leetCodeLink": "https://leetcode.com/problems/happy-number/",
-    "solutionLink": ""
+    "solutionLink": "../../solutions/0200-0299/happy-number-easy"
   },
   {
     "problemName": "1790. Check if One String Swap Can Make Strings Equal",
     "difficulty": "Easy",
     "leetCodeLink": "https://leetcode.com/problems/check-if-one-string-swap-can-make-strings-equal",
-    "solutionLink": "../../solutions/0200-0299/happy-number-easy"
+    "solutionLink": "../../solutions/1700-1799/check-if-one-string-swap-can-make-strings-equal-easy"
   },
   {
     "problemName": "589. N-ary Tree Preorder Traversal",
@@ -82,7 +82,7 @@ export const problems = [
     "problemName": "496. Next Greater Element I",
     "difficulty": "Easy",
     "leetCodeLink": "https://leetcode.com/problems/next-greater-element-i",
-    "solutionLink": ""
+    "solutionLink": "../solutions/0400-0499/next-greater-element-i-easy"
   },
   {
     "problemName": "1232. Check If It Is a Straight Line",
@@ -124,7 +124,7 @@ export const problems = [
     "problemName": "1768. Merge Strings Alternately",
     "difficulty": "Easy",
     "leetCodeLink": "https://leetcode.com/problems/merge-strings-alternately",
-    "solutionLink": ""
+    "solutionLink": "../../solutions/1700-1799/merge-strings-alternately-easy"
   },
   {
     "problemName": "1678. Goal Parser Interpretation",
@@ -136,7 +136,7 @@ export const problems = [
     "problemName": "389. Find the Difference",
     "difficulty": "Easy",
     "leetCodeLink": "https://leetcode.com/problems/find-the-difference",
-    "solutionLink": ""
+    "solutionLink": "../../solutions/0300-0399/find-the-difference-easy"
   },
   {
     "problemName": "709. To Lower Case",

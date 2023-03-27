@@ -14,6 +14,10 @@ Our intended audience is any individual who wishes to enhance their programming 
 
 See [CONTRIBUTING.md](CONTRIBUTING.md).
 
+## Discord Community
+
+https://discord.com/invite/Nqm4jJcyBf
+
 ## Outro
 
 GLHF.

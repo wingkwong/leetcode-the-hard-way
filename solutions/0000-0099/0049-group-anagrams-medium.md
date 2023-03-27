@@ -138,6 +138,35 @@ class Solution:
 ```
 
 </TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * @param {string[]} strs
+ * @return {string[][]}
+ */
+var groupAnagrams = function(strs) {
+    let ans = [];
+    let hashMap = {};
+    for (let i = 0; i < strs.length; i++) {
+        let word = strs[i];
+        let sortedWord = word.split("").sort().join("");
+        if (hashMap[sortedWord]) {
+            hashMap[sortedWord].push(word);
+        } else {
+            hashMap[sortedWord] = [word];
+        }
+    }
+    for (let i in hashMap) {
+        ans.push(hashMap[i]);
+    }
+    return ans;
+};
+```
+
+</TabItem>
 </Tabs>
 
 ## Approach 2: Hash Map with Prime Numbers

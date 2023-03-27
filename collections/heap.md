@@ -15,7 +15,7 @@ export const problems = [
     "problemName": "1046 - Last Stone Weight",
     "difficulty": "Easy",
     "leetCodeLink": "https://leetcode.com/problems/last-stone-weight/",
-    "solutionLink": ""
+    "solutionLink": "../solutions/1000-1099/last-stone-weight-easy"
   },
   {
     "problemName": "1337 - The K Weakest Rows in a Matrix",
@@ -63,7 +63,7 @@ export const problems = [
     "problemName": "0295 - Find Median from Data Stream",
     "difficulty": "Hard",
     "leetCodeLink": "https://leetcode.com/problems/find-median-from-data-stream/",
-    "solutionLink": ""
+    "solutionLink": "../solutions/0200-0299/find-median-from-data-stream-hard"
   },
   {
     "problemName": "1167 - Minimum Cost to Connect Sticks",

@@ -155,4 +155,91 @@ class Solution:
 ```
 
 </TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * @param {number[][]} matrix
+ * @param {number} target
+ * @return {boolean}
+ */
+var searchMatrix = function(matrix, target) {
+    let row = matrix.length;
+    let col = matrix[0].length;
+    let top = 0;
+    let bottom = row - 1;
+    while (top <= bottom) {
+        let mid = Math.floor((top + bottom) / 2);
+        if (target > matrix[mid][col - 1]) {
+            top = mid + 1;
+        } else if (target < matrix[mid][0]) {
+            bottom = mid - 1;
+        } else {
+            break;
+        }
+    }
+    if (!(top <= bottom)) {
+        return false;
+    }
+    let l = 0;
+    let r = col - 1;
+    let mid = Math.floor((top + bottom) / 2);
+    while (l <= r) {
+        let m = Math.floor((l + r) / 2);
+        if (target > matrix[mid][m]) {
+            l = m + 1;
+        } else if (target < matrix[mid][m]) {
+            r = m - 1;
+        } else {
+            return true;
+        }
+    }
+    return false;
+};
+```
+
+</TabItem>
+
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@radojicic23"/>
+
+```cpp
+class Solution {
+public:
+    bool searchMatrix(vector<vector<int>>& matrix, int target) {
+        int rows = matrix.size(), cols = matrix[0].size();
+        int top = 0, bottom = rows - 1;
+        while (top <= bottom) {
+            int mid = top + (bottom - top) / 2;
+            if (target > matrix[mid][cols - 1]) {
+                top = mid + 1;
+            } else if (target < matrix[mid][0]) {
+                bottom = mid - 1;
+            } else {
+                break;
+            }
+        }
+        if (!(top <= bottom)) {
+            return false;
+        }
+        int mid = top + (bottom - top) / 2;
+        int left = 0, right = cols - 1;
+        while (left <= right) {
+            int m = left + (right - left) / 2;
+            if (target > matrix[mid][m]) {
+                left = m + 1;
+            } else if (target < matrix[mid][m]) {
+                right = m - 1;
+            } else {
+                return true;
+            }
+        }
+        return false;
+    }
+};
+```
+
+</TabItem>
 </Tabs>

@@ -14,7 +14,7 @@ export const DPBitManipulationProblems = [
     "problemName": "0464 - Can I Win",
     "difficulty": "Medium",
     "leetCodeLink": "https://leetcode.com/problems/can-i-win/",
-    "solutionLink": ""
+    "solutionLink": "../solutions/0400-0499/can-i-win-medium"
   },
   {
     "problemName": "0691 - Stickers to Spell Word",
@@ -26,7 +26,7 @@ export const DPBitManipulationProblems = [
     "problemName": "0698 - Partition to K Equal Sum Subsets",
     "difficulty": "Medium",
     "leetCodeLink": "https://leetcode.com/problems/partition-to-k-equal-sum-subsets/",
-    "solutionLink": ""
+    "solutionLink": "../solutions/0600-0699/partition-to-k-equal-sum-subsets-medium"
   },
   {
     "problemName": "0847 -  Shortest Path Visiting All Nodes",
@@ -79,7 +79,7 @@ export const DPBitManipulationProblems = [
   {
     "problemName": "1723 - Find Minimum Time to Finish All Jobs",
     "difficulty": "Hard",
-    "leetCodeLink": "https://leetcode.com/problems/distribute-repeating-integers/",
+    "leetCodeLink": "https://leetcode.com/problems/find-minimum-time-to-finish-all-jobs/",
     "solutionLink": ""
   },
 ]
