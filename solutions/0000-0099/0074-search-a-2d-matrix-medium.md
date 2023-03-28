@@ -90,6 +90,35 @@ class Solution:
 ```
 
 </TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * @param {number[][]} matrix
+ * @param {number} target
+ * @return {boolean}
+ */
+var searchMatrix = function(matrix, target) {
+    let rows = matrix.length, cols = matrix[0].length;
+    let r = 0;
+    for (let i = 0; i < rows; i++) {
+        if (target >= matrix[i][0] && target <= matrix[i][cols - 1]) {
+            r = i;
+            break;
+        }
+    }
+    for (let i = 0; i < cols; i++) {
+        if (matrix[r][i] == target) {
+            return true;
+        }
+    }
+    return false;
+};
+```
+
+</TabItem>
 </Tabs>
 
 
