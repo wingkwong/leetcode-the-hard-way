@@ -1,5 +1,5 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/same-tree/'
+description: 'Author: @ColeB2, @radojicic23 | https://leetcode.com/problems/same-tree/'
 tags: [Tree, Depth-First Search, Breadth-First Search, Binary Tree]
 ---
 
@@ -84,6 +84,37 @@ class Solution:
         # if both are None --> return True
         # if 1 is a node and the other is None, it will return False.
         return p is q
+```
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} p
+ * @param {TreeNode} q
+ * @return {boolean}
+ */
+var isSameTree = function(p, q) {
+    // if both of them are empty
+    if (!p && !q) return true;
+    // if one of them is empty 
+    // if the values are not the same
+    if (!p || !q || p.val != q.val) return false;
+    // recursive call
+    // are left and right subtree equal
+    return (isSameTree(p.left, q.left) && 
+            isSameTree(p.right, q.right));
+};
 ```
 </TabItem>
 </Tabs>
