@@ -116,6 +116,23 @@ var merge = function(nums1, m, nums2, n) {
 ```
 
 </TabItem>
+
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@radojicic23"/>
+
+```cpp
+class Solution {
+public:
+    void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
+        for (int i = 0; i < n; i++) {
+            nums1[m + i] = nums2[i];
+        }
+        sort(nums1.begin(), nums1.end());
+    }
+};
+```
+
+</TabItem>
 </Tabs>
 
 ## Approach 2: Two Pointers
@@ -228,6 +245,39 @@ var merge = function(nums1, m, nums2, n) {
 ```
 
 </TabItem>
+
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@radojicic23"/>
+
+```cpp
+class Solution {
+public:
+    void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
+        // last element  of nums1
+        int last = m + n - 1;
+        // merge them in reverse order
+        while (m > 0 && n > 0) {
+            // find the largest value 
+            if (nums1[m - 1] > nums2[n - 1]) {
+                nums1[last] = nums1[m - 1];
+                m--;
+            } else {
+                nums1[last] = nums2[n - 1];
+                n--;
+            }
+            last--;
+        }
+        // fill nums1 with leftover of nums2 elements
+        while (n > 0) {
+            nums1[last] = nums2[n - 1];
+            n--;
+            last--;
+        }
+    }
+};
+```
+
+</TabItem>
 </Tabs>
 
 ## Approach 3: Two Pointers In-place (Optimal)
@@ -309,5 +359,26 @@ class Solution:
             index -= 1
 ```
 </TabItem>
-</Tabs>
 
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@radojicic23"/>
+
+```cpp
+class Solution {
+public:
+    void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
+        int index = m + n - 1;
+        int a = m - 1, b = n - 1;
+        while (b >= 0) {
+            if (a >= 0 && nums1[a] > nums2[b]) {
+                nums1[index] = nums1[a--];
+            } else {
+                nums1[index] = nums2[b--];
+            }
+            index--;
+        }
+    }
+};
+```
+</TabItem>
+</Tabs>
