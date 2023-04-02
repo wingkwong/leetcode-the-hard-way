@@ -2,6 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
+import Head from '@docusaurus/Head';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
@@ -45,6 +46,10 @@ export default function Home() {
     <Layout
       title={`${siteConfig.title}`}
       description="LeetCode The Hard Way - From Absolute Beginner to Quitter">
+      <Head>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4531209581366540"
+      crossorigin="anonymous"></script>
+      </Head>
       <HomepageHeader />
       <main>
         <HomepageFeatures />
