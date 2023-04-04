@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @lonyehan | https://leetcode.com/problems/path-sum-ii/'
+description: 'Author: @wingkwong, @lonyehan, @radojicic23 | https://leetcode.com/problems/path-sum-ii/'
 tags: [Backtracking, Tree, Depth-First Search, Binary Tree]
 ---
 
@@ -283,6 +283,41 @@ public class Solution {
         return result;
     }
 }
+```
+
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @param {number} targetSum
+ * @return {number[][]}
+ */
+var pathSum = function(root, targetSum) {
+    function dfs(root, remainingSum, path, ans) {
+        if (!root) return ans;
+        path.push(root.val);
+        if (!root.left && !root.right && root.val === remainingSum) {
+            ans.push(path.slice());
+        }
+        dfs(root.left, remainingSum - root.val, path, ans);
+        dfs(root.right, remainingSum - root.val, path, ans);
+        path.pop();
+        return ans;
+    }
+    return dfs(root, targetSum, [], []);
+};
 ```
 
 </TabItem>
