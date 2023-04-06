@@ -1,5 +1,5 @@
 ---
-description: "Author: @jeremiaaxel | https://leetcode.com/problems/best-time-to-buy-and-sell-stock/"
+description: "Author: @jeremiaaxel, @ColeB2, @radojicic23 | https://leetcode.com/problems/best-time-to-buy-and-sell-stock/"
 ---
 
 # 0121 - Best Time to Buy and Sell Stock (Easy)
@@ -112,6 +112,29 @@ class Solution:
             buy_price = min(buy_price, cur_price)
         # return our answer.
         return max_profit
+```
+
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * @param {number[]} prices
+ * @return {number}
+ */
+var maxProfit = function(prices) {
+    let buyPrice = prices[0];
+    let maxProfit = 0;
+    for (let i = 1; i < prices.length; i++) {
+        let currPrice = prices[i];
+        let currProfit = currPrice - buyPrice;
+        maxProfit = Math.max(maxProfit, currProfit);
+        buyPrice = Math.min(buyPrice, currPrice);
+    }
+    return maxProfit;
+};
 ```
 
 </TabItem>
