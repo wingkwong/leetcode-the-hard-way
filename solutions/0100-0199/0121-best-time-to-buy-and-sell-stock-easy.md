@@ -138,4 +138,26 @@ var maxProfit = function(prices) {
 ```
 
 </TabItem>
+
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@radojicic23"/>
+
+```cpp
+class Solution {
+public:
+    int maxProfit(vector<int>& prices) {
+        int buyPrice = prices[0];
+        int maxProfit = 0;
+        for (int i = 1; i < prices.size(); i++) {
+            int currPrice = prices[i];
+            int currProfit = currPrice - buyPrice;
+            maxProfit = max(maxProfit, currProfit);
+            buyPrice = min(buyPrice, currPrice);
+        }
+        return maxProfit;
+    }
+};
+```
+
+</TabItem>
 </Tabs>
