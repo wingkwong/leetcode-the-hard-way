@@ -1,5 +1,5 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/max-area-of-island/'
+description: 'Author: @ColeB2, wingkwong | https://leetcode.com/problems/max-area-of-island/'
 tags: [Array, Depth-First Search, Breadth-First Search, Union Find, Matrix]
 ---
 
@@ -93,6 +93,52 @@ class Solution:
                 if grid[r][c] == 1:
                     bfs(r, c)
         return self.max_area
+```
+
+</TabItem>
+</Tabs>
+
+## Approach 2: Depth-First Search
+
+For each land, we can run DFS to calculate the area of the current island. We set the visited cell to other value so that it won't re-calculate. Get the maximum area and return it.
+
+Time Complexity: $$O(m * n)$$ must traverse each cell in the grid.
+
+Space Complexity: $$O(m * n)$$. 
+
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@wingkwong"/>
+
+```cpp
+class Solution {
+public:
+    int ans = 0;
+    int maxAreaOfIsland(vector<vector<int>>& grid) {
+        for(int i = 0; i < grid.size(); i++) {
+            for(int j = 0; j < grid[0].size(); j++) {
+                if(grid[i][j] == 1) {
+                    // if it is 1, then we can start from this cell
+                    ans = max(ans, dfs(grid, i, j));
+                }
+            }
+        }
+        return ans;
+    }
+    
+    int dfs(vector<vector<int>>& grid, int i, int j) {
+        // if it is 0 or out of bound, return 0
+        if(i < 0 || j < 0 || i > grid.size() - 1 || j > grid[0].size() - 1 || grid[i][j] != 1) return 0;
+        // set it to 0 so that we won't visit it again
+        grid[i][j] = 0;
+        // 1 (current cell) + the result from four directions
+        return 1 +
+            dfs(grid, i + 1, j) +
+            dfs(grid, i, j + 1) +
+            dfs(grid, i - 1, j) +
+            dfs(grid, i, j - 1);
+    }
+};
 ```
 
 </TabItem>
