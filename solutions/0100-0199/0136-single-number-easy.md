@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @vigneshshiv | https://leetcode.com/problems/single-number/'
+description: 'Author: @wingkwong, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/single-number/'
 ---
 
 # 0136 - Single Number (Easy)
@@ -134,6 +134,30 @@ public:
         }
         return 2 * sumOfSet - sumOfNumbers;
     }
+};
+```
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var singleNumber = function(nums) {
+    let hashSet = new Set();
+    let sumOfSet = 0;
+    let sumOfNums = 0;
+    for (let num of nums) {
+        if (!hashSet.has(num)) {
+            hashSet.add(num);
+            sumOfSet += num;
+        }
+        sumOfNums += num;
+    }
+    return 2 * sumOfSet - sumOfNums;
 };
 ```
 </TabItem>
