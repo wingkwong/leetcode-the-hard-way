@@ -300,7 +300,7 @@ export const week3Problems = [
     problemName: "0704 - Binary Search",
     difficulty: "Easy",
     leetCodeLink: "https://leetcode.com/problems/binary-search/",
-    solutionLink: "",
+    solutionLink: "../solutions/0700-0799/binary-search-easy",
     tags: "Binary Search",
   },
 ];
@@ -454,7 +454,7 @@ export const week6Problems = [
     difficulty: "Easy",
     leetCodeLink:
       " https://leetcode.com/problems/sum-of-all-odd-length-subarrays/",
-    solutionLink: "",
+    solutionLink: "../solutions/1500-1599/sum-of-all-odd-length-subarrays-easy",
     tags: "Prefix Sum",
   },
 ];
@@ -517,7 +517,7 @@ export const week8Problems = [
     problemName: "0112 - Path Sum",
     difficulty: "Easy",
     leetCodeLink: "https://leetcode.com/problems/path-sum/",
-    solutionLink: "",
+    solutionLink: "../solutions/0100-0199/path-sum-easy",
     tags: "BFS,Binary Tree",
   },
   {
@@ -578,7 +578,7 @@ export const week9Problems = [
     problemName: "0695. Max Area of Island",
     difficulty: "Medium",
     leetCodeLink: "https://leetcode.com/problems/max-area-of-island/",
-    solutionLink: "",
+    solutionLink: "../solutions/0600-0699/max-area-of-island-medium",
     tags: "DFS",
   },
 ];
