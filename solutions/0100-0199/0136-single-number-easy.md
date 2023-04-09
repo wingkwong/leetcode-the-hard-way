@@ -161,4 +161,22 @@ var singleNumber = function(nums) {
 };
 ```
 </TabItem>
+
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```py
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        hash_set = set()
+        sum_of_nums = 0
+        sum_of_set = 0
+        for n in nums:
+            if n not in hash_set:
+                hash_set.add(n)
+                sum_of_set += n
+            sum_of_nums += n
+        return 2 * sum_of_set - sum_of_nums
+```
+</TabItem>
 </Tabs>
