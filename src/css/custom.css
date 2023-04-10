@@ -31,6 +31,7 @@
   --ifm-footer-link-hover-color: #9ca0f3;
   --ifm-link-color: #5039c4;
   --ifm-announcement-color: #9da0e2;
+  --ifm-code-border-radius: 10px;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -170,4 +171,9 @@ div[class^='announcementBar_'] .clean-btn {
   color: #fff;
   padding: 5px;
   margin: 5px;
+}
+
+pre  {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
 }

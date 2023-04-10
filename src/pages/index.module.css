@@ -28,6 +28,7 @@
   background: #032341;
   width: 100%;
   padding: 10px;
+  border: none;
 }
 
 .buttons a:last-of-type {
