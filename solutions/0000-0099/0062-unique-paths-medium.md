@@ -1,5 +1,6 @@
 ---
 description: "Author: @wingkwong, @ganajayant, @radojicic23 | https://leetcode.com/problems/unique-paths/"
+tags: [Math, Dynamic Programming, Combinatorics]
 ---
 
 # 0062 - Unique Paths (Medium)
@@ -100,6 +101,40 @@ class Solution {
         }
     }
 }
+```
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@ColeB2"/>
+
+```py
+class Solution:
+    # Time Complexity: O(m*n)
+    # Space Complexity: O(m*n)
+    # We are going to traverse all the unique paths, and store the values
+    # of these number of unique paths at each cell in our cache.
+    # Slight difference, we can start at m,n and traverse towards 0,0
+    # to get the same result, which allows us to reuse the function
+    # as our recursive function.
+    cache = {}
+    def uniquePaths(self, m: int, n: int) -> int:
+        # Already calculate values for (m,n) before, reuse those.
+        if (m,n) in self.cache:
+            return self.cache[(m,n)]
+        # If we reach 1, for m or n, that is our base case.
+        if m == 1 or n == 1:
+            # set our answer to 1
+            unique_paths = 1
+        else:
+            # any other case, set current value to bottom + right cell
+            # or in our case since we are starting bottom right, set the
+            # current value to be the top + left cells.
+            unique_paths = self.uniquePaths(m - 1, n) + self.uniquePaths(m, n - 1)
+        # cache our result for unique_path we got whether it was 1
+        # or something we solved, to use for later.
+        self.cache[(m,n)] = unique_paths
+        return unique_paths
 ```
 
 </TabItem>
