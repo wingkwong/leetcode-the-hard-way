@@ -2,6 +2,7 @@
 description: >-
   Author: @wingkwong |
   https://leetcode.com/problems/maximum-value-of-k-coins-from-piles/
+tags: [Array, Dynamic Programming, Prefix Sum]
 ---
 
 # 2218 - Maximum Value of K Coins From Piles (Hard)
@@ -50,6 +51,8 @@ The maximum total can be obtained if we choose all coins from the last pile.
 
 Let $$dp[i][j]$$ be the maximum total value we can have if we pick $$j$$ elements starting from $$piles[i]$$. The answer is $$dp[0][k]$$. First we calculate the value if we pick any elements in the current pile. Then we try to pick at most $$min((int) piles[i].size(), k)$$ elements and find out the max result.
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -78,3 +81,33 @@ public:
     }
 };
 ```
+
+</TabItem>
+
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@wingkwong"/>
+
+```py
+class Solution:
+    def maxValueOfCoins(self, piles: List[List[int]], k: int) -> int:
+        @lru_cache(None)
+        def dp(i, k):
+            # reach the end - return 0
+            if i == len(piles) or k == 0:
+                return 0
+            res = 0
+            # do not take 
+            res += dp(i + 1, k)
+            # try to take it one by one 
+            # calculate the value we could have
+            take = 0
+            for j in range(min(k, len(piles[i]))):
+                # take this element
+                take += piles[i][j]
+                res = max(res, dp(i + 1, k - 1 - j) + take)
+            return res
+        return dp(0, k)
+```
+
+</TabItem>
+</Tabs>
