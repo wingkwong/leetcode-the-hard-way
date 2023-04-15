@@ -296,4 +296,38 @@ public:
 ```
 
 </TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number[]}
+ */
+var preorderTraversal = function(root) {
+    let stack = [], ans = [];
+    stack.push(root);
+    while (stack.length != 0) {
+        let node = stack[stack.length - 1];
+        stack.pop();
+        if (node != null) {
+            ans.push(node.val);
+            stack.push(node.right);
+            stack.push(node.left);
+        }
+    }
+    return ans;
+};
+```
+
+</TabItem>
 </Tabs>
