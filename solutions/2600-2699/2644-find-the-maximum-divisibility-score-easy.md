@@ -56,7 +56,7 @@ Since divisors[0] and divisors[1] both have the maximum divisibility score, we r
 - `1 <= nums.length, divisors.length <= 1000`
 - `1 <= nums[i], divisors[i] <= 10^9`
 
-## Approach 1: TBC
+## Approach 1: Brute Force
 
 <Tabs>
 <TabItem value="cpp" label="C++">
