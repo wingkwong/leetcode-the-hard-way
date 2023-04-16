@@ -85,7 +85,7 @@ public:
                 // `d` will be the possible answer
                 ans = d;
             } else if (cnt == mx_cnt) {
-                // however, it the counter is same as the current max
+                // however, if the counter is same as the current max
                 // then we need to take the min one
                 ans = min(ans, d);
             }
@@ -121,7 +121,7 @@ class Solution:
                 # `d` will be the possible answer
                 res = d
             elif cnt == mx_cnt:
-                # however, it the counter is same as the current max
+                # however, if the counter is same as the current max
                 # then we need to take the min one
                 res = min(res, d)
         return res
