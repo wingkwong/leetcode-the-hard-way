@@ -2,6 +2,7 @@
 description: >-
   Author: @wingkwong |
   https://leetcode.com/problems/number-of-ways-to-form-a-target-string-given-a-dictionary/
+tags: [Array, String, Dynamic Programming]
 ---
 
 # 1639 - Number of Ways to Form a Target String Given a Dictionary (Hard)
@@ -61,6 +62,8 @@ Explanation: There are 4 ways to form target.
 
 ## Approach 1: Dynamic Programming
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -92,3 +95,40 @@ public:
     }
 };
 ```
+
+</TabItem>
+
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@wingkwong"/>
+
+```py
+class Solution:
+    # take or not take dp
+    def numWays(self, words: List[str], target: str) -> int:
+        M = 10 ** 9 + 7
+        n, m = len(words[0]), len(target)
+        cnt = [[0] * 26 for _ in range(n)]
+        # count character frequency for each j-th column
+        for i in range(len(words)):
+            for j in range(n):
+                cnt[j][ord(words[i][j]) - ord('a')] += 1
+        @lru_cache(None)
+        def dfs(i, j):
+            # reach target
+            if j == m:
+                return 1
+            # reach the end of the word
+            if i == n:
+                return 0
+            # not take
+            res = dfs(i + 1, j)
+            # take
+            c = ord(target[j]) - ord('a')
+            if cnt[i][c] > 0:
+                res += cnt[i][c] * dfs(i + 1, j + 1)
+            return res % M
+        return dfs(0, 0)
+```
+
+</TabItem>
+</Tabs>
