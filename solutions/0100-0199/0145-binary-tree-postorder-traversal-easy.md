@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @ganajayant, @vigneshshiv | https://leetcode.com/problems/binary-tree-postorder-traversal/'
+description: 'Author: @wingkwong, @ganajayant, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/binary-tree-postorder-traversal/'
 tags: [Stack, Tree, Depth-First Search, Binary Tree]
 ---
 
@@ -149,6 +149,36 @@ class Solution {
         return ll;
     }
 }
+```
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number[]}
+ */
+var postorderTraversal = function(root) {
+    let ans = [];
+    function dfs(node) {
+        if (!node) return;
+        dfs(node.left);
+        dfs(node.right);
+        ans.push(node.val);
+    }
+    dfs(root);
+    return ans;
+};
 ```
 </TabItem>
 </Tabs>
