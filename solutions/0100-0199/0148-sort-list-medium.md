@@ -241,4 +241,66 @@ function merge(list1, list2) {
 ```
 
 </TabItem>
+
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@radojicic23"/>
+
+```cpp
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* sortList(ListNode* head) {
+        // base case
+        if (head == NULL || head->next == NULL) return head;
+        // split list into two halfs
+        // slow and fast pointer
+        ListNode* slow = head;
+        ListNode* fast = head->next;
+        while (fast && fast->next) {
+            slow = slow->next;
+            fast = fast->next->next;
+        }
+        ListNode* start = slow->next;
+        slow->next = NULL;
+        // sort left portion
+        ListNode* left = sortList(head);
+        // sort right portion
+        ListNode* right = sortList(start);
+        // merge left and right portion
+        return merge(left, right);
+    }
+    // merge sort function
+    ListNode* merge(ListNode* list1, ListNode* list2) {
+        ListNode* dummy = new ListNode(0);
+        ListNode* tail = dummy;
+        // while both lists are not empty
+        while (list1 && list2) {
+            // find smaller value
+            if (list1->val < list2->val) {
+                tail->next = list1;
+                list1 = list1->next;
+            } else {
+                tail->next = list2;
+                list2 = list2->next;
+            }
+            tail = tail->next;
+        }
+        // it's possible that one of two lists are not empty
+        if (list1) tail->next = list1;
+        if (list2) tail->next = list2;
+        return dummy->next;
+    }
+};
+```
+
+</TabItem>
 </Tabs>
