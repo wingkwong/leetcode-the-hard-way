@@ -1,8 +1,8 @@
 ---
 description: >-
-  Author: @wingkwong |
+  Author: @wingkwong, @ColeB2 |
   https://leetcode.com/problems/coin-change-2
-tags: ['Dynamic Programming']
+tags: [Array, Dynamic Programming]
 ---
 
 # 0518 - Coin Change 2 (Medium)
@@ -55,7 +55,7 @@ Output: 1
 * All the values of `coins` are **unique**.
 * `0 <= amount <= 5000`
 
-## Approach: Dynamic Programming
+## Approach 1: Dynamic Programming
 
 This problem is very similar to [0377 - Combination Sum IV (Medium)](https://leetcode.com/problems/combination-sum-iv/). The only difference is the order of loops. The reason is that `(1, 1, 2)` and `(2, 1, 1)` are considered different in that problem.
 
@@ -65,6 +65,13 @@ $$
 dp(amount)=\sum_{i=0}^n dp(amount - coins[i])
 $$
 
+Time Complexity: $$O(amount * coins.length)$$. For each coin, we are going to loop through all the values from $$0$$ to $$amount$$.
+
+Space Complexity: $$O(amount)$$. We are going to create an array of size $$amount$$.
+
+
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -89,3 +96,31 @@ public:
     }
 };
 ```
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@ColeB2"/>
+
+```py
+class Solution:
+    def change(self, amount: int, coins: List[int]) -> int:
+        # initialize dp for all amounts from 0 to amount.
+        dp = [0] * (amount + 1)
+        # initialize base case for amount 0.
+        dp[0] = 1
+        # loop through all the coins
+        for coin in coins:
+            # loop through all the amounts, starting at coin. This
+            # prevents us from having to check if i >= coin.
+            for i in range(coin, amount + 1):
+                # the number of ways we can make each amount is based
+                # of the number of ways we can make the amount at each
+                # amount-coin
+                dp[i] += dp[i - coin]
+        # return final value, dp[-1] would also work.
+        return dp[amount]
+```
+
+</TabItem>
+</Tabs>
