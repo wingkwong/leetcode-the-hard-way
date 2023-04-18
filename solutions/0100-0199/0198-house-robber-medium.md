@@ -1,5 +1,5 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/house-robber/'
+description: 'Author: @ColeB2, @radojicic23 | https://leetcode.com/problems/house-robber/'
 tags: [Array, Dynamic Programming]
 ---
 
@@ -75,6 +75,26 @@ class Solution:
         # house2 will store the max amount of money we could have
         # possibly stolen during our trip.
         return house2
+```
+
+</TabItem>
+
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@radojicic23"/>
+
+```cpp
+class Solution {
+public:
+    int rob(vector<int>& nums) {
+        int rob1 = 0, rob2 = 0;
+        for (int n : nums) {
+            int temp = max(rob1 + n, rob2);
+            rob1 = rob2;
+            rob2 = temp;
+        }
+        return rob2;
+    }
+};
 ```
 
 </TabItem>
