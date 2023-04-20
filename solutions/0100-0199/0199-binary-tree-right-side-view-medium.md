@@ -1,5 +1,5 @@
 ---
-description: 'Author: @ganajayant, @ColeB2 | https://leetcode.com/problems/binary-tree-right-side-view/'
+description: 'Author: @ganajayant, @ColeB2, @radojicic23 | https://leetcode.com/problems/binary-tree-right-side-view/'
 ---
 
 # 0199 - Binary Tree Right Side View (Medium)
@@ -132,6 +132,39 @@ class Solution:
         dfs(root, 0, right_view)
         return right_view
 
+```
+
+</TabItem>
+
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@radojicic23"/>
+
+```cpp
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    vector<int> rightSideView(TreeNode* root) {
+        vector<int> ans;
+        dfs(root, 1, ans);
+        return ans;
+    }
+    void dfs(TreeNode* root, int level, vector<int>& ans) {
+        if (!root) return;
+        if (ans.size() < level) ans.push_back(root->val);
+        dfs(root->right, level + 1, ans);
+        dfs(root->left, level + 1, ans);
+    }
+};
 ```
 
 </TabItem>
