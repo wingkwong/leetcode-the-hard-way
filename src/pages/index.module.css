@@ -43,6 +43,20 @@
   color: #F7F8F8;
 }
 
+.about {
+  align-items: center;
+  padding: 4rem 2rem;
+  text-align: left;
+  background: var(--ifm-about-background-color);
+}
+
+.advertise {
+  align-items: center;
+  padding: 4rem 2rem;
+  text-align: left;
+  background: var(--ifm-advertise-background-color);
+}
+
 
 @media only screen and (max-width: 768px) {
   .gitHubButtonWrapper {

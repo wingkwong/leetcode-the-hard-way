@@ -32,6 +32,9 @@
   --ifm-link-color: #5039c4;
   --ifm-announcement-color: #9da0e2;
   --ifm-code-border-radius: 10px;
+  --ifm-feature-background-color: #f7f4f4;
+  --ifm-about-background-color: #FFC72C;
+  --ifm-advertise-background-color: #8EAEBD;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -48,6 +51,9 @@
   --ifm-hero-text-color: #f6fdfd;
   --ifm-link-color: #9da0e2;
   --ifm-announcement-color: #eff4ef;
+  --ifm-feature-background-color: #2D2D2D;
+  --ifm-about-background-color: #C19300;
+  --ifm-advertise-background-color: #4A6B78;
 }
 
 @media screen and (min-width: 997px) {
