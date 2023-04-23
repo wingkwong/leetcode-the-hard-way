@@ -75,25 +75,19 @@ def countGoodSubstrings(self, s: str) -> int:
         # two pointers to keep track of sliding window
         left_pointer = 0
         right_pointer = 2
-        
         unique_substring_count = 0
-        
         # when the sliding window is within s
         while (right_pointer < len(s)):
-            
             # we declare the 3 characters in the sliding window
             first_char = s[left_pointer]
             second_char = s[left_pointer + 1]
             third_char = s[right_pointer]
-            
             #  if all characters are unique, add 1
             if (first_char != second_char and first_char != third_char and second_char != third_char):
                 unique_substring_count += 1
-            
             # shift the sliding window right
             left_pointer += 1
             right_pointer += 1
-        
         # return result
         return unique_substring_count
 ```
@@ -109,20 +103,16 @@ public:
         int left_pointer = 0;
         int right_pointer = 2;
         int unique_substring_count = 0;
-        
         while (right_pointer < s.length()) {
             char first_char = s[left_pointer];
             char second_char = s[left_pointer + 1];
             char third_char = s[right_pointer];
-            
             if (first_char != second_char && first_char != third_char && second_char != third_char) {
                 unique_substring_count += 1;
             }
-            
             left_pointer += 1;
             right_pointer += 1;
         }
-        
         return unique_substring_count;
     }
 };

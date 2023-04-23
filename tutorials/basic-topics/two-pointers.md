@@ -59,28 +59,20 @@ We can sequentially add the next biggest elements with the two pointer approach.
 class Solution:
     def sortedSquares(self, nums: List[int]) -> List[int]:
         # initialize two pointers
-        left_pointer = 0
-        right_pointer = len(nums) - 1
-        
+        left_pointer, right_pointer = 0, len(nums) - 1
         # initialize result
         res = []
-        
         # while left_pointer does not meet right_pointer
         while(left_pointer <= right_pointer):
-            
             # if the square of left_pointer and right_pointer 
             if(abs(nums[left_pointer]) > abs(nums[right_pointer])):
-                
                 res.append(nums[left_pointer] ** 2)
-                
                 # we move the left to the right
                 left_pointer += 1
             else:
                 res.append(nums[right_pointer] ** 2)
-                
                 # we move the right pointer to the left
                 right_pointer -= 1
-        
         # we need to reverse the result list
         res.reverse()
         return res
@@ -97,7 +89,6 @@ public:
         int left_pointer = 0;
         int right_pointer = nums.size() - 1;
         vector<int> res;
-        
         while(left_pointer <= right_pointer) {
             if(abs(nums[left_pointer]) > abs(nums[right_pointer])) {
                 res.push_back(nums[left_pointer] * nums[left_pointer]);
@@ -126,7 +117,6 @@ class Solution {
         int left_pointer = 0;
         int right_pointer = nums.length - 1;
         List<Integer> res = new ArrayList<>();
-        
         while(left_pointer <= right_pointer) {
             if(Math.abs(nums[left_pointer]) > Math.abs(nums[right_pointer])) {
                 res.add(nums[left_pointer] * nums[left_pointer]);
