@@ -1,5 +1,5 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/last-stone-weight/'
+description: 'Author: @ColeB2, @wingkwong | https://leetcode.com/problems/last-stone-weight/'
 tags: [Array, Heap (Priority Queue)]
 ---
 
@@ -46,7 +46,7 @@ Output: 1
 - `1 <= stones.length <= 30`
 - `1 <= stones[i] <= 1000`
 
-## Approach 1: Heap/Priority Queue
+## Approach 1: Heap / Priority Queue
 
 We can see that after two stones break we need to replace them back in the array. Where depends on how much they broke down, and it isn't always guaranteed to be the end. This points toward a data structure that allows us to restructure efficiently, and that would be a Max Heap.
 
@@ -94,6 +94,37 @@ class Solution:
         # must return the absolute value of the remaining stone if it
         # exists, else 0 as the question asks.
         return abs(heap[0]) if heap else 0
+```
+
+</TabItem>
+
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@wingkwong"/>
+
+```cpp
+class Solution {
+public:
+    int lastStoneWeight(vector<int>& stones) {
+        // initialize a priority_queue in c++
+        priority_queue<int> pq;
+        // push the positive value of the stone onto the priority_queue
+        for (int x : stones) pq.push(x); 
+        // We need at least 2 stones to smash together, so we loop while
+        // our heap has at least 2 stones inside.
+        while (pq.size() >= 2) {
+            // pop both stones off, the 1st is the largest stone.
+            int y = pq.top(); pq.pop();
+            int x = pq.top(); pq.pop();
+            // if the stones are not same, then the stone of weight x is detroyed
+            // and the stone of weight y has new weight y - x.
+            if (x != y) pq.push(y - x);
+        }
+        // if there are no stones left, return 0
+        if (pq.size() == 0) return 0;
+        // return the weight of the last remaining stone
+        return pq.top();
+    }
+};
 ```
 
 </TabItem>
