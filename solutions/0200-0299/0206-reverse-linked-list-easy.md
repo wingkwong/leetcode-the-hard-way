@@ -140,6 +140,37 @@ var reverseList = function(head) {
 ```
 
 </TabItem>
+
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@radojicic23"/>
+
+```cpp
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* reverseList(ListNode* head) {
+        ListNode* prev = NULL;
+        while (head) {
+            ListNode* curr = head;
+            head = head->next;
+            curr->next = prev;
+            prev = curr;
+        }
+        return prev;
+    }
+};
+```
+
+</TabItem>
 </Tabs>
 
 ## Approach 2: Recursive
