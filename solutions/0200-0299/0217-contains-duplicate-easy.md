@@ -202,7 +202,7 @@ class Solution:
 </TabItem>
 </Tabs>
 
-## Beginner Python Solution
+## Beginner Python, JavaScript and C++ Solution
 
 In general, we want to make use of `defaultdict` in python.
 
@@ -246,6 +246,27 @@ var containsDuplicate = function(nums) {
         hash_map[n] = 1;
     }
     return false;
+};
+```
+
+</TabItem>
+
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@radojicic23"/>
+
+```cpp
+class Solution {
+public:
+    bool containsDuplicate(vector<int>& nums) {
+        unordered_map<int, int> hashMap;
+        for (auto n : nums) {
+            if (hashMap.count(n)) {
+                return true;
+            }
+            hashMap[n] = 1;
+        }
+        return false;
+    }
 };
 ```
 
