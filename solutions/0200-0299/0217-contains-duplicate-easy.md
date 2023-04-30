@@ -202,7 +202,7 @@ class Solution:
 </TabItem>
 </Tabs>
 
-## Approach 3
+## Approach 3: Hash Map
 
 In general, we want to make use of `defaultdict` in python.
 
