@@ -202,7 +202,7 @@ class Solution:
 </TabItem>
 </Tabs>
 
-## Beginner Python, JavaScript and C++ Solution
+## Approach 3
 
 In general, we want to make use of `defaultdict` in python.
 
