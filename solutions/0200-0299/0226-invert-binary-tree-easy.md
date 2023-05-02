@@ -1,5 +1,5 @@
 ---
-description: "Author: @ColeB2 | https://leetcode.com/problems/invert-binary-tree/"
+description: "Author: @ColeB2, @radojicic23 | https://leetcode.com/problems/invert-binary-tree/"
 tags: [Tree, Depth-First Search, Breadth-First Search, Binary Tree]
 ---
 
@@ -88,6 +88,41 @@ class Solution:
         self.invertTree(root.right)
         # return root node.
         return root
+```
+
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {TreeNode}
+ */
+var invertTree = function(root) {
+    // base case
+    if (!root) {
+        return root;
+    }
+    // swap left and right nodes
+    let tmp = root.left;
+    root.left = root.right;
+    root.right = tmp;
+    // call function recursively on left and right nodes
+    invertTree(root.left);
+    invertTree(root.right);
+    // return root node 
+    return root;
+};
 ```
 
 </TabItem>
