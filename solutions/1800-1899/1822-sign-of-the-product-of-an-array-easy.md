@@ -53,7 +53,7 @@ Explanation: The product of all values in the array is -1, and signFunc(-1) = -1
 
 ## Approach 1: Check the sign
 
-We don't need to calculate the final product. Instead, we check the sign only. We can exit early if we meet $0$.
+The first thought probably is just to simulate it by calculating the product of nums and check the sign like what problem statement says. However, We don't need to do that since we are not interested in the value but the sign. Therefore, we can just check the sign only. If we meet a zero, we can exit early since the final sign must be 0 anyway.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -72,6 +72,14 @@ public:
                 break;
             }
         }
+        // You may notice that when the number is positive, basically it won't change the sign. 
+        // Hence, we can just focus on negative numbers and flip the sign when we meet one. 
+        // Zero case remain unchanged.
+        // ----
+        // for (auto x : nums) {
+        //     if (x == 0) return 0;
+        //     if (x < 0) ans = -ans;
+        // }
         return ans;
     }
 };
