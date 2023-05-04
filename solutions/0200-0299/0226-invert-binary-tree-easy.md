@@ -255,5 +255,48 @@ class Solution:
 ```
 
 </TabItem>
-</Tabs>
 
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {TreeNode}
+ */
+var invertTree = function(root) {
+    // base case
+    if (!root) {
+        return root;
+    }
+    // initialize stack and add root inside
+    stack = [];
+    stack.push(root);
+    // go through every value in stack
+    while (stack.length) {
+        // pop the last node from the stack
+        let node = stack.pop();
+        if (node != null) {
+            // swap left and right nodes
+            let tmp = node.left;
+            node.left = node.right;
+            node.right = tmp;
+            // add left and right nodes in stack
+            stack.push(node.left, node.right);
+        } 
+    }
+    // return root node 
+    return root;
+};
+```
+
+</TabItem>
+</Tabs>
