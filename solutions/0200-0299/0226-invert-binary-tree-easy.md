@@ -211,50 +211,6 @@ class Solution:
 ```
 
 </TabItem>
-</Tabs>
-
-## Approach 3: Iterative Breadth-First Search
-
-Similarly, in most cases where you can do an iterative DFS, you can also do an iterative BFS using a queue. It will be the same idea as iterative DFS, just using a queue, meaning we will add nodes to the right side of our queue and pop them off the left side of our queue instead.
-
-Time Complexity: $$O(n)$$ where n is the number of nodes in our binary tree, as we have to visit each node at least once.
-
-Space Complexity: $$O(n)$$ for the size of the queue. In the worst case we will have a full level of nodes inside our queue, which in a full tree, the last level will contain $$\frac {n}{2}$$ nodes, which for our case means $$O(n)$$ space.
-
-<Tabs>
-<TabItem value="python" label="Python">
-<SolutionAuthor name="@ColeB2"/>
-
-```py
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
-        # Given None as a root node, we can return early.
-        if not root:
-            return root
-        # initialize our our queue with root node as our first value.
-        q = deque([root])
-        while q:
-            # pop root node off the left side of our queue.
-            node = q.popleft()
-            # swap the children nodes.
-            node.left, node.right = node.right, node.left
-            # only add the node to the q's right side, if the node exists.
-            if node.left:
-                q.append(node.left)
-            # same for the right node.
-            if node.right:
-                q.append(node.right)
-        # return the root.
-        return root
-```
-
-</TabItem>
 
 <TabItem value="js" label="JavaScript">
 <SolutionAuthor name="@radojicic23"/>
@@ -296,6 +252,99 @@ var invertTree = function(root) {
     // return root node 
     return root;
 };
+```
+
+</TabItem>
+
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@radojicic23"/>
+
+```cpp
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    TreeNode* invertTree(TreeNode* root) {
+        // base case 
+        if (!root) {
+            return root;
+        }
+        // initialize stack and add root inside 
+        stack<TreeNode*> st;
+        st.push(root);
+        // go through every value in stack
+        while (!st.empty()) {
+            // pop the last node from the stack
+            TreeNode* node = st.top();
+            st.pop();
+            // if node exist
+            if (node != NULL) {
+                // swap left and right nodes
+                TreeNode* tmp = node->left;
+                node->left = node->right;
+                node->right = tmp;
+                // insert left and right nodes in stack
+                st.push(node->left);
+                st.push(node->right);
+            }
+        }
+        // return root node
+        return root;
+    }
+};
+```
+
+</TabItem>
+</Tabs>
+
+## Approach 3: Iterative Breadth-First Search
+
+Similarly, in most cases where you can do an iterative DFS, you can also do an iterative BFS using a queue. It will be the same idea as iterative DFS, just using a queue, meaning we will add nodes to the right side of our queue and pop them off the left side of our queue instead.
+
+Time Complexity: $$O(n)$$ where n is the number of nodes in our binary tree, as we have to visit each node at least once.
+
+Space Complexity: $$O(n)$$ for the size of the queue. In the worst case we will have a full level of nodes inside our queue, which in a full tree, the last level will contain $$\frac {n}{2}$$ nodes, which for our case means $$O(n)$$ space.
+
+<Tabs>
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@ColeB2"/>
+
+```py
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
+        # Given None as a root node, we can return early.
+        if not root:
+            return root
+        # initialize our our queue with root node as our first value.
+        q = deque([root])
+        while q:
+            # pop root node off the left side of our queue.
+            node = q.popleft()
+            # swap the children nodes.
+            node.left, node.right = node.right, node.left
+            # only add the node to the q's right side, if the node exists.
+            if node.left:
+                q.append(node.left)
+            # same for the right node.
+            if node.right:
+                q.append(node.right)
+        # return the root.
+        return root
 ```
 
 </TabItem>
