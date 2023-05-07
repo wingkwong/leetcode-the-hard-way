@@ -398,4 +398,50 @@ public:
 ```
 
 </TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {TreeNode}
+ */
+var invertTree = function(root) {
+    // base case
+    if (!root) {
+        return root;
+    }
+    // initialize queue and insert root inside queue
+    let q = new Queue();
+    q.enqueue(root);
+    // go through all elements in queue
+    while (!q.isEmpty()) {
+        // pop the front node from queue
+        let node = q.dequeue();
+        // if node exist
+        if (node) {
+            // swap left and right nodes
+            let tmp = node.left;
+            node.left = node.right;
+            node.right = tmp;
+            // insert left and right nodes in queue
+            q.enqueue(node.left);
+            q.enqueue(node.right);
+        }
+    }
+    // return root node
+    return root;
+};
+```
+
+</TabItem>
 </Tabs>
