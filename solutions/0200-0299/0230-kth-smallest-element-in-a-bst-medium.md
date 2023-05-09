@@ -1,5 +1,5 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/kth-smallest-element-in-a-bst/'
+description: 'Author: @ColeB2, @radojicic23 | https://leetcode.com/problems/kth-smallest-element-in-a-bst/'
 tags: [Tree, Depth-First Search, Binary Search Tree, Binary Tree]
 ---
 
@@ -144,5 +144,55 @@ class Solution:
 ```
 
 </TabItem>
-</Tabs>
 
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @param {number} k
+ * @return {number}
+ */
+var kthSmallest = function(root, k) {
+    // initialize variable to count up to k
+    let n = 0;
+    // initialize stack
+    let stack = [];
+    // initialize curr node pointer
+    let curr = root;
+    // while current node is not null and stack is not empty
+    while (curr || stack) {
+        // while current node is not null 
+        while (curr) {
+            // add current node to the stack
+            stack.push(curr);
+            // shift current pointer to the left
+            curr = curr.left;
+        }
+        // current pointer is done going left
+        // pop that current node from the stack  
+        curr = stack.pop();
+        // update count variable
+        n++;
+        // if we found kth smallest element
+        if (n === k) {
+            // return kth smallest value
+            return curr.val;
+        }
+        // shift current pointer to the right 
+        curr = curr.right;
+    }
+};
+```
+
+</TabItem>
+</Tabs>
