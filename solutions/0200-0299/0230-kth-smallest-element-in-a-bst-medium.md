@@ -74,12 +74,54 @@ class Solution:
         # return the array.
         return arr
 
-
     def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
         # get the inorder traversal array.
         inorder = self.inorder(root)
         # return k-1 value since questions wants kth smallest, 1-indexed
         return inorder[k-1]
+```
+
+</TabItem>
+
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@radojicic23"/>
+
+```cpp
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    // initialize array
+    vector<int> res;
+    // recursive function
+    void inorder(TreeNode* root) {
+        // if root exist
+        if (root != NULL) {
+            // recursive call on the left side
+            inorder(root->left);
+            // insert current node to result array
+            res.push_back(root->val);
+            // recursive call on the right side
+            inorder(root->right);
+        }
+    }
+
+    int kthSmallest(TreeNode* root, int k) {
+        // get inorder traversal array
+        inorder(root);
+        // return kth smallest value
+        return res[k - 1];
+    }
+};
 ```
 
 </TabItem>
