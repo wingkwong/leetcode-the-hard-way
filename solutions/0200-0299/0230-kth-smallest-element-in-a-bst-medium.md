@@ -119,8 +119,7 @@ public:
         // get inorder traversal array
         inorder(root);
         // return kth smallest value
-        int ans = res[k - 1];
-        return ans;
+        return res[k - 1];
     }
 };
 ```
