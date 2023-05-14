@@ -125,7 +125,51 @@ public:
 ```
 
 </TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @param {number} k
+ * @return {number}
+ */
+
+// recursive function
+const inorder = function(root) {
+    // if root exist 
+    if (root !== null) {
+        // recursive call on the left side
+        inorder(root.left);
+        // insert current node to result array
+        res.push(root.val);
+        // recursive call on the right side
+        inorder(root.right);
+    }
+}
+
+var kthSmallest = function(root, k) {
+    // initialize result array
+    res = [];
+    // get inorder traversal array
+    inorder(root);
+    // return kth smallest value
+    return res[k - 1];
+};
+```
+
+</TabItem>
 </Tabs>
+
 
 ## Approach 2: Iterative Inorder Traversal
 
