@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @vigneshshiv | https://leetcode.com/problems/power-of-two/'
+description: 'Author: @wingkwong, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/power-of-two/'
 ---
 
 # 0231 - Power of Two (Easy)
@@ -90,6 +90,37 @@ class Solution {
         return n > 0 & (n & (n - 1)) == 0;
     }
 }
+```
+
+</TabItem>
+
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```py
+# 1. check if it's a positive number
+# 2. check the value is 0 after removing the rightmost bit
+class Solution:
+    def isPowerOfTwo(self, n: int) -> bool:
+        return n > 0 and not (n & (n - 1))
+```
+
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * @param {number} n
+ * @return {boolean}
+ */
+
+// 1. check if it's a positive number
+// 2. check the value is 0 after removing the rightmost bit
+var isPowerOfTwo = function(n) {
+    return n > 0 && !(n & (n - 1));
+};
 ```
 
 </TabItem>
