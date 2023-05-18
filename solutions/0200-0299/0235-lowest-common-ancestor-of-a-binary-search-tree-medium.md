@@ -1,5 +1,5 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/'
+description: 'Author: @ColeB2, @radojicic23 | https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/'
 tags: [Tree, Depth-First Search, Binary Search Tree, Binary Tree]
 ---
 
@@ -93,6 +93,40 @@ class Solution:
             # current node the LCA.
             else:
                 return node
+```
+
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *     this.val = val;
+ *     this.left = this.right = null;
+ * }
+ */
+
+/**
+ * @param {TreeNode} root
+ * @param {TreeNode} p
+ * @param {TreeNode} q
+ * @return {TreeNode}
+ */
+var lowestCommonAncestor = function(root, p, q) {
+    let curr = root;
+    while (curr) {
+        if (p.val < curr.val && q.val < curr.val) {
+            curr = curr.left;
+        } else if (p.val > curr.val && q.val > curr.val) {
+            curr = curr.right;
+        } else {
+            return curr;
+        }
+    }
+};
 ```
 
 </TabItem>
