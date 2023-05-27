@@ -237,7 +237,7 @@ class Solution:
         # a ^ b ^ c = a ^ c ^ b
         n = len(nums)
         res = n
-        for i in range(len(nums)):
+        for i in range(n):
             res ^= (i ^ nums[i])
         return res
 ```
