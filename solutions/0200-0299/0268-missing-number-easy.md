@@ -224,6 +224,25 @@ var missingNumber = function(nums) {
 ```
 
 </TabItem>
+
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```py
+class Solution:
+    def missingNumber(self, nums: List[int]) -> int:
+        # we can utilise the properties of XOR:
+        # a ^ a = 0
+        # a ^ 0 = a
+        # a ^ b ^ c = a ^ c ^ b
+        n = len(nums)
+        res = n
+        for i in range(n):
+            res ^= (i ^ nums[i])
+        return res
+```
+
+</TabItem>
 </Tabs>
 
 ## Approach 3: Math
