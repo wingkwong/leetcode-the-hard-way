@@ -178,4 +178,31 @@ class Solution:
 ```
 
 </TabItem>
+
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@radojicic23"/>
+
+```cpp
+class Solution {
+public:
+    void moveZeroes(vector<int>& nums) {
+        int countZeros = 0;
+        // iterate through array
+        for (int i = 0; i < nums.size(); i++) {
+            // count zeros
+            if (nums[i] == 0) {
+                countZeros++;
+            // if the current number is not 0
+            // and if zero's count is 1 or more
+            } else if (countZeros > 0) {
+                // swap them
+                nums[i - countZeros] = nums[i];
+                nums[i] = 0;
+            }
+        }
+    }
+};
+```
+
+</TabItem>
 </Tabs>
