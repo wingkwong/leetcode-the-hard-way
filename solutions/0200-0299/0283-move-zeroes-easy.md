@@ -96,6 +96,33 @@ class Solution {
 ```
 
 </TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * @param {number[]} nums
+ * @return {void} Do not return anything, modify nums in-place instead.
+ */
+var moveZeroes = function(nums) {
+    let slow = 0;
+    for (let fast = 0; fast < nums.length; fast++) {
+        if (nums[fast] === 0) {
+            continue;
+        } else {
+            nums[slow] = nums[fast];
+            slow++;
+        }
+    }
+    while (slow < nums.length) {
+        nums[slow] = 0;
+        slow++;
+    }
+};
+```
+
+</TabItem>
 </Tabs>
 
 ## Approach 2: Two pointers Optimal
