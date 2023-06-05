@@ -123,6 +123,32 @@ var moveZeroes = function(nums) {
 ```
 
 </TabItem>
+
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@radojicic23"/>
+
+```cpp
+class Solution {
+public:
+    void moveZeroes(vector<int>& nums) {
+        int slow = 0;
+        for (int fast = 0; fast < nums.size(); fast++) {
+            if (nums[fast] == 0) {
+                continue;
+            } else {
+                nums[slow] = nums[fast];
+                slow++;
+            }
+        }
+        while (slow < nums.size()) {
+            nums[slow] = 0;
+            slow++;
+        }
+    }
+};
+```
+
+</TabItem>
 </Tabs>
 
 ## Approach 2: Two pointers Optimal
