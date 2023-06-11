@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/find-the-difference/'
+description: "Author: @wingkwong, @radojicic23 | https://leetcode.com/problems/find-the-difference/"
 ---
 
 # 0389 - Find the Difference (Easy)
@@ -28,29 +28,31 @@ Explanation: 'e' is the letter that was added.
 
 ```
 Input: s = "", t = "y"
-Output: "y" 
+Output: "y"
 ```
 
 **Constraints:**
 
-* `0 <= s.length <= 1000`
-* `t.length == s.length + 1`
-* `s` and `t` consist of lowercase English letters.
+- `0 <= s.length <= 1000`
+- `t.length == s.length + 1`
+- `s` and `t` consist of lowercase English letters.
 
 ## Approach 1: Bit Manipulation
 
 Same idea as [0136 - Single Number (Easy)](../0100-0199/single-number-easy).
 
-Prerequisite:  You should understand properties of XOR.
+Prerequisite: You should understand properties of XOR.
 
 Let's have a quick review.
 
-* If we take XOR of a number and a zero, the result will be that number, i.e. $$a \oplus 0 = a$$.
-* If we take XOR of two same numbers, it will return 0, i.e. $$a \oplus a = 0$$.
-* If we take XOR of multiple numbers, the order doesn't affect the result, i.e. $$a \oplus b \oplus c = a \oplus c \oplus b$$.
+- If we take XOR of a number and a zero, the result will be that number, i.e. $$a \oplus 0 = a$$.
+- If we take XOR of two same numbers, it will return 0, i.e. $$a \oplus a = 0$$.
+- If we take XOR of multiple numbers, the order doesn't affect the result, i.e. $$a \oplus b \oplus c = a \oplus c \oplus b$$.
 
 Therefore, we apply XOR on each character. The same characters will cancel out each other. What's left is the answer.
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -58,7 +60,7 @@ class Solution {
 public:
     char findTheDifference(string s, string t) {
         char ans = 0;
-        // take XOR for each character: ans = ans ^ x 
+        // take XOR for each character: ans = ans ^ x
         for (auto x : s) ans ^= x;
         for (auto x : t) ans ^= x;
         return ans;
@@ -66,10 +68,15 @@ public:
 };
 ```
 
+</TabItem>
+</Tabs>
+
 ## Approach 2: Hash Map
 
 We can store the occurrence for each character. As `t` has one more character, we can count `t` first, iterate `s` to subtract the occurrences. The answer will be the one which has one occurrence.
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -79,7 +86,7 @@ public:
         unordered_map<char, int> m;
         // count the occurrence for t
         for (auto x : t) m[x]++;
-        // instead of using an extra hash map, 
+        // instead of using an extra hash map,
         // we decrease the occurrence
         for (auto x : s) m[x]--;
         for (auto x : m) {
@@ -94,10 +101,15 @@ public:
 };
 ```
 
+</TabItem>
+</Tabs>
+
 ## Approach 3: Sorting
 
-We can sort both input and compare each character one by one. If there is a difference, then return  $$t[i]$$. Otherwise, return the last character of $$t$$ as the first $$len(s)$$ characters are same.
+We can sort both input and compare each character one by one. If there is a difference, then return $$t[i]$$. Otherwise, return the last character of $$t$$ as the first $$len(s)$$ characters are same.
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -124,3 +136,22 @@ public:
     }
 };
 ```
+
+</TabItem>
+
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```py
+class Solution:
+    def findTheDifference(self, s: str, t: str) -> str:
+        s = "".join(sorted(list(s)))
+        t = "".join(sorted(list(t)))
+        for i in range(len(s)):
+            if s[i] != t[i]:
+                return t[i]
+        return t[-1]
+```
+
+</TabItem>
+</Tabs>
