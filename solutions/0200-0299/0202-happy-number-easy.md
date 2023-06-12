@@ -1,5 +1,6 @@
 ---
 description: 'Author: @vigneshshiv, @wingkwong | https://leetcode.com/problems/happy-number/'
+tags: [Array, Math, Two Pointers]
 ---
 
 # 0202 - Happy Number (Easy)
@@ -107,6 +108,37 @@ impl Solution {
         return fast == 1;
     }
 }
+```
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@ColeB2"/>
+
+```py
+class Solution:
+    def next_num(self, n: int) -> int:
+        # initialize num as 0
+        num = 0
+        # while our number exists: loop
+        while n:
+            # add ones digit squared to num
+            num += (n % 10) ** 2
+            # integer division to remove ones digit.
+            n = n // 10
+        return num
+
+    def isHappy(self, n: int) -> bool:
+        ## Cycle Detection - initialize slow/fast pointers
+        slow, fast = n, self.next_num(n)
+        ## Since we will always reach a cycle at some point
+        ## loop until fast reaches slow
+        while slow != fast:
+            # move fast pointer 2 numbers, slow 1.
+            fast = self.next_num(self.next_num(fast))
+            slow = self.next_num(slow)
+        # If the cycle location ends on 1, we are happy, else False.
+        return fast == 1
 ```
 
 </TabItem>
