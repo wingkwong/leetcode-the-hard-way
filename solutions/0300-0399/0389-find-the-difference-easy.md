@@ -154,4 +154,27 @@ class Solution:
 ```
 
 </TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * @param {string} s
+ * @param {string} t
+ * @return {character}
+ */
+var findTheDifference = function (s, t) {
+  const sortedS = s.split("").sort().join("");
+  const sortedT = t.split("").sort().join("");
+  for (let i = 0; i < s.length; i++) {
+    if (sortedS[i] != sortedT[i]) {
+      return sortedT[i];
+    }
+  }
+  return sortedT[sortedT.length - 1];
+};
+```
+
+</TabItem>
 </Tabs>
