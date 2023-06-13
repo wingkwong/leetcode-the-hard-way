@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/arranging-coins/'
+description: "Author: @wingkwong, @radojicic23 | https://leetcode.com/problems/arranging-coins/"
 ---
 
 # 0441 - Arranging Coins (Easy)
@@ -36,9 +36,13 @@ Explanation: Because the 4th row is incomplete, we return 3.
 
 **Constraints:**
 
-* `1 <= n <= 2^31 - 1`
+- `1 <= n <= 2^31 - 1`
 
 ## Approach 1: Math
+
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -53,6 +57,9 @@ public:
 };
 ```
 
+</TabItem>
+</Tabs>
+
 ## Approach 2: Binary Search
 
 :::info Prerequisite
@@ -60,6 +67,10 @@ public:
 - [Binary Search](../../tutorials/basic-topics/binary-search)
 
 :::
+
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -77,8 +88,33 @@ public:
             if (n < total) r = m - 1;
             // include m
             else l = m;
-        } 
+        }
         return l;
     }
 };
 ```
+
+</TabItem>
+
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@radojicic23"/>
+
+```py
+class Solution:
+    def arrangeCoins(self, n: int) -> int:
+        left = 1
+        right = n
+        while left <= right:
+            mid = (left + right) // 2
+            temp = int(mid * (mid + 1) / 2)
+            if temp == n:
+                return mid
+            elif temp < n:
+                left = mid + 1
+            else:
+                right = mid - 1
+        return right
+```
+
+</TabItem>
+</Tabs>
