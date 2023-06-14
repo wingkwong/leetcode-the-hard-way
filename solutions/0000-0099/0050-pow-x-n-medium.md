@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/powx-n/'
+description: 'Author: @wingkwong, @ColeB2 | https://leetcode.com/problems/powx-n/'
+tags: [Math, Recursion]
 ---
 
 # 0050 - Pow(x, n) (Medium)
@@ -44,6 +45,12 @@ Explanation: 2-2 = 1/22 = 1/4 = 0.25
 
 If the exponent $$n$$ is negative, we need to change it to positive exponent $$- n$$ and make the base  to $$1 / x$$. Then apply [Binary Exponentiation](../../tutorials/math/number-theory/binary-exponentiation).
 
+Time Complexity: $$O(log n)$$ instead of calculating $$x * x$$, $$n$$ times. We can utilize binary exponentiation to reduce the number of calculations to $$log n$$ time.
+
+Space Complexity: $$O(1)$$, we can perform it iteratively, with constant extra space.
+
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -64,3 +71,34 @@ public:
     }
 };
 ```
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@ColeB2"/>
+
+```py
+class Solution:
+    def myPow(self, x: float, n: int) -> float:
+        # negative n --> adjust our starting x and n. So the exponent
+        # is positive, and the x value is 1/x
+        if (n < 0):
+            n = -n 
+            x = 1 / x
+        # initialize our running answer, num, as 1.
+        num = 1
+        # while we have an exponent:
+        while n > 0:
+            # if exponent is odd ie: n % 2 == 1:
+            if n & 1:
+                # multiply answer by current x value.
+                num *= x
+            # multiply x value, by itself.
+            x *= x
+            # integer division --> n = n // 2
+            n >>= 1
+        return num
+```
+
+</TabItem>
+</Tabs>
