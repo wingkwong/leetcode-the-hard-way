@@ -9,8 +9,8 @@
   position: relative;
   overflow: hidden;
   display: block;
-  background-image: url('/static/img/banner.png');
-  background-size: cover;
+  /* background-image: url('/static/img/banner.png'); */
+  /* background-size: cover; */
 }
 
 .heroBanner img {
