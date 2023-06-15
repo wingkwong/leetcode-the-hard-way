@@ -1,6 +1,43 @@
-# 1019 - Next Greater Node in Linked List (Medium)
+---
+description: 'Author: @yashh0903 | https://leetcode.com/problems/next-greater-node-in-linked-list/'
+tags: [Array, Linked List, Stack, Monotonic Stack]
+---
 
-## Approach 1: Using stack
+# 1019 - Next Greater Node In Linked List (Medium) 
+
+## Problem Link
+
+https://leetcode.com/problems/next-greater-node-in-linked-list/
+
+## Problem Statement
+
+You are given the `head` of a linked list with `n` nodes.
+
+For each node in the list, find the value of the **next greater node**. That is, for each node, find the value of the first node that is next to it and has a **strictly larger** value than it.
+
+Return an integer array `answer` where `answer[i]` is the value of the next greater node of the `ith` node (**1-indexed**). If the `ith` node does not have a next greater node, set `answer[i] = 0`.
+
+**Example 1:**
+
+```
+Input: head = [2,1,5]
+Output: [5,5,0]
+```
+
+**Example 2:**
+
+```
+Input: head = [2,7,4,3,5]
+Output: [7,0,5,5,0]
+```
+
+**Constraints:**
+
+- The number of nodes in the list is `n`.
+- `1 <= n <= 1e4`
+- `1 <= Node.val <= 1e9`
+
+## Approach 1: Stack
 
 1. Initialize an empty stack and an empty answer vector.
 2. Reverse the given linked list.
@@ -40,28 +77,23 @@ public:
         }
 
         while (newHead != nullptr) {
-            if (st.empty())
-                ans.push_back(0);
-            else if (!st.empty() && st.top() > newHead->val)
-                ans.push_back(st.top());
+            if (st.empty()) ans.push_back(0);
+            else if (!st.empty() && st.top() > newHead->val) ans.push_back(st.top());
             else if (!st.empty() && st.top() <= newHead->val) {
-                // Pop elements from the stack until finding an element greater than the current node's value or the stack becomes empty
-                while (!st.empty() && st.top() <= newHead->val) {
-                    st.pop();
-                }
-                if (!st.empty())
+                // Pop elements from the stack until finding an element 
+                // greater than the current node's value or the stack becomes empty
+                while (!st.empty() && st.top() <= newHead->val) st.pop();
                 // Append the top element to the answer vector
-                    ans.push_back(st.top());
-                else
-                // If the stack becomes empty, there is no larger element, so append 0 to the answer vector
-                    ans.push_back(0);
+                if (!st.empty()) ans.push_back(st.top());
+                // If the stack becomes empty, 
+                // there is no larger element, so append 0 to the answer vector
+                else ans.push_back(0);
             }
             // Push the current node's value onto the stack
             st.push(newHead->val);
-             // Move to the next node
+            // Move to the next node
             newHead = newHead->next;
         }
-
         // Reversing the answer vector to restore the correct order
         reverse(ans.begin(), ans.end());
         return ans;
