@@ -1,4 +1,4 @@
-# 1019 - Next Greate Node in Linked List (Medium)
+# 1019 - Next Greater Node in Linked List (Medium)
 
 ## Approach 1: Using stack
 
@@ -13,21 +13,21 @@
 5. Reverse the answer vector to obtain the correct order of next larger elements.
 6. Return the answer vector.
 
+- Time Complexity: O(n), where n is the number of nodes in the linked list.
+- Space Complexity: O(n), as we use a stack to store elements and an answer vector to store the
+
 <Tabs>
 <TabItem value="cpp" label="C++">
 <SolutionAuthor name="@yashh0903"/>
 
 ```cpp
-/*
- * Time Complexity: O(n), where n is the number of nodes in the linked list.
- * Space Complexity: O(n), as we use a stack to store elements and an answer vector to store the result.
- */
-
 class Solution {
 public:
     vector<int> nextLargerNodes(ListNode* head) {
-        vector<int> ans; // Stores the result
-        stack<int> st; // Stack to keep track of elements
+        // Stores the result
+        vector<int> ans;
+        // Stack to keep track of elements
+        stack<int> st;
 
         ListNode* newHead = NULL;
 
@@ -50,15 +50,20 @@ public:
                     st.pop();
                 }
                 if (!st.empty())
-                    ans.push_back(st.top()); // Append the top element to the answer vector
+                // Append the top element to the answer vector
+                    ans.push_back(st.top());
                 else
-                    ans.push_back(0); // If the stack becomes empty, there is no larger element, so append 0 to the answer vector
+                // If the stack becomes empty, there is no larger element, so append 0 to the answer vector
+                    ans.push_back(0);
             }
-            st.push(newHead->val); // Push the current node's value onto the stack
-            newHead = newHead->next; // Move to the next node
+            // Push the current node's value onto the stack
+            st.push(newHead->val);
+             // Move to the next node
+            newHead = newHead->next;
         }
 
-        reverse(ans.begin(), ans.end()); // Reversing the answer vector to restore the correct order
+        // Reversing the answer vector to restore the correct order
+        reverse(ans.begin(), ans.end());
         return ans;
     }
 };
