@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong, @ColeB2 |
+  Author: @wingkwong, @ColeB2, @radojicic23 |
   https://leetcode.com/problems/coin-change-2
 tags: [Array, Dynamic Programming]
 ---
@@ -50,10 +50,10 @@ Output: 1
 
 **Constraints:**
 
-* `1 <= coins.length <= 300`
-* `1 <= coins[i] <= 5000`
-* All the values of `coins` are **unique**.
-* `0 <= amount <= 5000`
+- `1 <= coins.length <= 300`
+- `1 <= coins[i] <= 5000`
+- All the values of `coins` are **unique**.
+- `0 <= amount <= 5000`
 
 ## Approach 1: Dynamic Programming
 
@@ -69,7 +69,6 @@ Time Complexity: $$O(amount * coins.length)$$. For each coin, we are going to lo
 
 Space Complexity: $$O(amount)$$. We are going to create an array of size $$amount$$.
 
-
 <Tabs>
 <TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
@@ -84,7 +83,7 @@ public:
         dp[0] = 1;
         for(auto c : coins) {
             for(int i = 1; i <= amount; i++) {
-                // since we need dp[i - c], 
+                // since we need dp[i - c],
                 // we need to make sure i - c is greater or equal to 0
                 if(i >= c) {
                     // add the previous result
@@ -120,6 +119,29 @@ class Solution:
                 dp[i] += dp[i - coin]
         # return final value, dp[-1] would also work.
         return dp[amount]
+```
+
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+<SolutionAuthor name="@radojicic23"/>
+
+```js
+/**
+ * @param {number} amount
+ * @param {number[]} coins
+ * @return {number}
+ */
+var change = function (amount, coins) {
+  let dp = new Array(amount + 1).fill(0);
+  dp[0] = 1;
+  for (let coin of coins) {
+    for (let i = coin; i < amount + 1; i++) {
+      dp[i] += dp[i - coin];
+    }
+  }
+  return dp[dp.length - 1];
+};
 ```
 
 </TabItem>
