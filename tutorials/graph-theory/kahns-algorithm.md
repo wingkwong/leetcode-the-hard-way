@@ -1,7 +1,6 @@
 ---
 title: "Kahn's Algorithm"
-description: 'Coming Soon!'
-draft: true
+description: "Kahn's Algorithm is a classical algorithm in computer science that is used for topological sorting of directed acyclic graphs (DAGs)"
 keywords:
   - leetcode
   - tutorial
