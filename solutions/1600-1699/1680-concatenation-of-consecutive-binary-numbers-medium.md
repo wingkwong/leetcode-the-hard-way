@@ -97,7 +97,7 @@ public:
 <TabItem value="py" label="Python">
 <SolutionAuthor name="@wingkwong"/>
 
-```cpp
+```py
 # Time Complexity: O(N)
 # Space Complexity: O(1)
 class Solution:
