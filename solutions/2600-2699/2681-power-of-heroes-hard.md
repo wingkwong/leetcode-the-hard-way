@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wingkwong | https://leetcode.com/problems/power-of-heroes/'
+tags: [Array, Math, Sorting, Prefix Sum]
 ---
 
 # 2681 - Power of Heroes (Hard) 
@@ -77,10 +78,10 @@ class Solution:
 			# if you have no idea on above mathematic explanation, 
 			# try some cases and you will see the pattern
 			# nums = [1, 2, 3, 4]
-			# 1 * 1 * (1)
-			# 2 * 2 * (1 * 2 ^ 0 + 2)
-			# 3 * 3 * (1 * 2 ^ 1 + 2 * 2 ^ 0 + 3)
-			# 4 * 4 * (1 * 2 ^ 2  + 2 * 2 ^ 1 + 3 * 2 ^ 0 + 4)
+            # 1 * 1 * ((0) + 1)
+            # 2 * 2 * ((1) * 2 ^ 0 + 2)
+            # 3 * 3 * ((1 * 2 ^ 1 + 2) * 2 ^ 0 + 3)
+            # 4 * 4 * ((1 * 2 ^ 2 + 2 * 2 ^ 1 + 3) * 2 ^ 0 + 4)
 			# ...
 			# x * x * (prev_s * 2 + x)
             res += (x + s) * (x * x) 
