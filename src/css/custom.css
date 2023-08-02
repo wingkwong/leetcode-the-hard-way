@@ -183,3 +183,41 @@ pre  {
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
 }
+
+table {
+  width:100%;
+}
+
+table th:nth-child(1) {
+  text-align: left;
+}
+
+table tbody > tr > td:nth-child(1) {
+  width: 30%;
+}
+
+table tbody > tr > td:nth-child(2) {
+  width: 10%;
+  text-align: center;
+}
+
+table tbody > tr > td:nth-child(3) {
+  width: 10%;
+  text-align: center;
+}
+
+table, tr, td, th {
+  border: none !important;
+}
+
+.easy {
+  color: rgb(0 175 155);
+}
+
+.medium {
+  color: rgb(255 184 0);
+}
+
+.hard {
+  color: rgb(255 45 85);
+}
