@@ -1,15 +1,14 @@
 ---
-title: 'Study Plan - Programming Skills - I'
+title: 'Programming Skills (Basic)'
 description: 'https://leetcode.com/study-plan/programming-skills'
 hide_table_of_contents: true
-sidebar_position: 5
+sidebar_position: 10
 keywords:
   - leetcode
   - study plan
+  - roadmap
   - Programming Skills - I
 ---
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLBu4Bche1aEXiiHTKYwGD2m_7MEU6ECfj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 export const problems = [
   {

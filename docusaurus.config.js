@@ -101,9 +101,9 @@ const config = {
             activeBaseRegex: `/solutions/tags/`,
           },
           {
-            label: '🏛️ Collections',
-            to: '/collections/',
-            activeBaseRegex: `/collections/`,
+            label: '🏛️ Roadmap',
+            to: '/roadmap/',
+            activeBaseRegex: `/roadmap/`,
           },
           {
             label: '🖥️ Templates',
@@ -154,8 +154,8 @@ const config = {
                 href: '/solutions/tags',
               },
               {
-                label: 'Collections',
-                href: '/collections',
+                label: 'Roadmap',
+                href: '/roadmap',
               },
               {
                 label: 'Templates',
@@ -245,9 +245,9 @@ const config = {
       [
         '@docusaurus/plugin-content-docs',
         {
-          id: 'collections',
-          path: 'collections',
-          routeBasePath: 'collections',
+          id: 'roadmap',
+          path: 'roadmap',
+          routeBasePath: 'roadmap',
           sidebarPath: require.resolve('./sidebars.js'),
           remarkPlugins: [math],
           rehypePlugins: [katex],

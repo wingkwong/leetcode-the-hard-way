@@ -1,11 +1,12 @@
 ---
-title: 'LTHW - Dynamic Programming'
+title: 'Dynamic Programming'
 description: 'Collections of DP Problems in different categories'
 hide_table_of_contents: true
-sidebar_position: 4
+sidebar_position: 100
 keywords:
   - leetcode
-  - collection
+  - study plan
+  - roadmap
   - dynamic programming
 ---
 

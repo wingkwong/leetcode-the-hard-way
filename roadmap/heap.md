@@ -1,11 +1,12 @@
 ---
-title: 'LTHW - Heap (Priority Queue)'
+title: 'Heap (Priority Queue)'
 description: 'Collections of Heap (Priority Queue) Problems'
-sidebar_position: 3
+sidebar_position: 35
 hide_table_of_contents: true
 keywords:
   - leetcode
-  - collection
+  - roadmap
+  - study plan
   - Heap
   - Priority Queue
 ---

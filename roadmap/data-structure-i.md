@@ -1,15 +1,14 @@
 ---
-title: 'Study Plan - Data Structure - I'
+title: 'Data Structure (Basic)'
 description: 'https://leetcode.com/study-plan/data-structure'
 hide_table_of_contents: true
-sidebar_position: 6
+sidebar_position: 20
 keywords:
   - leetcode
   - study plan
+  - roadmap
   - Data Structure - I
 ---
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLBu4Bche1aEWG9KfBqhQdT95JNcW_eBdk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 export const problems = [
   {

@@ -1,7 +1,7 @@
 ---
 title: "LeetCode Summer Intensive"
 description: "Collections of LeetCode Summer Intensive Problems"
-sidebar_position: 2
+sidebar_position: 999
 hide_table_of_contents: true
 keywords:
   - leetcode
