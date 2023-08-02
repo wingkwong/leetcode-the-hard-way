@@ -206,6 +206,11 @@ table tbody > tr > td:nth-child(3) {
   text-align: center;
 }
 
+table tbody > tr > td:nth-child(4) {
+  width: 10%;
+  text-align: center;
+}
+
 table, tr, td, th {
   border: none !important;
 }
