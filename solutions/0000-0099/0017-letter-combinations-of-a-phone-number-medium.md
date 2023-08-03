@@ -5,7 +5,7 @@ description: >-
 tags: [Hash Table, String, Backtracking]
 ---
 
-# 0017 - Letter Combinations of a Phone Number (Hard)
+# 0017 - Letter Combinations of a Phone Number (Medium)
 
 ## Problem Link
 
