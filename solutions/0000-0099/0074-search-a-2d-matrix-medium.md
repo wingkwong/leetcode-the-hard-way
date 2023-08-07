@@ -47,20 +47,20 @@ Output: false
 class Solution {
 public:
     bool searchMatrix(vector<vector<int>>& matrix, int target) {
-        int n = matrix.size(), m = matrix[0].size(), j = 0;
+        int n = matrix.size(), m = matrix[0].size();
+        int targetRow = 0;
         // search for the target row
-        for (int i = 0; i < n; i++) {
-            // if the target is within [matrix[i][0], matrix[i][m - 1]],
-            // the target is possible in row i
-            if (target >= matrix[i][0] && target <= matrix[i][m - 1]) {
-                j = i;
+        for (int row = 0; row < n; row++) {
+            // target should be within [matrix[row][0] .. matrix[row][m - 1]]
+            if (matrix[row][0] <= target && target <= matrix[row][m - 1]) {
+                // target row is found
+                targetRow = row;
                 break;
             }
         }
-        // iterate each column on row j
-        for (int i = 0; i < m; i++) {
-            // check if target exists
-            if (matrix[j][i] == target) {
+        // then search for the target col
+        for (int col = 0; col < m; col++) {
+            if (matrix[targetRow][col] == target) {
                 return true;
             }
         }
