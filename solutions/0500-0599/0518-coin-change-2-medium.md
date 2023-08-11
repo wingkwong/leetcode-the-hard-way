@@ -62,7 +62,7 @@ This problem is very similar to [0377 - Combination Sum IV (Medium)](https://lee
 We can derive the following transition if $target$ is greater or equal to $nums[i]$ where $dp[i]$ represents the number of combinations that sum up to the $target$.
 
 $$
-dp(amount)=\sum_{i=0}^n dp(amount - coins[i])
+dp(amount)=\sum_{i=0}^{n-1} dp(amount - coins[i])
 $$
 
 Time Complexity: $$O(amount * coins.length)$$. For each coin, we are going to loop through all the values from $$0$$ to $$amount$$.
