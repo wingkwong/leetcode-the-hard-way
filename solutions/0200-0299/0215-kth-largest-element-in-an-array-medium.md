@@ -50,8 +50,6 @@ Space Complexity: $$O(k)$$. Where $$k$$ is the size of our heap, as we are only 
 ```cpp
 class Solution {
 public:
-class Solution {
-public:
     // k-th largest / smallest -> think of priority queue
     int findKthLargest(vector<int>& nums, int k) {
         priority_queue<int> pq;
@@ -66,7 +64,6 @@ public:
         // return the top which is the k-th largest element
         return pq.top();
     }
-};
 };
 ```
 
