@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @ColeB2 | https://leetcode.com/problems/kth-largest-element-in-an-array/'
+description: 'Author: @wingkwong, @ColeB2, @jit | https://leetcode.com/problems/kth-largest-element-in-an-array/'
 tags: [Priority Queue, Quick Select]
 ---
 
@@ -134,6 +134,31 @@ public:
         return nums[k - 1];
     }
 };
+```
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@wingkwong"/>
+
+```py
+class Solution:
+    def findKthLargest(self, nums: List[int], k: int) -> int:
+        return heapq.nlargest(k, nums)[-1]
+```
+
+</TabItem>
+
+<TabItem value="rust" label="Rust">
+<SolutionAuthor name="@jit"/>
+
+```rs
+impl Solution {
+    pub fn find_kth_largest(mut nums: Vec<i32>, k: i32) -> i32 {
+        let n = nums.len();
+        *nums.select_nth_unstable(n - k as usize).1
+    }
+}
 ```
 
 </TabItem>
