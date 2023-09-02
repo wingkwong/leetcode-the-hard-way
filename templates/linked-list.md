@@ -24,4 +24,16 @@ while (fast != nullptr && fast->next != nullptr) {
 ```
 
 </TabItem>
+<TabItem value="java" label="Java">
+
+```java
+ListNode slow = head, fast = head;
+while (fast != null && fast.next != null) {
+    // do something here
+    slow = slow.next;
+    fast = fast.next.next;
+}
+```
+
+</TabItem>
 </Tabs>
