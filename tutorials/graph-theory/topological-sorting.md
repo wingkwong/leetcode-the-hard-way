@@ -40,9 +40,11 @@ struct TopologicalSort {
     vector<int> orders;
     vector<vector<int>> G;
     bool isTopologicalSorted = false;
+    int steps = 0;
+    int nodes = 0;
     
     TopologicalSort(vector<vector<int>>& g, vector<int>& in) {
-        G = g; vector<vector<int>>
+        G = g;
         n = (int) G.size();
         indegree = in;
         
@@ -54,16 +56,20 @@ struct TopologicalSort {
             }
         }
         while(!q.empty()) {
-            auto u = q.front(); q.pop();
-            orders.push_back(u);
-            for(auto v : G[u]) {
-                if(--indegree[v] == 0) {
-                    q.push(v);
+            int sz = q.size();
+            steps += 1;
+            nodes += q.size();
+            for (int i = 0; i < sz; i++) {
+                auto u = q.front(); q.pop();
+                orders.push_back(u);
+                for(auto v : G[u]) {
+                    if(--indegree[v] == 0) {
+                        q.push(v);
+                    }
                 }
             }
-            res++;
         }
-        isTopologicalSorted = res == n;
+        isTopologicalSorted = nodes == n;
     }
 };
 ```
@@ -139,6 +145,36 @@ public:
         if (!ts.isTopologicalSorted) return {};
         // else return the order
         return ts.orders;
+    }
+};
+```
+
+</TabItem>
+</Tabs>
+
+## Example 3: [1136. Parallel Courses](https://leetcode.com/problems/parallel-courses/)
+
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@wingkwong"/>
+
+```cpp
+// ...
+// TopologicalSort implementation here
+// ...
+
+class Solution {
+public:
+    int minimumSemesters(int n, vector<vector<int>>& relations) {
+        vector<vector<int>> g(n);
+        vector<int> in(n);
+        for (auto x : relations) {
+            --x[0], --x[1];
+            g[x[0]].push_back(x[1]);
+            in[x[1]]++;
+        }
+        TopologicalSort ts(g, in);
+        return ts.isTopologicalSorted ? ts.steps : -1;
     }
 };
 ```
