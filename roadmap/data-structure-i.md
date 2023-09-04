@@ -21,7 +21,7 @@ export const problems = [
     "problemName": "53. Maximum Subarray",
     "difficulty": "Easy",
     "leetCodeLink": "https://leetcode.com/problems/maximum-subarray",
-    "solutionLink": ""
+    "solutionLink": "../../solutions/0000-0099/maximum-subarray-medium"
   },
   {
     "problemName": "1. Two Sum",
@@ -56,20 +56,20 @@ export const problems = [
   {
     "problemName": "118. Pascal's Triangle",
     "difficulty": "Easy",
-    "leetCodeLink": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock",
-    "solutionLink": ""
+    "leetCodeLink": "https://leetcode.com/problems/pascals-triangle",
+    "solutionLink": "../../solutions/0100-0199/pascals-triangle-easy"
   },
   {
     "problemName": "36. Valid Sudoku",
     "difficulty": "Medium",
     "leetCodeLink": "https://leetcode.com/problems/valid-sudoku/",
-    "solutionLink": ""
+    "solutionLink": "../../solutions/0000-0099/valid-sudoku-easy"
   },
   {
     "problemName": "74. Search a 2D Matrix",
     "difficulty": "Medium",
     "leetCodeLink": "https://leetcode.com/problems/search-a-2d-matrix",
-    "solutionLink": ""
+    "solutionLink": "../../solutions/0000-0099/search-a-2d-matrix-medium"
   },
   {
     "problemName": "387. First Unique Character in a String",
@@ -111,7 +111,7 @@ export const problems = [
     "problemName": "206. Reverse Linked List",
     "difficulty": "Easy",
     "leetCodeLink": "https://leetcode.com/problems/reverse-linked-list/",
-    "solutionLink": ""
+    "solutionLink": "../../solutions/0200-0299/reverse-linked-list-easy"
   },
   {
     "problemName": "83. Remove Duplicates from Sorted List",
@@ -177,7 +177,7 @@ export const problems = [
     "problemName": "112. Path Sum",
     "difficulty": "Easy",
     "leetCodeLink": "https://leetcode.com/problems/path-sum/",
-    "solutionLink": ""
+    "solutionLink": "../../solutions/0100-0199/path-sum-easy"
   },
 ]
 
