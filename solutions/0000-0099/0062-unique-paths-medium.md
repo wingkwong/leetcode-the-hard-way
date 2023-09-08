@@ -70,6 +70,26 @@ public:
 ```
 
 </TabItem>
+
+
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@wingkwong"/>
+
+```java
+class Solution {
+    public int uniquePaths(int m, int n) {
+        long ans = 1, x = m + n - 2, k = Math.min(n - 1, m - 1);
+        for (int i = 1; i <= k; i++) {
+            ans *= x;
+            x -= 1;
+            ans /= i;
+        }
+        return (int) ans;
+    }
+}
+```
+
+</TabItem>
 </Tabs>
 
 ## Approach 2: Dynamic programming (Top Down) Memoization
