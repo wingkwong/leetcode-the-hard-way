@@ -1,5 +1,5 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/pascals-triangle/'
+description: 'Author: @ColeB2, @wingkwong | https://leetcode.com/problems/pascals-triangle/'
 tags: [Array, Dynamic Programming]
 ---
 
@@ -71,4 +71,82 @@ class Solution:
 ```
 
 </TabItem>
+
+
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@wingkwong"/>
+
+```cpp
+class Solution {
+public:
+    vector<vector<int>> generate(int numRows) {
+        vector<vector<int>> ans(numRows);
+        for(int i = 0; i < numRows; i++) {
+            ans[i].resize(i + 1);
+            ans[i][0] = ans[i][i] = 1;
+            for(int j = 1; j < i; j++) {
+                ans[i][j] = ans[i - 1][j - 1] + ans[i - 1][j];
+            }
+        }
+        return ans;
+    }
+};
+```
+
+</TabItem>
+
+
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@wingkwong"/>
+
+```java
+class Solution {
+    public List<List<Integer>> generate(int numRows) {
+        List<List<Integer>> res = new ArrayList<>();
+        List<Integer> firstRow = new ArrayList<>();
+        firstRow.add(1);
+        res.add(firstRow);
+        for (int row = 1; row < numRows; row++) {
+            List<Integer> prevRow = res.get(row - 1);
+            List<Integer> currentRow = new ArrayList<>();
+            currentRow.add(1);
+            for (int i = 1; i < row; i++) {
+                currentRow.add(prevRow.get(i - 1) + prevRow.get(i));
+            }
+            currentRow.add(1);
+            res.add(currentRow);
+        }
+        return res;
+    }
+}
+```
+
+</TabItem>
+
+
+<TabItem value="kotlin" label="Kotlin">
+<SolutionAuthor name="@wingkwong"/>
+
+```kt
+class Solution {
+    fun generate(numRows: Int): List<List<Int>> {
+        val res = mutableListOf<List<Int>>()
+        res.add(listOf(1))
+        for (row in 1 until numRows) {
+            val prevRow = res[row - 1]
+            val currentRow = mutableListOf<Int>()
+            currentRow.add(1)
+            for (i in 1 until row) {
+                currentRow.add(prevRow[i - 1] + prevRow[i])
+            }
+            currentRow.add(1)
+            res.add(currentRow)
+        }
+        return res
+    }
+}
+```
+
+</TabItem>
+
 </Tabs>
