@@ -61,6 +61,8 @@ $$
 dp(target)=\sum_{i=0}^n dp(target - nums[i])
 $$
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -89,3 +91,65 @@ public:
     }
 };
 ```
+
+</TabItem>
+
+<TabItem value="kotlin" label="Kotlin">
+<SolutionAuthor name="@wingkwong"/>
+
+```kt
+class Solution {
+    fun combinationSum4(nums: IntArray, target: Int): Int {
+        // let dp[i] be the number of combinations that sum up to the target
+        val dp = IntArray(target + 1)
+        // base case
+        dp[0] = 1
+        // iterate target first - as (1, 1, 2) and (2, 1, 1) are considered different
+        for (i in 1..target) {
+            // iterate each number in nums
+            for (x in nums) {
+                // since we need dp[i - x], 
+                // we need to make sure i - x is greater or equal to 0
+                if (i - x >= 0) {
+                    // add the previous result
+                    dp[i] += dp[i - x]
+                }
+            }
+        }
+        return dp.last()
+    }
+}
+```
+
+</TabItem>
+
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@wingkwong"/>
+
+```java
+class Solution {
+    public int combinationSum4(int[] nums, int target) {
+        // let dp[i] be the number of combinations that sum up to the target
+        int[] dp = new int[target + 1];
+        // base case
+        dp[0] = 1;
+        // iterate target first - as (1, 1, 2) and (2, 1, 1) are considered different
+        for (int i = 1; i <= target; i++) {
+            // iterate each number in nums
+            for (int x : nums) {
+                // since we need dp[i - x], 
+                // we need to make sure i - x is greater or equal to 0
+                if (i - x >= 0) {
+                    // add the previous result
+                    dp[i] += dp[i - x];
+                }
+            }
+        }
+        return dp[target];
+    }
+}
+```
+
+</TabItem>
+</Tabs>
+
