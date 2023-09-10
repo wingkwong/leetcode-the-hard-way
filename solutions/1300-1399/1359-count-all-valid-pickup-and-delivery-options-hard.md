@@ -55,7 +55,10 @@ Then we need to think how to put $$D_i$$in some possible places. We know that$$D
 
 Hence, the answer is $$N! * \sum_{i=1}^{N} (2 * i - 1)$$. Remember to take $$MOD$$ during the calculation.
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
+
 
 ```cpp
 class Solution {
@@ -72,3 +75,49 @@ public:
     }
 };
 ```
+
+</TabItem>
+
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@wingkwong"/>
+
+```java
+
+class Solution {
+    public int countOrders(int n) {
+        long M = (long) 1e9 + 7;
+        long ans = 1;
+        for (int i = 1; i <= n; i++) {
+            // number of ways to put P: N!
+            ans = (ans * i) % M;
+            // number of ways to put D after P: 1 * 3 * 5 * .. * (2N - 1)
+            ans = (ans * (2 * i - 1)) % M;
+        }
+        return (int) ans;
+    }
+}
+```
+
+</TabItem>
+
+<TabItem value="kotlin" label="Kotlin">
+<SolutionAuthor name="@wingkwong"/>
+
+```kt
+class Solution {
+    fun countOrders(n: Int): Int {
+        val M = (1e9 + 7).toLong()
+        var ans = 1L
+        for (i in 1..n) {
+            // number of ways to put P: N!
+            ans = (ans * i) % M
+            // number of ways to put D after P: 1 * 3 * 5 * .. * (2N - 1)
+            ans = (ans * (2 * i - 1)) % M
+        }
+        return ans.toInt()
+    }
+}
+```
+
+</TabItem>
+</Tabs>
