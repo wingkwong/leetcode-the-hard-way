@@ -340,4 +340,37 @@ class dsu {
 ```
 
 </TabItem>
+
+<TabItem value="kt" label="Kotlin">
+
+```kt
+private class DSU(private val n: Int) {
+    private val parent = IntArray(n) { it }
+    private val rank = IntArray(n)
+    
+    fun find(x: Int): Int {
+        if (parent[x] != x) {
+            parent[x] = find(parent[x])
+        }
+        return parent[x]
+    }
+    
+    fun unite(x: Int, y: Int): Boolean {
+        val rootX = find(x)
+        val rootY = find(y)
+        if (rootX == rootY) return false
+        if (rank[rootX] < rank[rootY]) {
+            parent[rootX] = rootY
+        } else if (rank[rootX] > rank[rootY]) {
+            parent[rootY] = rootX
+        } else {
+            parent[rootX] = rootY
+            rank[rootY]++
+        }
+        return true
+    }
+}
+```
+
+</TabItem>
 </Tabs>
