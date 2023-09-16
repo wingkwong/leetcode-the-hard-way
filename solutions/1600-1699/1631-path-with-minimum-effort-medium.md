@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wingkwong | https://leetcode.com/problems/path-with-minimum-effort/'
+tags: [Array, Binary Search, Depth-First Search, Breadth-First Search, Union Find, Heap (Priority Queue), Matrix]
 ---
 
 # 1631 - Path With Minimum Effort (Medium)
@@ -56,9 +57,10 @@ Explanation: This route does not require any effort.
 
 ## Approach 1: DFS + Binary Search
 
-* Use Binary Search to look for the possible absolute difference $$k$$
-* Use DFS to walk the grid to see if the destination can be reached given $$k$$.
+Give the constraints, we know the absolute difference values would be between $[0, 1e6]$. Also looking for min max value gives a hint that we can use Binary Search to look for the possible absolute difference $$k$$, adn use DFS to walk the grid to see if the destination can be reached given $$k$$.
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -68,11 +70,11 @@ public:
     int diry[4] = { 0, 1, -1, 0 };
     void dfs(vector<vector<int>>& heights, vector<vector<int>>& vis, int i, int j, int mid) {
         vis[i][j] = 1;
-        for(int d = 0; d < 4; d++) {
+        for (int d = 0; d < 4; d++) {
             int x = i + dirx[d], y = j + diry[d];
-            if(x < 0 || x >= heights.size() || y < 0 || y >= heights[0].size() || vis[x][y]) continue;
+            if (x < 0 || x >= heights.size() || y < 0 || y >= heights[0].size() || vis[x][y]) continue;
             // if it is out of the target mid, then skip
-            if(abs(heights[i][j] - heights[x][y]) > mid) continue;
+            if (abs(heights[i][j] - heights[x][y]) > mid) continue;
             dfs(heights, vis, x, y, mid);
         }
     }
@@ -88,12 +90,59 @@ public:
             vector<vector<int>> vis(m, vector<int>(n, 0));
             // call dfs to check if the dist can be reached or not
             dfs(heights, vis, 0, 0, mid);
-            // exclude m
+            // exclude mid
             if(!vis[m - 1][n - 1]) l = mid + 1;
-            // include m
+            // include mid
             else r = mid;
         }
         return l;
     }
 };
 ```
+
+</TabItem>
+
+<TabItem value="kt" label="Kotlin">
+<SolutionAuthor name="@wingkwong"/>
+
+```kt
+class Solution {
+    private val dirx = intArrayOf(-1, 0, 0, 1)
+    private val diry = intArrayOf(0, 1, -1, 0)
+    private fun dfs(heights: Array<IntArray>, vis: Array<BooleanArray>, i: Int, j: Int, mid: Int) {
+        vis[i][j] = true
+        for (d in 0 until 4) {
+            val x = i + dirx[d]
+            val y = j + diry[d]
+            // if it is out of the target mid, then skip
+            if (x < 0 || x >= heights.size || y < 0 || y >= heights[0].size || vis[x][y] || 
+                Math.abs(heights[i][j] - heights[x][y]) > mid      
+            ) continue
+            dfs(heights, vis, x, y, mid)
+        }
+    }
+    fun minimumEffortPath(heights: Array<IntArray>): Int {
+        val n = heights.size
+        val m = heights[0].size
+        // init possible range
+        var l = 0
+        var r = 1e6.toInt()
+        // binary search
+        while (l < r) {
+            val mid = (l + r) / 2
+            val vis = Array(n) { BooleanArray(m) }
+            // call dfs to check if the dist can be reached or not
+            dfs(heights, vis, 0, 0, mid)
+            // exclude mid
+            if (!vis[n - 1][m - 1]) l = mid + 1
+            // include mid
+            else r = mid
+        }
+        return l
+    }
+}
+```
+
+</TabItem>
+</Tabs>
+
