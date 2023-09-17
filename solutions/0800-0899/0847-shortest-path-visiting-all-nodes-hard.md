@@ -2,6 +2,7 @@
 description: >-
   Author: @heiheihang, @wingkwong |
   https://leetcode.com/problems/shortest-path-visiting-all-nodes/
+tags: [Dynamic Programming, Bit Manipulation, Breadth-First Search, Graph, Bitmask]
 ---
 
 # 0847 - Shortest Path Visiting All Nodes (Hard)
@@ -47,8 +48,6 @@ Explanation: One possible path is [0,1,4,2,3]
 
 ## Approach 1: BFS
 
-_This approach is prepared by @heiheihang._
-
 There are two key observations in this question
 
 * We can use a bitmask to represent visited nodes as there are at most 12 nodes
@@ -58,61 +57,92 @@ We then need to figure out how to keep track of duplication. We can simply store
 
 We can start at any node in the graph initially, and we should update the bitmask accordingly.
 
+<Tabs>
+<TabItem value="py" label="Python">
 <SolutionAuthor name="@heiheihang"/>
 
 ```python
 def shortestPathLength(self, graph: List[List[int]]) -> int:
-        
-        #a visited set to prevent duplication
-        visited = set()
-        
-        #number of nodes in the graph
-        n = len(graph)
-        
-        #we want to visit all nodes (1111...1111)
-        target = (1 << n) - 1
-        
-        #a level set to keep the states at the current depth
-        level = set()
-        
-        #we can start at any node initially
-        for i in range(n):
-            level.add((i, 1 << i))
-        
-        #keep track of the distance of the path
-        depth = 0
-        
-        while(level):
-            
-            #store the states in the next level
-            new_level = set()
-            
-            for node, mask in level:
-    
-                #continue if state is visited before
-                if (node,mask) in visited:
-                    continue
-                
-                #return depth if all nodes have been visited
-                if(mask == target):
-                    return depth
-                
-                #add the current state to visited
-                visited.add((node,mask))
-                
-                #add the visiting neighbour state to the next level
-                for neighbour in graph[node]:
-                    new_level.add((neighbour, mask | (1 << neighbour)))
-            
-            #go to the next level
-            level = new_level
-            
-            #increase distance by 1
-            depth += 1
-        
-        #should never reach here
-        return -1
+    # a visited set to prevent duplication
+    visited = set()
+    # number of nodes in the graph
+    n = len(graph)
+    # we want to visit all nodes (1111...1111)
+    target = (1 << n) - 1
+    # a level set to keep the states at the current depth
+    level = set()
+    # we can start at any node initially
+    for i in range(n):
+        level.add((i, 1 << i))
+    # keep track of the distance of the path
+    depth = 0
+    while (level):
+        # store the states in the next level
+        new_level = set()
+        for node, mask in level:
+            # continue if state is visited before
+            if (node,mask) in visited:
+                continue
+            # return depth if all nodes have been visited
+            if(mask == target):
+                return depth
+            # add the current state to visited
+            visited.add((node,mask))
+            # add the visiting neighbour state to the next level
+            for neighbour in graph[node]:
+                new_level.add((neighbour, mask | (1 << neighbour)))
+        # go to the next level
+        level = new_level
+        # increase distance by 1
+        depth += 1
+    # should never reach here
+    return -1
 ```
+
+</TabItem>
+
+<TabItem value="kotlin" label="Kotlin">
+<SolutionAuthor name="@wingkwong"/>
+
+```kt
+class Solution {
+    fun shortestPathLength(graph: Array<IntArray>): Int {
+        val n = graph.size
+        if (n == 1) {
+            return 0
+        }
+        val q: Queue<IntArray> = LinkedList()
+        val vis = Array(n) { BooleanArray((1 shl n) - 1) }
+        for (i in 0 until n) {
+            q.add(intArrayOf(i, 1 shl i))
+            vis[i][1 shl i] = true
+        }
+        var steps = 0
+        while (q.isNotEmpty()) {
+            val next_q: Queue<IntArray> = LinkedList()
+            for (i in 0 until q.size) {
+                val (u, mask) = q.poll()
+                for (v in graph[u]) {
+                    val next_mask = mask or (1 shl v)
+                    if (next_mask == (1 shl n) - 1) {
+                        return steps + 1
+                    }
+                    if (!vis[v][next_mask]) {
+                        vis[v][next_mask] = true
+                        next_q.add(intArrayOf(v, next_mask))
+                    }
+                }
+            }
+            steps++
+            q.addAll(next_q)
+        }
+        return 0
+    }
+}
+```
+
+</TabItem>
+</Tabs>
 
 ## Approach 2: Floyd-Warshall & TSP
 
@@ -124,6 +154,8 @@ What's left is similar to TSP, which is Traveling Salesman Problem. Given a set 
 
 Let $$dp[i][mask]$$ be the shortest distances with visited nodes (marked as $$1$$ in $$mask$$) from the starting point $$i$$. In our function, first we check if $$dp[src][mask]$$ has been calculated before. If so, we can return it immediately. Otherwise, let's set this node in $$mask$$ and compare it with the target mask, which is $$(1 << n) - 1$$, i.e. all 1s with $$n$$ digits. If it matches with target mask, that means we visited all the nodes. Hence, we return $$0$$. Otherwise, we look for the next possible node to visit and calculate the distances recursively. At the end, we memoize the shortest distance at the current state and return it.
 
+<Tabs>
+<TabItem value="go" label="Go">
 <SolutionAuthor name="@wingkwong"/>
 
 ```go
@@ -211,3 +243,6 @@ func shortestPathLength(graph [][]int) int {
     return ans
  }
 ```
+
+</TabItem>
+</Tabs>
