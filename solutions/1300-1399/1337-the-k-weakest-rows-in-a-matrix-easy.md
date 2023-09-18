@@ -2,6 +2,7 @@
 description: >-
   Author: @wingkwong,@heiheihang |
   https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix/
+tags: [Array, Binary Search, Sorting, Heap (Priority Queue), Matrix]
 ---
 
 # 1337 - The K Weakest Rows in a Matrix (Easy)
@@ -71,9 +72,11 @@ The rows ordered from weakest to strongest are [0,2,3,1].
 
 ## Approach 1: Brute Force
 
-<SolutionAuthor name="@wingkwong"/>
-
 Iterate each row to find out the number of soldiers, store the count with the row index. Sort it and take the first $$k$$ counts.
+
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -101,15 +104,19 @@ public:
 };
 ```
 
+</TabItem>
+</Tabs>
+
 ## Approach 2: Heap
 
+<Tabs>
+<TabItem value="py" label="Python">
 <SolutionAuthor name="@heiheihang"/>
 
 ```py
 class Solution:
     def kWeakestRows(self, mat: List[List[int]], k: int) -> List[int]:
         rows = []
-        
         for i in range(len(mat)):
             cnt = 0
             for j in range(len(mat[i])):
@@ -120,22 +127,24 @@ class Solution:
             heappush(rows, [-cnt, -i])
             if len(rows) > k:
                 heappop(rows)
-            
         ans = []
-        
         while rows:
             cnt, row = heappop(rows)
             ans.append(-row)
-            
         ans.reverse()
         return ans
 ```
 
+</TabItem>
+</Tabs>
+
 ## Approach 3: Binary Search
 
-<SolutionAuthor name="@wingkwong"/>
-
 Instead of searching linearly, we can use binary search to find out the number of soldiers. The rest is same as approach 1.
+
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -171,11 +180,16 @@ public:
 };
 ```
 
+</TabItem>
+</Tabs>
+
 ## Approach 4: Binary Search + Priority Queue
 
-<SolutionAuthor name="@wingkwong"/>
-
 Instead of using a vector to store and sort, we use priority queue to handle the order.
+
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -207,3 +221,37 @@ public:
     }
 };
 ```
+</TabItem>
+
+<TabItem value="kotlin" label="Kotlin">
+<SolutionAuthor name="@wingkwong"/>
+
+```kt
+class Solution {
+    fun kWeakestRows(mat: Array<IntArray>, k: Int): IntArray {
+        var ans = IntArray(k)
+        var pq = PriorityQueue<Pair<Int, Int>>(compareBy( {it.first }, { it.second }))
+        fun search(nums: IntArray, target: Int): Int {
+            val n = nums.size
+            var l = 0
+            var r = n
+            while (l < r) {
+                var m = (l + r) / 2
+                if (nums[m] == target) l = m + 1
+                else r = m
+            }
+            return l
+        }
+        for (i in mat.indices) {
+            pq.add(Pair(search(mat[i], 1), i))
+        }
+        for (i in 0 until k) {
+            ans[i] = pq.poll().second
+        }
+        return ans
+    }
+}
+```
+
+</TabItem>
+</Tabs>
