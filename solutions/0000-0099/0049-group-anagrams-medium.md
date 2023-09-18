@@ -180,8 +180,16 @@ class Solution {
 public:
     vector<vector<string>> groupAnagrams(vector<string>& strs) {
         int M = 1e9 + 9;
-        vector<int> primes(26);
-        for (int i = 0; i < 26; i++)  primes[i] = i * i + i + 41;
+        vector<int> primes = {
+            2, 3, 5, 7, 11,
+            13, 17, 19, 23, 29,
+            31, 37, 41, 43, 47,
+            53, 59, 61, 67, 71,
+            73, 79, 83, 89, 97, 
+            101
+        };
+		// hacked by ["djrw", "beisx", "ceflvx", "anp"] :D
+        // for (int i = 0; i < 26; i++)  primes[i] = i * i + i + 41;
         unordered_map<long long, vector<string>> m;
         for (int i = 0; i < strs.size(); i++) {
             long long k = 1;
