@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wingkwong, @vigneshshiv | https://leetcode.com/problems/is-subsequence/'
+tags: [Two Pointers, String, Dynamic Programming]
 ---
 
 # 0392 - Is Subsequence (Easy)
@@ -285,6 +286,35 @@ class Solution {
             return dp[i][j] = 1 + lcs(s, t, i - 1, j - 1, dp);
         }
         return dp[i][j] = Math.max(lcs(s, t, i - 1, j, dp), lcs(s, t, i, j - 1, dp));
+    }
+}
+```
+</TabItem>
+
+<TabItem value="kotlin" label="Kotlin">
+<SolutionAuthor name="@wingkwong"/>
+
+```kt
+class Solution {
+    fun longestCommonSubsequence(s: String, t: String): Int {
+        val n = s.length
+        val m = t.length
+        val dp = Array(n + 1) { IntArray(m + 1) }
+        for (i in 1 .. n) {
+            for (j in 1 .. m) {
+                if (s[i - 1] == t[j - 1]) {
+                    dp[i][j] = dp[i - 1][j - 1] + 1
+                } else {
+                    dp[i][j] = maxOf(dp[i - 1][j], dp[i][j - 1])
+                }
+            }
+        }
+        return dp[n][m]
+    }
+    
+    fun isSubsequence(s: String, t: String): Boolean {
+        val n = s.length
+        return longestCommonSubsequence(s, t) == n
     }
 }
 ```
