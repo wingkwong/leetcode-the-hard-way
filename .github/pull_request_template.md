@@ -4,7 +4,7 @@ Provide summary of changes with issue number if any.
 
 ## Checklist
 
-**If you haven't fulfilled the below requirements or even delete the entire checklist, your PR won't be reviewed and will be closed without notice.**
+**If you haven't fulfilled the below requirements or even delete the entire checklist, your PR won't be reviewed and will be closed without notice. Regular contributors (with 10+ PRs) can skip this part.**
 
 ### General 
 
