@@ -15,11 +15,11 @@
     "crawl": "docker run -it --env-file=.env.local -e \"CONFIG=$(cat ./config.json | jq -r tostring)\" algolia/docsearch-scraper"
   },
   "dependencies": {
-    "@docusaurus/core": "2.4.1",
-    "@docusaurus/plugin-content-docs": "2.4.1",
+    "@docusaurus/core": "2.4.3",
+    "@docusaurus/plugin-content-docs": "2.4.3",
     "@docusaurus/plugin-google-analytics": "2.4.3",
     "@docusaurus/plugin-google-gtag": "2.4.3",
-    "@docusaurus/preset-classic": "2.4.1",
+    "@docusaurus/preset-classic": "2.4.3",
     "@mdx-js/react": "^1.6.22",
     "clsx": "^2.0.0",
     "hast-util-is-element": "^3.0.0",
@@ -30,7 +30,7 @@
     "remark-math": "3.0.1"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "2.4.2"
+    "@docusaurus/module-type-aliases": "2.4.3"
   },
   "browserslist": {
     "production": [
