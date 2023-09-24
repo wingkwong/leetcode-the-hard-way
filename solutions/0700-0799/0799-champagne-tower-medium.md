@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wingkwong | https://leetcode.com/problems/champagne-tower/'
+tags: [Dynamic Programming]
 ---
 
 # 0799 - Champagne Tower (Medium)
@@ -52,6 +53,8 @@ Output: 1.00000
 
 Let $$dp[i][j]$$ be the amount poured to a glass located at row $$i$$ and column $$j$$. We know that the topmost glass is $$poured$$ so the base case is $$dp[0][0] = poured$$. If the glass has excess liquid, then it will fall equal to the glass to the left and the right of it. It means if $$dp[i][j]$$ is greater than $$1$$, then the overflow $$dp[i][j] - 1$$will be equally distributed to the glass to the left $$dp[i + 1][j]$$ and to the right $$dp[i + 1][j + 1]$$. We can just simulate it and return the answer. Since $$dp[queryRow][queryGlass]$$ may exceed $$1$$, we need to return $$1$$in this case.
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -80,8 +83,15 @@ public:
 };
 ```
 
+</TabItem>
+</Tabs>
+
+
+
 We can see that the row $$i$$ depends on $$i - 1$$ row so we can use 1D array to store the state. Let $$dp[j]$$ be the amount poured to a glass located at $$j$$ column. We use $$ndp$$ to store the current state while $$dp$$ state stores the previous state. We swap them for every row, i.e. transit the state from row $$i$$ to row $$i + 1$$.
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -114,3 +124,42 @@ public:
     }
 };
 ```
+
+
+</TabItem>
+
+<TabItem value="kotlin" label="Kotlin">
+<SolutionAuthor name="@wingkwong"/>
+
+```kt
+class Solution {
+    fun champagneTower(poured: Int, query_row: Int, query_glass: Int): Double {
+        var dp = DoubleArray(query_glass + 2)
+        // the topmost glass
+        dp[0] = poured.toDouble()
+        for (i in 0 until query_row) {
+            // use ndp to store the current state
+            // while dp here is the previous state
+            val ndp = DoubleArray(query_glass + 2)
+            for (j in 0 .. query_glass) {
+                // check if has any excess liquid
+                if (dp[j] > 1.0) {
+                    // if so, amount - capacity of glass (1.0) = overflow
+                    val overflow = dp[j] - 1.0
+                    // distribute to the left and right equally
+                    ndp[j] += overflow / 2
+                    ndp[j + 1] += overflow / 2
+                }
+            }
+            // transit the state from row i to row i + 1
+            dp = ndp
+        }
+        // dp[query_glass] may have excess liquid
+        // take min to avoid it
+        return minOf(1.0, dp[query_glass])
+    }
+}
+```
+
+</TabItem>
+</Tabs>
