@@ -1,5 +1,6 @@
 ---
 description: "Author: @wingkwong, @radojicic23 | https://leetcode.com/problems/find-the-difference/"
+tags: [Hash Table, String, Bit Manipulation, Sorting]
 ---
 
 # 0389 - Find the Difference (Easy)
@@ -66,6 +67,21 @@ public:
         return ans;
     }
 };
+```
+
+</TabItem>
+
+<TabItem value="kotlin" label="Kotlin">
+<SolutionAuthor name="@wingkwong"/>
+
+```kt
+class Solution {
+    fun findTheDifference(s: String, t: String): Char {
+        var ans = 0
+        for (x in s + t) ans = ans xor x.toInt()
+        return ans.toChar()
+    }
+}
 ```
 
 </TabItem>
