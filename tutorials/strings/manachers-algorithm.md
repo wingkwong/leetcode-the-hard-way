@@ -35,9 +35,9 @@ Before we start let's some terminology clear:
   other side with respect to the center of a given palindrome.
 
   Mirror index depends on the center taken and on computing it comes out
-  to be exactly `mirror_index = 2*c - index`, where `c` is the center index. It is applicable in both cases where index is left and right of the center.
+  to be exactly $\boxed{mirror = 2*c - index}$, where `c` is the center index. It is applicable in both cases where index is left and right of the center.
 
-  The final length to be returned is the normal length is simply `2*palindromic_length + center`
+  The final length to be returned is the normal length is simply $\boxed{2 \times pLength + center}$
 
 Let's walk you through the algorithm along to better develop the intuition behind it, using a common example.
 
@@ -197,7 +197,7 @@ seperate Left and Right bound, just keeping track of right bound should be enoug
 ```
 
 - In the above case, the palindrome centered at given center is within the bounds
-  ( `i + pL` > R is not satisfied ) thus we don't update the center. So there's nothing to do but move to the next index.
+  ( $i + pL > R$ is not satisfied ) thus we don't update the center. So there's nothing to do but move to the next index.
 
 ```
    _                 pLengths[i] = 0
@@ -219,7 +219,7 @@ seperate Left and Right bound, just keeping track of right bound should be enoug
 ```
 
 - Again index is out of bounds, mirror doesn't exist, but this, time the palindromic length is 2.
-  Finally `i + pL > R`, the palindrome goes beyond the bounds hence the center $(c = i)$, and bound $(R = i+pL)$
+  Finally $i + pL > R$, the palindrome goes beyond the bounds hence the center $(c = i)$, and bound $(R = i+pL)$
   should be updated.
 
 ```
@@ -231,7 +231,7 @@ seperate Left and Right bound, just keeping track of right bound should be enoug
 ```
 
 - Here, for the first time mirror exists, thus we take the `pL` from the mirror which is 0. When you try to
-  expand beyond you don't find any palindrome, thus `pL = 0` will be final for this iteration. This palindrome is
+  expand beyond you don't find any palindrome, thus $pL = 0$ will be final for this iteration. This palindrome is
   within bounds and doesn't require updating center.
 
 ```
@@ -262,7 +262,7 @@ seperate Left and Right bound, just keeping track of right bound should be enoug
                ^     R = 7
 ```
 
-- Mirror exists but the length of mirror is larger than the bounds (`R - i = 1`), thus we rathar take
+- Mirror exists but the length of mirror is larger than the bounds ($R - i = 1$), thus we rathar take
   `pL=1` and try to explore more but don't find any palindrome.
 - Either way we will skip through all iterations.
 
@@ -373,7 +373,7 @@ calculate the most efficient 'center' for expansion.
   - The expanded palindromic string could be, "a#b#a**#**a#b#a" but not wrt center 'b' because the palindrome
     with 'b' as center doesn't "touch the left end".
 
-Thus the condition for a valid palindrome reduces to `pLength[i] == i`.
+Thus the condition for a valid palindrome reduces to $pLength[i] == i$.
 
 In order to get to the largest possible palindrome, we go from right to left. Find the
 prefix that needs to be added and finally append it. The code looks like following:
@@ -429,6 +429,20 @@ class Solution:
 
         return string[start:end+1].replace("#","")
 ```
+
+## Complexity analysis
+
+- Time Complexity for this algorithm is about $O(n)$:
+
+    We iterate through the string once and calculate the palindromic length at each center. But while
+    doing so we also discover the lengths of other indexes which will be stored in memory. Thus instead
+    of expanding everytime we can find out an indices's palindromic length in constant time.
+
+- Space Complexity for this algorithm is also $O(n)$:
+
+    Space complexity is $O(n)$ because we store an additional `pLengths` array to hold all the palindromic 
+    lengths of the $2n-1$ centers.
+
 
 Other than Palindromic Substrings, Manacher's Algorithm is not always the most efficient algorithm, but still
 a good practice for implementation.
