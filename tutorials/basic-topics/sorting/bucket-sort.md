@@ -124,7 +124,7 @@ public:
 
     Finally, the sorted array is returned as the result of the sortArray function.
 
-## Approach 1: Using Non Uniform Bucket Sizes
+## Approach 2: Using Non Uniform Bucket Sizes
 
 <Tabs>
 <TabItem value="cpp" label="C++">
