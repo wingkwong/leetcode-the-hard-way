@@ -142,7 +142,7 @@ const config = {
 
           {
             type: 'dropdown',
-            label: 'Links',
+            label: '🔗 Links',
             position: 'right',
             items: [
               // {
