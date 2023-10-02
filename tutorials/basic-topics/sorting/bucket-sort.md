@@ -43,7 +43,8 @@ Bucket sort is a non-comparative sorting algorithm that works by distributing el
 
 We can understand the Bucket Sort by using Scatter-Gather Approach.
 
-![example sort](https://github.com/wingkwong/leetcode-the-hard-way/assets/90080911/479e85a0-3e0c-4316-b040-9b1b96b6a12e)
+![bucket sort example](https://github.com/Sanchita1304/leetcode-the-hard-way/assets/90080911/7045afe4-e20e-4019-acbf-b13dfcb7b886)
+
 
 
 In the above example, the unsorted array is given.
