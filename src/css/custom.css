@@ -192,21 +192,21 @@ table th:nth-child(1) {
   text-align: left;
 }
 
-table tbody > tr > td:nth-child(1) {
+table.suggested-problem-table tbody > tr > td:nth-child(1) {
   width: 30%;
 }
 
-table tbody > tr > td:nth-child(2) {
+table.suggested-problem-table tbody > tr > td:nth-child(2) {
   width: 10%;
   text-align: center;
 }
 
-table tbody > tr > td:nth-child(3) {
+table.suggested-problem-table tbody > tr > td:nth-child(3) {
   width: 10%;
   text-align: center;
 }
 
-table tbody > tr > td:nth-child(4) {
+table.suggested-problem-table tbody > tr > td:nth-child(4) {
   width: 10%;
   text-align: center;
 }

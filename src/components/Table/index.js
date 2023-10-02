@@ -50,7 +50,7 @@ export default function Table({title, collectionLink, isSorted = true, data}) {
         {
           collectionLink && <h4>Start Practicing: <a href={collectionLink} target="_blank">{collectionLink}</a></h4>
         }
-        <table>
+        <table class="suggested-problem-table">
           <thead>
             <tr>
               <th>Problem Name</th>
