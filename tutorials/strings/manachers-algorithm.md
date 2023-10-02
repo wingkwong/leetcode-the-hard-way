@@ -454,7 +454,7 @@ a good practice for implementation.
 
 ## Template
 
-We've created a [template](../../templates/manachers-algorithm.md) for Manacher's algorithm implementation in different languages so that its easy to use.
+We've created a [template](../../templates/manachers-algorithm) for Manacher's algorithm implementation in different languages so that its easy to use.
 
 </TabItem>
 </Tabs>
