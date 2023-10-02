@@ -10,41 +10,63 @@ keywords:
 
 Please refer the [tutorial](../tutorials/strings/manachers-algorithm) guide for more details. 
 
+The function takes input of a string and returns all possible palindromic strings at each center, possible in the string.
+
 <Tabs>
 <TabItem value="cpp" label="C++">
 
 ```cpp
-// Convert odd/even strings to odd
-string str = "";
-for (int i = 0; i < s.length() - 1; i++) {
-    str += s[i];
-    str += "#";
-}
-str += s[s.length() - 1];
+vector<string> palindromicSubstrings(string s) {
+    if (s.empty()) return {};
 
-// Initializing variables
-vector<int> pLengths(str.length(), 0);
-int c = 0;
-int R = 0;
+    // Convert odd/even strings to odd
+    string str = "";
+    for (int i = 0; i < s.length() - 1; i++) {
+        str += s[i];
+        str += "#";
+    }
+    str += s[s.length() - 1];
 
-for (int i = 0; i < str.length(); i++) {
-    // Mirroring the palindromic length
-    if (i < R) {
-        int mirror = 2 * c - i;
-        pLengths[i] = min(R - i, pLengths[mirror]);
+    // Initializing variables
+    int len = str.length();
+    vector<int> pLengths(len, 0);
+    int c = 0;
+    int R = 0;
+
+    for (int i = 0; i < len; i++) {
+        // Mirroring the palindromic length
+        if (i < R) {
+            int mirror = 2 * c - i;
+            pLengths[i] = min(R - i, pLengths[mirror]);
+        }
+
+        // Exploring beyond bounds
+        while (i - pLengths[i] - 1 >= 0 && i + pLengths[i] + 1 < len &&
+               str[i + pLengths[i] + 1] == str[i - pLengths[i] - 1]) {
+            pLengths[i]++;
+        }
+
+        // Update center and bound
+        if (pLengths[i] + i > R) {
+            c = i;
+            R = i + pLengths[i];
+        }
     }
 
-    // Exploring beyond bounds
-    while (i - pLengths[i] - 1 >= 0 && i + pLengths[i] + 1 < str.length() &&
-           str[i + pLengths[i] + 1] == str[i - pLengths[i] - 1]) {
-        pLengths[i]++;
+    // Return all possible palindromic strings
+    vector<string> strings;
+    for (int i = 0; i < len; i++) {
+        string palindrome = str.substr(i - pLengths[i], 2 * pLengths[i] + 1);
+        string result = "";
+        for (char ch : palindrome) {
+            if (ch != '#') {
+                result += ch;
+            }
+        }
+        strings.push_back(result);
     }
 
-    // Update center and bound
-    if (pLengths[i] + i > R) {
-        c = i;
-        R = i + pLengths[i];
-    }
+    return strings;
 }
 
 ```
@@ -53,38 +75,53 @@ for (int i = 0; i < str.length(); i++) {
 <TabItem value="java" label="Java">
 
 ```java
-// create string with hashes using string builder
-StringBuilder stringBuilder = new StringBuilder();
-for (int i = 0; i < s.length() - 1; i++) {
-    stringBuilder.append(s.charAt(i));
-    stringBuilder.append("#");
-}
-stringBuilder.append(input.charAt(input.length() - 1));
-String string = stringBuilder.toString();
+public List<String> palindromicSubstrings(String s) {
+    if (s.length() == 0) return new ArrayList<>();
 
-
-// initializing variables
-int[] pLengths = new int[string.length];
-int c = 0;
-int R = 0;
-
-for ( int i = 0; i < string.length-1; i++){
-    int mirror = 2*C - i
-
-    // mirroring the palindromic length
-    if (i<R) 
-        pLengths[i] = Math.min(R-i, pLengths[mirror])
-
-    // exploring beyond bounds
-    while ( i - pLengths[i] - 1 >= 0 && i + pLengths[i] + 1 < len(string) &&
-        string[i + 1 + pLengths[i]] == string[i - 1 - pLengths[i]] )
-        pLengths[i]++;
-
-    // update center and bound
-    if (i + pLengths[i] > R){
-        c = i;
-        R = i + pLengthsp[i];
+    // Convert odd/even strings to odd
+    StringBuilder str = new StringBuilder();
+    for (int i = 0; i < s.length() - 1; i++) {
+        str.append(s.charAt(i));
+        str.append("#");
     }
+    str.append(s.charAt(s.length() - 1));
+
+    // Initializing variables
+    int len = str.length();
+    int[] pLengths = new int[len];
+    int c = 0;
+    int R = 0;
+
+    for (int i = 0; i < len; i++) {
+        // Mirroring the palindromic length
+        if (i < R) {
+            int mirror = 2 * c - i;
+            pLengths[i] = Math.min(R - i, pLengths[mirror]);
+        }
+
+        // Exploring beyond bounds
+        while (i - pLengths[i] - 1 >= 0 && i + pLengths[i] + 1 < len &&
+               str.charAt(i + pLengths[i] + 1) == str.charAt(i - pLengths[i] - 1)) {
+            pLengths[i]++;
+        }
+
+        // Update center and bound
+        if (pLengths[i] + i > R) {
+            c = i;
+            R = i + pLengths[i];
+        }
+    }
+
+    // Return all possible palindromic strings
+    List<String> strings = new ArrayList<>();
+    for (int i = 0; i < len; i++) {
+        String palindrome = str.substring(i - pLengths[i], i + pLengths[i] + 1).replace("#", "");
+        if (!palindrome.isEmpty()) {
+            strings.add(palindrome);
+        }
+    }
+
+    return strings;
 }
 
 ```
@@ -93,34 +130,42 @@ for ( int i = 0; i < string.length-1; i++){
 <TabItem value="python" label="Python">
 
 ```python
-string = ""
-# convert odd/even strings to odd
-for i in range(len(s)-1):
-    string += s[i] + "#"
-string += s[len(s)-1]
+def palindromicStrings( s: str) -> list[str]:
 
-# initializing variables
-pLengths = [0]* len(string)
-c = 0
-R = 0 
-
-for i in range(len(string)):
-
-    # mirroring the palindromic length
-    if i < R:
-        mirror = 2*c - i
-        pLengths[i] = min(R-i, pLengths[mirror])
+    # convert odd/even strings to odd
+    string = ""
+    for i in range(len(s)-1):
+        string += s[i] + "#"
+    string += s[len(s)-1]
     
-    # exploring beyond bounds
-    while ( i - pLengths[i] - 1 >= 0 and i + pLengths[i] + 1 < len(string)
-    and string[i + pLengths[i] + 1] == string[i - pLengths[i] - 1] ): 
-        pLengths[i] += 1
+    # initializing variables
+    pLengths = [0]* len(string)
+    c = 0
+    R = 0 
     
-    # update center and bound
-    if pLengths[i] + i > R:
-        c = i
-        R = i + pLengths[i]
-
+    for i in range(len(string)):
+    
+        # mirroring the palindromic length
+        if i < R:
+            mirror = 2*c - i
+            pLengths[i] = min(R-i, pLengths[mirror])
+        
+        # exploring beyond bounds
+        while ( i - pLengths[i] - 1 >= 0 and i + pLengths[i] + 1 < len(string)
+        and string[i + pLengths[i] + 1] == string[i - pLengths[i] - 1] ): 
+            pLengths[i] += 1
+        
+        # update center and bound
+        if pLengths[i] + i > R:
+            c = i
+            R = i + pLengths[i]
+    
+        # return all possile palindromic strings
+        strings = []
+        for i in range(len(pLengths)):
+            strings.append ( string[ i - pLengths[i]: i + pLengths[i] + 1 ] )
+        return strings
+            
 ```
 </TabItem>
 </Tabs>
