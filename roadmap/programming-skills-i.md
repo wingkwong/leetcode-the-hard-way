@@ -45,13 +45,13 @@ export const problems = [
     "problemName": "1779. Find Nearest Point That Has the Same X or Y Coordinate",
     "difficulty": "Easy",
     "leetCodeLink": "https://leetcode.com/problems/find-nearest-point-that-has-the-same-x-or-y-coordinate",
-    "solutionLink": ""
+    "solutionLink": "../../solutions/0900-0999/largest-perimeter-triangle-easy"
   },
   {
     "problemName": "1822. Sign of the Product of an Array",
     "difficulty": "Easy",
     "leetCodeLink": "https://leetcode.com/problems/sign-of-the-product-of-an-array",
-    "solutionLink": ""
+    "solutionLink": "../../solutions/1800-1899/sign-of-the-product-of-an-array-easy"
   },
   {
     "problemName": "1502. Can Make Arithmetic Progression From Sequence",
