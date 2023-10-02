@@ -8,7 +8,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
 
 function HomepageHeader() {
-  const { siteConfig } = useDocusaurusContext();
+  const {siteConfig} = useDocusaurusContext();
   return (
     <section className={clsx('hero', styles.heroBanner)}>
       <div className="container">
@@ -40,82 +40,14 @@ function HomepageHeader() {
   );
 }
 
-// new code for about section
-
-const svgList = [
-  {
-    title: 'github',
-    Svg: require('../../static/icon/github.svg').default,
-    color: 'black',
-    link: 'https://github.com/wingkwong/leetcode-the-hard-way',
-  },
-  {
-    title: 'discord',
-    Svg: require('../../static/icon/discord.svg').default,
-    link: 'https://discord.com/invite/Nqm4jJcyBf',
-  },
-  {
-    title: 'youtube',
-    Svg: require('../../static/icon/youtube.svg').default,
-    color: 'black',
-    link: 'https://www.youtube.com/@leetcodethehardway?sub_confirmation=1',
-  },
-  // {
-  //   title: 'linkedin',
-  //   Svg: require('../../static/icon/linkedin.svg').default,
-  //   color: 'black',
-  //   link: '',
-  // },  
-  // {
-  //   title: 'slack',
-  //   Svg: require('../../static/icon/slack.svg').default,
-  //   color: '#2979ff',
-  //   link: '',
-  // },
-
-]
-const Svg = ({ Svg, color, title, link }) => {
-  return (
-    <a href={link} target='_blank'>
-      <Svg className={styles.svg} style={{ fill: color }} />
-    </a>
-  )
-}
-
 function HomepageAbout() {
   return (
     <section className={styles.about}>
       <div className="container">
         <h1>📙 About</h1>
-
-        <div className={styles.myHeroContainer}>
-          <div className={styles.leftContainer}>
-            {/* <h2 className={styles.leftContainer_h1}>
-               LeetCode The Hard Way
-            </h2> */}
-            <p className={styles.leftContainer_p}>
-              Welcome to <b>LeetCode The Hard Way</b>, the ultimate resource for those looking to improve their skills in data structures and algorithms!
-              <br /> <br />
-              Join us for the future of coding excellence
-            </p>
-
-            <div className={styles.svgContainer}>
-              {svgList.map((item, index) => {
-                return <Svg {...item} key={item.title} />
-              })}
-            </div>
-
-          </div>
-
-          <div className={styles.rightContainer} style={{ borderRadius: '10px' }}>
-            <img src="img/favicon.ico" alt='HeroImg' />
-          </div>
-
-        </div>
-
-        <p style={{ textAlign: 'left' }}>
-          Our website is dedicated to providing comprehensive tutorials and detailed solutions to some of the most challenging problems in LeetCode. Whether you're a student looking to ace your next exam or a professional seeking to level up your coding skills, our tutorials and solutions are designed to help you succeed. Our content covers a range of popular programming languages, so you can learn and practice using the language of your choice.
-          <br /><br />
+        <p style={{textAlign: 'left'}}> 
+          Welcome to "LeetCode The Hard Way," the ultimate resource for those looking to improve their skills in data structures and algorithms! Our website is dedicated to providing comprehensive tutorials and detailed solutions to some of the most challenging problems in LeetCode. Whether you're a student looking to ace your next exam or a professional seeking to level up your coding skills, our tutorials and solutions are designed to help you succeed. Our content covers a range of popular programming languages, so you can learn and practice using the language of your choice.
+          <br/><br/>
           From basic data structures to advanced topics, we've got you covered. At "LeetCode The Hard Way," we believe that learning should be fun and engaging. With plenty of LC problems and examples to work through, you'll have the opportunity to apply what you've learned and test your skills. So why wait? Start exploring our tutorials and solutions today, and take the first step towards becoming a DSA expert!
         </p>
       </div>
@@ -128,7 +60,7 @@ function HomepageAdvertise() {
     <section className={styles.advertise}>
       <div className="container">
         <h1>🤝 Sponsorship and Advertisement</h1>
-        <p>
+        <p> 
           Interested in advertising on LeetCode The Hard Way? Our website provides free and comprehensive tutorials and solutions. As a free resource, we rely on the support of our community and advertisers to continue providing high-quality content. By sponsoring "LeetCode The Hard Way," you'll have the opportunity to connect with our audience through targeted advertisements and brand placement, while also supporting a valuable resource for programmers everywhere.
         </p>
         <p>
@@ -140,14 +72,14 @@ function HomepageAdvertise() {
 }
 
 export default function Home() {
-  const { siteConfig } = useDocusaurusContext();
+  const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
       title={`${siteConfig.title}`}
       description="LeetCode The Hard Way - From Absolute Beginner to Quitter">
       <Head>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4531209581366540"
-          crossorigin="anonymous"></script>
+      crossorigin="anonymous"></script>
       </Head>
       <main>
         <HomepageHeader />
