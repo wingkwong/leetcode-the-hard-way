@@ -14,10 +14,6 @@ Please refer the [tutorial](../tutorials/basic-topics/binary-search) guide for m
 <TabItem value="cpp" label="C++">
 
 ```cpp
-// ---------------------------------
-// target < nums[m]
-// ---------------------------------
-
 int search(vector<int>& nums, int target) {
     // init possible boundary
     int n = nums.size(), l = 0, r = n - 1;
@@ -25,7 +21,7 @@ int search(vector<int>& nums, int target) {
         // get the middle one
         // for even number of elements, take the upper one
         int m = l + (r - l + 1) / 2;
-        // exclude m
+        // exclude m (condition not fulfilled)
         if (target < nums[m]) r = m - 1;
         // include m
         else l = m;
@@ -38,10 +34,6 @@ int search(vector<int>& nums, int target) {
 <TabItem value="java" label="Java">
 
 ```java
-// ---------------------------------
-// target < nums[m]
-// ---------------------------------
-
 int search(int[] nums, int target) {
     // init possible boundary
     int n = nums.length, l = 0, r = n - 1;
@@ -49,7 +41,7 @@ int search(int[] nums, int target) {
         // get the middle one
         // for even number of elements, take the upper one
         int m = l + (r - l + 1) / 2;
-        // exclude m
+        // exclude m (condition not fulfilled)
         if (target < nums[m]) r = m - 1;
         // include m
         else l = m;
@@ -66,10 +58,6 @@ int search(int[] nums, int target) {
 <TabItem value="cpp" label="C++">
 
 ```cpp
-// ---------------------------------
-// target > nums[m]
-// ---------------------------------
-
 int search(vector<int>& nums, int target) {
     // init possible boundary
     int n = nums.size(), l = 0, r = n - 1;
@@ -77,7 +65,7 @@ int search(vector<int>& nums, int target) {
         // get the middle one
         // for even number of elements, take the lower one
         int m = l + (r - l) / 2;
-        // exclude m
+        // exclude m (condition not fulfilled)
         if (target > nums[m]) l = m + 1;
         // include m
         else r = m;
@@ -90,10 +78,6 @@ int search(vector<int>& nums, int target) {
 <TabItem value="java" label="Java">
 
 ```java
-// ---------------------------------
-// target > nums[m]
-// ---------------------------------
-
 int search(int[] nums, int target) {
     // init possible boundary
     int n = nums.length, l = 0, r = n - 1;
@@ -101,7 +85,7 @@ int search(int[] nums, int target) {
         // get the middle one
         // for even number of elements, take the lower one
         int m = l + (r - l) / 2;
-        // exclude m
+        // exclude m (condition not fulfilled)
         if (target > nums[m]) l = m + 1;
         // include m
         else r = m;
