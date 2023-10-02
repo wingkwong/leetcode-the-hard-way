@@ -50,6 +50,7 @@ The index of the element 9 is 4. We can use the following template to find the t
 <SolutionAuthor name="@heiheihang"/>
 
 ```python
+#Iterative
 def binarySearch(nums, target):
     lp, rp = 0, len(nums) - 1
     while (lp <= rp):
@@ -61,6 +62,22 @@ def binarySearch(nums, target):
         else:
             rp = mid - 1
     return -1 
+
+#Recursive 
+def binarySearch(nums: [int], low: int, high: int, target: int):
+    if low > high:
+        return -1  # Base case
+    
+    # Perform the steps:
+    mid = (low + high) // 2
+    if nums[mid] == target:
+        return mid
+    elif target > nums[mid]:
+        return binarySearch(nums, mid + 1, high, target)
+    return binarySearch(nums, low, mid - 1, target)
+
+def search(nums: [int], target: int):
+    return binarySearch(nums, 0, len(nums) - 1, target)
 ```
 </TabItem>
 
@@ -68,6 +85,7 @@ def binarySearch(nums, target):
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
+// Iterative
 int binarySearch(vector<int>& nums, int target) {
     int lp = 0, rp = nums.size() - 1;
     while (lp <= rp) {
@@ -81,6 +99,23 @@ int binarySearch(vector<int>& nums, int target) {
         }
     }
     return -1;
+}
+
+//Recusive
+int binarySearch(vector<int>& nums, int low, int high, int target) {
+
+    if (low > high) return -1; //Base case.
+
+    // Perform the steps:
+    int mid = (low + high) / 2;
+    if (nums[mid] == target) return mid;
+    else if (target > nums[mid])
+        return binarySearch(nums, mid + 1, high, target);
+    return binarySearch(nums, low, mid - 1, target);
+}
+
+int search(vector<int>& nums, int target) {
+    return binarySearch(nums, 0, nums.size() - 1, target);
 }
 ```
 </TabItem>
@@ -104,6 +139,22 @@ int binarySearch(int[] nums, int target) {
     }
     return -1;
 }
+
+//Recusive
+public static int binarySearch(int[] nums, int low, int high, int target) {
+        if (low > high) return -1; //Base case.
+
+        // Perform the steps:
+        int mid = (low + high) / 2;
+        if (nums[mid] == target) return mid;
+        else if (target > nums[mid])
+            return binarySearch(nums, mid + 1, high, target);
+        return binarySearch(nums, low, mid - 1, target);
+    }
+
+public static int search(int[] nums, int target) {
+    return binarySearch(nums, 0, nums.length - 1, target);
+} 
 
 ```
 </TabItem>
@@ -159,6 +210,24 @@ export const suggestedProblems = [
     "problemName": "0162 - Find Peak Element",
     "difficulty": "Medium",
     "leetCodeLink": "https://leetcode.com/problems/find-peak-element/",
+    "solutionLink": ""
+  },
+  {
+    "problemName": "1011. Capacity To Ship Packages Within D Days",
+    "difficulty": "Medium",
+    "leetCodeLink": "https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/",
+    "solutionLink": ""
+  },
+  {
+    "problemName": "74. Search a 2D Matrix",
+    "difficulty": "Medium",
+    "leetCodeLink": "https://leetcode.com/problems/search-a-2d-matrix/",
+    "solutionLink": ""
+  },
+  {
+    "problemName": "240. Search a 2D Matrix II",
+    "difficulty": "Medium",
+    "leetCodeLink": "https://leetcode.com/problems/search-a-2d-matrix-ii/",
     "solutionLink": ""
   }
 ]
