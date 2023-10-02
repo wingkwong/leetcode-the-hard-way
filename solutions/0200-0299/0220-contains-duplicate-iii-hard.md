@@ -51,7 +51,7 @@ Explanation: After trying all the possible pairs (i, j), we cannot satisfy the t
 - `1 <= indexDiff <= nums.length`
 - `0 <= valueDiff <= 109`
 
-## Approach 1: Bucket Sort
+## Approach : Bucket Sort
 
 1. Input Validation: 
 
