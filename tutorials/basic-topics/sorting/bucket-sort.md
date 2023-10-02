@@ -43,7 +43,7 @@ Bucket sort is a non-comparative sorting algorithm that works by distributing el
 
 We can understand the Bucket Sort by using Scatter-Gather Approach.
 
-![example sort](https://github.com/wingkwong/leetcode-the-hard-way/assets/90080911/479e85a0-3e0c-4316-b040-9b1b96b6a12e)
+![bucket sort example](https://github.com/Sanchita1304/leetcode-the-hard-way/assets/90080911/7045afe4-e20e-4019-acbf-b13dfcb7b886)
 
 
 In the above example, the unsorted array is given.
@@ -57,6 +57,9 @@ In the above example, the unsorted array is given.
 
 > An array of integers in the range [1,n] is given. We have to sort the array in ascending order and return it.
 
+There are two approaches we can use to solve the problem.
+
+## Approach 1: Using Uniform Bucket Sizes
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -96,18 +99,115 @@ public:
 </TabItem>
 </Tabs>
 
-In this code:
+**Explanation of the above example: **
 
-- We find the minimum and maximum values in the nums array to determine the range of values.
-- We create an array of buckets, with each bucket representing a value in the range from min_val to max_val.
-- We distribute the elements from the nums array into their respective buckets based on their values.
-- Finally, we gather the sorted elements by iterating through the buckets and reconstructing the sorted array.
+1. Find the Minimum and Maximum Values: 
+
+     The algorithm begins by finding the minimum and maximum values in the input array nums. This is done using the `min_element` and `max_element` functions from the C++ Standard Library. These values are crucial because they determine the range of values that need to be sorted.
+
+2. Create Buckets: 
+
+    Divides the range of input values into a series of "buckets." The number of buckets is determined by the range between the minimum and maximum values plus one `(bucket_range = max_val - min_val + 1)`. Each bucket is initially empty and will be used to count how many times each value appears in the input array.
+3. Distribute Elements into Buckets: 
+
+    The algorithm iterates through the input array nums. For each element, it calculates which bucket it belongs to by subtracting the min_val. It then increments the count in that bucket. This step effectively counts the occurrences of each value in the input array.
+
+4. Gather Sorted Elements:
+
+     After counting the occurrences of each value in the buckets, the algorithm reconstructs the sorted array. It iterates through the buckets in order and, for each non-empty bucket, adds the corresponding value back to the sorted array as many times as indicated by the count in the bucket. This process ensures that the values are added to the sorted array in ascending order.
+
+5. Return Sorted Array: 
+
+    Finally, the sorted array is returned as the result of the sortArray function.
+
+## Approach 1: Using Non Uniform Bucket Sizes
+
+<Tabs>
+<TabItem value="cpp" label="C++">
+
+```cpp
+class Solution {
+public:
+    vector<int> sortArray(vector<int>& nums) {
+        int n = nums.size();
+        int min_val = *min_element(nums.begin(), nums.end());
+        int max_val = *max_element(nums.begin(), nums.end());
+
+        // Calculate a minimum possible gap between two elements in the sorted array.
+        double min_gap = max(1.0, static_cast<double>(max_val - min_val) / (n - 1));
+
+        // Determine the number of buckets.
+        int num_buckets = static_cast<int>((max_val - min_val) / min_gap) + 1;
+
+        // Create and initialize the buckets.
+        vector<vector<int>> buckets(num_buckets);
+
+        // Distribute elements into buckets.
+        for (int num : nums) {
+            int bucket_index = static_cast<int>((num - min_val) / min_gap);
+            buckets[bucket_index].push_back(num);
+        }
+
+        // Sort individual buckets and concatenate them.
+        vector<int> sorted_array;
+        for (int i = 0; i < num_buckets; ++i) {
+            sort(buckets[i].begin(), buckets[i].end());
+            for (int num : buckets[i]) {
+                sorted_array.push_back(num);
+            }
+        }
+
+        return sorted_array;
+    }
+};
+
+```
+
+</TabItem>
+</Tabs>
+
+**Explanation of the above example: **
+
+1. Find Minimum and Maximum Values:
+
+     The first step is to find the minimum `(min_val)` and maximum `(max_val)` values in the input array nums. These values are needed to determine the range of values in the array.
+
+2. Calculate Minimum Gap: 
+
+    Calculate a minimum possible gap `(min_gap)` between two elements in the sorted array. This gap is determined by the range of values divided by the number of elements minus 1 `((max_val - min_val) / (n - 1))`. It ensures that the buckets are created based on the distribution of values.
+
+3. Determine the Number of Buckets: 
+
+    Calculate the number of buckets `(num_buckets)` by dividing the range of values `(max_val - min_val)` by the calculated min_gap. The +1 is added to ensure that the maximum value is included in a bucket.
+
+4. Create and Initialize the Buckets: 
+
+    Create an empty vector called buckets with a size equal to num_buckets. Each element of this vector will represent a bucket for storing numbers within a specific range.
+
+5. Distribute Elements into Buckets: 
+
+    Iterate through the elements of the input array nums. For each element num, calculate its position in the buckets vector by using the formula `(num - min_val) / min_gap`. This determines which bucket the element belongs to, considering its value and the min_gap. Add the element to the corresponding bucket.
+
+6. Sort Individual Buckets: 
+
+    For each bucket, sort its elements in ascending order. This ensures that elements within each bucket are correctly ordered.
+
+7. Concatenate Sorted Buckets: 
+
+    Iterate through the buckets vector in order and concatenate the sorted elements from each bucket into a single sorted_array.
+
+8. Return Sorted Array: 
+    After processing all buckets, the sorted_array will contain all elements from the input array nums sorted in ascending order. Return this sorted array as the result.
+
 
 **Time Complexity : $$O(N)$$**
 
 **Space Complexity : $$O(n+k)$$**
 
 Here, "n" is the number of elements in the input array 'nums' and "k" is the range of values in the array.
+
+**Difference between above approaches:**  Uniform Bucket Sort uses fixed-size buckets suitable for uniformly distributed data, while Non-Uniform Bucket Sort adapts bucket sizes to handle data with varying value densities, making it more suitable for non-uniformly distributed data. The choice between them depends on the characteristics of the data being sorted.
+
 
 Bucket Sort is useful for sorting when the input data is uniformly distributed across a range of values.
 
@@ -116,19 +216,19 @@ export const suggestedProblems = [
           "problemName": "451. Sort Characters By Frequency",
           "difficulty": "Medium",
           "leetCodeLink": "https://leetcode.com/problems/sort-characters-by-frequency/",
-          "solutionLink": "../../../solutions/0400-0499/sort-characters-by-frequency"
+          "solutionLink": "../../../solutions/0400-0499/sort-characters-by-frequency-medium"
       },
       {
           "problemName": "164. Maximum Gap",
           "difficulty": "Medium",
           "leetCodeLink": "https://leetcode.com/problems/maximum-gap/",
-          "solutionLink": "../../../solutions/0100-0199/maximum-gap"
+          "solutionLink": "../../../solutions/0100-0199/maximum-gap-medium"
       },
       {
           "problemName": "220. Contains Duplicate III",
           "difficulty": "Hard",
           "leetCodeLink": "https://leetcode.com/problems/contains-duplicate-iii/",
-          "solutionLink": "../../../solutions/0200-0299/contains-duplicate-III"
+          "solutionLink": "../../../solutions/0200-0299/contains-duplicate-iii-hard"
       },
 ]
 

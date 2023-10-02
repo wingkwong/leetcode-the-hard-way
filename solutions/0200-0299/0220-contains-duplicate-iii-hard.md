@@ -53,25 +53,39 @@ Explanation: After trying all the possible pairs (i, j), we cannot satisfy the t
 
 ## Approach 1: Bucket Sort
 
-1. Check for edge cases: If indexDiff is less than or equal to 0 or valueDiff is less than 0,   return false as it's impossible to find a valid pair.
+1. Input Validation: 
 
-2. Initialize an unordered map buckets to store the mapping of bucket numbers to values.
+    The function first checks if indexDiff is less than or equal to 0 or if valueDiff is less than 0. If either of these conditions is met, the function returns false. This is done to handle invalid input values.
 
-3. Calculate the bucketWidth as valueDiff + 1. This determines the width of each bucket.
+2. Bucket Initialization: 
 
-4. Iterate through the elements in the nums array.
+    The code uses an unordered map called buckets to store the elements of the array. Each bucket represents a range of values. The width of each bucket is determined by bucketWidth, which is valueDiff + 1. The purpose of buckets is to group elements within a certain range of values together.
 
-5. For each element num, calculate the bucket number using the getBucket function. This function ensures that negative numbers are placed in different buckets.
+3. Iterating through the Array: 
 
-6. Check if the current bucket is already in the buckets map. If yes, return true because you found a pair satisfying all conditions.
+    The code iterates through the input array nums using a for loop.
 
-7. Check the neighboring buckets (previous and next) to see if there's a value within the valueDiff range. If yes, return true.
+4. Bucket Assignment: 
 
-8. Update the buckets map with the current bucket and value.
+    For each element nums[i], it calculates the bucket to which it belongs using the getBucket function. The getBucket function ensures that negative numbers are placed in a different bucket by adjusting the bucket number accordingly.
 
-9. If the index is greater than or equal to indexDiff, remove the earliest bucket to maintain the window size.
+5. Checking for Duplicates: 
 
-10. If no valid pair is found, return false after iterating through the entire array.
+    The code checks if the calculated bucket already exists in the buckets map. If it does, it means there's a previous element within the same bucket with a value that satisfies the valueDiff condition. In such a case, the function returns true, indicating that a valid pair of indices was found.
+
+6. Checking Neighboring Buckets: 
+
+    The code also checks the neighboring buckets (one to the left and one to the right). If there's an element in either neighboring bucket that satisfies the valueDiff condition with the current element, it returns true.
+
+
+7. Updating Buckets: 
+
+    After processing an element, it adds it to the buckets map with its corresponding bucket number as the key. If the number of elements in buckets exceeds indexDiff, the code removes the earliest added element from the map to keep it within the desired index difference.
+
+8. Return False by Default: 
+
+    If the function iterates through the entire array without finding a valid pair of indices, it returns false by default.
+
 
 __Time Complexity__ is $O(n)$, where $n$ is the number of elements in the `nums` array.
 
