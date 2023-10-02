@@ -317,7 +317,7 @@ class Solution:
         string += s[len(s)-1]
 
         # initializing variables
-        pLengths = [0]* len(string)
+        pLengths = [0] * len(string)
         c = 0
         R = 0
 
@@ -325,7 +325,7 @@ class Solution:
 
             # mirroring the palindromic length
             if i < R:
-                mirror = 2*c - i
+                mirror = 2 * c - i
                 pLengths[i] = min(R-i, pLengths[mirror])
 
             # exploring beyond bounds
@@ -340,10 +340,10 @@ class Solution:
 
         # fix: some indices having extra pLength
         for i in range(int(len(pLengths)/2)):
-            if pLengths[2*i] % 2:
-                pLengths[2*i] -= 1
-            if pLengths[2*i+1] != 0 and not pLengths[2*i+1] % 2:
-                pLengths[2*i+1] -= 1
+            if pLengths[2 * i] % 2:
+                pLengths[2 * i] -= 1
+            if pLengths[2 * i + 1] != 0 and not pLengths[2 * i + 1] % 2:
+                pLengths[2 * i + 1] -= 1
 
         # return the longest substring
         longest_pL = pLengths.index(max(pLengths))
@@ -384,17 +384,17 @@ prefix that needs to be added and finally append it. The code looks like followi
 
 ```py
 class Solution:
-    def longestPalindrome(self, s: str) -> str:
-		if s is "": return ""
-
+    def shortestPalindrome(self, s: str) -> str:
+        if s is "": return ""
         string = ""
+
         # convert odd/even strings to odd
         for i in range(len(s)-1):
             string += s[i] + "#"
-        string += s[len(s)-1]
+        string += s[len(s) - 1]
 
         # initializing variables
-        pLengths = [0]* len(string)
+        pLengths = [0] * len(string)
         c = 0
         R = 0
 
@@ -402,7 +402,7 @@ class Solution:
 
             # mirroring the palindromic length
             if i < R:
-                mirror = 2*c - i
+                mirror = 2 * c - i
                 pLengths[i] = min(R-i, pLengths[mirror])
 
             # exploring beyond bounds
@@ -417,17 +417,22 @@ class Solution:
 
         # fix: some indices having extra pLength
         for i in range(int(len(pLengths)/2)):
-            if pLengths[2*i] % 2:
-                pLengths[2*i] -= 1
-            if pLengths[2*i+1] != 0 and not pLengths[2*i+1] % 2:
-                pLengths[2*i+1] -= 1
+            if pLengths[2 * i] % 2:
+                pLengths[2 * i] -= 1
+            if pLengths[2 * i + 1] != 0 and not pLengths[2 * i + 1] % 2:
+                pLengths[2 * i + 1] -= 1
 
-        # return the longest substring
-        longest_pL = pLengths.index(max(pLengths))
-        start = longest_pL - max(pLengths)
-        end = longest_pL + max(pLengths)
+        # if pL == i, at any point perform an expansion.
+        for i in range(int(len(pLengths)/2), -1, -1):
+            if pLengths[i] == i:
+                expand_index = i
+                break
 
-        return string[start:end+1].replace("#","")
+        # slice the part to be appended
+        prefix_reversed = string[expand_index+pLengths[i] + 1:len(string)]
+        prefix = ''.join( reversed(prefix_reversed) )
+        string = prefix + string
+        return string.replace("#","")
 ```
 
 ## Complexity analysis
@@ -446,6 +451,10 @@ class Solution:
 
 Other than Palindromic Substrings, Manacher's Algorithm is not always the most efficient algorithm, but still
 a good practice for implementation.
+
+## Template
+
+We've created a [template](../../templates/manachers-algorithm.md) for Manacher's algorithm implementation in different languages so that its easy to use.
 
 </TabItem>
 </Tabs>
