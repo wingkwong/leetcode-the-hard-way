@@ -308,13 +308,14 @@ Finally the code for the problem:
 ```py
 class Solution:
     def longestPalindrome(self, s: str) -> str:
-		if s is "": return ""
+        if s is "":
+            return ""
 
         string = ""
         # convert odd/even strings to odd
-        for i in range(len(s)-1):
+        for i in range(len(s) - 1):
             string += s[i] + "#"
-        string += s[len(s)-1]
+        string += s[len(s) - 1]
 
         # initializing variables
         pLengths = [0] * len(string)
@@ -326,11 +327,14 @@ class Solution:
             # mirroring the palindromic length
             if i < R:
                 mirror = 2 * c - i
-                pLengths[i] = min(R-i, pLengths[mirror])
+                pLengths[i] = min(R - i, pLengths[mirror])
 
             # exploring beyond bounds
-            while ( i - pLengths[i] - 1 >= 0 and i + pLengths[i] + 1 < len(string)
-            and string[i + pLengths[i] + 1] == string[i - pLengths[i] - 1] ):
+            while (
+                i - pLengths[i] - 1 >= 0
+                and i + pLengths[i] + 1 < len(string)
+                and string[i + pLengths[i] + 1] == string[i - pLengths[i] - 1]
+            ):
                 pLengths[i] += 1
 
             # update center and bound
@@ -339,7 +343,7 @@ class Solution:
                 R = i + pLengths[i]
 
         # fix: some indices having extra pLength
-        for i in range(int(len(pLengths)/2)):
+        for i in range(int(len(pLengths) / 2)):
             if pLengths[2 * i] % 2:
                 pLengths[2 * i] -= 1
             if pLengths[2 * i + 1] != 0 and not pLengths[2 * i + 1] % 2:
@@ -349,7 +353,7 @@ class Solution:
         longest_pL = pLengths.index(max(pLengths))
         start = longest_pL - max(pLengths)
         end = longest_pL + max(pLengths)
-        return string[start:end+1].replace("#","")
+        return string[start : end + 1].replace("#", "")
 ```
 
 </TabItem>
@@ -385,11 +389,12 @@ prefix that needs to be added and finally append it. The code looks like followi
 ```py
 class Solution:
     def shortestPalindrome(self, s: str) -> str:
-        if s is "": return ""
+        if s is "":
+            return ""
         string = ""
 
         # convert odd/even strings to odd
-        for i in range(len(s)-1):
+        for i in range(len(s) - 1):
             string += s[i] + "#"
         string += s[len(s) - 1]
 
@@ -403,11 +408,14 @@ class Solution:
             # mirroring the palindromic length
             if i < R:
                 mirror = 2 * c - i
-                pLengths[i] = min(R-i, pLengths[mirror])
+                pLengths[i] = min(R - i, pLengths[mirror])
 
             # exploring beyond bounds
-            while ( i - pLengths[i] - 1 >= 0 and i + pLengths[i] + 1 < len(string)
-            and string[i + pLengths[i] + 1] == string[i - pLengths[i] - 1] ):
+            while (
+                i - pLengths[i] - 1 >= 0
+                and i + pLengths[i] + 1 < len(string)
+                and string[i + pLengths[i] + 1] == string[i - pLengths[i] - 1]
+            ):
                 pLengths[i] += 1
 
             # update center and bound
@@ -416,23 +424,24 @@ class Solution:
                 R = i + pLengths[i]
 
         # fix: some indices having extra pLength
-        for i in range(int(len(pLengths)/2)):
+        for i in range(int(len(pLengths) / 2)):
             if pLengths[2 * i] % 2:
                 pLengths[2 * i] -= 1
             if pLengths[2 * i + 1] != 0 and not pLengths[2 * i + 1] % 2:
                 pLengths[2 * i + 1] -= 1
 
         # if pL == i, at any point perform an expansion.
-        for i in range(int(len(pLengths)/2), -1, -1):
+        for i in range(int(len(pLengths) / 2), -1, -1):
             if pLengths[i] == i:
                 expand_index = i
                 break
 
         # slice the part to be appended
-        prefix_reversed = string[expand_index+pLengths[i] + 1:len(string)]
-        prefix = ''.join( reversed(prefix_reversed) )
+        prefix_reversed = string[expand_index + pLengths[i] + 1 : len(string)]
+        prefix = "".join(reversed(prefix_reversed))
         string = prefix + string
-        return string.replace("#","")
+        return string.replace("#", "")
+
 ```
 
 ## Complexity analysis
