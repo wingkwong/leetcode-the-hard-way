@@ -130,42 +130,45 @@ public List<String> palindromicSubstrings(String s) {
 <TabItem value="python" label="Python">
 
 ```python
-def palindromicStrings( s: str) -> list[str]:
+def palindromicSubstrings(self, s: str) -> list[str]:
+    if len(s) == 0:
+        return []
 
-    # convert odd/even strings to odd
+    # Convert odd/even strings to odd
     string = ""
-    for i in range(len(s)-1):
+    for i in range(len(s) - 1):
         string += s[i] + "#"
-    string += s[len(s)-1]
-    
-    # initializing variables
-    pLengths = [0]* len(string)
+    string += s[len(s) - 1]
+
+    # Initializing variables
+    pLengths = [0] * len(string)
     c = 0
-    R = 0 
-    
+    R = 0
+
     for i in range(len(string)):
-    
-        # mirroring the palindromic length
+        # Mirroring the palindromic length
         if i < R:
-            mirror = 2*c - i
-            pLengths[i] = min(R-i, pLengths[mirror])
-        
-        # exploring beyond bounds
-        while ( i - pLengths[i] - 1 >= 0 and i + pLengths[i] + 1 < len(string)
-        and string[i + pLengths[i] + 1] == string[i - pLengths[i] - 1] ): 
+            mirror = 2 * c - i
+            pLengths[i] = min(R - i, pLengths[mirror])
+
+        # Exploring beyond bounds
+        while (i - pLengths[i] - 1 >= 0 and i + pLengths[i] + 1 < len(string)
+               and string[i + pLengths[i] + 1] == string[i - pLengths[i] - 1]):
             pLengths[i] += 1
-        
-        # update center and bound
+
+        # Update center and bound
         if pLengths[i] + i > R:
             c = i
             R = i + pLengths[i]
-    
-        # return all possile palindromic strings
-        strings = []
-        for i in range(len(pLengths)):
-            strings.append ( string[ i - pLengths[i]: i + pLengths[i] + 1 ] )
-        return strings
-            
+
+    # Return all possible palindromic strings
+    strings = []
+    for i in range(len(pLengths)):
+        strings.append(string[i - pLengths[i]:i + pLengths[i] + 1].replace("#", ""))
+    while "" in strings:
+        strings.remove("")  # Remove empty palindromes
+    return strings
+           
 ```
 </TabItem>
 </Tabs>
