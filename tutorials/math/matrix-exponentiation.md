@@ -297,24 +297,22 @@ Let us implement them one by one. First one is `multiply(A, B)`.
 <SolutionAuthor name="@Ishwarendra"/>
 
 ```cpp
-std::vector<std::vector<int>> multiply(const std::vector<std::vector<int>> A, 
-    const std::vector<std::vector<int>> B) 
-{
-    int n1 = std::size(A), m1 = std::size(A[0]);
-    int n2 = std::size(B), m2 = std::size(B[0]);
-    assert(m1 == n2); // If m1 != n2, program will give runtime error
+std::vector<std::vector<int>> multiply(const std::vector<std::vector<int>> A,
+const std::vector<std::vector<int>> B) {
+  int n1 = std::size(A), m1 = std::size(A[0]);
+  int n2 = std::size(B), m2 = std::size(B[0]);
 
-    std::vector<std::vector<int>> C(n1, std::vector<int>(m2));
-    for (int i = 0; i < n1; i++)
-    {
-        for (int j = 0; j < m2; j++)
-        {
-            for (int k = 0; k < m1; k++)
-                C[i][j] += A[i][k] * B[k][j];
-        }
+  // If m1 != n2, program will give runtime error
+  assert(m1 == n2); 
+
+  std::vector<std::vector<int>> C(n1, std::vector<int>(m2));
+  for (int i = 0; i < n1; i++) {
+    for (int j = 0; j < m2; j++) {
+      for (int k = 0; k < m1; k++) C[i][j] += A[i][k] * B[k][j];
     }
+  }
 
-    return C;
+  return C;
 }
 ```
 
@@ -326,26 +324,21 @@ std::vector<std::vector<int>> multiply(const std::vector<std::vector<int>> A,
 <SolutionAuthor name="@Ishwarendra"/>
 
 ```cpp
-std::vector<std::vector<int>> power(std::vector<std::vector<int>> A, int exp) 
-{
-    int n = std::size(A), m = std::size(A[0]);
-    assert(n == m);
+std::vector<std::vector<int>> power(std::vector<std::vector<int>> A, int exp) {
+  int n = std::size(A), m = std::size(A[0]);
+  assert(n == m);
 
-    // We need to start with identity matrix because (A^0 = Identity Matrix)
-    std::vector res(n, std::vector<int>(n));
-    for (int i = 0; i < n; i++)
-        res[i][i] = 1;
+  // We need to start with identity matrix because (A^0 = Identity Matrix)
+  std::vector res(n, std::vector<int>(n));
+  for (int i = 0; i < n; i++) res[i][i] = 1;
 
-    while (exp > 0) 
-    {
-        if (exp & 1) 
-            res = multiply(res, A);
+  while (exp > 0) {
+    if (exp & 1) res = multiply(res, A);
 
-        A = multiply(A, A);
-        exp >>= 1;
-    }
-
-    return res;
+    A = multiply(A, A);
+    exp >>= 1;
+  }
+  return res;
 }
 ```
 
@@ -357,17 +350,16 @@ std::vector<std::vector<int>> power(std::vector<std::vector<int>> A, int exp)
 <SolutionAuthor name="@Ishwarendra"/>
 
 ```cpp
-int fib(int n)
-{
-    std::vector<std::vector<int>> T {{1, 1}, {1, 0}};
-    std::vector<std::vector<int>> A {{1}, {0}};
+int fib(int n) {
+  std::vector<std::vector<int>> T {{1, 1}, {1, 0}};
+  std::vector<std::vector<int>> A {{1}, {0}};
 
-    /*  
-        T^n * A = B = {{F(1 + n)},
-                       {F(0 + n)}}
-    */
-    auto B = multiply(power(T, n), A);
-    return B[1][0];
+  /*
+    T^n * A = B = {{F(1 + n)},
+                   {F(0 + n)}}
+  */
+  auto B = multiply(power(T, n), A);
+  return B[1][0];
 }
 ```
 
@@ -493,25 +485,26 @@ Our `multiply` function has one change that was mentioned at the end of last pro
 <SolutionAuthor name="@Ishwarendra"/>
 
 ```cpp
-int countVowelPermutation(int n) 
-{
-    std::vector T(5, std::vector<int>(5, 0));
-    T[0][1] = T[0][2] = T[0][4] = 1;
-    T[1][0] = T[1][2] = 1;
-    T[2][1] = T[2][3] = 1;
-    T[3][2] = 1;
-    T[4][2] = T[4][3] = 1;
+int countVowelPermutation(int n) {
+  std::vector T(5, std::vector<int>(5, 0));
+  T[0][1] = T[0][2] = T[0][4] = 1;
+  T[1][0] = T[1][2] = 1;
+  T[2][1] = T[2][3] = 1;
+  T[3][2] = 1;
+  T[4][2] = T[4][3] = 1;
 
-    std::vector A(5, std::vector(1, 1)); // There is 1 way to make string of length-1 whose ending character is fixed.
-    
-    // Since our base case is string of length-1 so we need T^(n - 1) only to get answer for string of length n = (1 + (n - 1))
-    auto B = multiply(power(T, n - 1), A); 
-    
-    int ans = 0;
-    for (int i = 0; i < std::size(B); i++)
-        ans = (ans + B[i][0]) % MOD;
+  // There is 1 way to make string of length-1 whose ending character is fixed.
+  std::vector A(5, std::vector(1, 1)); 
 
-    return ans;
+  // Since our base case is string of length-1 so we need T^(n - 1) only to get answer for string of length n = (1 + (n - 1))
+  auto B = multiply(power(T, n - 1), A);
+
+  int ans = 0;
+  for (int i = 0; i < std::size(B); i++) {
+    ans = (ans + B[i][0]) % MOD;
+  }
+
+  return ans;
 }
 ```
 
