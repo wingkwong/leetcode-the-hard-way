@@ -123,7 +123,6 @@ public:
 
 3. Determine the number of buckets needed by dividing the range of values (max_val - min_val) by the minimum gap and adding 1. This accounts for the possibility of non-uniform bucket sizes.
 
-
 4. Create and initialize an array of pairs called buckets, where each pair represents a bucket. The first element of the pair stores the minimum value encountered in the bucket, and the second element stores the maximum value encountered in the bucket.
 
 5. Iterate through the input array nums, and for each element, calculate which bucket it belongs to based on its value. Update the corresponding bucket's minimum and maximum values.
