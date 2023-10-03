@@ -13,7 +13,7 @@ keywords:
 
 ## Overview
 
-A **binary search tree (BST)** is a [binary tree](./binary-tree.md) where each node has a comparable key (and an associated value) and satisfies the restriction that the key in any node is larger than the keys in all nodes in that node's left subtree and smaller than the keys in all nodes in that node's right subtree. BSTs are a fundamental data structure used to implement other data structures such as binary heaps and priority queues.
+A **binary search trees (BST)** are basically [binary trees](./binary-tree.md) where each node's value is larger than all the nodes in that node's left subtree, and smaller than all the nodes in that node's right subtree. This property allows the [binary search algorithm](./../basic-topics/binary-search.md) to be applied to the tree, which is useful for fast lookup, insertion, and deletion of the nodes.
 
 ## Implementation
 
@@ -115,6 +115,80 @@ Node* search(Node* node, int key) {
     }
 }
 ```
+
+## Examples
+
+
+### Example : [0098 - Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)
+
+> Given the root of a binary tree, determine if it is a valid binary search tree (BST).
+
+In this problem, we are asked to validate whether a given binary tree is a valid BST. So we just need to check if all the nodes in the tree follow the BST property. To do this, we can apply a `depth-first search (DFS)` algorithm to traverse the tree, and check if the current node's value is smaller than or equal to the previous node's value. If it is, then the tree is not a valid BST. The following is an implementation of this algorithm:
+
+```cpp
+class Solution {
+public:
+    bool isValidBST(TreeNode* root) {
+        if(root == nullptr) return true;
+
+        stack<TreeNode*> stck;
+        TreeNode* prev = nullptr;
+
+        while(root != nullptr || !stck.empty()){
+            while(root != nullptr){
+                stck.push(root);
+                root = root->left;
+            }
+
+            root = stck.top();
+            stck.pop();
+
+            // check if current node's value is smaller than or equal to the previous node's value
+            if(prev != nullptr && root->val <= prev->val){
+                return false;
+            }
+
+            prev = root;
+            root = root->right; // if right is nullptr, first while loop will not do anything , and root will be popped from stack
+            // else, it will traverse to depth of left subtree of right child
+        }
+
+        return true;
+    }
+};
+```
+
+### Example : [0230 - Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)
+
+> Given the root of a binary search tree, and an integer k, return the kth smallest value (1-indexed) of all the values of the nodes in the tree.
+
+In this problem, we are asked to return the kth smallest value of all the values in nodes of the Binary Search Tree. We can solve this problem by using a technique called `Inorder Traversal`. Since in BST, we know all the nodes to the left of the current node are smaller and all the nodes to right are larger, we can generate a sorted array by recursively traveling the left subtrees first, then the right subtrees.
+
+```cpp
+class Solution {
+public:
+    vector<int> res;
+
+    // recursive function
+    void inorder(TreeNode* root) {
+        // if root exist
+        if (root != NULL) {
+            // recursive call on the left side
+            inorder(root->left);
+            // insert current node to result array
+            res.push_back(root->val);
+            // recursive call on the right side
+            inorder(root->right);
+        }
+    }
+
+    int kthSmallest(TreeNode* root, int k) {
+        inorder(root);
+        return res[k-1];
+    }
+};
+```
+
 
 ## Complexity Analysis
 
