@@ -86,27 +86,27 @@ const config = {
         // },
         items: [
           {
-            label: '📚 Tutorials',
+            label: 'Tutorials',
             to: '/tutorials/category/basic-topics',
             activeBaseRegex: `/tutorials/`,
           },
           {
-            label: '📖 Solutions',
+            label: 'Solutions',
             to: '/solutions/category/0000---0099',
             activeBaseRegex: `/solutions/`,
           },
           {
-            label: '🏷️ Tags',
+            label: 'Tags',
             to: '/solutions/tags/',
             activeBaseRegex: `/solutions/tags/`,
           },
           {
-            label: '🏛️ Roadmap',
+            label: 'Roadmap',
             to: '/roadmap/',
             activeBaseRegex: `/roadmap/`,
           },
           {
-            label: '🖥️ Templates',
+            label: 'Templates',
             to: '/templates/',
             activeBaseRegex: `/templates/`,
           },
