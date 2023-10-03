@@ -15,7 +15,6 @@ keywords:
 ---
 
 <TutorialAuthors names="@Sanchita1304"/>
-<Contributors names="@wingkwong"/>
 
 ## Overview
 
@@ -30,11 +29,11 @@ Bucket sort is a non-comparative sorting algorithm that works by distributing el
     
 2. Distribution:
     
-    Iterate through the input array and place each element into the appropriate bucket based on its value. This is done by mapping the       element's value to the corresponding bucket.
+    Iterate through the input array and place each element into the appropriate bucket based on its value. This is done by mapping the element's value to the corresponding bucket.
     
 3. Sort Each Bucket:
     
-    For each non-empty bucket, sort its contents using a sorting algorithm of your choice (e.g., insertion sort, quicksort, or another       bucket sort recursively).
+    For each non-empty bucket, sort its contents using a sorting algorithm of your choice (e.g., insertion sort, quicksort, or another bucket sort recursively).
     
 4. Concatenation:
     
