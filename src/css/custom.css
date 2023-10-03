@@ -226,3 +226,11 @@ table, tr, td, th {
 .hard {
   color: rgb(255 45 85);
 }
+
+/*  for emoji's */
+
+@media screen and (min-width: 1000px) and (max-width: 1119px) {
+  .nav-emoji{
+    display: none;
+  }
+}

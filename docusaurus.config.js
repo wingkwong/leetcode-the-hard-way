@@ -86,27 +86,27 @@ const config = {
         // },
         items: [
           {
-            label: 'Tutorials',
+            html: '<span class="nav-emoji">📚</span> Tutorials',
             to: '/tutorials/category/basic-topics',
             activeBaseRegex: `/tutorials/`,
           },
           {
-            label: 'Solutions',
+            html: '<span class="nav-emoji">📖</span> Solutions',
             to: '/solutions/category/0000---0099',
             activeBaseRegex: `/solutions/`,
           },
           {
-            label: 'Tags',
+            html: '<span class="nav-emoji">🏷️</span> Tags',
             to: '/solutions/tags/',
             activeBaseRegex: `/solutions/tags/`,
           },
           {
-            label: 'Roadmap',
+            html: '<span class="nav-emoji">🏛️</span> Roadmap',
             to: '/roadmap/',
             activeBaseRegex: `/roadmap/`,
           },
           {
-            label: 'Templates',
+            html: '<span class="nav-emoji">🖥️</span> Templates',
             to: '/templates/',
             activeBaseRegex: `/templates/`,
           },
@@ -138,6 +138,7 @@ const config = {
 footer: {
   style: 'dark',
     links: [
+
       {
         title: 'Resources',
         items: [
@@ -198,6 +199,7 @@ footer: {
             label: 'Contributing',
             href: 'https://github.com/wingkwong/leetcode-the-hard-way/blob/main/CONTRIBUTING.md',
           }
+
         ],
       },
     ],
