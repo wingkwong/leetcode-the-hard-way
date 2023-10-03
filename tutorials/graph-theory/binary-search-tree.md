@@ -17,18 +17,16 @@ A **binary search trees (BST)** are basically [binary trees](./binary-tree.md) w
 
 ## Implementation
 
-A BST can be implemented using a [linked list](./../basic-topics/linked-list.md) where each node has a key, a value, and pointers to its left and right children. The root of the tree is the first node in the list. The left subtree of a node is the linked list starting from the node's left child, and the right subtree is the linked list starting from the node's right child. The following is an example of a BST implemented using a linked list:
+A BST can be implemented using a [binary tree](./binary-tree.md) with the following structure:
 
 ```cpp
-struct Node {
-    int key;
-    int value;
-    Node* left;
-    Node* right;
-};
-
-class BinarySearchTree {
-    Node* root;
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode() : val(0), left(nullptr), right(nullptr) {}
+    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 ```
 
@@ -39,21 +37,16 @@ class BinarySearchTree {
 Inserting a node into a BST is similar to inserting a node into a [binary tree](./binary-tree.md), except that the node must be inserted in the correct position to maintain the BST property. The following is an example of inserting a node into a BST:
 
 ```cpp
-void insert(Node* node, int key, int value) {
-    if (key < node->key) { // insert into left subtree
-        if (node->left == nullptr) {
-            node->left = new Node(key, value);
-        } else {
-            insert(node->left, key, value);
-        }
-    } else { // insert into right subtree
-        if (node->right == nullptr) {
-            node->right = new Node(key, value);
-        } else {
-            insert(node->right, key, value);
-        }
+TreeNode *insert(TreeNode *root, int key)
+    {
+        if (root == NULL)
+            return new TreeNode(key);
+        if (key < root->val)
+            root->left = insert(root->left, key);
+        else
+            root->right = insert(root->right, key);
+        return root;
     }
-}
 ```
 
 ### Deletion
@@ -66,35 +59,27 @@ There are 4 cases to consider when deleting a node from a BST:
 4. The node has both a left and right child - the node can be deleted and replaced with the *minimum node in its right subtree*.
 
 ```cpp
-void delete(Node* node, int key) {
-    if (node == nullptr) {
-        return;
+TreeNode *deleteNode(TreeNode *root, int key)
+    {
+        if (root)
+            if (key < root->val)
+                root->left = deleteNode(root->left, key);
+            else if (key > root->val)
+                root->right = deleteNode(root->right, key);
+            else
+            {
+                if (!root->left && !root->right)
+                    return NULL;
+                if (!root->left || !root->right)
+                    return root->left ? root->left : root->right;
+                TreeNode *temp = root->left;
+                while (temp->right != NULL)
+                    temp = temp->right;
+                root->val = temp->val;
+                root->left = deleteNode(root->left, temp->val);
+            }
+        return root;
     }
-
-    if (key < node->key) { // recurse to left subtree
-        delete(node->left, key);
-    } else if (key > node->key) { // recurse to right subtree
-        delete(node->right, key);
-    } else { // delete current node
-        if (node->left == nullptr && node->right == nullptr) { // no children
-            delete node;
-            node = nullptr;
-        } else if (node->left == nullptr) { // right child only
-            Node* temp = node;
-            node = node->right;
-            delete temp;
-        } else if (node->right == nullptr) { // left child only
-            Node* temp = node;
-            node = node->left;
-            delete temp;
-        } else { // both children
-            Node* temp = findMin(node->right);
-            node->key = temp->key;
-            node->value = temp->value;
-            delete(node->right, temp->key);
-        }
-    }
-}
 ```
 
 
@@ -103,88 +88,80 @@ void delete(Node* node, int key) {
 Searching in a BST follows the same logic as in binary search, using the divide and conquer approach. The following is an implementation of searching in a BST:
 
 ```cpp
-Node* search(Node* node, int key) {
-    if (node == nullptr || node->key == key) {
-        return node;
+TreeNode *search(TreeNode *root, int key)
+    {
+        if (root == NULL || root->val == key)
+            return root;
+        if (key < root->val)
+            return search(root->left, key);
+        return search(root->right, key);
     }
-
-    if (key < node->key) { // recurse to left subtree
-        return search(node->left, key);
-    } else { // recurse to right subtree
-        return search(node->right, key);
-    }
-}
 ```
 
 ## Examples
 
 
-### Example : [0098 - Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)
+### Example : [0700 - Search in a Binary Search Tree](https://leetcode.com/problems/search-in-a-binary-search-tree/)
 
-> Given the root of a binary tree, determine if it is a valid binary search tree (BST).
+> Find the node in the BST that the node's value equals val and return the subtree rooted with that node. If such a node does not exist, return null.
 
-In this problem, we are asked to validate whether a given binary tree is a valid BST. So we just need to check if all the nodes in the tree follow the BST property. To do this, we can apply a `depth-first search (DFS)` algorithm to traverse the tree, and check if the current node's value is smaller than or equal to the previous node's value. If it is, then the tree is not a valid BST. The following is an implementation of this algorithm:
+In this problem, we are asked to find a node with a given key in a BST. This can be done in an optimal way using the divide and conquer approach due to the BST property. The following is the complete solution to this problem:
 
 ```cpp
 class Solution {
 public:
-    bool isValidBST(TreeNode* root) {
-        if(root == nullptr) return true;
+    TreeNode *searchBST(TreeNode *root, int key)
+    {
+        // Key found
+        if (root == NULL || root->val == key)
+            return root;
 
-        stack<TreeNode*> stck;
-        TreeNode* prev = nullptr;
+        // Key is present in left subtree
+        if (key < root->val)
+            return searchBST(root->left, key);
 
-        while(root != nullptr || !stck.empty()){
-            while(root != nullptr){
-                stck.push(root);
-                root = root->left;
-            }
-
-            root = stck.top();
-            stck.pop();
-
-            // check if current node's value is smaller than or equal to the previous node's value
-            if(prev != nullptr && root->val <= prev->val){
-                return false;
-            }
-
-            prev = root;
-            root = root->right; // if right is nullptr, first while loop will not do anything , and root will be popped from stack
-            // else, it will traverse to depth of left subtree of right child
-        }
-
-        return true;
+        // Else key is present in right subtree
+        return searchBST(root->right, key);
     }
 };
 ```
 
-### Example : [0230 - Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)
+### Example : [0450 - Delete Node in a BST](https://leetcode.com/problems/delete-node-in-a-bst/)
 
-> Given the root of a binary search tree, and an integer k, return the kth smallest value (1-indexed) of all the values of the nodes in the tree.
+> Given a root node reference of a BST and a key, delete the node with the given key in the BST. Return the root node reference (possibly updated) of the BST.
 
-In this problem, we are asked to return the kth smallest value of all the values in nodes of the Binary Search Tree. We can solve this problem by using a technique called `Inorder Traversal`. Since in BST, we know all the nodes to the left of the current node are smaller and all the nodes to right are larger, we can generate a sorted array by recursively traveling the left subtrees first, then the right subtrees.
+In this problem, we are asked to delete a node with a given key from a BST. Now its fairly easy to navigate to the node with the given key, but the problem is that we need to *maintain the BST property* after deleting the node. For this we can apply the logic of deletion in a BST, which is described above. The following is the complete solution to this problem:
 
 ```cpp
-class Solution {
+class Solution
+{
 public:
-    vector<int> res;
+    TreeNode *deleteNode(TreeNode *root, int key)
+    {
+        if (root)
+            // If key is not equal to val, recursively call deleteNode on the left or right subtree
+            if (key < root->val)
+                root->left = deleteNode(root->left, key);
+            else if (key > root->val)
+                root->right = deleteNode(root->right, key);
+            else
+            {
+                // Nothing to delete
+                if (!root->left && !root->right)
+                    return NULL;
 
-    // recursive function
-    void inorder(TreeNode* root) {
-        // if root exist
-        if (root != NULL) {
-            // recursive call on the left side
-            inorder(root->left);
-            // insert current node to result array
-            res.push_back(root->val);
-            // recursive call on the right side
-            inorder(root->right);
-        }
-    }
+                // If left or right subtree is NULL, return the other subtree
+                if (!root->left || !root->right)
+                    return root->left ? root->left : root->right;
 
-    int kthSmallest(TreeNode* root, int k) {
-        inorder(root);
-        return res[k-1];
+                // If both subtrees are present, replace the node with the minimum node in its right subtree
+                TreeNode *temp = root->left;
+                while (temp->right != NULL)
+                    temp = temp->right;
+                root->val = temp->val;
+                root->left = deleteNode(root->left, temp->val);
+            }
+        return root;
     }
 };
 ```
