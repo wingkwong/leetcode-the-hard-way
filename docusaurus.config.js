@@ -138,7 +138,6 @@ const config = {
 footer: {
   style: 'dark',
     links: [
-
       {
         title: 'Resources',
         items: [
@@ -199,7 +198,6 @@ footer: {
             label: 'Contributing',
             href: 'https://github.com/wingkwong/leetcode-the-hard-way/blob/main/CONTRIBUTING.md',
           }
-
         ],
       },
     ],
