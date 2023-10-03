@@ -71,19 +71,73 @@ $$O(V+E)$$
 ### Space Complexity
 $$O(V)$$
 
+## Example : [0547 - Number of Provinces](https://leetcode.com/problems/number-of-provinces/)
+>There are $$n$$ cities. Some of them are connected, while some are not. If city a is connected directly with city $$b$$, and city $$b$$ is connected directly with city $$c$$, then city $$a$$ is connected indirectly with city $$c$$.  
+>A province is a group of directly or indirectly connected cities and no other cities outside of the group.  
+>You are given an $$n$$ x $$n$$ matrix isConnected where $$isConnected[i][j] = 1$$ if the ith city and the jth city are directly connected, and $$isConnected[i][j] = 0$$ otherwise.  
+
+>Return the total number of provinces.
+
+In this problem, a province is basically a connected component, so we just have to find the number of connected components here.  
+Since the graph is given in form of adjacency matrix, we will first convert it to adjacency list.  
+Then we will use the connected component code template to find number of provinces.  
+
+## Solution
+<Tabs>
+
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@Mr-ram99"/>
+
+```cpp
+int findCircleNum(vector<vector<int>>& isConnected) {
+      vector<vector<int>> adj_list(isConnected.size());
+      for(int i=0;i<isConnected.size();i++){
+          for(int j=0;j<isConnected[i].size();j++){
+              if(isConnected[i][j]==1){
+                  adj_list[i].push_back(j);
+              }
+          }
+      }
+      return connectedComponents(isConnected.size(), adj_list);
+  }
+  void dfs(int node, vector<vector<int>> &adj_list, vector<bool> &visited){  
+      visited[node]=true;
+      for(int x: adj_list[node]){
+          if(!visited[x]){
+              dfs(x, adj_list, visited);
+          }
+      }
+  }
+  int connectedComponents(int V, vector<vector<int>> &adj_list){
+      vector<bool> visited(V,false);  
+      int count = 0;                   
+      for(int i=0;i<V;i++){
+          if(!visited[i]){       
+              dfs(i, adj_list, visited);
+              count++;
+          }
+      }
+      return count;
+  }
+```
+
+</TabItem>
+</Tabs>
+
 export const suggestedProblems = [
   {
-    "problemName": "0547 - Number of Provinces",
+    "problemName": "1319 - Number of Operations to Make Network Connected",
     "difficulty": "Medium",
-    "leetCodeLink": "https://leetcode.com/problems/number-of-provinces/",
+    "leetCodeLink": "https://leetcode.com/problems/number-of-operations-to-make-network-connected/",
     "solutionLink": ""
   },
   {
-    "problemName": "2101 - Detonate the Maximum Bombs",
+    "problemName": "2316 - Count Unreachable Pairs of Nodes in an Undirected Graph",
     "difficulty": "Medium",
-    "leetCodeLink": "https://leetcode.com/problems/detonate-the-maximum-bombs/",
+    "leetCodeLink": "https://leetcode.com/problems/count-unreachable-pairs-of-nodes-in-an-undirected-graph/",
     "solutionLink": ""
   },
+  
 ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />
