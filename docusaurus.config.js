@@ -135,163 +135,145 @@ const config = {
           },
         ],
       },
-footer: {
-  style: 'dark',
-    links: [
-
-      {
-        title: 'Resources',
-        items: [
+      footer: {
+        style: 'dark',
+        links: [
           {
-            label: 'Tutorials',
-            to: '/tutorials/category/basic-topics/',
+            title: 'General',
+            items: [
+              {
+                label: 'Tutorials',
+                href: '/tutorials/category/basic-topics/',
+              },
+              {
+                label: 'Solutions',
+                href: '/solutions/category/0000---0099/',
+              },
+              {
+                label: 'Tags',
+                href: '/solutions/tags',
+              },
+              {
+                label: 'Roadmap',
+                href: '/roadmap',
+              },
+              {
+                label: 'Templates',
+                href: '/templates',
+              },
+            ],
           },
           {
-            label: 'Solutions',
-            to: '/solutions/category/0000---0099/',
-          },
-          
-          {
-            label: 'Templates',
-            to: '/templates',
+            title: 'Links',
+            items: [
+              {
+                label: 'GitHub',
+                href: 'https://github.com/wingkwong/leetcode-the-hard-way',
+              },
+              {
+                label: 'Discord',
+                href: 'https://discord.com/invite/Nqm4jJcyBf',
+              },
+              {
+                label: 'YouTube',
+                href: 'https://www.youtube.com/@leetcodethehardway?sub_confirmation=1',
+              },
+              {
+                label: 'Contact',
+                href: 'mailto:leetcodethehardway@gmail.com',
+              }
+            ],
           },
         ],
+        copyright: `Copyright © ${new Date().getFullYear()} LeetCode The Hard Way. Built with Docusaurus.`,
       },
-
-      {
-        title: 'General',
-        items: [
-          {
-            label: 'Roadmap',
-            to: '/roadmap',
-          },
-          {
-            label: 'Tags',
-            href: '/solutions/tags',
-          },
-        ],
+      announcementBar: {
+        id: 'announcementBar-2', // Increment on change
+        content: `⭐️ Master the technical interview without endless grinding with <a href="https://shareasale.com/r.cfm?b=1896233&u=3650658&m=114505&urllink=&afftrack=">AlgoMonster</a> ⭐️`,
+        isCloseable: false,
       },
-      {
-        title: 'Community',
-        items: [
-          {
-            label: 'GitHub',
-            href: 'https://github.com/wingkwong/leetcode-the-hard-way',
-          },
-          {
-            label: 'Discord',
-            href: 'https://discord.com/invite/Nqm4jJcyBf',
-          },
-          {
-            label: 'YouTube',
-            href: 'https://www.youtube.com/@leetcodethehardway?sub_confirmation=1',
-          },          
-        ],
+      prism: {
+        theme: lightCodeTheme,
+        darkTheme: darkCodeTheme,
+        additionalLanguages: ['csharp', 'java', 'kotlin', 'rust']
       },
-      {
-        title: 'Links',
-        items: [
-          {
-            label: 'Contact',
-            href: 'mailto:leetcodethehardway@gmail.com',
-          },
-          {
-            label: 'Contributing',
-            href: 'https://github.com/wingkwong/leetcode-the-hard-way/blob/main/CONTRIBUTING.md',
-          }
-
-        ],
-      },
-    ],
-      copyright: `Copyright © ${new Date().getFullYear()} LeetCode The Hard Way. Built with Docusaurus.`,
-      },
-announcementBar: {
-  id: 'announcementBar-2', // Increment on change
-    content: `⭐️ Master the technical interview without endless grinding with <a href="https://shareasale.com/r.cfm?b=1896233&u=3650658&m=114505&urllink=&afftrack=">AlgoMonster</a> ⭐️`,
-      isCloseable: false,
-      },
-prism: {
-  theme: lightCodeTheme,
-    darkTheme: darkCodeTheme,
-      additionalLanguages: ['csharp', 'java', 'kotlin', 'rust']
-},
-// https://docusaurus.io/docs/search#using-algolia-docsearch
-algolia: {
-  appId: 'TSP4XHNA9P',
-    apiKey: '13aa27443cab36b7f20f3a59617607a6',
-      indexName: 'leetcode-the-hard-way',
+      // https://docusaurus.io/docs/search#using-algolia-docsearch
+      algolia: {
+        appId: 'TSP4XHNA9P',
+        apiKey: '13aa27443cab36b7f20f3a59617607a6',
+        indexName: 'leetcode-the-hard-way',
         contextualSearch: false
-},
-docs: {
-  sidebar: {
-    hideable: true,
+      },
+      docs: {
+        sidebar: {
+          hideable: true,
         },
-},
+      },
     }),
 
-plugins: [
-  [
-    '@docusaurus/plugin-content-docs',
-    {
-      id: 'solutions',
-      path: 'solutions',
-      routeBasePath: 'solutions',
-      sidebarPath: require.resolve('./sidebars.js'),
-      remarkPlugins: [math],
-      rehypePlugins: [katex],
-      // showLastUpdateTime: true,
-      // showLastUpdateAuthor: true,
-      editUrl:
-        'https://github.com/wingkwong/leetcode-the-hard-way/tree/main/',
-    },
-  ],
-  [
-    '@docusaurus/plugin-content-docs',
-    {
-      id: 'tutorials',
-      path: 'tutorials',
-      routeBasePath: 'tutorials',
-      sidebarPath: require.resolve('./sidebars.js'),
-      remarkPlugins: [math],
-      rehypePlugins: [katex],
-      // showLastUpdateTime: true,
-      // showLastUpdateAuthor: true,
-      editUrl:
-        'https://github.com/wingkwong/leetcode-the-hard-way/tree/main/',
-    },
-  ],
-  [
-    '@docusaurus/plugin-content-docs',
-    {
-      id: 'roadmap',
-      path: 'roadmap',
-      routeBasePath: 'roadmap',
-      sidebarPath: require.resolve('./sidebars.js'),
-      remarkPlugins: [math],
-      rehypePlugins: [katex],
-      // showLastUpdateTime: true,
-      // showLastUpdateAuthor: true,
-      editUrl:
-        'https://github.com/wingkwong/leetcode-the-hard-way/tree/main/',
-    },
-  ],
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'solutions',
+        path: 'solutions',
+        routeBasePath: 'solutions',
+        sidebarPath: require.resolve('./sidebars.js'),
+        remarkPlugins: [math],
+        rehypePlugins: [katex],
+        // showLastUpdateTime: true,
+        // showLastUpdateAuthor: true,
+        editUrl:
+          'https://github.com/wingkwong/leetcode-the-hard-way/tree/main/',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'tutorials',
+        path: 'tutorials',
+        routeBasePath: 'tutorials',
+        sidebarPath: require.resolve('./sidebars.js'),
+        remarkPlugins: [math],
+        rehypePlugins: [katex],
+        // showLastUpdateTime: true,
+        // showLastUpdateAuthor: true,
+        editUrl:
+          'https://github.com/wingkwong/leetcode-the-hard-way/tree/main/',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'roadmap',
+        path: 'roadmap',
+        routeBasePath: 'roadmap',
+        sidebarPath: require.resolve('./sidebars.js'),
+        remarkPlugins: [math],
+        rehypePlugins: [katex],
+        // showLastUpdateTime: true,
+        // showLastUpdateAuthor: true,
+        editUrl:
+          'https://github.com/wingkwong/leetcode-the-hard-way/tree/main/',
+      },
+    ],
 
-  [
-    '@docusaurus/plugin-content-docs',
-    {
-      id: 'templates',
-      path: 'templates',
-      routeBasePath: 'templates',
-      sidebarPath: require.resolve('./sidebars.js'),
-      remarkPlugins: [math],
-      rehypePlugins: [katex],
-      // showLastUpdateTime: true,
-      // showLastUpdateAuthor: true,
-      editUrl:
-        'https://github.com/wingkwong/leetcode-the-hard-way/tree/main/',
-    },
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'templates',
+        path: 'templates',
+        routeBasePath: 'templates',
+        sidebarPath: require.resolve('./sidebars.js'),
+        remarkPlugins: [math],
+        rehypePlugins: [katex],
+        // showLastUpdateTime: true,
+        // showLastUpdateAuthor: true,
+        editUrl:
+          'https://github.com/wingkwong/leetcode-the-hard-way/tree/main/',
+      },
+    ],
   ],
-],
 
 };
 
