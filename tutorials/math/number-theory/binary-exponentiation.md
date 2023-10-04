@@ -20,7 +20,12 @@ The basic idea behind binary exponentiation is that we can express $$a ^ n$$ as 
 
 To generalise it, for a positive integer $$n$$, we have
 
-![image](https://user-images.githubusercontent.com/35857179/168304432-fa9ac8bb-0eb9-49d9-bdcf-5e3509c1f835.png)
+$
+x^n = \begin{cases}
+x \cdot (x^2)^{\frac{n - 1}{2}}, & \text{if } n \text{ is odd}\\
+(x^2)^{\frac{n}{2}}, & \text{if } n \text{ is even.}
+\end{cases}
+$
 
 ## Implementation
 
