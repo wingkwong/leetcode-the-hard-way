@@ -1,8 +1,6 @@
 ---
 title: 'Matrix Exponentiation'
 description: 'Binary Exponentiation but it involves matrices.'
-hide_table_of_contents: true
-draft: true
 keywords:
   - leetcode
   - tutorial
@@ -106,7 +104,7 @@ Verify it yourself!
 
 Let us now see a concrete problem that can be solved using Matrix Exponentiation.
 
-### [Example #1: 509. Fibonacci Number](https://leetcode.com/problems/fibonacci-number/description/)
+## [Example #1: 509. Fibonacci Number](https://leetcode.com/problems/fibonacci-number/description/)
 
 We can solve the problem using top-down dynamic programming or by bottom-up dynamic programming, but let us see how we can solve it using Matrix Exponentiation first. The recurrence for fibonacci series is:
 $$$
@@ -386,7 +384,7 @@ C[i][j] %= P;
 - **Time Complexity:** $O(log(n))$
 - **Space Complexity:** $O(1)$ as we only made matrices of constant dimension.
 
-### [Example #2: 1220. Count Vowels Permutation](https://leetcode.com/problems/count-vowels-permutation/description/)
+## [Example #2: 1220. Count Vowels Permutation](https://leetcode.com/problems/count-vowels-permutation/description/)
 
 Let us try to solve this problem using dynamic programming. 
 
