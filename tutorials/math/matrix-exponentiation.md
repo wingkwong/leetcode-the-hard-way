@@ -106,7 +106,7 @@ Verify it yourself!
 
 Let us now see a concrete problem that can be solved using Matrix Exponentiation.
 
-### [1. Fibonacci Number](https://leetcode.com/problems/fibonacci-number/description/)
+### [Example #1: 509. Fibonacci Number](https://leetcode.com/problems/fibonacci-number/description/)
 
 We can solve the problem using top-down dynamic programming or by bottom-up dynamic programming, but let us see how we can solve it using Matrix Exponentiation first. The recurrence for fibonacci series is:
 $$$
@@ -386,7 +386,7 @@ C[i][j] %= P;
 - **Time Complexity:** $O(log(n))$
 - **Space Complexity:** $O(1)$ as we only made matrices of constant dimension.
 
-### [2. Count Vowels Permutation](https://leetcode.com/problems/count-vowels-permutation/description/)
+### [Example #2: 1220. Count Vowels Permutation](https://leetcode.com/problems/count-vowels-permutation/description/)
 
 Let us try to solve this problem using dynamic programming. 
 
@@ -485,6 +485,8 @@ Our `multiply` function has one change that was mentioned at the end of last pro
 <SolutionAuthor name="@Ishwarendra"/>
 
 ```cpp
+const int MOD = 1e9 + 7;
+
 int countVowelPermutation(int n) {
   vector T(5, vector<int>(5, 0));
   T[0][1] = T[0][2] = T[0][4] = 1;
@@ -523,7 +525,7 @@ export const suggestedProblems = [
     "problemName": "1137. N-th Tribonacci Number",
     "difficulty": "Easy",
     "leetCodeLink": "https://leetcode.com/problems/n-th-tribonacci-number/description/",
-    "solutionLink": "../../../solutions/1100-1199/1137-n-th-tribonacci-number-easy.md"
+    "solutionLink": "../../../solutions/1100-1199/n-th-tribonacci-number-easy"
   },
 ]
 
