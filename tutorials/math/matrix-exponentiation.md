@@ -297,15 +297,15 @@ Let us implement them one by one. First one is `multiply(A, B)`.
 <SolutionAuthor name="@Ishwarendra"/>
 
 ```cpp
-std::vector<std::vector<int>> multiply(const std::vector<std::vector<int>> A,
-const std::vector<std::vector<int>> B) {
-  int n1 = std::size(A), m1 = std::size(A[0]);
-  int n2 = std::size(B), m2 = std::size(B[0]);
+vector<vector<int>> multiply(const vector<vector<int>> A,
+const vector<vector<int>> B) {
+  int n1 = size(A), m1 = size(A[0]);
+  int n2 = size(B), m2 = size(B[0]);
 
   // If m1 != n2, program will give runtime error
   assert(m1 == n2); 
 
-  std::vector<std::vector<int>> C(n1, std::vector<int>(m2));
+  vector<vector<int>> C(n1, vector<int>(m2));
   for (int i = 0; i < n1; i++) {
     for (int j = 0; j < m2; j++) {
       for (int k = 0; k < m1; k++) C[i][j] += A[i][k] * B[k][j];
@@ -324,12 +324,12 @@ const std::vector<std::vector<int>> B) {
 <SolutionAuthor name="@Ishwarendra"/>
 
 ```cpp
-std::vector<std::vector<int>> power(std::vector<std::vector<int>> A, int exp) {
-  int n = std::size(A), m = std::size(A[0]);
+vector<vector<int>> power(vector<vector<int>> A, int exp) {
+  int n = size(A), m = size(A[0]);
   assert(n == m);
 
   // We need to start with identity matrix because (A^0 = Identity Matrix)
-  std::vector res(n, std::vector<int>(n));
+  vector res(n, vector<int>(n));
   for (int i = 0; i < n; i++) res[i][i] = 1;
 
   while (exp > 0) {
@@ -351,8 +351,8 @@ std::vector<std::vector<int>> power(std::vector<std::vector<int>> A, int exp) {
 
 ```cpp
 int fib(int n) {
-  std::vector<std::vector<int>> T {{1, 1}, {1, 0}};
-  std::vector<std::vector<int>> A {{1}, {0}};
+  vector<vector<int>> T {{1, 1}, {1, 0}};
+  vector<vector<int>> A {{1}, {0}};
 
   /*
     T^n * A = B = {{F(1 + n)},
@@ -486,7 +486,7 @@ Our `multiply` function has one change that was mentioned at the end of last pro
 
 ```cpp
 int countVowelPermutation(int n) {
-  std::vector T(5, std::vector<int>(5, 0));
+  vector T(5, vector<int>(5, 0));
   T[0][1] = T[0][2] = T[0][4] = 1;
   T[1][0] = T[1][2] = 1;
   T[2][1] = T[2][3] = 1;
@@ -494,13 +494,13 @@ int countVowelPermutation(int n) {
   T[4][2] = T[4][3] = 1;
 
   // There is 1 way to make string of length-1 whose ending character is fixed.
-  std::vector A(5, std::vector(1, 1)); 
+  vector A(5, vector(1, 1)); 
 
   // Since our base case is string of length-1 so we need T^(n - 1) only to get answer for string of length n = (1 + (n - 1))
   auto B = multiply(power(T, n - 1), A);
 
   int ans = 0;
-  for (int i = 0; i < std::size(B); i++) {
+  for (int i = 0; i < size(B); i++) {
     ans = (ans + B[i][0]) % MOD;
   }
 
