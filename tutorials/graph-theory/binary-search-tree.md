@@ -37,13 +37,16 @@ struct TreeNode {
 Inserting a node into a BST is similar to inserting a node into a [binary tree](./binary-tree.md), except that the node must be inserted in the correct position to maintain the BST property. The following is an example of inserting a node into a BST:
 
 ```cpp
-TreeNode * insert(TreeNode * root, int key) {
-  if (root == NULL)
+TreeNode* insert(TreeNode* root, int key) {
+  if (root == NULL) {
     return new TreeNode(key);
-  if (key < root -> val)
-    root -> left = insert(root -> left, key);
-  else
-    root -> right = insert(root -> right, key);
+  }
+  if (key < root->val) {
+    root->left = insert(root->left, key);
+  } else {
+    root->right = insert(root->right, key);
+  }
+
   return root;
 }
 ```
@@ -58,30 +61,32 @@ There are 4 cases to consider when deleting a node from a BST:
 4. The node has both a left and right child - the node can be deleted and replaced with the *minimum node in its right subtree*.
 
 ```cpp
-TreeNode * deleteNode(TreeNode * root, int key) {
-  if (root)
+TreeNode* deleteNode(TreeNode* root, int key) {
+  if (root) {
+    if (key < root->val) {
+      root->left = deleteNode(root->left, key);
+    } else if (key > root->val) {
+      root->right = deleteNode(root->right, key);
+    }
 
-    if (key < root -> val)
-      root -> left = deleteNode(root -> left, key);
-
-    else if (key > root -> val)
-    root -> right = deleteNode(root -> right, key);
-
-  else {
-    if (!root -> left && !root -> right)
+  } else {
+    if (!root->left && !root->right) {
       return NULL;
+    }
+    if (!root->left || !root->right) {
+      return root->left ? root->left : root->right;
+    }
 
-    if (!root -> left || !root -> right)
-      return root -> left ? root -> left : root -> right;
+    TreeNode* temp = root->left;
 
-    TreeNode * temp = root -> left;
+    while (temp->right != NULL) {
+      temp = temp->right;
+    }
 
-    while (temp -> right != NULL)
-      temp = temp -> right;
-
-    root -> val = temp -> val;
-    root -> left = deleteNode(root -> left, temp -> val);
+    root->val = temp->val;
+    root->left = deleteNode(root->left, temp->val);
   }
+
   return root;
 }
 ```
@@ -92,20 +97,22 @@ TreeNode * deleteNode(TreeNode * root, int key) {
 Searching in a BST follows the same logic as in binary search, using the divide and conquer approach. The following is an implementation of searching in a BST:
 
 ```cpp
-TreeNode * search(TreeNode * root, int key) {
-  if (root == NULL || root -> val == key)
+TreeNode* search(TreeNode* root, int key) {
+  if (root == NULL || root->val == key) {
     return root;
+  }
 
-  if (key < root -> val)
-    return search(root -> left, key);
+  if (key < root->val){
+    return search(root->left, key);
+  }
 
-  return search(root -> right, key);
+  return search(root->right, key);
 }
 ```
 
 ## Balanced Binary Search Trees
 
-A binary search tree is said to be **balanced** if the height of the left and right subtrees of every node differ by at most 1. A balanced BST has applications in many algorithms, such as [AVL trees](./avl-tree.md) and [red-black trees](./red-black-tree.md).
+A binary search tree is said to be **balanced** if the height of the left and right subtrees of every node differ by at most 1. A balanced BST has applications in many algorithms, such as **AVL trees** and **red-black trees**.
 
 We can convert a binary tree into a balanced BST by first traversing the tree in inorder and storing the values in an array, and then constructing a balanced BST from the array. The following leetcode problem demonstrates this approach:
 
@@ -115,29 +122,28 @@ We can convert a binary tree into a balanced BST by first traversing the tree in
 
 ```cpp
 class Solution {
-  public: void inorder(TreeNode * root, vector < int > & ans) {
-    if (root == NULL)
-      return;
+ public:
+  void inorder(TreeNode* root, vector<int>& ans) {
+    if (root == NULL) return;
 
-    inorder(root -> left, ans);
-    ans.push_back(root -> val);
-    inorder(root -> right, ans);
+    inorder(root->left, ans);
+    ans.push_back(root->val);
+    inorder(root->right, ans);
   }
 
-  TreeNode * createBST(vector < int > ans, int start, int end) {
-    if (start > end)
-      return NULL;
+  TreeNode* createBST(vector<int> ans, int start, int end) {
+    if (start > end) return NULL;
 
     int mid = start + (end - start) / 2;
-    TreeNode * root = new TreeNode(ans[mid]);
-    root -> left = createBST(ans, start, mid - 1);
-    root -> right = createBST(ans, mid + 1, end);
+    TreeNode* root = new TreeNode(ans[mid]);
+    root->left = createBST(ans, start, mid - 1);
+    root->right = createBST(ans, mid + 1, end);
     return root;
   }
 
-  TreeNode * balanceBST(TreeNode * root) {
-    vector <int> ans;
-    inorder(root, ans); // Store the inorder traversal of the tree in an array
+  TreeNode* balanceBST(TreeNode* root) {
+    vector<int> ans;
+    inorder(root, ans);  // Store the inorder traversal of the tree in an array
 
     int start = 0, end = ans.size() - 1;
     return createBST(ans, start, end);
@@ -145,9 +151,7 @@ class Solution {
 };
 ```
 
-## Examples
-
-### Example : [0701 - Insert into a Binary Search Tree](https://leetcode.com/problems/insert-into-a-binary-search-tree/)
+## Example #1: [0701 - Insert into a Binary Search Tree](https://leetcode.com/problems/insert-into-a-binary-search-tree/)
 
 > You are given the root node of a binary search tree (BST) and a value to insert into the tree. Return the root node of the BST after the insertion. It is guaranteed that the new value does not exist in the original BST.
 
@@ -155,22 +159,26 @@ In this problem, we are asked to insert a node with a given key into a BST. To d
 
 ```cpp
 class Solution {
-  public: TreeNode * insertIntoBST(TreeNode * root, int key) {
+ public:
+  TreeNode* insertIntoBST(TreeNode* root, int key) {
     // If root is NULL, insert the node at the root
-    if (root == NULL)
+    if (root == NULL){
       return new TreeNode(key);
+    }
 
-    // If key is less than root's value, recurse into the left subtree, else recurse into the right subtree
-    if (key < root -> val)
-      root -> left = insertIntoBST(root -> left, key);
-    else
-      root -> right = insertIntoBST(root -> right, key);
+    // If key is less than root's value, recurse into the left subtree, else
+    // recurse into the right subtree
+    if (key < root->val){
+      root->left = insertIntoBST(root->left, key);
+    } else {
+      root->right = insertIntoBST(root->right, key);
+    }
     return root;
   }
 };
 ```
 
-### Example : [0450 - Delete Node in a BST](https://leetcode.com/problems/delete-node-in-a-bst/)
+## Example #2: [0450 - Delete Node in a BST](https://leetcode.com/problems/delete-node-in-a-bst/)
 
 > Given a root node reference of a BST and a key, delete the node with the given key in the BST. Return the root node reference (possibly updated) of the BST.
 
@@ -178,37 +186,38 @@ In this problem, we are asked to delete a node with a given key from a BST. Now 
 
 ```cpp
 class Solution {
-  public: TreeNode * deleteNode(TreeNode * root, int key) {
+ public:
+  TreeNode *deleteNode(TreeNode *root, int key) {
     if (root) {
-      // If key is not equal to val, recursively call deleteNode on the left or right subtree
-      if (key < root -> val)
-        root -> left = deleteNode(root -> left, key);
-      else if (key > root -> val)
-        root -> right = deleteNode(root -> right, key);
+      if (key < root->val) {
+        root->left = deleteNode(root->left, key);
+      } else if (key > root->val) {
+        root->right = deleteNode(root->right, key);
+      } else {
+        // If the node has no children, delete it directly
+        if (!root->left && !root->right) return NULL;
 
-    } else {
-      // Nothing to delete
-      if (!root -> left && !root -> right)
-        return NULL;
+        // If the node has only one child, delete it and replace it with its child
+        if (!root->left || !root->right) {
+          return root->left ? root->left : root->right;
+        }
 
-      // If left or right subtree is NULL, return the other subtree
-      if (!root -> left || !root -> right)
-        return root -> left ? root -> left : root -> right;
+        // If the node has both a left and right child, replace it with the minimum
+        TreeNode *temp = root->left;
+        while (temp->right != NULL) {
+          temp = temp->right;
+        }
 
-      // If both subtrees are present, replace the node with the minimum node in its right subtree
-      TreeNode * temp = root -> left;
-      while (temp -> right != NULL)
-        temp = temp -> right;
-      root -> val = temp -> val;
-      root -> left = deleteNode(root -> left, temp -> val);
+        root->val = temp->val;
+        root->left = deleteNode(root->left, temp->val);
+      }
     }
-
     return root;
   }
 };
 ```
 
-### Example : [0700 - Search in a Binary Search Tree](https://leetcode.com/problems/search-in-a-binary-search-tree/)
+## Example #3: [0700 - Search in a Binary Search Tree](https://leetcode.com/problems/search-in-a-binary-search-tree/)
 
 > Find the node in the BST that the node's value equals val and return the subtree rooted with that node. If such a node does not exist, return null.
 
@@ -216,17 +225,20 @@ In this problem, we are asked to find a node with a given key in a BST. This can
 
 ```cpp
 class Solution {
-  public: TreeNode * searchBST(TreeNode * root, int key) {
-    // Key found
-    if (root == NULL || root -> val == key)
+ public:
+  TreeNode* searchBST(TreeNode* root, int key) {
+    // Either root is found or the key is not present in the BST
+    if (root == NULL || root->val == key){
       return root;
+    }
 
-    // Key is present in left subtree
-    if (key < root -> val)
-      return searchBST(root -> left, key);
+    // If key is less than root's value, recurse into the left subtree, else
+    if (key < root->val){
+      return searchBST(root->left, key);
+    }
 
-    // Else key is present in right subtree
-    return searchBST(root -> right, key);
+    // Recurse into the right subtree
+    return searchBST(root->right, key);
   }
 };
 ```
