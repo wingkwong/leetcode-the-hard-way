@@ -50,6 +50,39 @@ Segment Trees have numerous applications in computer science and beyond:
 
 - **Interval Scheduling**: Solve problems involving scheduling tasks or events over time intervals.
 
+## Complexity Analysis
+
+Segment Trees are a powerful data structure for solving a variety of range query and update problems efficiently. Understanding their time and space complexities is essential when working with them.
+
+### Time Complexity
+
+1. **Build Segment Tree:**
+   - Time Complexity: O(N)
+     - Constructing the initial Segment Tree typically takes linear time, where N is the number of elements in the input array or sequence.
+
+2. **Query Operation:**
+   - Time Complexity: O(log N)
+     - Performing a query operation, such as finding the sum, minimum, maximum, or other aggregate value within a range, takes logarithmic time. This is because the Segment Tree reduces the search space by half at each level.
+
+3. **Update Operation:**
+   - Time Complexity: O(log N)
+     - Updating a single element in the input array and subsequently updating the Segment Tree also takes logarithmic time. This is because the tree height is logarithmic in the number of elements.
+
+### Space Complexity
+
+1. **Segment Tree Array:**
+   - Space Complexity: O(N)
+     - The Segment Tree is typically represented as an array of size 4*N (or a similar factor) to accommodate the tree structure. Therefore, the space complexity is linear with respect to the number of elements.
+
+2. **Recursive Implementation:**
+   - Space Complexity: O(log N)
+     - When implementing the Segment Tree recursively, the space complexity is proportional to the tree's height, which is logarithmic in the number of elements.
+
+### Remarks
+
+- The Segment Tree's efficiency lies in its ability to handle range queries and updates in logarithmic time, making it suitable for a wide range of problems.
+- Careful implementation can lead to memory optimizations, especially for large input sizes.
+
 
 ## Basic Segment Tree
 
