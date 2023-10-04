@@ -382,3 +382,183 @@ public:
 ```
 </TabItem>
 </Tabs>
+
+## Approach 4: Shell sort 
+
+1. Calculate the gap value for merging the two arrays. The gap is determined as ceil((size of arr1[] + size of arr2[]) / 2).
+
+2. Initialize two pointers: the left pointer at index 0 and the right pointer at index (left + gap).
+
+3. Perform the following steps for each gap until the gap becomes 0:
+   - Inside a loop that continues until the right pointer reaches the end (i.e., index n + m), handle three different cases:
+     - If the left pointer is inside arr1[] and the right pointer is in arr2[], compare arr1[left] and arr2[right - n]. If arr1[left] > arr2[right - n], swap them.
+     - If both pointers are in arr2[], compare arr1[left - n] and arr2[right - n]. If arr1[left - n] > arr2[right - n], swap them.
+     - If both pointers are in arr1[], compare arr1[left] and arr2[right]. If arr1[left] > arr2[right], swap them.
+   
+4. After the right pointer reaches the end, decrease the value of the gap by setting it to ceil(current gap / 2).
+
+5. Repeat the loop until the gap becomes 0.
+
+6. Finally, after performing all the operations, you will have the merged sorted array.
+
+
+<Tabs>
+<TabItem value="cpp" label="C++">
+
+```cpp
+class Solution {
+public:
+    void swapIfGreater(vector<int>& arr1, vector<int>& arr2, int ind1, int ind2) 
+    {
+        if (arr1[ind1] > arr2[ind2]) {
+            swap(arr1[ind1], arr2[ind2]);
+        }
+    }
+    void merge(vector<int>& arr1, int n, vector<int>& arr2, int m) {
+        int len = n + m;
+
+    // Initial gap:
+    int gap = (len / 2) + (len % 2);
+
+    while (gap > 0) {
+        // Place 2 pointers:
+        int left = 0;
+        int right = left + gap;
+        while (right < len) {
+            // case 1: left in arr1[]
+            //and right in arr2[]:
+            if (left < n && right >= n) {
+                swapIfGreater(arr1, arr2, left, right - n);
+            }
+            // case 2: both pointers in arr2[]:
+            else if (left >= n) {
+                swapIfGreater(arr2, arr2, left - n, right - n);
+            }
+            // case 3: both pointers in arr1[]:
+            else {
+                swapIfGreater(arr1, arr1, left, right);
+            }
+            left++, right++;
+        }
+        // break if iteration gap=1 is completed:
+        if (gap == 1) break;
+
+        // Otherwise, calculate new gap:
+        gap = (gap / 2) + (gap % 2);
+    }
+    int j=0;
+    for(int i=n;i<n+m;i++)
+    {
+        arr1[i]=arr2[j];
+        j++;
+    }
+    }
+};
+```
+</TabItem>
+<TabItem value="py" label="Python3">
+
+```py
+class Solution(object):
+    def swapIfGreater(self, arr1, arr2, ind1, ind2):
+        if arr1[ind1] > arr2[ind2]:
+            arr1[ind1], arr2[ind2] = arr2[ind2], arr1[ind1]
+
+    def merge(self, nums1, m, nums2, n):
+        # Calculate the total length
+        len = m + n
+
+        # Initial gap
+        gap = (len / 2) + (len % 2)
+
+        while gap > 0:
+            # Place two pointers
+            left = 0
+            right = left + gap
+
+            while right < len:
+                # case 1: left in nums1[] and right in nums2[]
+                if left < m and right >= m:
+                    self.swapIfGreater(nums1, nums2, left, right - m)
+
+                # case 2: both pointers in nums2[]
+                elif left >= m:
+                    self.swapIfGreater(nums2, nums2, left - m, right - m)
+
+                # case 3: both pointers in nums1[]
+                else:
+                    self.swapIfGreater(nums1, nums1, left, right)
+
+                left += 1
+                right += 1
+
+            # Break if iteration with gap=1 is completed
+            if gap == 1:
+                break
+
+            # Calculate the new gap
+            gap = (gap / 2) + (gap % 2)
+
+        j = 0
+        for i in range(m, len):
+            nums1[i] = nums2[j]
+            j += 1
+```
+</TabItem>
+<TabItem value="java" label="Java">
+
+```java
+class Solution {
+    public void swapIfGreater(int[] arr1, int[] arr2, int ind1, int ind2) {
+        if (arr1[ind1] > arr2[ind2]) {
+            int temp = arr1[ind1];
+            arr1[ind1] = arr2[ind2];
+            arr2[ind2] = temp;
+        }
+    }
+
+    public void merge(int[] nums1, int m, int[] nums2, int n) {
+        int len = m + n;
+
+        // Initial gap
+        int gap = (len / 2) + (len % 2);
+
+        while (gap > 0) {
+            // Place two pointers
+            int left = 0;
+            int right = left + gap;
+
+            while (right < len) {
+                // case 1: left in nums1[] and right in nums2[]
+                if (left < m && right >= m) {
+                    swapIfGreater(nums1, nums2, left, right - m);
+                }
+                // case 2: both pointers in nums2[]
+                else if (left >= m) {
+                    swapIfGreater(nums2, nums2, left - m, right - m);
+                }
+                // case 3: both pointers in nums1[]
+                else {
+                    swapIfGreater(nums1, nums1, left, right);
+                }
+                left++;
+                right++;
+            }
+            // Break if iteration with gap=1 is completed
+            if (gap == 1) {
+                break;
+            }
+            // Calculate the new gap
+            gap = (gap / 2) + (gap % 2);
+        }
+
+        int j = 0;
+        for (int i = m; i < len; i++) {
+            nums1[i] = nums2[j];
+            j++;
+        }
+    }
+}
+```
+</TabItem>
+</Tabs>

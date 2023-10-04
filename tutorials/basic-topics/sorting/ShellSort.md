@@ -384,6 +384,32 @@ For each value of the gap, the inner loop can run for a maximum of `n+m` times.
 
 In this question we can use brute approach of merging 2 sorted arrays using extra space but for optimal solution where we do not consider any extra space Shell Sort gives us an efficient solution.
 
+export const suggestedProblems = [
+    {
+        "problemName": "912-Sort an Array",
+        "difficulty": "Medium",
+        "leetCodeLink": "https://leetcode.com/problems/sort-an-array/",
+        "solutionLink": "../../../solutions/0900-0999/0912-sort-an-array-medium"
+    },
+    {
+        "problemName" : "148-Sort List",
+        "difficulty" : "Medium",
+        "leetCodeLink" : "https://leetcode.com/problems/sort-list/",
+        "solutionLink" : "../../../solutions/0100-0199/sort-list-medium"
+    },
+    {
+        "problemName" : "75-Sort Colors",
+        "difficulty" : "Medium",
+        "leetCodeLink" : "https://leetcode.com/problems/sort-colors/",
+        "solutionLink" : "../../../solutions/0000-0099/sort-colors-medium"
+    }, 
+    {
+        "problemName" : "88-Merge Sorted arrays",
+        "difficulty" : "Medium",
+        "leetCodeLink" : "https://leetcode.com/problems/merge-sorted-array/",
+        "solutionLink" : "../../../solutions/0000-0099/0088-merge-sorted-array-easy"
+    }
+]
 
-
-
+<Table title="Suggested Problems" data={suggestedProblems} />
+  

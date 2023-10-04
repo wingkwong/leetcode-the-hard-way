@@ -336,7 +336,7 @@ class Solution {
 </TabItem>
 </Tabs>
 
-## Approach 4: Couting Sort
+## Approach 4: Counting Sort
 
 <Tabs>
 <TabItem value="py" label="Python">
@@ -352,6 +352,62 @@ class Solution:
         for i, v in enumerate(b, -50000):
             ans.extend([i] * v)
         return ans
+```
+</TabItem>
+</Tabs>
+
+## Approach 5: Shell Sort
+<Tabs>
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@wingkwong"/>
+
+<TabItem value="cpp" label="C++">
+
+```cpp
+class Solution {
+public:
+    void shellSort(vector<int>& nums) {
+        int n = nums.size();
+        for (int gap = n / 2; gap > 0; gap /= 2) {
+            for (int i = gap; i < n; ++i) {
+                int temp = nums[i];
+                int j;
+                for (j = i; j >= gap && nums[j - gap] > temp; j -= gap) {
+                    nums[j] = nums[j - gap];
+                }
+                nums[j] = temp;
+            }
+        }
+    }
+
+    vector<int> sortArray(vector<int>& nums) {
+        shellSort(nums);
+        return nums;
+    }
+};
+```
+</TabItem>
+<TabItem value="py" label="Python3">
+
+```py
+class Solution:
+    def shellSort(self, nums):
+        n = len(nums)
+        gap = n // 2
+        while gap > 0:
+            for i in range(gap, n):
+                temp = nums[i]
+                j = i
+                while j >= gap and nums[j - gap] > temp:
+                    nums[j] = nums[j - gap]
+                    j -= gap
+                nums[j] = temp
+            gap //= 2
+
+    def sortArray(self, nums):
+        self.shellSort(nums)
+        return nums
+
 ```
 </TabItem>
 </Tabs>
