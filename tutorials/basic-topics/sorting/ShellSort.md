@@ -22,7 +22,31 @@ Shell Sort, also known as diminishing increment sort, operates on the principle 
 
 ### Step 1: Choose a Gap Sequence
 
-The first crucial step in Shell Sort is selecting an appropriate gap sequence. A common choice is to start with the array's length divided by 2 and repeatedly divide by 2 until the gap becomes 1. The choice of the gap sequence greatly influences the algorithm's performance.
+The first crucial step in Shell Sort is selecting an appropriate gap sequence. The choice of the gap sequence greatly influences the algorithm's performance. Two common gap sequences are:
+
+#### 1.1. Gap Sequence Starting at n/2
+
+A common choice is to start with the array's length divided by 2 and repeatedly divide by 2 until the gap becomes 1. This sequence has a formula: `gap = gap / 2`. It's simple and often works reasonably well.
+
+#### 1.2. Knuth Sequence
+
+Knuth's sequence is more sophisticated and is computed using the formula: `gap = (gap * 3) + 1`. It provides a better distribution of gaps and is often used for improved performance.
+
+#### 1.3. Sedgewick Sequence
+
+Sedgewick's sequence is another popular choice, offering a combination of smaller and larger gaps. It is typically defined as: `gap = 4^i + 3 * 2^(i-1) + 1`.
+
+**Impact on Running Time**
+
+The choice of the gap sequence can significantly affect the running time of the Shell Sort algorithm:
+
+- **Gap Sequence Starting at n/2**: This simple sequence often performs reasonably well and is easy to implement. However, it may not be as efficient as Knuth or Sedgewick sequences for some inputs.
+
+- **Knuth Sequence**: Knuth's sequence is known for its good performance characteristics. It tends to distribute gaps more effectively, resulting in faster sorting for many inputs. It can be an excellent choice for a wide range of scenarios.
+
+- **Sedgewick Sequence**: Sedgewick's sequence provides a combination of smaller and larger gaps. It aims to strike a balance between gap sizes, which can lead to efficient sorting in practice. It may perform particularly well for specific input distributions.
+
+The running time of Shell Sort heavily depends on the selected gap sequence. Therefore, choosing an appropriate sequence is essential to optimize the sorting performance for different input data.
 
 ### Step 2: Start Sorting with a Gap
 
