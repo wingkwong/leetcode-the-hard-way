@@ -48,7 +48,7 @@ Now, let's visualize how Shell Sort works with a simple example:
 
 Suppose we have an unsorted array `[6, 5, 3, 1, 8, 7, 2, 4]`. We'll perform Shell Sort on this array step by step:
 
-![image](../../../static/img/ShellSort.png) 
+<img width="638" alt="Screenshot 2023-10-06 at 12 04 53 AM" src="https://github.com/Saishreekouda/leetcode-the-hard-way/assets/96722257/fde0eb1d-8c61-4e3b-a49a-ecdc36b5a665">
 
 1. Start with a gap sequence: Initially, the gap is 4 (length of the array divided by 2).
 
@@ -58,6 +58,8 @@ Suppose we have an unsorted array `[6, 5, 3, 1, 8, 7, 2, 4]`. We'll perform Shel
    - Subarray 3: `[3, 2]`
    - Subarray 4: `[1, 4]`
 
+<img width="627" alt="image" src="https://github.com/Saishreekouda/leetcode-the-hard-way/assets/96722257/cdf586a2-a106-42e7-b58c-9594ff2d6afb">
+
 3. Apply Insertion Sort within each subarray:
 
    - After sorting Subarray 1: `[6, 8]`
@@ -65,19 +67,26 @@ Suppose we have an unsorted array `[6, 5, 3, 1, 8, 7, 2, 4]`. We'll perform Shel
    - After sorting Subarray 3: `[2, 3]`
    - After sorting Subarray 4: `[1, 4]`
 
+<img width="631" alt="image" src="https://github.com/Saishreekouda/leetcode-the-hard-way/assets/96722257/c81dfce6-ff6a-427a-8332-2b39964aeddf">
+
+
 4. Reduce the gap to 2 and repeat the process:
-   - Subarray 1: `[6, 3, 1]`
-   - Subarray 2: `[5, 2, 4]`
-   - Subarray 3: `[8, 7]`
+   - Subarray 1: `[6, 2, 8, 3]`
+   - Subarray 2: `[5, 1, 7, 4]`
+     
+<img width="634" alt="image" src="https://github.com/Saishreekouda/leetcode-the-hard-way/assets/96722257/6cc043da-e38b-41b4-9e3f-bb8418bcf59d">
 
 5. Apply Insertion Sort within each subarray:
 
-   - After sorting Subarray 1: `[1, 3, 6]`
-   - After sorting Subarray 2: `[2, 4, 5]`
-   - After sorting Subarray 3: `[7, 8]`
+   - After sorting Subarray 1: `[2, 3, 6, 8]`
+   - After sorting Subarray 2: `[1, 4, 5, 7]`
+     
+<img width="628" alt="image" src="https://github.com/Saishreekouda/leetcode-the-hard-way/assets/96722257/1210f307-b9b8-4590-8024-1c833193f230">
 
 6. Finally, reduce the gap to 1 and perform a final pass of Insertion Sort:
    - `[1, 2, 3, 4, 5, 6, 7, 8]` (Sorted!)
+  
+<img width="625" alt="image" src="https://github.com/Saishreekouda/leetcode-the-hard-way/assets/96722257/c736a5fd-2269-41d8-bcb2-27da25a48d25">
 
 ## Complexity Analysis
 
