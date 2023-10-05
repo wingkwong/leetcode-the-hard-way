@@ -22,7 +22,7 @@ A Segment Tree is a binary tree where each node represents a range or interval o
 If you have an array with elements [0, ..., N-1], you can divide it into two parts: [0, ..., N/2-1] and [N/2, ..., N-1]. This division allows us to create a recursive structure. We continue this process until the lower and upper bounds of the range are the same.
 The segment tree is typically depicted using an array structure, with the initial element storing the aggregate value for the entire range, and the descendants of the node at the i-th position can be located at (2i + 1) and (2i + 2).
 
-![Segment Tree Structure](images/segment_tree_structure.png)
+![Segment Tree Structure](images/segment-tree.jpg)
 
 Each node in the segment tree represents a range of elements in the array. The root node represents the entire array, and its children represent the two halves of the array. Each child's children represent the two halves of that child's range, and so on.
 
