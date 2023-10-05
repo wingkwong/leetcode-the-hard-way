@@ -14,22 +14,21 @@ keywords:
 
 ## Overview
 
-In this tutorial, we will explore the Shell Sort algorithm, a popular and efficient sorting technique. This algorithm uses insertion sort on a widely spread elements, first to sort them and then sorts the less widely spaced elements. This spacing is termed as interval.
-
+Shell Sort is a sorting algorithm that employs a unique gap-based strategy to improve the efficiency of the sorting process. It extends the idea from insertion sort and offers a solution with better time complexity.
 
 ## Algorithm
 
-Shell Sort is an efficient sorting algorithm that builds on the concept of Insertion Sort. It works by sorting subarrays of an array with a gap and gradually reducing the gap until it becomes 1. This process makes larger elements move to the end of the array faster, improving overall sorting time.
+Shell Sort, also known as diminishing increment sort, operates on the principle of repeatedly sorting subarrays with a specific gap size. It gradually reduces this gap size until it becomes 1, effectively sorting the entire array.
 
 ### Step 1: Choose a Gap Sequence
 
-The first step in Shell Sort is to choose a gap sequence. A common sequence is to start with the array's length divided by 2 and repeatedly divide by 2 until the gap becomes 1. The choice of gap sequence affects the algorithm's efficiency.
+The first crucial step in Shell Sort is selecting an appropriate gap sequence. A common choice is to start with the array's length divided by 2 and repeatedly divide by 2 until the gap becomes 1. The choice of the gap sequence greatly influences the algorithm's performance.
 
 ### Step 2: Start Sorting with a Gap
 
-1. Divide the array into subarrays of size `gap`. Initially, the subarrays are the elements separated by the chosen gap.
+1. Divide the array into subarrays of size equal to the chosen gap. Initially, these subarrays consist of elements separated by the selected gap.
 
-2. For each subarray, perform an Insertion Sort. This means you move elements within the subarray to their correct positions.
+2. For each subarray, execute an Insertion Sort. This involves rearranging elements within the subarray to their correct positions.
 
 ### Step 3: Reduce the Gap
 
@@ -43,25 +42,50 @@ The first step in Shell Sort is to choose a gap sequence. A common sequence is t
 
 5. Perform a final pass of Insertion Sort with a gap of 1. This is a regular Insertion Sort that ensures the entire array is sorted correctly.
 
+Now, let's visualize how Shell Sort works with a simple example:
 
-Let's see how Shell Sort works with an example array `[5, 2, 9, 3, 6]`:
+<!-- We can see that Shell Sort is performed in the following way: -->
 
-1. Initial gap is `n/2 = 5/2 = 2`. Divide the array into subarrays: `[5, 9]` and `[2, 3, 6]`. Perform Insertion Sort within these subarrays.
+Suppose we have an unsorted array `[6, 5, 3, 1, 8, 7, 2, 4]`. We'll perform Shell Sort on this array step by step:
 
-   Result after first pass: `[5, 2, 9, 3, 6]` → `[2, 3, 5, 6, 9]`
+![image](../../../static/img/ShellSort.png) 
 
-2. Reduce the gap to `1`. Perform a final pass of Insertion Sort.
+1. Start with a gap sequence: Initially, the gap is 4 (length of the array divided by 2).
 
-   Result after final pass: `[2, 3, 5, 6, 9]` (Sorted!)
+2. Divide the array into subarrays with a gap of 4:
+   - Subarray 1: `[6, 8]`
+   - Subarray 2: `[5, 7]`
+   - Subarray 3: `[3, 2]`
+   - Subarray 4: `[1, 4]`
 
+3. Apply Insertion Sort within each subarray:
 
-### Complexity Analysis
+   - After sorting Subarray 1: `[6, 8]`
+   - After sorting Subarray 2: `[5, 7]`
+   - After sorting Subarray 3: `[2, 3]`
+   - After sorting Subarray 4: `[1, 4]`
 
-Before diving into the algorithm's implementation, let's analyze its time complexity:
+4. Reduce the gap to 2 and repeat the process:
+   - Subarray 1: `[6, 3, 1]`
+   - Subarray 2: `[5, 2, 4]`
+   - Subarray 3: `[8, 7]`
 
-- **Time Complexity**: The time complexity of Shell Sort depends on the gap sequence used. In the worst case, it can be O(n^2), but with the right gap sequence, it can achieve a time complexity of O(n log^2 n).
+5. Apply Insertion Sort within each subarray:
 
-Now, let's walk through the topic by solving two example problems using the Shell Sort algorithm.
+   - After sorting Subarray 1: `[1, 3, 6]`
+   - After sorting Subarray 2: `[2, 4, 5]`
+   - After sorting Subarray 3: `[7, 8]`
+
+6. Finally, reduce the gap to 1 and perform a final pass of Insertion Sort:
+   - `[1, 2, 3, 4, 5, 6, 7, 8]` (Sorted!)
+
+## Complexity Analysis
+
+Before we dive into implementing Shell Sort, let's briefly analyze its time complexity:
+
+- **Time Complexity**: The time complexity of Shell Sort depends on the gap sequence used. In the worst case, it can be O(n^2), but with an optimal gap sequence, it can achieve a time complexity of O(n log^2 n).
+
+Shell Sort is a versatile sorting algorithm suitable for beginners and provides an intuitive way to sort arrays efficiently. Now, let's explore how to implement Shell Sort in various programming languages.
 
 ## Example 1: [912 - Sort an Array using Shell Sort](https://leetcode.com/problems/sort-an-array/)
 
