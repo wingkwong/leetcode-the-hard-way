@@ -358,8 +358,8 @@ class Solution:
 
 ## Approach 5: Shell Sort
 <Tabs>
-<TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+
+<SolutionAuthor name="@saishreekouda"/>
 
 <TabItem value="cpp" label="C++">
 
