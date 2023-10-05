@@ -200,14 +200,6 @@ public class Solution {
         nums[i] = nums[j];
         nums[j] = temp;
     }
-
-    public static void main(String[] args) {
-        Solution solution = new Solution();
-        int[] nums = {12, 11, 13, 5, 6, 7};
-        System.out.println("Original Array: " + Arrays.toString(nums));
-        solution.sortArray(nums);
-        System.out.println("Sorted Array: " + Arrays.toString(nums));
-    }
 }
 ```
 
