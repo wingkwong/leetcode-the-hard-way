@@ -101,6 +101,8 @@ div[class^='announcementBar_'] {
   font-size: 18px;
   height: 35px;
   padding: 10px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 div[class^='announcementBar_'] a {
