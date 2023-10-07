@@ -230,8 +230,6 @@ table, tr, td, th {
   color: rgb(255 45 85);
 }
 
-/*  for emoji's */
-
 @media screen and (min-width: 1120px) {
   .nav-emoji{
     display: inline-block;
