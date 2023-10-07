@@ -73,6 +73,9 @@
     background: var(--ifm-color-emphasis-200);
     color: inherit;
   }
+  .nav-emoji{
+    display: none;
+  }
 }
 
 .header-github-link:hover {
@@ -231,11 +234,6 @@ table, tr, td, th {
 
 /*  for emoji's */
 
-@media screen and (min-width: 997px) {
-  .nav-emoji{
-    display: none;
-  }
-}
 @media screen and (min-width: 1120px) {
   .nav-emoji{
     display: inline-block;
