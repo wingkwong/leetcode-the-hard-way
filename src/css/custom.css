@@ -231,8 +231,13 @@ table, tr, td, th {
 
 /*  for emoji's */
 
-@media screen and (min-width: 997px) and (max-width: 1119px) {
+@media screen and (min-width: 997px) {
   .nav-emoji{
     display: none;
+  }
+}
+@media screen and (min-width: 1120px) {
+  .nav-emoji{
+    display: inline-block;
   }
 }
