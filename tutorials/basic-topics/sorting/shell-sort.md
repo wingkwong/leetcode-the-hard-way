@@ -111,6 +111,8 @@ Apply Insertion Sort within each subarray:
 Finally, reduce the gap to 1 and perform a final pass of Insertion Sort:
    - $[1, 2, 3, 4, 5, 6, 7, 8]$ (Sorted!)
 
+![image](https://github.com/Saishreekouda/leetcode-the-hard-way/assets/96722257/4839a2d7-5966-4e44-a1ec-3d89d6937647)
+
 ## Complexity Analysis
 
 Before we dive into implementing Shell Sort, let's briefly analyze its time complexity:
