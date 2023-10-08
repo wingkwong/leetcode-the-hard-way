@@ -215,7 +215,6 @@ Shell Sort is generally **not** considered **a stable sort**. It does not guaran
 
 Shell Sort is an **out-of-place** algorithm, which means it requires additional memory to sort the array. The additional space required depends on the input size of the array elements. While it doesn't require as much extra space as some other sorting algorithms like Merge Sort or Heap Sort, it still needs space for temporary storage and swapping elements during the sorting process.
 
-
 **Time Complexity**
 
 - Best Case: $O(n \log_2(n))$
@@ -231,8 +230,6 @@ Shell Sort demonstrates a time complexity of $O(n \log_2(n))$ in its best and av
 For very large arrays, Shell Sort's space complexity of $O(n)$ can be inefficient, as it allocates extra memory. In such cases, when memory usage is a critical concern, you may consider alternative sorting algorithms like Quick Sort, which typically requires less additional space.
 
 Shell Sort remains a reliable sorting algorithm for moderately sized arrays, and its performance can be optimized by choosing an appropriate gap sequence.
-
-
 
 ## Example 2: [0088 - Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array)
 
@@ -452,9 +449,3 @@ export const suggestedProblems = [
 ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />
-
-
-
-
-
- 
