@@ -10,7 +10,7 @@ keywords:
   - shell sort
 ---
 
-<TutorialAuthors names="@<Saishreekouda>"/>
+<TutorialAuthors names="@Saishreekouda"/>
 
 ## Overview
 
