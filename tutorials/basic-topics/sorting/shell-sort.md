@@ -9,7 +9,6 @@ keywords:
   - algorithm
   - shell sort
 ---
-
 <TutorialAuthors names="@Saishreekouda"/>
 
 ## Overview

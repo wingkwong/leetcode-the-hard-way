@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @ganajayant, @deepanshu-rawat6 | https://leetcode.com/problems/sort-an-array/'
+description: 'Author: @saishreekouda, @wingkwong, @ganajayant, @deepanshu-rawat6| https://leetcode.com/problems/sort-an-array/'
 tags: ['sorting']
 ---
 
@@ -356,12 +356,21 @@ class Solution:
 </TabItem>
 </Tabs>
 
+
 ## Approach 5: Shell Sort
+- Start with a gap sequence. A common choice is to start with $\frac{n}{2}$ and halve it in each iteration until the gap becomes $1$, where $n$ is the length of the array.
+
+- Divide the array into subarrays of size equal to the current gap.
+
+- For each subarray, perform an insertion sort to sort the elements within the subarray.
+
+- Reduce the gap and repeat the process until the gap becomes $1$.
+
+- Finally, perform a final pass of insertion sort with a gap of $1$ to ensure the entire array is sorted.
+
 <Tabs>
-
-<SolutionAuthor name="@saishreekouda"/>
-
 <TabItem value="cpp" label="C++">
+<SolutionAuthor name="@saishreekouda"/>
 
 ```cpp
 class Solution {
@@ -388,10 +397,11 @@ public:
 ```
 </TabItem>
 <TabItem value="py" label="Python3">
+<SolutionAuthor name="@saishreekouda"/>
 
 ```py
 class Solution:
-    def shellSort(self, nums):
+    def sortArray(self, nums: List[int]) -> List[int]:
         n = len(nums)
         gap = n // 2
         while gap > 0:
@@ -403,11 +413,7 @@ class Solution:
                     j -= gap
                 nums[j] = temp
             gap //= 2
-
-    def sortArray(self, nums):
-        self.shellSort(nums)
         return nums
-
 ```
 </TabItem>
 </Tabs>
