@@ -1,6 +1,6 @@
 ---
 title: 'Shell Sort'
-description: 'Sorting algorithm using a gap concept'
+description: 'Sorting algorithm using a gap-based strategy to improve efficiency of sorting process'
 hide_table_of_contents: false
 keywords:
   - leetcode
@@ -70,47 +70,47 @@ Now, let's visualize how Shell Sort works with a simple example:
 
 Suppose we have an unsorted array $[6, 5, 3, 1, 8, 7, 2, 4]$. We'll perform Shell Sort on this array step by step:
 
-<img width="638" alt="step 1" src="https://github.com/Saishreekouda/leetcode-the-hard-way/assets/96722257/fde0eb1d-8c61-4e3b-a49a-ecdc36b5a665">
+<img width="638" alt="step 1" src="https://github.com/Saishreekouda/leetcode-the-hard-way/assets/96722257/fde0eb1d-8c61-4e3b-a49a-ecdc36b5a665"/>
 
-1. Start with a gap sequence: Initially, the gap is 4 (length of the array divided by 2).
+Start with a gap sequence: Initially, the gap is 4 (length of the array divided by 2).
 
-2. Divide the array into subarrays with a gap of 4:
+Divide the array into subarrays with a gap of 4:
 
    - Subarray 1: $[6, 8]$
    - Subarray 2: $[5, 7]$
    - Subarray 3: $[3, 2]$
    - Subarray 4: $[1, 4]$
 
-<img width="627" alt="image" src="https://github.com/Saishreekouda/leetcode-the-hard-way/assets/96722257/cdf586a2-a106-42e7-b58c-9594ff2d6afb">
+<!-- <img width="627" alt="image" src="https://github.com/Saishreekouda/leetcode-the-hard-way/assets/96722257/cdf586a2-a106-42e7-b58c-9594ff2d6afb"> -->
 
-3. Apply Insertion Sort within each subarray:
+Apply Insertion Sort within each subarray:
 
    - After sorting Subarray 1: $[6, 8]$
    - After sorting Subarray 2: $[5, 7]$
    - After sorting Subarray 3: $[2, 3]$
    - After sorting Subarray 4: $[1, 4]$
 
-<img width="631" alt="image" src="https://github.com/Saishreekouda/leetcode-the-hard-way/assets/96722257/c81dfce6-ff6a-427a-8332-2b39964aeddf">
+<!-- <img width="631" alt="image" src="https://github.com/Saishreekouda/leetcode-the-hard-way/assets/96722257/c81dfce6-ff6a-427a-8332-2b39964aeddf">  -->
 
 
-4. Reduce the gap to 2 and repeat the process:
+Reduce the gap to 2 and repeat the process:
 
    - Subarray 1: $[6, 2, 8, 3]$
    - Subarray 2: $[5, 1, 7, 4]$
      
-<img width="634" alt="image" src="https://github.com/Saishreekouda/leetcode-the-hard-way/assets/96722257/6cc043da-e38b-41b4-9e3f-bb8418bcf59d">
+<!-- <img width="634" alt="image" src="https://github.com/Saishreekouda/leetcode-the-hard-way/assets/96722257/6cc043da-e38b-41b4-9e3f-bb8418bcf59d"> -->
 
-5. Apply Insertion Sort within each subarray:
+Apply Insertion Sort within each subarray:
 
    - After sorting Subarray 1: $[2, 3, 6, 8]$
    - After sorting Subarray 2: $[1, 4, 5, 7]$
      
-<img width="628" alt="image" src="https://github.com/Saishreekouda/leetcode-the-hard-way/assets/96722257/1210f307-b9b8-4590-8024-1c833193f230">
+<!-- <img width="628" alt="image" src="https://github.com/Saishreekouda/leetcode-the-hard-way/assets/96722257/1210f307-b9b8-4590-8024-1c833193f230"> -->
 
-6. Finally, reduce the gap to 1 and perform a final pass of Insertion Sort:
+Finally, reduce the gap to 1 and perform a final pass of Insertion Sort:
    - $[1, 2, 3, 4, 5, 6, 7, 8]$ (Sorted!)
   
-<img width="625" alt="image" src="https://github.com/Saishreekouda/leetcode-the-hard-way/assets/96722257/c736a5fd-2269-41d8-bcb2-27da25a48d25">
+<!-- <img width="625" alt="image" src="https://github.com/Saishreekouda/leetcode-the-hard-way/assets/96722257/c736a5fd-2269-41d8-bcb2-27da25a48d25"> -->
 
 ## Complexity Analysis
 
@@ -322,24 +322,24 @@ public:
 <TabItem value="py" label="Python3">
 
 ```py
-class Solution(object):
-    def swapIfGreater(self, arr1, arr2, ind1, ind2):
+class Solution:
+    def swapIfGreater(self, arr1: List[int], arr2: List[int], ind1: int, ind2: int) -> None:
         if arr1[ind1] > arr2[ind2]:
             arr1[ind1], arr2[ind2] = arr2[ind2], arr1[ind1]
 
-    def merge(self, nums1, m, nums2, n):
+    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
         # Calculate the total length
-        len = m + n
+        length = m + n
 
         # Initial gap
-        gap = (len / 2) + (len % 2)
+        gap = (length // 2) + (length % 2)
 
         while gap > 0:
             # Place two pointers
             left = 0
             right = left + gap
 
-            while right < len:
+            while right < length:
                 # case 1: left in nums1[] and right in nums2[]
                 if left < m and right >= m:
                     self.swapIfGreater(nums1, nums2, left, right - m)
@@ -360,10 +360,10 @@ class Solution(object):
                 break
 
             # Calculate the new gap
-            gap = (gap / 2) + (gap % 2)
+            gap = (gap // 2) + (gap % 2)
 
         j = 0
-        for i in range(m, len):
+        for i in range(m, length):
             nums1[i] = nums2[j]
             j += 1
 ```
@@ -429,7 +429,6 @@ class Solution {
 **Time Complexity**: $O((n+m) \cdot \log(n+m))$
 
 The time complexity of the algorithm for merging two sorted arrays of sizes $n$ and $m$ is determined as follows:
-1.
 - The gap ranges from $n+m$ to 1, and at each step, the gap is divided by 2.
 - Therefore, the outer loop runs for $O(log(n+m))$ iterations.
 
@@ -443,25 +442,25 @@ In this question we can use brute approach of merging 2 sorted arrays using extr
 
 export const suggestedProblems = [
     {
-        "problemName": "912-Sort an Array",
+        "problemName": "0912-Sort an Array",
         "difficulty": "Medium",
         "leetCodeLink": "https://leetcode.com/problems/sort-an-array/",
         "solutionLink": "../../../solutions/0900-0999/0912-sort-an-array-medium"
     },
     {
-        "problemName" : "148-Sort List",
+        "problemName" : "0148-Sort List",
         "difficulty" : "Medium",
         "leetCodeLink" : "https://leetcode.com/problems/sort-list/",
         "solutionLink" : "../../../solutions/0100-0199/sort-list-medium"
     },
     {
-        "problemName" : "75-Sort Colors",
+        "problemName" : "0075-Sort Colors",
         "difficulty" : "Medium",
         "leetCodeLink" : "https://leetcode.com/problems/sort-colors/",
         "solutionLink" : "../../../solutions/0000-0099/sort-colors-medium"
     }, 
     {
-        "problemName" : "88-Merge Sorted arrays",
+        "problemName" : "0088-Merge Sorted arrays",
         "difficulty" : "Medium",
         "leetCodeLink" : "https://leetcode.com/problems/merge-sorted-array/",
         "solutionLink" : "../../../solutions/0000-0099/0088-merge-sorted-array-easy"
@@ -469,4 +468,9 @@ export const suggestedProblems = [
 ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />
-  
+
+
+
+
+
+ 
