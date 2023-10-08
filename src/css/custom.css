@@ -103,7 +103,6 @@ div[class^='announcementBar_'] {
   font-weight: bold;
   font-size: 18px;
   height: auto;
-  padding: 10px;
 }
 
 div[class^='announcementBar_'] a {
@@ -231,7 +230,7 @@ table, tr, td, th {
 }
 
 @media screen and (min-width: 1120px) {
-  .nav-emoji{
+  .nav-emoji {
     display: inline-block;
   }
 }
