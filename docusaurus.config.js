@@ -58,7 +58,7 @@ const config = {
         },
         gtag: {
           trackingID: 'G-NY80BVQV8L',
-        }, 
+        },
         googleAnalytics: {
           trackingID: 'UA-119822493-4',
         },
@@ -86,27 +86,27 @@ const config = {
         // },
         items: [
           {
-            label: '📚 Tutorials',
+            html: '<span class="nav-emoji">📚</span> Tutorials',
             to: '/tutorials/category/basic-topics',
             activeBaseRegex: `/tutorials/`,
           },
           {
-            label: '📖 Solutions',
+            html: '<span class="nav-emoji">📖</span> Solutions',
             to: '/solutions/category/0000---0099',
             activeBaseRegex: `/solutions/`,
           },
           {
-            label: '🏷️ Tags',
+            html: '<span class="nav-emoji">🏷️</span> Tags',
             to: '/solutions/tags/',
             activeBaseRegex: `/solutions/tags/`,
           },
           {
-            label: '🏛️ Roadmap',
+            html: '<span class="nav-emoji">🏛️</span> Roadmap',
             to: '/roadmap/',
             activeBaseRegex: `/roadmap/`,
           },
           {
-            label: '🖥️ Templates',
+            html: '<span class="nav-emoji">🖥️</span> Templates',
             to: '/templates/',
             activeBaseRegex: `/templates/`,
           },
@@ -211,70 +211,70 @@ const config = {
       },
     }),
 
-    plugins: [
-      [
-        '@docusaurus/plugin-content-docs',
-        {
-          id: 'solutions',
-          path: 'solutions',
-          routeBasePath: 'solutions',
-          sidebarPath: require.resolve('./sidebars.js'),
-          remarkPlugins: [math],
-          rehypePlugins: [katex],
-          // showLastUpdateTime: true,
-          // showLastUpdateAuthor: true,
-          editUrl:
-            'https://github.com/wingkwong/leetcode-the-hard-way/tree/main/',
-        }, 
-      ],
-      [
-        '@docusaurus/plugin-content-docs',
-        {
-          id: 'tutorials',
-          path: 'tutorials',
-          routeBasePath: 'tutorials',
-          sidebarPath: require.resolve('./sidebars.js'),
-          remarkPlugins: [math],
-          rehypePlugins: [katex],
-          // showLastUpdateTime: true,
-          // showLastUpdateAuthor: true,
-          editUrl:
-            'https://github.com/wingkwong/leetcode-the-hard-way/tree/main/',
-        }, 
-      ],
-      [
-        '@docusaurus/plugin-content-docs',
-        {
-          id: 'roadmap',
-          path: 'roadmap',
-          routeBasePath: 'roadmap',
-          sidebarPath: require.resolve('./sidebars.js'),
-          remarkPlugins: [math],
-          rehypePlugins: [katex],
-          // showLastUpdateTime: true,
-          // showLastUpdateAuthor: true,
-          editUrl:
-            'https://github.com/wingkwong/leetcode-the-hard-way/tree/main/',
-        }, 
-      ],
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'solutions',
+        path: 'solutions',
+        routeBasePath: 'solutions',
+        sidebarPath: require.resolve('./sidebars.js'),
+        remarkPlugins: [math],
+        rehypePlugins: [katex],
+        // showLastUpdateTime: true,
+        // showLastUpdateAuthor: true,
+        editUrl:
+          'https://github.com/wingkwong/leetcode-the-hard-way/tree/main/',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'tutorials',
+        path: 'tutorials',
+        routeBasePath: 'tutorials',
+        sidebarPath: require.resolve('./sidebars.js'),
+        remarkPlugins: [math],
+        rehypePlugins: [katex],
+        // showLastUpdateTime: true,
+        // showLastUpdateAuthor: true,
+        editUrl:
+          'https://github.com/wingkwong/leetcode-the-hard-way/tree/main/',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'roadmap',
+        path: 'roadmap',
+        routeBasePath: 'roadmap',
+        sidebarPath: require.resolve('./sidebars.js'),
+        remarkPlugins: [math],
+        rehypePlugins: [katex],
+        // showLastUpdateTime: true,
+        // showLastUpdateAuthor: true,
+        editUrl:
+          'https://github.com/wingkwong/leetcode-the-hard-way/tree/main/',
+      },
+    ],
 
-      [
-        '@docusaurus/plugin-content-docs',
-        {
-          id: 'templates',
-          path: 'templates',
-          routeBasePath: 'templates',
-          sidebarPath: require.resolve('./sidebars.js'),
-          remarkPlugins: [math],
-          rehypePlugins: [katex],
-          // showLastUpdateTime: true,
-          // showLastUpdateAuthor: true,
-          editUrl:
-            'https://github.com/wingkwong/leetcode-the-hard-way/tree/main/',
-        }, 
-      ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'templates',
+        path: 'templates',
+        routeBasePath: 'templates',
+        sidebarPath: require.resolve('./sidebars.js'),
+        remarkPlugins: [math],
+        rehypePlugins: [katex],
+        // showLastUpdateTime: true,
+        // showLastUpdateAuthor: true,
+        editUrl:
+          'https://github.com/wingkwong/leetcode-the-hard-way/tree/main/',
+      },
+    ],
   ],
-  
+
 };
 
 module.exports = config;
