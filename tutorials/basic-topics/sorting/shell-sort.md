@@ -18,15 +18,15 @@ Shell Sort is a sorting algorithm that employs a unique gap-based strategy to im
 
 ## Algorithm
 
-Shell Sort, also known as diminishing increment sort, operates on the principle of repeatedly sorting subarrays with a specific gap size. It gradually reduces this gap size until it becomes 1, effectively sorting the entire array.
+Shell Sort, also known as diminishing increment sort, operates on the principle of repeatedly sorting subarrays with a specific gap size. It gradually reduces this gap size until it becomes $1$, effectively sorting the entire array.
 
 ### Step 1: Choose a Gap Sequence
 
 The first crucial step in Shell Sort is selecting an appropriate gap sequence. The choice of the gap sequence greatly influences the algorithm's performance. Two common gap sequences are:
 
-#### 1.1. Gap Sequence Starting at n/2
+#### 1.1. Gap Sequence Starting at $\frac{n}{2}$
 
-A common choice is to start with the array's length divided by 2 and repeatedly divide by 2 until the gap becomes 1. This sequence has a formula: $\frac{n}{2}$. It's simple and often works reasonably well.
+A common choice is to start with the array's length divided by $2$ and repeatedly divide by $2$ until the gap becomes $1$. This sequence has a formula: $\frac{n}{2}$. It's simple and often works reasonably well.
 
 #### 1.2. Knuth Sequence
 
@@ -56,26 +56,25 @@ The running time of Shell Sort heavily depends on the selected gap sequence. The
 
 ### Step 3: Reduce the Gap
 
-3. Decrease the gap (usually by dividing it by 2).
+3. Decrease the gap (usually by dividing it by $2$).
 
 ### Step 4: Repeat Until Gap is 1
 
-4. Repeat steps 2 and 3 until the gap becomes 1.
+4. Repeat steps 2 and 3 until the gap becomes $1$.
 
 ### Step 5: Final Pass
 
-5. Perform a final pass of Insertion Sort with a gap of 1. This is a regular Insertion Sort that ensures the entire array is sorted correctly.
+5. Perform a final pass of Insertion Sort with a gap of $1$. This is a regular Insertion Sort that ensures the entire array is sorted correctly.
 
 Now, let's visualize how Shell Sort works with a simple example:
 
 Suppose we have an unsorted array $[6, 5, 3, 1, 8, 7, 2, 4]$. We'll perform Shell Sort on this array step by step:
 
-<!-- <img width="638" alt="step 1" src=""/> -->
 ![image](https://github.com/Saishreekouda/leetcode-the-hard-way/assets/96722257/fde0eb1d-8c61-4e3b-a49a-ecdc36b5a665)
 
-Start with a gap sequence: Initially, the gap is 4 (length of the array divided by 2).
+Start with a gap sequence: Initially, the gap is $4$ (length of the array divided by $2$).
 
-Divide the array into subarrays with a gap of 4:
+Divide the array into subarrays with a gap of $4$:
 
    - Subarray 1: $[6, 8]$
    - Subarray 2: $[5, 7]$
@@ -83,7 +82,6 @@ Divide the array into subarrays with a gap of 4:
    - Subarray 4: $[1, 4]$
 
 ![image](https://github.com/Saishreekouda/leetcode-the-hard-way/assets/96722257/cdf586a2-a106-42e7-b58c-9594ff2d6afb)
-<!-- <img width="627" alt="image" src=""> -->
 
 Apply Insertion Sort within each subarray:
 
@@ -94,7 +92,7 @@ Apply Insertion Sort within each subarray:
 
 ![image](https://github.com/Saishreekouda/leetcode-the-hard-way/assets/96722257/c81dfce6-ff6a-427a-8332-2b39964aeddf)
 
-Reduce the gap to 2 and repeat the process:
+Reduce the gap to $2$ and repeat the process:
 
    - Subarray 1: $[6, 2, 8, 3]$
    - Subarray 2: $[5, 1, 7, 4]$
@@ -108,7 +106,7 @@ Apply Insertion Sort within each subarray:
      
 ![image](https://github.com/Saishreekouda/leetcode-the-hard-way/assets/96722257/1210f307-b9b8-4590-8024-1c833193f230)
 
-Finally, reduce the gap to 1 and perform a final pass of Insertion Sort:
+Finally, reduce the gap to $1$ and perform a final pass of Insertion Sort:
    - $[1, 2, 3, 4, 5, 6, 7, 8]$ (Sorted!)
 
 ![image](https://github.com/Saishreekouda/leetcode-the-hard-way/assets/96722257/4839a2d7-5966-4e44-a1ec-3d89d6937647)
@@ -121,22 +119,20 @@ Before we dive into implementing Shell Sort, let's briefly analyze its time comp
 
 Shell Sort is a versatile sorting algorithm suitable for beginners and provides an intuitive way to sort arrays efficiently. Now, let's explore how to implement Shell Sort in various programming languages.
 
-## Example 1: [912 - Sort an Array using Shell Sort](https://leetcode.com/problems/sort-an-array/)
+## Example 1: [0912 - Sort an Array using Shell Sort](https://leetcode.com/problems/sort-an-array/)
 
 > Given an array of integers nums, sort the array in ascending order and return it.
 > You must solve the problem without using any built-in functions in $O(n\log(n))$ time complexity and with the smallest space complexity possible.
 
-### Algorithm
-
-- Start with a gap sequence. A common choice is to start with $\frac{n}{2}$ and halve it in each iteration until the gap becomes 1, where `n` is the length of the array.
+- Start with a gap sequence. A common choice is to start with $\frac{n}{2}$ and halve it in each iteration until the gap becomes $1$, where $n$ is the length of the array.
 
 - Divide the array into subarrays of size equal to the current gap.
 
 - For each subarray, perform an insertion sort to sort the elements within the subarray.
 
-- Reduce the gap and repeat the process until the gap becomes 1.
+- Reduce the gap and repeat the process until the gap becomes $1$.
 
-- Finally, perform a final pass of insertion sort with a gap of 1 to ensure the entire array is sorted.
+- Finally, perform a final pass of insertion sort with a gap of $1$ to ensure the entire array is sorted.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -169,7 +165,7 @@ public:
 
 ```py
 class Solution:
-    def shellSort(self, nums):
+    def sortArray(self, nums: List[int]) -> List[int]:
         n = len(nums)
         gap = n // 2
         while gap > 0:
@@ -181,11 +177,7 @@ class Solution:
                     j -= gap
                 nums[j] = temp
             gap //= 2
-
-    def sortArray(self, nums):
-        self.shellSort(nums)
         return nums
-
 ```
 </TabItem>
 <TabItem value="java" label="Java">
@@ -215,7 +207,7 @@ class Solution {
 </Tabs>
 
 - Merging of $n$ elements in each pass takes $O(n)$ time.
-- Since the array is repeatedly divided by 2, it takes $\log_2(n)$ passes to reach the top.
+- Since the array is repeatedly divided by $2$, it takes $\log_2(n)$ passes to reach the top.
 
 Shell Sort exhibits a time complexity of $O(n \log_2(n))$, making it an efficient sorting algorithm for a wide range of input sizes.
 
@@ -242,26 +234,29 @@ Shell Sort remains a reliable sorting algorithm for moderately sized arrays, and
 
 
 
-## Example 2: [88 - Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array)
+## Example 2: [0088 - Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array)
 
 > Given two integer arrays, sorted in non-decreasing order, and two integers representing the number of elements in both arrays.
 > Merge both arrays into a single array sorted in non-decreasing order.
 
-### Algorithm
-
 1. Calculate the gap value for merging the two arrays. The gap is determined as $\lceil \frac{{\text{size of arr1[]} + \text{size of arr2[]}}}{{2}} \rceil$.
 
-2. Initialize two pointers: the left pointer at index 0 and the right pointer at index (left + gap).
+2. Initialize two pointers: the left pointer at index $0$ and the right pointer at index (left + gap).
 
-3. Perform the following steps for each gap until the gap becomes 0:
-   - Inside a loop that continues until the right pointer reaches the end (i.e., index $n + m$), handle three different cases:
-     - If the left pointer is inside arr1[] and the right pointer is in arr2[], compare arr1[left] and arr2[right - n]. If arr1[left] > arr2[right - n], swap them.
-     - If both pointers are in arr2[], compare arr1[left - n] and arr2[right - n]. If arr1[left - n] > arr2[right - n], swap them.
-     - If both pointers are in arr1[], compare arr1[left] and arr2[right]. If arr1[left] > arr2[right], swap them.
+3. Perform the following steps for each gap until the gap becomes $0$:
+
+    - Inside a loop that continues until the right pointer reaches the end (i.e., index $n + m$), handle three different cases:
+
+        - If the left pointer is inside $\text{arr1}[]$ and the right pointer is in $\text{arr2}[]$, compare $\text{arr1}[{\text{left}}]$ and $\text{arr2}[{\text{right}} - n]$. If $\text{arr1}[{\text{left}}] > \text{arr2}[{\text{right}} - n]$, swap them.
+
+        - If both pointers are in $\text{arr2}[]$, compare $\text{arr1}[{\text{left}} - n]$ and $\text{arr2}[{\text{right}} - n]$. If $\text{arr1}[{\text{left}} - n] > \text{arr2}[{\text{right}} - n]$, swap them.
+
+        - If both pointers are in $\text{arr1}[]$, compare $\text{arr1}[{\text{left}}]$ and $\text{arr2}[{\text{right}}]$. If $\text{arr1}[{\text{left}}] > \text{arr2}[{\text{right}}]$, swap them.
+
    
 4. After the right pointer reaches the end, decrease the value of the gap by setting it to $\lceil \frac{{\text{current gap}}}{{2}} \rceil$.
 
-5. Repeat the loop until the gap becomes 0.
+5. Repeat the loop until the gap becomes $0$.
 
 6. Finally, after performing all the operations, you will have the merged sorted array.
 
@@ -430,7 +425,7 @@ class Solution {
 **Time Complexity**: $O((n+m) \cdot \log(n+m))$
 
 The time complexity of the algorithm for merging two sorted arrays of sizes $n$ and $m$ is determined as follows:
-- The gap ranges from $n+m$ to 1, and at each step, the gap is divided by 2.
+- The gap ranges from $n+m$ to $1$, and at each step, the gap is divided by $2$.
 - Therefore, the outer loop runs for $O(log(n+m))$ iterations.
 
 For each value of the gap, the inner loop can run for a maximum of $n+m$ times.
@@ -443,28 +438,16 @@ In this question we can use brute approach of merging 2 sorted arrays using extr
 
 export const suggestedProblems = [
     {
-        "problemName": "0912-Sort an Array",
-        "difficulty": "Medium",
-        "leetCodeLink": "https://leetcode.com/problems/sort-an-array/",
-        "solutionLink": "../../../solutions/0900-0999/0912-sort-an-array-medium"
-    },
-    {
-        "problemName" : "0148-Sort List",
+        "problemName" : "0148 - Sort List",
         "difficulty" : "Medium",
         "leetCodeLink" : "https://leetcode.com/problems/sort-list/",
         "solutionLink" : "../../../solutions/0100-0199/sort-list-medium"
     },
     {
-        "problemName" : "0075-Sort Colors",
+        "problemName" : "0075 - Sort Colors",
         "difficulty" : "Medium",
         "leetCodeLink" : "https://leetcode.com/problems/sort-colors/",
         "solutionLink" : "../../../solutions/0000-0099/sort-colors-medium"
-    }, 
-    {
-        "problemName" : "0088-Merge Sorted arrays",
-        "difficulty" : "Medium",
-        "leetCodeLink" : "https://leetcode.com/problems/merge-sorted-array/",
-        "solutionLink" : "../../../solutions/0000-0099/0088-merge-sorted-array-easy"
     }
 ]
 
