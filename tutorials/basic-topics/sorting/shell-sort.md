@@ -350,28 +350,19 @@ class Solution {
 
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         int len = m + n;
-
         // Initial gap
         int gap = (len / 2) + (len % 2);
-
         while (gap > 0) {
             // Place two pointers
             int left = 0;
             int right = left + gap;
-
             while (right < len) {
                 // case 1: left in nums1 and right in nums2
-                if (left < m && right >= m) {
-                    swapIfGreater(nums1, nums2, left, right - m);
-                }
+                if (left < m && right >= m) swapIfGreater(nums1, nums2, left, right - m);
                 // case 2: both pointers in nums2
-                else if (left >= m) {
-                    swapIfGreater(nums2, nums2, left - m, right - m);
-                }
+                else if (left >= m) swapIfGreater(nums2, nums2, left - m, right - m);
                 // case 3: both pointers in nums1
-                else {
-                    swapIfGreater(nums1, nums1, left, right);
-                }
+                else swapIfGreater(nums1, nums1, left, right);
                 left++;
                 right++;
             }
