@@ -22,6 +22,7 @@ Stack is the data structure The first item that comes in will be the first to go
 >
 > 1. Open brackets must be closed by the same type of brackets.
 > 2. Open brackets must be closed in the correct order.
+> 3. Every close bracket has a corresponding open bracket of the same type.
 
 To validate a string of parentheses is valid, we must have a corresponding opening bracket when we see a closing bracket. Lets look at some examples:
 
