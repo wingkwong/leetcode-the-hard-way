@@ -9,6 +9,7 @@ keywords:
   - algorithm
   - shell sort
 ---
+
 <TutorialAuthors names="@Saishreekouda"/>
 
 ## Overview
@@ -49,27 +50,26 @@ The running time of Shell Sort heavily depends on the selected gap sequence. The
 
 ### Step 2: Start Sorting with a Gap
 
-1. Divide the array into subarrays of size equal to the chosen gap. Initially, these subarrays consist of elements separated by the selected gap.
-
-2. For each subarray, execute an Insertion Sort. This involves rearranging elements within the subarray to their correct positions.
+- Divide the array into subarrays of size equal to the chosen gap. Initially, these subarrays consist of elements separated by the selected gap.
+- For each subarray, execute an Insertion Sort. This involves rearranging elements within the subarray to their correct positions.
 
 ### Step 3: Reduce the Gap
 
-3. Decrease the gap (usually by dividing it by $2$).
+- Decrease the gap (usually by dividing it by $2$).
 
 ### Step 4: Repeat Until Gap is 1
 
-4. Repeat steps 2 and 3 until the gap becomes $1$.
+- Repeat steps 2 and 3 until the gap becomes $1$.
 
 ### Step 5: Final Pass
 
-5. Perform a final pass of Insertion Sort with a gap of $1$. This is a regular Insertion Sort that ensures the entire array is sorted correctly.
+- Perform a final pass of Insertion Sort with a gap of $1$. This is a regular Insertion Sort that ensures the entire array is sorted correctly.
 
 Now, let's visualize how Shell Sort works with a simple example:
 
 Suppose we have an unsorted array $[6, 5, 3, 1, 8, 7, 2, 4]$. We'll perform Shell Sort on this array step by step:
 
-![image](https://github.com/Saishreekouda/leetcode-the-hard-way/assets/96722257/fde0eb1d-8c61-4e3b-a49a-ecdc36b5a665)
+![image](https://github.com/wingkwong/leetcode-the-hard-way/assets/35857179/078c31f2-e68e-4775-ab6c-0c13bccf8ee9)
 
 Start with a gap sequence: Initially, the gap is $4$ (length of the array divided by $2$).
 
@@ -80,7 +80,7 @@ Divide the array into subarrays with a gap of $4$:
    - Subarray 3: $[3, 2]$
    - Subarray 4: $[1, 4]$
 
-![image](https://github.com/Saishreekouda/leetcode-the-hard-way/assets/96722257/cdf586a2-a106-42e7-b58c-9594ff2d6afb)
+![image](https://github.com/wingkwong/leetcode-the-hard-way/assets/35857179/52bb5dc8-06e7-4cfe-a592-ace3b85658d9)
 
 Apply Insertion Sort within each subarray:
 
@@ -89,26 +89,26 @@ Apply Insertion Sort within each subarray:
    - After sorting Subarray 3: $[2, 3]$
    - After sorting Subarray 4: $[1, 4]$
 
-![image](https://github.com/Saishreekouda/leetcode-the-hard-way/assets/96722257/c81dfce6-ff6a-427a-8332-2b39964aeddf)
+![image](https://github.com/wingkwong/leetcode-the-hard-way/assets/35857179/b894f409-2641-41f9-a497-a8336214f44a)
 
 Reduce the gap to $2$ and repeat the process:
 
    - Subarray 1: $[6, 2, 8, 3]$
    - Subarray 2: $[5, 1, 7, 4]$
      
-![image](https://github.com/Saishreekouda/leetcode-the-hard-way/assets/96722257/6cc043da-e38b-41b4-9e3f-bb8418bcf59d)
+![image](https://github.com/wingkwong/leetcode-the-hard-way/assets/35857179/3c00754e-2876-4543-9072-6d1c8df70e24)
 
 Apply Insertion Sort within each subarray:
 
    - After sorting Subarray 1: $[2, 3, 6, 8]$
    - After sorting Subarray 2: $[1, 4, 5, 7]$
      
-![image](https://github.com/Saishreekouda/leetcode-the-hard-way/assets/96722257/1210f307-b9b8-4590-8024-1c833193f230)
+![image](https://github.com/wingkwong/leetcode-the-hard-way/assets/35857179/e77e9e39-779d-42f5-be63-6aafc98036ac)
 
 Finally, reduce the gap to $1$ and perform a final pass of Insertion Sort:
    - $[1, 2, 3, 4, 5, 6, 7, 8]$ (Sorted!)
 
-![image](https://github.com/Saishreekouda/leetcode-the-hard-way/assets/96722257/4839a2d7-5966-4e44-a1ec-3d89d6937647)
+![image](https://github.com/wingkwong/leetcode-the-hard-way/assets/35857179/98643b8e-ef4c-4eec-b802-7d1f38883da5)
 
 ## Complexity Analysis
 
@@ -118,7 +118,7 @@ Before we dive into implementing Shell Sort, let's briefly analyze its time comp
 
 Shell Sort is a versatile sorting algorithm suitable for beginners and provides an intuitive way to sort arrays efficiently. Now, let's explore how to implement Shell Sort in various programming languages.
 
-## Example 1: [0912 - Sort an Array using Shell Sort](https://leetcode.com/problems/sort-an-array/)
+## Example #1: [0912 - Sort an Array](https://leetcode.com/problems/sort-an-array/)
 
 > Given an array of integers nums, sort the array in ascending order and return it.
 > You must solve the problem without using any built-in functions in $O(n\log(n))$ time complexity and with the smallest space complexity possible.
@@ -135,6 +135,7 @@ Shell Sort is a versatile sorting algorithm suitable for beginners and provides 
 
 <Tabs>
 <TabItem value="cpp" label="C++">
+<SolutionAuthor name="@Saishreekouda"/>
 
 ```cpp
 class Solution {
@@ -161,6 +162,7 @@ public:
 ```
 </TabItem>
 <TabItem value="py" label="Python3">
+<SolutionAuthor name="@Saishreekouda"/>
 
 ```py
 class Solution:
@@ -180,6 +182,7 @@ class Solution:
 ```
 </TabItem>
 <TabItem value="java" label="Java">
+<SolutionAuthor name="@Saishreekouda"/>
 
 ```java
 class Solution {
@@ -230,24 +233,20 @@ For very large arrays, Shell Sort's space complexity of $O(n)$ can be inefficien
 
 Shell Sort remains a reliable sorting algorithm for moderately sized arrays, and its performance can be optimized by choosing an appropriate gap sequence.
 
-## Example 2: [0088 - Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array)
+## Example #2: [0088 - Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array)
 
 > Given two integer arrays, sorted in non-decreasing order, and two integers representing the number of elements in both arrays.
 > Merge both arrays into a single array sorted in non-decreasing order.
 
-1. Calculate the gap value for merging the two arrays. The gap is determined as $\lceil \frac{{\text{size of arr1[]} + \text{size of arr2[]}}}{{2}} \rceil$.
+1. Calculate the gap value for merging the two arrays. The gap is determined as $\lceil \frac{{\text{size of arr1} + \text{size of arr2}}}{{2}} \rceil$.
 
 2. Initialize two pointers: the left pointer at index $0$ and the right pointer at index (left + gap).
 
 3. Perform the following steps for each gap until the gap becomes $0$:
-
     - Inside a loop that continues until the right pointer reaches the end (i.e., index $n + m$), handle three different cases:
-
-        - If the left pointer is inside $\text{arr1}[]$ and the right pointer is in $\text{arr2}[]$, compare $\text{arr1}[{\text{left}}]$ and $\text{arr2}[{\text{right}} - n]$. If $\text{arr1}[{\text{left}}] > \text{arr2}[{\text{right}} - n]$, swap them.
-
-        - If both pointers are in $\text{arr2}[]$, compare $\text{arr1}[{\text{left}} - n]$ and $\text{arr2}[{\text{right}} - n]$. If $\text{arr1}[{\text{left}} - n] > \text{arr2}[{\text{right}} - n]$, swap them.
-
-        - If both pointers are in $\text{arr1}[]$, compare $\text{arr1}[{\text{left}}]$ and $\text{arr2}[{\text{right}}]$. If $\text{arr1}[{\text{left}}] > \text{arr2}[{\text{right}}]$, swap them.
+        - If the left pointer is inside $\text{arr1}$ and the right pointer is in $\text{arr2}$, compare $\text{arr1}[{\text{left}}]$ and $\text{arr2}[{\text{right}} - n]$. If $\text{arr1}[{\text{left}}] > \text{arr2}[{\text{right}} - n]$, swap them.
+        - If both pointers are in $\text{arr2}$, compare $\text{arr1}[{\text{left}} - n]$ and $\text{arr2}[{\text{right}} - n]$. If $\text{arr1}[{\text{left}} - n] > \text{arr2}[{\text{right}} - n]$, swap them.
+        - If both pointers are in $\text{arr1}$, compare $\text{arr1}[{\text{left}}]$ and $\text{arr2}[{\text{right}}]$. If $\text{arr1}[{\text{left}}] > \text{arr2}[{\text{right}}]$, swap them.
 
    
 4. After the right pointer reaches the end, decrease the value of the gap by setting it to $\lceil \frac{{\text{current gap}}}{{2}} \rceil$.
@@ -259,59 +258,48 @@ Shell Sort remains a reliable sorting algorithm for moderately sized arrays, and
 
 <Tabs>
 <TabItem value="cpp" label="C++">
+<SolutionAuthor name="@Saishreekouda"/>
 
 ```cpp
 class Solution {
-public:
-    void swapIfGreater(vector<int>& arr1, vector<int>& arr2, int ind1, int ind2) 
-    {
-        if (arr1[ind1] > arr2[ind2]) {
-            swap(arr1[ind1], arr2[ind2]);
-        }
+ public:
+  void swapIfGreater(vector<int>& arr1, vector<int>& arr2, int ind1, int ind2) {
+    if (arr1[ind1] > arr2[ind2]) {
+      swap(arr1[ind1], arr2[ind2]);
     }
-    void merge(vector<int>& arr1, int n, vector<int>& arr2, int m) {
-        int len = n + m;
-
-    // Initial gap:
+  }
+  void merge(vector<int>& arr1, int n, vector<int>& arr2, int m) {
+    int len = n + m;
+    // initial gap:
     int gap = (len / 2) + (len % 2);
-
     while (gap > 0) {
-        // Place 2 pointers:
-        int left = 0;
-        int right = left + gap;
-        while (right < len) {
-            // case 1: left in arr1[]
-            //and right in arr2[]:
-            if (left < n && right >= n) {
-                swapIfGreater(arr1, arr2, left, right - n);
-            }
-            // case 2: both pointers in arr2[]:
-            else if (left >= n) {
-                swapIfGreater(arr2, arr2, left - n, right - n);
-            }
-            // case 3: both pointers in arr1[]:
-            else {
-                swapIfGreater(arr1, arr1, left, right);
-            }
-            left++, right++;
-        }
-        // break if iteration gap=1 is completed:
-        if (gap == 1) break;
-
-        // Otherwise, calculate new gap:
-        gap = (gap / 2) + (gap % 2);
+      // place 2 pointers:
+      int left = 0, right = left + gap;
+      while (right < len) {
+        // case 1: left in arr1 and right in arr2:
+        if (left < n && right >= n) swapIfGreater(arr1, arr2, left, right - n);
+        // case 2: both pointers in arr2:
+        else if (left >= n) swapIfGreater(arr2, arr2, left - n, right - n);
+        // case 3: both pointers in arr1:
+        else swapIfGreater(arr1, arr1, left, right);
+        left++, right++;
+      }
+      // break if iteration gap=1 is completed:
+      if (gap == 1) break;
+      // otherwise, calculate new gap:
+      gap = (gap / 2) + (gap % 2);
     }
-    int j=0;
-    for(int i=n;i<n+m;i++)
-    {
-        arr1[i]=arr2[j];
-        j++;
+    int j = 0;
+    for (int i = n; i < n + m; i++) {
+      arr1[i] = arr2[j];
+      j++;
     }
-    }
+  }
 };
 ```
 </TabItem>
 <TabItem value="py" label="Python3">
+<SolutionAuthor name="@Saishreekouda"/>
 
 ```py
 class Solution:
@@ -322,38 +310,25 @@ class Solution:
     def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
         # Calculate the total length
         length = m + n
-
         # Initial gap
         gap = (length // 2) + (length % 2)
-
         while gap > 0:
             # Place two pointers
             left = 0
             right = left + gap
-
             while right < length:
-                # case 1: left in nums1[] and right in nums2[]
-                if left < m and right >= m:
-                    self.swapIfGreater(nums1, nums2, left, right - m)
-
-                # case 2: both pointers in nums2[]
-                elif left >= m:
-                    self.swapIfGreater(nums2, nums2, left - m, right - m)
-
-                # case 3: both pointers in nums1[]
-                else:
-                    self.swapIfGreater(nums1, nums1, left, right)
-
+                # case 1: left in nums1 and right in nums2
+                if left < m and right >= m: self.swapIfGreater(nums1, nums2, left, right - m)
+                # case 2: both pointers in nums2
+                elif left >= m: self.swapIfGreater(nums2, nums2, left - m, right - m)
+                # case 3: both pointers in nums1
+                else: self.swapIfGreater(nums1, nums1, left, right)
                 left += 1
                 right += 1
-
             # Break if iteration with gap=1 is completed
-            if gap == 1:
-                break
-
+            if gap == 1: break
             # Calculate the new gap
             gap = (gap // 2) + (gap % 2)
-
         j = 0
         for i in range(m, length):
             nums1[i] = nums2[j]
@@ -361,6 +336,7 @@ class Solution:
 ```
 </TabItem>
 <TabItem value="java" label="Java">
+<SolutionAuthor name="@Saishreekouda"/>
 
 ```java
 class Solution {
@@ -384,15 +360,15 @@ class Solution {
             int right = left + gap;
 
             while (right < len) {
-                // case 1: left in nums1[] and right in nums2[]
+                // case 1: left in nums1 and right in nums2
                 if (left < m && right >= m) {
                     swapIfGreater(nums1, nums2, left, right - m);
                 }
-                // case 2: both pointers in nums2[]
+                // case 2: both pointers in nums2
                 else if (left >= m) {
                     swapIfGreater(nums2, nums2, left - m, right - m);
                 }
-                // case 3: both pointers in nums1[]
+                // case 3: both pointers in nums1
                 else {
                     swapIfGreater(nums1, nums1, left, right);
                 }
