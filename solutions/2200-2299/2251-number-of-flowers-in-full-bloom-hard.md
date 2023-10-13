@@ -2,6 +2,7 @@
 description: >-
   Author: @wingkwong |
   https://leetcode.com/problems/number-of-flowers-in-full-bloom/
+tags: [Array, Hash Table, Binary Search, Sorting, Prefix Sum, Ordered Set]
 ---
 
 # 2251 - Number of Flowers in Full Bloom (Hard)
@@ -48,35 +49,68 @@ For each person, we return the number of flowers in full bloom during their arri
 
 ## Approach 1: Line Sweep
 
+We can put $flowers$ and $people$ on the number line and apply standard line sweep. Add the running sum to the answer if $idx$ is not $-1$ indicating that is a person. However, this solution would be slow and can be further optimized with Binary Search.
+
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
 public:
-    vector<int> fullBloomFlowers(vector<vector<int>>& flowers, vector<int>& persons) {
-        int n = persons.size();
+    vector<int> fullBloomFlowers(vector<vector<int>>& flowers, vector<int>& people) {
+        int n = people.size();
         vector<int> ans(n);
         vector<array<int, 3>> v; // {time, idx, val}
         for (auto& flower : flowers) {
-            // in
-            v.push_back({flower[0], -1, 1});
-            // out
-            v.push_back({flower[1] + 1, -1, -1});
+            v.push_back({flower[0], -1, 1}); // in
+            v.push_back({flower[1] + 1, -1, -1}); // out
         }
-        // include persons
-        for (int i = 0; i < n; i++) v.push_back({persons[i], i, 0});
-        // sort in ascending
+        // include people
+        for (int i = 0; i < n; i++) v.push_back({people[i], i, 0});
+        // sort in ascending by time -> idx -> val
         sort(v.begin(), v.end());
         int sum = 0;
         for (auto& [time, idx, val] : v) {
             // calculate the prefix sum
             sum += val;
-            // idx is not -1, set the answer for person[idx]
-            if (idx != -1) {
-                ans[idx] = sum;
-            }
+            // idx is not -1, set the answer for people[idx]
+            if (idx != -1) ans[idx] = sum;
         }
         return ans;
     }
 };
 ```
+
+</TabItem>
+<TabItem value="kotlin" label="Kotlin">
+<SolutionAuthor name="@wingkwong"/>
+
+```kt
+class Solution {
+    fun fullBloomFlowers(flowers: Array<IntArray>, people: IntArray): IntArray {
+        val n = people.size
+        val ans = IntArray(n)
+        // {time, idx, val}
+        val v = mutableListOf<Triple<Int, Int, Int>>()
+        for (flower in flowers) {
+            v.add(Triple(flower[0], -1, 1))
+            v.add(Triple(flower[1] + 1, -1, -1))
+        }
+        for (i in 0 until n) v.add(Triple(people[i], i, 0))
+        v.sortBy { it.first }
+        var sum = 0
+        for ((time, idx, value) in v) {
+            sum += value
+            if (idx != -1) {
+                ans[idx] = sum
+            }
+        }
+        return ans
+    }
+}
+```
+
+</TabItem>
+</Tabs>
+

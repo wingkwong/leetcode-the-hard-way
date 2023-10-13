@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @ganajayant, @deepanshu-rawat6 | https://leetcode.com/problems/sort-an-array/'
+description: 'Author: @saishreekouda, @wingkwong, @ganajayant, @deepanshu-rawat6| https://leetcode.com/problems/sort-an-array/'
 tags: ['sorting']
 ---
 
@@ -336,7 +336,7 @@ class Solution {
 </TabItem>
 </Tabs>
 
-## Approach 4: Couting Sort
+## Approach 4: Counting Sort
 
 <Tabs>
 <TabItem value="py" label="Python">
@@ -352,6 +352,68 @@ class Solution:
         for i, v in enumerate(b, -50000):
             ans.extend([i] * v)
         return ans
+```
+</TabItem>
+</Tabs>
+
+
+## Approach 5: Shell Sort
+- Start with a gap sequence. A common choice is to start with $\frac{n}{2}$ and halve it in each iteration until the gap becomes $1$, where $n$ is the length of the array.
+
+- Divide the array into subarrays of size equal to the current gap.
+
+- For each subarray, perform an insertion sort to sort the elements within the subarray.
+
+- Reduce the gap and repeat the process until the gap becomes $1$.
+
+- Finally, perform a final pass of insertion sort with a gap of $1$ to ensure the entire array is sorted.
+
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@saishreekouda"/>
+
+```cpp
+class Solution {
+public:
+    void shellSort(vector<int>& nums) {
+        int n = nums.size();
+        for (int gap = n / 2; gap > 0; gap /= 2) {
+            for (int i = gap; i < n; ++i) {
+                int temp = nums[i];
+                int j;
+                for (j = i; j >= gap && nums[j - gap] > temp; j -= gap) {
+                    nums[j] = nums[j - gap];
+                }
+                nums[j] = temp;
+            }
+        }
+    }
+
+    vector<int> sortArray(vector<int>& nums) {
+        shellSort(nums);
+        return nums;
+    }
+};
+```
+</TabItem>
+<TabItem value="py" label="Python3">
+<SolutionAuthor name="@saishreekouda"/>
+
+```py
+class Solution:
+    def sortArray(self, nums: List[int]) -> List[int]:
+        n = len(nums)
+        gap = n // 2
+        while gap > 0:
+            for i in range(gap, n):
+                temp = nums[i]
+                j = i
+                while j >= gap and nums[j - gap] > temp:
+                    nums[j] = nums[j - gap]
+                    j -= gap
+                nums[j] = temp
+            gap //= 2
+        return nums
 ```
 </TabItem>
 </Tabs>

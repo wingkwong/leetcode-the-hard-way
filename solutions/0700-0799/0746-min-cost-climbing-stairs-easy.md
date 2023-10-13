@@ -1,5 +1,5 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/min-cost-climbing-stairs/'
+description: 'Author: @ColeB2, @wingkwong | https://leetcode.com/problems/min-cost-climbing-stairs/'
 tags: [Array, Dynamic Programming]
 ---
 
@@ -75,6 +75,48 @@ class Solution:
         # stand on the last step and step to the final floor, or the
         # step below that and take 2 steps to reach the final floor.
         return min(cost[-1], cost[-2])
+```
+
+</TabItem>
+
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@wingkwong"/>
+
+```cpp
+class Solution {
+public:
+    int minCostClimbingStairs(vector<int>& cost) {
+        int n = cost.size();
+        int dp[n + 1];
+        memset(dp, 0, sizeof(dp));
+        dp[0] = cost[0];
+        dp[1] = cost[1];
+        for (int i = 2; i <= n; i++) {
+            dp[i] = min(dp[i - 1], dp[i - 2]) + (i == n ? 0 : cost[i]);
+        }
+        return dp[n];
+    }
+};
+```
+
+</TabItem>
+
+<TabItem value="kotlin" label="Kotlin">
+<SolutionAuthor name="@wingkwong"/>
+
+```kt
+class Solution {
+    fun minCostClimbingStairs(cost: IntArray): Int {
+        val n = cost.size
+        val dp = IntArray(n + 1)
+        dp[0] = cost[0]
+        dp[1] = cost[1]
+        for (i in 2 .. n) {
+            dp[i] = minOf(dp[i - 1], dp[i - 2]) + if (i == n) 0 else cost[i]
+        }
+        return dp[n]
+    }
+}
 ```
 
 </TabItem>

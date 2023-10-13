@@ -2,6 +2,7 @@
 description: >-
   Author: @wingkwong, @ganajayant, @vigneshshiv, @radojicic23 |
   https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
+tags: [Array, Binary Search]
 ---
 
 # 0034 - Find First and Last Position of Element in Sorted Array (Medium)
@@ -82,13 +83,12 @@ public:
     }
 
     vector<int> searchRange(vector<int>& nums, int target) {
-        int n = nums.size();
         // handle edge case
-        vector<int> ans = {-1, -1};
-        if (n == 0) return ans;
+        if ((int) nums.size() == 0) return {-1, -1};
         // return the lower bound and upper bound - 1
         return vector<int> {
             // if the first position is -1, we can return ans directly
+            // see Approach 2: Optimal Binary Search
             getFirstPosition(nums, target),
             getLastPosition(nums, target)
         };
@@ -192,9 +192,48 @@ class Solution:
 ```
 
 </TabItem>
+
+<TabItem value="kotlint" label="Kotlin">
+<SolutionAuthor name="@wingkwong"/>
+
+```kotlin
+class Solution {
+    fun getFirstPosition(nums: IntArray, target: Int): Int {
+        var l = 0
+        var r = nums.size - 1
+        while (l < r) {
+            val m = (l + r) / 2
+            if (target > nums[m]) l = m + 1
+            else r = m
+        }
+        return if (nums[l] == target) l else -1
+    }
+    
+    fun getLastPosition(nums: IntArray, target: Int): Int {
+        var l = 0
+        var r = nums.size - 1
+        while (l < r) {
+            val m = (l + r + 1) / 2
+            if (target < nums[m]) r = m - 1
+            else l = m
+        }
+        return if (nums[l] == target) l else -1
+    }
+    
+    fun searchRange(nums: IntArray, target: Int): IntArray {
+        if (nums.size == 0) return intArrayOf(-1, -1)
+        return intArrayOf(
+            getFirstPosition(nums, target),
+            getLastPosition(nums, target),
+        )
+    }
+}
+```
+
+</TabItem>
 </Tabs>
 
-## Approach 2: Binary Search Optimal
+## Approach 2: Optimal Binary Search
 
 To find the start and end indices, try to find the start index first, if it doesn't exist then the array not having the given element. So added a condition to check if the first index is not found then skip the end index block.
 
@@ -238,6 +277,45 @@ class Solution {
             }
         }
         return index;
+    }
+}
+```
+
+</TabItem>
+
+<TabItem value="kotlin" label="Kotlin">
+<SolutionAuthor name="@wingkwong"/>
+
+```kotlin
+class Solution {
+    fun getFirstPosition(nums: IntArray, target: Int): Int {
+        var l = 0
+        var r = nums.size - 1
+        while (l < r) {
+            val m = (l + r) / 2
+            if (target > nums[m]) l = m + 1
+            else r = m
+        }
+        return if (nums[l] == target) l else -1
+    }
+    
+    fun getLastPosition(nums: IntArray, target: Int): Int {
+        var l = 0
+        var r = nums.size - 1
+        while (l < r) {
+            val m = (l + r + 1) / 2
+            if (target < nums[m]) r = m - 1
+            else l = m
+        }
+        return if (nums[l] == target) l else -1
+    }
+    
+    fun searchRange(nums: IntArray, target: Int): IntArray {
+        if (nums.size == 0) return intArrayOf(-1, -1)
+        val first = getFirstPosition(nums, target)
+        if (first == -1) return intArrayOf(-1, -1)
+        val last = getLastPosition(nums, target)
+        return intArrayOf(first, last)
     }
 }
 ```

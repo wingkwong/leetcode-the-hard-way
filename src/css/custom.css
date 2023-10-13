@@ -73,6 +73,9 @@
     background: var(--ifm-color-emphasis-200);
     color: inherit;
   }
+  .nav-emoji {
+    display: none;
+  }
 }
 
 .header-github-link:hover {
@@ -99,8 +102,7 @@ div[class^='announcementBar_'] {
   border-bottom: 1px dotted #eeeeee;
   font-weight: bold;
   font-size: 18px;
-  height: 35px;
-  padding: 10px;
+  height: auto;
 }
 
 div[class^='announcementBar_'] a {
@@ -225,4 +227,10 @@ table, tr, td, th {
 
 .hard {
   color: rgb(255 45 85);
+}
+
+@media screen and (min-width: 1120px) {
+  .nav-emoji {
+    display: inline-block;
+  }
 }
