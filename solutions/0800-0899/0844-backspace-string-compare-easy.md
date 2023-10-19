@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wingkwong, @radojicic23 | https://leetcode.com/problems/backspace-string-compare/'
+tags: [Two Pointers, String, Stack, Simulation]
 ---
 
 # 0844 - Backspace String Compare (Easy)
@@ -115,6 +116,31 @@ var backspaceCompare = function(s, t) {
     }
     return get_result(s) == get_result(t);
 };
+```
+
+</TabItem>
+
+<TabItem value="kotlin" label="Kotlin">
+<SolutionAuthor name="@wingkwong"/>
+
+```kt
+class Solution {
+    fun process(s: String): String {
+        val res = StringBuilder()
+        for (x in s) {
+            // include this character to final string
+            if (x != '#') res.append(x)
+            // pop the previous character if possible
+            else if (res.isNotEmpty()) res.deleteAt(res.length - 1)
+        }
+        return res.toString()
+    }
+
+    fun backspaceCompare(s: String, t: String): Boolean {
+        // check if both are same after processed
+        return process(s) == process(t)
+    }
+}
 ```
 
 </TabItem>
