@@ -15,7 +15,7 @@ keywords:
 
 A prime factor is a factor of a number that is also a prime number. For example, the prime factors of $12$ are $2$ and $3$, as $12 = 2 * 2 * 3$. Prime factorization is the process of finding the prime factors of a number. This can be done by repeatedly dividing the number by prime numbers until the remaining number is also a prime number. The prime factorization of a number is unique, meaning that there is only one combination of prime numbers that multiply together to equal that number. The prime factorization of a number can be useful in solving mathematical problems such as finding the greatest common divisor (GCD) of two numbers or the least common multiple (LCM) of two numbers.
 
-## Approach #1: Finding prime factor in root(n) time
+## Approach #1: Finding prime factor in $\sqrt n$ time
 
 We know that every composite number $N$ has a prime factor less than $N$. Thus, we can iterate over numbers from $2$ to $N$ and whenever we find number that divides $N$ we divide $N$ by it until it no longer divides $N$. 
 
@@ -64,9 +64,9 @@ vector<int> getPrimeFactors(int n) {
 
 Before moving further, it's important to recognise that a number $N$ cannot have more than $log(N)$ prime factors. Since the smallest prime factor a number can have is $2$ and $2^{log(n)} \geq n$. If the number has a prime factor bigger than $2$ than it will have even lesser prime factors. The pre-requisite for this method is knowing [Sieve of Eratosthenes](../math/number-theory/sieve-of-eratosthenes.md).
 
-We can infact, optimise our code to find prime factors of a number $N$ in $O(log(N))$ time. But to do so, we need to do pre computation which takes $O(MAX)$ time, where $MAX$ is the biggest number upto which we can answer the query. Thus the final time complexity is $O(MAX + log(N))$. This is helpful only if we have to find prime factor of multiple numbers less than or equal to $MAX$.
+We can optimise our code to find prime factors of a number $N$ in $O(log(N))$ time. But to do so, we need to do some pre-computations which takes $O(MAX)$ time, where $MAX$ is the largest number upto which we can find it's prime factors. Thus the final time complexity is $O(MAX + log(N))$. This is helpful only if we have to find prime factor of multiple numbers less than or equal to $MAX$.
 
-Since the pre computation takes $O(MAX)$ time so we cannot find prime factors of very large numbers (due to constraints on time) using this method. The pre computation process is a modification of [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes). For each number from $2$ to $MAX$ we find it's smallest prime factor and store it in an array, let's call it `min_prime`. We will see how to find `min_prime` array later, first let us see how to calculate prime factor of a number $N$ if we already have the `min_prime` array.
+Since the pre computation takes $O(MAX)$ time so we cannot find prime factors of very large numbers (due to constraints on time) using this method. The pre computation process is a modification of [Sieve of Eratosthenes](../math/number-theory/sieve-of-eratosthenes.md). For each number from $2$ to $MAX$ we find it's smallest prime factor and store it in an array, let's call it `min_prime`. We will see how to find `min_prime` array later, first let us see how to calculate prime factor of a number $N$ if we already have the `min_prime` array in hand.
 
 ## Implementation
 
@@ -109,6 +109,7 @@ vector<int> minPrime(int MAX) {
 
       // if min_prime[i] = i then i must be a prime number.
       // Any multiple of i less than i * i (i.e., i * 2, i * 3, ... i * (i - 1)) has a smaller prime factor than i.
+      // Any number >= i * i may have i as it's minimum prime factor
       for (int j = i * i; j <= MAX; j += i) min_prime[j] = std::min(min_prime[j], i);
   }
 
@@ -208,7 +209,7 @@ public:
 
 ## [Example #2: 2507. Smallest Value After Replacing with Sum of Prime Factors](https://leetcode.com/problems/smallest-value-after-replacing-with-sum-of-prime-factors/description/)
 
-In this problem, we have keep replacing $n$ with sum of it's prime factors. We need to stop the process once $n$ becomes prime as a prime number has only $2$ factors $1$ and itself. Since $1$ is not a prime number so it doesn't change. Once our process stops, we will have the minimum number, because sum of prime factor of any number is always less than itself.
+In this problem, we have keep replacing $n$ with sum of it's prime factors. We need to stop the process once $n$ becomes prime as a prime number has only two factors $1$ and itself. Since $1$ is not a prime number so it doesn't change. Once our process stops, we will have the minimum number, because sum of prime factor of any number is always less than itself.
 
 <details>
 <summary> Sum of prime factor of any number is always less than or equal to itself. Why? </summary>
