@@ -140,3 +140,6 @@ public:
   }
 };
 ```
+
+- **Time Complexity:** $O(MAX + n \cdot log(n))$, where $MAX$ is the max element of `nums` and $n$ is length of `nums`.
+- **Space Complexity:** $O(MAX + n \cdot log(n))$, as we are building a graph of $n \cdot log(n)$ edges and $(MAX + 1)$ nodes.

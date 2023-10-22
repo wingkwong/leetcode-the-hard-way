@@ -74,3 +74,6 @@ public:
     }
 };
 ```
+
+- **Time Complexity:** $O(\sqrt{n})$.
+- **Space Complexity:** $O(log(n))$, as we are storing prime factor of $n$.
