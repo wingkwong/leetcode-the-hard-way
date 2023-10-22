@@ -15,7 +15,7 @@ keywords:
 
 A prime factor is a factor of a number that is also a prime number. For example, the prime factors of $12$ are $2$ and $3$, as $12 = 2 * 2 * 3$. Prime factorization is the process of finding the prime factors of a number. This can be done by repeatedly dividing the number by prime numbers until the remaining number is also a prime number. The prime factorization of a number is unique, meaning that there is only one combination of prime numbers that multiply together to equal that number. The prime factorization of a number can be useful in solving mathematical problems such as finding the greatest common divisor (GCD) of two numbers or the least common multiple (LCM) of two numbers.
 
-## Implementation
+## Approach #1: Finding prime factor in root(n) time
 
 We know that every composite number $N$ has a prime factor less than $N$. Thus, we can iterate over numbers from $2$ to $N$ and whenever we find number that divides $N$ we divide $N$ by it until it no longer divides $N$. 
 
@@ -30,6 +30,8 @@ No, we won't because every composite number has a prime factor less than $N$ so 
 We can further speed up our algorithm by using the fact that a number can have atmost $1$ prime factor greater than $\sqrt(n)$. This can be easily proved by assuming that a number contains two prime factors greater than $\sqrt{n}$, let's call them $P$ and $Q$. 
 
 Since $P > \sqrt n$ and $Q > \sqrt n$ $\implies$ $P \cdot Q > \sqrt n  \cdot \sqrt n (= n^2)$. This is not possible as $P$ and $Q$ are prime factor of $N$ so their product must be less than or equal to $N$.
+
+## Implementation #1
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -58,11 +60,15 @@ vector<int> getPrimeFactors(int n) {
 
 - **Time Complexity:** $O(\sqrt{n})$
 
+## Approach #2: Finding prime factor in log(n) time
+
 Before moving further, it's important to recognise that a number $N$ cannot have more than $log(N)$ prime factors. Since the smallest prime factor a number can have is $2$ and $2^{log(n)} \geq n$. If the number has a prime factor bigger than $2$ than it will have even lesser prime factors. The pre-requisite for this method is knowing [Sieve of Eratosthenes](../math/number-theory/sieve-of-eratosthenes.md).
 
 We can infact, optimise our code to find prime factors of a number $N$ in $O(log(N))$ time. But to do so, we need to do pre computation which takes $O(MAX)$ time, where $MAX$ is the biggest number upto which we can answer the query. Thus the final time complexity is $O(MAX + log(N))$. This is helpful only if we have to find prime factor of multiple numbers less than or equal to $MAX$.
 
 Since the pre computation takes $O(MAX)$ time so we cannot find prime factors of very large numbers (due to constraints on time) using this method. The pre computation process is a modification of [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes). For each number from $2$ to $MAX$ we find it's smallest prime factor and store it in an array, let's call it `min_prime`. We will see how to find `min_prime` array later, first let us see how to calculate prime factor of a number $N$ if we already have the `min_prime` array.
+
+## Implementation
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -143,6 +149,8 @@ int distinctPrimeFactors(vector<int>& nums) {
 - **Time Complexity:** $O(n \cdot \sqrt MAX)$, where $MAX$ is the max number present in `nums` and $n$ is length of `nums`.
 - **Space Complexity:** $O(\text{number of prime from 2 to MAX})$.
 
+We can code same approach using `getPrimeFactorsInLogn()` function (Method-2).
+
 <Tabs>
 <TabItem value="cpp" label="C++">
 <SolutionAuthor name="@Ishwarendra"/>
@@ -203,7 +211,7 @@ public:
 In this problem, we have keep replacing $n$ with sum of it's prime factors. We need to stop the process once $n$ becomes prime as a prime number has only $2$ factors $1$ and itself. Since $1$ is not a prime number so it doesn't change. Once our process stops, we will have the minimum number, because sum of prime factor of any number is always less than itself.
 
 <details>
-<summary> Sum of prime factor of any number is always less than itself. Why? </summary>
+<summary> Sum of prime factor of any number is always less than or equal to itself. Why? </summary>
 
 If we take a composite number then it can be written as product of atleast $2$ different numbers. Let $N$ be a composite number such that $N = A \cdot B$, where $A, B > 1$.
 
@@ -381,26 +389,20 @@ export const suggestedProblems = [
   {
     "problemName": "263. Ugly Number",
     "difficulty": "Easy",
-    "leetCodeLink": "https://leetcode.com/problems/ugly-number/description/",
-    "solutionLink": ""
+    "leetCodeLink": "https://leetcode.com/problems/ugly-number/",
+    "solutionLink": "../../../solutions/0200-0299/ugly-number-easy"
   },
   {
     "problemName": "650. 2 Keys Keyboard",
     "difficulty": "Medium",
-    "leetCodeLink": "https://leetcode.com/problems/2-keys-keyboard/description/",
-    "solutionLink": ""
-  },
-  {
-    "problemName": "1627. Graph Connectivity with threshold",
-    "difficulty": "Hard",
-    "leetCodeLink": "https://leetcode.com/problems/graph-connectivity-with-threshold/description/",
-    "solutionLink": ""
+    "leetCodeLink": "https://leetcode.com/problems/2-keys-keyboard/",
+    "solutionLink": "../../../solutions/0600-0699/two-keys-keyboard-medium"
   },
   {
     "problemName": "2709. Greatest Common Divisor Traversal",
     "difficulty": "Hard",
-    "leetCodeLink": "https://leetcode.com/problems/greatest-common-divisor-traversal/description/",
-    "solutionLink": ""
+    "leetCodeLink": "https://leetcode.com/problems/greatest-common-divisor-traversal/",
+    "solutionLink": "../../../solutions/2700-2799/greatest-common-divisor-traversal-hard"
   },
 ]
 
