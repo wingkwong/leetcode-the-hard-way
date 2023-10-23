@@ -1,15 +1,13 @@
 ---
 title: 'Prime Factors'
 description: 'Factor of a given number which is a prime number.'
-hide_table_of_contents: true
-draft: true
 keywords:
   - leetcode
   - tutorial
   - prime factors
 ---
 
-<TutorialAuthors names="@wingkwong, @Ishwarendra"/>
+<TutorialAuthors names="@Ishwarendra, @wingkwong"/>
 
 ## Overview
 
@@ -31,7 +29,7 @@ We can further speed up our algorithm by using the fact that a number can have a
 
 Since $P > \sqrt n$ and $Q > \sqrt n$ $\implies$ $P \cdot Q > \sqrt n  \cdot \sqrt n (= n^2)$. This is not possible as $P$ and $Q$ are prime factor of $N$ so their product must be less than or equal to $N$.
 
-## Implementation #1
+## Implementation
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -41,7 +39,6 @@ Since $P > \sqrt n$ and $Q > \sqrt n$ $\implies$ $P \cdot Q > \sqrt n  \cdot \sq
 ```cpp
 vector<int> getPrimeFactors(int n) {
   vector<int> prime_factors;
-
   // i * i <= n or i <= sqrt(n) both work.
   for (int i = 2; i * i <= n; i++) { 
     while (n % i == 0) {
@@ -49,7 +46,6 @@ vector<int> getPrimeFactors(int n) {
       n /= i;
     }
   }
-
   if (n > 1) prime_factors.emplace_back(n);
   return prime_factors;
 }
@@ -79,7 +75,6 @@ Since the pre computation takes $O(MAX)$ time so we cannot find prime factors of
 // For sake of simplicity let us assume min_prime is a global vector.
 vector<int> getPrimeFactorsInLogn(int n) {
   vector<int> prime_factors;
-
   while (n > 1) {
     int smallest_prime_factor_of_n = min_prime[n];
     prime_factors.push_back(smallest_prime_factor_of_n);
@@ -100,19 +95,15 @@ vector<int> getPrimeFactorsInLogn(int n) {
 ```cpp
 vector<int> minPrime(int MAX) {
   vector<int> min_prime(MAX + 1);
-
   // Set min_prime[i] = i
-  iota(std::begin(min_prime), std::end(min_prime), 0);
-
+  iota(begin(min_prime), end(min_prime), 0);
   for (int i = 2; i * i <= MAX; i++) { 
       if (min_prime[i] != i) continue;
-
       // if min_prime[i] = i then i must be a prime number.
       // Any multiple of i less than i * i (i.e., i * 2, i * 3, ... i * (i - 1)) has a smaller prime factor than i.
       // Any number >= i * i may have i as it's minimum prime factor
-      for (int j = i * i; j <= MAX; j += i) min_prime[j] = std::min(min_prime[j], i);
+      for (int j = i * i; j <= MAX; j += i) min_prime[j] = min(min_prime[j], i);
   }
-
   return min_prime;
 }
 ```
@@ -139,7 +130,6 @@ int distinctPrimeFactors(vector<int>& nums) {
     auto pf = getPrimeFactors(num);
     for (auto prime : pf) distinct_pf.emplace(prime);
   }
-
   return distinct_pf.size();
 }
 ```
@@ -160,42 +150,36 @@ We can code same approach using `getPrimeFactorsInLogn()` function (Method-2).
 class Solution {
   vector<int> minPrime(int MAX) {
     vector<int> min_prime(MAX + 1);
-    iota(std::begin(min_prime), std::end(min_prime), 0);
-
+    iota(begin(min_prime), end(min_prime), 0);
     for (int i = 2; i * i <= MAX; i++) { 
         if (min_prime[i] != i) continue;
-        for (int j = i * i; j <= MAX; j += i) min_prime[j] = std::min(min_prime[j], i);
+        for (int j = i * i; j <= MAX; j += i) min_prime[j] = min(min_prime[j], i);
     }
-
     return min_prime;
   }
 
   // We need to pass the min_prime vector to use inside the function.
-  vector<int> getPrimeFactorsInLogn(int n, std::vector<int> &min_prime) {
+  vector<int> getPrimeFactorsInLogn(int n, vector<int> &min_prime) {
     vector<int> prime_factors;
-
     while (n > 1) {
       int smallest_prime_factor_of_n = min_prime[n];
       prime_factors.push_back(smallest_prime_factor_of_n);
       n /= smallest_prime_factor_of_n;
     } 
-
     return prime_factors;
   }
+
 public:
   int distinctPrimeFactors(vector<int>& nums) {
     set<int> distinct_pf;
-
     // Finding the limit upto which we should run sieve.
     const int max = *max_element(begin(nums), end(nums));
     auto min_prime = minPrime(max + 1);
-
     for (auto num : nums) {
       // Get prime factors of each number in log(n) time.
       auto pf = getPrimeFactorsInLogn(num, min_prime);
       for (auto prime : pf) distinct_pf.emplace(prime);
     }
-
     return distinct_pf.size();
   }
 };
@@ -238,18 +222,31 @@ Adding $(1)$ and $(2)$ we get, $2 \cdot (A \cdot B) \geq 2 \cdot (A + B) \implie
 <SolutionAuthor name="@Ishwarendra" />
 
 ```cpp
-int smallestValue(int n) {
-  while (true)
-  {
-    auto pf = getPrimeFactors(n);
-    int sum = accumulate(begin(pf), end(pf), 0);
-
-    if (sum == n) break;
-    n = sum;
+class Solution {
+public:
+  vector<int> getPrimeFactors(int n) {
+    vector<int> prime_factors;
+    // i * i <= n or i <= sqrt(n) both work.
+    for (int i = 2; i * i <= n; i++) { 
+      while (n % i == 0) {
+        prime_factors.emplace_back(i);
+        n /= i;
+      }
+    }
+    if (n > 1) prime_factors.emplace_back(n);
+    return prime_factors;
   }
 
-  return n;
-}
+  int smallestValue(int n) {
+    while (true) {
+      auto pf = getPrimeFactors(n);
+      int sum = accumulate(begin(pf), end(pf), 0);
+      if (sum == n) break;
+      n = sum;
+    }
+    return n;
+  }
+};
 ```
 
 </TabItem>
@@ -294,85 +291,68 @@ class Solution {
   // g = graph using which we can find maximum connected component size
   vector<int> isPresent; 
   vector<vector<int>> g;
-
   vector<int> minPrime(int MAX) {
     vector<int> min_prime(MAX + 1);
-    iota(std::begin(min_prime), std::end(min_prime), 0);
-
+    iota(begin(min_prime), end(min_prime), 0);
     for (int i = 2; i * i <= MAX; i++) { 
         if (min_prime[i] != i) continue;
-        for (int j = i * i; j <= MAX; j += i) min_prime[j] = std::min(min_prime[j], i);
+        for (int j = i * i; j <= MAX; j += i) min_prime[j] = min(min_prime[j], i);
     }
-
     return min_prime;
   }
 
-  vector<int> getPrimeFactorsInLogn(int n, std::vector<int> &min_prime) {
+  vector<int> getPrimeFactorsInLogn(int n, vector<int> &min_prime) {
     vector<int> prime_factors;
-
     while (n > 1) {
       int smallest_prime_factor_of_n = min_prime[n];
-
       // Since we only need unique prime factors so we won't push same number again and again
       if (n % smallest_prime_factor_of_n == 0) prime_factors.push_back(smallest_prime_factor_of_n);
-
       // Remove the prime factor completely from n
       while (n % smallest_prime_factor_of_n == 0) n /= smallest_prime_factor_of_n;
     } 
-
     return prime_factors;
   }
 
-  int getComponentSize(int src, std::vector<bool> &vis) {
+  int getComponentSize(int src, vector<bool> &vis) {
     queue<int> q;
     q.emplace(src);
     vis[src] = true;
     int count = isPresent[src];
-
     while (!q.empty()) {
       int node = q.front();
       q.pop();
-
       for (int child : g[node]) {
         if (!vis[child]) {
           q.emplace(child);
           vis[child] = true;
-          
           // Increase component size only if the number is present in nums.
           count += isPresent[child];
         }
       }
     }
-
     return count;
   }  
 public:
   int largestComponentSize(vector<int>& nums) {
     int max_elem = *max_element(begin(nums), end(nums));
     auto min_prime = minPrime(max_elem + 1);
-
     isPresent.resize(max_elem + 1);
     g.resize(max_elem + 1);
     vector<bool> vis(max_elem + 1);
-
     for (int num : nums) {
       isPresent[num] = 1;
       auto pf = getPrimeFactorsInLogn(num, min_prime);
-
       for (auto prime : pf) {
         if (prime == num) continue;
-
         // num and prime has gcd > 1
         g[prime].emplace_back(num);
         g[num].emplace_back(prime);
       }
     } 
-
     int ans = isPresent[1];
     for (int src = 2; src <= max_elem; src++) {
       ans = max(ans, getComponentSize(src, vis));
     }
-
     return ans;
   }
 };
