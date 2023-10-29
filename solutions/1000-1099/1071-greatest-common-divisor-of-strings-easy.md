@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/greatest-common-divisor-of-strings/'
+description: 'Author: @wingkwong, @vigneshshiv | https://leetcode.com/problems/greatest-common-divisor-of-strings/'
 tags: [Math, String]
 ---
 
@@ -41,7 +41,7 @@ Output: ""
 - `1 <= str1.length, str2.length <= 1000`
 - `str1` and `str2` consist of English uppercase letters.
 
-## Approach 1: TBC
+## Approach 1: Optimal Solution - String equals with GCD
 
 <Tabs>
 <TabItem value="py" label="Python">
@@ -59,6 +59,82 @@ class Solution:
         # - str2[0 .. g]
         # where g is the gcd of their length
         return "" if str1 + str2 != str2 + str1 else str1[:gcd(len(str1), len(str2))]
+```
+
+</TabItem>
+
+<TabItem value="java" label="java">
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+class Solution {
+
+    /**
+     * m - Str1, n - str2
+     * 
+     * Time complexity - O(m + n)
+     * Space complexity - O(1)
+     */
+    public String gcdOfStrings(String str1, String str2) {
+        if (!Objects.equals(str1 + str2, str2 + str1)) {
+            return "";
+        }
+        return str1.substring(0, gcd(str1.length(), str2.length()));
+    }
+
+    private int gcd(int a, int b) {
+        if (b == 0) return a;
+        return gcd(b, a % b);
+    }
+}
+```
+
+</TabItem>
+</Tabs>
+
+## Approach 2: Substring Division
+
+As stated in the problem, `t` divides `s` which means length of `t` is either `equal` or `factor` of `t` & `s`. 
+
+First, iterate over the smallest string `min(t, s)`, use the `index` to substring(0, index) and divide both `s` & `t` and 
+if there's no reminder then apply factor (no. of times) with str1 and str2 to find string equals. 
+
+<Tabs>
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+class Solution {
+
+    /**
+     * m - Str1, n - str2
+     * 
+     * Time complexity - O(min(m, n) * (m + n))
+     * Space complexity - O(1)
+     */
+    public String gcdOfStrings(String str1, String str2) {
+        int str1Len = str1.length(), str2Len = str2.length();
+        // Check 1st char in both strings
+        if (str1.charAt(0) != str2.charAt(0)) {
+            return "";
+        }
+        // Function - Check both strings are factor by divisor substring length
+        Function<Integer, Boolean> isDivisor = len -> {
+            if (str1Len % len != 0 || str2Len % len != 0) {
+                return false;
+            }
+            int f1 = str1Len / len, f2 = str2Len / len;
+            String mini = str2.substring(0, len);
+            return Objects.equals(mini.repeat(f1), str1) && Objects.equals(mini.repeat(f2), str2);
+        };
+        for (int i = Math.min(str1Len, str2Len); i > 0; i--) {
+            if (isDivisor.apply(i)) {
+                return str1.substring(0, i);
+            }
+        }
+        return "";
+    }
+}
 ```
 
 </TabItem>
