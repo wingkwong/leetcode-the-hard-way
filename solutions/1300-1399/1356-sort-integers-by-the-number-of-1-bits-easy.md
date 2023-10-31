@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
+  Author: @wingkwong, @vigneshshiv |
   https://leetcode.com/problems/sort-integers-by-the-number-of-1-bits
 tags: ['Sorting']
 ---
@@ -42,8 +42,10 @@ Explantion: All integers have 1 bit in the binary representation, you should jus
 * `1 <= arr.length <= 500`
 * `0 <= arr[i] <= 10^4`
 
-## Approach 1: Sorting + __builtin_popcount
+## Approach 1: Sorting + __builtin_popcount / Bit Count
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -63,3 +65,51 @@ public:
     }
 };
 ```
+
+</TabItem>
+
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+class Solution {
+    public int[] sortByBits(int[] arr) {
+        return Arrays.stream(arr)
+                .boxed()
+                .sorted(Comparator.comparing(Integer::bitCount).thenComparing(Integer::intValue))
+                .mapToInt(num -> num)
+                .toArray();
+    }
+}
+```
+
+</TabItem>
+</Tabs>
+
+## Approach 2: Sorting with Math Logic    
+
+Since the input values can range from `0` to `10000`, we can add to each element on the array the value of the bit count (number of 1s) multiplied by 10001.
+
+`10001` is not a magic number, it is merely the max possible number the array may have + 1, which ensures that the bit count has the maximum priority
+
+<Tabs>
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+class Solution {
+    public int[] sortByBits(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] += (Integer.bitCount(arr[i]) * 10001);
+        }
+        Arrays.sort(arr);
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] %= 10001;
+        }
+        return arr;
+    }
+}
+```
+
+</TabItem>
+</Tabs>
