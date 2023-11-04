@@ -44,7 +44,7 @@ Output: [0]
 
 ## Approach 1: DFS + Counting
 
-We can perform DFS to traverse the tree to get each node value and store in a hash map. After that, we know the frequencies for each node value and we can find the maximum one and build the final result.
+We can perform DFS to traverse the tree to get each node value and store in a HashMap. After that, we know the frequencies for each node value and we can find the maximum one and build the final result.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -87,6 +87,162 @@ public:
         return ans;
     }
 };
+```
+
+</TabItem>
+
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    public int[] findMode(TreeNode root) {
+        Map<Integer, Integer> frequency = new HashMap<>();
+        findModeRecursive(root, frequency);
+        // Leetcode compilation issue for Optional class, so used java.util package directly here
+        java.util.Optional<Integer> max = frequency.values().stream().max(Integer::compare);
+        return max.isPresent() 
+            ? frequency.entrySet().stream()
+                .filter(entry -> entry.getValue() == max.get())
+                .mapToInt(Map.Entry::getKey)
+                .toArray() 
+            : null;
+    }
+
+    private void findModeRecursive(TreeNode node, Map<Integer, Integer> frequency) {
+        if (node == null) return;
+        // Count the frequency
+        frequency.put(node.val, frequency.getOrDefault(node.val, 0) + 1);
+        findModeRecursive(node.left, frequency);
+        findModeRecursive(node.right, frequency);
+    }
+}
+```
+
+</TabItem>
+</Tabs>
+
+## Approach 2: DFS Iterative
+
+We can perform DFS Iterative to traverse the tree to get each node value and store in a HashMap. After that, we know the frequencies for each node value and we can find the maximum one and build the final result.
+
+Both DFS Recursive and Iterative approach follows In-Order Traversal techniques.
+
+<Tabs>
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    public int[] findMode(TreeNode root) {
+        Map<Integer, Integer> frequency = new HashMap<>();
+        Stack<TreeNode> stack = new Stack<>();
+        while (root != null || !stack.isEmpty()) {
+            if (root != null) {
+                stack.push(root);
+                root = root.left;
+            } else {
+                int key = stack.peek().val;
+                frequency.put(key, frequency.getOrDefault(key, 0) + 1);
+                root = stack.pop().right;
+            }
+        }
+        // Leetcode compilation issue for Optional class, so used java.util package directly here
+        java.util.Optional<Integer> max = frequency.values().stream().max(Integer::compare);
+        return max.isPresent() 
+            ? frequency.entrySet().stream()
+                .filter(entry -> entry.getValue() == max.get())
+                .mapToInt(Map.Entry::getKey)
+                .toArray()
+            : null;
+    }
+}
+```
+
+</TabItem>
+</Tabs>
+
+## Approach 3: Breadth First Search (BFS)
+
+We can perform BFS to traverse the tree to get each node value and store in a HashMap. After that, we know the frequencies for each node value and we can find the maximum one and build the final result.
+
+Since BFS approach follows Pre-Order Traversal so Queue is used to handle First-In, First-Out (FIFO) technique.
+
+<Tabs>
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    public int[] findMode(TreeNode root) {
+        Map<Integer, Integer> frequency = new HashMap<>();
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+        while (!queue.isEmpty()) {
+            TreeNode node = queue.poll();
+            frequency.put(node.val, frequency.getOrDefault(node.val, 0) + 1);
+            if (node.left != null) {
+                queue.offer(node.left);
+            }
+            if (node.right != null) {
+                queue.offer(node.right);
+            }
+        }
+        // Leetcode compilation issue for Optional class, so used java.util package directly here
+        java.util.Optional<Integer> max = frequency.values().stream().max(Integer::compare);
+        return max.isPresent() 
+            ? frequency.entrySet().stream()
+                .filter(entry -> entry.getValue() == max.get())
+                .mapToInt(Map.Entry::getKey)
+                .toArray()
+            : null;
+    }
+}
 ```
 
 </TabItem>
