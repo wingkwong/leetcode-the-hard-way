@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong, @radojicic23|
+  Author: @wingkwong, @radojicic23, @vigneshshiv |
   https://leetcode.com/problems/increasing-triplet-subsequence/
 ---
 
@@ -117,6 +117,28 @@ var increasingTriplet = function(nums) {
     }
     return false;
 };
+```
+
+</TabItem>
+
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+class Solution {
+    public boolean increasingTriplet(int[] nums) {
+        int first = Integer.MAX_VALUE, second = Integer.MAX_VALUE;
+        for (int x : nums) {
+            // update the first smallest number
+            if (x <= first) first = x;
+            // update the second smallest number
+            else if (x <= second) second = x;
+            // if x > first && x > second, then found the answer
+            else return true;
+        }
+        return false;
+    }
+}
 ```
 
 </TabItem>
