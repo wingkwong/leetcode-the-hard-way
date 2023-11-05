@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong, @radojicic23|
+  Author: @wingkwong, @radojicic23, @vigneshshiv |
   https://leetcode.com/problems/increasing-triplet-subsequence/
 ---
 
