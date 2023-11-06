@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/max-number-of-k-sum-pairs/'
+description: 'Author: @wingkwong, @vigneshshiv | https://leetcode.com/problems/max-number-of-k-sum-pairs/'
 ---
 
 # 1679 - Max Number of K-Sum Pairs (Medium)
@@ -51,6 +51,8 @@ The first case is when $$x$$ is same as $$k - x$$. In this case, we can only tak
 
 Otherwise, we can only take the minimal value of $$m[x]$$and $$m[k - x]$$, then update the hash map values.
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -78,10 +80,43 @@ public:
     }
 };
 ```
+</TabItem>
+
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+class Solution {
+    public int maxOperations(int[] nums, int k) {
+        int count = 0;
+        Map<Integer, Integer> table = new HashMap<>();
+        for (int x : nums) {
+            int reminder = k - x;
+            if (table.containsKey(reminder)) {
+                count += 1;
+                if (table.get(reminder) == 1) {
+                    table.remove(reminder);
+                } else {
+                    table.merge(reminder, -1, Integer::sum);
+                }
+            } else {
+                table.merge(x, 1, Integer::sum);
+            }
+        }
+        return count;
+    }
+}
+```
+</TabItem>
+</Tabs>
 
 ## Approach 2: Two Pointers
 
 We can sort the input and use two pointers to track elements from both side. If their sum is equal to $$k$$, then we increase $$ans$$ by 1. If $$nums[i] + nums[j] > k$$, it means we should reduce the sum, hence we move $$j$$-th pointer to the left . Otherwise, we increase $$i$$-th pointer to the right to increase the sum.
+
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -98,3 +133,6 @@ public:
     }
 };
 ```
+
+</TabItem>
+</Tabs>
