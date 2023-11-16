@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wingkwong | https://leetcode.com/problems/find-unique-binary-string/'
+tags: [Array, String, Backtracking]
 ---
 
 # 1980 - Find Unique Binary String (Medium)
@@ -65,9 +66,10 @@ for (int i = 0; i < 1 << n; i ++) {
 }
 ```
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
-```cpp
 class Solution {
 public:
     string findDifferentBinaryString(vector<string>& nums) {
@@ -91,5 +93,6 @@ public:
         return ans;
     }
 };
-```
 
+</TabItem>
+</Tabs>
