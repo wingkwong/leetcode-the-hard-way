@@ -41,9 +41,9 @@ As shown in the diagram above, the line chart can be represented with a single l
 
 **Constraints:**
 
-- 1 <= stockPrices.length <= 10^5
-- stockPrices[i].length == 2
-- 1 <= day_i, price_i <= 10^9
+- $1 <= stockPrices.length <= 10^5$
+- $stockPrices[i].length == 2$
+- $1 <= day_i, price_i <= 10^9$
 - All day_i are distinct.
 
 ## Approach 1: Greedy

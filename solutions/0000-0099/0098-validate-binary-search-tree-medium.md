@@ -42,7 +42,7 @@ Explanation: The root node's value is 5 but its right child's value is 4.
 **Constraints**
 
 - The number of nodes in the tree is in the range [1, 104].
-- -231 <= Node.val <= 231 - 1
+- -$2^31 <= Node.val <= 2 ^ 31 - 1$
 
 ## Approach 1: Preorder Traversal
 

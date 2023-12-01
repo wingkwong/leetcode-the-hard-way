@@ -40,9 +40,9 @@ Explanation: There is no a single valid k, we return -1.
 
 ** Constraints **
 
-- 1 <= nums.length <= 1000
-- -1000 <= nums[i] <= 1000
-- nums[i] != 0
+- $1 <= nums.length <= 1000$
+- $-1000 <= nums[i] <= 1000$
+- $nums[i] != 0$
 
 ## Approach 1: Sorting
 

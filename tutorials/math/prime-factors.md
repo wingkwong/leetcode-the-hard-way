@@ -138,7 +138,7 @@ int distinctPrimeFactors(vector<int>& nums) {
 </Tabs>
 
 - **Time Complexity:** $O(n \cdot \sqrt MAX)$, where $MAX$ is the max number present in `nums` and $n$ is length of `nums`.
-- **Space Complexity:** $O(\text{number of prime from 2 to MAX})$.
+- **Space Complexity:** $O(\text\{number of prime from 2 to MAX})$.
 
 We can code same approach using `getPrimeFactorsInLogn()` function (Method-2).
 

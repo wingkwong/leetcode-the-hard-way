@@ -45,8 +45,8 @@ We return 0 because no subarrays meet the conditions.
 
 **Constraints:**
 
-- 1 <= k <= nums.length <= 10^5
-- 1 <= nums[i] <= 10^5
+- $1 <= k <= nums.length <= 10^5$
+- $1 <= nums[i] <= 10^5$
 
 ## Approach 1: Sliding Window
 

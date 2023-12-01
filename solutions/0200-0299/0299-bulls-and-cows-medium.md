@@ -46,7 +46,7 @@ Note that only one of the two unmatched 1s is counted as a cow since the non-bul
 
 **Constraints:**
 
-- 1 <= secret.length, guess.length <= 1000
+- $1 <= secret.length, guess.length <= 1000$
 - secret.length == guess.length
 - secret and guess consist of digits only.
 
