@@ -36,7 +36,7 @@ Explanation: Remove all the digits from the number and it is left with nothing w
 
 **Constraints:**
 
-* 1 <= a.length, b.length <= 104
+* $1 <= a.length, b.length <= 10^4$
 * a and b consist only of '0' or '1' characters.
 * Each string does not contain leading zeros except for the zero itself.
 

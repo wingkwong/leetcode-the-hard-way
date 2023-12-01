@@ -39,9 +39,9 @@ Output: 1
 
 **Constraints:**
 
-- 1 <= arr.length <= 500
-- 0 <= arr[i] <= 109
-- 1 <= k <= arr.length
+- $1 <= arr.length <= 500$
+- $0 <= arr[i] <= 10^9$
+- $1 <= k <= arr.length$
 
 ## Approach 1: Recursion
 

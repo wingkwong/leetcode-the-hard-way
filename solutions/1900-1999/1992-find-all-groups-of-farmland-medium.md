@@ -58,7 +58,7 @@ There are no groups of farmland.
 
 - m == land.length
 - n == land[i].length
-- 1 <= m, n <= 300
+- $1 <= m, n <= 300$
 - land consists of only 0's and 1's.
 - Groups of farmland are rectangular in shape.
 

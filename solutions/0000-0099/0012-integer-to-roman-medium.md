@@ -1,13 +1,14 @@
 ---
 description: >-
   Author: @jessicaribeiroalves, @radojicic23 | https://leetcode.com/problems/integer-to-roman/
+tags: [Hash Table, Math, String]
 ---
 
 # 0012 - Integer to Roman (Medium)
 
 ## Problem Link
 
-<https://leetcode.com/problems/integer-to-roman/>
+https://leetcode.com/problems/integer-to-roman/
 
 ## Problem Statement
 

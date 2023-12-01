@@ -46,11 +46,11 @@ Note that we did not use all of the additional rocks.
 
 **Constraints:**
 
-- n == capacity.length == rocks.length
-- 1 <= n <= 5 * 10^4
-- 1 <= capacity[i] <= 10^9
-- 0 <= rocks[i] <= capacity[i]
-- 1 <= additionalRocks <= 10^9
+- $n == capacity.length == rocks.length$
+- $1 <= n <= 5 * 10^4$
+- $1 <= capacity[i] <= 10^9$
+- $0 <= rocks[i] <= capacity[i]$
+- $1 <= additionalRocks <= 10^9$
 
 ## Approach 1: Greedy
 

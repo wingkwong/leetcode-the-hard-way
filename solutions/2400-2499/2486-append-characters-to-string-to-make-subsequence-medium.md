@@ -47,7 +47,7 @@ It can be shown that appending any 4 characters to the end of s will never make 
 
 **Constraints:**
 
-- 1 <= s.length, t.length <= 105
+- $1 <= s.length, t.length <= 10^5$
 - s and t consist only of lowercase English letters.
 
 ## Approach 1: Two Pointers

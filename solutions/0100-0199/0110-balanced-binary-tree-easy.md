@@ -55,7 +55,7 @@ Output: true
 
 This solution is strictly following the definition of a balanced binary tree.  
 
-- (1) ABS(left sub-tree's height - right sub-tree's height) <= 1.
+- (1) ABS(left sub-tree's height - right sub-tree's height) $<= 1$.
 
 - (2) Every left sub-trees and right sub-trees are also balanced.
 

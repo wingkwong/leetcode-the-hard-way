@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wingkwong | https://leetcode.com/problems/closest-prime-numbers-in-range/'
+tags: [Math, Number Theory]
 ---
 
 # 2523 - Closest Prime Numbers in Range (Medium) 
@@ -41,13 +42,6 @@ Explanation: There exists only one prime number in the given range, so the condi
 **Constraints:**
 
 - `1 <= left <= right <= 10^6`
-
-.spoilerbutton {display:block; border:dashed; padding: 0px 0px; margin:10px 0px; font-size:150%; font-weight: bold; color:#000000; background-color:cyan; outline:0; 
-}
-.spoiler {overflow:hidden;}
-.spoiler > div {-webkit-transition: all 0s ease;-moz-transition: margin 0s ease;-o-transition: all 0s ease;transition: margin 0s ease;}
-.spoilerbutton[value="Show Message"] + .spoiler > div {margin-top:-500%;}
-.spoilerbutton[value="Hide Message"] + .spoiler {padding:5px;}
 
 ## Approach 1: Prime Sieve
 
