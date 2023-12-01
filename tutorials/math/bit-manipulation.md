@@ -236,7 +236,7 @@ for (int i = n; ~i; i--) {
 }
 ```
 
-### Left-Shift (<<)
+### Left-Shift ($<<$)
 
 $<<$ shifts the bits to the left. For example, $1 << 1 = 2$ because we shift the $1$ $(0001_2)$ to the left to become $2$ $(0010_2)$. 
 
@@ -244,7 +244,7 @@ Similarily, $1 << 2 = 4$ because we shift the $1$ $(0001_2)$ to the left twice t
 
 And you may find that $1 << n$ is actually $2 ^ n$. Also $n << m$ means multiplying n by 2 power m. i.e, $n = n * (2^m)$. 
 
-In simple, $n << m$ _shifting each bit of n to left m times_. Let's say, $n = 8$ and $m = 2$. $n$ can be represented as $1000_2$ in binary, Therefore, $8 << 2$ = $1000_2$ << $2$ = $100000_2$ (32), which is same as $(8 * 2^2)$ = $32$
+In simple, $n << m$ _shifting each bit of n to left m times_. Let's say, $n = 8$ and $m = 2$. $n$ can be represented as $1000_2$ in binary, Therefore, $$8 << 2$$ = $1000_2 << 2$ = $100000_2 (32)$, which is same as $(8 * 2^2)$ = $32$
 
 #### Example #1: [0078 - Subsets](https://leetcode.com/problems/subsets/)
 

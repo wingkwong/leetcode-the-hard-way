@@ -56,7 +56,7 @@ for (int i = 0; i < n; i++) {
 
 In the following case, the time complexity is $$O(\sqrt n)$$. You can see $$i * i <= n$$ as $$i <= \sqrt n$$.
 
-> As sqrt() returns double, it would be safe to use i \* i <= n to check the condition instead of using i <= sqrt(n).
+> As sqrt() returns double, it would be safe to use $i * i <= n$ to check the condition instead of using $i <= sqrt(n)$.
 
 ```cpp
 for (int i = 2; i * i <= n; i++) {
