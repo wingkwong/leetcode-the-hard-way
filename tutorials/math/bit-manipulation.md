@@ -236,7 +236,7 @@ for (int i = n; ~i; i--) {
 }
 ```
 
-### Left-Shift ($<<$)
+### Left-Shift
 
 $<<$ shifts the bits to the left. For example, $1 << 1 = 2$ because we shift the $1$ $(0001_2)$ to the left to become $2$ $(0010_2)$. 
 
@@ -270,7 +270,7 @@ public:
 };
 ```
 
-### Right-Shift (>>)
+### Right-Shift
 
 $>>$ shifts the bits to the right. For example $3_{10}$ $(0011_2)$ $>> 1$ would become $1$ $(0010_2)$.
 
