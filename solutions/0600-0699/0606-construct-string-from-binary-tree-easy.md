@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @lonyehan | https://leetcode.com/problems/construct-string-from-binary-tree/'
+description: 'Author: @wingkwong, @lonyehan, @jit | https://leetcode.com/problems/construct-string-from-binary-tree/'
 tags: [String, Tree, Depth-First Search, Binary Tree]
 ---
 
@@ -156,6 +156,29 @@ public class Solution {
         return result;        
     }
 }
+```
+
+</TabItem>
+
+<TabItem value="elixir" label="Elixir">
+<SolutionAuthor name="@jit"/>
+
+```elixir
+defmodule Solution do
+  # Enumerate the cases:
+  @spec tree2str(root :: TreeNode.t | nil) :: String.t
+  def tree2str(%TreeNode{val: v, left: nil, right: nil}), do:
+    "#{v}"
+
+  def tree2str(%TreeNode{val: v, left: lch, right: nil}), do:
+    "#{v}(#{tree2str(lch)})"
+  
+  def tree2str(%TreeNode{val: v, left: nil, right: rch}), do:
+    "#{v}()(#{tree2str(rch)})"
+
+  def tree2str(%TreeNode{val: v, left: lch, right: rch}), do:
+    "#{v}(#{tree2str(lch)})(#{tree2str(rch)})"
+end
 ```
 
 </TabItem>
