@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @ganajayant, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/binary-tree-inorder-traversal/'
+description: 'Author: @wingkwong, @ganajayant, @vigneshshiv, @radojicic23, @jit | https://leetcode.com/problems/binary-tree-inorder-traversal/'
 tags: [Stack, Tree, Depth-First Search, Binary Tree]
 ---
 
@@ -100,8 +100,9 @@ public:
 
 class Solution:
     def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
-		# left -> root -> right
-        return self.inorderTraversal(root.left) + [root.val] + self.inorderTraversal(root.right) if root else []
+        # left -> root -> right
+        if root is None: return []
+        return self.inorderTraversal(root.left) + [root.val] + self.inorderTraversal(root.right)
 ```
 </TabItem>
 
@@ -172,6 +173,49 @@ var inorderTraversal = function(root) {
     return res;
 };
 ```
+</TabItem>
+
+<TabItem value="rust" label="Rust">
+<SolutionAuthor name="@jit"/>
+
+```rs
+// Definition for a binary tree node.
+// #[derive(Debug, PartialEq, Eq)]
+// pub struct TreeNode {
+//   pub val: i32,
+//   pub left: Option<Rc<RefCell<TreeNode>>>,
+//   pub right: Option<Rc<RefCell<TreeNode>>>,
+// }
+// 
+// impl TreeNode {
+//   #[inline]
+//   pub fn new(val: i32) -> Self {
+//     TreeNode {
+//       val,
+//       left: None,
+//       right: None
+//     }
+//   }
+// }
+use std::rc::Rc;
+use std::cell::RefCell;
+type TreeRef = Rc<RefCell<TreeNode>>;
+
+impl Solution {
+    // A typical recursive implementation...
+    pub fn inorder_traversal(root: Option<TreeRef>) -> Vec<i32> {
+        Self::walk(root.as_ref())
+    }
+
+    fn walk(node: Option<&TreeRef>) -> Vec<i32> {
+        node.map_or_else(|| Vec::new(), |tree_ref| {
+            let TreeNode { val: v, left: l, right: r } = &*tree_ref.borrow();
+            [Self::walk(l.as_ref()), vec![*v], Self::walk(r.as_ref())].concat()
+        })
+    }
+}
+```
+
 </TabItem>
 </Tabs>
 
