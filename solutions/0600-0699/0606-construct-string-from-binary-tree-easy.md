@@ -182,4 +182,63 @@ end
 ```
 
 </TabItem>
+
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@kesava-karri"/>
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    /**Approach
+     * Access the elements in preorder dfs as we usually do and 
+     * a simple add-on is the parenthesis for each child.
+     * Add the parenthesis to right child if:
+     * 1. right child is present [the case when both children exist]
+     * 2. left is null [the case when only right child exist]
+     * Note: parenthesis will not be added if child doesn't exist,
+     * why? -> 'cause null wouldn't be appended to our string
+     */
+    StringBuilder sb = new StringBuilder();
+    public String tree2str(TreeNode root) {
+        f(root);
+        return sb.toString();
+    }
+    private void f(TreeNode root) {
+        if (root == null) return;
+        sb.append(root.val);
+        if (root.left == null && root.right == null) return;
+        sb.append("(");
+        f(root.left);
+        sb.append(")");
+        // Add the parenthesis to right child if
+        // 1. right child is present [the case when both children exist]
+        // 2. left is null [the case when only right child exist]
+        // Note: parenthesis will not be added if child doesn't exist, 
+        // why? -> 'cause null wouldn't be appended to our string
+        if (root.left == null || root.right != null) {
+            sb.append("(");
+        }
+        f(root.right);
+        if (root.left == null || root.right != null) {
+            sb.append(")");
+        }
+    }
+}
+```
+
+</TabItem>
 </Tabs>
