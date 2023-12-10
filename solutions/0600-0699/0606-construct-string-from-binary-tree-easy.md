@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @lonyehan, @jit | https://leetcode.com/problems/construct-string-from-binary-tree/'
+description: 'Author: @wingkwong, @lonyehan, @jit, @kesava-karri | https://leetcode.com/problems/construct-string-from-binary-tree/'
 tags: [String, Tree, Depth-First Search, Binary Tree]
 ---
 
