@@ -34,11 +34,11 @@ The **transpose** of a matrix is the matrix flipped over its main diagonal, swit
 
 **Constraints:**
 
-- `m == matrix.length`
-- `n == matrix[i].length`
-- `1 <= m, n <= 1000`
-- `1 <= m * n <= 10 ^ 5`
-- `-10 ^ 9 <= matrix[i][j] <= 10 ^ 9`
+- $m == matrix.length$
+- $n == matrix[i].length$
+- $1 <= m, n <= 1000$
+- $1 <= m * n <= 10 ^ 5$
+- $-10 ^ 9 <= matrix[i][j] <= 10 ^ 9$
 
 ## Approach 1: Iterating over the columns and rows
 
@@ -59,6 +59,15 @@ class Solution:
             for column in range(len(matrix)):
                 transposed[row].append(matrix[column][row])
         return transposed
+```
+
+
+<SolutionAuthor name="@wingkwong"/>
+
+```py
+class Solution:
+    def transpose(self, matrix: List[List[int]]) -> List[List[int]]:
+        return [[matrix[row][col] for row in range(0, len(matrix))] for col in range(0, len(matrix[0]))]
 ```
 
 </TabItem>
