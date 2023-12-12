@@ -1,5 +1,5 @@
 ---
-description: "Author: @ColeB2 | https://leetcode.com/problems/generate-parentheses/description/"
+description: "Author: @ColeB2, @vigneshshiv | https://leetcode.com/problems/generate-parentheses/description/"
 tags: [String, Dynamic Programming, Backtracking]
 ---
 
@@ -89,6 +89,35 @@ class Solution:
                 stack.append((paren + "(", _open - 1, _close))
                 stack.append((paren + ")", _open, _close - 1))
         return output
+```
+
+</TabItem>
+
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@vigneshshiv"/>
+
+```java
+class Solution {
+    public List<String> generateParenthesis(int n) {
+        char[] pairs = new char[2 * n];
+        List<String> result = new ArrayList<>();
+        generateParenthesis(pairs, n, n, 0, result);
+        return result;
+    }
+    
+    public void generateParenthesis(char[] pairs, int open, int close, int index, List<String> result) {
+        if (open < 0 || close < open) return;
+        if (open == 0 && close == 0) {
+            result.add(String.valueOf(pairs));
+        } else {
+            pairs[index] = '(';
+            generateParenthesis(pairs, open - 1, close, index + 1, result);
+            // Close it properly at the right index
+            pairs[index] = ')';
+            generateParenthesis(pairs, open, close - 1, index + 1, result);
+        }
+    }
+}
 ```
 
 </TabItem>
