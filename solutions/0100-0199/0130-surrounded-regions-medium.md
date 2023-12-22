@@ -1,5 +1,5 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/surrounded-regions/'
+description: 'Author: @ColeB2, @kesava-karri | https://leetcode.com/problems/surrounded-regions/'
 tags: [Array, Depth-First Search, Breadth-First Search, Union Find, Matrix]
 ---
 
@@ -103,6 +103,67 @@ class Solution:
                     board[row][col] = 'X'
                 elif board[row][col] =='P':
                     board[row][col] = 'O'
+```
+
+</TabItem>
+</Tabs>
+
+## Approach 2: Depth-First Search
+* The Os not to flip are the ones which are on the borders
+* So go to each O on the borders & do a dfs to find the connected graph of Os and turn them into a new symbol for example *
+* Now Xs, Os, *s will be present and these leftover Os are the ones not connected to borders, so flip all these Os to Xs
+* Finally, turn all the *s back to O
+
+Time Complexity: $$O(m * n)$$
+
+Space Complexity: $$O(1)$$
+
+<Tabs>
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@kesava-karri"/>
+
+```java
+class Solution {
+    int m, n;
+    public void solve(char[][] board) {
+        m = board.length;
+        n = board[0].length;
+        // Creating stars [*] :)
+        for(int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                // To not flip the Os on the edges & their Os graphs
+                // Change them to *s
+                if (i == 0 || i == m - 1 || j == 0 || j == n - 1) {
+                     if (board[i][j] == 'O') {
+                        dfs(i, j, board);
+                    }
+                }
+            }
+        }
+        for(int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                // flip Os not connected to borders
+                if (board[i][j] == 'O') board[i][j] = 'X';
+                // bring back our 0s on the borders with its 
+                // respective connected graphs
+                else if (board[i][j] == '*') board[i][j] = 'O';
+            }
+        }
+    }
+    private void dfs(int row, int col, char[][] board) {
+        // Return if out-of-bounds or when not a O
+        if (row >= m || row < 0 || col >= n || col < 0
+            || board[row][col] != 'O') {
+            return;
+        }
+        board[row][col] = '*';
+        // Navigate thru all directions to find our connected graph of Os
+        dfs(row + 1, col, board);
+        dfs(row - 1, col, board);
+        dfs(row, col + 1, board);
+        dfs(row, col - 1, board);
+    }
+}
 ```
 
 </TabItem>
