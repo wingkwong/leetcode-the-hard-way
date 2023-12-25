@@ -1,5 +1,5 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/decode-ways/'
+description: 'Author: @ColeB2, @heder, @wingkwong | https://leetcode.com/problems/decode-ways/'
 tags: [String, Dynamic Programming]
 ---
 
@@ -113,6 +113,128 @@ class Solution:
         # return our previous dp1 value we solved. Which would be the
         # current value on the last iteration, but that gets set to 0.
         return dp1
+```
+
+</TabItem>
+
+
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@wingkwong"/>
+
+```cpp
+// Time Complexity: O(N)
+// Space Complexity: O(N)
+// This solution can be further space-optimized to be O(1).
+class Solution {
+public:
+    // number of ways to do something -> think about dp
+    int numDecodings(string s) {
+        // cannot map to any character due to the leading zero
+        if (s.front() == '0') return 0;
+        int n = s.size(); 
+        // dp[i]: number of ways of decoding the substring s[:i]
+        vector<int> dp(n + 1);
+        // base case
+        dp[0] = 1;
+        for (int i = 1; i <= n; i++) {
+            // check single digit decode
+            // valid deocde is possible only when s[i - 1] is not zero
+            // if so, take the previous state dp[i - 1]
+            // e.g. AB - 1[2]
+            if (s[i - 1] != '0') dp[i] = dp[i - 1];
+            // check double digit decode
+            // by looking at the previous two digits
+            // if the substring belongs to the range [10 - 26]
+            // then add the previous state dp[i - 2]
+            // e.g. L - [12]
+            if (i >= 2) {
+                // or you can use `stoi(s.substr(i - 2, 2))`
+                int x = (s[i - 2] - '0') * 10 + s[i - 1] - '0';
+                // check the range
+                if (10 <= x && x <= 26) dp[i] += dp[i - 2];
+            }
+        }
+        return dp[n];
+    }
+};
+```
+
+</TabItem>
+
+<TabItem value="java" label="Java">
+<SolutionAuthor name="@wingkwong"/>
+
+```java
+// Time Complexity: O(N)
+// Space Complexity: O(N)
+// This solution can be further space-optimized to be O(1).
+class Solution {
+    public int numDecodings(String s) {
+        // cannot map to any character due to the leading zero
+        if (s.charAt(0) == '0') return 0;
+        int n = s.length(); 
+        // dp[i]: number of ways of decoding the substring s[:i]
+        int[]  dp = new int[n + 1];
+        // base case
+        dp[0] = 1;
+        for (int i = 1; i <= n; i++) {
+            // check single digit decode
+            // valid deocde is possible only when s[i - 1] is not zero
+            // if so, take the previous state dp[i - 1]
+            // e.g. AB - 1[2]
+            if (s.charAt(i - 1) != '0') dp[i] = dp[i - 1];
+            // check double digit decode
+            // by looking at the previous two digits
+            // if the substring belongs to the range [10 - 26]
+            // then add the previous state dp[i - 2]
+            // e.g. L - [12]
+            if (i >= 2) {
+                // or you can use `stoi(s.substr(i - 2, 2))`
+                int x = (s.charAt(i - 2) - '0') * 10 + s.charAt(i - 1) - '0';
+                // check the range
+                if (10 <= x && x <= 26) dp[i] += dp[i - 2];
+            }
+        }
+        return dp[n];
+    }
+}
+```
+
+</TabItem>
+</Tabs>
+
+## Approach 2: Top-Down Dynamic Programming
+
+- Time complexity: $$O(n)$$ with $$n$$ being the length of the string. Memoization helps to prune the recurision tree and makes the differenc here.
+- Space Complexity: $$O(n)$$ for memo but also for the the recursion stack.
+
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@heder"/>
+
+```cpp
+static int numDecodings(const string& s) {
+    vector<int> memo(size(s), -1);
+    return dp(s, 0, memo);
+}
+
+static int dp(const string& s, int i, vector<int>& memo) {
+    if (i == size(s)) return 1;
+    
+    if (memo[i] != -1) return memo[i];
+    int ans = 0;
+    
+    if (s[i] == '0') {
+        ans = 0;
+    } else {
+        ans = dp(s, i + 1, memo);
+        if (i + 1 < size(s) && (s[i] == '1'  || s[i] == '2' && s[i + 1] <= '6')) {
+            ans += dp(s, i + 2, memo);
+        }
+    }
+    
+    return memo[i] = ans;
+}
 ```
 
 </TabItem>
