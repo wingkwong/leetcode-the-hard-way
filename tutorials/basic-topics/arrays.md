@@ -70,7 +70,7 @@ We have 3 types of arrays.
 `scores_of_students`: This array is an 1-d array containing the scores of each student. We can perform the following operations to obtain different information of the scores:
 
 * `max(scores_of_students)`: returns the highest score in the array, which is 98 in this case
-* `min(scores_of_students)`: returns the highest score in the array, which is 67 in this case
+* `min(scores_of_students)`: returns the lowest score in the array, which is 67 in this case
 * `sum(scores_of_students)`: returns the sum of score in the array, which is 422 in this case
 * `scores_of_students.sort()`: sort the scores in order, which is `[67, 76, 86, 95, 98`] in this case. Note that it is preferred to use the pre-built sorting function when you are solving a problem NOT TARGETED to teach you sorting. It will speed up your learning.
 
