@@ -1,5 +1,5 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/longest-increasing-subsequence/'
+description: 'Author: @ColeB2, @wingkwong | https://leetcode.com/problems/longest-increasing-subsequence/'
 tags: [Array, Binary Search, Dynamic Programming]
 ---
 
@@ -37,8 +37,8 @@ Output: 1
 
 **Constraints:**
 
-- `1 <= nums.length <= 2500`
-- `-10^4 <= nums[i] <= 10^4`
+- $1 <= nums.length <= 2500$
+- $-10^4 <= nums[i] <= 10^4$
 
 **Follow up**: Can you come up with an algorithm that runs in `O(n log(n))` time complexity?
 
@@ -129,6 +129,28 @@ class Solution:
                 piles.append(num)
         # return length of piles.
         return len(piles)
+```
+
+</TabItem>
+
+
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@wingkwong"/>
+
+```cpp
+class Solution {
+public:
+    int lengthOfLIS(vector<int>& nums) {
+        int n = (int) nums.size();
+        vector<int> lis;
+        for(int i = 0; i < n; i++) {
+            auto it = lower_bound(lis.begin(), lis.end(), nums[i]);
+            if(it == lis.end()) lis.push_back(nums[i]);
+            else *it = nums[i];
+        }
+        return (int) lis.size();
+    }
+};
 ```
 
 </TabItem>
