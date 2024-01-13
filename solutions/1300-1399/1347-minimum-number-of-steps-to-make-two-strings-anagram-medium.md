@@ -1,8 +1,8 @@
 ---
 description: >-
-  Author: @wingkwong |
+  Author: @wingkwong, @jaffar |
   https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram/
-tags: ['Hash Map']
+tags: [Hash Table, String, Counting]
 ---
 
 # 1347 - Minimum Number of Steps to Make Two Strings Anagram (Easy)
@@ -49,8 +49,10 @@ Explanation: "anagram" and "mangaar" are anagrams.
 * `s.length == t.length`
 * `s` and `t` consist of lowercase English letters only.
 
-## Approach 1: Hash Map
+## Approach 1: Frequency Count
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -60,7 +62,7 @@ public:
         int ans = 0;
         unordered_map<int, int> m;
         // Count the frequency of characters of each string.
-        // Loop over all characters if the frequency of a character in t is less than the frequency of the same character in s
+        // Loop over all characters if the frequency of a character in t is less than that in s
         // then add the difference between the frequencies to the answer.
         for (auto x : s) m[x - 'a']++;
         for (auto x : t) m[x - 'a']--;
@@ -69,3 +71,18 @@ public:
     }
 };
 ```
+
+</TabItem>
+
+
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@jaffar"/>
+
+```py
+class Solution:
+    def minSteps(self, s: str, t: str) -> int:
+        return sum((Counter(s) - Counter(t)).values())
+```
+
+</TabItem>
+</Tabs>
