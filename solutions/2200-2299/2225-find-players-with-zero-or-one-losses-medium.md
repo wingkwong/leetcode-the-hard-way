@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
+  Author: @wingkwong, @heder |
   https://leetcode.com/problems/find-players-with-zero-or-one-losses/
 tags: [Array, Hash Table, Sorting, Counting]
 ---
@@ -58,9 +58,14 @@ Thus, answer[0] = [1,2,5,6] and answer[1] = [].
 * `winneri != loseri`
 * All `matches[i]` are **unique**.
 
-## Approach 1: Hash Map
+## Approach 1: Hash Map (1062ms)
 
 Check the number of times to lose for each player. If it is $$0$$, then this player belongs to $$ans[0]$$. If it is $$1$$, then it belongs to $$ans[1]$$.
+
+Let $$n$$ be the number of matches then the
+
+- Time complexity is $$O(n \log n)$$ we need to look at all the matches which would be $$O(n)$$ but the sort at the end is $$O(n \log n)$$ (kudos @learner_9 for spotting and pointing out the mistake) and the
+- Space complexity is $$O(n)$$.
 
 
 <Tabs>
@@ -95,3 +100,117 @@ public:
 
 </TabItem>
 </Tabs>
+
+## Approach 2: Set (1249 ms)
+
+Let $$n$$ be the number of matches then the
+
+- Time complexity is $$O(n \log n)$$ because of the insertion into the set / map and the
+- Space complexity is $$O(n)$$.
+
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@heder"/>
+
+```cpp
+static vector<vector<int>> findWinners(const vector<vector<int>>& matches) noexcept {
+    vector<vector<int>> ans(2);
+
+    set<int> win;
+    map<int, int> loss;
+    
+    for (const vector<int>& match : matches) {
+        win.insert(match[0]);
+        ++loss[match[1]];
+    }
+    
+    for (int p : win)
+        if (loss.find(p) == end(loss)) ans[0].push_back(p);
+    
+    for (auto [p, l] : loss)
+        if (l == 1) ans[1].push_back(p);
+    
+    return ans;
+}
+```
+
+</TabItem>
+</Tabs>
+
+### Variant with a single map (1069ms)
+
+Picking up on a idea from @stanislav-iablokov we can turn this into a solution with only one map. This is as fast as the solution with the hash set / map.
+
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@heder"/>
+
+```cpp
+static vector<vector<int>> findWinners(const vector<vector<int>>& matches) noexcept {
+    vector<vector<int>> ans(2);
+    
+    map<int, int> loss;
+    
+    for (const vector<int>& match : matches) {
+        loss[match[0]] += 0;  // make sure the winners are in the map too., just  loss[match[0]]; would work as well
+        ++loss[match[1]];
+    }
+    
+    for (auto [p, l] : loss) {
+        if (l == 0) {
+            ans[0].push_back(p);
+        } else if (l == 1) {
+            ans[1].push_back(p);
+        }
+    }
+    
+    return ans;
+}
+```
+
+</TabItem>
+</Tabs>
+
+## Approach 3: Arrays (749ms)
+
+The range of the play number is limited enough that we can just use arrays instead of a hash map / set.
+
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@heder"/>
+
+```cpp
+static vector<vector<int>> findWinners(const vector<vector<int>>& matches) noexcept {
+    array<bool, 100001> played = {};
+    array<int, 100001> losses = {};
+    
+    for (const vector<int>& match : matches) {
+        played[match[0]] = true;
+        played[match[1]] = true;
+        ++losses[match[1]];
+    }
+    
+    vector<vector<int>> ans(2);
+
+    for (int i = 0; i < size(played); ++i) {
+        if (played[i]) {
+            if (losses[i] == 0) {
+                ans[0].push_back(i);
+            } else if (losses[i] == 1) {
+                ans[1].push_back(i);
+            }
+        }
+    }
+
+    return ans;
+}
+```
+
+</TabItem>
+</Tabs>
+
+
+Let $$n$$ be the number of matches then the
+
+- Time complexity is $$O(n + c)$$ we need to look at all the matches, but there is a significat constant factor $$c$$ as we need look over the entier arrays and the
+- Space complexity is $$O(c)$$, which means it's constant, but it's a large constant.
