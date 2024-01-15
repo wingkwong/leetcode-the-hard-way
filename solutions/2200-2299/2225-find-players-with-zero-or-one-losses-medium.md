@@ -2,6 +2,7 @@
 description: >-
   Author: @wingkwong |
   https://leetcode.com/problems/find-players-with-zero-or-one-losses/
+tags: [Array, Hash Table, Sorting, Counting]
 ---
 
 # 2225 - Find Players With Zero or One Losses (Medium)
@@ -61,6 +62,9 @@ Thus, answer[0] = [1,2,5,6] and answer[1] = [].
 
 Check the number of times to lose for each player. If it is $$0$$, then this player belongs to $$ans[0]$$. If it is $$1$$, then it belongs to $$ans[1]$$.
 
+
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -88,3 +92,6 @@ public:
     }
 };
 ```
+
+</TabItem>
+</Tabs>
