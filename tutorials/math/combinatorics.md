@@ -229,7 +229,7 @@ $b$ $=$ $\frac{k \, - \, endPos \, + \, startPos}{2}$
 
 Then the solution is $k \choose a$ $=$ $k \choose b$ as we need to find number of ways to choose $a$ or $b$ moves, out of $k$ moves.
 
-Thus, we need to find $nCr$$(k, \frac{k - endPos + startPos}{2})$.
+Thus, we need to find $nCr$ $(k, \frac{k - endPos + startPos}{2})$.
 
 To implement this, you can both precompute the entire Pascal's Triangle, or use concept of mudular inverses to find the required value.
 
