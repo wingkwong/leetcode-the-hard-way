@@ -117,7 +117,10 @@ This is a very famous sequence of natural numbers and has a variety of applicati
 [Here](https://en.wikipedia.org/wiki/Catalan_number#Applications_in_combinatorics) is a more exhastive list.
 
 The $n^{th}$ Catalan number can be found using the formula:
-$C_n$ $=$ $\frac{1}{n + 1}$$2n \choose n$
+
+$$
+C_n = \frac{1}{n + 1} {2n \choose n}
+$$
 
 ### Example #2: [1863 - Sum of All Subset XOR Totals](https://leetcode.com/problems/sum-of-all-subset-xor-totals/description/)
 
