@@ -1,9 +1,9 @@
 ---
-description: 'Author: @heder | https://leetcode.com/problems/average-value-of-even-numbers-that-are-divisible-by-three/'
+description: 'Author: @heder, wingkwong | https://leetcode.com/problems/average-value-of-even-numbers-that-are-divisible-by-three/'
 tags: [Array, Math]
 ---
 
-# 2455 - Average Value of Even Numbers That Are Divisible by Three (Easy) 
+# 2455 - Average Value of Even Numbers That Are Divisible by Three (Easy)
 
 ## Problem Link
 
@@ -59,6 +59,22 @@ static int averageValue(const vector<int>& nums) {
     }
     return count ? sum / count : 0;
 }
+```
+
+</TabItem>
+
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@wingkwong"/>
+
+```py
+class Solution:
+    def averageValue(self, nums: List[int]) -> int:
+        s, cnt = 0, 0
+        for x in nums:
+            if x % 6 == 0:
+                cnt += 1
+                s += x
+        return s // cnt if cnt > 0 else 0
 ```
 
 </TabItem>
