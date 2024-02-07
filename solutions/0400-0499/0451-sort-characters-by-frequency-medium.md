@@ -104,6 +104,7 @@ object Solution {
 ```
 
 </TabItem>
+</Tabs>
 
 ## Approach 2: Count, Sort, Reconstruct
 
