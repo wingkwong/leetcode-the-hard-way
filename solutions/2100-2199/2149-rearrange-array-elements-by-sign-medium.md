@@ -2,6 +2,7 @@
 description: >-
   Author: @wingkwong |
   https://leetcode.com/problems/rearrange-array-elements-by-sign/
+tags: [Array, Two Pointers, Simulation]
 ---
 
 # 2149 - Rearrange Array Elements by Sign (Medium)
@@ -45,28 +46,32 @@ So nums is rearranged to [1,-1].
 
 **Constraints:**
 
-* `2 <= nums.length <= 2 * 10^5`
+* $2 <= nums.length <= 2 * 10^5$
 * `nums.length` is **even**
-* `1 <= |nums[i]| <= 10^5`
+* $1 <= |nums[i]| <= 10^5$
 * `nums` consists of **equal** number of positive and negative integers.
 
 ## Approach 1: Split and Combine
 
 The idea is to split the input into two vectors - positive and negative. Then iterate both vector to build the final answer.
 
+- Time Complexity: $O(n)$
+- Space Complexity: $O(n)$
+
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
 public:
     vector<int> rearrangeArray(vector<int>& nums) {
-        vector<int> pos, neg;
+        vector<int> pos, neg, ans;
         for (auto x : nums) {
             if (x >= 0) pos.push_back(x);
             else neg.push_back(x);
         }
         int i = 0, j = 0, n = pos.size(), m = neg.size();
-        vector<int> ans;
         while (i < n && j < m) {
             ans.push_back(pos[i++]);
             ans.push_back(neg[j++]);
@@ -75,3 +80,34 @@ public:
     }
 };
 ```
+
+
+</TabItem>
+</Tabs>
+
+We can further optimize the space complexity using two pointers to track the index of the pos and neg. In this way, we don't need the extra vectors to hold the positive and negative numbers.
+
+- Time Complexity: $O(n)$
+- Space Complexity: $O(1)$
+
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@wingkwong"/>
+
+```cpp
+class Solution {
+public:
+    vector<int> rearrangeArray(vector<int>& nums) {
+        vector<int> ans(n);
+        int i = 0, j = 1, n = nums.size();
+        for (auto x : nums) {
+            if (x >= 0) ans[i] = x, i += 2;
+            else ans[j] = x, j += 2;
+        }
+        return ans;
+    }
+};
+```
+
+</TabItem>
+</Tabs>
