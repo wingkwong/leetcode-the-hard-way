@@ -44,7 +44,7 @@ Output: [3,4,6,16,17]
 * `1 <= nums.length <= 1000`
 * `-10^6 <= nums[i] <= 10^6`
 
-# Approach 1: Prefix Sum
+## Approach 1: Prefix Sum
 
 
 <Tabs>
