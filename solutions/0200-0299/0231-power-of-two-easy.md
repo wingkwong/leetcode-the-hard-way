@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wingkwong, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/power-of-two/'
+tags: [Math, Bit Manipulation, Recursion]
 ---
 
 # 0231 - Power of Two (Easy)
@@ -120,6 +121,39 @@ class Solution:
 // 2. check the value is 0 after removing the rightmost bit
 var isPowerOfTwo = function(n) {
     return n > 0 && !(n & (n - 1));
+};
+```
+
+</TabItem>
+</Tabs>
+
+## Approach 2: Binary Search
+
+Almost same as the solution in 326. Power of Three and 342. Power of Four.
+
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@wingkwong"/>
+
+```cpp
+class Solution {
+public:
+    bool isPowerOfTwo(int n) {
+        // the idea is to use binary search to find x to see if 2 ^ x = n is true or false
+        int l = 0, r = (int) log(pow(2, 31)) / log(2);
+         while (l < r) {
+            // get the middle one
+            // for even number of elements, take the lower one
+            int m = l + (r - l) / 2;
+            // exclude m
+            if (pow(2, m) < n) l = m + 1;
+            // include m
+            else r = m;
+        }
+        // check if 2 ^ l is n
+        // if so, then n is a power of two, otherwise it is not
+        return pow(2, l) == n;
+    }
 };
 ```
 
