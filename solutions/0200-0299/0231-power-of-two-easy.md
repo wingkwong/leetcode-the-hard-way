@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/power-of-two/'
+description: 'Author: @wingkwong, @vigneshshiv, @radojicic23, @jit | https://leetcode.com/problems/power-of-two/'
 tags: [Math, Bit Manipulation, Recursion]
 ---
 
@@ -155,6 +155,19 @@ public:
         return pow(2, l) == n;
     }
 };
+```
+
+</TabItem>
+</Tabs>
+
+## Approach 3: Regex
+
+<Tabs>
+<TabItem value="ruby" label="Ruby">
+<SolutionAuthor name="@jit"/>
+
+```ruby
+def is_power_of_two(n) = !(/^10*$/ !~ '%b' % n)
 ```
 
 </TabItem>
