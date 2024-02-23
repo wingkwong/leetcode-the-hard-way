@@ -156,6 +156,34 @@ public:
 ```
 
 </TabItem>
+
+
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@wingkwong"/>
+
+```py
+class Solution:
+    def findCheapestPrice(self, n: int, flights: List[List[int]], src: int, dst: int, k: int) -> int:
+        def bellman_ford(g, dist, src, mx_edges):
+            dist[src] = 0
+            for i in range(mx_edges + 1):
+                ndist = dist.copy()
+                for x in g:
+                    _from, to, cost = x
+                    ndist[to] = min(ndist[to], dist[_from] + cost)
+                dist = ndist
+            return dist
+        g = []
+        for f in flights:
+            g.append([f[0], f[1], f[2]])
+        cost = bellman_ford(g, [1e9] * n, src, k)
+        if cost[dst] == 1e9:
+            return -1
+        return cost[dst]
+```
+
+</TabItem>
+
 </Tabs>
 
 ## Approach 3: Dijkstra's Algorithm
