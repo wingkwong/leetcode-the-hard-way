@@ -97,7 +97,7 @@ public:
                 r -= 1;
             } else {
                 // case 3. impossible to play
-				// ---
+                // ---
                 // either you don't enough power or enough score
                 break;
             }
