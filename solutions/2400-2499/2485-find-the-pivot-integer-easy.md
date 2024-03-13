@@ -1,6 +1,6 @@
 ---
-description: "Author: @dhanu084 | https://leetcode.com/problems/find-the-pivot-integer/"
-tags: [Math]
+description: "Author: @dhanu084, @wingkwong, @jit, @heder | https://leetcode.com/problems/find-the-pivot-integer/"
+tags: [Math, Prefix Sum]
 ---
 
 # 2485 - Find the Pivot Integer (Easy)
@@ -49,11 +49,32 @@ Explanation: It can be proved that no such integer exist.
 
 ## Approach 1: Math
 
-Time Complexity: $$O(n)$$
+- Time Complexity: $$O(n)$$
 
-Space Complexity: $$O(1)$$
+- Space Complexity: $$O(1)$$
 
 <Tabs>
+
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@wingkwong"/>
+
+```cpp
+class Solution {
+public:
+    int pivotInteger(int n) {
+        int s1 = n * (n + 1) / 2, s2 = 0;
+        for (int i = 1; i <= n; i++) {
+            s2 += i;
+            if (s1 == s2) return i;
+            s1 -= i;
+        }
+        return -1;
+    }
+};
+```
+
+</TabItem>
+
 <TabItem value="py" label="Python">
 
 <SolutionAuthor name="@dhanu084" />
@@ -85,4 +106,58 @@ class Solution:
 ```
 
 </TabItem>
+</Tabs>
+
+## Approach 2: Binary Search
+
+- Time Complexity: $$O(nlogn)$$
+
+- Space Complexity: $$O(1)$$
+
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@heder"/>
+
+```cpp
+static int fast_io = []() { std::ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr); return 0; }();
+
+class Solution {
+public:
+    __attribute__((disable_sanitizer_instrumentation))
+    static int pivotInteger(const int n)  {
+        const int total = n * (n + 1) / 2;
+        int lo = 1;
+        int hi = n;
+        while (lo <= hi) {
+            const int x = lo + (hi - lo) / 2;
+            const int below = (x - 1) * x / 2;
+            const int left = below + x;
+            const int right = total - below;
+            if (left == right) {
+                return x;
+            } else if (left < right) {
+                lo = x + 1;
+            } else {
+                hi = x - 1;
+            }
+        }
+        return -1;
+    }
+};
+```
+
+</TabItem>
+
+<TabItem value="ruby" label="Ruby">
+<SolutionAuthor name="@jit"/>
+
+```ruby
+# Binary search:
+def pivot_integer(n)
+  (1..n).bsearch { |x| (x..n).sum <=> (1..x).sum } || -1
+end
+```
+
+</TabItem>
+
 </Tabs>
