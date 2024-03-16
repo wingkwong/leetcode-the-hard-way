@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wingkwong | https://leetcode.com/problems/contiguous-array/'
+tags: [Array, Hash Table, Prefix Sum]
 ---
 
 # 0525 - Contiguous Array (Medium)
@@ -41,6 +42,8 @@ For example, given the input $$[0, 0, 0, 1, 1, 1]$$, $$pre$$ would be 0 -> -1 ->
 
 Therefore, the approach is to calculate the prefix sum and put it into a hash map. If the prefix sum can be found, then the we can compare the length with the current maximum answer to see if we update it or not. This solution gives both $$O(n)$$time complexity and space complexity.
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
@@ -60,7 +63,14 @@ public:
 };
 ```
 
+</TabItem>
+</Tabs>
+
 Or you can initialise $$m[pre] = -1$$ for $$pre = 0$$.
+
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
@@ -78,3 +88,6 @@ public:
     }
 };
 ```
+
+</TabItem>
+</Tabs>
