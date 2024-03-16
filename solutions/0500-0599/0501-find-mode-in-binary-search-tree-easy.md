@@ -3,7 +3,7 @@ description: 'Author: @wingkwong | https://leetcode.com/problems/find-mode-in-bi
 tags: [Tree, Depth-First Search, Binary Search Tree, Binary Tree]
 ---
 
-# 501 - Find Mode in Binary Search Tree (Easy) 
+# 0501 - Find Mode in Binary Search Tree (Easy) 
 
 ## Problem Link
 
