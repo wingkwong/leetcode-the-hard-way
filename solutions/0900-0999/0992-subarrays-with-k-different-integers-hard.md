@@ -2,6 +2,7 @@
 description: >-
   Author: @wingkwong |
   https://leetcode.com/problems/subarrays-with-k-different-integers/
+tags: [Array, Hash Table, Sliding Window, Counting]
 ---
 
 # 0992 - Subarrays with K Different Integers (Hard)
@@ -43,37 +44,36 @@ Explanation: Subarrays formed with exactly 3 different integers: [1,2,1,3], [2,1
 
 ## Approach 1: Sliding Window
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
 
 ```cpp
 class Solution {
 public:
-    // sliding window
-    int go(vector<int>& nums, int k) {
-        // count the frequency for each number
-        unordered_map<int, int> cnt;
-        int l = 0, res = 0;
-        for (int r = 0; r < nums.size(); r++) {
-            // if nums[r] doesn't exist, we subtract k by 1
-            // update cnt[nums[r]]
-            if (!cnt[nums[r]]++) k -= 1;
-            // while k < 0, we need to pop the leftmost element out
-            // if we remove nums[l] and its frequency is 0
-            // then we can include other integer so we increase k by 1
-            while (k < 0) {
-                if (!--cnt[nums[l]]) k += 1;
-                l++;
-            }
-            // add the current range to ans
-            res += r - l + 1;
+    int atMost(vector<int>& nums, int k) {
+        // standard sliding window pattern
+        int n = nums.size(), i = 0, ans = 0;
+        unordered_map<int, int> m;
+        for (int j = 0; j < n; j++) {
+            // step 1: make the condition invalid
+            k -= !m[nums[j]]++;
+            // step 2: if the condition is failed, 
+            // it means we need to shrink the window
+            // by adding k to make the condition valid
+            while(k < 0) k += !(--m[nums[i++]]);
+            // step 3: add the distance to ans
+            ans += j - i + 1;
         }
-        return res;
+        return ans;
     }
     
     int subarraysWithKDistinct(vector<int>& nums, int k) {
-        // exactly k differences = 
-        // at most k differences - at most k - 1 differences
-        return go(nums, k) - go(nums, k - 1);
+        // exactky k = at most k - at most (k - 1)
+        return atMost(nums, k) - atMost(nums, k - 1);
     }
 };
 ```
+
+</TabItem>
+</Tabs>
