@@ -1,5 +1,5 @@
 ---
-description: 'Author: @divyansh_0602| https://leetcode.com/problems/add-one-row-to-tree/'
+description: 'Author: @divyansh_0602, @jit, @heder| https://leetcode.com/problems/add-one-row-to-tree/'
 tags: [Tree, Depth-First Search, Breadth-First Search, Binary Tree]
 ---
 
@@ -126,6 +126,140 @@ public:
         return root;
     }
 };
+```
+
+</TabItem>
+
+<TabItem value="elixir" label="Elixir">
+<SolutionAuthor name="@jit"/>
+
+```elixir
+@spec add_one_row(root :: TreeNode.t | nil, val :: integer, depth :: integer) :: TreeNode.t | nil
+# A basic DFS implementation:
+def add_one_row(nil, _val, _), do: nil
+def add_one_row(root, val, 1), do: %TreeNode{val: val, left: root}
+
+def add_one_row(root, val, 2) do
+  %{root |
+    left:  %TreeNode{val: val, left: root.left},
+    right: %TreeNode{val: val, right: root.right}
+  }
+end
+
+def add_one_row(root, val, d) do
+  %{root |
+    left:  add_one_row(root.left, val, d - 1),
+    right: add_one_row(root.right, val, d - 1)
+  }
+end
+```
+
+</TabItem>
+</Tabs>
+
+## Approach 2: Iterative DFS
+
+- Time complexity: $$O(n)$$ where $n$ is the number of nodes.
+- Space complexity: $$O(h)$$ where $h$ is the height of the tree that can vary depending how balanced / unbalanced to tree is from $$O(\log n)$$ to $$O(n)$$.
+
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@heder"/>
+
+```cpp
+static TreeNode* addOneRow(TreeNode* root, int val, int depth) {
+    if (depth == 1) return new TreeNode(val, root, nullptr);
+    
+    stack<pair<TreeNode*, int>> st;
+    st.push({root, depth - 1});
+    
+    while (!empty(st)) {
+        auto [node, depth] = st.top(); st.pop();
+        
+        if (depth == 1) {
+            node->left = new TreeNode(val, node->left, nullptr);
+            node->right = new TreeNode(val, nullptr, node->right);
+            continue;
+        }
+        
+        if (node->left) st.push({node->left, depth - 1});
+        if (node->right) st.push({node->right, depth - 1});
+    }
+
+    return root;
+}
+```
+
+</TabItem>
+</Tabs>
+
+## Approach 3: Level order traversal / iterative
+
+- Time complexity: $$O(n)$$ we might need to visit all the nodes.
+- Space Complexity: Worst case we have $$\approx n/2$$ nodes in the queue, hence the space complexity is $$O(n)$$
+
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@heder"/>
+
+```cpp
+static TreeNode* addOneRow(TreeNode* root, int val, int depth) {
+    if (depth == 1) return new TreeNode(val, root, nullptr);
+
+    queue<TreeNode*> q;
+    q.push(root);
+    for (int i = 1; i < depth; ++i) {
+        int q_size = size(q);
+        while (q_size--) {
+            TreeNode* node = q.front(); q.pop();
+            
+            if (i == depth - 1) {
+                node->left = new TreeNode(val, node->left, nullptr);
+                node->right = new TreeNode(val, nullptr, node->right);
+            } else {
+                if (node->left) q.push(node->left);
+                if (node->right) q.push(node->right);
+            }
+        }
+    }
+    
+    return root;
+}
+```
+
+</TabItem>
+</Tabs>
+
+A variant could be to do the level order traversal to $depth - 1$ and then insert the new nodes, like this:
+
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@heder"/>
+
+```cpp
+ static TreeNode* addOneRow(TreeNode* root, int val, int depth) {
+    if (depth == 1) return new TreeNode(val, root, nullptr);
+
+    queue<TreeNode*> q;
+    q.push(root);
+    for (int i = 1; i < depth - 1; ++i) {
+        int q_size = size(q);
+        while (q_size--) {
+            TreeNode* node = q.front(); q.pop();
+            
+            if (node->left) q.push(node->left);
+            if (node->right) q.push(node->right);
+        }
+    }
+
+    while (!empty(q)) {
+        TreeNode* node = q.front(); q.pop();
+        node->left = new TreeNode(val, node->left, nullptr);
+        node->right = new TreeNode(val, nullptr, node->right);
+    }
+    
+    return root;
+}
 ```
 
 </TabItem>
