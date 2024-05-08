@@ -72,7 +72,8 @@ If you are struggling with matrix multiplication remember that $B_{i, j}$ comes 
 
 $Q.2.$ Find a matrix $T$ such that $T \cdot A = B$, where
 
-$$$A = \begin{bmatrix}
+$$$
+A = \begin{bmatrix}
 a \\
 b \\
 c
