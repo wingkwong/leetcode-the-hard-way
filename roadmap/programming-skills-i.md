@@ -45,7 +45,7 @@ export const problems = [
     "problemName": "1779. Find Nearest Point That Has the Same X or Y Coordinate",
     "difficulty": "Easy",
     "leetCodeLink": "https://leetcode.com/problems/find-nearest-point-that-has-the-same-x-or-y-coordinate",
-    "solutionLink": "../../solutions/0900-0999/largest-perimeter-triangle-easy"
+    "solutionLink": "../../solutions/1700-1799/find-nearest-point-that-has-the-same-x-or-y-coordinate-easy"
   },
   {
     "problemName": "1822. Sign of the Product of an Array",
