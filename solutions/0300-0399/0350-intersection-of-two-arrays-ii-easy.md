@@ -1,5 +1,5 @@
 ---
-description: "Author: @wingkwong | https://leetcode.com/problems/intersection-of-two-arrays-ii/"
+description: "Author: @wingkwong, @jit | https://leetcode.com/problems/intersection-of-two-arrays-ii/"
 tags: [Array, Hash Table, Two Pointers, Binary Search, Sorting]
 ---
 
@@ -66,6 +66,17 @@ public:
 class Solution:
     def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
         return list((Counter(nums1) & Counter(nums2)).elements())
+```
+
+</TabItem>
+
+<TabItem value="scala" label="Scala">
+<SolutionAuthor name="@jit"/>
+
+```scala
+object Solution {
+    def intersect(a: Array[Int], b: Array[Int]) = a intersect b
+}
 ```
 
 </TabItem>
