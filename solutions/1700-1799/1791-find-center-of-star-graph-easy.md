@@ -67,7 +67,7 @@ class Solution:
 
 </TabItem>
 
-<TabItem value="py" label="Java">
+<TabItem value="java" label="Java">
 <SolutionAuthor name="@adlet_lee"/>
 
 ```java
