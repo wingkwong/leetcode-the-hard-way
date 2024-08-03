@@ -48,7 +48,7 @@ Explanation: There are 6 possible pairs of indices to traverse between: (0, 1), 
 
 ## Approach 1: Prime Factorization
 
-RFirst let us see how to build the graph. Naive way of building graph would be to iterate over all $(i, j)$ pairs and check if $\gcd(nums_i, nums_j) > 1$. If it is then add an edge bweten them, else not. But this approch will take $O(n^2)$ operations in worst case, which will not pass.
+RFirst let us see how to build the graphhh. Naive way of building graph would be to iterate over all $(i, j)$ pairs and check if $\gcd(nums_i, nums_j) > 1$. If it is then add an edge bweten them, else not. But this approch will take $O(n^2)$ operations in worst case, which will not pass.
 
 A different way to build graph could be to add edge between $p$ and $nums_i$ if $p$ is a prime factor of $nums_i$. Since any number $n$ has atmost $log(n)$ prime factors so we will have atmost $n \cdot log(n)$ edges in the graph. But while counting component we need to make sure that the node is present in `nums`. If it isn't then it can serve as a bridge connecting two numbers from `nums`, but it should not included in count of nodes in connected component.
 
