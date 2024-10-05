@@ -89,13 +89,18 @@ Concatenation: Finally, concatenating the sorted buckets into the original array
 Thus, the overall time complexity of Bucket Sort in the average case is: 
 $$O(n+k+m^2)=O(n)$$
 In the worst case (when all elements fall into a single bucket), the time complexity becomes:
-O(n^2)
+$$O(n^2)$$
 ### Complexity
 Bucket Sort requires additional space for the buckets. The number of buckets is generally proportional to the number of elements,$$k$$. Therefore, the space complexity can be expressed as:
 $$O(n+k)$$
 If k is on the order of n (for example, if we have one bucket per element), then the space complexity can be simplified to:
 $$O(n)$$
-In summary, the space complexity indicates that this sorting algorithm requires extra space for its operation, which makes it less space-efficient compared to in-place sorting algorithms.\
+In summary, the space complexity indicates that this sorting algorithm requires extra space for its operation, which makes it less space-efficient compared to in-place sorting algorithms.
+
+### Example:
+
+## Poblem Name: "0075 -  Sort Array By Parity II "
+## Difficulty": "Medium"
 
 <TabItem value="c++" label="C++">
 <SolutionAuthor name="@ARRY7686"/>
@@ -122,11 +127,87 @@ public:
 </TabItem>
 </Tabs>
 
+## Explanation
+### Sample input:
+$$
+[2,0,2,1,1,0]
+$$
+### Expected Output
+$$
+[0,0,1,1,2,2]
+$$
+### Dry-Run:
+## Variables:
+- Input array: nums = [2, 0, 2, 1, 1, 0]
+- Counter array: counter = [0, 0, 0] (to count occurrences of 0s, 1s, and 2s)
+- Index for filling: inx = 0
+
+## Count:
+Iterate over the nums array and fill the counter array based on the values in nums.
+- Iteration 1: 
+$$
+num = 2 
+$$
+$$counter = [0, 0, 1]$$
+- Iteration 2:
+ $$num = 0$$
+$$counter = [1, 0, 1]$$
+
+-Iteration 3:
+$$ num = 24$$
+$$counter = [1, 0, 2] $$
+
+-Iteration 4: 
+$$num = 1$$
+$$counter = [1, 1, 2]$$
+
+-Iteration 5: 
+$$num = 1$$
+$$counter = [1, 2, 2]$$ 
+
+-Iteration 6:
+$$ num = 0$$
+$$counter = [2, 2, 2] $$
+
+## Fill:
+use the counter array to fill the nums array in sorted order:
+
+- **Outer Loop (i = 0):**
+    - **Inner Loop (while counter[0] > 0):**
+        - Fill nums[inx] = 0 → nums = [0, 0, 2, 1, 1, 0] (increment inx to 1)
+        - Decrement counter[0] → counter = [1, 2, 2]
+        - Fill nums[inx] = 0 → nums = [0, 0, 2, 1, 1, 0] (increment inx to 2)
+        - Decrement counter[0] → counter = [0, 2, 2]
+        - Exit inner loop since counter[0] is now 0.
+<br>
+- **Outer Loop (i = 1):**
+
+    - **Inner Loop (while counter[1] > 0):**
+
+        - Fill nums[inx] = 1 → nums = [0, 0, 1, 1, 1, 0] (increment inx to 3)
+        - Decrement counter[1] → counter = [0, 1, 2]
+        - Fill nums[inx] = 1 → nums = [0, 0, 1, 1, 2, 0] (increment inx to 4)
+        - Decrement counter[1] → counter = [0, 0, 2]
+        - Exit inner loop since counter[1] is now 0.
+<br>
+- **Outer Loop (i = 2):**
+
+    - **Inner Loop (while counter[2] > 0):**
+
+        - Fill nums[inx] = 2 → nums = [0, 0, 1, 1, 2, 2] (increment inx to 5)
+        - Decrement counter[2] → counter = [0, 0, 1]
+        - Fill nums[inx] = 2 → nums = [0, 0, 1, 1, 2, 2] (increment inx to 6)
+        - Decrement counter[2] → counter = [0, 0, 0]
+        - Exit inner loop since counter[2] is now 0.
+
+## Results
+The final sorted nums array is $$[0,0,1,1,2,2]$$.
+
 export const suggestedProblems = [
   {
     "problemName": "0075 -  Sort Array By Parity II ",
     "difficulty": "Medium",
-    "leetCodeLink": "https://leetcode.com/problems/sort-colors/",
+    "leetCodeLink": "https://leetcode.com/problems/sort-array-by-parity-ii/",
     "solutionLink": "../../../solutions/0900-0999/0922-Sort-Array-By-Parity-ii-easy"
   },
   {
