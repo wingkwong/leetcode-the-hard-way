@@ -34,7 +34,7 @@ Prim's algorithm is widely used in network design, where the goal is to minimize
 
 _Source: https://miro.medium.com/max/700/1*7kpPIPcmXr38Juh0umM6fA.jpeg_
 
-## Example [1135 - Connecting Cities With Minimum Cost](https://leetcode.com/problems/connecting-cities-with-minimum-cost/description/?envType=problem-list-v2&envId=minimum-spanning-tree)
+## Example 1: [1135 - Connecting Cities With Minimum Cost](https://leetcode.com/problems/connecting-cities-with-minimum-cost/description/?envType=problem-list-v2&envId=minimum-spanning-tree)
 **Note:** The above link requires the Leetcode Subscription. To view the problem, use [this](https://leetcode.ca/all/1135.html) alternate link.
 
 ### Instructions: 
@@ -42,7 +42,7 @@ _Source: https://miro.medium.com/max/700/1*7kpPIPcmXr38Juh0umM6fA.jpeg_
 - You are given connections, where each `connections[i] = [city1, city2, cost]` represents the cost to connect `city1` and `city2 ` together. The connections are all bidirectional.
 - Return the minimum cost so that for every pair of cities, there exists a path of connections (possibly of length 1) that connects those two cities together.  The cost is the sum of the connection costs used. If the task is impossible, return $-1$.
 
-Example: 
+#### Example: 
 
 **Input:** N = `3`, connections = `[[1,2,5],[1,3,6],[2,3,1]]`
 
@@ -78,7 +78,7 @@ The adjacency list will look like:
 Where each tuple consists of '(cost, destination)'.
 
 Now, to find the minimum cost, we use the below approach.
-#### Explanation:
+### Explanation:
 
 <TabItem value="py" label="Python">
 <SolutionAuthor name="@Infonioknight"/>
@@ -135,18 +135,131 @@ else: return res
 import random
 import heapq
 
-def connecting_cities_with_minimum_cost(adjacency_list):
+class Solution:
+  def connecting_cities_with_minimum_cost(adjacency_list):
+      # Number of nodes in the given tree
+      n = len(adjacency_list)
+      # A list we will use to implement a priority queue
+      connection_queue = []
+      # Total minimum cost to traverse all the cities
+      res = 0
+      # Taking the assumption that the n nodes in the adjacency list are from 1 to n
+      start = random.randint(1, n)
+      # To ensure we don't create closed loops
+      seen = set([start])
+  
+      for connection in adjacency_list[start]:
+          heapq.heappush(connection_queue, connection)
+  
+      while len(seen) < n and connection_queue:
+          cost, current = heapq.heappop(connection_queue)
+          if current in seen:
+              continue
+  
+          res += cost
+          seen.add(current)
+  
+          for connection in adjacency_list[current]:
+              if connection[1] not in seen:
+                  heapq.heappush(connection_queue, connection)
+  
+      if len(seen) < n: return -1
+      return res
+  
+  
+  def minimumCost(self, n: int, connections: List[List[int]]) -> int:
+      adjacency_list = {}
+  
+      for connection in connections:
+          if connection[0] not in adjacency_list:
+              adjacency_list[connection[0]] = []
+          if connection[1] not in adjacency_list:
+              adjacency_list[connection[1]] = []
+          adjacency_list[connection[0]].append((connection[2], connection[1]))
+          adjacency_list[connection[1]].append((connection[2], connection[0]))
+  
+      return connecting_cities_with_minimum_cost(adjacency_list)
+```
+</TabItem>
+</Tabs>
+
+## Example 2: [1584 - Min Cost to Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points)
+### Instructions: 
+You are given an array `points` representing integer coordinates of some points on a 2D-plane, where `points[i]` = `[xi, yi]`.
+The cost of connecting two points `[xi, yi]` and `[xj, yj]` is the **Manhattan distance** between them: `|xi - xj|` + `|yi - yj|`, where `|val|` denotes the absolute value of `val`.
+
+Return the minimum cost to make all points connected. All points are connected if there is exactly one simple path between any two points.
+
+#### Example: 
+
+**Input:** points = `[[0,0],[2,2],[3,10],[5,2],[7,0]]`
+
+**Output:** `20`
+
+### Approach
+- This problem is also, extremely similar to the previous one. Only difference being the way the input is provided here (as a list of points, where you calculate the weight of the edges)
+- The approach I would suggest, would be to assume this as a **Complete Tree** (Every node is connected to every other node). So the way to convert the given points, into an adjacency list would be as below.
+
+<Tabs>
+
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@Infonioknight"/>
+
+```py
+points = [[0,0],[2,2],[3,10],[5,2],[7,0]]
+
+adjacency_list = {}
+for i in range(len(points)):
+    current = tuple(points[i])
+    for j in range(i+1, len(points)):
+        destination = tuple(points[j])
+        if current not in adjacency_list:
+            adjacency_list[current] = []
+        if destination not in adjacency_list:
+            adjacency_list[destination] = []
+
+        # The formula in the second item of the append, is to calculate the Manhattan Distance between two points (the edge weight)
+        adjacency_list[current].append([abs(destination[0] - current[0]) + abs(destination[1] - current[1]), destination])
+        adjacency_list[destination].append([abs(destination[0] - current[0]) + abs(destination[1] - current[1]), current])
+```
+</TabItem>
+
+The adjacency list, will look something like this:
+```
+(0, 0): [[4, (2, 2)], [13, (3, 10)], [7, (5, 2)], [7, (7, 0)]]
+(2, 2): [[4, (0, 0)], [9, (3, 10)], [3, (5, 2)], [7, (7, 0)]]
+(3, 10): [[13, (0, 0)], [9, (2, 2)], [10, (5, 2)], [14, (7, 0)]]
+(5, 2): [[7, (0, 0)], [3, (2, 2)], [10, (3, 10)], [4, (7, 0)]]
+(7, 0): [[7, (0, 0)], [7, (2, 2)], [14, (3, 10)], [4, (5, 2)]]
+```
+
+The rest of the code follows an almost identical pattern as the previous one. The below being probably the only changes regarding to how the entire traversal is started.
+
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@Infonioknight"/>
+
+```py
+# Here, our helper function contains one additional argument - the initial point (as here we don't need to randomly start)
+def min_cost_points(adjacency_list, initial):
     # Number of nodes in the given tree
     n = len(adjacency_list)
     # A list we will use to implement a priority queue
     connection_queue = []
-    # Total minimum cost to traverse all the cities
+    # Total minimum cost to connect all points
     res = 0
-    # Taking the assumption that the n nodes in the adjacency list are from 1 to n
-    start = random.randint(1, n)
+    start = tuple(initial)
     # To ensure we don't create closed loops
     seen = set([start])
+```
 
+</TabItem>
+
+The below is the implementation of the main function. It is identical to the previous example in every way except for the final output (as in this question, we are guaranteed a solution)
+
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@Infonioknight"/>
+  
+```py
     for connection in adjacency_list[start]:
         heapq.heappush(connection_queue, connection)
 
@@ -162,24 +275,79 @@ def connecting_cities_with_minimum_cost(adjacency_list):
             if connection[1] not in seen:
                 heapq.heappush(connection_queue, connection)
 
-    if len(seen) < n: return -1
-    else: return res
+    return res
+```
+</TabItem>
+
+#### Final Code:
+
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@Infonioknight"/>
+
+```py
+import heapq
+
+class Solution:
+  def min_cost_points(adjacency_list, initial):
+      # Number of nodes in the given tree
+      n = len(adjacency_list)
+      # A list we will use to implement a priority queue
+      connection_queue = []
+      # Total minimum cost to connect all points
+      res = 0
+      # Taking the assumption that the n nodes in the adjacency list are from 1 to n
+      start = tuple(initial)
+      # To ensure we don't create closed loops
+      seen = set([start])
+  
+      for connection in adjacency_list[start]:
+          heapq.heappush(connection_queue, connection)
+  
+      while len(seen) < n and connection_queue:
+          cost, current = heapq.heappop(connection_queue)
+          if current in seen:
+              continue
+  
+          res += cost
+          seen.add(current)
+  
+          for connection in adjacency_list[current]:
+              if connection[1] not in seen:
+                  heapq.heappush(connection_queue, connection)
+  
+      return res
+  
+  def minCostConnectPoints(self, points: List[List[int]]) -> int:
+      adjacency_list = {}
+      for i in range(len(points)):
+          current = tuple(points[i])
+          for j in range(i+1, len(points)):
+              destination = tuple(points[j])
+              if current not in adjacency_list:
+                  adjacency_list[current] = []
+              if destination not in adjacency_list:
+                  adjacency_list[destination] = []
+              
+              adjacency_list[current].append([abs(destination[0] - current[0]) + abs(destination[1] - current[1]), destination])
+              adjacency_list[destination].append([abs(destination[0] - current[0]) + abs(destination[1] - current[1]), current])
+
+       return min_cost_points(adjacency_list, points[0])
 ```
 </TabItem>
 </Tabs>
 
 export const suggestedProblems = [ 
   { 
-    "problemName": "1584 - Min Cost to Connect All Points", 
-    "difficulty": "Medium", 
-    "leetCodeLink": "https://leetcode.com/problems/min-cost-to-connect-all-points/", 
+    "problemName": "1489. Find Critical and Pseudo-Critical Edges in Minimum Spanning Tree", 
+    "difficulty": "Hard", 
+    "leetCodeLink": "https://leetcode.com/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/", 
     "solutionLink": "" 
   }, 
   { 
     "problemName": "0787 - Cheapest Flights Within K Stops", 
     "difficulty": "Medium", 
     "leetCodeLink": "https://leetcode.com/problems/cheapest-flights-within-k-stops/", 
-    "solutionLink": "" 
+    "solutionLink": "../../solutions/0700-0799/0787-cheapest-flights-within-k-stops-medium.md" 
   },
 ]
 
