@@ -52,7 +52,7 @@ _Source: https://miro.medium.com/max/700/1*7kpPIPcmXr38Juh0umM6fA.jpeg_
 First, we convert the given 'connections' array, into an adjacency list for ease of traversing.
 <Tabs>
 
-<TabItem value="py" label="Python">
+<TabItem value="py1" label="Python">
 <SolutionAuthor name="@Infonioknight"/>
   
 ```py
@@ -68,6 +68,7 @@ for connection in connections:
     adjacency_list[connection[1]].append((connection[2], connection[0]))
 ```
 </TabItem>
+</Tabs>
 
 The adjacency list will look like:
 ```
@@ -80,7 +81,8 @@ Where each tuple consists of '(cost, destination)'.
 Now, to find the minimum cost, we use the below approach.
 ### Explanation:
 
-<TabItem value="py" label="Python">
+<Tabs>
+<TabItem value="py2" label="Python">
 <SolutionAuthor name="@Infonioknight"/>
 
 ```py
@@ -88,10 +90,12 @@ for connection in adjacency_list[start]:
     heapq.heappush(connection_queue, connection)
 ```
 </TabItem>
+</Tabs>
 
 First, we push all the connections of the starting node into the priority queue. On doing so, the nodes with edges of MINIMUM COST come in front.
 
-<TabItem value="py" label="Python">
+<Tabs>
+<TabItem value="py3" label="Python">
 <SolutionAuthor name="@Infonioknight"/>
   
 ```py
@@ -104,11 +108,13 @@ while len(seen) < n and connection_queue:
     seen.add(current)
 ```
 </TabItem>
+</Tabs>
 
 - Then, we take the first element out of the queue (this is the node we ideally will add to our MST as it will have the minimum cost. We also ensure that the node selected hasn't already been visited.
 - If the node hasn't been visited, we then add the cost to our solution and mark the node as visited.
 
-<TabItem value="py" label="Python">
+<Tabs>
+<TabItem value="py4" label="Python">
 <SolutionAuthor name="@Infonioknight"/>
   
 ```py
@@ -120,6 +126,7 @@ if len(seen) < n: return -1
 else: return res
 ```
 </TabItem>
+</Tabs>
 
 - After that, we check the adjacency list for all the nodes connected to the current node (the node visited most recently) and if the connections of this node haven't been visited, they are added to the priority queue.
 - This process goes on until one of two outcomes is achieved.
@@ -128,7 +135,8 @@ else: return res
 
 #### Final Code:
 
-<TabItem value="py" label="Python">
+<Tabs>
+<TabItem value="py5" label="Python">
 <SolutionAuthor name="@Infonioknight"/>
   
 ```py
@@ -202,7 +210,7 @@ Return the minimum cost to make all points connected. All points are connected i
 
 <Tabs>
 
-<TabItem value="py" label="Python">
+<TabItem value="py6" label="Python">
 <SolutionAuthor name="@Infonioknight"/>
 
 ```py
@@ -223,6 +231,7 @@ for i in range(len(points)):
         adjacency_list[destination].append([abs(destination[0] - current[0]) + abs(destination[1] - current[1]), current])
 ```
 </TabItem>
+</Tabs>
 
 The adjacency list, will look something like this:
 ```
@@ -235,7 +244,8 @@ The adjacency list, will look something like this:
 
 The rest of the code follows an almost identical pattern as the previous one. The below being probably the only changes regarding to how the entire traversal is started.
 
-<TabItem value="py" label="Python">
+<Tabs>
+<TabItem value="py7" label="Python">
 <SolutionAuthor name="@Infonioknight"/>
 
 ```py
@@ -253,10 +263,12 @@ def min_cost_points(adjacency_list, initial):
 ```
 
 </TabItem>
+</Tabs>
 
 The below is the implementation of the main function. It is identical to the previous example in every way except for the final output (as in this question, we are guaranteed a solution)
 
-<TabItem value="py" label="Python">
+<Tabs>
+<TabItem value="py8" label="Python">
 <SolutionAuthor name="@Infonioknight"/>
   
 ```py
@@ -278,10 +290,12 @@ The below is the implementation of the main function. It is identical to the pre
     return res
 ```
 </TabItem>
+</Tabs>
 
 #### Final Code:
 
-<TabItem value="py" label="Python">
+<Tabs>
+<TabItem value="py9" label="Python">
 <SolutionAuthor name="@Infonioknight"/>
 
 ```py
