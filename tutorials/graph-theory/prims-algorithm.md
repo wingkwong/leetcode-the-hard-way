@@ -37,22 +37,35 @@ _Source: https://miro.medium.com/max/700/1*7kpPIPcmXr38Juh0umM6fA.jpeg_
 ## Example 1: [1135 - Connecting Cities With Minimum Cost](https://leetcode.com/problems/connecting-cities-with-minimum-cost/description/?envType=problem-list-v2&envId=minimum-spanning-tree)
 **Note:** The above link requires the Leetcode Subscription. To view the problem, use [this](https://leetcode.ca/all/1135.html) alternate link.
 
-### Instructions: 
-- There are N cities numbered from 1 to N.
-- You are given connections, where each `connections[i] = [city1, city2, cost]` represents the cost to connect `city1` and `city2 ` together. The connections are all bidirectional.
-- Return the minimum cost so that for every pair of cities, there exists a path of connections (possibly of length 1) that connects those two cities together.  The cost is the sum of the connection costs used. If the task is impossible, return $-1$.
+### Example: 
+**Input:** $N = 3$, $connections = [[1,2,5],[1,3,6],[2,3,1]]$
 
-#### Example: 
+First, for clarity we make a note of the connections in a way that's easy to understand.
 
-**Input:** N = `3`, connections = `[[1,2,5],[1,3,6],[2,3,1]]`
+- $city 1$ and $city 2$ are connected by a path of cost $5$
+- $city 1$ and $city 3$ are connected by a path of cost $6$
+- $city 2$ and $city 3$ are connected by a path of cost $1$
 
-**Output:** `6`
+Our goal is to find the minimum so that for every pair of cities, there exists a path of connections that connects these two cities together. If that is possible, we return the $cost$. If it's impossible, we return $-1$
+
+Assuming we start at $city 1$, we first pick the smallest connection from here - Namely the one to $city 2$ with a cost of 5
+
+Current total cost = $0 + 5 = 5$
+
+Now we have two remaining connections to consider from our connected cities:
+    - Connect $city 2$ to $city 3$ (cost $1$)
+    - Connect $city 1$ to $city 3$ (cost $6$)
+
+Clearly the **cheapest** one, is the one with cost $1$.
+So, the total cost is $5 + 1 = 6$
+
+Now all the cities have been connected. So we return our **solution** $6$.
 
 ### Approach
 First, we convert the given 'connections' array, into an adjacency list for ease of traversing.
 <Tabs>
 
-<TabItem value="py1" label="Python">
+<TabItem value="py" label="Python">
 <SolutionAuthor name="@Infonioknight"/>
   
 ```py
@@ -82,7 +95,7 @@ Now, to find the minimum cost, we use the below approach.
 ### Explanation:
 
 <Tabs>
-<TabItem value="py2" label="Python">
+<TabItem value="py" label="Python">
 <SolutionAuthor name="@Infonioknight"/>
 
 ```py
@@ -95,7 +108,7 @@ for connection in adjacency_list[start]:
 First, we push all the connections of the starting node into the priority queue. On doing so, the nodes with edges of MINIMUM COST come in front.
 
 <Tabs>
-<TabItem value="py3" label="Python">
+<TabItem value="py" label="Python">
 <SolutionAuthor name="@Infonioknight"/>
   
 ```py
@@ -110,11 +123,11 @@ while len(seen) < n and connection_queue:
 </TabItem>
 </Tabs>
 
-- Then, we take the first element out of the queue (this is the node we ideally will add to our MST as it will have the minimum cost. We also ensure that the node selected hasn't already been visited.
+- Then, we take the first element out of the queue (this is the node we ideally will add to our MST as it will have the minimum cost). We also ensure that the node selected hasn't already been visited.
 - If the node hasn't been visited, we then add the cost to our solution and mark the node as visited.
 
 <Tabs>
-<TabItem value="py4" label="Python">
+<TabItem value="py" label="Python">
 <SolutionAuthor name="@Infonioknight"/>
   
 ```py
@@ -136,7 +149,7 @@ else: return res
 #### Final Code:
 
 <Tabs>
-<TabItem value="py5" label="Python">
+<TabItem value="py" label="Python">
 <SolutionAuthor name="@Infonioknight"/>
   
 ```py
@@ -193,16 +206,11 @@ class Solution:
 
 ## Example 2: [1584 - Min Cost to Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points)
 ### Instructions: 
-You are given an array `points` representing integer coordinates of some points on a 2D-plane, where `points[i]` = `[xi, yi]`.
-The cost of connecting two points `[xi, yi]` and `[xj, yj]` is the **Manhattan distance** between them: `|xi - xj|` + `|yi - yj|`, where `|val|` denotes the absolute value of `val`.
+You are given an array $points$ representing integer coordinates of some points on a 2D-plane, where $points[i]$ = $[xi, yi]$.
+The cost of connecting two points $[xi, yi]$ and $[xj, yj]$ is the **Manhattan distance** between them: $|xi - xj|$ + $|yi - yj|$, where $|val|$ denotes the absolute value of $val$.
 
 Return the minimum cost to make all points connected. All points are connected if there is exactly one simple path between any two points.
 
-#### Example: 
-
-**Input:** points = `[[0,0],[2,2],[3,10],[5,2],[7,0]]`
-
-**Output:** `20`
 
 ### Approach
 - This problem is also, extremely similar to the previous one. Only difference being the way the input is provided here (as a list of points, where you calculate the weight of the edges)
@@ -210,7 +218,7 @@ Return the minimum cost to make all points connected. All points are connected i
 
 <Tabs>
 
-<TabItem value="py6" label="Python">
+<TabItem value="py" label="Python">
 <SolutionAuthor name="@Infonioknight"/>
 
 ```py
@@ -245,7 +253,7 @@ The adjacency list, will look something like this:
 The rest of the code follows an almost identical pattern as the previous one. The below being probably the only changes regarding to how the entire traversal is started.
 
 <Tabs>
-<TabItem value="py7" label="Python">
+<TabItem value="py" label="Python">
 <SolutionAuthor name="@Infonioknight"/>
 
 ```py
@@ -268,7 +276,7 @@ def min_cost_points(adjacency_list, initial):
 The below is the implementation of the main function. It is identical to the previous example in every way except for the final output (as in this question, we are guaranteed a solution)
 
 <Tabs>
-<TabItem value="py8" label="Python">
+<TabItem value="py" label="Python">
 <SolutionAuthor name="@Infonioknight"/>
   
 ```py
@@ -295,7 +303,7 @@ The below is the implementation of the main function. It is identical to the pre
 #### Final Code:
 
 <Tabs>
-<TabItem value="py9" label="Python">
+<TabItem value="py" label="Python">
 <SolutionAuthor name="@Infonioknight"/>
 
 ```py
@@ -363,7 +371,7 @@ export const suggestedProblems = [
     "problemName": "0787 - Cheapest Flights Within K Stops", 
     "difficulty": "Medium", 
     "leetCodeLink": "https://leetcode.com/problems/cheapest-flights-within-k-stops/", 
-    "solutionLink": "../../solutions/0700-0799/0787-cheapest-flights-within-k-stops-medium.md" 
+    "solutionLink": "../../solutions/0700-0799/cheapest-flights-within-k-stops-medium" 
   },
 ]
 
