@@ -1,6 +1,6 @@
 ---
-title: 'Disjoint Set Union (DSU)'
-description: 'Disjoint Set Union is a data structure that allows us to combine any two sets into one.'
+title: "Disjoint Set Union (DSU)"
+description: "Disjoint Set Union is a data structure that allows us to combine any two sets into one."
 hide_table_of_contents: true
 keywords:
   - leetcode
@@ -14,7 +14,7 @@ keywords:
 
 ## Overview
 
-A set is a collection of elements. If two sets have no common elements, then they are called disjoint sets. For example, {1, 2} and {3, 4} are disjoint sets while {1, 2} and {1, 3} are not because they have a common element $1$.
+A set is a collection of elements. If two sets have no common elements, then they are called disjoint sets. For example, $\{1, 2\}$ and $\{3, 4\}$ are disjoint sets while $\{1, 2\}$ and $\{1, 3\}$ are not because they have a common element $1$.
 
 Disjoint Set Union (or DSU or Union Find) is a data structure that allows us to combine any two sets into one. Let's say we have $10$ elements and we initialise an array $root$ with a size of $10$. Here we have $10$ sets and each individual element in the set is the parent.
 
@@ -38,7 +38,7 @@ bool unite(int x, int y) {
   }
 ```
 
-If we need to check whether two elements have the same parent, then we need a function $get$ to check it. To implement that, we simply check if the target element $x$ is $root[x]$, otherwise we can call the same function recursively until we have the root. In other word, the parent would be 
+If we need to check whether two elements have the same parent, then we need a function $get$ to check it. To implement that, we simply check if the target element $x$ is $root[x]$, otherwise we can call the same function recursively until we have the root. In other word, the parent would be
 
 ```cpp
 int get(int x) {
@@ -46,7 +46,7 @@ int get(int x) {
 }
 ```
 
-However, the above implementation is not efficient as each call depends on $n$ while we need to optimize it nearly constant time. 
+However, the above implementation is not efficient as each call depends on $n$ while we need to optimize it nearly constant time.
 
 One way to optimize it is compress the path. For example, if the root element is $1$ and we have the chain like $1$ -> $2$ -> $3$ -> $4$. If we write it vertically, element $1$ is on the top level, element $2$ is on the second level, element $3$ is on the third level and so on. We can compress these into the same level, i.e. element $2$, $3$ and $4$ would be on the second level only so that we don't need to talk all the nodes between the root and the source. This would achieve $O(log n)$ per call on average.
 
@@ -137,26 +137,26 @@ int main() {
 	return 0;
 }
 ```
+
 export const suggestedProblems = [
-  {
-    "problemName": "2421. Number of Good Paths",
-    "difficulty": "Hard",
-    "leetCodeLink": "https://leetcode.com/problems/number-of-good-paths/",
-    "solutionLink": "../../solutions/2400-2499/number-of-good-paths-hard"
-  },
-  {
-    "problemName": "2382. Maximum Segment Sum After Removals",
-    "difficulty": "Hard",
-    "leetCodeLink": "https://leetcode.com/problems/maximum-segment-sum-after-removals/",
-    "solutionLink": ""
-  },
-  {
-    "problemName": "1061. Lexicographically Smallest Equivalent String",
-    "difficulty": "Medium",
-    "leetCodeLink": "https://leetcode.com/problems/lexicographically-smallest-equivalent-string/",
-    "solutionLink": "../../solutions/1000-1099/lexicographically-smallest-equivalent-string-medium"
-  }
+{
+"problemName": "2421. Number of Good Paths",
+"difficulty": "Hard",
+"leetCodeLink": "https://leetcode.com/problems/number-of-good-paths/",
+"solutionLink": "../../solutions/2400-2499/number-of-good-paths-hard"
+},
+{
+"problemName": "2382. Maximum Segment Sum After Removals",
+"difficulty": "Hard",
+"leetCodeLink": "https://leetcode.com/problems/maximum-segment-sum-after-removals/",
+"solutionLink": ""
+},
+{
+"problemName": "1061. Lexicographically Smallest Equivalent String",
+"difficulty": "Medium",
+"leetCodeLink": "https://leetcode.com/problems/lexicographically-smallest-equivalent-string/",
+"solutionLink": "../../solutions/1000-1099/lexicographically-smallest-equivalent-string-medium"
+}
 ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />
-
