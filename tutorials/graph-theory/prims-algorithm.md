@@ -37,7 +37,7 @@ _Source: https://miro.medium.com/max/700/1*7kpPIPcmXr38Juh0umM6fA.jpeg_
 ## Example 1: [1135 - Connecting Cities With Minimum Cost](https://leetcode.com/problems/connecting-cities-with-minimum-cost/description/?envType=problem-list-v2&envId=minimum-spanning-tree)
 **Note:** The above link requires the Leetcode Subscription. To view the problem, use [this](https://leetcode.ca/all/1135.html) alternate link.
 
-### Example: 
+### Example 
 **Input:** $N = 3$, $connections = [[1,2,5],[1,3,6],[2,3,1]]$
 
 First, for clarity we make a note of the connections in a way that's easy to understand.
@@ -56,7 +56,7 @@ Now we have two remaining connections to consider from our connected cities:
     - Connect $city 2$ to $city 3$ (cost $1$)
     - Connect $city 1$ to $city 3$ (cost $6$)
 
-Clearly the **cheapest** one, is the one with cost $1$.
+Clearly the **cheapest** one is the one with cost $1$.
 So, the total cost is $5 + 1 = 6$
 
 Now all the cities have been connected. So we return our **solution** $6$.
@@ -92,7 +92,7 @@ The adjacency list will look like:
 Where each tuple consists of '(cost, destination)'.
 
 Now, to find the minimum cost, we use the below approach.
-### Explanation:
+### Explanation
 
 <Tabs>
 <TabItem value="py" label="Python">
@@ -146,7 +146,7 @@ else: return res
     - **Not all** the nodes have been visited, in which case the number of nodes in 'seen' will be less than the total number of nodes. In this case, we do not have a successful output and return $-1$
     - If all the nodes have been visited, we return the solution.
 
-#### Final Code:
+#### Final Code
 
 <Tabs>
 <TabItem value="py" label="Python">
@@ -205,7 +205,7 @@ class Solution:
 </Tabs>
 
 ## Example 2: [1584 - Min Cost to Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points)
-### Instructions: 
+### Instructions 
 You are given an array $points$ representing integer coordinates of some points on a 2D-plane, where $points[i]$ = $[xi, yi]$.
 The cost of connecting two points $[xi, yi]$ and $[xj, yj]$ is the **Manhattan distance** between them: $|xi - xj|$ + $|yi - yj|$, where $|val|$ denotes the absolute value of $val$.
 
@@ -300,7 +300,7 @@ The below is the implementation of the main function. It is identical to the pre
 </TabItem>
 </Tabs>
 
-#### Final Code:
+#### Final Code
 
 <Tabs>
 <TabItem value="py" label="Python">
