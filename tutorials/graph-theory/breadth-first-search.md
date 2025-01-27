@@ -33,7 +33,7 @@ def findTargetNode(root, targetValue):
     currentLevel = [root]
     
     #we increase our depth one by one as long as there is still node
-    while(len(level) > 0):
+    while(len(currentLevel) > 0):
     
         #we store the current level node's children in nextLevel
         nextLevel = []
