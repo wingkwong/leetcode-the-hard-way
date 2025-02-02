@@ -17,7 +17,7 @@ An obstacle and space are marked as `1` or `0` respectively in `grid`. A path th
 
 Return _the number of possible unique paths that the robot can take to reach the bottom-right corner_.
 
-The testcases are generated so that the answer will be less than or equal to `2 * 109`.
+The testcases are generated so that the answer will be less than or equal to `2 * 1e9`.
 
 **Example 1:**
 

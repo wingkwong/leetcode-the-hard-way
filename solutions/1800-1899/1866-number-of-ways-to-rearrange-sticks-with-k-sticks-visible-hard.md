@@ -40,7 +40,7 @@ The visible sticks are underlined.
 ```
 Input: n = 20, k = 11
 Output: 647427950
-Explanation: There are 647427950 (mod 109 + 7) ways to rearrange the sticks such that exactly 11 sticks are visible.
+Explanation: There are 647427950 (mod 1e9 + 7) ways to rearrange the sticks such that exactly 11 sticks are visible.
 ```
 
 **Constraints:**

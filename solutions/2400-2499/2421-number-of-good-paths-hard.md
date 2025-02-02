@@ -56,7 +56,7 @@ Explanation: The tree consists of only one node, so there is one good path.
 
 - `n == vals.length`
 - `1 <= n <= 3 * 10^4`
-- `0 <= vals[i] <= 105`
+- `0 <= vals[i] <= 1e5`
 - `edges.length == n - 1`
 - `edges[i].length == 2`
 - `0 <= ai, bi < n`

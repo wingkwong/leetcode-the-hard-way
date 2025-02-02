@@ -16,7 +16,7 @@ At each step, if you are at city `i`, you can pick any city `j` such that `j != 
 
 Notice that `fuel` **cannot** become negative at any point in time, and that you are **allowed** to visit any city more than once (including `start` and `finish`).
 
-Return _the count of all possible routes from_ `start` _to_ `finish`. Since the answer may be too large, return it modulo `109 + 7`.
+Return _the count of all possible routes from_ `start` _to_ `finish`. Since the answer may be too large, return it modulo `1e9 + 7`.
 
 **Example 1:**
 

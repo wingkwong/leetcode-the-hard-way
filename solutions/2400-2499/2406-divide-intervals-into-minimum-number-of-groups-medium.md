@@ -36,7 +36,7 @@ Explanation: None of the intervals overlap, so we can put all of them in one gro
 
 **Constraints:**
 
-- `1 <= intervals.length <= 105`
+- `1 <= intervals.length <= 1e5`
 - `intervals[i].length == 2`
 - `1 <= lefti <= righti <= 10^6`
 

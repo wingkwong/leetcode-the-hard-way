@@ -44,7 +44,7 @@ The relative ordering of the elements less than and greater than pivot is also m
 
 **Constraints:**
 
-- `1 <= nums.length <= 105`
+- `1 <= nums.length <= 1e5`
 - `-10^6 <= nums[i] <= 10^6`
 - `pivot` equals to an element of `nums`.
 

@@ -51,7 +51,7 @@ Explanation: We don't need to make any changes as the string "0000" is beautiful
 
 **Constraints:**
 
-- `2 <= s.length <= 105`
+- `2 <= s.length <= 1e5`
 - `s` has an even length.
 - `s[i]` is either `'0'` or `'1'`.
 

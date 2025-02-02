@@ -51,7 +51,7 @@ countIntervals.count();    // return 8
 **Constraints:**
 
 - `1 <= left <= right <= 10^9`
-- At most `105` calls **in total** will be made to `add` and `count`.
+- At most `1e5` calls **in total** will be made to `add` and `count`.
 - At least **one** call will be made to `count`.
 
 ## Approach 1: Sweep Line & Merge

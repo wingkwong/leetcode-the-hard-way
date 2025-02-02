@@ -29,8 +29,8 @@ Output: 10
 
 **Constraints:**
 
-- `1 <= nums.length <= 105`
-- `0 <= nums[i] <= 105`
+- `1 <= nums.length <= 1e5`
+- `0 <= nums[i] <= 1e5`
 
 ## Approach 1: Binary Search
 

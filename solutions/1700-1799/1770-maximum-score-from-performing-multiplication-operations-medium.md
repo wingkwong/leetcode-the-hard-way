@@ -52,7 +52,7 @@ The total score is 50 + 15 - 9 + 4 + 42 = 102.
 - `n == nums.length`
 - `m == multipliers.length`
 - `1 <= m <= 103`
-- `m <= n <= 105`
+- `m <= n <= 1e5`
 - `-1000 <= nums[i], multipliers[i] <= 1000`
 
 ## Approach 1: Dynamic Programming

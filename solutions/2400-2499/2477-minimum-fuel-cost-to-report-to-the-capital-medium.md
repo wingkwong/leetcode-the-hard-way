@@ -61,13 +61,13 @@ Explanation: No representatives need to travel to the capital city.
 
 **Constraints:**
 
-- `1 <= n <= 105`
+- `1 <= n <= 1e5`
 - `roads.length == n - 1`
 - `roads[i].length == 2`
 - `0 <= ai, bi < n`
 - `ai != bi`
 - `roads` represents a valid tree.
-- `1 <= seats <= 105`
+- `1 <= seats <= 1e5`
 
 ## Approach 1: DFS
 

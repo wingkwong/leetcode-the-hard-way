@@ -45,8 +45,8 @@ Thus, [2,0,2] is returned.
 
 - `n == spells.length`
 - `m == potions.length`
-- `1 <= n, m <= 105`
-- `1 <= spells[i], potions[i] <= 105`
+- `1 <= n, m <= 1e5`
+- `1 <= spells[i], potions[i] <= 1e5`
 - `1 <= success <= 1010`
 
 ## Approach 1: Binary Search

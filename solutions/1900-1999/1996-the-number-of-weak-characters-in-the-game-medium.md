@@ -39,9 +39,9 @@ Explanation: The third character is weak because the second character has a stri
 
 **Constraints:**
 
-- `2 <= properties.length <= 105`
+- `2 <= properties.length <= 1e5`
 - `properties[i].length == 2`
-- `1 <= attacki, defensei <= 105`
+- `1 <= attacki, defensei <= 1e5`
 
 ## Approach 1: Hash Map
 

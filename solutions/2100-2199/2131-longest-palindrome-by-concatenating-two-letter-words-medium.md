@@ -48,7 +48,7 @@ Note that "ll" is another longest palindrome that can be created, and so is "xx"
 
 **Constraints:**
 
-- `1 <= words.length <= 105`
+- `1 <= words.length <= 1e5`
 - `words[i].length == 2`
 - `words[i]` consists of lowercase English letters.
 

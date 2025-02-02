@@ -25,7 +25,7 @@ Your task is to form `target` using the given `words` under the following rules:
 
 **Notice** that you can use **multiple characters** from the **same string** in `words` provided the conditions above are met.
 
-Return _the number of ways to form `target` from `words`_. Since the answer may be too large, return it **modulo** `109 + 7`.
+Return _the number of ways to form `target` from `words`_. Since the answer may be too large, return it **modulo** `1e9 + 7`.
 
 **Example 1:**
 

@@ -53,11 +53,11 @@ Note that we can connect houses 1 and 2 with cost 1 or with cost 2 but we will a
 
 - `2 <= n <= 10^4`
 - `wells.length == n`
-- `0 <= wells[i] <= 105`
+- `0 <= wells[i] <= 1e5`
 - `1 <= pipes.length <= 10^4`
 - `pipes[j].length == 3`
 - `1 <= house1j, house2j <= n`
-- `0 <= costj <= 105`
+- `0 <= costj <= 1e5`
 - `house1j != house2j`
 
 ## Approach 1: **Kruskal's Algorithm**

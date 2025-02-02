@@ -48,7 +48,7 @@ Output: 8
 **Constraints:**
 
 - `1 <= nums.length <= 2 * 10^4`
-- `1 <= nums[i] <= 105`
+- `1 <= nums[i] <= 1e5`
 - All the values of `nums` are **unique**.
 
 ## Approach 1: Factorisation + DSU

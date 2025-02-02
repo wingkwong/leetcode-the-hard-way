@@ -49,8 +49,8 @@ Explanation:
 **Constraints:**
 
 - `n == arr.length`
-- `1 <= n <= 105`
-- `1 <= arr[i] <= 105`
+- `1 <= n <= 1e5`
+- `1 <= arr[i] <= 1e5`
 
 ## Approach 1: Prefix Sum
 

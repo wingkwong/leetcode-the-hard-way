@@ -45,7 +45,7 @@ Explanation: Notice that you must rearrange entire columns, and there is no way 
 
 - `m == matrix.length`
 - `n == matrix[i].length`
-- `1 <= m * n <= 105`
+- `1 <= m * n <= 1e5`
 - `matrix[i][j]` is either `0` or `1`.
 
 ## Approach 1: Sorting

@@ -13,7 +13,7 @@ https://leetcode.com/problems/maximum-product-after-k-increments/
 
 You are given an array of non-negative integers `nums` and an integer `k`. In one operation, you may choose **any** element from `nums` and **increment** it by `1`.
 
-Return _the **maximum** **product** of_ `nums` _after **at most** _ `k` _operations._ Since the answer may be very large, return it **modulo** `109 + 7`.
+Return _the **maximum** **product** of_ `nums` _after **at most** _ `k` _operations._ Since the answer may be very large, return it **modulo** `1e9 + 7`.
 
 **Example 1:**
 

@@ -37,7 +37,7 @@ Note that the integer returned should not contain leading zeroes.
 
 **Constraints:**
 
-- `1 <= num.length <= 105`
+- `1 <= num.length <= 1e5`
 - `num` consists of digits.
 
 ## Approach 1: Counting and Building String

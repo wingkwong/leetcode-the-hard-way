@@ -41,7 +41,7 @@ Explanation: The numbers 1, 3, 9, 10, and 17 are all present on at least one of 
 
 - `1 <= nums.length <= 300`
 - `nums.length == numsi.length`
-- `1 <= nums[i][j] <= 4*106`
+- `1 <= nums[i][j] <= 4 * 1e6`
 
 ## Approach 1: Check Prime
 

@@ -8,7 +8,7 @@ description: 'Author: @wkw | https://leetcode.com/problems/number-of-ways-to-rea
 
 You are given two **positive** integers `startPos` and `endPos`. Initially, you are standing at position `startPos` on an **infinite** number line. With one step, you can move either one position to the left, or one position to the right.
 
-Given a positive integer `k`, return _the number of **different** ways to reach the position_`endPos`_starting from_`startPos`\*, such that you perform **exactly\***`k`_steps_. Since the answer may be very large, return it **modulo** `109 + 7`.
+Given a positive integer `k`, return _the number of **different** ways to reach the position_`endPos`_starting from_`startPos`\*, such that you perform **exactly\***`k`_steps_. Since the answer may be very large, return it **modulo** `1e9 + 7`.
 
 Two ways are considered different if the order of the steps made is not exactly the same.
 

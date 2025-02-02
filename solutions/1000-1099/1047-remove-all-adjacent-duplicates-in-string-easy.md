@@ -35,7 +35,7 @@ Output: "ay"
 
 **Constraints:**
 
-- `1 <= s.length <= 105`
+- `1 <= s.length <= 1e5`
 - `s` consists of lowercase English letters.
 
 ## Approach 1: Stack

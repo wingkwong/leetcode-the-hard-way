@@ -33,7 +33,7 @@ The only valid partition is ("s","s","s","s","s","s").
 
 **Constraints:**
 
-- `1 <= s.length <= 105`
+- `1 <= s.length <= 1e5`
 - `s` consists of only English lowercase letters.
 
 ## Approach 1: Greedy

@@ -25,7 +25,7 @@ However, due to an error in transmission, Bob did not receive Alice's text messa
 
 Given a string `pressedKeys` representing the string received by Bob, return _the **total number of possible text messages** Alice could have sent_.
 
-Since the answer may be very large, return it **modulo** `109 + 7`.
+Since the answer may be very large, return it **modulo** `1e9 + 7`.
 
 **Example 1:**
 
@@ -45,7 +45,7 @@ Input: pressedKeys = "222222222222222222222222222222222222"
 Output: 82876089
 Explanation:
 There are 2082876103 possible text messages Alice could have sent.
-Since we need to return the answer modulo 109 + 7, we return 2082876103 % (109 + 7) = 82876089.
+Since we need to return the answer modulo 1e9 + 7, we return 2082876103 % (1e9 + 7) = 82876089.
 ```
 
 **Constraints:**

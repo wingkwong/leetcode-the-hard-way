@@ -42,7 +42,7 @@ In the 2nd column, both 12 and -2 are of length 2.
 - `m == grid.length`
 - `n == grid[i].length`
 - `1 <= m, n <= 100`
-- `-109 <= grid[r][c] <= 109`
+- `-109 <= grid[r][c] <= 1e9`
 
 ## Approach 1: Transpose and Count Digits
 

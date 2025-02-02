@@ -35,7 +35,7 @@ Explanation: The optimal subarray is (0, 4) with a score of min(5,5,4,5,4) * (4-
 
 **Constraints:**
 
-- `1 <= nums.length <= 105`
+- `1 <= nums.length <= 1e5`
 - `1 <= nums[i] <= 2 * 104`
 - `0 <= k < nums.length`
 

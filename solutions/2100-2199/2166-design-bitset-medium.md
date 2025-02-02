@@ -48,9 +48,9 @@ bs.toString(); // return "01010", which is the composition of bitset.
 
 **Constraints:**
 
-- `1 <= size <= 105`
+- `1 <= size <= 1e5`
 - `0 <= idx <= size - 1`
-- At most `105` calls will be made **in total** to `fix`, `unfix`, `flip`, `all`, `one`, `count`, and `toString`.
+- At most `1e5` calls will be made **in total** to `fix`, `unfix`, `flip`, `all`, `one`, `count`, and `toString`.
 - At least one call will be made to `all`, `one`, `count`, or `toString`.
 - At most `5` calls will be made to `toString`.
 

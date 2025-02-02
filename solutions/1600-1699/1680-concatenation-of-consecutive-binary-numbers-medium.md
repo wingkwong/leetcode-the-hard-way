@@ -11,7 +11,7 @@ https://leetcode.com/problems/concatenation-of-consecutive-binary-numbers/
 
 ## Problem Statement
 
-Given an integer `n`, return _the **decimal value** of the binary string formed by concatenating the binary representations of_`1`_to_`n`\*in order, **modulo\***`109 + 7`.
+Given an integer `n`, return _the **decimal value** of the binary string formed by concatenating the binary representations of_`1`_to_`n`\*in order, **modulo\***`1e9 + 7`.
 
 **Example 1:**
 
@@ -37,7 +37,7 @@ Input: n = 12
 Output: 505379714
 Explanation: The concatenation results in "1101110010111011110001001101010111100".
 The decimal value of that is 118505380540.
-After modulo 109 + 7, the result is 505379714.
+After modulo 1e9 + 7, the result is 505379714.
 ```
 
 **Constraints:**

@@ -43,7 +43,7 @@ Output: [["root/a/2.txt","root/c/d/4.txt"],["root/a/1.txt","root/c/3.txt"]]
 
 - `1 <= paths.length <= 2 * 10^4`
 - `1 <= paths[i].length <= 3000`
-- `1 <= sum(paths[i].length) <= 5 * 105`
+- `1 <= sum(paths[i].length) <= 5 * 1e5`
 - `paths[i]` consist of English letters, digits, `'/'`, `'.'`, `'('`, `')'`, and `' '`.
 - You may assume no files or directories share the same name in the same directory.
 - You may assume each given directory info represents a unique directory. A single blank space separates the directory path and file info.

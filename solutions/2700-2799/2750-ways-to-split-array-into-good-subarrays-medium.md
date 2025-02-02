@@ -15,7 +15,7 @@ You are given a binary array `nums`.
 
 A subarray of an array is **good** if it contains **exactly** **one** element with the value `1`.
 
-Return _an integer denoting the number of ways to split the array_`nums`_into **good** subarrays_. As the number may be too large, return it **modulo** `109 + 7`.
+Return _an integer denoting the number of ways to split the array_`nums`_into **good** subarrays_. As the number may be too large, return it **modulo** `1e9 + 7`.
 
 A subarray is a contiguous **non-empty** sequence of elements within an array.
 

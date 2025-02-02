@@ -47,8 +47,8 @@ It is optimal to leave nums as is, and since 10 is the maximum value, we return 
 **Constraints:**
 
 - `n == nums.length`
-- `2 <= n <= 105`
-- `0 <= nums[i] <= 109`
+- `2 <= n <= 1e5`
+- `0 <= nums[i] <= 1e9`
 
 ## Approach 1: Prefix Sum + Greedy.
 

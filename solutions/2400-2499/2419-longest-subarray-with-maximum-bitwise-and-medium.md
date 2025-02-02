@@ -44,7 +44,7 @@ The longest subarray with that value is [4], so we return 1.
 
 **Constraints:**
 
-- `1 <= nums.length <= 105`
+- `1 <= nums.length <= 1e5`
 - `1 <= nums[i] <= 10^6`
 
 ## Approach 1: Consecutive Max Element

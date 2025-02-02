@@ -48,8 +48,8 @@ The maximum distance is 2 with pair (2,4).
 
 **Constraints:**
 
-- `1 <= nums1.length, nums2.length <= 105`
-- `1 <= nums1[i], nums2[j] <= 105`
+- `1 <= nums1.length, nums2.length <= 1e5`
+- `1 <= nums1[i], nums2[j] <= 1e5`
 - Both `nums1` and `nums2` are **non-increasing**.
 
 ## Approach 1: Two Pointers

@@ -42,7 +42,7 @@ Explanation: Both resulting strings will have 5 distinct characters, regardless 
 
 **Constraints:**
 
-- `1 <= word1.length, word2.length <= 105`
+- `1 <= word1.length, word2.length <= 1e5`
 - `word1` and `word2` consist of only lowercase English letters.
 
 ## Approach 1: Hashmap

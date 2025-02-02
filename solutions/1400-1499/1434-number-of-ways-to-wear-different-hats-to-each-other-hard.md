@@ -13,7 +13,7 @@ Given a 2D integer array `hats`, where `hats[i]` is a list of all hats preferred
 
 Return _the number of ways that the n people wear different hats to each other_.
 
-Since the answer may be too large, return it modulo `109 + 7`.
+Since the answer may be too large, return it modulo `1e9 + 7`.
 
 **Example 1:**
 

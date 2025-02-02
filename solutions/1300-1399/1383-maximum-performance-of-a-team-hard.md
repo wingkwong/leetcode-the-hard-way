@@ -13,7 +13,7 @@ Choose **at most** `k` different engineers out of the `n` engineers to form a te
 
 The performance of a team is the sum of their engineers' speeds multiplied by the minimum efficiency among their engineers.
 
-Return _the maximum performance of this team_. Since the answer can be a huge number, return it **modulo** `109 + 7`.
+Return _the maximum performance of this team_. Since the answer can be a huge number, return it **modulo** `1e9 + 7`.
 
 **Example 1:**
 

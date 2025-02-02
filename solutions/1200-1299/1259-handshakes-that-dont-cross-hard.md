@@ -14,7 +14,7 @@ You are given an **even** number of people `numPeople` that stand around a circl
 
 Return _the number of ways these handshakes could occur such that none of the handshakes cross_.
 
-Since the answer could be very large, return it **modulo** `109 + 7`.
+Since the answer could be very large, return it **modulo** `1e9 + 7`.
 
 **Example 1:**
 

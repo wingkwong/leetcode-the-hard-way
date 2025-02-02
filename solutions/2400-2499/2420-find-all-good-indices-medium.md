@@ -41,7 +41,7 @@ Explanation: There are no good indices in this array.
 **Constraints:**
 
 - `n == nums.length`
-- `3 <= n <= 105`
+- `3 <= n <= 1e5`
 - `1 <= nums[i] <= 10^6`
 - `1 <= k <= n / 2`
 

@@ -32,7 +32,7 @@ Output: 1
 
 **Constraints:**
 
-- `3 <= n <= 105`
+- `3 <= n <= 1e5`
 - `edges.length == n - 1`
 - `edges[i].length == 2`
 - `1 <= ui, vi <= n`

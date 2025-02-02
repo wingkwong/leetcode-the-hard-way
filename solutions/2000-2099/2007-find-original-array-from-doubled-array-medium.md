@@ -45,8 +45,8 @@ Explanation: changed is not a doubled array.
 
 **Constraints:**
 
-- `1 <= changed.length <= 105`
-- `0 <= changed[i] <= 105`
+- `1 <= changed.length <= 1e5`
+- `0 <= changed[i] <= 1e5`
 
 ## Approach 1: Sorting + Hashmap
 

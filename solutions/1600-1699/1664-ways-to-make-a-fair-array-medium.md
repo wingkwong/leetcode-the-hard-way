@@ -54,7 +54,7 @@ Explanation: You cannot make a fair array after removing any index.
 
 **Constraints:**
 
-- `1 <= nums.length <= 105`
+- `1 <= nums.length <= 1e5`
 - `1 <= nums[i] <= 10^4`
 
 ## Approach 1: Prefix Sum

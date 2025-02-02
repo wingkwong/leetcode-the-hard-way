@@ -17,7 +17,7 @@ There can be multiple ways to distribute the candies. Two ways are considered **
 
 For example, `(1), (2,3)` and `(2), (1,3)` are considered different because candies `2` and `3` in the bag `(2,3)` in the first way are not in the same bag in the second way (they are split between the bags `(2)` and `(1,3)`). However, `(1), (2,3)` and `(3,2), (1)` are considered the same because the candies in each bag are all in the same bags in both ways.
 
-Given two integers, `n` and `k`, return _the **number** of different ways to distribute the candies_. As the answer may be too large, return it **modulo** `109 + 7`.
+Given two integers, `n` and `k`, return _the **number** of different ways to distribute the candies_. As the answer may be too large, return it **modulo** `1e9 + 7`.
 
 **Example 1:**
 
@@ -52,7 +52,7 @@ Explanation: You can distribute 4 candies into 2 bags in 7 ways:
 ```
 Input: n = 20, k = 5
 Output: 206085257
-Explanation: You can distribute 20 candies into 5 bags in 1881780996 ways. 1881780996 modulo 109 + 7 = 206085257.
+Explanation: You can distribute 20 candies into 5 bags in 1881780996 ways. 1881780996 modulo 1e9 + 7 = 206085257.
 ```
 
 **Constraints:**

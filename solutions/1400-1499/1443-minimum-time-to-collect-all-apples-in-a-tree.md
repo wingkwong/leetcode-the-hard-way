@@ -44,7 +44,7 @@ Output: 0
 
 **Constraints:**
 
-- `1 <= n <= 105`
+- `1 <= n <= 1e5`
 - `edges.length == n - 1`
 - `edges[i].length == 2`
 - `0 <= ai < bi <= n - 1`

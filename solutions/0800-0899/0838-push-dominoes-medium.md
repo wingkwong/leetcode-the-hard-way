@@ -45,7 +45,7 @@ Output: "LL.RR.LLRRLL.."
 **Constraints:**
 
 - `n == dominoes.length`
-- `1 <= n <= 105`
+- `1 <= n <= 1e5`
 - `dominoes[i]` is either `'L'`, `'R'`, or `'.'`.
 
 ## Approach 1: Two Pointers

@@ -55,10 +55,10 @@ Hence, [-1,-1] is returned.
 
 **Constraints:**
 
-- `1 <= n == nums.length <= 105`
-- `0 <= nums[i] <= 109`
-- `0 <= indexDifference <= 105`
-- `0 <= valueDifference <= 109`
+- `1 <= n == nums.length <= 1e5`
+- `0 <= nums[i] <= 1e9`
+- `0 <= indexDifference <= 1e5`
+- `0 <= valueDifference <= 1e9`
 
 ## Approach 1: One Pass
 

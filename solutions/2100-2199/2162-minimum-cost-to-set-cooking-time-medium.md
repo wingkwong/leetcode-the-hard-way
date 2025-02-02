@@ -65,7 +65,7 @@ Note other possible ways are 0076, 076, 0116, and 116, but none of them produces
 **Constraints:**
 
 - `0 <= startAt <= 9`
-- `1 <= moveCost, pushCost <= 105`
+- `1 <= moveCost, pushCost <= 1e5`
 - `1 <= targetSeconds <= 6039`
 
 ## Approach 1: Simulation

@@ -31,7 +31,7 @@ Output: "leotcede"
 
 **Constraints:**
 
-- `1 <= s.length <= 3 * 105`
+- `1 <= s.length <= 3 * 1e5`
 - `s` consist of **printable ASCII** characters.
 
 ## Approach 1: Two Pointers
