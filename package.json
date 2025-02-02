@@ -12,7 +12,8 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "crawl": "docker run -it --env-file=.env.local -e \"CONFIG=$(cat ./config.json | jq -r tostring)\" algolia/docsearch-scraper"
+    "crawl": "docker run -it --env-file=.env.local -e \"CONFIG=$(cat ./config.json | jq -r tostring)\" algolia/docsearch-scraper",
+    "prettier": "prettier --write ."
   },
   "dependencies": {
     "@docusaurus/core": "3.7.0",
@@ -30,7 +31,8 @@
     "remark-math": "6.0.0"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "3.7.0"
+    "@docusaurus/module-type-aliases": "3.7.0",
+    "prettier": "^3.4.2"
   },
   "browserslist": {
     "production": [
