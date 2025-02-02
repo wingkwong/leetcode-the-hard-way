@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/maximize-the-topmost-element-after-k-moves/
+  Author: @wkw | https://leetcode.com/problems/maximize-the-topmost-element-after-k-moves/
 ---
 
 # 2202 - Maximize the Topmost Element After K Moves (Medium)
@@ -16,14 +15,12 @@ You are given a **0-indexed** integer array `nums` representing the contents of 
 
 In one move, you can perform **either** of the following:
 
-* If the pile is not empty, **remove** the topmost element of the pile.
-* If there are one or more removed elements, **add** any one of them back onto the pile. This element becomes the new topmost element.
+- If the pile is not empty, **remove** the topmost element of the pile.
+- If there are one or more removed elements, **add** any one of them back onto the pile. This element becomes the new topmost element.
 
 You are also given an integer `k`, which denotes the total number of moves to be made.
 
 Return _the **maximum value** of the topmost element of the pile possible after **exactly**_ `k` _moves_. In case it is not possible to obtain a non-empty pile after `k` moves, return `-1`.
-
-
 
 **Example 1:**
 
@@ -44,21 +41,21 @@ Note that this is not the only way to end with 5 at the top of the pile. It can 
 ```
 Input: nums = [2], k = 1
 Output: -1
-Explanation: 
+Explanation:
 In the first move, our only option is to pop the topmost element of the pile.
 Since it is not possible to obtain a non-empty pile after one move, we return -1.
 ```
 
 **Constraints:**
 
-* `1 <= nums.length <= 10^5`
-* `0 <= nums[i], k <= 10^9`
+- `1 <= nums.length <= 10^5`
+- `0 <= nums[i], k <= 10^9`
 
 ## Approach 1: Check All Cases
 
 If $$k > n$$, then we can remove all elements and put the maximum element back at the end. However, this cannot be done when $$k - n$$ is an even number when $$n$$ is $$1$$. If $$k > 1$$, we can check the maximum value for the top $$k - 1$$ elements so that we put the maximum value in the last move. The last case is we only remove elements and not putting any of them back, i.e. check $$nums[k]$$ is the maximum.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

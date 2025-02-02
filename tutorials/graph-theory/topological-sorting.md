@@ -1,6 +1,6 @@
 ---
-title: "Topological Sorting"
-description: "Topological Sorting is a linear ordering of its vertices such that for every directed edge (u, v) from vertex u to vertex v, u comes before v in the ordering."
+title: 'Topological Sorting'
+description: 'Topological Sorting is a linear ordering of its vertices such that for every directed edge (u, v) from vertex u to vertex v, u comes before v in the ordering.'
 keywords:
   - leetcode
   - tutorial
@@ -8,7 +8,7 @@ keywords:
   - algorithm
 ---
 
-<TutorialCredits authors="@wingkwong"/>
+<TutorialCredits authors="@wkw"/>
 
 ## Overview
 
@@ -29,7 +29,7 @@ The following implementation is using BFS.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 struct TopologicalSort {
@@ -79,7 +79,7 @@ struct TopologicalSort {
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 // ...
@@ -115,7 +115,7 @@ public:
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 // ...
@@ -154,7 +154,7 @@ public:
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 // ...

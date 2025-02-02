@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/zigzag-conversion/'
+description: 'Author: @wkw | https://leetcode.com/problems/zigzag-conversion/'
 tags: [String]
 ---
 
-# 0006 - Zigzag Conversion (Medium) 
+# 0006 - Zigzag Conversion (Medium)
 
 ## Problem Link
 
@@ -63,7 +63,7 @@ Output: "A"
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 // simulate and add each character to the corresponding row
@@ -98,7 +98,7 @@ public:
 </TabItem>
 
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 # simulate and add each character to the corresponding row

@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/counting-bits/'
+description: 'Author: @wkw | https://leetcode.com/problems/counting-bits/'
 ---
 
 # 0338 - Counting Bits (Easy)
@@ -10,7 +10,7 @@ https://leetcode.com/problems/counting-bits/
 
 ## Problem Statement
 
-Given an integer `n`, return _an array_ `ans` _of length_ `n + 1` _such that for each_ `i` __ (`0 <= i <= n`)_,_ `ans[i]` _is the **number of**_ `1`_**'s** in the binary representation of_ `i`.
+Given an integer `n`, return _an array_ `ans` _of length_ `n + 1` _such that for each_ `i` \__ (`0 <= i <= n`)_,_ `ans[i]` \_is the **number of**_ `1`_**'s** in the binary representation of_ `i`.
 
 **Example 1:**
 
@@ -34,35 +34,35 @@ Explanation:
 2 --> 10
 3 --> 11
 4 --> 100
-5 --> 101 
+5 --> 101
 ```
 
 **Constraints:**
 
-* `0 <= n <= 10^5`
+- `0 <= n <= 10^5`
 
 **Follow up:**
 
-* It is very easy to come up with a solution with a runtime of `O(n log n)`. Can you do it in linear time `O(n)` and possibly in a single pass?
-* Can you do it without using any built-in function (i.e., like `__builtin_popcount` in C++)?
+- It is very easy to come up with a solution with a runtime of `O(n log n)`. Can you do it in linear time `O(n)` and possibly in a single pass?
+- Can you do it without using any built-in function (i.e., like `__builtin_popcount` in C++)?
 
 ## Approach 1: (n + 1) hammingWeight
 
 If you've solved [0191 - Number of 1 Bits (Easy)](../0100-0199/number-of-1-bits-easy), then you can use that solution in this problem. The time complexity is $$O(n logn)$$.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
 public:
-    // Check out 0191 - Number of 1 Bits (Easy) - Approach 3 
+    // Check out 0191 - Number of 1 Bits (Easy) - Approach 3
     // for detailed explanation
     int hammingWeight(int n) {
         int ans = 0;
         for (; n; n = n & (n - 1)) ans++;
         return ans;
     }
-    
+
     vector<int> countBits(int n) {
         vector<int> ans;
         for (int i = 0; i <= n; i++) {
@@ -79,7 +79,7 @@ $i$ & $(i - 1)$ is a common trick to turn the rightmost set bit to $0$. For exam
 
 The transition function is simply $ans[i] = ans[i$ & $(i - 1)] + 1$.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -90,7 +90,7 @@ public:
             // no. of 1s in (1000100) = no. of 1s in (1000000) + 1
             ans[i] = ans[i & (i - 1)] + 1;
         }
-        return ans; 
+        return ans;
     }
 };
 ```

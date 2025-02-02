@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/k-divisible-elements-subarrays/
+  Author: @wkw | https://leetcode.com/problems/k-divisible-elements-subarrays/
 ---
 
 # 2261 - K Divisible Elements Subarrays (Medium)
@@ -16,8 +15,8 @@ Given an integer array `nums` and two integers `k` and `p`, return _the number o
 
 Two arrays `nums1` and `nums2` are said to be **distinct** if:
 
-* They are of **different** lengths, or
-* There exists **at least** one index `i` where `nums1[i] != nums2[i]`.
+- They are of **different** lengths, or
+- There exists **at least** one index `i` where `nums1[i] != nums2[i]`.
 
 A **subarray** is defined as a **non-empty** contiguous sequence of elements in an array.
 
@@ -42,20 +41,20 @@ Output: 10
 Explanation:
 All element of nums are divisible by p = 1.
 Also, every subarray of nums will have at most 4 elements that are divisible by 1.
-Since all subarrays are distinct, the total number of subarrays satisfying all the constraints is 10. 
+Since all subarrays are distinct, the total number of subarrays satisfying all the constraints is 10.
 ```
 
 **Constraints:**
 
-* `1 <= nums.length <= 200`
-* `1 <= nums[i], p <= 200`
-* `1 <= k <= nums.length`
+- `1 <= nums.length <= 200`
+- `1 <= nums[i], p <= 200`
+- `1 <= k <= nums.length`
 
 ## Approach 1: Brute Force
 
 Build all subarrays and insert them to set. The answer would be the size of the set.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -71,7 +70,7 @@ public:
                 // cnt += nums[j] % p == 0;
                 // use below instead
                 cnt += nums[j] % p == 0 ? 1 : 0;
-                // or 
+                // or
                 // if (nums[j] % p == 0) cnt += 1;
                 if (cnt <= k) {
                     t = t + to_string(nums[j]) + "|";

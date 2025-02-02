@@ -38,8 +38,7 @@ Explanation: The array cannot be partitioned into equal sum subsets.
 
 We can use dynamic programming and a hash set to solve this problem. Our hash set would represent all the totals we can make using the numbers in $$nums$$, and our base case would be $$0$$. We also only have to reach a total of the $$sum(nums) // 2$$ as if one half is half the sum, then the other will be too. This also means we can terminate early if the sum of all numbers isn't even.
 
-Then we can iterate through each number in $$nums$$, and for each iteration, iterate through our hash set of totals. If the current $$total$$ + the current $$number$$ is equal to our target we can return true, otherwise, we will have to add our $$total + num$$ to our hash set.
-Note we can loop through our hash set and add numbers to it, so we will need an intermediate hash set to add our $$total + num$$ and $$total$$ to, as well as reassign later.
+Then we can iterate through each number in $$nums$$, and for each iteration, iterate through our hash set of totals. If the current $$total$$ + the current $$number$$ is equal to our target we can return true, otherwise, we will have to add our $$total + num$$ to our hash set. Note we can loop through our hash set and add numbers to it, so we will need an intermediate hash set to add our $$total + num$$ and $$total$$ to, as well as reassign later.
 
 If we don't find our target total, we can return False.
 

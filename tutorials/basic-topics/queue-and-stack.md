@@ -1,6 +1,6 @@
 ---
-title: "Queue & Stack"
-description: "Stack is the data structure The first item that comes in will be the first to go out."
+title: 'Queue & Stack'
+description: 'Stack is the data structure The first item that comes in will be the first to go out.'
 # hide_table_of_contents: true
 keywords:
   - leetcode
@@ -204,25 +204,6 @@ class Solution:
         return time
 ```
 
-export const suggestedProblems = [
-{
-"problemName": "0155 - Min Stack",
-"difficulty": "Easy",
-"leetCodeLink": "https://leetcode.com/problems/min-stack/",
-"solutionLink": "../../solutions/0100-0199/min-stack-easy"
-},
-{
-"problemName": "0496 - Next Greater Element I",
-"difficulty": "Easy",
-"leetCodeLink": "https://leetcode.com/problems/next-greater-element-i/",
-"solutionLink": "../../solutions/0400-0499/next-greater-element-i-easy"
-},
-{
-"problemName": "1475 - Final Prices With a Special Discount in a Shop",
-"difficulty": "Easy",
-"leetCodeLink": "https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/",
-"solutionLink": "../../solutions/1400-1499/final-prices-with-a-special-discount-in-a-shop-easy"
-},
-]
+export const suggestedProblems = [ { "problemName": "0155 - Min Stack", "difficulty": "Easy", "leetCodeLink": "https://leetcode.com/problems/min-stack/", "solutionLink": "../../solutions/0100-0199/min-stack-easy" }, { "problemName": "0496 - Next Greater Element I", "difficulty": "Easy", "leetCodeLink": "https://leetcode.com/problems/next-greater-element-i/", "solutionLink": "../../solutions/0400-0499/next-greater-element-i-easy" }, { "problemName": "1475 - Final Prices With a Special Discount in a Shop", "difficulty": "Easy", "leetCodeLink": "https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/", "solutionLink": "../../solutions/1400-1499/final-prices-with-a-special-discount-in-a-shop-easy" }, ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />

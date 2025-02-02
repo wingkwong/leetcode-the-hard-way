@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/count-lattice-points-inside-a-circle/
+  Author: @wkw | https://leetcode.com/problems/count-lattice-points-inside-a-circle/
 ---
 
 # 2249 - Count Lattice Points Inside a Circle (Medium)
@@ -16,8 +15,8 @@ Given a 2D integer array `circles` where `circles[i] = [xi, yi, ri]` represents 
 
 **Note:**
 
-* A **lattice point** is a point with integer coordinates.
-* Points that lie **on the circumference of a circle** are also considered to be inside it.
+- A **lattice point** is a point with integer coordinates.
+- Points that lie **on the circumference of a circle** are also considered to be inside it.
 
 **Example 1:**
 
@@ -42,22 +41,22 @@ Input: circles = [[2,2,2],[3,4,1]]
 Output: 16
 Explanation:
 The figure above shows the given circles.
-There are exactly 16 lattice points which are present inside at least one circle. 
+There are exactly 16 lattice points which are present inside at least one circle.
 Some of them are (0, 2), (2, 0), (2, 4), (3, 2), and (4, 4).
 ```
 
 **Constraints:**
 
-* `1 <= circles.length <= 200`
-* `circles[i].length == 3`
-* `1 <= xi, yi <= 100`
-* `1 <= ri <= min(xi, yi)`
+- `1 <= circles.length <= 200`
+- `circles[i].length == 3`
+- `1 <= xi, yi <= 100`
+- `1 <= ri <= min(xi, yi)`
 
 ## Approach 1: Brute Force
 
 Iterate each point, check if the distance between the center point and the target point is less than or equal to the radius. If so, that means the target point is within the circle.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

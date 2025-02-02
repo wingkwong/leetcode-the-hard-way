@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @heiheihang |
-  https://leetcode.com/problems/minimum-number-of-moves-to-make-palindrome/
+  Author: @heiheihang | https://leetcode.com/problems/minimum-number-of-moves-to-make-palindrome/
 ---
 
 # 2193 - Minimum Number of Moves to Make Palindrome (Hard)
@@ -26,7 +25,7 @@ Return _the **minimum number of moves** needed to make_ `s` _a palindrome_.
 Input: s = "aabb"
 Output: 2
 Explanation:
-We can obtain two palindromes from s, "abba" and "baab". 
+We can obtain two palindromes from s, "abba" and "baab".
 - We can obtain "abba" from s in 2 moves: "aabb" -> "abab" -> "abba".
 - We can obtain "baab" from s in 2 moves: "aabb" -> "abab" -> "baab".
 Thus, the minimum number of moves needed to make s a palindrome is 2.
@@ -46,9 +45,9 @@ It can be shown that it is not possible to obtain a palindrome in less than 2 mo
 
 **Constraints:**
 
-* `1 <= s.length <= 2000`
-* `s` consists only of lowercase English letters.
-* `s` can be converted to a palindrome using a finite number of moves.
+- `1 <= s.length <= 2000`
+- `s` consists only of lowercase English letters.
+- `s` can be converted to a palindrome using a finite number of moves.
 
 ## Approach 1: Brute Force
 
@@ -66,64 +65,64 @@ This greedy approach is hard to justify that it produces the smallest amount of 
 
 ```python
 def minMovesToMakePalindrome(self, s: str) -> int:
-        
+
         #initialize the number of counts
         res = 0
-        
+
         #keep track of the right pointer of unused character
         rp = len(s) - 1
-        
+
         #count the frequency of characters
         d = defaultdict(int)
-        
+
         #change the string to a list for swapping
         s = list(s)
-        
+
         #calculate the frequency of characters
         for i in range(len(s)):
             c = s[i]
             d[c] += 1
-            
+
         #initialize the position of the odd character (middle)
         odd_position = -1
-        
+
         #we only need to look up to the middle of the palindrome form left side
         for i in range((len(s)+1)//2):
-            
+
             left_character = s[i]
-            
+
             #we skip if the character is the odd one
             if(d[left_character] == 1):
                 odd_position = i
                 continue
-                
-            #we find the matching 
+
+            #we find the matching
             for j in range(rp, -1, -1):
-                
+
                 #stop when we find a matching character
                 if(s[j] == left_character):
-                    
+
                     #swap the characters until the target position
                     for k in range(j, rp):
                         s[k] = s[k+1]
                     #set the character at the target position
                     s[rp] = left_character
-                    
+
                     #add the distance travelled for the target character
                     res += rp - j
                     break
             #decrease the count of that character by 2
             d[left_character] -= 2
-            
+
             #decrease right pointer by 1
             rp -= 1
             # print(s, res, i)
-            
+
         #if there is an odd character
         if(odd_position != -1):
-            
+
             #add its distance to the center position
             res += (len(s)) // 2 - left_over
-            
+
         return res
 ```

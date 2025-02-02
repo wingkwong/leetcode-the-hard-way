@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong, @ganajayant, @radojicic23| https://leetcode.com/problems/search-a-2d-matrix/'
+description: 'Author: @wkw, @ganajayant, @radojicic23| https://leetcode.com/problems/search-a-2d-matrix/'
 tags: [Array, Binary Search, Matrix]
 ---
 
-# 0074 - Search a 2D Matrix (Medium) 
+# 0074 - Search a 2D Matrix (Medium)
 
 ## Problem Link
 
@@ -41,7 +41,7 @@ Output: false
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -100,27 +100,27 @@ class Solution:
  * @param {number} target
  * @return {boolean}
  */
-var searchMatrix = function(matrix, target) {
-    let rows = matrix.length, cols = matrix[0].length;
-    let r = 0;
-    for (let i = 0; i < rows; i++) {
-        if (target >= matrix[i][0] && target <= matrix[i][cols - 1]) {
-            r = i;
-            break;
-        }
+var searchMatrix = function (matrix, target) {
+  let rows = matrix.length,
+    cols = matrix[0].length;
+  let r = 0;
+  for (let i = 0; i < rows; i++) {
+    if (target >= matrix[i][0] && target <= matrix[i][cols - 1]) {
+      r = i;
+      break;
     }
-    for (let i = 0; i < cols; i++) {
-        if (matrix[r][i] == target) {
-            return true;
-        }
+  }
+  for (let i = 0; i < cols; i++) {
+    if (matrix[r][i] == target) {
+      return true;
     }
-    return false;
+  }
+  return false;
 };
 ```
 
 </TabItem>
 </Tabs>
-
 
 ## Approach 2: Binary Search
 
@@ -151,6 +151,7 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 
 <TabItem value="python" label="Python">
@@ -161,31 +162,31 @@ class Solution {
 # Space Complexity: O(1)
 class Solution:
     def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
-        # initialize rows and cols 
-        rows, cols = len(matrix), len(matrix[0]) 
+        # initialize rows and cols
+        rows, cols = len(matrix), len(matrix[0])
         # top row and bottom row
         top, bot = 0, rows - 1
-        
+
         # binary search
-        while top <= bot: 
+        while top <= bot:
             # compute the middle row
             mid = (top + bot) // 2
-            # if this target value is greater then 
+            # if this target value is greater then
             # the largest value in the middle row
             if target > matrix[mid][-1]:
                 # look at rows with larger value
                 top = mid + 1
-            # if this target value is smaller then 
+            # if this target value is smaller then
             # the smallest value in this row
             elif target < matrix[mid][0]:
                 # look at rows with smaller value
                 bot = mid - 1
             else:
-                break 
-            
+                break
+
         if not (top <= bot):
             return False
-        
+
         # second binary search portion
         # run binary search on the current (middle row)
         mid = (top + bot) // 2
@@ -200,7 +201,7 @@ class Solution:
                 r = m - 1
             else:
                 return True
-        
+
         return False
 ```
 
@@ -215,38 +216,38 @@ class Solution:
  * @param {number} target
  * @return {boolean}
  */
-var searchMatrix = function(matrix, target) {
-    let row = matrix.length;
-    let col = matrix[0].length;
-    let top = 0;
-    let bottom = row - 1;
-    while (top <= bottom) {
-        let mid = Math.floor((top + bottom) / 2);
-        if (target > matrix[mid][col - 1]) {
-            top = mid + 1;
-        } else if (target < matrix[mid][0]) {
-            bottom = mid - 1;
-        } else {
-            break;
-        }
-    }
-    if (!(top <= bottom)) {
-        return false;
-    }
-    let l = 0;
-    let r = col - 1;
+var searchMatrix = function (matrix, target) {
+  let row = matrix.length;
+  let col = matrix[0].length;
+  let top = 0;
+  let bottom = row - 1;
+  while (top <= bottom) {
     let mid = Math.floor((top + bottom) / 2);
-    while (l <= r) {
-        let m = Math.floor((l + r) / 2);
-        if (target > matrix[mid][m]) {
-            l = m + 1;
-        } else if (target < matrix[mid][m]) {
-            r = m - 1;
-        } else {
-            return true;
-        }
+    if (target > matrix[mid][col - 1]) {
+      top = mid + 1;
+    } else if (target < matrix[mid][0]) {
+      bottom = mid - 1;
+    } else {
+      break;
     }
+  }
+  if (!(top <= bottom)) {
     return false;
+  }
+  let l = 0;
+  let r = col - 1;
+  let mid = Math.floor((top + bottom) / 2);
+  while (l <= r) {
+    let m = Math.floor((l + r) / 2);
+    if (target > matrix[mid][m]) {
+      l = m + 1;
+    } else if (target < matrix[mid][m]) {
+      r = m - 1;
+    } else {
+      return true;
+    }
+  }
+  return false;
 };
 ```
 

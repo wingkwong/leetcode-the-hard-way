@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/my-calendar-iii/'
+description: 'Author: @wkw | https://leetcode.com/problems/my-calendar-iii/'
 tags: [Binary Search, Design, Segment Tree, Ordered Set]
 ---
 
-# 0732 - My Calendar III (Hard) 
+# 0732 - My Calendar III (Hard)
 
 ## Problem Link
 
@@ -48,7 +48,7 @@ myCalendarThree.book(25, 55); // return 3
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 // Time Complexity: O(N ^ 2)
@@ -57,14 +57,14 @@ class MyCalendarThree {
 public:
     // finding number of overlapping elements at time points -> line sweeping
     MyCalendarThree() {}
-    
+
     int book(int start, int end) {
         // new event starts here -> increase by 1
         lines[start]++;
         // the event ends here -> decrease by 1
         // p.s. sometimes you may see `lines[end + 1]--;`. e.g. 2406. Divide Intervals Into Minimum Number of Groups
         //      you may search `leetcode-the-hard-way` on Discussion to see my solution explanation on that problem
-        //      this is because the interval is inclusive, i.e [start, end] 
+        //      this is because the interval is inclusive, i.e [start, end]
         //      however, the interval in this problem is [start, end), so we don't need to add 1 here.
         lines[end]--;
         int mx = 0, cnt = 0;
@@ -77,12 +77,12 @@ public:
         return mx;
     }
 private:
-    // can I use `vector` instead? 
-    // given that the constraints state 0 <= start < end <= 10 ^ 9 
+    // can I use `vector` instead?
+    // given that the constraints state 0 <= start < end <= 10 ^ 9
     // it means we need to sweep from 0 to 10 ^ 9 if we use vector
     // let's say the books are [10, 20) and [1e9 - 10, 1e9)
     // then the range [20, 1e9 - 10 - 1] is empty but we still spend time to check them
-    
+
     // in c++, we can use map instead since we only have at most 400 calls
     // in line sweeping, we need to ensure the keys are sorted
     // map is implemented as red-black trees so the it fulfils
@@ -100,18 +100,18 @@ private:
 </TabItem>
 
 <TabItem value="java" label="Java">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```java
 // Time Complexity: O(N ^ 2)
 // Space Complexity: O(N)
 class MyCalendarThree {
-    // can I use `ArrayList` instead? 
-    // given that the constraints state 0 <= start < end <= 10 ^ 9 
+    // can I use `ArrayList` instead?
+    // given that the constraints state 0 <= start < end <= 10 ^ 9
     // it means we need to sweep from 0 to 10 ^ 9 if we use ArrayList
     // let's say the books are [10, 20) and [1e9 - 10, 1e9)
     // then the range [20, 1e9 - 10 - 1] is empty but we still spend time to check them
-    
+
     // in java, we can use TreeMap instead since we only have at most 400 calls
     // in line sweeping, we need to ensure the keys are sorted
     // TreeMap is implemented as red-black trees so the it fulfils
@@ -119,19 +119,19 @@ class MyCalendarThree {
     private TreeMap<Integer, Integer> lines;
 
     // finding number of overlapping elements at time points -> line sweeping
-    
+
     public MyCalendarThree() {
         // init TreeMap
         lines = new TreeMap<>();
     }
-    
+
     public int book(int start, int end) {
         // new event starts here -> increase by 1
         lines.put(start, lines.getOrDefault(start, 0) + 1);
         // the event ends here -> decrease by 1
         // p.s. sometimes you may see `lines[end + 1]--;`. e.g. 2406. Divide Intervals Into Minimum Number of Groups
         //      you may search `leetcode-the-hard-way` on Discussion to see my solution explanation on that problem
-        //      this is because the interval is inclusive, i.e [start, end] 
+        //      this is because the interval is inclusive, i.e [start, end]
         //      however, the interval in this problem is [start, end), so we don't need to add 1 here.
         lines.put(end, lines.getOrDefault(end, 0) - 1);
         int mx = 0, cnt = 0;
@@ -143,7 +143,7 @@ class MyCalendarThree {
         }
         return mx;
     }
-    
+
 }
 
 /**
@@ -156,7 +156,7 @@ class MyCalendarThree {
 </TabItem>
 
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 from sortedcontainers import SortedDict
@@ -179,7 +179,7 @@ class MyCalendarThree:
         # the event ends here -> decrease by 1
         # p.s. sometimes you may see `lines.get(end + 1, 0) - 1;`. e.g. 2406. Divide Intervals Into Minimum Number of Groups
         #      you may search `leetcode-the-hard-way` on Discussion to see my solution explanation on that problem
-        #      this is because the interval is inclusive, i.e [start, end] 
+        #      this is because the interval is inclusive, i.e [start, end]
         #      however, the interval in this problem is [start, end), so we don't need to add 1 here.
         self.lines[end] = self.lines.get(end, 0) - 1
         # here we calculate the prefix sum using `accumulate`
@@ -199,7 +199,7 @@ class MyCalendarThree:
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class MyCalendarThree {
@@ -209,7 +209,7 @@ public:
         int sum, lazy, tl, tr, l, r;
         Node() : sum(0), lazy(0), l(-1), r(-1) {}
     };
-    
+
     const static int magic = 64 * 200 * 10;
 
     Node segtree[magic];
@@ -291,7 +291,7 @@ public:
         segtree[1].sum = 0; segtree[1].lazy = 0;
         segtree[1].tl = 0; segtree[1].tr = 1e9;
     }
-    
+
     int book(int start, int end) {
         update(1, start, end - 1);
         return segtree[1].sum;

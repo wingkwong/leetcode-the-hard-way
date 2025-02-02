@@ -1,6 +1,6 @@
 ---
-title: "Shell Sort"
-description: "Sorting algorithm using a gap-based strategy to improve efficiency of sorting process"
+title: 'Shell Sort'
+description: 'Sorting algorithm using a gap-based strategy to improve efficiency of sorting process'
 hide_table_of_contents: false
 keywords:
   - leetcode
@@ -121,8 +121,7 @@ Shell Sort is a versatile sorting algorithm suitable for beginners and provides 
 
 ## Example #1: [0912 - Sort an Array](https://leetcode.com/problems/sort-an-array/)
 
-> Given an array of integers nums, sort the array in ascending order and return it.
-> You must solve the problem without using any built-in functions in $O(n\log(n))$ time complexity and with the smallest space complexity possible.
+> Given an array of integers nums, sort the array in ascending order and return it. You must solve the problem without using any built-in functions in $O(n\log(n))$ time complexity and with the smallest space complexity possible.
 
 - Start with a gap sequence. A common choice is to start with $\frac{n}{2}$ and halve it in each iteration until the gap becomes $1$, where $n$ is the length of the array.
 
@@ -239,8 +238,7 @@ Shell Sort remains a reliable sorting algorithm for moderately sized arrays, and
 
 ## Example #2: [0088 - Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array)
 
-> Given two integer arrays, sorted in non-decreasing order, and two integers representing the number of elements in both arrays.
-> Merge both arrays into a single array sorted in non-decreasing order.
+> Given two integer arrays, sorted in non-decreasing order, and two integers representing the number of elements in both arrays. Merge both arrays into a single array sorted in non-decreasing order.
 
 1. Calculate the gap value for merging the two arrays. The gap is determined as $\lceil \frac{{\text{size of arr1} + \text{size of arr2}}}{{2}} \rceil$.
 
@@ -404,19 +402,6 @@ For each value of the gap, the inner loop can run for a maximum of $n+m$ times.
 
 In this question we can use brute approach of merging 2 sorted arrays using extra space but for optimal solution where we do not consider any extra space Shell Sort gives us an efficient solution.
 
-export const suggestedProblems = [
-{
-"problemName" : "0148 - Sort List",
-"difficulty" : "Medium",
-"leetCodeLink" : "https://leetcode.com/problems/sort-list/",
-"solutionLink" : "../../../solutions/0100-0199/sort-list-medium"
-},
-{
-"problemName" : "0075 - Sort Colors",
-"difficulty" : "Medium",
-"leetCodeLink" : "https://leetcode.com/problems/sort-colors/",
-"solutionLink" : "../../../solutions/0000-0099/sort-colors-medium"
-}
-]
+export const suggestedProblems = [ { "problemName" : "0148 - Sort List", "difficulty" : "Medium", "leetCodeLink" : "https://leetcode.com/problems/sort-list/", "solutionLink" : "../../../solutions/0100-0199/sort-list-medium" }, { "problemName" : "0075 - Sort Colors", "difficulty" : "Medium", "leetCodeLink" : "https://leetcode.com/problems/sort-colors/", "solutionLink" : "../../../solutions/0000-0099/sort-colors-medium" } ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />

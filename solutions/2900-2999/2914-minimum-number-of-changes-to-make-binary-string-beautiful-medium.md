@@ -1,8 +1,8 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/minimum-number-of-changes-to-make-binary-string-beautiful/'
+description: 'Author: @wkw | https://leetcode.com/problems/minimum-number-of-changes-to-make-binary-string-beautiful/'
 ---
 
-# 2914 - Minimum Number of Changes to Make Binary String Beautiful (Medium) 
+# 2914 - Minimum Number of Changes to Make Binary String Beautiful (Medium)
 
 ## Problem Link
 
@@ -19,7 +19,7 @@ A string is **beautiful** if it's possible to partition it into one or more subs
 
 You can change any character in `s` to `0` or `1`.
 
-Return *the **minimum** number of changes required to make the string*`s` *beautiful*.
+Return _the **minimum** number of changes required to make the string_`s` _beautiful_.
 
 **Example 1:**
 
@@ -61,7 +61,7 @@ Given each substring has an even length and each substring contains only 1's or 
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

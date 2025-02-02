@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @ColeB2 | https://leetcode.com/problems/powx-n/'
+description: 'Author: @wkw, @ColeB2 | https://leetcode.com/problems/powx-n/'
 tags: [Math, Recursion]
 ---
 
@@ -37,13 +37,13 @@ Explanation: 2-2 = 1/22 = 1/4 = 0.25
 
 **Constraints:**
 
-* `-100.0 < x < 100.0`
-* `-2^31 <= n <= 2^31 - 1`
-* `-10^4 <= x^n <= 10^4`
+- `-100.0 < x < 100.0`
+- `-2^31 <= n <= 2^31 - 1`
+- `-10^4 <= x^n <= 10^4`
 
 ## Approach 1: Binary Exponentiation
 
-If the exponent $$n$$ is negative, we need to change it to positive exponent $$- n$$ and make the base  to $$1 / x$$. Then apply [Binary Exponentiation](../../tutorials/math/number-theory/binary-exponentiation).
+If the exponent $$n$$ is negative, we need to change it to positive exponent $$- n$$ and make the base to $$1 / x$$. Then apply [Binary Exponentiation](../../tutorials/math/number-theory/binary-exponentiation).
 
 Time Complexity: $$O(log n)$$ instead of calculating $$x * x$$, $$n$$ times. We can utilize binary exponentiation to reduce the number of calculations to $$log n$$ time.
 
@@ -51,7 +51,7 @@ Space Complexity: $$O(1)$$, we can perform it iteratively, with constant extra s
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -83,7 +83,7 @@ class Solution:
         # negative n --> adjust our starting x and n. So the exponent
         # is positive, and the x value is 1/x
         if (n < 0):
-            n = -n 
+            n = -n
             x = 1 / x
         # initialize our running answer, num, as 1.
         num = 1

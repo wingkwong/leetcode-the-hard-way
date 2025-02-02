@@ -1,7 +1,8 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/longest-palindromic-substring/
+  Author: @wkw | https://leetcode.com/problems/longest-palindromic-substring/
+
+
 tags: [String, Dynamic Programming]
 ---
 
@@ -32,8 +33,8 @@ Output: "bb"
 
 **Constraints:**
 
-* `1 <= s.length <= 1000`
-* `s` consist of only digits and English letters.
+- `1 <= s.length <= 1000`
+- `s` consist of only digits and English letters.
 
 ## Approach 1: Manacher's Algorithm
 
@@ -41,7 +42,7 @@ The most efficient solution is using Manacher's Algorithm to solve it in O(n). I
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -49,7 +50,7 @@ public:
     string manacher(string s) {
       int n = (int) s.size();
       // d1[i]: the number of palindromes accordingly with odd lengths with centers in the position i.
-      // d2[i]: the number of palindromes accordingly with even lengths with centers in the position i. 
+      // d2[i]: the number of palindromes accordingly with even lengths with centers in the position i.
       vector<int> d1(n), d2(n);
       int l1 = 0, r1 = -1, l2 = 0, r2 = -1, mx_len = 0, start = 0;
       for (int i = 0; i < n; i++) {
@@ -62,7 +63,7 @@ public:
           if (i + k > r1) l1 = i - k, r1 = i + k;
           if(d1[i] * 2 > mx_len) start = i - k, mx_len = d1[i] * 2 - 1;
           // ----------------------
-          // calculate d2[i] 
+          // calculate d2[i]
           // ----------------------
           k = (i > r2) ? 0 : min(d2[l2 + r2 - i + 1], r2 - i + 1);
           while (0 <= i - k - 1 && i + k < n && s[i - k - 1] == s[i + k]) k++;
@@ -73,20 +74,20 @@ public:
       // return the longest palindrome
       return s.substr(start, mx_len);
     }
-    
+
     string longestPalindrome(string s) {
-        // Using Manacher's algorithm 
+        // Using Manacher's algorithm
         return manacher(s);
     }
 };
 ```
+
 </TabItem>
 </Tabs>
 
-
 ## Approach 2: Character Set
 
-With the help of HashSet, add every character while iterating and if the character is found already in the Set, count those characters (+2), and remove the char from the Set. Finally if the Set is not empty, then we can add 1 more character to be in the middle to form a palindrome, so count 1 and return it. 
+With the help of HashSet, add every character while iterating and if the character is found already in the Set, count those characters (+2), and remove the char from the Set. Finally if the Set is not empty, then we can add 1 more character to be in the middle to form a palindrome, so count 1 and return it.
 
 Time complexity: $O(n)$, where $n$ - # of characters, All HashSet operation are $O(1)$ constant time
 
@@ -110,21 +111,21 @@ public int longestPalindrome(String s) {
     return !seen.isEmpty() ? count + 1 : count;
 }
 ```
+
 </TabItem>
 </Tabs>
 
-
 ## Approach 3: ASCII Character Array (Optimal Solution)
 
-As the problems states, constraints are `a-zA-Z`, So optimally we can maintain a char array of size $52$. 
+As the problems states, constraints are `a-zA-Z`, So optimally we can maintain a char array of size $52$.
 
 [ASCII](https://bluesock.org/~willg/dev/ascii.html) range for `A-Z` range is $65 - 90$ and `a-z` range is $97 - 122$.
 
-Since the ranges are clear and alphabetic char size 26 for each, and the same can be placed in `int[]` array. Convert any `A-Z` char to $0-26$ range. 
+Since the ranges are clear and alphabetic char size 26 for each, and the same can be placed in `int[]` array. Convert any `A-Z` char to $0-26$ range.
 
-Eg: If a char is `D` and subtracting `'A'` from `'D'` find the index, that is $4$ which is same as `c - 'A'`. 
+Eg: If a char is `D` and subtracting `'A'` from `'D'` find the index, that is $4$ which is same as `c - 'A'`.
 
-For `a-z` characters ASCII values are $>= 97$, so it's better separate the slots. So first half the array has `A-Z` range and other halfs maintained for `a-z` range. 
+For `a-z` characters ASCII values are $>= 97$, so it's better separate the slots. So first half the array has `A-Z` range and other halfs maintained for `a-z` range.
 
 Time complexity: $O(n)$, where $n$ - # of characters
 
@@ -149,5 +150,6 @@ public int longestPalindrome(String s) {
     return count == s.length() ? count : count + 1;
 }
 ```
+
 </TabItem>
 </Tabs>

@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @vigneshshiv, @radojicic23 |
-  https://leetcode.com/problems/reverse-linked-list/
+  Author: @vigneshshiv, @radojicic23 | https://leetcode.com/problems/reverse-linked-list/
 ---
 
 # 0206 - Reverse Linked List (Easy)
@@ -41,16 +40,16 @@ Output: []
 
 **Constraints:**
 
-* The number of nodes in the list is the range `[0, 5000]`.
-* `-5000 <= Node.val <= 5000`
+- The number of nodes in the list is the range `[0, 5000]`.
+- `-5000 <= Node.val <= 5000`
 
 **Follow up:** A linked list can be reversed either iteratively or recursively. Could you implement both?
 
 ## Approach 1: Iterative
 
-The idea is to have 2 pointers **prev** and **next** while traversing. 
+The idea is to have 2 pointers **prev** and **next** while traversing.
 
-Keep the next pointer reference in temp node, and change the **current node next ptr** to **prev node**. Keep continuing the process till last node and return last node as a head reference. 
+Keep the next pointer reference in temp node, and change the **current node next ptr** to **prev node**. Keep continuing the process till last node and return last node as a head reference.
 
 <Tabs>
 <TabItem value="java" label="Java">
@@ -87,6 +86,7 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 
 <TabItem value="python" label="Python">
@@ -101,7 +101,7 @@ class Solution {
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
         prev = None
-        
+
         while head:
             curr = head
             head = head.next
@@ -127,15 +127,15 @@ class Solution:
  * @param {ListNode} head
  * @return {ListNode}
  */
-var reverseList = function(head) {
-    let prev = null;
-    while (head) {
-        let curr = head;
-        head = head.next;
-        curr.next = prev;
-        prev = curr;
-    }
-    return prev;
+var reverseList = function (head) {
+  let prev = null;
+  while (head) {
+    let curr = head;
+    head = head.next;
+    curr.next = prev;
+    prev = curr;
+  }
+  return prev;
 };
 ```
 
@@ -201,7 +201,7 @@ class Solution {
         if (head == null) return null;
         return reverseList(head, null);
     }
-    
+
     public ListNode reverseList(ListNode head, ListNode prev) {
         if (head == null) return prev;
         // Reference copy of next node
@@ -209,13 +209,14 @@ class Solution {
         // Set current node next ptr to previous node
         head.next = prev;
         // Pass next node as current, and current node as prev to the next recursive call
-        // e.g. 1 -> 2 -> 3 
+        // e.g. 1 -> 2 -> 3
         // Current node is 1, and next node is 2
         // For the next recursive call, passing current node 2 and and previous as 1, so that 1 <- 2
         return reverseList(next, head);
     }
 }
 ```
+
 </TabItem>
 
 <TabItem value="python" label="Python">
@@ -231,7 +232,7 @@ class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
         if not head:
             return None
-    
+
         new_head = head
         if head.next:
             new_head = self.reverseList(head.next)
@@ -257,16 +258,16 @@ class Solution:
  * @param {ListNode} head
  * @return {ListNode}
  */
-var reverseList = function(head) {
-    function reverse(node, prev) {
-        if (!node) {
-            return prev;
-        }
-        let curr = node.next;
-        node.next = prev;
-        return reverse(curr, node);
+var reverseList = function (head) {
+  function reverse(node, prev) {
+    if (!node) {
+      return prev;
     }
-    return reverse(head, null);
+    let curr = node.next;
+    node.next = prev;
+    return reverse(curr, node);
+  }
+  return reverse(head, null);
 };
 ```
 

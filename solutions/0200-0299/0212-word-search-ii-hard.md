@@ -44,7 +44,7 @@ Output: []
 
 ## Approach 1: Iterative DFS using a Trie
 
-If you solved Word Search I, you know we can run a DFS on each cell of the matrix, checking that the cell location is inbounds, the cell letter matches the letter in the word we are looking at, and that we haven't already visited the cell in the current DFS. 
+If you solved Word Search I, you know we can run a DFS on each cell of the matrix, checking that the cell location is inbounds, the cell letter matches the letter in the word we are looking at, and that we haven't already visited the cell in the current DFS.
 
 Repeating the above, but for each word, would be way too costly though, so we can use a Trie instead of a list of words. A Trie would give us access to the first letter of all the words so for each cell in the matrix we can check if it is worthwhile to run DFS in $$O(1)$$ time. Then if the letter is in our Trie, we can run our DFS. Still costly, but using a trie prevents us from having to run our algorithm for each word.
 
@@ -171,7 +171,7 @@ class Solution:
                 root.removeWord(word)
                 # add word to our return list
                 words_made.append(word)
-                
+
             # Check 4 adjacent directions to add those cells to our
             # stack for iterative DFS.
             for x,y in ((1,0), (0,1), (-1,0), (0,-1)):

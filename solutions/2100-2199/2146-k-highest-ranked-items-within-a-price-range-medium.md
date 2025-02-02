@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/k-highest-ranked-items-within-a-price-range/
+  Author: @wkw | https://leetcode.com/problems/k-highest-ranked-items-within-a-price-range/
 ---
 
 # 2146 - K Highest Ranked Items Within a Price Range (Medium)
@@ -14,9 +13,9 @@ https://leetcode.com/problems/k-highest-ranked-items-within-a-price-range/
 
 You are given a **0-indexed** 2D integer array `grid` of size `m x n` that represents a map of the items in a shop. The integers in the grid represent the following:
 
-* `0` represents a wall that you cannot pass through.
-* `1` represents an empty cell that you can freely move to and from.
-* All other positive integers represent the price of an item in that cell. You may also freely move to and from these item cells.
+- `0` represents a wall that you cannot pass through.
+- `1` represents an empty cell that you can freely move to and from.
+- All other positive integers represent the price of an item in that cell. You may also freely move to and from these item cells.
 
 It takes `1` step to travel between adjacent grid cells.
 
@@ -30,8 +29,6 @@ You are interested in the **positions** of the `k` **highest-ranked** items whos
 4. The column number (**smaller** column number has a higher rank).
 
 Return _the_ `k` _highest-ranked items within the price range **sorted** by their rank (highest to lowest)_. If there are fewer than `k` reachable items within the price range, return _**all** of them_.
-
-
 
 **Example 1:**
 
@@ -75,28 +72,28 @@ Thus, the 2 highest ranked items in the price range are (2,1) and (1,2).
 Input: grid = [[1,1,1],[0,0,1],[2,3,4]], pricing = [2,3], start = [0,0], k = 3
 Output: [[2,1],[2,0]]
 Explanation: You start at (0,0).
-With a price range of [2,3], we can take items from (2,0) and (2,1). 
-The ranks of these items are: 
+With a price range of [2,3], we can take items from (2,0) and (2,1).
+The ranks of these items are:
 - (2,1) with distance 5
 - (2,0) with distance 6
-Thus, the 2 highest ranked items in the price range are (2,1) and (2,0). 
+Thus, the 2 highest ranked items in the price range are (2,1) and (2,0).
 Note that k = 3 but there are only 2 reachable items within the price range.
 ```
 
 **Constraints:**
 
-* `m == grid.length`
-* `n == grid[i].length`
-* `1 <= m, n <= 10^5`
-* `1 <= m * n <= 10^5`
-* `0 <= grid[i][j] <= 10^5`
-* `pricing.length == 2`
-* `2 <= low <= high <= 10^5`
-* `start.length == 2`
-* `0 <= row <= m - 1`
-* `0 <= col <= n - 1`
-* `grid[row][col] > 0`
-* `1 <= k <= m * n`
+- `m == grid.length`
+- `n == grid[i].length`
+- `1 <= m, n <= 10^5`
+- `1 <= m * n <= 10^5`
+- `0 <= grid[i][j] <= 10^5`
+- `pricing.length == 2`
+- `2 <= low <= high <= 10^5`
+- `start.length == 2`
+- `0 <= row <= m - 1`
+- `0 <= col <= n - 1`
+- `grid[row][col] > 0`
+- `1 <= k <= m * n`
 
 ## Approach 1: BFS
 
@@ -106,7 +103,7 @@ First we put our starting point to a queue. Then iterate the current queue and c
 
 After we have the maximum `k` items, we need to sort them based on their rank from highest to lowest. We can apply a custom sorting comparator here. At the end, we output the coordinate of each cell. One thing to note that the reachable items can be less than `k`, hence we need to take the minimum one of `tmp.size()` and `k`.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -130,7 +127,7 @@ public:
                 if (0 <= x && x < n && 0 <= y && y < m && grid[x][y] != 0) {
                     if (pricing[0] <= grid[x][y] && grid[x][y] <= pricing[1]) {
                         tmp.push_back({x, y, step});
-                    } 
+                    }
                     for (int d = 0; d < 4; d++) {
                         int next_x = x + dirx[d];
                         int next_y = y + diry[d];
@@ -143,7 +140,7 @@ public:
             }
         }
         sort(tmp.begin(), tmp.end(), [&](const array<int, 3>& x, const array<int, 3>& y) {
-            return (x[2] < y[2]) || 
+            return (x[2] < y[2]) ||
                    (x[2] == y[2] && grid[x[0]][x[1]] < grid[y[0]][y[1]]) ||
                    (x[2] == y[2] && grid[x[0]][x[1]] ==  grid[y[0]][y[1]] && x[0] < y[0]) ||
                    (x[2] == y[2] && grid[x[0]][x[1]] ==  grid[y[0]][y[1]] && x[0] == y[0] && x[1] < y[1]);
@@ -159,7 +156,7 @@ public:
 
 In fact, a custom comparator is not necessary if we push the criteria in the same order to `tmp`, i.e. distance, price, row number and column number. This is because the `sort()` will sort them based on this order.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -185,7 +182,7 @@ public:
                     if (pricing[0] <= grid[x][y] && grid[x][y] <= pricing[1]) {
                         // tmp.push_back({x, y, step});
                         tmp.push_back({step, grid[x][y], x, y});
-                    } 
+                    }
                     for (int d = 0; d < 4; d++) {
                         int next_x = x + dirx[d];
                         int next_y = y + diry[d];
@@ -199,7 +196,7 @@ public:
         }
         sort(tmp.begin(), tmp.end());
         // sort(tmp.begin(), tmp.end(), [&](const array<int, 3>& x, const array<int, 3>& y) {
-        //     return (x[2] < y[2]) || 
+        //     return (x[2] < y[2]) ||
         //            (x[2] == y[2] && grid[x[0]][x[1]] < grid[y[0]][y[1]]) ||
         //            (x[2] == y[2] && grid[x[0]][x[1]] ==  grid[y[0]][y[1]] && x[0] < y[0]) ||
         //            (x[2] == y[2] && grid[x[0]][x[1]] ==  grid[y[0]][y[1]] && x[0] == y[0] && x[1] < y[1]);

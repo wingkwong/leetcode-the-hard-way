@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/max-pair-sum-in-an-array/'
+description: 'Author: @wkw | https://leetcode.com/problems/max-pair-sum-in-an-array/'
 tags: [Array, Hash Table]
 ---
 
-# 2815 - Max Pair Sum in an Array (Easy) 
+# 2815 - Max Pair Sum in an Array (Easy)
 
 ## Problem Link
 
@@ -13,15 +13,15 @@ https://leetcode.com/problems/max-pair-sum-in-an-array/
 
 You are given a **0-indexed** integer array `nums`. You have to find the **maximum** sum of a pair of numbers from `nums` such that the maximum **digit**in both numbers are equal.
 
-Return *the maximum sum or* `-1`*if no such pair exists*.
+Return _the maximum sum or_ `-1`_if no such pair exists_.
 
 **Example 1:**
 
 ```
 Input: nums = [51,71,17,24,42]
 Output: 88
-Explanation: 
-For i = 1 and j = 2, nums[i] and nums[j] have equal maximum digits with a pair sum of 71 + 17 = 88. 
+Explanation:
+For i = 1 and j = 2, nums[i] and nums[j] have equal maximum digits with a pair sum of 71 + 17 = 88.
 For i = 3 and j = 4, nums[i] and nums[j] have equal maximum digits with a pair sum of 24 + 42 = 66.
 It can be shown that there are no other pairs with equal maximum digits, so the answer is 88.
 ```
@@ -45,7 +45,7 @@ We brute force all the pairs and use `mx_ds` to find the maximum digits of $x$. 
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -59,7 +59,7 @@ public:
         }
         return mx;
     }
-    
+
     int maxSum(vector<int>& nums) {
         int n = nums.size(), ans = -1;
         // brute-force all the pairs

@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @vigneshshiv, @radojicic23, @jit | https://leetcode.com/problems/power-of-two/'
+description: 'Author: @wkw, @vigneshshiv, @radojicic23, @jit | https://leetcode.com/problems/power-of-two/'
 tags: [Math, Bit Manipulation, Recursion]
 ---
 
@@ -40,7 +40,7 @@ Output: false
 
 **Constraints:**
 
-* `-2^31 <= n <= 2^31 - 1`
+- `-2^31 <= n <= 2^31 - 1`
 
 **Follow up:** Could you solve it without loops/recursion?
 
@@ -50,7 +50,7 @@ It's obvious to see that the answer is `false` if $n <= 0$. If $n$ is positive, 
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -75,7 +75,7 @@ class Solution {
      * 2. check the value is 0 after removing the rightmost bit
      *
      * Samples below
-     * 
+     *
      *  #1 n = 5
      *     5 = 0101
      *   5-1 = 0100
@@ -119,8 +119,8 @@ class Solution:
 
 // 1. check if it's a positive number
 // 2. check the value is 0 after removing the rightmost bit
-var isPowerOfTwo = function(n) {
-    return n > 0 && !(n & (n - 1));
+var isPowerOfTwo = function (n) {
+  return n > 0 && !(n & (n - 1));
 };
 ```
 
@@ -133,7 +133,7 @@ Almost same as the solution in 326. Power of Three and 342. Power of Four.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

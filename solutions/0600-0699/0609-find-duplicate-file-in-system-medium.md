@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/find-duplicate-file-in-system/'
+description: 'Author: @wkw | https://leetcode.com/problems/find-duplicate-file-in-system/'
 tags: [Array, Hash Table, String]
 ---
 
-# 0609 - Find Duplicate File in System (Medium) 
+# 0609 - Find Duplicate File in System (Medium)
 
 ## Problem Link
 
@@ -11,7 +11,7 @@ https://leetcode.com/problems/find-duplicate-file-in-system/
 
 ## Problem Statement
 
-Given a list `paths` of directory info, including the directory path, and all the files with contents in this directory, return *all the duplicate files in the file system in terms of their paths*. You may return the answer in **any order**.
+Given a list `paths` of directory info, including the directory path, and all the files with contents in this directory, return _all the duplicate files in the file system in terms of their paths_. You may return the answer in **any order**.
 
 A group of duplicate files consists of at least two files that have the same content.
 
@@ -60,7 +60,7 @@ Output: [["root/a/2.txt","root/c/d/4.txt"],["root/a/1.txt","root/c/3.txt"]]
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -73,12 +73,12 @@ public:
         while (getline(ss, line, delim)) res.push_back(line);
         return res;
     }
-    
+
     // steps
     // 1. for each path, split by the ' ', then get the directory path, file name and file content
     // 2. combine the directory path and file name
     // 3. group directoryPath/fileName by file content using hash map
-    // 4. build the final ans 
+    // 4. build the final ans
     vector<vector<string>> findDuplicate(vector<string>& paths) {
         vector<vector<string>> ans;
         unordered_map<string, vector<string>> m;
@@ -104,7 +104,7 @@ public:
             // e.g. ["root/a 1.txt(abcd) 2.txt(efsfgh)","root/c 3.txt(abdfcd)","root/c/d 4.txt(efggdfh)"]
             if (x.second.size() > 1) {
                 // x.second is already the full list of paths
-                ans.push_back(x.second);    
+                ans.push_back(x.second);
             }
         }
         return ans;
@@ -115,7 +115,7 @@ public:
 </TabItem>
 
 <TabItem value="python" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:

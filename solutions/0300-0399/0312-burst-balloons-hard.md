@@ -50,7 +50,6 @@ If we preprocess our $$nums$$ array with $$1$$ values on each side to handle the
 
 The memoization comes from storing the max coins we get for each $$k$$ we try at each $$i$$ and $$j$$ value. By checking the amount of coins we can get for each $$k$$ from $$i$$ to $$j$$ and caching the max coin value out of all the $$k$$'s we test we can reuse the work of that $$i,j$$ pair for future sub problems.
 
-
 Time Complexity: $$O(n^3)$$ where n in the length of $$nums$$. We are going to have $$n^3$$ sub problems where we check each $$i$$, $$j$$, and $$k$$ value.
 
 Space Complexity: $$O(n^2)$$. Since we are only storing the $$i,j$$ values in our cache, we will only end up with $$n^2$$ values inside our cache.
@@ -63,7 +62,7 @@ Space Complexity: $$O(n^2)$$. Since we are only storing the $$i,j$$ values in ou
 class Solution:
     def maxCoins(self, nums: List[int]) -> int:
         # Pre process nums with 1s on each end to handle the edge
-        # ballons where when we pop them the coins are multiplied by 1.   
+        # ballons where when we pop them the coins are multiplied by 1.
         nums = [1] + nums + [1]
         # initialize our cache with key: (i, j) where i, j are the
         # start and end points of our array and the value: max_coins
@@ -73,7 +72,7 @@ class Solution:
         # recursive function. Parameter i, j are our start and endpoints
         # in the array.
         def helper(i, j):
-            # base case: 
+            # base case:
             #i > j it means we have 0 values inside our array.
             if i > j:
                 # return 0, as we can't get any coins from empty array.

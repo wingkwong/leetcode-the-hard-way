@@ -8,7 +8,9 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_learning_sketching_nd4f.svg').default,
     description: (
       <>
-        Acquire knowledge of Data Structures and Algorithms, covering a range from fundamental to advanced level, by working through problems on LeetCode.
+        Acquire knowledge of Data Structures and Algorithms, covering a range
+        from fundamental to advanced level, by working through problems on
+        LeetCode.
       </>
     ),
   },
@@ -17,7 +19,8 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_onboarding_re_6osc.svg').default,
     description: (
       <>
-        In contrast to many discussions posts, our approach is to offer in-depth explanations, both in-line and in the form of articles.
+        In contrast to many discussions posts, our approach is to offer in-depth
+        explanations, both in-line and in the form of articles.
       </>
     ),
   },
@@ -26,13 +29,14 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_community_re_cyrm.svg').default,
     description: (
       <>
-        Join our Discord group to engage in live conversations about Leetcode topics with other community members.
+        Join our Discord group to engage in live conversations about Leetcode
+        topics with other community members.
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({ Svg, title, description }) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">

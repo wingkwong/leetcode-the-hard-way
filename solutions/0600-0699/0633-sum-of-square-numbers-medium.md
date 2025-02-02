@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/sum-of-square-numbers/'
+description: 'Author: @wkw | https://leetcode.com/problems/sum-of-square-numbers/'
 ---
 
 # 0633 - Sum of Square Numbers (Medium)
@@ -29,7 +29,7 @@ Output: false
 
 **Constraints:**
 
-* `0 <= c <= 2^31 - 1`
+- `0 <= c <= 2^31 - 1`
 
 ## Approach 1: Binary Search
 
@@ -43,7 +43,7 @@ We can rewrite $$a ^ 2 + b ^ 2 = c$$ to $$b ^ 2 = c - a ^ 2$$ so that we can fix
 
 To determine if `x` is a perfect square, we can use binary search to look for `[0, x]`. If $$x$$ is greater 2, the range is actually `[2, x / 2]`. In case you have solved [0367 - Valid Perfect Square (Easy)](../0300-0399/valid-perfect-square-easy), we can use the same solution directly.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -63,11 +63,11 @@ public:
         // check if it is a perfect square
         return l * l == num;
     }
-    
+
     bool judgeSquareSum(int c) {
         // a ^ 2 + b ^ 2 = c
         // b ^ 2 = c - a ^ 2
-	// fix a 
+	// fix a
         for (long long a = 0; a * a <= c; a++) {
 	    // check if c - a ^ 2 is a perfect square or not
             if (isPerfectSquare(c - (int) a * a)) {

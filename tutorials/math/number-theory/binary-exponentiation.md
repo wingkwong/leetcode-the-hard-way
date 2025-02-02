@@ -1,6 +1,6 @@
 ---
-title: "Binary Exponentiation"
-description: "Binary Exponentiation is also known as Exponentiation by Squaring."
+title: 'Binary Exponentiation'
+description: 'Binary Exponentiation is also known as Exponentiation by Squaring.'
 hide_table_of_contents: true
 keywords:
   - leetcode
@@ -10,7 +10,7 @@ keywords:
   - algorithm
 ---
 
-<TutorialCredits authors="@wingkwong"/>
+<TutorialCredits authors="@wkw"/>
 
 ## Overview
 
@@ -31,7 +31,7 @@ $
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 long long fastpow(long long base, long long exp) {
@@ -56,7 +56,7 @@ In case you need to take mod during the calculation, we can do as follows.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 long long modpow(long long base, long long exp, long long mod) {
@@ -75,13 +75,6 @@ long long modpow(long long base, long long exp, long long mod) {
 
 </Tabs>
 
-export const suggestedProblems = [
-{
-"problemName": "0050 - Pow(x, n)",
-"difficulty": "Medium",
-"leetCodeLink": "https://leetcode.com/problems/powx-n/",
-"solutionLink": "../../../solutions/0000-0099/pow-x-n-medium"
-},
-]
+export const suggestedProblems = [ { "problemName": "0050 - Pow(x, n)", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/powx-n/", "solutionLink": "../../../solutions/0000-0099/pow-x-n-medium" }, ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />

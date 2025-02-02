@@ -1,5 +1,5 @@
 ---
-description: "Author: @wingkwong, @jit | https://leetcode.com/problems/intersection-of-two-arrays-ii/"
+description: 'Author: @wkw, @jit | https://leetcode.com/problems/intersection-of-two-arrays-ii/'
 tags: [Array, Hash Table, Two Pointers, Binary Search, Sorting]
 ---
 
@@ -43,7 +43,7 @@ Explanation: [9,4] is also accepted.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -60,7 +60,7 @@ public:
 </TabItem>
 
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:

@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @ganajayant, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/binary-tree-preorder-traversal/'
+description: 'Author: @wkw, @ganajayant, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/binary-tree-preorder-traversal/'
 tags: [Stack, Tree, Depth-First Search, Binary Tree]
 ---
 
@@ -7,7 +7,7 @@ tags: [Stack, Tree, Depth-First Search, Binary Tree]
 
 ## Problem Statement
 
-Given the `root` of a binary tree, return *the preorder traversal of its nodes' values*.
+Given the `root` of a binary tree, return _the preorder traversal of its nodes' values_.
 
 **Example 1:**
 
@@ -41,7 +41,7 @@ Output: [1]
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 /**
@@ -62,7 +62,7 @@ Output: [1]
 // This is a standard pre-order traversal problem, I'd suggest to learn in-order and post-order as well.
 // Here's a short tutorial if you're interested.
 // https://wingkwong.github.io/leetcode-the-hard-way/tutorials/graph-theory/binary-tree
-// then you may try the following problems 
+// then you may try the following problems
 // 94. Binary Tree Inorder Traversal: https://leetcode.com/problems/binary-tree-inorder-traversal/
 // 145. Binary Tree Postorder Traversal: https://leetcode.com/problems/binary-tree-postorder-traversal/
 
@@ -78,16 +78,17 @@ public:
         // traverse the right node
         preorder(node->right);
     }
-    
+
     vector<int> preorderTraversal(TreeNode* root) {
         preorder(root);
         return ans;
     }
 };
 ```
+
 </TabItem>
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 # Definition for a binary tree node.
@@ -100,7 +101,7 @@ public:
 # This is a standard pre-order traversal problem, I'd suggest to learn in-order and post-order as well.
 # Here's a short tutorial if you're interested.
 # https://wingkwong.github.io/leetcode-the-hard-way/tutorials/graph-theory/binary-tree
-# then you may try the following problems 
+# then you may try the following problems
 # 94. Binary Tree Inorder Traversal: https://leetcode.com/problems/binary-tree-inorder-traversal/
 # 145. Binary Tree Postorder Traversal: https://leetcode.com/problems/binary-tree-postorder-traversal/
 
@@ -109,6 +110,7 @@ class Solution:
 		# root -> left  -> right
         return [root.val] + self.preorderTraversal(root.left) + self.preorderTraversal(root.right) if root else []
 ```
+
 </TabItem>
 <TabItem value="java" label="Java">
 <SolutionAuthor name="@ganajayant"/>
@@ -146,6 +148,7 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 
 <TabItem value="javascript" label="JavaScript">
@@ -164,19 +167,19 @@ class Solution {
  * @param {TreeNode} root
  * @return {number[]}
  */
-var res = []
-var preorderTraversal = function(root) {
-    let res = [];
-    function dfs(node) {
-        if (node == null) {
-            return;
-        }
-        res.push(node.val);
-        dfs(node.left);
-        dfs(node.right);
+var res = [];
+var preorderTraversal = function (root) {
+  let res = [];
+  function dfs(node) {
+    if (node == null) {
+      return;
     }
-    dfs(root);
-    return res;
+    res.push(node.val);
+    dfs(node.left);
+    dfs(node.right);
+  }
+  dfs(root);
+  return res;
 };
 ```
 
@@ -222,7 +225,7 @@ class Solution {
             //  / \
             // 2   3
             // If 1 & 2 is added to result, Stack is only having 3
-            // If current node is 2, the 2's left is null, 
+            // If current node is 2, the 2's left is null,
             // So Pops out stack top, i.e, current node's (2's) parent (1) right subtree
             root = root.left;
             if (root == null && !stack.isEmpty()) {
@@ -233,6 +236,7 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 
 <TabItem value="py" label="Python">
@@ -255,7 +259,7 @@ class Solution:
                 res.append(node.val)
                 stack.append(node.right)
                 stack.append(node.left)
-        return res 
+        return res
 ```
 
 </TabItem>
@@ -313,19 +317,20 @@ public:
  * @param {TreeNode} root
  * @return {number[]}
  */
-var preorderTraversal = function(root) {
-    let stack = [], ans = [];
-    stack.push(root);
-    while (stack.length != 0) {
-        let node = stack[stack.length - 1];
-        stack.pop();
-        if (node != null) {
-            ans.push(node.val);
-            stack.push(node.right);
-            stack.push(node.left);
-        }
+var preorderTraversal = function (root) {
+  let stack = [],
+    ans = [];
+  stack.push(root);
+  while (stack.length != 0) {
+    let node = stack[stack.length - 1];
+    stack.pop();
+    if (node != null) {
+      ans.push(node.val);
+      stack.push(node.right);
+      stack.push(node.left);
     }
-    return ans;
+  }
+  return ans;
 };
 ```
 

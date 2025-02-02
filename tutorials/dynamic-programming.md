@@ -1,6 +1,6 @@
 ---
-title: "Dynamic Programming"
-description: "Dynamic Programming is used to minimize the cost associated with repetitive computations."
+title: 'Dynamic Programming'
+description: 'Dynamic Programming is used to minimize the cost associated with repetitive computations.'
 hide_table_of_contents: true
 draft: true
 keywords:
@@ -61,8 +61,7 @@ As we can see for generating $$stair(5)$$ value of $$stair(3)$$ is generated twi
 
 #### Solution-2 : Memorization Technique
 
-If we can store overlapping sub-problem and use it, we can save our computational resources as well as time.
-We use a hash-table to look-up values of $$climb(n)$$ if we have computed it before then we simply call it, instead of recalculating the value all over again.
+If we can store overlapping sub-problem and use it, we can save our computational resources as well as time. We use a hash-table to look-up values of $$climb(n)$$ if we have computed it before then we simply call it, instead of recalculating the value all over again.
 
 <Tabs>
 <TabItem value="py" label="Python">
@@ -182,37 +181,6 @@ The time complexity of this approach is $$O(n)$$.
 
 You can find a nice explanation [here](https://qr.ae/pGcv9h) on how to use these tips.
 
-export const suggestedProblems = [
-{
-"problemName": "0072 - Edit Distance",
-"difficulty": "Hard",
-"leetCodeLink": "https://leetcode.com/problems/edit-distance/",
-"solutionLink": "../solutions/0000-0099/edit-distance-hard"
-},
-{
-"problemName": "0877 - Stone Game",
-"difficulty": "Medium",
-"leetCodeLink": "https://leetcode.com/problems/stone-game/",
-"solutionLink": "../solutions/0800-0899/stone-game-medium"
-},
-{
-"problemName": "1510 - Stone Game IV",
-"difficulty": "Hard",
-"leetCodeLink": "https://leetcode.com/problems/stone-game-iv",
-"solutionLink": "../solutions/1500-1599/stone-game-iv-hard"
-},
-{
-"problemName": "1692 - Count Ways to Distribute Candies",
-"difficulty": "Hard",
-"leetCodeLink": "https://leetcode.com/problems/count-ways-to-distribute-candies/",
-"solutionLink": "../solutions/1600-1699/count-ways-to-distribute-candies-hard"
-},
-{
-"problemName": "2110 - Number of Smooth Descent Periods of a Stock",
-"difficulty": "Medium",
-"leetCodeLink": "https://leetcode.com/problems/number-of-smooth-descent-periods-of-a-stock/",
-"solutionLink": "../solutions/2100-2199/number-of-smooth-descent-periods-of-a-stock-medium"
-},
-]
+export const suggestedProblems = [ { "problemName": "0072 - Edit Distance", "difficulty": "Hard", "leetCodeLink": "https://leetcode.com/problems/edit-distance/", "solutionLink": "../solutions/0000-0099/edit-distance-hard" }, { "problemName": "0877 - Stone Game", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/stone-game/", "solutionLink": "../solutions/0800-0899/stone-game-medium" }, { "problemName": "1510 - Stone Game IV", "difficulty": "Hard", "leetCodeLink": "https://leetcode.com/problems/stone-game-iv", "solutionLink": "../solutions/1500-1599/stone-game-iv-hard" }, { "problemName": "1692 - Count Ways to Distribute Candies", "difficulty": "Hard", "leetCodeLink": "https://leetcode.com/problems/count-ways-to-distribute-candies/", "solutionLink": "../solutions/1600-1699/count-ways-to-distribute-candies-hard" }, { "problemName": "2110 - Number of Smooth Descent Periods of a Stock", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/number-of-smooth-descent-periods-of-a-stock/", "solutionLink": "../solutions/2100-2199/number-of-smooth-descent-periods-of-a-stock-medium" }, ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />

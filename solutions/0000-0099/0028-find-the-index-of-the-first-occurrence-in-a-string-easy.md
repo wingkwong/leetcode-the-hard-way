@@ -18,7 +18,7 @@ Return the index of the first occurrence of needle in haystack, or `-1` if `need
 
 What should we return when `needle` is an empty string? This is a great question to ask during an interview.
 
-For the purpose of this problem, we will return 0 when `needle` is an empty string. This is consistent to C's [strstr()](http://www.cplusplus.com/reference/cstring/strstr/) and Java's [indexOf()](https://docs.oracle.com/javase/7/docs/api/java/lang/String.html#indexOf\(java.lang.String\)).
+For the purpose of this problem, we will return 0 when `needle` is an empty string. This is consistent to C's [strstr()](http://www.cplusplus.com/reference/cstring/strstr/) and Java's [indexOf()](<https://docs.oracle.com/javase/7/docs/api/java/lang/String.html#indexOf(java.lang.String)>).
 
 **Example 1:**
 
@@ -43,11 +43,10 @@ Output: 0
 
 **Constraints:**
 
-* `0 <= haystack.length, needle.length <= 5 * 10^4`
-* `haystack` and `needle` consist of only lower-case English characters.
+- `0 <= haystack.length, needle.length <= 5 * 10^4`
+- `haystack` and `needle` consist of only lower-case English characters.
 
 ## Approach 1: Rolling Hash
-
 
 <Tabs>
 <TabItem value="py" label="Python">
@@ -80,7 +79,7 @@ class Solution:
             if idx == 0:
                 t[0] = sum(ord(s[j]) * pow(PRIME, m - 1 - j, MOD) for j in range(m)) % MOD
             else:
-                # For i > 0, here comes the essence of "rolling hash", 
+                # For i > 0, here comes the essence of "rolling hash",
                 #   whereby we manage to compute t[i - 1] with little work.
                 #
                 # EXPLANATION:
@@ -89,20 +88,20 @@ class Solution:
                 #       where s_k is the numerical value for the s[k] (here we use the ASCII value).
                 #   Then, observe that, for two successive substrings of length m,
                 #       or using Python's slicing syntax, s[i: i + m] and s[i + 1: i + m + 1],
-                #       one can say they differ by 
+                #       one can say they differ by
                 #           i) the previously leftmost character, which is now dropped, and,
                 #           ii) the currently rightmost character, which is new part of the substring.
-                #   In other words, the other m - 1 characters are basically unaffected 
+                #   In other words, the other m - 1 characters are basically unaffected
                 #       except that their positions are shifted leftward by one index.
-                #       These charachers, alongside the differing ones, make up of both t[i - 1] and t[i], 
+                #       These charachers, alongside the differing ones, make up of both t[i - 1] and t[i],
                 #       with the only difference of the power that is increased by 1.
                 #   To compute t[i] from t[i - 1],
                 #       firstly, find s_k * d ^ (m + i - 1 - k) for the leftmost character to be dropped,
                 #           that is, to multiply ord(s[i - 1]) by d ^ (m - 1) = h (precomputed),
                 #           and take that amount off t[i - 1];
-                #       secondly, multiply the result by d, adjusting for the power of d having increased by one 
+                #       secondly, multiply the result by d, adjusting for the power of d having increased by one
                 #           (with respect to each characher).
-                #       thirdly, add the last part of t[i], that of the character on the right end, 
+                #       thirdly, add the last part of t[i], that of the character on the right end,
                 #           given by ord(s[i + m - 1]), to the sum.
                 #       finally, don't forget the modulo operation.
                 t[idx] = (PRIME * (t[idx - 1] - ord(s[idx - 1]) * h) + ord(s[idx + m - 1])) % MOD
@@ -113,11 +112,11 @@ class Solution:
                 return idx
         return -1
 ```
+
 </TabItem>
 </Tabs>
 
-
-## Approach 2: Index Of 
+## Approach 2: Index Of
 
 using method in string indexOf gives the first index of needle if it appeared in haystack
 
@@ -135,6 +134,7 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 
 <TabItem value="cpp" label="C++">
@@ -151,6 +151,7 @@ public:
     }
 };
 ```
+
 </TabItem>
 
 <TabItem value="py" label="Python">
@@ -163,6 +164,7 @@ class Solution:
             return 0
         return haystack.find(needle)
 ```
+
 </TabItem>
 
 <TabItem value="js" label="JavaScript">
@@ -174,12 +176,13 @@ class Solution:
  * @param {string} needle
  * @return {number}
  */
-var strStr = function(haystack, needle) {
-    if (needle.length == 0) {
-        return 0;
-    }
-    return haystack.indexOf(needle);
+var strStr = function (haystack, needle) {
+  if (needle.length == 0) {
+    return 0;
+  }
+  return haystack.indexOf(needle);
 };
 ```
+
 </TabItem>
 </Tabs>

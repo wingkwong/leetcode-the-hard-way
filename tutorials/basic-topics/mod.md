@@ -1,6 +1,6 @@
 ---
-title: "MOD (1e9 + 7)"
-description: "Mod 1e9+7"
+title: 'MOD (1e9 + 7)'
+description: 'Mod 1e9+7'
 hide_table_of_contents: false
 keywords:
   - leetcode

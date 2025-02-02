@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/count-number-of-texts/'
+description: 'Author: @wkw | https://leetcode.com/problems/count-number-of-texts/'
 ---
 
 # 2266 - Count Number of Texts (Medium)
@@ -16,18 +16,16 @@ Alice is texting Bob using her phone. The **mapping** of digits to letters is sh
 
 In order to **add** a letter, Alice has to **press** the key of the corresponding digit `i` times, where `i` is the position of the letter in the key.
 
-* For example, to add the letter `'s'`, Alice has to press `'7'` four times. Similarly, to add the letter `'k'`, Alice has to press `'5'` twice.
-* Note that the digits `'0'` and `'1'` do not map to any letters, so Alice **does not** use them.
+- For example, to add the letter `'s'`, Alice has to press `'7'` four times. Similarly, to add the letter `'k'`, Alice has to press `'5'` twice.
+- Note that the digits `'0'` and `'1'` do not map to any letters, so Alice **does not** use them.
 
 However, due to an error in transmission, Bob did not receive Alice's text message but received a **string of pressed keys** instead.
 
-* For example, when Alice sent the message `"bob"`, Bob received the string `"2266622"`.
+- For example, when Alice sent the message `"bob"`, Bob received the string `"2266622"`.
 
 Given a string `pressedKeys` representing the string received by Bob, return _the **total number of possible text messages** Alice could have sent_.
 
 Since the answer may be very large, return it **modulo** `109 + 7`.
-
-
 
 **Example 1:**
 
@@ -52,14 +50,14 @@ Since we need to return the answer modulo 109 + 7, we return 2082876103 % (109 +
 
 **Constraints:**
 
-* `1 <= pressedKeys.length <= 10^5`
-* `pressedKeys` only consists of digits from `'2'` - `'9'`.
+- `1 <= pressedKeys.length <= 10^5`
+- `pressedKeys` only consists of digits from `'2'` - `'9'`.
 
 ## Approach 1: Dynamic Programming
 
 Every digit except 7 and 9 has 3 keys. We can iterate the input and check previous 3 results. If it is 7 or 9, then check the previous 4 results.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -80,7 +78,7 @@ public:
                 if (i > 2 && pressedKeys[i - 1] == pressedKeys[i - 3]) {
                     dp[i] = (dp[i] + dp[i - 3]) % M;
                     // check for the case like 7777
-                    if (i > 3 && (pressedKeys[i - 1] == '7' || pressedKeys[i - 1] == '9') 
+                    if (i > 3 && (pressedKeys[i - 1] == '7' || pressedKeys[i - 1] == '9')
                         && pressedKeys[i - 1] == pressedKeys[i - 4]) {
                         dp[i] = (dp[i] + dp[i - 4]) % M;
                     }

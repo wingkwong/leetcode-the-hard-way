@@ -1,6 +1,6 @@
 ---
-title: "Bit Manipulation"
-description: "Bit Manipulation utilises different bitwise operations to manipulate bits"
+title: 'Bit Manipulation'
+description: 'Bit Manipulation utilises different bitwise operations to manipulate bits'
 hide_table_of_contents: false
 keywords:
   - leetcode
@@ -8,7 +8,7 @@ keywords:
   - bit manipulation
 ---
 
-<TutorialCredits authors="@wingkwong"/>
+<TutorialCredits authors="@wkw"/>
 
 ## Overview
 

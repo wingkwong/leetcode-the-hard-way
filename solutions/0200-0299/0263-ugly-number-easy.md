@@ -13,7 +13,7 @@ https://leetcode.com/problems/ugly-number/
 
 An **ugly number** is a positive integer whose prime factors are limited to `2`, `3`, and `5`.
 
-Given an integer `n`, return `true` if `n` is an ***ugly number.***
+Given an integer `n`, return `true` if `n` is an **_ugly number._**
 
 **Example 1:**
 
@@ -41,7 +41,7 @@ Explanation: 14 is not ugly since it includes the prime factor 7.
 
 **Constraints:**
 
-* $-2^{31} \leq n \leq 2^{31} - 1$
+- $-2^{31} \leq n \leq 2^{31} - 1$
 
 ## Approach 1: Brute Force
 
@@ -55,12 +55,12 @@ public:
   bool isUgly(int n) {
     // Since ugly numbers are positive
     if (n <= 0) return false;
-    
+
     array<int, 3> nums {2, 3, 5};
 
     for (int num : nums) {
       while (n % num == 0) n /= num;
-    }   
+    }
 
     return n == 1;
   }

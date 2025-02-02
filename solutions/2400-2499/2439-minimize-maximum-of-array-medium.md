@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/minimize-maximum-of-array/'
+description: 'Author: @wkw | https://leetcode.com/problems/minimize-maximum-of-array/'
 tags: [Array, Binary Search, Dynamic Programming, Greedy, Prefix Sum]
 ---
 
-# 2439 - Minimize Maximum of Array (Medium) 
+# 2439 - Minimize Maximum of Array (Medium)
 
 ## Problem Link
 
@@ -19,7 +19,7 @@ In one operation, you must:
 - Decrease `nums[i]` by 1.
 - Increase `nums[i - 1]` by 1.
 
-Return*the **minimum** possible value of the **maximum** integer of*`nums`*after performing **any** number of operations*.
+Return*the **minimum** possible value of the **maximum** integer of*`nums`_after performing **any** number of operations_.
 
 **Example 1:**
 
@@ -54,43 +54,43 @@ It is optimal to leave nums as is, and since 10 is the maximum value, we return 
 
 By definition, $ceil(a / b)$ return the smallest integer that is greater than or equal to $a / b$. Here's how we can derive it mathematically.
 
-Let $q = a / b$ and $k = ceil(a / b)$ where $k$ is the smallest integer such that $k >= q$. 
+Let $q = a / b$ and $k = ceil(a / b)$ where $k$ is the smallest integer such that $k >= q$.
 
 Since $k$ is the smallest integer greater than or equal to $q$, we can write:
 
-$$ 
+$$
 k - 1 < q <= k
-$$ 
+$$
 
 Multiplying both sides of this inequality by $b$, we get:
 
-$$ 
+$$
 (k - 1) * b < a <= k * b
-$$ 
+$$
 
 Adding $b - 1$ to both sides of this inequality, we get:
 
-$$ 
+$$
 k * b + (b - 1) > a >= (k - 1) * b + 1
-$$ 
+$$
 
 Dividing both sides of this inequality by $b$, we get:
 
-$$ 
+$$
 k + (b - 1) / b > a / b >= (k - 1) + 1 / b
-$$ 
+$$
 
 Since $(b - 1) / b$ is a fraction between $0$ and $1$, we know that $(b - 1) / b < 1.$ Therefore, we can simplify the inequality to:
 
-$$ 
+$$
 k + 1 > (a + b - 1) / b >= k
-$$ 
+$$
 
 This means that $(a + b - 1) / b$ is the smallest integer greater than or equal to $q$, which is exactly what $ceil(a / b)$ represents.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 // idea: try to distribute prefix sum into (i + 1) evenly and record the maximum.
@@ -101,7 +101,7 @@ This means that $(a + b - 1) / b$ is the smallest integer greater than or equal 
 // [3, 8] -> [4, 7] -> [5, 6] -> the min max is 6
 // we can see that the min max is `ceil(sum / n)`
 // in example 2, we have [10, 1]. Here 10 is already the min max.
-// so we can conclude 
+// so we can conclude
 // nums[0] >= nums[1]: return nums[0] (i.e. max(nums[0], nums[1])
 // else: `ceil(sum / n)`
 
@@ -127,7 +127,7 @@ public:
 </TabItem>
 
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:

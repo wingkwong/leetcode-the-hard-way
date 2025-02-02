@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/buildings-with-an-ocean-view/
+  Author: @wkw | https://leetcode.com/problems/buildings-with-an-ocean-view/
 ---
 
 # 1762 - Buildings With an Ocean View (Medium)
@@ -44,8 +43,8 @@ Explanation: Only building 3 has an ocean view.
 
 **Constraints:**
 
-* `1 <= heights.length <= 10^5`
-* `1 <= heights[i] <= 10^9`
+- `1 <= heights.length <= 10^5`
+- `1 <= heights[i] <= 10^9`
 
 ## Approach 1: Backwards
 
@@ -53,7 +52,7 @@ We iterate $$heights$$ from right to left and track the maximum height. If the c
 
 Since we do it backwards, we reverse the answer at the end.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

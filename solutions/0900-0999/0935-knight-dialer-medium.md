@@ -3,7 +3,7 @@ description: 'Author: @jit | https://leetcode.com/problems/knight-dialer/'
 tags: [Dynamic Programming]
 ---
 
-# 0935 - Knight Dialer (Medium) 
+# 0935 - Knight Dialer (Medium)
 
 ## Problem Link
 

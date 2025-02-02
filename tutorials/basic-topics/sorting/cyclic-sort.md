@@ -1,6 +1,6 @@
 ---
-title: "Cyclic Sort"
-description: "Cyclic Sort is a comparison sort algorithm that is theoretically optimal in terms of the total number of writes to the original array."
+title: 'Cyclic Sort'
+description: 'Cyclic Sort is a comparison sort algorithm that is theoretically optimal in terms of the total number of writes to the original array.'
 hide_table_of_contents: false
 keywords:
   - leetcode
@@ -10,7 +10,7 @@ keywords:
   - cyclic sort
 ---
 
-<TutorialCredits authors="@prishit55" contributors="@wingkwong" />
+<TutorialCredits authors="@prishit55" contributors="@wkw" />
 
 ## Overview
 
@@ -87,31 +87,6 @@ public:
 
 Cyclic Sort pattern is very useful to solve problems involving arrays containing numbers in a given range, finding the missing or duplicate numbers.
 
-export const suggestedProblems = [
-{
-"problemName": "0268 - Missing Number",
-"difficulty": "Easy",
-"leetCodeLink": "https://leetcode.com/problems/missing-number/",
-"solutionLink": ""
-},
-{
-"problemName": "0041 - First Missing Positive",
-"difficulty": "Hard",
-"leetCodeLink": "https://leetcode.com/problems/first-missing-positive/",
-"solutionLink": ""
-},
-{
-"problemName" : "0448 - Find All Numbers Disappeared In An Array",
-"difficulty" : "Easy",
-"leetCodeLink" : "https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/",
-"solutionLink" : ""
-},
-{
-"problemName" : "0645 - Set Mismatch",
-"difficulty" : "Easy",
-"leetCodeLink" : "https://leetcode.com/problems/set-mismatch/",
-"solutionLink" : ""
-},
-]
+export const suggestedProblems = [ { "problemName": "0268 - Missing Number", "difficulty": "Easy", "leetCodeLink": "https://leetcode.com/problems/missing-number/", "solutionLink": "" }, { "problemName": "0041 - First Missing Positive", "difficulty": "Hard", "leetCodeLink": "https://leetcode.com/problems/first-missing-positive/", "solutionLink": "" }, { "problemName" : "0448 - Find All Numbers Disappeared In An Array", "difficulty" : "Easy", "leetCodeLink" : "https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/", "solutionLink" : "" }, { "problemName" : "0645 - Set Mismatch", "difficulty" : "Easy", "leetCodeLink" : "https://leetcode.com/problems/set-mismatch/", "solutionLink" : "" }, ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />

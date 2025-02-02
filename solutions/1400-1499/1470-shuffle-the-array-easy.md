@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/shuffle-the-array/'
+description: 'Author: @wkw | https://leetcode.com/problems/shuffle-the-array/'
 tags: [Array]
 ---
 
-# 1470 - Shuffle the Array (Easy) 
+# 1470 - Shuffle the Array (Easy)
 
 ## Problem Link
 
@@ -13,13 +13,13 @@ https://leetcode.com/problems/shuffle-the-array/
 
 Given the array `nums` consisting of `2n` elements in the form `[x1,x2,...,xn,y1,y2,...,yn]`.
 
-*Return the array in the form* `[x1,y1,x2,y2,...,xn,yn]`.
+_Return the array in the form_ `[x1,y1,x2,y2,...,xn,yn]`.
 
 **Example 1:**
 
 ```
 Input: nums = [2,5,1,3,4,7], n = 3
-Output: [2,3,5,4,1,7] 
+Output: [2,3,5,4,1,7]
 Explanation: Since x1=2, x2=5, x3=1, y1=3, y2=4, y3=7 then the answer is [2,3,5,4,1,7].
 ```
 
@@ -47,7 +47,7 @@ Output: [1,2,1,2]
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 // the first half n elements are x and the second half n elements are y
@@ -71,7 +71,7 @@ public:
 </TabItem>
 
 <TabItem value="java" label="Java">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```java
 // the first half n elements are x and the second half n elements are y
@@ -94,7 +94,7 @@ class Solution {
 </TabItem>
 
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 # the first half n elements are x and the second half n elements are y
@@ -109,7 +109,7 @@ class Solution:
             # push y_1 .. y_n
             ans.append(nums[i + n])
         return ans
-        
+
         # alternatively, we can do it in one-liner
         # return [x for p in zip(nums[:n], nums[n:]) for x in p]
 ```

@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/minimum-fuel-cost-to-report-to-the-capital/'
+description: 'Author: @wkw | https://leetcode.com/problems/minimum-fuel-cost-to-report-to-the-capital/'
 tags: [Tree, Depth-First Search, Breadth-First Search, Graph]
 ---
 
-# 2477 - Minimum Fuel Cost to Report to the Capital (Medium) 
+# 2477 - Minimum Fuel Cost to Report to the Capital (Medium)
 
 ## Problem Link
 
@@ -19,18 +19,18 @@ There is a car in each city. You are given an integer `seats` that indicates the
 
 A representative can use the car in their city to travel or change the car and ride with another representative. The cost of traveling between two cities is one liter of fuel.
 
-Return *the minimum number of liters of fuel to reach the capital city*.
+Return _the minimum number of liters of fuel to reach the capital city_.
 
 **Example 1:**
 
 ```
 Input: roads = [[0,1],[0,2],[0,3]], seats = 5
 Output: 3
-Explanation: 
+Explanation:
 - Representative1 goes directly to the capital with 1 liter of fuel.
 - Representative2 goes directly to the capital with 1 liter of fuel.
 - Representative3 goes directly to the capital with 1 liter of fuel.
-It costs 3 liters of fuel at minimum. 
+It costs 3 liters of fuel at minimum.
 It can be proven that 3 is the minimum number of liters of fuel needed.
 ```
 
@@ -39,7 +39,7 @@ It can be proven that 3 is the minimum number of liters of fuel needed.
 ```
 Input: roads = [[3,1],[3,2],[1,0],[0,4],[0,5],[4,6]], seats = 2
 Output: 7
-Explanation: 
+Explanation:
 - Representative2 goes directly to city 3 with 1 liter of fuel.
 - Representative2 and representative3 go together to city 1 with 1 liter of fuel.
 - Representative2 and representative3 go together to the capital with 1 liter of fuel.
@@ -47,7 +47,7 @@ Explanation:
 - Representative5 goes directly to the capital with 1 liter of fuel.
 - Representative6 goes directly to city 4 with 1 liter of fuel.
 - Representative4 and representative6 go together to the capital with 1 liter of fuel.
-It costs 7 liters of fuel at minimum. 
+It costs 7 liters of fuel at minimum.
 It can be proven that 7 is the minimum number of liters of fuel needed.
 ```
 
@@ -73,7 +73,7 @@ Explanation: No representatives need to travel to the capital city.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -117,7 +117,7 @@ public:
 </TabItem>
 
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:
@@ -130,7 +130,7 @@ class Solution:
             g[u].append(v)
             # v can go to u
             g[v].append(u)
-            
+
         # u is the source
         # v is the parent
         def dfs(u, p):

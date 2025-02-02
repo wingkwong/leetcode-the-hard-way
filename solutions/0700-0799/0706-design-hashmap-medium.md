@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @vigneshshiv |
-  https://leetcode.com/problems/design-hashmap/
+  Author: @vigneshshiv | https://leetcode.com/problems/design-hashmap/
 ---
 
 # 0706 - Design HashMap (Medium)
@@ -16,10 +15,10 @@ Design a HashMap without using any built-in hash table libraries.
 
 Implement the `MyHashMap` class:
 
-* `MyHashMap()` initializes the object with an empty map.
-* `void put(int key, int value)` inserts a `(key, value)` pair into the HashMap. If the `key` already exists in the map, update the corresponding `value`.
-* `int get(int key)` returns the `value` to which the specified `key` is mapped, or `-1` if this map contains no mapping for the `key`.
-* `void remove(key)` removes the `key` and its corresponding `value` if the map contains the mapping for the `key`.
+- `MyHashMap()` initializes the object with an empty map.
+- `void put(int key, int value)` inserts a `(key, value)` pair into the HashMap. If the `key` already exists in the map, update the corresponding `value`.
+- `int get(int key)` returns the `value` to which the specified `key` is mapped, or `-1` if this map contains no mapping for the `key`.
+- `void remove(key)` removes the `key` and its corresponding `value` if the map contains the mapping for the `key`.
 
 <br/>
 
@@ -46,8 +45,8 @@ myHashMap.get(2);    // return -1 (i.e., not found), The map is now [[1,1]]
 
 **Constraints:**
 
-* `0 <= key, value <= 10^6`
-* At most `10^4` calls will be made to `put`, `get`, and `remove`.
+- `0 <= key, value <= 10^6`
+- At most `10^4` calls will be made to `put`, `get`, and `remove`.
 
 <br/>
 
@@ -67,16 +66,16 @@ In this simple implementation, we use an array of linked lists and a hash code f
 
 **To Insert a key**,
 
-* First, compute the key’s hash code, which will usually be an `int` or `long`.
-* Then, map the hash code to an index in the array. Eg: `hash(key) % array_length`.
-* _Store the key and value in this index_, we must use linked list because of collisions.
+- First, compute the key’s hash code, which will usually be an `int` or `long`.
+- Then, map the hash code to an index in the array. Eg: `hash(key) % array_length`.
+- _Store the key and value in this index_, we must use linked list because of collisions.
 
 How can we design the HashMap which is similar to used in programming languages?
 
-Few points to consider while designing the HashMap, 
+Few points to consider while designing the HashMap,
 
-* How to handle the collisions? Collision is if the same key is mapped to more than value. 
-* HashMap should be efficient and should automatically grow and shrink in size. 
+- How to handle the collisions? Collision is if the same key is mapped to more than value.
+- HashMap should be efficient and should automatically grow and shrink in size.
 
 We will look at first, How to handle collisions. There are multiple ways of handling HashTable (HashMap) collision, here I have used Chaining with Linked Lists.
 
@@ -88,11 +87,11 @@ In the worst case, lookup is $O(n)$, where the $n$ is the number of elements in 
 
 **Automatically increase and decrease in size**
 
-Since internally, all `HashMap` implementation uses _array to store the values_. 
+Since internally, all `HashMap` implementation uses _array to store the values_.
 
-As we know array's can't be increase or decrease in size automatically, because once we initialize the array with a fixed size, the array is default to the size, until we re-assign the values with new array or re-initialize the array with the new size when program needs. 
+As we know array's can't be increase or decrease in size automatically, because once we initialize the array with a fixed size, the array is default to the size, until we re-assign the values with new array or re-initialize the array with the new size when program needs.
 
-But HashMap stores and operates thousands and millions of elements seamlessly with constant $O(1)$ time. As technically it's `amortized` constant $O(1)$ time. 
+But HashMap stores and operates thousands and millions of elements seamlessly with constant $O(1)$ time. As technically it's `amortized` constant $O(1)$ time.
 
 What is amortized time?
 
@@ -100,13 +99,13 @@ When the array in it has reached its capacity and need to re-create itself with 
 
 The implementation of HashMap increase / decrease in size happens in the below cases.
 
-Initialize ListNode[] array with $16$, it's a default configuration used in languages. We can take other numbers as well, but it's a standard practise to initialize array capacity with $16$. 
+Initialize ListNode[] array with $16$, it's a default configuration used in languages. We can take other numbers as well, but it's a standard practise to initialize array capacity with $16$.
 
-The main reason for that, if the capacity is too low (less than $16$), we have to increase the size (grow our hashmap) immediately after few elements added to HashMap, this is not the best implementation. 
+The main reason for that, if the capacity is too low (less than $16$), we have to increase the size (grow our hashmap) immediately after few elements added to HashMap, this is not the best implementation.
 
-Here another important considerations is when to grow the table or double it's capacity? Since we cannot do that for every insert new element, so we it's better to keep some ranges like if the table reaches $50$% of capacity, or $75$% capacity or $90$%. As per language implementation is $75$%, so we follow the same here. 
+Here another important considerations is when to grow the table or double it's capacity? Since we cannot do that for every insert new element, so we it's better to keep some ranges like if the table reaches $50$% of capacity, or $75$% capacity or $90$%. As per language implementation is $75$%, so we follow the same here.
 
-The same goes for reduce or decrease HashMap when we remove elements. When the element size is reach $N/4$ capacity i.e, $25$%, we will reduce the capacity to half of the size. 
+The same goes for reduce or decrease HashMap when we remove elements. When the element size is reach $N/4$ capacity i.e, $25$%, we will reduce the capacity to half of the size.
 
 So HashMap Initial Capacity is set to $16$ and `Load Factor` is set to $75$%, As soon as the size reaches $75$%, Hashmap does table doubling and shrink automatically to $50$% when it reaches elements of size $25$%.
 
@@ -124,7 +123,7 @@ The detailed explanation found in MIT 6006 lecture - https://www.youtube.com/wat
 
 ```java
 class MyHashMap {
-    
+
     // Initial capacity is set to 16
     private static final int INITIAL_CAPACITY = 1 << 4;
 
@@ -137,14 +136,14 @@ class MyHashMap {
     private ListNode[] arr;
 
     private int capacity = INITIAL_CAPACITY;
-    
-    // Threshold range for initial capacity (16) is set to 12. 
+
+    // Threshold range for initial capacity (16) is set to 12.
     // When the Hashmap is reaches size of 12, it doubles it size and rehashes the elements
     private int threshold = (int) (INITIAL_CAPACITY * LOAD_FACTOR); // Default
-    
+
     // Shrink threshold for initial is set to 0, it will change when the capacity is increased.
     private int shrink_threshold = 0;
-    
+
     // Size of the linked list
     private int size = 0;
 
@@ -227,7 +226,7 @@ class MyHashMap {
              *  few of remove operation causes remove the element from the array, if the HEAD is null
              */
             if (node != null) {
-                // Elements formed in Linked list so using HEAD we can traverse through the elements. 
+                // Elements formed in Linked list so using HEAD we can traverse through the elements.
                 Node current = node.head;
                 while (current != null) {
                     // Re-hashes the existing key for the allocated size
@@ -305,7 +304,7 @@ class MyHashMap {
 
     /**
      * Linked List Head and Tail node reference for faster adds and remove elements.
-     * 
+     *
      * Head and Tail becomes easy to handle operations for add, remove elements
      */
     private class ListNode {
@@ -387,7 +386,6 @@ class MyHashMap {
 }
 
 ```
+
 </TabItem>
 </Tabs>
-
-

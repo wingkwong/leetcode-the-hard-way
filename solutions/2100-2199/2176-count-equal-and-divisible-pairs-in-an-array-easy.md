@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/count-equal-and-divisible-pairs-in-an-array/
+  Author: @wkw | https://leetcode.com/problems/count-equal-and-divisible-pairs-in-an-array/
 ---
 
 # 2176 - Count Equal and Divisible Pairs in an Array (Easy)
@@ -37,14 +36,14 @@ Explanation: Since no value in nums is repeated, there are no pairs (i,j) that m
 
 **Constraints:**
 
-* `1 <= nums.length <= 100`
-* `1 <= nums[i], k <= 100`
+- `1 <= nums.length <= 100`
+- `1 <= nums[i], k <= 100`
 
 ## Approach 1: Brute Force
 
 Just do what it says.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

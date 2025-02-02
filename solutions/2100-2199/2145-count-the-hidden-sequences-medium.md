@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/count-the-hidden-sequences/'
+description: 'Author: @wkw | https://leetcode.com/problems/count-the-hidden-sequences/'
 ---
 
 # 2145 - Count the Hidden Sequences (Medium)
@@ -14,10 +14,10 @@ You are given a **0-indexed** array of `n` integers `differences`, which describ
 
 You are further given two integers `lower` and `upper` that describe the **inclusive** range of values `[lower, upper]` that the hidden sequence can contain.
 
-* For example, given `differences = [1, -3, 4]`, `lower = 1`, `upper = 6`, the hidden sequence is a sequence of length `4` whose elements are in between `1` and `6` (**inclusive**).
-  * `[3, 4, 1, 5]` and `[4, 5, 2, 6]` are possible hidden sequences.
-  * `[5, 6, 3, 7]` is not possible since it contains an element greater than `6`.
-  * `[1, 2, 3, 4]` is not possible since the differences are not correct.
+- For example, given `differences = [1, -3, 4]`, `lower = 1`, `upper = 6`, the hidden sequence is a sequence of length `4` whose elements are in between `1` and `6` (**inclusive**).
+  - `[3, 4, 1, 5]` and `[4, 5, 2, 6]` are possible hidden sequences.
+  - `[5, 6, 3, 7]` is not possible since it contains an element greater than `6`.
+  - `[1, 2, 3, 4]` is not possible since the differences are not correct.
 
 Return _the number of **possible** hidden sequences there are._ If there are no possible sequences, return `0`.
 
@@ -55,20 +55,20 @@ Explanation: There are no possible hidden sequences. Thus, we return 0.
 
 **Constraints:**
 
-* `n == differences.length`
-* `1 <= n <= 10^5`
-* `-10^5 <= differences[i] <= 10^5`
-* `-10^5 <= lower <= upper <= 10^5`
+- `n == differences.length`
+- `1 <= n <= 10^5`
+- `-10^5 <= differences[i] <= 10^5`
+- `-10^5 <= lower <= upper <= 10^5`
 
 ## Approach 1: Moving up and down
 
-Note that we just need to return the **number** of possible hidden sequences. Supposing `hidden[0] = 0`,  we can calculate the next value by `differences`, i.e. `hidden[i + 1] = hidden[i] + differences[i]`. Here we just need to record the max and min values and calculate the possible ranges by moving the hidden array up and down within upper and lower range.
+Note that we just need to return the **number** of possible hidden sequences. Supposing `hidden[0] = 0`, we can calculate the next value by `differences`, i.e. `hidden[i + 1] = hidden[i] + differences[i]`. Here we just need to record the max and min values and calculate the possible ranges by moving the hidden array up and down within upper and lower range.
 
-If we move the hidden array up (i.e. +1 to each element) until the maximum value reaches upper boundary, we can move `upper - max` steps. Similarly, if we move down (i.e. -1 to each element), then we can move `min - lower` steps. Therefore, the answer is `(upper - max) - (min - lower) + 1`.  We need to add 1 here because this is the original hidden array without moving.
+If we move the hidden array up (i.e. +1 to each element) until the maximum value reaches upper boundary, we can move `upper - max` steps. Similarly, if we move down (i.e. -1 to each element), then we can move `min - lower` steps. Therefore, the answer is `(upper - max) - (min - lower) + 1`. We need to add 1 here because this is the original hidden array without moving.
 
-Another way to think about it is that we first include the whole boundary which is `(upper - lower)` and we exclude the fixed area `(max - min)`.  In this case, we will also get the same answer `(upper - lower) - (max - min) + 1`.
+Another way to think about it is that we first include the whole boundary which is `(upper - lower)` and we exclude the fixed area `(max - min)`. In this case, we will also get the same answer `(upper - lower) - (max - min) + 1`.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -87,7 +87,7 @@ public:
 
 ### Kotlin
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```kotlin
 class Solution {
@@ -107,7 +107,7 @@ class Solution {
 
 ### Python3
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```python
 class Solution:

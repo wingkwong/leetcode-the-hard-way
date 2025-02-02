@@ -1,8 +1,8 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/make-number-of-distinct-characters-equal/'
+description: 'Author: @wkw | https://leetcode.com/problems/make-number-of-distinct-characters-equal/'
 ---
 
-# 2531 - Make Number of Distinct Characters Equal (Medium) 
+# 2531 - Make Number of Distinct Characters Equal (Medium)
 
 ## Problem Link
 
@@ -14,7 +14,7 @@ You are given two **0-indexed** strings `word1` and `word2`.
 
 A **move** consists of choosing two indices `i` and `j` such that `0 <= i < word1.length` and `0 <= j < word2.length` and swapping `word1[i]` with `word2[j]`.
 
-Return `true` *if it is possible to get the number of distinct characters in* `word1` *and* `word2` *to be equal with **exactly one** move.*Return `false` *otherwise*.
+Return `true` _if it is possible to get the number of distinct characters in_ `word1` _and_ `word2` *to be equal with **exactly one** move.*Return `false` _otherwise_.
 
 **Example 1:**
 
@@ -49,7 +49,7 @@ Explanation: Both resulting strings will have 5 distinct characters, regardless 
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -65,7 +65,7 @@ public:
             for (int j = 0; j < 26; j++) {
                 char x = i + 'a';
                 char y = j + 'a';
-                // if we need to swap x and y, 
+                // if we need to swap x and y,
                 // we need to make sure x is in word1 and y is in word2
                 if (m1[x] > 0 && m2[y] > 0) {
                     // swap x in word1 and y in word2
@@ -81,7 +81,7 @@ public:
                     if (cnt1 == cnt2) return true;
                     // undo the swap so that we can perform a new swap
                     m1[x]++; m2[x]--;
-                    m1[y]--; m2[y]++;   
+                    m1[y]--; m2[y]++;
                 }
             }
         }

@@ -1,6 +1,6 @@
 ---
-title: "Kadane Algorithm"
-description: "Kadane 1D algorithm finds the maximum sum subarray in an array of integers. Kadane 2D algorithm finds the maximum sum subarray in a 2D array of integers."
+title: 'Kadane Algorithm'
+description: 'Kadane 1D algorithm finds the maximum sum subarray in an array of integers. Kadane 2D algorithm finds the maximum sum subarray in a 2D array of integers.'
 hide_table_of_contents: false
 keywords:
   - leetcode
@@ -9,7 +9,7 @@ keywords:
   - algorithm
 ---
 
-<TutorialCredits authors="@ShivaRapolu01, @wingkwong"/>
+<TutorialCredits authors="@ShivaRapolu01, @wkw"/>
 
 ## Overview
 
@@ -38,8 +38,7 @@ Explanation: [4,-1,2,1] has the largest sum = 6.
 
 > A subarray is a contiguous part of an array maintaining the order of elements. $[1,2,3]$ is a subarray of $[1,2,3,4,5]$ but $[1,3,2]$ & $[1,3,5]$ are not.
 
-Consider an array of positive integers only, the maximum sum subarray will be the entire array itself. If the array contains negative integers only, then the maximum sum subarray will be the maximum element of the array.
-It gets tricker when we have both positive and negative numbers.
+Consider an array of positive integers only, the maximum sum subarray will be the entire array itself. If the array contains negative integers only, then the maximum sum subarray will be the maximum element of the array. It gets tricker when we have both positive and negative numbers.
 
 If the array consists of positive integers(need not be all positive integers). Then there definitely exists a subarray which has positive sum, because I can choose one positive element in worst case and it would be the subarray with positive sum.
 
@@ -79,25 +78,7 @@ public:
 </TabItem>
 </Tabs>
 
-export const kadaneSuggestedProblems = [
-{
-"problemName": "152 - Maximum Product Subarray",
-"difficulty": "Medium",
-"leetCodeLink": "https://leetcode.com/problems/maximum-product-subarray/",
-"solutionLink": ""
-},
-{
-"problemName": "121 - Best Time to Buy and Sell Stock",
-"difficulty": "Easy",
-"leetCodeLink": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
-"solutionLink": ""
-},
-{
-"problemName": "918 - Maximum-sum-circular-subarray",
-"difficulty": "Medium",
-"leetCodeLink": "https://leetcode.com/problems/maximum-sum-circular-subarray/",
-"solutionLink": ""
-}
+export const kadaneSuggestedProblems = [ { "problemName": "152 - Maximum Product Subarray", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/maximum-product-subarray/", "solutionLink": "" }, { "problemName": "121 - Best Time to Buy and Sell Stock", "difficulty": "Easy", "leetCodeLink": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/", "solutionLink": "" }, { "problemName": "918 - Maximum-sum-circular-subarray", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/maximum-sum-circular-subarray/", "solutionLink": "" }
 
 ]
 
@@ -219,13 +200,6 @@ public:
 </TabItem>
 </Tabs>
 
-export const kadane2DSuggestedProblems = [
-{
-"problemName": "363 - Max Sum of Rectangle No Larger Than K",
-"difficulty": "Hard",
-"leetCodeLink": "https://leetcode.com/problems/max-sum-of-rectangle-no-larger-than-k/",
-"solutionLink": ""
-}
-]
+export const kadane2DSuggestedProblems = [ { "problemName": "363 - Max Sum of Rectangle No Larger Than K", "difficulty": "Hard", "leetCodeLink": "https://leetcode.com/problems/max-sum-of-rectangle-no-larger-than-k/", "solutionLink": "" } ]
 
 <Table title="Suggested Problems" data={kadane2DSuggestedProblems} />

@@ -1,6 +1,6 @@
 ---
-title: "Matrix Exponentiation"
-description: "Binary Exponentiation but it involves matrices."
+title: 'Matrix Exponentiation'
+description: 'Binary Exponentiation but it involves matrices.'
 keywords:
   - leetcode
   - tutorial
@@ -291,11 +291,11 @@ But this solution is not better than dynamic programming solution which runs in 
 
 Let us see the code for the above idea. Our code can be divided into three broad functions:
 
-| S.No. | Function Name    | Parameter Description                                | What does the function do?                                                                       |
-| ----- | ---------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| 1.    | `multiply(A, B)` | $A, B:$ Matrix (2D array/list)                       | Returns a new matrix $C = A \cdot B$                                                             |
-| 2.    | `power(A, exp)`  | $A:$ A Square Matrix (2D array/list), $exp:$ integer | Returns a new matrix $C = A^{exp}$ in $O(log(exp)) \cdot k^3$ time, where $k$ is order of matrix |
-| 3.    | `fib(n)`         | $n:$ integer                                         | Returns $n^{th}$ term of fibonacci series                                                        |
+| S.No. | Function Name | Parameter Description | What does the function do? |
+| --- | --- | --- | --- |
+| 1. | `multiply(A, B)` | $A, B:$ Matrix (2D array/list) | Returns a new matrix $C = A \cdot B$ |
+| 2. | `power(A, exp)` | $A:$ A Square Matrix (2D array/list), $exp:$ integer | Returns a new matrix $C = A^{exp}$ in $O(log(exp)) \cdot k^3$ time, where $k$ is order of matrix |
+| 3. | `fib(n)` | $n:$ integer | Returns $n^{th}$ term of fibonacci series |
 
 Let us implement them one by one. First one is `multiply(A, B)`.
 
@@ -531,13 +531,6 @@ int countVowelPermutation(int n) {
 - You can use matrix exponentiation only if the recurrence is linear and has constant coefficients.
 - Matrix exponentiation can often be used as an optimisation for dynamic programming solutions. Again check if the recurrence formed is **linear with constant coefficients or not!.**
 
-export const suggestedProblems = [
-{
-"problemName": "1137. N-th Tribonacci Number",
-"difficulty": "Easy",
-"leetCodeLink": "https://leetcode.com/problems/n-th-tribonacci-number/description/",
-"solutionLink": "../../../solutions/1100-1199/n-th-tribonacci-number-easy"
-},
-]
+export const suggestedProblems = [ { "problemName": "1137. N-th Tribonacci Number", "difficulty": "Easy", "leetCodeLink": "https://leetcode.com/problems/n-th-tribonacci-number/description/", "solutionLink": "../../../solutions/1100-1199/n-th-tribonacci-number-easy" }, ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />

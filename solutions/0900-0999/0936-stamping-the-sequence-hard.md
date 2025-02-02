@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/stamping-the-sequence/'
+description: 'Author: @wkw | https://leetcode.com/problems/stamping-the-sequence/'
 ---
 
 # 0936 - Stamping The Sequence (Hard)
@@ -14,19 +14,17 @@ You are given two strings `stamp` and `target`. Initially, there is a string `s`
 
 In one turn, you can place `stamp` over `s` and replace every letter in the `s` with the corresponding letter from `stamp`.
 
-*   For example, if `stamp = "abc"` and `target = "abcba"`, then `s` is `"?????"` initially. In one turn you can:
+- For example, if `stamp = "abc"` and `target = "abcba"`, then `s` is `"?????"` initially. In one turn you can:
 
-    * place `stamp` at index `0` of `s` to obtain `"abc??"`,
-    * place `stamp` at index `1` of `s` to obtain `"?abc?"`, or
-    * place `stamp` at index `2` of `s` to obtain `"??abc"`.
+  - place `stamp` at index `0` of `s` to obtain `"abc??"`,
+  - place `stamp` at index `1` of `s` to obtain `"?abc?"`, or
+  - place `stamp` at index `2` of `s` to obtain `"??abc"`.
 
-    Note that `stamp` must be fully contained in the boundaries of `s` in order to stamp (i.e., you cannot place `stamp` at index `3` of `s`).
+  Note that `stamp` must be fully contained in the boundaries of `s` in order to stamp (i.e., you cannot place `stamp` at index `3` of `s`).
 
 We want to convert `s` to `target` using **at most** `10 * target.length` turns.
 
 Return _an array of the index of the left-most letter being stamped at each turn_. If we cannot obtain `target` from `s` within `10 * target.length` turns, return an empty array.
-
-
 
 **Example 1:**
 
@@ -52,14 +50,14 @@ Explanation: Initially s = "???????".
 
 **Constraints:**
 
-* `1 <= stamp.length <= target.length <= 1000`
-* `stamp` and `target` consist of lowercase English letters.
+- `1 <= stamp.length <= target.length <= 1000`
+- `stamp` and `target` consist of lowercase English letters.
 
 ## Approach 1: Greedy
 
 We first try the first stamp and mark those characters to$$*$$. Then build some new stamps to check if they exist in target, if so mark them and repeat the process until all characters are stamped.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -85,7 +83,7 @@ public:
                     // *b**
                     // **c*
                     // ***a
-                    
+
                     // check if we can use this new_stamp to cover some characters
                     auto p = target.find(new_stamp);
                     while (p != string::npos) {

@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/reverse-string/'
+description: 'Author: @wkw, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/reverse-string/'
 ---
 
 # 0344 - Reverse String (Easy)
@@ -12,7 +12,7 @@ https://leetcode.com/problems/reverse-string/
 
 Write a function that reverses a string. The input string is given as an array of characters `s`.
 
-You must do this by modifying the input array [in-place](https://en.wikipedia.org/wiki/In-place\_algorithm) with `O(1)` extra memory.
+You must do this by modifying the input array [in-place](https://en.wikipedia.org/wiki/In-place_algorithm) with `O(1)` extra memory.
 
 **Example 1:**
 
@@ -25,13 +25,13 @@ Output: ["o","l","l","e","h"]
 
 ```
 Input: s = ["H","a","n","n","a","h"]
-Output: ["h","a","n","n","a","H"] 
+Output: ["h","a","n","n","a","H"]
 ```
 
 **Constraints:**
 
-* `1 <= s.length <= 10^5`
-* `s[i]` is a [printable ascii character](https://en.wikipedia.org/wiki/ASCII#Printable\_characters).
+- `1 <= s.length <= 10^5`
+- `s[i]` is a [printable ascii character](https://en.wikipedia.org/wiki/ASCII#Printable_characters).
 
 ## Approach 1: In-place modification
 
@@ -39,7 +39,7 @@ We iterate the array to process two elements at the same time and swap them. Fir
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -55,7 +55,7 @@ public:
 
 </TabItem>
 <TabItem value="go" label="Go">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```go
 func reverseString(s []byte)  {
@@ -95,16 +95,16 @@ class Solution {
  * @param {character[]} s
  * @return {void} Do not return anything, modify s in-place instead.
  */
-var reverseString = function(s) {
-    let left = 0;
-    let right = s.length - 1;
-    while (left < right) {
-        char = s[left];
-        s[left] = s[right];
-        s[right] = char;
-        left++;
-        right--;
-    }
+var reverseString = function (s) {
+  let left = 0;
+  let right = s.length - 1;
+  while (left < right) {
+    char = s[left];
+    s[left] = s[right];
+    s[right] = char;
+    left++;
+    right--;
+  }
 };
 ```
 
@@ -119,7 +119,7 @@ class Solution:
         """
         Do not return anything, modify s in-place instead.
         """
-        
+
         left, right = 0, len(s) - 1
         while left < right:
             s[left], s[right] = s[right], s[left]
@@ -134,7 +134,7 @@ class Solution:
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -148,7 +148,7 @@ public:
 </TabItem>
 
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:
@@ -159,7 +159,7 @@ class Solution:
 </TabItem>
 
 <TabItem value="rust" label="Rust">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```rust
 impl Solution {

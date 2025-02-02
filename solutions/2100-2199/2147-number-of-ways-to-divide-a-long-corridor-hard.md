@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/number-of-ways-to-divide-a-long-corridor/
+  Author: @wkw | https://leetcode.com/problems/number-of-ways-to-divide-a-long-corridor/
 ---
 
 # 2147 - Number of Ways to Divide a Long Corridor (Hard)
@@ -55,15 +54,15 @@ Explanation: There is no way to divide the corridor because there will always be
 
 **Constraints:**
 
-* `n == corridor.length`
-* `1 <= n <= 10^5`
-* `corridor[i]` is either `'S'` or `'P'`.
+- `n == corridor.length`
+- `1 <= n <= 10^5`
+- `corridor[i]` is either `'S'` or `'P'`.
 
 ## Approach 1: Greedy
 
 Count the number of seats. If there are two seats already and there are plants after them, count the plants. If it reaches the third seat, that means we can divide the corridor between the second seat and the third seat, i.e. `plants + 1` ways. We update answer and reset the counters. At the end, we need to check if the seat counter is 2 as we need 2 seats in the last block.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -85,4 +84,3 @@ public:
     }
 };
 ```
-

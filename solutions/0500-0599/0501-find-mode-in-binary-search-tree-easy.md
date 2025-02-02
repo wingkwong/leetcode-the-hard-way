@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/find-mode-in-binary-search-tree/'
+description: 'Author: @wkw | https://leetcode.com/problems/find-mode-in-binary-search-tree/'
 tags: [Tree, Depth-First Search, Binary Search Tree, Binary Tree]
 ---
 
-# 0501 - Find Mode in Binary Search Tree (Easy) 
+# 0501 - Find Mode in Binary Search Tree (Easy)
 
 ## Problem Link
 
@@ -11,7 +11,7 @@ https://leetcode.com/problems/find-mode-in-binary-search-tree/
 
 ## Problem Statement
 
-Given the `root` of a binary search tree (BST) with duplicates, return *all the mode(s) (i.e., the most frequently occurred element) in it*.
+Given the `root` of a binary search tree (BST) with duplicates, return _all the mode(s) (i.e., the most frequently occurred element) in it_.
 
 If the tree has more than one mode, return them in **any order**.
 
@@ -48,7 +48,7 @@ We can perform DFS to traverse the tree to get each node value and store in a Ha
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 /**
@@ -116,11 +116,11 @@ class Solution {
         findModeRecursive(root, frequency);
         // Leetcode compilation issue for Optional class, so used java.util package directly here
         java.util.Optional<Integer> max = frequency.values().stream().max(Integer::compare);
-        return max.isPresent() 
+        return max.isPresent()
             ? frequency.entrySet().stream()
                 .filter(entry -> entry.getValue() == max.get())
                 .mapToInt(Map.Entry::getKey)
-                .toArray() 
+                .toArray()
             : null;
     }
 
@@ -179,7 +179,7 @@ class Solution {
         }
         // Leetcode compilation issue for Optional class, so used java.util package directly here
         java.util.Optional<Integer> max = frequency.values().stream().max(Integer::compare);
-        return max.isPresent() 
+        return max.isPresent()
             ? frequency.entrySet().stream()
                 .filter(entry -> entry.getValue() == max.get())
                 .mapToInt(Map.Entry::getKey)
@@ -235,7 +235,7 @@ class Solution {
         }
         // Leetcode compilation issue for Optional class, so used java.util package directly here
         java.util.Optional<Integer> max = frequency.values().stream().max(Integer::compare);
-        return max.isPresent() 
+        return max.isPresent()
             ? frequency.entrySet().stream()
                 .filter(entry -> entry.getValue() == max.get())
                 .mapToInt(Map.Entry::getKey)

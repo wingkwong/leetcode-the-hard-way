@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/closest-prime-numbers-in-range/'
+description: 'Author: @wkw | https://leetcode.com/problems/closest-prime-numbers-in-range/'
 tags: [Math, Number Theory]
 ---
 
-# 2523 - Closest Prime Numbers in Range (Medium) 
+# 2523 - Closest Prime Numbers in Range (Medium)
 
 ## Problem Link
 
@@ -17,7 +17,7 @@ Given two positive integers `left` and `right`, find the two integers `num1` and
 - `nums1` and `nums2` are both **prime** numbers.
 - `nums2 - nums1` is the **minimum** amongst all other pairs satisfying the above conditions.
 
-Return *the positive integer array* `ans = [nums1, nums2]`. *If there are multiple pairs satisfying these conditions, return the one with the minimum* `nums1` *value or* `[-1, -1]` *if such numbers do not exist.*
+Return _the positive integer array_ `ans = [nums1, nums2]`. _If there are multiple pairs satisfying these conditions, return the one with the minimum_ `nums1` _value or_ `[-1, -1]` _if such numbers do not exist._
 
 A number greater than `1` is called **prime** if it is only divisible by `1` and itself.
 
@@ -47,7 +47,7 @@ Explanation: There exists only one prime number in the given range, so the condi
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -63,8 +63,8 @@ public:
             for (int j = i * i; j <= n; j += i * 2) {
               is_prime[j] = 0;
             }
-          }   
-        } 
+          }
+        }
         primes.push_back(2);
         for (int i = 3; i <= n; i += 2) {
             if (is_prime[i]) {
@@ -72,7 +72,7 @@ public:
             }
         }
     }
-    
+
     vector<int> closestPrimes(int left, int right) {
         // generate prime numbers
         prime_sieve(right);
@@ -90,7 +90,7 @@ public:
                     // set l and r
                     l = primes[i - 1];
                     r = primes[i];
-                }   
+                }
             }
         }
         // if both l and r are set, then return {l, r}

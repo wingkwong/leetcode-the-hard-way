@@ -1,5 +1,5 @@
 ---
-description: "Author: @ColeB2 | https://leetcode.com/problems/car-fleet/"
+description: 'Author: @ColeB2 | https://leetcode.com/problems/car-fleet/'
 tags: [Array, Stack, Sorting, Monotonic Stack]
 ---
 
@@ -62,14 +62,13 @@ Then, the fleet (speed 2) and the car starting at 4 (speed 1) become one fleet, 
 - All the values of `position` are unique.
 - `0 < speed[i] <= 10^6`
 
-
 ## Approach 1: Monotonic Stack
 
 We are given a bunch of cars, on the same road, starting at different positions, going at different speeds, all trying to reach the same destination. Know this we are trying to figure out, how many groups, or fleets will reach the destination. Meaning some cars are going to have to slow down and follow bumper-to-bumper for some of their drive to the destination. Knowing that we are going to solve this using 2 main steps.
 
 1. We are going to have to get the position, and speed of each car, in sorted order. We need to know the position because a faster car, stuck behind a slower car, can't pass.
 
-2. Knowing their position, we can use a monotonic decreasing stack and a little math to find out how many fleets will cross the finish line. 
+2. Knowing their position, we can use a monotonic decreasing stack and a little math to find out how many fleets will cross the finish line.
 
 A quick refresher, a monotonic decreasing stack, is a stack, where every item inside the stack is going to be ordered by largest, to smallest. In our case, we are going to use a little math to order the items in our stack from largest to smallest based on the lead car of a fleet's time to reach the destination. We don't care about cars stuck behind the fleet, just about when the lead car is going to finish.
 
@@ -85,7 +84,6 @@ Time Complexity: $$O(nlogn)$$. The time of this will be dominated by the sorting
 
 Space Complexity: $$O(n)$$. We need to create an array, cars, and a stack.
 
-
 <Tabs>
 <TabItem value="python" label="Python">
 <SolutionAuthor name="@ColeB2"/>
@@ -94,7 +92,7 @@ Space Complexity: $$O(n)$$. We need to create an array, cars, and a stack.
 class Solution:
     def carFleet(self, target: int, position: List[int], speed: List[int]) -> int:
         # Here we will utilize a monotonic decreasing stack, meaning everything
-        # in the stack will be ordered by a car fleet's leading car's 
+        # in the stack will be ordered by a car fleet's leading car's
         # "time to destination". This means, any element, with a time larger/slower
         # than the top of our stack, will force us to remove the faster/smaller times
         # until the incoming car is no longer slower than the top.
@@ -102,7 +100,7 @@ class Solution:
         # the position and speed of our cars - zip(position, speed)
         # then sorting the array of tuples, python will sort by the first value
         # first, and second value for ties. Since the question doesn't have cars
-        # starting at the same position, we will only have cars ordered by position. 
+        # starting at the same position, we will only have cars ordered by position.
         cars = sorted(zip(position,speed))
         stack = []
         # Loop through every car in cars.
@@ -126,18 +124,15 @@ class Solution:
 </TabItem>
 </Tabs>
 
-
 ## Approach 2: Reverse Sorting
 
 Similar to approach 1, we will need a cars array, but by sorting it in reverse order, and instead, tracking the time to complete of the last fleet of cars, and number of car fleets, we can remove the need to use a stack.
 
 This works, by checking the incoming car's $$time$$ to finish, with a variable $$last\_time$$ which tracks the time of the fleet that is going to finish next. If incoming cars $$time$$ to finish is greater, that means it is going to take longer to finish than the fleet ahead of it. If it is less than $$last\_time$$ that means it is going to catch the fleet before it finishes. In that case we do nothing, as we already counted the fleet it is going to catch.
 
-
 Time Complexity: $$O(nlogn)$$. The time of this will still be dominated by the sorting, and we also need to create a cars array and loop through it in $$O(n)$$.
 
 Space Complexity: $$O(n)$$. We still need a cars array, but no longer need a stack, which will be a slight improvement in space requirements.
-
 
 <Tabs>
 <TabItem value="python" label="Python">
@@ -153,7 +148,7 @@ class Solution:
         # destination be last.
         cars = sorted(zip(position,speed), reverse=True)
         # Here we will track the time of last car to cross destination. By
-        # initializing it to 0, we assure that the first car's time will be 
+        # initializing it to 0, we assure that the first car's time will be
         # greater than it, triggering our count of fleets to increment by one.
         last_time = 0
         # track number of car fleets
@@ -162,7 +157,7 @@ class Solution:
         for car in cars:
             # get position and speed of the car.
             pos, spe = car[0], car[1]
-            # calculate the time it takes to finish. 
+            # calculate the time it takes to finish.
             time = (target-pos) / spe
             # Check, if the time the car is going to finish is greater. There are
             # 2 conditions here.
@@ -183,4 +178,3 @@ class Solution:
 
 </TabItem>
 </Tabs>
-

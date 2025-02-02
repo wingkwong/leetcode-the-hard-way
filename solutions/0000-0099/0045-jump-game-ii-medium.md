@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong, @radojicic23 | https://leetcode.com/problems/jump-game-ii/'
+description: 'Author: @wkw, @radojicic23 | https://leetcode.com/problems/jump-game-ii/'
 tags: [Array, Dynamic Programming, Greedy]
 ---
 
-# 0045 - Jump Game II (Medium) 
+# 0045 - Jump Game II (Medium)
 
 ## Problem Link
 
@@ -18,7 +18,7 @@ Each element `nums[i]` represents the maximum length of a forward jump from inde
 - `0 <= j <= nums[i]` and
 - `i + j < n`
 
-Return *the minimum number of jumps to reach*`nums[n - 1]`. The test cases are generated such that you can reach `nums[n - 1]`.
+Return _the minimum number of jumps to reach_`nums[n - 1]`. The test cases are generated such that you can reach `nums[n - 1]`.
 
 **Example 1:**
 
@@ -44,7 +44,7 @@ Output: 2
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 // intuition:
@@ -55,7 +55,7 @@ Output: 2
 // from the 4th node, we can reach 5th
 // from the 5th node, it is the desination, we don't need to jump
 // here we can put those on different level, i.e.
-// lv1: 2 
+// lv1: 2
 // lv2: 1 3
 // lv3: 1 4
 // each level can be reachable from the previous level starting from 2nd level
@@ -69,7 +69,7 @@ public:
         // nxt_end: the ending index of the next level
         int n = nums.size(), cur_end = 0, nxt_end = 0, steps = 0;
         for (int i = 0; i < n; i++) {
-            // if the current index is out of the current level, 
+            // if the current index is out of the current level,
             // we add 1 step because we are going to the next level
             if (i > cur_end) steps += 1, cur_end = nxt_end;
             // update nxt_end - take the max index
@@ -83,7 +83,7 @@ public:
 </TabItem>
 
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 # intuition:
@@ -94,7 +94,7 @@ public:
 # from the 4th node, we can reach 5th
 # from the 5th node, it is the desination, we don't need to jump
 # here we can put those on different level, i.e.
-# lv1: 2 
+# lv1: 2
 # lv2: 1 3
 # lv3: 1 4
 # each level can be reachable from the previous level starting from 2nd level
@@ -110,7 +110,7 @@ class Solution:
         cur_end, nxt_end = 0, 0
         steps = 0
         for i in range(n):
-			# if the current index is out of the current level, 
+			# if the current index is out of the current level,
 			# we add 1 step because we are going to the next level
             if i > cur_end:
                 steps += 1
@@ -130,17 +130,18 @@ class Solution:
  * @param {number[]} nums
  * @return {number}
  */
-var jump = function(nums) {
-    let steps = 0;
-    let currEnd = 0, maxEnd = 0;
-    for (let i = 0; i < nums.length; i++) {
-        if (i > currEnd) {
-            steps++;
-            currEnd = maxEnd;
-        }
-        maxEnd = Math.max(maxEnd, i + nums[i]);
+var jump = function (nums) {
+  let steps = 0;
+  let currEnd = 0,
+    maxEnd = 0;
+  for (let i = 0; i < nums.length; i++) {
+    if (i > currEnd) {
+      steps++;
+      currEnd = maxEnd;
     }
-    return steps;
+    maxEnd = Math.max(maxEnd, i + nums[i]);
+  }
+  return steps;
 };
 ```
 

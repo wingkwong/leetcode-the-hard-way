@@ -1,5 +1,5 @@
 ---
-description: 'Author: @jit, @wingkwong | https://leetcode.com/problems/minimum-changes-to-make-alternating-binary-string/'
+description: 'Author: @jit, @wkw | https://leetcode.com/problems/minimum-changes-to-make-alternating-binary-string/'
 tags: [String]
 ---
 
@@ -15,7 +15,7 @@ You are given a string `s` consisting only of the characters `'0'` and `'1'`. In
 
 The string is called alternating if no two adjacent characters are equal. For example, the string `"010"` is alternating, while the string `"0100"` is not.
 
-Return *the **minimum** number of operations needed to make* `s` *alternating*.
+Return _the **minimum** number of operations needed to make_ `s` _alternating_.
 
 **Example 1:**
 
@@ -66,7 +66,7 @@ object Solution {
 </TabItem>
 
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

@@ -1,15 +1,15 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/sort-the-matrix-diagonally/'
+description: 'Author: @wkw | https://leetcode.com/problems/sort-the-matrix-diagonally/'
 tags: [Array, Sorting, Matrix]
 ---
 
-# 1329 - Sort the Matrix Diagonally (Medium) 
+# 1329 - Sort the Matrix Diagonally (Medium)
 
 ## Problem Statement
 
 A **matrix diagonal** is a diagonal line of cells starting from some cell in either the topmost row or leftmost column and going in the bottom-right direction until reaching the matrix's end. For example, the **matrix diagonal** starting from `mat[2][0]`, where `mat` is a `6 x 3` matrix, includes cells `mat[2][0]`, `mat[3][1]`, and `mat[4][2]`.
 
-Given an `m x n` matrix `mat` of integers, sort each **matrix diagonal** in ascending order and return *the resulting matrix*.
+Given an `m x n` matrix `mat` of integers, sort each **matrix diagonal** in ascending order and return _the resulting matrix_.
 
 **Example 1:**
 
@@ -34,7 +34,7 @@ Output: [[5,17,4,1,52,7],[11,11,25,45,8,69],[14,23,25,44,58,15],[22,27,31,36,50,
 
 ## Approach 1: Priority Queue
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -44,10 +44,10 @@ public:
         // observation:
         // for each cell mat[i][j] in the same diagonal,
         // they will have the same value i - j
-        
-        // if the diagonal line is pointing to upper right direction, 
+
+        // if the diagonal line is pointing to upper right direction,
         // then they will have the same value i + j (see https://leetcode.com/problems/diagonal-traverse/)
-        
+
         // the idea is to use priority queue for each diagonal
         // as priority queue could sort it internally when a value is pushed / popped
         // we use greater<int> as we want the smallest go first
@@ -56,7 +56,7 @@ public:
         for (int i = 0; i < n; i++) {
             // iterate each col
             for (int j = 0; j < m; j++) {
-                // for each mat[i][j] 
+                // for each mat[i][j]
                 // add it to corresponding priority queue
                 diag[i - j].push(mat[i][j]);
             }

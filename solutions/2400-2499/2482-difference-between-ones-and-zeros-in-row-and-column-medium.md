@@ -3,7 +3,7 @@ description: 'Author: @heder | https://leetcode.com/problems/difference-between-
 tags: [Array, Matrix, Simulation]
 ---
 
-# 2482 - Difference Between Ones and Zeros in Row and Column (Medium) 
+# 2482 - Difference Between Ones and Zeros in Row and Column (Medium)
 
 ## Problem Link
 
@@ -21,7 +21,7 @@ A **0-indexed** `m x n` difference matrix `diff` is created with the following p
 - Let the number of zeros in the `jth` column be `zerosColj`.
 - `diff[i][j] = onesRowi + onesColj - zerosRowi - zerosColj`
 
-Return *the difference matrix*`diff`.
+Return _the difference matrix_`diff`.
 
 **Example 1:**
 
@@ -29,12 +29,12 @@ Return *the difference matrix*`diff`.
 Input: grid = [[0,1,1],[1,0,1],[0,0,1]]
 Output: [[0,0,4],[0,0,4],[-2,-2,2]]
 Explanation:
-- diff[0][0] = onesRow0 + onesCol0 - zerosRow0 - zerosCol0 = 2 + 1 - 1 - 2 = 0 
-- diff[0][1] = onesRow0 + onesCol1 - zerosRow0 - zerosCol1 = 2 + 1 - 1 - 2 = 0 
-- diff[0][2] = onesRow0 + onesCol2 - zerosRow0 - zerosCol2 = 2 + 3 - 1 - 0 = 4 
-- diff[1][0] = onesRow1 + onesCol0 - zerosRow1 - zerosCol0 = 2 + 1 - 1 - 2 = 0 
-- diff[1][1] = onesRow1 + onesCol1 - zerosRow1 - zerosCol1 = 2 + 1 - 1 - 2 = 0 
-- diff[1][2] = onesRow1 + onesCol2 - zerosRow1 - zerosCol2 = 2 + 3 - 1 - 0 = 4 
+- diff[0][0] = onesRow0 + onesCol0 - zerosRow0 - zerosCol0 = 2 + 1 - 1 - 2 = 0
+- diff[0][1] = onesRow0 + onesCol1 - zerosRow0 - zerosCol1 = 2 + 1 - 1 - 2 = 0
+- diff[0][2] = onesRow0 + onesCol2 - zerosRow0 - zerosCol2 = 2 + 3 - 1 - 0 = 4
+- diff[1][0] = onesRow1 + onesCol0 - zerosRow1 - zerosCol0 = 2 + 1 - 1 - 2 = 0
+- diff[1][1] = onesRow1 + onesCol1 - zerosRow1 - zerosCol1 = 2 + 1 - 1 - 2 = 0
+- diff[1][2] = onesRow1 + onesCol2 - zerosRow1 - zerosCol2 = 2 + 3 - 1 - 0 = 4
 - diff[2][0] = onesRow2 + onesCol0 - zerosRow2 - zerosCol0 = 1 + 1 - 2 - 2 = -2
 - diff[2][1] = onesRow2 + onesCol1 - zerosRow2 - zerosCol1 = 1 + 1 - 2 - 2 = -2
 - diff[2][2] = onesRow2 + onesCol2 - zerosRow2 - zerosCol2 = 1 + 3 - 2 - 0 = 2
@@ -66,7 +66,6 @@ Explanation:
 
 We compute the sum of each row and column, which is equal to the number of ones and from that we can reason about the number of zeros. Note that we are rewriting the input.
 
-
 <Tabs>
 <TabItem value="cpp" label="C++">
 <SolutionAuthor name="@heder"/>
@@ -85,7 +84,7 @@ public:
                 rs[r] += grid[r][c];
                 cs[c] += grid[r][c];
             }
-        
+
         for (int r = 0; r < rows; ++r)
             for (int c = 0; c < cols; ++c)
                 grid[r][c] = rs[r] + cs[c] - (rows - rs[r]) - (cols - cs[c]);
@@ -137,7 +136,7 @@ public:
                 rs[r] += grid[r][c] ?: -1;
                 cs[c] += grid[r][c] ?: -1;
             }
-        
+
         for (int r = 0; r < rows; ++r)
             for (int c = 0; c < cols; ++c)
                 grid[r][c] = rs[r] + cs[c];

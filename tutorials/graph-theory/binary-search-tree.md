@@ -1,6 +1,6 @@
 ---
-title: "Binary Search Tree"
-description: "A binary tree where left child is less than or equal to the parent, while the right child is greater"
+title: 'Binary Search Tree'
+description: 'A binary tree where left child is less than or equal to the parent, while the right child is greater'
 keywords:
   - leetcode
   - tutorial
@@ -202,25 +202,6 @@ class Solution {
 
 where $n$ is the number of nodes in the BST.
 
-export const suggestedProblems = [
-{
-"problemName": "0098 - Validate Binary Search Tree",
-"difficulty": "Medium",
-"leetCodeLink": "https://leetcode.com/problems/validate-binary-search-tree/",
-"solutionLink": "../../solutions/0000-0099/validate-binary-search-tree-medium"
-},
-{
-"problemName": "0230 - Kth Smallest Element in a BST",
-"difficulty": "Medium",
-"leetCodeLink": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/",
-"solutionLink": "../../solutions/0200-0299/kth-smallest-element-in-a-bst-medium"
-},
-{
-"problemName": "0703 - Kth Largest Element in a Stream",
-"difficulty": "Easy",
-"leetCodeLink": "https://leetcode.com/problems/kth-largest-element-in-a-stream/",
-"solutionLink": "../../solutions/0700-0799/kth-largest-element-in-a-stream-easy"
-},
-]
+export const suggestedProblems = [ { "problemName": "0098 - Validate Binary Search Tree", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/validate-binary-search-tree/", "solutionLink": "../../solutions/0000-0099/validate-binary-search-tree-medium" }, { "problemName": "0230 - Kth Smallest Element in a BST", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/", "solutionLink": "../../solutions/0200-0299/kth-smallest-element-in-a-bst-medium" }, { "problemName": "0703 - Kth Largest Element in a Stream", "difficulty": "Easy", "leetCodeLink": "https://leetcode.com/problems/kth-largest-element-in-a-stream/", "solutionLink": "../../solutions/0700-0799/kth-largest-element-in-a-stream-easy" }, ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />

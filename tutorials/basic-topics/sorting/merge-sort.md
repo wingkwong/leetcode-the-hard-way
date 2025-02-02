@@ -1,6 +1,6 @@
 ---
-title: "Merge Sort"
-description: "A sorting algorithm based on divide-and-conquer strategy"
+title: 'Merge Sort'
+description: 'A sorting algorithm based on divide-and-conquer strategy'
 hide_table_of_contents: false
 keywords:
   - leetcode
@@ -10,7 +10,7 @@ keywords:
   - merge sort
 ---
 
-<TutorialCredits authors="@Sreetama2001" contributors="@wingkwong" />
+<TutorialCredits authors="@Sreetama2001" contributors="@wkw" />
 
 ## Overview
 
@@ -44,8 +44,7 @@ Image by Brian Hans via [Medium](https://medium.com/@brianhans/merge-sort-a1d031
 
 ## Example: [0912 - Sort an Array](https://leetcode.com/problems/sort-an-array/)
 
-> Given an array of integers nums, sort the array in ascending order and return it.
-> You must solve the problem without using any built-in functions in O(nlog(n)) time complexity and with the smallest space complexity possible.
+> Given an array of integers nums, sort the array in ascending order and return it. You must solve the problem without using any built-in functions in O(nlog(n)) time complexity and with the smallest space complexity possible.
 
 ### Top Down Approach
 
@@ -268,8 +267,7 @@ class Solution {
 </TabItem>
 </Tabs>
 
-Merging of $n$ elements takes $n$ time and since each time the array is cut into half it takes $\log_{2}n$ time to reach the top.
-So **total time complexity is** $O(n\log_{2} n)$.
+Merging of $n$ elements takes $n$ time and since each time the array is cut into half it takes $\log_{2}n$ time to reach the top. So **total time complexity is** $O(n\log_{2} n)$.
 
 ![image](https://cdn.kastatic.org/ka-perseus-images/5fcbebf66560d8fc490de2a0d8a0e5b1d65c5c54.png)
 
@@ -277,8 +275,7 @@ Image taken from [Khan Academy](https://cdn.kastatic.org/)
 
 Merge Sort is a **stable sort** because the same element in an array maintain their original positions with respect to each other that means the original order of elements of input set is preserved.
 
-Merge sort copies of more than a constant number of array elements. Hence it requires additional space which depends upon the input size of the array elements.
-So is an **out of place algorithm**.
+Merge sort copies of more than a constant number of array elements. Hence it requires additional space which depends upon the input size of the array elements. So is an **out of place algorithm**.
 
 **Time Complexity**: Best & Worst & Average is $O(n \log_{2} n)$
 
@@ -414,37 +411,6 @@ public:
 </TabItem>
 </Tabs>
 
-export const suggestedProblems = [
-{
-"problemName": "912-Sort an Array",
-"difficulty": "Medium",
-"leetCodeLink": "https://leetcode.com/problems/sort-an-array/",
-"solutionLink": "../../../solutions/0900-0999/sort-an-array-medium"
-},
-{
-"problemName": "56-Merge Intervals",
-"difficulty": "Medium",
-"leetCodeLink": "https://leetcode.com/problems/merge-intervals/",
-"solutionLink": ""
-},
-{
-"problemName" : "148-Sort List",
-"difficulty" : "Medium",
-"leetCodeLink" : "https://leetcode.com/problems/sort-list/",
-"solutionLink" : "../../../solutions/0100-0199/sort-list-medium"
-},
-{
-"problemName" : "327-Count of Range Sum",
-"difficulty" : "Hard",
-"leetCodeLink" : "https://leetcode.com/problems/count-of-range-sum/",
-"solutionLink" : "../../../solutions/0300-0399/count-of-range-sum-hard"
-},
-{
-"problemName" : "23-Merge k Sorted Lists",
-"difficulty" : "Hard",
-"leetCodeLink" : "https://leetcode.com/problems/merge-k-sorted-lists/",
-"solutionLink" : "../../../solutions/0000-0099/merge-k-sorted-lists-hard"
-}
-]
+export const suggestedProblems = [ { "problemName": "912-Sort an Array", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/sort-an-array/", "solutionLink": "../../../solutions/0900-0999/sort-an-array-medium" }, { "problemName": "56-Merge Intervals", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/merge-intervals/", "solutionLink": "" }, { "problemName" : "148-Sort List", "difficulty" : "Medium", "leetCodeLink" : "https://leetcode.com/problems/sort-list/", "solutionLink" : "../../../solutions/0100-0199/sort-list-medium" }, { "problemName" : "327-Count of Range Sum", "difficulty" : "Hard", "leetCodeLink" : "https://leetcode.com/problems/count-of-range-sum/", "solutionLink" : "../../../solutions/0300-0399/count-of-range-sum-hard" }, { "problemName" : "23-Merge k Sorted Lists", "difficulty" : "Hard", "leetCodeLink" : "https://leetcode.com/problems/merge-k-sorted-lists/", "solutionLink" : "../../../solutions/0000-0099/merge-k-sorted-lists-hard" } ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />

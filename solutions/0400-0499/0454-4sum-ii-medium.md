@@ -1,8 +1,8 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/4sum-ii/'
+description: 'Author: @wkw | https://leetcode.com/problems/4sum-ii/'
 ---
 
-# 0454 -  4Sum II (Medium)
+# 0454 - 4Sum II (Medium)
 
 ## Problem Link
 
@@ -12,8 +12,8 @@ https://leetcode.com/problems/4sum-ii/
 
 Given four integer arrays `nums1`, `nums2`, `nums3`, and `nums4` all of length `n`, return the number of tuples `(i, j, k, l)` such that:
 
-* `0 <= i, j, k, l < n`
-* `nums1[i] + nums2[j] + nums3[k] + nums4[l] == 0`
+- `0 <= i, j, k, l < n`
+- `nums1[i] + nums2[j] + nums3[k] + nums4[l] == 0`
 
 **Example 1:**
 
@@ -35,18 +35,18 @@ Output: 1
 
 **Constraints:**
 
-* `n == nums1.length`
-* `n == nums2.length`
-* `n == nums3.length`
-* `n == nums4.length`
-* `1 <= n <= 200`
-* `-2^28 <= nums1[i], nums2[i], nums3[i], nums4[i] <= 2^28`
+- `n == nums1.length`
+- `n == nums2.length`
+- `n == nums3.length`
+- `n == nums4.length`
+- `1 <= n <= 200`
+- `-2^28 <= nums1[i], nums2[i], nums3[i], nums4[i] <= 2^28`
 
 ## Approach 1: Brute Force (TLE)
 
 The simple way is to iterate over all $$nums$$ to construct all possible tuples. However, this solution gives TLE as it is a $$O(n^4)$$ solution.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -71,7 +71,7 @@ public:
 
 We can take the same approach from [0001 - Two Sum (Easy)](../0000-0099/two-sum). We know that $$a + b + c + d = 0$$ is same as $$a = -(b + c + d)$$. Therefore, we iterate $$nums1$$ to count the number of element $$a$$. Then iterate $$nums2$$, $$nums3$$ and $$nums4$$ to find if the complementary sum $$-(b + c + d)$$ is in hash map or not. However, this solution gives TLE as it is a $$O(n^3)$$ solution.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -98,7 +98,7 @@ public:
 
 We can take the same approach from [0001 - Two Sum (Easy)](../0000-0099/two-sum). We know that $$a + b + c + d = 0$$ is same as $$a + b = - (c + d)$$. Therefore, we iterate $$nums1$$and $$nums2$$ to count the sum of elements $$a + b$$. Then iterate $$nums3$$ and $$nums4$$to find if the complementary sum $$- (c + d)$$is in hash map or not. This solution passes as it is a $$O(n^2)$$solution.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

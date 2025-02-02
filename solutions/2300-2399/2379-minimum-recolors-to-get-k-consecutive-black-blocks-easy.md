@@ -1,8 +1,8 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/minimum-recolors-to-get-k-consecutive-black-blocks/'
+description: 'Author: @wkw | https://leetcode.com/problems/minimum-recolors-to-get-k-consecutive-black-blocks/'
 ---
 
-# 2379 - Minimum Recolors to Get K Consecutive Black Blocks (Easy) 
+# 2379 - Minimum Recolors to Get K Consecutive Black Blocks (Easy)
 
 ## Problem Statement
 
@@ -12,7 +12,7 @@ You are also given an integer `k`, which is the desired number of **consecutive*
 
 In one operation, you can **recolor** a white block such that it becomes a black block.
 
-Return*the **minimum** number of operations needed such that there is at least **one** occurrence of*`k`*consecutive black blocks.*
+Return*the **minimum** number of operations needed such that there is at least **one** occurrence of*`k`_consecutive black blocks._
 
 **Example 1:**
 
@@ -21,7 +21,7 @@ Input: blocks = "WBBWWBBWBW", k = 7
 Output: 3
 Explanation:
 One way to achieve 7 consecutive black blocks is to recolor the 0th, 3rd, and 4th blocks
-so that blocks = "BBBBBBBWBW". 
+so that blocks = "BBBBBBBWBW".
 It can be shown that there is no way to achieve 7 consecutive black blocks in less than 3 operations.
 Therefore, we return 3.
 ```
@@ -45,7 +45,7 @@ Therefore, we return 0.
 
 ## Approach 1: Brute Force
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

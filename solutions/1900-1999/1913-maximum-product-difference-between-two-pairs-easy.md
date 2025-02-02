@@ -1,9 +1,9 @@
 ---
-description: 'Author: @heder, @wingkwong, @jit, @jaffar | https://leetcode.com/problems/maximum-product-difference-between-two-pairs/'
+description: 'Author: @heder, @wkw, @jit, @jaffar | https://leetcode.com/problems/maximum-product-difference-between-two-pairs/'
 tags: [Array, Sorting]
 ---
 
-# 1913 - Maximum Product Difference Between Two Pairs (Easy) 
+# 1913 - Maximum Product Difference Between Two Pairs (Easy)
 
 ## Problem Link
 
@@ -17,7 +17,7 @@ The **product difference** between two pairs `(a, b)` and `(c, d)` is defined as
 
 Given an integer array `nums`, choose four **distinct** indices `w`, `x`, `y`, and `z` such that the **product difference** between pairs `(nums[w], nums[x])` and `(nums[y], nums[z])` is **maximized**.
 
-Return *the **maximum** such product difference*.
+Return _the **maximum** such product difference_.
 
 **Example 1:**
 
@@ -53,7 +53,7 @@ In order to maximize the value of $a * b - c * d$, we need to maximize $a * b$ a
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -245,7 +245,6 @@ public:
 </TabItem>
 </Tabs>
 
-
 ## Approach 6: Min / Max Heap
 
 It's maybe a bit of an overkill to use a heap to solve this problem, but why not. I have seen some variants that push all elements on the the heap (`priority_queue`) without limiting the size to two elements, but that's a waste as we can keep the size of the heap bounded, which leads to better time / space complexity.
@@ -283,7 +282,7 @@ public:
         const int mn2 = max_heap.top();
         const int mx1 = min_heap.top(); min_heap.pop();
         const int mx2 = min_heap.top();
-       
+
         return mx1 * mx2 - mn1 * mn2;
     }
 };

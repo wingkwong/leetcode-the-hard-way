@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/keep-multiplying-found-values-by-two/
+  Author: @wkw | https://leetcode.com/problems/keep-multiplying-found-values-by-two/
 ---
 
 # 2154 - Keep Multiplying Found Values by Two (Easy)
@@ -27,7 +26,7 @@ Return _the **final** value of_ `original`.
 ```
 Input: nums = [5,3,6,1,12], original = 3
 Output: 24
-Explanation: 
+Explanation:
 - 3 is found in nums. 3 is multiplied by 2 to obtain 6.
 - 6 is found in nums. 6 is multiplied by 2 to obtain 12.
 - 12 is found in nums. 12 is multiplied by 2 to obtain 24.
@@ -45,12 +44,12 @@ Explanation:
 
 **Constraints:**
 
-* `1 <= nums.length <= 1000`
-* `1 <= nums[i], original <= 1000`
+- `1 <= nums.length <= 1000`
+- `1 <= nums[i], original <= 1000`
 
 ## Approach 1: Simulation with Set
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

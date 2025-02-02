@@ -1,6 +1,6 @@
 ---
-title: "Bucket Sort"
-description: ""
+title: 'Bucket Sort'
+description: ''
 hide_table_of_contents: true
 draft: true
 keywords:

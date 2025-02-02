@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @vigneshshiv | https://leetcode.com/problems/subsets/'
+description: 'Author: @wkw, @vigneshshiv | https://leetcode.com/problems/subsets/'
 tags: [Array, Backtracking, Bit Manipulation]
 ---
 
@@ -26,22 +26,22 @@ Output: [[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]
 
 ```
 Input: nums = [0]
-Output: [[],[0]] 
+Output: [[],[0]]
 ```
 
 **Constraints:**
 
-* `1 <= nums.length <= 10`
-* `-10 <= nums[i] <= 10`
-* All the numbers of `nums` are **unique**.
+- `1 <= nums.length <= 10`
+- `-10 <= nums[i] <= 10`
+- All the numbers of `nums` are **unique**.
 
-## Approach 1: Bit  Manipulation
+## Approach 1: Bit Manipulation
 
 We can try all the possible combinations of the numbers. For each number there are only two options - you either take the number or not. If the bit is set as 1, then it means this number needs to be taken. If the bit is set as 0, we don't take this number.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -50,13 +50,13 @@ public:
         int n = nums.size();
         // number of subsets for n elements would be 2 ^ n
         // because for each element, you can choose to take it or not
-        // if take = 1, don't take = 0, then we can use bit manipulation 
+        // if take = 1, don't take = 0, then we can use bit manipulation
         int p = 1 << n; // 1 * 2 ^ n
         vector<vector<int>> ans;
         for(int i = 0; i < p; i++){
-            vector<int> t; 
+            vector<int> t;
             for(int j = 0; j < n; j++){
-               if((1 << j) & i) t.emplace_back(nums[j]); 
+               if((1 << j) & i) t.emplace_back(nums[j]);
             }
             ans.emplace_back(t);
         }
@@ -64,6 +64,7 @@ public:
     }
 };
 ```
+
 </TabItem>
 </Tabs>
 
@@ -73,20 +74,20 @@ Standard [Backtracking](../../tutorials/basic-topics/backtracking) problem.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
 public:
     void backtrack(vector<vector<int>>& ans, vector<int>& tmp, vector<int>& nums, int start) {
-        ans.push_back(tmp);    
+        ans.push_back(tmp);
         for(int i = start; i < nums.size(); i++) {
             tmp.push_back(nums[i]);
             backtrack(ans, tmp, nums, i + 1);
             tmp.pop_back();
         }
     }
-    
+
     vector<vector<int>> subsets(vector<int>& nums) {
         vector<vector<int>> ans;
         vector<int> tmp;
@@ -96,6 +97,7 @@ public:
     }
 };
 ```
+
 </TabItem>
 
 <TabItem value="java" label="java">
@@ -106,13 +108,13 @@ public:
 // Time complexity: O(n * 2^n)
 // Space complexity: O(n * 2^n), where n is space taken by each subset, 2^n is the total subset
 class Solution {
-    
+
     public List<List<Integer>> subsets(int[] nums) {
         List<List<Integer>> subsets = new ArrayList<>();
         subsetsBacktrack(subsets, new ArrayList<>(), nums, 0);
         return subsets;
     }
-    
+
     // Input: nums - [1, 2], idx 0
     private void subsetsBacktrack(List<List<Integer>> subsets, List<Integer> sets, int[] nums, int idx) {
         // index 0, [] added to result { [] }
@@ -122,7 +124,7 @@ class Solution {
         for (int i = idx; i < nums.length; i++) {
             // index 0, sets add [1]
             // index 1, sets add, [1, 2]
-            /* 
+            /*
              * index 1, (actually index 0 call stack), so it's add [2] in sets
              * So, it calls subsets again and it to result set
              * Finally, result set is like - { [], [1], [1, 2], [2] }
@@ -147,7 +149,7 @@ class Solution {
 ```py
 class Solution:
     # Iterative Back Tracking approach using a set to catch any dupes.
-    # Initialize with empty tuple, and during each iteration of our 
+    # Initialize with empty tuple, and during each iteration of our
     # nums array, choose to both add the current number to the tuple,
     # and not add the number to the tuple.
     # Time: O(n*2^n) to generate all subsets and copy them into our
@@ -157,7 +159,7 @@ class Solution:
         # initialize our set to prevent duplicates.
         power_set = set()
         # initialize our stack for backtracking
-        # we start with an empty tuple for hashing and idx of where 
+        # we start with an empty tuple for hashing and idx of where
         # we are at in our nums array.
         stack = [((),0)]
         while stack:
@@ -191,7 +193,7 @@ class Solution:
 // Time complexity: O(n * 2^n)
 // Space complexity: O(n * 2^n), where n is space taken by each subset, 2^n is the total subset
 class Solution {
-    
+
     // Input: nums - [1, 2]
     public List<List<Integer>> subsets(int[] nums) {
         List<List<Integer>> subsets = new ArrayList<>();
@@ -218,6 +220,7 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 </Tabs>
 
@@ -225,7 +228,7 @@ class Solution {
 
 Not required to pass result list OR temp list as a argument, just build the result sets from the previous returned values.
 
-Implemented using Java 8 functional-programming style. 
+Implemented using Java 8 functional-programming style.
 
 <Tabs>
 <TabItem value="java" label="java">
@@ -233,7 +236,7 @@ Implemented using Java 8 functional-programming style.
 
 ```java
 class Solution {
-    
+
     // Just a supplier function, provides the result
     Supplier<List<List<Integer>>> empty2DList = () -> {
         List<List<Integer>> sets = new ArrayList<>();
@@ -265,5 +268,6 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 </Tabs>

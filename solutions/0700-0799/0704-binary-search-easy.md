@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @ColeB2, @radojicic23 | https://leetcode.com/problems/binary-search/'
+description: 'Author: @wkw, @ColeB2, @radojicic23 | https://leetcode.com/problems/binary-search/'
 ---
 
 # 0704 - Binary Search (Easy)
@@ -32,21 +32,20 @@ Explanation: 2 does not exist in nums so return -1
 
 **Constraints:**
 
-* `1 <= nums.length <= 10^4`
-* `-10^4 < nums[i], target < 10^4`
-* All the integers in `nums` are **unique**.
-* `nums` is sorted in ascending order.
-
+- `1 <= nums.length <= 10^4`
+- `-10^4 < nums[i], target < 10^4`
+- All the integers in `nums` are **unique**.
+- `nums` is sorted in ascending order.
 
 ## Approach 1: Brute Force/Linear Search
 
-The questions asks for an $$O(log n)$$ time answer. But what if we can't find that. We can always start with the brute force solution first to gain insight. Obviously we can imagine, that if we scan through the numbers, we can return it if we find it, and if we reach the end of the array without finding it, we can return -1. 
+The questions asks for an $$O(log n)$$ time answer. But what if we can't find that. We can always start with the brute force solution first to gain insight. Obviously we can imagine, that if we scan through the numbers, we can return it if we find it, and if we reach the end of the array without finding it, we can return -1.
 
-We also know the array is sorted, so if we ever pass the target before the end, we can return early. That is our insight right there. 
+We also know the array is sorted, so if we ever pass the target before the end, we can return early. That is our insight right there.
 
 Time Complexity $$O(n)$$ to scan each number in the array.
 
-Space Complexity $$O(1)$$ 
+Space Complexity $$O(1)$$
 
 <Tabs>
 <TabItem value="python" label="Python">
@@ -72,7 +71,6 @@ class Solution:
 
 Note we found our insight above that the array is sorted. Since the array is sorted, and we know if the number we are looking at is larger or smaller than our target, then can we eliminate the need to look at all the numbers? Can we look directly in the middle, and eliminate half of all numbers in one go? We can. That is our intuition for binary search below.
 
-
 ## Approach 2: Binary Search
 
 :::info Prerequisite
@@ -85,7 +83,7 @@ We set the boundary from the first index to the last index of the array. In each
 
 <Tabs>
 <TabItem value="c++" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -145,22 +143,22 @@ class Solution:
  * @param {number} target
  * @return {number}
  */
-var search = function(nums, target) {
-    // initialize left and right boundary
-    let l = 0;
-    let r = nums.length - 1;
-    while (l <= r) {
-        // find mid value 
-        let mid = Math.floor((l + r) / 2) 
-        if (nums[mid] == target) return mid;
-        // if mid value is greater than target
-        // search left
-        else if (nums[mid] > target) r = mid - 1;
-        // if mid value is less than target
-        // search right
-        else l = mid + 1;
-    }
-    return -1;
+var search = function (nums, target) {
+  // initialize left and right boundary
+  let l = 0;
+  let r = nums.length - 1;
+  while (l <= r) {
+    // find mid value
+    let mid = Math.floor((l + r) / 2);
+    if (nums[mid] == target) return mid;
+    // if mid value is greater than target
+    // search left
+    else if (nums[mid] > target) r = mid - 1;
+    // if mid value is less than target
+    // search right
+    else l = mid + 1;
+  }
+  return -1;
 };
 ```
 
@@ -171,10 +169,9 @@ var search = function(nums, target) {
 
 Similarly, we set the boundary from the first index to the last index of the array. In each round, we try the middle one $$m = l + (r - l) / 2$$. If there are even number of elements, we take the lower one. If the target is greater than $$nums[m]$$, then move the left pointer to $$m + 1$$, else move the right pointer to $$m$$. At the end, if the target is found, the index would be $$l$$.
 
-
 <Tabs>
 <TabItem value="c++" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -195,7 +192,6 @@ public:
     }
 };
 ```
-
 
 </TabItem>
 
@@ -235,22 +231,22 @@ class Solution:
  * @param {number} target
  * @return {number}
  */
-var search = function(nums, target) {
-    // initialize left and right boundary
-    let l = 0;
-    let r = nums.length - 1;
-    while (l <= r) {
-        // find mid value 
-        let mid = Math.floor((l + r) / 2) 
-        if (nums[mid] == target) return mid;
-        // if mid value is less than target
-        // search right
-        else if (nums[mid] < target) l = mid + 1;
-        // if mid value is greater than target
-        // search left
-        else r = mid - 1;
-    }
-    return -1;
+var search = function (nums, target) {
+  // initialize left and right boundary
+  let l = 0;
+  let r = nums.length - 1;
+  while (l <= r) {
+    // find mid value
+    let mid = Math.floor((l + r) / 2);
+    if (nums[mid] == target) return mid;
+    // if mid value is less than target
+    // search right
+    else if (nums[mid] < target) l = mid + 1;
+    // if mid value is greater than target
+    // search left
+    else r = mid - 1;
+  }
+  return -1;
 };
 ```
 

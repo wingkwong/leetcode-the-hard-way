@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/combination-sum-iv/
+  Author: @wkw | https://leetcode.com/problems/combination-sum-iv/
 ---
 
 # 0377 - Combination Sum IV (Medium)
@@ -42,14 +41,12 @@ Output: 0
 
 **Constraints:**
 
-* `1 <= nums.length <= 200`
-* `1 <= nums[i] <= 1000`
-* All the elements of `nums` are **unique**.
-* `1 <= target <= 1000`
+- `1 <= nums.length <= 200`
+- `1 <= nums[i] <= 1000`
+- All the elements of `nums` are **unique**.
+- `1 <= target <= 1000`
 
 **Follow up:** What if negative numbers are allowed in the given array? How does it change the problem? What limitation we need to add to the question to allow negative numbers?
-
-
 
 ## Approach: Dynamic Programming
 
@@ -63,7 +60,7 @@ $$
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -78,13 +75,13 @@ public:
         for(int i = 1; i <= target; i++) {
             // iterate each number in nums
             for (auto x : nums) {
-                // since we need dp[i - x], 
+                // since we need dp[i - x],
                 // we need to make sure i - x is greater or equal to 0
                 if(i - x >= 0) {
                     // add the previous result
-                    dp[i] += dp[i - x];   
+                    dp[i] += dp[i - x];
                 }
-            }    
+            }
         }
         // return answer dp[target]
         return dp.back();
@@ -95,7 +92,7 @@ public:
 </TabItem>
 
 <TabItem value="kotlin" label="Kotlin">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```kt
 class Solution {
@@ -108,7 +105,7 @@ class Solution {
         for (i in 1..target) {
             // iterate each number in nums
             for (x in nums) {
-                // since we need dp[i - x], 
+                // since we need dp[i - x],
                 // we need to make sure i - x is greater or equal to 0
                 if (i - x >= 0) {
                     // add the previous result
@@ -124,7 +121,7 @@ class Solution {
 </TabItem>
 
 <TabItem value="java" label="Java">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```java
 class Solution {
@@ -137,7 +134,7 @@ class Solution {
         for (int i = 1; i <= target; i++) {
             // iterate each number in nums
             for (int x : nums) {
-                // since we need dp[i - x], 
+                // since we need dp[i - x],
                 // we need to make sure i - x is greater or equal to 0
                 if (i - x >= 0) {
                     // add the previous result
@@ -152,4 +149,3 @@ class Solution {
 
 </TabItem>
 </Tabs>
-

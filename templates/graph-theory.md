@@ -14,7 +14,7 @@ keywords:
 
 ### Tree Traversal
 
-Please refer the [tutorial](../tutorials/graph-theory/binary-tree#traversal) guide for more details. 
+Please refer the [tutorial](../tutorials/graph-theory/binary-tree#traversal) guide for more details.
 
 #### Preorder traversal
 
@@ -31,6 +31,7 @@ void preorder(TreeNode* node) {
     preorder(node->right);
 }
 ```
+
 </TabItem>
 
 <TabItem value="py" label="Python">
@@ -42,14 +43,15 @@ def preorder(node):
     preorder(node.left)
     preorder(node.right)
 ```
+
 </TabItem>
 </Tabs>
 
 #### Inorder traversal
 
 First traverse the left sub-tree,then visit the root and then traverse the right sub-tree.
-<Tabs>
 
+<Tabs>
 <TabItem value="cpp" label="C++">
 
 ```cpp
@@ -60,6 +62,7 @@ void inorder(TreeNode* node) {
     inorder(node->right);
 }
 ```
+
 </TabItem>
 
 <TabItem value="py" label="Python">
@@ -71,6 +74,7 @@ def inorder(node):
     # do something with node.val here
     inorder(node.right)
 ```
+
 </TabItem>
 </Tabs>
 
@@ -90,6 +94,7 @@ void postorder(TreeNode* node) {
     // do something with node.val here
 }
 ```
+
 </TabItem>
 
 <TabItem value="py" label="Python">
@@ -109,7 +114,7 @@ def postorder(node):
 
 In Breadth First Search, we explore all the closest nodes first before going one step further.
 
-Please refer the [tutorial](../tutorials/graph-theory/breadth-first-search) guide for more details. 
+Please refer the [tutorial](../tutorials/graph-theory/breadth-first-search) guide for more details.
 
 <Tabs>
 <TabItem value="py" label="Python">
@@ -131,6 +136,7 @@ def findTargetNode(root, targetValue):
         currentLevel = nextLevel
     return None
 ```
+
 </TabItem>
 </Tabs>
 
@@ -138,7 +144,7 @@ def findTargetNode(root, targetValue):
 
 Bellman Ford Algorithm computes shortest paths from a single source vertex to all of the other vertices in a weighted directed graph.
 
-Please refer the [tutorial](../tutorials/graph-theory/bellman-ford-algorithm) guide for more details. 
+Please refer the [tutorial](../tutorials/graph-theory/bellman-ford-algorithm) guide for more details.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -210,12 +216,12 @@ struct TopologicalSort {
     bool isTopologicalSorted = false;
     int steps = 0;
     int nodes = 0;
-    
+
     TopologicalSort(vector<vector<int>>& g, vector<int>& in) {
         G = g;
         n = (int) G.size();
         indegree = in;
-        
+
         int res = 0;
         queue<int> q;
         for(int i = 0; i < n; i++) {
@@ -253,7 +259,7 @@ Please refer the [tutorial](../tutorials/graph-theory/kahns-algorithm) guide for
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 template<typename T_vector, typename T_vector_vector>
@@ -347,14 +353,14 @@ class dsu {
 private class DSU(private val n: Int) {
     private val parent = IntArray(n) { it }
     private val rank = IntArray(n)
-    
+
     fun find(x: Int): Int {
         if (parent[x] != x) {
             parent[x] = find(parent[x])
         }
         return parent[x]
     }
-    
+
     fun unite(x: Int, y: Int): Boolean {
         val rootX = find(x)
         val rootY = find(y)

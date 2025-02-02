@@ -1,6 +1,6 @@
 ---
-title: "Z Algorithm"
-description: "Z Algorithm is a string matching algorithm with O(n) complexity"
+title: 'Z Algorithm'
+description: 'Z Algorithm is a string matching algorithm with O(n) complexity'
 keywords:
   - leetcode
   - tutorial
@@ -8,7 +8,7 @@ keywords:
   - algorithm
 ---
 
-<TutorialCredits authors="@wingkwong, @Cyber-Machine"/>
+<TutorialCredits authors="@wkw, @Cyber-Machine"/>
 
 ## Overview
 
@@ -100,8 +100,7 @@ Space Complexity: $O(n)$, due to the storage of the Z-array which contains an en
 >
 > For example, if s = "abcde", then it will be "bcdea" after one shift.
 
-Since the string has been cyclically shifted we have to basically check if goal appears when we concat our initial string two times. One way to check the occurance of this is to run two loops and check the occurance of goal in the
-concatenation of inital string. Using z-algorithm we can minimize our time complexity to solve this problem in linear time.
+Since the string has been cyclically shifted we have to basically check if goal appears when we concat our initial string two times. One way to check the occurance of this is to run two loops and check the occurance of goal in the concatenation of inital string. Using z-algorithm we can minimize our time complexity to solve this problem in linear time.
 
 In z-algorithm we create an initial array known as _z-array_ which stores the length of longest prefix substring that occurs in our string.
 
@@ -204,8 +203,7 @@ class Solution(object):
 
 > You are building a string s of length n one character at a time, prepending each new character to the front of the string. The strings are labeled from 1 to n, where the string with length i is labeled si.
 >
-> For example, for s = "abaca", s1 == "a", s2 == "ca", s3 == "aca", etc.
-> The score of si is the length of the longest common prefix between si and sn (Note that s == sn).
+> For example, for s = "abaca", s1 == "a", s2 == "ca", s3 == "aca", etc. The score of si is the length of the longest common prefix between si and sn (Note that s == sn).
 >
 > Given the final string s, return the sum of the score of every si.
 

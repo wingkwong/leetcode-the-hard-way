@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @vigneshshiv |
-  https://leetcode.com/problems/minimum-window-substring/
+  Author: @vigneshshiv | https://leetcode.com/problems/minimum-window-substring/
 ---
 
 # 0076 - Minimum Window Substring (Hard)
@@ -45,26 +44,25 @@ Since the largest window of s only has one 'a', return empty string.
 
 **Constraints:**
 
-* `m == s.length`
-* `n == t.length`
-* `1 <= m, n <= 10^5`
-* `s` and `t` consist of uppercase and lowercase English letters.
-
+- `m == s.length`
+- `n == t.length`
+- `1 <= m, n <= 10^5`
+- `s` and `t` consist of uppercase and lowercase English letters.
 
 **Follow up:** Could you find an algorithm that runs in `O(m + n)` time?
 
 ## Approach 1: Sliding Window with HashMap
 
-Finding all of T's characters in S, irrespective of order and other characters in a linear time requires two pointer approach. 
+Finding all of T's characters in S, irrespective of order and other characters in a linear time requires two pointer approach.
 
-One of the base case is, T should be smaller than S, Otherwise if T's larger than S then return "". But if both strings are equal then T is our answer. 
+One of the base case is, T should be smaller than S, Otherwise if T's larger than S then return "". But if both strings are equal then T is our answer.
 
 Apart from above mentioned base cases, Here are the simple steps to solve this problem,
 
 - Build a HashMap of T's characters and it's count.
 - Iterate through S and move forward with one pointer, and look for each char in map and it's count, If matches then we found one of the matching character.
 - Repeat the process until of all T's characters found in S, Once found, that's our minimum window.
-- Remove S's unnecessary characters in HashMap starting from first, and find the minimum window. 
+- Remove S's unnecessary characters in HashMap starting from first, and find the minimum window.
 - Repeat the 3rd & 4th step until you find the minimum window substring
 
 Time Complexity: $O(m + n)$, where $m$ - # of characters in s and $n$ - # of characters in t.
@@ -129,7 +127,7 @@ class Solution {
 
 ```py
 class Solution:
-    # We are going to create a counter to count the characters of t, then as 
+    # We are going to create a counter to count the characters of t, then as
     # we come across them in s, decrement the count in our counter. If count
     # for that character is <= 0, we have more than enough characters in our
     # window to equal t. so we can increment a matches variable to track that.
@@ -157,7 +155,7 @@ class Solution:
         # side of our window starting at 0, matches to track the characters
         # we have enough of inside our window to match t, and an initial variable
         # to where our window will start, and how large it is. We use -1 to show
-        # we don't have a window started that is valid yet, and len(s) + 1 as a 
+        # we don't have a window started that is valid yet, and len(s) + 1 as a
         # window that will be large enough than any window we find, if we find one
         # will be smaller than it, and therefore trigger our update condition.
         l = 0
@@ -186,7 +184,7 @@ class Solution:
                     window_start = l
                 # start the removal of the left character, ie moving window forward.
                 left_ch = s[l]
-                # if left ch is a character we need to match t, 
+                # if left ch is a character we need to match t,
                 if left_ch in counter:
                     # check to see if we have 0 for a count of that character.
                     # if we do, we know by removing it, we will no longer have enough
@@ -205,7 +203,6 @@ class Solution:
 
 </TabItem>
 </Tabs>
-
 
 ## Approach 2: Sliding Window with ASCII
 

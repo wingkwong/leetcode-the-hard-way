@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/fruit-into-baskets/'
+description: 'Author: @wkw | https://leetcode.com/problems/fruit-into-baskets/'
 tags: [Array, Hash Table, Sliding Window]
 ---
 
-# 0904 - Fruit Into Baskets (Medium) 
+# 0904 - Fruit Into Baskets (Medium)
 
 ## Problem Link
 
@@ -19,7 +19,7 @@ You want to collect as much fruit as possible. However, the owner has some stric
 - Starting from any tree of your choice, you must pick **exactly one fruit** from **every** tree (including the start tree) while moving to the right. The picked fruits must fit in one of your baskets.
 - Once you reach a tree with fruit that cannot fit in your baskets, you must stop.
 
-Given the integer array `fruits`, return *the **maximum** number of fruits you can pick*.
+Given the integer array `fruits`, return _the **maximum** number of fruits you can pick_.
 
 **Example 1:**
 
@@ -56,7 +56,7 @@ If we had started at the first tree, we would only pick from trees [1,2].
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -65,7 +65,7 @@ public:
         int n = fruits.size(), ans = 0;
         // count the frequency of fruits
         unordered_map<int, int> m;
-        // two pointers 
+        // two pointers
         // - l is the pointer to the starting index of the window
         // - r is the pointer to the ending index of the window
         for (int l = 0, r = 0; r < n; r++) {
@@ -90,7 +90,7 @@ public:
 </TabItem>
 
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:
@@ -98,7 +98,7 @@ class Solution:
         ans = 0
         # count the frequency of fruits
         cnt = Counter()
-        # two pointers 
+        # two pointers
         # - l is the pointer to the starting index of the window
         # - r is the pointer to the ending index of the window
         l = 0

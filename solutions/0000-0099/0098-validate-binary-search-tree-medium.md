@@ -1,5 +1,5 @@
 ---
-description: "Author: @dhanu084, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/validate-binary-search-tree/"
+description: 'Author: @dhanu084, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/validate-binary-search-tree/'
 ---
 
 # 0098 - Validate Binary Search Tree (Medium)
@@ -14,11 +14,7 @@ Given the root of a binary tree, determine if it is a valid binary search tree (
 
 A valid BST is defined as follows:
 
-The left
-subtree
-of a node contains only nodes with keys less than the node's key.
-The right subtree of a node contains only nodes with keys greater than the node's key.
-Both the left and right subtrees must also be binary search trees.
+The left subtree of a node contains only nodes with keys less than the node's key. The right subtree of a node contains only nodes with keys greater than the node's key. Both the left and right subtrees must also be binary search trees.
 
 **Example 1:**
 
@@ -73,6 +69,7 @@ class Solution:
         # pass -inf as the left minimum and inf as right maximum initially
         return validate(root, -inf, inf)
 ```
+
 </TabItem>
 
 <TabItem value="java" label="Java">
@@ -99,7 +96,7 @@ class Solution {
         if (root == null) return true;
         return checkBST(root, null, null);
     }
-    
+
     public boolean checkBST(TreeNode root, Integer min, Integer max) {
         if (root == null) return true;
         // Check the node value with it's parent
@@ -139,7 +136,7 @@ public:
         if (!(node->val > left && node->val < right)) {
             return false;
         }
-        return (valid(node->left, left, node->val) && 
+        return (valid(node->left, left, node->val) &&
                 valid(node->right, node->val, right));
     }
 
@@ -167,21 +164,21 @@ public:
  * @param {TreeNode} root
  * @return {boolean}
  */
-var isValidBST = function(root) {
-    function valid(node, left, right) {
-        if (!node) {
-            return true;
-        }
-        if (!(node.val > left && node.val < right)) {
-            return false;
-        }
-        return (valid(node.left, left, node.val) && 
-                valid(node.right, node.val, right));
+var isValidBST = function (root) {
+  function valid(node, left, right) {
+    if (!node) {
+      return true;
     }
-    return valid(root, parseFloat(-Infinity), parseFloat(Infinity));
+    if (!(node.val > left && node.val < right)) {
+      return false;
+    }
+    return (
+      valid(node.left, left, node.val) && valid(node.right, node.val, right)
+    );
+  }
+  return valid(root, parseFloat(-Infinity), parseFloat(Infinity));
 };
 ```
 
 </TabItem>
 </Tabs>
-

@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/minimum-sum-of-four-digit-number-after-splitting-digits/
+  Author: @wkw | https://leetcode.com/problems/minimum-sum-of-four-digit-number-after-splitting-digits/
 ---
 
 # 2160 - Minimum Sum of Four Digit Number After Splitting Digits (Easy)
@@ -32,19 +31,19 @@ The minimum sum can be obtained by the pair [29, 23]: 29 + 23 = 52.
 ```
 Input: num = 4009
 Output: 13
-Explanation: Some possible pairs [new1, new2] are [0, 49], [490, 0], etc. 
+Explanation: Some possible pairs [new1, new2] are [0, 49], [490, 0], etc.
 The minimum sum can be obtained by the pair [4, 9]: 4 + 9 = 13.
 ```
 
 **Constraints:**
 
-* `1000 <= num <= 9999`
+- `1000 <= num <= 9999`
 
 ## Approach 1: Sorting & Greedy
 
 We can sort those 4 digits in an increasing order. Let's say $$abcd$$ where $$a <= b <= c <= d$$. We put those two smallest digits to be decimal's place, and those two largest ones in one's place. The answer is simply $$ac + bd$$.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

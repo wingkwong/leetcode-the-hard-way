@@ -1,5 +1,5 @@
 ---
-description: "Author: @ColeB2, @radojicic23 | https://leetcode.com/problems/invert-binary-tree/"
+description: 'Author: @ColeB2, @radojicic23 | https://leetcode.com/problems/invert-binary-tree/'
 tags: [Tree, Depth-First Search, Breadth-First Search, Binary Tree]
 ---
 
@@ -43,12 +43,11 @@ Output: []
 - The number of nodes in the tree is in the range `[0, 100]`.
 - `100 <= Node.val <= 100`
 
-
 ## Approach 1: Recursive Depth-First Search
 
 Like many tree problems, they can often be solved with recursion, and this problem is no exception. When solving problems recursively it helps to think the problem through and think up the base case(s).
 
-So looking at the problem, and the images, it appears that this problem is asking us to swap each child for each node. Then know that we can think about what happens if we reach the end, a node that has a value of null. That is our base case. If we reach a null node, we can just return the node. 
+So looking at the problem, and the images, it appears that this problem is asking us to swap each child for each node. Then know that we can think about what happens if we reach the end, a node that has a value of null. That is our base case. If we reach a null node, we can just return the node.
 
 Knowing that is our base case, all we are left with is understanding how to swap our children nodes. We can do that using a temporary variable to track the left child so we don't lose it. Setting the root node's left pointer to the right child, then setting the root node's right pointer to the temporary variable, which was our left child.
 
@@ -108,20 +107,20 @@ class Solution:
  * @param {TreeNode} root
  * @return {TreeNode}
  */
-var invertTree = function(root) {
-    // base case
-    if (!root) {
-        return root;
-    }
-    // swap left and right nodes
-    let tmp = root.left;
-    root.left = root.right;
-    root.right = tmp;
-    // call function recursively on left and right nodes
-    invertTree(root.left);
-    invertTree(root.right);
-    // return root node 
+var invertTree = function (root) {
+  // base case
+  if (!root) {
     return root;
+  }
+  // swap left and right nodes
+  let tmp = root.left;
+  root.left = root.right;
+  root.right = tmp;
+  // call function recursively on left and right nodes
+  invertTree(root.left);
+  invertTree(root.right);
+  // return root node
+  return root;
 };
 ```
 
@@ -228,29 +227,29 @@ class Solution:
  * @param {TreeNode} root
  * @return {TreeNode}
  */
-var invertTree = function(root) {
-    // base case
-    if (!root) {
-        return root;
-    }
-    // initialize stack and add root inside
-    stack = [];
-    stack.push(root);
-    // go through every value in stack
-    while (stack.length) {
-        // pop the last node from the stack
-        let node = stack.pop();
-        if (node != null) {
-            // swap left and right nodes
-            let tmp = node.left;
-            node.left = node.right;
-            node.right = tmp;
-            // add left and right nodes in stack
-            stack.push(node.left, node.right);
-        } 
-    }
-    // return root node 
+var invertTree = function (root) {
+  // base case
+  if (!root) {
     return root;
+  }
+  // initialize stack and add root inside
+  stack = [];
+  stack.push(root);
+  // go through every value in stack
+  while (stack.length) {
+    // pop the last node from the stack
+    let node = stack.pop();
+    if (node != null) {
+      // swap left and right nodes
+      let tmp = node.left;
+      node.left = node.right;
+      node.right = tmp;
+      // add left and right nodes in stack
+      stack.push(node.left, node.right);
+    }
+  }
+  // return root node
+  return root;
 };
 ```
 
@@ -274,11 +273,11 @@ var invertTree = function(root) {
 class Solution {
 public:
     TreeNode* invertTree(TreeNode* root) {
-        // base case 
+        // base case
         if (!root) {
             return root;
         }
-        // initialize stack and add root inside 
+        // initialize stack and add root inside
         stack<TreeNode*> st;
         st.push(root);
         // go through every value in stack
@@ -415,31 +414,31 @@ public:
  * @param {TreeNode} root
  * @return {TreeNode}
  */
-var invertTree = function(root) {
-    // base case
-    if (!root) {
-        return root;
-    }
-    // initialize queue and insert root inside queue
-    let q = new Queue();
-    q.enqueue(root);
-    // go through all elements in queue
-    while (!q.isEmpty()) {
-        // pop the front node from queue
-        let node = q.dequeue();
-        // if node exist
-        if (node) {
-            // swap left and right nodes
-            let tmp = node.left;
-            node.left = node.right;
-            node.right = tmp;
-            // insert left and right nodes in queue
-            q.enqueue(node.left);
-            q.enqueue(node.right);
-        }
-    }
-    // return root node
+var invertTree = function (root) {
+  // base case
+  if (!root) {
     return root;
+  }
+  // initialize queue and insert root inside queue
+  let q = new Queue();
+  q.enqueue(root);
+  // go through all elements in queue
+  while (!q.isEmpty()) {
+    // pop the front node from queue
+    let node = q.dequeue();
+    // if node exist
+    if (node) {
+      // swap left and right nodes
+      let tmp = node.left;
+      node.left = node.right;
+      node.right = tmp;
+      // insert left and right nodes in queue
+      q.enqueue(node.left);
+      q.enqueue(node.right);
+    }
+  }
+  // return root node
+  return root;
 };
 ```
 

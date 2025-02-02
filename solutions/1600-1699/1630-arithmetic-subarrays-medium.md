@@ -3,7 +3,7 @@ description: 'Author: @jit, @martin0327, @heder | https://leetcode.com/problems/
 tags: [Array, Sorting]
 ---
 
-# 1630 - Arithmetic Subarrays (Medium) 
+# 1630 - Arithmetic Subarrays (Medium)
 
 ## Problem Link
 
@@ -29,7 +29,7 @@ The following sequence is not **arithmetic**:
 
 You are given an array of `n` integers, `nums`, and two arrays of `m` integers each, `l` and `r`, representing the `m` range queries, where the `ith` query is the range `[l[i], r[i]]`. All the arrays are **0-indexed**.
 
-Return *a list of*`boolean` *elements* `answer`*, where* `answer[i]` *is* `true` *if the subarray* `nums[l[i]], nums[l[i]+1], ... , nums[r[i]]`*can be **rearranged** to form an **arithmetic** sequence, and* `false` *otherwise.*
+Return _a list of_`boolean` _elements_ `answer`_, where_ `answer[i]` _is_ `true` _if the subarray_ `nums[l[i]], nums[l[i]+1], ... , nums[r[i]]`_can be **rearranged** to form an **arithmetic** sequence, and_ `false` _otherwise._
 
 **Example 1:**
 
@@ -78,7 +78,7 @@ defp is_arith?([a | [b | rest] = tl]) do
   diff = a - b
   Enum.zip_with(tl, rest, &-/2) |> Enum.all?(&(&1 == diff))
 end
-  
+
 defp is_arith?(_), do: true
 ```
 
@@ -104,7 +104,7 @@ public:
             int l = ql[i], r = qr[i];
             mo[l/sz].push_back({r,l,i});
         }
-        
+
         int i=0, j=0, mul = 0;
         map<int,int> mp1, mp2;
         mp1[a[0]]++;
@@ -113,10 +113,10 @@ public:
         auto dec1 = [&] (int x) {
             if (mp1[x] == 2) mul--;
             if (--mp1[x] == 0) mp1.erase(x);
-        }; 
+        };
         auto inc2 = [&] (int x) { mp2[x]++; };
         auto dec2 = [&] (int x) { if (--mp2[x] == 0) mp2.erase(x); };
-        
+
         auto lr = [&] (int x) {
             auto it1 = mp1.lower_bound(x);
             auto it2 = mp1.upper_bound(x);
@@ -144,7 +144,7 @@ public:
             }
             dec1(x);
         };
-        
+
         vector<bool> ans(q);
         for (auto &[_,rli] : mo) {
             sort(rli.begin(), rli.end());
@@ -160,7 +160,7 @@ public:
         }
         return ans;
     }
-}; 
+};
 ```
 
 </TabItem>
@@ -185,7 +185,7 @@ public:
         : m_(bin_log(size(nums)) + 1, vector<pair<int, int>>(size(nums))) {
         transform(begin(nums), end(nums), begin(m_[0]),
                   [](int x) { return make_pair(x, x); });
-        
+
         for (int k = 1; k < size(m_); ++k) {
             for (int i = 0; i + (1 << k) - 1 < size(nums); ++i) {
                 const auto& p1 = m_[k - 1][i];
@@ -196,7 +196,7 @@ public:
             }
         }
     }
-    
+
     pair<int, int> query(int l, int r) {
         const int len = r - l + 1;
     	const int k = bin_log(len);
@@ -204,7 +204,7 @@ public:
         const auto& p2 = m_[k][r - (1 << k) + 1];
 	    return make_pair(
             min(p1.first, p2.first),
-            max(p1.second, p2.second));   
+            max(p1.second, p2.second));
     }
 
 private:
@@ -217,7 +217,7 @@ class Solution {
 public:
     vector<bool> checkArithmeticSubarrays(vector<int>& nums, vector<int>& ls, vector<int>& rs) {
         RangeMinMaxQuery rmq(nums);
-        
+
         const int m = size(ls);
         vector<bool> ans;
         for (int i = 0; i < m; ++i) {
@@ -228,10 +228,10 @@ public:
                 ans.push_back(true);
                 continue;
             }
-            
+
             const auto [mn, mx] = rmq.query(l, r);
             const int d = (mx - mn) / (len - 1);
-            
+
             if (mn == mx) {
                 ans.push_back(true);
             } else if ((mx - mn) % (len -1)) {

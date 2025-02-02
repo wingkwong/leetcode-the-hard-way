@@ -1,6 +1,15 @@
 ---
 description: 'Author: @ColeB2 | https://leetcode.com/problems/swim-in-rising-water/'
-tags: [Array, Binary Search, Depth-First Search, Breadth-First Search, Union Find, Heap (Priority Queue), Matrix]
+tags:
+  [
+    Array,
+    Binary Search,
+    Depth-First Search,
+    Breadth-First Search,
+    Union Find,
+    Heap (Priority Queue),
+    Matrix,
+  ]
 ---
 
 # 0778 - Swim in Rising Water (Hard)
@@ -52,7 +61,6 @@ We need to wait until time 16 so that (0, 0) and (4, 4) are connected.
 
 ## Approach 1: Dijkstra's Algorithm
 
-
 You could imagine that using a breadth-first search, on each iteration we would want to sort the queue by elevation of cells, so as to follow the best path first, instead of all paths. That is where Dijkstra's algorithm comes in.
 
 Dijkstra's algorithm gives us access to the best possible cell to follow inside our path by utilizing a min-heap. The min heap sorts the cells so the lowest elevation cell will always be on top, and by utilizing Dijkstra's algorithm, we guaranteed the best path. We must also maintain a visited set to prevent revisiting any cells.
@@ -99,7 +107,7 @@ class Solution:
                 # calculate the new time, which will be the largest value
                 # of the cell we are looking at, and the time we passed
                 # to the last cell.
-                # Note, each cell will track the max possible time to 
+                # Note, each cell will track the max possible time to
                 # reach said cell. Example: if our (0,0) cell started at
                 # t = 20, and the adjacent cells are all < 20, it would
                 # no longer matter which cell you travelled to first as
@@ -111,4 +119,3 @@ class Solution:
 
 </TabItem>
 </Tabs>
-

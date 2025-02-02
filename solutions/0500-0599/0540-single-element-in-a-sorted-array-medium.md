@@ -1,15 +1,15 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/single-element-in-a-sorted-array/'
+description: 'Author: @wkw | https://leetcode.com/problems/single-element-in-a-sorted-array/'
 tags: [Array, Binary Search]
 ---
 
-# 0540 - Single Element in a Sorted Array (Medium) 
+# 0540 - Single Element in a Sorted Array (Medium)
 
 ## Problem Statement
 
 You are given a sorted array consisting of only integers where every element appears exactly twice, except for one element which appears exactly once.
 
-Return *the single element that appears only once*.
+Return _the single element that appears only once_.
 
 Your solution must run in `O(log n)` time and `O(1)` space.
 
@@ -34,7 +34,7 @@ Output: 10
 
 ## Approach 1: Binary Search
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

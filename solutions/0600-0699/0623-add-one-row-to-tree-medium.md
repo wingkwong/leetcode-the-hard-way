@@ -3,7 +3,7 @@ description: 'Author: @divyansh_0602, @jit, @heder| https://leetcode.com/problem
 tags: [Tree, Depth-First Search, Breadth-First Search, Binary Tree]
 ---
 
-# 0623 - Add One Row to Tree (Medium) 
+# 0623 - Add One Row to Tree (Medium)
 
 ## Problem Link
 
@@ -17,14 +17,14 @@ Note that the root `node` is at depth `1`.
 
 The adding rule is:
 
-* Given the integer `depth`, for each not null tree node `cur` at the depth `depth - 1`, create two tree nodes with value `val` as `cur`'s left subtree root and right subtree root.
-* `cur`'s original left subtree should be the left subtree of the new left subtree root.
-* `cur`'s original right subtree should be the right subtree of the new right subtree root.
-* If `depth == 1` that means there is no depth `depth - 1` at all, then create a tree node with value `val` as the new root of the whole original tree, and the original tree is the new root's left subtree.
+- Given the integer `depth`, for each not null tree node `cur` at the depth `depth - 1`, create two tree nodes with value `val` as `cur`'s left subtree root and right subtree root.
+- `cur`'s original left subtree should be the left subtree of the new left subtree root.
+- `cur`'s original right subtree should be the right subtree of the new right subtree root.
+- If `depth == 1` that means there is no depth `depth - 1` at all, then create a tree node with value `val` as the new root of the whole original tree, and the original tree is the new root's left subtree.
 
 **Example 1:**
 
-![Example 1](https://assets.leetcode.com/uploads/2021/03/15/addrow-tree.jpg "Example 1")
+![Example 1](https://assets.leetcode.com/uploads/2021/03/15/addrow-tree.jpg 'Example 1')
 
 ```
 Input: root = [4,2,6,3,1,5], val = 1, depth = 2
@@ -33,7 +33,7 @@ Output: [4,1,1,2,null,null,6,3,1,5]
 
 **Example 2:**
 
-![Example 2](https://assets.leetcode.com/uploads/2021/03/11/add2-tree.jpg "Example 2")
+![Example 2](https://assets.leetcode.com/uploads/2021/03/11/add2-tree.jpg 'Example 2')
 
 ```
 Input: root = [4,2,null,3,1], val = 1, depth = 3
@@ -42,17 +42,18 @@ Output: [4,2,null,1,1,3,null,null,1]
 
 **Constraints:**
 
-* The number of nodes in the tree is in the range `[1, 10^4]`.
-* The depth of the tree is in the range `[1, 10^4]`.
-* `-100 <= Node.val <= 100`
-* `-10^5 <= val <= 10^5`
-* `1 <= depth <= the depth of tree + 1`
+- The number of nodes in the tree is in the range `[1, 10^4]`.
+- The depth of the tree is in the range `[1, 10^4]`.
+- `-100 <= Node.val <= 100`
+- `-10^5 <= val <= 10^5`
+- `1 <= depth <= the depth of tree + 1`
 
 ## Approach 1: Recursion (DFS)
 
 This approach uses a simple DFS approach. The recursive function $insert(node, currDepth, val, depth)$ can be used to recursively reach a node where we need to insert two nodes.
 
 The parameters used in the function are:
+
 - $node$: the current node on which DFS is called upon
 - $currDepth$: the depth of current node $node$
 - $val$: value of nodes to be inserted
@@ -60,7 +61,7 @@ The parameters used in the function are:
 
 > Note: the parameters $val$ and $depth$ never change during program execution and hence can be made global
 
-Now, whenever we reach a node with depth $depth-1$ we create two new nodes $l$ and $r$ and link $l$'s and $r$'s left and right children to be $node$'s left and right children respectively, and then we re-assign $node$'s left and right children as $l$ and $r$ respectively. 
+Now, whenever we reach a node with depth $depth-1$ we create two new nodes $l$ and $r$ and link $l$'s and $r$'s left and right children to be $node$'s left and right children respectively, and then we re-assign $node$'s left and right children as $l$ and $r$ respectively.
 
 If $node$ is at a depth < $depth$ we recursively call $insert$ for $node$->$right$ and $node$->$left$ with increased depths.
 
@@ -169,19 +170,19 @@ end
 ```cpp
 static TreeNode* addOneRow(TreeNode* root, int val, int depth) {
     if (depth == 1) return new TreeNode(val, root, nullptr);
-    
+
     stack<pair<TreeNode*, int>> st;
     st.push({root, depth - 1});
-    
+
     while (!empty(st)) {
         auto [node, depth] = st.top(); st.pop();
-        
+
         if (depth == 1) {
             node->left = new TreeNode(val, node->left, nullptr);
             node->right = new TreeNode(val, nullptr, node->right);
             continue;
         }
-        
+
         if (node->left) st.push({node->left, depth - 1});
         if (node->right) st.push({node->right, depth - 1});
     }
@@ -212,7 +213,7 @@ static TreeNode* addOneRow(TreeNode* root, int val, int depth) {
         int q_size = size(q);
         while (q_size--) {
             TreeNode* node = q.front(); q.pop();
-            
+
             if (i == depth - 1) {
                 node->left = new TreeNode(val, node->left, nullptr);
                 node->right = new TreeNode(val, nullptr, node->right);
@@ -222,7 +223,7 @@ static TreeNode* addOneRow(TreeNode* root, int val, int depth) {
             }
         }
     }
-    
+
     return root;
 }
 ```
@@ -246,7 +247,7 @@ A variant could be to do the level order traversal to $depth - 1$ and then inser
         int q_size = size(q);
         while (q_size--) {
             TreeNode* node = q.front(); q.pop();
-            
+
             if (node->left) q.push(node->left);
             if (node->right) q.push(node->right);
         }
@@ -257,7 +258,7 @@ A variant could be to do the level order traversal to $depth - 1$ and then inser
         node->left = new TreeNode(val, node->left, nullptr);
         node->right = new TreeNode(val, nullptr, node->right);
     }
-    
+
     return root;
 }
 ```

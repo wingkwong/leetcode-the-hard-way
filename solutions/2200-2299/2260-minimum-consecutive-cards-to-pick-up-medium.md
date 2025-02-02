@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong, @dhanu084 |
-  https://leetcode.com/problems/minimum-consecutive-cards-to-pick-up/
+  Author: @wkw, @dhanu084 | https://leetcode.com/problems/minimum-consecutive-cards-to-pick-up/
 ---
 
 # 2260 - Minimum Consecutive Cards to Pick Up (Medium)
@@ -47,7 +46,7 @@ Store the index for each number, check each element with size > 1 and find out t
 
 <Tabs>
 <TabItem value = "cpp" label = "C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

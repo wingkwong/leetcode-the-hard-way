@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/minimum-health-to-beat-game/'
+description: 'Author: @wkw | https://leetcode.com/problems/minimum-health-to-beat-game/'
 tags: [Array, Greedy, Prefix Sum]
 ---
 
-# 2214 - Minimum Health to Beat Game (Medium) 
+# 2214 - Minimum Health to Beat Game (Medium)
 
 ## Problem Link
 
@@ -17,7 +17,7 @@ You are also given an integer `armor`. You may use your armor ability **at most 
 
 You must complete the levels in order and your health must be **greater than** `0` at all times to beat the game.
 
-Return *the **minimum** health you need to start with to beat the game.*
+Return _the **minimum** health you need to start with to beat the game._
 
 **Example 1:**
 
@@ -68,7 +68,7 @@ Note that you did not use your armor ability.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -76,10 +76,10 @@ public:
     long long minimumHealth(vector<int>& damage, int armor) {
         // without any armor, the minimum health you need is sum(damage) + 1 (see example 3)
         long long ans = accumulate(damage.begin(), damage.end(), 0LL) + 1;
-        // when should we use the armor ability? 
+        // when should we use the armor ability?
         // it's optimal to use when you take the most amount of damage
         int mx = *max_element(damage.begin(), damage.end());
-        // since mx can be greater than armor, 
+        // since mx can be greater than armor,
         // we take the minimum value and substract it from ans
         ans -= min(mx, armor);
         return ans;

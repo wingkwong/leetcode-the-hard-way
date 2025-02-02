@@ -1,10 +1,12 @@
 ---
 description: >-
   Author: @Kavita613 | https://leetcode.com/problems/frog-jump/
+
+
 tags: [Array, Dynamic Programming]
 ---
 
-# 0403 - Frog Jump (Hard) 
+# 0403 - Frog Jump (Hard)
 
 ## Problem Link
 
@@ -21,8 +23,8 @@ frog's last jump was k units, its next jump must be either k - 1, k, or k + 1 un
 
 ```
 Input: stones = [0,1,3,5,6,8,12,17]
-Output: true  
-Explanation: The frog can jump to the last stone by jumping $1$ unit to the $2nd$ stone, then $2$ units to the $3rd$ stone, then  
+Output: true
+Explanation: The frog can jump to the last stone by jumping $1$ unit to the $2nd$ stone, then $2$ units to the $3rd$ stone, then
 $2$ units to the $4th$ stone, then $3$ units to the $6th$ stone, $4$ units to the $7th$ stone, and $5$ units to the $8th$ stone.
 ```
 
@@ -30,10 +32,9 @@ $2$ units to the $4th$ stone, then $3$ units to the $6th$ stone, $4$ units to th
 
 ```
 Input: stones = [0,1,2,3,4,8,9,11]
-Output: false  
+Output: false
 Explanation: There is no way to jump to the last stone as the gap between the $5th$ and $6th$ stone is too large.
 ```
-
 
 **Constraints:**
 
@@ -42,12 +43,11 @@ Explanation: There is no way to jump to the last stone as the gap between the $5
 - `stones[0] == 0`
 - `stones` is sorted in a strictly increasing order.
 
-
 ## Approach 1: HashMap
 
 - First, we make hashmap of each stone, which would contain a set(stores viable moves that can be made)
 - Traversing the $stones$ array from index $0$ which is our 0th positions(only one move at 0th position made by frog)
-- Populate the sets of stones that can be reached from current position using a viable move which are $k-1$, $k$ and $k+1$. And also we will calculate next viable move using previous move 
+- Populate the sets of stones that can be reached from current position using a viable move which are $k-1$, $k$ and $k+1$. And also we will calculate next viable move using previous move
 - At the end we will return true if we reach at the end of posiions which is $stones[n-1]$
 
 Time Complexity is $O(n * n)$, where $n$ is the length of $stones$ array.
@@ -107,26 +107,28 @@ public:
   }
 };
 ```
+
 </TabItem>
 </Tabs>
 
-## Approach 2: Dynamic Programming  
-  We apply Recursion + Memoization to find out the solution. There are three possible recursion call for $k-1$, $k$, $k+1$ moves.  
-  There are some base condtions, we have to facus on 
+## Approach 2: Dynamic Programming
+
+We apply Recursion + Memoization to find out the solution. There are three possible recursion call for $k-1$, $k$, $k+1$ moves.  
+ There are some base condtions, we have to facus on
+
 - if move k is less then zero, then we can not make a jump at that position.
 - Now, we have to find that whatever $move$ $(stones[idx-1] + k)$ that has been made is present in our $stones$ array or not
 - Also we are answer in our dp and if $dp[idx][k]!=-1$, it means our answer is already present in dp
-- Now, final base condition will check if we reach last position or not  
-  
+- Now, final base condition will check if we reach last position or not
+
 Time Complexity is $O(n * n)$, where $n$ is the length of the $stones$ array.  
 Space Complexity is $O(n * n)$
-
 
 <Tabs>
 <TabItem value="cpp" label="C++">
 <SolutionAuthor name="@Kavita613"/>
 
-```cpp  
+```cpp
 class Solution {
  public:
   // Create Globally 2d dp array
@@ -180,5 +182,6 @@ class Solution {
   }
 };
 ```
+
 </TabItem>
 </Tabs>

@@ -22,23 +22,22 @@ Implement the `TimeMap` class:
 **Example 1:**
 
 ```
-Input: ["TimeMap", "set", "get", "get", "set", "get", "get"] 
+Input: ["TimeMap", "set", "get", "get", "set", "get", "get"]
         [[], ["foo", "bar", 1], ["foo", 1], ["foo", 3], ["foo", "bar2", 4], ["foo", 4], ["foo", 5]]
 Output: [null, null, "bar", "bar", null, "bar2", "bar2"]
 ```
 
 **Constraints:**
 
-* `1 <= key.length, value.length <= 100`
-* `key` and `value` consist of lowercase English letters and digits.
-* `1 <= timestamp <= 10^7`
-* All the timestamps `timestamp` of `set` are strictly increasing.
-* At most `2 * 10^5` calls will be made to `set` and `get`.
+- `1 <= key.length, value.length <= 100`
+- `key` and `value` consist of lowercase English letters and digits.
+- `1 <= timestamp <= 10^7`
+- All the timestamps `timestamp` of `set` are strictly increasing.
+- At most `2 * 10^5` calls will be made to `set` and `get`.
 
 ## Approach 1: Binary Search
-Create a hashmap to store key, value pairs. Here the value timestamp value with acutal value which is stored in another Object of class Element
-Whenever get used for a particular element we will be going to get all the values of corresponding key and binary search the list of timestamps 
 
+Create a hashmap to store key, value pairs. Here the value timestamp value with acutal value which is stored in another Object of class Element Whenever get used for a particular element we will be going to get all the values of corresponding key and binary search the list of timestamps
 
 <Tabs>
 <TabItem value="java" label="Java">
@@ -103,8 +102,8 @@ class TimeMap {
     }
 }
 ```
-</TabItem>
 
+</TabItem>
 
 <TabItem value="python" label="Python">
 <SolutionAuthor name="@ColeB2"/>
@@ -112,7 +111,7 @@ class TimeMap {
 ```py
 class TimeMap:
     # Here we will implement our TimeMap. We need easy access to our values, via
-    # a key,value pair system, as well as we may also have multiple values for 
+    # a key,value pair system, as well as we may also have multiple values for
     # each key, which will be inputted at a given timestamp. So a hash map, for
     # O(1) access given keys, with values being an array of all our values at a given
     # timestamp. ie: { key: [(timestamp1, value1), (timestamp2, value2)...] }
@@ -122,7 +121,7 @@ class TimeMap:
     def __init__(self):
         # initialize empty hash map, O(1) to init.
         self.map = {}
-        
+
 
     def set(self, key: str, value: str, timestamp: int) -> None:
         # add key, value, timestamps to hash map, O(1) to add to hash map.
@@ -131,7 +130,7 @@ class TimeMap:
             self.map[key] = []
         # add tuple to hash map @ key, consisting of (timestamp, value)
         self.map[key].append((timestamp, value))
-        
+
 
     def get(self, key: str, timestamp: int) -> str:
         # Get value from key, #O(logn) where n length of array we are searching.
@@ -167,5 +166,6 @@ class TimeMap:
         # exactly find the answer, so we can return:
         return arr[l - 1][1]
 ```
+
 </TabItem>
 </Tabs>

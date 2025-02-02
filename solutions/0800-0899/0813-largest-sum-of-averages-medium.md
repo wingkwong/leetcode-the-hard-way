@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/largest-sum-of-averages/'
+description: 'Author: @wkw | https://leetcode.com/problems/largest-sum-of-averages/'
 tags: [Array, Dynamic Programming, Prefix Sum]
 ---
 
-# 0813 - Largest Sum of Averages (Medium) 
+# 0813 - Largest Sum of Averages (Medium)
 
 ## Problem Link
 
@@ -15,14 +15,14 @@ You are given an integer array `nums` and an integer `k`. You can partition the 
 
 Note that the partition must use every integer in `nums`, and that the score is not necessarily an integer.
 
-Return *the maximum **score** you can achieve of all the possible partitions*. Answers within `10-6` of the actual answer will be accepted.
+Return _the maximum **score** you can achieve of all the possible partitions_. Answers within `10-6` of the actual answer will be accepted.
 
 **Example 1:**
 
 ```
 Input: nums = [9,1,2,3,9], k = 3
 Output: 20.00000
-Explanation: 
+Explanation:
 The best choice is to partition nums into [9], [1, 2, 3], [9]. The answer is 9 + (1 + 2 + 3) / 3 + 9 = 20.
 We could have also partitioned nums into [9, 1], [2], [3, 9], for example.
 That partition would lead to a score of 5 + 2 + 6 = 13, which is worse.
@@ -45,7 +45,7 @@ Output: 20.50000
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

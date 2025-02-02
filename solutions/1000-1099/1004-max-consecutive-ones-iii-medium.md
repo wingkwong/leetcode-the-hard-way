@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong| https://leetcode.com/problems/max-consecutive-ones-iii/'
+description: 'Author: @wkw| https://leetcode.com/problems/max-consecutive-ones-iii/'
 ---
 
 # 1004 - Max Consecutive Ones III (Medium)
@@ -32,15 +32,15 @@ Bolded numbers were flipped from 0 to 1. The longest subarray is underlined.
 
 **Constraints:**
 
-* `1 <= nums.length <= 10^5`
-* `nums[i]` is either `0` or `1`.
-* `0 <= k <= nums.length`
+- `1 <= nums.length <= 10^5`
+- `nums[i]` is either `0` or `1`.
+- `0 <= k <= nums.length`
 
 ## Approach 1: Sliding Window
 
 We are looking for the longest subarray with $$k$$ zeros. We can use standard sliding windows to solve it.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -55,7 +55,7 @@ public:
             // k < 0 means the window includes k zeros
             if (k < 0) {
                 // if the starting point of the window is 0,
-                // then add 1 to k to reduce the window size by 1 
+                // then add 1 to k to reduce the window size by 1
                 if (nums[i] == 0) k++;
                 // move pointer i
                 i++;

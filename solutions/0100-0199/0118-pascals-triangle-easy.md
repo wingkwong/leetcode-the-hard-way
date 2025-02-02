@@ -1,5 +1,5 @@
 ---
-description: 'Author: @ColeB2, @wingkwong | https://leetcode.com/problems/pascals-triangle/'
+description: 'Author: @ColeB2, @wkw | https://leetcode.com/problems/pascals-triangle/'
 tags: [Array, Dynamic Programming]
 ---
 
@@ -37,7 +37,7 @@ Output: [[1]]
 
 ## Approach 1: Iterative Dynamic Programming
 
-We know every level is based on the previous level, so we can reuse work from the previous level, to solve the current level. 
+We know every level is based on the previous level, so we can reuse work from the previous level, to solve the current level.
 
 To create a level, outside of the first, and last numbers of each level, for each position in the triangle, it is equal to the $$jth$$ position plus the $$jth - 1$$ position from the previous level. So we can initialize each level with an array already containing a $$1$$, and then loop from $$1$$ to $$i$$, which will be the length of the row, and finish by adding a $$1$$ to the row before adding it to the triangle.
 
@@ -72,9 +72,8 @@ class Solution:
 
 </TabItem>
 
-
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -95,9 +94,8 @@ public:
 
 </TabItem>
 
-
 <TabItem value="java" label="Java">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```java
 class Solution {
@@ -123,9 +121,8 @@ class Solution {
 
 </TabItem>
 
-
 <TabItem value="kotlin" label="Kotlin">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```kt
 class Solution {

@@ -108,7 +108,7 @@ class Solution:
         # Loop each each in edges
         for n1, n2 in edges:
             # union of both edges returns false, it means both
-            # edges were already apart of the same graph, so 
+            # edges were already apart of the same graph, so
             # the next edge would cause a cycle. So we would return
             # that edge.
             if not union(n1, n2):

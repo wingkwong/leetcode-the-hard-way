@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/find-the-town-judge/'
+description: 'Author: @wkw | https://leetcode.com/problems/find-the-town-judge/'
 tags: [Array, Hash Table, Graph]
 ---
 
-# 0997 - Find the Town Judge (Easy) 
+# 0997 - Find the Town Judge (Easy)
 
 ## Problem Link
 
@@ -21,7 +21,7 @@ If the town judge exists, then:
 
 You are given an array `trust` where `trust[i] = [ai, bi]` representing that the person labeled `ai` trusts the person labeled `bi`.
 
-Return *the label of the town judge if the town judge exists and can be identified, or return*`-1`*otherwise*.
+Return _the label of the town judge if the town judge exists and can be identified, or return_`-1`_otherwise_.
 
 **Example 1:**
 
@@ -57,7 +57,7 @@ Output: -1
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -92,7 +92,7 @@ We can further simplify Approach 1 with one array since we know `indegrees - out
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

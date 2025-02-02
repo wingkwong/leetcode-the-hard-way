@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/convert-the-temperature/'
+description: 'Author: @wkw | https://leetcode.com/problems/convert-the-temperature/'
 tags: [Math]
 ---
 
-# 2469 - Convert the Temperature (Easy) 
+# 2469 - Convert the Temperature (Easy)
 
 ## Problem Link
 
@@ -45,11 +45,11 @@ Explanation: Temperature at 122.11 Celsius converted in Kelvin is 395.26 and con
 ## Approach 1: Just do it
 
 - Kelvin = Celsius + 273.15
-- Fahrenheit = Celsius * 1.80 + 32.00
+- Fahrenheit = Celsius \* 1.80 + 32.00
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

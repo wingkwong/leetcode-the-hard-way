@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/broken-calculator/'
+description: 'Author: @wkw | https://leetcode.com/problems/broken-calculator/'
 ---
 
 # 0991 - Broken Calculator (Medium)
@@ -12,12 +12,10 @@ https://leetcode.com/problems/broken-calculator/
 
 There is a broken calculator that has the integer `startValue` on its display initially. In one operation, you can:
 
-* multiply the number on display by `2`, or
-* subtract `1` from the number on display.
+- multiply the number on display by `2`, or
+- subtract `1` from the number on display.
 
 Given two integers `startValue` and `target`, return _the minimum number of operations needed to display_ `target` _on the calculator_.
-
-
 
 **Example 1:**
 
@@ -45,13 +43,13 @@ Explanation: Use double, decrement and double {3 -> 6 -> 5 -> 10}.
 
 **Constraints:**
 
-* `1 <= x, y <= 10^9`
+- `1 <= x, y <= 10^9`
 
 ## Approach 1: Greedy
 
 We solve it backwards. For operation 1, instead of multiplying the number by $$2$$, we divide it by $$2$$ if possible. Similarly, we add $$1$$ to the number for operation 2. At the end, the number may be less than startValue, in this case we can only use operation 2.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

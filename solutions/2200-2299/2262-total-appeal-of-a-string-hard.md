@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/total-appeal-of-a-string/'
+description: 'Author: @wkw | https://leetcode.com/problems/total-appeal-of-a-string/'
 ---
 
 # 2262 - Total Appeal of A String (Hard)
@@ -12,7 +12,7 @@ https://leetcode.com/problems/total-appeal-of-a-string/
 
 The **appeal** of a string is the number of **distinct** characters found in the string.
 
-* For example, the appeal of `"abbca"` is `3` because it has `3` distinct characters: `'a'`, `'b'`, and `'c'`.
+- For example, the appeal of `"abbca"` is `3` because it has `3` distinct characters: `'a'`, `'b'`, and `'c'`.
 
 Given a string `s`, return _the **total appeal of all of its substrings.**_
 
@@ -47,14 +47,14 @@ The total sum is 4 + 6 + 6 + 4 = 20.
 
 **Constraints:**
 
-* `1 <= s.length <= 10^5`
-* `s` consists of lowercase English letters.
+- `1 <= s.length <= 10^5`
+- `s` consists of lowercase English letters.
 
 ## Approach 1: Hash Map
 
-Observation: The appeal of all substrings ending at $$i$$-th is that ending at $$i - 1$$th  plus the number of substrings that don't contain $$s[i]$$, which can be calculated by tracking the last occurrence.
+Observation: The appeal of all substrings ending at $$i$$-th is that ending at $$i - 1$$th plus the number of substrings that don't contain $$s[i]$$, which can be calculated by tracking the last occurrence.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

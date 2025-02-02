@@ -1,6 +1,6 @@
 ---
-title: "Selection Sort"
-description: "Selection sort is an comparison sorting algorithm that finds the minimum value each time."
+title: 'Selection Sort'
+description: 'Selection sort is an comparison sorting algorithm that finds the minimum value each time.'
 hide_table_of_contents: false
 keywords:
   - leetcode
@@ -10,7 +10,7 @@ keywords:
   - selection sort
 ---
 
-<TutorialCredits authors="@Bobliuuu" contributors="@wingkwong" />
+<TutorialCredits authors="@Bobliuuu" contributors="@wkw" />
 
 ## Overview
 
@@ -45,23 +45,17 @@ In order to achieve this, we can use selection sort.
 
 Let's see the algorithm work on the first test case: $nums = [2, 0, 2, 1, 1, 0]$ and $n = 6$.
 
-In the first iteration, we find the minimum value from index $0$ to $5$, which is $0$. This value is moved to the $0$-th index. <br/>
-The array is now $nums = [0, 2, 2, 1, 1, 0]$.
+In the first iteration, we find the minimum value from index $0$ to $5$, which is $0$. This value is moved to the $0$-th index. <br/> The array is now $nums = [0, 2, 2, 1, 1, 0]$.
 
-In the second iteration, we find the minimum value from index 1 to 5, which is 0. This value is moved to the 1st index. <br/>
-The array is now $nums = [0, 0, 2, 1, 1, 2]$.
+In the second iteration, we find the minimum value from index 1 to 5, which is 0. This value is moved to the 1st index. <br/> The array is now $nums = [0, 0, 2, 1, 1, 2]$.
 
-In the third iteration, we find the minimum value from index 2 to 5, which is 1. This value is moved to the 2nd index. <br/>
-The array is now $nums = [0, 0, 1, 2, 1, 2]$.
+In the third iteration, we find the minimum value from index 2 to 5, which is 1. This value is moved to the 2nd index. <br/> The array is now $nums = [0, 0, 1, 2, 1, 2]$.
 
-In the fourth iteration, we find the minimum value from index 3 to 5, which is 1. This value is moved to the 3th index. <br/>
-The array is now $nums = [0, 0, 1, 1, 2, 2]$.
+In the fourth iteration, we find the minimum value from index 3 to 5, which is 1. This value is moved to the 3th index. <br/> The array is now $nums = [0, 0, 1, 1, 2, 2]$.
 
-In the fifth iteration, we find the minimum value from index 4 to 5, which is 2. This value is moved to the 4th index. <br/>
-The array is still $nums = [0, 0, 1, 1, 2, 2]$.
+In the fifth iteration, we find the minimum value from index 4 to 5, which is 2. This value is moved to the 4th index. <br/> The array is still $nums = [0, 0, 1, 1, 2, 2]$.
 
-In the last iteration, we find the minimum value from index 5 to 5, which is 2. This value is moved to the 5th index. <br/>
-The array is still $nums = [0, 0, 1, 1, 2, 2]$.
+In the last iteration, we find the minimum value from index 5 to 5, which is 2. This value is moved to the 5th index. <br/> The array is still $nums = [0, 0, 1, 1, 2, 2]$.
 
 Now, let's look at the solution to the example question.
 
@@ -102,25 +96,6 @@ The time complexity of this program is $$O(n ^ 2)$$, since we run two for loops 
 
 The space complexity of this program is $$O(1)$$, since we don't need any extra space other than our original array.
 
-export const suggestedProblems = [
-{
-"problemName": "0075 - Sort Colors",
-"difficulty": "Easy",
-"leetCodeLink": "https://leetcode.com/problems/sort-colors/",
-"solutionLink": "../../../solutions/0000-0099/sort-colors-medium"
-},
-{
-"problemName": "0268 - Missing Number",
-"difficulty": "Easy",
-"leetCodeLink": "https://leetcode.com/problems/missing-number/",
-"solutionLink": "../../../solutions/0200-0299/missing-number-easy"
-},
-{
-"problemName" : "0448 - Find All Numbers Disappeared In An Array",
-"difficulty" : "Easy",
-"leetCodeLink" : "https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/",
-"solutionLink" : ""
-},
-]
+export const suggestedProblems = [ { "problemName": "0075 - Sort Colors", "difficulty": "Easy", "leetCodeLink": "https://leetcode.com/problems/sort-colors/", "solutionLink": "../../../solutions/0000-0099/sort-colors-medium" }, { "problemName": "0268 - Missing Number", "difficulty": "Easy", "leetCodeLink": "https://leetcode.com/problems/missing-number/", "solutionLink": "../../../solutions/0200-0299/missing-number-easy" }, { "problemName" : "0448 - Find All Numbers Disappeared In An Array", "difficulty" : "Easy", "leetCodeLink" : "https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/", "solutionLink" : "" }, ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />

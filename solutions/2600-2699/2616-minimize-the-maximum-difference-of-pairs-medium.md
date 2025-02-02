@@ -1,8 +1,8 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/minimize-the-maximum-difference-of-pairs/'
+description: 'Author: @wkw | https://leetcode.com/problems/minimize-the-maximum-difference-of-pairs/'
 ---
 
-# 2616 - Minimize the Maximum Difference of Pairs (Medium) 
+# 2616 - Minimize the Maximum Difference of Pairs (Medium)
 
 ## Problem Link
 
@@ -14,14 +14,14 @@ You are given a **0-indexed** integer array `nums` and an integer `p`. Find `p` 
 
 Note that for a pair of elements at the index `i` and `j`, the difference of this pair is `|nums[i] - nums[j]|`, where `|x|` represents the **absolute** **value** of `x`.
 
-Return *the **minimum** **maximum** difference among all*`p` *pairs.*
+Return _the **minimum** **maximum** difference among all_`p` _pairs._
 
 **Example 1:**
 
 ```
 Input: nums = [10,1,2,7,1,3], p = 2
 Output: 1
-Explanation: The first pair is formed from the indices 1 and 4, and the second pair is formed from the indices 2 and 5. 
+Explanation: The first pair is formed from the indices 1 and 4, and the second pair is formed from the indices 2 and 5.
 The maximum difference is max(|nums[1] - nums[4]|, |nums[2] - nums[5]|) = max(0, 1) = 1. Therefore, we return 1.
 ```
 
@@ -43,7 +43,7 @@ Explanation: Let the indices 1 and 3 form a pair. The difference of that pair is
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

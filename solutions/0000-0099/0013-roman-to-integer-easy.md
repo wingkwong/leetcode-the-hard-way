@@ -70,10 +70,7 @@ The solution used was iterating over the string and executing a condition that m
 
 The condition says: if the current character is greater than the previous character then subtract the previous character value from the $result$, otherwise increment the value of the previous character to the $result$.
 
-For example, if we consider the string $s = 'XIV'$, the first character `'X'` whose value is `10` will satisfy the condition, since the $previousChar$ variable is initialized with `0`, then $result$ still remains `0`.
-The second character `'I'` whose value is `1` won't satisfy the condition once `1` isn't greater than $previousChar$ which is now `10`. So $result$ is incremented by `10` and $previousChar$ is updated to `1`.
-Finally, the third character `'V'` whose value is `5` will satisfy the condition because is greater than $previousChar$. So from the $result$ is subtracted `1` and $previousChar$ is updated to 5.
-The code finishes the loop with $result = 9$ and finally increments the value of $previousChar$ to the $result$. So our final $result$ becomes `14`.
+For example, if we consider the string $s = 'XIV'$, the first character `'X'` whose value is `10` will satisfy the condition, since the $previousChar$ variable is initialized with `0`, then $result$ still remains `0`. The second character `'I'` whose value is `1` won't satisfy the condition once `1` isn't greater than $previousChar$ which is now `10`. So $result$ is incremented by `10` and $previousChar$ is updated to `1`. Finally, the third character `'V'` whose value is `5` will satisfy the condition because is greater than $previousChar$. So from the $result$ is subtracted `1` and $previousChar$ is updated to 5. The code finishes the loop with $result = 9$ and finally increments the value of $previousChar$ to the $result$. So our final $result$ becomes `14`.
 
 **Time Complexity: $O(n)$**
 
@@ -82,7 +79,6 @@ This solution will be $O(n)$ as the time varies proportionally to the length of 
 **Space Complexity: $O(1)$**
 
 The space complexity for this solution is $O(1)$ as we only created variables for the counters and they're not related to the input size.
-
 
 <Tabs>
 <TabItem value="py" label="Python">
@@ -99,7 +95,7 @@ romanNumeralsDict = {
     "M": 1000
 }
 
-class Solution(object):    
+class Solution(object):
     def romanToInt(self, s):
         result = 0
         previousChar = 0
@@ -127,24 +123,25 @@ class Solution(object):
  * @param {string} s
  * @return {number}
  */
-var romanToInt = function(s) {
-    const roman = {
-        "I": 1, 
-        "V": 5, 
-        "X": 10, 
-        "L": 50, 
-        "C": 100, 
-        "D": 500, 
-        "M": 1000};
-    let res = 0;
-    for (i = 0; i < s.length; i++) {
-        if (i + 1 < s.length && roman[s[i]] < roman[s[i + 1]]) {
-            res -= roman[s[i]];
-        } else {
-            res += roman[s[i]];
-        }
+var romanToInt = function (s) {
+  const roman = {
+    I: 1,
+    V: 5,
+    X: 10,
+    L: 50,
+    C: 100,
+    D: 500,
+    M: 1000,
+  };
+  let res = 0;
+  for (i = 0; i < s.length; i++) {
+    if (i + 1 < s.length && roman[s[i]] < roman[s[i + 1]]) {
+      res -= roman[s[i]];
+    } else {
+      res += roman[s[i]];
     }
-    return res;
+  }
+  return res;
 };
 ```
 
@@ -158,12 +155,12 @@ class Solution {
 public:
     int romanToInt(string s) {
         unordered_map<char, int> roman = {
-            {'I', 1}, 
-            {'V', 5}, 
-            {'X', 10}, 
-            {'L', 50}, 
-            {'C', 100}, 
-            {'D', 500}, 
+            {'I', 1},
+            {'V', 5},
+            {'X', 10},
+            {'L', 50},
+            {'C', 100},
+            {'D', 500},
             {'M', 1000}
         };
         int res = 0;
@@ -176,7 +173,7 @@ public:
         }
         return res;
     }
-}; 
+};
 ```
 
 </TabItem>

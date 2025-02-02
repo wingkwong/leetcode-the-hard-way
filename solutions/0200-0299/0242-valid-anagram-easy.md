@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @vigneshshiv, @radojicic23, @jit | https://leetcode.com/problems/valid-anagram/'
+description: 'Author: @wkw, @vigneshshiv, @radojicic23, @jit | https://leetcode.com/problems/valid-anagram/'
 tags: [Hash Table, String, Sorting]
 ---
 
@@ -31,8 +31,8 @@ Output: false
 
 **Constraints:**
 
-* `1 <= s.length, t.length <= 5 * 10^4`
-* `s` and `t` consist of lowercase English letters.
+- `1 <= s.length, t.length <= 5 * 10^4`
+- `s` and `t` consist of lowercase English letters.
 
 **Follow up:** What if the inputs contain Unicode characters? How would you adapt your solution to such a case?
 
@@ -40,7 +40,7 @@ Output: false
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -99,12 +99,12 @@ class Solution:
  * @param {string} t
  * @return {boolean}
  */
-var isAnagram = function(s, t) {
-    // sort strings 
-    const sorted_s = s.split('').sort().join('');
-    const sorted_t = t.split('').sort().join('');
-    // if they are same after sorting they are anagrams
-    return sorted_s == sorted_t;
+var isAnagram = function (s, t) {
+  // sort strings
+  const sorted_s = s.split('').sort().join('');
+  const sorted_t = t.split('').sort().join('');
+  // if they are same after sorting they are anagrams
+  return sorted_s == sorted_t;
 };
 ```
 
@@ -115,13 +115,13 @@ var isAnagram = function(s, t) {
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
 public:
     bool isAnagram(string s, string t) {
-        // if s and t are anagram, 
+        // if s and t are anagram,
         // then the frequency of each character would be same
         int cnt[26] = {0};
         for (auto x : s) cnt[x - 'a']++;
@@ -150,7 +150,7 @@ class Solution {
         }
         for (char c : t.toCharArray()) {
             chars[c - 'a']--;
-            // If any char is occurred more than "s string" char, then immediately return false. 
+            // If any char is occurred more than "s string" char, then immediately return false.
             if (chars[c - 'a'] < 0) return false;
         }
         for (int num : chars) {
@@ -164,10 +164,10 @@ class Solution {
 </TabItem>
 
 <TabItem value="go" label="Go">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```go
-// if s and t are anagram, 
+// if s and t are anagram,
 // then the frequency of each character would be same
 func isAnagram(s string, t string) bool {
     cnt := [26]int{}

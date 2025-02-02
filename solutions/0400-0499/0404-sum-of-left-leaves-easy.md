@@ -1,5 +1,5 @@
 ---
-description: 'Author: @heiheihang, @wingkwong, @jit | https://leetcode.com/problems/sum-of-left-leaves/'
+description: 'Author: @heiheihang, @wkw, @jit | https://leetcode.com/problems/sum-of-left-leaves/'
 tags: [Tree, Depth-First Search, Breadth-First Search, Binary Tree]
 ---
 
@@ -27,13 +27,13 @@ Explanation: There are two left leaves in the binary tree, with values 9 and 15 
 
 ```
 Input: root = [1]
-Output: 0 
+Output: 0
 ```
 
 **Constraints:**
 
-* The number of nodes in the tree is in the range `[1, 1000]`.
-* `-1000 <= Node.val <= 1000`
+- The number of nodes in the tree is in the range `[1, 1000]`.
+- `-1000 <= Node.val <= 1000`
 
 ## Approach 1: DFS
 
@@ -50,7 +50,7 @@ def sumOfLeftLeaves(self, root: Optional[TreeNode]) -> int:
         if (node is None): return 0
         # if node is a leaf (no left and right) and is the left child
         # return its value for adding
-        if (node.left is None and node.right is None and isLeft is True): return node.val 
+        if (node.left is None and node.right is None and isLeft is True): return node.val
         # perform dfs on both children
         # set isLeft to true on left child
         # set isLeft to false on right child
@@ -62,9 +62,8 @@ def sumOfLeftLeaves(self, root: Optional[TreeNode]) -> int:
 
 </TabItem>
 
-
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -80,7 +79,6 @@ public:
 ```
 
 </TabItem>
-
 
 <TabItem value="elixir" label="Elixir">
 <SolutionAuthor name="@jit"/>

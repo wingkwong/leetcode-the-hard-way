@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/valid-palindrome-ii/'
+description: 'Author: @wkw | https://leetcode.com/problems/valid-palindrome-ii/'
 ---
 
 # 0680 - Valid Palindrome II (Easy)
@@ -36,14 +36,14 @@ Output: false
 
 **Constraints:**
 
-* `1 <= s.length <= 10^5`
-* `s` consists of lowercase English letters.
+- `1 <= s.length <= 10^5`
+- `s` consists of lowercase English letters.
 
 ## Approach 1: Brute Force
 
 To check if a string is a palindrome, we can use two pointers to compare the character at pointer $$i$$ and that at pointer $$j$$. If they are not same, then it means it is not a palindrome. However, this problem allows us to delete at most one character from it. Therefore, we do the same way. If there is a difference, that means we can potentially delete the one at pointer $$i$$ or the one at pointer $$j$$. We try both case to see if it is possible to form a palindrome.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -56,7 +56,7 @@ public:
         }
         return true;
     }
-    
+
     bool validPalindrome(string s) {
         int n = s.size(), i = 0, j = n - 1;
         while (i < j) {

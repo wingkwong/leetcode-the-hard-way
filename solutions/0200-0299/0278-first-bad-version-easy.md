@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @radojicic23 | https://leetcode.com/problems/first-bad-version/'
+description: 'Author: @wkw, @radojicic23 | https://leetcode.com/problems/first-bad-version/'
 ---
 
 # 0278 - First Bad Version (Easy)
@@ -37,7 +37,7 @@ Output: 1
 
 **Constraints:**
 
-* `1 <= bad <= n <= 2^31 - 1`
+- `1 <= bad <= n <= 2^31 - 1`
 
 ## Approach 1: Binary Search
 
@@ -49,7 +49,7 @@ Output: 1
 
 <Tabs>
 <TabItem value="c++" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 // The API isBadVersion is defined for you.
@@ -81,7 +81,7 @@ public:
 ```javascript
 /**
  * Definition for isBadVersion()
- * 
+ *
  * @param {integer} version number
  * @return {boolean} whether the version is bad
  * isBadVersion = function(version) {
@@ -93,21 +93,21 @@ public:
  * @param {function} isBadVersion()
  * @return {function}
  */
-var solution = function(isBadVersion) {
-    /**
-     * @param {integer} n Total versions
-     * @return {integer} The first bad version
-     */
-    return function(n) {
-        let l = 1;
-        let r = n;
-        while (l < r) {
-            let mid = Math.floor((l + r) / 2);
-            if (!isBadVersion(mid)) l = mid + 1;
-            else r = mid;
-        }
-        return l;
-    };
+var solution = function (isBadVersion) {
+  /**
+   * @param {integer} n Total versions
+   * @return {integer} The first bad version
+   */
+  return function (n) {
+    let l = 1;
+    let r = n;
+    while (l < r) {
+      let mid = Math.floor((l + r) / 2);
+      if (!isBadVersion(mid)) l = mid + 1;
+      else r = mid;
+    }
+    return l;
+  };
 };
 ```
 
@@ -129,7 +129,7 @@ class Solution:
                 r = mid
             else:
                 l = mid + 1
-        return l 
+        return l
 ```
 
 </TabItem>

@@ -1,6 +1,6 @@
 ---
-title: "Linear Search"
-description: "Linear search is a searching technique that works in a linear / sequential fashion. It traverses whole of the data structure and returns the position(s) where the value is found. If not found then it simple returns nothing."
+title: 'Linear Search'
+description: 'Linear search is a searching technique that works in a linear / sequential fashion. It traverses whole of the data structure and returns the position(s) where the value is found. If not found then it simple returns nothing.'
 hide_table_of_contents: false
 ---
 
@@ -18,14 +18,11 @@ To elaborate there are three main steps in performing linear search
 
 Here we can have three cases :
 
-- **Case I - Best Case** _When the element we are looking for is at index-0 i.e., first position:_<br/>
-  In this case we can break the loop as soon as we find the element and as here that is the 0 index, we can break the loop on the 0 index itself. This results in $O(1)$ time complexity.
+- **Case I - Best Case** _When the element we are looking for is at index-0 i.e., first position:_<br/> In this case we can break the loop as soon as we find the element and as here that is the 0 index, we can break the loop on the 0 index itself. This results in $O(1)$ time complexity.
 
-- **Case II - Average Case** _When the element we are looking for is at middle position i.e., length/2 index:_<br/>
-  In this case we will have to traverse the data structure for the half of length. This means that the time complexity is $O(n)$.
+- **Case II - Average Case** _When the element we are looking for is at middle position i.e., length/2 index:_<br/> In this case we will have to traverse the data structure for the half of length. This means that the time complexity is $O(n)$.
 
-- **Case III - Worst Case** _When the element we are looking for is at last index:_<br/>
-  Here we have traverse the whole data structure. In this case the time complexity is $O(n)$.
+- **Case III - Worst Case** _When the element we are looking for is at last index:_<br/> Here we have traverse the whole data structure. In this case the time complexity is $O(n)$.
 
 ## Example #1: [1295 - Find Numbers with Even Number of Digits](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/)
 
@@ -61,11 +58,9 @@ public:
 
 ## Example: [2089 - Find target Indices after sorting array](https://leetcode.com/problems/find-target-indices-after-sorting-array/)
 
-> You are given a 0-indexed integer array nums and a target element target.A target index is an index i such that nums[i] == target.
-> Return a list of the target indices of nums after sorting nums in non-decreasing order. If there are no target indices, return an empty list. The returned list must be sorted in increasing order.
+> You are given a 0-indexed integer array nums and a target element target.A target index is an index i such that nums[i] == target. Return a list of the target indices of nums after sorting nums in non-decreasing order. If there are no target indices, return an empty list. The returned list must be sorted in increasing order.
 
-If we sort this array using library sorting functions then this problem is reduced to a simple linear search question. Where we are supposed to search for the target. Thats' it. Now to do so we will create a vetor for storing the answers, and the run a for loop and traverse every element and check it. If found then we will add that index to the vector.
-Finally we will return the vector and its' done.
+If we sort this array using library sorting functions then this problem is reduced to a simple linear search question. Where we are supposed to search for the target. Thats' it. Now to do so we will create a vetor for storing the answers, and the run a for loop and traverse every element and check it. If found then we will add that index to the vector. Finally we will return the vector and its' done.
 
 This will take $O(nlogn)$ time complexity as we will be using sort function which takes $O(nlogn)$.
 
@@ -95,31 +90,6 @@ public:
 </TabItem>
 </Tabs>
 
-export const suggestedProblems = [
-{
-"problemName": "1539 - Kth Missing Positive Number",
-"difficulty": "Easy",
-"leetCodeLink": "https://leetcode.com/problems/kth-missing-positive-number/",
-"solutionLink": "../../solutions/1500-1599/kth-missing-positive-number-easy"
-},
-{
-"problemName": "1672 - Richest Customer Wealth",
-"difficulty": "Easy",
-"leetCodeLink": "https://leetcode.com/problems/richest-customer-wealth/",
-"solutionLink": "../../solutions/1600-1699/richest-customer-wealth-easy"
-},
-{
-"problemName": "0540 - Single Element in a Sorted Array",
-"difficulty": "Medium",
-"leetCodeLink": "https://leetcode.com/problems/single-element-in-a-sorted-array/",
-"solutionLink": "../../solutions/0500-0599/single-element-in-a-sorted-array-medium"
-},
-{
-"problemName": "0275 - H-Index II",
-"difficulty": "Medium",
-"leetCodeLink": "https://leetcode.com/problems/h-index-ii/",
-"solutionLink": ""
-},
-]
+export const suggestedProblems = [ { "problemName": "1539 - Kth Missing Positive Number", "difficulty": "Easy", "leetCodeLink": "https://leetcode.com/problems/kth-missing-positive-number/", "solutionLink": "../../solutions/1500-1599/kth-missing-positive-number-easy" }, { "problemName": "1672 - Richest Customer Wealth", "difficulty": "Easy", "leetCodeLink": "https://leetcode.com/problems/richest-customer-wealth/", "solutionLink": "../../solutions/1600-1699/richest-customer-wealth-easy" }, { "problemName": "0540 - Single Element in a Sorted Array", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/single-element-in-a-sorted-array/", "solutionLink": "../../solutions/0500-0599/single-element-in-a-sorted-array-medium" }, { "problemName": "0275 - H-Index II", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/h-index-ii/", "solutionLink": "" }, ]
 
 <Table title = "Suggested problems" data = {suggestedProblems}/>

@@ -46,8 +46,7 @@ medianFinder.findMedian(); // return 2.0
 - There will be at least one element in the data structure before calling `findMedian`.
 - At most `5 * 10^4` calls will be made to `addNum` and `findMedian`.
 
-**Follow up:**
-Follow up:
+**Follow up:** Follow up:
 
 - If all integer numbers from the stream are in the range `[0, 100]`, how would you optimize your solution?
 - If `99%` of all integer numbers from the stream are in the range `[0, 100]`, how would you optimize your solution?
@@ -61,12 +60,14 @@ If we maintain 2 priority queues, a left and right one, where the left one conta
 The key being the left data structure must be a max heap, as we want access to the largest number to the left of the middle, and the right data structure must be a min heap, as we want access to the smallest number to the right of the middle.
 
 If we do that, it gives us 2 conditions to add numbers.
+
 1. If left and right are of equal length:
-    - Here we must push our number to the right, pop the smallest on the right and push the popped number to the left.
+   - Here we must push our number to the right, pop the smallest on the right and push the popped number to the left.
 2. The other condition, left is larger:
-    - Here we will push our number to the left, pop the largest on the left and push the popped number to the right.
+   - Here we will push our number to the left, pop the largest on the left and push the popped number to the right.
 
 Time Complexity:
+
 - addNum: $$O(logn)$$ it takes $$logn$$ time to push to heaps of sized n.
 - findMedian: $$O(1)$$ we can access the numbers we need in constant time.
 
@@ -84,7 +85,7 @@ class MedianFinder:
         self.max_l = []
         # min heap as our right heap for all numbers > median.
         self.min_r = []
-        
+
 
     def addNum(self, num: int) -> None:
         # Time: O(logn) to push to heaps.
@@ -110,7 +111,7 @@ class MedianFinder:
             # we use -n here as all numbers popped off the min heap
             # we flipped to convert the Python min heap to a max heap.
             heapq.heappush(self.min_r, -n)
-        
+
 
     def findMedian(self) -> float:
         # Time: O(1)

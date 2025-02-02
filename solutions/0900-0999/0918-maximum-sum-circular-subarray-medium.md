@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/maximum-sum-circular-subarray/'
+description: 'Author: @wkw | https://leetcode.com/problems/maximum-sum-circular-subarray/'
 tags: [Array, Divide and Conquer, Dynamic Programming, Queue, Monotonic Queue]
 ---
 
-# 0918 - Maximum Sum Circular Subarray (Medium) 
+# 0918 - Maximum Sum Circular Subarray (Medium)
 
 ## Problem Link
 
@@ -11,7 +11,7 @@ https://leetcode.com/problems/maximum-sum-circular-subarray/
 
 ## Problem Statement
 
-Given a **circular integer array** `nums` of length `n`, return *the maximum possible sum of a non-empty **subarray** of*`nums`.
+Given a **circular integer array** `nums` of length `n`, return _the maximum possible sum of a non-empty **subarray** of_`nums`.
 
 A **circular array** means the end of the array connects to the beginning of the array. Formally, the next element of `nums[i]` is `nums[(i + 1) % n]` and the previous element of `nums[i]` is `nums[(i - 1 + n) % n]`.
 
@@ -51,7 +51,7 @@ Explanation: Subarray [-2] has maximum sum -2.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -65,7 +65,7 @@ public:
         }
         return global;
     }
-    
+
     // case 1: max subarray sum in [0 .. n - 1]
     // i.e. kadane's algo
     // case 2. circular subarray in [0 .. |  n - 1 .. | .. 2 * n - 1]
@@ -90,7 +90,7 @@ public:
 </TabItem>
 
 <TabItem value="java" label="Java">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```java
 class Solution {
@@ -134,7 +134,7 @@ class Solution {
 </TabItem>
 
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:
@@ -172,7 +172,7 @@ class Solution:
 </TabItem>
 
 <TabItem value="rs" label="Rust">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```rs
 use std::cmp::max;

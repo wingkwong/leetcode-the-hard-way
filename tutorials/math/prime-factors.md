@@ -1,13 +1,13 @@
 ---
-title: "Prime Factors"
-description: "Factor of a given number which is a prime number."
+title: 'Prime Factors'
+description: 'Factor of a given number which is a prime number.'
 keywords:
   - leetcode
   - tutorial
   - prime factors
 ---
 
-<TutorialCredits authors="@Ishwarendra, @wingkwong"/>
+<TutorialCredits authors="@Ishwarendra, @wkw"/>
 
 ## Overview
 
@@ -366,25 +366,6 @@ public:
 
 The process of finding connected components can be done using a data structure [Disjoint Set Union](../graph-theory/disjoint-set-union.md) as well.
 
-export const suggestedProblems = [
-{
-"problemName": "263. Ugly Number",
-"difficulty": "Easy",
-"leetCodeLink": "https://leetcode.com/problems/ugly-number/",
-"solutionLink": "../../../solutions/0200-0299/ugly-number-easy"
-},
-{
-"problemName": "650. 2 Keys Keyboard",
-"difficulty": "Medium",
-"leetCodeLink": "https://leetcode.com/problems/2-keys-keyboard/",
-"solutionLink": "../../../solutions/0600-0699/two-keys-keyboard-medium"
-},
-{
-"problemName": "2709. Greatest Common Divisor Traversal",
-"difficulty": "Hard",
-"leetCodeLink": "https://leetcode.com/problems/greatest-common-divisor-traversal/",
-"solutionLink": "../../../solutions/2700-2799/greatest-common-divisor-traversal-hard"
-},
-]
+export const suggestedProblems = [ { "problemName": "263. Ugly Number", "difficulty": "Easy", "leetCodeLink": "https://leetcode.com/problems/ugly-number/", "solutionLink": "../../../solutions/0200-0299/ugly-number-easy" }, { "problemName": "650. 2 Keys Keyboard", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/2-keys-keyboard/", "solutionLink": "../../../solutions/0600-0699/two-keys-keyboard-medium" }, { "problemName": "2709. Greatest Common Divisor Traversal", "difficulty": "Hard", "leetCodeLink": "https://leetcode.com/problems/greatest-common-divisor-traversal/", "solutionLink": "../../../solutions/2700-2799/greatest-common-divisor-traversal-hard" }, ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />

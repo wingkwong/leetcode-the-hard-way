@@ -8,7 +8,7 @@ keywords:
   - manachers
 ---
 
-Please refer the [tutorial](../tutorials/strings/manachers-algorithm) guide for more details. 
+Please refer the [tutorial](../tutorials/strings/manachers-algorithm) guide for more details.
 
 The function takes input of a string and returns all possible palindromic strings at each center, possible in the string.
 
@@ -70,6 +70,7 @@ vector<string> palindromicSubstrings(string s) {
 }
 
 ```
+
 </TabItem>
 
 <TabItem value="java" label="Java">
@@ -125,6 +126,7 @@ public List<String> palindromicSubstrings(String s) {
 }
 
 ```
+
 </TabItem>
 
 <TabItem value="python" label="Python">
@@ -168,7 +170,8 @@ def palindromicSubstrings(self, s: str) -> list[str]:
     while "" in strings:
         strings.remove("")  # Remove empty palindromes
     return strings
-           
+
 ```
+
 </TabItem>
 </Tabs>

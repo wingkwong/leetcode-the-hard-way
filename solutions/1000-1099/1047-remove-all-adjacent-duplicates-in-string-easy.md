@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong, @radojicic23 | https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/'
+description: 'Author: @wkw, @radojicic23 | https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/'
 tags: [String, Stack]
 ---
 
-# 1047 - Remove All Adjacent Duplicates In String (Easy) 
+# 1047 - Remove All Adjacent Duplicates In String (Easy)
 
 ## Problem Link
 
@@ -15,14 +15,14 @@ You are given a string `s` consisting of lowercase English letters. A **duplicat
 
 We repeatedly make **duplicate removals** on `s` until we no longer can.
 
-Return *the final string after all such duplicate removals have been made*. It can be proven that the answer is **unique**.
+Return _the final string after all such duplicate removals have been made_. It can be proven that the answer is **unique**.
 
 **Example 1:**
 
 ```
 Input: s = "abbaca"
 Output: "ca"
-Explanation: 
+Explanation:
 For example, in "abbaca" we could remove "bb" since the letters are adjacent and equal, and this is the only possible move.  The result of this move is that the string is "aaca", of which only "aa" is possible, so the final string is "ca".
 ```
 
@@ -42,7 +42,7 @@ Output: "ay"
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -67,7 +67,7 @@ public:
 </TabItem>
 
 <TabItem value="java" label="Java">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```java
 class Solution {
@@ -89,7 +89,7 @@ class Solution {
 </TabItem>
 
 <TabItem value="go" label="Go">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```go
 func removeDuplicates(s string) string {
@@ -112,7 +112,7 @@ func removeDuplicates(s string) string {
 </TabItem>
 
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:
@@ -131,7 +131,7 @@ class Solution:
 </TabItem>
 
 <TabItem value="kt" label="Kotlin">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```kt
 class Solution {
@@ -156,7 +156,7 @@ class Solution {
 </TabItem>
 
 <TabItem value="rs" label="Rust">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```rs
 impl Solution {
@@ -188,16 +188,16 @@ impl Solution {
  * @param {string} s
  * @return {string}
  */
-var removeDuplicates = function(s) {
-    let stack = [];
-    for (let c = 0; c < s.length; c++) {
-        if (stack.length > 0 && stack[stack.length - 1] == s[c]) {
-            stack.pop();
-        } else {
-            stack.push(s[c]);
-        }
+var removeDuplicates = function (s) {
+  let stack = [];
+  for (let c = 0; c < s.length; c++) {
+    if (stack.length > 0 && stack[stack.length - 1] == s[c]) {
+      stack.pop();
+    } else {
+      stack.push(s[c]);
     }
-    return stack.join("");
+  }
+  return stack.join('');
 };
 ```
 

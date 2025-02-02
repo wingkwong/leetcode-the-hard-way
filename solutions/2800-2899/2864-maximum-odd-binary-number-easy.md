@@ -1,9 +1,9 @@
 ---
-description: 'Author: @heder, @wingkwong | https://leetcode.com/problems/maximum-odd-binary-number/'
+description: 'Author: @heder, @wkw | https://leetcode.com/problems/maximum-odd-binary-number/'
 tags: [Math, String, Greedy]
 ---
 
-# 2864 - Maximum Odd Binary Number (Easy) 
+# 2864 - Maximum Odd Binary Number (Easy)
 
 ## Problem Link
 
@@ -15,7 +15,7 @@ You are given a **binary** string `s` that contains at least one `'1'`.
 
 You have to **rearrange** the bits in such a way that the resulting binary number is the **maximum odd binary number** that can be created from this combination.
 
-Return *a string representing the maximum odd binary number that can be created from the given combination.*
+Return _a string representing the maximum odd binary number that can be created from the given combination._
 
 **Note**that the resulting string **can** have leading zeros.
 
@@ -65,7 +65,7 @@ string maximumOddBinaryNumber(const string& s) {
 </TabItem>
 
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:

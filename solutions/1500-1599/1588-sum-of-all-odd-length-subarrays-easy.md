@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @luiz290788, @wingkwong | 
-  https://leetcode.com/problems/sum-of-all-odd-length-subarrays/
+  Author: @luiz290788, @wkw |  https://leetcode.com/problems/sum-of-all-odd-length-subarrays/
 ---
 
 # 1588 - Sum Of All Odd Length Subarrays (Easy)
@@ -53,7 +52,7 @@ Output: 66
 
 - `1 <= arr.length <= 100`
 - `1 <= arr[i] <= 1000`
- 
+
 **Follow up:**
 
 Could you solve this problem in $O(n)$ time complexity?
@@ -70,7 +69,7 @@ For a brute force solution, we generate every subarray with odd length and sum a
 class Solution {
   public int sumOddLengthSubarrays(int[] arr) {
     int totalSum = 0;
-    
+
     for (int startingPosition = 0; startingPosition < arr.length; startingPosition++) {
       for (int length = 1; length + startingPosition - 1 < arr.length; length += 2) {
         for (int numberToSum = startingPosition; numberToSum < startingPosition + length; numberToSum++) {
@@ -87,7 +86,7 @@ class Solution {
 </TabItem>
 
 <TabItem value="rs" label="Rust">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```rs
 impl Solution {
@@ -135,7 +134,7 @@ class Solution {
     int totalSum = 0;
     for (int windowSize = 1; windowSize <= arr.length; window += 2) {
       int windowSum = 0;
-      
+
       // calculate the sum of the window with one element missing
       for (int index = 0; index < windowSize - 1; index++) {
         windowSum += arr[index];
@@ -150,7 +149,7 @@ class Solution {
         windowSum -= arr[index - (windowSize - 1)];
       }
     }
-    
+
     return totalSum;
   }
 }
@@ -211,7 +210,7 @@ As we are only interested in the odd-length arrays, we can divide this number by
 class Solution {
   public int sumOddLengthSubarrays(int[] arr) {
     int totalSum = 0;
-    
+
     for (int index = 0; index < arr.length; index++) {
       int totalOfSubArrays = (index + 1) * (arr.length - i);
       // summing the rest of the division to round up

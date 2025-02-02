@@ -1,7 +1,8 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/rearrange-array-elements-by-sign/
+  Author: @wkw | https://leetcode.com/problems/rearrange-array-elements-by-sign/
+
+
 tags: [Array, Two Pointers, Simulation]
 ---
 
@@ -31,7 +32,7 @@ Output: [3,-2,1,-5,2,-4]
 Explanation:
 The positive integers in nums are [3,1,2]. The negative integers are [-2,-5,-4].
 The only possible way to rearrange them such that they satisfy all conditions is [3,-2,1,-5,2,-4].
-Other ways such as [1,-2,2,-5,3,-4], [3,1,2,-2,-5,-4], [-2,3,-5,1,-4,2] are incorrect because they do not satisfy one or more conditions.  
+Other ways such as [1,-2,2,-5,3,-4], [3,1,2,-2,-5,-4], [-2,3,-5,1,-4,2] are incorrect because they do not satisfy one or more conditions.
 ```
 
 **Example 2:**
@@ -46,10 +47,10 @@ So nums is rearranged to [1,-1].
 
 **Constraints:**
 
-* $2 <= nums.length <= 2 * 10^5$
-* `nums.length` is **even**
-* $1 <= |nums[i]| <= 10^5$
-* `nums` consists of **equal** number of positive and negative integers.
+- $2 <= nums.length <= 2 * 10^5$
+- `nums.length` is **even**
+- $1 <= |nums[i]| <= 10^5$
+- `nums` consists of **equal** number of positive and negative integers.
 
 ## Approach 1: Split and Combine
 
@@ -60,7 +61,7 @@ The idea is to split the input into two vectors - positive and negative. Then it
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -81,7 +82,6 @@ public:
 };
 ```
 
-
 </TabItem>
 </Tabs>
 
@@ -92,7 +92,7 @@ We can further optimize the space complexity using two pointers to track the ind
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

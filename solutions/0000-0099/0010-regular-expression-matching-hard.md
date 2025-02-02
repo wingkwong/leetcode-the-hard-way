@@ -52,15 +52,16 @@ Explanation: ".*" means "zero or more (*) of any character (.)".
 
 ## Approach 1: Dynamic Programming - Memoization
 
-We can solve this recursively, using a dfs/backtracking approach, where we check each character against each other, if they match, or match up to an $$'.'$$ character, we can move on to the next character. When we reach a $$'*'$$ character is our trick case. That is the case where we have to  either skip the current character and not match it at all, or match it up several times to the same character in $$s$$.
+We can solve this recursively, using a dfs/backtracking approach, where we check each character against each other, if they match, or match up to an $$'.'$$ character, we can move on to the next character. When we reach a $$'*'$$ character is our trick case. That is the case where we have to either skip the current character and not match it at all, or match it up several times to the same character in $$s$$.
 
 The way we can handle that is simply by checking both cases:
+
 1. Where we can just ignore the asterisk and the current character completely, and recursively call our helper function
 2. If the current character matches, just check the star against the next character in our string.
 
 The memoization comes in by storing in a cache the keys of $$(i, j)$$ where $$i$$ is the index we are at in $$s$$ and $$j$$ is the index we are at in $$p$$. By storing whether or not we have matches at these $$(i, j)$$ positions, it prevents us from having to redo work in cases where we may have to go over the string multiple times because of asterisks.
 
-Time Complexity: $$O(s.length * p.length)$$. We are going to be checking through all indexes of length $$s$$ and $$p$$, but we will be reusing the working by storing those values inside our  hash map.
+Time Complexity: $$O(s.length * p.length)$$. We are going to be checking through all indexes of length $$s$$ and $$p$$, but we will be reusing the working by storing those values inside our hash map.
 
 Space Complexity: $$O(s.length * p.length)$$. Our cache will store the whether the work from checking each character against each other.
 

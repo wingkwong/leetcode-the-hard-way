@@ -1,6 +1,6 @@
 ---
-title: "Knuth–Morris–Pratt Algorithm"
-description: "KMP is a algorithm to search the occurrences of a word within a string"
+title: 'Knuth–Morris–Pratt Algorithm'
+description: 'KMP is a algorithm to search the occurrences of a word within a string'
 draft: true
 keywords:
   - leetcode
@@ -10,7 +10,7 @@ keywords:
   - algorithm
 ---
 
-<TutorialCredits authors="@wingkwong"/>
+<TutorialCredits authors="@wkw"/>
 
 ## Overview
 
@@ -18,4 +18,4 @@ If we look at the problem [0028 - Implement strStr()](https://leetcode.com/probl
 
 KMP could give $O(n + m)$ in the worst case. The idea of KMP is to cut out some repeated words by doing some preprocessing. Let's take `AAABAAAB` as a haystack and `AAAA` as a needle and we start at index 0. We can see that the first three character match but the forth character is `B` which doesn't match that in the needle. If we start at index 1, we would face the same problem as `AABA` doesn't match with `AAAA`. However, if the prefix of the haystack matches that in the needle, we can start our pointer at the position where the mismatch is, in this case `B` at index 3.
 
-@wingkwong: WIP ...
+@wkw: WIP ...

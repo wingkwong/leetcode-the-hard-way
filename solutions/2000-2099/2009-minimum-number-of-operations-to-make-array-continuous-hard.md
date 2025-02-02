@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/minimum-number-of-operations-to-make-array-continuous/'
+description: 'Author: @wkw | https://leetcode.com/problems/minimum-number-of-operations-to-make-array-continuous/'
 tags: [Array, Binary Search]
 ---
 
-# 2009 - Minimum Number of Operations to Make Array Continuous (Hard) 
+# 2009 - Minimum Number of Operations to Make Array Continuous (Hard)
 
 ## Problem Link
 
@@ -20,7 +20,7 @@ You are given an integer array `nums`. In one operation, you can replace **any**
 
 For example, `nums = [4, 2, 5, 3]` is **continuous**, but `nums = [1, 2, 3, 5, 6]` is **not continuous**.
 
-Return *the **minimum** number of operations to make*`nums`**continuous**.
+Return _the **minimum** number of operations to make_`nums`**continuous**.
 
 **Example 1:**
 
@@ -60,7 +60,7 @@ The resulting array is [1,2,3,4], which is continuous.
 
 <Tabs>
 <TabItem value="kotlin" label="Kotlin">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```kt
 class Solution {
@@ -79,7 +79,7 @@ class Solution {
             // the rest of the elements `n - (r - l)` will be replaced
             // i.e. replace all elements to v[l] in [0 .. l) and v[r] in [r .. m)
             ans = min(ans, n - (r - l))
-        }        
+        }
         return ans
     }
 }

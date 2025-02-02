@@ -1,6 +1,6 @@
 ---
-title: "Binary Search"
-description: "Binary search is the searching strategy that reduces the search space by half every iteration until you have found the target."
+title: 'Binary Search'
+description: 'Binary search is the searching strategy that reduces the search space by half every iteration until you have found the target.'
 hide_table_of_contents: false
 keywords:
   - leetcode
@@ -9,7 +9,7 @@ keywords:
   - algorithm
 ---
 
-<TutorialCredits authors="@heiheihang, @wingkwong"/>
+<TutorialCredits authors="@heiheihang, @wkw"/>
 
 ## Overview
 
@@ -66,7 +66,7 @@ def binarySearch(nums, target):
 </TabItem>
 
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 int binarySearch(vector<int>& nums, int target) {
@@ -88,7 +88,7 @@ int binarySearch(vector<int>& nums, int target) {
 </TabItem>
 
 <TabItem value="java" label="Java">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```java
 int binarySearch(int[] nums, int target) {
@@ -140,31 +140,6 @@ There can be very challenging questions using binary search, but we should focus
    m = l + (r - l) / 2
    $$
 
-export const suggestedProblems = [
-{
-"problemName": "0704 - Binary Search",
-"difficulty": "Easy",
-"leetCodeLink": "https://leetcode.com/problems/binary-search/",
-"solutionLink": "../../solutions/0700-0799/binary-search-easy"
-},
-{
-"problemName": "0153 - Find Minimum in Rotated Sorted Array",
-"difficulty": "Medium",
-"leetCodeLink": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/",
-"solutionLink": ""
-},
-{
-"problemName": "0154 - Find Minimum in Rotated Sorted Array II",
-"difficulty": "Hard",
-"leetCodeLink": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/",
-"solutionLink": ""
-},
-{
-"problemName": "0162 - Find Peak Element",
-"difficulty": "Medium",
-"leetCodeLink": "https://leetcode.com/problems/find-peak-element/",
-"solutionLink": ""
-}
-]
+export const suggestedProblems = [ { "problemName": "0704 - Binary Search", "difficulty": "Easy", "leetCodeLink": "https://leetcode.com/problems/binary-search/", "solutionLink": "../../solutions/0700-0799/binary-search-easy" }, { "problemName": "0153 - Find Minimum in Rotated Sorted Array", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/", "solutionLink": "" }, { "problemName": "0154 - Find Minimum in Rotated Sorted Array II", "difficulty": "Hard", "leetCodeLink": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/", "solutionLink": "" }, { "problemName": "0162 - Find Peak Element", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/find-peak-element/", "solutionLink": "" } ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />

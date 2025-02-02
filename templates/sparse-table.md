@@ -33,9 +33,9 @@ struct sparse_table {
     }
 };
 ```
+
 </TabItem>
 </Tabs>
-
 
 Usage: Range Queries finding min, max, gcd, lcm, and etc. The array cannot be changed between two queries.
 
@@ -50,5 +50,6 @@ void main() {
 	cout << g.query(j, i) << "\n";
 }
 ```
+
 </TabItem>
 </Tabs>

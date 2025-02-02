@@ -72,7 +72,7 @@ class Solution:
             chars_position[ch] = i
         # array of partitions length we are going to return.
         partitions_length = []
-        # left and right pointers. Left pointer is the left side of 
+        # left and right pointers. Left pointer is the left side of
         # the window, right pointer is the right side, which will be
         # updated everytime we add a new character to the window.
         left, right = 0, 0

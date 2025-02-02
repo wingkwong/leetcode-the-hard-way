@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/word-pattern/'
+description: 'Author: @wkw | https://leetcode.com/problems/word-pattern/'
 tags: [Hash Table, String]
 ---
 
-# 0290 - Word Pattern (Easy) 
+# 0290 - Word Pattern (Easy)
 
 ## Problem Link
 
@@ -49,7 +49,7 @@ Output: false
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -88,7 +88,7 @@ public:
                 if (used.find(words[i]) != used.end()) {
                     return false;
                 }
-                // if not, then map it   
+                // if not, then map it
                 // e.g. a -> dog
                 m[pattern[i]] = words[i];
                 used.insert(words[i]);

@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/range-sum-query-mutable/'
+description: 'Author: @wkw | https://leetcode.com/problems/range-sum-query-mutable/'
 tags: [Array, Design, Binary Indexed Tree, Segment Tree]
 ---
 
-# 0307 - Range Sum Query - Mutable (Medium) 
+# 0307 - Range Sum Query - Mutable (Medium)
 
 ## Problem Link
 
@@ -51,19 +51,19 @@ numArray.sumRange(0, 2); // return 1 + 2 + 5 = 8
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 struct segtree {
     vector<long long> sums;
     int size;
-    
+
     void init(int n) {
         size = 1;
         while (size < n) size *= 2;
         sums.assign(size * 2, 0LL);
     }
-    
+
     void set(int i, int v, int x, int lx, int rx) {
         if (rx - lx == 1) {
             sums[x] = v;
@@ -77,11 +77,11 @@ struct segtree {
         }
         sums[x] = sums[2 * x + 1] + sums[2 * x + 2];
     }
-    
+
     void set(int i, int v) {
         set(i, v, 0, 0, size);
     }
-    
+
     long long sum(int l, int r, int x, int lx, int rx) {
         // no intersection
         if (lx >= r || l >= rx) return 0;
@@ -92,8 +92,8 @@ struct segtree {
         long long s2 = sum(l, r, 2 * x + 2, m, rx);
         return s1 + s2;
     }
-    
-    
+
+
     long long sum(int l, int r) {
         return sum(l, r, 0, 0, size);
     }
@@ -108,16 +108,16 @@ public:
             st.set(i, nums[i]);
         }
     }
-    
+
     void update(int index, int val) {
         st.set(index, val);
     }
-    
+
     int sumRange(int left, int right) {
         return st.sum(left, right + 1);
     }
 
-private: 
+private:
     segtree st;
     int n;
 };

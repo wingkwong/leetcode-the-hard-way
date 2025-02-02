@@ -1,6 +1,6 @@
 ---
-title: "Arrays"
-description: "An array is a data structure consisting of a collection of elements."
+title: 'Arrays'
+description: 'An array is a data structure consisting of a collection of elements.'
 hide_table_of_contents: true
 keywords:
   - leetcode
@@ -9,7 +9,7 @@ keywords:
   - data structure
 ---
 
-<TutorialCredits authors="@heiheihang, @wingkwong"/>
+<TutorialCredits authors="@heiheihang, @wkw"/>
 
 ## Overview
 
@@ -37,7 +37,7 @@ basketball_matches = [[0, 76, 86, 100],
 </TabItem>
 
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 vector<int> scores_of_students = {86, 76, 67, 98, 95};
@@ -51,7 +51,7 @@ vector<vector<int>> basketball_matches = {{0, 76, 86, 100},
 </TabItem>
 
 <TabItem value="java" label="Java">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```java
 int[] scores_of_students = {86, 76, 67, 98, 95};
@@ -99,7 +99,7 @@ for i in range(len(basketball_matches)):
 </TabItem>
 
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 for (int i = 0; i < basketball_matches.size(); i++) {
@@ -114,7 +114,7 @@ for (int i = 0; i < basketball_matches.size(); i++) {
 </TabItem>
 
 <TabItem value="java" label="Java">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```java
 for (int i = 0; i < basketball_matches.length; i++) {
@@ -131,46 +131,15 @@ for (int i = 0; i < basketball_matches.length; i++) {
 
 ### Complexity
 
-| Operation        | Complexity | Explanation                                                                                                                                                                                                                             |
-| ---------------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Look-up (Access) | $$O(1)$$   | When we do `array[1]`, the program can instantly find the value stored at the first location.                                                                                                                                           |
-| Add              | $$O(1)$$   | More accurately this is amortised O(1). When we add to the end of the array, it only takes constant time.                                                                                                                               |
-| Pop              | $$O(1)$$   | When we remove the last element of the array, it takes constant time.                                                                                                                                                                   |
-| Insert           | $$O(N)$$   | When we insert an element to the middle of the array, it takes O(N) time. The whole array needs to be restructured to accommodate the new element.                                                                                      |
-| Remove           | $$O(N)$$   | When we remove an element in the middle of the array, it takes O(N) time. The whole array needs to be restructured to replace the missing gap of the replaced element.                                                                  |
-| Len              | $$O(1)$$   | This may seem like to be O(N) as we have to go through the whole array to check its length. However, checking the length of an array in many languages should be pre-computed in their data structures, so it only takes constant time. |
+| Operation | Complexity | Explanation |
+| --- | --- | --- |
+| Look-up (Access) | $$O(1)$$ | When we do `array[1]`, the program can instantly find the value stored at the first location. |
+| Add | $$O(1)$$ | More accurately this is amortised O(1). When we add to the end of the array, it only takes constant time. |
+| Pop | $$O(1)$$ | When we remove the last element of the array, it takes constant time. |
+| Insert | $$O(N)$$ | When we insert an element to the middle of the array, it takes O(N) time. The whole array needs to be restructured to accommodate the new element. |
+| Remove | $$O(N)$$ | When we remove an element in the middle of the array, it takes O(N) time. The whole array needs to be restructured to replace the missing gap of the replaced element. |
+| Len | $$O(1)$$ | This may seem like to be O(N) as we have to go through the whole array to check its length. However, checking the length of an array in many languages should be pre-computed in their data structures, so it only takes constant time. |
 
-export const suggestedProblems = [
-{
-"problemName": "1480 - Running Sum of 1d Array",
-"difficulty": "Easy",
-"leetCodeLink": "https://leetcode.com/problems/running-sum-of-1d-array/",
-"solutionLink": "../../solutions/1400-1499/running-sum-of-1d-array-easy"
-},
-{
-"problemName": "1929 - Concatenation of Array",
-"difficulty": "Easy",
-"leetCodeLink": "https://leetcode.com/problems/concatenation-of-array/",
-"solutionLink": "../../solutions/1900-1999/concatenation-of-array-easy"
-},
-{
-"problemName": "1431 - Kids With the Greatest Number of Candies",
-"difficulty": "Easy",
-"leetCodeLink": "https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/",
-"solutionLink": "../../solutions/1400-1499/kids-with-the-greatest-number-of-candies-easy"
-},
-{
-"problemName": "1572 - Matrix Diagonal Sum",
-"difficulty": "Easy",
-"leetCodeLink": "https://leetcode.com/problems/matrix-diagonal-sum/",
-"solutionLink": "../../solutions/1500-1599/matrix-diagonal-sum-easy"
-},
-{
-"problemName": "0036 - Valid Sudoku",
-"difficulty": "Medium",
-"leetCodeLink": "https://leetcode.com/problems/valid-sudoku/",
-"solutionLink": ""
-},
-]
+export const suggestedProblems = [ { "problemName": "1480 - Running Sum of 1d Array", "difficulty": "Easy", "leetCodeLink": "https://leetcode.com/problems/running-sum-of-1d-array/", "solutionLink": "../../solutions/1400-1499/running-sum-of-1d-array-easy" }, { "problemName": "1929 - Concatenation of Array", "difficulty": "Easy", "leetCodeLink": "https://leetcode.com/problems/concatenation-of-array/", "solutionLink": "../../solutions/1900-1999/concatenation-of-array-easy" }, { "problemName": "1431 - Kids With the Greatest Number of Candies", "difficulty": "Easy", "leetCodeLink": "https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/", "solutionLink": "../../solutions/1400-1499/kids-with-the-greatest-number-of-candies-easy" }, { "problemName": "1572 - Matrix Diagonal Sum", "difficulty": "Easy", "leetCodeLink": "https://leetcode.com/problems/matrix-diagonal-sum/", "solutionLink": "../../solutions/1500-1599/matrix-diagonal-sum-easy" }, { "problemName": "0036 - Valid Sudoku", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/valid-sudoku/", "solutionLink": "" }, ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />

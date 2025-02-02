@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @ganajayant, @radojicic23 | https://leetcode.com/problems/container-with-most-water/'
+description: 'Author: @wkw, @ganajayant, @radojicic23 | https://leetcode.com/problems/container-with-most-water/'
 ---
 
 # 0011 - Container With Most Water (Medium)
@@ -20,7 +20,7 @@ Return _the maximum amount of water a container can store_.
 
 **Example 1:**
 
-![](https://s3-lc-upload.s3.amazonaws.com/uploads/2018/07/17/question\_11.jpg)
+![](https://s3-lc-upload.s3.amazonaws.com/uploads/2018/07/17/question_11.jpg)
 
 ```
 Input: height = [1,8,6,2,5,4,8,3,7]
@@ -37,18 +37,17 @@ Output: 1
 
 **Constraints:**
 
-* `n == height.length`
-* `2 <= n <= 10^5`
-* `0 <= height[i] <= 10^4`
+- `n == height.length`
+- `2 <= n <= 10^5`
+- `0 <= height[i] <= 10^4`
 
 ## Approach 1: Two Pointers
 
 We know that the area is $$width * height$$. Given two lines with different heights, we should only take the minimum one and the width is simply their distance. We use two pointers to track the lines, every time we calculate the area and move either one line. If the left line is shorter, then move the left one because we want to keep the maximum one, and vice versa.
 
-
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -66,6 +65,7 @@ public:
     }
 };
 ```
+
 </TabItem>
 
 <TabItem value="java" label="Java">
@@ -93,26 +93,28 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 <TabItem value="javascript" label="JavaScript">
 <SolutionAuthor name="@MithunPrabhu777"/>
 
 ```javascript
 const maxArea = (height) => {
-    let [left, right, max] = [0, height.length - 1, 0];
+  let [left, right, max] = [0, height.length - 1, 0];
 
-    while (left < right) {
-        max = Math.max(max, Math.min(height[left], height[right]) * (right - left));
-        if (height[right] > height[left]) {
-            left += 1;
-        } else {
-            right -= 1;
-        }
+  while (left < right) {
+    max = Math.max(max, Math.min(height[left], height[right]) * (right - left));
+    if (height[right] > height[left]) {
+      left += 1;
+    } else {
+      right -= 1;
     }
+  }
 
-    return max;
+  return max;
 };
 ```
+
 </TabItem>
 
 <TabItem value="python" label="Python">
@@ -120,18 +122,18 @@ const maxArea = (height) => {
 
 ```python
 def maxArea(height):
-    res = 0  
-    l, r = 0, len(height) - 1 
+    res = 0
+    l, r = 0, len(height) - 1
 
     while l < r:
         area = (r - l) * min(height[r], height[l])
         res = max(res, area)
-        
-        if height[l] < height[r]: 
-            l += 1 
-        else: 
+
+        if height[l] < height[r]:
+            l += 1
+        else:
             r -= 1
-    
+
     return res
 ```
 

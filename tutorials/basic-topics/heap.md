@@ -1,6 +1,6 @@
 ---
-title: "Heap (Priority Queue)"
-description: "A heap, or a priority queue, is a data structure that efficiently stores elements in a particular order."
+title: 'Heap (Priority Queue)'
+description: 'A heap, or a priority queue, is a data structure that efficiently stores elements in a particular order.'
 # hide_table_of_contents: true
 keywords:
   - leetcode
@@ -20,13 +20,11 @@ A heap, or a priority queue, is a data structure that efficiently stores element
 
 ### Insertion
 
-To do insetion in heap, we would add the new element to the end of the heap. If the position of the new element violates the heap properity, the new elements will be sifted up until it reaches the correct position.
-![heap_insertion](https://user-images.githubusercontent.com/63882653/171032169-d92bc368-8f5a-44eb-8507-3c84f884c113.gif)
+To do insetion in heap, we would add the new element to the end of the heap. If the position of the new element violates the heap properity, the new elements will be sifted up until it reaches the correct position. ![heap_insertion](https://user-images.githubusercontent.com/63882653/171032169-d92bc368-8f5a-44eb-8507-3c84f884c113.gif)
 
 ### Deletion
 
-In heap, the deletion refers to pop the root in the heap. After the root of the heap has been popped out, the last element in the heap will be inserted to the root position. If this violates the heap porperity, the new root would be sifted down until it reaches the correct position.
-![deletion_heap](https://user-images.githubusercontent.com/63882653/171033836-ec8841ac-649a-468d-8961-4ad395152df7.gif)
+In heap, the deletion refers to pop the root in the heap. After the root of the heap has been popped out, the last element in the heap will be inserted to the root position. If this violates the heap porperity, the new root would be sifted down until it reaches the correct position. ![deletion_heap](https://user-images.githubusercontent.com/63882653/171033836-ec8841ac-649a-468d-8961-4ad395152df7.gif)
 
 ## Python
 
@@ -178,9 +176,7 @@ Let's work on a problem ([LeetCode Link](https://leetcode.com/problems/the-k-wea
 >
 > A row i is weaker than a row j if one of the following is true:
 >
-> The number of soldiers in row i is less than the number of soldiers in row j.
-> Both rows have the same number of soldiers and i < j.
-> Return the indices of the k weakest rows in the matrix ordered from weakest to strongest.
+> The number of soldiers in row i is less than the number of soldiers in row j. Both rows have the same number of soldiers and i < j. Return the indices of the k weakest rows in the matrix ordered from weakest to strongest.
 
 The idea of this question is
 
@@ -240,25 +236,6 @@ vector<int> kWeakestRows(vector<vector<int>>& mat, int k) {
 priority_queue<pair<int,int>> pq;
 ```
 
-export const suggestedProblems = [
-{
-"problemName": "0703 - Kth Largest Element in a Stream",
-"difficulty": "Easy",
-"leetCodeLink": "https://leetcode.com/problems/kth-largest-element-in-a-stream/",
-"solutionLink": "../../solutions/0700-0799/kth-largest-element-in-a-stream-easy"
-},
-{
-"problemName": "0215 - Kth Largest Element in an Array",
-"difficulty": "Medium",
-"leetCodeLink": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
-"solutionLink": "../../solutions/0200-0299/kth-largest-element-in-an-array-medium"
-},
-{
-"problemName": "0973 - K Closest Points to Origin",
-"difficulty": "Medium",
-"leetCodeLink": "https://leetcode.com/problems/k-closest-points-to-origin/",
-"solutionLink": "../../solutions/0900-0999/k-closest-points-to-origin-medium"
-},
-]
+export const suggestedProblems = [ { "problemName": "0703 - Kth Largest Element in a Stream", "difficulty": "Easy", "leetCodeLink": "https://leetcode.com/problems/kth-largest-element-in-a-stream/", "solutionLink": "../../solutions/0700-0799/kth-largest-element-in-a-stream-easy" }, { "problemName": "0215 - Kth Largest Element in an Array", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/kth-largest-element-in-an-array/", "solutionLink": "../../solutions/0200-0299/kth-largest-element-in-an-array-medium" }, { "problemName": "0973 - K Closest Points to Origin", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/k-closest-points-to-origin/", "solutionLink": "../../solutions/0900-0999/k-closest-points-to-origin-medium" }, ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />

@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/non-decreasing-subsequences/'
+description: 'Author: @wkw | https://leetcode.com/problems/non-decreasing-subsequences/'
 tags: [Array, Hash Table, Backtracking, Bit Manipulation]
 ---
 
-# 0491 - Non-decreasing Subsequences (Medium) 
+# 0491 - Non-decreasing Subsequences (Medium)
 
 ## Problem Link
 
@@ -11,7 +11,7 @@ https://leetcode.com/problems/non-decreasing-subsequences/
 
 ## Problem Statement
 
-Given an integer array `nums`, return *all the different possible non-decreasing subsequences of the given array with at least two elements*. You may return the answer in **any order**.
+Given an integer array `nums`, return _all the different possible non-decreasing subsequences of the given array with at least two elements_. You may return the answer in **any order**.
 
 **Example 1:**
 
@@ -36,7 +36,7 @@ Output: [[4,4]]
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 // ideas:
@@ -69,14 +69,14 @@ public:
                     // copy cur_s to new_s
                     // because we want to add the number to the new set `new_s`
                     // while keeping the old one `cur_s` unchanged
-                    // e.g. x = 7, cur_s = [4, 6], new_s = [4, 6, 7] 
+                    // e.g. x = 7, cur_s = [4, 6], new_s = [4, 6, 7]
                     vector<int> new_s = cur_s;
                     // add the number to the new set `new_s`
                     new_s.push_back(x);
                     // add `new_s` to `tmp_s` instead of `s`
                     // because we are iterating `s`
                     tmp_s.insert(new_s);
-                    
+
                 }
             }
             // add the result back to `s`

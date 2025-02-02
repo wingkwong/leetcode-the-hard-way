@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/optimize-water-distribution-in-a-village/
+  Author: @wkw | https://leetcode.com/problems/optimize-water-distribution-in-a-village/
 ---
 
 # 1168 - Optimize Water Distribution in a Village (Hard)
@@ -20,7 +19,7 @@ Return _the minimum total cost to supply water to all houses_.
 
 **Example 1:**
 
-![](https://assets.leetcode.com/uploads/2019/05/22/1359\_ex1.png)
+![](https://assets.leetcode.com/uploads/2019/05/22/1359_ex1.png)
 
 ```
 Input: n = 3, wells = [1,2,2], pipes = [[1,2,1],[2,3,1]]
@@ -47,19 +46,19 @@ Option 3:
   - Build a well inside house 2 with cost 1.
   - Connect house 1 with house 2 with cost 1.
 The total cost will be 2.
-Note that we can connect houses 1 and 2 with cost 1 or with cost 2 but we will always choose the cheapest option. 
+Note that we can connect houses 1 and 2 with cost 1 or with cost 2 but we will always choose the cheapest option.
 ```
 
 **Constraints:**
 
-* `2 <= n <= 10^4`
-* `wells.length == n`
-* `0 <= wells[i] <= 105`
-* `1 <= pipes.length <= 10^4`
-* `pipes[j].length == 3`
-* `1 <= house1j, house2j <= n`
-* `0 <= costj <= 105`
-* `house1j != house2j`
+- `2 <= n <= 10^4`
+- `wells.length == n`
+- `0 <= wells[i] <= 105`
+- `1 <= pipes.length <= 10^4`
+- `pipes[j].length == 3`
+- `1 <= house1j, house2j <= n`
+- `0 <= costj <= 105`
+- `house1j != house2j`
 
 ## Approach 1: **Kruskal's Algorithm**
 
@@ -67,7 +66,7 @@ If we add a new house, says house 0, and connect it to each houses with weight $
 
 In order to get the MST, we sort the edges based on the weights in an increasing order. Then we iterate them one by one, and greedily pick edges which does not result in cycle with the previous edges.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class dsu {

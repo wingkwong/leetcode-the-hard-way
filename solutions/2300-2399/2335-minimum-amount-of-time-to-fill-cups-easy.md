@@ -1,7 +1,8 @@
 ---
 description: >-
-  Author: @TBC |
-  https://leetcode.com/problems/minimum-amount-of-time-to-fill-cups
+  Author: @TBC | https://leetcode.com/problems/minimum-amount-of-time-to-fill-cups
+
+
 draft: true
 ---
 
@@ -55,8 +56,8 @@ Explanation: Every second, we fill up a cold cup.
 
 **Constraints:**
 
-* `amount.length == 3`
-* `0 <= amount[i] <= 100`
+- `amount.length == 3`
+- `0 <= amount[i] <= 100`
 
 ## Approach: TBC
 

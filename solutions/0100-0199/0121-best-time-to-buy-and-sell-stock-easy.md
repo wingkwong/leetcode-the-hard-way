@@ -1,5 +1,5 @@
 ---
-description: "Author: @jeremiaaxel, @ColeB2, @radojicic23 | https://leetcode.com/problems/best-time-to-buy-and-sell-stock/"
+description: 'Author: @jeremiaaxel, @ColeB2, @radojicic23 | https://leetcode.com/problems/best-time-to-buy-and-sell-stock/'
 ---
 
 # 0121 - Best Time to Buy and Sell Stock (Easy)
@@ -14,7 +14,7 @@ You are given an array `prices` where `prices[i]` is the price of a given stock 
 
 You want to maximize your profit by choosing a **single** day to buy one stock and choosing a **different day in the future** to sell that stock.
 
-Return *the maximum profit you can achieve from this transaction*. If you cannot achieve any profit, return `0`.
+Return _the maximum profit you can achieve from this transaction_. If you cannot achieve any profit, return `0`.
 
 **Example 1:**
 
@@ -63,26 +63,26 @@ The space complexity is $O(1)$ since we only use a constant amount of space.
 ```java
 class Solution {
     public int maxProfit(int[] prices) {
-        /* Initialize buy price with the highest amount of value 
+        /* Initialize buy price with the highest amount of value
         and the current maximum profit with zero */
         int buyPrice = Integer.MAX_VALUE;
         int currentMaxProfit = 0;
-        
+
         for (int price : prices) {
-            /* if a price is smaller than the current buy price, update the buy price, 
+            /* if a price is smaller than the current buy price, update the buy price,
             and continue to the next loop since it is obviously zero profit. */
             if (price < buyPrice) {
                 buyPrice = price;
                 continue;
             }
-            /* check if the profit from current price is bigger than the current max profit, 
+            /* check if the profit from current price is bigger than the current max profit,
             and update accordingly. */
             int profit = price - buyPrice;
             if (profit > currentMaxProfit) {
                 currentMaxProfit = profit;
             }
         }
-        
+
         return currentMaxProfit;
     }
 }
@@ -124,16 +124,16 @@ class Solution:
  * @param {number[]} prices
  * @return {number}
  */
-var maxProfit = function(prices) {
-    let buyPrice = prices[0];
-    let maxProfit = 0;
-    for (let i = 1; i < prices.length; i++) {
-        let currPrice = prices[i];
-        let currProfit = currPrice - buyPrice;
-        maxProfit = Math.max(maxProfit, currProfit);
-        buyPrice = Math.min(buyPrice, currPrice);
-    }
-    return maxProfit;
+var maxProfit = function (prices) {
+  let buyPrice = prices[0];
+  let maxProfit = 0;
+  for (let i = 1; i < prices.length; i++) {
+    let currPrice = prices[i];
+    let currProfit = currPrice - buyPrice;
+    maxProfit = Math.max(maxProfit, currProfit);
+    buyPrice = Math.min(buyPrice, currPrice);
+  }
+  return maxProfit;
 };
 ```
 

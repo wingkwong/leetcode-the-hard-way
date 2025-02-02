@@ -1,6 +1,6 @@
 ---
-title: "Binary Tree"
-description: "Binary Tree is a tree structure in which eacho node only contains at most two children"
+title: 'Binary Tree'
+description: 'Binary Tree is a tree structure in which eacho node only contains at most two children'
 keywords:
   - leetcode
   - tutorial
@@ -8,7 +8,7 @@ keywords:
   - data structure
 ---
 
-<TutorialCredits authors="@wingkwong"/>
+<TutorialCredits authors="@wkw"/>
 
 ## Overview
 

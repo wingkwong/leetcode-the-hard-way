@@ -1,5 +1,5 @@
 ---
-description: "Author: @ColeB2 | https://leetcode.com/problems/diameter-of-binary-tree/"
+description: 'Author: @ColeB2 | https://leetcode.com/problems/diameter-of-binary-tree/'
 tags: [Tree, Depth-First Search, Binary Tree]
 ---
 
@@ -79,7 +79,7 @@ class Solution:
             # height of each sub-tree.
             l = helper(node.left)
             r = helper(node.right)
-            # diamater for the current node will be solved by calculating the 
+            # diamater for the current node will be solved by calculating the
             # max height of each sub-tree and adding them together.
             # update global diameter, with current nodes diameter.
             self.diameter = max(self.diameter, l + r)
@@ -93,6 +93,6 @@ class Solution:
         # return diameter we calcuated.
         return self.diameter
 ```
+
 </TabItem>
 </Tabs>
-

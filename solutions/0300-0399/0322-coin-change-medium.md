@@ -31,6 +31,7 @@ Explanation: 11 = 5 + 5 + 1
 Input: coins = [2], amount = 3
 Output: -1
 ```
+
 **Example 3:**
 
 ```
@@ -46,7 +47,7 @@ Output: 0
 
 ## Approach 1: Dynamic Programming
 
-We can create a $$dp$$ array of length $$amount + 1$$ to represent all the ways we can make change from $$0$$ to $$amount$$, then solve the ways we can make each amount. 
+We can create a $$dp$$ array of length $$amount + 1$$ to represent all the ways we can make change from $$0$$ to $$amount$$, then solve the ways we can make each amount.
 
 We can do this by initializing the array with a number larger than the amount ($$amount$$ using all $$1$$ coins would reach size $$amount$$), and give the $$0$$ position of the array a value of $$0$$.
 
@@ -55,7 +56,6 @@ Then we can loop through all amounts, and for each amount, loop through all the 
 Time Complexity: $$O(amount + len(coins))$$. We are going to iterate over each amount, and for each amount, iterate through each coin.
 
 Space Complexity: $$O(amount)$$. We are going to create an array of size $$amount$$ to hold the number of ways we can create each amount.
-
 
 <Tabs>
 <TabItem value="python" label="Python">
@@ -79,7 +79,7 @@ class Solution:
                 if i - coin >= 0:
                     # the way to make coins will be either the min of
                     # the current way to make coins, dp[i] or
-                    # the number of ways it took to make coins at the 
+                    # the number of ways it took to make coins at the
                     # current amount minus the coin we are using + 1.
                     dp[i] = min(dp[i], 1 + dp[i-coin])
         # return the last number in the array, which will be amount.

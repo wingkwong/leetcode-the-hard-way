@@ -1,9 +1,9 @@
 ---
-description: 'Author: @heder, @wingkwong | https://leetcode.com/problems/determine-if-string-halves-are-alike/'
+description: 'Author: @heder, @wkw | https://leetcode.com/problems/determine-if-string-halves-are-alike/'
 tags: [String, Counting]
 ---
 
-# 1704 - Determine if String Halves Are Alike (Easy) 
+# 1704 - Determine if String Halves Are Alike (Easy)
 
 ## Problem Link
 
@@ -15,7 +15,7 @@ You are given a string `s` of even length. Split this string into two halves of 
 
 Two strings are **alike** if they have the same number of vowels (`'a'`, `'e'`, `'i'`, `'o'`, `'u'`, `'A'`, `'E'`, `'I'`, `'O'`, `'U'`). Notice that `s` contains uppercase and lowercase letters.
 
-Return `true`*if*`a`*and*`b`*are **alike***. Otherwise, return `false`.
+Return `true`_if_`a`_and_`b`\*are **alike\***. Otherwise, return `false`.
 
 **Example 1:**
 
@@ -71,9 +71,8 @@ static bool isVowel(char ch) noexcept {
 
 </TabItem>
 
-
 <TabItem value="rs" label="Rust">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```rs
 impl Solution {

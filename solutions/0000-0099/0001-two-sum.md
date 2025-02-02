@@ -1,5 +1,5 @@
 ---
-description: "Author: @wingkwong, @ganajayant, @skoden, @radojicic23 | https://leetcode.com/problems/two-sum/"
+description: 'Author: @wkw, @ganajayant, @skoden, @radojicic23 | https://leetcode.com/problems/two-sum/'
 tags: [Array, Two Pointer, Hash Table]
 ---
 
@@ -41,10 +41,10 @@ Output: [0,1]
 
 **Constraints:**
 
--   `2 <= nums.length <= 10^4`
--   `-10^9 <= nums[i] <= 10^9`
--   `-10^9 <= target <= 10^9`
--   **Only one valid answer exists.**
+- `2 <= nums.length <= 10^4`
+- `-10^9 <= nums[i] <= 10^9`
+- `-10^9 <= target <= 10^9`
+- **Only one valid answer exists.**
 
 **Follow-up:** Can you come up with an algorithm that is less than `O(n^2)` time complexity?
 
@@ -54,7 +54,7 @@ Tthe goal is to find two numbers in an array that add up to a given target numbe
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -75,7 +75,7 @@ public:
 
 </TabItem>
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```python
 class Solution:
@@ -90,7 +90,7 @@ class Solution:
 
 </TabItem>
 <TabItem value="go" label="Go">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```go
 func twoSum(nums []int, target int) []int {
@@ -136,15 +136,15 @@ class Solution {
  * @param {number} target
  * @return {number[]}
  */
-var twoSum = function(nums, target) {
-    for (let i = 0; i < nums.length; i++) {
-        for (let j = i + 1; j < nums.length; j++) {
-            if (nums[i] + nums[j] == target) {
-                return [i, j];
-            }
-        }
+var twoSum = function (nums, target) {
+  for (let i = 0; i < nums.length; i++) {
+    for (let j = i + 1; j < nums.length; j++) {
+      if (nums[i] + nums[j] == target) {
+        return [i, j];
+      }
     }
-    return [-1, -1];
+  }
+  return [-1, -1];
 };
 ```
 
@@ -196,7 +196,7 @@ A better way to do it is using one-pass hash table approach. We iterate each ele
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -218,7 +218,7 @@ public:
 
 </TabItem>
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:
@@ -235,7 +235,7 @@ class Solution:
 
 </TabItem>
 <TabItem value="go" label="Go">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```go
 func twoSum(nums []int, target int) []int {
@@ -277,22 +277,22 @@ class Solution {
 
 ```javascript
 var twoSum = function (nums, target) {
-    const hashMap = {};
+  const hashMap = {};
 
-    for (let i = 0; i < nums.length; i++) {
-        const difference = target - nums[i];
+  for (let i = 0; i < nums.length; i++) {
+    const difference = target - nums[i];
 
-        if (hashMap[difference] >= 0) return [hashMap[difference], i];
+    if (hashMap[difference] >= 0) return [hashMap[difference], i];
 
-        hashMap[nums[i]] = i;
-    }
+    hashMap[nums[i]] = i;
+  }
 };
 ```
 
 </TabItem>
 
 <TabItem value="rs" label="Rust">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```rs
 use std::collections::HashMap;

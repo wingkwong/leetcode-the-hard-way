@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/maximum-distance-between-a-pair-of-values/
+  Author: @wkw | https://leetcode.com/problems/maximum-distance-between-a-pair-of-values/
 ---
 
 # 1855 - Maximum Distance Between a Pair of Values (Medium)
@@ -49,15 +48,15 @@ The maximum distance is 2 with pair (2,4).
 
 **Constraints:**
 
-* `1 <= nums1.length, nums2.length <= 105`
-* `1 <= nums1[i], nums2[j] <= 105`
-* Both `nums1` and `nums2` are **non-increasing**.
+- `1 <= nums1.length, nums2.length <= 105`
+- `1 <= nums1[i], nums2[j] <= 105`
+- Both `nums1` and `nums2` are **non-increasing**.
 
 ## Approach 1: Two Pointers
 
 As both arrays are sorted, we can use two pointers $$i$$ and $$j$$ to iterate $$nums1$$ and $$nums2$$ respectively. If $$nums1[i] <= nums2[j]$$, we can update the answer and increase pointer $$j$$ by $$1$$, else increase pointer $$i$$ by $$1$$.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -68,7 +67,7 @@ public:
         // nums1 = [55,30,5,4,2], nums2 = [100,20,10,10,5]
         while(i < n && j < m) {
             if(nums1[i] <= nums2[j]) {
-                ans = max(ans, j - i); 
+                ans = max(ans, j - i);
                 j++;
             } else {
                 i++;
@@ -83,7 +82,7 @@ public:
 
 Using the same idea as approach 1 but with lower bound.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -99,4 +98,3 @@ public:
     }
 };
 ```
-

@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @vigneshshiv |
-  https://leetcode.com/problems/string-compression/
+  Author: @vigneshshiv | https://leetcode.com/problems/string-compression/
 ---
 
 # 0443 - String Compression (Medium)
@@ -26,7 +25,6 @@ After you are done **modifying the input array**, return _the new length of the 
 You must write an algorithm that uses only constant extra space.
 
 Given an integer array `nums`, return `true` _if there exists a triple of indices_ `(i, j, k)` _such that_ `i < j < k` _and_ `nums[i] < nums[j] < nums[k]`. If no such indices exists, return `false`.
-
 
 **Example 1:**
 
@@ -54,16 +52,16 @@ Explanation: The groups are "a" and "bbbbbbbbbbbb". This compresses to "ab12".
 
 **Constraints:**
 
-* `1 <= chars.length <= 2000`
-* `chars[i]` is a lowercase English letter, uppercase English letter, digit, or symbol.
+- `1 <= chars.length <= 2000`
+- `chars[i]` is a lowercase English letter, uppercase English letter, digit, or symbol.
 
 **Follow up:** Could you implement a solution that runs in `O(n)` time complexity and `O(1)` space complexity?
 
-## Approach 1: Iterative 
+## Approach 1: Iterative
 
-As stated in the problem, find the **consecutive repeating characters** frequency and once a **set of group is found** then modify the array with the character, number of occurances in the next index and repeat the process till last. 
+As stated in the problem, find the **consecutive repeating characters** frequency and once a **set of group is found** then modify the array with the character, number of occurances in the next index and repeat the process till last.
 
-Since it's input is a char array, if number of occurrance for a character is more than 9 times, place the numbers in an invididual position and move forward. 
+Since it's input is a char array, if number of occurrance for a character is more than 9 times, place the numbers in an invididual position and move forward.
 
 <Tabs>
 <TabItem value="java" label="Java">
@@ -72,7 +70,7 @@ Since it's input is a char array, if number of occurrance for a character is mor
 ```java
 class Solution {
     public int compress(char[] chars) {
-        int i = 0, res = 0; 
+        int i = 0, res = 0;
         while (i < chars.length) {
             int groupLength = 1;
             while (i + groupLength < chars.length && chars[i + groupLength] == chars[i]) {

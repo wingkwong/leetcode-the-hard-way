@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/minimum-cost-to-cut-a-stick/
+  Author: @wkw | https://leetcode.com/problems/minimum-cost-to-cut-a-stick/
 ---
 
 # 1547 - Minimum Cost to Cut a Stick (Hard)
@@ -48,10 +47,10 @@ There are much ordering with total cost <= 25, for example, the order [4, 6, 5, 
 
 **Constraints:**
 
-* `2 <= n <= 10^6`
-* `1 <= cuts.length <= min(n - 1, 100)`
-* `1 <= cuts[i] <= n - 1`
-* All the integers in `cuts` array are **distinct**.
+- `2 <= n <= 10^6`
+- `1 <= cuts.length <= min(n - 1, 100)`
+- `1 <= cuts[i] <= n - 1`
+- All the integers in `cuts` array are **distinct**.
 
 ## Approach 1: Dynamic Programming
 
@@ -61,7 +60,7 @@ Let's think of the base case first. Since the minimum length of a rod is $$1$$, 
 
 Otherwise, we iterate each position$$k$$ and perform each possible cut. We know that the cost is the length of the rod to be cut, i.e. $$cuts[j]  - cuts[i]$$. In example 1, the first cut costs 7. Since we have added $$0$$ and $$n$$to the input, so we have covered that. Once we cut at a certain point, the rod will be split into two parts. We perform the logic to calculate the costs for these two parts until we perform all the cuts.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -77,17 +76,17 @@ public:
         int ans = 1e9;
         //
         for (int k = i + 1; k < j; k++) {
-            // if this rod is to be cut, the cost is the length, 
+            // if this rod is to be cut, the cost is the length,
             // i.e. cuts[j] - cuts[i]
             // after the cut, it will be split into two parts
-            // then we calculate the cost for left rod : dfs(cuts, i, k) 
+            // then we calculate the cost for left rod : dfs(cuts, i, k)
             // and the cost for the right rod: dfs(cuts, k, j)
             ans = min(ans, cuts[j] - cuts[i] + dfs(cuts, i, k) + dfs(cuts, k, j));
         }
-        // memoize the ans 
+        // memoize the ans
         return dp[i][j] = ans;
     }
-    
+
     int minCost(int n, vector<int>& cuts) {
         cuts.push_back(0);
         cuts.push_back(n);

@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/maximum-employees-to-be-invited-to-a-meeting/
+  Author: @wkw | https://leetcode.com/problems/maximum-employees-to-be-invited-to-a-meeting/
 ---
 
 # 2127 - Maximum Employees to Be Invited to a Meeting (Hard)
@@ -29,7 +28,7 @@ Explanation:
 The above figure shows how the company can invite employees 0, 1, and 2, and seat them at the round table.
 All employees cannot be invited because employee 2 cannot sit beside employees 0, 1, and 3, simultaneously.
 Note that the company can also invite employees 1, 2, and 3, and give them their desired seats.
-The maximum number of employees that can be invited to the meeting is 3. 
+The maximum number of employees that can be invited to the meeting is 3.
 ```
 
 **Example 2:**
@@ -37,7 +36,7 @@ The maximum number of employees that can be invited to the meeting is 3.
 ```
 Input: favorite = [1,2,0]
 Output: 3
-Explanation: 
+Explanation:
 Each employee is the favorite person of at least one other employee, and the only way the company can invite them is if they invite every employee.
 The seating arrangement will be the same as that in the figure given in example 1:
 - Employee 0 will sit between employees 2 and 1.
@@ -62,10 +61,10 @@ The maximum number of employees that can be invited to the meeting is 4.
 
 **Constraints:**
 
-* `n == favorite.length`
-* `2 <= n <= 10^5`
-* `0 <= favorite[i] <= n - 1`
-* `favorite[i] != i`
+- `n == favorite.length`
+- `2 <= n <= 10^5`
+- `0 <= favorite[i] <= n - 1`
+- `favorite[i] != i`
 
 ## Approach 1: DFS
 
@@ -77,7 +76,7 @@ However, it would fail for the input \[1,2,0] because it will output $$0$$ inste
 
 The final answer is simple the maximum number of the result of case 1 and case 2.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -109,7 +108,7 @@ public:
         function<tuple<int, int, int>(int)> dfs2 = [&](int u)->tuple<int, int, int> {
             if (depth[u] != -1) {
                 return { u, depth[u], 0 };
-            }  
+            }
             depth[u] = 0;
             auto [entry, d, isCyclic] = dfs2(a[u]);
             if (isCyclic) {
@@ -122,7 +121,7 @@ public:
                 u == entry
             };
         };
-        
+
         for (int i = 0; i < n; i++) {
             if (depth[i] != -1) continue;
             auto [entry, d, isCyclic] = dfs2(i);

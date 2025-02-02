@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/replace-non-coprime-numbers-in-array/
+  Author: @wkw | https://leetcode.com/problems/replace-non-coprime-numbers-in-array/
 ---
 
 # 2197 - Replace Non-Coprime Numbers in Array (Hard)
@@ -30,7 +29,7 @@ Two values `x` and `y` are **non-coprime** if `GCD(x, y) > 1` where `GCD(x, y)` 
 ```
 Input: nums = [6,4,3,2,7,6,2]
 Output: [12,7,6]
-Explanation: 
+Explanation:
 - (6, 4) are non-coprime with LCM(6, 4) = 12. Now, nums = [12,3,2,7,6,2].
 - (12, 3) are non-coprime with LCM(12, 3) = 12. Now, nums = [12,2,7,6,2].
 - (12, 2) are non-coprime with LCM(12, 2) = 12. Now, nums = [12,7,6,2].
@@ -45,7 +44,7 @@ Note that there are other ways to obtain the same resultant array.
 ```
 Input: nums = [2,2,1,1,3,3,3]
 Output: [2,1,1,3]
-Explanation: 
+Explanation:
 - (3, 3) are non-coprime with LCM(3, 3) = 3. Now, nums = [2,2,1,1,3,3].
 - (3, 3) are non-coprime with LCM(3, 3) = 3. Now, nums = [2,2,1,1,3].
 - (2, 2) are non-coprime with LCM(2, 2) = 2. Now, nums = [2,1,1,3].
@@ -56,15 +55,15 @@ Note that there are other ways to obtain the same resultant array.
 
 **Constraints:**
 
-* `1 <= nums.length <= 10^5`
-* `1 <= nums[i] <= 10^5`
-* The test cases are generated such that the values in the final array are **less than or equal** to `108`.
+- `1 <= nums.length <= 10^5`
+- `1 <= nums[i] <= 10^5`
+- The test cases are generated such that the values in the final array are **less than or equal** to `108`.
 
 ## Approach 1: Simulation
 
-We iterate each number and check if the gcd of this number $$x$$ and the last element $$y$$ of $$ans$$ is non co-prime, i.e. $$gcd(x, y) > 1$$.  If so, replace them with their LCM and keep doing the same process till they are co-prime.
+We iterate each number and check if the gcd of this number $$x$$ and the last element $$y$$ of $$ans$$ is non co-prime, i.e. $$gcd(x, y) > 1$$. If so, replace them with their LCM and keep doing the same process till they are co-prime.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

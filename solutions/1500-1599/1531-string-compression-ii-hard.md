@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/string-compression-ii/'
+description: 'Author: @wkw | https://leetcode.com/problems/string-compression-ii/'
 tags: [String, Dynamic Programming]
 ---
 
-# 1531 - String Compression II (Hard) 
+# 1531 - String Compression II (Hard)
 
 ## Problem Link
 
@@ -17,7 +17,7 @@ Notice that in this problem, we are not adding `'1'` after single characters.
 
 Given a string `s` and an integer `k`. You need to delete **at most** `k` characters from `s` such that the run-length encoded version of `s` has minimum length.
 
-Find the *minimum length of the run-length encoded version of*`s`*after deleting at most*`k`*characters*.
+Find the _minimum length of the run-length encoded version of_`s`_after deleting at most_`k`_characters_.
 
 **Example 1:**
 
@@ -53,7 +53,7 @@ Explanation: Since k is zero, we cannot delete anything. The compressed string i
 
 <Tabs>
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:
@@ -76,7 +76,7 @@ class Solution:
                 # since the length of RLE will be changed
                 # e.g. prev_cnt = 1: a -> a2
                 # e.g. prev_cnt = 9: a9 -> a10
-                # e.g. prev_cnt = 99: a99 -> a100 
+                # e.g. prev_cnt = 99: a99 -> a100
                 # otherwise the length of RLE will not be changed
                 # e.g. prev_cnt = 3: a3 -> a4
                 # e.g. prev_cnt = 8: a8 -> a9
@@ -87,9 +87,9 @@ class Solution:
                 # e.g. a
                 keep = dp(i + 1, s[i], 1, k) + 1
             return min(delete, keep)
-        
+
         # dp(i, prev, prev_cnt, k) returns the length of RLE with k characters to be deleted
-        # starting from index i 
+        # starting from index i
         # with previous character `prev`
         # with `prev_cnt` times repeated so far
         return dp(0, "", 0, k)

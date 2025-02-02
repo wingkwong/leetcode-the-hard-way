@@ -1,10 +1,9 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/largest-number-after-digit-swaps-by-parity/
+  Author: @wkw | https://leetcode.com/problems/largest-number-after-digit-swaps-by-parity/
 ---
 
-# 2231 -  Largest Number After Digit Swaps by Parity (Easy)
+# 2231 - Largest Number After Digit Swaps by Parity (Easy)
 
 ## Problem Link
 
@@ -39,13 +38,13 @@ Note that there may be other sequences of swaps but it can be shown that 87655 i
 
 **Constraints:**
 
-* `1 <= num <= 10^9`
+- `1 <= num <= 10^9`
 
 ## Approach 1: Sorting
 
 Put all digits with the same parity together. Sort them. Build the result.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -53,7 +52,7 @@ public:
     int largestInteger(int num) {
         int tmp = num;
         vector<int> odd, even;
-        // iterate each digit 
+        // iterate each digit
         // and put the digit to the corresponding parity vector
         while (tmp) {
             int d = tmp % 10;
@@ -80,7 +79,7 @@ public:
 
 We cast the number as a string. Compare each pair the number and check its parity. If they have the same parity and $$s[i]$$ is smaller, then swap it with $$s[j]$$. Return the value as integer.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -91,8 +90,8 @@ public:
         for (int i = 0; i < n; i++) {
             for (int j = i + 1; j < n; j++) {
                 if (
-                    // 1. check if they hv the same parity 
-                    !((s[i] ^ s[j]) & 1) && 
+                    // 1. check if they hv the same parity
+                    !((s[i] ^ s[j]) & 1) &&
                     // 2. check if it's worth swapping
                     s[i] < s[j]
                 ) {

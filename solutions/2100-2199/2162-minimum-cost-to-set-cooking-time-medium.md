@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/minimum-cost-to-set-cooking-time/
+  Author: @wkw | https://leetcode.com/problems/minimum-cost-to-set-cooking-time/
 ---
 
 # 2162 - Minimum Cost to Set Cooking Time (Medium)
@@ -14,15 +13,15 @@ https://leetcode.com/problems/minimum-cost-to-set-cooking-time/
 
 A generic microwave supports cooking times for:
 
-* at least `1` second.
-* at most `99` minutes and `99` seconds.
+- at least `1` second.
+- at most `99` minutes and `99` seconds.
 
 To set the cooking time, you push **at most four digits**. The microwave normalizes what you push as four digits by **prepending zeroes**. It interprets the **first** two digits as the minutes and the **last** two digits as the seconds. It then **adds** them up as the cooking time. For example,
 
-* You push `9` `5` `4` (three digits). It is normalized as `0954` and interpreted as `9` minutes and `54` seconds.
-* You push `0` `0` `0` `8` (four digits). It is interpreted as `0` minutes and `8` seconds.
-* You push `8` `0` `9` `0`. It is interpreted as `80` minutes and `90` seconds.
-* You push `8` `1` `3` `0`. It is interpreted as `81` minutes and `30` seconds.
+- You push `9` `5` `4` (three digits). It is normalized as `0954` and interpreted as `9` minutes and `54` seconds.
+- You push `0` `0` `0` `8` (four digits). It is interpreted as `0` minutes and `8` seconds.
+- You push `8` `0` `9` `0`. It is interpreted as `80` minutes and `90` seconds.
+- You push `8` `1` `3` `0`. It is interpreted as `81` minutes and `30` seconds.
 
 You are given integers `startAt`, `moveCost`, `pushCost`, and `targetSeconds`. **Initially**, your finger is on the digit `startAt`. Moving the finger above **any specific digit** costs `moveCost` units of fatigue. Pushing the digit below the finger **once** costs `pushCost` units of fatigue.
 
@@ -31,8 +30,6 @@ There can be multiple ways to set the microwave to cook for `targetSeconds` seco
 Return _the **minimum cost** to set_ `targetSeconds` _seconds of cooking time_.
 
 Remember that one minute consists of `60` seconds.
-
-
 
 **Example 1:**
 
@@ -67,9 +64,9 @@ Note other possible ways are 0076, 076, 0116, and 116, but none of them produces
 
 **Constraints:**
 
-* `0 <= startAt <= 9`
-* `1 <= moveCost, pushCost <= 105`
-* `1 <= targetSeconds <= 6039`
+- `0 <= startAt <= 9`
+- `1 <= moveCost, pushCost <= 105`
+- `1 <= targetSeconds <= 6039`
 
 ## Approach 1: Simulation
 
@@ -81,7 +78,7 @@ To calculate the cost, it is pretty straightforward. Example 2 gives a good hint
 
 After calculating the first possible minimum cost, we can try the second one. Similarly, we check if $$m'$$ and $$s'$$ are valid. If so, calculate the cost and return the minimum one.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -96,7 +93,7 @@ public:
         }
         return res;
     }
-    
+
     int minCostSetTime(int startAt, int moveCost, int pushCost, int targetSeconds) {
         int ans = 1e9, m = targetSeconds / 60, s = targetSeconds % 60;
         vector<int> d(4);

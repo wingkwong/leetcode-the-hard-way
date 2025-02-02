@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/maximum-width-of-binary-tree/
+  Author: @wkw | https://leetcode.com/problems/maximum-width-of-binary-tree/
 ---
 
 # 0662 - Maximum Width of Binary Tree (Medium)
@@ -52,22 +51,22 @@ Explanation: The maximum width existing in the second level with the length 2 (3
 
 **Constraints:**
 
-* The number of nodes in the tree is in the range `[1, 3000]`.
-* `-100 <= Node.val <= 100`
+- The number of nodes in the tree is in the range `[1, 3000]`.
+- `-100 <= Node.val <= 100`
 
 ## Approach 1: BFS
 
 We want to traverse each node level by level to calculate the width between the leftmost and the rightmost non-null nodes on the same level. We can use queue to perform BFS.
 
-First we initialise a queue with a pair of tuple $$(node, idx)$$. Then we append the root with idx $$0$$ at the beginning. How do we assign $$idx$$ for other nodes? Given a full binary tree, we can easily see a pattern here. If a node with idx $$i$$ has the left node, the its idx would be $$2 * i$$. If a node with idx $$i$$ has the right node, the its idx would be $$2 * i + 1$$. 
+First we initialise a queue with a pair of tuple $$(node, idx)$$. Then we append the root with idx $$0$$ at the beginning. How do we assign $$idx$$ for other nodes? Given a full binary tree, we can easily see a pattern here. If a node with idx $$i$$ has the left node, the its idx would be $$2 * i$$. If a node with idx $$i$$ has the right node, the its idx would be $$2 * i + 1$$.
 
-![BFS traversal](https://leetcode.com/problems/maximum-width-of-binary-tree/Figures/662/662\_bfs\_traversal.png)
+![BFS traversal](https://leetcode.com/problems/maximum-width-of-binary-tree/Figures/662/662_bfs_traversal.png)
 
 For each level, we calculate the width between the leftmost and rightmost nodes, which are the first element $$l$$ in the queue and the last element $$r$$ in the queue respectively, and check if it could be maximum value. The width between those two nodes is simply $$r_{idx} - l_{idx} + 1$$. For example, on the last level, the width between the leftmost node and the rightmost node would be $$7 - 4 + 1 = 4$$.
 
 For each element in the queue, we check if it has the left node or the right node. If so, we add it to the queue for further processing. We return the answer after we process all the nodes.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

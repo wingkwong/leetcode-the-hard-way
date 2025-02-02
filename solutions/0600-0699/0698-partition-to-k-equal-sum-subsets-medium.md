@@ -1,9 +1,17 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/partition-to-k-equal-sum-subsets/'
-tags: [Array, Dynamic Programming, Backtracking, Bit Manipulation, Memoization, Bitmask]
+description: 'Author: @wkw | https://leetcode.com/problems/partition-to-k-equal-sum-subsets/'
+tags:
+  [
+    Array,
+    Dynamic Programming,
+    Backtracking,
+    Bit Manipulation,
+    Memoization,
+    Bitmask,
+  ]
 ---
 
-# 0698 - Partition to K Equal Sum Subsets (Medium) 
+# 0698 - Partition to K Equal Sum Subsets (Medium)
 
 ## Problem Link
 
@@ -38,7 +46,7 @@ Output: false
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -61,7 +69,7 @@ public:
             if (dp[mask] == -1) continue;
             // iterate each number
             for (int i = 0; i < n; i++) {
-                // if this number is not used, 
+                // if this number is not used,
                 // then include it if dp[mask] + nums[i] is less than or equal to target
                 if (!(mask & (1 << i)) && dp[mask] + nums[i] <= target) {
                     // set the i-th bit on mask on dp since we include the i-th number
@@ -77,7 +85,7 @@ public:
 </TabItem>
 
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:
@@ -99,7 +107,7 @@ class Solution:
             if dp[mask] == -1: continue
             # iterate each number
             for i in range(n):
-                # if this number is not used, 
+                # if this number is not used,
                 # then include it if dp[mask] + nums[i] is less than or equal to target
                 if not ((1 << i) & mask) and dp[mask] + nums[i] <= target:
                     # set the i-th bit on mask on dp since we include the i-th number

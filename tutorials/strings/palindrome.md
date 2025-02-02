@@ -1,6 +1,6 @@
 ---
-title: "Palindrome"
-description: "A palindrome is a word, number, phrase, or other sequence of characters which reads the same backward as forward."
+title: 'Palindrome'
+description: 'A palindrome is a word, number, phrase, or other sequence of characters which reads the same backward as forward.'
 hide_table_of_contents: true
 keywords:
   - leetcode
@@ -8,7 +8,7 @@ keywords:
   - palindrome
 ---
 
-<TutorialCredits authors="@wingkwong"/>
+<TutorialCredits authors="@wkw"/>
 
 ## Overview
 
@@ -22,7 +22,7 @@ As we know it reads the same forward and backward, which means $s[0]$ is same as
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 bool isPalindrome(const string& s) {
@@ -44,7 +44,7 @@ We can directly use built-in function to reverse a string and check if it is sam
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 bool isPalindrome(const string& s) {
@@ -59,7 +59,7 @@ bool isPalindrome(const string& s) {
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 bool isPalindrome(const string& s) {
@@ -72,7 +72,7 @@ bool isPalindrome(const string& s) {
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 bool isPalindrome(const string &s) {
@@ -89,7 +89,7 @@ For a given range, we can follow the same idea to use two pointers to check if a
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 bool palindromeWithRange(string s, int i, int j) {

@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/'
+description: 'Author: @wkw | https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/'
 tags: [Depth-First Search, Union Find, Graph]
 ---
 
-# 0947 - Most Stones Removed with Same Row or Column (Medium) 
+# 0947 - Most Stones Removed with Same Row or Column (Medium)
 
 ## Problem Link
 
@@ -15,7 +15,7 @@ On a 2D plane, we place `n` stones at some integer coordinate points. Each coord
 
 A stone can be removed if it shares either **the same row or the same column** as another stone that has not been removed.
 
-Given an array `stones` of length `n` where `stones[i] = [xi, yi]` represents the location of the `ith` stone, return *the largest possible number of stones that can be removed*.
+Given an array `stones` of length `n` where `stones[i] = [xi, yi]` represents the location of the `ith` stone, return _the largest possible number of stones that can be removed_.
 
 **Example 1:**
 
@@ -61,7 +61,7 @@ Explanation: [0,0] is the only stone on the plane, so you cannot remove it.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 // retrieved from https://wingkwong.github.io/leetcode-the-hard-way/tutorials/graph-theory/disjoint-set-union
@@ -104,8 +104,8 @@ class dsu {
   }
 };
 
-// idea: 
-// if two stones shares the same row or the same column, 
+// idea:
+// if two stones shares the same row or the same column,
 // we can use DSU to unite them together so that they are in the same group
 // for each group, we want to keep at least 1 stone (i.e. others will be removed)
 // hence, the answer is just the total count - the number of the connected components
@@ -132,7 +132,7 @@ public:
 };
 ```
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -141,7 +141,7 @@ public:
     int find(int x) {
         return parent[x] == x ? x : find(parent[x]);
     }
-    
+
     int removeStones(vector<vector<int>>& stones) {
         int n = (int) stones.size();
         parent.resize(n + 1, 0);

@@ -45,8 +45,7 @@ const config = {
           rehypePlugins: [katex],
           // showLastUpdateTime: true,
           // showLastUpdateAuthor: true,
-          editUrl:
-            'https://github.com/wingkwong/leetcode-the-hard-way',
+          editUrl: 'https://github.com/wingkwong/leetcode-the-hard-way',
         },
         // blog: {
         //   showReadingTime: true,
@@ -181,7 +180,7 @@ const config = {
               {
                 label: 'Contact',
                 href: 'mailto:leetcodethehardway@gmail.com',
-              }
+              },
             ],
           },
         ],
@@ -195,14 +194,14 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
-        additionalLanguages: ['csharp', 'java', 'kotlin', 'rust']
+        additionalLanguages: ['csharp', 'java', 'kotlin', 'rust'],
       },
       // https://docusaurus.io/docs/search#using-algolia-docsearch
       algolia: {
         appId: 'TSP4XHNA9P',
         apiKey: '13aa27443cab36b7f20f3a59617607a6',
         indexName: 'leetcode-the-hard-way',
-        contextualSearch: false
+        contextualSearch: false,
       },
       docs: {
         sidebar: {
@@ -274,7 +273,6 @@ const config = {
       },
     ],
   ],
-
 };
 
 module.exports = config;

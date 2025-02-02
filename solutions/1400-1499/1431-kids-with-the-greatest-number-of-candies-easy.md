@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @heiheihang |
-  https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/
+  Author: @heiheihang | https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/
 ---
 
 # 1431 - Kids With the Greatest Number of Candies (Easy)
@@ -22,7 +21,7 @@ Note that **multiple** kids can have the **greatest** number of candies.
 
 ```
 Input: candies = [2,3,5,1,3], extraCandies = 3
-Output: [true,true,true,false,true] 
+Output: [true,true,true,false,true]
 Explanation: If you give all extraCandies to:
 - Kid 1, they will have 2 + 3 = 5 candies, which is the greatest among the kids.
 - Kid 2, they will have 3 + 3 = 6 candies, which is the greatest among the kids.
@@ -35,7 +34,7 @@ Explanation: If you give all extraCandies to:
 
 ```
 Input: candies = [4,2,1,1,2], extraCandies = 1
-Output: [true,false,false,false,false] 
+Output: [true,false,false,false,false]
 Explanation: There is only 1 extra candy.
 Kid 1 will always have the greatest number of candies, even if a different kid is given the extra candy.
 ```
@@ -49,10 +48,10 @@ Output: [true,false,true]
 
 **Constraints:**
 
-* `n == candies.length`
-* `2 <= n <= 100`
-* `1 <= candies[i] <= 100`
-* `1 <= extraCandies <= 50`
+- `n == candies.length`
+- `2 <= n <= 100`
+- `1 <= candies[i] <= 100`
+- `1 <= extraCandies <= 50`
 
 ## Approach 1: Iteration
 
@@ -62,19 +61,19 @@ We need to use `max` to find the largest number of candies among the kids. Then 
 
 ```python
 def kidsWithCandies(self, candies: List[int], extra_candies: int) -> List[bool]:
-        
+
         #find the greatest number of candies among the kids
         most_candies = max(candies)
-        
+
         #initialize the result list
         result = []
-        
+
         #iterate each kid
         for i in range(len(candies)):
-            
+
             #declare a veriable for the number of candies of the ith kid
             kid = candies[i]
-            
+
             #check if the kid can have more than or equal to the largest number of candies
             if(kid + extra_candies >= most_candies):
                 #put TRUE to result if yes
@@ -82,7 +81,7 @@ def kidsWithCandies(self, candies: List[int], extra_candies: int) -> List[bool]:
             else:
                 #put FALSE to result if no
                 result.append(False)
-        
+
         #return result list
         return result
 ```

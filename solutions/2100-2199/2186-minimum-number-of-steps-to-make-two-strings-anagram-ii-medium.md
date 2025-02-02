@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @heiheihang, @wingkwong |
-  https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram-ii/
+  Author: @heiheihang, @wkw | https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram-ii/
 ---
 
 # 2186 - Minimum Number of Steps to Make Two Strings Anagram II (Medium)
@@ -23,7 +22,7 @@ An **anagram** of a string is a string that contains the same characters with a 
 ```
 Input: s = "leetcode", t = "coats"
 Output: 7
-Explanation: 
+Explanation:
 - In 2 steps, we can append the letters in "as" onto s = "leetcode", forming s = "leetcodeas".
 - In 5 steps, we can append the letters in "leede" onto t = "coats", forming t = "coatsleede".
 "leetcodeas" and "coatsleede" are now anagrams of each other.
@@ -41,14 +40,14 @@ Explanation: The given strings are already anagrams of each other. Thus, we do n
 
 **Constraints:**
 
-* `1 <= s.length, t.length <= 2 * 10^5`
-* `s` and `t` consist of lowercase English letters.
+- `1 <= s.length, t.length <= 2 * 10^5`
+- `s` and `t` consist of lowercase English letters.
 
 ## Approach 1: 2 Dictionaries
 
 We can store the characters of both strings into two dictionaries, and we make the following observation
 
-* To make the number of any character `c` equal in string `s` and `t`, we must add the difference between `s.count(c)` and `t.count(c)`
+- To make the number of any character `c` equal in string `s` and `t`, we must add the difference between `s.count(c)` and `t.count(c)`
 
 In python `defaultdict`, if we simply perform `for key in d1` , we will miss out the `keys` in `d2`. If we iterate both dictionaries, we will need to cancel out double counts.
 
@@ -100,7 +99,7 @@ def minSteps(self, s: str, t: str) -> int:
     # count c in s as positive
     for c in s:
         d[c] += 1
-        
+
     #count c in t as negative
     for c in t:
         d[c] -= 1
@@ -116,7 +115,7 @@ def minSteps(self, s: str, t: str) -> int:
     return res
 ```
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

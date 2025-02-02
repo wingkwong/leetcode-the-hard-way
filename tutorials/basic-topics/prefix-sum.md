@@ -1,6 +1,6 @@
 ---
-title: "Prefix Sum"
-description: "Prefix Sum is the sums of prefixes of the input sequence"
+title: 'Prefix Sum'
+description: 'Prefix Sum is the sums of prefixes of the input sequence'
 hide_table_of_contents: true
 keywords:
   - leetcode
@@ -8,7 +8,7 @@ keywords:
   - prefix sum
 ---
 
-<TutorialCredits authors="@wingkwong"/>
+<TutorialCredits authors="@wkw"/>
 
 ## Overview
 
@@ -54,7 +54,7 @@ $$
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 vector<int> generatePrefixSum(vector<int>& a) {
@@ -84,7 +84,7 @@ Let's start with a brute force solution, we iterate each element $a[i]$ and we i
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -111,7 +111,7 @@ However, if we utilise the idea of Prefix sum, we know the result at some point 
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -136,7 +136,7 @@ As we don't actually need $pref$ for further process in this question, we can ju
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -183,7 +183,7 @@ Sometimes we may pad a zero as the first element in prefix sum as we want to exc
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 vector<int> generatePrefixSum(vector<int>& a) {
@@ -212,7 +212,7 @@ $$
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class NumArray {
@@ -240,31 +240,6 @@ public:
 </TabItem>
 </Tabs>
 
-export const suggestedProblems = [
-{
-"problemName": "1480 - Running Sum of 1d Array",
-"difficulty": "Easy",
-"leetCodeLink": "https://leetcode.com/problems/running-sum-of-1d-array",
-"solutionLink": "../../solutions/1400-1499/running-sum-of-1d-array-easy"
-},
-{
-"problemName": "0303 - Range Sum Query - Immutable",
-"difficulty": "Easy",
-"leetCodeLink": "https://leetcode.com/problems/range-sum-query-immutable/",
-"solutionLink": ""
-},
-{
-"problemName": "1004 - Max Consecutive Ones III",
-"difficulty": "Medium",
-"leetCodeLink": "https://leetcode.com/problems/max-consecutive-ones-iii/",
-"solutionLink": "../../solutions/1000-1099/max-consecutive-ones-iii-medium"
-},
-{
-"problemName": "0974 - Subarray Sums Divisible by K",
-"difficulty": "Medium",
-"leetCodeLink": "https://leetcode.com/problems/subarray-sums-divisible-by-k/",
-"solutionLink": "../../solutions/0900-0999/subarray-sums-divisible-by-k-medium"
-},
-]
+export const suggestedProblems = [ { "problemName": "1480 - Running Sum of 1d Array", "difficulty": "Easy", "leetCodeLink": "https://leetcode.com/problems/running-sum-of-1d-array", "solutionLink": "../../solutions/1400-1499/running-sum-of-1d-array-easy" }, { "problemName": "0303 - Range Sum Query - Immutable", "difficulty": "Easy", "leetCodeLink": "https://leetcode.com/problems/range-sum-query-immutable/", "solutionLink": "" }, { "problemName": "1004 - Max Consecutive Ones III", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/max-consecutive-ones-iii/", "solutionLink": "../../solutions/1000-1099/max-consecutive-ones-iii-medium" }, { "problemName": "0974 - Subarray Sums Divisible by K", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/subarray-sums-divisible-by-k/", "solutionLink": "../../solutions/0900-0999/subarray-sums-divisible-by-k-medium" }, ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />

@@ -1,6 +1,6 @@
 ---
-title: "Bubble Sort"
-description: "It is sorting algorithm based on the idea of repeatedly comparing pairs of adjacent elements and then swapping their positions if they exist in the wrong order."
+title: 'Bubble Sort'
+description: 'It is sorting algorithm based on the idea of repeatedly comparing pairs of adjacent elements and then swapping their positions if they exist in the wrong order.'
 hide_table_of_contents: false
 keywords:
   - leetcode
@@ -10,7 +10,7 @@ keywords:
   - bubble sort
 ---
 
-<TutorialCredits authors="@RadhikaChhabra17" contributors="@wingkwong" />
+<TutorialCredits authors="@RadhikaChhabra17" contributors="@wkw" />
 
 ## Overview
 
@@ -30,8 +30,7 @@ $$
 arr = {5, 1, 4, 2, 8}
 $$
 
-![image](https://user-images.githubusercontent.com/77332750/196658633-a3b735de-820b-45de-a0cc-b7933d67d75c.png)
-We can use a variable $check$ to see if there is swap in one pass or not. If there is no swapping in one pass, they we don't have to check for other pass.
+![image](https://user-images.githubusercontent.com/77332750/196658633-a3b735de-820b-45de-a0cc-b7933d67d75c.png) We can use a variable $check$ to see if there is swap in one pass or not. If there is no swapping in one pass, they we don't have to check for other pass.
 
 <Tabs>
 <TabItem value="c++" label="C++">
@@ -62,8 +61,7 @@ void bubblesort(vector<int> &arr) {
 
 For first iteration will run $$(n-1)$$ times. For the second one, it will run $$(n-2)$$ times and so on.
 
-Therefore, the Time Complexity for the worst case $= (n - 1) + (n - 2) + (n - 3) + ... + 1 = O(n^2)$
-Use of variable $check$ will reduce the time complexity further as if there is no change in any iterations, next iterations will not occurs, this reduces the time complexity.
+Therefore, the Time Complexity for the worst case $= (n - 1) + (n - 2) + (n - 3) + ... + 1 = O(n^2)$ Use of variable $check$ will reduce the time complexity further as if there is no change in any iterations, next iterations will not occurs, this reduces the time complexity.
 
 ### Space Complexity
 
@@ -114,19 +112,6 @@ public:
 </TabItem>
 </Tabs>
 
-export const suggestedProblems = [
-{
-"problemName": "0075 - Sort Colors ",
-"difficulty": "Medium",
-"leetCodeLink": "https://leetcode.com/problems/sort-colors/",
-"solutionLink": "../../../solutions/0000-0099/sort-colors-medium"
-},
-{
-"problemName": "0148 - Sort List",
-"difficulty": "Medium",
-"leetCodeLink": "https://leetcode.com/problems/sort-list/",
-"solutionLink": "../../../solutions/0100-0199/sort-list-medium"
-}
-]
+export const suggestedProblems = [ { "problemName": "0075 - Sort Colors ", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/sort-colors/", "solutionLink": "../../../solutions/0000-0099/sort-colors-medium" }, { "problemName": "0148 - Sort List", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/sort-list/", "solutionLink": "../../../solutions/0100-0199/sort-list-medium" } ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />

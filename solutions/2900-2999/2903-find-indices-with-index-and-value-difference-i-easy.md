@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/find-indices-with-index-and-value-difference-i/'
+description: 'Author: @wkw | https://leetcode.com/problems/find-indices-with-index-and-value-difference-i/'
 tags: [Array]
 ---
 
-# 2903 - Find Indices With Index and Value Difference I (Easy) 
+# 2903 - Find Indices With Index and Value Difference I (Easy)
 
 ## Problem Link
 
@@ -18,7 +18,7 @@ Your task is to find **two** indices `i` and `j`, both in the range `[0, n - 1]`
 - `abs(i - j) >= indexDifference`, and
 - `abs(nums[i] - nums[j]) >= valueDifference`
 
-Return *an integer array* `answer`, *where* `answer = [i, j]` *if there are two such indices*, *and* `answer = [-1, -1]` *otherwise*. If there are multiple choices for the two indices, return *any of them*.
+Return _an integer array_ `answer`, _where_ `answer = [i, j]` _if there are two such indices_, _and_ `answer = [-1, -1]` _otherwise_. If there are multiple choices for the two indices, return _any of them_.
 
 **Note:** `i` and `j` may be **equal**.
 
@@ -66,7 +66,7 @@ Basically just follow the instruction - iterate $i$ and $j$ and check if the giv
 
 <Tabs>
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:
@@ -88,7 +88,7 @@ The brute force approach takes $O(n ^ 2)$ complexity. We can further optimize to
 
 <Tabs>
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:

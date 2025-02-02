@@ -1,5 +1,5 @@
 ---
-description: "Author: @wingkwong, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/trapping-rain-water/"
+description: 'Author: @wkw, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/trapping-rain-water/'
 tags: [Array, Two Pointers, Dynamic Programming, Stack, Monotonic Stack]
 ---
 
@@ -38,7 +38,7 @@ Output: 9
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 // Time Complexity: O(N)
@@ -83,7 +83,7 @@ public:
 
 <Tabs>
 <TabItem value="java" label="Java">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```java
 // Time Complexity: O(N)
@@ -136,7 +136,7 @@ class Solution {
 </TabItem>
 
 <TabItem value="python" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 # Time Complexity: O(N)
@@ -237,8 +237,7 @@ This problem one of the problem of solving with the previous heights with the cu
 
 1. Keep adding the index (referenced to height) into stack, if the current height is higher the last added one (Stack Top)
 
-2. Once we find there's a downward slop, means this is starting position to trap water fill (hold the water).
-   So keep calculating water trap area with the height and the index. Since we need to find the height and width of water area, indices are required to find the width (the same is maintained in the stack).
+2. Once we find there's a downward slop, means this is starting position to trap water fill (hold the water). So keep calculating water trap area with the height and the index. Since we need to find the height and width of water area, indices are required to find the width (the same is maintained in the stack).
 
 3. Keep repeating the process until the we reach last or there's no higher height to calculate the water fill (Stack is empty).
 

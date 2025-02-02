@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @ColeB2 | https://leetcode.com/problems/permutation-in-string/'
+description: 'Author: @wkw, @ColeB2 | https://leetcode.com/problems/permutation-in-string/'
 tags: [Hash Table, Two Pointers, String, Sliding Window]
 ---
 
@@ -27,13 +27,13 @@ Explanation: s2 contains one permutation of s1 ("ba").
 
 ```
 Input: s1 = "ab", s2 = "eidboaoo"
-Output: false 
+Output: false
 ```
 
 **Constraints:**
 
-* `1 <= s1.length, s2.length <= 10^4`
-* `s1` and `s2` consist of lowercase English letters.
+- `1 <= s1.length, s2.length <= 10^4`
+- `s1` and `s2` consist of lowercase English letters.
 
 ## Approach 1: Sliding Window
 
@@ -43,7 +43,7 @@ We first use a hash map $$target$$ count the occurrences for each character in $
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -56,7 +56,7 @@ public:
         for (auto x : s1) target[x - 'a']++;
         // apply sliding window. pointer i is the starting position
         for (int i = 0; i < m; i++) {
-          // pointer j is the ending position 
+          // pointer j is the ending position
           // j - i + 1 = window size
           // we count the occurrences for characters in s2 within the window
           while (j < m && j - i + 1 <= n) now[s2[j++] - 'a']++;
@@ -102,11 +102,9 @@ public:
 </TabItem>
 </Tabs>
 
-
 ## Approach 2: Sliding Window - Track Matches
 
 Similar to Approach 1 but with a slight improvement. We will still create a sliding window, and a hash map to count the characters in $$s1$$. But, instead of creating a second hash map to count the characters in $$s2$$, we will use the first hash map, and just decrement the count every time a character comes into our window, and increment a $$matches$$ variable when ever the counter's character count for that character reaches 0. (Must also then decrement $$matches$$ when the character count is no longer 0). Thus removing the need to do a worst case, $O(26)$ check of both counters on each iteration to check that they are equal.
-
 
 Time Complexity: $O(n+m)$ where $$n$$ is the length of $$s2$$, and $$m$$ is the length of $$s1$$.
 
@@ -143,7 +141,7 @@ class Solution:
                 # decrement the counter, as it matches with our window.
                 counter[ch] -= 1
                 # if number of characters reaches 0, we know we have the same amount
-                # of characters in s1, as we do our window sliding across s2. 
+                # of characters in s1, as we do our window sliding across s2.
                 if counter[ch] == 0:
                     # So we increment matches.
                     matches += 1
@@ -155,7 +153,7 @@ class Solution:
                 if left_ch in counter:
                     # Leaving character is in s1, so now we check if our count of characters is 0.
                     # If it is 0, we know that the leaving character caused our
-                    # window to no longer have same number of ch as s1. 
+                    # window to no longer have same number of ch as s1.
                     if counter[left_ch] == 0:
                         # So we decrement matches.
                         matches -= 1
@@ -169,7 +167,7 @@ class Solution:
         return False
 ```
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 # idea:
@@ -182,7 +180,7 @@ class Solution:
 class Solution:
     def checkInclusion(self, s1: str, s2: str) -> bool:
         n, m = len(s1), len(s2)
-        # if s1 got more characters, 
+        # if s1 got more characters,
         # then s2 can never contain a permutation of s1
         if n > m: return False
         # cnt_s1: frequency of character in s1

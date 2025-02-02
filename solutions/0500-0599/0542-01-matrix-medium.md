@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/01-matrix/'
+description: 'Author: @wkw | https://leetcode.com/problems/01-matrix/'
 tags: [Array, Dynamic Programming, Breadth-First Search, Matrix]
 ---
 
-# 0542 - 01 Matrix (Medium) 
+# 0542 - 01 Matrix (Medium)
 
 ## Problem Link
 
@@ -11,7 +11,7 @@ https://leetcode.com/problems/01-matrix/
 
 ## Problem Statement
 
-Given an `m x n` binary matrix `mat`, return *the distance of the nearest*`0`*for each cell*.
+Given an `m x n` binary matrix `mat`, return _the distance of the nearest_`0`_for each cell_.
 
 The distance between two adjacent cells is `1`.
 
@@ -44,7 +44,7 @@ The first observation is that if $mat[i][j]$ is $0$, then the output $ans[i][j]$
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -73,8 +73,8 @@ public:
                 int next_x = x + dir_x[d];
                 int next_y = y + dir_y[d];
                 // check boundary
-                if (0 <= next_x && next_x < m && 
-                    0 <= next_y && next_y < n && 
+                if (0 <= next_x && next_x < m &&
+                    0 <= next_y && next_y < n &&
                     // mat[next_x][next_y] needs to be unvisited
                     mat[next_x][next_y] == -1) {
                     // push next position to the queue

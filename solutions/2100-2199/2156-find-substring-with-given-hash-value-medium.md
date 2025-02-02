@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/find-substring-with-given-hash-value/
+  Author: @wkw | https://leetcode.com/problems/find-substring-with-given-hash-value/
 ---
 
 # 2156 - Find Substring With Given Hash Value (Medium)
@@ -18,7 +17,7 @@ The hash of a **0-indexed** string `s` of length `k`, given integers `p` and `m`
 
 Where `val(s[i])` represents the index of `s[i]` in the alphabet from `val('a') = 1` to `val('z') = 26`.
 
-You are given a string `s` and the integers `power`, `modulo`, `k`, and `hashValue.` Return `sub`, _the **first**  **substring** of_ `s` _of length_ `k` _such that_ `hash(sub, power, modulo) == hashValue`.
+You are given a string `s` and the integers `power`, `modulo`, `k`, and `hashValue.` Return `sub`, _the **first** **substring** of_ `s` _of length_ `k` _such that_ `hash(sub, power, modulo) == hashValue`.
 
 The test cases will be generated such that an answer always **exists**.
 
@@ -29,7 +28,7 @@ A **substring** is a contiguous non-empty sequence of characters within a string
 ```
 Input: s = "leetcode", power = 7, modulo = 20, k = 2, hashValue = 0
 Output: "ee"
-Explanation: The hash of "ee" can be computed to be hash("ee", 7, 20) = (5 * 1 + 5 * 7) mod 20 = 40 mod 20 = 0. 
+Explanation: The hash of "ee" can be computed to be hash("ee", 7, 20) = (5 * 1 + 5 * 7) mod 20 = 40 mod 20 = 0.
 "ee" is the first substring of length 2 with hashValue 0. Hence, we return "ee".
 ```
 
@@ -38,19 +37,19 @@ Explanation: The hash of "ee" can be computed to be hash("ee", 7, 20) = (5 * 1 +
 ```
 Input: s = "fbxzaad", power = 31, modulo = 100, k = 3, hashValue = 32
 Output: "fbx"
-Explanation: The hash of "fbx" can be computed to be hash("fbx", 31, 100) = (6 * 1 + 2 * 31 + 24 * 312) mod 100 = 23132 mod 100 = 32. 
-The hash of "bxz" can be computed to be hash("bxz", 31, 100) = (2 * 1 + 24 * 31 + 26 * 312) mod 100 = 25732 mod 100 = 32. 
+Explanation: The hash of "fbx" can be computed to be hash("fbx", 31, 100) = (6 * 1 + 2 * 31 + 24 * 312) mod 100 = 23132 mod 100 = 32.
+The hash of "bxz" can be computed to be hash("bxz", 31, 100) = (2 * 1 + 24 * 31 + 26 * 312) mod 100 = 25732 mod 100 = 32.
 "fbx" is the first substring of length 3 with hashValue 32. Hence, we return "fbx".
 Note that "bxz" also has a hash of 32 but it appears later than "fbx".
 ```
 
 **Constraints:**
 
-* `1 <= k <= s.length <= 2 * 10^4`
-* `1 <= power, modulo <= 10^9`
-* `0 <= hashValue < modulo`
-* `s` consists of lowercase English letters only.
-* The test cases are generated such that an answer always **exists**.
+- `1 <= k <= s.length <= 2 * 10^4`
+- `1 <= power, modulo <= 10^9`
+- `0 <= hashValue < modulo`
+- `s` consists of lowercase English letters only.
+- The test cases are generated such that an answer always **exists**.
 
 ## Approach 1: Reversed **Rabin-Karp**
 
@@ -81,7 +80,7 @@ for (int i = 1; i < n + 1; i++) p[i] = (p[i - 1] * 1LL * power) % modulo;
 
 $$target$$ is possible to be negative so we need to do the trick$$(target + modulo) \mod modulo$$ before comparing with the hashValue.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -96,12 +95,12 @@ public:
       }
       return res;
     }
-    
+
     string subStrHash(string s, int power, int modulo, int k, int hashValue) {
         int n = s.size();
         vector<long long> h(n + 1);
         for (int i = n - 1; i >= 0; i--) h[i] = (h[i + 1] * power + (s[i] - 'a' + 1)) % modulo;
-        for (int i = 0; i + k - 1 < n; i++) { 
+        for (int i = 0; i + k - 1 < n; i++) {
             long long target = (h[i] - h[i + k] * modpow(power, k, modulo)) % modulo;
             if((target + modulo) % modulo == hashValue){
                 return s.substr(i, k);

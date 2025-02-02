@@ -1,8 +1,8 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/divide-intervals-into-minimum-number-of-groups/'
+description: 'Author: @wkw | https://leetcode.com/problems/divide-intervals-into-minimum-number-of-groups/'
 ---
 
-# 2406 - Divide Intervals Into Minimum Number of Groups (Medium) 
+# 2406 - Divide Intervals Into Minimum Number of Groups (Medium)
 
 ## Problem Statement
 
@@ -10,7 +10,7 @@ You are given a 2D integer array `intervals` where `intervals[i] = [lefti, right
 
 You have to divide the intervals into one or more **groups** such that each interval is in **exactly** one group, and no two intervals that are in the same group **intersect** each other.
 
-Return *the **minimum** number of groups you need to make*.
+Return _the **minimum** number of groups you need to make_.
 
 Two intervals **intersect** if there is at least one common number between them. For example, the intervals `[1, 5]` and `[5, 8]` intersect.
 
@@ -42,7 +42,7 @@ Explanation: None of the intervals overlap, so we can put all of them in one gro
 
 ## Approach 1: Line Sweep
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -68,7 +68,7 @@ public:
         }
         // so now what we have is
         // intervals   1  2  3  4  5  6  7  8  9  10
-        // +           2  1  0  0  1  1  0  0  0  0 
+        // +           2  1  0  0  1  1  0  0  0  0
         // -           0  0  1  0  1  0  0  1  0  2
         // m           2  1  -1 0  0  1  0  -1 0  -2
         for (auto& x: m) {

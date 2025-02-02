@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong, @iraycd | https://leetcode.com/problems/the-number-of-weak-characters-in-the-game/'
+description: 'Author: @wkw, @iraycd | https://leetcode.com/problems/the-number-of-weak-characters-in-the-game/'
 tags: [Array, Stack, Greedy, Sorting, Monotonic Stack]
 ---
 
-# 1996 - The Number of Weak Characters in the Game (Medium) 
+# 1996 - The Number of Weak Characters in the Game (Medium)
 
 ## Problem Statement
 
@@ -11,7 +11,7 @@ You are playing a game that contains multiple characters, and each of the charac
 
 A character is said to be **weak** if any other character has **both** attack and defense levels **strictly greater** than this character's attack and defense levels. More formally, a character `i` is said to be **weak** if there exists another character `j` where `attackj > attacki` and `defensej > defensei`.
 
-Return *the number of **weak** characters*.
+Return _the number of **weak** characters_.
 
 **Example 1:**
 
@@ -45,7 +45,7 @@ Explanation: The third character is weak because the second character has a stri
 
 ## Approach 1: Hash Map
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -65,7 +65,7 @@ public:
         for(auto x : p) m[x[0]].push_back(x[1]);
         // for each attack
         for(auto x : m) {
-            // we count the number of weak characters 
+            // we count the number of weak characters
             // and add it to `weakCharacters`
             weakCharacters += count_if(x.second.begin(), x.second.end(), [&](int curDefense){ return curDefense < maxDefense;});
             // then update `maxDefense` which is the maximum value in current defenses
@@ -78,7 +78,7 @@ public:
 
 ## Approach 2: Sort with custom comparator
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -95,8 +95,8 @@ public:
         int maxDefense = 0;
         // sort properties with custom sort comparator
         sort(p.begin(), p.end(), [](const vector<int>& x, const vector<int>& y) {
-            // if the attack is same, then sort defense in ascending order  
-            // otherwise, sort attack in in descending order 
+            // if the attack is same, then sort defense in ascending order
+            // otherwise, sort attack in in descending order
            return x[0] == y[0] ? x[1] < y[1] : x[0] > y[0];
         });
         // by doing so, we don't need to compare starting from the back
@@ -112,7 +112,7 @@ public:
 };
 ```
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:
@@ -127,10 +127,10 @@ class Solution:
         # we can set the init value to x where x < 1
         maxDefense = 0
         # sort properties with custom sort comparator
-        # if the attack is same, then sort defense in descending order  
-        # otherwise, sort attack in in ascending order 
+        # if the attack is same, then sort defense in descending order
+        # otherwise, sort attack in in ascending order
         p.sort(key = lambda x: (x[0], -x[1]), reverse = True)
-		# or we can do it like 
+		# or we can do it like
 		# p.sort(key = lambda x: (-x[0], x[1]))
         for _, defense in p:
             # if it is less than current maxDefense, then it means it is a weak character
@@ -148,15 +148,15 @@ class Solution:
 // 2. count weak characters (those defenses less than the current maximum defense)
 // 3. update the maximum defense
 func numberOfWeakCharacters(properties [][]int) int {
-    
+
     // Weak starts at 0, this is the variable which is going to be returned
     weekCharacterCount := 0
     maxDefence := 0
-    
+
     // Sorting the order of the desending order of the attack
     sort.Sort(ByAttack(properties))
     for _, elem := range properties {
-        // Appending the count if the current element is less than the max defense 
+        // Appending the count if the current element is less than the max defense
         // Else change the max defence
         if(elem[1] < maxDefence){
             weekCharacterCount++;
@@ -170,11 +170,11 @@ func numberOfWeakCharacters(properties [][]int) int {
 // Custom sorting Logic by attack
 type ByAttack [][]int
 func (a ByAttack) Len() int           { return len(a) }
-func (a ByAttack) Less(i, j int) bool { 
+func (a ByAttack) Less(i, j int) bool {
     if(a[i][0] == a[j][0]){
         return a[i][1] < a[j][1]
     }
-    return a[i][0] > a[j][0] 
+    return a[i][0] > a[j][0]
 }
 func (a ByAttack) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }
 ```

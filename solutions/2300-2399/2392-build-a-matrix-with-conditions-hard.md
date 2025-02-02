@@ -1,8 +1,8 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/build-a-matrix-with-conditions/'
+description: 'Author: @wkw | https://leetcode.com/problems/build-a-matrix-with-conditions/'
 ---
 
-# 2392 - Build a Matrix With Conditions (Hard) 
+# 2392 - Build a Matrix With Conditions (Hard)
 
 ## Problem Statement
 
@@ -20,7 +20,7 @@ The matrix should also satisfy the following conditions:
 - The number `abovei` should appear in a **row** that is strictly **above** the row at which the number `belowi` appears for all `i` from `0` to `n - 1`.
 - The number `lefti` should appear in a **column** that is strictly **left** of the column at which the number `righti` appears for all `i` from `0` to `m - 1`.
 
-Return ***any** matrix that satisfies the conditions*. If no answer exists, return an empty matrix.
+Return **\*any** matrix that satisfies the conditions\*. If no answer exists, return an empty matrix.
 
 **Example 1:**
 
@@ -57,14 +57,14 @@ No matrix can satisfy all the conditions, so we return the empty matrix.
 
 ## Approach 1: Kahn's Algorithm
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
 public:
-    // there is at least one vertex in the “graph” with an “in-degree” of 0. 
-    // if all vertices in the “graph” have non-zero “in-degree”, 
-    // then all vertices need at least one vertex as a predecessor. 
+    // there is at least one vertex in the “graph” with an “in-degree” of 0.
+    // if all vertices in the “graph” have non-zero “in-degree”,
+    // then all vertices need at least one vertex as a predecessor.
     // In this case, no vertex can serve as the starting vertex.
     template<typename T_vector, typename T_vector_vector>
       T_vector kahn(int n, T_vector_vector &edges){
@@ -89,7 +89,7 @@ public:
           if (visited != n) return T_vector{};
           return ordering;
       }
-    
+
     // the idea is to topologically sort rowConditions & colConditions
     // then build the final matrix based on the order if possible
     vector<vector<int>> buildMatrix(int k, vector<vector<int>>& rowConditions, vector<vector<int>>& colConditions) {
@@ -98,7 +98,7 @@ public:
         vector<int> rowOrders = kahn<vector<int>>(k, rowConditions);
         // in example 1, colOrders would be [3, 2, 1]
         vector<int> colOrders = kahn<vector<int>>(k, colConditions);
-        // since we need to map to a `k x k` matrix, 
+        // since we need to map to a `k x k` matrix,
         // we need to make sure that both got exact k elements
         if ((int) rowOrders.size() == k && (int) colOrders.size() == k) {
             // used to map the index of the given row / col value

@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/number-of-ways-to-buy-pens-and-pencils/
+  Author: @wkw | https://leetcode.com/problems/number-of-ways-to-buy-pens-and-pencils/
 ---
 
 # 2240 - Number of Ways to Buy Pens and Pencils (Medium)
@@ -38,15 +37,15 @@ Explanation: The price of both pens and pencils are 10, which cost more than tot
 
 **Constraints:**
 
-* `1 <= total, cost1, cost2 <= 10^6`
+- `1 <= total, cost1, cost2 <= 10^6`
 
 ## Approach 1: Math
 
 We try all the cases - if buy 0 pen to $$total / cost1$$ pens, how many pencils we can buy in each round?
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

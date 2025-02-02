@@ -1,13 +1,13 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/subarray-sums-divisible-by-k/'
+description: 'Author: @wkw | https://leetcode.com/problems/subarray-sums-divisible-by-k/'
 tags: [Array, Hash Table, Prefix Sum]
 ---
 
-# 0974 - Subarray Sums Divisible by K (Medium) 
+# 0974 - Subarray Sums Divisible by K (Medium)
 
 ## Problem Statement
 
-Given an integer array `nums` and an integer `k`, return *the number of non-empty **subarrays** that have a sum divisible by*`k`.
+Given an integer array `nums` and an integer `k`, return _the number of non-empty **subarrays** that have a sum divisible by_`k`.
 
 A **subarray** is a **contiguous** part of an array.
 
@@ -37,7 +37,7 @@ Output: 0
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -65,7 +65,7 @@ public:
             if (x < 0) x = (x % k + k) % k;
             // we need to find pairs such that (pref[j] - pref[i]) % k == 0
             // hence, we look for pref[j] % k == pref[i] % k
-            // why ..? 
+            // why ..?
             // pref[j] = a * k + x
             // pref[i] = b * k + y
             // pref[j] - pref[i] = (a * k + x) - (b * k + y)
@@ -83,7 +83,7 @@ public:
 </TabItem>
 
 <TabItem value="java" label="Java">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```java
 class Solution {
@@ -108,7 +108,7 @@ class Solution {
             }
             // we need to find pairs such that (pref[j] - pref[i]) % k == 0
             // hence, we look for pref[j] % k == pref[i] % k
-            // why ..? 
+            // why ..?
             // pref[j] = a * k + x
             // pref[i] = b * k + y
             // pref[j] - pref[i] = (a * k + x) - (b * k + y)
@@ -129,7 +129,7 @@ class Solution {
 </TabItem>
 
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:
@@ -139,7 +139,7 @@ class Solution:
         pref[0] = nums[0]
         for i in range(1, len(nums)):
             pref[i] = pref[i-1] + nums[i]
-        
+
         # store the modular cnt
         m = [0] * k
         # base value
@@ -148,13 +148,13 @@ class Solution:
         ans = 0
         # iterate each sum
         for x in pref:
-            # we don't need the following logic as Python handles it internally 
+            # we don't need the following logic as Python handles it internally
             # if x is negative, turn it to positive modular equivalent
             # if x < 0:
             #     x = (x % k + k) % k
             # we need to find pairs such that (pref[j] - pref[i]) % k == 0
             # hence, we look for pref[j] % k == pref[i] % k
-            # why ..? 
+            # why ..?
             # pref[j] = a * k + x
             # pref[i] = b * k + y
             # pref[j] - pref[i] = (a * k + x) - (b * k + y)
@@ -170,7 +170,7 @@ class Solution:
 </TabItem>
 
 <TabItem value="rs" label="Rust">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```rs
 impl Solution {
@@ -195,7 +195,7 @@ impl Solution {
             }
             // we need to find pairs such that (pref[j] - pref[i]) % k == 0
             // hence, we look for pref[j] % k == pref[i] % k
-            // why ..? 
+            // why ..?
             // pref[j] = a * k + x
             // pref[i] = b * k + y
             // pref[j] - pref[i] = (a * k + x) - (b * k + y)

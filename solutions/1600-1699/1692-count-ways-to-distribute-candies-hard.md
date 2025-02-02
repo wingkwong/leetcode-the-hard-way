@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/count-ways-to-distribute-candies/
+  Author: @wkw | https://leetcode.com/problems/count-ways-to-distribute-candies/
 ---
 
 # 1692 - Count Ways to Distribute Candies (Hard)
@@ -58,7 +57,7 @@ Explanation: You can distribute 20 candies into 5 bags in 1881780996 ways. 18817
 
 **Constraints:**
 
-* `1 <= k <= n <= 1000`
+- `1 <= k <= n <= 1000`
 
 ## Approach 1: Dynamic Programming
 
@@ -80,7 +79,7 @@ $$
 dp[i][j] = dp[i][j - 1] * i + dp[i - 1][j - 1]
 $$
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -92,7 +91,7 @@ public:
         if (dp[n][k] != -1) return dp[n][k];
         return dp[n][k] = (dfs(dp, n - 1, k) * k + dfs(dp, n - 1, k - 1)) % M;
     }
-    
+
     int waysToDistribute(int n, int k) {
         vector<vector<long long>> dp(n + 1, vector<long long>(k + 1, -1));
         return dfs(dp, n, k);
@@ -100,7 +99,7 @@ public:
 };
 ```
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -132,11 +131,11 @@ $$
 S(n,k)=\frac1{k!}\sum_{j=0}^k(-1)^j\binom{k}j(k-j)^n
 $$
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```python
 class Solution:
     def waysToDistribute(self, n: int, k: int) -> int:
-        return int(sum((-1) ** j * comb(k, j) * (k - j) ** n 
+        return int(sum((-1) ** j * comb(k, j) * (k - j) ** n
                     for j in range(k)) // factorial(k)  % (10 ** 9 + 7))
 ```

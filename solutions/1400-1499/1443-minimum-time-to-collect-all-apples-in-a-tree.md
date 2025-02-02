@@ -1,5 +1,5 @@
 ---
-description: "Author: @hirotake111, @wingkwong | https://leetcode.com/problems/minimum-time-to-collect-all-apples-in-a-tree/"
+description: 'Author: @hirotake111, @wkw | https://leetcode.com/problems/minimum-time-to-collect-all-apples-in-a-tree/'
 tags: [Tree, Depth-First Search, Backtracking]
 ---
 
@@ -165,7 +165,7 @@ func contains(edges []int, target int) bool {
 </TabItem>
 
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -186,7 +186,7 @@ public:
                     // calculate the child time
                     t = dfs(v, u);
                     // if there is an apple in the subtree, we need 2 seconds to collect it and head back
-                    // if we are in vertex 1, we need 4 seconds to collect all the apples in 4 & 5 
+                    // if we are in vertex 1, we need 4 seconds to collect all the apples in 4 & 5
                     // i.e. (1 -> 4, 4 -> 1, 1 -> 5, 5 -> 1)
                     // how does 0 know that 1 has collected the apple? check the time, i.e. `t`
                     // if t > 0, it means we got some apples in sub trees

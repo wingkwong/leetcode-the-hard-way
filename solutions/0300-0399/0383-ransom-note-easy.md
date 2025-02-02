@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/ransom-note/'
+description: 'Author: @wkw | https://leetcode.com/problems/ransom-note/'
 tags: [Hash Table, String, Counting]
 ---
 
-# 0383 - Ransom Note (Easy) 
+# 0383 - Ransom Note (Easy)
 
 ## Problem Link
 
@@ -11,7 +11,7 @@ https://leetcode.com/problems/ransom-note/
 
 ## Problem Statement
 
-Given two strings `ransomNote` and `magazine`, return `true`*if*`ransomNote`*can be constructed by using the letters from*`magazine`*and*`false`*otherwise*.
+Given two strings `ransomNote` and `magazine`, return `true`_if_`ransomNote`_can be constructed by using the letters from_`magazine`_and_`false`_otherwise_.
 
 Each letter in `magazine` can only be used once in `ransomNote`.
 
@@ -43,19 +43,19 @@ Output: true
 
 ## Approach 1: Counting
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
 public:
     bool canConstruct(string ransomNote, string magazine) {
 	    // you can also use unordered_map<int, int> m; here
-		// since we're just dealing with lowercase English letters, 
+		// since we're just dealing with lowercase English letters,
         // we can just use an array of length 26 to store the frequency of them
         int m[26] = {0};
         // count each character
         for(char c : magazine) m[c - 'a']++;
-        // check if it can be found in m and substract by 1 
+        // check if it can be found in m and substract by 1
         for(char c : ransomNote) {
 			// if it is less than 0, it means it cannot be constructed from magazine
             if(--m[c - 'a'] < 0) return false;

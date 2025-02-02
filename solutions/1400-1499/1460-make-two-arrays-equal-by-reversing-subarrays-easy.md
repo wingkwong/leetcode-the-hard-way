@@ -1,5 +1,5 @@
 ---
-description: "Author: @wingkwong | https://leetcode.com/problems/make-two-arrays-equal-by-reversing-subarrays/"
+description: 'Author: @wkw | https://leetcode.com/problems/make-two-arrays-equal-by-reversing-subarrays/'
 tags: [Array, Hash Table, Sorting]
 ---
 
@@ -57,7 +57,7 @@ Explanation: arr does not have value 9 and it can never be converted to target.
 
 <Tabs>
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution:

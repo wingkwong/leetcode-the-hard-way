@@ -1,6 +1,6 @@
 ---
-title: "Introduction"
-description: "Introduction and overview of sorting"
+title: 'Introduction'
+description: 'Introduction and overview of sorting'
 hide_table_of_contents: true
 sidebar_position: 1
 keywords:
@@ -10,7 +10,7 @@ keywords:
   - algorithm
 ---
 
-<TutorialCredits authors="@wingkwong"/>
+<TutorialCredits authors="@wkw"/>
 
 ## Overview
 
@@ -58,13 +58,6 @@ sort(a.begin(), a.end(), [&](const array<int, 3>& x, const array<int, 3>& y) {
 });
 ```
 
-export const suggestedProblems = [
-{
-"problemName": "0921 - Sort an Array",
-"difficulty": "Medium",
-"leetCodeLink": "https://leetcode.com/problems/sort-an-array/",
-"solutionLink": "../../solutions/0900-0999/sort-an-array-medium"
-},
-]
+export const suggestedProblems = [ { "problemName": "0921 - Sort an Array", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/sort-an-array/", "solutionLink": "../../solutions/0900-0999/sort-an-array-medium" }, ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />

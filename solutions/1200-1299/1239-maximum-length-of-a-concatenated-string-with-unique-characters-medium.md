@@ -3,7 +3,7 @@ description: 'Author: @heder | https://leetcode.com/problems/maximum-length-of-a
 tags: [Array, String, Backtracking, Bit Manipulation]
 ---
 
-# 1239 - Maximum Length of a Concatenated String with Unique Characters (Medium) 
+# 1239 - Maximum Length of a Concatenated String with Unique Characters (Medium)
 
 ## Problem Link
 
@@ -13,7 +13,7 @@ https://leetcode.com/problems/maximum-length-of-a-concatenated-string-with-uniqu
 
 You are given an array of strings `arr`. A string `s` is formed by the **concatenation** of a **subsequence** of `arr` that has **unique characters**.
 
-Return *the **maximum** possible length* of `s`.
+Return _the **maximum** possible length_ of `s`.
 
 A **subsequence** is an array that can be derived from another array by deleting some or no elements without changing the order of the remaining elements.
 
@@ -78,7 +78,7 @@ static int maxLength(const vector<string>& arr) {
         const int m = bitmask(a);
         if (m != -1) bms.push_back(m);
     }
-    
+
     // Expand the bitmasks if there is no conflict.
     vector<int> as;
     for (int bm : bms) {
@@ -87,7 +87,7 @@ static int maxLength(const vector<string>& arr) {
             if (!(as[i] & bm)) as.push_back(as[i] | bm);
         as.push_back(bm);
     }
-    
+
     // Look for the bitmask with the most bits set.
     int ans = 0;
     for (int a : as) ans = max(ans, __builtin_popcount(a));
@@ -128,7 +128,7 @@ static int maxLength(const vector<string>& arr) {
         if (__builtin_popcount(m) == size(a))
             bms.push_back(m);
     }
-    
+
     // Expand the bitmasks if there is no conflict.
     vector<int> as;
     for (int bm : bms) {
@@ -137,7 +137,7 @@ static int maxLength(const vector<string>& arr) {
             if (!(as[i] & bm)) as.push_back(as[i] | bm);
         as.push_back(bm);
     }
-    
+
     // Look for the bitmask with the most bits set.
     int ans = 0;
     for (int a : as) ans = max(ans, __builtin_popcount(a));

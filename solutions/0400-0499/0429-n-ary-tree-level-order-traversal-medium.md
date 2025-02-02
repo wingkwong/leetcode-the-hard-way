@@ -1,15 +1,15 @@
 ---
-description: 'Author: @wingkwong, @lonyehan | https://leetcode.com/problems/n-ary-tree-level-order-traversal/'
+description: 'Author: @wkw, @lonyehan | https://leetcode.com/problems/n-ary-tree-level-order-traversal/'
 tags: [Tree, Breadth-First Search]
 ---
 
-# 0429 - N-ary Tree Level Order Traversal (Medium) 
+# 0429 - N-ary Tree Level Order Traversal (Medium)
 
 ## Problem Statement
 
-Given an n-ary tree, return the *level order* traversal of its nodes' values.
+Given an n-ary tree, return the _level order_ traversal of its nodes' values.
 
-*Nary-Tree input serialization is represented in their level order traversal, each group of children is separated by the null value (See examples).*
+_Nary-Tree input serialization is represented in their level order traversal, each group of children is separated by the null value (See examples)._
 
 **Example 1:**
 
@@ -34,7 +34,7 @@ Output: [[1],[2,3,4,5],[6,7,8,9,10],[11,12,13],[14]]
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 /*
@@ -66,7 +66,7 @@ public:
     // Then remove the front of the queue, add its children to back of the queue
     // Do the above steps until the queue is empty
     // In this question, we need to extra thing which is to push the each value of the nodes level by level
-    // We can simply use `level` to store the values of the nodes at current level, 
+    // We can simply use `level` to store the values of the nodes at current level,
     // and add it back to `ans` once we've processed all nodes at that level
     vector<vector<int>> levelOrder(Node* root) {
         // the total number of nodes is between [0, 10 ^ 4]
@@ -77,11 +77,11 @@ public:
         // standard bfs approach
         queue<Node*> q;
         // start with the root node
-        q.push(root); 
+        q.push(root);
         // do the following logic when the queue is not empty
         while(!q.empty()) {
             // get the queue size
-            int n = q.size(); 
+            int n = q.size();
             // level is used to store all the node values at the current level
             vector<int> level;
             // for each element in the current queue
@@ -93,7 +93,7 @@ public:
                 // add it to level
                 level.push_back(node->val);
                 // this node may include other nodes, we add them all to the queue
-                for(auto n : node->children) q.push(n); 
+                for(auto n : node->children) q.push(n);
             }
             // we've processed this level, add it to ans
             ans.push_back(level);
@@ -103,10 +103,11 @@ public:
     }
 };
 ```
+
 </TabItem>
 
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 """
@@ -125,7 +126,7 @@ class Solution:
     # Then remove the front of the queue, add its children to back of the queue
     # Do the above steps until the queue is empty
     # In this question, we need to extra thing which is to push the each value of the nodes level by level
-    # We can simply use `level` to store the values of the nodes at current level, 
+    # We can simply use `level` to store the values of the nodes at current level,
     # and add it back to `ans` once we've processed all nodes at that level
     def levelOrder(self, root: 'Node') -> List[List[int]]:
         # the total number of nodes is between [0, 10 ^ 4]
@@ -153,6 +154,7 @@ class Solution:
         # return final ans
         return ans
 ```
+
 </TabItem>
 
 <TabItem value="cs" label="C#">
@@ -178,13 +180,13 @@ public class Node {
 }
 */
 public class Solution {
-    public IList<IList<int>> LevelOrder(Node root) {        
+    public IList<IList<int>> LevelOrder(Node root) {
         if(root == null) return new List<IList<int>>();
-        
+
         List<IList<int>> result = new List<IList<int>>();
         Queue<Node> queue = new Queue<Node>();
         queue.Enqueue(root);
-        
+
         while(queue.Count != 0){
             int count = queue.Count;
             List<int> list = new List<int>();
@@ -193,15 +195,16 @@ public class Solution {
                 list.Add(q.val);
                 foreach(var c in q.children){
                     queue.Enqueue(c);
-                }                
+                }
             }
-            
+
             result.Add(list);
         }
-        
+
         return result;
     }
 }
 ```
+
 </TabItem>
 </Tabs>

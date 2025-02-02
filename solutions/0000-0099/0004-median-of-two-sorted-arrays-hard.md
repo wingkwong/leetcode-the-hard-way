@@ -1,5 +1,5 @@
 ---
-description: "Author: @ColeB2 | https://leetcode.com/problems/median-of-two-sorted-arrays/"
+description: 'Author: @ColeB2 | https://leetcode.com/problems/median-of-two-sorted-arrays/'
 tags: [Array, Binary Search, Divide and Conquer]
 ---
 
@@ -50,30 +50,33 @@ Note we will be partitioning our X array, after the point we select. Ie, a parti
 
 Knowing it is the separation of 2 equal halves of our array, should give us some intuition that there are only a small number of partitions that can be valid, based on where we partition the first array.
 
-Example, array's X, and Y of elements:
-We can imagine, where every we partition our smallest array, which we will always select to be X, we have to find a partition in Y, which separates all the elements into 2 equal halves.
+Example, array's X, and Y of elements: We can imagine, where every we partition our smallest array, which we will always select to be X, we have to find a partition in Y, which separates all the elements into 2 equal halves.
+
 ```
               |x1, x2, x3, x4
 y1, y2, y3, y4|
 ```
+
 We can imagine if we separate before the first element in X, we will need to place our partition in Y at a point that gives us 4 elements on the left side.
 
 More examples:
+
 ```
         x1| x2, x3, x4
 y1, y2, y3| y4
 ```
+
 ```
 x1 x2| x3 x4
 y1 y2| y3 y4
 ```
 
 I hope you can see the point. Here we can see, that for each of the valid partitions in X, there is only 1 other place where we can partition Y so that there are an even number of elements on each side of the array.
- 
 
 Now how do we use this information? Well for a median to be valid, it needs to be the middle value/average of the middle values. Meaning we can use some comparisons on the elements to see if all the values on the left are less than all the values on the right to know that they are indeed in their proper halves.
 
 So we can derive some rules to check:
+
 - $$max\_x\_left <= min\_y\_right$$
 - $$max\_y\_left <= min\_x\_right$$
 
@@ -81,13 +84,14 @@ If those rules pass, we know that we have a valid array. Note that we don't have
 
 Once we know that the above rules are true and we have a valid median, we just need to solve how to calculate the median based on the number of elements. We can do that using 2 simple rules as well.
 
-Odd Number of Elements: 
+Odd Number of Elements:
+
 - $$max(max\_x\_left,max\_y\_left)$$
 
-That is the largest number on the left side of the partition will be our median.
-Note: The odd calculation depends on how we calculate our halfway point. If we calculate it as $$Floor((m + n + 1) / 2)$$ Then we can use the left side of the partition as the median. If we calculate half as $$floor(mn / 2)$$ then we need to take the right of the partition. As how we select which value to use for half, will affect our partitioning.
+That is the largest number on the left side of the partition will be our median. Note: The odd calculation depends on how we calculate our halfway point. If we calculate it as $$Floor((m + n + 1) / 2)$$ Then we can use the left side of the partition as the median. If we calculate half as $$floor(mn / 2)$$ then we need to take the right of the partition. As how we select which value to use for half, will affect our partitioning.
 
 Even Number of Elements:
+
 - $$(min(min\_x\_right, min\_y\_right) + max(max\_x\_left, max\_y\_left)) \over 2$$
 
 That is, the largest number on the left side of the partition, and the smallest on the right side of the partition, all divided by 2.
@@ -121,7 +125,7 @@ class Solution:
         half = int((m + n + 1) / 2)
         # Loop through each possible partition of x
         # Note we start at -1 as we are partitioning after the index we start at.
-        # Ie: Negative one would be like placing a partition at the 0th index 
+        # Ie: Negative one would be like placing a partition at the 0th index
         # before all the numbers
         for x_partition in range(-1, m):
             # Solve for our y partition. Since we want half elements on each side
@@ -133,7 +137,7 @@ class Solution:
             y_partition = half - x_partition - 2
             # Get smallest and largest values around the partitions in each array.
             # If we are outside  thebounds of the array, pick a sufficiently
-            # small number ie. -inf if we are out of bounds to the left, and 
+            # small number ie. -inf if we are out of bounds to the left, and
             # +inf if we are over the right bound.
             # Get largest X value on left side of the partition
             max_x_left = X[x_partition] if x_partition >= 0 else float('-infinity')
@@ -169,11 +173,9 @@ That is:
 
 $$max\_x\_left > min\_y\_right$$. Then we will look at $$r = x\_partition - 1$$
 
-
 Time Complexity: $$O(log(min(m,n)))$$ Where m, n are the lengths of nums1 and nums2 respectively. It will be the logarithm of the smallest array, as we only need to binary search over the smallest array, then make the partitions in the larger array respectively.
 
 Space Complexity: $$O(1)$$ Only need constant extra space. For code readability below, I have copied over the arrays into separate variables, X and Y, but it could be done without the copy over, meaning $$O(1)$$ extra space.
-
 
 <Tabs>
 <TabItem value="python" label="Python">

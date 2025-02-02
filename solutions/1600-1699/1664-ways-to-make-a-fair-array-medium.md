@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/ways-to-make-a-fair-array/'
+description: 'Author: @wkw | https://leetcode.com/problems/ways-to-make-a-fair-array/'
 tags: [Array, Dynamic Programming]
 ---
 
-# 1664 - Ways to Make a Fair Array (Medium) 
+# 1664 - Ways to Make a Fair Array (Medium)
 
 ## Problem Link
 
@@ -21,7 +21,7 @@ For example, if `nums = [6,1,7,4,1]`:
 
 An array is **fair** if the sum of the odd-indexed values equals the sum of the even-indexed values.
 
-Return the ***number** of indices that you could choose such that after the removal,*`nums`*is **fair**.*
+Return the **\*number** of indices that you could choose such that after the removal,*`nums`*is **fair**.\*
 
 **Example 1:**
 
@@ -61,7 +61,7 @@ Explanation: You cannot make a fair array after removing any index.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -75,7 +75,7 @@ public:
             else even += nums[i];
         }
         // we want to simulate the removal and calculate the result on the fly
-        // if we remove a number at index i, 
+        // if we remove a number at index i,
         // then the parity of all numbers after nums[i] will be changed
         // i.e. even -> odd and odd -> even
         // while that of numbers before nums[i] will not changed
@@ -89,10 +89,10 @@ public:
                 //    `odd - nums[i] - preOdd` would contribute to even sum
                 // 4. since the parity of numbers before index i won't be changed,
                 //    the new even sum would be `preEven + (odd - nums[i] - preOdd)`
-                
+
                 // similarly, the new odd would be preOdd + even - preEven
-                // where preOdd doesn't change and (even - preEven) is the even sum after index i 
-                
+                // where preOdd doesn't change and (even - preEven) is the even sum after index i
+
                 int new_even = preEven + (odd - nums[i] - preOdd);
                 int new_odd = preOdd + (even - preEven);
                 ans += new_odd == new_even;
@@ -105,9 +105,9 @@ public:
                 //    `even - nums[i] - preEven` would contribute to odd sum
                 // 4. since the parity of numbers before index i won't be changed,
                 //    the new odd sum would be `preOdd + even - nums[i] - preEven`
-                
+
                 // similarly, the new even would be preEven + odd - preOdd
-                // where preEven doesn't change and (odd - preOdd) is the even sum after index i 
+                // where preEven doesn't change and (odd - preOdd) is the even sum after index i
                 int new_odd = preOdd + (even - nums[i] - preEven);
                 int new_even = preEven + (odd - preOdd);
                 ans += new_odd == new_even;

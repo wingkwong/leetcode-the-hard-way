@@ -1,6 +1,6 @@
 ---
-title: "Sliding Window"
-description: "Sliding window is a technique used to solve problems in array or string."
+title: 'Sliding Window'
+description: 'Sliding window is a technique used to solve problems in array or string.'
 hide_table_of_contents: true
 keywords:
   - leetcode
@@ -9,7 +9,7 @@ keywords:
   - algorithm
 ---
 
-<TutorialCredits authors="@heiheihang, @wingkwong"/>
+<TutorialCredits authors="@heiheihang, @wkw"/>
 
 ## Overview
 
@@ -95,7 +95,7 @@ def countGoodSubstrings(self, s: str) -> int:
 </TabItem>
 
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -123,7 +123,7 @@ public:
 </TabItem>
 
 <TabItem value="java" label="Java">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```java
 class Solution {
@@ -155,25 +155,6 @@ class Solution {
 
 In this problem, the size of the sliding window is constant. There are harder problems with varying sliding window size, but you need to learn [Hash Map](hash-map) first.
 
-export const suggestedProblems = [
-{
-"problemName": "1852 - Distinct Numbers in Each Subarray",
-"difficulty": "Medium",
-"leetCodeLink": "https://leetcode.com/problems/distinct-numbers-in-each-subarray",
-"solutionLink": "../../solutions/1800-1899/distinct-numbers-in-each-subarray-medium"
-},
-{
-"problemName": "1004 - Max Consecutive Ones III",
-"difficulty": "Medium",
-"leetCodeLink": "https://leetcode.com/problems/max-consecutive-ones-iii",
-"solutionLink": "../../solutions/1000-1099/max-consecutive-ones-iii-medium"
-},
-{
-"problemName": "1876 - Substrings of Size Three with Distinct Characters",
-"difficulty": "Medium",
-"leetCodeLink": "https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters/",
-"solutionLink": ""
-},
-]
+export const suggestedProblems = [ { "problemName": "1852 - Distinct Numbers in Each Subarray", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/distinct-numbers-in-each-subarray", "solutionLink": "../../solutions/1800-1899/distinct-numbers-in-each-subarray-medium" }, { "problemName": "1004 - Max Consecutive Ones III", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/max-consecutive-ones-iii", "solutionLink": "../../solutions/1000-1099/max-consecutive-ones-iii-medium" }, { "problemName": "1876 - Substrings of Size Three with Distinct Characters", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters/", "solutionLink": "" }, ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />

@@ -1,5 +1,5 @@
 ---
-description: "Author: @ColeB2 | https://leetcode.com/problems/reverse-nodes-in-k-group/"
+description: 'Author: @ColeB2 | https://leetcode.com/problems/reverse-nodes-in-k-group/'
 tags: [Linked List, Recursion]
 ---
 
@@ -40,7 +40,6 @@ Output: [3,2,1,4,5]
 - The number of nodes in the list is `n`.
 - `1 <= k <= n <= 5000`
 - `0 <= Node.val <= 1000`
- 
 
 **Follow-up:** Can you solve the problem in `O(1)` extra memory space?
 
@@ -143,4 +142,3 @@ class Solution:
 
 </TabItem>
 </Tabs>
-

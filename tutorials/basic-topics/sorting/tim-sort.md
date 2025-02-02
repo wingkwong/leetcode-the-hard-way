@@ -1,6 +1,6 @@
 ---
-title: "Tim Sort"
-description: "Timsort is a fast stable sorting algorithm based upon insertion sort and merge sort."
+title: 'Tim Sort'
+description: 'Timsort is a fast stable sorting algorithm based upon insertion sort and merge sort.'
 hide_table_of_contents: true
 keywords:
   - leetcode
@@ -10,17 +10,15 @@ keywords:
   - tim sort
 ---
 
-<TutorialCredits authors="@Bobliuuu" contributors="@wingkwong" />
+<TutorialCredits authors="@Bobliuuu" contributors="@wkw" />
 
 ## Overview
 
-Timsort is a fast stable sorting algorithm based upon both [insertion sort](insertion-sort.md) and [merge sort](merge-sort.md). The algorithm was first created by Tim Peters in 2002, and is now being used in Python's `sort()` and Java's `Arrays.sort()`.
-The reason this algorithm is so fast is because it leverages the benefits of both merge sort and insertion sort. Let's see how it works!
+Timsort is a fast stable sorting algorithm based upon both [insertion sort](insertion-sort.md) and [merge sort](merge-sort.md). The algorithm was first created by Tim Peters in 2002, and is now being used in Python's `sort()` and Java's `Arrays.sort()`. The reason this algorithm is so fast is because it leverages the benefits of both merge sort and insertion sort. Let's see how it works!
 
 ## Algorithm
 
-Timsort works by first splitting an array into **runs**. A **run** is a subarray of data spliced from the original array.
-These runs are generated using merge sort (each run has a standard size of 32-64, to split the array into small enough pieces for insertion sort to be fast on each one), and insertion sort is used to sort each run. Finally, merge sort combines these sorted arrays together recursively.
+Timsort works by first splitting an array into **runs**. A **run** is a subarray of data spliced from the original array. These runs are generated using merge sort (each run has a standard size of 32-64, to split the array into small enough pieces for insertion sort to be fast on each one), and insertion sort is used to sort each run. Finally, merge sort combines these sorted arrays together recursively.
 
 Basically, to run timsort:
 
@@ -147,25 +145,6 @@ The time complexity of this program is $$O(n log n)$$, since the merging takes $
 
 The space complexity of this program is $$O(1)$$, since we don't need any extra space other than our original array.
 
-export const suggestedProblems = [
-{
-"problemName": "0075 - Sort Colors",
-"difficulty": "Easy",
-"leetCodeLink": "https://leetcode.com/problems/sort-colors/",
-"solutionLink": "../../../solutions/0000-0099/sort-colors-medium"
-},
-{
-"problemName": "0268 - Missing Number",
-"difficulty": "Easy",
-"leetCodeLink": "https://leetcode.com/problems/missing-number/",
-"solutionLink": "../../../solutions/0200-0299/missing-number-easy"
-},
-{
-"problemName" : "0448 - Find All Numbers Disappeared In An Array",
-"difficulty" : "Easy",
-"leetCodeLink" : "https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/",
-"solutionLink" : ""
-},
-]
+export const suggestedProblems = [ { "problemName": "0075 - Sort Colors", "difficulty": "Easy", "leetCodeLink": "https://leetcode.com/problems/sort-colors/", "solutionLink": "../../../solutions/0000-0099/sort-colors-medium" }, { "problemName": "0268 - Missing Number", "difficulty": "Easy", "leetCodeLink": "https://leetcode.com/problems/missing-number/", "solutionLink": "../../../solutions/0200-0299/missing-number-easy" }, { "problemName" : "0448 - Find All Numbers Disappeared In An Array", "difficulty" : "Easy", "leetCodeLink" : "https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/", "solutionLink" : "" }, ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />

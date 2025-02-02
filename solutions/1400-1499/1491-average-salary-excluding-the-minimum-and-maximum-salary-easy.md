@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/average-salary-excluding-the-minimum-and-maximum-salary/'
+description: 'Author: @wkw | https://leetcode.com/problems/average-salary-excluding-the-minimum-and-maximum-salary/'
 ---
 
 # 1491 - Average Salary Excluding the Minimum and Maximum Salary (Easy)
@@ -34,15 +34,15 @@ Average salary excluding minimum and maximum salary is (2000) / 1 = 2000
 
 **Constraints:**
 
-* `3 <= salary.length <= 100`
-* `1000 <= salary[i] <= 10^6`
-* All the integers of `salary` are **unique**.
+- `3 <= salary.length <= 100`
+- `1000 <= salary[i] <= 10^6`
+- All the integers of `salary` are **unique**.
 
 ## Approach 1: One Pass
 
 We iterate $$salary$$ and calculate the total sum $$sum$$, the minimum value $$mi$$ and the maximum value $$mx$$. The average salary of employees excluding the minimum and maximum salary would be $$sum - mi - mx$$. Since we exclude two items, we just need to divide by $$len(salary) - 2$$.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```go
 func average(salary []int) float64 {
@@ -56,12 +56,12 @@ func average(salary []int) float64 {
         // find the maximum value
         if x > mx { mx = x }
     }
-    // exclude mi & mx and get the avg 
+    // exclude mi & mx and get the avg
     return float64(sum - mi - mx) / float64(n - 2)
 }
 ```
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```rust
 use std::cmp;
@@ -77,7 +77,7 @@ impl Solution {
             mx = cmp::max(mx, x);
             mi = cmp::min(mi, x);
         }
-        return ((sum - mx - mi) as f64 / (n - 2.0)); 
+        return ((sum - mx - mi) as f64 / (n - 2.0));
     }
 }
 ```

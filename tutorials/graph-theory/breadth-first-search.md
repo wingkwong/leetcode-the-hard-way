@@ -1,6 +1,6 @@
 ---
-title: "Breadth First Search (BFS)"
-description: "In BFS, we explore all the closest nodes first before going one step further."
+title: 'Breadth First Search (BFS)'
+description: 'In BFS, we explore all the closest nodes first before going one step further.'
 hide_table_of_contents: true
 keywords:
   - leetcode
@@ -112,25 +112,6 @@ def averageOfLevels(self, root: Optional[TreeNode]) -> List[float]:
 
 We should keep practising the this template of BFS in these similar problems.
 
-export const suggestedProblems = [
-{
-"problemName": "0199 - Binary Tree Right Side View",
-"difficulty": "Medium",
-"leetCodeLink": "https://leetcode.com/problems/binary-tree-right-side-view/",
-"solutionLink": "../../solutions/0100-0199/binary-tree-right-side-view-medium"
-},
-{
-"problemName": "0103 - Binary Tree Zigzag Level Order Traversal",
-"difficulty": "Medium",
-"leetCodeLink": "https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/",
-"solutionLink": "../../solutions/0100-0199/binary-tree-zigzag-level-order-traversal-medium"
-},
-{
-"problemName": "0101 - Symmetric Tree",
-"difficulty": "Easy",
-"leetCodeLink": "https://leetcode.com/problems/symmetric-tree/",
-"solutionLink": "../../solutions/0100-0199/symmetric-tree-easy"
-},
-]
+export const suggestedProblems = [ { "problemName": "0199 - Binary Tree Right Side View", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/binary-tree-right-side-view/", "solutionLink": "../../solutions/0100-0199/binary-tree-right-side-view-medium" }, { "problemName": "0103 - Binary Tree Zigzag Level Order Traversal", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/", "solutionLink": "../../solutions/0100-0199/binary-tree-zigzag-level-order-traversal-medium" }, { "problemName": "0101 - Symmetric Tree", "difficulty": "Easy", "leetCodeLink": "https://leetcode.com/problems/symmetric-tree/", "solutionLink": "../../solutions/0100-0199/symmetric-tree-easy" }, ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />

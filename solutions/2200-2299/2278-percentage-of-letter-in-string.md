@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/percentage-of-letter-in-string
+  Author: @wkw | https://leetcode.com/problems/percentage-of-letter-in-string
 ---
 
 # 2278 - Percentage of Letter in String (Easy)
@@ -40,7 +39,7 @@ The percentage of characters in s that equal the letter 'k' is 0%, so we return 
 
 ## Approach 1: Counting
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -49,7 +48,7 @@ public:
         int cnt = 0, n = s.size();
         // counting
         for (char& c : s) cnt += (c == letter);
-        // return the percentage of characters in s 
+        // return the percentage of characters in s
         // that equal letter rounded down to the nearest whole percent
         return ((double) cnt / n) * 100;
     }

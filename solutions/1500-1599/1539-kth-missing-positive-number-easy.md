@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/kth-missing-positive-number/
+  Author: @wkw | https://leetcode.com/problems/kth-missing-positive-number/
 ---
 
 # 1539 - Kth Missing Positive Number (Easy)
@@ -34,16 +33,16 @@ Explanation: The missing positive integers are [5,6,7,...]. The 2nd missing posi
 
 **Constraints:**
 
-* `1 <= arr.length <= 1000`
-* `1 <= arr[i] <= 1000`
-* `1 <= k <= 1000`
-* `arr[i] < arr[j]` for `1 <= i < j <= arr.length`
+- `1 <= arr.length <= 1000`
+- `1 <= arr[i] <= 1000`
+- `1 <= k <= 1000`
+- `arr[i] < arr[j]` for `1 <= i < j <= arr.length`
 
 ## Approach 1: Brute Force
 
 Iterate each number to find out the $$k$$-th missing number.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/all-divisions-with-the-highest-score-of-a-binary-array/
+  Author: @wkw | https://leetcode.com/problems/all-divisions-with-the-highest-score-of-a-binary-array/
 ---
 
 # 2155 - All Divisions With the Highest Score of a Binary Array (Medium)
@@ -14,9 +13,9 @@ https://leetcode.com/problems/all-divisions-with-the-highest-score-of-a-binary-a
 
 You are given a **0-indexed** binary array `nums` of length `n`. `nums` can be divided at index `i` (where `0 <= i <= n)` into two arrays (possibly empty) `nums_left` and `nums_right`:
 
-* `numsleft` has all the elements of `nums` between index `0` and `i - 1` **(inclusive)**, while `numsright` has all the elements of nums between index `i` and `n - 1` **(inclusive)**.
-* If `i == 0`, `nums_left` is **empty**, while `nums_right` has all the elements of `nums`.
-* If `i == n`, `nums_left` has all the elements of nums, while `nums_right` is **empty**.
+- `numsleft` has all the elements of `nums` between index `0` and `i - 1` **(inclusive)**, while `numsright` has all the elements of nums between index `i` and `n - 1` **(inclusive)**.
+- If `i == 0`, `nums_left` is **empty**, while `nums_right` has all the elements of `nums`.
+- If `i == n`, `nums_left` has all the elements of nums, while `nums_right` is **empty**.
 
 The **division score** of an index `i` is the **sum** of the number of `0`'s in `nums_left` and the number of `1`'s in `nums_right`.
 
@@ -64,15 +63,15 @@ Only index 0 has the highest possible division score 2.
 
 **Constraints:**
 
-* `n == nums.length`
-* `1 <= n <= 10^5`
-* `nums[i]` is either `0` or `1`.
+- `n == nums.length`
+- `1 <= n <= 10^5`
+- `nums[i]` is either `0` or `1`.
 
 ## Approach 1: Prefix Sum + Suffix Sum
 
-Calculate the prefix sum and suffix sum first. Then construct the score (`left[i] + right[i]`) at each index. Find the maximum value and push all indices with such value into the final array. 
+Calculate the prefix sum and suffix sum first. Then construct the score (`left[i] + right[i]`) at each index. Find the maximum value and push all indices with such value into the final array.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -94,7 +93,7 @@ public:
 
 We don't actually need to calculate suffix sum. Let $$left[i + 1]$$ be $$nums[0] + nums[1] + ... + nums[i]$$. For each index, there are $$i - left[i]$$ zeros in the left and $$left[n] - left[i]$$ ones in the right. Therefore, we can come up with this formula: $$score[i] = i - left[i] + left[n] - left[i]$$.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -122,7 +121,7 @@ public:
 
 If we look at the last index, we have `accumulate(nums.begin(), nums.end(), 0)` ones and 0 zeros at the beginning. If we move from the right to the left, we can update `zero` and `one` on the fly.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -154,7 +153,7 @@ public:
 
 We can just use one variable instead of two shown in Approach 3.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

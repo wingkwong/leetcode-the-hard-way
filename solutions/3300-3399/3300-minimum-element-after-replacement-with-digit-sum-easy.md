@@ -1,5 +1,5 @@
 ---
-description: "Author: @wingkwong | https://leetcode.com/problems/minimum-element-after-replacement-with-digit-sum/"
+description: 'Author: @wkw | https://leetcode.com/problems/minimum-element-after-replacement-with-digit-sum/'
 ---
 
 # 3300 - Minimum Element After Replacement With Digit Sum (Easy)
@@ -57,7 +57,7 @@ For each element, we calculate the digit sum and use $res$ to keep track of the 
 
 <Tabs>
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:

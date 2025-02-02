@@ -1,10 +1,9 @@
 ---
 description: >-
-  Author: @heiheihang, @wingkwong |
-  https://leetcode.com/problems/minimum-operations-to-halve-array-sum/
+  Author: @heiheihang, @wkw | https://leetcode.com/problems/minimum-operations-to-halve-array-sum/
 ---
 
-# 2208 -  Minimum Operations to Halve Array Sum (Medium)
+# 2208 - Minimum Operations to Halve Array Sum (Medium)
 
 ## Problem Link
 
@@ -26,7 +25,7 @@ The following is one of the ways to reduce the sum by at least half:
 Pick the number 19 and reduce it to 9.5.
 Pick the number 9.5 and reduce it to 4.75.
 Pick the number 8 and reduce it to 4.
-The final array is [5, 4.75, 4, 1] with a total sum of 5 + 4.75 + 4 + 1 = 14.75. 
+The final array is [5, 4.75, 4, 1] with a total sum of 5 + 4.75 + 4 + 1 = 14.75.
 The sum of nums has been reduced by 33 - 14.75 = 18.25, which is at least half of the initial sum, 18.25 >= 33/2 = 16.5.
 Overall, 3 operations were used so we return 3.
 It can be shown that we cannot reduce the sum by at least half in less than 3 operations.
@@ -42,15 +41,16 @@ The following is one of the ways to reduce the sum by at least half:
 Pick the number 20 and reduce it to 10.
 Pick the number 10 and reduce it to 5.
 Pick the number 3 and reduce it to 1.5.
-The final array is [1.5, 8, 5] with a total sum of 1.5 + 8 + 5 = 14.5. 
+The final array is [1.5, 8, 5] with a total sum of 1.5 + 8 + 5 = 14.5.
 The sum of nums has been reduced by 31 - 14.5 = 16.5, which is at least half of the initial sum, 16.5 >= 31/2 = 16.5.
 Overall, 3 operations were used so we return 3.
 It can be shown that we cannot reduce the sum by at least half in less than 3 operations.
 ```
 
 **Constraints:**
-* `1 <= nums.length <= 10^5`
-* `1 <= nums[i] <= 10^7`
+
+- `1 <= nums.length <= 10^5`
+- `1 <= nums[i] <= 10^7`
 
 ## Approach 1: Max Heap
 
@@ -62,13 +62,13 @@ We can keep track of the current largest number, and perform the division on the
 class Solution:
     def halveArray(self, nums: List[int]) -> int:
         s = sum(nums)
-        
+
         target = s / 2
         h = []
-        
+
         for n in nums:
             heappush(h, -n)
-            
+
         val = s
         res = 0
         while(val > target):
@@ -81,12 +81,11 @@ class Solution:
         return res
 ```
 
-
 ## Approach 2: Priority Queue
 
 First we calculate $$sum$$ and $$half$$. We use priority queue to store the elements. We pop out the maximum element $$top$$, add the half of it (i.e. $$top / 2$$) to $$reduce$$, and push it to priority queue. We keep doing that until $$reduce$$ is greater than / equal to $$half$$. The answer is how many rounds we have performed.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

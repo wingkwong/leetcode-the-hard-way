@@ -1,6 +1,6 @@
 ---
-title: "Divide and Conquer"
-description: ""
+title: 'Divide and Conquer'
+description: ''
 # hide_table_of_contents: true
 draft: true
 keywords:

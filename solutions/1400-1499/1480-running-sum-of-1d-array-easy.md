@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @heiheihang, @wingkwong, @radojicic23 |
-  https://leetcode.com/problems/running-sum-of-1d-array/
+  Author: @heiheihang, @wkw, @radojicic23 | https://leetcode.com/problems/running-sum-of-1d-array/
 ---
 
 # 1480 - Running Sum of 1d Array (Easy)
@@ -36,20 +35,19 @@ Explanation: Running sum is obtained as follows: [1, 1+1, 1+1+1, 1+1+1+1, 1+1+1+
 
 ```
 Input: nums = [3,1,2,10,1]
-Output: [3,4,6,16,17] 
+Output: [3,4,6,16,17]
 ```
 
 **Constraints:**
 
-* `1 <= nums.length <= 1000`
-* `-10^6 <= nums[i] <= 10^6`
+- `1 <= nums.length <= 1000`
+- `-10^6 <= nums[i] <= 10^6`
 
 ## Approach 1: Prefix Sum
 
-
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -66,7 +64,7 @@ public:
         for (int i = 1; i < n; i++) pref[i] = pref[i - 1] + a[i];
         return pref;
     }
-    
+
     vector<int> runningSum(vector<int>& nums) {
 	    // use the pre-defined function directly
         return generatePrefixSum(nums);
@@ -91,7 +89,7 @@ y4 = x0 + x1 + x2 + x3 + x4
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -131,25 +129,25 @@ The trick here is that we need to add the number from `nums` to `running_sum` fi
 
 ```python
 def runningSum(self, nums: List[int]) -> List[int]:
-        
+
         #initialize the running_sum
         running_sum = 0
-        
+
         #initialize the result list
         result = []
-        
+
         #we iterage each number in nums
         for i in range(len(nums)):
-            
+
             #the current number is defined by nums[i]
             current_number = nums[i]
-            
+
             #add the current_number to running_sum
             running_sum += current_number
-            
+
             #add the running_sum to the result list
             result.append(running_sum)
-        
+
         #return result
         return result
 ```
@@ -157,7 +155,7 @@ def runningSum(self, nums: List[int]) -> List[int]:
 </TabItem>
 
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -184,14 +182,14 @@ public:
  * @param {number[]} nums
  * @return {number[]}
  */
-var runningSum = function(nums) {
-    let total = 0;
-    let res =  [];
-    for (let i = 0; i < nums.length; i++) {
-        total += nums[i];
-        res.push(total);
-    }
-    return res;
+var runningSum = function (nums) {
+  let total = 0;
+  let res = [];
+  for (let i = 0; i < nums.length; i++) {
+    total += nums[i];
+    res.push(total);
+  }
+  return res;
 };
 ```
 

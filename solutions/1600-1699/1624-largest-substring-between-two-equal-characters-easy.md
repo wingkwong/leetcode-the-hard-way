@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong, @jit, @jaffar | https://leetcode.com/problems/largest-substring-between-two-equal-characters/'
+description: 'Author: @wkw, @jit, @jaffar | https://leetcode.com/problems/largest-substring-between-two-equal-characters/'
 tags: [Hash Table, String]
 ---
 
-# 1624 - Largest Substring Between Two Equal Characters (Easy) 
+# 1624 - Largest Substring Between Two Equal Characters (Easy)
 
 ## Problem Link
 
@@ -11,7 +11,7 @@ https://leetcode.com/problems/largest-substring-between-two-equal-characters/
 
 ## Problem Statement
 
-Given a string `s`, return *the length of the longest substring between two equal characters, excluding the two characters.* If there is no such substring return `-1`.
+Given a string `s`, return _the length of the longest substring between two equal characters, excluding the two characters._ If there is no such substring return `-1`.
 
 A **substring** is a contiguous sequence of characters within a string.
 
@@ -50,7 +50,7 @@ We can iterate each character in $s$ and use a hash map to store the first index
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -72,7 +72,6 @@ public:
 
 </TabItem>
 
-
 <TabItem value="scala" label="Scala">
 <SolutionAuthor name="@jit"/>
 
@@ -86,7 +85,6 @@ object Solution {
 ```
 
 </TabItem>
-
 
 <TabItem value="py" label="Python">
 <SolutionAuthor name="@jaffar"/>

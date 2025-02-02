@@ -85,7 +85,7 @@ class Solution:
         # the value of each column in row 0, similarly, our first
         # column will be all the values in the column going vertically,
         # so we check the value of each row in column 0.
-        
+
         # Iterate our matrix, skipping the first row/column
         for r in range(1, ROWS):
             for c in range(1, COLS):
@@ -98,11 +98,11 @@ class Solution:
         for r in range(1, ROWS):
             for c in range(1, COLS):
                 # if either the first row of any given cell or
-                # the first column of any given cell is 0, we can 
+                # the first column of any given cell is 0, we can
                 # set the current cell to 0.
                 if matrix[r][0] == 0 or matrix[0][c] == 0:
                     matrix[r][c] = 0
-        # Edge cases, if the first row was 0, set all column values in 
+        # Edge cases, if the first row was 0, set all column values in
         # the top row to 0.
         if first_row:
             for c in range(COLS):

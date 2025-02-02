@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/find-closest-number-to-zero/
+  Author: @wkw | https://leetcode.com/problems/find-closest-number-to-zero/
 ---
 
 # 2239 - Find Closest Number to Zero (Easy)
@@ -38,14 +37,14 @@ Explanation: 1 and -1 are both the closest numbers to 0, so 1 being larger is re
 
 **Constraints:**
 
-* `1 <= n <= 1000`
-* `-105 <= nums[i] <= 10^5`
+- `1 <= n <= 1000`
+- `-105 <= nums[i] <= 10^5`
 
 ## Approach 1:
 
 If we sort the input and check if the absolute value is minimal, the answer would be found in the last round. However, it is not necessary to sort it here. We just need to check if the number is greater that answer or not.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

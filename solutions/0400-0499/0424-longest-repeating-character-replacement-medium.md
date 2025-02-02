@@ -1,7 +1,8 @@
 ---
 description: >-
-  Author: @ColeB2 |
-  https://leetcode.com/problems/longest-substring-without-repeating-characters/
+  Author: @ColeB2 | https://leetcode.com/problems/longest-substring-without-repeating-characters/
+
+
 tags: [Hash Table, String, Sliding Window]
 ---
 
@@ -36,9 +37,9 @@ The substring "BBBB" has the longest repeating letters, which is 4.
 
 **Constraints:**
 
-* `1 <= s.length <= 10^5`
-* `s` consists of only uppercase English letters.
-* `0 <= k <= s.length`
+- `1 <= s.length <= 10^5`
+- `s` consists of only uppercase English letters.
+- `0 <= k <= s.length`
 
 ## Approach 1: Sliding Window - Get the Most Frequent Letter Count
 
@@ -49,7 +50,6 @@ We can do that by tracking the left side of our window, and looping through the 
 Finally we can update our longest length of window counter.
 
 Note: We have no need to continuously check that our window is in compliance after the first check, as we don't care about windows smaller than the longest window we created so far, so by shrinking it once, we know it won't falsely set a window length longer than the max length found so far.
-
 
 Time complexity: $O(26*n)$ Where $n$ is the number of characters in the string, and $26$ is the length of the time to find the most commonly value of our hash map, as their are only $26$ uppercase English letters.
 
@@ -62,7 +62,7 @@ Space complexity: $O(26)$, As our counter will only ever get $26$ keys large, to
 
 ```py
 class Solution:
-    def characterReplacement(self, s: str, k: int) -> int:        
+    def characterReplacement(self, s: str, k: int) -> int:
         # initialize variables.
         # l, left pointer, tracks the left side of our sliding window.
         l = 0
@@ -78,7 +78,7 @@ class Solution:
                 counter[ch] = 0
             counter[ch] += 1
             # get the size of our current window.
-            # number of replacements will be equal to 
+            # number of replacements will be equal to
             # window_length - highest frequency value character.
             window_length = (r-l) + 1
             if window_length - max(counter.values()) > k:
@@ -90,6 +90,7 @@ class Solution:
             length = max(length, (r-l)+1)
         return length
 ```
+
 </TabItem>
 </Tabs>
 
@@ -110,7 +111,7 @@ Space complexity: $O(26)$, As our counter will only ever get $26$ keys large, to
 
 ```py
 class Solution:
-    def characterReplacement(self, s: str, k: int) -> int:        
+    def characterReplacement(self, s: str, k: int) -> int:
         # initialize variables.
         # l, left pointer, tracks the left side of our sliding window.
         l = 0
@@ -131,7 +132,7 @@ class Solution:
             # used character inside our window.
             most_frequent = max(most_frequent, counter[ch])
             # get the size of our current window.
-            # number of replacements will be equal to 
+            # number of replacements will be equal to
             # window_length - most_frequenct character.
             window_length = (r-l) + 1
             if window_length - most_frequent > k:
@@ -143,7 +144,6 @@ class Solution:
             length = max(length, (r-l)+1)
         return length
 ```
+
 </TabItem>
 </Tabs>
-
-

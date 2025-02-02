@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @radojicic23, @ColeB2 | https://leetcode.com/problems/combination-sum/'
+description: 'Author: @wkw, @radojicic23, @ColeB2 | https://leetcode.com/problems/combination-sum/'
 tags: [Array, Backtracking]
 ---
 
@@ -39,27 +39,27 @@ Output: [[2,2,2,2],[2,3,3],[3,5]]
 
 ```
 Input: candidates = [2], target = 1
-Output: [] 
+Output: []
 ```
 
 **Constraints:**
 
-* `1 <= candidates.length <= 30`
-* `1 <= candidates[i] <= 200`
-* All elements of `candidates` are **distinct**.
-* `1 <= target <= 500`
+- `1 <= candidates.length <= 30`
+- `1 <= candidates[i] <= 200`
+- All elements of `candidates` are **distinct**.
+- `1 <= target <= 500`
 
 ## Approach 1: Backtracking
 
 We can apply backtracking in this problem.
 
-First, we sort the array and build our candidates incrementally. We iterate from starting point and  push each candidate to `tmp` and call `backtrack()` with the updated  $$target_{new} = target_{old} - candidates[i]$$.
+First, we sort the array and build our candidates incrementally. We iterate from starting point and push each candidate to `tmp` and call `backtrack()` with the updated $$target_{new} = target_{old} - candidates[i]$$.
 
 If we have a valid solution, we push `tmp` to answer and abandon a candidate.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -98,16 +98,16 @@ class Solution:
         def dfs(i, curr, total):
             if total == target:
                 res.append(curr.copy())
-                return 
+                return
             if i >= len(candidates) or total > target:
-                return 
+                return
             curr.append(candidates[i])
             dfs(i, curr, total + candidates[i])
             curr.pop()
             dfs(i + 1, curr, total)
-        
+
         dfs(0, [], 0)
-        return res 
+        return res
 ```
 
 </TabItem>
@@ -121,30 +121,29 @@ class Solution:
  * @param {number} target
  * @return {number[][]}
  */
-var combinationSum = function(candidates, target) {
-    candidates.sort((a, b) => a - b);
-    let res = [];
-    backtrack(0, [], target);
-    return res;
+var combinationSum = function (candidates, target) {
+  candidates.sort((a, b) => a - b);
+  let res = [];
+  backtrack(0, [], target);
+  return res;
 
-    function backtrack(i, curr, target) {
-        if (target == 0) {
-            res.push(curr.slice());
-        }
-        if (target <= 0 || i == candidates.length) {
-            return;
-        }
-        curr.push(candidates[i]);
-        backtrack(i, curr, target - candidates[i]);
-        curr.pop();
-        backtrack(i + 1, curr, target);
+  function backtrack(i, curr, target) {
+    if (target == 0) {
+      res.push(curr.slice());
     }
+    if (target <= 0 || i == candidates.length) {
+      return;
+    }
+    curr.push(candidates[i]);
+    backtrack(i, curr, target - candidates[i]);
+    curr.pop();
+    backtrack(i + 1, curr, target);
+  }
 };
 ```
 
 </TabItem>
 </Tabs>
-
 
 ## Approach 2: Dynamic Programming - Tabulation
 
@@ -153,11 +152,12 @@ For our dynamic programming approach, we can solve how many combinations sum up 
 First, we would need a 2D dynamic programming array, $$dp$$ which would be an array of arrays that contains all possible combinations to reach that index of the array. Ie, for index $$0$$, how many combinations of candidates reach $$0$$, and that would repeat all the way up to an index of $$target + 1$$ which is our $$target$$ number.
 
 We can do that by looping through each number, $$num$$ of candidates, and looping through each sub-target, $$sub_target$$ inside our $$dp$$ array starting at our $$num$$ and ending at $$target + 1$$. Then for each $$sub\_target$$, we can do 2 things.
+
 1. On the first iteration, obviously the $$num$$ will equal our $$sub\_target$$ so we can append an array of just that number to the $$dp$$ array at an index of $$sub_target$$.
 2. Then we can also append every combination from our $$dp$$ array at the position of $$sub\_target - num$$.
 
-
 For example 2, starting at candidate number 2:
+
 ```
 candidates = [2,3,5]
 target = 8:
@@ -166,13 +166,16 @@ dp = [[ ][ ][ ][ ][ ][ ][ ][ ][ ]]
              ^ start our loop at candidate number, 2.
              ^ since we are starting here, we know 2 adds up to 2, so we can add 2.
 ```
+
 ```
        0  1  2  3  4  5  6  7  8
 dp = [[ ][ ][2][ ][ ][ ][ ][ ][ ]]
        ^  check 2-candidate number = 2-2=0 and add all those to current array.
                 ^ repeat the process for all sub_targets until we reach the end.
 ```
+
 For explanation's sake, I will skip the odds, since we can see we have nothing at positions $$3-2=1$$, $$5-2=3$$, $$7-2=5$$.
+
 ```
        0  1   2   3    4    5  6  7  8
 dp = [[ ][ ][[2]][ ][[2,2]][ ][ ][ ][ ]]
@@ -184,8 +187,9 @@ dp = [[ ][ ][[2]][ ][[2,2]][ ][[2,2,2]][ ][ ]]
        0  1   2   3    4    5     6     7     8
 dp = [[ ][ ][[2]][ ][[2,2]][ ][[2,2,2]][ ][2,2,2,2]]
 ```
-For candidate number $$3$$, you can imagine we would add a combo array with number $$3$$ to $$dp$$ array at $$sub\_target$$ 3, and all the combinations from $$dp$$ array at $$0$$, and repeat for numbers, $$4,5,6,7,8$$, and similarly for $$5$$ we would start at $$5$$, and repeat for $$6,7,8$$
-The finished product would look something like this:
+
+For candidate number $$3$$, you can imagine we would add a combo array with number $$3$$ to $$dp$$ array at $$sub\_target$$ 3, and all the combinations from $$dp$$ array at $$0$$, and repeat for numbers, $$4,5,6,7,8$$, and similarly for $$5$$ we would start at $$5$$, and repeat for $$6,7,8$$ The finished product would look something like this:
+
 ```
 dp = [
     0   1   2      3
@@ -196,7 +200,6 @@ dp = [
     [[2, 2, 2, 2], [2, 3, 3], [3, 5]]
 ]
 ```
-
 
 <Tabs>
 <TabItem value="python" label="Python">
@@ -217,7 +220,7 @@ class Solution:
             # our target will be at target + 1
             for sub_target in range(num, target + 1):
                 # first iteration our num will be the sub target, so
-                # we can add list containing that number to the 
+                # we can add list containing that number to the
                 # dp array.
                 if num == sub_target:
                     dp[sub_target].append([num])
@@ -230,7 +233,7 @@ class Solution:
         # our answer will reside in the last position of our
         # dp array, so we can return it.
         return dp[-1]
-        
+
 ```
 
 </TabItem>

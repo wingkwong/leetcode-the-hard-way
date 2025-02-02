@@ -1,7 +1,8 @@
 ---
 description: >-
-  Author: @wingkwong, @ColeB2, @radojicic23 |
-  https://leetcode.com/problems/coin-change-2
+  Author: @wkw, @ColeB2, @radojicic23 | https://leetcode.com/problems/coin-change-2
+
+
 tags: [Array, Dynamic Programming]
 ---
 
@@ -71,7 +72,7 @@ Space Complexity: $$O(amount)$$. We are going to create an array of size $$amoun
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

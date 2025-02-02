@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/champagne-tower/'
+description: 'Author: @wkw | https://leetcode.com/problems/champagne-tower/'
 tags: [Dynamic Programming]
 ---
 
@@ -11,11 +11,11 @@ https://leetcode.com/problems/champagne-tower/
 
 ## Problem Statement
 
-We stack glasses in a pyramid, where the **first** row has `1` glass, the **second** row has `2` glasses, and so on until the 100th row.  Each glass holds one cup of champagne.
+We stack glasses in a pyramid, where the **first** row has `1` glass, the **second** row has `2` glasses, and so on until the 100th row. Each glass holds one cup of champagne.
 
-Then, some champagne is poured into the first glass at the top.  When the topmost glass is full, any excess liquid poured will fall equally to the glass immediately to the left and right of it.  When those glasses become full, any excess champagne will fall equally to the left and right of those glasses, and so on.  (A glass at the bottom row has its excess champagne fall on the floor.)
+Then, some champagne is poured into the first glass at the top. When the topmost glass is full, any excess liquid poured will fall equally to the glass immediately to the left and right of it. When those glasses become full, any excess champagne will fall equally to the left and right of those glasses, and so on. (A glass at the bottom row has its excess champagne fall on the floor.)
 
-For example, after one cup of champagne is poured, the top most glass is full.  After two cups of champagne are poured, the two glasses on the second row are half full.  After three cups of champagne are poured, those two cups become full - there are 3 full glasses total now.  After four cups of champagne are poured, the third row has the middle glass half full, and the two outside glasses are a quarter full, as pictured below.
+For example, after one cup of champagne is poured, the top most glass is full. After two cups of champagne are poured, the two glasses on the second row are half full. After three cups of champagne are poured, those two cups become full - there are 3 full glasses total now. After four cups of champagne are poured, the third row has the middle glass half full, and the two outside glasses are a quarter full, as pictured below.
 
 ![](https://s3-lc-upload.s3.amazonaws.com/uploads/2018/03/09/tower.png)
 
@@ -46,8 +46,8 @@ Output: 1.00000
 
 **Constraints:**
 
-* `0 <= poured <= 10^9`
-* `0 <= query_glass <= query_row < 100`
+- `0 <= poured <= 10^9`
+- `0 <= query_glass <= query_row < 100`
 
 ## Approach 1: DP
 
@@ -55,7 +55,7 @@ Let $$dp[i][j]$$ be the amount poured to a glass located at row $$i$$ and column
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -77,7 +77,7 @@ public:
             }
         }
         // dp[query_row][query_glass] may have excess liquid
-        // take min to avoid it 
+        // take min to avoid it
         return min(1.0, dp[query_row][query_glass]);
     }
 };
@@ -86,13 +86,11 @@ public:
 </TabItem>
 </Tabs>
 
-
-
 We can see that the row $$i$$ depends on $$i - 1$$ row so we can use 1D array to store the state. Let $$dp[j]$$ be the amount poured to a glass located at $$j$$ column. We use $$ndp$$ to store the current state while $$dp$$ state stores the previous state. We swap them for every row, i.e. transit the state from row $$i$$ to row $$i + 1$$.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -125,11 +123,10 @@ public:
 };
 ```
 
-
 </TabItem>
 
 <TabItem value="kotlin" label="Kotlin">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```kt
 class Solution {

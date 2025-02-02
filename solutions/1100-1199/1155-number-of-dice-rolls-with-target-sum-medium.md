@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/
+  Author: @wkw | https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/
 ---
 
 # 1155 - Number of Dice Rolls With Target Sum (Medium)
@@ -44,12 +43,12 @@ Explanation: The answer must be returned modulo 109 + 7.
 
 **Constraints:**
 
-* `1 <= n, k <= 30`
-* `1 <= target <= 1000`
+- `1 <= n, k <= 30`
+- `1 <= target <= 1000`
 
 ## Approach 1: Dynamic Programming
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

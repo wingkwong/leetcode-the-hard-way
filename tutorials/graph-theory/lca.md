@@ -1,6 +1,6 @@
 ---
-title: "Lowest Common Ancestor(LCA)"
-description: "Lowest common ancestor (LCA) of two nodes x and y is the deepest(lowest) node that has both x and y as descendants"
+title: 'Lowest Common Ancestor(LCA)'
+description: 'Lowest common ancestor (LCA) of two nodes x and y is the deepest(lowest) node that has both x and y as descendants'
 hide_table_of_contents: false
 keywords:
   - leetcode
@@ -9,7 +9,7 @@ keywords:
   - algorithm
 ---
 
-<TutorialCredit authors="@RohitTaparia" contributors="@wingkwong" />
+<TutorialCredit authors="@RohitTaparia" contributors="@wkw" />
 
 ## Overview
 
@@ -276,19 +276,6 @@ class Solution {
 </TabItem>
 </Tabs>
 
-export const suggestedProblems = [
-{
-"problemName": "1123. Lowest Common Ancestor of Deepest Leaves",
-"difficulty": "Medium",
-"leetCodeLink": "https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves/",
-"solutionLink": ""
-},
-{
-"problemName": "235. Lowest Common Ancestor of a Binary Search Tree",
-"difficulty": "Medium",
-"leetCodeLink": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/",
-"solutionLink": ""
-}
-]
+export const suggestedProblems = [ { "problemName": "1123. Lowest Common Ancestor of Deepest Leaves", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves/", "solutionLink": "" }, { "problemName": "235. Lowest Common Ancestor of a Binary Search Tree", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/", "solutionLink": "" } ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />

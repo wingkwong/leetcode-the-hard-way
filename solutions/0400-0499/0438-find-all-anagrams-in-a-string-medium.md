@@ -1,7 +1,8 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/find-all-anagrams-in-a-string/
+  Author: @wkw | https://leetcode.com/problems/find-all-anagrams-in-a-string/
+
+
 tags: [Hash Table, String, Sliding Window]
 ---
 
@@ -40,8 +41,8 @@ The substring with start index = 2 is "ab", which is an anagram of "ab".
 
 **Constraints:**
 
-* `1 <= s.length, p.length <= 3 * 10^4`
-* `s` and `p` consist of lowercase English letters.
+- `1 <= s.length, p.length <= 3 * 10^4`
+- `s` and `p` consist of lowercase English letters.
 
 ## Approach 1: Sliding Window
 
@@ -51,10 +52,9 @@ First we build the count `m2` of each character in string `p`. Then we keep the 
 
 - Space Complexity: $O(1)$
 
-
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -76,7 +76,7 @@ class Solution {
 </TabItem>
 
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:

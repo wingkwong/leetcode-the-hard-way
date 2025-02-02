@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/summary-ranges/'
+description: 'Author: @wkw | https://leetcode.com/problems/summary-ranges/'
 ---
 
 # 0228 - Summary Ranges (Easy)
@@ -16,8 +16,8 @@ Return _the **smallest sorted** list of ranges that **cover all the numbers in t
 
 Each range `[a,b]` in the list should be output as:
 
-* `"a->b"` if `a != b`
-* `"a"` if `a == b`
+- `"a->b"` if `a != b`
+- `"a"` if `a == b`
 
 **Example 1:**
 
@@ -44,16 +44,16 @@ Explanation: The ranges are:
 
 **Constraints:**
 
-* `0 <= nums.length <= 20`
-* `-2^31 <= nums[i] <= 2^31 - 1`
-* All the values of `nums` are **unique**.
-* `nums` is sorted in ascending order.
+- `0 <= nums.length <= 20`
+- `-2^31 <= nums[i] <= 2^31 - 1`
+- All the values of `nums` are **unique**.
+- `nums` is sorted in ascending order.
 
 ## Approach 1: Iteration
 
 We take a number as an starting point at $$i$$, then search for the next ending point $$j$$ which satisfies $$nums[j] + 1 \ne nums[j + 1]$$. If both pointer is not same, then we can push $$nums[i]$$->$$nums[j]$$ to our answer array, else we just push $$nums[i]$$.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

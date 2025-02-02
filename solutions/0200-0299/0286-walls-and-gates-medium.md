@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/walls-and-gates/'
+description: 'Author: @wkw | https://leetcode.com/problems/walls-and-gates/'
 tags: [Array, Breadth-First Search, Matrix]
 ---
 
-# 0286 - Walls and Gates (Medium) 
+# 0286 - Walls and Gates (Medium)
 
 ## Problem Link
 
@@ -17,7 +17,7 @@ You are given an `m x n` grid `rooms` initialized with these three possible val
 - `0` A gate.
 - `INF` Infinity means an empty room. We use the value `231 - 1 = 2147483647` to represent `INF` as you may assume that the distance to a gate is less than `2147483647`.
 
-Fill each empty room with the distance to *its nearest gate*. If it is impossible to reach a gate, it should be filled with `INF`.
+Fill each empty room with the distance to _its nearest gate_. If it is impossible to reach a gate, it should be filled with `INF`.
 
 **Example 1:**
 
@@ -44,7 +44,7 @@ Output: [[-1]]
 
 <Tabs>
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:
@@ -54,10 +54,10 @@ class Solution:
         """
         # Multi-source BFS
         # We can see each gate as a source, then we start from each gate
-        # If the next room `rooms[next_x][next_y` is empty, 
+        # If the next room `rooms[next_x][next_y` is empty,
         # we update the value rooms[x][y] + 1 and
         # we push (next_x, next_y) to the queue
-        
+
         n, m = len(rooms), len(rooms[0])
         q = deque()
         for i in range(n):
@@ -71,7 +71,7 @@ class Solution:
                 if 0 <= next_x < n and 0 <= next_y < m and rooms[next_x][next_y] == 2147483647:
                     rooms[next_x][next_y] = rooms[x][y] + 1
                     q.append((next_x, next_y))
-                    
+
 ```
 
 </TabItem>

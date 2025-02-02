@@ -14,8 +14,7 @@ https://leetcode.com/problems/detect-squares/
 You are given a stream of points on the X-Y plane. Design an algorithm that:
 
 - **Adds** new points from the stream into a data structure. **Duplicate** points are allowed and should be treated as different points.
-- Given a query point, **counts** the number of ways to choose three points from the data structure such that the three points and the query point form an **axis-aligned square** with **positive area**.
-An **axis-aligned square** is a square whose edges are all the same length and are either parallel or perpendicular to the x-axis and y-axis.
+- Given a query point, **counts** the number of ways to choose three points from the data structure such that the three points and the query point form an **axis-aligned square** with **positive area**. An **axis-aligned square** is a square whose edges are all the same length and are either parallel or perpendicular to the x-axis and y-axis.
 
 Implement the `DetectSquares` class:
 
@@ -54,7 +53,6 @@ detectSquares.count([11, 10]); // return 2. You can choose:
 - `0 <= x, y <= 1000`
 - At most `3000` calls in total will be made to `add` and `count`.
 
-
 ## Approach 1: Checking for Diagonal Points
 
 This a tricky problem that can be greatly simplified by knowing what to do. If for any given count call, we can check all points inside our hash map and only continue with our algorithm if the point is directly diagonal with the point we are given, then we know we can only create a square with those two points, if there are 2 points that are adjacent to those points, to create the other 2 corners.
@@ -64,6 +62,7 @@ Meaning during our search for diagonal points, we want a difference in $$x,y$$ t
 When we find a suitable corner, we can check the adjacent positions where a corner would need to exist to create a square and multiply the number of points of all three corners to add to our total result. Obviously, if any of those corners don't exist, we will multiply by $$0$$, not creating a square.
 
 Time Complexity:
+
 - Add: $$O(1)$$, we can add points to our data structure in constant time.
 - Count: $$O(n)$$, where $$n$$ is the number of unique points. We are going to check through all unique points once, doing constant time work to determine if we can create a square, and increment our count for the number of squares we find.
 
@@ -84,7 +83,7 @@ class DetectSquares:
         # key: tuple (x,y) coordinate
         # value: number of times point exists in the plane.
         self.points = {}
-        
+
     def add(self, point: List[int]) -> None:
         # convert our point to a tuple, so it is hashable in python
         point = tuple(point)
@@ -94,7 +93,7 @@ class DetectSquares:
             self.points[point] = 0
         # increment the value of the given point
         self.points[point] += 1
-        
+
     def count(self, point: List[int]) -> int:
         # initialize square, which is the number of squares
         # we can create with the given point, point.
@@ -113,7 +112,7 @@ class DetectSquares:
             if (dy != dx) or  px == x or py == y:
                 continue
             # points are diagonal apart --> check adj corners exist.
-            # if a corner exists, we will use the count from our 
+            # if a corner exists, we will use the count from our
             # self.points hash map, otherwise initialize it with 0.
             corner1 = self.points[(x, py)] if (x, py) in self.points else 0
             corner2 = self.points[(px, y)] if (px, y) in self.points else 0

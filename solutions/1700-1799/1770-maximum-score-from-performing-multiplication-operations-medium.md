@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/maximum-score-from-performing-multiplication-operations
+  Author: @wkw | https://leetcode.com/problems/maximum-score-from-performing-multiplication-operations
 ---
 
 # 1770 - Maximum Score from Performing Multiplication Operations (Medium)
@@ -12,13 +11,13 @@ https://leetcode.com/problems/maximum-score-from-performing-multiplication-opera
 
 ## Problem Statement
 
-You are given two integer arrays `nums` and `multipliers` **** of size `n` and `m` respectively, where `n >= m`. The arrays are **1-indexed**.
+You are given two integer arrays `nums` and `multipliers` \***\* of size `n` and `m` respectively, where `n >= m`. The arrays are **1-indexed\*\*.
 
 You begin with a score of `0`. You want to perform **exactly** `m` operations. On the `ith` operation **(1-indexed)**, you will:
 
-* Choose one integer `x` from **either the start or the end** of the array `nums`.
-* Add `multipliers[i] * x` to your score.
-* Remove `x` from the array `nums`.
+- Choose one integer `x` from **either the start or the end** of the array `nums`.
+- Add `multipliers[i] * x` to your score.
+- Remove `x` from the array `nums`.
 
 Return _the **maximum** score after performing_ `m` _operations._
 
@@ -44,17 +43,17 @@ Explanation: An optimal solution is as follows:
 - Choose from the start, [-3,-3,-2,7,1], adding -3 * -5 = 15 to the score.
 - Choose from the start, [-3,-2,7,1], adding -3 * 3 = -9 to the score.
 - Choose from the end, [-2,7,1], adding 1 * 4 = 4 to the score.
-- Choose from the end, [-2,7], adding 7 * 6 = 42 to the score. 
+- Choose from the end, [-2,7], adding 7 * 6 = 42 to the score.
 The total score is 50 + 15 - 9 + 4 + 42 = 102.
 ```
 
 **Constraints:**
 
-* `n == nums.length`
-* `m == multipliers.length`
-* `1 <= m <= 103`
-* `m <= n <= 105`
-* `-1000 <= nums[i], multipliers[i] <= 1000`
+- `n == nums.length`
+- `m == multipliers.length`
+- `1 <= m <= 103`
+- `m <= n <= 105`
+- `-1000 <= nums[i], multipliers[i] <= 1000`
 
 ## Approach 1: Dynamic Programming
 
@@ -66,12 +65,12 @@ Supposing our multipliers pointer is at index $$j$$ (0-based), that means we hav
 
 Let $$dp[i][j]$$ be the maximum score where $$i$$ is the pointer at $$nums$$ and $$j$$ is the pointer at $$mult$$. When $$j$$ reaches the end of $$mult$$, then return $$0$$. If $$dp[i][j]$$has been calculated before, return it immediately. Otherwise, we have two options.
 
-* if we pick from the left, we got $$mult[j] * nums[i] + dfs(nums, mult, i + 1, j + 1)$$
-* if we pick from the right, $$mult[j] * nums[n - 1 - j + i] + dfs(nums, mult, i, j + 1)$$
+- if we pick from the left, we got $$mult[j] * nums[i] + dfs(nums, mult, i + 1, j + 1)$$
+- if we pick from the right, $$mult[j] * nums[n - 1 - j + i] + dfs(nums, mult, i, j + 1)$$
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -92,7 +91,7 @@ public:
             mult[j] * nums[i] + dfs(nums, mult, dp, i + 1, j + 1),
             // pick fromt the end
             mult[j] * nums[n - 1 - (j - i)] + dfs(nums, mult, dp, i, j + 1)
-        ); 
+        );
     }
     int maximumScore(vector<int>& nums, vector<int>& multipliers) {
         n = (int) nums.size(), m = (int) multipliers.size();
@@ -106,7 +105,7 @@ public:
 
 ** Iterative Approach **
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -119,9 +118,9 @@ public:
             // at round m, we  pick the m-th multiplier
             // at round m - 1, we pick the (m - 1)-th multiplier
             // at round m - 2, we pick the (m - 2)-th multiplier
-            // and so on ... 
+            // and so on ...
             int mult = multipliers[m - 1 - i];
-            // how many elements we need to process? 
+            // how many elements we need to process?
             // at round m, there are m elements
             // at round m - 1, there are m - 1 elements
             // at round m - 2, there are m - 2 elements
@@ -130,7 +129,7 @@ public:
                 // so we take the max of
                 dp[j] = max(
                     // the start
-                    mult * nums[j] + dp[j + 1], 
+                    mult * nums[j] + dp[j + 1],
                     // the end
                     mult * nums[j + (n - (m - i))] + dp[j]
                 );
@@ -140,6 +139,6 @@ public:
     }
 };
 ```
+
 </TabItem>
 </Tabs>
-

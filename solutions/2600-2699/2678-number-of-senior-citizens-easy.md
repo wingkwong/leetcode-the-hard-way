@@ -1,8 +1,8 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/number-of-senior-citizens/'
+description: 'Author: @wkw | https://leetcode.com/problems/number-of-senior-citizens/'
 ---
 
-# 2678 - Number of Senior Citizens (Easy) 
+# 2678 - Number of Senior Citizens (Easy)
 
 ## Problem Link
 
@@ -17,7 +17,7 @@ You are given a **0-indexed** array of strings `details`. Each element of `detai
 - The following two characters are used to indicate the age of the person.
 - The last two characters determine the seat allotted to that person.
 
-Return *the number of passengers who are **strictly****more than 60 years old**.*
+Return _the number of passengers who are **strictly\*\***more than 60 years old\*\*._
 
 **Example 1:**
 
@@ -47,7 +47,7 @@ Explanation: None of the passengers are older than 60.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:
@@ -58,7 +58,7 @@ class Solution:
             if int(detail[11:13]) > 60:
                 res += 1
         return res
-            
+
 ```
 
 </TabItem>

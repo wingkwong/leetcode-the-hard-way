@@ -1,5 +1,5 @@
 ---
-description: 'Author: @ColeB2, @wingkwong | https://leetcode.com/problems/min-cost-climbing-stairs/'
+description: 'Author: @ColeB2, @wkw | https://leetcode.com/problems/min-cost-climbing-stairs/'
 tags: [Array, Dynamic Programming]
 ---
 
@@ -64,7 +64,7 @@ Space Complexity: $$O(1)$$ we can reuse the cost array to overwrite the min cost
 ```py
 class Solution:
     def minCostClimbingStairs(self, cost: List[int]) -> int:
-        # loop from the 3rd step, (2 indexed step in 0-indexed list) 
+        # loop from the 3rd step, (2 indexed step in 0-indexed list)
         # until the end of the cost array
         for i in range(2, len(cost)):
             # calculate the cost of the ith step. The cost will be the
@@ -80,7 +80,7 @@ class Solution:
 </TabItem>
 
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -102,7 +102,7 @@ public:
 </TabItem>
 
 <TabItem value="kotlin" label="Kotlin">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```kt
 class Solution {

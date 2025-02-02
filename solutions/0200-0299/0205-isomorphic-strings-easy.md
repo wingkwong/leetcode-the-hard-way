@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/isomorphic-strings/'
+description: 'Author: @wkw, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/isomorphic-strings/'
 tags: [Hash Table, String]
 ---
 
-# 0205 - Isomorphic Strings (Easy) 
+# 0205 - Isomorphic Strings (Easy)
 
 ## Problem Link
 
@@ -11,7 +11,7 @@ https://leetcode.com/problems/isomorphic-strings/
 
 ## Problem Statement
 
-Given two strings `s` and `t`, *determine if they are isomorphic*.
+Given two strings `s` and `t`, _determine if they are isomorphic_.
 
 Two strings `s` and `t` are isomorphic if the characters in `s` can be replaced to get `t`.
 
@@ -48,7 +48,7 @@ Output: true
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -93,14 +93,14 @@ public:
 class Solution {
     public boolean isIsomorphic(String s, String t) {
         // ASCII char range, partitioning first half for s and 2nd half for t.
-        // Partition can be done by ascii + 128 (range) for the 2nd half. 
+        // Partition can be done by ascii + 128 (range) for the 2nd half.
         int[] table = new int[256];
         for (int i = 0; i < s.length(); i++) {
             // If the char count from s & t is not match, then return false
             if (table[s.charAt(i)] != table[t.charAt(i) + 128]) {
                 return false;
             }
-            // Char similarity found (non matching char, but can help to transform to other char) 
+            // Char similarity found (non matching char, but can help to transform to other char)
             // so just keeping the index reference
             table[s.charAt(i)] = table[t.charAt(i) + 128] = i + 1;
         }
@@ -126,7 +126,7 @@ class Solution:
                 return False
             map1[s[i]] = t[i]
             map2[t[i]] = s[i]
-        return True 
+        return True
 ```
 
 </TabItem>
@@ -140,20 +140,20 @@ class Solution:
  * @param {string} t
  * @return {boolean}
  */
-var isIsomorphic = function(s, t) {
-    let map1 = {};
-    let map2 = {};
-    for (let i = 0; i < s.length; i++) {
-        if (s[i] in map1 && map1[s[i]] != t[i]) {
-            return false;
-        }
-        if (t[i] in map2 && map2[t[i]] != s[i]) {
-            return false;
-        }
-        map1[s[i]] = t[i];
-        map2[t[i]] = s[i];
+var isIsomorphic = function (s, t) {
+  let map1 = {};
+  let map2 = {};
+  for (let i = 0; i < s.length; i++) {
+    if (s[i] in map1 && map1[s[i]] != t[i]) {
+      return false;
     }
-    return true;
+    if (t[i] in map2 && map2[t[i]] != s[i]) {
+      return false;
+    }
+    map1[s[i]] = t[i];
+    map2[t[i]] = s[i];
+  }
+  return true;
 };
 ```
 

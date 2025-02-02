@@ -1,5 +1,5 @@
 ---
-description: "Author: @wingkwong, @radojicic23 | https://leetcode.com/problems/sqrtx/"
+description: 'Author: @wkw, @radojicic23 | https://leetcode.com/problems/sqrtx/'
 ---
 
 # 0069 - Sqrt(x) (Easy)
@@ -45,7 +45,7 @@ Explanation: The square root of 8 is 2.82842..., and since the decimal part is t
 
 <Tabs>
 <TabItem value="c++" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

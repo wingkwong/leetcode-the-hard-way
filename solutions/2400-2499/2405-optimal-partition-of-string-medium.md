@@ -1,14 +1,14 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/optimal-partition-of-string/'
+description: 'Author: @wkw | https://leetcode.com/problems/optimal-partition-of-string/'
 ---
 
-# 2405 - Optimal Partition of String (Medium) 
+# 2405 - Optimal Partition of String (Medium)
 
 ## Problem Statement
 
 Given a string `s`, partition the string into one or more **substrings** such that the characters in each substring are **unique**. That is, no letter appears in a single substring more than **once**.
 
-Return *the **minimum** number of substrings in such a partition.*
+Return _the **minimum** number of substrings in such a partition._
 
 Note that each character should belong to exactly one substring in a partition.
 
@@ -38,12 +38,12 @@ The only valid partition is ("s","s","s","s","s","s").
 
 ## Approach 1: Greedy
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
 public:
-    // the idea is to keep each partition as long as possible 
+    // the idea is to keep each partition as long as possible
     // so that we could have the minimum number of substrings
     int partitionString(string s) {
         // the minimum number of substring is at least 1
@@ -64,7 +64,7 @@ public:
             }
             // increase the frequency of the current character by 1
             cnt[c - 'a']++;
-        } 
+        }
         return ans;
     }
 };

@@ -45,7 +45,6 @@ Output: 23
 - `piles.length <= h <= 10^9`
 - `1 <= piles[i] <= 10^9`
 
-
 ## Approach 1: Brute Force - TLE
 
 It is a medium problem, so the brute force will likely TLE, but we can gather some insight by figuring out the brute force solution.
@@ -58,8 +57,7 @@ What about the slowest possible rate? Given an h value, we can calculate the sum
 
 Example 3: There are 88 bananas that is $$sum(piles)$$, and we know we have 6 hours to finish them. $$h=6$$. So, $$Ceil(88 / 6) = 15$$. We get a close minimum k value of at least 15 bananas per hour to finish all of them in 6 hours. We also know that if we ate 30 bananas per hour, we could eat all of them in 5 hours. So we have our boundaries, we know we need to eat somewhere between 15 and 30 bananas. So the brute force would be to check, starting at 15, and finishing at 30. For time we will have to do $$O(n)$$ at each k value.
 
-Time Complexity: $$O(n(maxKValue - minKValue))$$. Where $$n$$ is the number of banana piles. $$maxKValue$$ is $$max(piles)$$ and $$minKValue$$ is $$Ceil(sum(piles)/h)$$. 
-We know we are going to have to loop through all the possible k values, and inside of each k, we are going to have to do $$O(n)$$ work to find the total time.
+Time Complexity: $$O(n(maxKValue - minKValue))$$. Where $$n$$ is the number of banana piles. $$maxKValue$$ is $$max(piles)$$ and $$minKValue$$ is $$Ceil(sum(piles)/h)$$. We know we are going to have to loop through all the possible k values, and inside of each k, we are going to have to do $$O(n)$$ work to find the total time.
 
 Space Complexity: O(1)
 
@@ -98,7 +96,6 @@ class Solution:
 </TabItem>
 </Tabs>
 
-
 ## Approach 2: Binary Search
 
 Can we improve the brute force approach? Sure our first instinct should be that if we linearly scan all possible ks, that is from the minimum k value to the maximum k value, then it must me it is possible to binary search those values. That means for example 3, given a minimum k of 15, and a maximum k of 30, it makes more sense to start at 22, $$30//15 = 22$$ than it does to start at 15. Then we can also eliminate half of all k values during each iteration.
@@ -127,7 +124,7 @@ class Solution:
         # set left, l, and right, r, boundaries to k_min, k_max
         l,r = k_min, k_max
         while l < r:
-            #calculate our initial k value to be the middle value. 
+            #calculate our initial k value to be the middle value.
             # l +  (r-1) // 2 to prevent integer overflow, doesn't matter for
             # python but it is good practice for other languages.
             k = l + (r-l) // 2

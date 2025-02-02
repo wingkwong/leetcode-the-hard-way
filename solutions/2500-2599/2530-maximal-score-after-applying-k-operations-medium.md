@@ -1,5 +1,5 @@
 ---
-description: "Author: @wingkwong | https://leetcode.com/problems/maximal-score-after-applying-k-operations/"
+description: 'Author: @wkw | https://leetcode.com/problems/maximal-score-after-applying-k-operations/'
 tags: [Array, Greedy, Heap (Priority Queue)]
 ---
 
@@ -58,7 +58,7 @@ To optimise the solution, we can apply priority queue / heap (in python) so that
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -88,7 +88,7 @@ public:
 </TabItem>
 
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:

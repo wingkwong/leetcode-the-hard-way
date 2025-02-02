@@ -71,7 +71,7 @@ class TrieNode:
     # nodes can be reached via a hash map
     # Contains a char as an optional parameter
     # Also utilizes attributes of is_word to denote
-    # whether it is a word. 
+    # whether it is a word.
     # Ex: If we have the word apple in our trie. a->p->p->l->e
     # 'e' node will have is_word = True, to denote that
     # apple is a word in our map. Letters, a,p,p,l,e won't be True
@@ -93,7 +93,7 @@ class WordDictionary:
         self.root = TrieNode()
         # max_length variable to speed searching.
         self.max_length = 0
-        
+
 
     def addWord(self, word: str) -> None:
         # Time: O(l) where l is the length of the word.
@@ -113,7 +113,7 @@ class WordDictionary:
         node.is_word = True
         # update max length to simplify searching.
         self.max_length = max(self.max_length, len(word))
-        
+
 
     def search(self, word: str) -> bool:
         # Time WC: O(w * 26^n) where w is length of word, 26 being
@@ -163,4 +163,3 @@ class WordDictionary:
 
 </TabItem>
 </Tabs>
-

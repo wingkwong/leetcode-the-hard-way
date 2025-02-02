@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/maximum-consecutive-floors-without-special-floors
+  Author: @wkw | https://leetcode.com/problems/maximum-consecutive-floors-without-special-floors
 ---
 
 # 2274 - Maximum Consecutive Floors Without Special Floors (Medium)
@@ -40,9 +39,9 @@ Explanation: Every floor rented is a special floor, so we return 0.
 
 **Constraints:**
 
-* `1 <= special.length <= 10^5`
-* `1 <= bottom <= special[i] <= top <= 10^9`
-* All the values of `special` are **unique**.
+- `1 <= special.length <= 10^5`
+- `1 <= bottom <= special[i] <= top <= 10^9`
+- All the values of `special` are **unique**.
 
 ## Approach 1: Sorting
 
@@ -50,7 +49,7 @@ We add $bottom - 1$ and $top + 1$ to the array $special$ and sort the array so t
 
 The answer would be the maximum result of $special[i] - special[i - 1] - 1$ for $i = [1 .. n)$.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

@@ -1,7 +1,8 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/number-of-flowers-in-full-bloom/
+  Author: @wkw | https://leetcode.com/problems/number-of-flowers-in-full-bloom/
+
+
 tags: [Array, Hash Table, Binary Search, Sorting, Prefix Sum, Ordered Set]
 ---
 
@@ -41,11 +42,11 @@ For each person, we return the number of flowers in full bloom during their arri
 
 **Constraints:**
 
-* `1 <= flowers.length <= 5 * 10^4`
-* `flowers[i].length == 2`
-* `1 <= starti <= endi <= 10^9`
-* `1 <= persons.length <= 5 * 10^4`
-* `1 <= persons[i] <= 10^9`
+- `1 <= flowers.length <= 5 * 10^4`
+- `flowers[i].length == 2`
+- `1 <= starti <= endi <= 10^9`
+- `1 <= persons.length <= 5 * 10^4`
+- `1 <= persons[i] <= 10^9`
 
 ## Approach 1: Line Sweep
 
@@ -53,7 +54,7 @@ We can put $flowers$ and $people$ on the number line and apply standard line swe
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -84,7 +85,7 @@ public:
 
 </TabItem>
 <TabItem value="kotlin" label="Kotlin">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```kt
 class Solution {
@@ -113,4 +114,3 @@ class Solution {
 
 </TabItem>
 </Tabs>
-

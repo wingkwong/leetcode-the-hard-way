@@ -49,7 +49,6 @@ Output: false
 - `1 <= m, n <= 6`
 - `1 <= word.length <= 15`
 - `board` and `word` consists of only lowercase and uppercase English letters.
- 
 
 **Follow up**: Could you use search pruning to make your solution faster with a larger `board`?
 
@@ -62,9 +61,10 @@ Inside our DFS, we would need to track some edge cases, if our position on the b
 Depending on how it is implemented though, the backtracking solution will be very slow, or even TLE. That is where the follow-up of search pruning comes into play.
 
 There are 3 things we can edge cases we can check to ensure our algorithm is efficient.
+
 1. First, we can check if the word is larger than the number of characters on the board. If so we have no reason to continue.
 2. Second, we can count both the characters on the board and in the word and compare the 2. If a character in the word isn't on the board, or there isn't enough of them on the board, we can terminate early again.
-3. Finally, we can flip the word if there are fewer characters on the board of the word's last letter, than its first we can flip the word. For example: If we have the word $$cat$$ and our board has a lot of $$c$$ characters, and only 1 $$t$$ character, it makes more sense to search for the $$t$$ character, as we will only have to run our DFS algorithm once, instead of several times for each $$c$$ we find.  
+3. Finally, we can flip the word if there are fewer characters on the board of the word's last letter, than its first we can flip the word. For example: If we have the word $$cat$$ and our board has a lot of $$c$$ characters, and only 1 $$t$$ character, it makes more sense to search for the $$t$$ character, as we will only have to run our DFS algorithm once, instead of several times for each $$c$$ we find.
 
 Time Complexity: $$O(m*n*3^L)$$ Where m is the number of rows, n is the number of columns, and L is the length of the word. Note it is $$3^L$$ instead of 4, as after the first DFS call, we only check 3 paths, as the 4th path would be a visited position that will terminate early.
 
@@ -133,7 +133,7 @@ class Solution:
                         return True
         # Reach the end, didn't find the word, return False.
         return False
-        
+
 ```
 
 </TabItem>

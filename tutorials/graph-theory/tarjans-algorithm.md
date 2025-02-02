@@ -9,14 +9,13 @@ keywords:
   - algorithm
 ---
 
-<TutorialCredits authors="@BlackPanther112358" contributors="@wingkwong" />
+<TutorialCredits authors="@BlackPanther112358" contributors="@wkw" />
 
 ## Overview
 
 Tarjan's Algorithm is popular algorithm for finding the Strongly Connected Components (SCC) of a directed graph. In the below graph, the nodes in a blue envelope constitute a single connected component as any node $u$ as a path to another node $v$ and vice versa. Note that while we can reach the node $f$ from the node $e$, the opposite is not true. Hence, $f$ and $e$ are not part of the same component. Thus, the following graph has 3 strongly connected components as highlighted. A single strongly connected component can be formally described as maximal set of vertices such that for any 2 vertices belonging to the set, say $u$ and $v$, there exists a path from $u$ to $v$ and vice versa.
 
-![image](https://user-images.githubusercontent.com/83649829/198752836-3c43a6f4-e1e2-445e-b679-0df4cb8ff3e0.png)$\\$
-[Source: Strongly connected component from Wikipedia](https://en.wikipedia.org/wiki/Strongly_connected_component)
+![image](https://user-images.githubusercontent.com/83649829/198752836-3c43a6f4-e1e2-445e-b679-0df4cb8ff3e0.png)$\\$ [Source: Strongly connected component from Wikipedia](https://en.wikipedia.org/wiki/Strongly_connected_component)
 
 In this tutorial we will discuss the Tarjan's Algorithm to find SCC.
 
@@ -339,14 +338,7 @@ class Solution {
 </TabItem>
 </Tabs>
 
-export const suggestedProblems = [
-{
-"problemName": "1489 - Find Critical and Pseudo-Critical Edges in Minimum Spanning Tree",
-"difficulty": "Hard",
-"leetCodeLink": "https://leetcode.com/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree",
-"solutionLink": ""
-},
-]
+export const suggestedProblems = [ { "problemName": "1489 - Find Critical and Pseudo-Critical Edges in Minimum Spanning Tree", "difficulty": "Hard", "leetCodeLink": "https://leetcode.com/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree", "solutionLink": "" }, ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />
 

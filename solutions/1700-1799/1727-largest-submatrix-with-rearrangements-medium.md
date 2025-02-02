@@ -3,7 +3,7 @@ description: 'Author: @jit | https://leetcode.com/problems/largest-submatrix-wit
 tags: [Array, Greedy, Sorting, Matrix]
 ---
 
-# 1727 - Largest Submatrix With Rearrangements (Medium) 
+# 1727 - Largest Submatrix With Rearrangements (Medium)
 
 ## Problem Link
 
@@ -13,7 +13,7 @@ https://leetcode.com/problems/largest-submatrix-with-rearrangements/
 
 You are given a binary matrix `matrix` of size `m x n`, and you are allowed to rearrange the **columns** of the `matrix` in any order.
 
-Return *the area of the largest submatrix within*`matrix`*where **every** element of the submatrix is*`1`*after reordering the columns optimally.*
+Return _the area of the largest submatrix within_`matrix`_where **every** element of the submatrix is_`1`_after reordering the columns optimally._
 
 **Example 1:**
 

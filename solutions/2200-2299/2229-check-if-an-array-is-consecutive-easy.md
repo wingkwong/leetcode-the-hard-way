@@ -1,6 +1,8 @@
 ---
 description: >-
   Author: @hiverkiya | https://leetcode.com/problems/check-if-an-array-is-consecutive/
+
+
 tags: [Array]
 ---
 
@@ -37,7 +39,9 @@ The minimum value is 1 and the length of nums is 2.
 The value 2 in the range [x, x + n - 1] = [1, 1 + 2 - 1], = [1, 2] = (1, 2) does not occur in nums.
 Therefore, nums is not consecutive.
 ```
+
 **Example 3:**
+
 ```
 Input: nums = [3, 5, 4]
 Output: true
@@ -72,7 +76,7 @@ Space Complexity: $O(1)$. No extra space is used
 class Solution {
 public:
     bool isConsecutive(vector<int>& nums) {
-        // using sort from C++ STL to order the elements in ascending order 
+        // using sort from C++ STL to order the elements in ascending order
         sort(nums.begin(), nums.end());
         // run a loop to check elements till size-1 to avoid overflow
         for(int i = 0; i < nums.size() - 1; i++) {

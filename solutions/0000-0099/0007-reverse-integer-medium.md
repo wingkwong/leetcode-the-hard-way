@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @vigneshshiv, @MithunPrabhu777, @radojicic23 |
-  https://leetcode.com/problems/reverse-integer/
+  Author: @vigneshshiv, @MithunPrabhu777, @radojicic23 | https://leetcode.com/problems/reverse-integer/
 ---
 
 # 0007 - Reverse Integer (Medium)
@@ -39,18 +38,17 @@ Output: 21
 
 **Constraints:**
 
-* `-2^31 <= x <= 2^31 - 1`
+- `-2^31 <= x <= 2^31 - 1`
 
 ## Approach 1: Standard
 
-As input can be from `Integer.MIN_VALUE` to `Integer.MAX_VALUE`. 
+As input can be from `Integer.MIN_VALUE` to `Integer.MAX_VALUE`.
 
-Reversing some of the 10 digits number, will not provide the correct answer, because the integer range might overflow, if it does return 0, otherwise the reversed number. 
+Reversing some of the 10 digits number, will not provide the correct answer, because the integer range might overflow, if it does return 0, otherwise the reversed number.
 
-For example, reversing the last integer number `2147483647` can go out of range, so having `long` primitive in the program can hold the range. 
+For example, reversing the last integer number `2147483647` can go out of range, so having `long` primitive in the program can hold the range.
 
-First, get the sign bit value, and negate the input if it's negative.
-Reverse the integer and if it's above max range then return 0 or return the value with sign bit value.
+First, get the sign bit value, and negate the input if it's negative. Reverse the integer and if it's above max range then return 0 or return the value with sign bit value.
 
 <Tabs>
 <TabItem value="java" label="Java">
@@ -76,6 +74,7 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 
 <TabItem value="javascript" label="JavaScript">
@@ -86,21 +85,22 @@ class Solution {
  * @param {number} x
  * @return {number}
  */
-var reverse = function(x) {
-    let [number, sign, remainder] = [0, 1, 0];
-    const RANGE = 2 ** 31 - 1;
-    if (x < 0) {
-        x *= -1;
-        sign = -1;
-    }
-    while (x > 0) {
-        remainder = x % 10;
-        number = (number * 10) + remainder;
-        x = Math.floor(x / 10);
-    }
-    return number > RANGE ? 0 : number * sign;
+var reverse = function (x) {
+  let [number, sign, remainder] = [0, 1, 0];
+  const RANGE = 2 ** 31 - 1;
+  if (x < 0) {
+    x *= -1;
+    sign = -1;
+  }
+  while (x > 0) {
+    remainder = x % 10;
+    number = number * 10 + remainder;
+    x = Math.floor(x / 10);
+  }
+  return number > RANGE ? 0 : number * sign;
 };
 ```
+
 </TabItem>
 
 <TabItem value="py" label="Python">
@@ -120,6 +120,7 @@ class Solution:
             x //= 10
         return 0 if number > MAX else int(number) * sign
 ```
+
 </TabItem>
 
 <TabItem value="cpp" label="C++">
@@ -142,5 +143,6 @@ public:
     }
 };
 ```
+
 </TabItem>
 </Tabs>

@@ -1,8 +1,8 @@
 ---
-description: 'Author: @wingkwong, @ganajayant, @lonyehan | https://leetcode.com/problems/sort-the-people/'
+description: 'Author: @wkw, @ganajayant, @lonyehan | https://leetcode.com/problems/sort-the-people/'
 ---
 
-# 2418 - Sort the People (Easy) 
+# 2418 - Sort the People (Easy)
 
 ## Problem Link
 
@@ -14,7 +14,7 @@ You are given an array of strings `names`, and an array `heights` that consists 
 
 For each index `i`, `names[i]` and `heights[i]` denote the name and height of the `ith` person.
 
-Return `names`*sorted in **descending** order by the people's heights*.
+Return `names`_sorted in **descending** order by the people's heights_.
 
 **Example 1:**
 
@@ -45,7 +45,7 @@ Explanation: The first Bob is the tallest, followed by Alice and the second Bob.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -103,15 +103,15 @@ public class Solution {
     public string[] SortPeople(string[] names, int[] heights) {
         PriorityQueue<string, int> pq = new PriorityQueue<string, int>();
         List<string> list = new List<string>();
-        
+
         for(int i = 0; i < names.Length; i++) {
             pq.Enqueue(names[i], -heights[i]);
         }
-        
+
         while(pq.Count != 0) {
             list.Add(pq.Dequeue());
         }
-        
+
         return list.ToArray();
     }
 }

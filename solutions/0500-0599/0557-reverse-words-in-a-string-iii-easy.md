@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/reverse-words-in-a-string-iii/'
+description: 'Author: @wkw | https://leetcode.com/problems/reverse-words-in-a-string-iii/'
 tags: [Two Pointers, String]
 ---
 
-# 0557 - Reverse Words in a String III (Easy) 
+# 0557 - Reverse Words in a String III (Easy)
 
 ## Problem Link
 
@@ -39,7 +39,7 @@ Output: "doG gniD"
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -64,7 +64,7 @@ public:
             ans += v[i];
             // add space after each string except the last one
             if(i != v.size() - 1) ans += " ";
-        } 
+        }
         return ans;
     }
 };
@@ -73,18 +73,18 @@ public:
 </TabItem>
 
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:
     def reverseWords(self, s: str) -> str:
         # step1: split the string
         #   split() = ["Let's","take","LeetCode","contest"]
-        # step2: reverse the list 
+        # step2: reverse the list
         #   s.split()[::-1] = ["contest","LeetCode","take","Let's"]
         # step3: convert each element to string separated by space
         #   ' '.join(s.split()[::-1]) = "contest LeetCode take Let's"
-        # step4: reverse the string 
+        # step4: reverse the string
         #   ' '.join(s.split()[::-1])[::-1] = "s'teL ekat edoCteeL tsetnoc"
         return ' '.join(s.split()[::-1])[::-1]
 ```
@@ -92,7 +92,7 @@ class Solution:
 </TabItem>
 
 <TabItem value="kt" label="Kotlin">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```java
 class Solution {
@@ -111,24 +111,27 @@ class Solution {
 </TabItem>
 
 <TabItem value="ts" label="TypeScript">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```ts
 function reverseWords(s: string): string {
-    // step 1: split by space
-    //  s.split(' ') = [ "Let's", 'take', 'LeetCode', 'contest' ]
-    // step 2: for each element, reverse it 
-    //  s.split(' ').map(w => w.split('').reverse().join('')) = [ "s'teL", 'ekat', 'edoCteeL', 'tsetnoc' ]
-    // step 3: join them back
-    //  s.split(' ').map(w => w.split('').reverse().join('')).join(' ') = "s'teL ekat edoCteeL tsetnoc"
-    return s.split(' ').map(w => w.split('').reverse().join('')).join(' ')
-};
+  // step 1: split by space
+  //  s.split(' ') = [ "Let's", 'take', 'LeetCode', 'contest' ]
+  // step 2: for each element, reverse it
+  //  s.split(' ').map(w => w.split('').reverse().join('')) = [ "s'teL", 'ekat', 'edoCteeL', 'tsetnoc' ]
+  // step 3: join them back
+  //  s.split(' ').map(w => w.split('').reverse().join('')).join(' ') = "s'teL ekat edoCteeL tsetnoc"
+  return s
+    .split(' ')
+    .map((w) => w.split('').reverse().join(''))
+    .join(' ');
+}
 ```
 
 </TabItem>
 
 <TabItem value="go" label="Go">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```go
 func reverseWords(s string) string {
@@ -159,7 +162,7 @@ func reverseWords(s string) string {
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -190,7 +193,7 @@ public:
 </TabItem>
 
 <TabItem value="java" label="Java">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```java
 class Solution {

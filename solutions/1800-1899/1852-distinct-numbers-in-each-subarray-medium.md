@@ -1,7 +1,8 @@
 ---
 description: >-
-  Author: @TBC |
-  https://leetcode.com/problems/distinct-numbers-in-each-subarray/
+  Author: @TBC | https://leetcode.com/problems/distinct-numbers-in-each-subarray/
+
+
 draft: 'true'
 ---
 
@@ -44,7 +45,7 @@ Explanation: The number of distinct elements in each subarray goes as follows:
 
 **Constraints:**
 
-* `1 <= k <= nums.length <= 10^5`
-* `1 <= nums[i] <= 10^5`
+- `1 <= k <= nums.length <= 10^5`
+- `1 <= nums[i] <= 10^5`
 
 ## Approach 1: TBC

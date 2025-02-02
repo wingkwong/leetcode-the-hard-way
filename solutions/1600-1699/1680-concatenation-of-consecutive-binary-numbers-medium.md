@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/concatenation-of-consecutive-binary-numbers/'
+description: 'Author: @wkw | https://leetcode.com/problems/concatenation-of-consecutive-binary-numbers/'
 tags: [Math, Bit Manipulation, Simulation]
 ---
 
-# 1680 - Concatenation of Consecutive Binary Numbers (Medium) 
+# 1680 - Concatenation of Consecutive Binary Numbers (Medium)
 
 ## Problem Link
 
@@ -11,7 +11,7 @@ https://leetcode.com/problems/concatenation-of-consecutive-binary-numbers/
 
 ## Problem Statement
 
-Given an integer `n`, return *the **decimal value** of the binary string formed by concatenating the binary representations of*`1`*to*`n`*in order, **modulo***`109 + 7`.
+Given an integer `n`, return _the **decimal value** of the binary string formed by concatenating the binary representations of_`1`_to_`n`\*in order, **modulo\***`109 + 7`.
 
 **Example 1:**
 
@@ -48,7 +48,7 @@ After modulo 109 + 7, the result is 505379714.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 // Time Complexity: O(N)
@@ -56,16 +56,16 @@ After modulo 109 + 7, the result is 505379714.
 class Solution {
 public:
     // the idea is to use bit manipulation to set the current number based on the previous number
-    // for example, 
+    // for example,
     // n = 1, ans = 0b1
     // n = 2 (10), we need to shift 2 bits of the previous ans to the left and add `n`
     // i.e. 1 -> 100 (shift 2 bits to the left) -> 110 (set `10`). ans = 0b110
-    // n = 3 (11), we need to shift 2 bits of the previous ans to the left and add `n` 
+    // n = 3 (11), we need to shift 2 bits of the previous ans to the left and add `n`
     // i.e 110 -> 11000 (shift 2 bits to the left) -> 11011 (set `11`). ans = 0b11011
     // n = 4 (100), we need to shift 3 bits of the previous ans to the left and add `n`
     // i.e. 11011 -> 11011000 (shift 3 bits to the left) -> 11011100 (set `100). ans = 0b11011100
     // so now we can see a pattern here
-    // we need to shift `l` bits of the previous ans to the left and add the current `i` 
+    // we need to shift `l` bits of the previous ans to the left and add the current `i`
     // how to know `l`? it is not difficult to see `x` only increases when we meet power of 2
     int concatenatedBinary(int n) {
         // `l` is the bit length to be shifted
@@ -95,23 +95,23 @@ public:
 </TabItem>
 
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 # Time Complexity: O(N)
 # Space Complexity: O(1)
 class Solution:
     # the idea is to use bit manipulation to set the current number based on the previous number
-    # for example, 
+    # for example,
     # n = 1, ans = 0b1
     # n = 2 (10), we need to shift 2 bits of the previous ans to the left and add `n`
     # i.e. 1 -> 100 (shift 2 bits to the left) -> 110 (set `10`). ans = 0b110
-    # n = 3 (11), we need to shift 2 bits of the previous ans to the left and add `n` 
+    # n = 3 (11), we need to shift 2 bits of the previous ans to the left and add `n`
     # i.e 110 -> 11000 (shift 2 bits to the left) -> 11011 (set `11`). ans = 0b11011
     # n = 4 (100), we need to shift 3 bits of the previous ans to the left and add `n`
     # i.e. 11011 -> 11011000 (shift 3 bits to the left) -> 11011100 (set `100). ans = 0b11011100
     # so now we can see a pattern here
-    # we need to shift `l` bits of the previous ans to the left and add the current `i` 
+    # we need to shift `l` bits of the previous ans to the left and add the current `i`
     # how to know `l`? it is not difficult to see `x` only increases when we meet power of 2
     def concatenatedBinary(self, n: int) -> int:
         M = 10 ** 9 + 7
@@ -138,23 +138,23 @@ class Solution:
 </TabItem>
 
 <TabItem value="java" label="Java">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```java
 // Time Complexity: O(N)
 // Space Complexity: O(1)
 class Solution {
     // the idea is to use bit manipulation to set the current number based on the previous number
-    // for example, 
+    // for example,
     // n = 1, ans = 0b1
     // n = 2 (10), we need to shift 2 bits of the previous ans to the left and add `n`
     // i.e. 1 -> 100 (shift 2 bits to the left) -> 110 (set `10`). ans = 0b110
-    // n = 3 (11), we need to shift 2 bits of the previous ans to the left and add `n` 
+    // n = 3 (11), we need to shift 2 bits of the previous ans to the left and add `n`
     // i.e 110 -> 11000 (shift 2 bits to the left) -> 11011 (set `11`). ans = 0b11011
     // n = 4 (100), we need to shift 3 bits of the previous ans to the left and add `n`
     // i.e. 11011 -> 11011000 (shift 3 bits to the left) -> 11011100 (set `100). ans = 0b11011100
     // so now we can see a pattern here
-    // we need to shift `l` bits of the previous ans to the left and add the current `i` 
+    // we need to shift `l` bits of the previous ans to the left and add the current `i`
     // how to know `l`? it is not difficult to see `x` only increases when we meet power of 2
     public int concatenatedBinary(int n) {
         // `l` is the bit length to be shifted
@@ -184,23 +184,23 @@ class Solution {
 </TabItem>
 
 <TabItem value="go" label="Go">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```go
 // Time Complexity: O(N)
 // Space Complexity: O(1)
 
 // the idea is to use bit manipulation to set the current number based on the previous number
-// for example, 
+// for example,
 // n = 1, ans = 0b1
 // n = 2 (10), we need to shift 2 bits of the previous ans to the left and add `n`
 // i.e. 1 -> 100 (shift 2 bits to the left) -> 110 (set `10`). ans = 0b110
-// n = 3 (11), we need to shift 2 bits of the previous ans to the left and add `n` 
+// n = 3 (11), we need to shift 2 bits of the previous ans to the left and add `n`
 // i.e 110 -> 11000 (shift 2 bits to the left) -> 11011 (set `11`). ans = 0b11011
 // n = 4 (100), we need to shift 3 bits of the previous ans to the left and add `n`
 // i.e. 11011 -> 11011000 (shift 3 bits to the left) -> 11011100 (set `100). ans = 0b11011100
 // so now we can see a pattern here
-// we need to shift `l` bits of the previous ans to the left and add the current `i` 
+// we need to shift `l` bits of the previous ans to the left and add the current `i`
 // how to know `l`? it is not difficult to see `x` only increases when we meet power of 2
 func concatenatedBinary(n int) int {
     // `l` is the bit length to be shifted
@@ -221,7 +221,7 @@ func concatenatedBinary(n int) int {
         // e.g. 0001 << 3 = 0001000
         // e.g. 0001000 | 0001111 = 0001111
         ans = ((ans << l) | i) % M
-    }   
+    }
     return ans
 }
 

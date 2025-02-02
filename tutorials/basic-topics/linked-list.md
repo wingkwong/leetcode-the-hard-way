@@ -1,6 +1,6 @@
 ---
-title: "Linked List"
-description: "A linked list is a linear data structure that consists of nodes. Each node stores some data as well as the address of the next node."
+title: 'Linked List'
+description: 'A linked list is a linear data structure that consists of nodes. Each node stores some data as well as the address of the next node.'
 hide_table_of_contents: false
 keywords:
   - leetcode
@@ -17,8 +17,7 @@ In this tutorial you will learn about Linked Lists, and its implementation using
 
 Problem with using Arrays was that we have to have some idea about the size of the array that we require. To counter this we learnt about dynamic arrays. Linked list is another approach to tackle this problem. In linked lists we do not have to worry about the size at all.
 
-A linked list is a linear data structure that has a series of connected nodes. Each node has two fields, $data$ and an $address$.
-We call the start of a linked list, $head$. We can all it anything but by convention, we'll call it $head$.
+A linked list is a linear data structure that has a series of connected nodes. Each node has two fields, $data$ and an $address$. We call the start of a linked list, $head$. We can all it anything but by convention, we'll call it $head$.
 
 ## Representation of a Linked List
 
@@ -372,13 +371,13 @@ return false;
 
 ## Complexity Analysis
 
-| Operation                   | Complexity | Explanation                                                            |
-| --------------------------- | ---------- | ---------------------------------------------------------------------- |
-| Look up                     | $$O(N)$$   | We will have to iterate from head till the element we want             |
-| Insertion at beginning      | $$O(1)$$   | Simply change the head pointer                                         |
-| Insertion at the end        | $$O(N)$$   | Move from the head to the last item then change the pointers           |
-| Deletion from the beginning | $$O(1)$$   | Simply change the head pointer                                         |
-| Deletion from the end       | $$O(N)$$   | Move from the head to the node just before the item you want to delete |
+| Operation | Complexity | Explanation |
+| --- | --- | --- |
+| Look up | $$O(N)$$ | We will have to iterate from head till the element we want |
+| Insertion at beginning | $$O(1)$$ | Simply change the head pointer |
+| Insertion at the end | $$O(N)$$ | Move from the head to the last item then change the pointers |
+| Deletion from the beginning | $$O(1)$$ | Simply change the head pointer |
+| Deletion from the end | $$O(N)$$ | Move from the head to the node just before the item you want to delete |
 
 ## Example: [0237 - Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list/)
 
@@ -608,25 +607,6 @@ class Solution {
 </TabItem>
 </Tabs>
 
-export const suggestedProblems = [
-{
-"problemName": "206. Reverse Linked List",
-"difficulty": "Easy",
-"leetCodeLink": "https://leetcode.com/problems/reverse-linked-list/",
-"solutionLink": ""
-},
-{
-"problemName": "86. Partition List",
-"difficulty": "Medium",
-"leetCodeLink": "https://leetcode.com/problems/partition-list/",
-"solutionLink": ""
-},
-{
-"problemName": "148. Sort List",
-"difficulty": "Medium",
-"leetCodeLink": "https://leetcode.com/problems/sort-list/",
-"solutionLink": ""
-},
-]
+export const suggestedProblems = [ { "problemName": "206. Reverse Linked List", "difficulty": "Easy", "leetCodeLink": "https://leetcode.com/problems/reverse-linked-list/", "solutionLink": "" }, { "problemName": "86. Partition List", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/partition-list/", "solutionLink": "" }, { "problemName": "148. Sort List", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/sort-list/", "solutionLink": "" }, ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />

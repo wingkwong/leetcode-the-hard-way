@@ -1,5 +1,5 @@
 ---
-description: "Author: @ColeB2 | https://leetcode.com/problems/lru-cache/"
+description: 'Author: @ColeB2 | https://leetcode.com/problems/lru-cache/'
 tags: [Hash Table, Linked List, Design, Doubly-Linked List]
 ---
 
@@ -47,16 +47,16 @@ lRUCache.get(4);    // return 4
 
 - `1 <= capacity <= 3000`
 - `0 <= key <= 10^4`
-- `0 <= value <= 10^5`
-At most `2 * 10^5` calls will be made to `get` and `put`.
+- `0 <= value <= 10^5` At most `2 * 10^5` calls will be made to `get` and `put`.
 
 ## Approach 1: Doubly-Linked List
 
-For a design question, it helps to brainstorm out approach, and get all the requirements we need to breakdown how we should design it. So we know we are given a $$capacity$$ meaning and if we ever go over our capacity we are going to have to remove an item. We also know we need to get and put into our cache in $$O(1)$$ time, so that points towards a Hash map. With a hash map, we can get and put key-value pairs inside of it $$O(1)$$. 
+For a design question, it helps to brainstorm out approach, and get all the requirements we need to breakdown how we should design it. So we know we are given a $$capacity$$ meaning and if we ever go over our capacity we are going to have to remove an item. We also know we need to get and put into our cache in $$O(1)$$ time, so that points towards a Hash map. With a hash map, we can get and put key-value pairs inside of it $$O(1)$$.
 
 So now how do we handle the order in which we use items? We could use an array, but there is no way to quickly remove an item from the middle to update its position to the front without using $$O(n)$$ time. We need a way to track both the front and the back, as well as have $$O(1)$$ removal time. That is where a doubly-linked list comes into play! With a doubly-linked list, we can track both the head and tail of the list, so we can add nodes to the front in $$O(1)$$ time to update the order items were used in. We can also remove from the tail in $$O(1)$$ time when we go over capacity and need to remove the least recently used item. We can also remove a node form anywhere inside the linked list in $$O(1)$$ since unlike a singly-linked list, a doubly-linked list has both the next and previous pointers for access to both nodes next to a given node. This gives us the perfect data structure.
 
 To recap we need:
+
 1. A hash map for $$O(1)$$ access to a node given a key.
 2. A doubly linked list for $$O(1)$$ insertion and removal times.
 
@@ -127,7 +127,7 @@ class LRUCache:
             return self.hash_map[key].val
         # did not find, return -1
         return -1
-        
+
 
     def put(self, key: int, value: int) -> None:
         # make sure key is in out LRU Cache

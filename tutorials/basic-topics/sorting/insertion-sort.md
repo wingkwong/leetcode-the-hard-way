@@ -1,6 +1,6 @@
 ---
-title: "Insertion Sort"
-description: "An sorting algorithm based on picking one element at a time and inserting it in sorted order."
+title: 'Insertion Sort'
+description: 'An sorting algorithm based on picking one element at a time and inserting it in sorted order.'
 hide_table_of_contents: false
 keywords:
   - leetcode
@@ -10,7 +10,7 @@ keywords:
   - insertion sort
 ---
 
-<TutorialCredits authors="@Shivashish-rwt" contributors="@wingkwong" />
+<TutorialCredits authors="@Shivashish-rwt" contributors="@wkw" />
 
 ## Overview
 
@@ -158,31 +158,6 @@ Apart from sorting the the given array we are not doing anything in the solution
 
 We are not using any extra space apart from the array we have to sort. So, the space complexity is $O(1)$.
 
-export const suggestedProblems = [
-{
-"problemName": "1365 - How Many Numbers Are Smaller Than the Current Number",
-"difficulty": "Easy",
-"leetCodeLink": "https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/",
-"solutionLink": "../../../solutions/1300-1399/how-many-numbers-are-smaller-than-the-current-number-easy"
-},
-{
-"problemName": "2037 - Minimum Number of Moves to Seat Everyone",
-"difficulty": "Easy",
-"leetCodeLink": "https://leetcode.com/problems/minimum-number-of-moves-to-seat-everyone/",
-"solutionLink": ""
-},
-{
-"problemName": "1913 - Maximum Product Difference Between Two Pairs",
-"difficulty": "Easy",
-"leetCodeLink": "https://leetcode.com/problems/maximum-product-difference-between-two-pairs/",
-"solutionLink": ""
-},
-{
-"problemName": "2089 - Find Target Indices After Sorting Array",
-"difficulty": "Easy",
-"leetCodeLink": "https://leetcode.com/problems/find-target-indices-after-sorting-array/",
-"solutionLink": ""
-},
-]
+export const suggestedProblems = [ { "problemName": "1365 - How Many Numbers Are Smaller Than the Current Number", "difficulty": "Easy", "leetCodeLink": "https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/", "solutionLink": "../../../solutions/1300-1399/how-many-numbers-are-smaller-than-the-current-number-easy" }, { "problemName": "2037 - Minimum Number of Moves to Seat Everyone", "difficulty": "Easy", "leetCodeLink": "https://leetcode.com/problems/minimum-number-of-moves-to-seat-everyone/", "solutionLink": "" }, { "problemName": "1913 - Maximum Product Difference Between Two Pairs", "difficulty": "Easy", "leetCodeLink": "https://leetcode.com/problems/maximum-product-difference-between-two-pairs/", "solutionLink": "" }, { "problemName": "2089 - Find Target Indices After Sorting Array", "difficulty": "Easy", "leetCodeLink": "https://leetcode.com/problems/find-target-indices-after-sorting-array/", "solutionLink": "" }, ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />
