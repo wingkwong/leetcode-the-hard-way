@@ -1,6 +1,6 @@
 ---
-title: 'Counting Sort'
-description: ''
+title: "Counting Sort"
+description: ""
 hide_table_of_contents: true
 draft: true
 keywords:
@@ -11,4 +11,4 @@ keywords:
   - counting sort
 ---
 
-<TutorialAuthors names="@TBC"/>
+<TutorialCredits authors="@TBC"/>

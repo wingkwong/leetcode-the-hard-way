@@ -1,6 +1,6 @@
 ---
-title: 'Tim Sort'
-description: 'Timsort is a fast stable sorting algorithm based upon insertion sort and merge sort.'
+title: "Tim Sort"
+description: "Timsort is a fast stable sorting algorithm based upon insertion sort and merge sort."
 hide_table_of_contents: true
 keywords:
   - leetcode
@@ -10,49 +10,48 @@ keywords:
   - tim sort
 ---
 
-<TutorialAuthors names="@Bobliuuu"/>
-<Contributors names="@wingkwong" />
+<TutorialCredits authors="@Bobliuuu" contributors="@wingkwong" />
 
 ## Overview
 
-Timsort is a fast stable sorting algorithm based upon both [insertion sort](insertion-sort.md) and [merge sort](merge-sort.md). The algorithm was first created by Tim Peters in 2002, and is now being used in Python's `sort()` and Java's `Arrays.sort()`. 
+Timsort is a fast stable sorting algorithm based upon both [insertion sort](insertion-sort.md) and [merge sort](merge-sort.md). The algorithm was first created by Tim Peters in 2002, and is now being used in Python's `sort()` and Java's `Arrays.sort()`.
 The reason this algorithm is so fast is because it leverages the benefits of both merge sort and insertion sort. Let's see how it works!
 
 ## Algorithm
 
-Timsort works by first splitting an array into **runs**. A **run** is a subarray of data spliced from the original array. 
-These runs are generated using merge sort (each run has a standard size of 32-64, to split the array into small enough pieces for insertion sort to be fast on each one), and insertion sort is used to sort each run. Finally, merge sort combines these sorted arrays together recursively. 
+Timsort works by first splitting an array into **runs**. A **run** is a subarray of data spliced from the original array.
+These runs are generated using merge sort (each run has a standard size of 32-64, to split the array into small enough pieces for insertion sort to be fast on each one), and insertion sort is used to sort each run. Finally, merge sort combines these sorted arrays together recursively.
 
-Basically, to run timsort: 
+Basically, to run timsort:
 
 - We split the array into runs.
 - For each run, run insertion sort to sort that section.
-- Merge runs together one by one using merge sort, by comparing values in each sorted list and combining them. 
+- Merge runs together one by one using merge sort, by comparing values in each sorted list and combining them.
 
-This algorithm works because each run is sorted using insertion sort, and merge sort makes sure that each subarray is merged to the original array in the correct position. 
+This algorithm works because each run is sorted using insertion sort, and merge sort makes sure that each subarray is merged to the original array in the correct position.
 
 ## Example: [0287 - Find The Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)
 
 > An array of integers in the range [1, n] is given, where one integer is repeated. We have to find this repeated number.
 
-*Naive Approach*: Using a Hashmap or a frequency array, we can store the number of times each element comes up. We then return an array by looping through the frequency array finding the value that appears twice. However, this requires $$O(n)$$ space complexity, and the problem requires us to have $O(1)$ space complexity. 
+_Naive Approach_: Using a Hashmap or a frequency array, we can store the number of times each element comes up. We then return an array by looping through the frequency array finding the value that appears twice. However, this requires $$O(n)$$ space complexity, and the problem requires us to have $O(1)$ space complexity.
 
-For this sort of problem, we can use timsort to lower our space complexity! 
+For this sort of problem, we can use timsort to lower our space complexity!
 
 ### Pseudocode
 
 - Sort the array using timsort
 - Loop through the array
-- If two values are the same, then that value must be repeated. Return that value. 
+- If two values are the same, then that value must be repeated. Return that value.
 
 ### Dry Run
 
-Let's do a dry run of timsort with the array $[5, 4, 3, 1, 2, 6, 7, 4]$, and a run size of $2$. 
+Let's do a dry run of timsort with the array $[5, 4, 3, 1, 2, 6, 7, 4]$, and a run size of $2$.
 
-- Each run is sorted using insertion sort. The array becomes $[4, 5, 1, 3, 2, 6, 4, 7]$. 
-- The merges happen using recursion. We first attempt to split the array into two parts, down the middle. 
-- First, the left part is merged, meaning the first two runs are merged. Then the array becomes $[1, 3, 4, 5, 2, 6, 4, 7]$. 
-- Then, the right part is merged, meaning the next two runs are merged. The the array becomes $[1, 3, 4, 5, 2, 4, 6, 7]$. 
+- Each run is sorted using insertion sort. The array becomes $[4, 5, 1, 3, 2, 6, 4, 7]$.
+- The merges happen using recursion. We first attempt to split the array into two parts, down the middle.
+- First, the left part is merged, meaning the first two runs are merged. Then the array becomes $[1, 3, 4, 5, 2, 6, 4, 7]$.
+- Then, the right part is merged, meaning the next two runs are merged. The the array becomes $[1, 3, 4, 5, 2, 4, 6, 7]$.
 - Finally, the entire array is merged. The array is finally sorted: $[1, 2, 3, 4, 4, 5, 6, 7]$.
 
 <Tabs>
@@ -63,7 +62,7 @@ Let's do a dry run of timsort with the array $[5, 4, 3, 1, 2, 6, 7, 4]$, and a r
 class Solution {
 public:
     // initalize the size of each run
-    const int RUN = 32; 
+    const int RUN = 32;
     void insertionSort(vector<int>& nums, int left, int right) {
         for (int i = left; i <= right; i++) {
             int tmp = nums[i];
@@ -77,7 +76,7 @@ public:
     }
 
     void merge(vector<int>& nums, int left, int mid, int right) {
-        // maintain the two previous lists 
+        // maintain the two previous lists
         vector<int> lt, rt;
         int lenlt = mid - left + 1, lenrt = right - mid;
         for (int i = 0; i < lenlt; i++) {
@@ -86,7 +85,7 @@ public:
         for (int i = 0; i < lenrt; i++) {
             rt.push_back(nums[mid + 1 + i]);
         }
-        // start recreating the correct list, putting the smaller one each time 
+        // start recreating the correct list, putting the smaller one each time
         int i = 0, j = 0, k = left;
         while (i < lenlt && j < lenrt) {
             if (lt[i] <= rt[j]) {
@@ -111,7 +110,7 @@ public:
         int n = nums.size();
         // insertion sort on each run
         for (int i = 0; i < n; i += RUN) {
-            insertionSort(nums, i, min((i + RUN-1), (n - 1))); 
+            insertionSort(nums, i, min((i + RUN-1), (n - 1)));
         }
         for (int size = RUN; size < n; size = 2 * size) {
             for (int left = 0; left < n; left += 2 * size) {
@@ -127,7 +126,7 @@ public:
     }
     int findDuplicate(vector<int>& nums) {
         // use timsort to sort the array
-        timSort(nums); 
+        timSort(nums);
         for (int i = 0; i < nums.size() - 1; i++) {
             // return the duplicate if found
             if (nums[i] == nums[i + 1]) {
@@ -144,30 +143,29 @@ public:
 
 ## Complexity
 
-The time complexity of this program is $$O(n log n)$$, since the merging takes $logn$ steps, and merges $n$ values each time. 
+The time complexity of this program is $$O(n log n)$$, since the merging takes $logn$ steps, and merges $n$ values each time.
 
-The space complexity of this program is $$O(1)$$, since we don't need any extra space other than our original array. 
+The space complexity of this program is $$O(1)$$, since we don't need any extra space other than our original array.
 
 export const suggestedProblems = [
-    {
-        "problemName": "0075 - Sort Colors",
-        "difficulty": "Easy",
-        "leetCodeLink": "https://leetcode.com/problems/sort-colors/",
-        "solutionLink": "../../../solutions/0000-0099/sort-colors-medium"
-    },
-    {
-        "problemName": "0268 - Missing Number",
-        "difficulty": "Easy",
-        "leetCodeLink": "https://leetcode.com/problems/missing-number/",
-        "solutionLink": "../../../solutions/0200-0299/missing-number-easy"
-    },
-    {
-        "problemName" : "0448 - Find All Numbers Disappeared In An Array",
-        "difficulty" : "Easy",
-        "leetCodeLink" : "https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/",
-        "solutionLink" : ""
-    },
+{
+"problemName": "0075 - Sort Colors",
+"difficulty": "Easy",
+"leetCodeLink": "https://leetcode.com/problems/sort-colors/",
+"solutionLink": "../../../solutions/0000-0099/sort-colors-medium"
+},
+{
+"problemName": "0268 - Missing Number",
+"difficulty": "Easy",
+"leetCodeLink": "https://leetcode.com/problems/missing-number/",
+"solutionLink": "../../../solutions/0200-0299/missing-number-easy"
+},
+{
+"problemName" : "0448 - Find All Numbers Disappeared In An Array",
+"difficulty" : "Easy",
+"leetCodeLink" : "https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/",
+"solutionLink" : ""
+},
 ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />
-

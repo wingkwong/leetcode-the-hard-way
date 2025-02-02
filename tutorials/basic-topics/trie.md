@@ -1,6 +1,6 @@
 ---
-title: 'Trie'
-description: 'A trie or prefix tree is a tree data structure used to efficiently store and retrieve keys in a dataset of strings.'
+title: "Trie"
+description: "A trie or prefix tree is a tree data structure used to efficiently store and retrieve keys in a dataset of strings."
 # hide_table_of_contents: true
 keywords:
   - leetcode
@@ -10,7 +10,7 @@ keywords:
   - data structure
 ---
 
-<TutorialAuthors names="@wingkwong"/>
+<TutorialCredits authors="@wingkwong"/>
 
 ## Overview
 
@@ -48,8 +48,7 @@ trie.search("app");     // return True
 
 - $1 <= word.length, prefix.length <= 2000$
 - word and prefix consist only of lowercase English letters.
-- At most 3 * 10^4 calls in total will be made to insert, search, and startsWith.
-
+- At most 3 \* 10^4 calls in total will be made to insert, search, and startsWith.
 
 ## Trie
 
@@ -61,7 +60,7 @@ We can see Trie containing a number of Trie nodes. Each node contains a value an
 
 ## Trie Node
 
-Each Trie Node should have a children array with the size of $26$ for character $a$ to $z$. Also it has a boolean variable $$isEndOfWord$$ to indicate if a word is ended at this node. 
+Each Trie Node should have a children array with the size of $26$ for character $a$ to $z$. Also it has a boolean variable $$isEndOfWord$$ to indicate if a word is ended at this node.
 
 ```cpp
 class TrieNode {
@@ -70,7 +69,7 @@ class TrieNode {
   bool isEndOfWord;
   // children for 26 characters
   TrieNode* children[26];
-  
+
   // constructor - setting initial values
   TrieNode() {
     // no word is ended here
@@ -83,10 +82,10 @@ class TrieNode {
 };
 ```
 
-## Initializing 
+## Initializing
 
 ```cpp
-Trie() { 
+Trie() {
     // init Trie - define the very first node
     root = new TrieNode();
 }
@@ -102,7 +101,7 @@ bool search(string word) {
     TrieNode* node = root;
     // iterate the word
     for (int i = 0; i < (int) word.size(); i++) {
-        // get the index of the character 
+        // get the index of the character
         // a -> 0
         // b -> 1
         // ...
@@ -127,15 +126,15 @@ void insert(string word) {
     // start from the root node
     TrieNode* node = root;
     for (int i = 0; i < (int) word.size(); i++) {
-        // get the index of the character 
+        // get the index of the character
         // a -> 0
         // b -> 1
         // ...
         // z -> 25
         int idx = word[i] - 'a';
-        // traverse each node, 
+        // traverse each node,
         if (!node->children[idx]) {
-            // if the node doesn't exist, 
+            // if the node doesn't exist,
             // create a new node
             node->children[idx] = new TrieNode();
         }
@@ -157,7 +156,7 @@ bool startsWith(string prefix) {
     TrieNode* node = root;
     // iterate each character in prefix
     for (int i = 0; i < (int) prefix.size(); i++) {
-        // get the index of the character 
+        // get the index of the character
         // a -> 0
         // b -> 1
         // ...

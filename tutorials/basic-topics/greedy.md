@@ -1,6 +1,6 @@
 ---
-title: 'Greedy'
-description: 'Designing greedy algorithms to find a greedy strategy that produces an optimal solution to the problem'
+title: "Greedy"
+description: "Designing greedy algorithms to find a greedy strategy that produces an optimal solution to the problem"
 hide_table_of_contents: false
 keywords:
   - leetcode
@@ -9,7 +9,7 @@ keywords:
   - algorithm
 ---
 
-<TutorialAuthors names="@abhishek-sultaniya, @wingkwong"/>
+<TutorialCredits authors="@abhishek-sultaniya, @wingkwong"/>
 
 ## Overview
 
@@ -71,11 +71,11 @@ public:
 	}
 };
 ```
+
 </TabItem>
 </Tabs>
 
 ## Example 2: [455 - Assign Cookies](https://leetcode.com/problems/assign-cookies/)
-
 
 > Assume you are an awesome parent and want to give your children some cookies. But, you should give each child at most one cookie.
 >
@@ -103,40 +103,41 @@ public:
 	}
 };
 ```
+
 </TabItem>
 </Tabs>
 
 export const suggestedProblems = [
-  {
-    "problemName": "0561 - Array Partition",
-    "difficulty": "Easy",
-    "leetCodeLink": "https://leetcode.com/problems/array-partition/",
-    "solutionLink": ""
-  },
-  {
-    "problemName": "0860 - Lemonade Change",
-    "difficulty": "Easy",
-    "leetCodeLink": "https://leetcode.com/problems/lemonade-change/",
-    "solutionLink": ""  
-  },
-  {
-    "problemName": "1005 - Maximize Sum Of Array After K Negations",
-    "difficulty": "Easy",
-    "leetCodeLink": "https://leetcode.com/problems/maximize-sum-of-array-after-k-negations/",
-    "solutionLink": ""
-  },
-  {
-    "problemName": "0045 - Jump Game II",
-    "difficulty": "Medium",
-    "leetCodeLink": "https://leetcode.com/problems/jump-game-ii/",
-    "solutionLink": ""
-  },
-  {
-    "problemName": "0402 - Remove K Digits",
-    "difficulty": "Medium",
-    "leetCodeLink": "https://leetcode.com/problems/remove-k-digits/",
-    "solutionLink": ""
-  },
+{
+"problemName": "0561 - Array Partition",
+"difficulty": "Easy",
+"leetCodeLink": "https://leetcode.com/problems/array-partition/",
+"solutionLink": ""
+},
+{
+"problemName": "0860 - Lemonade Change",
+"difficulty": "Easy",
+"leetCodeLink": "https://leetcode.com/problems/lemonade-change/",
+"solutionLink": ""
+ },
+{
+"problemName": "1005 - Maximize Sum Of Array After K Negations",
+"difficulty": "Easy",
+"leetCodeLink": "https://leetcode.com/problems/maximize-sum-of-array-after-k-negations/",
+"solutionLink": ""
+},
+{
+"problemName": "0045 - Jump Game II",
+"difficulty": "Medium",
+"leetCodeLink": "https://leetcode.com/problems/jump-game-ii/",
+"solutionLink": ""
+},
+{
+"problemName": "0402 - Remove K Digits",
+"difficulty": "Medium",
+"leetCodeLink": "https://leetcode.com/problems/remove-k-digits/",
+"solutionLink": ""
+},
 ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />

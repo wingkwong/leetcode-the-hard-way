@@ -1,6 +1,6 @@
 ---
-title: 'Depth First Search (DFS)'
-description: 'In DFS, we aim to finish one branch before looking at other branches.'
+title: "Depth First Search (DFS)"
+description: "In DFS, we aim to finish one branch before looking at other branches."
 hide_table_of_contents: true
 keywords:
   - leetcode
@@ -10,7 +10,7 @@ keywords:
   - algorithm
 ---
 
-<TutorialAuthors names="@heiheihang"/>
+<TutorialCredits authors="@heiheihang"/>
 
 ## Overview
 
@@ -31,15 +31,15 @@ def dfs(node):
     if(node == None):
         # we stop when node is invalid
         return
-        
+
     # explore left branch first
     dfs(node.left)
-    
+
     # evalute current node
     print("I just visited the left branch!")
     print("I am number: " + str(node.val))
     print("I am visiting the right branch now!")
-    
+
     # explore right branch
     dfs(node.right)
 ```
@@ -53,19 +53,19 @@ def findMaximumDepth(root):
         if(node == None):
             # we stop when node is invalid
             return 0
-            
+
         # explore left branch first
         left_branch_depth = dfs(node.left)
-        
+
         print("I just visited the left branch!")
         print("I am visiting the right branch now!")
-        
+
         # explore right branch
         right_branch_depth = dfs(node.right)
-        
+
         # return the larger depth of the two branches
         return max(left_branch_depth, right_branch_depth) + 1
-    
+
     return dfs(root)
 ```
 
@@ -89,52 +89,52 @@ def findTreeDiameter(root):
         if(node == None):
             # we stop when node is invalid
             return 0
-            
+
         # explore left branch first
         left_branch_depth = dfs(node.left)
-        
+
         print("I just visited the left branch!")
         print("I am visiting the right branch now!")
-        
+
         # explore right branch
         right_branch_depth = dfs(node.right)
-        
+
         #the longest path at the current node is the maximum depth of left and right
         local_diameter = left_brach_depth + right_branch_depth + 1
-        
+
         #update the global variable
         nonlocal diameter
         diameter = max(diameter, local_diameter)
-        
+
         # return the larger depth of the two branches
         return max(left_branch_depth, right_branch_depth) + 1
-    
+
     dfs(root)
-    
+
     return diameter
 ```
 
 Here are some similar problems in which you can tweak the template above to obtain a solution.
 
 export const suggestedProblems = [
-  {
-    "problemName": "0404 - Sum of Left Leaves",
-    "difficulty": "Easy",
-    "leetCodeLink": "https://leetcode.com/problems/sum-of-left-leaves/",
-    "solutionLink": "../../solutions/0400-0499/sum-of-left-leaves-easy"
-  },
-  {
-    "problemName": "0110 - Balanced Binary Tree",
-    "difficulty": "Easy",
-    "leetCodeLink": "https://leetcode.com/problems/balanced-binary-tree/",
-    "solutionLink": "../../solutions/0100-0199/balanced-binary-tree-easy"
-  },
-  {
-    "problemName": "0559 - Maximum Depth of N-ary Tree",
-    "difficulty": "Easy",
-    "leetCodeLink": "https://leetcode.com/problems/maximum-depth-of-n-ary-tree/",
-    "solutionLink": "../../solutions/0500-0599/maximum-depth-of-n-ary-tree-easy"
-  },
+{
+"problemName": "0404 - Sum of Left Leaves",
+"difficulty": "Easy",
+"leetCodeLink": "https://leetcode.com/problems/sum-of-left-leaves/",
+"solutionLink": "../../solutions/0400-0499/sum-of-left-leaves-easy"
+},
+{
+"problemName": "0110 - Balanced Binary Tree",
+"difficulty": "Easy",
+"leetCodeLink": "https://leetcode.com/problems/balanced-binary-tree/",
+"solutionLink": "../../solutions/0100-0199/balanced-binary-tree-easy"
+},
+{
+"problemName": "0559 - Maximum Depth of N-ary Tree",
+"difficulty": "Easy",
+"leetCodeLink": "https://leetcode.com/problems/maximum-depth-of-n-ary-tree/",
+"solutionLink": "../../solutions/0500-0599/maximum-depth-of-n-ary-tree-easy"
+},
 ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />

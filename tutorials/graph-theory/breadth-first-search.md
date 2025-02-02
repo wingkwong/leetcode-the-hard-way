@@ -1,6 +1,6 @@
 ---
-title: 'Breadth First Search (BFS)'
-description: 'In BFS, we explore all the closest nodes first before going one step further.'
+title: "Breadth First Search (BFS)"
+description: "In BFS, we explore all the closest nodes first before going one step further."
 hide_table_of_contents: true
 keywords:
   - leetcode
@@ -10,7 +10,7 @@ keywords:
   - algorithm
 ---
 
-<TutorialAuthors names="@heiheihang"/>
+<TutorialCredits authors="@heiheihang"/>
 
 ## Overview
 
@@ -28,16 +28,16 @@ We will introduce the following template for BFS:
 def findTargetNode(root, targetValue):
     if(root is None):
         return None
-    
+
     #currentLevel contains the nodes with the same distance to root (closest so far)
     currentLevel = [root]
-    
+
     #we increase our depth one by one as long as there is still node
     while(len(currentLevel) > 0):
-    
+
         #we store the current level node's children in nextLevel
         nextLevel = []
-        
+
         for node in currentLevel:
             #skip if the node is None
             if(node is None):
@@ -46,17 +46,17 @@ def findTargetNode(root, targetValue):
             #because we are traversing the tree level by level
             if(node.val == targetValue):
                 return node
-                
+
             #add the children to nextLevel
             nextLevel.append(node.left)
             nextLevel.append(node.right)
         #change the currentLevel to nextLevel (no target node in this level, go next)
         currentLevel = nextLevel
-    
-    #if no target node has been returned    
+
+    #if no target node has been returned
     return None
-    
-    
+
+
 ```
 
 In general, we use a **queue** to model **BFS.** As the head of the queue represents the closest nodes, and the tail of the queue represents the furthest nodes. We look at the head of the queue, and add new nodes to the end of the queue.
@@ -90,7 +90,7 @@ def averageOfLevels(self, root: Optional[TreeNode]) -> List[float]:
 
             #stores the total sum of the currentLevel nodes
             currentLevelNodeCount = 0
-            
+
             currentLevelSum = 0
             for node in currentLevel:
                 if(node is None):
@@ -102,7 +102,7 @@ def averageOfLevels(self, root: Optional[TreeNode]) -> List[float]:
             #calculate the level average
             if currentLevelNodeCount:
                 currentLevelAverage = currentLevelSum / currentLevelNodeCount
-                
+
                 answer.append(currentLevelAverage)
 
             #explore the nextLevel
@@ -113,24 +113,24 @@ def averageOfLevels(self, root: Optional[TreeNode]) -> List[float]:
 We should keep practising the this template of BFS in these similar problems.
 
 export const suggestedProblems = [
-  {
-    "problemName": "0199 -  Binary Tree Right Side View",
-    "difficulty": "Medium",
-    "leetCodeLink": "https://leetcode.com/problems/binary-tree-right-side-view/",
-    "solutionLink": "../../solutions/0100-0199/binary-tree-right-side-view-medium"
-  },
-  {
-    "problemName": "0103 - Binary Tree Zigzag Level Order Traversal",
-    "difficulty": "Medium",
-    "leetCodeLink": "https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/",
-    "solutionLink": "../../solutions/0100-0199/binary-tree-zigzag-level-order-traversal-medium"
-  },
-  {
-    "problemName": "0101 - Symmetric Tree",
-    "difficulty": "Easy",
-    "leetCodeLink": "https://leetcode.com/problems/symmetric-tree/",
-    "solutionLink": "../../solutions/0100-0199/symmetric-tree-easy"
-  },
+{
+"problemName": "0199 - Binary Tree Right Side View",
+"difficulty": "Medium",
+"leetCodeLink": "https://leetcode.com/problems/binary-tree-right-side-view/",
+"solutionLink": "../../solutions/0100-0199/binary-tree-right-side-view-medium"
+},
+{
+"problemName": "0103 - Binary Tree Zigzag Level Order Traversal",
+"difficulty": "Medium",
+"leetCodeLink": "https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/",
+"solutionLink": "../../solutions/0100-0199/binary-tree-zigzag-level-order-traversal-medium"
+},
+{
+"problemName": "0101 - Symmetric Tree",
+"difficulty": "Easy",
+"leetCodeLink": "https://leetcode.com/problems/symmetric-tree/",
+"solutionLink": "../../solutions/0100-0199/symmetric-tree-easy"
+},
 ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />

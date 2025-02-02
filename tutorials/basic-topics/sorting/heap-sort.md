@@ -1,6 +1,6 @@
 ---
-title: 'Heap Sort'
-description: ''
+title: "Heap Sort"
+description: ""
 hide_table_of_contents: true
 draft: true
 keywords:
@@ -11,4 +11,4 @@ keywords:
   - heap sort
 ---
 
-<TutorialAuthors names="@TBC"/>
+<TutorialCredits authors="@TBC"/>

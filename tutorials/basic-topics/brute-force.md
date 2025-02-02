@@ -1,6 +1,6 @@
 ---
-title: 'Brute Force'
-description: 'Brute Force is used when the problem size is limited'
+title: "Brute Force"
+description: "Brute Force is used when the problem size is limited"
 hide_table_of_contents: true
 keywords:
   - leetcode
@@ -8,7 +8,7 @@ keywords:
   - brute force
 ---
 
-<TutorialAuthors names="@wingkwong"/>
+<TutorialCredits authors="@wingkwong"/>
 
 ## Overview
 
@@ -27,7 +27,7 @@ Note that the brute force approach often results in a solution that has a high t
 
 > Given an array nums. We define a running sum of an array as $runningSum[i] = sum(nums[0] ... nums[i])$.
 > Return the running sum of nums.
-> 
+>
 > Input: nums = $[1,2,3,4]$
 >
 > Output: $[1,3,6,10]$
@@ -68,7 +68,7 @@ public:
 > The value of $|x|$ is defined as:
 >
 > $x$ if $x >= 0$
-> 
+>
 > $-x$ if $x < 0$
 
 Similar to Example 1, we iterate each element and iterate the elements after that to search for each pair to see if the condition can be met or not. Some better approaches would be using [Sliding Window](../basic-topics/sliding-window) or Counting Sort to reduce time complexity.

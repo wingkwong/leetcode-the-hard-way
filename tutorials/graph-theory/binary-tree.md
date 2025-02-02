@@ -1,6 +1,6 @@
 ---
-title: 'Binary Tree'
-description: 'Binary Tree is a tree structure in which eacho node only contains at most two children'
+title: "Binary Tree"
+description: "Binary Tree is a tree structure in which eacho node only contains at most two children"
 keywords:
   - leetcode
   - tutorial
@@ -8,7 +8,7 @@ keywords:
   - data structure
 ---
 
-<TutorialAuthors names="@wingkwong"/>
+<TutorialCredits authors="@wingkwong"/>
 
 ## Overview
 
@@ -17,9 +17,9 @@ A binary tree is a tree data structure in which each node has at most two childr
 ## Properties
 
 - The number of nodes on level $l$ is equal to the $2^l$, like on level $0$ (root node) we got $2 ^ 0 >= 1$ node only.
-- The Maximum number of nodes in a binary tree of height $h$ is $2^h - 1$. 
+- The Maximum number of nodes in a binary tree of height $h$ is $2^h - 1$.
 
-## Traversal 
+## Traversal
 
 There are different ways to traverse trees - In-order, Pre-order, and Post-order. Supposing we have a binary tree with $5$ nodes,
 
@@ -42,6 +42,7 @@ void preorder(TreeNode* node) {
     preorder(node->right);
 }
 ```
+
 </TabItem>
 
 <TabItem value="py" label="Python">
@@ -49,10 +50,11 @@ void preorder(TreeNode* node) {
 ```py
 def preorder(node):
     if (node == None): return
-    s.append(node.val)    
+    s.append(node.val)
     preorder(node.left)
     preorder(node.right)
 ```
+
 </TabItem>
 </Tabs>
 
@@ -73,6 +75,7 @@ void inorder(TreeNode* node) {
     inorder(node->right);
 }
 ```
+
 </TabItem>
 
 <TabItem value="py" label="Python">
@@ -84,6 +87,7 @@ def inorder(node):
     s.append(node.val)
     inorder(node.right)
 ```
+
 </TabItem>
 </Tabs>
 
@@ -104,6 +108,7 @@ void postorder(TreeNode* node) {
     s.push_back(node->val);
 }
 ```
+
 </TabItem>
 
 <TabItem value="py" label="Python">
@@ -113,17 +118,16 @@ def postorder(node):
     if (node == None): return
     postorder(node.left)
     postorder(node.right)
-    s.append(node.val)  
+    s.append(node.val)
 ```
 
 </TabItem>
 </Tabs>
 
-
 ## Summary
 
-| Traversal  | Path               | Order               |
-| ---------- | ------------------ | ------------------- |
+| Traversal  | Path                  | Order                 |
+| ---------- | --------------------- | --------------------- |
 | Pre-order  | 1 -> 2 -> 4 -> 5 -> 3 | Root -> Left -> Right |
 | In-order   | 4 -> 2 -> 5 -> 1 -> 3 | Left -> Root -> Right |
-| Post-order | 4 -> 5 -> 2 -> 3 -> 1 | Left -> Right -> Root  |
+| Post-order | 4 -> 5 -> 2 -> 3 -> 1 | Left -> Right -> Root |

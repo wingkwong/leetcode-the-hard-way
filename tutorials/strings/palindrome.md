@@ -1,6 +1,6 @@
 ---
-title: 'Palindrome'
-description: 'A palindrome is a word, number, phrase, or other sequence of characters which reads the same backward as forward.'
+title: "Palindrome"
+description: "A palindrome is a word, number, phrase, or other sequence of characters which reads the same backward as forward."
 hide_table_of_contents: true
 keywords:
   - leetcode
@@ -8,15 +8,15 @@ keywords:
   - palindrome
 ---
 
-<TutorialAuthors names="@wingkwong"/>
+<TutorialCredits authors="@wingkwong"/>
 
 ## Overview
 
-A palindrome reads the same forward and backward. `amanaplanacanalpanama` and `10101` are the examples of palindrome. 
+A palindrome reads the same forward and backward. `amanaplanacanalpanama` and `10101` are the examples of palindrome.
 
-There are multiple ways to check if a string is a palindrome or not. 
+There are multiple ways to check if a string is a palindrome or not.
 
-### Iteration 
+### Iteration
 
 As we know it reads the same forward and backward, which means $s[0]$ is same as $s[n - 1]$, $s[1]$ is same as $s[n - 2]$ and so on. Therefore, we can iterate $n / 2$ times to check if the left side is same as the right side.
 
@@ -70,7 +70,6 @@ bool isPalindrome(const string& s) {
 </TabItem>
 </Tabs>
 
-
 <Tabs>
 <TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wingkwong"/>
@@ -80,6 +79,7 @@ bool isPalindrome(const string &s) {
     return equal(s.begin(), s.begin() + s.size() / 2, s.rbegin());
 }
 ```
+
 </TabItem>
 </Tabs>
 
@@ -100,5 +100,6 @@ bool palindromeWithRange(string s, int i, int j) {
     return true;
 }
 ```
+
 </TabItem>
 </Tabs>

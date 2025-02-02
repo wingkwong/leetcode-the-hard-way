@@ -1,6 +1,6 @@
 ---
-title: 'Hash Map'
-description: 'Hash Map provides quick lookup of certain values in O(1) time.'
+title: "Hash Map"
+description: "Hash Map provides quick lookup of certain values in O(1) time."
 hide_table_of_contents: true
 keywords:
   - leetcode
@@ -9,7 +9,7 @@ keywords:
   - algorithm
 ---
 
-<TutorialAuthors names="@heiheihang, @wingkwong"/>
+<TutorialCredits authors="@heiheihang, @wingkwong"/>
 
 ## Overview
 
@@ -45,7 +45,6 @@ We can see that the first two elements (`2` and `7` ) add up to the target (`9)`
 
 The naive way to solve this problem is to use a nested for-loop:
 
-
 <Tabs>
 <TabItem value="py" label="Python">
 <SolutionAuthor name="@heiheihang"/>
@@ -61,8 +60,9 @@ class Solution:
                 if(nums[i] + nums[j] == target):
                     # return the two indices if they do
                     return [i, j]
-        return -1    
+        return -1
 ```
+
 </TabItem>
 
 <TabItem value="cpp" label="C++">
@@ -83,8 +83,8 @@ public:
     }
 };
 ```
-</TabItem>
 
+</TabItem>
 
 <TabItem value="java" label="Java">
 <SolutionAuthor name="@wingkwong"/>
@@ -103,6 +103,7 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 </Tabs>
 
@@ -122,11 +123,12 @@ hash_map = {}
 input_1 = [2,7,11,15]
 
 # we put the (value, index) pair to the hash map
-hash_map[2] = 0 
+hash_map[2] = 0
 hash_map[7] = 1
 hash_map[11] = 2
 hash_map[15] = 3
 ```
+
 </TabItem>
 
 <TabItem value="cpp" label="C++">
@@ -144,8 +146,8 @@ for (int i = 0; i < input_1.size(); i++) {
     hash_map[input_1[i]] = i;
 }
 ```
-</TabItem>
 
+</TabItem>
 
 <TabItem value="java" label="Java">
 <SolutionAuthor name="@wingkwong"/>
@@ -162,11 +164,11 @@ for (int i = 0; i < input_1.length; i++) {
     hash_map.put(input_1[i], i);
 }
 ```
+
 </TabItem>
 </Tabs>
 
 The special feature of hash map is that, from now on, if we want to know a value exists in `input_1` or not, we can just perform:
-
 
 <Tabs>
 <TabItem value="py" label="Python">
@@ -178,6 +180,7 @@ if( 7 in hash_map):
 else:
     print("7 is not in input_1")
 ```
+
 </TabItem>
 
 <TabItem value="cpp" label="C++">
@@ -197,8 +200,8 @@ if (hash_map.count(7)) {
     cout << "7 is not in input_1" << endl;
 }
 ```
-</TabItem>
 
+</TabItem>
 
 <TabItem value="java" label="Java">
 <SolutionAuthor name="@wingkwong"/>
@@ -210,6 +213,7 @@ if (hash_map.containsKey(7)){
     System.out.println("7 is not in input_1");
 }
 ```
+
 </TabItem>
 </Tabs>
 
@@ -218,30 +222,30 @@ This operation only takes $$O(1)$$ time! Without hash map, we would need to iter
 After understanding Hash Map, are you able to solve [Two Sum](../../solutions/0000-0099/two-sum) in $$O(N)$$ time?
 
 export const suggestedProblems = [
-  {
-    "problemName": "0217 - Contains Duplicate",
-    "difficulty": "Easy",
-    "leetCodeLink": "https://leetcode.com/problems/contains-duplicate/",
-    "solutionLink": "../../solutions/0200-0299/contains-duplicate-easy"
-  },
-  {
-    "problemName": "0219 - Contains Duplicate II",
-    "difficulty": "Easy",
-    "leetCodeLink": "https://leetcode.com/problems/contains-duplicate-ii/",
-    "solutionLink": "../../solutions/0200-0299/contains-duplicate-ii-easy"
-  },
-  {
-    "problemName": "0003 - Longest Substring Without Repeating Characters",
-    "difficulty": "Medium",
-    "leetCodeLink": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
-    "solutionLink": "../../solutions/0000-0099/longest-substring-without-repeating-characters-medium"
-  },
-  {
-    "problemName": "0706 - Design HashMap",
-    "difficulty": "Medium",
-    "leetCodeLink": "https://leetcode.com/problems/design-hashmap/",
-    "solutionLink": "../../solutions/0700-0799/design-hashmap-medium"
-  },
+{
+"problemName": "0217 - Contains Duplicate",
+"difficulty": "Easy",
+"leetCodeLink": "https://leetcode.com/problems/contains-duplicate/",
+"solutionLink": "../../solutions/0200-0299/contains-duplicate-easy"
+},
+{
+"problemName": "0219 - Contains Duplicate II",
+"difficulty": "Easy",
+"leetCodeLink": "https://leetcode.com/problems/contains-duplicate-ii/",
+"solutionLink": "../../solutions/0200-0299/contains-duplicate-ii-easy"
+},
+{
+"problemName": "0003 - Longest Substring Without Repeating Characters",
+"difficulty": "Medium",
+"leetCodeLink": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+"solutionLink": "../../solutions/0000-0099/longest-substring-without-repeating-characters-medium"
+},
+{
+"problemName": "0706 - Design HashMap",
+"difficulty": "Medium",
+"leetCodeLink": "https://leetcode.com/problems/design-hashmap/",
+"solutionLink": "../../solutions/0700-0799/design-hashmap-medium"
+},
 ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />

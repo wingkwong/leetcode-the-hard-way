@@ -1,6 +1,6 @@
 ---
 title: "Bellman Ford Algorithm"
-description: 'Bellman Ford Algorithm computes shortest paths from a single source vertex to all of the other vertices in a weighted digraph'
+description: "Bellman Ford Algorithm computes shortest paths from a single source vertex to all of the other vertices in a weighted digraph"
 keywords:
   - leetcode
   - tutorial
@@ -8,7 +8,7 @@ keywords:
   - algorithm
 ---
 
-<TutorialAuthors names="@wingkwong"/>
+<TutorialCredits authors="@wingkwong"/>
 
 ## Overview
 
@@ -34,6 +34,7 @@ void bellman_ford(T_a3 &g, T_vector &dist, int src, int mx_edges) {
     }
 }
 ```
+
 </TabItem>
 
 <TabItem value="py" label="Python">

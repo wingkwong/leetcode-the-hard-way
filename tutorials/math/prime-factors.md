@@ -1,13 +1,13 @@
 ---
-title: 'Prime Factors'
-description: 'Factor of a given number which is a prime number.'
+title: "Prime Factors"
+description: "Factor of a given number which is a prime number."
 keywords:
   - leetcode
   - tutorial
   - prime factors
 ---
 
-<TutorialAuthors names="@Ishwarendra, @wingkwong"/>
+<TutorialCredits authors="@Ishwarendra, @wingkwong"/>
 
 ## Overview
 
@@ -15,7 +15,7 @@ A prime factor is a factor of a number that is also a prime number. For example,
 
 ## Approach #1: Finding prime factor in $\sqrt n$ time
 
-We know that every composite number $N$ has a prime factor less than $N$. Thus, we can iterate over numbers from $2$ to $N$ and whenever we find number that divides $N$ we divide $N$ by it until it no longer divides $N$. 
+We know that every composite number $N$ has a prime factor less than $N$. Thus, we can iterate over numbers from $2$ to $N$ and whenever we find number that divides $N$ we divide $N$ by it until it no longer divides $N$.
 
 <details>
 <summary>But wouldn't we accidently divide N by a non-prime number this way?</summary>
@@ -24,8 +24,7 @@ No, we won't because every composite number has a prime factor less than $N$ so 
 
 </details>
 
-
-We can further speed up our algorithm by using the fact that a number can have atmost $1$ prime factor greater than $\sqrt(n)$. This can be easily proved by assuming that a number contains two prime factors greater than $\sqrt{n}$, let's call them $P$ and $Q$. 
+We can further speed up our algorithm by using the fact that a number can have atmost $1$ prime factor greater than $\sqrt(n)$. This can be easily proved by assuming that a number contains two prime factors greater than $\sqrt{n}$, let's call them $P$ and $Q$.
 
 Since $P > \sqrt n$ and $Q > \sqrt n$ $\implies$ $P \cdot Q > \sqrt n  \cdot \sqrt n (= n^2)$. This is not possible as $P$ and $Q$ are prime factor of $N$ so their product must be less than or equal to $N$.
 
@@ -35,12 +34,11 @@ Since $P > \sqrt n$ and $Q > \sqrt n$ $\implies$ $P \cdot Q > \sqrt n  \cdot \sq
 <TabItem value="cpp" label="C++">
 <SolutionAuthor name="@Ishwarendra"/>
 
-
 ```cpp
 vector<int> getPrimeFactors(int n) {
   vector<int> prime_factors;
   // i * i <= n or i <= sqrt(n) both work.
-  for (int i = 2; i * i <= n; i++) { 
+  for (int i = 2; i * i <= n; i++) {
     while (n % i == 0) {
       prime_factors.emplace_back(i);
       n /= i;
@@ -70,7 +68,6 @@ Since the pre computation takes $O(MAX)$ time so we cannot find prime factors of
 <TabItem value="cpp" label="C++">
 <SolutionAuthor name="@Ishwarendra"/>
 
-
 ```cpp
 // For sake of simplicity let us assume min_prime is a global vector.
 vector<int> getPrimeFactorsInLogn(int n) {
@@ -97,7 +94,7 @@ vector<int> minPrime(int MAX) {
   vector<int> min_prime(MAX + 1);
   // Set min_prime[i] = i
   iota(begin(min_prime), end(min_prime), 0);
-  for (int i = 2; i * i <= MAX; i++) { 
+  for (int i = 2; i * i <= MAX; i++) {
       if (min_prime[i] != i) continue;
       // if min_prime[i] = i then i must be a prime number.
       // Any multiple of i less than i * i (i.e., i * 2, i * 3, ... i * (i - 1)) has a smaller prime factor than i.
@@ -107,6 +104,7 @@ vector<int> minPrime(int MAX) {
   return min_prime;
 }
 ```
+
 </details>
 
 Now, that we are aware the techniques used to find prime factors let us solve some problem to get a better grip over the topic.
@@ -151,7 +149,7 @@ class Solution {
   vector<int> minPrime(int MAX) {
     vector<int> min_prime(MAX + 1);
     iota(begin(min_prime), end(min_prime), 0);
-    for (int i = 2; i * i <= MAX; i++) { 
+    for (int i = 2; i * i <= MAX; i++) {
         if (min_prime[i] != i) continue;
         for (int j = i * i; j <= MAX; j += i) min_prime[j] = min(min_prime[j], i);
     }
@@ -165,7 +163,7 @@ class Solution {
       int smallest_prime_factor_of_n = min_prime[n];
       prime_factors.push_back(smallest_prime_factor_of_n);
       n /= smallest_prime_factor_of_n;
-    } 
+    }
     return prime_factors;
   }
 
@@ -200,21 +198,22 @@ In this problem, we have keep replacing $n$ with sum of it's prime factors. We n
 
 If we take a composite number then it can be written as product of atleast $2$ different numbers. Let $N$ be a composite number such that $N = A \cdot B$, where $A, B > 1$.
 
-We know that 
+We know that
 
-$$$
+$$
 \begin{equation}
   A \cdot B \geq 2 \cdot A
 \end{equation}
-$$$ 
+$$
 
-$$$
+$$
 \begin{equation}
   A \cdot B \geq 2 \cdot B
 \end{equation}
-$$$ 
+$$
 
-Adding $(1)$ and $(2)$ we get, $2 \cdot (A \cdot B) \geq 2 \cdot (A + B) \implies A \cdot B \geq A + B.$ 
+Adding $(1)$ and $(2)$ we get, $2 \cdot (A \cdot B) \geq 2 \cdot (A + B) \implies A \cdot B \geq A + B.$
+
 </details>
 
 <Tabs>
@@ -227,7 +226,7 @@ public:
   vector<int> getPrimeFactors(int n) {
     vector<int> prime_factors;
     // i * i <= n or i <= sqrt(n) both work.
-    for (int i = 2; i * i <= n; i++) { 
+    for (int i = 2; i * i <= n; i++) {
       while (n % i == 0) {
         prime_factors.emplace_back(i);
         n /= i;
@@ -259,7 +258,7 @@ The above code is bound to come out of `while` loop in atmost $log(n)$ steps. In
 
 ## [Example #3: 952. Largest Component Size by Common Factor](https://leetcode.com/problems/largest-component-size-by-common-factor/description/)
 
-This problem requires basic knowledge of graph traversal. The two popular traversals are [Depth First Search](../graph-theory/depth-first-search.md) and [Breadth First Search](../graph-theory/breadth-first-search.md). 
+This problem requires basic knowledge of graph traversal. The two popular traversals are [Depth First Search](../graph-theory/depth-first-search.md) and [Breadth First Search](../graph-theory/breadth-first-search.md).
 
 First let us see how to build the graph. Naive way of building graph would be to iterate over all $(i, j)$ pairs and check if $\gcd(nums_i, nums_j) > 1$. If it is then add an edge bweten them, else not. But this approch will take $O(n^2)$ operations in worst case, which will not pass.
 
@@ -277,6 +276,7 @@ Graph for above example looks as shown below. Although total node in the connect
 </details>
 
 Now, as the graph is built we need three main functions:
+
 1. `getPrimeFactorsInLogn(n)`: Gives us prime factor of a number $n$. Since $\max(nums)$ is only $10^5$ so we prefer this function over the one which does the same thing in $\sqrt n$ time.
 2. `getComponentCount(src)`: Starting from node $\text{src}$ how many nodes (that are present in `nums`) can be reached from it.
 3. `largestComponentSize(nums)`: The main function that builds graph and use other $2$ functions.
@@ -289,12 +289,12 @@ Now, as the graph is built we need three main functions:
 class Solution {
   // isPresent[i] = 1 if i is present in nums, else 0
   // g = graph using which we can find maximum connected component size
-  vector<int> isPresent; 
+  vector<int> isPresent;
   vector<vector<int>> g;
   vector<int> minPrime(int MAX) {
     vector<int> min_prime(MAX + 1);
     iota(begin(min_prime), end(min_prime), 0);
-    for (int i = 2; i * i <= MAX; i++) { 
+    for (int i = 2; i * i <= MAX; i++) {
         if (min_prime[i] != i) continue;
         for (int j = i * i; j <= MAX; j += i) min_prime[j] = min(min_prime[j], i);
     }
@@ -309,7 +309,7 @@ class Solution {
       if (n % smallest_prime_factor_of_n == 0) prime_factors.push_back(smallest_prime_factor_of_n);
       // Remove the prime factor completely from n
       while (n % smallest_prime_factor_of_n == 0) n /= smallest_prime_factor_of_n;
-    } 
+    }
     return prime_factors;
   }
 
@@ -331,7 +331,7 @@ class Solution {
       }
     }
     return count;
-  }  
+  }
 public:
   int largestComponentSize(vector<int>& nums) {
     int max_elem = *max_element(begin(nums), end(nums));
@@ -348,7 +348,7 @@ public:
         g[prime].emplace_back(num);
         g[num].emplace_back(prime);
       }
-    } 
+    }
     int ans = isPresent[1];
     for (int src = 2; src <= max_elem; src++) {
       ans = max(ans, getComponentSize(src, vis));
@@ -367,24 +367,24 @@ public:
 The process of finding connected components can be done using a data structure [Disjoint Set Union](../graph-theory/disjoint-set-union.md) as well.
 
 export const suggestedProblems = [
-  {
-    "problemName": "263. Ugly Number",
-    "difficulty": "Easy",
-    "leetCodeLink": "https://leetcode.com/problems/ugly-number/",
-    "solutionLink": "../../../solutions/0200-0299/ugly-number-easy"
-  },
-  {
-    "problemName": "650. 2 Keys Keyboard",
-    "difficulty": "Medium",
-    "leetCodeLink": "https://leetcode.com/problems/2-keys-keyboard/",
-    "solutionLink": "../../../solutions/0600-0699/two-keys-keyboard-medium"
-  },
-  {
-    "problemName": "2709. Greatest Common Divisor Traversal",
-    "difficulty": "Hard",
-    "leetCodeLink": "https://leetcode.com/problems/greatest-common-divisor-traversal/",
-    "solutionLink": "../../../solutions/2700-2799/greatest-common-divisor-traversal-hard"
-  },
+{
+"problemName": "263. Ugly Number",
+"difficulty": "Easy",
+"leetCodeLink": "https://leetcode.com/problems/ugly-number/",
+"solutionLink": "../../../solutions/0200-0299/ugly-number-easy"
+},
+{
+"problemName": "650. 2 Keys Keyboard",
+"difficulty": "Medium",
+"leetCodeLink": "https://leetcode.com/problems/2-keys-keyboard/",
+"solutionLink": "../../../solutions/0600-0699/two-keys-keyboard-medium"
+},
+{
+"problemName": "2709. Greatest Common Divisor Traversal",
+"difficulty": "Hard",
+"leetCodeLink": "https://leetcode.com/problems/greatest-common-divisor-traversal/",
+"solutionLink": "../../../solutions/2700-2799/greatest-common-divisor-traversal-hard"
+},
 ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />

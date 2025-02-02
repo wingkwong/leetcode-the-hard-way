@@ -1,6 +1,6 @@
 ---
-title: 'Two Pointers'
-description: 'Two Pointers is an effective technique used for searching pairs in a sorted array.'
+title: "Two Pointers"
+description: "Two Pointers is an effective technique used for searching pairs in a sorted array."
 hide_table_of_contents: true
 keywords:
   - leetcode
@@ -9,7 +9,7 @@ keywords:
   - algorithm
 ---
 
-<TutorialAuthors names="@heiheihang, @wingkwong"/>
+<TutorialCredits authors="@heiheihang, @wingkwong"/>
 
 ## Overview
 
@@ -64,7 +64,7 @@ class Solution:
         res = []
         # while left_pointer does not meet right_pointer
         while(left_pointer <= right_pointer):
-            # if the square of left_pointer and right_pointer 
+            # if the square of left_pointer and right_pointer
             if(abs(nums[left_pointer]) > abs(nums[right_pointer])):
                 res.append(nums[left_pointer] ** 2)
                 # we move the left to the right
@@ -77,6 +77,7 @@ class Solution:
         res.reverse()
         return res
 ```
+
 </TabItem>
 
 <TabItem value="cpp" label="C++">
@@ -105,8 +106,8 @@ public:
 };
 
 ```
-</TabItem>
 
+</TabItem>
 
 <TabItem value="java" label="Java">
 <SolutionAuthor name="@wingkwong"/>
@@ -133,30 +134,31 @@ class Solution {
 }
 
 ```
+
 </TabItem>
 </Tabs>
 
 Unfortunately, there is no fixed way to perform two pointers. However, generally, we have a pointer at the start of the list and another pointer at the end of the list. We have to carefully analyze the question and choose the most appropriate approach to operate the two pointers.
 
 export const suggestedProblems = [
-  {
-    "problemName": "1768 - Merge Strings Alternately",
-    "difficulty": "Easy",
-    "leetCodeLink": "https://leetcode.com/problems/merge-strings-alternately/",
-    "solutionLink": "../../solutions/1700-1799/merge-strings-alternately-easy"
-  },
-  {
-    "problemName": "2108 - Find First Palindromic String in the Array",
-    "difficulty": "Easy",
-    "leetCodeLink": "https://leetcode.com/problems/find-first-palindromic-string-in-the-array/",
-    "solutionLink": "../../solutions/2100-2199/find-first-palindromic-string-in-the-array-easy"
-  },
-  {
-    "problemName": "0283 - Move Zeroes",
-    "difficulty": "Easy",
-    "leetCodeLink": "https://leetcode.com/problems/move-zeroes/",
-    "solutionLink": "../../solutions/0200-0299/move-zeroes-easy"
-  },
+{
+"problemName": "1768 - Merge Strings Alternately",
+"difficulty": "Easy",
+"leetCodeLink": "https://leetcode.com/problems/merge-strings-alternately/",
+"solutionLink": "../../solutions/1700-1799/merge-strings-alternately-easy"
+},
+{
+"problemName": "2108 - Find First Palindromic String in the Array",
+"difficulty": "Easy",
+"leetCodeLink": "https://leetcode.com/problems/find-first-palindromic-string-in-the-array/",
+"solutionLink": "../../solutions/2100-2199/find-first-palindromic-string-in-the-array-easy"
+},
+{
+"problemName": "0283 - Move Zeroes",
+"difficulty": "Easy",
+"leetCodeLink": "https://leetcode.com/problems/move-zeroes/",
+"solutionLink": "../../solutions/0200-0299/move-zeroes-easy"
+},
 ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />

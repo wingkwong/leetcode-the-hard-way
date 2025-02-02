@@ -1,6 +1,6 @@
 ---
-title: 'Insertion Sort'
-description: 'An sorting algorithm based on picking one element at a time and inserting it in sorted order.'
+title: "Insertion Sort"
+description: "An sorting algorithm based on picking one element at a time and inserting it in sorted order."
 hide_table_of_contents: false
 keywords:
   - leetcode
@@ -10,8 +10,7 @@ keywords:
   - insertion sort
 ---
 
-<TutorialAuthors names="@Shivashish-rwt"/>
-<Contributors names="@wingkwong" />
+<TutorialCredits authors="@Shivashish-rwt" contributors="@wingkwong" />
 
 ## Overview
 
@@ -31,12 +30,12 @@ In a sorted array, all the elements to the left of any element are smaller than 
 
 For the array $[3,2,5,10,9]$, the steps would be
 
-* First of all, we will pick the first element which is $3$ in our case.
-* Now, we will compare with all the elements left to it, in this case there is nothing left to $3$ so, we will do nothing.
-* Now, pick the next element which is $2$ and start comparing with all the elements left to it.
-* First element left to $2$ is $3$ , which is greater than selected element $2$. So, we will move $3$ to right. If the element left to selected element is less than selected element then, our selected element have reached it's correct position so, we will place selected element there only.
-* Now, there is nothing no more element further left to our selected element $2$. So, we will place $2$ at the beginning of array.
-* We will proceed with the same way for all the elements. Then, at last we will get our array as sorted.
+- First of all, we will pick the first element which is $3$ in our case.
+- Now, we will compare with all the elements left to it, in this case there is nothing left to $3$ so, we will do nothing.
+- Now, pick the next element which is $2$ and start comparing with all the elements left to it.
+- First element left to $2$ is $3$ , which is greater than selected element $2$. So, we will move $3$ to right. If the element left to selected element is less than selected element then, our selected element have reached it's correct position so, we will place selected element there only.
+- Now, there is nothing no more element further left to our selected element $2$. So, we will place $2$ at the beginning of array.
+- We will proceed with the same way for all the elements. Then, at last we will get our array as sorted.
 
 ## Example: [1464. Maximum Product of Two Elements in an Array](https://leetcode.com/problems/maximum-product-of-two-elements-in-an-array/)
 
@@ -51,10 +50,10 @@ We have to maximize the product. Now, in order to maximize the product of two nu
 Now, we know how can we maximize the value of given expression. But we have to also figure out the how can we get the two largest number present in the given array. Here comes the sorting method, if we sort our array then, the largest number would be present at the last index and second largest number would be present at the second last index of the sorted array. For sorting, we are going to use Insertion Sort Algorithm.
 
 We have figured out the solution of the problem:
-* Sort the given array using insertion sort (Refer to the algorithm section).
-* Take out the last two elements because those are the largest two elements in our array.
-* Put the values in the expression and return it.
 
+- Sort the given array using insertion sort (Refer to the algorithm section).
+- Take out the last two elements because those are the largest two elements in our array.
+- Put the values in the expression and return it.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -130,18 +129,18 @@ class Solution:
     def insertionSort(arr, n):
         for i in range(1, n):
             # Picking element from array
-            nums = arr[i]  
+            nums = arr[i]
             j = i - 1
-              
-            # Comparing nums with all the elements left to it  
-            while j >= 0 and arr[j] > nums: 
+
+            # Comparing nums with all the elements left to it
+            while j >= 0 and arr[j] > nums:
                 # Shifting the greater element to the right
-                arr[j + 1] = arr[j] 
+                arr[j + 1] = arr[j]
                 j = j - 1
 
             # Placing selected element at correct position
-            arr[j + 1] = nums 
-        
+            arr[j + 1] = nums
+
     def maxProduct(self, nums: List[int]) -> int:
         Solution.insertionSort(nums,len(nums))
         return (nums[-1] - 1) * (nums[-2] - 1)
@@ -160,30 +159,30 @@ Apart from sorting the the given array we are not doing anything in the solution
 We are not using any extra space apart from the array we have to sort. So, the space complexity is $O(1)$.
 
 export const suggestedProblems = [
-  {
-    "problemName": "1365 - How Many Numbers Are Smaller Than the Current Number",
-    "difficulty": "Easy",
-    "leetCodeLink": "https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/",
-    "solutionLink": "../../../solutions/1300-1399/how-many-numbers-are-smaller-than-the-current-number-easy"
-  },
-  {
-    "problemName": "2037 - Minimum Number of Moves to Seat Everyone",
-    "difficulty": "Easy",
-    "leetCodeLink": "https://leetcode.com/problems/minimum-number-of-moves-to-seat-everyone/",
-    "solutionLink": ""
-  },
-  {
-    "problemName": "1913 - Maximum Product Difference Between Two Pairs",
-    "difficulty": "Easy",
-    "leetCodeLink": "https://leetcode.com/problems/maximum-product-difference-between-two-pairs/",
-    "solutionLink": ""
-  },
-  {
-    "problemName": "2089 - Find Target Indices After Sorting Array",
-    "difficulty": "Easy",
-    "leetCodeLink": "https://leetcode.com/problems/find-target-indices-after-sorting-array/",
-    "solutionLink": ""
-  },
+{
+"problemName": "1365 - How Many Numbers Are Smaller Than the Current Number",
+"difficulty": "Easy",
+"leetCodeLink": "https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/",
+"solutionLink": "../../../solutions/1300-1399/how-many-numbers-are-smaller-than-the-current-number-easy"
+},
+{
+"problemName": "2037 - Minimum Number of Moves to Seat Everyone",
+"difficulty": "Easy",
+"leetCodeLink": "https://leetcode.com/problems/minimum-number-of-moves-to-seat-everyone/",
+"solutionLink": ""
+},
+{
+"problemName": "1913 - Maximum Product Difference Between Two Pairs",
+"difficulty": "Easy",
+"leetCodeLink": "https://leetcode.com/problems/maximum-product-difference-between-two-pairs/",
+"solutionLink": ""
+},
+{
+"problemName": "2089 - Find Target Indices After Sorting Array",
+"difficulty": "Easy",
+"leetCodeLink": "https://leetcode.com/problems/find-target-indices-after-sorting-array/",
+"solutionLink": ""
+},
 ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />

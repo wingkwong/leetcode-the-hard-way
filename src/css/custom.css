@@ -155,22 +155,37 @@ div[class^='announcementBar_'] .clean-btn {
   );
 }
 
-.tutorial-tag-wrapper .tag {
-  background-color: #282A36;
-  border-radius: 2px;
-  color: #e6e6e6;
-  padding: 5px;
-  margin: 5px;
+.tutorial-credit-wrapper {
+  display: flex;
 }
 
-.tutorial-tag-wrapper.contributors {
-  margin-top: 20px;
+.tutorial-credit-wrapper-base {
+  line-height: normal;
+  display: flex;
+  gap: 8px;
+}
+
+.tutorial-credit-wrapper-name {
+  font-size: 0.875rem;
+  color: inherit;
 }
 
 .solution-author-wrapper {
-  text-align: center;
-  background-color: #343955;
-  color: #e6e6e6;
+  --background: #f4f4f4;
+  --text: #333;
+  padding: 8px 16px;
+  background-color: var(--background);
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: var(--text);
+  margin: 12px 0 0 0;
+  display: inline-block;
+}
+
+[data-theme="dark"] .solution-author-wrapper {
+  --background: #333;
+  --text: #f4f4f4;
 }
 
 .tag-wrapper .topic-tag {

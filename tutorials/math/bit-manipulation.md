@@ -1,6 +1,6 @@
 ---
-title: 'Bit Manipulation'
-description: 'Bit Manipulation utilises different bitwise operations to manipulate bits'
+title: "Bit Manipulation"
+description: "Bit Manipulation utilises different bitwise operations to manipulate bits"
 hide_table_of_contents: false
 keywords:
   - leetcode
@@ -8,7 +8,7 @@ keywords:
   - bit manipulation
 ---
 
-<TutorialAuthors names="@wingkwong"/>
+<TutorialCredits authors="@wingkwong"/>
 
 ## Overview
 
@@ -18,16 +18,16 @@ Binary uses only $0$ and $1$ to represent a number in a base-2 number system. Th
 
 ## Bitwise Operators
 
-| X | Y | X & Y | X \| Y | X ^ Y | ~ X |
-|---|---|---|---|---|---|
-| 0 | 0 | 0 | 0 | 0 | 1 |
-| 0 | 1 | 0 | 1 | 1 | 1 |
-| 1 | 0 | 0 | 1 | 1 | 0 |
-| 1 | 1 | 1 | 1 | 0 | 0 |
+| X   | Y   | X & Y | X \| Y | X ^ Y | ~ X |
+| --- | --- | ----- | ------ | ----- | --- |
+| 0   | 0   | 0     | 0      | 0     | 1   |
+| 0   | 1   | 0     | 1      | 1     | 1   |
+| 1   | 0   | 0     | 1      | 1     | 0   |
+| 1   | 1   | 1     | 1      | 0     | 0   |
 
 ### AND (&) Operator
 
-&amp; takes two bit integers to compare. If the bits are both $1$, then the resulting bit is $1$, else $0$. 
+&amp; takes two bit integers to compare. If the bits are both $1$, then the resulting bit is $1$, else $0$.
 
 For example, $0010_2$ &amp; $0011_2 = 0010_2$ because only the second bits from the right are both $1$.
 
@@ -41,7 +41,7 @@ Let's say $n$ is $5_{10}$ which is $0101_2$. How to check if the 2-nd, 3-rd, or 
 
 #### Usage #3: Remove the rightmost set bit
 
-We can use $n$ &amp; $(n - 1)$ to remove the rightmost set bit. 
+We can use $n$ &amp; $(n - 1)$ to remove the rightmost set bit.
 
 ```
 n     n     n - 1  n & (n - 1)
@@ -54,7 +54,7 @@ n     n     n - 1  n & (n - 1)
  5   0101   0100    0100
  6   0110   0101    0100
  7   0111   0110    0110
- 8   1000   0111    0000 
+ 8   1000   0111    0000
  9   1001   1000    1000
 10   1010   1001    1000
 11   1011   1010    1010
@@ -66,7 +66,7 @@ n     n     n - 1  n & (n - 1)
 
 #### Example #1: [0231 - Power of Two (Easy)](https://leetcode.com/problems/power-of-two/)
 
-We know that a power of 2 is a positive number and only has one bit set. We can use $n$ &amp; $(n - 1)$ to see the result is 0 or not to determine if the target value is a power of 2 or not. 
+We know that a power of 2 is a positive number and only has one bit set. We can use $n$ &amp; $(n - 1)$ to see the result is 0 or not to determine if the target value is a power of 2 or not.
 
 In short, $n$ &amp; $(n - 1)$ never have a 1 bit in the same place.
 
@@ -100,7 +100,7 @@ public:
 
 ### OR (|) Operator
 
-$\vert$ takes two bit integers to compare. If either bits are $1$, then the resulting bit is $1$, else $0$. 
+$\vert$ takes two bit integers to compare. If either bits are $1$, then the resulting bit is $1$, else $0$.
 
 For example, $0010_2 | 0011_2 = 0011_2$ because only the first and the second bits from the right are $1$ in either value.
 
@@ -112,7 +112,7 @@ Let's say $n$ is $4_{10}$ which is $0100_2$. If we execute $n \vert 1$, i.e. $01
 
 Let's say $n$ is $4_{10}$ which is $0100_2$. How to set other bits? Similar to above example, we can use left shift operator (which will be discussed below), i.e. $n \vert (1 << i)$ where $n$ is the i-th bit to be set.
 
-#### Example: [0421 -  Maximum XOR of Two Numbers in an Array](https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/)
+#### Example: [0421 - Maximum XOR of Two Numbers in an Array](https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/)
 
 ```cpp
 class Solution {
@@ -132,7 +132,7 @@ public:
                     break;
                 }
             }
-            
+
         }
         return ans;
     }
@@ -155,15 +155,15 @@ For example, $0010_2$ ^ $0011_2 = 0001_2$ because the first bit got $0$ and $1$ 
 
 #### Example #1: [0268 - Missing Number](https://leetcode.com/problems/missing-number/)
 
-Given the fact that we know $n$ distinct numbers in the range $[0, n]$, we can find the missing number using the above XOR properties. 
+Given the fact that we know $n$ distinct numbers in the range $[0, n]$, we can find the missing number using the above XOR properties.
 
-For example, let's say the input is $[0, 1, 3]$ and we know the the missing number is $2$. We can compare the index (0, 1, 2) and the value (0, 1, 3) and write $3$ ^ $(0$ ^ $0)$ ^ $(1$ ^ $1)$ ^ $(2$ ^ $3)$. 
+For example, let's say the input is $[0, 1, 3]$ and we know the the missing number is $2$. We can compare the index (0, 1, 2) and the value (0, 1, 3) and write $3$ ^ $(0$ ^ $0)$ ^ $(1$ ^ $1)$ ^ $(2$ ^ $3)$.
 
 Based on property #2, we know $0$ ^ $0$ and $(1$ ^ $1)$ would be $0$.
 
-Based on property #1, we know that $0$ ^ $1$ would be $1$. Therefore, we got $3$ ^  $(2$ ^ $3)$. 
+Based on property #1, we know that $0$ ^ $1$ would be $1$. Therefore, we got $3$ ^ $(2$ ^ $3)$.
 
-Based on property #4, we can rewrite as $2$ ^ $(3$ ^ $3)$ and use property #2 again to get $2$ ^ $0$. 
+Based on property #4, we can rewrite as $2$ ^ $(3$ ^ $3)$ and use property #2 again to get $2$ ^ $0$.
 
 Based on property #1, we have our final answer which is $2$.
 
@@ -206,6 +206,7 @@ public:
 ```
 
 #### Example #3: Swap 2 numbers
+
 XOR (^) can be used to swap 2 numbers by changing the bits and reversing it.
 
 Let's say, $a = 4$ $(0100_2)$, $b = 6$ $(0110_2)$, we want $a = 6$ and $b = 4$ as our answer.
@@ -238,11 +239,11 @@ for (int i = n; ~i; i--) {
 
 ### Left-Shift
 
-$<<$ shifts the bits to the left. For example, $1 << 1 = 2$ because we shift the $1$ $(0001_2)$ to the left to become $2$ $(0010_2)$. 
+$<<$ shifts the bits to the left. For example, $1 << 1 = 2$ because we shift the $1$ $(0001_2)$ to the left to become $2$ $(0010_2)$.
 
 Similarily, $1 << 2 = 4$ because we shift the $1$ $(0001_2)$ to the left twice to become $4$ $(0100_2)$.
 
-And you may find that $1 << n$ is actually $2 ^ n$. Also $n << m$ means multiplying n by 2 power m. i.e, $n = n * (2^m)$. 
+And you may find that $1 << n$ is actually $2 ^ n$. Also $n << m$ means multiplying n by 2 power m. i.e, $n = n * (2^m)$.
 
 In simple, $n << m$ _shifting each bit of n to left m times_. Let's say, $n = 8$ and $m = 2$. $n$ can be represented as $1000_2$ in binary, Therefore, $$8 << 2$$ = $1000_2 << 2$ = $100000_2 (32)$, which is same as $(8 * 2^2)$ = $32$
 
@@ -255,13 +256,13 @@ public:
         int n = nums.size();
         // number of subsets for n elements would be 2 ^ n
         // because for each element, you can choose to take it or not
-        // if take = 1, don't take = 0, then we can use bit manipulation 
+        // if take = 1, don't take = 0, then we can use bit manipulation
         int p = 1 << n; // 1 * 2 ^ n
         vector<vector<int>> ans;
         for(int i = 0; i < p; i++){
-            vector<int> t; 
+            vector<int> t;
             for(int j = 0; j < n; j++){
-               if((1 << j) & i) t.emplace_back(nums[j]); 
+               if((1 << j) & i) t.emplace_back(nums[j]);
             }
             ans.emplace_back(t);
         }
@@ -294,15 +295,15 @@ while (n > 0) {
 
 ### Two's Compliment and Negative Numbers
 
-Computers typically store integers in two’s complement representation. A positive number is represented as itself while a negative number is represented as the two’s complement of it’s absolute value (with a 1 in its sign bit to indicate that a negative value). 
+Computers typically store integers in two’s complement representation. A positive number is represented as itself while a negative number is represented as the two’s complement of it’s absolute value (with a 1 in its sign bit to indicate that a negative value).
 
-Let’s look at the `4-bit` integer $-3$ as an example. _If it’s a 4-bit number, we have one bit for the sign and three bits for the value_. We want the complement with respect to $2^3$, which is $8$. 
+Let’s look at the `4-bit` integer $-3$ as an example. _If it’s a 4-bit number, we have one bit for the sign and three bits for the value_. We want the complement with respect to $2^3$, which is $8$.
 
-The complement of $3$ (the absolute value of $-3$) with respect to $8$ is $5$. Binary value of $5$ is $0101_2$. Therefore, $-3$ in binary as a 4-bit number is $1101_2$, with the first bit being the sign bit. 
+The complement of $3$ (the absolute value of $-3$) with respect to $8$ is $5$. Binary value of $5$ is $0101_2$. Therefore, $-3$ in binary as a 4-bit number is $1101_2$, with the first bit being the sign bit.
 
 In other words, the binary representation of $-K$ (negative K) as a N-bit number is $concat(1, 2^N-1 - K)$ otherwise _prepend (prefix) the sign bit_ $(1)$ with the value for the calculated complement.
 
-Another way to look at this is that we invert the bits in the positive representation and then add $1$. $3$ is $0011_2$ in binary. 
+Another way to look at this is that we invert the bits in the positive representation and then add $1$. $3$ is $0011_2$ in binary.
 
 _Flip the bits_ to get 100, add $1$ to get $101_2$, then prepend the sign bit $1$ to get $1101_2$.
 
@@ -316,12 +317,13 @@ Positive  Values  Negative  Values
 3         0 011   -5        1 011
 2         0 010   -6        1 010
 1         0 001   -7        1 001
-0         0 000 
+0         0 000
 ```
 
 ### Common Bit Tasks
 
 ### Get Bit
+
 It shifts $1$ over by _i_ bits, creating a value that looks like $0100_2$ $(2^i)$. By performing and AND (&amp;) with num, we clear all bits other than the bit at bit _i_.
 
 Finally, compare that value to $0$, if that new value is not _zero_, then bit _i_ must have a $1$, otherwise, bit _i_ is a $0$.
@@ -333,7 +335,8 @@ int getBit(int num, int i) {
 ```
 
 ### Set Bit
-It shits $1$ over by _i_ bits, creating a value that looks like $0100_2$ ( $2$ to the power of $i$ ). By performing an $OR$ with num, only the value at bit _i_ will change. 
+
+It shits $1$ over by _i_ bits, creating a value that looks like $0100_2$ ( $2$ to the power of $i$ ). By performing an $OR$ with num, only the value at bit _i_ will change.
 
 All other bits of the mask are _zero_ and will not affect num.
 

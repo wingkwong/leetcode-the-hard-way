@@ -1,6 +1,6 @@
 ---
 title: "Manacher's Algorithm"
-description: "A famous algorithm and the fastest known technique to find palindromic substrings of even or odd length." 
+description: "A famous algorithm and the fastest known technique to find palindromic substrings of even or odd length."
 hide_table_of_contents: false
 keywords:
   - leetcode
@@ -9,7 +9,7 @@ keywords:
   - algorithm
 ---
 
-<TutorialAuthors names="@abhiramtilakiiit"/>
+<TutorialCredits authors="@abhiramtilakiiit"/>
 
 ## Overview
 
@@ -357,7 +357,7 @@ class Solution:
 Now, we are ready to take up a harder problem.
 
 > You are given a string 's'. You can convert s to a palindrome by adding characters in front of it.
-Return the shortest palindrome you can find by performing this transformation.
+> Return the shortest palindrome you can find by performing this transformation.
 
 The first part of this problem is to find all the palindromic lengths so that we get to
 calculate the most efficient 'center' for expansion.
@@ -439,15 +439,14 @@ class Solution:
 
 - Time Complexity for this algorithm is about $O(n)$:
 
-    We iterate through the string once and calculate the palindromic length at each center. But while
-    doing so we also discover the lengths of other indexes which will be stored in memory. Thus instead
-    of expanding everytime we can find out an indices's palindromic length in constant time.
+  We iterate through the string once and calculate the palindromic length at each center. But while
+  doing so we also discover the lengths of other indexes which will be stored in memory. Thus instead
+  of expanding everytime we can find out an indices's palindromic length in constant time.
 
 - Space Complexity for this algorithm is also $O(n)$:
 
-    Space complexity is $O(n)$ because we store an additional `pLengths` array to hold all the palindromic 
-    lengths of the $2n-1$ centers.
-
+  Space complexity is $O(n)$ because we store an additional `pLengths` array to hold all the palindromic
+  lengths of the $2n-1$ centers.
 
 Other than Palindromic Substrings, Manacher's Algorithm is not always the most efficient algorithm, but still
 a good practice for implementation.
@@ -460,24 +459,24 @@ We've created a [template](../../templates/manachers-algorithm) for Manacher's a
 </Tabs>
 
 export const suggestedProblems = [
-    {
-        "problemName": "647 - Palindromic Substrings",
-        "difficulty": "Medium",
-        "leetCodeLink": "https://leetcode.com/problems/palindromic-substrings/description/",
-        "solutionLink": "../../solutions/0600-0699/palindromic-substrings-medium"
-    },
-    {
-        "problemName": "1960 - Maximum Product of Length of Two Palindromic Substrings",
-        "difficulty": "Hard",
-        "leetCodeLink": "https://leetcode.com/problems/maximum-product-of-the-length-of-two-palindromic-substrings/",
-        "solutionLink": ""
-    },
-    {
-        "problemName": "1745 - Palindrome Partitioning IV",
-        "difficulty": "Hard",
-        "leetCodeLink": "https://leetcode.com/problems/palindrome-partitioning-iv/description/",
-        "solutionLink": ""
-    },
+{
+"problemName": "647 - Palindromic Substrings",
+"difficulty": "Medium",
+"leetCodeLink": "https://leetcode.com/problems/palindromic-substrings/description/",
+"solutionLink": "../../solutions/0600-0699/palindromic-substrings-medium"
+},
+{
+"problemName": "1960 - Maximum Product of Length of Two Palindromic Substrings",
+"difficulty": "Hard",
+"leetCodeLink": "https://leetcode.com/problems/maximum-product-of-the-length-of-two-palindromic-substrings/",
+"solutionLink": ""
+},
+{
+"problemName": "1745 - Palindrome Partitioning IV",
+"difficulty": "Hard",
+"leetCodeLink": "https://leetcode.com/problems/palindrome-partitioning-iv/description/",
+"solutionLink": ""
+},
 ]
 
 <Table title = "Suggested problems" data = {suggestedProblems}/>

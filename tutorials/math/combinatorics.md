@@ -1,6 +1,6 @@
 ---
-title: 'Combinatorics'
-description: 'Combinatorics is the branch of mathematics dealing with counting and enumerating the possibilities for a certain event to occur. It is heavily used as it enables us to find very short and concise answers to many problems.'
+title: "Combinatorics"
+description: "Combinatorics is the branch of mathematics dealing with counting and enumerating the possibilities for a certain event to occur. It is heavily used as it enables us to find very short and concise answers to many problems."
 hide_table_of_contents: false
 keywords:
   - leetcode
@@ -8,7 +8,7 @@ keywords:
   - combinatorics
 ---
 
-<TutorialAuthors names="@BlackPanther112358"/>
+<TutorialCredits authors="@BlackPanther112358"/>
 
 ## Overview
 
@@ -61,7 +61,7 @@ public:
 </Tabs>
 
 Sometimes it is not possible to calculate the entirety of Pascal's Triangle due to larger values of $n$. In this case, we begin by precomputing
-$x!$$\,$ $\forall$$\,$$x \in [{0, n}]$. Similarly, we will also [precompute](https://cp-algorithms.com/algebra/module-inverse.html#mod-inv-all-num) the modular inverses.  This can be achieved in $O(n)$ time. Thus we can now compute $n \choose r$ using the analytical equation presented earlier. You can read about modular inverses [here](../../tutorials/basic-topics/mod.md)
+$x!$$\,$ $\forall$$\,$$x \in [{0, n}]$. Similarly, we will also [precompute](https://cp-algorithms.com/algebra/module-inverse.html#mod-inv-all-num) the modular inverses. This can be achieved in $O(n)$ time. Thus we can now compute $n \choose r$ using the analytical equation presented earlier. You can read about modular inverses [here](../../tutorials/basic-topics/mod.md)
 
 The implementation of above can be as follows:
 
@@ -110,6 +110,7 @@ For further reading, you can visit [cp-algorithms](https://cp-algorithms.com/com
 ## Finding the $n^{th}$ catalan number
 
 This is a very famous sequence of natural numbers and has a variety of applications.
+
 - Number of ways to make balanced bracket sequences using $n$ left and $n$ right brackets.
 - [Number of ways to make binary trees](https://leetcode.com/problems/unique-binary-search-trees/description/)
 - Number of ways to form a mountain range with $n$ upstrokes and downstrokes. $\\$
@@ -128,7 +129,7 @@ This is an example of a very tricky problem which heavily simplifies after using
 
 Here we will consider the $i^{th}$ bit from the right. Let's say that the $i^{th}$ bit is set in $k$ out of $n$ numbers in some given subset. If $k$ is odd, then $i^{th}$ bit is set in the XOR of all numbers of the subset, otherwise, it is not set.
 
-Hence if there are $m$ numbers out of $n$ with $i^{th}$ bit set, then the contribution of the bit is $Place\,value\,of\,the\,bit$ $*$ $number\,of\,ways\,to\,get\,odd\,k$ 
+Hence if there are $m$ numbers out of $n$ with $i^{th}$ bit set, then the contribution of the bit is $Place\,value\,of\,the\,bit$ $*$ $number\,of\,ways\,to\,get\,odd\,k$
 
 Thus we can find $\sum_{k = 1}^{k <= m}$ $m \choose k$ for all odd values of $k$, which comes out to $2^{m - 1}$. Furthermore, we can choose the remaining elements in the subset in $2^{n - m}$ ways by similar logic. Hence total ways to get odd values of $k$ are $2^{n - 1}$, which is independent of both $m$ and $k$.
 
@@ -203,6 +204,7 @@ Let's represent going left as $-1$ and going right as $+1$. Thus, following the 
 $-1$ such that there sum is equal to $endPos - startPos$.
 
 Here we can immediately see that such will be impossible in only 2 cases:
+
 - The parity of $k$ and $endPos - startPos$ is different.
 - The magnitude of $k$ is less than magnitude of $endPos - startPos$.
 
@@ -214,18 +216,17 @@ $(1) * a + (-1) * b = endPos - startPos$, such that $a + b = k$
 Here $a$ represents the number of $1$, i.e., the right steps and similarly $b$ represents number of $-1$, i.e., the number of left steps. We
 are now interested in finding the number of possible values of $a$ and $b$ such that the above equations are satisfied.
 
-Adding both equations, 
+Adding both equations,
 
 $2a$ $=$ $endPos - startPos + k$
 
-Thus, 
+Thus,
 
 $a$ $=$ $\frac{k \, + \, endPos \, - \, startPos}{2}$
 
 Similarly, by subtracting the equations and simplifying,
 
 $b$ $=$ $\frac{k \, - \, endPos \, + \, startPos}{2}$
-
 
 Then the solution is $k \choose a$ $=$ $k \choose b$ as we need to find number of ways to choose $a$ or $b$ moves, out of $k$ moves.
 
@@ -236,27 +237,28 @@ To implement this, you can both precompute the entire Pascal's Triangle, or use 
 You can check the complete solution for this problem [here](../../solutions/2400-2499/number-of-ways-to-reach-a-position-after-exactly-k-steps-medium)
 
 export const suggestedProblems = [
-  {
-    "problemName": "920 - Number of Music Playlists",
-    "difficulty": "Hard",
-    "leetCodeLink": "https://leetcode.com/problems/number-of-music-playlists/",
-    "solutionLink": ""
-  },
-  {
-    "problemName": "1916 - Count Ways to Build Rooms in an Ant Colony",
-    "difficulty": "Hard",
-    "leetCodeLink": "https://leetcode.com/problems/count-ways-to-build-rooms-in-an-ant-colony/",
-    "solutionLink": "../../solutions/1900-1999/count-ways-to-build-rooms-in-an-ant-colony"
-  },
-  {
-    "problemName": "1467 - Probability of a Two Boxes Having The Same Number of Distinct Balls",
-    "difficulty": "Hard",
-    "leetCodeLink": "https://leetcode.com/problems/probability-of-a-two-boxes-having-the-same-number-of-distinct-balls/",
-    "solutionLink": ""
-  },
+{
+"problemName": "920 - Number of Music Playlists",
+"difficulty": "Hard",
+"leetCodeLink": "https://leetcode.com/problems/number-of-music-playlists/",
+"solutionLink": ""
+},
+{
+"problemName": "1916 - Count Ways to Build Rooms in an Ant Colony",
+"difficulty": "Hard",
+"leetCodeLink": "https://leetcode.com/problems/count-ways-to-build-rooms-in-an-ant-colony/",
+"solutionLink": "../../solutions/1900-1999/count-ways-to-build-rooms-in-an-ant-colony"
+},
+{
+"problemName": "1467 - Probability of a Two Boxes Having The Same Number of Distinct Balls",
+"difficulty": "Hard",
+"leetCodeLink": "https://leetcode.com/problems/probability-of-a-two-boxes-having-the-same-number-of-distinct-balls/",
+"solutionLink": ""
+},
 ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />
 
 ## References
-1. [cp-algorithms](https://cp-algorithms.com/) 
+
+1. [cp-algorithms](https://cp-algorithms.com/)

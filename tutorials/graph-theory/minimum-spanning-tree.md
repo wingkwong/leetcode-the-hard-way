@@ -1,6 +1,6 @@
 ---
-title: 'Minimum Spanning Tree'
-description: 'A minimum spanning tree is a subset of the edges of a connected undirected graph with the minimum possible total edge weight and it does not contain any cycles.'
+title: "Minimum Spanning Tree"
+description: "A minimum spanning tree is a subset of the edges of a connected undirected graph with the minimum possible total edge weight and it does not contain any cycles."
 hide_table_of_contents: true
 keywords:
   - leetcode
@@ -10,11 +10,11 @@ keywords:
   - algorithm
 ---
 
-<TutorialAuthors names="@wingkwong"/>
+<TutorialCredits authors="@wingkwong"/>
 
 ## Overview
 
-A Minimum Spanning Tree (MST) is a subset of the edges of a connected, undirected graph that connects all the vertices together, without any cycles and with the minimum possible total edge weight. There are different algorithms that can be used to find the MST of a graph, such as Kruskal's algorithm, Prim's algorithm and Boruvka's algorithm. 
+A Minimum Spanning Tree (MST) is a subset of the edges of a connected, undirected graph that connects all the vertices together, without any cycles and with the minimum possible total edge weight. There are different algorithms that can be used to find the MST of a graph, such as Kruskal's algorithm, Prim's algorithm and Boruvka's algorithm.
 
 ### Kruskal's Algorithm
 

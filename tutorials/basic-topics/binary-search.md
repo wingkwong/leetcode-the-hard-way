@@ -1,6 +1,6 @@
 ---
-title: 'Binary Search'
-description: 'Binary search is the searching strategy that reduces the search space by half every iteration until you have found the target.'
+title: "Binary Search"
+description: "Binary search is the searching strategy that reduces the search space by half every iteration until you have found the target."
 hide_table_of_contents: false
 keywords:
   - leetcode
@@ -9,7 +9,7 @@ keywords:
   - algorithm
 ---
 
-<TutorialAuthors names="@heiheihang, @wingkwong"/>
+<TutorialCredits authors="@heiheihang, @wingkwong"/>
 
 ## Overview
 
@@ -60,8 +60,9 @@ def binarySearch(nums, target):
             lp = mid + 1
         else:
             rp = mid - 1
-    return -1 
+    return -1
 ```
+
 </TabItem>
 
 <TabItem value="cpp" label="C++">
@@ -83,8 +84,8 @@ int binarySearch(vector<int>& nums, int target) {
     return -1;
 }
 ```
-</TabItem>
 
+</TabItem>
 
 <TabItem value="java" label="Java">
 <SolutionAuthor name="@wingkwong"/>
@@ -106,6 +107,7 @@ int binarySearch(int[] nums, int target) {
 }
 
 ```
+
 </TabItem>
 </Tabs>
 
@@ -116,51 +118,53 @@ There can be very challenging questions using binary search, but we should focus
 1. When the input is sorted, it's probably a hint to use binary search.
 2. When you need to find the first / last index of something, then it may be another hint to use binary search (as index is sorted).
 3. When initialising the boundary, we may think about the possible range (sometimes $r$ may not necessarily be the max of the constraint
-4. In while condition, you may see some people write $while (l < r)$ , $while (r > l)$,  $while (l <= r)$ , or $while (l >= r)$.  either one works depending on how to write the logic - just a personal preference. See [here](https://stackoverflow.com/questions/35613574/when-to-use-in-binary-search-condition) for more.
+4. In while condition, you may see some people write $while (l < r)$ , $while (r > l)$, $while (l <= r)$ , or $while (l >= r)$. either one works depending on how to write the logic - just a personal preference. See [here](https://stackoverflow.com/questions/35613574/when-to-use-in-binary-search-condition) for more.
 5. Think about the mid - if there are even elements, should we pick the left or the right mid? e.g. [1,2,3,4] like choosing $2$ or $3$?
 6. Think about how to shrink - if $mid$ is never be the answer, then we can exclude it ($l = m + 1$ or $r = m - 1$).
-7. If you are using C++, most people use $l + (r - l) / 2$ to avoid integer overflow problem. Let's say $l$ & $r$ are large enough like ~INT_MAX, when you sum them up, it causes overflow. 
+7. If you are using C++, most people use $l + (r - l) / 2$ to avoid integer overflow problem. Let's say $l$ & $r$ are large enough like ~INT_MAX, when you sum them up, it causes overflow.
 
-    We know that $m$ is actually somewhere in between $l$ and $r$ so let $m = l + x$ where $x$ is an arbitrary value. Since we know that $m = (l + r) / 2$, we can substitute to have the following
-    $$$
-        l + x = (l + r) / 2 \\
-        x = (l + r) / 2 - l \\
-        x * 2 = (l + r) - 2 * l \\
-        x * 2 = (r - l)  \\
-        x = (r - l) / 2 \\
-    $$$
-    so putting x back to the first equation, we would have
-    $$$
-    m = l + x \\
-    m = l + (r - l) / 2
-    $$$
+   We know that $m$ is actually somewhere in between $l$ and $r$ so let $m = l + x$ where $x$ is an arbitrary value. Since we know that $m = (l + r) / 2$, we can substitute to have the following
 
+   $$
+       l + x = (l + r) / 2 \\
+       x = (l + r) / 2 - l \\
+       x * 2 = (l + r) - 2 * l \\
+       x * 2 = (r - l)  \\
+       x = (r - l) / 2 \\
+   $$
+
+   so putting x back to the first equation, we would have
+
+   $$
+   m = l + x \\
+   m = l + (r - l) / 2
+   $$
 
 export const suggestedProblems = [
-  {
-    "problemName": "0704 - Binary Search",
-    "difficulty": "Easy",
-    "leetCodeLink": "https://leetcode.com/problems/binary-search/",
-    "solutionLink": "../../solutions/0700-0799/binary-search-easy"
-  },
-  {
-    "problemName": "0153 - Find Minimum in Rotated Sorted Array",
-    "difficulty": "Medium",
-    "leetCodeLink": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/",
-    "solutionLink": ""
-  },
-  {
-    "problemName": "0154 - Find Minimum in Rotated Sorted Array II",
-    "difficulty": "Hard",
-    "leetCodeLink": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/",
-    "solutionLink": ""
-  },
-  {
-    "problemName": "0162 - Find Peak Element",
-    "difficulty": "Medium",
-    "leetCodeLink": "https://leetcode.com/problems/find-peak-element/",
-    "solutionLink": ""
-  }
+{
+"problemName": "0704 - Binary Search",
+"difficulty": "Easy",
+"leetCodeLink": "https://leetcode.com/problems/binary-search/",
+"solutionLink": "../../solutions/0700-0799/binary-search-easy"
+},
+{
+"problemName": "0153 - Find Minimum in Rotated Sorted Array",
+"difficulty": "Medium",
+"leetCodeLink": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/",
+"solutionLink": ""
+},
+{
+"problemName": "0154 - Find Minimum in Rotated Sorted Array II",
+"difficulty": "Hard",
+"leetCodeLink": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/",
+"solutionLink": ""
+},
+{
+"problemName": "0162 - Find Peak Element",
+"difficulty": "Medium",
+"leetCodeLink": "https://leetcode.com/problems/find-peak-element/",
+"solutionLink": ""
+}
 ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />

@@ -8,7 +8,7 @@ keywords:
   - algorithm
 ---
 
-<TutorialAuthors names="@wingkwong, @Cyber-Machine"/>
+<TutorialCredits authors="@wingkwong, @Cyber-Machine"/>
 
 ## Overview
 

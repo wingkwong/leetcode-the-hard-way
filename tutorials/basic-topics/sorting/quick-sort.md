@@ -1,6 +1,6 @@
 ---
-title: 'Quick Sort'
-description: ''
+title: "Quick Sort"
+description: ""
 hide_table_of_contents: true
 draft: true
 keywords:
@@ -11,4 +11,4 @@ keywords:
   - quick sort
 ---
 
-<TutorialAuthors names="@TBC"/>
+<TutorialCredits authors="@TBC"/>

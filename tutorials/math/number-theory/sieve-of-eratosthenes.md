@@ -1,6 +1,6 @@
 ---
-title: 'Sieve of Eratosthenes'
-description: 'Sieve of Eratosthenes is a way of finding all prime numbers up to N (inclusive).'
+title: "Sieve of Eratosthenes"
+description: "Sieve of Eratosthenes is a way of finding all prime numbers up to N (inclusive)."
 hide_table_of_contents: true
 keywords:
   - leetcode
@@ -9,7 +9,7 @@ keywords:
   - algorithm
 ---
 
-<TutorialAuthors names="@wingkwong"/>
+<TutorialCredits authors="@wingkwong"/>
 
 ## Overview
 
@@ -41,12 +41,12 @@ vector<bool> sieveOfEratosthenes(const int n) {
 </Tabs>
 
 export const suggestedProblems = [
-  {
-    "problemName": "0204 - Count Primes",
-    "difficulty": "Medium",
-    "leetCodeLink": "https://leetcode.com/problems/count-primes/",
-    "solutionLink": "../../../solutions/0200-0299/count-primes"
-  },
+{
+"problemName": "0204 - Count Primes",
+"difficulty": "Medium",
+"leetCodeLink": "https://leetcode.com/problems/count-primes/",
+"solutionLink": "../../../solutions/0200-0299/count-primes"
+},
 ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />

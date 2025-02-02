@@ -1,6 +1,6 @@
 ---
-title: 'Sliding Window'
-description: 'Sliding window is a technique used to solve problems in array or string.'
+title: "Sliding Window"
+description: "Sliding window is a technique used to solve problems in array or string."
 hide_table_of_contents: true
 keywords:
   - leetcode
@@ -9,7 +9,7 @@ keywords:
   - algorithm
 ---
 
-<TutorialAuthors names="@heiheihang, @wingkwong"/>
+<TutorialCredits authors="@heiheihang, @wingkwong"/>
 
 ## Overview
 
@@ -57,12 +57,12 @@ In this problem, we need to keep a _window_ of substrings of length 3.
 
 We can use the following strategy:
 
-* `left_pointer` to keep track of the left character of the substring length of $3$
-* `right_pointer` to keep track of the right character of the substring length of $3$
-* We check if the following characters are unique:
-  * `s[left_pointer]`
-  * `s[left_pointer + 1]`
-  * `s[right_pointer]`
+- `left_pointer` to keep track of the left character of the substring length of $3$
+- `right_pointer` to keep track of the right character of the substring length of $3$
+- We check if the following characters are unique:
+  - `s[left_pointer]`
+  - `s[left_pointer + 1]`
+  - `s[right_pointer]`
 
 Let's take a look at the following solution:
 
@@ -91,6 +91,7 @@ def countGoodSubstrings(self, s: str) -> int:
         # return result
         return unique_substring_count
 ```
+
 </TabItem>
 
 <TabItem value="cpp" label="C++">
@@ -118,8 +119,8 @@ public:
 };
 
 ```
-</TabItem>
 
+</TabItem>
 
 <TabItem value="java" label="Java">
 <SolutionAuthor name="@wingkwong"/>
@@ -130,48 +131,49 @@ class Solution {
         int left_pointer = 0;
         int right_pointer = 2;
         int unique_substring_count = 0;
-        
+
         while (right_pointer < s.length()) {
             char first_char = s.charAt(left_pointer);
             char second_char = s.charAt(left_pointer + 1);
             char third_char = s.charAt(right_pointer);
-            
+
             if (first_char != second_char && first_char != third_char && second_char != third_char) {
                 unique_substring_count += 1;
             }
-            
+
             left_pointer += 1;
             right_pointer += 1;
         }
-        
+
         return unique_substring_count;
     }
 }
 ```
+
 </TabItem>
 </Tabs>
 
 In this problem, the size of the sliding window is constant. There are harder problems with varying sliding window size, but you need to learn [Hash Map](hash-map) first.
 
 export const suggestedProblems = [
-  {
-    "problemName": "1852 - Distinct Numbers in Each Subarray",
-    "difficulty": "Medium",
-    "leetCodeLink": "https://leetcode.com/problems/distinct-numbers-in-each-subarray",
-    "solutionLink": "../../solutions/1800-1899/distinct-numbers-in-each-subarray-medium"
-  },
-  {
-    "problemName": "1004 - Max Consecutive Ones III",
-    "difficulty": "Medium",
-    "leetCodeLink": "https://leetcode.com/problems/max-consecutive-ones-iii",
-    "solutionLink": "../../solutions/1000-1099/max-consecutive-ones-iii-medium"
-  },
-  {
-    "problemName": "1876 - Substrings of Size Three with Distinct Characters",
-    "difficulty": "Medium",
-    "leetCodeLink": "https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters/",
-    "solutionLink": ""
-  },
+{
+"problemName": "1852 - Distinct Numbers in Each Subarray",
+"difficulty": "Medium",
+"leetCodeLink": "https://leetcode.com/problems/distinct-numbers-in-each-subarray",
+"solutionLink": "../../solutions/1800-1899/distinct-numbers-in-each-subarray-medium"
+},
+{
+"problemName": "1004 - Max Consecutive Ones III",
+"difficulty": "Medium",
+"leetCodeLink": "https://leetcode.com/problems/max-consecutive-ones-iii",
+"solutionLink": "../../solutions/1000-1099/max-consecutive-ones-iii-medium"
+},
+{
+"problemName": "1876 - Substrings of Size Three with Distinct Characters",
+"difficulty": "Medium",
+"leetCodeLink": "https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters/",
+"solutionLink": ""
+},
 ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />

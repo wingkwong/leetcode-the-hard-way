@@ -1,6 +1,6 @@
 ---
-title: 'Introduction'
-description: 'Introduction and overview of sorting'
+title: "Introduction"
+description: "Introduction and overview of sorting"
 hide_table_of_contents: true
 sidebar_position: 1
 keywords:
@@ -10,7 +10,7 @@ keywords:
   - algorithm
 ---
 
-<TutorialAuthors names="@wingkwong"/>
+<TutorialCredits authors="@wingkwong"/>
 
 ## Overview
 
@@ -22,7 +22,7 @@ In C++, if define a static array of N elements of type int such as $$a[4]$$ you 
 sort(a, a + N);
 ```
 
-If you want to sort for a specific range $$[x, y)$$,  then use
+If you want to sort for a specific range $$[x, y)$$, then use
 
 ```cpp
 sort(a + x, a + y);
@@ -34,7 +34,7 @@ For dynamic array, we do in such way
 sort(a.begin(), a.end());
 ```
 
-If you want to sort for a specific range $$[x, y)$$,  then use
+If you want to sort for a specific range $$[x, y)$$, then use
 
 ```cpp
 sort(a.begin() + x, a.begin() + y);
@@ -51,7 +51,7 @@ By default, `sort()` sorts the elements in the range $$[x, y)$$ into ascending o
 ```cpp
 sort(a.begin(), a.end(), [&](const array<int, 3>& x, const array<int, 3>& y) {
     return (
-        (x[0] < y[0]) || 
+        (x[0] < y[0]) ||
         (x[0] == y[0] && x[1] < y[1]) ||
         (x[0] == y[0] && x[1] == y[1] || x[2] < y[2])
     );
@@ -59,12 +59,12 @@ sort(a.begin(), a.end(), [&](const array<int, 3>& x, const array<int, 3>& y) {
 ```
 
 export const suggestedProblems = [
-  {
-    "problemName": "0921 - Sort an Array",
-    "difficulty": "Medium",
-    "leetCodeLink": "https://leetcode.com/problems/sort-an-array/",
-    "solutionLink": "../../solutions/0900-0999/sort-an-array-medium"
-  },
+{
+"problemName": "0921 - Sort an Array",
+"difficulty": "Medium",
+"leetCodeLink": "https://leetcode.com/problems/sort-an-array/",
+"solutionLink": "../../solutions/0900-0999/sort-an-array-medium"
+},
 ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />

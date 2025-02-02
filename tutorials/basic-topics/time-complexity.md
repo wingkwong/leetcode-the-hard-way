@@ -1,6 +1,6 @@
 ---
-title: 'Time Complexity'
-description: 'Time Complexity is one of the important measurements when it comes to writing an efficient solution.'
+title: "Time Complexity"
+description: "Time Complexity is one of the important measurements when it comes to writing an efficient solution."
 hide_table_of_contents: true
 keywords:
   - leetcode
@@ -8,7 +8,7 @@ keywords:
   - time complexity
 ---
 
-<TutorialAuthors names="@wingkwong"/>
+<TutorialCredits authors="@wingkwong"/>
 
 ## Overview
 
