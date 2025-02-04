@@ -9,7 +9,7 @@ keywords:
   - algorithm
 ---
 
-<TutorialCredit authors="@RohitTaparia" contributors="@wkw" />
+<TutorialCredits authors="@RohitTaparia" contributors="@wkw" />
 
 ## Overview
 
