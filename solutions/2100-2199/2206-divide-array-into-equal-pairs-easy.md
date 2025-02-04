@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/divide-array-into-equal-pairs/
+  Author: @wkw | https://leetcode.com/problems/divide-array-into-equal-pairs/
 ---
 
 # 2206 - Divide Array Into Equal Pairs (Easy)
@@ -16,8 +15,8 @@ You are given an integer array `nums` consisting of `2 * n` integers.
 
 You need to divide `nums` into `n` pairs such that:
 
-* Each element belongs to **exactly one** pair.
-* The elements present in a pair are **equal**.
+- Each element belongs to **exactly one** pair.
+- The elements present in a pair are **equal**.
 
 Return `true` _if nums can be divided into_ `n` _pairs, otherwise return_ `false`.
 
@@ -25,7 +24,7 @@ Return `true` _if nums can be divided into_ `n` _pairs, otherwise return_ `false
 
 Count the frequency for each number. If there is a number with odd frequency, then the answer is false. Otherwise, it must be true.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

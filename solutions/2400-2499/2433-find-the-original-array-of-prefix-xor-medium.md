@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @vigneshshiv |
-  https://leetcode.com/problems/find-the-original-array-of-prefix-xor/
+  Author: @vigneshshiv | https://leetcode.com/problems/find-the-original-array-of-prefix-xor/
 ---
 
 # 2433 - Find the Original array of prefix XOR (Medium)
@@ -14,8 +13,7 @@ https://leetcode.com/problems/find-the-original-array-of-prefix-xor/
 
 You are given an **integer** array `pref` of size `n`. Find and return _the array `arr` of size `n` that satisfies_:
 
-- `pref[i] = arr[0] ^ arr[1] ^ ... ^ arr[i]`.
-Note that `^` denotes the **bitwise-xor** operation.
+- `pref[i] = arr[0] ^ arr[1] ^ ... ^ arr[i]`. Note that `^` denotes the **bitwise-xor** operation.
 
 It can be proven that the answer is **unique**.
 
@@ -42,9 +40,8 @@ Explanation: We have pref[0] = arr[0] = 13.
 
 **Constraints:**
 
-* `1 <= pref.length <= 10^5`
-* `0 <= pref[i] <= 10^6`
-
+- `1 <= pref.length <= 10^5`
+- `0 <= pref[i] <= 10^6`
 
 ## Approach 1: STL
 
@@ -68,5 +65,6 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 </Tabs>

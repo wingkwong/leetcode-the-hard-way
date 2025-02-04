@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/sum-of-even-numbers-after-queries/'
+description: 'Author: @wkw | https://leetcode.com/problems/sum-of-even-numbers-after-queries/'
 tags: [Array, Simulation]
 ---
 
-# 0985 - Sum of Even Numbers After Queries (Medium) 
+# 0985 - Sum of Even Numbers After Queries (Medium)
 
 ## Problem Link
 
@@ -15,7 +15,7 @@ You are given an integer array `nums` and an array `queries` where `queries[i] =
 
 For each query `i`, first, apply `nums[indexi] = nums[indexi] + vali`, then print the sum of the even values of `nums`.
 
-Return *an integer array*`answer`*where*`answer[i]`*is the answer to the*`ith`*query*.
+Return _an integer array_`answer`_where_`answer[i]`_is the answer to the_`ith`_query_.
 
 **Example 1:**
 
@@ -48,14 +48,14 @@ Output: [0]
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
 public:
     // the idea is we don't calculate the even sum from scratch for each query
     // instead, we calculate it at the beginning
-    // since each query only updates one value, 
+    // since each query only updates one value,
     // so we can adjust the even sum base on the original value and new value
     vector<int> sumEvenAfterQueries(vector<int>& nums, vector<vector<int>>& queries) {
         int evenSum = 0;
@@ -74,7 +74,7 @@ public:
             nums[idx] += val;
             // check if we need to update evenSum for the new value
             if (nums[idx] % 2 == 0) evenSum += nums[idx];
-            // then we have evenSum after this query, push it to ans 
+            // then we have evenSum after this query, push it to ans
             ans.push_back(evenSum);
         }
         return ans;
@@ -85,13 +85,13 @@ public:
 </TabItem>
 
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:
     # the idea is we don't calculate the even sum from scratch for each query
     # instead, we calculate it at the beginning
-    # since each query only updates one value, 
+    # since each query only updates one value,
     # so we can adjust the even sum base on the original value and new value
     def sumEvenAfterQueries(self, nums: List[int], queries: List[List[int]]) -> List[int]:
         # calculate the sum of all even numbers
@@ -104,7 +104,7 @@ class Solution:
             nums[idx] += val
             # check if we need to update evenSum for the new value
             if nums[idx] % 2 == 0: evenSum += nums[idx]
-            # then we have evenSum after this query, push it to ans 
+            # then we have evenSum after this query, push it to ans
             ans.append(evenSum)
         return ans
 ```
@@ -112,13 +112,13 @@ class Solution:
 </TabItem>
 
 <TabItem value="java" label="Java">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```java
 class Solution {
     // the idea is we don't calculate the even sum from scratch for each query
     // instead, we calculate it at the beginning
-    // since each query only updates one value, 
+    // since each query only updates one value,
     // so we can adjust the even sum base on the original value and new value
     public int[] sumEvenAfterQueries(int[] nums, int[][] queries) {
         int evenSum = 0, n = queries.length;
@@ -137,7 +137,7 @@ class Solution {
             nums[idx] += val;
             // check if we need to update evenSum for the new value
             if (nums[idx] % 2 == 0) evenSum += nums[idx];
-            // then we have evenSum after this query, push it to ans 
+            // then we have evenSum after this query, push it to ans
             ans[i] = evenSum;
         }
         return ans;
@@ -148,12 +148,12 @@ class Solution {
 </TabItem>
 
 <TabItem value="go" label="Go">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```go
 // the idea is we don't calculate the even sum from scratch for each query
 // instead, we calculate it at the beginning
-// since each query only updates one value, 
+// since each query only updates one value,
 // so we can adjust the even sum base on the original value and new value
 func sumEvenAfterQueries(nums []int, queries [][]int) []int {
     evenSum := 0
@@ -176,7 +176,7 @@ func sumEvenAfterQueries(nums []int, queries [][]int) []int {
         if nums[idx] % 2 == 0 {
             evenSum += nums[idx]
         }
-        // then we have evenSum after this query, push it to ans 
+        // then we have evenSum after this query, push it to ans
         ans[i] = evenSum
     }
     return ans
@@ -192,7 +192,7 @@ It's kind of overkill and not necessary. Here's the code if you're interested.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 struct segtree {

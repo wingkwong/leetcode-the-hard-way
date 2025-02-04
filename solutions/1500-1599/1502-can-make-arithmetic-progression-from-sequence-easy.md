@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/can-make-arithmetic-progression-from-sequence/
+  Author: @wkw | https://leetcode.com/problems/can-make-arithmetic-progression-from-sequence/
 ---
 
 # 1502 - Can Make Arithmetic Progression From Sequence (Easy)
@@ -34,8 +33,8 @@ Explanation: There is no way to reorder the elements to obtain an arithmetic pro
 
 **Constraints:**
 
-* `2 <= arr.length <= 1000`
-* `-10^6 <= arr[i] <= 10^6`
+- `2 <= arr.length <= 1000`
+- `-10^6 <= arr[i] <= 10^6`
 
 ## Approach 1: Sorting
 
@@ -43,7 +42,7 @@ We sort the array and calculate the first difference. Iterate the rest of the el
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -69,7 +68,7 @@ public:
 </TabItem>
 
 <TabItem value="rs" label="Rust">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```rs
 impl Solution {

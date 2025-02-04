@@ -1,5 +1,5 @@
 ---
-description: "Author: @wingkwong | https://leetcode.com/problems/three-consecutive-odds/"
+description: 'Author: @wkw | https://leetcode.com/problems/three-consecutive-odds/'
 tags: [Array]
 ---
 
@@ -38,7 +38,7 @@ Explanation: [5,7,23] are three consecutive odds.
 
 <Tabs>
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:

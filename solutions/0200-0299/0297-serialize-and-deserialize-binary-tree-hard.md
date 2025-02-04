@@ -1,6 +1,7 @@
 ---
 description: 'Author: @ColeB2 | https://leetcode.com/problems/serialize-and-deserialize-binary-tree/'
-tags: [String, Tree, Depth-First Search, Breadth-First Search, Design, Binary Tree]
+tags:
+  [String, Tree, Depth-First Search, Breadth-First Search, Design, Binary Tree]
 ---
 
 # 0297 - Serialize and Deserialize Binary Tree (Hard)
@@ -42,8 +43,7 @@ Output: []
 
 We can use a queue/BFS to order our nodes in a level order traversal. That means looping through level by level and appending them to a string or an array. Note for Python, and potentially any other languages that use immutable strings, we will use an array first, then convert our serialized array into a string after like the question asks. Python we can use .join method (This prevents remaking the string during each concatenation). We will also need to separate our nodes in the string with a separator, and use a character to denote a null node.
 
-Serializing:
-Time Complexity: $$O(n)$$. We must read each node, and then convert it to a serialized form. We can't skip nodes.
+Serializing: Time Complexity: $$O(n)$$. We must read each node, and then convert it to a serialized form. We can't skip nodes.
 
 Space Complexity: $$O(n)$$. Our queue to perform BFS will have $$n/2$$ nodes in the last layer, and if we use an array to serialize before we convert to a string, the array will have $$n$$ elements.
 
@@ -51,8 +51,7 @@ The tricky part then becomes deserializing. To deserialize we must read our inpu
 
 Again we can use a queue to solve which node is child of which. By appending all nodes to the queue and using a boolean to determine whether the next node being read in is the left or right child. If it is the right child, we can then pop the node out of the queue, and start adding children to the new node in front of the queue.
 
-Deserializing:
-Time Complexity: $$O(n)$$. We must process each node.
+Deserializing: Time Complexity: $$O(n)$$. We must process each node.
 
 Space Complexity: $$O(n)$$, We must create $$n$$ nodes, and we will also need up to $$n$$ space for our queue, and potentially more if we convert our string to an array first.
 
@@ -70,7 +69,7 @@ Space Complexity: $$O(n)$$, We must create $$n$$ nodes, and we will also need up
 class Codec:
     def serialize(self, root):
         """Encodes a tree to a single string.
-        
+
         :type root: TreeNode
         :rtype: str
 
@@ -111,7 +110,7 @@ class Codec:
 
     def deserialize(self, data):
         """Decodes your encoded data to tree.
-        
+
         :type data: str
         :rtype: TreeNode
         Time: O(n)
@@ -155,7 +154,7 @@ class Codec:
                 q[0].right = node
                 # pop the node, since it no longer needs children
                 q.popleft()
-                # set right to false as the next node first child will be a 
+                # set right to false as the next node first child will be a
                 # left child.
                 right = False
             # right == false, next child is the first value in the queue's left

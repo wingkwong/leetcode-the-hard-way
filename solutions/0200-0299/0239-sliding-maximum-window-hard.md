@@ -1,6 +1,6 @@
 ---
-description: "Author: @ColeB2 | https://leetcode.com/problems/sliding-window-maximum/"
-tags: [Array, Queue, Sliding Window,  Heap(Priority Queue), Monotonic Queue]
+description: 'Author: @ColeB2 | https://leetcode.com/problems/sliding-window-maximum/'
+tags: [Array, Queue, Sliding Window, Heap(Priority Queue), Monotonic Queue]
 ---
 
 # 0239 - Sliding Window Maximum (Hard)
@@ -16,10 +16,11 @@ You are given an array of integers `nums`, there is a sliding window of size `k`
 Return _the max sliding window._
 
 **Example 1:**
+
 ```
 Input: nums = [1,3,-1,-3,5,3,6,7], k = 3
 Output: [3,3,5,5,6,7]
-Explanation: 
+Explanation:
 Window position                Max
 ---------------               -----
 [1  3  -1] -3  5  3  6  7       3
@@ -31,16 +32,17 @@ Window position                Max
 ```
 
 **Example 2:**
+
 ```
 Input: nums = [1], k = 1
 Output: [1]
 ```
 
 **Constraints:**
+
 - `1 <= nums.length <= 10^5`
 - `-10^4 <= nums[i] <= 10^4`
 - `1 <= k <= nums.length`
-
 
 ## Approach 1: Brute Force
 
@@ -71,6 +73,7 @@ class Solution:
             max_window.append(max(window))
         return max_window
 ```
+
 </TabItem>
 </Tabs>
 
@@ -79,14 +82,14 @@ class Solution:
 The approach we will use here is the monotonic queue, more specifically, the monotonic increasing queue. Where every value in the queue will be ordered in decreasing order. Meaning the largest values will be on the left, and the smallest on the right. If the incoming number is larger than the numbers on the right, we pop them until it is no longer larger, than we can add it to the queue. We will also use a deque (double ended queue), so we can pop the left side in $$O(1)$$ time for the case when a number needs to exit our sliding window.
 
 So we can solve this if we follow 3 basic rules.
+
 1. Pop from the right side of our queue if the incoming number is larger than the right most number of the queue to maintain the monotonic qualities we need.
 2. Pop from the left side of the queue if the index of the left element is no longer within our window.
 3. Add the left most value of our queue, the largest value, to our output array.
 
-Time Complexity: $$O(n)$$ as in the worst case, we are going to add each number to the queue once, and then
-look at it one more time to pop it.
+Time Complexity: $$O(n)$$ as in the worst case, we are going to add each number to the queue once, and then look at it one more time to pop it.
 
-Space Complexity: $$O(n)$$ Space will be $$O(n-k)$$ for our output array, which will hold n-k numbers, plus $$O(k)$$ for our deque. 
+Space Complexity: $$O(n)$$ Space will be $$O(n-k)$$ for our output array, which will hold n-k numbers, plus $$O(k)$$ for our deque.
 
 <Tabs>
 <TabItem value="python" label="Python">
@@ -130,8 +133,8 @@ class Solution:
                 l += 1
         # Return the output of our algorithm, the maximum sliding window.
         return max_window
-                
+
 ```
+
 </TabItem>
 </Tabs>
-

@@ -1,15 +1,15 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/reordered-power-of-2/'
+description: 'Author: @wkw | https://leetcode.com/problems/reordered-power-of-2/'
 tags: [Math, Sorting, Counting, Enumeration]
 ---
 
-# 0869 - Reordered Power of 2 (Medium) 
+# 0869 - Reordered Power of 2 (Medium)
 
 ## Problem Statement
 
 You are given an integer `n`. We reorder the digits in any order (including the original order) such that the leading digit is not zero.
 
-Return `true` *if and only if we can do this so that the resulting number is a power of two*.
+Return `true` _if and only if we can do this so that the resulting number is a power of two_.
 
 **Example 1:**
 
@@ -31,7 +31,7 @@ Output: false
 
 ## Approach 1: Sorting
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -45,7 +45,7 @@ public:
         // return the string
         return t;
     }
-    
+
     // the idea is to sort `n` and compare all sorted power of two
     // if they are matched, then it means they can be reordered to each other
     bool reorderedPowerOf2(int n) {

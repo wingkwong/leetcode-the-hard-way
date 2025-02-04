@@ -9,7 +9,7 @@ keywords:
   - algorithm
 ---
 
-<TutorialAuthors names="@wingkwong"/>
+<TutorialCredits authors="@wkw"/>
 
 ## Overview
 
@@ -26,7 +26,7 @@ The first run, the vertex is the source node. We remove it and check its neighbo
 <Tabs>
 
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 template<typename T_pair, typename T_vector>
@@ -46,24 +46,12 @@ void dijkstra(T_pair &g, T_vector &dist, int start) {
   }
 }
 ```
+
 </TabItem>
 </Tabs>
 
 Dijkstra's algorithm is guaranteed to find the shortest path between two nodes in a graph if all the edge weights are non-negative. If the graph contains negative edge weights, Bellman-Ford algorithm should be used instead.
 
-export const suggestedProblems = [
-  {
-    "problemName": "0743 - Network Delay Time",
-    "difficulty": "Medium",
-    "leetCodeLink": "https://leetcode.com/problems/network-delay-time/",
-    "solutionLink": "../../solutions/0700-0799/network-delay-time-medium"
-  },
-  {
-    "problemName": "1334 - Find the City With the Smallest Number of Neighbors at a Threshold Distance",
-    "difficulty": "Medium",
-    "leetCodeLink": "https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/",
-    "solutionLink": "../../solutions/1300-1399/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance-medium"
-  },
-]
+export const suggestedProblems = [ { "problemName": "0743 - Network Delay Time", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/network-delay-time/", "solutionLink": "../../solutions/0700-0799/network-delay-time-medium" }, { "problemName": "1334 - Find the City With the Smallest Number of Neighbors at a Threshold Distance", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/", "solutionLink": "../../solutions/1300-1399/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance-medium" }, ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />

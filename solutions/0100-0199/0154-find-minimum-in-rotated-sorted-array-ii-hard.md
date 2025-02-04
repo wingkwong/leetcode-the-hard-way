@@ -3,7 +3,7 @@ description: 'Author: @yashh0903 | https://leetcode.com/problems/find-minimum-in
 tags: [Array, Binary Search]
 ---
 
-# 0154 - Find Minimum in Rotated Sorted Array II (Hard) 
+# 0154 - Find Minimum in Rotated Sorted Array II (Hard)
 
 ## Problem Link
 
@@ -18,7 +18,7 @@ Suppose an array of length `n` sorted in ascending order is **rotated** between 
 
 Notice that **rotating** an array `[a[0], a[1], a[2], ..., a[n-1]]` 1 time results in the array `[a[n-1], a[0], a[1], a[2], ..., a[n-2]]`.
 
-Given the sorted rotated array `nums` that may contain **duplicates**, return *the minimum element of this array*.
+Given the sorted rotated array `nums` that may contain **duplicates**, return _the minimum element of this array_.
 
 You must decrease the overall operation steps as much as possible.
 

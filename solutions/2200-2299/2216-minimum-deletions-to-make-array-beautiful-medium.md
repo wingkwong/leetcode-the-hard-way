@@ -1,7 +1,8 @@
 ---
 description: >-
-  Author: @TBC |
-  https://leetcode.com/problems/minimum-deletions-to-make-array-beautiful/
+  Author: @TBC | https://leetcode.com/problems/minimum-deletions-to-make-array-beautiful/
+
+
 draft: true
 ---
 
@@ -15,8 +16,8 @@ https://leetcode.com/problems/minimum-deletions-to-make-array-beautiful/
 
 You are given a **0-indexed** integer array `nums`. The array `nums` is **beautiful** if:
 
-* `nums.length` is even.
-* `nums[i] != nums[i + 1]` for all `i % 2 == 0`.
+- `nums.length` is even.
+- `nums[i] != nums[i + 1]` for all `i % 2 == 0`.
 
 Note that an empty array is considered beautiful.
 
@@ -42,7 +43,7 @@ Explanation: You can delete nums[0] and nums[5] to make nums = [1,2,2,3] which i
 
 **Constraints:**
 
-* `1 <= nums.length <= 10^5`
-* `0 <= nums[i] <= 10^5`
+- `1 <= nums.length <= 10^5`
+- `0 <= nums[i] <= 10^5`
 
 ## Approach 1: TBC

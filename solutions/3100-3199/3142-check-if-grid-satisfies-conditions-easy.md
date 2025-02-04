@@ -1,5 +1,5 @@
 ---
-description: "Author: @wingkwong | https://leetcode.com/problems/check-if-grid-satisfies-conditions/"
+description: 'Author: @wkw | https://leetcode.com/problems/check-if-grid-satisfies-conditions/'
 tags: [Array, Matrix]
 ---
 
@@ -62,7 +62,7 @@ Iterate over each cell to check if the conditions can be satisified.
 
 <Tabs>
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:

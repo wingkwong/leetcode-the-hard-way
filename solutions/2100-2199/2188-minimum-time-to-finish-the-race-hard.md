@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @heiheihang |
-  https://leetcode.com/problems/minimum-time-to-finish-the-race/
+  Author: @heiheihang | https://leetcode.com/problems/minimum-time-to-finish-the-race/
 ---
 
 # 2188 - Minimum Time to Finish the Race (Hard)
@@ -14,7 +13,7 @@ https://leetcode.com/problems/minimum-time-to-finish-the-race/
 
 You are given a **0-indexed** 2D integer array `tires` where `tires[i] = [fi, ri]` indicates that the `ith` tire can finish its `xth` successive lap in `fi * ri(x-1)` seconds.
 
-* For example, if `fi = 3` and `ri = 2`, then the tire would finish its `1st` lap in `3` seconds, its `2nd` lap in `3 * 2 = 6` seconds, its `3rd` lap in `3 * 22 = 12` seconds, etc.
+- For example, if `fi = 3` and `ri = 2`, then the tire would finish its `1st` lap in `3` seconds, its `2nd` lap in `3 * 2 = 6` seconds, its `3rd` lap in `3 * 22 = 12` seconds, etc.
 
 You are also given an integer `changeTime` and an integer `numLaps`.
 
@@ -27,7 +26,7 @@ Return _the **minimum** time to finish the race._
 ```
 Input: tires = [[2,3],[3,4]], changeTime = 5, numLaps = 4
 Output: 21
-Explanation: 
+Explanation:
 Lap 1: Start with tire 0 and finish the lap in 2 seconds.
 Lap 2: Continue with tire 0 and finish the lap in 2 * 3 = 6 seconds.
 Lap 3: Change tires to a new tire 0 for 5 seconds and then finish the lap in another 2 seconds.
@@ -41,30 +40,30 @@ The minimum time to complete the race is 21 seconds.
 ```
 Input: tires = [[1,10],[2,2],[3,4]], changeTime = 6, numLaps = 5
 Output: 25
-Explanation: 
+Explanation:
 Lap 1: Start with tire 1 and finish the lap in 2 seconds.
 Lap 2: Continue with tire 1 and finish the lap in 2 * 2 = 4 seconds.
 Lap 3: Change tires to a new tire 1 for 6 seconds and then finish the lap in another 2 seconds.
 Lap 4: Continue with tire 1 and finish the lap in 2 * 2 = 4 seconds.
 Lap 5: Change tires to tire 0 for 6 seconds then finish the lap in another 1 second.
 Total time = 2 + 4 + 6 + 2 + 4 + 6 + 1 = 25 seconds.
-The minimum time to complete the race is 25 seconds. 
+The minimum time to complete the race is 25 seconds.
 ```
 
 **Constraints:**
 
-* `1 <= tires.length <= 10^5`
-* `tires[i].length == 2`
-* `1 <= fi, changeTime <= 10^5`
-* `2 <= ri <= 10^5`
-* `1 <= numLaps <= 1000`
+- `1 <= tires.length <= 10^5`
+- `tires[i].length == 2`
+- `1 <= fi, changeTime <= 10^5`
+- `2 <= ri <= 10^5`
+- `1 <= numLaps <= 1000`
 
 ## Approach 1: DP
 
 The general approach is to store the minimum time required to travel each lap. We must make the following observation:
 
-* To travel $$n$$ laps, we must use the same tire for $$n$$ laps, or we can use the set of tires used to travel $$a$$ laps and another set of tires used to travel $$b$$ laps such that $$a+b=n$$.
-* Before we can find an optimal set of tires to travel $$n$$ laps, we can only consider using the same tire to travel $$1$$ to $$n$$ laps
+- To travel $$n$$ laps, we must use the same tire for $$n$$ laps, or we can use the set of tires used to travel $$a$$ laps and another set of tires used to travel $$b$$ laps such that $$a+b=n$$.
+- Before we can find an optimal set of tires to travel $$n$$ laps, we can only consider using the same tire to travel $$1$$ to $$n$$ laps
 
 We can now break this problem into 2 parts:
 
@@ -81,10 +80,10 @@ Notice that the above condition is not optimally the upper bound, but it is good
 
 The second part involves looking for a combination of laps for each lap. For example, if we want to find the minimum time for running 9 laps, we need to find the following
 
-* `dp[1] + dp[8] + changeTime`
-* `dp[2] + dp[7] + changeTime`
-* `dp[3] + dp[6] + changeTime`
-* `dp[4] + dp[5] + changeTime`
+- `dp[1] + dp[8] + changeTime`
+- `dp[2] + dp[7] + changeTime`
+- `dp[3] + dp[6] + changeTime`
+- `dp[4] + dp[5] + changeTime`
 
 Of course, if there exists a tire running 9 laps in a row that is fast than the above, we keep it.
 

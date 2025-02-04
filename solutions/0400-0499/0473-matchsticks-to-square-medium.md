@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/matchsticks-to-square/'
+description: 'Author: @wkw | https://leetcode.com/problems/matchsticks-to-square/'
 ---
 
 # 0473 - Matchsticks to Square (Medium)
@@ -34,8 +34,8 @@ Explanation: You cannot find a way to form a square with all the matchsticks.
 
 **Constraints:**
 
-* `1 <= matchsticks.length <= 15`
-* `1 <= matchsticks[i] <= 10^8`
+- `1 <= matchsticks.length <= 15`
+- `1 <= matchsticks[i] <= 10^8`
 
 ## Approach 1: Bitmask DP
 
@@ -47,7 +47,7 @@ Let $$dp[mask]$$ be the length of matchsticks we have put in the state $$mask$$.
 
 Hence, we iterate the mask. If the mask cannot be used, then skip it. Otherwise, we iterate $$n$$ times to check if $$i$$-th bit is used. If not, it means we may take this matchstick. However, we can only set this bit (take the matchstick) only if putting it won't exceed the length of side, i.e. $$dp[mask] + matchsticks[i] <= side$$. Once we choose it, then we update the new state $$(dp[mask] + matchsticks[i]) \mod side$$. We take $$mod$$ here because if we want to reset it if the prefect match for a side is found. At the end, choosing all $$5$$ matchsticks would give $$dp[(11111_2)] = 0$$.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -70,13 +70,13 @@ public:
         for (int mask = 0; mask < (1 << n); mask++) {
             // cannot use this state - skip it
             if (dp[mask] == -1) continue;
-            // try to put each matchstick 
+            // try to put each matchstick
             for (int i = 0; i < n; i++) {
                 // if matchsticks[i] is available to be put
                 // and the length won't exceed side after putting it
                 if (!(mask & (1 << i)) && dp[mask] + matchsticks[i] <= side) {
                     // then put it and update the state
-                    // if it perfectly forms a side, it would be 0 
+                    // if it perfectly forms a side, it would be 0
                     dp[mask | (1 << i)] = (dp[mask] + matchsticks[i]) % side;
                 }
             }
@@ -86,4 +86,3 @@ public:
     }
 };
 ```
-

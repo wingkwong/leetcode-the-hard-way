@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/time-needed-to-rearrange-a-binary-string/'
+description: 'Author: @wkw | https://leetcode.com/problems/time-needed-to-rearrange-a-binary-string/'
 tags: [String, Dynamic Programming, Simulation]
 ---
 
-# 2380 - Time Needed to Rearrange a Binary String (Medium) 
+# 2380 - Time Needed to Rearrange a Binary String (Medium)
 
 ## Problem Statement
 
@@ -16,7 +16,7 @@ Return*the number of seconds needed to complete this process.*
 ```
 Input: s = "0110101"
 Output: 4
-Explanation: 
+Explanation:
 After one second, s becomes "1011010".
 After another second, s becomes "1101100".
 After the third second, s becomes "1110100".
@@ -46,7 +46,7 @@ Can you solve this problem in O(n) time complexity?
 
 ## Approach 1: Brute Force
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -68,7 +68,7 @@ public:
                     // after swapping, it could possibly produce another 01
                     // hence set it to 1
                     need = 1;
-                }                
+                }
             }
             // if we swapped it, then we need 1 second for the action
             ans += need;

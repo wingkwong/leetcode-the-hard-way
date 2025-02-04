@@ -1,7 +1,8 @@
 ---
 description: >-
-  Author: @TBC |
-  https://leetcode.com/problems/the-latest-time-to-catch-a-bus
+  Author: @TBC | https://leetcode.com/problems/the-latest-time-to-catch-a-bus
+
+
 draft: true
 ---
 
@@ -28,8 +29,8 @@ Return _the latest time you may arrive at the bus station to catch a bus_. You *
 ```
 Input: buses = [10,20], passengers = [2,17,18,19], capacity = 2
 Output: 16
-Explanation: 
-The 1st bus departs with the 1st passenger. 
+Explanation:
+The 1st bus departs with the 1st passenger.
 The 2nd bus departs with you and the 2nd passenger.
 Note that you must not arrive at the same time as the passengers, which is why you must arrive before the 2nd passenger to catch the bus.
 ```
@@ -39,20 +40,20 @@ Note that you must not arrive at the same time as the passengers, which is why y
 ```
 Input: buses = [20,30,10], passengers = [19,13,26,4,25,11,21], capacity = 2
 Output: 20
-Explanation: 
-The 1st bus departs with the 4th passenger. 
+Explanation:
+The 1st bus departs with the 4th passenger.
 The 2nd bus departs with the 6th and 2nd passengers.
 The 3rd bus departs with the 1st passenger and you.
 ```
 
 **Constraints:**
 
-* `n == buses.length`
-* `m == passengers.length`
-* `1 <= n, m, capacity <= 10^5`
-* `2 <= buses[i], passengers[i] <= 10^9`
-* Each element in `buses` is **unique**.
-* Each element in `passengers` is **unique**.
+- `n == buses.length`
+- `m == passengers.length`
+- `1 <= n, m, capacity <= 10^5`
+- `2 <= buses[i], passengers[i] <= 10^9`
+- Each element in `buses` is **unique**.
+- Each element in `passengers` is **unique**.
 
 ## Approach: TBC
 

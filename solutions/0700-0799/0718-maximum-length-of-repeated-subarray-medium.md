@@ -1,9 +1,17 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/maximum-length-of-repeated-subarray/'
-tags: [Array, Binary Search, Dynamic Programming, Sliding Window, Rolling Hash, Hash Function]
+description: 'Author: @wkw | https://leetcode.com/problems/maximum-length-of-repeated-subarray/'
+tags:
+  [
+    Array,
+    Binary Search,
+    Dynamic Programming,
+    Sliding Window,
+    Rolling Hash,
+    Hash Function,
+  ]
 ---
 
-# 0718 - Maximum Length of Repeated Subarray (Medium) 
+# 0718 - Maximum Length of Repeated Subarray (Medium)
 
 ## Problem Link
 
@@ -11,7 +19,7 @@ https://leetcode.com/problems/maximum-length-of-repeated-subarray/
 
 ## Problem Statement
 
-Given two integer arrays `nums1` and `nums2`, return *the maximum length of a subarray that appears in **both** arrays*.
+Given two integer arrays `nums1` and `nums2`, return _the maximum length of a subarray that appears in **both** arrays_.
 
 **Example 1:**
 
@@ -37,7 +45,7 @@ Output: 5
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -85,7 +93,7 @@ public:
         int n = nums1.size(), m = nums2.size(), ans = 0;
         // swap it to ensure n > m
         if (n < m) {
-            // or you can call findLength(nums2, nums1); 
+            // or you can call findLength(nums2, nums1);
             swap(nums1, nums2);
             swap(n, m);
         }
@@ -96,7 +104,7 @@ public:
             for (int j = 1; j <= m; j++) {
                 if (nums1[i - 1] == nums2[j - 1]) {
                     // extend from the previous dp state
-                    dp[j] = dp2[j - 1] + 1; 
+                    dp[j] = dp2[j - 1] + 1;
                 } else {
                     // reset to 0
                     dp[j] = 0;
@@ -115,7 +123,7 @@ public:
 </TabItem>
 
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:
@@ -152,7 +160,7 @@ class Solution:
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 // Binary Search + Rolling Hash Approach
@@ -169,7 +177,7 @@ public:
         PolyHash H1 = PolyHash(nums1);
         // build hashes for nums2
         PolyHash H2 = PolyHash(nums2);
-        
+
         int l = 0, r = min(N, M);
         // binary search
         while (l < r) {
@@ -197,30 +205,31 @@ public:
     }
 };
 ```
+
 </TabItem>
 
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:
     # Binary Search Approach
     def findLength(self, nums1: List[int], nums2: List[int]) -> int:
         N, M = len(nums1), len(nums2)
-        
+
         def ok(k):
             # the idea is to use binary search to find the length `k`
             # then we check if there is any nums1[i : i + k] == nums2[i : i + k]
             s = set(tuple(nums1[i : i + k]) for i in range(N - k + 1))
             return any(tuple(nums2[i : i + k]) in s for i in range(M - k + 1))
-        
+
         # init possible boundary
         l, r = 0, min(N, M)
         while l < r:
             # get the middle one
             # for even number of elements, take the upper one
             m = (l + r + 1) // 2
-            if ok(m): 
+            if ok(m):
                 # include m
                 l = m
             else:

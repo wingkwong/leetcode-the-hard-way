@@ -1,5 +1,5 @@
 ---
-description: "Author: @wingkwong, @rahulvarma5297, @radojicic23 | https://leetcode.com/problems/merge-k-sorted-lists/"
+description: 'Author: @wkw, @rahulvarma5297, @radojicic23 | https://leetcode.com/problems/merge-k-sorted-lists/'
 tags: [Linked List, Divide and Conquer, Heap (Priority Queue), Merge Sort]
 ---
 
@@ -63,7 +63,7 @@ The idea is to merge the $$k$$ lists into $$k / 2$$, then $$k / 4$$, $$k / 8$$ a
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 /**

@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/minimum-number-of-taps-to-open-to-water-a-garden/description/'
+description: 'Author: @wkw | https://leetcode.com/problems/minimum-number-of-taps-to-open-to-water-a-garden/description/'
 tags: [Array, Dynamic Programming, Greedy]
 ---
 
-# 1326 - Minimum Number of Taps to Open to Water a Garden (Hard) 
+# 1326 - Minimum Number of Taps to Open to Water a Garden (Hard)
 
 ## Problem Link
 
@@ -17,7 +17,7 @@ There are `n + 1` taps located at points `[0, 1, ..., n]` in the garden.
 
 Given an integer `n` and an integer array `ranges` of length `n + 1` where `ranges[i]` (0-indexed) means the `i-th` tap can water the area `[i - ranges[i], i + ranges[i]]` if it was open.
 
-Return *the minimum number of taps* that should be open to water the whole garden, If the garden cannot be watered return **-1**.
+Return _the minimum number of taps_ that should be open to water the whole garden, If the garden cannot be watered return **-1**.
 
 **Example 1:**
 
@@ -51,7 +51,7 @@ Explanation: Even if you activate all the four taps you cannot water the whole g
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 // TC: O(n * m) where m is ranges[i]
@@ -71,7 +71,7 @@ public:
             for (int j = l; j <= r; j++) {
                 // check we can use less number of taps from [l .. r]
                 // i.e. can i water [0 .. j] just using dp[j] taps
-                // or I need to water dp[0 .. l] `dp[l]` times 
+                // or I need to water dp[0 .. l] `dp[l]` times
                 // and use one more tap to water [l + 1 .. j]
                 dp[j] = min(dp[j], dp[l] + 1);
             }

@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/minimum-average-difference/'
+description: 'Author: @wkw | https://leetcode.com/problems/minimum-average-difference/'
 tags: [Array, Prefix Sum]
 ---
 
@@ -19,9 +19,9 @@ Return _the index with the **minimum average difference**_. If there are multipl
 
 **Note:**
 
-* The **absolute difference** of two numbers is the absolute value of their difference.
-* The **average** of `n` elements is the **sum** of the `n` elements divided (**integer division**) by `n`.
-* The average of `0` elements is considered to be `0`.
+- The **absolute difference** of two numbers is the absolute value of their difference.
+- The **average** of `n` elements is the **sum** of the `n` elements divided (**integer division**) by `n`.
+- The average of `0` elements is considered to be `0`.
 
 **Example 1:**
 
@@ -50,14 +50,14 @@ The average difference of index 0 is: |0 / 1 - 0| = |0 - 0| = 0.
 
 **Constraints:**
 
-* `1 <= nums.length <= 10^5`
-* `0 <= nums[i] <= 10^5`
+- `1 <= nums.length <= 10^5`
+- `0 <= nums[i] <= 10^5`
 
 ## Approach 1: Prefix Sum
 
 For the example we can see that we need a range of sum of the input. Hence, we can calculate the prefix sum first. Then for each index, we split $$nums$$ into two parts and calculate the average difference.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

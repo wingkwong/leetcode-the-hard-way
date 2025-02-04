@@ -1,5 +1,5 @@
 ---
-description: "Author: @ColeB2 | https://leetcode.com/problems/copy-list-with-random-pointer/"
+description: 'Author: @ColeB2 | https://leetcode.com/problems/copy-list-with-random-pointer/'
 tags: [Hash Table, Linked List]
 ---
 
@@ -59,10 +59,9 @@ Output: [[3,null],[3,0],[3,null]]
 - `-10^4 <= Node.val <= 10^4`
 - `Node.random` is `null` or is pointing to some node in the linked list.
 
-
 ## Approach 1: 2 Passes
 
-We can break this problem down into 2 easy steps. 
+We can break this problem down into 2 easy steps.
 
 Step 1 is to loop through the linked list and make a copy of each node, we will place the nodes into a hash map with the original node as the key and the created node as the value. We do this for $$O(1)$$ access later.
 

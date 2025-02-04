@@ -8,7 +8,7 @@ keywords:
   - time complexity
 ---
 
-<TutorialAuthors names="@wingkwong"/>
+<TutorialCredits authors="@wkw"/>
 
 ## Overview
 

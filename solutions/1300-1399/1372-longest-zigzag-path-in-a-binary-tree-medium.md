@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/longest-zigzag-path-in-a-binary-tree/'
+description: 'Author: @wkw | https://leetcode.com/problems/longest-zigzag-path-in-a-binary-tree/'
 tags: [Dynamic Programming, Tree, Depth-First Search, Binary Tree]
 ---
 
-# 1372 - Longest ZigZag Path in a Binary Tree (Medium) 
+# 1372 - Longest ZigZag Path in a Binary Tree (Medium)
 
 ## Problem Link
 
@@ -22,7 +22,7 @@ A ZigZag path for a binary tree is defined as follow:
 
 Zigzag length is defined as the number of nodes visited - 1. (A single node has a length of 0).
 
-Return *the longest **ZigZag** path contained in that tree*.
+Return _the longest **ZigZag** path contained in that tree_.
 
 **Example 1:**
 
@@ -56,7 +56,7 @@ Output: 0
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 /**
@@ -76,7 +76,7 @@ public:
         // root is nullptr, we can return `cnt`
         if (!root) return cnt;
         // if `isLeft` is true, we have two choices
-        // 1. go to right making a zipzag path - increase the cnt by 1 
+        // 1. go to right making a zipzag path - increase the cnt by 1
         // 2. still go to left - starting a new zigzag path - hence cnt is set to 0
         if (isLeft) return max(dfs(root->right, 0, cnt + 1), dfs(root->left, 1, 0));
         // similarly, we apply the same logic for the opposite direction
@@ -92,7 +92,7 @@ public:
 
 </TabItem>
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 # Definition for a binary tree node.

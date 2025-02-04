@@ -1,7 +1,6 @@
 ---
 description: >-
-  Authors: @heiheihang, @wingkwong |
-  https://leetcode.com/problems/minimum-time-to-remove-all-cars-containing-illegal-goods/
+  Authors: @heiheihang, @wkw | https://leetcode.com/problems/minimum-time-to-remove-all-cars-containing-illegal-goods/
 ---
 
 # 2167 - Minimum Time to Remove All Cars Containing Illegal Goods (Hard)
@@ -29,19 +28,19 @@ Note that an empty sequence of cars is considered to have no cars containing ill
 ```
 Input: s = "1100101"
 Output: 5
-Explanation: 
+Explanation:
 One way to remove all the cars containing illegal goods from the sequence is to
 - remove a car from the left end 2 times. Time taken is 2 * 1 = 2.
 - remove a car from the right end. Time taken is 1.
 - remove the car containing illegal goods found in the middle. Time taken is 2.
-This obtains a total time of 2 + 1 + 2 = 5. 
+This obtains a total time of 2 + 1 + 2 = 5.
 
 An alternative way is to
 - remove a car from the left end 2 times. Time taken is 2 * 1 = 2.
 - remove a car from the right end 3 times. Time taken is 3 * 1 = 3.
 This also obtains a total time of 2 + 3 = 5.
 
-5 is the minimum time taken to remove all the cars containing illegal goods. 
+5 is the minimum time taken to remove all the cars containing illegal goods.
 There are no other ways to remove them with less time.
 ```
 
@@ -59,18 +58,18 @@ Another way to remove all the cars containing illegal goods from the sequence is
 - remove the car containing illegal goods found in the middle. Time taken is 2.
 This obtains a total time of 2.
 
-Another way to remove all the cars containing illegal goods from the sequence is to 
-- remove a car from the right end 2 times. Time taken is 2 * 1 = 2. 
+Another way to remove all the cars containing illegal goods from the sequence is to
+- remove a car from the right end 2 times. Time taken is 2 * 1 = 2.
 This obtains a total time of 2.
 
-2 is the minimum time taken to remove all the cars containing illegal goods. 
+2 is the minimum time taken to remove all the cars containing illegal goods.
 There are no other ways to remove them with less time.
 ```
 
 **Constraints:**
 
-* `1 <= s.length <= 2 * 10^5`
-* `s[i]` is either `'0'` or `'1'`.
+- `1 <= s.length <= 2 * 10^5`
+- `s[i]` is either `'0'` or `'1'`.
 
 ## Approach 1: Minimum Sum of Subarray
 
@@ -98,30 +97,30 @@ The rest of the problem becomes a classic subarray sum problem.
 
 ```python
 def minimumTime(self, s: str) -> int:
-        
+
         #initialize currentValue and smallest
         currentValue = 0
         smallest = 0
-        
+
         #iterate all characters
         for c in s:
-            
+
             #separate the cases of 0 and 1
             if(c == "0"):
-                
+
                 #-1 if it is 0
                 currentValue -= 1
-                
+
                 #update smallest subarray sum including current value
                 currentValue = min(-1, currentValue)
-                
+
                 #update smallest
                 smallest = min(smallest, currentValue)
             else:
-                
+
                 #add 1 if it is 1
                 currentValue += 1
-        
+
         #return result based on formula
         return len(s) + smallest
 ```
@@ -136,14 +135,14 @@ For each index, we have three options.
 2. remove from the middle and contribute $$dp1[i - 1] + 2$$ or $$dp2[i + 1] + 2$$ time if applicable.
 3. remove from the right and contribute $$n - i$$ time
 
-Let's think about the case from the left to right, the transition is 
+Let's think about the case from the left to right, the transition is
 
-* if the character is 0, it doesn't contribute anything, so we take the previous state. $$dp1[i] := dp1[i - 1]$$
-* if the character is 1, we can either take $$i$$ or $$dp1[i - 1] + 2$$.
+- if the character is 0, it doesn't contribute anything, so we take the previous state. $$dp1[i] := dp1[i - 1]$$
+- if the character is 1, we can either take $$i$$ or $$dp1[i - 1] + 2$$.
 
 For $$dp2$$, we need to do it in reverse order. We can reverse the string and perform the same logic. At the end, the answer is to find the minimum value from $$dp1[i] + dp2[n - i]$$.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

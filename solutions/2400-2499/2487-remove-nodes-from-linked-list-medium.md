@@ -1,5 +1,5 @@
 ---
-description: "Author: @dhanu084 | https://leetcode.com/problems/remove-nodes-from-linked-list/"
+description: 'Author: @dhanu084 | https://leetcode.com/problems/remove-nodes-from-linked-list/'
 tags: [Linked List, Stack]
 ---
 

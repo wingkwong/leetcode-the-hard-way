@@ -1,7 +1,8 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/sum-of-unique-elements/
+  Author: @wkw | https://leetcode.com/problems/sum-of-unique-elements/
+
+
 tags: ['Hash Map']
 ---
 
@@ -43,12 +44,12 @@ Explanation: The unique elements are [1,2,3,4,5], and the sum is 15.
 
 **Constraints:**
 
-* `1 <= nums.length <= 100`
-* `1 <= nums[i] <= 100`
+- `1 <= nums.length <= 100`
+- `1 <= nums[i] <= 100`
 
 ## Approach 1: Hash Map
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

@@ -1,7 +1,8 @@
 ---
 description: >-
-  Author: @TBC |
-  https://leetcode.com/problems/find-the-difference-of-two-arrays/
+  Author: @TBC | https://leetcode.com/problems/find-the-difference-of-two-arrays/
+
+
 draft: true
 ---
 
@@ -15,12 +16,10 @@ https://leetcode.com/problems/find-the-difference-of-two-arrays/
 
 Given two **0-indexed** integer arrays `nums1` and `nums2`, return _a list_ `answer` _of size_ `2` _where:_
 
-* `answer[0]` _is a list of all **distinct** integers in_ `nums1` _which are **not** present in_ `nums2`_._
-* `answer[1]` _is a list of all **distinct** integers in_ `nums2` _which are **not** present in_ `nums1`.
+- `answer[0]` _is a list of all **distinct** integers in_ `nums1` _which are **not** present in_ `nums2`_._
+- `answer[1]` _is a list of all **distinct** integers in_ `nums2` _which are **not** present in_ `nums1`.
 
 **Note** that the integers in the lists may be returned in **any** order.
-
-
 
 **Example 1:**
 
@@ -44,7 +43,7 @@ Every integer in nums2 is present in nums1. Therefore, answer[1] = [].
 
 **Constraints:**
 
-* `1 <= nums1.length, nums2.length <= 1000`
-* `-1000 <= nums1[i], nums2[i] <= 1000`
+- `1 <= nums1.length, nums2.length <= 1000`
+- `-1000 <= nums1[i], nums2[i] <= 1000`
 
 ## Approach 1: TBC

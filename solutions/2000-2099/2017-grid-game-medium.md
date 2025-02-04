@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/grid-game/'
+description: 'Author: @wkw | https://leetcode.com/problems/grid-game/'
 ---
 
 # 2017 - Grid Game (Medium)
@@ -17,8 +17,6 @@ Both robots initially start at `(0, 0)` and want to reach `(1, n-1)`. Each robot
 At the start of the game, the **first** robot moves from `(0, 0)` to `(1, n-1)`, collecting all the points from the cells on its path. For all cells `(r, c)` traversed on the path, `grid[r][c]` is set to `0`. Then, the **second** robot moves from `(0, 0)` to `(1, n-1)`, collecting the points on its path. Note that their paths may intersect with one another.
 
 The **first** robot wants to **minimize** the number of points collected by the **second** robot. In contrast, the **second** robot wants to **maximize** the number of points it collects. If both robots play **optimally**, return _the **number of points** collected by the **second** robot._
-
-
 
 **Example 1:**
 
@@ -58,10 +56,10 @@ The second robot will collect 0 + 1 + 3 + 3 + 0 = 7 points.
 
 **Constraints:**
 
-* `grid.length == 2`
-* `n == grid[r].length`
-* `1 <= n <= 5 * 10^4`
-* `1 <= grid[r][c] <= 10^5`
+- `grid.length == 2`
+- `n == grid[r].length`
+- `1 <= n <= 5 * 10^4`
+- `1 <= grid[r][c] <= 10^5`
 
 ## Approach 1: Prefix & Suffix Sum
 
@@ -69,12 +67,12 @@ The first observation is that the first point on the top row and the last point 
 
 For each index $$i$$, robot 2 could either
 
-* get from the top row, i.e. $$pref[n - 1] - pref[i]$$, or
-* get from the bottom row, i.e. $$suff[0] - suff[i]$$
+- get from the top row, i.e. $$pref[n - 1] - pref[i]$$, or
+- get from the bottom row, i.e. $$suff[0] - suff[i]$$
 
 We take the maximum one at each $$i$$ and compare with the current answer. As robot 1 plays optimally, which means it would get the maximum point. We take the minimum here.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -97,14 +95,14 @@ public:
         long long ans = 1e18;
         // iterate each index
         for (int i = 0; i < n; i++) {
-            // either take 
+            // either take
             ans = min({
                 // take the min one with ans
-                ans, 
+                ans,
                 // choose the best one
                 max(
                     // take from the top row
-                    pref[n - 1] - pref[i], 
+                    pref[n - 1] - pref[i],
                     // take from the bottom row
                     suff[0] - suff[i])}
                 );
@@ -122,7 +120,7 @@ public:
 
 The idea is similar. Robot 1 can collect all points till $$i$$, then move to the bottom row and go till the end. We can simply check $$pref[i]$$ (collected on the top row) plus $$suff[i]$$ (collected on the bottom row).
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

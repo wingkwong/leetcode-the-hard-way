@@ -1,5 +1,5 @@
 ---
-description: "Author: @wingkwong, @radojicic23 | https://leetcode.com/problems/find-the-difference/"
+description: 'Author: @wkw, @radojicic23 | https://leetcode.com/problems/find-the-difference/'
 tags: [Hash Table, String, Bit Manipulation, Sorting]
 ---
 
@@ -54,7 +54,7 @@ Therefore, we apply XOR on each character. The same characters will cancel out e
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -72,7 +72,7 @@ public:
 </TabItem>
 
 <TabItem value="kotlin" label="Kotlin">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```kt
 class Solution {
@@ -93,7 +93,7 @@ We can store the occurrence for each character. As `t` has one more character, w
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -126,7 +126,7 @@ We can sort both input and compare each character one by one. If there is a diff
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -181,8 +181,8 @@ class Solution:
  * @return {character}
  */
 var findTheDifference = function (s, t) {
-  const sortedS = s.split("").sort().join("");
-  const sortedT = t.split("").sort().join("");
+  const sortedS = s.split('').sort().join('');
+  const sortedT = t.split('').sort().join('');
   for (let i = 0; i < s.length; i++) {
     if (sortedS[i] != sortedT[i]) {
       return sortedT[i];

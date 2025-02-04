@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/find-all-k-distant-indices-in-an-array/
+  Author: @wkw | https://leetcode.com/problems/find-all-k-distant-indices-in-an-array/
 ---
 
 # 2200 - Find All K-Distant Indices in an Array (Easy)
@@ -29,7 +28,7 @@ Explanation: Here, nums[2] == key and nums[5] == key.
 - For index 4, |4 - 5| <= k and nums[5] == key, so 4 is a k-distant index.
 - For index 5, |5 - 5| <= k and nums[5] == key, so 5 is a k-distant index.
 - For index 6, |6 - 5| <= k and nums[5] == key, so 6 is a k-distant index.
-Thus, we return [1,2,3,4,5,6] which is sorted in increasing order. 
+Thus, we return [1,2,3,4,5,6] which is sorted in increasing order.
 ```
 
 **Example 2:**
@@ -37,22 +36,22 @@ Thus, we return [1,2,3,4,5,6] which is sorted in increasing order.
 ```
 Input: nums = [2,2,2,2,2], key = 2, k = 2
 Output: [0,1,2,3,4]
-Explanation: For all indices i in nums, there exists some index j such that |i - j| <= k and nums[j] == key, so every index is a k-distant index. 
+Explanation: For all indices i in nums, there exists some index j such that |i - j| <= k and nums[j] == key, so every index is a k-distant index.
 Hence, we return [0,1,2,3,4].
 ```
 
 **Constraints:**
 
-* `1 <= nums.length <= 1000`
-* `1 <= nums[i] <= 1000`
-* `key` is an integer from the array `nums`.
-* `1 <= k <= nums.length`
+- `1 <= nums.length <= 1000`
+- `1 <= nums[i] <= 1000`
+- `key` is an integer from the array `nums`.
+- `1 <= k <= nums.length`
 
 ## Approach 1: Brute Force
 
 Just do what it says.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

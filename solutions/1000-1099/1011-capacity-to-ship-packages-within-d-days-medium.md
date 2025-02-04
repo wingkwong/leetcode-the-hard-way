@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @SkollRyu |
-  https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/
+  Author: @SkollRyu | https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/
 ---
 
 # 1011 - Capacity to Ship Packages within d days (Medium)
@@ -58,8 +57,8 @@ Explanation:
 
 **Constraints:**
 
-* `1 <= days <= weights.length <= 5 * 10^4`
-* `1 <= weights[i] <= 500`
+- `1 <= days <= weights.length <= 5 * 10^4`
+- `1 <= weights[i] <= 500`
 
 ## Approach 1: Binary Seach
 
@@ -80,19 +79,19 @@ class Solution:
             curr = 0
             days_needed = 1
             # day starts from 1st
-            
+
             for weight in weights:
                 if weight + curr > target_cap:
                     days_needed += 1
                     curr = 0
                 curr += weight
-            
+
             return days_needed
-            
-        l = max(weights)     
+
+        l = max(weights)
         r = sum(weights)
         # if days = 1, the capacity needed is the sum of weights
-        
+
         while l < r:
             mid  = l + ((r-l) // 2)
             days_needed = count_days(mid)
@@ -102,6 +101,6 @@ class Solution:
                 r = mid
             else:
                 l = mid + 1
-        
+
         return l
 ```

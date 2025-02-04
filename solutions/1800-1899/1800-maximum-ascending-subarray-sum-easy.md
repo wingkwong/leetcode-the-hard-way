@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/maximum-ascending-subarray-sum/
+  Author: @wkw | https://leetcode.com/problems/maximum-ascending-subarray-sum/
 ---
 
 # 1800 - Maximum Ascending Subarray Sum (Easy)
@@ -39,19 +38,19 @@ Explanation: [10,20,30,40,50] is the ascending subarray with the maximum sum of 
 ```
 Input: nums = [12,17,15,13,10,11,12]
 Output: 33
-Explanation: [10,11,12] is the ascending subarray with the maximum sum of 33. 
+Explanation: [10,11,12] is the ascending subarray with the maximum sum of 33.
 ```
 
 **Constraints:**
 
-* `1 <= nums.length <= 100`
-* `1 <= nums[i] <= 100`
+- `1 <= nums.length <= 100`
+- `1 <= nums[i] <= 100`
 
 ## Approach 1: One-Pass
 
 Check each number starting from the second one to see if the current number is greater than the previous one or not. If so, add the current number to total sum and compare with the answer. Else we reset the sum as the current number.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -66,7 +65,7 @@ public:
                 // update ans
                 ans = max(ans, sum);
             } else {
-                // start a new ascending subarray 
+                // start a new ascending subarray
                 // reset sum to nums[i]
                 sum = nums[i];
             }

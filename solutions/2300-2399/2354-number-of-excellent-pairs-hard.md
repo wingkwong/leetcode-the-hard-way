@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/number-of-excellent-pairs/
+  Author: @wkw | https://leetcode.com/problems/number-of-excellent-pairs/
 ---
 
 # 2354 - Number of Excellent Pairs (Hard)
@@ -16,8 +15,8 @@ You are given a **0-indexed** positive integer array `nums` and a positive integ
 
 A pair of numbers `(num1, num2)` is called **excellent** if the following conditions are satisfied:
 
-* **Both** the numbers `num1` and `num2` exist in the array `nums`.
-* The sum of the number of set bits in `num1 OR num2` and `num1 AND num2` is greater than or equal to `k`, where `OR` is the bitwise **OR** operation and `AND` is the bitwise **AND** operation.
+- **Both** the numbers `num1` and `num2` exist in the array `nums`.
+- The sum of the number of set bits in `num1 OR num2` and `num1 AND num2` is greater than or equal to `k`, where `OR` is the bitwise **OR** operation and `AND` is the bitwise **AND** operation.
 
 Return _the number of **distinct** excellent pairs_.
 
@@ -47,17 +46,17 @@ Explanation: There are no excellent pairs for this array.
 
 **Constraints:**
 
-* `1 <= nums.length <= 10^5`
-* `1 <= nums[i] <= 10^9`
-* `1 <= k <= 60`
+- `1 <= nums.length <= 10^5`
+- `1 <= nums[i] <= 10^9`
+- `1 <= k <= 60`
 
 ## Approach: Bit Manipulation
 
-For num1 OR num2, it is equal to the number of set bits of num1. For num1 AND num2, it is equal to the number of set bits of num2. Therefore, the sum of the number of set bits in (num1 OR num2) and (num1 AND num2) is equal to the sum of the number of set bits in num1 and num2. 
+For num1 OR num2, it is equal to the number of set bits of num1. For num1 AND num2, it is equal to the number of set bits of num2. Therefore, the sum of the number of set bits in (num1 OR num2) and (num1 AND num2) is equal to the sum of the number of set bits in num1 and num2.
 
 We can iterate each number and count the frequency of the set bits $m[bits]$. Then we can try all combinations to check if the sum of the number of set bits in num1 and num2 is greater than or equal to $k$. If so, the number of pairs would be $m[i] * m[j]$.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -86,7 +85,7 @@ public:
         for (int i = 0; i < 32; i++) {
             for (int j = 0; j < 32; j++) {
                 if (i + j >= k) {
-                    // if second condition is satisfied, 
+                    // if second condition is satisfied,
                     // then the number of pairs would be m[i] * m[j]
                     ans += m[i] * m[j] * 1LL;
                 }

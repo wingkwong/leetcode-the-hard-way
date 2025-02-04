@@ -1,8 +1,8 @@
 ---
-description: 'Author: @wingkwong, @ganajayant | https://leetcode.com/problems/longest-subarray-with-maximum-bitwise-and/'
+description: 'Author: @wkw, @ganajayant | https://leetcode.com/problems/longest-subarray-with-maximum-bitwise-and/'
 ---
 
-# 2419 - Longest Subarray With Maximum Bitwise AND (Medium) 
+# 2419 - Longest Subarray With Maximum Bitwise AND (Medium)
 
 ## Problem Link
 
@@ -16,7 +16,7 @@ Consider a **non-empty** subarray from `nums` that has the **maximum** possible 
 
 - In other words, let `k` be the maximum value of the bitwise AND of **any** subarray of `nums`. Then, only subarrays with a bitwise AND equal to `k` should be considered.
 
-Return *the length of the **longest** such subarray*.
+Return _the length of the **longest** such subarray_.
 
 The bitwise AND of an array is the bitwise AND of all the numbers in it.
 
@@ -44,14 +44,14 @@ The longest subarray with that value is [4], so we return 1.
 
 **Constraints:**
 
-- `1 <= nums.length <= 105`
+- `1 <= nums.length <= 1e5`
 - `1 <= nums[i] <= 10^6`
 
-## Approach 1: Consecutive Max Element 
+## Approach 1: Consecutive Max Element
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

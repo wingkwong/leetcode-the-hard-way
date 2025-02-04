@@ -1,7 +1,8 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/number-of-ways-to-stay-in-the-same-place-after-some-steps/
+  Author: @wkw | https://leetcode.com/problems/number-of-ways-to-stay-in-the-same-place-after-some-steps/
+
+
 tags: [Dynamic Programming]
 ---
 
@@ -15,7 +16,7 @@ https://leetcode.com/problems/number-of-ways-to-stay-in-the-same-place-after-som
 
 You have a pointer at index `0` in an array of size `arrLen`. At each step, you can move 1 position to the left, 1 position to the right in the array, or stay in the same place (The pointer should not be placed outside the array at any time).
 
-Given two integers `steps` and `arrLen`, return the number of ways such that your pointer still at index `0` after **exactly** `steps` steps. Since the answer may be too large, return it **modulo** `109 + 7`.
+Given two integers `steps` and `arrLen`, return the number of ways such that your pointer still at index `0` after **exactly** `steps` steps. Since the answer may be too large, return it **modulo** `1e9 + 7`.
 
 **Example 1:**
 
@@ -48,14 +49,14 @@ Output: 8
 
 **Constraints:**
 
-* `1 <= steps <= 500`
-* `1 <= arrLen <= 10^6`
+- `1 <= steps <= 500`
+- `1 <= arrLen <= 10^6`
 
 ## Approach 1: Dynamic Programming
 
 The first observation is that the computational complexity does not depend on $$arrLen$$. Instead, it is all about steps. If we have $$n$$ steps, we can only walk at most $$n / 2$$ steps to the left or the right. Therefore, we can use DFS with memoization to find out the answer.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -75,9 +76,9 @@ public:
             // memoize it
             return dp[pos][steps] = (
                 // move to the left
-                dfs(pos - 1, steps - 1) % M + 
+                dfs(pos - 1, steps - 1) % M +
                 // stay at current position
-                dfs(pos, steps - 1) % M + 
+                dfs(pos, steps - 1) % M +
                 // move to the right
                 dfs(pos + 1, steps - 1) % M
             ) % M;
@@ -87,7 +88,7 @@ public:
 };
 ```
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:
@@ -106,7 +107,7 @@ class Solution:
                 # stay at current position
                 dfs(pos, steps - 1) +
                 # move to the right
-                dfs(pos + 1, steps - 1) 
+                dfs(pos + 1, steps - 1)
             ) % M
         return dfs(0, steps)
 ```

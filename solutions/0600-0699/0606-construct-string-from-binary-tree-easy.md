@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong, @lonyehan, @jit, @kesava-karri | https://leetcode.com/problems/construct-string-from-binary-tree/'
+description: 'Author: @wkw, @lonyehan, @jit, @kesava-karri | https://leetcode.com/problems/construct-string-from-binary-tree/'
 tags: [String, Tree, Depth-First Search, Binary Tree]
 ---
 
-# 0606 - Construct String from Binary Tree (Easy) 
+# 0606 - Construct String from Binary Tree (Easy)
 
 ## Problem Link
 
@@ -40,7 +40,7 @@ Explanation: Almost the same as the first example, except we cannot omit the fir
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 /**
@@ -56,14 +56,14 @@ Explanation: Almost the same as the first example, except we cannot omit the fir
  */
 
 // Time Complexity: O(N) where N is the number of the nodes in the tree
-// Space Complexity: O(H) where H is the height of the tree. 
+// Space Complexity: O(H) where H is the height of the tree.
 // In worse case, H can be N when it is a left skewed binary tree / right skewed binary tree
 class Solution {
 public:
     // case 1: root is nullptr -> ""
     // case 2: root doesn't have left sub tree and right sub tree -> root->val
     // case 3: root->left is not nullptr -> root->val + (dfs result from left sub tree)
-    // case 4: root->left is nullptr but root->right is not nullptr -> root->val + () 
+    // case 4: root->left is nullptr but root->right is not nullptr -> root->val + ()
     // case 5: root->right is not nullptr -> root->val + (dfs result from right sub tree)
     string tree2str(TreeNode* root) {
         // handle case 1
@@ -72,7 +72,7 @@ public:
         string s = to_string(root->val);
         // handle case 2
         // this line is obviously not necessary
-        if (!root->left && !root->right) s += "";  
+        if (!root->left && !root->right) s += "";
         // handle case 3
         if (root->left) s += "(" + tree2str(root->left) + ")";
         // handle case 4
@@ -87,7 +87,7 @@ public:
 
 </TabItem>
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 # Definition for a binary tree node.
@@ -98,13 +98,13 @@ public:
 #         self.right = right
 
 # Time Complexity: O(N) where N is the number of the nodes in the tree
-# Space Complexity: O(H) where H is the height of the tree. 
+# Space Complexity: O(H) where H is the height of the tree.
 # In worse case, H can be N when it is a left skewed binary tree / right skewed binary tree
 class Solution:
     # case 1: root is nullptr -> ""
     # case 2: root doesn't have left sub tree and right sub tree -> root.val
     # case 3: root.left is not nullptr -> root.val + (dfs result from left sub tree)
-    # case 4: root.left is nullptr but root.right is not nullptr -> root.val + () 
+    # case 4: root.left is nullptr but root.right is not nullptr -> root.val + ()
     # case 5: root.right is not nullptr -> root.val + (dfs result from right sub tree)
     def tree2str(self, root: Optional[TreeNode]) -> str:
         # handle case 1
@@ -126,7 +126,7 @@ class Solution:
         # handle case 5
         if root.right:
             s += '({})'.format(self.tree2str(root.right))
-        return s        
+        return s
 ```
 
 </TabItem>
@@ -137,12 +137,12 @@ class Solution:
 public class Solution {
     public string Tree2str(TreeNode root) {
         if(root == null) return null;
-        
+
         string left = Tree2str(root.left);
         string right = Tree2str(root.right);
-        
+
         string result = "";
-        
+
         if(left == null && right == null) {
             result = $"{root.val}";
         }
@@ -152,8 +152,8 @@ public class Solution {
         else {
             result = $"{root.val}({left})({right})";
         }
-        
-        return result;        
+
+        return result;
     }
 }
 ```
@@ -172,7 +172,7 @@ defmodule Solution do
 
   def tree2str(%TreeNode{val: v, left: lch, right: nil}), do:
     "#{v}(#{tree2str(lch)})"
-  
+
   def tree2str(%TreeNode{val: v, left: nil, right: rch}), do:
     "#{v}()(#{tree2str(rch)})"
 
@@ -204,7 +204,7 @@ end
  */
 class Solution {
     /**Approach
-     * Access the elements in preorder dfs as we usually do and 
+     * Access the elements in preorder dfs as we usually do and
      * a simple add-on is the parenthesis for each child.
      * Add the parenthesis to right child if:
      * 1. right child is present [the case when both children exist]
@@ -227,7 +227,7 @@ class Solution {
         // Add the parenthesis to right child if
         // 1. right child is present [the case when both children exist]
         // 2. left is null [the case when only right child exist]
-        // Note: parenthesis will not be added if child doesn't exist, 
+        // Note: parenthesis will not be added if child doesn't exist,
         // why? -> 'cause null wouldn't be appended to our string
         if (root.left == null || root.right != null) {
             sb.append("(");

@@ -69,7 +69,7 @@ class Solution:
         # position in the matrix
         r, c = 0, 0
         while not len(spiral_order) == (ROWS * COLS):
-            # For our loop we will always just blindly add to the 
+            # For our loop we will always just blindly add to the
             # array and visited set, then check boundaries after.
             spiral_order.append(matrix[r][c])
             visited.add((r,c))
@@ -89,7 +89,7 @@ class Solution:
             # unvisited, inbounds cell.
             dr, dc = dirs[direction]
             r, c = r + dr, c + dc
-        
+
         return spiral_order
 ```
 

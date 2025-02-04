@@ -11,4 +11,4 @@ keywords:
   - bucket sort
 ---
 
-<TutorialAuthors names="@TBC"/>
+<TutorialCredits authors="@TBC"/>

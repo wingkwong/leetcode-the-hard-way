@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/longest-nice-subarray/'
+description: 'Author: @wkw | https://leetcode.com/problems/longest-nice-subarray/'
 tags: [Array, Bit Manipulation, Sliding Window]
 ---
 
-# 2401 - Longest Nice Subarray (Medium) 
+# 2401 - Longest Nice Subarray (Medium)
 
 ## Problem Statement
 
@@ -11,7 +11,7 @@ You are given an array `nums` consisting of **positive** integers.
 
 We call a subarray of `nums` **nice** if the bitwise **AND** of every pair of elements that are in **different** positions in the subarray is equal to `0`.
 
-Return *the length of the **longest** nice subarray*.
+Return _the length of the **longest** nice subarray_.
 
 A **subarray** is a **contiguous** part of an array.
 
@@ -39,12 +39,12 @@ Explanation: The length of the longest nice subarray is 1. Any subarray of lengt
 
 **Constraints:**
 
-- `1 <= nums.length <= 105`
+- `1 <= nums.length <= 1e5`
 - `1 <= nums[i] <= 10^9`
 
 ## Approach 1: Sliding Window + Bit Manipulation
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -58,7 +58,7 @@ public:
             // x is the current AND value of current window at this point
             // now we want to include nums[r] in the window
             // however, if we include it, the current window may become not nice (i.e. x_new != 0)
-            // therefore, in this case, we need to remove some bits using XOR, 
+            // therefore, in this case, we need to remove some bits using XOR,
             // i.e shrinking the window from the left
             while ((x & nums[r]) != 0) x ^= nums[l++];
             // here we are good to include nums[r], we use OR to set the bits

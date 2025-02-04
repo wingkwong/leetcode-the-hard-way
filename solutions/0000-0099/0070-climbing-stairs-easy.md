@@ -1,5 +1,5 @@
 ---
-description: "Author: @aryankashyap7, @radojicic23 | https://leetcode.com/problems/climbing-stairs/"
+description: 'Author: @aryankashyap7, @radojicic23 | https://leetcode.com/problems/climbing-stairs/'
 tags: [Math, Dynamic Programming, Memoization]
 ---
 

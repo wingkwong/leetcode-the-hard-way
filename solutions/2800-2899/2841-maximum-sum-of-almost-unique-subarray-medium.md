@@ -1,8 +1,8 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/maximum-sum-of-almost-unique-subarray/'
+description: 'Author: @wkw | https://leetcode.com/problems/maximum-sum-of-almost-unique-subarray/'
 ---
 
-# 2841 - Maximum Sum of Almost Unique Subarray (Medium) 
+# 2841 - Maximum Sum of Almost Unique Subarray (Medium)
 
 ## Problem Link
 
@@ -12,7 +12,7 @@ https://leetcode.com/problems/maximum-sum-of-almost-unique-subarray/
 
 You are given an integer array `nums` and two positive integers `m` and `k`.
 
-Return *the **maximum sum** out of all **almost unique** subarrays of length*`k`*of* `nums`. If no such subarray exists, return `0`.
+Return _the **maximum sum** out of all **almost unique** subarrays of length_`k`_of_ `nums`. If no such subarray exists, return `0`.
 
 A subarray of `nums` is **almost unique** if it contains at least `m` distinct elements.
 
@@ -52,7 +52,7 @@ Explanation: There are no subarrays of size k = 3 that contain at least m = 3 di
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -71,7 +71,7 @@ public:
             cnt[nums[i]]++, sum += nums[i];
             // nums[i - k] is out of the window, if it is 0, remove from the map
             if (--cnt[nums[i - k]] == 0) cnt.erase(nums[i - k]);
-            // nums[i - k] is out of the window, substract from the sum 
+            // nums[i - k] is out of the window, substract from the sum
             sum -= nums[i - k];
             // check if it has at least m distinct elements, set the ans
             if ((int) cnt.size() >= m) ans = max(ans, sum);

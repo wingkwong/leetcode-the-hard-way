@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/check-if-it-is-a-straight-line/
+  Author: @wkw | https://leetcode.com/problems/check-if-it-is-a-straight-line/
 ---
 
 # 1232 - Check If It Is a Straight Line (Easy)
@@ -32,23 +31,20 @@ Input: coordinates = [[1,1],[2,2],[3,4],[4,5],[5,6],[7,7]]
 Output: false
 ```
 
-
-
 **Constraints:**
 
-* `2 <= coordinates.length <= 1000`
-* `coordinates[i].length == 2`
-* `-10^4 <= coordinates[i][0], coordinates[i][1] <= 10^4`
-* `coordinates` contains no duplicate point.
+- `2 <= coordinates.length <= 1000`
+- `coordinates[i].length == 2`
+- `-10^4 <= coordinates[i][0], coordinates[i][1] <= 10^4`
+- `coordinates` contains no duplicate point.
 
 ## Approach 1: Check the Slope
 
 First we calculate the slope between the first two points. Then starting from the third one, we check if the slope with the previous point is same as the target one. To compare the slope, we can use multiplication instead of division to avoid divide-by-zero and precision issue.
 
-
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -76,7 +72,7 @@ public:
 </TabItem>
 
 <TabItem value="rs" label="Rust">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```rs
 impl Solution {
@@ -97,4 +93,3 @@ impl Solution {
 
 </Tabs>
 ```
-

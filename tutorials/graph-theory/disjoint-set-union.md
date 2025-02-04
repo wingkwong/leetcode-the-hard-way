@@ -1,6 +1,6 @@
 ---
-title: "Disjoint Set Union (DSU)"
-description: "Disjoint Set Union is a data structure that allows us to combine any two sets into one."
+title: 'Disjoint Set Union (DSU)'
+description: 'Disjoint Set Union is a data structure that allows us to combine any two sets into one.'
 hide_table_of_contents: true
 keywords:
   - leetcode
@@ -10,7 +10,7 @@ keywords:
   - algorithm
 ---
 
-<TutorialAuthors names="@wingkwong"/>
+<TutorialCredits authors="@wkw"/>
 
 ## Overview
 
@@ -138,25 +138,6 @@ int main() {
 }
 ```
 
-export const suggestedProblems = [
-{
-"problemName": "2421. Number of Good Paths",
-"difficulty": "Hard",
-"leetCodeLink": "https://leetcode.com/problems/number-of-good-paths/",
-"solutionLink": "../../solutions/2400-2499/number-of-good-paths-hard"
-},
-{
-"problemName": "2382. Maximum Segment Sum After Removals",
-"difficulty": "Hard",
-"leetCodeLink": "https://leetcode.com/problems/maximum-segment-sum-after-removals/",
-"solutionLink": ""
-},
-{
-"problemName": "1061. Lexicographically Smallest Equivalent String",
-"difficulty": "Medium",
-"leetCodeLink": "https://leetcode.com/problems/lexicographically-smallest-equivalent-string/",
-"solutionLink": "../../solutions/1000-1099/lexicographically-smallest-equivalent-string-medium"
-}
-]
+export const suggestedProblems = [ { "problemName": "2421. Number of Good Paths", "difficulty": "Hard", "leetCodeLink": "https://leetcode.com/problems/number-of-good-paths/", "solutionLink": "../../solutions/2400-2499/number-of-good-paths-hard" }, { "problemName": "2382. Maximum Segment Sum After Removals", "difficulty": "Hard", "leetCodeLink": "https://leetcode.com/problems/maximum-segment-sum-after-removals/", "solutionLink": "" }, { "problemName": "1061. Lexicographically Smallest Equivalent String", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/lexicographically-smallest-equivalent-string/", "solutionLink": "../../solutions/1000-1099/lexicographically-smallest-equivalent-string-medium" } ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />

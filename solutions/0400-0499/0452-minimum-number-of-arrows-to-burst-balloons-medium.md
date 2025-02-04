@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/
+  Author: @wkw | https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/
 ---
 
 # 0452 - Minimum Number of Arrows to Burst Balloons (Medium)
@@ -48,9 +47,9 @@ Explanation: The balloons can be burst by 2 arrows:
 
 **Constraints:**
 
-* `1 <= points.length <= 10^5`
-* `points[i].length == 2`
-* `-2^31 <= xstart < xend <= 2^31 - 1`
+- `1 <= points.length <= 10^5`
+- `points[i].length == 2`
+- `-2^31 <= xstart < xend <= 2^31 - 1`
 
 ## Approach 1: Greedy
 
@@ -61,7 +60,7 @@ class Solution {
 public:
     int findMinArrowShots(vector<vector<int>>& points) {
         sort(points.begin(), points.end(), [&](const vector<int>& x, const vector<int>& y) {
-            return x[1] < y[1];  
+            return x[1] < y[1];
         });
         int ans = 1, cur_r = points[0][1];
         for (auto p : points) {

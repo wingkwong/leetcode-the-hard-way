@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/smallest-string-with-swaps'
+description: 'Author: @wkw | https://leetcode.com/problems/smallest-string-with-swaps'
 ---
 
 # 1202 - Smallest String With Swaps (Medium)
@@ -21,7 +21,7 @@ Return the lexicographically smallest string that `s` can be changed to after us
 ```
 Input: s = "dcab", pairs = [[0,3],[1,2]]
 Output: "bacd"
-Explaination: 
+Explaination:
 Swap s[0] and s[3], s = "bcad"
 Swap s[1] and s[2], s = "bacd"
 ```
@@ -31,7 +31,7 @@ Swap s[1] and s[2], s = "bacd"
 ```
 Input: s = "dcab", pairs = [[0,3],[1,2],[0,2]]
 Output: "abcd"
-Explaination: 
+Explaination:
 Swap s[0] and s[3], s = "bcad"
 Swap s[0] and s[2], s = "acbd"
 Swap s[1] and s[2], s = "abcd"
@@ -42,18 +42,18 @@ Swap s[1] and s[2], s = "abcd"
 ```
 Input: s = "cba", pairs = [[0,1],[1,2]]
 Output: "abc"
-Explaination: 
+Explaination:
 Swap s[0] and s[1], s = "bca"
 Swap s[1] and s[2], s = "bac"
-Swap s[0] and s[1], s = "abc" 
+Swap s[0] and s[1], s = "abc"
 ```
 
 **Constraints:**
 
-* `1 <= s.length <= 10^5`
-* `0 <= pairs.length <= 10^5`
-* `0 <= pairs[i][0], pairs[i][1] < s.length`
-* `s` only contains lower case English letters.
+- `1 <= s.length <= 10^5`
+- `0 <= pairs.length <= 10^5`
+- `0 <= pairs[i][0], pairs[i][1] < s.length`
+- `s` only contains lower case English letters.
 
 ## Approach 1: DSU
 
@@ -106,7 +106,7 @@ class dsu {
 
 </details>
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

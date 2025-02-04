@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/delete-columns-to-make-sorted/'
+description: 'Author: @wkw | https://leetcode.com/problems/delete-columns-to-make-sorted/'
 tags: [Array, String]
 ---
 
-# 0944 - Delete Columns to Make Sorted (Easy) 
+# 0944 - Delete Columns to Make Sorted (Easy)
 
 ## Problem Link
 
@@ -23,7 +23,7 @@ cae
 
 You want to **delete** the columns that are **not sorted lexicographically**. In the above example (0-indexed), columns 0 (`'a'`, `'b'`, `'c'`) and 2 (`'c'`, `'e'`, `'e'`) are sorted while column 1 (`'b'`, `'c'`, `'a'`) is not, so you would delete column 1.
 
-Return *the number of columns that you will delete*.
+Return _the number of columns that you will delete_.
 
 **Example 1:**
 
@@ -71,7 +71,7 @@ All 3 columns are not sorted, so you will delete all 3.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -98,7 +98,7 @@ public:
 </TabItem>
 
 <TabItem value="rs" label="Rust">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```rs
 impl Solution {

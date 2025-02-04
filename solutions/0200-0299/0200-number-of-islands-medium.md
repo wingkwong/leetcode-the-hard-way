@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @ColeB2 | https://leetcode.com/problems/number-of-islands/'
+description: 'Author: @wkw, @ColeB2 | https://leetcode.com/problems/number-of-islands/'
 tags: [Array, Depth-First Search, Breadth-First Search, Union Find, Matrix]
 ---
 
@@ -41,14 +41,14 @@ Output: 3
 
 **Constraints:**
 
-* `m == grid.length`
-* `n == grid[i].length`
-* `1 <= m, n <= 300`
-* `grid[i][j]` is `'0'` or `'1'`.
+- `m == grid.length`
+- `n == grid[i].length`
+- `1 <= m, n <= 300`
+- `grid[i][j]` is `'0'` or `'1'`.
 
 ## Approach 1: Flood Fill
 
-We can use [0733 - Flood Fill (Easy)](../0700-0799/flood-fill-easy) solution in this problem. The idea is to search for $$1$$ and paint the entire island with different character that  does not exist in the grid (says $$2$$). Every time we start flood fill, we increase our answer by $$1$$.
+We can use [0733 - Flood Fill (Easy)](../0700-0799/flood-fill-easy) solution in this problem. The idea is to search for $$1$$ and paint the entire island with different character that does not exist in the grid (says $$2$$). Every time we start flood fill, we increase our answer by $$1$$.
 
 Time Complexity: $$O(m*n)$$ where m is the number of rows, and n is the number of columns in the grid. We must traverse the whole grid in order to determine the number of islands.
 
@@ -56,7 +56,7 @@ Space Complexity: $$(m*n)$$ where m is the number of rows, and n is the number o
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -93,7 +93,7 @@ public:
         }
         return;
     }
-    
+
     int numIslands(vector<vector<char>>& grid) {
         int ans = 0;
         // iterate each row
@@ -105,12 +105,12 @@ public:
                     // perform flood fill and make each cell to 2 or any number except 0 and 1
                     // so that we won't visit it again
                     floodFill(grid, row, col, '2');
-                    // after performing flood fill, we color one island 
+                    // after performing flood fill, we color one island
                     ans++;
                 }
             }
        }
-       return ans; 
+       return ans;
     }
 };
 ```
@@ -126,10 +126,10 @@ public:
 // Time complexity: O(rc)
 // Space complexity: O(rc)
 class Solution {
-    
+
     public final int NO_DIRS = 4;
     public int[] DIRS = {0, 1, 0, -1, 0};
-    
+
     public int numIslands(char[][] grid) {
         int count = 0;
         // Visited set for string row and col, like "row # col"
@@ -146,7 +146,7 @@ class Solution {
         }
         return count;
     }
-    
+
     public boolean exploreGrid(char[][] grid, int row, int col, Set<String> visited) {
         boolean rowInbounds = 0 <= row && row < grid.length;
         boolean colInbounds = 0 <= col && col < grid[0].length;
@@ -194,7 +194,7 @@ class Solution:
             # pop off our row and column
             row, col = q.popleft()
             # check we are in bounds, and land.
-            if (row < 0 or col < 0 
+            if (row < 0 or col < 0
                 or row >= len(grid) or col >= len(grid[0])
                 or grid[row][col] != '1'
                 ):
@@ -218,11 +218,11 @@ class Solution:
             for c in range(COLS):
                 # if we find land
                 if grid[r][c] == '1':
-                    # flood fill it, making sure to overwrite our 
+                    # flood fill it, making sure to overwrite our
                     # grid as we will change it during our algorithm.
                     grid = self.bfs(r, c, grid)
                     num_islands += 1
-        
+
         return num_islands
 ```
 

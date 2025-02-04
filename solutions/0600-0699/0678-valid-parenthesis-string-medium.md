@@ -71,7 +71,7 @@ class Solution:
     # negative means we have more ')'.
     # The min_balance value will represent the lowest balance of
     # parenthesis. This means we always convert a '*' to a ')',
-    # without going negative. This means we can reconvert a '*' 
+    # without going negative. This means we can reconvert a '*'
     # if the value ever does go negative.
     # The max_balance value will represent the highest balance of
     # parenthesis. Meaning we will always convert a '*' into a '('

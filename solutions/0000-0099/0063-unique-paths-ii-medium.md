@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/unique-paths-ii/'
+description: 'Author: @wkw | https://leetcode.com/problems/unique-paths-ii/'
 tags: [Array, Dynamic Programming, Matrix]
 ---
 
-# 0063 - Unique Paths II (Medium) 
+# 0063 - Unique Paths II (Medium)
 
 ## Problem Link
 
@@ -15,9 +15,9 @@ You are given an `m x n` integer array `grid`. There is a robot initially locate
 
 An obstacle and space are marked as `1` or `0` respectively in `grid`. A path that the robot takes cannot include **any** square that is an obstacle.
 
-Return *the number of possible unique paths that the robot can take to reach the bottom-right corner*.
+Return _the number of possible unique paths that the robot can take to reach the bottom-right corner_.
 
-The testcases are generated so that the answer will be less than or equal to `2 * 109`.
+The testcases are generated so that the answer will be less than or equal to `2 * 1e9`.
 
 **Example 1:**
 
@@ -48,7 +48,7 @@ Output: 1
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -63,7 +63,7 @@ public:
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
                 if (obstacleGrid[i][j]) {
-                    // if there is an obstacle at grid[i][j], 
+                    // if there is an obstacle at grid[i][j],
                     // then we couldn't reach grid[i][j],
                     // hence setting dp[i][j] to 0
                     dp[i][j] = 0;
@@ -75,7 +75,7 @@ public:
                 }
             }
         }
-        // the number of possible unique paths 
+        // the number of possible unique paths
         // that the robot can take to reach the bottom-right corner
         return dp[n - 1][m - 1];
     }

@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/count-integers-in-intervals
+  Author: @wkw | https://leetcode.com/problems/count-integers-in-intervals
 ---
 
 # 2276 - Count Integers in Intervals (Hard)
@@ -14,14 +13,14 @@ https://leetcode.com/problems/count-integers-in-intervals
 
 Given an **empty** set of intervals, implement a data structure that can:
 
-* **Add** an interval to the set of intervals.
-* **Count** the number of integers that are present in **at least one** interval.
+- **Add** an interval to the set of intervals.
+- **Count** the number of integers that are present in **at least one** interval.
 
 Implement the `CountIntervals` class:
 
-* `CountIntervals()` Initializes the object with an empty set of intervals.
-* `void add(int left, int right)` Adds the interval `[left, right]` to the set of intervals.
-* `int count()` Returns the number of integers that are present in **at least one** interval.
+- `CountIntervals()` Initializes the object with an empty set of intervals.
+- `void add(int left, int right)` Adds the interval `[left, right]` to the set of intervals.
+- `int count()` Returns the number of integers that are present in **at least one** interval.
 
 **Note** that an interval `[left, right]` denotes all the integers `x` where `left <= x <= right`.
 
@@ -35,7 +34,7 @@ Output
 [null, null, null, 6, null, 8]
 
 Explanation
-CountIntervals countIntervals = new CountIntervals(); // initialize the object with an empty set of intervals. 
+CountIntervals countIntervals = new CountIntervals(); // initialize the object with an empty set of intervals.
 countIntervals.add(2, 3);  // add [2, 3] to the set of intervals.
 countIntervals.add(7, 10); // add [7, 10] to the set of intervals.
 countIntervals.count();    // return 6
@@ -51,13 +50,13 @@ countIntervals.count();    // return 8
 
 **Constraints:**
 
-* `1 <= left <= right <= 10^9`
-* At most `105` calls **in total** will be made to `add` and `count`.
-* At least **one** call will be made to `count`.
+- `1 <= left <= right <= 10^9`
+- At most `1e5` calls **in total** will be made to `add` and `count`.
+- At least **one** call will be made to `count`.
 
 ## Approach 1: Sweep Line & Merge
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class CountIntervals {
@@ -66,7 +65,7 @@ public:
         modified = 0;
         res = 0;
     }
-    
+
     void add(int left, int right) {
         // in
         m[left] += 1;
@@ -75,7 +74,7 @@ public:
         // mark as modified to check if we need to recalculate the count
         modified = 1;
     }
-    
+
     int count() {
         if (modified) {
             res = 0;
@@ -94,7 +93,7 @@ public:
                     res += x.first - l;
                 }
             }
-            // replace the map 
+            // replace the map
             m = m2;
         }
         modified = 0;

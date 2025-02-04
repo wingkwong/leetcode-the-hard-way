@@ -1,26 +1,26 @@
 {
-    "name": "LeetCode The Hard Way - Converter",
-    "short_name": "LTHWConverter",
-    "description": "Converts a Leetcode problem page into Github Flavored Markdown",
-    "manifest_version": 2,
-    "minimum_chrome_version": "55",
-    "version": "0.1.0",
-    "content_scripts": [
-      {
-        "js": ["content.js"],
-        "matches": [
-          "https://*.leetcode.com/problems/*",
-          "https://*.leetcode-cn.com/problems/*"
-        ]
-      }
-    ],
-    "background": {
-      "scripts": ["background.js"],
-      "persistent": false
-    },
-    "page_action": {
-      "default_title": "Click to generate Markdown from a Leetcode problem page",
-      "default_popup": "popup.html"
-    },
-    "permissions": ["https://*.leetcode.com/*", "https://*.leetcode-cn.com/*"]
-  }
+  "name": "LeetCode The Hard Way - Converter",
+  "short_name": "LTHWConverter",
+  "description": "Converts a Leetcode problem page into Github Flavored Markdown",
+  "manifest_version": 2,
+  "minimum_chrome_version": "55",
+  "version": "0.1.0",
+  "content_scripts": [
+    {
+      "js": ["content.js"],
+      "matches": [
+        "https://*.leetcode.com/problems/*",
+        "https://*.leetcode-cn.com/problems/*"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "page_action": {
+    "default_title": "Click to generate Markdown from a Leetcode problem page",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["https://*.leetcode.com/*", "https://*.leetcode-cn.com/*"]
+}

@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/count-primes/'
+description: 'Author: @wkw | https://leetcode.com/problems/count-primes/'
 ---
 
 # 0204 - Count Primes
@@ -31,18 +31,18 @@ Output: 0
 
 ```
 Input: n = 1
-Output: 0 
+Output: 0
 ```
 
 **Constraints:**
 
-* `0 <= n <= 5 * 10^6`
+- `0 <= n <= 5 * 10^6`
 
 ## Approach 1: Sieve of Eratosthenes
 
 See [Sieve of Eratosthenes](../../tutorials/math/number-theory/sieve-of-eratosthenes).
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

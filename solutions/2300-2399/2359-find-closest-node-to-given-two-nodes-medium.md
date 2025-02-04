@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/find-closest-node-to-given-two-nodes
+  Author: @wkw | https://leetcode.com/problems/find-closest-node-to-given-two-nodes
 ---
 
 # 2359 - Find Closest Node to Given Two Nodes (Medium)
@@ -48,11 +47,11 @@ The maximum of those two distances is 2. It can be proven that we cannot get a n
 
 **Constraints:**
 
-* `n == edges.length`
-* `2 <= n <= 10^5`
-* `-1 <= edges[i] < n`
-* `edges[i] != i`
-* `0 <= node1, node2 < n`
+- `n == edges.length`
+- `2 <= n <= 10^5`
+- `-1 <= edges[i] < n`
+- `edges[i] != i`
+- `0 <= node1, node2 < n`
 
 ## Approach 1: DFS x 2
 
@@ -60,7 +59,7 @@ Since there is only at most 1 outgoing edge, we can simply use DFS.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -79,7 +78,7 @@ public:
             dfs(v, d, vis, edges);
         }
     }
-    
+
     int closestMeetingNode(vector<int>& edges, int node1, int node2) {
         int n = edges.size();
         // d1[i]: shortest dist to node i starting from node 1
@@ -88,7 +87,7 @@ public:
         // vis1[i]: true if node i is visited else false. used for building d1
         // vis2[i]: true if node i is visited else false. used for building d2
         vector<int> vis1(n, 0), vis2(n, 0);
-        // dist to node1 from node1 is 0, same as node2 
+        // dist to node1 from node1 is 0, same as node2
         d1[node1] = 0, d2[node2] = 0;
         // build the dist for d1
         dfs(node1, d1, vis1, edges);
@@ -110,7 +109,7 @@ public:
 </TabItem>
 
 <TabItem value="java" label="Java">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```java
 class Solution {
@@ -127,7 +126,7 @@ class Solution {
             dfs(v, d, vis, edges);
         }
     }
-    
+
     public int closestMeetingNode(int[] edges, int node1, int node2) {
         int n = edges.length;
         // d1[i]: shortest dist to node i starting from node 1
@@ -140,7 +139,7 @@ class Solution {
         boolean[] vis2 = new boolean[n];
         Arrays.fill(d1, Integer.MAX_VALUE);
         Arrays.fill(d2, Integer.MAX_VALUE);
-        // dist to node1 from node1 is 0, same as node2 
+        // dist to node1 from node1 is 0, same as node2
         d1[node1] = d2[node2] = 0;
         // build the dist for d1
         dfs(node1, d1, vis1, edges);
@@ -162,7 +161,7 @@ class Solution {
 </TabItem>
 
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:
@@ -186,7 +185,7 @@ class Solution:
         # vis1[i]: true if node i is visited else false. used for building d1
         # vis2[i]: true if node i is visited else false. used for building d2
         vis1, vis2 = [False] * n, [False] * n
-        # dist to node1 from node1 is 0, same as node2 
+        # dist to node1 from node1 is 0, same as node2
         d1[node1], d2[node2] = 0, 0
         # build the dist for d1
         dfs(node1, d1, vis1, edges)
@@ -205,7 +204,7 @@ class Solution:
 </TabItem>
 
 <TabItem value="rs" label="Rust">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```rs
 use std::cmp::max;
@@ -225,7 +224,7 @@ impl Solution {
             Self::dfs(v, d, vis, edges);
         }
     }
-    
+
     pub fn closest_meeting_node(edges: Vec<i32>, node1: i32, node2: i32) -> i32 {
         let n = edges.len();
         // d1[i]: shortest dist to node i starting from node 1
@@ -236,7 +235,7 @@ impl Solution {
         // vis2[i]: true if node i is visited else false. used for building d2
         let mut vis1 = vec![false; n];
         let mut vis2 = vec![false; n];
-        // dist to node1 from node1 is 0, same as node2 
+        // dist to node1 from node1 is 0, same as node2
         d1[node1 as usize] = 0;
         d2[node2 as usize] = 0;
         // build the dist for d1
@@ -260,14 +259,13 @@ impl Solution {
 </TabItem>
 </Tabs>
 
-
 ## Approach: Dijkstra x 2
 
 Dijkstra approach in this question is not recommended but here's how we do in case there are multiple outgoing edges.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -289,7 +287,7 @@ public:
         }
       }
     }
-    
+
     int closestMeetingNode(vector<int>& edges, int node1, int node2) {
         int n = edges.size();
         // d1[i]: shortest dist to node i starting from node 1

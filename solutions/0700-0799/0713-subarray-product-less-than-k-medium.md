@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/subarray-product-less-than-k/'
+description: 'Author: @wkw | https://leetcode.com/problems/subarray-product-less-than-k/'
 tags: [Array, Sliding Window]
 ---
 
-# 0713 - Subarray Product Less Than K (Medium) 
+# 0713 - Subarray Product Less Than K (Medium)
 
 ## Problem Link
 
@@ -11,7 +11,7 @@ https://leetcode.com/problems/subarray-product-less-than-k/
 
 ## Problem Statement
 
-Given an array of integers `nums` and an integer `k`, return *the number of contiguous subarrays where the product of all the elements in the subarray is strictly less than*`k`.
+Given an array of integers `nums` and an integer `k`, return _the number of contiguous subarrays where the product of all the elements in the subarray is strictly less than_`k`.
 
 **Example 1:**
 
@@ -40,7 +40,7 @@ Output: 0
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

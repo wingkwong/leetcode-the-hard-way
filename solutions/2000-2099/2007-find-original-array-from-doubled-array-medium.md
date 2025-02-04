@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong, @iraycd | https://leetcode.com/problems/find-original-array-from-doubled-array/'
+description: 'Author: @wkw, @iraycd | https://leetcode.com/problems/find-original-array-from-doubled-array/'
 tags: [Array, Hash Table, Greedy, Sorting]
 ---
 
-# 2007 - Find Original Array From Doubled Array (Medium) 
+# 2007 - Find Original Array From Doubled Array (Medium)
 
 ## Problem Link
 
@@ -13,7 +13,7 @@ https://leetcode.com/problems/find-original-array-from-doubled-array/
 
 An integer array `original` is transformed into a **doubled** array `changed` by appending **twice the value** of every element in `original`, and then randomly **shuffling** the resulting array.
 
-Given an array `changed`, return `original`*if*`changed`*is a **doubled** array. If*`changed`*is not a **doubled** array, return an empty array. The elements in* `original` *may be returned in **any** order*.
+Given an array `changed`, return `original`_if_`changed`_is a **doubled** array. If_`changed`_is not a **doubled** array, return an empty array. The elements in_ `original` _may be returned in **any** order_.
 
 **Example 1:**
 
@@ -45,19 +45,19 @@ Explanation: changed is not a doubled array.
 
 **Constraints:**
 
-- `1 <= changed.length <= 105`
-- `0 <= changed[i] <= 105`
+- `1 <= changed.length <= 1e5`
+- `0 <= changed[i] <= 1e5`
 
 ## Approach 1: Sorting + Hashmap
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 // Time Complexity: O(N + NlogN)
 // Space Complexity: O(N)
-// where N is the number of elements in `changed` 
+// where N is the number of elements in `changed`
 class Solution {
 public:
     // hashmap approach
@@ -99,7 +99,7 @@ public:
 ```cpp
 // Time Complexity: O(N + KlogK)
 // Space Complexity: O(N)
-// where N is the number of elements in `changed` 
+// where N is the number of elements in `changed`
 // and K is the number of elements in `uniqueNumbers`
 class Solution {
 public:
@@ -139,7 +139,7 @@ public:
 ```cpp
 // Time Complexity: O(NlogN)
 // Space Complexity: O(N)
-// where N is the number of elements in `changed` 
+// where N is the number of elements in `changed`
 class Solution {
 public:
     // multiset approach
@@ -161,7 +161,7 @@ public:
             // then return {}
             if (s.find(smallest * 2) == s.end()) return {};
             // otherwise we can remove its doubled element
-            else s.erase(s.find(smallest * 2));   
+            else s.erase(s.find(smallest * 2));
         }
         return ans;
     }
@@ -171,12 +171,12 @@ public:
 </TabItem>
 
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 # Time Complexity: O(NlogN)
 # Space Complextiy O(N)
-# where N is the number of elements in `changed` 
+# where N is the number of elements in `changed`
 class Solution:
     def findOriginalArray(self, changed):
         # use Counter to count the frequency of each element in `changed`
@@ -195,8 +195,8 @@ class Solution:
                 # similarly, odd length -> return []
                 if cnt[x] % 2:
                     return []
-                else: 
-                    # add `0` `cnt[x] // 2` times 
+                else:
+                    # add `0` `cnt[x] // 2` times
                     ans += [0] * (cnt[x] // 2)
             else:
                 # otherwise, we put the element `x` `cnt[x]` times to ans
@@ -204,10 +204,11 @@ class Solution:
             cnt[2 * x] -= cnt[x]
         return ans
 ```
+
 </TabItem>
 
 <TabItem value="java" label="Java">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```java
 class Solution {
@@ -245,6 +246,7 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 	
 <TabItem value="go" label="Go">
@@ -262,17 +264,17 @@ func findOriginalArray(changed []int) []int {
     if(isOdd == 1){
         return []int{}
     }
-    
+
     // Converting everything to a map, counting the repetitions.
     changedMap := make(map[int]int)
     for _, elem := range changed {
         if _, ok:= changedMap[elem]; ok {
-            changedMap[elem] = changedMap[elem] +1 
+            changedMap[elem] = changedMap[elem] +1
         }else {
             changedMap[elem] = 1;
         }
     }
-    
+
     // Creating a unique set of all the repetitions.
     // Sorting the set/unique array in ascending order as we can easily remove the elements.
     var set []int
@@ -281,7 +283,7 @@ func findOriginalArray(changed []int) []int {
     }
     sort.Ints(set)
 
-    
+
     var original []int;
     for _, elem := range set {
         if _, ok:= changedMap[elem*2]; ok {
@@ -295,20 +297,21 @@ func findOriginalArray(changed []int) []int {
                original = append(original, elem)
             }
             // In the case of [2,1,2,4,2,4] we have 2s more than 1s. so we subtract 2s from 1s.
-            changedMap[elem*2] = y - x; 
+            changedMap[elem*2] = y - x;
             changedMap[elem] = 0;
         }
     }
-    
+
     // Only if all the changedMap has 0 elements in them we make we consider they are all doubled.
     for _, elem := range changedMap {
         if (elem != 0){
             return []int{}
         }
     }
-    
+
     return original
 }
 ```
+
 </TabItem>
 </Tabs>

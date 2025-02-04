@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/number-of-1-bits/'
+description: 'Author: @wkw, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/number-of-1-bits/'
 ---
 
 # 0191 - Number of 1 Bits (Easy)
@@ -14,8 +14,8 @@ Write a function that takes an unsigned integer and returns the number of '1' bi
 
 **Note:**
 
-* Note that in some languages, such as Java, there is no unsigned integer type. In this case, the input will be given as a signed integer type. It should not affect your implementation, as the integer's internal binary representation is the same, whether it is signed or unsigned.
-* In Java, the compiler represents the signed integers using [2's complement notation](https://en.wikipedia.org/wiki/Two's_complement). Therefore, in **Example 3**, the input represents the signed integer. `-3`.
+- Note that in some languages, such as Java, there is no unsigned integer type. In this case, the input will be given as a signed integer type. It should not affect your implementation, as the integer's internal binary representation is the same, whether it is signed or unsigned.
+- In Java, the compiler represents the signed integers using [2's complement notation](https://en.wikipedia.org/wiki/Two's_complement). Therefore, in **Example 3**, the input represents the signed integer. `-3`.
 
 **Example 1:**
 
@@ -38,12 +38,12 @@ Explanation: The input binary string 00000000000000000000000010000000 has a tota
 ```
 Input: n = 11111111111111111111111111111101
 Output: 31
-Explanation: The input binary string 11111111111111111111111111111101 has a total of thirty one '1' bits. 
+Explanation: The input binary string 11111111111111111111111111111101 has a total of thirty one '1' bits.
 ```
 
 **Constraints:**
 
-* The input must be a **binary string** of length `32`.
+- The input must be a **binary string** of length `32`.
 
 **Follow up:** If this function is called many times, how would you optimize it?
 
@@ -51,7 +51,7 @@ Explanation: The input binary string 11111111111111111111111111111101 has a tota
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -66,7 +66,7 @@ public:
 </TabItem>
 
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:
@@ -77,17 +77,18 @@ class Solution:
 </TabItem>
 
 <TabItem value="go" label="Go">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```go
 func hammingWeight(num uint32) int {
     return bits.OnesCount32(num);
 }
 ```
+
 </TabItem>
 
 <TabItem value="rs" label="Rust">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```rs
 impl Solution {
@@ -121,8 +122,8 @@ public class Solution {
  * @param {number} n - a positive integer
  * @return {number}
  */
-var hammingWeight = function(n) {
-    return n.toString(2).split('1').length - 1
+var hammingWeight = function (n) {
+  return n.toString(2).split('1').length - 1;
 };
 ```
 
@@ -135,7 +136,7 @@ We check each parity of teach bit. Increase $$ans$$ by 1 if the bit is set.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -159,10 +160,10 @@ public:
 ```java
 public class Solution {
     // you need to treat n as an unsigned value
-    // 
+    //
     public int hammingWeight(int n) {
         int ones = 0;
-        // n > 0, fails to return the correct the answer because of Integer MAX_VALUE. 
+        // n > 0, fails to return the correct the answer because of Integer MAX_VALUE.
         // Integer.MAX_VALUE + 1 is -2147483648, so it's not greater than 0, so n will not enter into loop
         while (n != 0) {
             ones += (n & 1);
@@ -189,7 +190,7 @@ class Solution:
             if (n & 1): res += 1
             # same as --> n //= 2
             n >>= 1
-        return res 
+        return res
 ```
 
 </TabItem>
@@ -202,13 +203,13 @@ class Solution:
  * @param {number} n - a positive integer
  * @return {number}
  */
-var hammingWeight = function(n) {
-    let res = 0;
-    while (n != 0) {
-        if (n & 1) res++;
-        n /= 2
-    }
-    return res;
+var hammingWeight = function (n) {
+  let res = 0;
+  while (n != 0) {
+    if (n & 1) res++;
+    n /= 2;
+  }
+  return res;
 };
 ```
 
@@ -230,7 +231,7 @@ n     n     n - 1  n & (n - 1)
  5   0101   0100    0100
  6   0110   0101    0100
  7   0111   0110    0110
- 8   1000   0111    0000 
+ 8   1000   0111    0000
  9   1001   1000    1000
 10   1010   1001    1000
 11   1011   1010    1010
@@ -242,7 +243,7 @@ n     n     n - 1  n & (n - 1)
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -254,6 +255,7 @@ public:
     }
 };
 ```
+
 </TabItem>
 
 <TabItem value="java" label="Java">
@@ -273,6 +275,7 @@ public class Solution {
     }
 }
 ```
+
 </TabItem>
 
 <TabItem value="python" label="Python">
@@ -281,7 +284,7 @@ public class Solution {
 ```python
 class Solution:
     def hammingWeight(self, n: int) -> int:
-        res = 0        
+        res = 0
         while n:
             n = n & (n - 1)
             res += 1

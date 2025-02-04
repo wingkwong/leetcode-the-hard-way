@@ -1,5 +1,5 @@
 ---
-description: 'Author: @ColeB2, @heder, @wingkwong | https://leetcode.com/problems/decode-ways/'
+description: 'Author: @ColeB2, @heder, @wkw | https://leetcode.com/problems/decode-ways/'
 tags: [String, Dynamic Programming]
 ---
 
@@ -31,7 +31,7 @@ Given a string `s` containing only digits, return _the **number** of ways to **d
 
 The test cases are generated so that the answer fits in a **32-bit** integer.
 
- **Example 1:**
+**Example 1:**
 
 ```
 Input: s = "12"
@@ -62,9 +62,10 @@ Explanation: "06" cannot be mapped to "F" because of the leading zero ("6" is di
 
 ## Approach 1: Bottom-Up Dynamic Programming
 
-We can use a bottom-up dp approach. By looping backwards we have 2 main cases to worry about. 
+We can use a bottom-up dp approach. By looping backwards we have 2 main cases to worry about.
+
 1. Current number is not a zero. If the current number was a 0, we would do nothing, and just leave our current number of ways as 0, as we may not have a valid string that can be decoded. If it is not a 0 though, we know we should have at least the same number of ways that we had in the previous case.
-2. If the current number is a $$1$$, or a $$2$$ and the previous was a $$6$$ or less,  then the number of ways would be equal to whatever the current number of ways is, plus the number of ways from 2 iterations before.
+2. If the current number is a $$1$$, or a $$2$$ and the previous was a $$6$$ or less, then the number of ways would be equal to whatever the current number of ways is, plus the number of ways from 2 iterations before.
 
 These two cases work in sequence based on each other. If the current number is a 1 or a 2, then we know from the first case that we have at least as many ways as we had on the previous iteration, so we can update our dp value to reflect that. We also know that based on the second case, we can add the values we have from our dp array from 2 iterations before as the current and previous string values can also be counted now as a single letter we can decode.
 
@@ -117,9 +118,8 @@ class Solution:
 
 </TabItem>
 
-
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 // Time Complexity: O(N)
@@ -131,7 +131,7 @@ public:
     int numDecodings(string s) {
         // cannot map to any character due to the leading zero
         if (s.front() == '0') return 0;
-        int n = s.size(); 
+        int n = s.size();
         // dp[i]: number of ways of decoding the substring s[:i]
         vector<int> dp(n + 1);
         // base case
@@ -162,7 +162,7 @@ public:
 </TabItem>
 
 <TabItem value="java" label="Java">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```java
 // Time Complexity: O(N)
@@ -172,7 +172,7 @@ class Solution {
     public int numDecodings(String s) {
         // cannot map to any character due to the leading zero
         if (s.charAt(0) == '0') return 0;
-        int n = s.length(); 
+        int n = s.length();
         // dp[i]: number of ways of decoding the substring s[:i]
         int[]  dp = new int[n + 1];
         // base case
@@ -220,10 +220,10 @@ static int numDecodings(const string& s) {
 
 static int dp(const string& s, int i, vector<int>& memo) {
     if (i == size(s)) return 1;
-    
+
     if (memo[i] != -1) return memo[i];
     int ans = 0;
-    
+
     if (s[i] == '0') {
         ans = 0;
     } else {
@@ -232,7 +232,7 @@ static int dp(const string& s, int i, vector<int>& memo) {
             ans += dp(s, i + 2, memo);
         }
     }
-    
+
     return memo[i] = ans;
 }
 ```

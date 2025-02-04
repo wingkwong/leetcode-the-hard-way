@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/count-of-range-sum/'
+description: 'Author: @wkw | https://leetcode.com/problems/count-of-range-sum/'
 ---
 
 # 0327 - Count of Range Sum (Hard)
@@ -31,14 +31,14 @@ Output: 1
 
 **Constraints:**
 
-* `1 <= nums.length <= 10^5`
-* `-2^31 <= nums[i] <= 2^31 - 1`
-* `-10^5 <= lower <= upper <= 10^5`
-* The answer is **guaranteed** to fit in a **32-bit** integer.
+- `1 <= nums.length <= 10^5`
+- `-2^31 <= nums[i] <= 2^31 - 1`
+- `-10^5 <= lower <= upper <= 10^5`
+- The answer is **guaranteed** to fit in a **32-bit** integer.
 
 ## Approach 1: Ordered Set
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 #include <ext/pb_ds/assoc_container.hpp>
@@ -48,16 +48,16 @@ using namespace __gnu_pbds;
 class Solution {
 public:
     tree<long long, null_type, less_equal<long long>, rb_tree_tag, tree_order_statistics_node_update> T;
-    
+
     // lower <= sum[j] - sum[i] <= upper
     // sum[j] - sum[i] >= lower
     // sum[j] - sum[i] <= upper
     // where i < j
-    
-    // given sum[j], find the number of i such that 
-    // 1. i < j 
+
+    // given sum[j], find the number of i such that
+    // 1. i < j
     // 2. sum[j] - upper <= sum[i] <= sum[j] - lower
-    
+
     int countRangeSum(vector<int>& nums, int lower, int upper) {
         long long sum = 0, ans = 0;
         // normalise as lower <= sum[j] - 0 <= upper

@@ -2,7 +2,7 @@
 
 <img align="left" width="240" height="360" src="https://user-images.githubusercontent.com/35857179/168307611-1b28018b-fc98-4cff-88a6-d8312ac7bce6.png">
 
-## About 
+## About
 
 Welcome to "LeetCode The Hard Way," the ultimate resource for those looking to improve their skills in data structures and algorithms! Our website is dedicated to providing comprehensive tutorials and detailed solutions to some of the most challenging problems in LeetCode. Whether you're a student looking to ace your next exam or a professional seeking to level up your coding skills, our tutorials and solutions are designed to help you succeed. Our content covers a range of popular programming languages, so you can learn and practice using the language of your choice.
 

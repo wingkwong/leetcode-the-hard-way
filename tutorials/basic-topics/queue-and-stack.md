@@ -10,7 +10,7 @@ keywords:
   - data structure
 ---
 
-<TutorialAuthors names="@heiheihang"/>
+<TutorialCredits authors="@heiheihang"/>
 
 ### Stack
 
@@ -34,42 +34,42 @@ We can process the string in the following way:
 
 ```python
 #1st character from valid_string_1
-valid_string_1_step_1 = ["("] 
+valid_string_1_step_1 = ["("]
 ```
 
 We have the first character first. We do not need to do anything if it is an opening bracket.
 
 ```python
 #2nd character from valid_string_1
-valid_string_1_step_2 = ["(", "["] 
+valid_string_1_step_2 = ["(", "["]
 ```
 
 We have the second character now. Again, we do not need to do anything if it is an opening bracket.
 
 ```python
-#3rd character from valid_string_1 
-valid_string_1_step_3a = ["(", "[", "]"] 
+#3rd character from valid_string_1
+valid_string_1_step_3a = ["(", "[", "]"]
 ```
 
 Here, we see a matching pair `"["` and `"]"`, so we can cancel them out.
 
 ```python
 #3rd character from valid_string_1 (removing valid pair)
-valid_string_1_step_3b = ["("] 
+valid_string_1_step_3b = ["("]
 ```
 
 We have removed the two last seen elements form the stack.
 
 ```python
 #4th character from valid_string_1 (after removing 2nd and 3rd)
-valid_string_1_step_4a = ["(", ")"] 
+valid_string_1_step_4a = ["(", ")"]
 ```
 
 After adding the fourth character, we see a matching pair between the 1st character and the 4th character. We can remove it now.
 
 ```python
 #4th character from valid_string_1 (after removing 1st and 4th)
-valid_string_1_step_4a = [] 
+valid_string_1_step_4a = []
 ```
 
 With no more character to process and with an empty stack, we know that there are no remaining opening and closing brackets. Hence, we can validate this string.
@@ -105,41 +105,41 @@ Are you able to code the solution out after looking at these two examples?
 ```python
 class Solution:
     def isValid(self, s: str) -> bool:
-        
+
         #we use a stack to keep track of brackets
         stack = []
-        
+
         #iterate the characters in the string
         for c in s:
-        
+
             #we store the character in the stack if it is an opening bracket
             if(c == "(" or c == "[" or c == "{"):
                 stack.append(c)
-                
-            #we check if there is a matching opening bracket 
+
+            #we check if there is a matching opening bracket
             #when we see a closing bracket
             elif(c == ")"):
                 if(len(stack) == 0 or stack[-1] != "("):
                     return False
                 else:
                     stack.pop()
-                    
-            #we check if there is a matching opening bracket 
+
+            #we check if there is a matching opening bracket
             #when we see a closing bracket
             elif(c == "]"):
                 if(len(stack) == 0 or stack[-1] != "["):
                     return False
                 else:
                     stack.pop()
-                    
-            #we check if there is a matching opening bracket 
+
+            #we check if there is a matching opening bracket
             #when we see a closing bracket
             elif(c == "}"):
                 if(len(stack) == 0 or stack[-1] != "{"):
                     return False
                 else:
                     stack.pop()
-                    
+
         #if the stack is not empty, there are some unmatched opening brackets
         #this suggests it is not valid
         if(len(stack) != 0):
@@ -157,42 +157,42 @@ As the problem statement and examples are quite long, we kindly ask you to read 
 
 To implement a Queue, we must have a data structure that handles adding element on the left in $$O(1)$$ \_\_ time. These are the options in different languages:
 
-* Python: `queue = deque([]) # queue.appendleft(x) , queue.pop()`
-* C++: `queue<int> q; // q.push(x), q.pop()`
+- Python: `queue = deque([]) # queue.appendleft(x) , queue.pop()`
+- C++: `queue<int> q; // q.push(x), q.pop()`
 
 We can use these data structures to simulate this problem
 
 ```python
 class Solution:
     def timeRequiredToBuy(self, tickets: List[int], k: int) -> int:
-        
-        
+
+
         queue = deque([])
-        
+
         #we initialize the queue first
         #as we need to keep track of the kth person, we add the index as well
         for i in range(len(tickets)):
             ticket_needed = tickets[i]
             queue.appendleft([i,ticket_needed])
-        
+
         #keep track of overall time
         time = 0
-        
+
         #we continue until queue is empty
         while(queue):
-            
+
             #each person spends one second for purchase
             time += 1
 
             #access the first person and her ticket needed from the queue
             first_person_in_queue, tickets_remaining = queue[-1]
-            
+
             #the first person buys one ticket , so she needs one less ticket
             tickets_remaining -= 1
-            
+
             #we remove the first person from the queue
             queue.pop()
-            
+
             #if the first person still needs to buy more tickets, we move her back to the end of the queue
             if(tickets_remaining != 0):
                 queue.appendleft([first_person_in_queue, tickets_remaining])
@@ -200,29 +200,10 @@ class Solution:
             else:
                 if(first_person_in_queue == k):
                     return time
-            
+
         return time
 ```
 
-export const suggestedProblems = [
-  {
-    "problemName": "0155 - Min Stack",
-    "difficulty": "Easy",
-    "leetCodeLink": "https://leetcode.com/problems/min-stack/",
-    "solutionLink": "../../solutions/0100-0199/min-stack-easy"
-  },
-  {
-    "problemName": "0496 - Next Greater Element I",
-    "difficulty": "Easy",
-    "leetCodeLink": "https://leetcode.com/problems/next-greater-element-i/",
-    "solutionLink": "../../solutions/0400-0499/next-greater-element-i-easy"
-  },
-  {
-    "problemName": "1475 - Final Prices With a Special Discount in a Shop",
-    "difficulty": "Easy",
-    "leetCodeLink": "https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/",
-    "solutionLink": "../../solutions/1400-1499/final-prices-with-a-special-discount-in-a-shop-easy"
-  },
-]
+export const suggestedProblems = [ { "problemName": "0155 - Min Stack", "difficulty": "Easy", "leetCodeLink": "https://leetcode.com/problems/min-stack/", "solutionLink": "../../solutions/0100-0199/min-stack-easy" }, { "problemName": "0496 - Next Greater Element I", "difficulty": "Easy", "leetCodeLink": "https://leetcode.com/problems/next-greater-element-i/", "solutionLink": "../../solutions/0400-0499/next-greater-element-i-easy" }, { "problemName": "1475 - Final Prices With a Special Discount in a Shop", "difficulty": "Easy", "leetCodeLink": "https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/", "solutionLink": "../../solutions/1400-1499/final-prices-with-a-special-discount-in-a-shop-easy" }, ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />

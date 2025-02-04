@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/minimum-operations-to-make-the-array-k-increasing/
+  Author: @wkw | https://leetcode.com/problems/minimum-operations-to-make-the-array-k-increasing/
 ---
 
 # 2111 - Minimum Operations to Make the Array K-Increasing (Hard)
@@ -16,12 +15,12 @@ You are given a **0-indexed** array `arr` consisting of `n` positive integers, a
 
 The array `arr` is called **K-increasing** if `arr[i-k] <= arr[i]` holds for every index `i`, where `k <= i <= n-1`.
 
-* For example, `arr = [4, 1, 5, 2, 6, 2]` is K-increasing for `k = 2` because:
-  * `arr[0] <= arr[2] (4 <= 5)`
-  * `arr[1] <= arr[3] (1 <= 2)`
-  * `arr[2] <= arr[4] (5 <= 6)`
-  * `arr[3] <= arr[5] (2 <= 2)`
-* However, the same `arr` is not K-increasing for `k = 1` (because `arr[0] > arr[1]`) or `k = 3` (because `arr[0] > arr[3]`).
+- For example, `arr = [4, 1, 5, 2, 6, 2]` is K-increasing for `k = 2` because:
+  - `arr[0] <= arr[2] (4 <= 5)`
+  - `arr[1] <= arr[3] (1 <= 2)`
+  - `arr[2] <= arr[4] (5 <= 6)`
+  - `arr[3] <= arr[5] (2 <= 2)`
+- However, the same `arr` is not K-increasing for `k = 1` (because `arr[0] > arr[1]`) or `k = 3` (because `arr[0] > arr[3]`).
 
 In one **operation**, you can choose an index `i` and **change** `arr[i]` into **any** positive integer.
 
@@ -64,14 +63,14 @@ Note that there can be other ways to make the array K-increasing, but none of th
 
 **Constraints:**
 
-* `1 <= arr.length <= 10^5`
-* `1 <= arr[i], k <= arr.length`
+- `1 <= arr.length <= 10^5`
+- `1 <= arr[i], k <= arr.length`
 
 ## Approach 1: Longest Increasing Subsequence
 
 We can break input vector into $$k$$ groups $$ai,ai+k,ai+2∗k,...$$for each $$i<k$$. Calculate the LIS (Longest Increasing Subsequence) on each group and compare the length with the target size. We need to perform $$a.size()−lengthOfLIS(a)$$operations to make it K-increasing.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -86,7 +85,7 @@ public:
         }
         return (int) lis.size();
     }
-    
+
     int kIncreasing(vector<int>& arr, int k) {
         int ans = 0, n = arr.size();
         for (int i = 0; i < k; i++) {

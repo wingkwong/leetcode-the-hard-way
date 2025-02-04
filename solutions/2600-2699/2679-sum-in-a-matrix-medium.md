@@ -1,8 +1,8 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/sum-in-a-matrix/'
+description: 'Author: @wkw | https://leetcode.com/problems/sum-in-a-matrix/'
 ---
 
-# 2679 - Sum in a Matrix (Medium) 
+# 2679 - Sum in a Matrix (Medium)
 
 ## Problem Link
 
@@ -15,7 +15,7 @@ You are given a **0-indexed** 2D integer array `nums`. Initially, your score is 
 1. From each row in the matrix, select the largest number and remove it. In the case of a tie, it does not matter which number is chosen.
 2. Identify the highest number amongst all those removed in step 1. Add that number to your **score**.
 
-Return *the final **score**.*
+Return _the final **score**._
 
 **Example 1:**
 
@@ -43,7 +43,7 @@ Explanation: We remove 1 and add it to the answer. We return 1.
 
 <Tabs>
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:
@@ -52,7 +52,7 @@ class Solution:
         res = 0
         # sort each row
         for num in nums: num.sort()
-        # for each column, 
+        # for each column,
         for j in range(n):
             # we look for the highest number
             mx = 0
@@ -70,8 +70,8 @@ class Solution:
         # in this way, we can just use max to find the higher number
         for col in zip(*[sorted(row) for row in nums]):
             # [
-            #     (1, 2, 3, 1), 
-            #     (2, 4, 5, 2), 
+            #     (1, 2, 3, 1),
+            #     (2, 4, 5, 2),
             #     (7, 6, 6, 3)
             # ]
             res += max(col)

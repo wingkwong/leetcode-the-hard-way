@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/numbers-with-same-consecutive-differences/'
+description: 'Author: @wkw | https://leetcode.com/problems/numbers-with-same-consecutive-differences/'
 tags: [Backtracking, Breadth-First Search]
 ---
 
-# 0967 - Numbers With Same Consecutive Differences (Medium) 
+# 0967 - Numbers With Same Consecutive Differences (Medium)
 
 ## Problem Statement
 
@@ -35,14 +35,14 @@ Output: [10,12,21,23,32,34,43,45,54,56,65,67,76,78,87,89,98]
 
 ## Approach 1: BFS
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 // Time Complexity: O(2 ^ n)
 // Space Complexity: O(2 ^ n)
 class Solution {
 public:
-    // The idea is to use BFS to try appending 0 - 9 to each number 
+    // The idea is to use BFS to try appending 0 - 9 to each number
     // starting from a single digit 1 - 9 until the number has n digits
     vector<int> numsSameConsecDiff(int n, int k) {
         // push all numbers with single digit to a deque
@@ -66,7 +66,7 @@ public:
                     // we use abs to cover both case
                   if (abs((p % 10) - j) == k) {
                     // if the difference is equal to k
-                    // we can include digit j 
+                    // we can include digit j
                     // so multiply the current number by 10 and add j
                     q.push_back(p * 10 + j);
                   }
@@ -79,13 +79,13 @@ public:
 };
 ```
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 # Time Complexity: O(2 ^ n)
 # Space Complexity: O(2 ^ n)
 class Solution:
-    # The idea is to use BFS to try appending 0 - 9 to each number 
+    # The idea is to use BFS to try appending 0 - 9 to each number
     # starting from a single digit 1 - 9 until the number has n digits
     def numsSameConsecDiff(self, n: int, k: int) -> List[int]:
         # init ans
@@ -97,7 +97,7 @@ class Solution:
         while d:
             # pop the first element from the deque
             pos, num = d.pop()
-            # if the current position is n, 
+            # if the current position is n,
             if pos == n:
                 # then we can append num to ans
                 ans.append(num)
@@ -110,7 +110,7 @@ class Solution:
                     # we use abs to cover both case
                     if abs(num % 10 - j) == k:
                         # if the difference is equal to k
-                        # we can include digit j 
+                        # we can include digit j
                         # so multiply the current number by 10 and add j
                         d.append((pos + 1, num * 10 + j))
         # return the final ans

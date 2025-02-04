@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/sign-of-the-product-of-an-array/
+  Author: @wkw | https://leetcode.com/problems/sign-of-the-product-of-an-array/
 ---
 
 # 1822 - Sign of the Product of an Array (Easy)
@@ -14,9 +13,9 @@ https://leetcode.com/problems/sign-of-the-product-of-an-array/
 
 There is a function `signFunc(x)` that returns:
 
-* `1` if `x` is positive.
-* `-1` if `x` is negative.
-* `0` if `x` is equal to `0`.
+- `1` if `x` is positive.
+- `-1` if `x` is negative.
+- `0` if `x` is equal to `0`.
 
 You are given an integer array `nums`. Let `product` be the product of all values in the array `nums`.
 
@@ -48,8 +47,8 @@ Explanation: The product of all values in the array is -1, and signFunc(-1) = -1
 
 **Constraints:**
 
-* `1 <= nums.length <= 1000`
-* `-100 <= nums[i] <= 100`
+- `1 <= nums.length <= 1000`
+- `-100 <= nums[i] <= 100`
 
 ## Approach 1: Check the sign
 
@@ -57,7 +56,7 @@ The first thought probably is just to simulate it by calculating the product of 
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -72,8 +71,8 @@ public:
                 break;
             }
         }
-        // You may notice that when the number is positive, basically it won't change the sign. 
-        // Hence, we can just focus on negative numbers and flip the sign when we meet one. 
+        // You may notice that when the number is positive, basically it won't change the sign.
+        // Hence, we can just focus on negative numbers and flip the sign when we meet one.
         // Zero case remain unchanged.
         // ----
         // for (auto x : nums) {
@@ -88,7 +87,7 @@ public:
 </TabItem>
 
 <TabItem value="rs" label="Rust">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```rs
 impl Solution {
@@ -97,7 +96,7 @@ impl Solution {
         for x in nums.into_iter() {
             if x == 0 {
                 return 0;
-            } 
+            }
             ans *= x.signum();
         }
         ans

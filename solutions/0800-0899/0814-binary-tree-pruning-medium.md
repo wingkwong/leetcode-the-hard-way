@@ -1,13 +1,13 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/binary-tree-pruning/'
+description: 'Author: @wkw | https://leetcode.com/problems/binary-tree-pruning/'
 tags: [Tree, Depth-First Search, Binary Tree]
 ---
 
-# 0814 - Binary Tree Pruning (Medium) 
+# 0814 - Binary Tree Pruning (Medium)
 
 ## Problem Statement
 
-Given the `root` of a binary tree, return *the same tree where every subtree (of the given tree) not containing a*`1`*has been removed*.
+Given the `root` of a binary tree, return _the same tree where every subtree (of the given tree) not containing a_`1`_has been removed_.
 
 A subtree of a node `node` is `node` plus every node that is a descendant of `node`.
 
@@ -16,7 +16,7 @@ A subtree of a node `node` is `node` plus every node that is a descendant of `no
 ```
 Input: root = [1,null,0,0,1]
 Output: [1,null,0,null,1]
-Explanation: 
+Explanation:
 Only the red nodes satisfy the property "every subtree not containing a 1".
 The diagram on the right represents the answer.
 ```
@@ -42,18 +42,18 @@ Output: [1,1,0,1,1,null,1]
 
 ## Approach 1: DFS
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 // Time Complexity: O(N) where N is the number of the nodes in the tree
-// Space Complexity: O(H) where H is the height of the tree. 
+// Space Complexity: O(H) where H is the height of the tree.
 // In worse case, H can be N when it is a left skewed binary tree / right skewed binary tree
 class Solution {
 public:
     // the idea is to use DFS to traverse the tree
     // if the current subtree satifies one of the following conditions
     // 1. root value is 1
-    // 2. left sub tree contains 1 
+    // 2. left sub tree contains 1
     // 3. right sub tree contains 1
     // then we return `root`
     // otherwise, we return nullptr
@@ -86,7 +86,7 @@ if (!root->left && !root->right && !root->val) {
 }
 ```
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 # Definition for a binary tree node.
@@ -97,13 +97,13 @@ if (!root->left && !root->right && !root->val) {
 #         self.right = right
 
 # Time Complexity: O(N) where N is the number of the nodes in the tree
-# Space Complexity: O(H) where H is the height of the tree. 
+# Space Complexity: O(H) where H is the height of the tree.
 # In worse case, H can be N when it is a left skewed binary tree / right skewed binary tree
 class Solution:
     # the idea is to use DFS to traverse the tree
     # if the current subtree satisfies one of the following conditions
     # 1. root value is 1
-    # 2. left sub tree contains 1 
+    # 2. left sub tree contains 1
     # 3. right sub tree contains 1
     # then we return `root`
     # otherwise, we return None

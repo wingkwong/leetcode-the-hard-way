@@ -1,14 +1,14 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/largest-palindromic-number/'
+description: 'Author: @wkw | https://leetcode.com/problems/largest-palindromic-number/'
 ---
 
-# 2384 - Largest Palindromic Number (Medium) 
+# 2384 - Largest Palindromic Number (Medium)
 
 ## Problem Statement
 
 You are given a string `num` consisting of digits only.
 
-Return *the **largest palindromic** integer (in the form of a string) that can be formed using digits taken from*`num`. It should not contain **leading zeroes**.
+Return _the **largest palindromic** integer (in the form of a string) that can be formed using digits taken from_`num`. It should not contain **leading zeroes**.
 
 **Notes:**
 
@@ -20,7 +20,7 @@ Return *the **largest palindromic** integer (in the form of a string) that can b
 ```
 Input: num = "444947137"
 Output: "7449447"
-Explanation: 
+Explanation:
 Use the digits "4449477" from "444947137" to form the palindromic integer "7449447".
 It can be shown that "7449447" is the largest palindromic integer that can be formed.
 ```
@@ -30,19 +30,19 @@ It can be shown that "7449447" is the largest palindromic integer that can be fo
 ```
 Input: num = "00009"
 Output: "9"
-Explanation: 
+Explanation:
 It can be shown that "9" is the largest palindromic integer that can be formed.
 Note that the integer returned should not contain leading zeroes.
 ```
 
 **Constraints:**
 
-- `1 <= num.length <= 105`
+- `1 <= num.length <= 1e5`
 - `num` consists of digits.
 
 ## Approach 1: Counting and Building String
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -62,10 +62,10 @@ public:
         }
         // we can put some zeros as well for cases like 0099 -> 9009
         if (cnt[0] >= 2) {
-            // however, we only do it when we've used some digits 
+            // however, we only do it when we've used some digits
             // think of cases like 9
             if (l.size()) {
-                l += string(cnt[0] / 2, '0');    
+                l += string(cnt[0] / 2, '0');
             }
         }
         // build the middle part

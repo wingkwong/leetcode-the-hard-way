@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/k-diff-pairs-in-an-array/'
+description: 'Author: @wkw | https://leetcode.com/problems/k-diff-pairs-in-an-array/'
 ---
 
 # 0532 - K-diff Pairs in an Array (Medium)
@@ -14,8 +14,8 @@ Given an array of integers `nums` and an integer `k`, return _the number of **un
 
 A **k-diff** pair is an integer pair `(nums[i], nums[j])`, where the following are true:
 
-* `0 <= i < j < nums.length`
-* `|nums[i] - nums[j]| == k`
+- `0 <= i < j < nums.length`
+- `|nums[i] - nums[j]| == k`
 
 **Notice** that `|val|` denotes the absolute value of `val`.
 
@@ -46,9 +46,9 @@ Explanation: There is one 0-diff pair in the array, (1, 1).
 
 **Constraints:**
 
-* `1 <= nums.length <= 10^4`
-* `-10^7 <= nums[i] <= 10^7`
-* `0 <= k <= 10^7`
+- `1 <= nums.length <= 10^4`
+- `-10^7 <= nums[i] <= 10^7`
+- `0 <= k <= 10^7`
 
 ## Approach 1: Hash Map
 
@@ -66,7 +66,7 @@ We iterate $$m$$ to check each $$(x, y)$$. There are two cases:
 1. If $$k$$ is $$0$$, that means $$nums[i] == nums[j]$$, so we need at least two occurrences of that number.
 2. If $$k$$is greater than $$0$$, then we need to check if the complement $$x + k$$ exists in hash map or not.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

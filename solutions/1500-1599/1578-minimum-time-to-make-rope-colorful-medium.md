@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/minimum-time-to-make-rope-colorful/'
+description: 'Author: @wkw | https://leetcode.com/problems/minimum-time-to-make-rope-colorful/'
 tags: [Array, String, Dynamic Programming, Greedy]
 ---
 
-# 1578 - Minimum Time to Make Rope Colorful (Medium) 
+# 1578 - Minimum Time to Make Rope Colorful (Medium)
 
 ## Problem Link
 
@@ -15,7 +15,7 @@ Alice has `n` balloons arranged on a rope. You are given a **0-indexed** string 
 
 Alice wants the rope to be **colorful**. She does not want **two consecutive balloons** to be of the same color, so she asks Bob for help. Bob can remove some balloons from the rope to make it **colorful**. You are given a **0-indexed** integer array `neededTime` where `neededTime[i]` is the time (in seconds) that Bob needs to remove the `ith` balloon from the rope.
 
-Return *the **minimum time** Bob needs to make the rope **colorful***.
+Return \*the **minimum time** Bob needs to make the rope **colorful\***.
 
 **Example 1:**
 
@@ -55,24 +55,24 @@ There are no longer two consecutive balloons of the same color. Total time = 1 +
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 // Time Complexity: O(n)
 // Space Complexity: O(1)
 class Solution {
 public:
-    // intuition: 
+    // intuition:
     // ---------------
-    // if there are consecutive balloons with the same color, 
-    // we want to keep the one with maximum neededTime and remove others 
-    
+    // if there are consecutive balloons with the same color,
+    // we want to keep the one with maximum neededTime and remove others
+
     // if there are 2 balloons with different colors, ans = 0 as it is colorful
     // if there are 2 balloons with same color, ans = min(neededTime[0], neededTime[1])
     // if there are 3 consecutive balloons with same color, ans = sum(neededTime[0 .. 2]) - max(neededTime[0 .. 2])
     // if there are N consecutive balloons with same color, ans = sum(neededTime[0 .. n - 1]) - max(neededTime[0 .. n - 1])
     // we don't need to calculate the sum and subtract the max though. instead, we can either
-    // 1. update neededTime in place to the max of neededTime[i] and neededTime[i - 1] (shown in below solution) or 
+    // 1. update neededTime in place to the max of neededTime[i] and neededTime[i - 1] (shown in below solution) or
     // 2. store the current max time in a variable
     // why? let's say colors = "aaa" and neededTime = [1,2,1]
     // we first compare neededTime[0] and neededTime[1] and decide to remove the first balloon (neededTime[0] < neededTime[1])
@@ -86,10 +86,10 @@ public:
             // e.g. aba[a]c and i = 3 (0-based)
             if (colors[i] == colors[i - 1]) {
                 // then we remove the one with less time
-                // e.g. in above example, we remove the balloon at index 2 
-                // with neededTime[2] since neededTime[2] < neededTime[3] 
+                // e.g. in above example, we remove the balloon at index 2
+                // with neededTime[2] since neededTime[2] < neededTime[3]
                 ans += min(neededTime[i], neededTime[i - 1]);
-                // update the max neededTime inplace 
+                // update the max neededTime inplace
                 // or alternatively you can store it in a variable
                 neededTime[i] = max(neededTime[i], neededTime[i - 1]);
             }
@@ -102,23 +102,23 @@ public:
 </TabItem>
 
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 # Time Complexity: O(n)
 # Space Complexity: O(1)
 class Solution:
-    # intuition: 
+    # intuition:
     # ---------------
-    # if there are consecutive balloons with the same color, 
-    # we want to keep the one with maximum neededTime and remove others 
-    
+    # if there are consecutive balloons with the same color,
+    # we want to keep the one with maximum neededTime and remove others
+
     # if there are 2 balloons with different colors, ans = 0 as it is colorful
     # if there are 2 balloons with same color, ans = min(neededTime[0], neededTime[1])
     # if there are 3 consecutive balloons with same color, ans = sum(neededTime[0 .. 2]) - max(neededTime[0 .. 2])
     # if there are N consecutive balloons with same color, ans = sum(neededTime[0 .. n - 1]) - max(neededTime[0 .. n - 1])
     # we don't need to calculate the sum and subtract the max though. instead, we can either
-    # 1. update neededTime in place to the max of neededTime[i] and neededTime[i - 1] (shown in below solution) or 
+    # 1. update neededTime in place to the max of neededTime[i] and neededTime[i - 1] (shown in below solution) or
     # 2. store the current max time in a variable
     # why? let's say colors = "aaa" and neededTime = [1,2,1]
     # we first compare neededTime[0] and neededTime[1] and decide to remove the first balloon (neededTime[0] < neededTime[1])
@@ -132,10 +132,10 @@ class Solution:
             # e.g. aba[a]c and i = 3 (0-based)
             if colors[i] == colors[i - 1]:
                 # then we remove the one with less time
-                # e.g. in above example, we remove the balloon at index 2 
-                # with neededTime[2] since neededTime[2] < neededTime[3] 
+                # e.g. in above example, we remove the balloon at index 2
+                # with neededTime[2] since neededTime[2] < neededTime[3]
                 ans += min(neededTime[i], neededTime[i - 1])
-                # update the max neededTime inplace 
+                # update the max neededTime inplace
                 # or alternatively you can store it in a variable
                 neededTime[i] = max(neededTime[i], neededTime[i - 1])
         return ans
@@ -144,23 +144,23 @@ class Solution:
 </TabItem>
 
 <TabItem value="java" label="Java">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```java
 // Time Complexity: O(n)
 // Space Complexity: O(1)
 class Solution {
-    // intuition: 
+    // intuition:
     // ---------------
-    // if there are consecutive balloons with the same color, 
-    // we want to keep the one with maximum neededTime and remove others 
-    
+    // if there are consecutive balloons with the same color,
+    // we want to keep the one with maximum neededTime and remove others
+
     // if there are 2 balloons with different colors, ans = 0 as it is colorful
     // if there are 2 balloons with same color, ans = min(neededTime[0], neededTime[1])
     // if there are 3 consecutive balloons with same color, ans = sum(neededTime[0 .. 2]) - max(neededTime[0 .. 2])
     // if there are N consecutive balloons with same color, ans = sum(neededTime[0 .. n - 1]) - max(neededTime[0 .. n - 1])
     // we don't need to calculate the sum and subtract the max though. instead, we can either
-    // 1. update neededTime in place to the max of neededTime[i] and neededTime[i - 1] (shown in below solution) or 
+    // 1. update neededTime in place to the max of neededTime[i] and neededTime[i - 1] (shown in below solution) or
     // 2. store the current max time in a variable
     // why? let's say colors = "aaa" and neededTime = [1,2,1]
     // we first compare neededTime[0] and neededTime[1] and decide to remove the first balloon (neededTime[0] < neededTime[1])
@@ -174,10 +174,10 @@ class Solution {
             // e.g. aba[a]c and i = 3 (0-based)
             if (colors.charAt(i) == colors.charAt(i - 1)) {
                 // then we remove the one with less time
-                // e.g. in above example, we remove the balloon at index 2 
-                // with neededTime[2] since neededTime[2] < neededTime[3] 
+                // e.g. in above example, we remove the balloon at index 2
+                // with neededTime[2] since neededTime[2] < neededTime[3]
                 ans += Math.min(neededTime[i], neededTime[i - 1]);
-                // update the max neededTime inplace 
+                // update the max neededTime inplace
                 // or alternatively you can store it in a variable
                 neededTime[i] = Math.max(neededTime[i], neededTime[i - 1]);
             }

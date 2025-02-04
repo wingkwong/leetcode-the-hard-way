@@ -13,7 +13,7 @@ https://leetcode.com/problems/count-elements-with-maximum-frequency/
 
 You are given an array `nums` consisting of **positive** integers.
 
-Return *the **total frequencies** of elements in*`nums` *such that those elements all have the **maximum** frequency*.
+Return _the **total frequencies** of elements in_`nums` *such that those elements all have the **maximum** frequency*.
 
 The **frequency** of an element is the number of occurrences of that element in the array.
 
@@ -64,7 +64,7 @@ static int maxFrequencyElements(const vector<int>& nums) {
     for (auto [num, c] : cnt) mx = max(mx, c);
     // sum up max counts
     int ans = 0;
-    for (auto [num, c] : cnt) 
+    for (auto [num, c] : cnt)
         if (c == mx) ans += c;
     return ans;
 }
@@ -97,7 +97,7 @@ static int maxFrequencyElements(const vector<int>& nums) {
     for (int c : cnt) mx = max(mx, c);
     // sum up max counts
     int ans = 0;
-    for (int c : cnt) 
+    for (int c : cnt)
         if (c == mx) ans += c;
     return ans;
 }
@@ -122,13 +122,12 @@ If we feel fancy, we could replace a few of the raw loops with stanard library f
         int mx = *max_element(begin(cnt), end(cnt));
         return accumulate(begin(cnt), end(cnt), 0, [mx](int s, int x) {
             return s + (x == mx) * x;
-        });      
+        });
     }
 ```
 
 </TabItem>
 </Tabs>
-
 
 ## Approach 2: frequency count, single pass over the frequency count array
 
@@ -167,7 +166,6 @@ static int maxFrequencyElements(const vector<int>& nums) {
 </TabItem>
 </Tabs>
 
-
 ## Approach 3: compute max during frequency count and then sum up
 
 Instead of doing an extra pass over the frequency count array we can keep track of the maximum while doing the frequency count.
@@ -190,7 +188,7 @@ static int maxFrequencyElements(const vector<int>& nums) {
     for (int num : nums) mx = max(mx, ++cnt[num]);
     // sum up max counts
     int ans = 0;
-    for (int c : cnt) 
+    for (int c : cnt)
         if (c == mx) ans += c;
     return ans;
 }
@@ -198,7 +196,6 @@ static int maxFrequencyElements(const vector<int>& nums) {
 
 </TabItem>
 </Tabs>
-
 
 ## Approach 4: single pass
 

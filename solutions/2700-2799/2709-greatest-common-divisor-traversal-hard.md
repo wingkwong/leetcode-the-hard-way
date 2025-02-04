@@ -13,7 +13,7 @@ You are given a **0-indexed** integer array `nums`, and you are allowed to trave
 
 Your task is to determine if for every pair of indices `i` and `j` in nums, where `i < j`, there exists a sequence of traversals that can take us from `i to j.`
 
-Return `true` *if it is possible to traverse between all such pairs of indices, or `false` otherwise.*
+Return `true` _if it is possible to traverse between all such pairs of indices, or `false` otherwise._
 
 **Example 1:**
 
@@ -43,8 +43,8 @@ Explanation: There are 6 possible pairs of indices to traverse between: (0, 1), 
 
 **Constraints:**
 
-* $1 \leq$ `nums.length` $\leq 10^5$
-* $1 \leq nums_i \leq 10^5$
+- $1 \leq$ `nums.length` $\leq 10^5$
+- $1 \leq nums_i \leq 10^5$
 
 ## Approach 1: Prime Factorization
 
@@ -52,7 +52,7 @@ RFirst let us see how to build the graph. Naive way of building graph would be t
 
 A different way to build graph could be to add edge between $p$ and $nums_i$ if $p$ is a prime factor of $nums_i$. Since any number $n$ has atmost $log(n)$ prime factors so we will have atmost $n \cdot log(n)$ edges in the graph. But while counting component we need to make sure that the node is present in `nums`. If it isn't then it can serve as a bridge connecting two numbers from `nums`, but it should not included in count of nodes in connected component.
 
-We need to take care of few corner cases first. If there are more than one $1$ then we can never reach/leave all $1$. If there is only one $1$ then we can choose it as starting point. Since $\gcd(1, x) = 1$, so we can never leave the vertex. In this case answer is `true` if `size(nums) == 1`. 
+We need to take care of few corner cases first. If there are more than one $1$ then we can never reach/leave all $1$. If there is only one $1$ then we can choose it as starting point. Since $\gcd(1, x) = 1$, so we can never leave the vertex. In this case answer is `true` if `size(nums) == 1`.
 
 <SolutionAuthor name="@Ishwarendra"/>
 
@@ -65,7 +65,7 @@ class Solution {
     vector<int> min_prime(MAX + 1);
     iota(std::begin(min_prime), std::end(min_prime), 0);
 
-    for (int i = 2; i * i <= MAX; i++) { 
+    for (int i = 2; i * i <= MAX; i++) {
         if (min_prime[i] != i) continue;
         for (int j = i * i; j <= MAX; j += i) min_prime[j] = std::min(min_prime[j], i);
     }
@@ -84,7 +84,7 @@ class Solution {
 
       // Remove the prime factor `i` completely from n
       while (n % smallest_prime_factor_of_n == 0) n /= smallest_prime_factor_of_n;
-    } 
+    }
 
     return prime_factors;
   }
@@ -105,7 +105,7 @@ class Solution {
         }
       }
     }
-  }  
+  }
 public:
   bool canTraverseAllPairs(vector<int>& nums) {
     // if nums contain 1 then we can never reach that vertex/leave that vertex.
@@ -129,7 +129,7 @@ public:
         g[prime].emplace_back(num);
         g[num].emplace_back(prime);
       }
-    } 
+    }
 
     bfs(nums[0], vis);
     for (auto num : nums) {

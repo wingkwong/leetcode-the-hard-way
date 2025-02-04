@@ -1,7 +1,8 @@
 ---
 description: >-
-  Author: @wingkwong,@heiheihang |
-  https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix/
+  Author: @wkw,@heiheihang | https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix/
+
+
 tags: [Array, Binary Search, Sorting, Heap (Priority Queue), Matrix]
 ---
 
@@ -17,58 +18,58 @@ You are given an `m x n` binary matrix `mat` of `1`'s (representing soldiers) an
 
 A row `i` is **weaker** than a row `j` if one of the following is true:
 
-* The number of soldiers in row `i` is less than the number of soldiers in row `j`.
-* Both rows have the same number of soldiers and `i < j`.
+- The number of soldiers in row `i` is less than the number of soldiers in row `j`.
+- Both rows have the same number of soldiers and `i < j`.
 
 Return _the indices of the_ `k` _ **weakest** rows in the matrix ordered from weakest to strongest_.
 
 **Example 1:**
 
 ```
-Input: mat = 
+Input: mat =
 [[1,1,0,0,0],
  [1,1,1,1,0],
  [1,0,0,0,0],
  [1,1,0,0,0],
- [1,1,1,1,1]], 
+ [1,1,1,1,1]],
 k = 3
 Output: [2,0,3]
-Explanation: 
-The number of soldiers in each row is: 
-- Row 0: 2 
-- Row 1: 4 
-- Row 2: 1 
-- Row 3: 2 
-- Row 4: 5 
+Explanation:
+The number of soldiers in each row is:
+- Row 0: 2
+- Row 1: 4
+- Row 2: 1
+- Row 3: 2
+- Row 4: 5
 The rows ordered from weakest to strongest are [2,0,3,1,4].
 ```
 
 **Example 2:**
 
 ```
-Input: mat = 
+Input: mat =
 [[1,0,0,0],
  [1,1,1,1],
  [1,0,0,0],
- [1,0,0,0]], 
+ [1,0,0,0]],
 k = 2
 Output: [0,2]
-Explanation: 
-The number of soldiers in each row is: 
-- Row 0: 1 
-- Row 1: 4 
-- Row 2: 1 
-- Row 3: 1 
+Explanation:
+The number of soldiers in each row is:
+- Row 0: 1
+- Row 1: 4
+- Row 2: 1
+- Row 3: 1
 The rows ordered from weakest to strongest are [0,2,3,1].
 ```
 
 **Constraints:**
 
-* `m == mat.length`
-* `n == mat[i].length`
-* `2 <= n, m <= 100`
-* `1 <= k <= m`
-* `matrix[i][j]` is either 0 or 1.
+- `m == mat.length`
+- `n == mat[i].length`
+- `2 <= n, m <= 100`
+- `1 <= k <= m`
+- `matrix[i][j]` is either 0 or 1.
 
 ## Approach 1: Brute Force
 
@@ -76,7 +77,7 @@ Iterate each row to find out the number of soldiers, store the count with the ro
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -144,7 +145,7 @@ Instead of searching linearly, we can use binary search to find out the number o
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -168,7 +169,7 @@ public:
                 // accumulate(mat[i].begin(), mat[i].end(), 0),
                 i
             });
-        }        
+        }
         sort(a.begin(), a.end());
         // or use partial_sort
         // partial_sort(a.begin(), a.begin() + k, a.end());
@@ -189,7 +190,7 @@ Instead of using a vector to store and sort, we use priority queue to handle the
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -221,10 +222,11 @@ public:
     }
 };
 ```
+
 </TabItem>
 
 <TabItem value="kotlin" label="Kotlin">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```kt
 class Solution {

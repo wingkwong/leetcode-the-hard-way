@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended-ii/'
+description: 'Author: @wkw | https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended-ii/'
 ---
 
 # 1751 - Maximum Number of Events That Can Be Attended II (Hard)
@@ -49,14 +49,14 @@ Explanation: Although the events do not overlap, you can only attend 3 events. P
 
 **Constraints:**
 
-* `1 <= k <= events.length`
-* `1 <= k * events.length <= 10^6`
-* `1 <= startDayi <= endDayi <= 10^9`
-* `1 <= valuei <= 10^6`
+- `1 <= k <= events.length`
+- `1 <= k * events.length <= 10^6`
+- `1 <= startDayi <= endDayi <= 10^9`
+- `1 <= valuei <= 10^6`
 
 ## Approach 1: Dynamic Programming
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -65,8 +65,8 @@ public:
         int n = events.size();
         // sort by start time
         sort(events.begin(), events.end());
-        // dp[i][j] means the max value we could get 
-        // when we are at event i with k events left to join 
+        // dp[i][j] means the max value we could get
+        // when we are at event i with k events left to join
         vector<vector<int>> dp(n, vector<int>(k + 1, -1));
         function<int(int,int,int)> dfs = [&](int idx, int k, int end) {
             // reached all events or attended all k events
@@ -78,7 +78,7 @@ public:
             if (dp[idx][k] != -1) return dp[idx][k];
             // so we only have two choices left, we either
             return dp[idx][k] = max(
-                // choice 1: attend this event 
+                // choice 1: attend this event
                 // and search for the next events starting from this end time
                 events[idx][2] + dfs(idx + 1, k - 1, events[idx][1]),
                 // choice 2: skip this event - search for the next one

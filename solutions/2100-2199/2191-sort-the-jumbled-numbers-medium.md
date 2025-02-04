@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/sort-the-jumbled-numbers/'
+description: 'Author: @wkw | https://leetcode.com/problems/sort-the-jumbled-numbers/'
 ---
 
 # 2191 - Sort the Jumbled Numbers (Medium)
@@ -18,17 +18,15 @@ You are also given another integer array `nums`. Return _the array_ `nums` _sort
 
 **Notes:**
 
-* Elements with the same mapped values should appear in the **same relative order** as in the input.
-* The elements of `nums` should only be sorted based on their mapped values and **not be replaced** by them.
-
-
+- Elements with the same mapped values should appear in the **same relative order** as in the input.
+- The elements of `nums` should only be sorted based on their mapped values and **not be replaced** by them.
 
 **Example 1:**
 
 ```
 Input: mapping = [8,9,4,0,2,1,3,5,7,6], nums = [991,338,38]
 Output: [338,38,991]
-Explanation: 
+Explanation:
 Map the number 991 as follows:
 1. mapping[9] = 6, so all occurrences of the digit 9 will become 6.
 2. mapping[1] = 9, so all occurrences of the digit 1 will become 9.
@@ -49,17 +47,17 @@ Explanation: 789 maps to 789, 456 maps to 456, and 123 maps to 123. Thus, the so
 
 **Constraints:**
 
-* `mapping.length == 10`
-* `0 <= mapping[i] <= 9`
-* All the values of `mapping[i]` are **unique**.
-* `1 <= nums.length <= 3 * 10^4`
-* `0 <= nums[i] < 10^9`
+- `mapping.length == 10`
+- `0 <= mapping[i] <= 9`
+- All the values of `mapping[i]` are **unique**.
+- `1 <= nums.length <= 3 * 10^4`
+- `0 <= nums[i] < 10^9`
 
 ## Approach 1: Sorting
 
-For each number, we generate a mapped value. For example, $$991$$ -> $$669$$. We store it in a pair where the key is the original value and the value is the mapped value. Then we sort by the value so  that we could keep the same relative order if the values are same.
+For each number, we generate a mapped value. For example, $$991$$ -> $$669$$. We store it in a pair where the key is the original value and the value is the mapped value. Then we sort by the value so that we could keep the same relative order if the values are same.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

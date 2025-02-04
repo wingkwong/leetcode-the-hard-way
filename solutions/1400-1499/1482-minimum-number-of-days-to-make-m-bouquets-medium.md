@@ -1,5 +1,5 @@
 ---
-description: "Author: @wingkwong, @jit | https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/description/"
+description: 'Author: @wkw, @jit | https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/description/'
 tags: [Array, Binary Search]
 ---
 
@@ -67,7 +67,7 @@ It is obvious that we can make two bouquets in different ways.
 
 <Tabs>
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:

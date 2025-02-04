@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @ColeB2 | https://leetcode.com/problems/distinct-subsequences/'
+description: 'Author: @wkw, @ColeB2 | https://leetcode.com/problems/distinct-subsequences/'
 tags: [String, Dynamic Programming]
 ---
 
@@ -45,8 +45,8 @@ babgbag
 
 **Constraints:**
 
-* `1 <= s.length, t.length <= 1000`
-* `s` and `t` consist of English letters.
+- `1 <= s.length, t.length <= 1000`
+- `s` and `t` consist of English letters.
 
 ## Approach 1: Dynamic Programming
 
@@ -54,7 +54,7 @@ Let $$dp[i][j]$$ be the number of distinct subsequences if $$s[0 .. i)$$contains
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -92,14 +92,14 @@ class Solution:
         # T + 1 columns to handle empty string case
         # S + 1 rows to handle empty string case.
         dp = [[0] * (len(t) + 1) for _ in range(len(s) + 1)]
-        # base case: for every subsequence in s, only 1, the empty 
+        # base case: for every subsequence in s, only 1, the empty
         # string matches up to empty string of t.
         for i in range(0, len(s) + 1):
             dp[i][0] = 1
         # loop through our dp table, skipping the empty string parts.
         for i in range(1, len(s) + 1):
             for j in range(1, len(t) + 1):
-                # We should have at least the same amount of matches in 
+                # We should have at least the same amount of matches in
                 # matches in our string s[:i] as we did on s[:i - 1]
                 # matching against t[:j]
                 dp[i][j] = dp[i - 1][j]
@@ -108,7 +108,7 @@ class Solution:
                     # then we need to add all the values from the dp
                     # table of [i-1][j-1]
                     dp[i][j] += dp[i - 1][j - 1]
-        
+
         return dp[len(s)][len(t)]
 ```
 
@@ -121,7 +121,7 @@ In Approach 1, we calculate $$dp[i][j]$$ based on the previous row. We can simpl
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

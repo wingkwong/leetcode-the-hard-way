@@ -11,4 +11,4 @@ keywords:
   - radix sort
 ---
 
-<TutorialAuthors names="@TBC"/>
+<TutorialCredits authors="@TBC"/>

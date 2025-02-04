@@ -64,7 +64,7 @@ class Solution:
         for house3 in nums:
             # Current house we have 2 options, to either take the money.
             # or skip. Our temp variable decides which option is better.
-            # house1 + house3 is us taking the money, which means we 
+            # house1 + house3 is us taking the money, which means we
             # would have the same money we had from house1, which was
             # the house 2 houses before house3.
             # house2, is us deciding to take money from the last house
@@ -107,15 +107,15 @@ public:
  * @param {number[]} nums
  * @return {number}
  */
-var rob = function(nums) {
-    let rob1 = 0;
-    let rob2 = 0;
-    for (let n of nums) {
-        let temp = Math.max(n + rob1, rob2);
-        rob1 = rob2;
-        rob2 = temp;
-    }
-    return rob2;
+var rob = function (nums) {
+  let rob1 = 0;
+  let rob2 = 0;
+  for (let n of nums) {
+    let temp = Math.max(n + rob1, rob2);
+    rob1 = rob2;
+    rob2 = temp;
+  }
+  return rob2;
 };
 ```
 

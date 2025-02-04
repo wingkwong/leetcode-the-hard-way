@@ -39,7 +39,6 @@ Output: [-1]
 - `preorder` is **guaranteed** to be the preorder traversal of the tree.
 - `inorder` is **guaranteed** to be the inorder traversal of the tree.
 
-
 ## Approach 1: Recursion and Array Slicing
 
 This problem can be solved with simple recursion if we make some observations. The first is noticing that the first value in preorder is always our root node. The second is noticing that our root order splits the inorder array into left and right halves. Knowing that we can repeatedly slice our array and pass the slices back into our recursive algorithm.
@@ -67,7 +66,6 @@ Note above: preorder must splice off the first number, and must contain the inde
 Time Complexity: $$O(n)$$. The time will scale with n, the number of nodes in our tree. Note that array slicing takes up time as well, so it can be made much more efficient by tracking endpoints around the slices instead.
 
 Space Complexity: $$O(n)$$. The array slices at each iteration will take up space, as well as our call stack, which will scale with height, but approach $$n$$ in worst case scenarios.
-
 
 <Tabs>
 <TabItem value="python" label="Python">

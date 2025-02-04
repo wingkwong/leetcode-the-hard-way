@@ -1,12 +1,12 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/most-frequent-even-element/'
+description: 'Author: @wkw | https://leetcode.com/problems/most-frequent-even-element/'
 ---
 
-# 2404 - Most Frequent Even Element (Easy) 
+# 2404 - Most Frequent Even Element (Easy)
 
 ## Problem Statement
 
-Given an integer array `nums`, return *the most frequent even element*.
+Given an integer array `nums`, return _the most frequent even element_.
 
 If there is a tie, return the **smallest** one. If there is no such element, return `-1`.
 
@@ -43,7 +43,7 @@ Explanation: There is no even element.
 
 ## Approach 1: Hash Map
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -58,7 +58,7 @@ public:
         for (auto &x : m) {
             // x.first is the element
             // x.second is the frequency of that element
-            // if the element is even -> x.first % 2 == 0 
+            // if the element is even -> x.first % 2 == 0
             // and if the count is greater than the current maximum -> x.second > mx
             if (x.first % 2 == 0 && x.second > mx) {
                 // then we can update the maximum

@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/maximum-performance-of-a-team/'
+description: 'Author: @wkw | https://leetcode.com/problems/maximum-performance-of-a-team/'
 tags: [Array, Greedy, Sorting, Heap (Priority Queue)]
 ---
 
-# 1383 - Maximum Performance of a Team (Hard) 
+# 1383 - Maximum Performance of a Team (Hard)
 
 ## Problem Statement
 
@@ -13,14 +13,14 @@ Choose **at most** `k` different engineers out of the `n` engineers to form a te
 
 The performance of a team is the sum of their engineers' speeds multiplied by the minimum efficiency among their engineers.
 
-Return *the maximum performance of this team*. Since the answer can be a huge number, return it **modulo** `109 + 7`.
+Return _the maximum performance of this team_. Since the answer can be a huge number, return it **modulo** `1e9 + 7`.
 
 **Example 1:**
 
 ```
 Input: n = 6, speed = [2,10,3,1,5,8], efficiency = [5,4,3,9,7,2], k = 2
 Output: 60
-Explanation: 
+Explanation:
 We have the maximum performance of the team by selecting engineer 2 (with speed=10 and efficiency=4) and engineer 5 (with speed=5 and efficiency=7). That is, performance = (10 + 5) * min(4, 7) = 60.
 ```
 
@@ -50,10 +50,10 @@ Output: 72
 
 ## Approach 1: Priority Queue
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
-// Time Complexity: O(N * (logN + logK)) 
+// Time Complexity: O(N * (logN + logK))
 // Space Complexity: O(N + K)
 // where N is the total number of candidates and K is the size of team
 class Solution {
@@ -65,7 +65,7 @@ public:
         for (int i = 0; i < n; i++) candidates[i] = { efficiency[i], speed[i] };
         // sort candidates in descending order
         sort(candidates.rbegin(), candidates.rend());
-        // Using Example 1: 
+        // Using Example 1:
         // speed: [2, 10, 3, 1 ,5, 8] and efficiency: [5, 4, 3, 9, 7, 2]
         // after sort, it becomes
         // a: [{9, 1}, {7 ,5}, {5, 2}, {4, 10}, {3, 3}, {2, 8}]
@@ -95,7 +95,7 @@ public:
 };
 ```
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:
@@ -105,12 +105,12 @@ class Solution:
         candidates = zip(efficiency, speed)
         # default sort mode is ascending. use `reverse = True` to sort in descending
         candidates = sorted(candidates, key=lambda x: x[0], reverse=True)
-        # Using Example 1: 
+        # Using Example 1:
         # speed: [2, 10, 3, 1 ,5, 8] and efficiency: [5, 4, 3, 9, 7, 2]
         # after sort, it becomes
         # candidates: [(9, 1), (7 ,5), (5, 2), (4, 10), (3, 3), (2, 8)]
         speedSum, ans = 0, 0
-        # in python, it usually refers to heap 
+        # in python, it usually refers to heap
         heap = []
         # iterate each tuple
         for e, s in candidates:
@@ -129,14 +129,12 @@ class Solution:
         return ans % MOD
 ```
 
-
-
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```golang
 // Logic Behind:
 // 1. Join Score and Efficiency
-//    We join both array since they are related, 
+//    We join both array since they are related,
 //    Which can be done either through maps or array. We are using array.
 // 2. Sorting Efficiency
 //    We are sorting the efficiency.
@@ -150,21 +148,21 @@ class Solution:
 func maxPerformance(n int, speed []int, efficiency []int, k int) int {
     // Since the answer can be huge, we are usingn 10**9 + 7 as it suggests.
     MODULES := int(math.Pow(10, 9)) + 7;
-    
+
     // Adding the spped and efficiency
     // Since the number is same we don't have to check the length.
     players := make([][]int, len(speed), len(speed))
     for i, e := range speed {
         players[i] = []int{e, efficiency[i]}
     }
-    
+
     // Sorting Players by Efficiency
     sort.Sort(ByEfficiency(players))
-    
-    // Variables 
+
+    // Variables
     sumOfSpeed := 0
     maxPerformance := 0
-    
+
     // Initialization of the speed heap.
     speedHeap := &SpeedHeap{}
     heap.Init(speedHeap)
@@ -209,11 +207,11 @@ func (h *SpeedHeap) Pop() interface{} {
 // Player Sorting
 type ByEfficiency [][]int
 func (a ByEfficiency) Len() int           { return len(a) }
-func (a ByEfficiency) Less(i, j int) bool { 
+func (a ByEfficiency) Less(i, j int) bool {
     if(a[i][1] == a[j][1]){
         return a[i][0] < a[j][0]
     }
-    return a[i][1] > a[j][1] 
+    return a[i][1] > a[j][1]
 }
 func (a ByEfficiency) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }
 ```

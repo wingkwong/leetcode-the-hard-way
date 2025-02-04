@@ -1,5 +1,5 @@
 ---
-description: "Author: @ColeB2, @radojicic23 | https://leetcode.com/problems/add-two-numbers/"
+description: 'Author: @ColeB2, @radojicic23 | https://leetcode.com/problems/add-two-numbers/'
 tags: [Linked List, Math, Recursion]
 ---
 
@@ -120,31 +120,31 @@ class Solution:
  * @param {ListNode} l2
  * @return {ListNode}
  */
-var addTwoNumbers = function(l1, l2) {
-    let dummy = new ListNode();
-    let curr = dummy;
-    let carry = 0;
-    while (l1 || l2 || carry) {
-        // get values if linked list is not null
-        // otherwise the value is 0
-        let v1 = l1 ? l1.val : 0;
-        let v2 = l2 ? l2.val : 0;
-        // add values 
-        let value = v1 + v2 + carry;
-        // update carry value
-        // it can only be 1 or 0
-        carry = Math.floor(value / 10);
-        // our value can be two digits number
-        // we want only one's place digit 
-        value %= 10;
-        // insert it into new list 
-        curr.next = new ListNode(value);
-        // update pointers 
-        curr = curr.next;
-        l1 = l1 ? l1.next : 0;
-        l2 = l2 ? l2.next : 0;
-    }
-    return dummy.next;
+var addTwoNumbers = function (l1, l2) {
+  let dummy = new ListNode();
+  let curr = dummy;
+  let carry = 0;
+  while (l1 || l2 || carry) {
+    // get values if linked list is not null
+    // otherwise the value is 0
+    let v1 = l1 ? l1.val : 0;
+    let v2 = l2 ? l2.val : 0;
+    // add values
+    let value = v1 + v2 + carry;
+    // update carry value
+    // it can only be 1 or 0
+    carry = Math.floor(value / 10);
+    // our value can be two digits number
+    // we want only one's place digit
+    value %= 10;
+    // insert it into new list
+    curr.next = new ListNode(value);
+    // update pointers
+    curr = curr.next;
+    l1 = l1 ? l1.next : 0;
+    l2 = l2 ? l2.next : 0;
+  }
+  return dummy.next;
 };
 ```
 

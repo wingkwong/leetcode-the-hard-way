@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/3sum-with-multiplicity/'
+description: 'Author: @wkw | https://leetcode.com/problems/3sum-with-multiplicity/'
 ---
 
 # 0923 - 3Sum With Multiplicity (Medium)
@@ -19,7 +19,7 @@ As the answer can be very large, return it **modulo** `10^9 + 7`.
 ```
 Input: arr = [1,1,2,2,3,3,4,4,5,5], target = 8
 Output: 20
-Explanation: 
+Explanation:
 Enumerating by the values (arr[i], arr[j], arr[k]):
 (1, 2, 5) occurs 8 times;
 (1, 3, 4) occurs 8 times;
@@ -32,7 +32,7 @@ Enumerating by the values (arr[i], arr[j], arr[k]):
 ```
 Input: arr = [1,1,2,2,2,2], target = 5
 Output: 12
-Explanation: 
+Explanation:
 arr[i] = 1, arr[j] = arr[k] = 2 occurs 12 times:
 We choose one 1 from [1,1] in 2 ways,
 and two 2s from [2,2,2,2] in 6 ways.
@@ -40,18 +40,18 @@ and two 2s from [2,2,2,2] in 6 ways.
 
 **Constraints:**
 
-* `3 <= arr.length <= 3000`
-* `0 <= arr[i] <= 100`
-* `0 <= target <= 300`
+- `3 <= arr.length <= 3000`
+- `0 <= arr[i] <= 100`
+- `0 <= target <= 300`
 
 ## Approach 1: Hash Map + Binomial
 
 We can use hash map to store the frequency for each number. As we know $$x + y + z == target$$, we can break it down into 4 cases, which are
 
-* Case 1: $$i + i + i == target$$
-* Case 2: $$i + i + j == target$$
-* Case 3: $$i + j + j == target$$
-* Case 4: $$i + j + k == target$$
+- Case 1: $$i + i + i == target$$
+- Case 2: $$i + i + j == target$$
+- Case 3: $$i + j + j == target$$
+- Case 4: $$i + j + k == target$$
 
 where $$i < j < k$$.
 
@@ -78,7 +78,7 @@ For case 3, we need to choose $$2$$ elements from $$m[j]$$ and multiply by $$m[i
 
 For case 4, there are $$m[i] * m[j] * m[k]$$ ways.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 int threeSumMulti(vector<int>& arr, int target) {
@@ -92,7 +92,7 @@ int threeSumMulti(vector<int>& arr, int target) {
         // case 1: i + i + i == target
         // choose 3 from m[i]
         if(i + i + i == target) ans += binomial<long>(m[i], 3);
-        // iterate j 
+        // iterate j
         // make sure i < j
         for(int j = i + 1; j <= 100; j++) {
             int k = target - i - j;

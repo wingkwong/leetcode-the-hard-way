@@ -1,7 +1,8 @@
 ---
 description: >-
-  Author: @wingkwong, @ColeB2 |
-  https://leetcode.com/problems/min-cost-to-connect-all-points/''
+  Author: @wkw, @ColeB2 | https://leetcode.com/problems/min-cost-to-connect-all-points/''
+
+
 tags: [Array, Union Find, Graph, Minimum Spanning Tree]
 ---
 
@@ -26,7 +27,7 @@ Return _the minimum cost to make all points connected._ All points are connected
 ```
 Input: points = [[0,0],[2,2],[3,10],[5,2],[7,0]]
 Output: 20
-Explanation: 
+Explanation:
 
 We can connect the points as shown above to get the minimum cost of 20.
 Notice that there is a unique path between every pair of points.
@@ -41,27 +42,27 @@ Output: 18
 
 **Constraints:**
 
-* `1 <= points.length <= 1000`
-* `-10^6 <= xi, yi <= 10^6`
-* All pairs `(xi, yi)` are distinct.
+- `1 <= points.length <= 1000`
+- `-10^6 <= xi, yi <= 10^6`
+- All pairs `(xi, yi)` are distinct.
 
 ## Approach 1: Kruskal's Algorithm
 
-If we see this problem as a graph problem, it is same as find a minimum spanning tree (MST).  We can use Kruskal's algorithm with disjoint-set data structure (DSU) to solve it. We calculate the weight and build edges for all points. Then sort the array in an increasing order. For each edge, we check if two points are united or not. If not, we unite them and and the cost.
+If we see this problem as a graph problem, it is same as find a minimum spanning tree (MST). We can use Kruskal's algorithm with disjoint-set data structure (DSU) to solve it. We calculate the weight and build edges for all points. Then sort the array in an increasing order. For each edge, we check if two points are united or not. If not, we unite them and and the cost.
 
-For more, please see [Kruskal's Algorithm](https://en.wikipedia.org/wiki/Kruskal's\_algorithm).
+For more, please see [Kruskal's Algorithm](https://en.wikipedia.org/wiki/Kruskal's_algorithm).
 
 For DSU templates, please see [DSU Template](../../templates/graph-theory#disjoin-set-union-dsu).
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
 public:
     int minCostConnectPoints(vector<vector<int>>& points) {
-        int n = points.size(); 
+        int n = points.size();
         vector<array<int, 3>> edges;
         // build all the edges
         for(int i = 0; i < n; i++) {
@@ -88,7 +89,7 @@ public:
 </TabItem>
 
 <TabItem value="kotlin" label="Kotlin">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```kt
 fun minCostConnectPoints(points: Array<IntArray>): Int {
@@ -150,7 +151,7 @@ class Solution:
             # track which point we need to select to add to our tree.
             x, y, min_point = None, None, float('inf')
             # loop through all our points in the adjacency list.
-            # k = (x,y) coords of that point. 
+            # k = (x,y) coords of that point.
             # v = manhattan distance of nearest point.
             for k, v in adj_list.items():
                 # If this point is closer than selected point.
@@ -175,43 +176,43 @@ class Solution:
 </TabItem>
 
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
 public:
-   int mi_node(int n, int dist[], bool vis[]) { 
-      int mi = INT_MAX; 
-      int mi_idx = -1; 
-      for (int i = 0; i < n; i++) { 
-        if (vis[i] == false && dist[i] < mi) { 
-          mi = dist[i], mi_idx = i; 
-        } 
-      } 
-      return mi_idx; 
-    } 
+   int mi_node(int n, int dist[], bool vis[]) {
+      int mi = INT_MAX;
+      int mi_idx = -1;
+      for (int i = 0; i < n; i++) {
+        if (vis[i] == false && dist[i] < mi) {
+          mi = dist[i], mi_idx = i;
+        }
+      }
+      return mi_idx;
+    }
 
     int prim(vector<vector<int>> &edges, int n) {
-        int parent[n]; 
-        int dist[n]; 
-        bool vis[n]; 
-        for (int i = 0; i < n; i++) { 
-            dist[i] = numeric_limits<int>::max(); 
-            vis[i] = false; 
-        } 
-        parent[0] = -1; 
-        dist[0] = 0; 
-        for (int i = 0; i < n - 1; i++) { 
-            int u = mi_node(n, dist, vis); 
-            vis[u] = true; 
-            for (int v = 0; v < n; v++) { 
-              if (edges[u][v] && vis[v] == false &&  edges[u][v] < dist[v]) { 
-                dist[v] = edges[u][v]; 
-                parent[v] = u; 
-              } 
-            } 
-          } 
-          int cost = 0; 
+        int parent[n];
+        int dist[n];
+        bool vis[n];
+        for (int i = 0; i < n; i++) {
+            dist[i] = numeric_limits<int>::max();
+            vis[i] = false;
+        }
+        parent[0] = -1;
+        dist[0] = 0;
+        for (int i = 0; i < n - 1; i++) {
+            int u = mi_node(n, dist, vis);
+            vis[u] = true;
+            for (int v = 0; v < n; v++) {
+              if (edges[u][v] && vis[v] == false &&  edges[u][v] < dist[v]) {
+                dist[v] = edges[u][v];
+                parent[v] = u;
+              }
+            }
+          }
+          int cost = 0;
           for (int i = 1; i < n; i++) {
               cost += edges[parent[i]][i];
           }
@@ -219,7 +220,7 @@ public:
     }
 
     int minCostConnectPoints(vector<vector<int>>& points) {
-        int n = points.size(); 
+        int n = points.size();
         vector<vector<int>> edges(n, vector<int>(n));
         for(int i = 0; i < n; i++) {
             for(int j = 0; j < n; j++) {
@@ -234,4 +235,3 @@ public:
 
 </TabItem>
 </Tabs>
-

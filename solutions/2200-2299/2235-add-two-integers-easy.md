@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/add-two-integers/'
+description: 'Author: @wkw | https://leetcode.com/problems/add-two-integers/'
 ---
 
 # 2235 - Add Two Integers (Easy)
@@ -30,11 +30,11 @@ Explanation: num1 + num2 = -6, so -6 is returned.
 
 **Constraints:**
 
-* `-100 <= num1, num2 <= 100`
+- `-100 <= num1, num2 <= 100`
 
 ## Approach 1: A + B
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -47,7 +47,7 @@ public:
 
 ## Approach 2: Half Adder
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -60,7 +60,7 @@ public:
 
 ## Approach 3: Log & Exp
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

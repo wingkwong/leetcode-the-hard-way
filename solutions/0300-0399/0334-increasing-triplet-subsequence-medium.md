@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong, @radojicic23, @vigneshshiv |
-  https://leetcode.com/problems/increasing-triplet-subsequence/
+  Author: @wkw, @radojicic23, @vigneshshiv | https://leetcode.com/problems/increasing-triplet-subsequence/
 ---
 
 # 0334 - Increasing Triplet Subsequence (Medium)
@@ -13,7 +12,6 @@ https://leetcode.com/problems/increasing-triplet-subsequence/
 ## Problem Statement
 
 Given an integer array `nums`, return `true` _if there exists a triple of indices_ `(i, j, k)` _such that_ `i < j < k` _and_ `nums[i] < nums[j] < nums[k]`. If no such indices exists, return `false`.
-
 
 **Example 1:**
 
@@ -41,8 +39,8 @@ Explanation: The triplet (3, 4, 5) is valid because nums[3] == 0 < nums[4] == 4 
 
 **Constraints:**
 
-* `1 <= nums.length <= 5 * 10^5`
-* `-2^31 <= nums[i] <= 2^31 - 1`
+- `1 <= nums.length <= 5 * 10^5`
+- `-2^31 <= nums[i] <= 2^31 - 1`
 
 **Follow up:** Could you implement a solution that runs in `O(n)` time complexity and `O(1)` space complexity?
 
@@ -52,7 +50,7 @@ Find the first two smallest numbers. If there is a number greater than them, the
 
 <Tabs>
 <TabItem value="c++" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -77,9 +75,9 @@ public:
 <TabItem value="python" label="Python">
 <SolutionAuthor name="@radojicic23"/>
 
-```python 
+```python
 class Solution:
-    def increasingTriplet(self, nums: List[int]) -> bool:        
+    def increasingTriplet(self, nums: List[int]) -> bool:
         threshold1 = threshold2 = float("inf")
         for num in nums:
             # update the first smallest threshold
@@ -99,23 +97,23 @@ class Solution:
 <TabItem value="javascript" label="JavaScript">
 <SolutionAuthor name="@radojicic23"/>
 
-```javascript 
+```javascript
 /**
  * @param {number[]} nums
  * @return {boolean}
  */
-var increasingTriplet = function(nums) {
-    let threshold1 = Infinity;
-    let threshold2 = Infinity;
-    for (n of nums) {
-        // update the first smallest threshold
-        if (n <= threshold1) threshold1 = n;
-        // update the second smallest threshold
-        else if (n <= threshold2) threshold2 = n;
-        // if it's greater than both tresholds
-        else return true;
-    }
-    return false;
+var increasingTriplet = function (nums) {
+  let threshold1 = Infinity;
+  let threshold2 = Infinity;
+  for (n of nums) {
+    // update the first smallest threshold
+    if (n <= threshold1) threshold1 = n;
+    // update the second smallest threshold
+    else if (n <= threshold2) threshold2 = n;
+    // if it's greater than both tresholds
+    else return true;
+  }
+  return false;
 };
 ```
 

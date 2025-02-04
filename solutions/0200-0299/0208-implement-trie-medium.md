@@ -1,7 +1,8 @@
 ---
 description: >-
-  Author: @vigneshshiv |
-  https://leetcode.com/problems/implement-trie-prefix-tree/
+  Author: @vigneshshiv | https://leetcode.com/problems/implement-trie-prefix-tree/
+
+
 tags: [Hash Table, String, Design, Trie]
 ---
 
@@ -43,31 +44,29 @@ trie.search("app");     // return True
 
 **Constraints:**
 
-* `1 <= word.length, prefix.length <= 2000`
-* `word` and `prefix` consist only of lowercase English letters.
-* At most `3 * 10^4` calls in total will be made to `insert`, `search`, and `startsWith`.
-
+- `1 <= word.length, prefix.length <= 2000`
+- `word` and `prefix` consist only of lowercase English letters.
+- At most `3 * 10^4` calls in total will be made to `insert`, `search`, and `startsWith`.
 
 ## Approach 1: Trie Structure
 
-A trie, or a prefix tree, is a type of search tree that is usually used to store strings. 
+A trie, or a prefix tree, is a type of search tree that is usually used to store strings.
+
 - Each path from the root to leaves forms a word.
 - Each node except for the root node contains a value.
-- All the descendants of a node share a common prefix associated to that node. 
+- All the descendants of a node share a common prefix associated to that node.
 
 For example, when trie stores [ape,apple,are,art, ...], `are` and `art` share `ar` as the prefix.
 
-**So we can form a tree of characters represents a value and connecting from top to bottom to form a string.** 
-There are two operations provided by a trie: `insert` a new string and `search` for a given string. 
+**So we can form a tree of characters represents a value and connecting from top to bottom to form a string.** There are two operations provided by a trie: `insert` a new string and `search` for a given string.
 
-Here, we are using ASCII key based character store in tree, since the constraint given is all characters are english lowercase letters, we can covert each character to integer value represents corresponding to a char. While inserting a string, we are constructing a tree to form a string and at the end, mark the word as completes. This helps to search for a string weather it is a complete word or prefix. 
+Here, we are using ASCII key based character store in tree, since the constraint given is all characters are english lowercase letters, we can covert each character to integer value represents corresponding to a char. While inserting a string, we are constructing a tree to form a string and at the end, mark the word as completes. This helps to search for a string weather it is a complete word or prefix.
 
 > Wiki Reference - https://en.wikipedia.org/wiki/Trie
 
-Time Complexity for insert and search: $O(L)$, where $L$ is the length of the word
-Space Complexity: $O(K*N)$, where $K$ is the no. of characters and $N$ is the no. of nodes in the tree. 
+Time Complexity for insert and search: $O(L)$, where $L$ is the length of the word Space Complexity: $O(K*N)$, where $K$ is the no. of characters and $N$ is the no. of nodes in the tree.
 
-Side note, all of our Google searches performs similar to Trie structure implementation and Google search autocomplete is a great example. 
+Side note, all of our Google searches performs similar to Trie structure implementation and Google search autocomplete is a great example.
 
 ![Alt text](https://assets.leetcode.com/users/images/1d1bc396-05a2-4d8c-b8b0-e707c5790fde_1604920548.2461913.png)
 
@@ -77,14 +76,14 @@ Side note, all of our Google searches performs similar to Trie structure impleme
 
 ```java
 class Trie {
-    
+
     // The root of this Trie
     private TrieNode root;
 
     public Trie() {
         root = new TrieNode('\0'); // Forms as Root
     }
-    
+
     public void insert(String word) {
         TrieNode current = root;
         for (char c : word.toCharArray()) {
@@ -96,15 +95,15 @@ class Trie {
         }
         current.isWord = true;
     }
-    
+
     public boolean search(String word) {
         return contains(word, false);
     }
-    
+
     public boolean startsWith(String prefix) {
         return contains(prefix, true);
     }
-    
+
     private boolean contains(String prefix, boolean startsWith) {
         TrieNode current = root;
         for (char c : prefix.toCharArray()) {
@@ -115,7 +114,7 @@ class Trie {
         }
         return startsWith ? true : current.isWord;
     }
-    
+
     /**
      * Node in the Trie
      */
@@ -142,7 +141,7 @@ class TrieNode:
     # nodes can be reached via a hash map
     # Contains a char as an optional parameter
     # Also utilizes attributes of is_word to denote
-    # whether it is a word. 
+    # whether it is a word.
     # Ex: If we have the word apple in our trie. a->p->p->l->e
     # 'e' node will have is_word = True, to denote that
     # apple is a word in our map. Letters, a,p,p,l,e won't be True
@@ -151,7 +150,7 @@ class TrieNode:
         self.char = char
         self.is_word = False
         self.nodes = {}
-        
+
 class Trie:
     # Total Space Complexity
     # O(k*n) where k is the number of characters we insert into our hashmap.
@@ -159,7 +158,7 @@ class Trie:
     def __init__(self):
         # initialize root as a TrieNode with None char.
         self.root = TrieNode()
-        
+
 
     def insert(self, word: str) -> None:
         # Time: O(l) where l is the length of the word.
@@ -177,7 +176,7 @@ class Trie:
             node = node.nodes[ch]
         # When we reached the end set the is_word boolean to True.
         node.is_word = True
-        
+
 
     def search(self, word: str) -> bool:
         # Time: O(l) where l is the length of the word.
@@ -193,7 +192,7 @@ class Trie:
             node = node.nodes[ch]
         # Reached end of word, return boolean is_word.
         return node.is_word
-        
+
 
     def startsWith(self, prefix: str) -> bool:
         # Time: O(l) where l is length of the prefix

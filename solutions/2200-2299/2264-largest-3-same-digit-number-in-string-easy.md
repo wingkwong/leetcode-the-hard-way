@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/largest-3-same-digit-number-in-string/
+  Author: @wkw | https://leetcode.com/problems/largest-3-same-digit-number-in-string/
 ---
 
 # 2264 - Largest 3-Same-Digit Number in String (Easy)
@@ -14,15 +13,15 @@ https://leetcode.com/problems/largest-3-same-digit-number-in-string/
 
 You are given a string `num` representing a large integer. An integer is **good** if it meets the following conditions:
 
-* It is a **substring** of `num` with length `3`.
-* It consists of only one unique digit.
+- It is a **substring** of `num` with length `3`.
+- It consists of only one unique digit.
 
 Return _the **maximum good** integer as a **string** or an empty string_ `""` _if no such integer exists_.
 
 Note:
 
-* A **substring** is a contiguous sequence of characters within a string.
-* There may be **leading zeroes** in `num` or a good integer.
+- A **substring** is a contiguous sequence of characters within a string.
+- There may be **leading zeroes** in `num` or a good integer.
 
 **Example 1:**
 
@@ -51,14 +50,14 @@ Explanation: No substring of length 3 consists of only one unique digit. Therefo
 
 **Constraints:**
 
-* `3 <= num.length <= 1000`
-* `num` only consists of digits.
+- `3 <= num.length <= 1000`
+- `num` only consists of digits.
 
 ## Approach 1: Check the max digit
 
 Iterate num and check if the current character is same as the previous two. If so, store the maximum digit and render at the end.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

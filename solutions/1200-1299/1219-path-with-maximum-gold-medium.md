@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/path-with-maximum-gold/'
+description: 'Author: @wkw | https://leetcode.com/problems/path-with-maximum-gold/'
 tags: [Array, Backtracking, Matrix]
 ---
 
-# 1219 - Path with Maximum Gold (Medium) 
+# 1219 - Path with Maximum Gold (Medium)
 
 ## Problem Link
 
@@ -57,11 +57,11 @@ Path to get the maximum gold, 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7.
 
 ## Approach 1: DFS Backtracking
 
-Since only at most $25$ cells containing gold, we can try all the possible paths using backtracking. 
+Since only at most $25$ cells containing gold, we can try all the possible paths using backtracking.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

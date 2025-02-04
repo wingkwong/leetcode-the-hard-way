@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @vigneshshiv | https://leetcode.com/problems/is-subsequence/'
+description: 'Author: @wkw, @vigneshshiv | https://leetcode.com/problems/is-subsequence/'
 tags: [Two Pointers, String, Dynamic Programming]
 ---
 
@@ -26,14 +26,14 @@ Output: true
 
 ```
 Input: s = "axc", t = "ahbgdc"
-Output: false 
+Output: false
 ```
 
 **Constraints:**
 
-* `0 <= s.length <= 100`
-* `0 <= t.length <= 10^4`
-* `s` and `t` consist only of lowercase English letters.
+- `0 <= s.length <= 100`
+- `0 <= t.length <= 10^4`
+- `s` and `t` consist only of lowercase English letters.
 
 **Follow up:** Suppose there are lots of incoming `s`, say `s1, s2, ..., sk` where `k >= 10^9`, and you want to check one by one to see if `t` has its subsequence. In this scenario, how would you change your code?
 
@@ -43,7 +43,7 @@ We use two pointers $$i$$ and $$j$$ to track the index in $$s$$ and $$t$$ respec
 
 <Tabs>
 <TabItem value="c++" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -61,6 +61,7 @@ public:
     }
 };
 ```
+
 </TabItem>
 
 <TabItem value="java" label="Java">
@@ -80,6 +81,7 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 </Tabs>
 
@@ -89,7 +91,7 @@ We can directly use [0072 - Edit Distance (Hard)](../0000-0099/edit-distance-har
 
 <Tabs>
 <TabItem value="c++" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -105,7 +107,7 @@ public:
         for (int i = 1; i <= m; i++){
             for(int j = 1; j <= n; j++){
                 if(word1[i - 1] == word2[j - 1]) { // a = b
-                    dp[i][j] = dp[i - 1][j - 1]; 
+                    dp[i][j] = dp[i - 1][j - 1];
                 } else {
                     // find out the min cost for all three actions
                     dp[i][j] = 1 + min({
@@ -118,13 +120,14 @@ public:
         }
         return dp[m][n];
     }
-    
+
     bool isSubsequence(string s, string t) {
         int n = s.size(), m = t.size();
         return minDistance(s, t) == m - n;
     }
 }
 ```
+
 </TabItem>
 </Tabs>
 
@@ -146,7 +149,7 @@ For example, let's say $$s = abc$$ and $$t = aaaabbcde$$. The first character is
 
 <Tabs>
 <TabItem value="c++" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -169,6 +172,7 @@ public:
     }
 };
 ```
+
 </TabItem>
 
 <TabItem value="java" label="Java">
@@ -176,7 +180,7 @@ public:
 
 ```java
 class Solution {
-    
+
     /**
      * Eg-1. s="abc", t="bahbgdca"
      *  idx=[a={1,7}, b={0,3}, c={6}]
@@ -208,7 +212,7 @@ class Solution {
         }
         return true;
     }
-    
+
     private int binarySearch(List<Integer> list, int index) {
         int start = 0, mid = 0, end = list.size() - 1;
         while (start <= end) {
@@ -223,6 +227,7 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 </Tabs>
 
@@ -232,7 +237,7 @@ If $$s$$ is a subsequence of $$t$$, then it means the Longest Common Subsequence
 
 <Tabs>
 <TabItem value="c++" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -252,13 +257,14 @@ public:
         }
         return dp[n][m];
     }
-    
+
     bool isSubsequence(string s, string t) {
         int n = s.size();
         return longestCommonSubsequence(s, t) == n;
     }
 };
 ```
+
 </TabItem>
 
 <TabItem value="java" label="Java">
@@ -276,7 +282,7 @@ class Solution {
         int length = lcs(s, t, m - 1, n - 1, dp);
         return length == m;
     }
-    
+
     private int lcs(String s, String t, int i, int j, int[][] dp) {
         if (i < 0 || j < 0) return 0;
         if (dp[i][j] != -1) {
@@ -289,10 +295,11 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 
 <TabItem value="kotlin" label="Kotlin">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```kt
 class Solution {
@@ -311,19 +318,20 @@ class Solution {
         }
         return dp[n][m]
     }
-    
+
     fun isSubsequence(s: String, t: String): Boolean {
         val n = s.length
         return longestCommonSubsequence(s, t) == n
     }
 }
 ```
+
 </TabItem>
 </Tabs>
 
 ## Approach 5: Dynamic Programming with Memoization
 
-We can apply the same recurrance relation which is used in DP Bottom-up with DP Recursive with memoization. 
+We can apply the same recurrance relation which is used in DP Bottom-up with DP Recursive with memoization.
 
 <Tabs>
 <TabItem value="java" label="Java">
@@ -337,7 +345,7 @@ class Solution {
         int length = lcs(s, t, m - 1, n - 1, memo);
         return length == m;
     }
-    
+
     private int lcs(String s, String t, int i, int j, int[][] memo) {
         int result = 0;
         if (i < 0 || j < 0) return result;
@@ -352,12 +360,13 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 </Tabs>
 
 ## Approach 6: Stack
 
-Just a build a stack with S string in reversing order, and iterate over T string and pops out stack if Stack top and T characters are matching, once Stack becomes empty then we find the answer as true. 
+Just a build a stack with S string in reversing order, and iterate over T string and pops out stack if Stack top and T characters are matching, once Stack becomes empty then we find the answer as true.
 
 <Tabs>
 <TabItem value="java" label="Java">
@@ -380,12 +389,13 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 </Tabs>
 
 ## Approach 7: STL (indexOf)
 
-String class provides, built-in method called `indexOf`, just pass **fromIndex** argument to define the search space, and it keeps searching for a character from that position. This solution is optimal and efficient for smaller strings. 
+String class provides, built-in method called `indexOf`, just pass **fromIndex** argument to define the search space, and it keeps searching for a character from that position. This solution is optimal and efficient for smaller strings.
 
 <Tabs>
 <TabItem value="java" label="Java">
@@ -403,5 +413,6 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 </Tabs>

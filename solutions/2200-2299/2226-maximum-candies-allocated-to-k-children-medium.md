@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/maximum-candies-allocated-to-k-children/
+  Author: @wkw | https://leetcode.com/problems/maximum-candies-allocated-to-k-children/
 ---
 
 # 2226 - Maximum Candies Allocated to K Children (Medium)
@@ -36,15 +35,15 @@ Explanation: There are 11 children but only 7 candies in total, so it is impossi
 
 **Constraints:**
 
-* `1 <= candies.length <= 10^5`
-* `1 <= candies[i] <= 10^7`
-* `1 <= k <= 10^12`
+- `1 <= candies.length <= 10^5`
+- `1 <= candies[i] <= 10^7`
+- `1 <= k <= 10^12`
 
 ## Approach 1: Binary Search
 
 We can use binary search to find out the maximum number of candies in a single pile.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -54,7 +53,7 @@ public:
         while (l < r) {
             // tips: + 1 here is required to find the max valid element
             long long m = l + (r - l + 1) / 2, cnt = 0;
-            // if each child get m candies, 
+            // if each child get m candies,
             // is it possible to allocate to k children?
             for (auto x : candies) cnt += x / m;
             // m is too large
@@ -66,4 +65,3 @@ public:
     }
 };
 ```
-

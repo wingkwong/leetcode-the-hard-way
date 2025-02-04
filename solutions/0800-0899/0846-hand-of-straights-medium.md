@@ -41,7 +41,7 @@ Explanation: Alice's hand can not be rearranged into groups of 4.
 
 ## Approach 1: Greedy using Sorting and a Hash Map.
 
-Breaking down this problem, it would be efficient to access the cards in $$O(1)$$ time, so a hash map to keep track of the count of cards will be of use. 
+Breaking down this problem, it would be efficient to access the cards in $$O(1)$$ time, so a hash map to keep track of the count of cards will be of use.
 
 We also know that given a number, it can be potentially used in a multitude of ways, for example, $$3$$, could be used in the group $$1,2,3$$, group $$2,3,4$$ and/or group $$3,4,5$$ assuming a $$groupSize$$ of $$3$$. This is where our greedy approach comes in. If we sort our cards and start with the smallest group first, we can eliminate cards and create our groups that way.
 

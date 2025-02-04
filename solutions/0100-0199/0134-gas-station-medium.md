@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @hirotake111 |
-  https://leetcode.com/problems/gas-station/
+  Author: @hirotake111 | https://leetcode.com/problems/gas-station/
 ---
 
 # 0134 - Gas Station (Medium)
@@ -63,8 +62,7 @@ In the first place we can compare the sum of gas and the sum of cost. If the sum
 
 ### Step 2
 
-Since we passed step 1 with given input, now we are sure there is at least one possible solution (starting index). And according to the problem description, there is only ONE.
-At this point the only thing we need to do is to find the index which the sum of (`gas[i]` - `cost[i]`) is always positive for the rest of input (`gas` and `cost`).
+Since we passed step 1 with given input, now we are sure there is at least one possible solution (starting index). And according to the problem description, there is only ONE. At this point the only thing we need to do is to find the index which the sum of (`gas[i]` - `cost[i]`) is always positive for the rest of input (`gas` and `cost`).
 
 - Time Complexity: $O(n)$
 - Space Complexity: $O(1)$

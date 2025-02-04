@@ -1,6 +1,15 @@
 ---
 description: 'Author: @madhu915 | https://leetcode.com/problems/two-sum-iv-input-is-a-bst/'
-tags: [Hash Table, Two Pointers, Tree, Depth-First Search, Breadth-First Search, Binary Search Tree, Binary Tree]
+tags:
+  [
+    Hash Table,
+    Two Pointers,
+    Tree,
+    Depth-First Search,
+    Breadth-First Search,
+    Binary Search Tree,
+    Binary Tree,
+  ]
 ---
 
 # 0653 - Two Sum IV - Input is a BST (Easy)
@@ -11,7 +20,7 @@ https://leetcode.com/problems/two-sum-iv-input-is-a-bst/
 
 ## Problem Statement
 
-Given the `root` of a binary search tree and an integer `k`, return `true` *if there exist two elements in the BST such that their sum is equal to* `k`, *or* `false` *otherwise*.
+Given the `root` of a binary search tree and an integer `k`, return `true` _if there exist two elements in the BST such that their sum is equal to_ `k`, _or_ `false` _otherwise_.
 
 **Example 1:**
 

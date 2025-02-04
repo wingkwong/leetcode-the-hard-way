@@ -1,5 +1,5 @@
 ---
-description: "Author: @wingkwong, @ganajayant, @radojicic23 | https://leetcode.com/problems/search-insert-position/"
+description: 'Author: @wkw, @ganajayant, @radojicic23 | https://leetcode.com/problems/search-insert-position/'
 ---
 
 # 0035 - Search Insert Position (Easy)
@@ -48,7 +48,7 @@ We can use STL to get the answer. lower_bound returns the first element which ha
 
 <Tabs>
 <TabItem value="c++" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -62,7 +62,7 @@ public:
 </TabItem>
 
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:
@@ -83,7 +83,7 @@ class Solution:
 
 <Tabs>
 <TabItem value="c++" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

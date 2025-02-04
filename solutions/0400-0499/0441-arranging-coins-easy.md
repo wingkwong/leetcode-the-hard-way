@@ -1,5 +1,5 @@
 ---
-description: "Author: @wingkwong, @radojicic23 | https://leetcode.com/problems/arranging-coins/"
+description: 'Author: @wkw, @radojicic23 | https://leetcode.com/problems/arranging-coins/'
 ---
 
 # 0441 - Arranging Coins (Easy)
@@ -42,7 +42,7 @@ Explanation: Because the 4th row is incomplete, we return 3.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -70,7 +70,7 @@ public:
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

@@ -1,8 +1,8 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/count-the-digits-that-divide-a-number/'
+description: 'Author: @wkw | https://leetcode.com/problems/count-the-digits-that-divide-a-number/'
 ---
 
-# 2520 - Count the Digits That Divide a Number (Easy) 
+# 2520 - Count the Digits That Divide a Number (Easy)
 
 ## Problem Link
 
@@ -10,7 +10,7 @@ https://leetcode.com/problems/count-the-digits-that-divide-a-number/
 
 ## Problem Statement
 
-Given an integer `num`, return *the number of digits in num that divide*`num`.
+Given an integer `num`, return _the number of digits in num that divide_`num`.
 
 An integer `val` divides `nums` if `nums % val == 0`.
 
@@ -47,7 +47,7 @@ Explanation: 1248 is divisible by all of its digits, hence the answer is 4.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -75,7 +75,7 @@ public:
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

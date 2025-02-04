@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/
+  Author: @wkw | https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/
 ---
 
 # 0421 - Maximum XOR of Two Numbers in an Array
@@ -26,13 +25,13 @@ Explanation: The maximum result is 5 XOR 25 = 28.
 
 ```
 Input: nums = [14,70,53,83,49,91,36,80,92,51,66,70]
-Output: 127 
+Output: 127
 ```
 
 **Constraints:**
 
-* `1 <= nums.length <= 2 * 10^5`
-* `0 <= nums[i] <= 2^31 - 1`
+- `1 <= nums.length <= 2 * 10^5`
+- `0 <= nums[i] <= 2^31 - 1`
 
 ## Approach 1: Bit Masking + Set + Two Sum Idea
 

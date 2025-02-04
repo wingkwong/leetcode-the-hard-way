@@ -1,6 +1,15 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/path-with-minimum-effort/'
-tags: [Array, Binary Search, Depth-First Search, Breadth-First Search, Union Find, Heap (Priority Queue), Matrix]
+description: 'Author: @wkw | https://leetcode.com/problems/path-with-minimum-effort/'
+tags:
+  [
+    Array,
+    Binary Search,
+    Depth-First Search,
+    Breadth-First Search,
+    Union Find,
+    Heap (Priority Queue),
+    Matrix,
+  ]
 ---
 
 # 1631 - Path With Minimum Effort (Medium)
@@ -45,15 +54,15 @@ Explanation: The route of [1,2,3,4,5] has a maximum absolute difference of 1 in 
 ```
 Input: heights = [[1,2,1,1,1],[1,2,1,2,1],[1,2,1,2,1],[1,2,1,2,1],[1,1,1,2,1]]
 Output: 0
-Explanation: This route does not require any effort. 
+Explanation: This route does not require any effort.
 ```
 
 **Constraints:**
 
-* `rows == heights.length`
-* `columns == heights[i].length`
-* `1 <= rows, columns <= 100`
-* `1 <= heights[i][j] <= 10^6`
+- `rows == heights.length`
+- `columns == heights[i].length`
+- `1 <= rows, columns <= 100`
+- `1 <= heights[i][j] <= 10^6`
 
 ## Approach 1: DFS + Binary Search
 
@@ -61,7 +70,7 @@ Give the constraints, we know the absolute difference values would be between $[
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -78,7 +87,7 @@ public:
             dfs(heights, vis, x, y, mid);
         }
     }
-    
+
     int minimumEffortPath(vector<vector<int>>& heights) {
         int m = (int) heights.size(), n = m ? (int) heights[0].size() : 0;
         // init possible range
@@ -103,7 +112,7 @@ public:
 </TabItem>
 
 <TabItem value="kt" label="Kotlin">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```kt
 class Solution {
@@ -115,8 +124,8 @@ class Solution {
             val x = i + dirx[d]
             val y = j + diry[d]
             // if it is out of the target mid, then skip
-            if (x < 0 || x >= heights.size || y < 0 || y >= heights[0].size || vis[x][y] || 
-                Math.abs(heights[i][j] - heights[x][y]) > mid      
+            if (x < 0 || x >= heights.size || y < 0 || y >= heights[0].size || vis[x][y] ||
+                Math.abs(heights[i][j] - heights[x][y]) > mid
             ) continue
             dfs(heights, vis, x, y, mid)
         }
@@ -145,4 +154,3 @@ class Solution {
 
 </TabItem>
 </Tabs>
-

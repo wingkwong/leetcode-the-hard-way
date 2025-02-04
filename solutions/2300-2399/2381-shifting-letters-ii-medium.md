@@ -1,8 +1,8 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/shifting-letters-ii/'
+description: 'Author: @wkw | https://leetcode.com/problems/shifting-letters-ii/'
 ---
 
-# 2381 - Shifting Letters II (Medium) 
+# 2381 - Shifting Letters II (Medium)
 
 ## Problem Statement
 
@@ -10,7 +10,7 @@ You are given a string `s` of lowercase English letters and a 2D integer array `
 
 Shifting a character **forward** means replacing it with the **next** letter in the alphabet (wrapping around so that `'z'` becomes `'a'`). Similarly, shifting a character **backward** means replacing it with the **previous** letter in the alphabet (wrapping around so that `'a'` becomes `'z'`).
 
-Return *the final string after all such shifts to*`s`*are applied*.
+Return _the final string after all such shifts to_`s`_are applied_.
 
 **Example 1:**
 
@@ -41,7 +41,7 @@ Finally, shift the characters from index 1 to index 1 forward. Now s = "catz".
 
 ## Approach 1: Line Sweep
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -66,7 +66,7 @@ public:
             // v can be negative if it is shifting backward
             // in this case, we need to turn it back to positive
             if (v < 0) v = (v % 26 + 26) % 26;
-            // in place update character at position i 
+            // in place update character at position i
             s[i] = 'a' + v;
         }
         return s;

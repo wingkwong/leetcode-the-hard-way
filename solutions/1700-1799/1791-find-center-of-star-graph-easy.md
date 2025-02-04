@@ -1,5 +1,5 @@
 ---
-description: "Author: @wingkwong, @adlet_lee, @jit | https://leetcode.com/problems/find-center-of-star-graph/"
+description: 'Author: @wkw, @adlet_lee, @jit | https://leetcode.com/problems/find-center-of-star-graph/'
 tags: [Graph]
 ---
 
@@ -32,7 +32,7 @@ Output: 1
 
 **Constraints:**
 
-- `3 <= n <= 105`
+- `3 <= n <= 1e5`
 - `edges.length == n - 1`
 - `edges[i].length == 2`
 - `1 <= ui, vi <= n`
@@ -45,7 +45,7 @@ Given that there is only one center node and exactly $n - 1$ edges that connect 
 
 <Tabs>
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:
@@ -95,7 +95,7 @@ Since center node will exist in each edge, we can simply check the first two edg
 
 <Tabs>
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:

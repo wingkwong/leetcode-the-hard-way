@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/maximum-score-of-a-node-sequence/
+  Author: @wkw | https://leetcode.com/problems/maximum-score-of-a-node-sequence/
 ---
 
 # 2242 - Maximum Score of a Node Sequence (Hard)
@@ -18,14 +17,12 @@ You are given a **0-indexed** integer array `scores` of length `n` where `scores
 
 A node sequence is **valid** if it meets the following conditions:
 
-* There is an edge connecting every pair of **adjacent** nodes in the sequence.
-* No node appears more than once in the sequence.
+- There is an edge connecting every pair of **adjacent** nodes in the sequence.
+- No node appears more than once in the sequence.
 
 The score of a node sequence is defined as the **sum** of the scores of the nodes in the sequence.
 
-Return _the **maximum score** of a valid node sequence with a length of_ `4`_._ If no such sequence exists, return __ `-1`.
-
-
+Return _the **maximum score** of a valid node sequence with a length of_ `4`_._ If no such sequence exists, return \_\_ `-1`.
 
 **Example 1:**
 
@@ -54,20 +51,20 @@ There are no valid node sequences of length 4, so we return -1.
 
 **Constraints:**
 
-* `n == scores.length`
-* `4 <= n <= 5 * 10^4`
-* `1 <= scores[i] <= 10^8`
-* `0 <= edges.length <= 5 * 10^4`
-* `edges[i].length == 2`
-* `0 <= ai, bi <= n - 1`
-* `ai != bi`
-* There are no duplicate edges.
+- `n == scores.length`
+- `4 <= n <= 5 * 10^4`
+- `1 <= scores[i] <= 10^8`
+- `0 <= edges.length <= 5 * 10^4`
+- `edges[i].length == 2`
+- `0 <= ai, bi <= n - 1`
+- `ai != bi`
+- There are no duplicate edges.
 
 ## Approach 1: Find the neighbours
 
 The key idea is to find the best three neighbours for each node. We need to keep the order based on the scores. We can use priority queue but in C++ it is not convenient to iterate it at the end, instead we use set as it is sorted internally. After that, we just need to iterate them to find out all the combinations. However, we need to check if they are duplicate before updating the answer.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

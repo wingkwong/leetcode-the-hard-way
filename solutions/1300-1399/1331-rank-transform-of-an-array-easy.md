@@ -1,7 +1,8 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/rank-transform-of-an-array
+  Author: @wkw | https://leetcode.com/problems/rank-transform-of-an-array
+
+
 tags: ['Sorting']
 ---
 
@@ -17,9 +18,9 @@ Given an array of integers `arr`, replace each element with its rank.
 
 The rank represents how large the element is. The rank has the following rules:
 
-* Rank is an integer starting from 1.
-* The larger the element, the larger the rank. If two elements are equal, their rank must be the same.
-* Rank should be as small as possible.
+- Rank is an integer starting from 1.
+- The larger the element, the larger the rank. If two elements are equal, their rank must be the same.
+- Rank should be as small as possible.
 
 **Example 1:**
 
@@ -46,12 +47,12 @@ Output: [5,3,4,2,8,6,7,1,3]
 
 **Constraints:**
 
-* `0 <= arr.length <= 10^5`
-* `-10^9 <= arr[i] <= 10^9`
+- `0 <= arr.length <= 10^5`
+- `-10^9 <= arr[i] <= 10^9`
 
 ## Approach 1: Sorting with Hash Map
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -75,7 +76,7 @@ public:
 
 ## Approach 2: Sorting without Hash Map
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

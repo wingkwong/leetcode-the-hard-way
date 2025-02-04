@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/parallel-courses-iii/'
+description: 'Author: @wkw | https://leetcode.com/problems/parallel-courses-iii/'
 tags: [Array, Dynamic Programming, Graph, Topological Sort]
 ---
 
-# 2050 - Parallel Courses III (Hard) 
+# 2050 - Parallel Courses III (Hard)
 
 ## Problem Link
 
@@ -18,7 +18,7 @@ You must find the **minimum** number of months needed to complete all the course
 - You may start taking a course at **any time** if the prerequisites are met.
 - **Any number of courses** can be taken at the **same time**.
 
-Return *the **minimum** number of months needed to complete all the courses*.
+Return _the **minimum** number of months needed to complete all the courses_.
 
 **Note:** The test cases are generated such that it is possible to complete every course (i.e., the graph is a directed acyclic graph).
 
@@ -27,7 +27,7 @@ Return *the **minimum** number of months needed to complete all the courses*.
 ```
 Input: n = 3, relations = [[1,3],[2,3]], time = [3,2,5]
 Output: 8
-Explanation: The figure above represents the given graph and the time required to complete each course. 
+Explanation: The figure above represents the given graph and the time required to complete each course.
 We start course 1 and course 2 simultaneously at month 0.
 Course 1 takes 3 months and course 2 takes 2 months to complete respectively.
 Thus, the earliest time we can start course 3 is at month 3, and the total time required is 3 + 5 = 8 months.
@@ -60,17 +60,17 @@ Thus, the minimum time needed to complete all the courses is 7 + 5 = 12 months.
 
 ## Approach 1: DFS
 
-We can use dfs to find the maximum time of all the paths starting from `u`. If there is no prerequisite relationship for `u`, we can simply return `time[u]`. Otherwise, we check the same for all of the neighbors. We can the maximum of all the results. 
+We can use dfs to find the maximum time of all the paths starting from `u`. If there is no prerequisite relationship for `u`, we can simply return `time[u]`. Otherwise, we check the same for all of the neighbors. We can the maximum of all the results.
 
 <Tabs>
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:
     def minimumTime(self, n: int, relations: List[List[int]], time: List[int]) -> int:
         g = defaultdict(list)
-        # build the prerequisite graph 
+        # build the prerequisite graph
         # minus one to make it zero indexing
         for x in relations: g[x[0] - 1].append(x[1] - 1)
         # memoize it to improve performance
@@ -80,7 +80,7 @@ class Solution:
             if not g[u]: return time[u]
             # the current time + the max of the dfs result from the neighbors
             return max([dfs(v) for v in g[u]]) + time[u]
-        # try all the nodes 
+        # try all the nodes
         return max([dfs(i) for i in range(n)])
 ```
 

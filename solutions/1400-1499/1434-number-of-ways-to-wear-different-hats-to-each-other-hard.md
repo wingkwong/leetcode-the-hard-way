@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/number-of-ways-to-wear-different-hats-to-each-other/'
+description: 'Author: @wkw | https://leetcode.com/problems/number-of-ways-to-wear-different-hats-to-each-other/'
 tags: [Array, Dynamic Programming, Bit Manipulation, Bitmask]
 ---
 
-# 1434 - Number of Ways to Wear Different Hats to Each Other (Hard) 
+# 1434 - Number of Ways to Wear Different Hats to Each Other (Hard)
 
 ## Problem Statement
 
@@ -11,16 +11,16 @@ There are `n` people and `40` types of hats labeled from `1` to `40`.
 
 Given a 2D integer array `hats`, where `hats[i]` is a list of all hats preferred by the `ith` person.
 
-Return *the number of ways that the n people wear different hats to each other*.
+Return _the number of ways that the n people wear different hats to each other_.
 
-Since the answer may be too large, return it modulo `109 + 7`.
+Since the answer may be too large, return it modulo `1e9 + 7`.
 
 **Example 1:**
 
 ```
 Input: hats = [[3,4],[4,5],[5]]
 Output: 1
-Explanation: There is only one way to choose hats given the conditions. 
+Explanation: There is only one way to choose hats given the conditions.
 First person choose hat 3, Second person choose hat 4 and last one hat 5.
 ```
 
@@ -52,15 +52,15 @@ Number of Permutations of (1,2,3,4) = 24.
 
 ## Approach 1: Dynamic Programming
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
 public:
     int n, M = 1e9 + 7;
-    
+
     int dfs(vector<vector<int>>& hatsToPeople, vector<vector<int>>& dp, int hat, int mask) {
-        // if the mask is able to reache the end state, 
+        // if the mask is able to reache the end state,
         // i.e. all people can wear some hats, then return 1
         if (mask == (1 << n) - 1) return 1;
         // if the current hat is out of 40, return 0
@@ -80,7 +80,7 @@ public:
         // memoize the result
         return dp[mask][hat] = res;
     }
-    
+
     int numberWays(vector<vector<int>>& hats) {
         // number of people
         n = hats.size();

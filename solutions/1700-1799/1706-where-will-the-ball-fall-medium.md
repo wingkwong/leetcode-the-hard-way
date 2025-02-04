@@ -3,7 +3,7 @@ description: 'Author: @TBC | https://leetcode.com/problems/where-will-the-ball-f
 tags: [Array, Dynamic Programming, Depth-First Search, Matrix, Simulation]
 ---
 
-# 1706 - Where Will the Ball Fall (Medium) 
+# 1706 - Where Will the Ball Fall (Medium)
 
 ## Problem Link
 
@@ -20,7 +20,7 @@ Each cell in the box has a diagonal board spanning two corners of the cell that 
 
 We drop one ball at the top of each column of the box. Each ball can get stuck in the box or fall out of the bottom. A ball gets stuck if it hits a "V" shaped pattern between two boards or if a board redirects the ball into either wall of the box.
 
-Return *an array*`answer`*of size*`n`*where*`answer[i]`*is the column that the ball falls out of at the bottom after dropping the ball from the*`ith`*column at the top, or -1 if the ball gets stuck in the box.*
+Return _an array_`answer`_of size_`n`_where_`answer[i]`_is the column that the ball falls out of at the bottom after dropping the ball from the_`ith`_column at the top, or -1 if the ball gets stuck in the box._
 
 **Example 1:**
 
@@ -61,7 +61,7 @@ Output: [0,1,2,3,4,-1]
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 // Time Complexity: O(m * n)
@@ -112,9 +112,8 @@ public:
 
 </TabItem>
 
-
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 # Time Complexity: O(m * n)
@@ -155,14 +154,13 @@ class Solution:
             # cur_col is the final destination
             ans.append(cur_col)
         return ans
-        
+
 ```
 
 </TabItem>
 
-
 <TabItem value="go" label="Go">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```go
 // Time Complexity: O(m * n)

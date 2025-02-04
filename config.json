@@ -1,11 +1,11 @@
 {
-    "index_name": "leetcode-the-hard-way",
-    "start_urls": ["https://leetcodethehardway.com/"],
-    "selectors": {
-      "lvl0": "",
-      "lvl1": "h1",
-      "lvl2": "h2",
-      "lvl3": "h3",
-      "text": "article div,article p,article theme-code-block"
-    }
+  "index_name": "leetcode-the-hard-way",
+  "start_urls": ["https://leetcodethehardway.com/"],
+  "selectors": {
+    "lvl0": "",
+    "lvl1": "h1",
+    "lvl2": "h2",
+    "lvl3": "h3",
+    "text": "article div,article p,article theme-code-block"
+  }
 }

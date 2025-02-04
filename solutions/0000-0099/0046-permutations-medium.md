@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @radojicic23 | https://leetcode.com/problems/permutations/'
+description: 'Author: @wkw, @radojicic23 | https://leetcode.com/problems/permutations/'
 ---
 
 # 0046 - Permutations (Medium)
@@ -30,14 +30,14 @@ Output: [[0,1],[1,0]]
 
 ```
 Input: nums = [1]
-Output: [[1]] 
+Output: [[1]]
 ```
 
 **Constraints:**
 
-* `1 <= nums.length <= 6`
-* `-10 <= nums[i] <= 10`
-* All the integers of `nums` are **unique**.
+- `1 <= nums.length <= 6`
+- `-10 <= nums[i] <= 10`
+- All the integers of `nums` are **unique**.
 
 ## Approach 1: STL
 
@@ -45,7 +45,7 @@ Use C++ STL `next_permutation` to generate all possible permutations.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -70,7 +70,7 @@ Check out [Backtracking](../../tutorials/basic-topics/backtracking) section for 
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -84,10 +84,10 @@ public:
             if (find(tmp.begin(), tmp.end(), x) != tmp.end()) continue;
             tmp.push_back(x);
             backtrack(nums, ans, tmp);
-            tmp.pop_back();   
+            tmp.pop_back();
         }
     }
-    
+
     vector<vector<int>> permute(vector<int>& nums) {
         // sort(nums.begin(), nums.end());
         vector<vector<int>> ans;
@@ -103,14 +103,14 @@ public:
 <TabItem value="python" label="Python">
 <SolutionAuthor name="@radojicic23"/>
 
-```python 
+```python
 class Solution:
     def permute(self, nums: List[int]) -> List[List[int]]:
         res = []
 
         if (len(nums) == 1):
             return [nums.copy()]
-        
+
         for i in range(len(nums)):
             n = nums.pop(0)
             perms = self.permute(nums)
@@ -119,8 +119,8 @@ class Solution:
                 perm.append(n)
             res.extend(perms)
             nums.append(n)
-        
-        return res 
+
+        return res
 ```
 
 </TabItem>

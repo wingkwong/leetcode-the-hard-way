@@ -3,7 +3,7 @@ description: 'Author: @heder | https://leetcode.com/problems/delete-node-in-a-li
 tags: [Linked List]
 ---
 
-# 0237 - Delete Node in a Linked List (Medium) 
+# 0237 - Delete Node in a Linked List (Medium)
 
 ## Problem Link
 

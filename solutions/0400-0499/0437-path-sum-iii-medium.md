@@ -38,16 +38,15 @@ Output: 3
 
 ## Approach 1: DFS + BFS
 
-* Since the path can start from any node of the tree it felt like dfs needs to be done from every node 
-  which lead to the thought of accessing nodes using BFS and calculating the sum.
-* So we use a queue to reach each node & calculate the sum from that node (Similar to level order traversing (BFS))
-* When the `remainingSum` reaches the node whose difference makes it zero leads to the path we need.
-* So whenever such path exists we increment our answer
-* Note:
-* 1. The start node doesn't need to be the root node
-* 2. The end node doesn't have to be the leaf node
-* The 3 paths for example 1 equating to targetSum are: [5, 3], [5, 2, 1], [-3, 11]
-* Check [this remainingSum example](https://leetcode.com/problems/path-sum-ii/solutions/2615948/leetcode-the-hard-way-explained-line-by-line/remainingSum) run thru by @wingkwong
+- Since the path can start from any node of the tree it felt like dfs needs to be done from every node which lead to the thought of accessing nodes using BFS and calculating the sum.
+- So we use a queue to reach each node & calculate the sum from that node (Similar to level order traversing (BFS))
+- When the `remainingSum` reaches the node whose difference makes it zero leads to the path we need.
+- So whenever such path exists we increment our answer
+- Note:
+- 1. The start node doesn't need to be the root node
+- 2. The end node doesn't have to be the leaf node
+- The 3 paths for example 1 equating to targetSum are: [5, 3], [5, 2, 1], [-3, 11]
+- Check [this remainingSum example](https://leetcode.com/problems/path-sum-ii/solutions/2615948/leetcode-the-hard-way-explained-line-by-line/remainingSum) run thru by @wkw
 
 <Tabs>
 <TabItem value="java" label="Java">

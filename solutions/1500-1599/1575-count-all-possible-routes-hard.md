@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/count-all-possible-routes/'
+description: 'Author: @wkw | https://leetcode.com/problems/count-all-possible-routes/'
 ---
 
 # 1575 - Count All Possible Routes (Hard)
@@ -16,7 +16,7 @@ At each step, if you are at city `i`, you can pick any city `j` such that `j != 
 
 Notice that `fuel` **cannot** become negative at any point in time, and that you are **allowed** to visit any city more than once (including `start` and `finish`).
 
-Return _the count of all possible routes from_ `start` _to_ `finish`. Since the answer may be too large, return it modulo `109 + 7`.
+Return _the count of all possible routes from_ `start` _to_ `finish`. Since the answer may be too large, return it modulo `1e9 + 7`.
 
 **Example 1:**
 
@@ -53,15 +53,15 @@ Explanation: It is impossible to get from 0 to 2 using only 3 units of fuel sinc
 
 **Constraints:**
 
-* `2 <= locations.length <= 100`
-* `1 <= locations[i] <= 10^9`
-* All integers in `locations` are **distinct**.
-* `0 <= start, finish < locations.length`
-* `1 <= fuel <= 200`
+- `2 <= locations.length <= 100`
+- `1 <= locations[i] <= 10^9`
+- All integers in `locations` are **distinct**.
+- `0 <= start, finish < locations.length`
+- `1 <= fuel <= 200`
 
-## Approach 1:  Dynamic Programming
+## Approach 1: Dynamic Programming
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -75,14 +75,14 @@ public:
             if (f < 0) return 0;
             // calculated before -> return it directly
             if (dp[from][f] != -1) return dp[from][f];
-            // if the starting point is the finishing point, 
+            // if the starting point is the finishing point,
             // then there is one way
             int res = from == finish;
             // try all locations
             for (int to = 0; to < n; to++) {
                 // skip the same point
                 if (from == to) continue;
-                // move to next position and 
+                // move to next position and
                 // substract the fuel
                 (res += dfs(to, f - abs(locations[from] - locations[to]))) %= M;
             }

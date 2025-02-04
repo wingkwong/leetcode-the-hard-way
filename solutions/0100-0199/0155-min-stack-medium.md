@@ -14,11 +14,11 @@ Design a stack that supports push, pop, top, and retrieving the minimum element 
 
 Implement the `MinStack` class:
 
-* `MinStack()` initializes the stack object.
-* `void push(int val)` pushes the element `val` onto the stack.
-* `void pop()` removes the element on the top of the stack.
-* `int top()` gets the top element of the stack.
-* `int getMin()` retrieves the minimum element in the stack.
+- `MinStack()` initializes the stack object.
+- `void push(int val)` pushes the element `val` onto the stack.
+- `void pop()` removes the element on the top of the stack.
+- `int top()` gets the top element of the stack.
+- `int getMin()` retrieves the minimum element in the stack.
 
 **Example 1:**
 
@@ -43,9 +43,9 @@ minStack.getMin(); // return -2
 
 **Constraints:**
 
-* `-2^31 <= val <= 2^31 - 1`
-* Methods `pop`, `top` and `getMin` operations will always be called on **non-empty** stacks.
-* At most `3 * 10^4` calls will be made to `push`, `pop`, `top`, and `getMin`.
+- `-2^31 <= val <= 2^31 - 1`
+- Methods `pop`, `top` and `getMin` operations will always be called on **non-empty** stacks.
+- At most `3 * 10^4` calls will be made to `push`, `pop`, `top`, and `getMin`.
 
 ## Approach 1: Implementation
 
@@ -65,28 +65,28 @@ Similarly, when we `pop` an element from the stack, we need to update `current_m
 class MinStack:
 
     def __init__(self):
-        
+
         #initialize stack
         self.stack = []
-        
+
         #we need to have a label to keep track of the current smallest number
         self.current_min = None
-        
+
     def push(self, val: int) -> None:
-        
+
         #update current_min if new value is smaller
         if(self.current_min == None or val < self.current_min):
             self.current_min = val
-        
+
         #besides adding val, we also need to add current_min to keep track of current_min
         self.stack.append([val, self.current_min])
-        
+
 
     def pop(self) -> None:
-        
+
         #remove last element
         self.stack.pop()
-        
+
         #update current_min after popping
         if(self.stack):
             self.current_min = self.stack[-1][1]
@@ -94,13 +94,13 @@ class MinStack:
             self.current_min = None
 
     def top(self) -> int:
-        
+
         #if stack is not empty, return the last element's value (not label)
         if(self.stack):
             return self.stack[-1][0]
 
     def getMin(self) -> int:
-        
+
         #return current_min
         if(self.stack):
             return self.current_min
@@ -118,7 +118,7 @@ We can take some liberties to simplify it, as the question states that all `pop`
 
 Time Complexity: $$O(1)$$ for each method implemented.
 
-Space Complexity: $$O(n)$$ n is the number of items we put onto the stack. 
+Space Complexity: $$O(n)$$ n is the number of items we put onto the stack.
 
 <Tabs>
 <TabItem value="py" label="Python">
@@ -146,13 +146,13 @@ class MinStack:
     # the trick for implementing a min stack is using the idea that
     # we can use a little bit extra space to track the minimum value
     # as we push each element onto the stack. That way we don't need
-    # to use O(n) time to search for the min, we can check it in 
+    # to use O(n) time to search for the min, we can check it in
     # constant time.
     def __init__(self):
         # No values, so we will initialize the head of our linked
         # list as None to signal that.
         self.head = None
-        
+
 
     def push(self, val: int) -> None:
         # Time: O(1)
@@ -164,7 +164,7 @@ class MinStack:
         # make it the 'top' node, of the stack, and 'push' the other
         # nodes down below it.
         self.head = node
-        
+
     def pop(self) -> None:
         # Time: O(1)
         # only called on non-empty stacks, so we can just
@@ -183,7 +183,7 @@ class MinStack:
         # return head.val, since we know there will always
         # be a head node with a value we can return.
         return self.head.val
-        
+
 
     def getMin(self) -> int:
         # Time: O(1)
@@ -195,5 +195,3 @@ class MinStack:
 
 </TabItem>
 </Tabs>
-
-

@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong, @iraycd | https://leetcode.com/problems/bag-of-tokens/'
+description: 'Author: @wkw, @iraycd | https://leetcode.com/problems/bag-of-tokens/'
 tags: [Array, Two Pointers, Greedy, Sorting]
 ---
 
-# 0948 - Bag of Tokens (Medium) 
+# 0948 - Bag of Tokens (Medium)
 
 ## Problem Statement
 
@@ -16,7 +16,7 @@ Your goal is to maximize your total **score** by potentially playing each token 
 
 Each token may be played **at most** once and **in any order**. You do **not** have to play all the tokens.
 
-Return *the largest possible **score** you can achieve after playing any number of tokens*.
+Return _the largest possible **score** you can achieve after playing any number of tokens_.
 
 **Example 1:**
 
@@ -57,7 +57,7 @@ Explanation: Play the tokens in this order to get a score of 2:
 <Tabs>
 
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 // Time Complexity: O(NlogN) (O(NlogN) for sorting & O(N) for two pointers.)
@@ -106,10 +106,11 @@ public:
     }
 };
 ```
+
 </TabItem>
 
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 # Time Complexity: O(NlogN) (O(NlogN) for sorting & O(N) for two pointers.)
@@ -157,7 +158,7 @@ class Solution:
 </TabItem>
 
 <TabItem value="java" label="Java">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```java
 // Time Complexity: O(NlogN) (O(NlogN) for sorting & O(N) for two pointers.)
@@ -205,6 +206,7 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 <TabItem value="go" label="Go">
 <SolutionAuthor name="@iraycd"/>

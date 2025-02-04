@@ -8,21 +8,21 @@ keywords:
   - palindrome
 ---
 
-<TutorialAuthors names="@wingkwong"/>
+<TutorialCredits authors="@wkw"/>
 
 ## Overview
 
-A palindrome reads the same forward and backward. `amanaplanacanalpanama` and `10101` are the examples of palindrome. 
+A palindrome reads the same forward and backward. `amanaplanacanalpanama` and `10101` are the examples of palindrome.
 
-There are multiple ways to check if a string is a palindrome or not. 
+There are multiple ways to check if a string is a palindrome or not.
 
-### Iteration 
+### Iteration
 
 As we know it reads the same forward and backward, which means $s[0]$ is same as $s[n - 1]$, $s[1]$ is same as $s[n - 2]$ and so on. Therefore, we can iterate $n / 2$ times to check if the left side is same as the right side.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 bool isPalindrome(const string& s) {
@@ -44,7 +44,7 @@ We can directly use built-in function to reverse a string and check if it is sam
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 bool isPalindrome(const string& s) {
@@ -59,7 +59,7 @@ bool isPalindrome(const string& s) {
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 bool isPalindrome(const string& s) {
@@ -70,16 +70,16 @@ bool isPalindrome(const string& s) {
 </TabItem>
 </Tabs>
 
-
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 bool isPalindrome(const string &s) {
     return equal(s.begin(), s.begin() + s.size() / 2, s.rbegin());
 }
 ```
+
 </TabItem>
 </Tabs>
 
@@ -89,7 +89,7 @@ For a given range, we can follow the same idea to use two pointers to check if a
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 bool palindromeWithRange(string s, int i, int j) {
@@ -100,5 +100,6 @@ bool palindromeWithRange(string s, int i, int j) {
     return true;
 }
 ```
+
 </TabItem>
 </Tabs>

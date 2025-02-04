@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/restore-ip-addresses/'
+description: 'Author: @wkw | https://leetcode.com/problems/restore-ip-addresses/'
 tags: [String, Backtracking]
 ---
 
-# 0093 - Restore IP Addresses (Medium) 
+# 0093 - Restore IP Addresses (Medium)
 
 ## Problem Link
 
@@ -15,7 +15,7 @@ A **valid IP address** consists of exactly four integers separated by single dot
 
 - For example, `"0.1.2.201"` and `"192.168.1.1"` are **valid** IP addresses, but `"0.011.255.245"`, `"192.168.1.312"` and `"192.168@1.1"` are **invalid** IP addresses.
 
-Given a string `s` containing only digits, return *all possible valid IP addresses that can be formed by inserting dots into*`s`. You are **not** allowed to reorder or remove any digits in `s`. You may return the valid IP addresses in **any** order.
+Given a string `s` containing only digits, return _all possible valid IP addresses that can be formed by inserting dots into_`s`. You are **not** allowed to reorder or remove any digits in `s`. You may return the valid IP addresses in **any** order.
 
 **Example 1:**
 
@@ -45,10 +45,9 @@ Output: ["1.0.10.23","1.0.102.3","10.1.0.23","10.10.2.3","101.0.2.3"]
 
 ## Approach 1: Iterative
 
-
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 // ideas:
@@ -62,7 +61,7 @@ public:
     vector<string> restoreIpAddresses(string s) {
         vector<string> ans;
         int n = s.size();
-        // iterate `s` - place 3 dots to have 4 segments 
+        // iterate `s` - place 3 dots to have 4 segments
         // [seg1].[seg2].[seg3].[seg4]
         // 1st dot - we just need to run it 3 times at most
         // e.g. for 255, we can place the first dot at `2.55`, `25.5` or `255.`
@@ -74,7 +73,7 @@ public:
                     // now we can separate into 4 segments
                     string seg1 = s.substr(0, i),
                            seg2 = s.substr(i, j - i),
-                           seg3 = s.substr(j, k - j), 
+                           seg3 = s.substr(j, k - j),
                            seg4 = s.substr(k);
                     // for each segment, check if it is valid
                     if (ok(seg1) && ok(seg2) && ok(seg3) && ok(seg4)) {
@@ -86,17 +85,17 @@ public:
         }
         return ans;
     }
-    
+
     // check if a given IP address segment is valid
     // 192 -> true
     // 312 -> false
     bool ok(string s) {
         // string length > 3 is not a valid IP address segment
-        if (s.size() > 3 || 
+        if (s.size() > 3 ||
             // empty segment is not valid
             s.size() == 0 ||
             // if the first character is 0, we cannot have something like 0x, 0xx
-            (s[0] == '0' && s.size() > 1) || 
+            (s[0] == '0' && s.size() > 1) ||
             // segment is out of range
             stoi(s) > 255
            ) {
@@ -111,7 +110,7 @@ public:
 </TabItem>
 
 <TabItem value="java" label="Java">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```java
 
@@ -124,7 +123,7 @@ class Solution {
     public List<String> restoreIpAddresses(String s) {
         List<String> ans = new ArrayList<>();
         int n = s.length();
-        // iterate `s` - place 3 dots to have 4 segments 
+        // iterate `s` - place 3 dots to have 4 segments
         // [seg1].[seg2].[seg3].[seg4]
         // 1st dot - we just need to run it 3 times at most
         // e.g. for 255, we can place the first dot at `2.55`, `25.5` or `255.`
@@ -136,7 +135,7 @@ class Solution {
                     // now we can separate into 4 segments
                     String seg1 = s.substring(0, i),
                            seg2 = s.substring(i, j),
-                           seg3 = s.substring(j, k), 
+                           seg3 = s.substring(j, k),
                            seg4 = s.substring(k);
                     // for each segment, check if it is valid
                     if (ok(seg1) && ok(seg2) && ok(seg3) && ok(seg4)) {
@@ -148,17 +147,17 @@ class Solution {
         }
         return ans;
     }
-    
+
     // check if a given IP address segment is valid
     // 192 -> true
     // 312 -> false
     private boolean ok(String s) {
         // string length > 3 is not a valid IP address segment
-        if (s.length() > 3 || 
+        if (s.length() > 3 ||
             // empty segment is not valid
             s.length() == 0 ||
             // if the first character is 0, we cannot have something like 0x, 0xx
-            (s.charAt(0) == '0' && s.length() > 1) || 
+            (s.charAt(0) == '0' && s.length() > 1) ||
             // segment is out of range
             Integer.parseInt(s) > 255
            ) {
@@ -173,7 +172,7 @@ class Solution {
 </TabItem>
 
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 # ideas:
@@ -185,7 +184,7 @@ class Solution:
     def restoreIpAddresses(self, s: str) -> List[str]:
         ans = []
         n = len(s)
-        
+
         # check if a given IP address segment is valid
         # 192 -> true
         # 312 -> false
@@ -197,8 +196,8 @@ class Solution:
             if len(seg) > 3 or len(seg) == 0 or (seg[0] == '0' and len(seg) > 1) or int(seg) > 255:
                 return False
             return True
-    
-        # iterate `s` - place 3 dots to have 4 segments 
+
+        # iterate `s` - place 3 dots to have 4 segments
         # [seg1].[seg2].[seg3].[seg4]
         # 1st dot - we just need to run it 3 times at most
         # e.g. for 255, we can place the first dot at `2.55`, `25.5` or `255.`
@@ -220,7 +219,7 @@ class Solution:
 </TabItem>
 
 <TabItem value="rs" label="Rust">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```rs
 // ideas:
@@ -233,7 +232,7 @@ impl Solution {
     fn restore_ip_addresses(s: String) -> Vec<String> {
         let mut ans = vec![];
         let n = s.len();
-        // iterate `s` - place 3 dots to have 4 segments 
+        // iterate `s` - place 3 dots to have 4 segments
         // [seg1].[seg2].[seg3].[seg4]
         // 1st dot - we just need to run it 3 times at most
         // e.g. for 255, we can place the first dot at `2.55`, `25.5` or `255.`
@@ -249,9 +248,9 @@ impl Solution {
                         let seg3 = &s[j..k];
                         let seg4 = &s[k..];
                         // for each segment, check if it is valid
-                        if Solution::ok(seg1) && 
-                           Solution::ok(seg2) && 
-                           Solution::ok(seg3) && 
+                        if Solution::ok(seg1) &&
+                           Solution::ok(seg2) &&
+                           Solution::ok(seg3) &&
                            Solution::ok(seg4) {
                             // if so, we build the ip address and push to answer
                             ans.push(format!("{}.{}.{}.{}", seg1, seg2, seg3, seg4));

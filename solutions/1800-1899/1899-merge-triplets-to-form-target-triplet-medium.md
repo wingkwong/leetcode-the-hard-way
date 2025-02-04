@@ -16,10 +16,9 @@ A **triplet** is an array of three integers. You are given a 2D integer array `t
 To obtain `target`, you may apply the following operation on `triplets` **any number** of times (possibly **zero**):
 
 - Choose two indices (**0-indexed**) `i` and `j` (`i != j`) and **update** `triplets[j]` to become `[max(ai, aj), max(bi, bj), max(ci, cj)]`.
-    - For example, if `triplets[i] = [2, 5, 3]` and `triplets[j] = [1, 7, 5]`, `triplets[j]` will be updated to `[max(2, 1), max(5, 7), max(3, 5)] = [2, 7, 5]`.
+  - For example, if `triplets[i] = [2, 5, 3]` and `triplets[j] = [1, 7, 5]`, `triplets[j]` will be updated to `[max(2, 1), max(5, 7), max(3, 5)] = [2, 7, 5]`.
 
 Return `true` _if it is possible to obtain the_ `target` _**triplet**_ `[x, y, z]` _as an element of_ `triplets`, _or_ `false` _otherwise_.
-
 
 **Example 1:**
 
@@ -58,7 +57,7 @@ The target triplet [5,5,5] is now an element of triplets.
 
 ## Approach 1: Greedy
 
-We only need to know that it is possible to create our target triplet given a list of triplets. To create our target triplet, we either need a single triplet, or a combination of triplets, that matches exactly to our target triplet. 
+We only need to know that it is possible to create our target triplet given a list of triplets. To create our target triplet, we either need a single triplet, or a combination of triplets, that matches exactly to our target triplet.
 
 We can do this by looping through all the triplets and marking down each digit that matches while also maintaining that the other digits in the triplet that don't match are at least less than the digit they are suppose to match too (If any digit is greater than any target triplet digit, then we know we can't use the triplet as it will override the target digit value that we need to match). If we match all 3 digits, then we can return True.
 

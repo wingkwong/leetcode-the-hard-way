@@ -85,7 +85,7 @@ class Solution:
                 dp[i] = min(r - i, dp[2 * c - i])
             # Next we can update the length of the palindrome by checking
             # each side of the current character centered at i.
-            # dp[i] handles if we already previously checked on the 
+            # dp[i] handles if we already previously checked on the
             # left side, so as not to redo work we already found earlier.
             while s[i + dp[i] + 1] == s[i - dp[i] - 1]:
                 dp[i] += 1
@@ -96,7 +96,7 @@ class Solution:
             # Count the number of palindromic substrings centered at i.
             substring_count += (dp[i] + 1) // 2
         return substring_count
-    
+
     def countSubstrings(self, s: str) -> int:
         # call manacher and return value.
         return self.manacher(s)

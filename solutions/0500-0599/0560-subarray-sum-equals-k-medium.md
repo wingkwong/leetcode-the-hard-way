@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @ganajayant | https://leetcode.com/problems/subarray-sum-equals-k/'
+description: 'Author: @wkw, @ganajayant | https://leetcode.com/problems/subarray-sum-equals-k/'
 ---
 
 # 0560 - Subarray Sum Equals K (Medium)
@@ -28,9 +28,9 @@ Output: 2
 
 **Constraints:**
 
-* `1 <= nums.length <= 2 * 10^4`
-* `-1000 <= nums[i] <= 1000`
-* `-10^7 <= k <= 10^7`
+- `1 <= nums.length <= 2 * 10^4`
+- `-1000 <= nums[i] <= 1000`
+- `-10^7 <= k <= 10^7`
 
 ## Approach 1: Hash Map
 
@@ -38,7 +38,7 @@ We use hash map to store the cumulative sum $$sum[i]$$ up to index $$i$$. If $$s
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -56,6 +56,7 @@ public:
     }
 };
 ```
+
 </TabItem>
 <TabItem value="java" label="Java">
 <SolutionAuthor name="@ganajayant"/>
@@ -77,6 +78,6 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 </Tabs>
-

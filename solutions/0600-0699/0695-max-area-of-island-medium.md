@@ -104,11 +104,11 @@ For each land, we can run DFS to calculate the area of the current island. We se
 
 Time Complexity: $$O(m * n)$$ must traverse each cell in the grid.
 
-Space Complexity: $$O(m * n)$$. 
+Space Complexity: $$O(m * n)$$.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -125,7 +125,7 @@ public:
         }
         return ans;
     }
-    
+
     int dfs(vector<vector<int>>& grid, int i, int j) {
         // if it is 0 or out of bound, return 0
         if(i < 0 || j < 0 || i > grid.size() - 1 || j > grid[0].size() - 1 || grid[i][j] != 1) return 0;

@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/count-elements-with-strictly-smaller-and-greater-elements/
+  Author: @wkw | https://leetcode.com/problems/count-elements-with-strictly-smaller-and-greater-elements/
 ---
 
 # 2148 - Count Elements With Strictly Smaller and Greater Elements (Easy)
@@ -35,14 +34,14 @@ Since there are two elements with the value 3, in total there are 2 elements hav
 
 **Constraints:**
 
-* `1 <= nums.length <= 100`
-* `-10^5 <= nums[i] <= 10^5`
+- `1 <= nums.length <= 100`
+- `-10^5 <= nums[i] <= 10^5`
 
 ## Approach 1: Sorting
 
 The order doesn't matter. We can sort the array and only focus on all elements except the first one and the last one because those two elements won't have strictly smaller and greater elements at the same time. From `nums[1..n - 2]`, we can check if the element is greater than the smallest one and smaller than the greatest one.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -57,4 +56,3 @@ public:
     }
 };
 ```
-

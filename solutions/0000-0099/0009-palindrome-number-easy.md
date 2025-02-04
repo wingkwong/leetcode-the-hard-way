@@ -14,7 +14,7 @@ Given an integer `x`, return `true` if `x` is palindrome integer.
 
 An integer is a **palindrome** when it reads the same backward as forward.
 
-* For example, `121` is a palindrome while `123` is not.
+- For example, `121` is a palindrome while `123` is not.
 
 **Example 1:**
 
@@ -42,7 +42,7 @@ Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
 
 **Constraints:**
 
-* `-2^31 <= x <= 2^31 - 1`
+- `-2^31 <= x <= 2^31 - 1`
 
 ## Approach 1: Convert to string
 
@@ -59,6 +59,7 @@ class Solution:
         #[::-1]: read from the end
         return str(x) == str(x)[::-1]
 ```
+
 </TabItem>
 
 <TabItem value="java" label="Java">
@@ -73,6 +74,7 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 
 <TabItem value="js" label="JavaScript">
@@ -83,11 +85,12 @@ class Solution {
  * @param {number} x
  * @return {boolean}
  */
-var isPalindrome = function(x) {
-    var str = x.toString();
-    return str.split("").reverse().join("") == x.toString();
+var isPalindrome = function (x) {
+  var str = x.toString();
+  return str.split('').reverse().join('') == x.toString();
 };
 ```
+
 </TabItem>
 
 <TabItem value="cpp" label="C++">
@@ -103,6 +106,7 @@ public:
     }
 };
 ```
+
 </TabItem>
 </Tabs>
 
@@ -112,7 +116,7 @@ Calculate the reversed number.
 
 In JavaScript, we have used `Object.is(..)` for value comparison, It's a ES6 feature and makes value comparisons in an even more strict fashion than the === comparison.
 
-References from MDN and You Don't Know JS (Behind the scenes polyfills of `Object.is`). 
+References from MDN and You Don't Know JS (Behind the scenes polyfills of `Object.is`).
 
 > https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
 
@@ -134,6 +138,7 @@ class Solution:
             in_num = in_num//10
         return reverser == x
 ```
+
 </TabItem>
 <TabItem value="java" label="Java">
 <SolutionAuthor name="@ganajayant"/>
@@ -156,22 +161,24 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 <TabItem value="javascript" label="JavaScript">
 <SolutionAuthor name="@MithunPrabhu777"/>
 
 ```javascript
-var isPalindrome = function(x) {
-    if (x < 0 || x > 0 && Object.is(x % 10, 0)) return false;
-    let n = x;
-    let num = 0;
-    while (x > 0) {
-        num = (num * 10) + (x % 10);
-        x = Math.floor(x / 10);
-    }
-    return Object.is(n, num);
+var isPalindrome = function (x) {
+  if (x < 0 || (x > 0 && Object.is(x % 10, 0))) return false;
+  let n = x;
+  let num = 0;
+  while (x > 0) {
+    num = num * 10 + (x % 10);
+    x = Math.floor(x / 10);
+  }
+  return Object.is(n, num);
 };
 ```
+
 </TabItem>
 
 <TabItem value="cpp" label="C++">
@@ -195,5 +202,6 @@ public:
     }
 };
 ```
+
 </TabItem>
 </Tabs>

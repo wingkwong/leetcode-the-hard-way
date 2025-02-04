@@ -1,9 +1,10 @@
 ---
 description: 'Author: @heder, @jit, @jaffar | https://leetcode.com/problems/sort-characters-by-frequency/'
-tags: [Hash Table, String, Sorting, Heap (Priority Queue), Bucket Sort, Counting]
+tags:
+  [Hash Table, String, Sorting, Heap (Priority Queue), Bucket Sort, Counting]
 ---
 
-# 0451 - Sort Characters By Frequency (Medium) 
+# 0451 - Sort Characters By Frequency (Medium)
 
 ## Problem Link
 
@@ -13,7 +14,7 @@ https://leetcode.com/problems/sort-characters-by-frequency/
 
 Given a string `s`, sort it in **decreasing order** based on the **frequency** of the characters. The **frequency** of a character is the number of times it appears in the string.
 
-Return *the sorted string*. If there are multiple answers, return *any of them*.
+Return _the sorted string_. If there are multiple answers, return _any of them_.
 
 **Example 1:**
 

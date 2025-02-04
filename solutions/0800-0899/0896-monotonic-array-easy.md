@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/monotonic-array/'
+description: 'Author: @wkw | https://leetcode.com/problems/monotonic-array/'
 tags: [Array]
 ---
 
-# 0896 - Monotonic Array (Easy) 
+# 0896 - Monotonic Array (Easy)
 
 ## Problem Statement
 
@@ -11,7 +11,7 @@ An array is **monotonic** if it is either monotone increasing or monotone decrea
 
 An array `nums` is monotone increasing if for all `i <= j`, `nums[i] <= nums[j]`. An array `nums` is monotone decreasing if for all `i <= j`, `nums[i] >= nums[j]`.
 
-Given an integer array `nums`, return `true`*if the given array is monotonic, or*`false`*otherwise*.
+Given an integer array `nums`, return `true`_if the given array is monotonic, or_`false`_otherwise_.
 
 **Example 1:**
 
@@ -41,7 +41,7 @@ Output: false
 
 ## Approach 1: Two Loops
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -64,7 +64,7 @@ public:
 
 ## Approach 2: One Pass
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -75,7 +75,7 @@ public:
             // check for monotone increasing
             inc &= nums[i - 1] <= nums[i];
             // check for monotone decreasing
-            dec &= nums[i - 1] >= nums[i]; 
+            dec &= nums[i - 1] >= nums[i];
         }
         // the given is monotonic if either one is true
         return inc || dec;

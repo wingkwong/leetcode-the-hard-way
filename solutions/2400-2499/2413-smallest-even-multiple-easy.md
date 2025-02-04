@@ -53,6 +53,7 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 </Tabs>
 
@@ -67,6 +68,7 @@ $O(1)$ : There is one int variable (4 bytes of memory) and algorithm will always
 ## Approach 2: Ternary operator
 
 We can make our solution much shorter using ternary operator:
+
 - $n \% 2$ is a condition
 - $n$ is returned when condition is true
 - $n * 2$ is returned when condition is false
@@ -82,6 +84,7 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 </Tabs>
 

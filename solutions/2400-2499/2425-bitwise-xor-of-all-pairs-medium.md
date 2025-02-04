@@ -2,7 +2,7 @@
 description: 'Author: @ganajayant | https://leetcode.com/problems/bitwise-xor-of-all-pairings'
 ---
 
-# 2425 - Bitwise XOR of All Pairings (Medium) 
+# 2425 - Bitwise XOR of All Pairings (Medium)
 
 ## Problem Link
 
@@ -43,8 +43,8 @@ Thus, one possible nums3 array is [2,5,1,6].
 
 **Concepts**
 
-* XOR of even times of a number is zero. e.g. $x \oplus x = 0$
-* XOR of odd times of a number is number itself. e.g. $x \oplus x \oplus x = x$
+- XOR of even times of a number is zero. e.g. $x \oplus x = 0$
+- XOR of odd times of a number is number itself. e.g. $x \oplus x \oplus x = x$
 
 **Understanding**
 
@@ -52,27 +52,15 @@ let $n$ be the length of $num1$ and $m$ be the length of $nums2$
 
 **Case 1: when n and m are even**
 
-suppose $nums1=[a, b]$, $nums2=[c, d]$ <br />
-taking xor results in $[a \oplus{} c, a \oplus{} d, b \oplus{} c, b \oplus{} d]$ results in $[a \oplus{} c \oplus{} a \oplus{} d \oplus{} b \oplus{} c \oplus{} b \oplus{} d ]$ <br />
-Given that $x \oplus x = 0$ (even times xor with self = 0), <br />
-the above xor becomes $[a \oplus{} a \oplus{} b \oplus{} b \oplus{} c \oplus{} c \oplus{} d \oplus{} d]$ => $[0 \oplus{} 0 \oplus{} 0 \oplus{} 0]$ = 0<br />
-Hence, $result = 0$
+suppose $nums1=[a, b]$, $nums2=[c, d]$ <br /> taking xor results in $[a \oplus{} c, a \oplus{} d, b \oplus{} c, b \oplus{} d]$ results in $[a \oplus{} c \oplus{} a \oplus{} d \oplus{} b \oplus{} c \oplus{} b \oplus{} d ]$ <br /> Given that $x \oplus x = 0$ (even times xor with self = 0), <br /> the above xor becomes $[a \oplus{} a \oplus{} b \oplus{} b \oplus{} c \oplus{} c \oplus{} d \oplus{} d]$ => $[0 \oplus{} 0 \oplus{} 0 \oplus{} 0]$ = 0<br /> Hence, $result = 0$
 
 **Case 2 : when n and m are odd**
 
-Let $x_1$ = xor of all elements of $nums1$ and $x_2$ = xor of all elements of $nums2$ <br />
-suppose $nums1=[a]$, $nums2=[c]$<br /> 
-taking xor results in $[a \oplus{} c]$<br />
-Hence, $result = x_1 \oplus x_2$
+Let $x_1$ = xor of all elements of $nums1$ and $x_2$ = xor of all elements of $nums2$ <br /> suppose $nums1=[a]$, $nums2=[c]$<br /> taking xor results in $[a \oplus{} c]$<br /> Hence, $result = x_1 \oplus x_2$
 
 **Case 3 / 4: when one of them is odd and other is even**
 
-let $nums1=[a, b, c]$, $nums2=[d, e]$<br />
-Let's $x_1$= xor of all elements of $nums1$, $x_2$ = xor of all elements of $nums2$ <br />
-that is $x_1=a \oplus{} b \oplus{} c$, $x_2 = d \oplus{} e$<br />
-Since in this case $n$ is even we can clearly see that each element of $nums1$ repeat even times that makes xor as $0$<br />
-and $m$ is odd we get resultant xor of $nums2$ which is $x_2$ that is $d \oplus e$<br />
-Hence, $result = x_2$ (if $m$ is even) or $x_1$ (if $n$ is even)
+let $nums1=[a, b, c]$, $nums2=[d, e]$<br /> Let's $x_1$= xor of all elements of $nums1$, $x_2$ = xor of all elements of $nums2$ <br /> that is $x_1=a \oplus{} b \oplus{} c$, $x_2 = d \oplus{} e$<br /> Since in this case $n$ is even we can clearly see that each element of $nums1$ repeat even times that makes xor as $0$<br /> and $m$ is odd we get resultant xor of $nums2$ which is $x_2$ that is $d \oplus e$<br /> Hence, $result = x_2$ (if $m$ is even) or $x_1$ (if $n$ is even)
 
 <Tabs>
 <TabItem value="java" label="Java">
@@ -107,5 +95,6 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 </Tabs>

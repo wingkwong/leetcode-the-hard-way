@@ -3,7 +3,7 @@ description: 'Author: @ganajayant, @RadhikaChhabra17, @radojicic23 | https://lee
 tags: [Array, Two Pointers, Sorting]
 ---
 
-# 0075 - Sort Colors (Medium) 
+# 0075 - Sort Colors (Medium)
 
 ## Problem Link
 
@@ -71,14 +71,14 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 </Tabs>
-
 
 ## Approach 2: Bubble Sort
 
 We want all integers together. One way of doing this is sorting the array so that we will get all $0$ initially, then all $1$ and $2$. We can use bubble sort for sorting.
-    
+
 Time Complexity: $O(n ^ 2)$, where $n$ is the number of elements in array
 
 Space complexity: $O(1)$
@@ -104,6 +104,7 @@ class Solution {
     }
 };
 ```
+
 </TabItem>
 
 <TabItem value="js" label="JavaScript">
@@ -114,23 +115,24 @@ class Solution {
  * @param {number[]} nums
  * @return {void} Do not return anything, modify nums in-place instead.
  */
-var sortColors = function(nums) {
-    let swapped = false;
-    for (i = 0; i < nums.length - 1; i++) {
-        for (j = 0; j < nums.length - i - 1; j++) {
-            if (nums[j] > nums[j + 1]) {
-                swapped = true;
-                let tmp = nums[j];
-                nums[j] = nums[j + 1];
-                nums[j + 1] = tmp;
-            }
-        }
-        if (swapped === false) {
-            return;
-        }
+var sortColors = function (nums) {
+  let swapped = false;
+  for (i = 0; i < nums.length - 1; i++) {
+    for (j = 0; j < nums.length - i - 1; j++) {
+      if (nums[j] > nums[j + 1]) {
+        swapped = true;
+        let tmp = nums[j];
+        nums[j] = nums[j + 1];
+        nums[j + 1] = tmp;
+      }
     }
+    if (swapped === false) {
+      return;
+    }
+  }
 };
 ```
+
 </TabItem>
 
 <TabItem value="py" label="Python">
@@ -149,7 +151,8 @@ class Solution:
                     swapped = True
                     nums[j], nums[j + 1] = nums[j + 1], nums[j]
             if not swapped:
-                return 
+                return
 ```
+
 </TabItem>
 </Tabs>

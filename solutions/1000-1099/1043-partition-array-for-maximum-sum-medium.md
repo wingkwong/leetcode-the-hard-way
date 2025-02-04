@@ -1,5 +1,5 @@
 ---
-description: "Author: @Dhanu084 | https://leetcode.com/problems/partition-array-for-maximum-sum/description/"
+description: 'Author: @Dhanu084 | https://leetcode.com/problems/partition-array-for-maximum-sum/description/'
 tags: [Recursion, Dynamic Programming]
 ---
 
@@ -49,8 +49,7 @@ Time complexity: $$O(n * k ^ n)$$
 
 Space complexity: $$O(n)$$ + auxilary recursive stack space
 
-**Note:**
-This soution will give Time Limit Exceeded at leetcode as it is exponential in nature
+**Note:** This soution will give Time Limit Exceeded at leetcode as it is exponential in nature
 
 <Tabs>
 <TabItem value="py" label="Python">

@@ -1,5 +1,5 @@
 ---
-description: "Author: @wingkwong, @ganajayant, @radojicic23| https://leetcode.com/problems/swap-nodes-in-pairs/"
+description: 'Author: @wkw, @ganajayant, @radojicic23| https://leetcode.com/problems/swap-nodes-in-pairs/'
 ---
 
 # 0024 - Swap Nodes in Pairs (Medium)
@@ -48,7 +48,7 @@ Let's think of the second node first. If two nodes are swapped, the second node 
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -128,15 +128,7 @@ var swapPairs = function (head) {
 
 ## Approach 2: Iterative
 
-See, we need to swap adjacent nodes right, So can we see that as a linked list in which we have to swap a linked list of length 2 and then after doing on that, we can move it further.
-Example:
-1->2->3->4
-After swapping first part or linked list of length 2, It would be
-2->1->3->4
-Now we need to go to 3->4 and do on the same on it and final answer would become
-2->1->4->3
-For this new linked list of length 2, We maintain two variables currentnode and nextnode denoting first and last of that linked list.
-Now we need to think how would we connect those linked list of len 2, For this I maintained two variables previousnode which is helping to form this linked list.
+See, we need to swap adjacent nodes right, So can we see that as a linked list in which we have to swap a linked list of length 2 and then after doing on that, we can move it further. Example: 1->2->3->4 After swapping first part or linked list of length 2, It would be 2->1->3->4 Now we need to go to 3->4 and do on the same on it and final answer would become 2->1->4->3 For this new linked list of length 2, We maintain two variables currentnode and nextnode denoting first and last of that linked list. Now we need to think how would we connect those linked list of len 2, For this I maintained two variables previousnode which is helping to form this linked list.
 
 <Tabs>
 <TabItem value="java" label="Java">
@@ -270,7 +262,7 @@ public:
             // initialize pointers
             auto second = curr->next;
             auto nxtPair = curr->next->next;
-            // swap this pair 
+            // swap this pair
             second->next = curr;
             curr->next = nxtPair;
             prev->next = second;

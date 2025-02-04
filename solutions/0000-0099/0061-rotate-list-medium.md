@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @radojicic23 | https://leetcode.com/problems/rotate-list/'
+description: 'Author: @wkw, @radojicic23 | https://leetcode.com/problems/rotate-list/'
 ---
 
 # 0061 - Rotate List (Medium)
@@ -32,9 +32,9 @@ Output: [2,0,1]
 
 **Constraints:**
 
-* The number of nodes in the list is in the range `[0, 500]`.
-* `-100 <= Node.val <= 100`
-* `0 <= k <= 2 * 10^9`
+- The number of nodes in the list is in the range `[0, 500]`.
+- `-100 <= Node.val <= 100`
+- `0 <= k <= 2 * 10^9`
 
 ## Approach 1: Connect and Cut
 
@@ -42,7 +42,7 @@ First we iterate each node till the end and connect the tail to the head. At the
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -118,24 +118,24 @@ class Solution:
  * @param {number} k
  * @return {ListNode}
  */
-var rotateRight = function(head, k) {
-    let curr = head;
-    let n = 1;
-    if (!head) return null;
-    while (curr.next) {
-        curr = curr.next;
-        n++;
-    }
-    curr.next = head;
-    k = n - k % n;
-    while (k) {
-        curr = curr.next;
-        k--;
-    }
-    head = curr.next;
-    curr.next = null;
-    return head;
-}
+var rotateRight = function (head, k) {
+  let curr = head;
+  let n = 1;
+  if (!head) return null;
+  while (curr.next) {
+    curr = curr.next;
+    n++;
+  }
+  curr.next = head;
+  k = n - (k % n);
+  while (k) {
+    curr = curr.next;
+    k--;
+  }
+  head = curr.next;
+  curr.next = null;
+  return head;
+};
 ```
 
 </TabItem>

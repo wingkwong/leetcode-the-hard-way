@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/create-binary-tree-from-descriptions/
+  Author: @wkw | https://leetcode.com/problems/create-binary-tree-from-descriptions/
 ---
 
 # 2196 - Create Binary Tree From Descriptions (Medium)
@@ -14,8 +13,8 @@ https://leetcode.com/problems/create-binary-tree-from-descriptions/
 
 You are given a 2D integer array `descriptions` where `descriptions[i] = [parent_i, child_i, isLeft_i]` indicates that `parent_i` is the **parent** of `child_i` in a **binary** tree of **unique** values. Furthermore,
 
-* If `isLeft_i == 1`, then `child_i` is the left child of `parent_i`.
-* If `isLeft_i == 0`, then `child_i` is the right child of `parent_i`.
+- If `isLeft_i == 1`, then `child_i` is the left child of `parent_i`.
+- If `isLeft_i == 0`, then `child_i` is the right child of `parent_i`.
 
 Construct the binary tree described by `descriptions` and return _its **root**_.
 
@@ -45,11 +44,11 @@ The resulting binary tree is shown in the diagram.
 
 **Constraints:**
 
-* `1 <= descriptions.length <= 10^4`
-* `descriptions[i].length == 3`
-* `1 <= parent_i, child_i <= 10^5`
-* `0 <= isLeft_i <= 1`
-* The binary tree described by `descriptions` is valid.
+- `1 <= descriptions.length <= 10^4`
+- `descriptions[i].length == 3`
+- `1 <= parent_i, child_i <= 10^5`
+- `0 <= isLeft_i <= 1`
+- The binary tree described by `descriptions` is valid.
 
 ## Approach 1: Hash Map
 
@@ -61,7 +60,7 @@ If $$isLeft$$ is $$1$$, that means the child is the left child of parent. Else, 
 
 At the end, we find out the node without parent, return that TreeNode because that is the root.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

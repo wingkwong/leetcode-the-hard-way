@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/maximum-product-after-k-increments/
+  Author: @wkw | https://leetcode.com/problems/maximum-product-after-k-increments/
 ---
 
 # 2233 - Maximum Product After K Increments (Medium)
@@ -14,7 +13,7 @@ https://leetcode.com/problems/maximum-product-after-k-increments/
 
 You are given an array of non-negative integers `nums` and an integer `k`. In one operation, you may choose **any** element from `nums` and **increment** it by `1`.
 
-Return _the **maximum**  **product** of_ `nums` _after **at most** _ `k` _operations._ Since the answer may be very large, return it **modulo** `109 + 7`.
+Return _the **maximum** **product** of_ `nums` _after **at most** _ `k` _operations._ Since the answer may be very large, return it **modulo** `1e9 + 7`.
 
 **Example 1:**
 
@@ -40,8 +39,8 @@ Note that there may be other ways to increment nums to have the maximum product.
 
 **Constraints:**
 
-* `1 <= nums.length, k <= 10^5`
-* `0 <= nums[i] <= 10^6`
+- `1 <= nums.length, k <= 10^5`
+- `0 <= nums[i] <= 10^6`
 
 ## Approach 1: Priority Queue
 
@@ -51,7 +50,7 @@ We should increase the smallest element every time.
 
 However, we cannot sort it every time after the increment as it takes too much time. Instead, we can use priority queue to maintain the order.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/smallest-string-with-a-given-numeric-value/
+  Author: @wkw | https://leetcode.com/problems/smallest-string-with-a-given-numeric-value/
 ---
 
 # 1633 - Smallest String With A Given Numeric Value (Medium)
@@ -20,8 +19,6 @@ You are given two integers `n` and `k`. Return _the **lexicographically smallest
 
 Note that a string `x` is lexicographically smaller than string `y` if `x` comes before `y` in dictionary order, that is, either `x` is a prefix of `y`, or if `i` is the first position such that `x[i] != y[i]`, then `x[i]` comes before `y[i]` in alphabetic order.
 
-
-
 **Example 1:**
 
 ```
@@ -39,14 +36,14 @@ Output: "aaszz"
 
 **Constraints:**
 
-* `1 <= n <= 10^5`
-* `n <= k <= 26 * n`
+- `1 <= n <= 10^5`
+- `n <= k <= 26 * n`
 
 ## Approach 1: Build from the right
 
 To obtain lexicographically smallest string, we should put $$a$$ from the left and $$z$$ from the right if possible and put what's left in the middle. Therefore, we initialise the answer with all $$a$$s. Starting from the right, the best case is to make it to $$z$$ (i.e. $$s[i] + 25$$). If we cannot do it, then we can only make it to the max one (i.e. $$s[i] + k$$).
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -55,7 +52,7 @@ public:
         // init s with all 'a's
         string s(n, 'a');
         // since we put n times, update k
-        k -= n; 
+        k -= n;
         // 0-index
         n -= 1;
         // fill character until k <= 0
@@ -81,7 +78,7 @@ First we calculate the number of characters that are not $$a$$, i.e. the total n
 
 For the middle segment, how many $$k$$ left we can use? We've used $$(n - nonA) * 1$$ for the first segment and $$(nonA-1)* 26$$ for the last segment. The index of the character in the middle segment would be $$k - (n - nonA) - (nonA - 1) * 26$$.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -92,8 +89,8 @@ public:
         // 1st segment: there is (n - nonA) 'a's
         // 2nd segment: one character with index k - (n - nonA) - (nonA - 1) * 26
         // 3rd segemnt: there is (nonA - 1) 'z's
-        return string(n - nonA, 'a') + 
-               char(k - (n - nonA) - (nonA - 1) * 26 + 'a' - 1) + 
+        return string(n - nonA, 'a') +
+               char(k - (n - nonA) - (nonA - 1) * 26 + 'a' - 1) +
                string(nonA - 1, 'z');
     }
 };

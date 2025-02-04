@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/count-good-triplets-in-an-array/
+  Author: @wkw | https://leetcode.com/problems/count-good-triplets-in-an-array/
 ---
 
 # 2179 - Count Good Triplets in an Array (Hard)
@@ -23,8 +22,8 @@ Return _the **total number** of good triplets_.
 ```
 Input: nums1 = [2,0,1,3], nums2 = [0,1,2,3]
 Output: 1
-Explanation: 
-There are 4 triplets (x,y,z) such that pos1x < pos1y < pos1z. They are (2,0,1), (2,0,3), (2,1,3), and (0,1,3). 
+Explanation:
+There are 4 triplets (x,y,z) such that pos1x < pos1y < pos1z. They are (2,0,1), (2,0,3), (2,1,3), and (0,1,3).
 Out of those triplets, only the triplet (0,1,3) satisfies pos2x < pos2y < pos2z. Hence, there is only 1 good triplet.
 ```
 
@@ -38,20 +37,20 @@ Explanation: The 4 good triplets are (4,0,3), (4,0,2), (4,1,3), and (4,1,2).
 
 **Constraints:**
 
-* `n == nums1.length == nums2.length`
-* `3 <= n <= 10^5`
-* `0 <= nums1[i], nums2[i] <= n - 1`
-* `nums1` and `nums2` are permutations of `[0, 1, ..., n - 1]`.
+- `n == nums1.length == nums2.length`
+- `3 <= n <= 10^5`
+- `0 <= nums1[i], nums2[i] <= n - 1`
+- `nums1` and `nums2` are permutations of `[0, 1, ..., n - 1]`.
 
 ## Approach 1: BIT
 
-BIT aka fenwick tree is a data structure that can efficiently update elements and calculate prefix sums in a table of numbers. You can check out more details [here](https://cp-algorithms.com/data\_structures/fenwick.html).
+BIT aka fenwick tree is a data structure that can efficiently update elements and calculate prefix sums in a table of numbers. You can check out more details [here](https://cp-algorithms.com/data_structures/fenwick.html).
 
 In this problem, we use two BITs to store the number of elements $$l$$ smaller than $$nums[i]$$ and the number of elements $$r$$ greater than $$nums[i]$$. In other word, we fix the middle point and calculate the number of triplets by $$l * r$$ at that point. The answer is the sum of them.
 
 First, we need to know that what is the position of $$nums1[i]$$ in $$nums2[i]$$. Then we iterate the array to get the position in $$nums2$$ for $$nums1[i]$$. We call $$query$$ to get the number of elements smaller than it. It's also the prefix sum or the range query from $$0$$ to it. Then we update the tree for this position. Similarly, we do the same thing for the second BIT in reversed order. This time we are looking for the suffix sum with the range from the target position till the end. At the end, we sum all $$l[i] * r[i]$$.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 template <class T>

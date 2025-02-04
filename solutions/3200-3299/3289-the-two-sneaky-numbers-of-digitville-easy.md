@@ -1,5 +1,5 @@
 ---
-description: "Author: @wingkwong | https://leetcode.com/problems/the-two-sneaky-numbers-of-digitville/"
+description: 'Author: @wkw | https://leetcode.com/problems/the-two-sneaky-numbers-of-digitville/'
 tags: [Array, Hash Table, Math]
 ---
 
@@ -58,7 +58,7 @@ We can simply count the frequency and find which two numbers have appear more th
 
 <Tabs>
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:

@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @vigneshshiv |
-  https://leetcode.com/problems/subtree-of-another-tree/
+  Author: @vigneshshiv | https://leetcode.com/problems/subtree-of-another-tree/
 ---
 
 # 0572 - Subtree of Another Tree (Easy)
@@ -38,15 +37,14 @@ Output: false
 
 **Constraints:**
 
-* The number of nodes in the `root` tree is in the range `[1, 2000]`.
-* The number of nodes in the `subRoot` tree is in the range `[1, 1000]`.
-* `-10^4 <= root.val <= 10^4`
-* `-10^4 <= subRoot.val <= 10^4`
+- The number of nodes in the `root` tree is in the range `[1, 2000]`.
+- The number of nodes in the `subRoot` tree is in the range `[1, 1000]`.
+- `-10^4 <= root.val <= 10^4`
+- `-10^4 <= subRoot.val <= 10^4`
 
 **Follow up:** Could you do this in one pass?
 
 ## Approach 1: Pre-order Recursive Solution
-
 
 <Tabs>
 <TabItem value="java" label="Java">
@@ -73,14 +71,14 @@ class Solution {
         boolean contains = Objects.nonNull(subRoot) ? containsTree(root, subRoot) : true;
         return contains;
     }
-    
+
     private boolean containsTree(TreeNode t1, TreeNode t2) {
         // Big tree t1 is empty, not a matching case
         if (Objects.isNull(t1)) return false;
         if (Objects.equals(t1.val, t2.val) && matchTree(t1, t2)) return true;
         return containsTree(t1.left, t2) || containsTree(t1.right, t2);
     }
-    
+
     private boolean matchTree(TreeNode t1, TreeNode t2) {
         // nothing left in the subtree to compare
         if (Objects.isNull(t1) && Objects.isNull(t2)) return true;
@@ -95,7 +93,6 @@ class Solution {
 ```
 
 </TabItem>
-
 
 <TabItem value="python" label="Python">
 <SolutionAuthor name="@ColeB2"/>

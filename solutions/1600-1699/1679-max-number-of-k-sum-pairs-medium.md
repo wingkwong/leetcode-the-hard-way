@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @vigneshshiv | https://leetcode.com/problems/max-number-of-k-sum-pairs/'
+description: 'Author: @wkw, @vigneshshiv | https://leetcode.com/problems/max-number-of-k-sum-pairs/'
 ---
 
 # 1679 - Max Number of K-Sum Pairs (Medium)
@@ -39,9 +39,9 @@ There are no more pairs that sum up to 6, hence a total of 1 operation.
 
 **Constraints:**
 
-* `1 <= nums.length <= 10^5`
-* `1 <= nums[i] <= 10^9`
-* `1 <= k <= 10^9`
+- `1 <= nums.length <= 10^5`
+- `1 <= nums[i] <= 10^9`
+- `1 <= k <= 10^9`
 
 ## Approach 1: Hash Map
 
@@ -53,7 +53,7 @@ Otherwise, we can only take the minimal value of $$m[x]$$and $$m[k - x]$$, then 
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -72,7 +72,7 @@ public:
                     int ops = min(m[x], m[k - x]);
                     ans += ops;
                     m[x] -= ops;
-                    m[k - x] -= ops;   
+                    m[k - x] -= ops;
                 }
             }
         }
@@ -80,6 +80,7 @@ public:
     }
 };
 ```
+
 </TabItem>
 
 <TabItem value="java" label="Java">
@@ -107,6 +108,7 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 </Tabs>
 
@@ -116,7 +118,7 @@ We can sort the input and use two pointers to track elements from both side. If 
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

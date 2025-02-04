@@ -22,13 +22,13 @@ keywords:
 struct segtree {
     vector<long long> sums;
     int size;
-    
+
     void init(int n) {
         size = 1;
         while (size < n) size *= 2;
         sums.assign(size * 2, 0LL);
     }
-    
+
     void set(int i, int v, int x, int lx, int rx) {
         if (rx - lx == 1) {
             sums[x] = v;
@@ -39,33 +39,31 @@ struct segtree {
         else set(i, v, 2 * x + 2, m, rx);
         sums[x] = sums[2 * x + 1] + sums[2 * x + 2];
     }
-    
+
     void set(int i, int v) {
         set(i, v, 0, 0, size);
     }
-    
+
     long long sum(int l, int r, int x, int lx, int rx) {
         if (lx >= r || l >= rx) return 0;
         if (lx >= l && rx <= r) return sums[x];
         int m = (lx + rx) / 2;
         return sum(l, r, 2 * x + 1, lx, m) + sum(l, r, 2 * x + 2, m, rx);
     }
-    
+
     long long sum(int l, int r) {
         return sum(l, r, 0, 0, size);
     }
 };
 ```
+
 </TabItem>
 </Tabs>
 
-
 ### Sample Usage
-
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-
 
 ```cpp
 int n = nums.size();
@@ -78,11 +76,11 @@ st.set(index, val);
 // ...
 st.sum(left, right + 1)
 ```
+
 </TabItem>
 </Tabs>
 
-
-<!-- 
+<!--
 TODO: verify
 
 ## Advanced Segment Tree
@@ -125,21 +123,21 @@ public:
 
         segmentTree[idx] = segmentTree[2 * idx + 1] + segmentTree[2 * idx + 2];
     }
-    
+
     int sum(int idx, int left, int right, int l, int r) {
         // Case 1 : if current_segment comes under range...
         if (left >= l && right <= r) {
             return segmentTree[idx];
         }
 
-        // Case 2 : if current_segement doesn't comes in range.... 
+        // Case 2 : if current_segement doesn't comes in range....
         // then we return 0 as answer to not pick current segment
         if (r < left || right < l)
             return 0;
 
         // Case 3 : if current_segement comes partitally...
         int mid = left + (right - left) / 2;
-        
+
         int leftSum = sum(2 * idx + 1, left, mid, l, r);
         int rightSum = sum(2 * idx + 2, mid + 1, right, l, r);
 
@@ -148,7 +146,7 @@ public:
 
     int getSum(int l, int r) { return sum(0, 0, n-1, l, r); }
 
-    
+
     void pointUpdate(int idx, int left, int right, int index, int value) {
         // doing Actual update at leaf node.
         if (left == right){
@@ -158,7 +156,7 @@ public:
 
         int mid = (left + right) / 2;
 
-        // if index comes into left part, 
+        // if index comes into left part,
         // then we will update only left part and update complete component after if-else & vice versa
         if (index <= mid) pointUpdate(2 * idx + 1, left, mid, index, value);
         else pointUpdate(2 * idx + 2, mid + 1, right, index, value);
@@ -176,7 +174,7 @@ public:
             if(left != right) {
                 lazy[2 * idx + 1] += lazy[idx];
                 lazy[2 * idx + 2] += lazy[idx];
-            } 
+            }
 
             // done updating, so make current lazy_updates = 0
             lazy[idx] = 0;
@@ -185,7 +183,7 @@ public:
         // Case 1 : If current range comes outside...
         if (right < l || r < left) return ;
 
-        // Case 2 : If current range comes inside... 
+        // Case 2 : If current range comes inside...
         if (left >= l && right <= r) {
             segmentTree[idx] += (right - left + 1) * value;
 
@@ -211,13 +209,13 @@ public:
         // Executing pending updates at first.
         if (lazy[idx]){
             segmentTree[idx] += (right - left + 1) * lazy[idx];
-            
+
             // If current node is not leaf node, then we have to propagate updates to childrens.
             if (left != right){
                 lazy[2 * idx + 1] += lazy[idx];
                 lazy[2 * idx + 2] += lazy[idx];
             }
-            
+
             // We are done updating :)
             lazy[idx] = 0;
         }
@@ -233,13 +231,13 @@ public:
 
         int leftSide = querySumLazy(2 * idx + 1, left, mid, l, r);
         int rightSide = querySumLazy(2 * idx + 2, mid + 1, right, l, r);
-        
+
         return leftSide + rightSide;
     }
     int getSumLazy(int l, int r) { return querySumLazy(0, 0, n - 1, l, r); }
 
     void printSegmentTree() {
-        for(int i : segmentTree) cout << i << " "; 
+        for(int i : segmentTree) cout << i << " ";
         cout << endl;
     }
 

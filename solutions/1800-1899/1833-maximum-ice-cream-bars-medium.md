@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @hirotake111 |
-  https://leetcode.com/problems/maximum-ice-cream-bars/
+  Author: @hirotake111 | https://leetcode.com/problems/maximum-ice-cream-bars/
 ---
 
 # 1833 - Maximum Ice Cream Bars (Medium)
@@ -53,8 +52,7 @@ Explanation: The boy can buy all the ice cream bars for a total price of 1 + 6 +
 
 ## Approach 1: Frequency
 
-Time Complexity: $O(n + m)$ <sub>(where `n`: length of costs, `m`: maximum value among `costs`)</sub>
-Space Complexity: $O(m)$ <sub>(where `m`: maximum value among `costs`)</sub>
+Time Complexity: $O(n + m)$ <sub>(where `n`: length of costs, `m`: maximum value among `costs`)</sub> Space Complexity: $O(m)$ <sub>(where `m`: maximum value among `costs`)</sub>
 
 <Tabs>
 <TabItem value="py" label="Python">

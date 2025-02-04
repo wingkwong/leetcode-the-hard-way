@@ -1,7 +1,8 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/first-letter-to-appear-twice
+  Author: @wkw | https://leetcode.com/problems/first-letter-to-appear-twice
+
+
 tags: ['Hash Map']
 ---
 
@@ -17,8 +18,8 @@ Given a string `s` consisting of lowercase English letters, return _the first le
 
 **Note**:
 
-* A letter `a` appears twice before another letter `b` if the **second** occurrence of `a` is before the **second** occurrence of `b`.
-* `s` will contain at least one letter that appears twice.&#x20;
+- A letter `a` appears twice before another letter `b` if the **second** occurrence of `a` is before the **second** occurrence of `b`.
+- `s` will contain at least one letter that appears twice.&#x20;
 
 **Example 1:**
 
@@ -44,13 +45,13 @@ The only letter that appears twice is 'd' so we return 'd'.
 
 **Constraints:**
 
-* `2 <= s.length <= 100`
-* `s` consists of lowercase English letters.
-* `s` has at least one repeated letter.
+- `2 <= s.length <= 100`
+- `s` consists of lowercase English letters.
+- `s` has at least one repeated letter.
 
 ## Approach 1: Hash Map
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

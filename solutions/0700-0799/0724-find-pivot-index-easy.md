@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/find-pivot-index/'
+description: 'Author: @wkw | https://leetcode.com/problems/find-pivot-index/'
 tags: [Array, Prefix Sum]
 ---
 
-# 0724 - Find Pivot Index (Easy) 
+# 0724 - Find Pivot Index (Easy)
 
 ## Problem Statement
 
@@ -13,7 +13,7 @@ The **pivot index** is the index where the sum of all the numbers **strictly** t
 
 If the index is on the left edge of the array, then the left sum is `0` because there are no elements to the left. This also applies to the right edge of the array.
 
-Return *the **leftmost pivot index***. If no such index exists, return -1.
+Return \*the **leftmost pivot index\***. If no such index exists, return -1.
 
 **Example 1:**
 
@@ -55,7 +55,7 @@ Right sum = nums[1] + nums[2] = 1 + -1 = 0
 
 ## Approach 1: Prefix Sum
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -68,7 +68,7 @@ public:
         // totalSum = 28
         for (int i = 0; i < n; i++) pref[i + 1] = pref[i] + nums[i], totalSum += nums[i];
         for (int i = 0; i < n; i++) {
-            // if the current number is nums[i], 
+            // if the current number is nums[i],
             // then we can get the left part easily - just pref[i]
             // the right part would be the total sum - pref[i] - the current number
             int leftSum = pref[i], rightSum = sum - left - nums[i];
@@ -84,7 +84,7 @@ public:
 };
 ```
 
-## Approach 2: Prefix Sum with Space Optimizated 
+## Approach 2: Prefix Sum with Space Optimizated
 
 ```cpp
 class Solution {
@@ -95,7 +95,7 @@ public:
         // alternative, we can use `accumulate(nums.begin(), nums.end(), 0);`
         for (int i = 0; i < n; i++) totalSum += nums[i];
         for (int i = 0; i < n; i++) {
-            // if the current number is nums[i], 
+            // if the current number is nums[i],
             // then we can get the left part easily - i.e leftSum
             // the right part would be the total sum - leftSum - the current number
             int rightSum = totalSum - leftSum - nums[i];

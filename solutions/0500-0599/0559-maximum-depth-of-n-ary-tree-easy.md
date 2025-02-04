@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @heiheihang |
-  https://leetcode.com/problems/maximum-depth-of-n-ary-tree/
+  Author: @heiheihang | https://leetcode.com/problems/maximum-depth-of-n-ary-tree/
 ---
 
 # 0559 - Maximum Depth of N-ary Tree (Easy)
@@ -29,7 +28,7 @@ Output: 3
 
 **Example 2:**
 
-![](https://assets.leetcode.com/uploads/2019/11/08/sample\_4\_964.png)
+![](https://assets.leetcode.com/uploads/2019/11/08/sample_4_964.png)
 
 ```
 Input: root = [1,null,2,3,4,5,null,null,6,7,null,8,null,9,10,null,null,11,null,12,null,13,null,null,14]
@@ -38,8 +37,8 @@ Output: 5
 
 **Constraints:**
 
-* The total number of nodes is in the range `[0, 10^4]`.
-* The depth of the n-ary tree is less than or equal to `1000`.
+- The total number of nodes is in the range `[0, 10^4]`.
+- The depth of the n-ary tree is less than or equal to `1000`.
 
 ## Approach 1: DFS
 
@@ -51,22 +50,22 @@ _Note: A **binary tree** means each node at most has **2 children** (binary mean
 
 ```python
 def maxDepth(self, root: 'Node') -> int:
-        
+
         def dfs(node):
             #there is a possibility the root is None
             if(node is None):
                 return 0
-                
+
             #initialize the largest depth
             largestDepth = 0
-            
+
             #iterate each child, and update the largest depth if appropriate
             for child in node.children:
                 largestDepth = max(largestDepth, dfs(child))
-            
-            #don't forget to add the current level height!    
+
+            #don't forget to add the current level height!
             return largestDepth + 1
-        
+
         #we start iterating from the root
         return dfs(root)
 ```

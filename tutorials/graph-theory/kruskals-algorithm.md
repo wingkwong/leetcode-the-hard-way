@@ -8,7 +8,7 @@ keywords:
   - algorithm
 ---
 
-<TutorialAuthors names="@wingkwong"/>
+<TutorialCredits authors="@wkw"/>
 
 ## Overview
 
@@ -19,8 +19,8 @@ Here are the steps to find the MST using Kruskal's algorithm:
 1. Sort all the edges in non-decreasing order of their weight.
 2. Initialize the MST as an empty set.
 3. For each edge in the sorted list of edges:
-    - If adding the edge does not form a cycle in the MST, add the edge to the MST.
-    - Otherwise, discard the edge.
+   - If adding the edge does not form a cycle in the MST, add the edge to the MST.
+   - Otherwise, discard the edge.
 4. Repeat steps 3 until all the vertices are included in the MST.
 
 The time complexity of Kruskal's algorithm is $O(E log E)$ where $E$ is the number of edges in the graph. It is more efficient than Prim's algorithm when the number of edges is much larger than the number of vertices.
@@ -36,7 +36,7 @@ The time complexity of Kruskal's algorithm is $O(E log E)$ where $E$ is the numb
 <Tabs>
 
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class dsu {
@@ -82,7 +82,7 @@ int mst(vector<vector<int>>& g) {
     int n = (int) g.size();
     vector<array<int, 3>> edges;
     // g[i] = {from, to, weight}
-    for (auto x : g) edges.push_back({x[2], x[0], x[1]}); 
+    for (auto x : g) edges.push_back({x[2], x[0], x[1]});
     sort(edges.begin(), edges.end());
     dsu d(n + 1);
     int minimum_weight = 0;
@@ -94,22 +94,10 @@ int mst(vector<vector<int>>& g) {
     return minimum_weight;
 }
 ```
+
 </TabItem>
 </Tabs>
 
-export const suggestedProblems = [
-  {
-    "problemName": "1135 - Connecting Cities With Minimum Cost",
-    "difficulty": "Medium",
-    "leetCodeLink": "https://leetcode.com/problems/connecting-cities-with-minimum-cost/",
-    "solutionLink": "../../solutions/1100-1199/connecting-cities-with-minimum-cost-medium"
-  },
-  {
-    "problemName": "1168 - Optimize Water Distribution in a Village",
-    "difficulty": "Hard",
-    "leetCodeLink": "https://leetcode.com/problems/optimize-water-distribution-in-a-village/",
-    "solutionLink": "../../solutions/1100-1199/optimize-water-distribution-in-a-village-hard"
-  },
-]
+export const suggestedProblems = [ { "problemName": "1135 - Connecting Cities With Minimum Cost", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/connecting-cities-with-minimum-cost/", "solutionLink": "../../solutions/1100-1199/connecting-cities-with-minimum-cost-medium" }, { "problemName": "1168 - Optimize Water Distribution in a Village", "difficulty": "Hard", "leetCodeLink": "https://leetcode.com/problems/optimize-water-distribution-in-a-village/", "solutionLink": "../../solutions/1100-1199/optimize-water-distribution-in-a-village-hard" }, ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />

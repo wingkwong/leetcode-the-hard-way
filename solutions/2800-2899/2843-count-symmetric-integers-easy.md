@@ -3,7 +3,7 @@ description: 'Author: @heder | https://leetcode.com/problems/count-symmetric-int
 tags: [Math, Enumeration]
 ---
 
-# 2843 - Count Symmetric Integers (Easy) 
+# 2843 - Count Symmetric Integers (Easy)
 
 ## Problem Link
 
@@ -15,7 +15,7 @@ You are given two positive integers `low` and `high`.
 
 An integer `x` consisting of `2 * n` digits is **symmetric** if the sum of the first `n` digits of `x` is equal to the sum of the last `n` digits of `x`. Numbers with an odd number of digits are never symmetric.
 
-Return *the **number of symmetric** integers in the range* `[low, high]`.
+Return _the **number of symmetric** integers in the range_ `[low, high]`.
 
 **Example 1:**
 
@@ -98,16 +98,16 @@ constexpr bool isSymmetricInteger(int x) {
     }
     return false;
 }
-    
+
 constexpr auto gen_ps() {
     array<int, 10001> ans = {};
     for (int i = 1; i < size(ans); ++i)
         ans[i] = ans[i - 1] + isSymmetricInteger(i);
     return ans;
 }
-    
+
 constexpr auto ps = gen_ps();
-    
+
 }  // namespace
 
 class Solution {

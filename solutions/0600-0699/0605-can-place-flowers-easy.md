@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @vigneshshiv |
-  https://leetcode.com/problems/can-place-flowers/
+  Author: @vigneshshiv | https://leetcode.com/problems/can-place-flowers/
 ---
 
 # 0605 - Can Place Flowers (Easy)
@@ -32,17 +31,16 @@ Output: false
 
 **Constraints:**
 
-* `1 <= flowerbed.length <= 2 * 10^4`
-* `flowerbed[i]` is `0` or `1`.
-* There are no two adjacent flowers in `flowerbed`.
-* `0 <= n <= flowerbed.length`
-
+- `1 <= flowerbed.length <= 2 * 10^4`
+- `flowerbed[i]` is `0` or `1`.
+- There are no two adjacent flowers in `flowerbed`.
+- `0 <= n <= flowerbed.length`
 
 ## Approach 1: STL
 
-Simplest approach to check is to iterate over the elements and check the prev[i - 1] and next[i + 1] elements to statisfy the constraint. 
+Simplest approach to check is to iterate over the elements and check the prev[i - 1] and next[i + 1] elements to statisfy the constraint.
 
-If given `n` is 0 return `true`, or if `n` is higher than the no. of plots available to plant in an array adjacently then return `false`. 
+If given `n` is 0 return `true`, or if `n` is higher than the no. of plots available to plant in an array adjacently then return `false`.
 
 Time Complexity: $O(n)$, where $n$ - # of elements in the array
 
@@ -57,7 +55,7 @@ class Solution {
     public boolean canPlaceFlowers(int[] flowerbed, int n) {
         // Case 1. No flowers to plant, so return true
         if (n == 0) return true;
-        // Case 2. If No. of flowers to plant adajacently is higher than the half flowerbed array 
+        // Case 2. If No. of flowers to plant adajacently is higher than the half flowerbed array
         int range = (flowerbed.length / 2) + ((flowerbed.length & 1) == 0 ? 0 : 1);
         if (n > range) return false;
         // Case 3. Iterate to check prev[i - 1] and next[i + 1] elements to satisfy the constraint
@@ -72,5 +70,6 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 </Tabs>

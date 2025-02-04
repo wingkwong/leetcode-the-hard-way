@@ -1,5 +1,5 @@
 ---
-title: "Topological Sorting"
+title: 'Topological Sorting'
 description: 'Topological Sorting is a linear ordering of its vertices such that for every directed edge (u, v) from vertex u to vertex v, u comes before v in the ordering.'
 keywords:
   - leetcode
@@ -8,7 +8,7 @@ keywords:
   - algorithm
 ---
 
-<TutorialAuthors names="@wingkwong"/>
+<TutorialCredits authors="@wkw"/>
 
 ## Overview
 
@@ -20,18 +20,16 @@ The time complexity would be $O(|E| + |V|)$.
 
 ## Implementation
 
-The following implementation is using BFS. 
+The following implementation is using BFS.
 
 - `G` is the graph built with the dependencies
 - `indegree` is used to record the indegree of given node
 - `orders` is the topologically sorted order
 - `isTopologicalSorted` is used to determine if the graph can be topologically sorted or not
 
-
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
-
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 struct TopologicalSort {
@@ -42,12 +40,12 @@ struct TopologicalSort {
     bool isTopologicalSorted = false;
     int steps = 0;
     int nodes = 0;
-    
+
     TopologicalSort(vector<vector<int>>& g, vector<int>& in) {
         G = g;
         n = (int) G.size();
         indegree = in;
-        
+
         int res = 0;
         queue<int> q;
         for(int i = 0; i < n; i++) {
@@ -73,15 +71,15 @@ struct TopologicalSort {
     }
 };
 ```
+
 </TabItem>
 </Tabs>
 
 ## Example 1: [0207 - Course Schedule](https://leetcode.com/problems/course-schedule/)
 
-
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 // ...
@@ -117,7 +115,7 @@ public:
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 // ...
@@ -156,7 +154,7 @@ public:
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 // ...

@@ -1,8 +1,8 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/subarrays-distinct-element-sum-of-squares-i/'
+description: 'Author: @wkw | https://leetcode.com/problems/subarrays-distinct-element-sum-of-squares-i/'
 ---
 
-# 2913 - Subarrays Distinct Element Sum of Squares I (Easy) 
+# 2913 - Subarrays Distinct Element Sum of Squares I (Easy)
 
 ## Problem Link
 
@@ -16,7 +16,7 @@ The **distinct count** of a subarray of `nums` is defined as:
 
 - Let `nums[i..j]` be a subarray of `nums` consisting of all the indices from `i` to `j` such that `0 <= i <= j < nums.length`. Then the number of distinct values in `nums[i..j]` is called the distinct count of `nums[i..j]`.
 
-Return *the sum of the **squares** of **distinct counts** of all subarrays of*`nums`.
+Return _the sum of the **squares** of **distinct counts** of all subarrays of_`nums`.
 
 A subarray is a contiguous **non-empty** sequence of elements within an array.
 
@@ -58,7 +58,7 @@ Since the constraints are small, we can brute force each subarray by using two l
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

@@ -8,7 +8,7 @@ keywords:
   - data structure
 ---
 
-<TutorialAuthors names="@ChiragAgg5k"/>
+<TutorialCredits authors="@ChiragAgg5k"/>
 
 ## Binary Search Trees
 
@@ -51,7 +51,7 @@ There are 4 cases to consider when deleting a node from a BST:
 1. The node has no children - the node can be deleted without any further processing.
 2. The node has only a left child - the node can be deleted and replaced with its left child.
 3. The node has only a right child - the node can be deleted and replaced with its right child.
-4. The node has both a left and right child - the node can be deleted and replaced with the *minimum node in its right subtree*.
+4. The node has both a left and right child - the node can be deleted and replaced with the _minimum node in its right subtree_.
 
 ```cpp
 TreeNode* deleteNode(TreeNode* root, int key) {
@@ -70,7 +70,6 @@ TreeNode* deleteNode(TreeNode* root, int key) {
 }
 ```
 
-
 #### Searching
 
 Searching in a BST follows the same logic as in binary search, using the divide and conquer approach. The following is an implementation of searching in a BST:
@@ -82,7 +81,6 @@ TreeNode* search(TreeNode* root, int key) {
   return search(root->right, key);
 }
 ```
-
 
 ### Example #1: [0701 - Insert into a Binary Search Tree](https://leetcode.com/problems/insert-into-a-binary-search-tree/)
 
@@ -96,7 +94,7 @@ class Solution {
   TreeNode* insertIntoBST(TreeNode* root, int key) {
     // if root is NULL, insert the node at the root
     if (root == NULL) return new TreeNode(key);
-    // if key is less than root's value, recurse into the left subtree, 
+    // if key is less than root's value, recurse into the left subtree,
     // else recurse into the right subtree
     if (key < root->val) root->left = insertIntoBST(root->left, key);
     else root->right = insertIntoBST(root->right, key);
@@ -109,7 +107,7 @@ class Solution {
 
 > Given a root node reference of a BST and a key, delete the node with the given key in the BST. Return the root node reference (possibly updated) of the BST.
 
-In this problem, we are asked to delete a node with a given key from a BST. Now its fairly easy to navigate to the node with the given key, but the problem is that we need to *maintain the BST property* after deleting the node. For this we can apply the logic of deletion in a BST, which is described above. The following is the complete solution to this problem:
+In this problem, we are asked to delete a node with a given key from a BST. Now its fairly easy to navigate to the node with the given key, but the problem is that we need to _maintain the BST property_ after deleting the node. For this we can apply the logic of deletion in a BST, which is described above. The following is the complete solution to this problem:
 
 ```cpp
 class Solution {
@@ -196,33 +194,14 @@ class Solution {
 
 ## Complexity Analysis
 
-| Operation | Time Complexity   | Space Complexity   |
-| --------- | ----------------- | ------------------ |
-| Insertion | $O(n)$            | $O(n)$             |
-| Deletion  | $O(n)$            | $O(n)$             |
-| Searching | $O(n)$            | $O(n)$             |
+| Operation | Time Complexity | Space Complexity |
+| --------- | --------------- | ---------------- |
+| Insertion | $O(n)$          | $O(n)$           |
+| Deletion  | $O(n)$          | $O(n)$           |
+| Searching | $O(n)$          | $O(n)$           |
 
 where $n$ is the number of nodes in the BST.
 
-export const suggestedProblems = [
-  {
-    "problemName": "0098 - Validate Binary Search Tree",
-    "difficulty": "Medium",
-    "leetCodeLink": "https://leetcode.com/problems/validate-binary-search-tree/",
-    "solutionLink": "../../solutions/0000-0099/validate-binary-search-tree-medium"
-  },
-  {
-    "problemName": "0230 - Kth Smallest Element in a BST",
-    "difficulty": "Medium",
-    "leetCodeLink": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/",
-    "solutionLink": "../../solutions/0200-0299/kth-smallest-element-in-a-bst-medium"
-  },
-  {
-    "problemName": "0703 - Kth Largest Element in a Stream",
-    "difficulty": "Easy",
-    "leetCodeLink": "https://leetcode.com/problems/kth-largest-element-in-a-stream/",
-    "solutionLink": "../../solutions/0700-0799/kth-largest-element-in-a-stream-easy"
-  },
-]
+export const suggestedProblems = [ { "problemName": "0098 - Validate Binary Search Tree", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/validate-binary-search-tree/", "solutionLink": "../../solutions/0000-0099/validate-binary-search-tree-medium" }, { "problemName": "0230 - Kth Smallest Element in a BST", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/", "solutionLink": "../../solutions/0200-0299/kth-smallest-element-in-a-bst-medium" }, { "problemName": "0703 - Kth Largest Element in a Stream", "difficulty": "Easy", "leetCodeLink": "https://leetcode.com/problems/kth-largest-element-in-a-stream/", "solutionLink": "../../solutions/0700-0799/kth-largest-element-in-a-stream-easy" }, ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />

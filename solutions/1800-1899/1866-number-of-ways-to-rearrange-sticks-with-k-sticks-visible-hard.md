@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/number-of-ways-to-rearrange-sticks-with-k-sticks-visible/
+  Author: @wkw | https://leetcode.com/problems/number-of-ways-to-rearrange-sticks-with-k-sticks-visible/
 ---
 
 # 1866 - Number of Ways to Rearrange Sticks With K Sticks Visible (Hard)
@@ -14,7 +13,7 @@ https://leetcode.com/problems/number-of-ways-to-rearrange-sticks-with-k-sticks-v
 
 There are `n` uniquely-sized sticks whose lengths are integers from `1` to `n`. You want to arrange the sticks such that **exactly** `k` sticks are **visible** from the left. A stick is **visible** from the left if there are no **longer** sticks to the **left** of it.
 
-* For example, if the sticks are arranged `[1,3,2,5,4]`, then the sticks with lengths `1`, `3`, and `5` are visible from the left.
+- For example, if the sticks are arranged `[1,3,2,5,4]`, then the sticks with lengths `1`, `3`, and `5` are visible from the left.
 
 Given `n` and `k`, return _the **number** of such arrangements_. Since the answer may be large, return it **modulo** `10^9 + 7`.
 
@@ -41,17 +40,17 @@ The visible sticks are underlined.
 ```
 Input: n = 20, k = 11
 Output: 647427950
-Explanation: There are 647427950 (mod 109 + 7) ways to rearrange the sticks such that exactly 11 sticks are visible.
+Explanation: There are 647427950 (mod 1e9 + 7) ways to rearrange the sticks such that exactly 11 sticks are visible.
 ```
 
 **Constraints:**
 
-* `1 <= n <= 1000`
-* `1 <= k <= n`
+- `1 <= n <= 1000`
+- `1 <= k <= n`
 
 ## Approach 1: Dynamic Programming
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -73,7 +72,7 @@ public:
             // if we put the tallest number from the right
             // then we look for j - 1 sticks visible for i - 1 size
             res = (res + dfs(i - 1, j - 1)) % M;
-            // if we dont put the tallest one, 
+            // if we dont put the tallest one,
             // we have (i - 1) choices to choose
             // then we look for j sticks visible i - 1 size
             res = (res + 1LL * dfs(i - 1, j) * (i - 1) % M) % M;

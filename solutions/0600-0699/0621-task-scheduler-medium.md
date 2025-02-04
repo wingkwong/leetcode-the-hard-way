@@ -22,7 +22,7 @@ Return _the least number of units of times that the CPU will take to finish all 
 ```
 Input: tasks = ["A","A","A","B","B","B"], n = 2
 Output: 8
-Explanation: 
+Explanation:
 A -> B -> idle -> A -> B -> idle -> A -> B
 There is at least 2 units of time between any two same tasks.
 ```
@@ -45,7 +45,7 @@ And so on.
 ```
 Input: tasks = ["A","A","A","A","A","A","B","C","D","E","F","G"], n = 2
 Output: 16
-Explanation: 
+Explanation:
 One possible solution is
 A -> B -> C -> A -> D -> E -> A -> F -> G -> A -> idle -> idle -> A -> idle -> idle -> A
 ```
@@ -58,7 +58,7 @@ A -> B -> C -> A -> D -> E -> A -> F -> G -> A -> idle -> idle -> A -> idle -> i
 
 ## Approach 1: Heap and Queue
 
-Reading the question we see we have 3 prime issues. Being able  totrack which task has the most times it needs to be completed, A way to track the time, and a way to track the cooldown of each task.
+Reading the question we see we have 3 prime issues. Being able totrack which task has the most times it needs to be completed, A way to track the time, and a way to track the cooldown of each task.
 
 We can track the number of times a task needs to be completed in a heap. The heap can be created in $$O(nlogn)$$ time, and will update itself when we push tasks back onto the heap in $$O(logk)$$ time, where k is the size of the heap.
 
@@ -153,7 +153,6 @@ So we can see all we have to do is count the tasks, find the mode, and find how 
 Time Complexity: $$O(m)$$ where m is the number of tasks.
 
 Space Complexity: $$O(k)$$ where k is the number of unique tasks to maintain a Counter/Hash map.
-
 
 <Tabs>
 <TabItem value="python" label="Python">

@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/maximum-score-of-a-good-subarray/'
+description: 'Author: @wkw | https://leetcode.com/problems/maximum-score-of-a-good-subarray/'
 tags: [Array, Two Pointers, Binary Search, Stack, Monotonic Stack]
 ---
 
-# 1793 - Maximum Score of a Good Subarray (Hard) 
+# 1793 - Maximum Score of a Good Subarray (Hard)
 
 ## Problem Link
 
@@ -15,7 +15,7 @@ You are given an array of integers `nums` **(0-indexed)** and an integer `k`.
 
 The **score** of a subarray `(i, j)` is defined as `min(nums[i], nums[i+1], ..., nums[j]) * (j - i + 1)`. A **good** subarray is a subarray where `i <= k <= j`.
 
-Return *the maximum possible **score** of a **good** subarray.*
+Return _the maximum possible **score** of a **good** subarray._
 
 **Example 1:**
 
@@ -35,7 +35,7 @@ Explanation: The optimal subarray is (0, 4) with a score of min(5,5,4,5,4) * (4-
 
 **Constraints:**
 
-- `1 <= nums.length <= 105`
+- `1 <= nums.length <= 1e5`
 - `1 <= nums[i] <= 2 * 104`
 - `0 <= k < nums.length`
 
@@ -45,7 +45,7 @@ Given that $i <= k <= j$, we can use two pointers to find the answer. Finding th
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -71,12 +71,12 @@ public:
             return f(t[h][l], t[h][r - (1 << h) + 1]);
         }
     };
-    
+
     int maximumScore(vector<int>& nums, int k) {
         int n = nums.size(), ans = 0;
         int i = 0, j = n - 1;
         sparse_table g(nums.begin(), nums.end(), [](int x, int y) {
-           return min(x, y); 
+           return min(x, y);
         });
         while (i <= k && k <= j) {
             ans = max(ans, g.query(i, j) * (j - i + 1));

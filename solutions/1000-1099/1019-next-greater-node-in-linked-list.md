@@ -3,7 +3,7 @@ description: 'Author: @yashh0903 | https://leetcode.com/problems/next-greater-no
 tags: [Array, Linked List, Stack, Monotonic Stack]
 ---
 
-# 1019 - Next Greater Node In Linked List (Medium) 
+# 1019 - Next Greater Node In Linked List (Medium)
 
 ## Problem Link
 
@@ -80,12 +80,12 @@ public:
             if (st.empty()) ans.push_back(0);
             else if (!st.empty() && st.top() > newHead->val) ans.push_back(st.top());
             else if (!st.empty() && st.top() <= newHead->val) {
-                // Pop elements from the stack until finding an element 
+                // Pop elements from the stack until finding an element
                 // greater than the current node's value or the stack becomes empty
                 while (!st.empty() && st.top() <= newHead->val) st.pop();
                 // Append the top element to the answer vector
                 if (!st.empty()) ans.push_back(st.top());
-                // If the stack becomes empty, 
+                // If the stack becomes empty,
                 // there is no larger element, so append 0 to the answer vector
                 else ans.push_back(0);
             }

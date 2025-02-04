@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/shortest-path-in-a-grid-with-obstacles-elimination/'
+description: 'Author: @wkw | https://leetcode.com/problems/shortest-path-in-a-grid-with-obstacles-elimination/'
 tags: [Array, Breadth-First Search, Matrix]
 ---
 
-# 1293 - Shortest Path in a Grid with Obstacles Elimination (Hard) 
+# 1293 - Shortest Path in a Grid with Obstacles Elimination (Hard)
 
 ## Problem Link
 
@@ -13,14 +13,14 @@ https://leetcode.com/problems/shortest-path-in-a-grid-with-obstacles-elimination
 
 You are given an `m x n` integer matrix `grid` where each cell is either `0` (empty) or `1` (obstacle). You can move up, down, left, or right from and to an empty cell in **one step**.
 
-Return *the minimum number of **steps** to walk from the upper left corner*`(0, 0)`*to the lower right corner*`(m - 1, n - 1)`*given that you can eliminate **at most***`k`*obstacles*. If it is not possible to find such walk return `-1`.
+Return _the minimum number of **steps** to walk from the upper left corner_`(0, 0)`_to the lower right corner_`(m - 1, n - 1)`\*given that you can eliminate **at most\***`k`_obstacles_. If it is not possible to find such walk return `-1`.
 
 **Example 1:**
 
 ```
 Input: grid = [[0,0,0],[1,1,0],[0,0,0],[0,1,1],[0,0,0]], k = 1
 Output: 6
-Explanation: 
+Explanation:
 The shortest path without eliminating any obstacle is 10.
 The shortest path with one obstacle elimination at position (3,2) is 6. Such path is (0,0) -> (0,1) -> (0,2) -> (1,2) -> (2,2) -> (3,2) -> (4,2).
 ```
@@ -46,22 +46,22 @@ Explanation: We need to eliminate at least two obstacles to find such a walk.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
 public:
-    // 4 directions 
+    // 4 directions
     const int dx[4] = { -1, 0, 0, 1 }, dy[4] = { 0, -1, 1, 0 };
     // if you are working on 8 directions, then you can use
     // const int dx[8]= { -1, 0, 0, 1, -1, -1, 1, 1 },
     //           dy[8]= { 0, 1, -1, 0, -1, 1, -1, 1 };
-    
+
     int shortestPath(vector<vector<int>>& grid, int k) {
         int m = grid.size(), n = grid[0].size(), steps = 0;
         vector<vector<int>> remains(m, vector<int>(n, INT_MIN));
-        // we have a queue storing {x, y, k} 
-        // where x and y are coordinate 
+        // we have a queue storing {x, y, k}
+        // where x and y are coordinate
         // and r is remain number of obstacles you can remove
         queue<array<int, 3>> q;
         // we start at (0, 0) with k
@@ -96,8 +96,8 @@ public:
             // increase step count
             steps += 1;
         }
-        // if we reach here, 
-        // then it means it is not possible to find such walk 
+        // if we reach here,
+        // then it means it is not possible to find such walk
         return -1;
     }
 };

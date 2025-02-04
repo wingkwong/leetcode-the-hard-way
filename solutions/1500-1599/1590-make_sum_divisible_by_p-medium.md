@@ -1,7 +1,8 @@
 ---
 description: >-
-  Author: @darkhope |
-  https://leetcode.com/problems/make-sum-divisible-by-p/
+  Author: @darkhope | https://leetcode.com/problems/make-sum-divisible-by-p/
+
+
 tags: [Array, Hash Table, Prefix Sum]
 ---
 
@@ -34,6 +35,7 @@ Input: nums = [6,3,5,2], p = 9
 Output: 2
 Explanation: We cannot remove a single element to get a sum divisible by 9. The best way is to remove the subarray [5,2], leaving us with [6,3] with sum 9.
 ```
+
 **Example 3:**
 
 ```
@@ -44,9 +46,9 @@ Explanation: Here the sum is 6. which is already divisible by 3. Thus we do not 
 
 **Constraints:**
 
-* `1 <= nums.length <= 10^5`
-* `1 <= nums[i] <= 10^9`
-* `1 <= p <= 10^9`
+- `1 <= nums.length <= 10^5`
+- `1 <= nums[i] <= 10^9`
+- `1 <= p <= 10^9`
 
 ## Approach 1: Hash Map
 
@@ -56,15 +58,14 @@ Firstly we take a suffix array of sum from $n-1$ to $i$ % $p$, then we will iter
 
 **Time Complexity: $O(n)$**
 
-Calculating and storing suffix array will be done in $O(n)$.
-Since we are using unordered_map so it will give average $O(1)$ for inserting and fetching.  
+Calculating and storing suffix array will be done in $O(n)$. Since we are using unordered_map so it will give average $O(1)$ for inserting and fetching.
 
 **Space Complexity: $O(n)$**
 
 The only extra memory we are using is the suffix array and a HashMap.
-<Tabs>
-<TabItem value="cpp" label="C++">
-<SolutionAuthor name="@darkhope"/>
+
+<Tabs> 
+<TabItem value="cpp" label="C++"> <SolutionAuthor name="@darkhope"/>
 
 ```cpp
 class Solution {

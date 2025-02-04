@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/graph-valid-tree/'
+description: 'Author: @wkw | https://leetcode.com/problems/graph-valid-tree/'
 tags: ['DSU', 'Graph', 'DFS', 'BFS']
 ---
 
@@ -35,18 +35,18 @@ Output: false
 
 **Constraints:**
 
-* `1 <= n <= 2000`
-* `0 <= edges.length <= 5000`
-* `edges[i].length == 2`
-* `0 <= ai, bi < n`
-* `ai != bi`
-* There are no self-loops or repeated edges.
+- `1 <= n <= 2000`
+- `0 <= edges.length <= 5000`
+- `edges[i].length == 2`
+- `0 <= ai, bi < n`
+- `ai != bi`
+- There are no self-loops or repeated edges.
 
 ## Approach 1: DSU
 
-If a graph is a valid tree, it must have exactly `n - 1` edges. Besides, it cannot be fully connected and contain any cycles. Therefore, we just need check if there are n - 1 edges and any cycles. We can use DSU to check if element A and element B share the same parent. If so, it means that they are united, a cycle wound be there. Hence, we can return false immediately as a valid tree cannot have a  cycle. Otherwise, we unite both element. If there is no cycle after iterating all elements, then we can simply check if there are `n - 1` edges. There are other ways such as DFS and BFS to solve it.
+If a graph is a valid tree, it must have exactly `n - 1` edges. Besides, it cannot be fully connected and contain any cycles. Therefore, we just need check if there are n - 1 edges and any cycles. We can use DSU to check if element A and element B share the same parent. If so, it means that they are united, a cycle wound be there. Hence, we can return false immediately as a valid tree cannot have a cycle. Otherwise, we unite both element. If there is no cycle after iterating all elements, then we can simply check if there are `n - 1` edges. There are other ways such as DFS and BFS to solve it.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class dsu {

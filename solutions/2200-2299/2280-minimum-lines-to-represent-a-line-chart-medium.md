@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/minimum-lines-to-represent-a-line-chart
+  Author: @wkw | https://leetcode.com/problems/minimum-lines-to-represent-a-line-chart
 ---
 
 # 2280 - Minimum Lines to Represent a Line Chart (Medium)
@@ -48,7 +47,7 @@ As shown in the diagram above, the line chart can be represented with a single l
 
 ## Approach 1: Greedy
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -64,12 +63,12 @@ public:
         sort(stockPrices.begin(), stockPrices.end());
         // slope = (y1 - y0) / (x1 - x0)
         // a line is needed when the slope is different
-        // to check if the slope is same 
+        // to check if the slope is same
         // use integer multiplcation instead of float dvision to avoid precision problem
-        // hence, 
+        // hence,
         // slope1 = (y1 - y0) / (x1 - x0)
         // slope2 = (y2 - y1) / (x2 - x1)
-        // slope1 = slope2 
+        // slope1 = slope2
         // (y1 - y0) / (x1 - x0) = (y2 - y1) / (x2 - x1)
         // (y1 - y0) * (x2 - x1) = (y2 - y1) * (x1 - x0)
 

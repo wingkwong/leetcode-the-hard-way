@@ -8,7 +8,7 @@ keywords:
   - MOD
 ---
 
-<TutorialAuthors names="@tannudaral"/>
+<TutorialCredits authors="@tannudaral"/>
 
 ## Overview
 
@@ -18,7 +18,7 @@ The task of modulo operator $\%$, also know as the remainder operator, is to giv
 
 ## Modular Arithmetic
 
-An important property of the modulo is that in addition, subtraction and multiplication, the remainder can be taken before the operation:  
+An important property of the modulo is that in addition, subtraction and multiplication, the remainder can be taken before the operation:
 
 ### Addition
 
@@ -36,14 +36,14 @@ $(a * b)\,mod\,m$ $=$ $(a\,mod\,m * b\,mod\,m)\,mod\,m$
 
 ### Division
 
-The modular division is completely different from modular addition, subtraction and multiplication. It also does not always exist. It requires a concept called the "Modular Multiplicative Inverse". The modular multiplicative inverse of a number $a$ is the number $a^{−1}$ such that $a ⋅ a^{−1} \,mod\, m = 1$. You may notice that this is similar to the concept of a reciprocal of a number, but here we don't want a fraction; we want an integer, specifically an integer between $0$ and $m−1$ inclusive.  
+The modular division is completely different from modular addition, subtraction and multiplication. It also does not always exist. It requires a concept called the "Modular Multiplicative Inverse". The modular multiplicative inverse of a number $a$ is the number $a^{−1}$ such that $a ⋅ a^{−1} \,mod\, m = 1$. You may notice that this is similar to the concept of a reciprocal of a number, but here we don't want a fraction; we want an integer, specifically an integer between $0$ and $m−1$ inclusive.
 
-There are **two** faster ways to calculate the inverse: 
+There are **two** faster ways to calculate the inverse:
 
-- Extended GCD algorithm 
+- Extended GCD algorithm
 - Fermat's little theorem
 
-The extended GCD algorithm may be more versatile and sometimes faster, but Fermat's little theorem method is more popular, since it's almost free once you implement exponentiation, which we will cover here. 
+The extended GCD algorithm may be more versatile and sometimes faster, but Fermat's little theorem method is more popular, since it's almost free once you implement exponentiation, which we will cover here.
 
 Fermat's little theorem says that provided the modulus m is a prime number ($10^9+7$ is prime) then $a^{m}\,mod\,m=a\,mod\,m$. Working backwards, $a^{m−1}\,mod\,m = 1 = a ⋅ a^{m−2}\, mod\, m$, therefore the number we need is $a^{m−2}\, mod\, m$.
 
@@ -53,7 +53,7 @@ $$
 (a\, /\, b) \,mod\, m = (a\, mod\, m\, * b^{-1} \,mod \,m)\, mod\, m
 $$
 
-## Example 
+## Example
 
 Let's understand this with the factorial of a number program. The following code calculates $n!$, the factorial of $n$, modulo $m$:
 
@@ -67,8 +67,8 @@ int factorial(int n) {
     for (int i = 2; i <= n; i++) {
         // WRONG APPROACH
         // Here, fact may exceed 2 ^ 64 - 1
-        fact = fact * i;                 
-    }           
+        fact = fact * i;
+    }
     return fact % M;
 }
 ```
@@ -89,7 +89,7 @@ int factorial(int n) {
         // Here, fact never exceeds 10 ^ 9 + 7
         fact = (fact * i) % M;
     }
- 
+
     return fact;
 }
 ```
@@ -99,11 +99,11 @@ int factorial(int n) {
 
 ## Why 1e9 + 7?
 
-The number $1e9 + 7$ fits nicely into a signed 32-bit integer. It is also the first 10-digit prime number. In some problems we need to compute the Modular Multiplicative Inverse and it helps very much that this number is prime. 
+The number $1e9 + 7$ fits nicely into a signed 32-bit integer. It is also the first 10-digit prime number. In some problems we need to compute the Modular Multiplicative Inverse and it helps very much that this number is prime.
 
 In fact any prime number less then $2^{30}$ will be fine in order to prevent possible overflows. But this one can be easily written as $1e9 + 7$. This reasoning almost uniquely determined this number.
 
 ## References
 
 1. [Competitive Programmer's Handbook](https://cses.fi/book/book.pdf)
-2. [Fermat's Little Theorem](https://en.wikipedia.org/wiki/Fermat%27s_little_theorem) 
+2. [Fermat's Little Theorem](https://en.wikipedia.org/wiki/Fermat%27s_little_theorem)

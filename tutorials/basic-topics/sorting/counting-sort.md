@@ -11,4 +11,4 @@ keywords:
   - counting sort
 ---
 
-<TutorialAuthors names="@TBC"/>
+<TutorialCredits authors="@TBC"/>

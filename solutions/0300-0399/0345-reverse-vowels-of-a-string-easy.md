@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/reverse-vowels-of-a-string/'
+description: 'Author: @wkw | https://leetcode.com/problems/reverse-vowels-of-a-string/'
 tags: [Two Pointers, String]
 ---
 
-# 0345 - Reverse Vowels of a String (Easy) 
+# 0345 - Reverse Vowels of a String (Easy)
 
 ## Problem Link
 
@@ -31,31 +31,31 @@ Output: "leotcede"
 
 **Constraints:**
 
-- `1 <= s.length <= 3 * 105`
+- `1 <= s.length <= 3 * 1e5`
 - `s` consist of **printable ASCII** characters.
 
 ## Approach 1: Two Pointers
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 // Time Complexity: O(N)
 // Space Complexity: O(1)
 class Solution {
 public:
-    // fun fact: 
-    // `Y` and `y` can be a vowel as well. 
+    // fun fact:
+    // `Y` and `y` can be a vowel as well.
     // glad the problem statement defines it well
     bool isVowel(char c) {
-        // alternatively, we can just check 
-        // return c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U' || 
+        // alternatively, we can just check
+        // return c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U' ||
         //        c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u'
         c = tolower(c);
         return c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u';
     }
-    
+
     string reverseVowels(string s) {
         // `l` is the left pointer to track the vowel character
         // `r` is the right pointer to track the vowel character
@@ -84,14 +84,14 @@ public:
 </TabItem>
 
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 # Time Complexity: O(N)
 # Space Complexity: O(N)
 class Solution:
-    # fun fact: 
-    # `Y` and `y` can be a vowel as well. 
+    # fun fact:
+    # `Y` and `y` can be a vowel as well.
     # glad the problem statement defines it well
     def reverseVowels(self, s: str) -> str:
         n = len(s)
@@ -115,25 +115,25 @@ class Solution:
             # since we've processed the character s[r],
             # we move the right pointer to the left
             r -= 1
-            
+
         return "".join(s)
 ```
 
 </TabItem>
 
 <TabItem value="java" label="Java">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```java
 // Time Complexity: O(N)
 // Space Complexity: O(N) due to s.toCharArray()
 class Solution {
-    // fun fact: 
-    // `Y` and `y` can be a vowel as well. 
+    // fun fact:
+    // `Y` and `y` can be a vowel as well.
     // glad the problem statement defines it well
     boolean isVowel(char c) {
-        // alternatively, we can just check 
-        // return c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U' || 
+        // alternatively, we can just check
+        // return c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U' ||
         //        c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u'
         c = Character.toLowerCase(c);
         return switch (c) {
@@ -141,7 +141,7 @@ class Solution {
             default -> false;
         };
     }
-    
+
     public String reverseVowels(String s) {
         // `l` is the left pointer to track the vowel character
         // `r` is the right pointer to track the vowel character
@@ -173,18 +173,18 @@ class Solution {
 </TabItem>
 
 <TabItem value="go" label="Go">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```go
 // Time Complexity: O(N)
 // Space Complexity: O(N)
 
-// fun fact: 
-// `Y` and `y` can be a vowel as well sometimes. 
+// fun fact:
+// `Y` and `y` can be a vowel as well sometimes.
 // glad the problem statement defines it well
 func isVowel(c rune) bool {
-    // alternatively, we can just check 
-    // return c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U' || 
+    // alternatively, we can just check
+    // return c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U' ||
     //        c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u'
     c = unicode.ToLower(c)
 	return c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u'

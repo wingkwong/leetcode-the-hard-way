@@ -1,8 +1,8 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/maximum-or/'
+description: 'Author: @wkw | https://leetcode.com/problems/maximum-or/'
 ---
 
-# 2680 - Maximum OR (Medium) 
+# 2680 - Maximum OR (Medium)
 
 ## Problem Link
 
@@ -12,7 +12,7 @@ https://leetcode.com/problems/maximum-or/
 
 You are given a **0-indexed** integer array `nums` of length `n` and an integer `k`. In an operation, you can choose an element and multiply it by `2`.
 
-Return *the maximum possible value of*`nums[0] | nums[1] | ... | nums[n - 1]` *that can be obtained after applying the operation on nums at most*`k`*times*.
+Return _the maximum possible value of_`nums[0] | nums[1] | ... | nums[n - 1]` _that can be obtained after applying the operation on nums at most_`k`_times_.
 
 Note that `a | b` denotes the **bitwise or** between two integers `a` and `b`.
 
@@ -42,20 +42,20 @@ Explanation: If we apply the operation twice on index 0, we yield a new array of
 
 <Tabs>
 <TabItem value="cpp" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:
     def maximumOr(self, nums: List[int], k: int) -> int:
         n, res = len(nums), 0
         pre, suf = [0] * n, [0] * n
-        # calculate the prefix OR 
+        # calculate the prefix OR
         for i in range(n - 1): pre[i + 1] = pre[i] | nums[i]
         # calculate the suffix OR
         for i in range(n - 1, 0, -1): suf[i - 1] = suf[i] | nums[i]
         # iterate each number
         # we apply k operations on nums[i], i.e. shift k bits to the left
-        # why not applying on multiple numbers? 
+        # why not applying on multiple numbers?
         # first in binary format, multiplying a number by 2 is shifting 1 bit to the left
         # e.g. 0010 (2) -> 0100 (4)
         # e.g. 0101 (5) -> 1010 (10)

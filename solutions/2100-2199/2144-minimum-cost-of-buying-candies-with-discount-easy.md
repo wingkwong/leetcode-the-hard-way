@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/minimum-cost-of-buying-candies-with-discount/
+  Author: @wkw | https://leetcode.com/problems/minimum-cost-of-buying-candies-with-discount/
 ---
 
 # 2144 - Minimum Cost of Buying Candies With Discount (Easy)
@@ -16,7 +15,7 @@ A shop is selling candies at a discount. For **every two** candies sold, the sho
 
 The customer can choose **any** candy to take away for free as long as the cost of the chosen candy is less than or equal to the **minimum** cost of the two candies bought.
 
-* For example, if there are `4` candies with costs `1`, `2`, `3`, and `4`, and the customer buys candies with costs `2` and `3`, they can take the candy with cost `1` for free, but not the candy with cost `4`.
+- For example, if there are `4` candies with costs `1`, `2`, `3`, and `4`, and the customer buys candies with costs `2` and `3`, they can take the candy with cost `1` for free, but not the candy with cost `4`.
 
 Given a **0-indexed** integer array `cost`, where `cost[i]` denotes the cost of the `ith` candy, return _the **minimum cost** of buying **all** the candies_.
 
@@ -55,14 +54,14 @@ Hence, the minimum cost to buy all candies is 5 + 5 = 10.
 
 **Constraints:**
 
-* `1 <= cost.length <= 100`
-* `1 <= cost[i] <= 100`
+- `1 <= cost.length <= 100`
+- `1 <= cost[i] <= 100`
 
 ## Approach 1: Greedy
 
 We can take any candy away for free as long as the cost of the chosen candy is less than or equal to the minimum cost of the two candies bought. If we sort the array in a non-increasing order, the candies we can take away to save most cost would be the 3rd, 6th, 9th, and so on. Therefore, we can skip all those costs and add the rest of them to answer.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

@@ -10,11 +10,11 @@ keywords:
   - algorithm
 ---
 
-<TutorialAuthors names="@wingkwong"/>
+<TutorialCredits authors="@wkw"/>
 
 ## Overview
 
-A Minimum Spanning Tree (MST) is a subset of the edges of a connected, undirected graph that connects all the vertices together, without any cycles and with the minimum possible total edge weight. There are different algorithms that can be used to find the MST of a graph, such as Kruskal's algorithm, Prim's algorithm and Boruvka's algorithm. 
+A Minimum Spanning Tree (MST) is a subset of the edges of a connected, undirected graph that connects all the vertices together, without any cycles and with the minimum possible total edge weight. There are different algorithms that can be used to find the MST of a graph, such as Kruskal's algorithm, Prim's algorithm and Boruvka's algorithm.
 
 ### Kruskal's Algorithm
 

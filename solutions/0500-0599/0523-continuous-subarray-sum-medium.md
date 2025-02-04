@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/continuous-subarray-sum/'
+description: 'Author: @wkw | https://leetcode.com/problems/continuous-subarray-sum/'
 ---
 
 # 0523 - Continuous Subarray Sum (Medium)
@@ -40,10 +40,10 @@ Output: false
 
 **Constraints:**
 
-* `1 <= nums.length <= 10^5`
-* `0 <= nums[i] <= 10^9`
-* `0 <= sum(nums[i]) <= 2^31 - 1`
-* `1 <= k <= 2^31 - 1`
+- `1 <= nums.length <= 10^5`
+- `0 <= nums[i] <= 10^9`
+- `0 <= sum(nums[i]) <= 2^31 - 1`
+- `1 <= k <= 2^31 - 1`
 
 ## Approach 1: Hash + Prefix Sum
 
@@ -51,7 +51,7 @@ A continuous subarray sum can be represented as $$sum_j - sum_i$$ where $$sum_j$
 
 Therefore, we can calculate the prefix sum and store its remainder to a hash map. If we see the same remainder in the hash map, we need to make sure that the length is at least $$2$$. If so, we can return true.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -66,7 +66,7 @@ public:
             // prefix sum
             sum += nums[i];
             // calculate the remainder
-            remainder = sum % k; 
+            remainder = sum % k;
             if (mod.count(remainder)) {
                 // if remainder exists in hash map
                 // check the length

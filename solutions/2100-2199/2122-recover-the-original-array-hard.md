@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/recover-the-original-array/'
+description: 'Author: @wkw | https://leetcode.com/problems/recover-the-original-array/'
 ---
 
 # 2122 - Recover the Original Array (Hard)
@@ -29,7 +29,7 @@ Output: [3,7,11]
 Explanation:
 If arr = [3,7,11] and k = 1, we get lower = [2,6,10] and higher = [4,8,12].
 Combining lower and higher gives us [2,6,10,4,8,12], which is a permutation of nums.
-Another valid possibility is that arr = [5,7,9] and k = 3. In that case, lower = [2,4,6] and higher = [8,10,12]. 
+Another valid possibility is that arr = [5,7,9] and k = 3. In that case, lower = [2,4,6] and higher = [8,10,12].
 ```
 
 **Example 2:**
@@ -55,16 +55,16 @@ The only possible combination is arr = [220] and k = 215. Using them, we get low
 
 **Constraints:**
 
-* `2 * n == nums.length`
-* `1 <= n <= 1000`
-* `1 <= nums[i] <= 10^9`
-* The test cases are generated such that there exists **at least one** valid array `arr`.
+- `2 * n == nums.length`
+- `1 <= n <= 1000`
+- `1 <= nums[i] <= 10^9`
+- The test cases are generated such that there exists **at least one** valid array `arr`.
 
 ## Approach 1: Try all possible k
 
 In short, we just need to try all possible $$k$$. If we sort $$nums$$, the smallest element must be in the lower array. It is easy to see $$k$$k can be $$(nums[i]−nums[0])/2$$. We try each $$k$$ to see if we can match all the pairs. If the size of lower array is same as that of higher array, then the answer would be $$ans[j]=(l[j]+r[j])/2$$.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

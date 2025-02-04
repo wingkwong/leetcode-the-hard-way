@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/flip-string-to-monotone-increasing/'
+description: 'Author: @wkw | https://leetcode.com/problems/flip-string-to-monotone-increasing/'
 tags: [String, Dynamic Programming]
 ---
 
-# 0926 - Flip String to Monotone Increasing (Medium) 
+# 0926 - Flip String to Monotone Increasing (Medium)
 
 ## Problem Link
 
@@ -15,7 +15,7 @@ A binary string is monotone increasing if it consists of some number of `0`'s (p
 
 You are given a binary string `s`. You can flip `s[i]` changing it from `0` to `1` or from `1` to `0`.
 
-Return *the minimum number of flips to make*`s`*monotone increasing*.
+Return _the minimum number of flips to make_`s`_monotone increasing_.
 
 **Example 1:**
 
@@ -60,7 +60,7 @@ if (s[i] == 0) cnt0 = min(cnt0 + 1, cnt1);
 else cnt1 += 1;
 ```
 
-which is essentially same as 
+which is essentially same as
 
 ```
 if (s[i] == 0) cnt0 += 1;
@@ -72,7 +72,7 @@ Alternatively, we can count the max of `cnt0` and `cnt1` and return `s.size() - 
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -86,7 +86,7 @@ public:
             if (x == '0') cnt0++;
             // or the number of ones
             else cnt1++;
-            // we can either flip all ones to zeros 
+            // we can either flip all ones to zeros
             // e.g. [111]0000 -> [000]0000
             // or we can just flip the current zero
             // e.g. 001[0] -> 001[1]
@@ -100,7 +100,7 @@ public:
 </TabItem>
 
 <TabItem value="java" label="Java">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```java
 class Solution {
@@ -113,7 +113,7 @@ class Solution {
             if (x == '0') cnt0 += 1;
             // of the number of ones
             else cnt1 += 1;
-            // we can either flip all ones to zeros 
+            // we can either flip all ones to zeros
             // e.g. [111]0000 -> [000]0000
             // or we can just flip the current zero
             // e.g. 001[0] -> 001[1]
@@ -128,7 +128,7 @@ class Solution {
 </TabItem>
 
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:
@@ -143,7 +143,7 @@ class Solution:
             # or the number of ones
             else:
                 cnt1 += 1
-            # we can either flip all ones to zeros 
+            # we can either flip all ones to zeros
             # e.g. [111]0000 -> [000]0000
             # or we can just flip the current zero
             # e.g. 001[0] -> 001[1]
@@ -154,7 +154,7 @@ class Solution:
 </TabItem>
 
 <TabItem value="rs" label="Rust">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```rs
 impl Solution {
@@ -172,7 +172,7 @@ impl Solution {
             else {
                 cnt1 += 1;
             }
-            // we can either flip all ones to zeros 
+            // we can either flip all ones to zeros
             // e.g. [111]0000 -> [000]0000
             // or we can just flip the current zero
             // e.g. 001[0] -> 001[1]

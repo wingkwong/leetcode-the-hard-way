@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/count-ways-to-distribute-candies/
+  Author: @wkw | https://leetcode.com/problems/count-ways-to-distribute-candies/
 ---
 
 # 1692 - Count Ways to Distribute Candies (Hard)
@@ -18,7 +17,7 @@ There can be multiple ways to distribute the candies. Two ways are considered **
 
 For example, `(1), (2,3)` and `(2), (1,3)` are considered different because candies `2` and `3` in the bag `(2,3)` in the first way are not in the same bag in the second way (they are split between the bags `(2)` and `(1,3)`). However, `(1), (2,3)` and `(3,2), (1)` are considered the same because the candies in each bag are all in the same bags in both ways.
 
-Given two integers, `n` and `k`, return _the **number** of different ways to distribute the candies_. As the answer may be too large, return it **modulo** `109 + 7`.
+Given two integers, `n` and `k`, return _the **number** of different ways to distribute the candies_. As the answer may be too large, return it **modulo** `1e9 + 7`.
 
 **Example 1:**
 
@@ -53,12 +52,12 @@ Explanation: You can distribute 4 candies into 2 bags in 7 ways:
 ```
 Input: n = 20, k = 5
 Output: 206085257
-Explanation: You can distribute 20 candies into 5 bags in 1881780996 ways. 1881780996 modulo 109 + 7 = 206085257.
+Explanation: You can distribute 20 candies into 5 bags in 1881780996 ways. 1881780996 modulo 1e9 + 7 = 206085257.
 ```
 
 **Constraints:**
 
-* `1 <= k <= n <= 1000`
+- `1 <= k <= n <= 1000`
 
 ## Approach 1: Dynamic Programming
 
@@ -80,7 +79,7 @@ $$
 dp[i][j] = dp[i][j - 1] * i + dp[i - 1][j - 1]
 $$
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -92,7 +91,7 @@ public:
         if (dp[n][k] != -1) return dp[n][k];
         return dp[n][k] = (dfs(dp, n - 1, k) * k + dfs(dp, n - 1, k - 1)) % M;
     }
-    
+
     int waysToDistribute(int n, int k) {
         vector<vector<long long>> dp(n + 1, vector<long long>(k + 1, -1));
         return dfs(dp, n, k);
@@ -100,7 +99,7 @@ public:
 };
 ```
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -132,11 +131,11 @@ $$
 S(n,k)=\frac1{k!}\sum_{j=0}^k(-1)^j\binom{k}j(k-j)^n
 $$
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```python
 class Solution:
     def waysToDistribute(self, n: int, k: int) -> int:
-        return int(sum((-1) ** j * comb(k, j) * (k - j) ** n 
+        return int(sum((-1) ** j * comb(k, j) * (k - j) ** n
                     for j in range(k)) // factorial(k)  % (10 ** 9 + 7))
 ```

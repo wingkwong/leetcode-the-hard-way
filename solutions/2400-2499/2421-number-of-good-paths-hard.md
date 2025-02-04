@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/number-of-good-paths/'
+description: 'Author: @wkw | https://leetcode.com/problems/number-of-good-paths/'
 tags: [Array, Tree, Union Find, Graph]
 ---
 
-# 2421 - Number of Good Paths (Hard) 
+# 2421 - Number of Good Paths (Hard)
 
 ## Problem Link
 
@@ -20,7 +20,7 @@ A **good path** is a simple path that satisfies the following conditions:
 1. The starting node and the ending node have the **same** value.
 2. All nodes between the starting node and the ending node have values **less than or equal to** the starting node (i.e. the starting node's value should be the maximum value along the path).
 
-Return *the number of distinct good paths*.
+Return _the number of distinct good paths_.
 
 Note that a path and its reverse are counted as the **same** path. For example, `0 -> 1` is considered to be the same as `1 -> 0`. A single node is also considered as a valid path.
 
@@ -56,7 +56,7 @@ Explanation: The tree consists of only one node, so there is one good path.
 
 - `n == vals.length`
 - `1 <= n <= 3 * 10^4`
-- `0 <= vals[i] <= 105`
+- `0 <= vals[i] <= 1e5`
 - `edges.length == n - 1`
 - `edges[i].length == 2`
 - `0 <= ai, bi < n`
@@ -67,7 +67,7 @@ Explanation: The tree consists of only one node, so there is one good path.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -95,7 +95,7 @@ public:
             x = get(x);
             // get the root of y
             y = get(y);
-            // if their vals are same, 
+            // if their vals are same,
             if (vals[x] == vals[y]) {
                 // then there would be cnt[x] * cnt[y] good paths
                 ans += cnt[x] * cnt[y];
@@ -130,7 +130,7 @@ public:
 </TabItem>
 
 <TabItem value="java" label="Java">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```java
 class Solution {
@@ -171,7 +171,7 @@ class Solution {
             x = get(x);
             // get the root of y
             y = get(y);
-            // if their vals are same, 
+            // if their vals are same,
             if (vals[x] == vals[y]) {
                 // then there would be cnt[x] * cnt[y] good paths
                 ans += cnt[x] * cnt[y];
@@ -195,7 +195,7 @@ class Solution {
 </TabItem>
 
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:
@@ -205,18 +205,18 @@ class Solution:
         ans = n
         # sort by vals
         edges.sort(key=lambda x: max(vals[x[0]], vals[x[1]]))
-        
+
         # dsu
         cnt = [1] * n
         root = [i for i in range(n)]
         def get(x):
             # recursively get the root element
             if x == root[x]:
-                return x 
+                return x
             else:
                 root[x] = get(root[x])
                 return root[x]
-        
+
         # iterate each edge
         for x, y in edges:
             # get the root of x
@@ -244,7 +244,7 @@ class Solution:
 </TabItem>
 
 <TabItem value="rs" label="Rust">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```rs
 use std::cmp::max;
@@ -274,7 +274,7 @@ impl Solution {
             let x = get(e[0] as usize, &mut root);
             // get the root of y
             let y = get(e[1] as usize, &mut root);
-            // if their vals are same, 
+            // if their vals are same,
             if vals[x] == vals[y] {
                 // then there would be cnt[x] * cnt[y] good paths
                 ans += cnt[x] as i32 * cnt[y] as i32;

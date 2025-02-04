@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/evaluate-boolean-binary-tree
+  Author: @wkw | https://leetcode.com/problems/evaluate-boolean-binary-tree
 ---
 
 # 2331 - Evaluate Boolean Binary Tree (Easy)
@@ -14,13 +13,13 @@ https://leetcode.com/problems/evaluate-boolean-binary-tree
 
 You are given the `root` of a **full binary tree** with the following properties:
 
-* **Leaf nodes** have either the value `0` or `1`, where `0` represents `False` and `1` represents `True`.
-* **Non-leaf nodes** have either the value `2` or `3`, where `2` represents the boolean `OR` and `3` represents the boolean `AND`.
+- **Leaf nodes** have either the value `0` or `1`, where `0` represents `False` and `1` represents `True`.
+- **Non-leaf nodes** have either the value `2` or `3`, where `2` represents the boolean `OR` and `3` represents the boolean `AND`.
 
 The **evaluation** of a node is as follows:
 
-* If the node is a leaf node, the evaluation is the **value** of the node, i.e. `True` or `False`.
-* Otherwise, **evaluate** the node's two children and **apply** the boolean operation of its value with the children's evaluations.
+- If the node is a leaf node, the evaluation is the **value** of the node, i.e. `True` or `False`.
+- Otherwise, **evaluate** the node's two children and **apply** the boolean operation of its value with the children's evaluations.
 
 Return _the boolean result of **evaluating** the_ `root` _node._
 
@@ -53,11 +52,11 @@ Explanation: The root node is a leaf node and it evaluates to false, so we retur
 
 **Constraints:**
 
-* The number of nodes in the tree is in the range `[1, 1000]`.
-* `0 <= Node.val <= 3`
-* Every node has either `0` or `2` children.
-* Leaf nodes have a value of `0` or `1`.
-* Non-leaf nodes have a value of `2` or `3`.
+- The number of nodes in the tree is in the range `[1, 1000]`.
+- `0 <= Node.val <= 3`
+- Every node has either `0` or `2` children.
+- Leaf nodes have a value of `0` or `1`.
+- Non-leaf nodes have a value of `2` or `3`.
 
 ## Approach 1: Recursive
 
@@ -66,9 +65,9 @@ We have four cases:
 1. If the value is 0, then return false
 2. If the value is 1, then return true
 3. If the value is 2, then call the function on left tree and right tree and apply OR operation on both returned values
-4. If the value is 3, then call the function on left tree and right tree and apply AND operation on both returned values 
+4. If the value is 3, then call the function on left tree and right tree and apply AND operation on both returned values
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

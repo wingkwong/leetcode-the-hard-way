@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/'
+description: 'Author: @wkw | https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/'
 tags: [Array, Dynamic Programming]
 ---
 
-# 0188 - Best Time to Buy and Sell Stock IV (Hard) 
+# 0188 - Best Time to Buy and Sell Stock IV (Hard)
 
 ## Problem Statement
 
@@ -37,7 +37,7 @@ Explanation: Buy on day 2 (price = 2) and sell on day 3 (price = 6), profit = 6-
 
 ## Approach 1: DP
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -67,8 +67,7 @@ public:
 };
 ```
 
-
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:
@@ -91,7 +90,7 @@ class Solution:
         return dp[-1][1]
 ```
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```java
 class Solution {

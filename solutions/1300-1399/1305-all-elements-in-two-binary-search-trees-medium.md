@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/all-elements-in-two-binary-search-trees/
+  Author: @wkw | https://leetcode.com/problems/all-elements-in-two-binary-search-trees/
 ---
 
 # 1305 - All Elements in Two Binary Search Trees (Medium)
@@ -34,8 +33,8 @@ Output: [1,1,8,8]
 
 **Constraints:**
 
-* The number of nodes in each tree is in the range `[0, 5000]`.
-* `-10^5 <= Node.val <= 10^5`
+- The number of nodes in each tree is in the range `[0, 5000]`.
+- `-10^5 <= Node.val <= 10^5`
 
 :::info Prerequisite
 
@@ -47,20 +46,20 @@ Output: [1,1,8,8]
 
 In this problem, we can use either one to traverse all nodes and put them into a common array. We sort the array at the end.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
 public:
     vector<int> s;
-    
+
     void dfs(TreeNode* node) {
         if (node == NULL) return;
         dfs(node->left);
         s.push_back(node->val);
         dfs(node->right);
     }
-    
+
     vector<int> getAllElements(TreeNode* root1, TreeNode* root2) {
         dfs(root1);
         dfs(root2);
@@ -80,9 +79,9 @@ However, we can see the in-order traversal is faster than the other two. This is
 
 ## Approach 2: In-order Traversal + Merging
 
-As we know In-order traversal will make the array sorted, the remaining problem is same as "merging two sorted arrays into one". 
+As we know In-order traversal will make the array sorted, the remaining problem is same as "merging two sorted arrays into one".
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -93,7 +92,7 @@ public:
         res.push_back(node->val);
         inorder(node->right, res);
     }
-    
+
     vector<int> merge(vector<int>& a, vector<int>& b) {
         vector<int> res;
         int n = (int) a.size(), m = (int) b.size();
@@ -106,7 +105,7 @@ public:
         while (j < m) res.push_back(b[j++]);
         return res;
     }
-    
+
     vector<int> getAllElements(TreeNode* root1, TreeNode* root2) {
         vector<int> a, b;
         inorder(root1, a); inorder(root2, b);

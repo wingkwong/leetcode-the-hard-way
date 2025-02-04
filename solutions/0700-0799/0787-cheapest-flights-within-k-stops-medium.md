@@ -1,8 +1,17 @@
 ---
 description: >-
-  Author: @wingkwong, @ColeB2 |
-  https://leetcode.com/problems/cheapest-flights-within-k-stops/
-tags: [Dynamic Programming, Depth-First Search, Breadth-First Search, Graph, Heap (Priority Queue), Shortest Path]
+  Author: @wkw, @ColeB2 | https://leetcode.com/problems/cheapest-flights-within-k-stops/
+
+
+tags:
+  [
+    Dynamic Programming,
+    Depth-First Search,
+    Breadth-First Search,
+    Graph,
+    Heap (Priority Queue),
+    Shortest Path,
+  ]
 ---
 
 # 0787 - Cheapest Flights Within K Stops (Medium)
@@ -15,7 +24,7 @@ https://leetcode.com/problems/cheapest-flights-within-k-stops/
 
 There are `n` cities connected by some number of flights. You are given an array `flights` where `flights[i] = [fromi, toi, pricei]` indicates that there is a flight from city `fromi` to city `toi` with cost `pricei`.
 
-You are also given three integers `src`, `dst`, and `k`, return _**the cheapest price** from_ `src` _to_ `dst` _with at most_ `k` _stops._ If there is no such route, return __ `-1`.
+You are also given three integers `src`, `dst`, and `k`, return _**the cheapest price** from_ `src` _to_ `dst` _with at most_ `k` _stops._ If there is no such route, return \_\_ `-1`.
 
 **Example 1:**
 
@@ -56,26 +65,26 @@ The optimal path with no stops from city 0 to 2 is marked in red and has cost 50
 
 **Constraints:**
 
-* `1 <= n <= 100`
-* `0 <= flights.length <= (n * (n - 1) / 2)`
-* `flights[i].length == 3`
-* `0 <= fromi, toi < n`
-* `fromi != toi`
-* `1 <= pricei <= 10^4`
-* There will not be any multiple flights between two cities.
-* `0 <= src, dst, k < n`
-* `src != dst`
+- `1 <= n <= 100`
+- `0 <= flights.length <= (n * (n - 1) / 2)`
+- `flights[i].length == 3`
+- `0 <= fromi, toi < n`
+- `fromi != toi`
+- `1 <= pricei <= 10^4`
+- There will not be any multiple flights between two cities.
+- `0 <= src, dst, k < n`
+- `src != dst`
 
 ## Approach 1: DP
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 // TC: O(F * K)
-// SC: O(N * K) 
-// where 
+// SC: O(N * K)
+// where
 // - F is the number of flights
 // - K is the number of stops
 // - N is the number of cities and K is the number of stops
@@ -91,10 +100,10 @@ public:
             // iterate each flight
             for (auto f : flights) {
                 int from = f[0], to = f[1], cost = f[2];
-                // ensure city `from` is reachable 
+                // ensure city `from` is reachable
                 if (dp[i - 1][from] != INT_MAX) {
                     // from + cost -> to
-                    dp[i][to] = min(dp[i][to], dp[i - 1][from] + cost);   
+                    dp[i][to] = min(dp[i][to], dp[i - 1][from] + cost);
                 }
             }
         }
@@ -108,17 +117,16 @@ public:
 </TabItem>
 </Tabs>
 
-
 ## Approach 2: Bellman Ford
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 // TC: O(F * K + N * K)
-// SC: O(F) 
-// where 
+// SC: O(F)
+// where
 // - F is the number of flights
 // - K is the number of stops
 // - N is the number of cities and K is the number of stops
@@ -137,7 +145,7 @@ public:
             dist = ndist;
         }
     }
-    
+
     int findCheapestPrice(int n, vector<vector<int>>& flights, int src, int dst, int k) {
         // we can directly use bellman ford template here (prerequisite: you need to understand bellman ford algo)
         // bellman ford algo is used to find the shortest paths from source node to other nodes in a weighted graph
@@ -157,9 +165,8 @@ public:
 
 </TabItem>
 
-
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:
@@ -193,7 +200,6 @@ We can use Dijkstra's Algorithm to find the shortest path. Dijkstra's Algorithm 
 Time Complexity: $$O((F + C)logC)$$ Where $$F$$ is the number of flights, and $$C$$ is the number of cities. Worst case we must take all flights and visit all cities, updating our heap $$logC$$ times at each city.
 
 Space Complexity: $$O(C)$$ Where $$C$$ is the number of cities. We must create an adjacency list, a heap, and a visited dictionary, all of which scale proportionally to the number of cities.
-
 
 <Tabs>
 <TabItem value="python" label="Python">

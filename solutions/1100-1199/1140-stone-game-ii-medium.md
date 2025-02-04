@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/stone-game-ii/'
+description: 'Author: @wkw | https://leetcode.com/problems/stone-game-ii/'
 tags: [Array, Math, Dynamic Programming, Game Theory]
 ---
 
-# 1140 - Stone Game II (Medium) 
+# 1140 - Stone Game II (Medium)
 
 ## Problem Statement
 
@@ -41,7 +41,7 @@ Output: 104
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -56,7 +56,7 @@ public:
         int res = 0, taken = 0;
         // i is the starting position
         // we can take at most i + 2 * m piles
-        // however, it may exceed the size of piles 
+        // however, it may exceed the size of piles
         // hence use min to get the max limit
         for (int j = i; j < min(i + 2 * m, n); j++) {
             // take this pile of stones
@@ -69,7 +69,7 @@ public:
         // memoize the result
         return dp[i][m] = res;
     }
-    
+
     int stoneGameII(vector<int>& piles) {
         // init dp with value -1
         memset(dp, -1, sizeof(dp));
@@ -82,7 +82,7 @@ public:
 </TabItem>
 
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:
@@ -96,7 +96,7 @@ class Solution:
             taken = 0
             # i is the starting position
             # we can take at most i + 2 * m piles
-            # however, it may exceed the size of piles 
+            # however, it may exceed the size of piles
             # hence use min to get the max limit
             for j in range(i, min(i + 2 * m, n)):
                 # take this pile of stones

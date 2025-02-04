@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/connecting-cities-with-minimum-cost/
+  Author: @wkw | https://leetcode.com/problems/connecting-cities-with-minimum-cost/
 ---
 
 # 1135 - Connecting Cities With Minimum Cost (Medium)
@@ -20,7 +19,7 @@ The **cost** is the sum of the connections' costs used.
 
 **Example 1:**
 
-![](https://assets.leetcode.com/uploads/2019/04/20/1314\_ex2.png)
+![](https://assets.leetcode.com/uploads/2019/04/20/1314_ex2.png)
 
 ```
 Input: n = 3, connections = [[1,2,5],[1,3,6],[2,3,1]]
@@ -30,22 +29,22 @@ Explanation: Choosing any 2 edges will connect all cities so we choose the minim
 
 **Example 2:**
 
-![](https://assets.leetcode.com/uploads/2019/04/20/1314\_ex1.png)
+![](https://assets.leetcode.com/uploads/2019/04/20/1314_ex1.png)
 
 ```
 Input: n = 4, connections = [[1,2,3],[3,4,4]]
 Output: -1
-Explanation: There is no way to connect all cities even if all edges are used. 
+Explanation: There is no way to connect all cities even if all edges are used.
 ```
 
 **Constraints:**
 
-* `1 <= n <= 10^4`
-* `1 <= connections.length <= 10^4`
-* `connections[i].length == 3`
-* `1 <= xi, yi <= n`
-* `xi != yi`
-* `0 <= costi <= 10^5`
+- `1 <= n <= 10^4`
+- `1 <= connections.length <= 10^4`
+- `connections[i].length == 3`
+- `1 <= xi, yi <= n`
+- `xi != yi`
+- `0 <= costi <= 10^5`
 
 ## Approach 1: **Kruskal's Algorithm**
 
@@ -53,7 +52,7 @@ If we treat it as a graph problem, it is actually same as finding Minimum Spanni
 
 In order to get the MST, we sort the edges based on the weights in an increasing order. Then we iterate them one by one, and greedily pick edges which does not result in cycle with the previous edges. At the end, we should have $$N - 1$$edges in MST. Otherwise, we return $$-1$$.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class dsu {
@@ -115,4 +114,3 @@ public:
     }
 };
 ```
-

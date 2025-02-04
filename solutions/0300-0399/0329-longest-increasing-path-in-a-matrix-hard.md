@@ -1,6 +1,16 @@
 ---
 description: 'Author: @ColeB2 | https://leetcode.com/problems/longest-increasing-path-in-a-matrix/'
-tags: [Array, Dynamic Programming, Depth-First Search, Breadth-First Search, Graph, Topological Sort, Memoization, Matrix]
+tags:
+  [
+    Array,
+    Dynamic Programming,
+    Depth-First Search,
+    Breadth-First Search,
+    Graph,
+    Topological Sort,
+    Memoization,
+    Matrix,
+  ]
 ---
 
 # 0329 - Longest Increasing Path in a Matrix (Hard)
@@ -81,7 +91,7 @@ class Solution:
             if (r,c) in cache:
                 # return that path length.
                 return cache[(r,c)]
-            
+
             # initialize path length to 1, as a 1 cell path starts as 1.
             path = 1
             # traverse our 4 directions
@@ -105,7 +115,7 @@ class Solution:
         # iterate our matrix
         for r in range(ROWS):
             for c in range(COLS):
-                # call DFS on each cell. Initialize prev_cell value of 
+                # call DFS on each cell. Initialize prev_cell value of
                 # inf as all other values will be below that.
                 dfs(r, c, float('inf'))
         return self.longest_path
@@ -158,7 +168,7 @@ class Solution:
                         # add new cell to our adjacency list. Current
                         # cell can traverse to the new cell.
                         adj_list[(r,c)].append((new_r, new_c))
-                        # update indegrees. Found 1 cell that points to 
+                        # update indegrees. Found 1 cell that points to
                         # our new cell.
                         indegrees[new_r][new_c] += 1
         # find all cells that have indegrees of 0. Ie cells that have

@@ -1,6 +1,8 @@
 ---
 description: >-
   Author: @jessicaribeiroalves | https://leetcode.com/problems/transpose-matrix/
+
+
 tags: [Array, Matrix, Simulation]
 ---
 
@@ -61,8 +63,7 @@ class Solution:
         return transposed
 ```
 
-
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:
@@ -77,14 +78,14 @@ class Solution:
 
 ```js
 const transpose = (matrix) => {
-    const transposed = [];
-    for (const row in matrix[0]) {
-        transposed.push([]);
-        for (const column of matrix) {
-            transposed[row].push(column[row]);
-        }
+  const transposed = [];
+  for (const row in matrix[0]) {
+    transposed.push([]);
+    for (const column of matrix) {
+      transposed[row].push(column[row]);
     }
-    return transposed;
+  }
+  return transposed;
 };
 ```
 

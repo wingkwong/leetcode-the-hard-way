@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/largest-perimeter-triangle/'
+description: 'Author: @wkw | https://leetcode.com/problems/largest-perimeter-triangle/'
 ---
 
 # 0976 - Largest Perimeter Triangle (Easy)
@@ -28,8 +28,8 @@ Output: 0
 
 **Constraints:**
 
-* `3 <= nums.length <= 10^4`
-* `1 <= nums[i] <= 10^6`
+- `3 <= nums.length <= 10^4`
+- `1 <= nums[i] <= 10^6`
 
 ## Approach 1: Sort
 
@@ -37,7 +37,7 @@ In order to form a valid triangle, the side lengths of the triangle must satisfy
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -61,7 +61,7 @@ public:
 </TabItem>
 
 <TabItem value="rs" label="Rust">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```rs
 impl Solution {
@@ -77,7 +77,7 @@ impl Solution {
 }
 ```
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```rs
 impl Solution {

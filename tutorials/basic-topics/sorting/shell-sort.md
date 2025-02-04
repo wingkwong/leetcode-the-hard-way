@@ -10,7 +10,7 @@ keywords:
   - shell sort
 ---
 
-<TutorialAuthors names="@Saishreekouda"/>
+<TutorialCredits authors="@Saishreekouda"/>
 
 ## Overview
 
@@ -75,38 +75,39 @@ Start with a gap sequence: Initially, the gap is $4$ (length of the array divide
 
 Divide the array into subarrays with a gap of $4$:
 
-   - Subarray 1: $[6, 8]$
-   - Subarray 2: $[5, 7]$
-   - Subarray 3: $[3, 2]$
-   - Subarray 4: $[1, 4]$
+- Subarray 1: $[6, 8]$
+- Subarray 2: $[5, 7]$
+- Subarray 3: $[3, 2]$
+- Subarray 4: $[1, 4]$
 
 ![image](https://github.com/wingkwong/leetcode-the-hard-way/assets/35857179/52bb5dc8-06e7-4cfe-a592-ace3b85658d9)
 
 Apply Insertion Sort within each subarray:
 
-   - After sorting Subarray 1: $[6, 8]$
-   - After sorting Subarray 2: $[5, 7]$
-   - After sorting Subarray 3: $[2, 3]$
-   - After sorting Subarray 4: $[1, 4]$
+- After sorting Subarray 1: $[6, 8]$
+- After sorting Subarray 2: $[5, 7]$
+- After sorting Subarray 3: $[2, 3]$
+- After sorting Subarray 4: $[1, 4]$
 
 ![image](https://github.com/wingkwong/leetcode-the-hard-way/assets/35857179/b894f409-2641-41f9-a497-a8336214f44a)
 
 Reduce the gap to $2$ and repeat the process:
 
-   - Subarray 1: $[6, 2, 8, 3]$
-   - Subarray 2: $[5, 1, 7, 4]$
-     
+- Subarray 1: $[6, 2, 8, 3]$
+- Subarray 2: $[5, 1, 7, 4]$
+
 ![image](https://github.com/wingkwong/leetcode-the-hard-way/assets/35857179/3c00754e-2876-4543-9072-6d1c8df70e24)
 
 Apply Insertion Sort within each subarray:
 
-   - After sorting Subarray 1: $[2, 3, 6, 8]$
-   - After sorting Subarray 2: $[1, 4, 5, 7]$
-     
+- After sorting Subarray 1: $[2, 3, 6, 8]$
+- After sorting Subarray 2: $[1, 4, 5, 7]$
+
 ![image](https://github.com/wingkwong/leetcode-the-hard-way/assets/35857179/e77e9e39-779d-42f5-be63-6aafc98036ac)
 
 Finally, reduce the gap to $1$ and perform a final pass of Insertion Sort:
-   - $[1, 2, 3, 4, 5, 6, 7, 8]$ (Sorted!)
+
+- $[1, 2, 3, 4, 5, 6, 7, 8]$ (Sorted!)
 
 ![image](https://github.com/wingkwong/leetcode-the-hard-way/assets/35857179/98643b8e-ef4c-4eec-b802-7d1f38883da5)
 
@@ -120,8 +121,7 @@ Shell Sort is a versatile sorting algorithm suitable for beginners and provides 
 
 ## Example #1: [0912 - Sort an Array](https://leetcode.com/problems/sort-an-array/)
 
-> Given an array of integers nums, sort the array in ascending order and return it.
-> You must solve the problem without using any built-in functions in $O(n\log(n))$ time complexity and with the smallest space complexity possible.
+> Given an array of integers nums, sort the array in ascending order and return it. You must solve the problem without using any built-in functions in $O(n\log(n))$ time complexity and with the smallest space complexity possible.
 
 - Start with a gap sequence. A common choice is to start with $\frac{n}{2}$ and halve it in each iteration until the gap becomes $1$, where $n$ is the length of the array.
 
@@ -160,6 +160,7 @@ public:
     }
 };
 ```
+
 </TabItem>
 <TabItem value="py" label="Python3">
 <SolutionAuthor name="@Saishreekouda"/>
@@ -180,6 +181,7 @@ class Solution:
             gap //= 2
         return nums
 ```
+
 </TabItem>
 <TabItem value="java" label="Java">
 <SolutionAuthor name="@Saishreekouda"/>
@@ -205,6 +207,7 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 </Tabs>
 
@@ -235,26 +238,22 @@ Shell Sort remains a reliable sorting algorithm for moderately sized arrays, and
 
 ## Example #2: [0088 - Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array)
 
-> Given two integer arrays, sorted in non-decreasing order, and two integers representing the number of elements in both arrays.
-> Merge both arrays into a single array sorted in non-decreasing order.
+> Given two integer arrays, sorted in non-decreasing order, and two integers representing the number of elements in both arrays. Merge both arrays into a single array sorted in non-decreasing order.
 
 1. Calculate the gap value for merging the two arrays. The gap is determined as $\lceil \frac{{\text{size of arr1} + \text{size of arr2}}}{{2}} \rceil$.
 
 2. Initialize two pointers: the left pointer at index $0$ and the right pointer at index (left + gap).
 
 3. Perform the following steps for each gap until the gap becomes $0$:
-    - Inside a loop that continues until the right pointer reaches the end (i.e., index $n + m$), handle three different cases:
-        - If the left pointer is inside $\text{arr1}$ and the right pointer is in $\text{arr2}$, compare $\text{arr1}[{\text{left}}]$ and $\text{arr2}[{\text{right}} - n]$. If $\text{arr1}[{\text{left}}] > \text{arr2}[{\text{right}} - n]$, swap them.
-        - If both pointers are in $\text{arr2}$, compare $\text{arr1}[{\text{left}} - n]$ and $\text{arr2}[{\text{right}} - n]$. If $\text{arr1}[{\text{left}} - n] > \text{arr2}[{\text{right}} - n]$, swap them.
-        - If both pointers are in $\text{arr1}$, compare $\text{arr1}[{\text{left}}]$ and $\text{arr2}[{\text{right}}]$. If $\text{arr1}[{\text{left}}] > \text{arr2}[{\text{right}}]$, swap them.
-
-   
+   - Inside a loop that continues until the right pointer reaches the end (i.e., index $n + m$), handle three different cases:
+     - If the left pointer is inside $\text{arr1}$ and the right pointer is in $\text{arr2}$, compare $\text{arr1}[{\text{left}}]$ and $\text{arr2}[{\text{right}} - n]$. If $\text{arr1}[{\text{left}}] > \text{arr2}[{\text{right}} - n]$, swap them.
+     - If both pointers are in $\text{arr2}$, compare $\text{arr1}[{\text{left}} - n]$ and $\text{arr2}[{\text{right}} - n]$. If $\text{arr1}[{\text{left}} - n] > \text{arr2}[{\text{right}} - n]$, swap them.
+     - If both pointers are in $\text{arr1}$, compare $\text{arr1}[{\text{left}}]$ and $\text{arr2}[{\text{right}}]$. If $\text{arr1}[{\text{left}}] > \text{arr2}[{\text{right}}]$, swap them.
 4. After the right pointer reaches the end, decrease the value of the gap by setting it to $\lceil \frac{{\text{current gap}}}{{2}} \rceil$.
 
 5. Repeat the loop until the gap becomes $0$.
 
 6. Finally, after performing all the operations, you will have the merged sorted array.
-
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -297,6 +296,7 @@ class Solution {
   }
 };
 ```
+
 </TabItem>
 <TabItem value="py" label="Python3">
 <SolutionAuthor name="@Saishreekouda"/>
@@ -334,6 +334,7 @@ class Solution:
             nums1[i] = nums2[j]
             j += 1
 ```
+
 </TabItem>
 <TabItem value="java" label="Java">
 <SolutionAuthor name="@Saishreekouda"/>
@@ -382,12 +383,14 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 </Tabs>
 
 **Time Complexity**: $O((n+m) \cdot \log(n+m))$
 
 The time complexity of the algorithm for merging two sorted arrays of sizes $n$ and $m$ is determined as follows:
+
 - The gap ranges from $n+m$ to $1$, and at each step, the gap is divided by $2$.
 - Therefore, the outer loop runs for $O(log(n+m))$ iterations.
 
@@ -399,19 +402,6 @@ For each value of the gap, the inner loop can run for a maximum of $n+m$ times.
 
 In this question we can use brute approach of merging 2 sorted arrays using extra space but for optimal solution where we do not consider any extra space Shell Sort gives us an efficient solution.
 
-export const suggestedProblems = [
-    {
-        "problemName" : "0148 - Sort List",
-        "difficulty" : "Medium",
-        "leetCodeLink" : "https://leetcode.com/problems/sort-list/",
-        "solutionLink" : "../../../solutions/0100-0199/sort-list-medium"
-    },
-    {
-        "problemName" : "0075 - Sort Colors",
-        "difficulty" : "Medium",
-        "leetCodeLink" : "https://leetcode.com/problems/sort-colors/",
-        "solutionLink" : "../../../solutions/0000-0099/sort-colors-medium"
-    }
-]
+export const suggestedProblems = [ { "problemName" : "0148 - Sort List", "difficulty" : "Medium", "leetCodeLink" : "https://leetcode.com/problems/sort-list/", "solutionLink" : "../../../solutions/0100-0199/sort-list-medium" }, { "problemName" : "0075 - Sort Colors", "difficulty" : "Medium", "leetCodeLink" : "https://leetcode.com/problems/sort-colors/", "solutionLink" : "../../../solutions/0000-0099/sort-colors-medium" } ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />

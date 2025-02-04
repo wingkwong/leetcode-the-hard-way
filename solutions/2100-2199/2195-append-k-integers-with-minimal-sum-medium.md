@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/append-k-integers-with-minimal-sum/
+  Author: @wkw | https://leetcode.com/problems/append-k-integers-with-minimal-sum/
 ---
 
 # 2195 - Append K Integers With Minimal Sum (Medium)
@@ -32,14 +31,14 @@ The sum of the two integers appended is 2 + 3 = 5, so we return 5.
 Input: nums = [5,6], k = 6
 Output: 25
 Explanation: The six unique positive integers that do not appear in nums which we append are 1, 2, 3, 4, 7, and 8.
-The resulting sum of nums is 5 + 6 + 1 + 2 + 3 + 4 + 7 + 8 = 36, which is the minimum. 
+The resulting sum of nums is 5 + 6 + 1 + 2 + 3 + 4 + 7 + 8 = 36, which is the minimum.
 The sum of the six integers appended is 1 + 2 + 3 + 4 + 7 + 8 = 25, so we return 25.
 ```
 
 **Constraints:**
 
-* `1 <= nums.length <= 10^5`
-* `1 <= nums[i], k <= 10^9`
+- `1 <= nums.length <= 10^5`
+- `1 <= nums[i], k <= 10^9`
 
 ## Approach 1: Sum of Consecutive Numbers
 
@@ -47,7 +46,7 @@ First we sort the input. For each number $$x$$, we need to know how many numbers
 
 If we need to append some numbers, then the next question is how many numbers we can append. Remember that we just need to append $$k$$ numbers.
 
-If $$k$$ is greater than / equal to what we need, we update $$k := k - need$$ and add the consecutive sum between $$prev$$ to $$x$$ which is $$((prev + 1) + (x - 1)) * need / 2$$.  For example, if $$prev$$ is $$1$$ and $$x$$ is $$4$$, then the consecutive sum between them is $$((1 + 1) + (4 - 1)) * 2 / 2 = 5$$, i.e $$2 + 3$$. Then we update $$prev := x$$. If we have already appended $$k$$ numbers, then we can return the answer.
+If $$k$$ is greater than / equal to what we need, we update $$k := k - need$$ and add the consecutive sum between $$prev$$ to $$x$$ which is $$((prev + 1) + (x - 1)) * need / 2$$. For example, if $$prev$$ is $$1$$ and $$x$$ is $$4$$, then the consecutive sum between them is $$((1 + 1) + (4 - 1)) * 2 / 2 = 5$$, i.e $$2 + 3$$. Then we update $$prev := x$$. If we have already appended $$k$$ numbers, then we can return the answer.
 
 > The consecutive sum between $$start$$ and $$end$$ is simply $$(start + end) * n / 2$$. If you are interested in how to get this formula, please check out [0829 - Consecutive Numbers Sum (Hard)](../0800-0899/consecutive-numbers-sum-hard).
 
@@ -55,7 +54,7 @@ The other case is we just need to append $$k$$ numbers. Then we simply add $$(pr
 
 In case we still need to append some numbers after the last element of the input $$last$$. Then we add $$((last + 1) + (last + k)) * k / 2$$.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

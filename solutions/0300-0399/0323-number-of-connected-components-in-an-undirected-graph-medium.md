@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/'
+description: 'Author: @wkw | https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/'
 tags: [Depth-First Search, Breadth-First Search, Union Find, Graph]
 ---
 
-# 0323 - Number of Connected Components in an Undirected Graph (Medium) 
+# 0323 - Number of Connected Components in an Undirected Graph (Medium)
 
 ## Problem Link
 
@@ -13,7 +13,7 @@ https://leetcode.com/problems/number-of-connected-components-in-an-undirected-gr
 
 You have a graph of `n` nodes. You are given an integer `n` and an array `edges` where `edges[i] = [ai, bi]` indicates that there is an edge between `ai` and `bi` in the graph.
 
-Return *the number of connected components in the graph*.
+Return _the number of connected components in the graph_.
 
 **Example 1:**
 
@@ -44,7 +44,7 @@ Eventually the connected components would belong to its own group. We can use DS
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class dsu {

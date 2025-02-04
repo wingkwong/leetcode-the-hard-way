@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/best-team-with-no-conflicts/'
+description: 'Author: @wkw | https://leetcode.com/problems/best-team-with-no-conflicts/'
 tags: [Array, Dynamic Programming, Sorting]
 ---
 
-# 1626 - Best Team With No Conflicts (Medium) 
+# 1626 - Best Team With No Conflicts (Medium)
 
 ## Problem Link
 
@@ -15,7 +15,7 @@ You are the manager of a basketball team. For the upcoming tournament, you want 
 
 However, the basketball team is not allowed to have **conflicts**. A **conflict** exists if a younger player has a **strictly higher** score than an older player. A conflict does **not** occur between players of the same age.
 
-Given two lists, `scores` and `ages`, where each `scores[i]` and `ages[i]` represents the score and age of the `ith` player, respectively, return *the highest overall score of all possible basketball teams*.
+Given two lists, `scores` and `ages`, where each `scores[i]` and `ages[i]` represents the score and age of the `ith` player, respectively, return _the highest overall score of all possible basketball teams_.
 
 **Example 1:**
 
@@ -58,7 +58,7 @@ For this kind of DP questions, remember the following
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

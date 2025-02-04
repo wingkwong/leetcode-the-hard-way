@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @ColeB2 | https://leetcode.com/problems/word-ladder/'
+description: 'Author: @wkw, @ColeB2 | https://leetcode.com/problems/word-ladder/'
 tags: [Hash Table, String, Breadth-First Search]
 ---
 
@@ -13,9 +13,9 @@ https://leetcode.com/problems/word-ladder/
 
 A **transformation sequence** from word `beginWord` to word `endWord` using a dictionary `wordList` is a sequence of words `beginWord -> s1 -> s2 -> ... -> sk` such that:
 
-* Every adjacent pair of words differs by a single letter.
-* Every `si` for `1 <= i <= k` is in `wordList`. Note that `beginWord` does not need to be in `wordList`.
-* `sk == endWord`
+- Every adjacent pair of words differs by a single letter.
+- Every `si` for `1 <= i <= k` is in `wordList`. Note that `beginWord` does not need to be in `wordList`.
+- `sk == endWord`
 
 Given two words, `beginWord` and `endWord`, and a dictionary `wordList`, return _the **number of words** in the **shortest transformation sequence** from_ `beginWord` _to_ `endWord`_, or_ `0` _if no such sequence exists._
 
@@ -37,13 +37,13 @@ Explanation: The endWord "cog" is not in wordList, therefore there is no valid t
 
 **Constraints:**
 
-* `1 <= beginWord.length <= 10`
-* `endWord.length == beginWord.length`
-* `1 <= wordList.length <= 5000`
-* `wordList[i].length == beginWord.length`
-* `beginWord`, `endWord`, and `wordList[i]` consist of lowercase English letters.
-* `beginWord != endWord`
-* All the words in `wordList` are **unique**.
+- `1 <= beginWord.length <= 10`
+- `endWord.length == beginWord.length`
+- `1 <= wordList.length <= 5000`
+- `wordList[i].length == beginWord.length`
+- `beginWord`, `endWord`, and `wordList[i]` consist of lowercase English letters.
+- `beginWord != endWord`
+- All the words in `wordList` are **unique**.
 
 ## Approach 1: BFS
 
@@ -54,17 +54,17 @@ Since we are looking for the shortest path, then we should use BFS instead of DF
 ```
 Graph:
 hit----hot---dot---dog---cog
-        |   /        |   / 
+        |   /        |   /
         |  /         |  /
         lot----------log
 ```
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
-// 1. build the combination of words that can be formed 
+// 1. build the combination of words that can be formed
 int m = (int) beginWord.size();
 map<string, vector<string>> comb;
 int n = (int) wordList.size();
@@ -100,10 +100,10 @@ Then, we can perform BFS using queue. We take the word, build its form and get t
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
-// 2. BFS 
+// 2. BFS
 queue<pair<string, int>> q; // {word, level}
 // check if it is visited already
 unordered_map<string, int> vis;
@@ -123,7 +123,7 @@ while (!q.empty()) {
             if (w == endWord) {
                 return level + 1;
             }
-            // else if it is not visited, then mark it visited 
+            // else if it is not visited, then mark it visited
             // and push it to the queue for next traversal
             if (!vis.count(w)) {
                 vis[w] = 1;
@@ -172,22 +172,21 @@ while q:
 Full version
 
 Time Complexity: $$O(M^2 * N)$$ where $$M$$ is the length of each word, and $$N$$ is the total number of words in $$wordList$$.
+
 - For each word in word list, we iterate each character, $$M * N$$ and to recreate each combination of each word to add to our hash map takes $$M$$ time -> $$O(M^2 * N)$$
 - BFS might traverse every node $$N$$, and similarily, we must check each character $$M$$ and recreated the intermediate words --> $$O(M^2 * N)$$
 
 Space Complexity: $$O(M^2 * N)$$. The space will be dominated by our hash map as each word $$N$$, has $$M$$ combinations of words which will be our keys, and each key will have the original word of sized $$M$$ as a value. Meaning each word will need $$M^2$$ space, and we need to do that for $$N$$ words.
 
-
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
-
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
 public:
     int ladderLength(string beginWord, string endWord, vector<string>& wordList) {
-        // 1. build the combination of words that can be formed 
+        // 1. build the combination of words that can be formed
         int m = (int) beginWord.size();
         map<string, vector<string>> comb;
         int n = (int) wordList.size();
@@ -197,7 +196,7 @@ public:
                 comb[t].push_back(s);
             }
         }
-        // 2. BFS 
+        // 2. BFS
         queue<pair<string, int>> q; // {word, level}
         unordered_map<string, int> vis;
         q.push({beginWord, 1});

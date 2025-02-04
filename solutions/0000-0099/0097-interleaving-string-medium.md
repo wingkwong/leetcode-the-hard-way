@@ -56,19 +56,18 @@ Output: true
 - `0 <= s1.length, s2.length <= 100`
 - `0 <= s3.length <= 200`
 - `s1`, `s2`, and `s3` consist of lowercase English letters.
- 
 
 **Follow up**: Could you solve it using only `O(s2.length)` additional memory space?
 
 ## Approach 1: 2D Dynamic Programming
 
-If we try to break down our problem into a sub problem we get that we are trying to find whether the characters in $$s1$$ up to $$i$$ and the characters in $$s2$$ up to $$j$$ can interleave to create a string in $$s3$$ up to $$i + j$$. 
+If we try to break down our problem into a sub problem we get that we are trying to find whether the characters in $$s1$$ up to $$i$$ and the characters in $$s2$$ up to $$j$$ can interleave to create a string in $$s3$$ up to $$i + j$$.
 
 So to construct our 2D grid we would need a grid of size $$s2.length + 1$$ wide and $$s1.length + 1$$ tall of all false/falsy values. This allows us to account for the empty string prefix of both $$s1$$ and $$s2$$. We would then initialize the $$0,0$$ position as a true/truthy value, as we know we can create the empty $$s3$$ using the empty $$s1$$ and $$s2$$ strings.
 
 For $$i,j$$ values in our grid, it maps out $$i$$ values to position is $$s1$$ and $$j$$ values to position in $$s2$$. This means that for each $$i,j$$ value in our grid it tells us whether we can create $$s3[:i+j]$$ using the characters from $$s1[:i]$$ and $$s2[:j]$$.
 
-So then for each i,j we know if it isn't the first row or column (our empty string values), and that if the character from the previous iteration of $$s1$$ matches the previous iteration character of $$s3$$ 
+So then for each i,j we know if it isn't the first row or column (our empty string values), and that if the character from the previous iteration of $$s1$$ matches the previous iteration character of $$s3$$
 
 Time Complexity: $$O(n*m)$$ where $$n$$ is the length of $$s1$$ and $$m$$ is the length of $$s2$$. We are iterating over our dp array of size $$n*m$$.
 
@@ -84,7 +83,7 @@ class Solution:
         # return early if s1 and s2 combined aren't same size as s3.
         if len(s1) + len(s2) != len(s3):
             return False
-        
+
         # create our 2d grid, we need an extra row/col to account for
         # the empty string case when comparing either empty s1/s2 values.
         dp = [[0 for _ in range(len(s2) + 1)] for _ in range(len(s1) + 1)]
@@ -102,7 +101,7 @@ class Solution:
                 # empty strings, and their is no way to be < empty.
                 #2. Check string value at s1[i-1] == s3[i+j-1]. This
                 # is checking if the letters at the proper position are
-                # equal. Note we subtract 1, since we added a extra 
+                # equal. Note we subtract 1, since we added a extra
                 # row/col to the start of each row/col in dp table.
                 #3. And if prevs 2 are truthy, We check that it held the
                 # same for the previous i value.
@@ -113,7 +112,7 @@ class Solution:
                     dp[i][j] = 1
         # the full string would be represented by the length os s1,s2
         # in our dp table.
-        return dp[len(s1)][len(s2)] 
+        return dp[len(s1)][len(s2)]
 ```
 
 </TabItem>

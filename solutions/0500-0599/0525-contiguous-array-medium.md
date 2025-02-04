@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/contiguous-array/'
+description: 'Author: @wkw | https://leetcode.com/problems/contiguous-array/'
 tags: [Array, Hash Table, Prefix Sum]
 ---
 
@@ -31,8 +31,8 @@ Explanation: [0, 1] (or [1, 0]) is a longest contiguous subarray with equal numb
 
 **Constraints:**
 
-* `1 <= nums.length <= 10^5`
-* `nums[i]` is either `0` or `1`.
+- `1 <= nums.length <= 10^5`
+- `nums[i]` is either `0` or `1`.
 
 ## Approach 1: Prefix Sum + Hash Map
 
@@ -44,7 +44,7 @@ Therefore, the approach is to calculate the prefix sum and put it into a hash ma
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -56,7 +56,7 @@ public:
             pre += 2 * nums[i] - 1;
             if (pre == 0) ans = max(ans, i + 1);
             if (m.count(pre)) ans = max(ans, i - m[pre]);
-            else m[pre] = i;            
+            else m[pre] = i;
         }
         return ans;
     }
@@ -70,7 +70,7 @@ Or you can initialise $$m[pre] = -1$$ for $$pre = 0$$.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -82,7 +82,7 @@ public:
         for (int i = 0; i < n; i++) {
             pre += 2 * nums[i] - 1;
             if (m.count(pre)) ans = max(ans, i - m[pre]);
-            else m[pre] = i;            
+            else m[pre] = i;
         }
         return ans;
     }

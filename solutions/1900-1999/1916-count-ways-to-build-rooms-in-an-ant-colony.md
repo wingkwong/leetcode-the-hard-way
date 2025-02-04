@@ -17,8 +17,6 @@ You can only build one room at a time, and you can travel freely between rooms y
 
 Return the number of different orders you can build all the rooms in. Since the answer may be large, return it modulo `10^9 + 7`.
 
-
-
 **Example 1:**
 
 ```
@@ -32,7 +30,7 @@ Explanation: There is only one way to build the additional rooms: 0 → 1 → 2
 ```
 Input: prevRoom = [-1,0,0,1,2]
 Output: 6
-Explanation: 
+Explanation:
 The 6 ways are:
 0 → 1 → 3 → 2 → 4
 0 → 2 → 4 → 1 → 3
@@ -44,24 +42,18 @@ The 6 ways are:
 
 **Constraints:**
 
-* `n == prevRoom.length`
-* `2 <= n <= 10^5`
-* `prevRoom[0] == -1`
-* `0 <= prevRoom[i] <= n` for all `1 <= i < n`
+- `n == prevRoom.length`
+- `2 <= n <= 10^5`
+- `prevRoom[0] == -1`
+- `0 <= prevRoom[i] <= n` for all `1 <= i < n`
 
 ## Approach 1: Combinatorics and Graph Traversal
 
-Once we obtain the graph from the structure of the ant colony, this problem can be simplified to finding the number of valid [Topological sorts](https://en.wikipedia.org/wiki/Topological_sorting) for the given directed tree. 
+Once we obtain the graph from the structure of the ant colony, this problem can be simplified to finding the number of valid [Topological sorts](https://en.wikipedia.org/wiki/Topological_sorting) for the given directed tree.
 
-We can observe that when there is no branching, i.e., when there is a single chain, there is only $1$ way possible. Now, we consider nodes where we have more than $1$ children node. Then we have to find the number of ways to organize the particular subtree with such node as root. We can then update the value in a global variable $ans$. 
+We can observe that when there is no branching, i.e., when there is a single chain, there is only $1$ way possible. Now, we consider nodes where we have more than $1$ children node. Then we have to find the number of ways to organize the particular subtree with such node as root. We can then update the value in a global variable $ans$.
 
-Thus, our task simplifies as follows, for every node, we take the number of nodes of each branch possible from that node. Then, we find the number of ways to rearrange the components such that any particular value is in order relative to other components belonging to the same branch. For example, if a branch has $2$ components :- $a$ and $b$, while another branch also has $2$ components :- $c$ and $d$, the $6$ possible arrangements are:$\\$
-$a,b,c,d\\$
-$a,c,b,d\\$
-$a,c,d,b\\$
-$c,d,a,b\\$
-$c,a,b,d\\$
-$c,a,d,b\\$
+Thus, our task simplifies as follows, for every node, we take the number of nodes of each branch possible from that node. Then, we find the number of ways to rearrange the components such that any particular value is in order relative to other components belonging to the same branch. For example, if a branch has $2$ components :- $a$ and $b$, while another branch also has $2$ components :- $c$ and $d$, the $6$ possible arrangements are:$\\$ $a,b,c,d\\$ $a,c,b,d\\$ $a,c,d,b\\$ $c,d,a,b\\$ $c,a,b,d\\$ $c,a,d,b\\$
 
 Let there be $m$ such branches, and the number of nodes in $i^{th}$ branch be $r_i$. Then the total number of nodes, which are children of the chosen node is $t = \sum_{i = 1}^{m} r_i$.
 
@@ -77,8 +69,7 @@ To compute $\Large{\frac{1}{r_i!}}$, we will use modular inverse of $r_i!$ and t
 
 Thus, we will use DFS (Depth-First Search) to traverse the tree, and find the number of ways to rearrange the subtree for the current node and update the value into a variable `ans`. We will also return the number of nodes found to help with calculating the number of ways for parent nodes.
 
-Time Complexity: $O(n)\\$
-Space Complexity: $O(n)$
+Time Complexity: $O(n)\\$ Space Complexity: $O(n)$
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -156,5 +147,6 @@ public:
     }
 };
 ```
+
 </TabItem>
 </Tabs>

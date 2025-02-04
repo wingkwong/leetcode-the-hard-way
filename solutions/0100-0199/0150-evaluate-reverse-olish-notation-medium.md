@@ -1,5 +1,5 @@
 ---
-description: "Author: @ColeB2 | https://leetcode.com/problems/evaluate-reverse-polish-notation/"
+description: 'Author: @ColeB2 | https://leetcode.com/problems/evaluate-reverse-polish-notation/'
 tags: [Array, Math, Stack]
 ---
 
@@ -50,6 +50,7 @@ Explanation: ((10 * (6 / ((9 + 3) * -11))) + 17) + 5
 ```
 
 **Constraints:**
+
 - `1 <= tokens.length <= 10^4`
 - `tokens[i]` is either an operator: `"+"`, `"-"`, `"*"`, or `"/"`, or an integer in the range `[-200, 200]`.
 
@@ -67,7 +68,6 @@ Time Complexity: $$O(n)$$ where n is the length of the input, tokens.
 
 Space Complexity: $$O(n)$$ for our stack, which will depend on the length of the input, tokens.
 
-
 <Tabs>
 <TabItem value="python" label="Python">
 <SolutionAuthor name="@ColeB2"/>
@@ -83,7 +83,7 @@ class Solution:
         # "-" maps to function which takes params x,y and subtracts them.
         # "*" maps to function which takes params x,y and multiplies them.
         # "/" maps to function which takes params x,y and divides them.
-        # Note "/" utilizes regular division, but converts the float to an 
+        # Note "/" utilizes regular division, but converts the float to an
         # int to handle the requirement of needing to truncate towards 0.
         ops = {
             "+": lambda x, y : (x + y),
@@ -100,14 +100,14 @@ class Solution:
                 # It is, then we pop, remembering the order of y first, then x.
                 y,x = stack.pop(), stack.pop()
                 # solve our answer, by calling our lambda function by first
-                # accessing the value of our hash map the same way we would any 
+                # accessing the value of our hash map the same way we would any
                 # hash map, then, since we know it will return a function, to supply
                 # the parameters that the function will need, which we know is x,y.
                 answer = ops[token](x,y)
                 # remember to append the answer to the stack.
                 stack.append(answer)
             # If token is NOT a operator, but a number, add the token to the stack.
-            # Remember that we are reading through an array of strings, so 
+            # Remember that we are reading through an array of strings, so
             # we will convert to an integer first here, to prevent having to convert
             # later when we need to pop it off.
             else:

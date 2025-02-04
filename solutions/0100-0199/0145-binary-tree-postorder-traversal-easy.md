@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong, @ganajayant, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/binary-tree-postorder-traversal/'
+description: 'Author: @wkw, @ganajayant, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/binary-tree-postorder-traversal/'
 tags: [Stack, Tree, Depth-First Search, Binary Tree]
 ---
 
-# 0145 - Binary Tree Postorder Traversal (Easy) 
+# 0145 - Binary Tree Postorder Traversal (Easy)
 
 ## Problem Link
 
@@ -11,7 +11,7 @@ https://leetcode.com/problems/binary-tree-postorder-traversal/
 
 ## Problem Statement
 
-Given the `root` of a binary tree, return *the postorder traversal of its nodes' values*.
+Given the `root` of a binary tree, return _the postorder traversal of its nodes' values_.
 
 **Example 1:**
 
@@ -45,7 +45,7 @@ Output: [1]
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 /**
@@ -66,7 +66,7 @@ Output: [1]
 // This is a standard post-order traversal problem, I'd suggest to learn in-order and pre-order as well.
 // Here's a short tutorial if you're interested.
 // https://wingkwong.github.io/leetcode-the-hard-way/tutorials/graph-theory/binary-tree
-// then you may try the following problems 
+// then you may try the following problems
 // 94. Binary Tree Inorder Traversal: https://leetcode.com/problems/binary-tree-inorder-traversal/
 // 144. Binary Tree Postorder Traversal: https://leetcode.com/problems/binary-tree-preorder-traversal/
 
@@ -82,16 +82,17 @@ public:
         ans.push_back(node->val);
         // do something with node value here
     }
-    
+
     vector<int> postorderTraversal(TreeNode* root) {
         postoder(root);
         return ans;
     }
 };
 ```
+
 </TabItem>
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 # Definition for a binary tree node.
@@ -104,7 +105,7 @@ public:
 # This is a standard post-order traversal problem, I'd suggest to learn in-order and pre-order as well.
 # Here's a short tutorial if you're interested.
 # https://wingkwong.github.io/leetcode-the-hard-way/tutorials/graph-theory/binary-tree
-# then you may try the following problems 
+# then you may try the following problems
 # 94. Binary Tree Inorder Traversal: https://leetcode.com/problems/binary-tree-inorder-traversal/
 # 144. Binary Tree Postorder Traversal: https://leetcode.com/problems/binary-tree-preorder-traversal/
 
@@ -113,6 +114,7 @@ class Solution:
 		# root -> left  -> right
         return self.preorderTraversal(root.left) + self.preorderTraversal(root.right) + [root.val] if root else []
 ```
+
 </TabItem>
 <TabItem value="java" label="Java">
 <SolutionAuthor name="@ganajayant"/>
@@ -150,6 +152,7 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 
 <TabItem value="js" label="JavaScript">
@@ -168,18 +171,19 @@ class Solution {
  * @param {TreeNode} root
  * @return {number[]}
  */
-var postorderTraversal = function(root) {
-    let ans = [];
-    function dfs(node) {
-        if (!node) return;
-        dfs(node.left);
-        dfs(node.right);
-        ans.push(node.val);
-    }
-    dfs(root);
-    return ans;
+var postorderTraversal = function (root) {
+  let ans = [];
+  function dfs(node) {
+    if (!node) return;
+    dfs(node.left);
+    dfs(node.right);
+    ans.push(node.val);
+  }
+  dfs(root);
+  return ans;
 };
 ```
+
 </TabItem>
 </Tabs>
 
@@ -210,7 +214,7 @@ var postorderTraversal = function(root) {
 class Solution {
     /**
      * Sample binary tree
-     * 
+     *
      *    1
      *   / \
      *  2   3

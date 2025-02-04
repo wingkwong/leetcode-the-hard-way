@@ -57,7 +57,6 @@ If intervals are also sorted, we can also fill our heap up with intervals that o
 
 Finally, since we are going to look through our queries after we sort them, we will need a hash map to map our queries back to the proper index in the return array, otherwise, we will have the correct answer, but in the improper order.
 
-
 Time Complexity: $$O(NlogN + QlogQ)$$ where $$N$$ is intervals.length and $$Q$$ is queries.length. The sorting of the intervals and queries array will be the dominant time factor. Other than that we will loop through each query twice (once in our initial algorithm and again at the end to map our queries back to their proper index) and through our intervals array once. Our heap operations will happen in $$logh$$ time, where h is the size of the heap, which will max out at $$logN$$ time.
 
 Space Complexity: $$O(N + Q)$$. We are going to create a heap which will be of size $$N$$ in the worst case. We are going to create a hash map, ($$Q$$) to map our queries back to their proper position in the return array as well as loop through a sorted array of queries, $$Q$$.
@@ -90,7 +89,7 @@ class Solution:
                 # pop this interval
                 left, right = intervals.pop()
                 # make sure that right is larger than the query. If it
-                # is smaller it won't fit, and since we are looping 
+                # is smaller it won't fit, and since we are looping
                 # through the queries in sorted order, all subsequent
                 # queries won't fit this interval either.
                 if right >= q:

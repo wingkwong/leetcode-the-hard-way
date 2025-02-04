@@ -1,8 +1,10 @@
 ---
 description: >-
-  Author: @heiheihang, @wingkwong |
-  https://leetcode.com/problems/shortest-path-visiting-all-nodes/
-tags: [Dynamic Programming, Bit Manipulation, Breadth-First Search, Graph, Bitmask]
+  Author: @heiheihang, @wkw | https://leetcode.com/problems/shortest-path-visiting-all-nodes/
+
+
+tags:
+  [Dynamic Programming, Bit Manipulation, Breadth-First Search, Graph, Bitmask]
 ---
 
 # 0847 - Shortest Path Visiting All Nodes (Hard)
@@ -39,19 +41,19 @@ Explanation: One possible path is [0,1,4,2,3]
 
 **Constraints:**
 
-* `n == graph.length`
-* `1 <= n <= 12`
-* `0 <= graph[i].length < n`
-* `graph[i]` does not contain `i`.
-* If `graph[a]` contains `b`, then `graph[b]` contains `a`.
-* The input graph is always connected.
+- `n == graph.length`
+- `1 <= n <= 12`
+- `0 <= graph[i].length < n`
+- `graph[i]` does not contain `i`.
+- If `graph[a]` contains `b`, then `graph[b]` contains `a`.
+- The input graph is always connected.
 
 ## Approach 1: BFS
 
 There are two key observations in this question
 
-* We can use a bitmask to represent visited nodes as there are at most 12 nodes
-* We should use BFS as we want to find the shortest path that visits all nodes
+- We can use a bitmask to represent visited nodes as there are at most 12 nodes
+- We should use BFS as we want to find the shortest path that visits all nodes
 
 We then need to figure out how to keep track of duplication. We can simply store the (currentNode, visitedBitMask) tuple in a set to prevent duplication.
 
@@ -102,7 +104,7 @@ def shortestPathLength(self, graph: List[List[int]]) -> int:
 </TabItem>
 
 <TabItem value="kotlin" label="Kotlin">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```kt
 class Solution {
@@ -156,7 +158,7 @@ Let $$dp[i][mask]$$ be the shortest distances with visited nodes (marked as $$1$
 
 <Tabs>
 <TabItem value="go" label="Go">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```go
 func min(x, y int) int {
@@ -186,7 +188,7 @@ func tsp(mask int, src int, n int, d [][]int, dp [][]int) int {
     for i := 0; i < n; i++ {
         // check for the next possible node to move
         if ((mask & (1 << i)) == 0) {
-            // the distance from node src to node i 
+            // the distance from node src to node i
             // plus the shortest distance starting from node i
             mi = min(mi, d[src][i] + tsp(now, i, n, d, dp))
         }
@@ -198,7 +200,7 @@ func tsp(mask int, src int, n int, d [][]int, dp [][]int) int {
 
 func shortestPathLength(graph [][]int) int {
     n := len(graph)
-    // use floyd-warshall algo to calcuate the shortest distances 
+    // use floyd-warshall algo to calcuate the shortest distances
     // between all pairs of nodes
     // d[i][j]: shortest distance between node i and node j
     d := make([][]int, 1 << n)

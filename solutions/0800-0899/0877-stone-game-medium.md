@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/stone-game/'
+description: 'Author: @wkw | https://leetcode.com/problems/stone-game/'
 ---
 
 # 0877 - Stone Game (Medium)
@@ -23,7 +23,7 @@ Assuming Alice and Bob play optimally, return `true` _if Alice wins the game, or
 ```
 Input: piles = [5,3,4,5]
 Output: true
-Explanation: 
+Explanation:
 Alice starts first, and can only take the first 5 or the last 5.
 Say she takes the first 5, so that the row becomes [3, 4, 5].
 If Bob takes 3, then the board is [4, 5], and Alice takes 5 to win with 10 points.
@@ -40,16 +40,16 @@ Output: true
 
 **Constraints:**
 
-* `2 <= piles.length <= 500`
-* `piles.length` is **even**.
-* `1 <= piles[i] <= 500`
-* `sum(piles[i])` is **odd**.
+- `2 <= piles.length <= 500`
+- `piles.length` is **even**.
+- `1 <= piles[i] <= 500`
+- `sum(piles[i])` is **odd**.
 
 ## Approach 1: Math
 
 Yes .. Just return true. In fact, it is always true because there are an even number of piles and the total number of stones across all the piles is odd. Therefore, if Alice picks the first one, then Bob must pick either the second one or the last one. In each turn, Alice can always pick the even indexed piles while Bob can only pick odd indexed piles. Since there is no tie, if the sum of stones of even indexed piles is greater than that of odd indexed piles, Alice just need to pick the even indexed piles and win the game. Otherwise, she can pick the odd indexed piles. As Alice always go first, in this case, she must win whatsoever.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -68,7 +68,7 @@ Space Complexity: $O(1)$
 
 Let `dp[i][j]` be the maximum difference Alice could get if she plays optimally for `piles[i .. j]`. Since we only have two options - either take `pile[i]` or `pile[j]`. We choose the maximum one.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

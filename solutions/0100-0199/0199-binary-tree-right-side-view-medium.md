@@ -37,19 +37,15 @@ Output: []
 
 **Constraints:**
 
-* The number of nodes in the tree is in the range `[0, 100]`.
-* `-100 <= Node.val <= 100`
+- The number of nodes in the tree is in the range `[0, 100]`.
+- `-100 <= Node.val <= 100`
 
 ## Approach 1: DFS
-Maintain an ArrayList.
-TRAVERSAL -> ROOT ->RIGHT -> LEFT This is the way traversal is done in array so that rightmost node at i level is visited first.
-When at i level, check in array/vector, if there is an element already present at indexi in the array.
-[ index represents the level in tree ]->[element at index i is rightmost node at level i]
-If at that level, element is present,, just continue the traversal.
-Else if no element is present at index i -> add that node to answer [res] at the i index.
-<Tabs>
-<TabItem value="java" label="Java">
-<SolutionAuthor name="@ganajayant"/>
+
+Maintain an ArrayList. TRAVERSAL -> ROOT ->RIGHT -> LEFT This is the way traversal is done in array so that rightmost node at i level is visited first. When at i level, check in array/vector, if there is an element already present at indexi in the array. [ index represents the level in tree ]->[element at index i is rightmost node at level i] If at that level, element is present,, just continue the traversal. Else if no element is present at index i -> add that node to answer [res] at the i index.
+
+<Tabs> 
+<TabItem value="java" label="Java"> <SolutionAuthor name="@ganajayant"/>
 
 ```java
 /**
@@ -86,8 +82,8 @@ class Solution {
     }
 }
 ```
-</TabItem>
 
+</TabItem>
 
 <TabItem value="py" label="Python">
 <SolutionAuthor name="@kondekarshubham123"/>
@@ -185,24 +181,23 @@ public:
  * @param {TreeNode} root
  * @return {number[]}
  */
-var rightSideView = function(root) {
-    if (!root) return [];
-    let ans = [];
-    dfs(root, 0);
-    return ans;
+var rightSideView = function (root) {
+  if (!root) return [];
+  let ans = [];
+  dfs(root, 0);
+  return ans;
 
-    function dfs(root, level) {
-        if (!root) return;
-        ans[level] = root.val;
-        dfs(root.left, level + 1);
-        dfs(root.right, level + 1);
-    }
+  function dfs(root, level) {
+    if (!root) return;
+    ans[level] = root.val;
+    dfs(root.left, level + 1);
+    dfs(root.right, level + 1);
+  }
 };
 ```
 
 </TabItem>
 </Tabs>
-
 
 ## Approach 2: Breadth-First Search
 
@@ -258,5 +253,6 @@ class Solution:
         # return our answer.
         return right_view
 ```
+
 </TabItem>
 </Tabs>

@@ -28,18 +28,19 @@ Output: [9,4]
 
 **Constraints:**
 
-* `1 <= nums1.length, nums2.length <= 1000`
-* `0 <= nums1[i], nums2[i] <= 1000` 
+- `1 <= nums1.length, nums2.length <= 1000`
+- `0 <= nums1[i], nums2[i] <= 1000`
 
 ## Approach 1: HashMap
-1) Insert all elements from first array into hash table (set).
 
-2) for each element i in second array if it is present in our hash table insert into result list & remove that element from our hash table so we again not insert into result.
+1. Insert all elements from first array into hash table (set).
 
-3) return result. 
-<Tabs>
-<TabItem value="java" label="Java">
-<SolutionAuthor name="@ganajayant"/>
+2. for each element i in second array if it is present in our hash table insert into result list & remove that element from our hash table so we again not insert into result.
+
+3. return result.
+
+<Tabs> 
+<TabItem value="java" label="Java"> <SolutionAuthor name="@ganajayant"/>
 
 ```java
 class Solution {
@@ -71,5 +72,6 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 </Tabs>

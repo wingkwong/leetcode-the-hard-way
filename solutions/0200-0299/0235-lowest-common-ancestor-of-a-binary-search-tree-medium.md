@@ -15,7 +15,6 @@ Given a binary search tree (BST), find the lowest common ancestor (LCA) node of 
 
 According to the [definition of LCA on Wikipedia](https://en.wikipedia.org/wiki/Lowest_common_ancestor): “The lowest common ancestor is defined between two nodes `p` and `q` as the lowest node in `T` that has both `p` and `q` as descendants (where we allow **a node to be a descendant of itself**).”
 
-
 **Example 1:**
 
 ![](https://assets.leetcode.com/uploads/2018/12/14/binarysearchtree_improved.png)
@@ -89,7 +88,7 @@ class Solution:
             # Else will cover 2 cases:
             # 1. node == p or q -- since we are traversing top down, it means
             # the other must be a child, thus making node the LCA.
-            # 2. p is in one subtree and q is in the other subtree, making the 
+            # 2. p is in one subtree and q is in the other subtree, making the
             # current node the LCA.
             else:
                 return node
@@ -115,17 +114,17 @@ class Solution:
  * @param {TreeNode} q
  * @return {TreeNode}
  */
-var lowestCommonAncestor = function(root, p, q) {
-    let curr = root;
-    while (curr) {
-        if (p.val < curr.val && q.val < curr.val) {
-            curr = curr.left;
-        } else if (p.val > curr.val && q.val > curr.val) {
-            curr = curr.right;
-        } else {
-            return curr;
-        }
+var lowestCommonAncestor = function (root, p, q) {
+  let curr = root;
+  while (curr) {
+    if (p.val < curr.val && q.val < curr.val) {
+      curr = curr.left;
+    } else if (p.val > curr.val && q.val > curr.val) {
+      curr = curr.right;
+    } else {
+      return curr;
     }
+  }
 };
 ```
 

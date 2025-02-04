@@ -1,13 +1,13 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/binary-tree-longest-consecutive-sequence/'
+description: 'Author: @wkw | https://leetcode.com/problems/binary-tree-longest-consecutive-sequence/'
 tags: [Tree, Depth-First Search, Binary Tree]
 ---
 
-# 0298 - Binary Tree Longest Consecutive Sequence (Medium) 
+# 0298 - Binary Tree Longest Consecutive Sequence (Medium)
 
 ## Problem Statement
 
-Given the `root` of a binary tree, return *the length of the longest **consecutive sequence path***.
+Given the `root` of a binary tree, return \*the length of the longest **consecutive sequence path\***.
 
 A **consecutive sequence path** is a path where the values **increase by one** along the path.
 
@@ -36,7 +36,7 @@ Explanation: Longest consecutive sequence path is 2-3, not 3-2-1, so return 2.
 
 ## Approach 1: DFS
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 /**

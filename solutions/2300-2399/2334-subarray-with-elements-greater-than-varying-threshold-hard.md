@@ -1,7 +1,8 @@
 ---
 description: >-
-  Author: @TBC |
-  https://leetcode.com/problems/subarray-with-elements-greater-than-varying-threshold
+  Author: @TBC | https://leetcode.com/problems/subarray-with-elements-greater-than-varying-threshold
+
+
 draft: true
 ---
 
@@ -36,15 +37,15 @@ Note that this is the only valid subarray.
 Input: nums = [6,5,6,5,8], threshold = 7
 Output: 1
 Explanation: The subarray [8] has a size of 1, and 8 > 7 / 1 = 7. So 1 is returned.
-Note that the subarray [6,5] has a size of 2, and every element is greater than 7 / 2 = 3.5. 
+Note that the subarray [6,5] has a size of 2, and every element is greater than 7 / 2 = 3.5.
 Similarly, the subarrays [6,5,6], [6,5,6,5], [6,5,6,5,8] also satisfy the given conditions.
 Therefore, 2, 3, 4, or 5 may also be returned.
 ```
 
 **Constraints:**
 
-* `1 <= nums.length <= 10^5`
-* `1 <= nums[i], threshold <= 10^9`
+- `1 <= nums.length <= 10^5`
+- `1 <= nums[i], threshold <= 10^9`
 
 ## Approach: TBC
 

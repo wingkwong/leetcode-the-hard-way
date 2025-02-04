@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/a-number-after-a-double-reversal/
+  Author: @wkw | https://leetcode.com/problems/a-number-after-a-double-reversal/
 ---
 
 # 2119 - A Number After a Double Reversal (Easy)
@@ -14,7 +13,7 @@ https://leetcode.com/problems/a-number-after-a-double-reversal/
 
 **Reversing** an integer means to reverse all its digits.
 
-* For example, reversing `2021` gives `1202`. Reversing `12300` gives `321` as the **leading zeros are not retained**.
+- For example, reversing `2021` gives `1202`. Reversing `12300` gives `321` as the **leading zeros are not retained**.
 
 Given an integer `num`, **reverse** `num` to get `reversed1`, **then reverse** `reversed1` to get `reversed2`. Return `true` _if_ `reversed2` _equals_ `num`. Otherwise return `false`.
 
@@ -44,11 +43,11 @@ Explanation: Reverse num to get 0, then reverse 0 to get 0, which equals num.
 
 **Constraints:**
 
-* `0 <= num <= 10^6`
+- `0 <= num <= 10^6`
 
 ## Approach 1: Just do what it says
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -68,7 +67,7 @@ public:
 
 However, a better way to solve this is to check if there is any trailing zero. No matter how many zeros at the end, after removing them all, it won't be same if you reverse it. The only exceptional case is $$num=0$$.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

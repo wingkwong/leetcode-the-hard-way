@@ -1,9 +1,17 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/can-i-win/'
-tags: [Math, Dynamic Programming, Bit Manipulation, Memoization, Game Theory, Bitmask]
+description: 'Author: @wkw | https://leetcode.com/problems/can-i-win/'
+tags:
+  [
+    Math,
+    Dynamic Programming,
+    Bit Manipulation,
+    Memoization,
+    Game Theory,
+    Bitmask,
+  ]
 ---
 
-# 0464 - Can I Win (Medium) 
+# 0464 - Can I Win (Medium)
 
 ## Problem Link
 
@@ -55,7 +63,7 @@ Output: true
 
 <Tabs>
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:

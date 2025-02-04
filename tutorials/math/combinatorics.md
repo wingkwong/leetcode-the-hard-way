@@ -8,7 +8,7 @@ keywords:
   - combinatorics
 ---
 
-<TutorialAuthors names="@BlackPanther112358"/>
+<TutorialCredits authors="@BlackPanther112358"/>
 
 ## Overview
 
@@ -26,8 +26,7 @@ We can precompute all the required values using the above formula in $O(n^2)$ an
 
 The important insight here is that the figure provided is nothing but an inverted Pascal's Triangle and contribution of each cell in the final sum is the value of cell multiplied by the binomial coefficient at the particular position in Pascal's Triangle.
 
-Thus for the cell at $i^{th}$ index in the topmost row, it's value is multiplied by $n - 1 \choose i$ and added to the final sum $modulo\,10$.
-Time Complexity of the program is $O(n^2)$ for computing the binomial coefficient and $O(n)$ Space complexity.
+Thus for the cell at $i^{th}$ index in the topmost row, it's value is multiplied by $n - 1 \choose i$ and added to the final sum $modulo\,10$. Time Complexity of the program is $O(n^2)$ for computing the binomial coefficient and $O(n)$ Space complexity.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -60,8 +59,7 @@ public:
 </TabItem>
 </Tabs>
 
-Sometimes it is not possible to calculate the entirety of Pascal's Triangle due to larger values of $n$. In this case, we begin by precomputing
-$x!$$\,$ $\forall$$\,$$x \in [{0, n}]$. Similarly, we will also [precompute](https://cp-algorithms.com/algebra/module-inverse.html#mod-inv-all-num) the modular inverses.  This can be achieved in $O(n)$ time. Thus we can now compute $n \choose r$ using the analytical equation presented earlier. You can read about modular inverses [here](../../tutorials/basic-topics/mod.md)
+Sometimes it is not possible to calculate the entirety of Pascal's Triangle due to larger values of $n$. In this case, we begin by precomputing $x!$$\,$ $\forall$$\,$$x \in [{0, n}]$. Similarly, we will also [precompute](https://cp-algorithms.com/algebra/module-inverse.html#mod-inv-all-num) the modular inverses. This can be achieved in $O(n)$ time. Thus we can now compute $n \choose r$ using the analytical equation presented earlier. You can read about modular inverses [here](../../tutorials/basic-topics/mod.md)
 
 The implementation of above can be as follows:
 
@@ -110,6 +108,7 @@ For further reading, you can visit [cp-algorithms](https://cp-algorithms.com/com
 ## Finding the $n^{th}$ catalan number
 
 This is a very famous sequence of natural numbers and has a variety of applications.
+
 - Number of ways to make balanced bracket sequences using $n$ left and $n$ right brackets.
 - [Number of ways to make binary trees](https://leetcode.com/problems/unique-binary-search-trees/description/)
 - Number of ways to form a mountain range with $n$ upstrokes and downstrokes. $\\$
@@ -128,12 +127,11 @@ This is an example of a very tricky problem which heavily simplifies after using
 
 Here we will consider the $i^{th}$ bit from the right. Let's say that the $i^{th}$ bit is set in $k$ out of $n$ numbers in some given subset. If $k$ is odd, then $i^{th}$ bit is set in the XOR of all numbers of the subset, otherwise, it is not set.
 
-Hence if there are $m$ numbers out of $n$ with $i^{th}$ bit set, then the contribution of the bit is $Place\,value\,of\,the\,bit$ $*$ $number\,of\,ways\,to\,get\,odd\,k$ 
+Hence if there are $m$ numbers out of $n$ with $i^{th}$ bit set, then the contribution of the bit is $Place\,value\,of\,the\,bit$ $*$ $number\,of\,ways\,to\,get\,odd\,k$
 
 Thus we can find $\sum_{k = 1}^{k <= m}$ $m \choose k$ for all odd values of $k$, which comes out to $2^{m - 1}$. Furthermore, we can choose the remaining elements in the subset in $2^{n - m}$ ways by similar logic. Hence total ways to get odd values of $k$ are $2^{n - 1}$, which is independent of both $m$ and $k$.
 
-Hence all we need to do is find bits which are set atleast once (by computing OR) and then multiply the final answer with $2^{n - 1}$.
-Time Complexity of the program is $O(n)$ with $O(1)$ Space Complexity.
+Hence all we need to do is find bits which are set atleast once (by computing OR) and then multiply the final answer with $2^{n - 1}$. Time Complexity of the program is $O(n)$ with $O(1)$ Space Complexity.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -158,8 +156,7 @@ public:
 
 Here our robot always goes either down or right. We know that we have to go down $m - 1$ times and go left $n - 1$ times. Thus we need to find the number of ways to arrange these. One way to visualize this is if we have $m + n - 2$ blank spaces, and we have to fill $n - 1$ of them using $R$ (representing going right) and remaining using $D$ (representing going down). Then we can just choose the number of spaces to fill with $L$ from total number of spaces. The the final solution is simply $m + n - 2 \choose n - 1$.
 
-Notice that we are not required to return the value after taking modulo and the constraints allow for a $O(n^2)$ precomputation. Thus, we will
-simply construct the entire Pascal's Triangle and query it everytime to calculate the answer.
+Notice that we are not required to return the value after taking modulo and the constraints allow for a $O(n^2)$ precomputation. Thus, we will simply construct the entire Pascal's Triangle and query it everytime to calculate the answer.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -190,42 +187,36 @@ public:
 </TabItem>
 </Tabs>
 
-NOTE: Since every testcase only asks us to find $n \choose r$ for particular values of $n$ and $r$, we can instead of precomputing the entire
-Pascal's Triangle, just compute the paricular value of $n \choose r$ using the recurrence relation and memoization. This will lead to less time
-and space complexity, as we only calculate the values we need. Also, then we no longer need to take modulo with INT_MAX as all the values will
-fit in the "int" type as mentioned in the question.
+NOTE: Since every testcase only asks us to find $n \choose r$ for particular values of $n$ and $r$, we can instead of precomputing the entire Pascal's Triangle, just compute the paricular value of $n \choose r$ using the recurrence relation and memoization. This will lead to less time and space complexity, as we only calculate the values we need. Also, then we no longer need to take modulo with INT_MAX as all the values will fit in the "int" type as mentioned in the question.
 
 You can check the complete solution for this problem [here](../../solutions/0000-0099/unique-paths-medium)
 
 ### Example #4: [2400 - Number of Ways to Reach a Position After Exactly k Steps](https://leetcode.com/problems/number-of-ways-to-reach-a-position-after-exactly-k-steps/)
 
-Let's represent going left as $-1$ and going right as $+1$. Thus, following the same idea as before, we have $k$ blanks to fill with $+1$ and
-$-1$ such that there sum is equal to $endPos - startPos$.
+Let's represent going left as $-1$ and going right as $+1$. Thus, following the same idea as before, we have $k$ blanks to fill with $+1$ and $-1$ such that there sum is equal to $endPos - startPos$.
 
 Here we can immediately see that such will be impossible in only 2 cases:
+
 - The parity of $k$ and $endPos - startPos$ is different.
 - The magnitude of $k$ is less than magnitude of $endPos - startPos$.
 
-After checking for above 2 cases, we know for sure that there exists a solution. Now we can just find the number of $1's$ and $-1's$ required
-to sum to $endPos - startPos$. Expressing this as an equation:
+After checking for above 2 cases, we know for sure that there exists a solution. Now we can just find the number of $1's$ and $-1's$ required to sum to $endPos - startPos$. Expressing this as an equation:
 
 $(1) * a + (-1) * b = endPos - startPos$, such that $a + b = k$
 
-Here $a$ represents the number of $1$, i.e., the right steps and similarly $b$ represents number of $-1$, i.e., the number of left steps. We
-are now interested in finding the number of possible values of $a$ and $b$ such that the above equations are satisfied.
+Here $a$ represents the number of $1$, i.e., the right steps and similarly $b$ represents number of $-1$, i.e., the number of left steps. We are now interested in finding the number of possible values of $a$ and $b$ such that the above equations are satisfied.
 
-Adding both equations, 
+Adding both equations,
 
 $2a$ $=$ $endPos - startPos + k$
 
-Thus, 
+Thus,
 
 $a$ $=$ $\frac{k \, + \, endPos \, - \, startPos}{2}$
 
 Similarly, by subtracting the equations and simplifying,
 
 $b$ $=$ $\frac{k \, - \, endPos \, + \, startPos}{2}$
-
 
 Then the solution is $k \choose a$ $=$ $k \choose b$ as we need to find number of ways to choose $a$ or $b$ moves, out of $k$ moves.
 
@@ -235,28 +226,10 @@ To implement this, you can both precompute the entire Pascal's Triangle, or use 
 
 You can check the complete solution for this problem [here](../../solutions/2400-2499/number-of-ways-to-reach-a-position-after-exactly-k-steps-medium)
 
-export const suggestedProblems = [
-  {
-    "problemName": "920 - Number of Music Playlists",
-    "difficulty": "Hard",
-    "leetCodeLink": "https://leetcode.com/problems/number-of-music-playlists/",
-    "solutionLink": ""
-  },
-  {
-    "problemName": "1916 - Count Ways to Build Rooms in an Ant Colony",
-    "difficulty": "Hard",
-    "leetCodeLink": "https://leetcode.com/problems/count-ways-to-build-rooms-in-an-ant-colony/",
-    "solutionLink": "../../solutions/1900-1999/count-ways-to-build-rooms-in-an-ant-colony"
-  },
-  {
-    "problemName": "1467 - Probability of a Two Boxes Having The Same Number of Distinct Balls",
-    "difficulty": "Hard",
-    "leetCodeLink": "https://leetcode.com/problems/probability-of-a-two-boxes-having-the-same-number-of-distinct-balls/",
-    "solutionLink": ""
-  },
-]
+export const suggestedProblems = [ { "problemName": "920 - Number of Music Playlists", "difficulty": "Hard", "leetCodeLink": "https://leetcode.com/problems/number-of-music-playlists/", "solutionLink": "" }, { "problemName": "1916 - Count Ways to Build Rooms in an Ant Colony", "difficulty": "Hard", "leetCodeLink": "https://leetcode.com/problems/count-ways-to-build-rooms-in-an-ant-colony/", "solutionLink": "../../solutions/1900-1999/count-ways-to-build-rooms-in-an-ant-colony" }, { "problemName": "1467 - Probability of a Two Boxes Having The Same Number of Distinct Balls", "difficulty": "Hard", "leetCodeLink": "https://leetcode.com/problems/probability-of-a-two-boxes-having-the-same-number-of-distinct-balls/", "solutionLink": "" }, ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />
 
 ## References
-1. [cp-algorithms](https://cp-algorithms.com/) 
+
+1. [cp-algorithms](https://cp-algorithms.com/)

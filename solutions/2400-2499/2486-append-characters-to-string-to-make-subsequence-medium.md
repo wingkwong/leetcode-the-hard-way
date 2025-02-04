@@ -1,5 +1,5 @@
 ---
-description: "Author: @dhanu084 | https://leetcode.com/problems/append-characters-to-string-to-make-subsequence/"
+description: 'Author: @dhanu084 | https://leetcode.com/problems/append-characters-to-string-to-make-subsequence/'
 tags: [Two Pointers]
 ---
 
