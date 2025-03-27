@@ -7,8 +7,7 @@ const darkCodeTheme = require('prism-react-renderer').themes.dracula;
 const math = require('remark-math');
 const katex = require('rehype-katex');
 
-/** @type {import('@docusaurus/types').Config} */
-const config = {
+module.exports = {
   title: 'LeetCode The Hard Way',
   tagline: 'From Absolute Beginner to Quitter',
   url: 'http://leetcodethehardway.com/',
@@ -32,9 +31,8 @@ const config = {
 
   presets: [
     [
-      'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+      '@docusaurus/preset-classic',
+      {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/',
@@ -61,7 +59,7 @@ const config = {
         googleAnalytics: {
           trackingID: 'UA-119822493-4',
         },
-      }),
+      },
     ],
   ],
 
@@ -274,5 +272,3 @@ const config = {
     ],
   ],
 };
-
-module.exports = config;
