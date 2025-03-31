@@ -54,7 +54,7 @@ struct segtree {
     long long sum(int l, int r) {
         return sum(l, r, 0, 0, size);
     }
-};
+} st;
 ```
 
 </TabItem>
