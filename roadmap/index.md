@@ -9,4 +9,4 @@ keywords:
   - study plan
 ---
 
-Here is the section for group of problems sorted in differnt categories to help you get started in a specific topic or way with your coding journey and not get overwhelmed from the sheer number of problems available in Leetcode. You can find different topics in left side bar or you can also navigate with the list given below.
+Here is the section for a group of problems sorted in different categories to help you get started with a specific topic or on to your coding journey while not getting overwhelmed from the sheer number of problems available in Leetcode. You can find different topics in left side bar or you can also navigate with the list given below.
