@@ -16,11 +16,11 @@
     "prettier": "prettier --write ."
   },
   "dependencies": {
-    "@docusaurus/core": "3.7.0",
-    "@docusaurus/plugin-content-docs": "3.7.0",
-    "@docusaurus/plugin-google-analytics": "3.7.0",
-    "@docusaurus/plugin-google-gtag": "3.7.0",
-    "@docusaurus/preset-classic": "3.7.0",
+    "@docusaurus/core": "3.9.1",
+    "@docusaurus/plugin-content-docs": "3.9.1",
+    "@docusaurus/plugin-google-analytics": "3.9.1",
+    "@docusaurus/plugin-google-gtag": "3.9.1",
+    "@docusaurus/preset-classic": "3.9.1",
     "@mdx-js/react": "^3.0.0",
     "clsx": "^2.1.1",
     "hast-util-is-element": "^3.0.0",
@@ -31,7 +31,7 @@
     "remark-math": "6.0.0"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "3.7.0",
+    "@docusaurus/module-type-aliases": "3.9.1",
     "prettier": "3.5.3"
   },
   "browserslist": {
