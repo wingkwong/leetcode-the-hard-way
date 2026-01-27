@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/ways-to-split-array-into-good-subarrays/'
+description: 'Author: @wkw | https://leetcode.com/problems/ways-to-split-array-into-good-subarrays/'
 tags: [Array, Math, Dynamic Programming]
 ---
 
-# 2750 - Ways to Split Array Into Good Subarrays (Medium) 
+# 2750 - Ways to Split Array Into Good Subarrays (Medium)
 
 ## Problem Link
 
@@ -15,7 +15,7 @@ You are given a binary array `nums`.
 
 A subarray of an array is **good** if it contains **exactly** **one** element with the value `1`.
 
-Return *an integer denoting the number of ways to split the array*`nums`*into **good** subarrays*. As the number may be too large, return it **modulo** `109 + 7`.
+Return _an integer denoting the number of ways to split the array_`nums`_into **good** subarrays_. As the number may be too large, return it **modulo** `1e9 + 7`.
 
 A subarray is a contiguous **non-empty** sequence of elements within an array.
 
@@ -48,7 +48,7 @@ Explanation: There is 1 way to split nums into good subarrays:
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @vigneshshiv, @radojicic23 |
-  https://leetcode.com/problems/search-in-rotated-sorted-array/
+  Author: @vigneshshiv, @radojicic23 | https://leetcode.com/problems/search-in-rotated-sorted-array/
 ---
 
 # 0033 - Search in Rotated Sorted Array (Medium)
@@ -242,7 +241,7 @@ public:
                     r = mid - 1;
                 }
             } else {
-                // we are in left sorted portion 
+                // we are in left sorted portion
                 if (target < nums[mid] || target > nums[r]) {
                     r = mid - 1;
                 // we are in right sorted portion

@@ -10,7 +10,7 @@ keywords:
   - algorithm
 ---
 
-<TutorialAuthors names="@heiheihang,@potatochick,@SkollRyu"/>
+<TutorialCredits authors="@heiheihang,@potatochick,@SkollRyu"/>
 
 ## Overview
 
@@ -20,13 +20,11 @@ A heap, or a priority queue, is a data structure that efficiently stores element
 
 ### Insertion
 
-To do insetion in heap, we would add the new element to the end of the heap. If the position of the new element violates the heap properity, the new elements will be sifted up until it reaches the correct position.
-![heap_insertion](https://user-images.githubusercontent.com/63882653/171032169-d92bc368-8f5a-44eb-8507-3c84f884c113.gif)
+To do insetion in heap, we would add the new element to the end of the heap. If the position of the new element violates the heap properity, the new elements will be sifted up until it reaches the correct position. ![heap_insertion](https://user-images.githubusercontent.com/63882653/171032169-d92bc368-8f5a-44eb-8507-3c84f884c113.gif)
 
 ### Deletion
 
-In heap, the deletion refers to pop the root in the heap. After the root of the heap has been popped out, the last element in the heap will be inserted to the root position. If this violates the heap porperity, the new root would be sifted down until it reaches the correct position.
-![deletion_heap](https://user-images.githubusercontent.com/63882653/171033836-ec8841ac-649a-468d-8961-4ad395152df7.gif)
+In heap, the deletion refers to pop the root in the heap. After the root of the heap has been popped out, the last element in the heap will be inserted to the root position. If this violates the heap porperity, the new root would be sifted down until it reaches the correct position. ![deletion_heap](https://user-images.githubusercontent.com/63882653/171033836-ec8841ac-649a-468d-8961-4ad395152df7.gif)
 
 ## Python
 
@@ -38,7 +36,7 @@ In Python, you can use the following functions to interact with a heap:
 heap = [] #to initialize a heap, it is just a list
 
 heappush(heap, 3) # to add an element to the heap, we can use heappush
-#heap = [3] 
+#heap = [3]
 
 heappush(heap, 5)
 #heap = [3, 5] , the heap always keeps the smallest element in front!
@@ -75,8 +73,8 @@ Let's work on a problem ([LeetCode Link](https://leetcode.com/problems/last-ston
 >
 > We are playing a game with the stones. On each turn, we choose the **heaviest two stones** and smash them together. Suppose the heaviest two stones have weights `x` and `y` with `x <= y`. The result of this smash is:
 >
-> * If `x == y`, both stones are destroyed, and
-> * If `x != y`, the stone of weight `x` is destroyed, and the stone of weight `y` has new weight `y - x`.
+> - If `x == y`, both stones are destroyed, and
+> - If `x != y`, the stone of weight `x` is destroyed, and the stone of weight `y` has new weight `y - x`.
 >
 > At the end of the game, there is **at most one** stone left.
 >
@@ -84,57 +82,64 @@ Let's work on a problem ([LeetCode Link](https://leetcode.com/problems/last-ston
 
 I want you to think about these questions before working on it:
 
-* Should we use a min-heap or a max-heap?
-* If it is a max-heap, how to we "store" the numbers?
-* What do we have to check before retrieving the two heaviest stones?
+- Should we use a min-heap or a max-heap?
+- If it is a max-heap, how to we "store" the numbers?
+- What do we have to check before retrieving the two heaviest stones?
 
 As we need to get the two heaviest stones in every iteration, we should use a max-heap for quick access of the largest elements. To use a max-heap, we can store the negative of the integer. We have to check if there are at least two more stones in the heap before retrieving the two heaviest stones.
 
 ```python
 def lastStoneWeight(self, stones: List[int]) -> int:
-        
+
         #initialize the max_heap
         max_heap = []
-        
+
         #add elements to max_heap
         for stone in stones:
             #store its negative to keep the most positive stone in front
             heappush(max_heap, -stone)
-            
+
         #we have to check if there are at least two stones in the heap
         while(len(max_heap) > 1):
-            
+
             #pop the largest element from max_heap, multiplied by -1
             largest_stone = -1 * heappop(max_heap)
-            
+
             #pop the second largest element (now largest) from max_heap, multiplied by -1
             second_largest_stone = -1 * heappop(max_heap)
-            
+
             #push the new stone if they are not equal
             if(largest_stone != second_largest_stone):
                 new_stone = largest_stone - second_largest_stone
                 #remember to store its negative
                 heappush(max_heap, -new_stone)
-        
+
         #if there is a stone left, return the stone, its positive value
         if(max_heap):
             return -max_heap[0]
-            
+
         #if no stone left, return 0
         return 0
 ```
+
 ## C++
+
 In C++, when we are refer to heap, we mostly refer to priority queue. By default, priority queue is a max heap in c++.
 
 Create a max heap:
-```cpp 
-priority_queue<int> max_heap; // max heap 
+
+```cpp
+priority_queue<int> max_heap; // max heap
 ```
+
 Create a min heap:
-```cpp 
-priority_queue<int,vector<int>,greater<int>> min_heap; // min heap 
+
+```cpp
+priority_queue<int,vector<int>,greater<int>> min_heap; // min heap
 ```
+
 Other related function:
+
 ```cpp
 priority_queue<int> max_heap; //max heap
 
@@ -154,7 +159,7 @@ for (auto x:vc){
 //To get element from the priority queue
 int top_element = max_heap.top();max_heap.pop();
 cout<<top_element; //output: 6
-//As we want to access the second largest element later, we need to remove the max element after we access it. 
+//As we want to access the second largest element later, we need to remove the max element after we access it.
 
 //To get all element from the priority queue
 while(!max_heap.empty()){
@@ -162,37 +167,43 @@ while(!max_heap.empty()){
   cout<<element<<" "; //output: 5 4 3 2 1
 }
 ```
+
 **Advance usage:** Use heap to sort the element by value while containing the index of the elements.
 
 Let's work on a problem ([LeetCode Link](https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix/))
->you are given an m x n binary matrix mat of 1's (representing soldiers) and 0's (representing civilians). The soldiers are positioned in front of >the civilians. That is, all the 1's will appear to the left of all the 0's in each row.
->
->A row i is weaker than a row j if one of the following is true:
->
->The number of soldiers in row i is less than the number of soldiers in row j.
->Both rows have the same number of soldiers and i < j.
->Return the indices of the k weakest rows in the matrix ordered from weakest to strongest.
 
-The idea of this question is 
-* count the number of soilders in each row
-* sort it
-* return the 1st - kth weakest **index** of row
+> you are given an m x n binary matrix mat of 1's (representing soldiers) and 0's (representing civilians). The soldiers are positioned in front of >the civilians. That is, all the 1's will appear to the left of all the 0's in each row.
+>
+> A row i is weaker than a row j if one of the following is true:
+>
+> The number of soldiers in row i is less than the number of soldiers in row j. Both rows have the same number of soldiers and i < j. Return the indices of the k weakest rows in the matrix ordered from weakest to strongest.
+
+The idea of this question is
+
+- count the number of soilders in each row
+- sort it
+- return the 1st - kth weakest **index** of row
 
 We will use a min heap as we want the result rank from `weakest to strongest`.
 
 Create a min heap which will contains `pair of {number of soldiers in the row, row index}`. By default, c++ will rank the order of element by the first element in the heap. In this case, it will be `number of soldiers`
+
 ```cpp
 priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>> pq;
 //priority_queue<pair<int,int>,vector<pair<int,int>>,greater<>> pq; // this line will also work
 ```
+
 To access the `pair of {number of soldiers in the row, row index}`
+
 ```cpp
 pair<int,int> top_element;
 top_element=pq.top();pq.pop();
 int number_of_soldiers = top_element.first;
 int index = top_element.second;
 ```
+
 My solution:
+
 ```cpp
 vector<int> kWeakestRows(vector<vector<int>>& mat, int k) {
         priority_queue<pair<int,int>,vector<pair<int,int>>,greater<>> pq; //min heap
@@ -203,11 +214,11 @@ vector<int> kWeakestRows(vector<vector<int>>& mat, int k) {
                 if (mat[i][j] == 1) count++;
             }
             pq.push({count,i}); //push pair of {number of soldiers in the row, row index} to the min heap
-            //pq.push(make_pair(count,i)); can replace with this line of syntax 
+            //pq.push(make_pair(count,i)); can replace with this line of syntax
         }
         vector<int> result;
         int count = 0;
-        
+
         //get the index only from the heap and put it in the array
         while(!pq.empty() && count<k){
             count++;
@@ -218,31 +229,13 @@ vector<int> kWeakestRows(vector<vector<int>>& mat, int k) {
         return result;
     }
 ```
+
 **Additional knowledge:** You can create a `max heap with pair<int,int>` with following syntax
 
 ```cpp
 priority_queue<pair<int,int>> pq;
 ```
 
-export const suggestedProblems = [
-  {
-    "problemName": "0703 - Kth Largest Element in a Stream",
-    "difficulty": "Easy",
-    "leetCodeLink": "https://leetcode.com/problems/kth-largest-element-in-a-stream/",
-    "solutionLink": "../../solutions/0700-0799/kth-largest-element-in-a-stream-easy"
-  },
-  {
-    "problemName": "0215 - Kth Largest Element in an Array",
-    "difficulty": "Medium",
-    "leetCodeLink": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
-    "solutionLink": "../../solutions/0200-0299/kth-largest-element-in-an-array-medium"
-  },
-  {
-    "problemName": "0973 - K Closest Points to Origin",
-    "difficulty": "Medium",
-    "leetCodeLink": "https://leetcode.com/problems/k-closest-points-to-origin/",
-    "solutionLink": "../../solutions/0900-0999/k-closest-points-to-origin-medium"
-  },
-]
+export const suggestedProblems = [ { "problemName": "0703 - Kth Largest Element in a Stream", "difficulty": "Easy", "leetCodeLink": "https://leetcode.com/problems/kth-largest-element-in-a-stream/", "solutionLink": "../../solutions/0700-0799/kth-largest-element-in-a-stream-easy" }, { "problemName": "0215 - Kth Largest Element in an Array", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/kth-largest-element-in-an-array/", "solutionLink": "../../solutions/0200-0299/kth-largest-element-in-an-array-medium" }, { "problemName": "0973 - K Closest Points to Origin", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/k-closest-points-to-origin/", "solutionLink": "../../solutions/0900-0999/k-closest-points-to-origin-medium" }, ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />

@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/make-the-string-great/'
+description: 'Author: @wkw | https://leetcode.com/problems/make-the-string-great/'
 tags: [String, Stack]
 ---
 
-# 1544 - Make The String Great (Easy) 
+# 1544 - Make The String Great (Easy)
 
 ## Problem Link
 
@@ -20,7 +20,7 @@ A good string is a string which doesn't have **two adjacent characters** `s[i]` 
 
 To make the string good, you can choose **two adjacent** characters that make the string bad and remove them. You can keep doing this until the string becomes good.
 
-Return *the string* after making it good. The answer is guaranteed to be unique under the given constraints.
+Return _the string_ after making it good. The answer is guaranteed to be unique under the given constraints.
 
 **Notice** that an empty string is also good.
 
@@ -58,7 +58,7 @@ Output: "s"
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -92,14 +92,14 @@ public:
 </TabItem>
 
 <TabItem value="java" label="Java">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```java
 class Solution {
     public String makeGood(String s) {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < s.length(); i++) {
-            // as long as `sb` has a character, 
+            // as long as `sb` has a character,
             // we check if the last character is same letter but in upper-case or vice-versa
             // here we can use XOR and 1 << 5 to convert a lower character to a upper one and vice-versa
             // A: 01[0]00001
@@ -123,7 +123,7 @@ class Solution {
 </TabItem>
 
 <TabItem value="kt" label="Kotlin">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```kt
 class Solution {

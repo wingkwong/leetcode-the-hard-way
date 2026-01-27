@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/find-the-longest-substring-containing-vowels-in-even-counts/
+  Author: @wkw | https://leetcode.com/problems/find-the-longest-substring-containing-vowels-in-even-counts/
 ---
 
 # 1371 - Find the Longest Substring Containing Vowels in Even Counts (Medium)
@@ -40,14 +39,14 @@ Explanation: In this case, the given string "bcbcbc" is the longest because all 
 
 **Constraints:**
 
-* `1 <= s.length <= 5 x 10^5`
-* `s` contains only lowercase English letters.
+- `1 <= s.length <= 5 x 10^5`
+- `s` contains only lowercase English letters.
 
 ## Approach 1: Bit-Masking
 
 We know that if we toggle a bit even number of times, it would be same as the original. We use the bit to represent if the vowel appears an even number of times or not. Since we only have 5 letters, which only gives 32 possibilities.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

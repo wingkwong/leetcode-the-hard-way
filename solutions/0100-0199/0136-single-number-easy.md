@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/single-number/'
+description: 'Author: @wkw, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/single-number/'
 ---
 
 # 0136 - Single Number (Easy)
@@ -37,9 +37,9 @@ Output: 1
 
 **Constraints:**
 
-* `1 <= nums.length <= 3 * 10^4`
-* `-3 * 10^4 <= nums[i] <= 3 * 10^4`
-* Each element in the array appears twice except for one element which appears only once.
+- `1 <= nums.length <= 3 * 10^4`
+- `-3 * 10^4 <= nums[i] <= 3 * 10^4`
+- Each element in the array appears twice except for one element which appears only once.
 
 ## Approach 1: Bit Manipulation
 
@@ -51,15 +51,15 @@ You should understand properties of XOR.
 
 Let's have a quick review.
 
-* If we take XOR of a number and a zero, the result will be that number, i.e. $$a \oplus 0 = a$$.
-* If we take XOR of two same numbers, it will return 0, i.e. $$a \oplus a = 0$$.
-* If we take XOR of multiple numbers, the order doesn't affect the result, i.e. $$a \oplus b \oplus c = a \oplus c \oplus b$$.
+- If we take XOR of a number and a zero, the result will be that number, i.e. $$a \oplus 0 = a$$.
+- If we take XOR of two same numbers, it will return 0, i.e. $$a \oplus a = 0$$.
+- If we take XOR of multiple numbers, the order doesn't affect the result, i.e. $$a \oplus b \oplus c = a \oplus c \oplus b$$.
 
 Therefore, if we take XOR of all numbers, what's left would be that single number as every element that appears twice would be cancelled out. For example, $$nums = [4,1,2,1,2]$$, we can reorder it like $$[1,1,2,2,4]$$, and we got $$(1 \oplus 1) \oplus (2 \oplus 2) \oplus 4 = 4$$.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -74,13 +74,14 @@ public:
 
 </TabItem>
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:
     def singleNumber(self, nums: List[int]) -> int:
         return reduce(lambda x, y: x ^ y, nums)
 ```
+
 </TabItem>
 
 <TabItem value="java" label="Java">
@@ -104,9 +105,9 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 </Tabs>
-
 
 ## Approach 2: Math
 
@@ -114,10 +115,9 @@ $$2 * sumOfSet - (SumOfNumbers) = answer$$
 
 For example, $$nums = [4,1,2,1,2]$$, $$sumOfSet$$ is $$1 + 2 + 4 = 7$$ and $$sumOfNumbers$$is $$1 + 1 + 2 + 2 + 4 = 10$$. Then the answer is $$2 *7 - 10 = 4$$.
 
-
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -136,6 +136,7 @@ public:
     }
 };
 ```
+
 </TabItem>
 
 <TabItem value="js" label="JavaScript">
@@ -146,20 +147,21 @@ public:
  * @param {number[]} nums
  * @return {number}
  */
-var singleNumber = function(nums) {
-    let hashSet = new Set();
-    let sumOfSet = 0;
-    let sumOfNums = 0;
-    for (let num of nums) {
-        if (!hashSet.has(num)) {
-            hashSet.add(num);
-            sumOfSet += num;
-        }
-        sumOfNums += num;
+var singleNumber = function (nums) {
+  let hashSet = new Set();
+  let sumOfSet = 0;
+  let sumOfNums = 0;
+  for (let num of nums) {
+    if (!hashSet.has(num)) {
+      hashSet.add(num);
+      sumOfSet += num;
     }
-    return 2 * sumOfSet - sumOfNums;
+    sumOfNums += num;
+  }
+  return 2 * sumOfSet - sumOfNums;
 };
 ```
+
 </TabItem>
 
 <TabItem value="py" label="Python">
@@ -178,5 +180,6 @@ class Solution:
             sum_of_nums += n
         return 2 * sum_of_set - sum_of_nums
 ```
+
 </TabItem>
 </Tabs>

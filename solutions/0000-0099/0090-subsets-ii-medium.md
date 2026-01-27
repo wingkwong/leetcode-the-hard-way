@@ -40,8 +40,7 @@ Standard backtracking problem. At each step, we must decide to either take a num
 
 We can push all of them to a set to remove the duplicates. We also must first sort the numbers, as while backtracking if we have a number set of $$[4,1,4]$$ for example, during our iterations through for selection, we will at some point push both $$(4,1)$$ and $$(1,4)$$ to our set, which are the same set when ordered properly, but when hashing and pushing to our set, won't be considered as the same set. By sorting first, we can easily fix that problem, and since the time complexity of backtracking is much greater than sorting, it won't affect our big oh.
 
-Time Complexity: $$O(n*2^n)$$ to generate and copy all subsets into our power set.
-Space Complexity: $$(n*2^n)$$ to return all our subsets.
+Time Complexity: $$O(n*2^n)$$ to generate and copy all subsets into our power set. Space Complexity: $$(n*2^n)$$ to return all our subsets.
 
 Worst case, we will have no duplicates and have both exponential time and space.
 
@@ -59,7 +58,7 @@ class Solution:
         # and idx of where we are at in our nums array.
         stack = [((), 0)]
         # sort our numbers, since when hashing (1,4) and (4,1) they
-        # are obviously the same for our questions purposes, 
+        # are obviously the same for our questions purposes,
         # but will hash differently and both make our set.
         nums.sort()
         while stack:

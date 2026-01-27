@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/largest-combination-with-bitwise-and-greater-than-zero
+  Author: @wkw | https://leetcode.com/problems/largest-combination-with-bitwise-and-greater-than-zero
 ---
 
 # 2275 - Largest Combination With Bitwise AND Greater Than Zero (Medium)
@@ -14,8 +13,8 @@ https://leetcode.com/problems/largest-combination-with-bitwise-and-greater-than-
 
 The **bitwise AND** of an array `nums` is the bitwise AND of all integers in `nums`.
 
-* For example, for `nums = [1, 5, 3]`, the bitwise AND is equal to `1 & 5 & 3 = 1`.
-* Also, for `nums = [7]`, the bitwise AND is `7`.
+- For example, for `nums = [1, 5, 3]`, the bitwise AND is equal to `1 & 5 & 3 = 1`.
+- Also, for `nums = [7]`, the bitwise AND is `7`.
 
 You are given an array of positive integers `candidates`. Evaluate the **bitwise AND** of every **combination** of numbers of `candidates`. Each number in `candidates` may only be used **once** in each combination.
 
@@ -44,14 +43,14 @@ The size of the combination is 2, so we return 2.
 
 **Constraints:**
 
-* `1 <= candidates.length <= 10^5`
-* `1 <= candidates[i] <= 10^7`
+- `1 <= candidates.length <= 10^5`
+- `1 <= candidates[i] <= 10^7`
 
 ## Approach 1: Counting
 
-If the $i$-th bit is set after performing AND operation on $k$ candidates, it means the $i$-th of all $k$ candidates must be 1. Therefore, we check each bit to see which bit has the most candidates with the bit set. 
+If the $i$-th bit is set after performing AND operation on $k$ candidates, it means the $i$-th of all $k$ candidates must be 1. Therefore, we check each bit to see which bit has the most candidates with the bit set.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -69,7 +68,7 @@ public:
                     bits += 1;
                 }
             }
-            // update the ans 
+            // update the ans
             ans = max(ans, bits);
         }
         return ans;

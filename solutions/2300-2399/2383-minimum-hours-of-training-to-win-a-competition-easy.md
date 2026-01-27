@@ -1,8 +1,8 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/minimum-hours-of-training-to-win-a-competition/'
+description: 'Author: @wkw | https://leetcode.com/problems/minimum-hours-of-training-to-win-a-competition/'
 ---
 
-# 2383 - Minimum Hours of Training to Win a Competition (Easy) 
+# 2383 - Minimum Hours of Training to Win a Competition (Easy)
 
 ## Problem Statement
 
@@ -16,7 +16,7 @@ Defeating the `ith` opponent **increases** your experience by `experience[i]`, b
 
 Before starting the competition, you can train for some number of hours. After each hour of training, you can **either** choose to increase your initial experience by one, or increase your initial energy by one.
 
-Return *the **minimum** number of training hours required to defeat all*`n`*opponents*.
+Return _the **minimum** number of training hours required to defeat all_`n`_opponents_.
 
 **Example 1:**
 
@@ -53,7 +53,7 @@ Explanation: You do not need any additional energy or experience to win the comp
 
 ## Approach 1: Greedy
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

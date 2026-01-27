@@ -1,8 +1,8 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/difference-between-element-sum-and-digit-sum-of-an-array/'
+description: 'Author: @wkw | https://leetcode.com/problems/difference-between-element-sum-and-digit-sum-of-an-array/'
 ---
 
-# 2535 - Difference Between Element Sum and Digit Sum of an Array (Easy) 
+# 2535 - Difference Between Element Sum and Digit Sum of an Array (Easy)
 
 ## Problem Link
 
@@ -15,7 +15,7 @@ You are given a positive integer array `nums`.
 - The **element sum** is the sum of all the elements in `nums`.
 - The **digit sum** is the sum of all the digits (not necessarily distinct) that appear in `nums`.
 
-Return *the **absolute** difference between the **element sum** and **digit sum** of*`nums`.
+Return _the **absolute** difference between the **element sum** and **digit sum** of_`nums`.
 
 **Note** that the absolute difference between two integers `x` and `y` is defined as `|x - y|`.
 
@@ -24,7 +24,7 @@ Return *the **absolute** difference between the **element sum** and **digit sum*
 ```
 Input: nums = [1,15,6,3]
 Output: 9
-Explanation: 
+Explanation:
 The element sum of nums is 1 + 15 + 6 + 3 = 25.
 The digit sum of nums is 1 + 1 + 5 + 6 + 3 = 16.
 The absolute difference between the element sum and digit sum is |25 - 16| = 9.
@@ -50,7 +50,7 @@ The absolute difference between the element sum and digit sum is |10 - 10| = 0.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

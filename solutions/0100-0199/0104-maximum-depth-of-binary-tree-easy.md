@@ -32,8 +32,8 @@ Output: 2
 
 **Constraints:**
 
-* The number of nodes in the tree is in the range `[0, 104]`.
-* `-100 <= Node.val <= 100`
+- The number of nodes in the tree is in the range `[0, 104]`.
+- `-100 <= Node.val <= 100`
 
 ## Approach 1: Recursive
 
@@ -68,6 +68,7 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 
 <TabItem value="python" label="Python">
@@ -83,7 +84,7 @@ class Solution {
 class Solution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:
         if not root:
-            return 0 
+            return 0
         return 1 + max(self.maxDepth(root.left), self.maxDepth(root.right))
 ```
 
@@ -105,11 +106,11 @@ class Solution:
  * @param {TreeNode} root
  * @return {number}
  */
-var maxDepth = function(root) {
-    if (!root) {
-        return 0;
-    }
-    return 1 + Math.max(maxDepth(root.left), maxDepth(root.right))
+var maxDepth = function (root) {
+  if (!root) {
+    return 0;
+  }
+  return 1 + Math.max(maxDepth(root.left), maxDepth(root.right));
 };
 ```
 
@@ -146,8 +147,9 @@ public:
 
 We can solve this iteratively by tracking a global max and using a stack to store our data for each node. What we will store is the node we are processing itself and the depth of that node. Then while traversing, we can update the global max depth on each iteration, and return it at the end.
 
-While traversing the tree we can process each node by: 
-1. Updating the global max depth by checking whether the depth of the current node is larger or not, we can do this using the max function. 
+While traversing the tree we can process each node by:
+
+1. Updating the global max depth by checking whether the depth of the current node is larger or not, we can do this using the max function.
 2. Checking whether it has children nodes, then adding them to the list, making sure the depth of the child node is 1 greater than the current node.
 
 Time Complexity: $$O(n)$$ where n is the number of nodes. We have to process each node once.
@@ -201,6 +203,7 @@ class Solution:
 We can also use a queue as our main data structure. A queue allows us to traverse the tree 1 level at a time. Meaning instead of updateing the global max depth at each node, we can update it once at each level.
 
 While traversing the tree we can process each level by:
+
 1. Updating the max depth we have reached.
 2. Running a for loop over the length of the queue. This allows us to process each node currently in the queue, while also adding the children node to the queue.
 3. During the processing of each node, make sure it has children before adding them to the queue.

@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong, @vigneshshiv | https://leetcode.com/problems/greatest-common-divisor-of-strings/'
+description: 'Author: @wkw, @vigneshshiv | https://leetcode.com/problems/greatest-common-divisor-of-strings/'
 tags: [Math, String]
 ---
 
-# 1071 - Greatest Common Divisor of Strings (Easy) 
+# 1071 - Greatest Common Divisor of Strings (Easy)
 
 ## Problem Link
 
@@ -13,7 +13,7 @@ https://leetcode.com/problems/greatest-common-divisor-of-strings/
 
 For two strings `s` and `t`, we say "`t` divides `s`" if and only if `s = t + ... + t` (i.e., `t` is concatenated with itself one or more times).
 
-Given two strings `str1` and `str2`, return *the largest string*`x`*such that*`x`*divides both*`str1`*and*`str2`.
+Given two strings `str1` and `str2`, return _the largest string_`x`_such that_`x`_divides both_`str1`_and_`str2`.
 
 **Example 1:**
 
@@ -45,7 +45,7 @@ Output: ""
 
 <Tabs>
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:
@@ -54,8 +54,8 @@ class Solution:
         # see example 1: "ABCABC" + "ABC" = "ABC" + "ABCABC"
         # if there is no such divisor, then return ""
         # otherwise, we can use gcd to find the lengths
-        # the answer is either 
-        # - str1[0 .. g] or 
+        # the answer is either
+        # - str1[0 .. g] or
         # - str2[0 .. g]
         # where g is the gcd of their length
         return "" if str1 + str2 != str2 + str1 else str1[:gcd(len(str1), len(str2))]
@@ -71,7 +71,7 @@ class Solution {
 
     /**
      * m - Str1, n - str2
-     * 
+     *
      * Time complexity - O(m + n)
      * Space complexity - O(1)
      */
@@ -94,10 +94,9 @@ class Solution {
 
 ## Approach 2: Substring Division
 
-As stated in the problem, `t` divides `s` which means length of `t` is either `equal` or `factor` of `t` & `s`. 
+As stated in the problem, `t` divides `s` which means length of `t` is either `equal` or `factor` of `t` & `s`.
 
-First, iterate over the smallest string `min(t, s)`, use the `index` to substring(0, index) and divide both `s` & `t` and 
-if there's no reminder then apply factor (no. of times) with str1 and str2 to find string equals. 
+First, iterate over the smallest string `min(t, s)`, use the `index` to substring(0, index) and divide both `s` & `t` and if there's no reminder then apply factor (no. of times) with str1 and str2 to find string equals.
 
 <Tabs>
 <TabItem value="java" label="Java">
@@ -108,7 +107,7 @@ class Solution {
 
     /**
      * m - Str1, n - str2
-     * 
+     *
      * Time complexity - O(min(m, n) * (m + n))
      * Space complexity - O(1)
      */

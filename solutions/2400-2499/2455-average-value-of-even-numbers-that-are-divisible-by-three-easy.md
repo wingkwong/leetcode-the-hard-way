@@ -11,7 +11,7 @@ https://leetcode.com/problems/average-value-of-even-numbers-that-are-divisible-b
 
 ## Problem Statement
 
-Given an integer array `nums` of **positive** integers, return *the average value of all even integers that are divisible by* `3`*.*
+Given an integer array `nums` of **positive** integers, return _the average value of all even integers that are divisible by_ `3`_._
 
 Note that the **average** of `n` elements is the **sum** of the `n` elements divided by `n` and **rounded down** to the nearest integer.
 
@@ -64,7 +64,7 @@ static int averageValue(const vector<int>& nums) {
 </TabItem>
 
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:

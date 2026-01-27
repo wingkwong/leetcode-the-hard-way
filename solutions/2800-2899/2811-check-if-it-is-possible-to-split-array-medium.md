@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/check-if-it-is-possible-to-split-array/'
+description: 'Author: @wkw | https://leetcode.com/problems/check-if-it-is-possible-to-split-array/'
 tags: [Array, Dynamic Programming, Greedy]
 ---
 
-# 2811 - Check if it is Possible to Split Array (Medium) 
+# 2811 - Check if it is Possible to Split Array (Medium)
 
 ## Problem Link
 
@@ -18,9 +18,9 @@ In each step, you can select an existing array (which may be the result of previ
 - The length of the subarray is one, or
 - The sum of elements of the subarray is **greater than or equal** to `m`.
 
-Return `true`*if you can split the given array into*`n`*arrays, otherwise return* `false`.
+Return `true`_if you can split the given array into_`n`_arrays, otherwise return_ `false`.
 
-**Note:** A subarray is *a contiguous non-empty sequence of elements within an array*.
+**Note:** A subarray is _a contiguous non-empty sequence of elements within an array_.
 
 **Example 1:**
 
@@ -33,7 +33,7 @@ Explanation: We can split the array into [2, 2] and [1] in the first step. Then,
 **Example 2:**
 
 ```
-Input: nums = [2, 1, 3], m = 5 
+Input: nums = [2, 1, 3], m = 5
 Output: false
 Explanation: We can try splitting the array in two different ways: the first way is to have [2, 1] and [3], and the second way is to have [2] and [1, 3]. However, both of these ways are not valid. So, the answer is false.
 ```
@@ -52,9 +52,9 @@ Explanation: We can split the array into [2, 3, 3, 2] and [3] in the first step.
 - `1 <= nums[i] <= 100`
 - `1 <= m <= 200`
 
-## Approach 1: 
+## Approach 1:
 
-we can split an array into two subarrays if either 
+we can split an array into two subarrays if either
 
 - The length of the subarray is one, or
 - The sum of elements of the subarray is greater than or equal to $m$.
@@ -69,10 +69,9 @@ If $n <= 2$, we can divide it into two arrays with a length of 1. Otherwise, we 
 - $[1]$, $[1]$, $[1]$, $[80,20]$, $[1]$, $[1]$, $[1]$
 - $[1]$, $[1]$, $[1]$, $[80]$, $[20]$, $[1]$, $[1]$, $[1]$
 
-
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

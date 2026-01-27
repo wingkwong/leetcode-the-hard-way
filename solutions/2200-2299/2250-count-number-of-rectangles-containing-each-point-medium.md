@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/count-number-of-rectangles-containing-each-point/
+  Author: @wkw | https://leetcode.com/problems/count-number-of-rectangles-containing-each-point/
 ---
 
 # 2250 - Count Number of Rectangles Containing Each Point (Medium)
@@ -27,7 +26,7 @@ The `ith` rectangle **contains** the `jth` point if `0 <= xj <= li` and `0 <= yj
 ```
 Input: rectangles = [[1,2],[2,3],[2,5]], points = [[2,1],[1,4]]
 Output: [2,1]
-Explanation: 
+Explanation:
 The first rectangle contains no points.
 The second rectangle contains only the point (2, 1).
 The third rectangle contains the points (2, 1) and (1, 4).
@@ -54,12 +53,12 @@ Therefore, we return [1, 3].
 
 **Constraints:**
 
-* `1 <= rectangles.length, points.length <= 5 * 10^4`
-* `rectangles[i].length == points[j].length == 2`
-* `1 <= li, xj <= 10^9`
-* `1 <= hi, yj <= 100`
-* All the `rectangles` are **unique**.
-* All the `points` are **unique**.
+- `1 <= rectangles.length, points.length <= 5 * 10^4`
+- `rectangles[i].length == points[j].length == 2`
+- `1 <= li, xj <= 10^9`
+- `1 <= hi, yj <= 100`
+- All the `rectangles` are **unique**.
+- All the `points` are **unique**.
 
 ## Approach 1: Lower Bound
 
@@ -69,7 +68,7 @@ For each $$y$$, we push the corresponding $$x$$ and then we sort all the $$x$$s 
 
 Then iterate each point, and iterate from $$p_y$$ to $$max_y$$to check how many points are greater than $$p_x$$.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -85,11 +84,11 @@ public:
         // iterate each point
         for (auto& p : points) {
             int cnt = 0;
-            // iterate from p[1] to mxY 
+            // iterate from p[1] to mxY
             // as these points are covering p[1]
             for (int y = p[1]; y < mxY; y++) {
                 // find the first position that p[0] can fit into
-                // elements behind this position can form rectangles 
+                // elements behind this position can form rectangles
                 // covering (p[0], p[1])
                 cnt += m[y].end() - lower_bound(m[y].begin(), m[y].end(), p[0]);
             }

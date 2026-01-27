@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/
+  Author: @wkw | https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/
 ---
 
 # 1365 - How Many Numbers Are Smaller Than the Current Number (Easy)
@@ -21,11 +20,11 @@ Return the answer in an array.&#x20;
 ```
 Input: nums = [8,1,2,2,3]
 Output: [4,0,1,1,3]
-Explanation: 
-For nums[0]=8 there exist four smaller numbers than it (1, 2, 2 and 3). 
+Explanation:
+For nums[0]=8 there exist four smaller numbers than it (1, 2, 2 and 3).
 For nums[1]=1 does not exist any smaller number than it.
-For nums[2]=2 there exist one smaller number than it (1). 
-For nums[3]=2 there exist one smaller number than it (1). 
+For nums[2]=2 there exist one smaller number than it (1).
+For nums[3]=2 there exist one smaller number than it (1).
 For nums[4]=3 there exist three smaller numbers than it (1, 2 and 2).
 ```
 
@@ -45,12 +44,12 @@ Output: [0,0,0,0]
 
 **Constraints:**
 
-* `2 <= nums.length <= 500`
-* `0 <= nums[i] <= 100`
+- `2 <= nums.length <= 500`
+- `0 <= nums[i] <= 100`
 
 ## Approach 1: Brute Force
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -79,7 +78,7 @@ public:
 
 ## Approach 2: Sorting
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -89,7 +88,7 @@ public:
         sort(sorted_nums.begin(), sorted_nums.end());
         // nums: 8 1 2 2 3
         // sorted_nums: 1 2 2 3 8
-        
+
         // iterate each element in nums
         // since we need the original order in ans
         for (auto& x : nums) {
@@ -116,7 +115,7 @@ public:
 
 ## Approach 3: Sorting + Lower Bound
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -127,12 +126,12 @@ public:
         // nums: 8 1 2 2 3
         // sorted_nums: 1 2 2 3 8
         for (auto& x : nums) {
-            // we can use lower_bound to calculate the smaller 
-            // lower_bound: returns an iterator pointing to the first element in the range [first,last) 
+            // we can use lower_bound to calculate the smaller
+            // lower_bound: returns an iterator pointing to the first element in the range [first,last)
             // which does not compare less than val
             // since it is a iterator, we need to add "- sorted_nums.begin()" to get the number of elements.
             ans.push_back(
-                lower_bound(sorted_nums.begin(), sorted_nums.end(), x) 
+                lower_bound(sorted_nums.begin(), sorted_nums.end(), x)
                             - sorted_nums.begin()
             );
         }

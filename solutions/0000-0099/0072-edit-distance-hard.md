@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @ColeB2 | https://leetcode.com/problems/edit-distance/'
+description: 'Author: @wkw, @ColeB2 | https://leetcode.com/problems/edit-distance/'
 tags: [String, Dynamic Programming]
 ---
 
@@ -15,16 +15,16 @@ Given two strings `word1` and `word2`, return _the minimum number of operations 
 
 You have the following three operations permitted on a word:
 
-* Insert a character
-* Delete a character
-* Replace a character
+- Insert a character
+- Delete a character
+- Replace a character
 
 **Example 1:**
 
 ```
 Input: word1 = "horse", word2 = "ros"
 Output: 3
-Explanation: 
+Explanation:
 horse -> rorse (replace 'h' with 'r')
 rorse -> rose (remove 'r')
 rose -> ros (remove 'e')
@@ -35,7 +35,7 @@ rose -> ros (remove 'e')
 ```
 Input: word1 = "intention", word2 = "execution"
 Output: 5
-Explanation: 
+Explanation:
 intention -> inention (remove 't')
 inention -> enention (replace 'i' with 'e')
 enention -> exention (replace 'n' with 'x')
@@ -45,8 +45,8 @@ exection -> execution (insert 'u')
 
 **Constraints:**
 
-* `0 <= word1.length, word2.length <= 500`
-* `word1` and `word2` consist of lowercase English letters.
+- `0 <= word1.length, word2.length <= 500`
+- `word1` and `word2` consist of lowercase English letters.
 
 ## Approach 1: Dynamic Programming - Tabulation
 
@@ -74,7 +74,7 @@ Space Complexity: $O(m * n)$
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -89,7 +89,7 @@ public:
         for (int i = 1; i <= m; i++){
             for(int j = 1; j <= n; j++){
                 if(word1[i - 1] == word2[j - 1]) { // a = b
-                    dp[i][j] = dp[i - 1][j - 1]; 
+                    dp[i][j] = dp[i - 1][j - 1];
                 } else {
                     // find out the min cost for all three actions
                     dp[i][j] = 1 + min({
@@ -105,11 +105,10 @@ public:
 };
 ```
 
-
 </TabItem>
 
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:
@@ -135,7 +134,6 @@ class Solution:
 </TabItem>
 </Tabs>
 
-
 ## Approach 2: Dynamic Programming - Memoization
 
 Using similar logic as the above approach but with recursion, and a hash map to cache the values to prevent doing repeated work we can achieve the same answer in similar time and space.
@@ -144,7 +142,7 @@ To perform it recursively we must first think of our base cases. That is any emp
 
 Knowing our base cases then, we must figure our what we do after that if we are not in a base case. The first, and most obvious one, would be if the current characters of both words match, that is $$word1[i - 1]$$ is equal to $$word2[j - 1]$$, then we can just cache the value of that to be what every was the value we receive from our recursive call at $$(i - 1, j - 1)$$
 
-The other option then is when the character doesn't match. In that case, we must either delete, replace, insert a character. Meaning we will basically have to perform 1 extra operation than we performed on our calls to $$(i - 1, j)$$, $$(i, j - 1)$$ or  $$(i - 1, j - 1)$$. We should take the one that performed the least amount of operations before to optimize our result.
+The other option then is when the character doesn't match. In that case, we must either delete, replace, insert a character. Meaning we will basically have to perform 1 extra operation than we performed on our calls to $$(i - 1, j)$$, $$(i, j - 1)$$ or $$(i - 1, j - 1)$$. We should take the one that performed the least amount of operations before to optimize our result.
 
 Remember to cache those results, and we can return our cache result for $$(i, j)$$ on each iteration to eventually solve our problem.
 
@@ -184,7 +182,7 @@ class Solution:
                 # cache the value we get from the recursive call
                 cache[(i, j)] = dfs(i - 1, j - 1)
             # character are different, then we need to know the number of
-            # operations we used on 3 different subproblems. That is 
+            # operations we used on 3 different subproblems. That is
             # word1[:i - 1] word2[:j]
             # word1[:i]     word2[:j - 1]
             # word1[:i - 1] word2[:j - 1]

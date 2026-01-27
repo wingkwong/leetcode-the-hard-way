@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong, @jit | https://leetcode.com/problems/largest-local-values-in-a-matrix/'
+description: 'Author: @wkw, @jit | https://leetcode.com/problems/largest-local-values-in-a-matrix/'
 tags: [Array, Matrix]
 ---
 
-# 2373 - Largest Local Values in a Matrix (Easy) 
+# 2373 - Largest Local Values in a Matrix (Easy)
 
 ## Problem Link
 
@@ -19,7 +19,7 @@ Generate an integer matrix `maxLocal` of size `(n - 2) x (n - 2)` such that:
 
 In other words, we want to find the largest value in every contiguous `3 x 3` matrix in `grid`.
 
-Return *the generated matrix*.
+Return _the generated matrix_.
 
 **Example 1:**
 
@@ -48,7 +48,7 @@ Explanation: Notice that the 2 is contained within every contiguous 3 x 3 matrix
 
 <Tabs>
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:
@@ -59,7 +59,7 @@ class Solution:
         # iterate all possible 3 x 3 grids
         for i in range(n - 2):
             for j in range(n - 2):
-                # for (i, j) being at top-left, 
+                # for (i, j) being at top-left,
                 # iterate to check the max in this 3 x 3 grid
                 for ii in range(i, i + 3):
                     for jj in range(j, j + 3):

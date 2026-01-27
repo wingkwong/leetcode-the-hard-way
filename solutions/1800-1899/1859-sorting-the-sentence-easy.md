@@ -1,7 +1,8 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/sorting-the-sentence/
+  Author: @wkw | https://leetcode.com/problems/sorting-the-sentence/
+
+
 tags: ['Sorting']
 ---
 
@@ -17,7 +18,7 @@ A **sentence** is a list of words that are separated by a single space with no l
 
 A sentence can be **shuffled** by appending the **1-indexed word position** to each word then rearranging the words in the sentence.
 
-* For example, the sentence `"This is a sentence"` can be shuffled as `"sentence4 a3 is2 This1"` or `"is2 sentence4 This1 a3"`.
+- For example, the sentence `"This is a sentence"` can be shuffled as `"sentence4 a3 is2 This1"` or `"is2 sentence4 This1 a3"`.
 
 Given a **shuffled sentence** `s` containing no more than `9` words, reconstruct and return _the original sentence_.
 
@@ -39,15 +40,15 @@ Explanation: Sort the words in s to their original positions "Me1 Myself2 and3 I
 
 **Constraints:**
 
-* `2 <= s.length <= 200`
-* `s` consists of lowercase and uppercase English letters, spaces, and digits from `1` to `9`.
-* The number of words in `s` is between `1` and `9`.
-* The words in `s` are separated by a single space.
-* `s` contains no leading or trailing spaces.
+- `2 <= s.length <= 200`
+- `s` consists of lowercase and uppercase English letters, spaces, and digits from `1` to `9`.
+- The number of words in `s` is between `1` and `9`.
+- The words in `s` are separated by a single space.
+- `s` contains no leading or trailing spaces.
 
 ## Approach 1: Sorting with Comparator
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -60,7 +61,7 @@ public:
         while(getline(ss, line, delim)) res.push_back(line);
         return res;
     }
-    
+
     string sortSentence(string s) {
         string ans;
         // split the string by space
@@ -77,7 +78,7 @@ public:
             });
         }
         // by default, sort() would sort the first element first, then sort the second one
-        // in this case, we would like to sort by the order which is the second element 
+        // in this case, we would like to sort by the order which is the second element
         // hence, we need to define a custom comparator
         sort(v.begin(), v.end(), [&](const pair<string, int> &x, const pair<string, int>& y) {
             // compare the second element
@@ -85,7 +86,7 @@ public:
         });
         // build the final string
         for (auto& x : v) {
-            if ((int) ans.size() > 0) ans += ' '; 
+            if ((int) ans.size() > 0) ans += ' ';
             ans += x.first;
         }
         return ans;
@@ -95,7 +96,7 @@ public:
 
 ## Approach 2: Sorting without Comparator
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -108,7 +109,7 @@ public:
         while(getline(ss, line, delim)) res.push_back(line);
         return res;
     }
-    
+
     string sortSentence(string s) {
         string ans;
         // split the string by space
@@ -117,7 +118,7 @@ public:
         // we need to sort a pair of words with orders -> {order, word}
         // so we use vector<pair<int, string>>
         vector<pair<int, string>> v((int) ss.size());
-        // we put order in the first place 
+        // we put order in the first place
         // so that we don't need to write a custom comparator in sorting
         for (auto& x : ss) {
             v.push_back({
@@ -129,7 +130,7 @@ public:
         sort(v.begin(), v.end());
         // build the final string
         for (auto& x : v) {
-            if ((int) ans.size() > 0) ans += ' '; 
+            if ((int) ans.size() > 0) ans += ' ';
             ans += x.second;
         }
         return ans;

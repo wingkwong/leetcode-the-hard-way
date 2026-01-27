@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/arithmetic-slices/'
+description: 'Author: @wkw | https://leetcode.com/problems/arithmetic-slices/'
 ---
 
 # 0413 - Arithmetic Slices (Medium)
@@ -12,7 +12,7 @@ https://leetcode.com/problems/arithmetic-slices/
 
 An integer array is called arithmetic if it consists of **at least three elements** and if the difference between any two consecutive elements is the same.
 
-* For example, `[1,3,5,7,9]`, `[7,7,7,7]`, and `[3,-1,-5,-9]` are arithmetic sequences.
+- For example, `[1,3,5,7,9]`, `[7,7,7,7]`, and `[3,-1,-5,-9]` are arithmetic sequences.
 
 Given an integer array `nums`, return _the number of arithmetic **subarrays** of_ `nums`.
 
@@ -30,21 +30,21 @@ Explanation: We have 3 arithmetic slices in nums: [1, 2, 3], [2, 3, 4] and [1,2,
 
 ```
 Input: nums = [1]
-Output: 0 
+Output: 0
 ```
 
 **Constraints:**
 
-* `1 <= nums.length <= 5000`
-* `-1000 <= nums[i] <= 1000`
+- `1 <= nums.length <= 5000`
+- `-1000 <= nums[i] <= 1000`
 
 ## Approach 1: DP
 
 Let's say we have the input $$nums = [1,2,3,4,5,6,7]$$. Starting the third element, we know that $$[1,2,3]$$ is an arithmetic subarrays. If we process the next number $$4$$, we can have a new one $$[2,3,4]$$. Also we can add $$4$$ to previous result $$[1,2,3]$$ to form $$[1,2,3,4]$$. In total, we got $$3$$arithmetic subarrays if we end at number $$4$$. What about ending at number $$5$$? Similarly, we could have a new one $$[3,4,5]$$. It extends the previous results $$[1,2,3]$$, $$[2,3,4]$$,$$[1,2,3,4]$$ and we can add $$5$$to form $$[1,2,3,4,5]$$ and $$[2,3,4,5]$$. We can see that the number of arithmetic subarrays at $$i$$ won't be affected by the indices beyond. Hence, we can use DP to solve it.
 
-Let $$dp[i]$$ be the number of arithmetic subarrays that end at $$i$$. If it can form an arithmetic subarray, then $$dp[i] = dp[i - 1] + 1$$. 
+Let $$dp[i]$$ be the number of arithmetic subarrays that end at $$i$$. If it can form an arithmetic subarray, then $$dp[i] = dp[i - 1] + 1$$.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -56,7 +56,7 @@ public:
             // it can form an arithmetic subarray
             if(nums[i] - nums[i - 1] == nums[i - 1] - nums[i - 2]) {
                 dp[i] = dp[i - 1] + 1;
-            } 
+            }
             ans += dp[i];
         }
         return ans;

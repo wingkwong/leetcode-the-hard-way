@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/middle-of-the-linked-list/description/'
+description: 'Author: @wkw | https://leetcode.com/problems/middle-of-the-linked-list/description/'
 tags: [Linked List, Two Pointers]
 ---
 
-# 0876 - Middle of the Linked List (Easy) 
+# 0876 - Middle of the Linked List (Easy)
 
 ## Problem Link
 
@@ -11,7 +11,7 @@ https://leetcode.com/problems/middle-of-the-linked-list/description/
 
 ## Problem Statement
 
-Given the `head` of a singly linked list, return *the middle node of the linked list*.
+Given the `head` of a singly linked list, return _the middle node of the linked list_.
 
 If there are two middle nodes, return **the second middle** node.
 
@@ -45,7 +45,7 @@ Classic Fast and Slow Pointer question
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 /**

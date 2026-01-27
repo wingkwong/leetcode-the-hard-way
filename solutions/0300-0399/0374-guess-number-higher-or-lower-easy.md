@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong, @radojicic23 |
-  https://leetcode.com/problems/guess-number-higher-or-lower/
+  Author: @wkw, @radojicic23 | https://leetcode.com/problems/guess-number-higher-or-lower/
 ---
 
 # 0374 - Guess Number Higher or Lower (Easy)
@@ -20,9 +19,9 @@ Every time you guess wrong, I will tell you whether the number I picked is highe
 
 You call a pre-defined API `int guess(int num)`, which returns three possible results:
 
-* `-1`: Your guess is higher than the number I picked (i.e. `num > pick`).
-* `1`: Your guess is lower than the number I picked (i.e. `num < pick`).
-* `0`: your guess is equal to the number I picked (i.e. `num == pick`).
+- `-1`: Your guess is higher than the number I picked (i.e. `num > pick`).
+- `1`: Your guess is lower than the number I picked (i.e. `num < pick`).
+- `0`: your guess is equal to the number I picked (i.e. `num == pick`).
 
 Return _the number that I picked_.
 
@@ -49,8 +48,8 @@ Output: 1
 
 **Constraints:**
 
-* `1 <= n <= 2^31 - 1`
-* `1 <= pick <= n`
+- `1 <= n <= 2^31 - 1`
+- `1 <= pick <= n`
 
 ## Approach 1: Binary Search
 
@@ -58,10 +57,10 @@ See [Binary Search](../../tutorials/basic-topics/binary-search) for basic unders
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
-/** 
+/**
  * Forward declaration of guess API.
  * @param  num   your guess
  * @return 	 -1 if num is higher than the picked number
@@ -94,7 +93,7 @@ public:
 </TabItem>
 
 <TabItem value="rs" label="Rust">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```rs
 impl Solution {
@@ -126,7 +125,7 @@ impl Solution {
                 -1 => r = m - 1,
                 1 => l = m + 1,
                 _ => return m
-                
+
             };
         }
     }
@@ -166,7 +165,7 @@ class Solution:
 <SolutionAuthor name="@radojicic23"/>
 
 ```js
-/** 
+/**
  * Forward declaration of guess API.
  * @param {number} num   your guess
  * @return 	     -1 if num is higher than the picked number
@@ -179,19 +178,19 @@ class Solution:
  * @param {number} n
  * @return {number}
  */
-var guessNumber = function(n) {
-    let left = 1;
-    let right = n;
-    while (left <= right) {
-        let mid = Math.floor((left + right) / 2);
-        if (guess(mid) === 1) {
-            left = mid + 1;
-        } else if (guess(mid) === -1) {
-            right = mid;
-        } else {
-            return mid;
-        }
-    } 
+var guessNumber = function (n) {
+  let left = 1;
+  let right = n;
+  while (left <= right) {
+    let mid = Math.floor((left + right) / 2);
+    if (guess(mid) === 1) {
+      left = mid + 1;
+    } else if (guess(mid) === -1) {
+      right = mid;
+    } else {
+      return mid;
+    }
+  }
 };
 ```
 

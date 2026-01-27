@@ -1,8 +1,8 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/check-if-strings-can-be-made-equal-with-operations-ii/'
+description: 'Author: @wkw | https://leetcode.com/problems/check-if-strings-can-be-made-equal-with-operations-ii/'
 ---
 
-# 2840 - Check if Strings Can be Made Equal With Operations II (Medium) 
+# 2840 - Check if Strings Can be Made Equal With Operations II (Medium)
 
 ## Problem Link
 
@@ -16,7 +16,7 @@ You can apply the following operation on **any** of the two strings **any** numb
 
 - Choose any two indices `i` and `j` such that `i < j` and the difference `j - i` is **even**, then **swap** the two characters at those indices in the string.
 
-Return `true`*if you can make the strings*`s1`*and*`s2`*equal, and*`false`*otherwise*.
+Return `true`_if you can make the strings_`s1`_and_`s2`_equal, and_`false`_otherwise_.
 
 **Example 1:**
 
@@ -49,7 +49,7 @@ We can only swap any characters with the same parity. We can simply sort all cha
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -65,7 +65,7 @@ public:
         // sort them
         sort(s1_even.begin(), s1_even.end());
         sort(s1_odd.begin(), s1_odd.end());
-        
+
         // put all characters in s2 at even index
         // put all characters in s2 at odd index
         vector<int> s2_even, s2_odd;

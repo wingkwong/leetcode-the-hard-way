@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @deepanshu-rawat6, @radojicic23 | https://leetcode.com/problems/valid-perfect-square/'
+description: 'Author: @wkw, @deepanshu-rawat6, @radojicic23 | https://leetcode.com/problems/valid-perfect-square/'
 ---
 
 # 0367 - Valid Perfect Square (Easy)
@@ -30,7 +30,7 @@ Output: false
 
 **Constraints:**
 
-* `1 <= num <= 2^31 - 1`
+- `1 <= num <= 2^31 - 1`
 
 ## Approach 1: Binary Search
 
@@ -40,12 +40,11 @@ Output: false
 
 :::
 
-This approach is similar to Standard Binary Search, just need check for $mid*mid$ and $num$ . Finally, we also need to check for overflow, for that its better to use long long in Cpp or long in Java.
-This solution gives $O( log n )$ time complexity and $O( 1 )$ space complexity.
+This approach is similar to Standard Binary Search, just need check for $mid*mid$ and $num$ . Finally, we also need to check for overflow, for that its better to use long long in Cpp or long in Java. This solution gives $O( log n )$ time complexity and $O( 1 )$ space complexity.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -74,13 +73,13 @@ public:
 ```java
 class Solution {
     public boolean isPerfectSquare(int num) {
-        // Binary Search 
-        // choosing long because of overflow 
+        // Binary Search
+        // choosing long because of overflow
         long s = 0, e = num;
         while (s <= e) {
             long mid = s + (e - s) / 2;
             // check if it's a perfect square
-            if (mid * mid == num) { 
+            if (mid * mid == num) {
                 return true;
             }
             // checks where num lies above or below mid*mid
@@ -93,6 +92,7 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 
 <TabItem value="py" label="Python">
@@ -113,6 +113,7 @@ class Solution:
                 right = mid - 1
         return False
 ```
+
 </TabItem>
 
 <TabItem value="js" label="JavaScript">
@@ -123,21 +124,22 @@ class Solution:
  * @param {number} num
  * @return {boolean}
  */
-var isPerfectSquare = function(num) {
-    let left = 0;
-    let right = num;
-    while (left <= right) {
-        let mid = Math.floor((left + right) / 2);
-        if (mid ** 2 === num) {
-            return true;
-        } else if (mid ** 2 > num) {
-            right = mid - 1;
-        } else {
-            left = mid + 1;
-        }
+var isPerfectSquare = function (num) {
+  let left = 0;
+  let right = num;
+  while (left <= right) {
+    let mid = Math.floor((left + right) / 2);
+    if (mid ** 2 === num) {
+      return true;
+    } else if (mid ** 2 > num) {
+      right = mid - 1;
+    } else {
+      left = mid + 1;
     }
-    return false;
-}
+  }
+  return false;
+};
 ```
+
 </TabItem>
 </Tabs>

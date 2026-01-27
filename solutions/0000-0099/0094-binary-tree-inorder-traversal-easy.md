@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @ganajayant, @vigneshshiv, @radojicic23, @jit | https://leetcode.com/problems/binary-tree-inorder-traversal/'
+description: 'Author: @wkw, @ganajayant, @vigneshshiv, @radojicic23, @jit | https://leetcode.com/problems/binary-tree-inorder-traversal/'
 tags: [Stack, Tree, Depth-First Search, Binary Tree]
 ---
 
@@ -7,7 +7,7 @@ tags: [Stack, Tree, Depth-First Search, Binary Tree]
 
 ## Problem Statement
 
-Given the `root` of a binary tree, return *the inorder traversal of its nodes' values*.
+Given the `root` of a binary tree, return _the inorder traversal of its nodes' values_.
 
 **Example 1:**
 
@@ -41,7 +41,7 @@ Output: [1]
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 /**
@@ -62,7 +62,7 @@ Output: [1]
 // This is a standard in-order traversal problem, I'd suggest to learn pre-order and post-order as well.
 // Here's a short tutorial if you're interested.
 // https://wingkwong.github.io/leetcode-the-hard-way/tutorials/graph-theory/binary-tree
-// then you may try the following problems 
+// then you may try the following problems
 // 144. Binary Tree Preorder Traversal: https://leetcode.com/problems/binary-tree-preorder-traversal/
 // 145. Binary Tree Postorder Traversal: https://leetcode.com/problems/binary-tree-postorder-traversal/
 
@@ -78,17 +78,18 @@ public:
         // traverse the right node
         inorder(node->right);
     }
-    
+
     vector<int> inorderTraversal(TreeNode* root) {
         inorder(root);
         return ans;
     }
 };
 ```
+
 </TabItem>
 
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 # Definition for a binary tree node.
@@ -104,6 +105,7 @@ class Solution:
         if root is None: return []
         return self.inorderTraversal(root.left) + [root.val] + self.inorderTraversal(root.right)
 ```
+
 </TabItem>
 
 <TabItem value="java" label="Java">
@@ -141,6 +143,7 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 
 <TabItem value="js" label="JavaScript">
@@ -159,20 +162,21 @@ class Solution {
  * @param {TreeNode} root
  * @return {number[]}
  */
-var inorderTraversal = function(root) {
-    let res = [];
-    function inorder(root) {
-        if (!root) {
-            return;
-        }
-        inorder(root.left);
-        res.push(root.val);
-        inorder(root.right);
+var inorderTraversal = function (root) {
+  let res = [];
+  function inorder(root) {
+    if (!root) {
+      return;
     }
-    inorder(root);
-    return res;
+    inorder(root.left);
+    res.push(root.val);
+    inorder(root.right);
+  }
+  inorder(root);
+  return res;
 };
 ```
+
 </TabItem>
 
 <TabItem value="rust" label="Rust">
@@ -186,7 +190,7 @@ var inorderTraversal = function(root) {
 //   pub left: Option<Rc<RefCell<TreeNode>>>,
 //   pub right: Option<Rc<RefCell<TreeNode>>>,
 // }
-// 
+//
 // impl TreeNode {
 //   #[inline]
 //   pub fn new(val: i32) -> Self {
@@ -256,11 +260,11 @@ class Solution {
                 //   1
                 //  / \
                 // 2   3
-                // All left tree traversed and currently root is NULL 
+                // All left tree traversed and currently root is NULL
                 // 2 is added to result, Stack is only having 1
                 // If current node is 2, and it's popped out, 2's right is assigned to root which is NULL
-                // So in the next iteration root still be NULL. 
-                // Stack top value 1 added to result and 1 popped out and 1's right 3 assigned to root. 
+                // So in the next iteration root still be NULL.
+                // Stack top value 1 added to result and 1 popped out and 1's right 3 assigned to root.
                 result.add(stack.peek().val);
                 root = stack.pop().right;
             }
@@ -269,6 +273,7 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 
 <TabItem value="python" label="Python">
@@ -286,23 +291,23 @@ class Solution:
         stack = []
         res = []
         curr = root
-        
+
         # If either of these are not empty
         while curr or stack:
             # If our current node is not None
             while curr:
                 # Add it to the stack
                 stack.append(curr)
-                # Move down to the left and 
+                # Move down to the left and
                 # keep doing it as long as it's possible
                 curr = curr.left
-            
+
             curr = stack.pop()
             res.append(curr.val)
             # Shift to the right
             curr = curr.right
-        
-        return res 
+
+        return res
 ```
 
 </TabItem>
@@ -323,19 +328,19 @@ class Solution:
  * @param {TreeNode} root
  * @return {number[]}
  */
-var inorderTraversal = function(root) {
-    let stack = [];
-    let res = [];
-    while (root || stack.length) {
-        while (root) {
-            stack.push(root);
-            root = root.left;
-        }
-        root = stack.pop();
-        res.push(root.val);
-        root = root.right;
+var inorderTraversal = function (root) {
+  let stack = [];
+  let res = [];
+  while (root || stack.length) {
+    while (root) {
+      stack.push(root);
+      root = root.left;
     }
-    return res;
+    root = stack.pop();
+    res.push(root.val);
+    root = root.right;
+  }
+  return res;
 };
 ```
 

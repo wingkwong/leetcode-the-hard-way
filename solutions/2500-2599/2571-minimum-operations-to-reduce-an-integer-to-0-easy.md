@@ -1,8 +1,8 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/minimum-operations-to-reduce-an-integer-to-0/'
+description: 'Author: @wkw | https://leetcode.com/problems/minimum-operations-to-reduce-an-integer-to-0/'
 ---
 
-# 2571 - Minimum Operations to Reduce an Integer to 0 (Easy) 
+# 2571 - Minimum Operations to Reduce an Integer to 0 (Easy)
 
 ## Problem Link
 
@@ -14,9 +14,9 @@ You are given a positive integer `n`, you can do the following operation **any**
 
 - Add or subtract a **power** of `2` from `n`.
 
-Return *the **minimum** number of operations to make*`n`*equal to*`0`.
+Return _the **minimum** number of operations to make_`n`_equal to_`0`.
 
-A number `x` is power of `2` if `x == 2i` where `i >= 0`*.*
+A number `x` is power of `2` if `x == 2i` where `i >= 0`_._
 
 **Example 1:**
 
@@ -50,7 +50,7 @@ So the minimum number of operations is 3.
 
 <Tabs>
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:
@@ -60,7 +60,7 @@ class Solution:
         def dp(x):
             # reach 0 -> 0 operation
             if x == 0: return 0
-            # if x is a power of 2, 
+            # if x is a power of 2,
             # we need 1 operation (i.e. subtract itself)
             if x in p: return 1
             # otherwise we either add / subtract the lsb to x

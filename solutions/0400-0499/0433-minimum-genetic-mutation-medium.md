@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/minimum-genetic-mutation/'
+description: 'Author: @wkw | https://leetcode.com/problems/minimum-genetic-mutation/'
 tags: [Hash Table, String, Breadth-First Search]
 ---
 
-# 0433 - Minimum Genetic Mutation (Medium) 
+# 0433 - Minimum Genetic Mutation (Medium)
 
 ## Problem Link
 
@@ -19,7 +19,7 @@ Suppose we need to investigate a mutation from a gene string `start` to a gene s
 
 There is also a gene bank `bank` that records all the valid gene mutations. A gene must be in `bank` to make it a valid gene string.
 
-Given the two gene strings `start` and `end` and the gene bank `bank`, return *the minimum number of mutations needed to mutate from*`start`*to*`end`. If there is no such a mutation, return `-1`.
+Given the two gene strings `start` and `end` and the gene bank `bank`, return _the minimum number of mutations needed to mutate from_`start`_to_`end`. If there is no such a mutation, return `-1`.
 
 Note that the starting point is assumed to be valid, so it might not be included in the bank.
 
@@ -56,12 +56,12 @@ Output: 3
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
 public:
-    // Intuition: we can see each string as a node and we can connect them if 
+    // Intuition: we can see each string as a node and we can connect them if
     // 1. there is only one single character different
     // 2. the target node is available in `bank`
     // the problem is now to find the shortest path from the starting point to the ending point
@@ -83,9 +83,9 @@ public:
             // iterate from the back because the size of q varies
             // which would result in wrong answer if you iterate from 0
             // alternatively, you can define a new variable for q.size() before the for-loop
-            // i.e. 
+            // i.e.
             // int n = q.size();
-            // for (int i = 0; i < n; i++) { 
+            // for (int i = 0; i < n; i++) {
             for (int i = q.size(); i > 0; i--) {
                 // get the gene string from the queue
                 string s = q.front();
@@ -95,7 +95,7 @@ public:
                 // otherwise, given a gene string with 8-character long
                 // we can replace each character with "A", "C", "G" and "T" (i.e. mutate)
                 for (int j = 0; j < 8; j++) {
-                    // s[j] will be modified later, 
+                    // s[j] will be modified later,
                     // hence store the original character here
                     char oc = s[j];
                     // iterate ACGT
@@ -128,11 +128,11 @@ public:
 </TabItem>
 
 <TabItem value="java" label="Java">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```java
 class Solution {
-    // Intuition: we can see each string as a node and we can connect them if 
+    // Intuition: we can see each string as a node and we can connect them if
     // 1. there is only one single character different
     // 2. the target node is available in `bank`
     // the problem is now to find the shortest path from the starting point to the ending point
@@ -156,9 +156,9 @@ class Solution {
             // iterate from the back because the size of q varies
             // which would result in wrong answer if you iterate from 0
             // alternatively, you can define a new variable for q.size() before the for-loop
-            // i.e. 
+            // i.e.
             // int n = q.size();
-            // for (int i = 0; i < n; i++) { 
+            // for (int i = 0; i < n; i++) {
             for (int i = q.size(); i > 0; i--) {
                 // get the gene string from the queue
                 String s = q.poll();
@@ -168,7 +168,7 @@ class Solution {
                 // we can replace each character with "A", "C", "G" and "T"
                 char[] ca = s.toCharArray();
                 for (int j = 0; j < 8; j++) {
-                    // s[j] will be modified later, 
+                    // s[j] will be modified later,
                     // hence store the original character here
                     char oc = ca[j];
                     // iterate ACGT

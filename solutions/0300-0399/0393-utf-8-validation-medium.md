@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/utf-8-validation/'
+description: 'Author: @wkw | https://leetcode.com/problems/utf-8-validation/'
 tags: [Array, Bit Manipulation]
 ---
 
-# 0393 - UTF-8 Validation (Medium) 
+# 0393 - UTF-8 Validation (Medium)
 
 ## Problem Statement
 
@@ -59,11 +59,11 @@ But the second continuation byte does not start with 10, so it is invalid.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 // Time Complexity : O(N) where N is the number of elements in data
-// Space Complexity: O(1) 
+// Space Complexity: O(1)
 class Solution {
 public:
     // the idea is to keep track the number of segments of utf-8 octet sequence left
@@ -80,7 +80,7 @@ public:
         int remaining = 0;
         // iterate each data and perform the following logic
         for (auto& x : data) {
-            // case 1: there is no remaining segement left, 
+            // case 1: there is no remaining segement left,
             // then it means we should check the first segement of UTF-8 octet sequence
             // i.e. 0xxxxxxx (for no of. bytes = 1)
             // i.e. 110xxxxx (for no of. bytes = 2)
@@ -91,15 +91,15 @@ public:
                     // case 1.1 - shift `x` 5 bits to the right
                     // i.e making the first (8 - 5) = 3 bits left
                     // e.g (110xxxxx >> 5) becomes 110 (in binary format)
-                    // if it is 0b110, 
-                    // then it is only possible to form `110xxxxx 10xxxxxx` 
+                    // if it is 0b110,
+                    // then it is only possible to form `110xxxxx 10xxxxxx`
                     // so we set remaining to 1 to look for `10xxxxxx` later
                     remaining = 1;
                 } else if ((x >> 4) == 0b1110) {
                     // case 1.2 -  shift `x` 4 bits to the right
                     // i.e making the first (8 - 4) = 4 bits left
                     // e.g (1110xxxx >> 4) becomes 1110 (in binary format)
-                    // if it is 0b1110, 
+                    // if it is 0b1110,
                     // then it is only possible to form `1110xxxx 10xxxxxx 10xxxxxx`
                     // so we set remaining to 2 to look for `10xxxxxx 10xxxxxx` later
                      remaining = 2;
@@ -107,7 +107,7 @@ public:
                     // case 1.3 -  shift `x` 3 bits to the right
                     // i.e making the first (8 - 3) = 5 bits left
                     // e.g (11110xxx >> 5) becomes 11110 (in binary format)
-                    // if it is 0b11110, 
+                    // if it is 0b11110,
                     // then it is only possible to form `11110xxx 10xxxxxx 10xxxxxx 10xxxxxx`
                     // so we set remaining to 3 to look for `10xxxxxx 10xxxxxx 10xxxxxx` later
                     remaining = 3;
@@ -133,10 +133,11 @@ public:
                 else remaining--;
             }
         }
-        // at the end, remaining will be 0 if data can represent the octet sequence 
+        // at the end, remaining will be 0 if data can represent the octet sequence
         return remaining == 0;
     }
 };
 ```
+
 </TabItem>
 </Tabs>

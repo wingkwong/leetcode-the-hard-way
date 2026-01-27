@@ -17,7 +17,6 @@ The **path sum** of a path is the sum of the node's values in the path.
 
 Given the `root` of a binary tree, return _the maximum **path sum** of any non-empty path_.
 
-
 **Example 1:**
 
 ![](https://assets.leetcode.com/uploads/2020/10/13/exx1.jpg)

@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/ugly-number-iii/'
+description: 'Author: @wkw | https://leetcode.com/problems/ugly-number-iii/'
 ---
 
 # 1201 - Ugly Number III (Medium)
@@ -40,13 +40,13 @@ Explanation: The ugly numbers are 2, 4, 6, 8, 10, 11, 12, 13... The 5th is 10.
 
 **Constraints:**
 
-* `1 <= n, a, b, c <= 10^9`
-* `1 <= a * b * c <= 10^18`
-* It is guaranteed that the result will be in range `[1, 2 * 10^9]`.
+- `1 <= n, a, b, c <= 10^9`
+- `1 <= a * b * c <= 10^18`
+- It is guaranteed that the result will be in range `[1, 2 * 10^9]`.
 
 ## Approach 1: Inclusive-Exclusive + Binary Search
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -58,17 +58,17 @@ public:
         // exclude overlapping counts for a and b = n / lcm(a, b)
         // exclude overlapping counts for b and c = n / lcm(b, c)
         // exclude overlapping counts for a and c = n / lcm(a, c)
-        // include those covered by all a, b and c = n / lcm(a, lcm(b, c))  
-        
-        // Set theory Formula: 
+        // include those covered by all a, b and c = n / lcm(a, lcm(b, c))
+
+        // Set theory Formula:
         // a + b + c - a ∩ c - a ∩ b - b ∩ c + a ∩ b ∩ c
-        return (int) n / a + n / b + n / c 
+        return (int) n / a + n / b + n / c
         - n / lcm(a, b)
         - n / lcm(b, c)
         - n / lcm(a, c)
         + n / lcm(a, lcm(b, c));
     }
-    
+
     int nthUglyNumber(int n, int a, int b, int c) {
         // init possible range [1, 2 * 10 ^ 9]
         int l = 1, r = 2e9;

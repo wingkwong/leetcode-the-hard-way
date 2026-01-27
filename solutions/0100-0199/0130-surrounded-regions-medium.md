@@ -89,8 +89,8 @@ class Solution:
         for row in range(ROWS):
             for col in range(COLS):
                 # cell is 'O' and an edge
-                if (board[row][col] == 'O' and 
-                    (row == 0 or row == ROWS - 1 or 
+                if (board[row][col] == 'O' and
+                    (row == 0 or row == ROWS - 1 or
                     col == 0 or col == COLS - 1
                     )):
                     # run our bfs algorithm
@@ -109,10 +109,11 @@ class Solution:
 </Tabs>
 
 ## Approach 2: Depth-First Search
-* The Os not to flip are the ones which are on the borders
-* So go to each O on the borders & do a dfs to find the connected graph of Os and turn them into a new symbol for example *
-* Now Xs, Os, *s will be present and these leftover Os are the ones not connected to borders, so flip all these Os to Xs
-* Finally, turn all the *s back to O
+
+- The Os not to flip are the ones which are on the borders
+- So go to each O on the borders & do a dfs to find the connected graph of Os and turn them into a new symbol for example \*
+- Now Xs, Os, \*s will be present and these leftover Os are the ones not connected to borders, so flip all these Os to Xs
+- Finally, turn all the \*s back to O
 
 Time Complexity: $$O(m * n)$$
 
@@ -144,7 +145,7 @@ class Solution {
             for (int j = 0; j < n; j++) {
                 // flip Os not connected to borders
                 if (board[i][j] == 'O') board[i][j] = 'X';
-                // bring back our 0s on the borders with its 
+                // bring back our 0s on the borders with its
                 // respective connected graphs
                 else if (board[i][j] == '*') board[i][j] = 'O';
             }

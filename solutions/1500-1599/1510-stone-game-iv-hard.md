@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/stone-game-iv/'
+description: 'Author: @wkw | https://leetcode.com/problems/stone-game-iv/'
 ---
 
 # 1510 - Stone Game IV (Hard)
@@ -44,13 +44,13 @@ Explanation: n is already a perfect square, Alice can win with one move, removin
 
 **Constraints:**
 
-* `1 <= n <= 10^5`
+- `1 <= n <= 10^5`
 
 ## Approach 1: Dynamic Programming
 
 Let `dp[i]` be the result of the game with `i` stones. If it is true, it means Alice must win. If it is false, it means Bob must win. If there is any `j` that `dp[i - j * j]` make the other lose the game, then `dp[i]` would be true. For example, Alice can take `j * j` to make Bob into a losing state and end the game.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

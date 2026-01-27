@@ -1,5 +1,5 @@
 ---
-description: "Author: @wingkwong, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/flood-fill/"
+description: 'Author: @wkw, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/flood-fill/'
 ---
 
 # 0733 - Flood Fill (Easy)
@@ -51,7 +51,7 @@ First we check if the color at the starting point is same as the target one. If 
 
 <Tabs>
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```python
 class Solution:
@@ -85,17 +85,17 @@ class Solution:
 
 ```java
 class Solution {
-    
+
     public final int NO_DIRS = 4;
     public int[] DIRS = {0, 1, 0, -1, 0};
-    
+
     public int[][] floodFill(int[][] image, int sr, int sc, int color) {
         if (image[sr][sc] == color) return image;
         Set<String> visited = new HashSet<>();
         fill(image, sr, sc, image[sr][sc], color, visited);
         return image;
     }
-    
+
     public void fill(int[][] image, int sr, int sc, int color, int newColor, Set<String> visited) {
         boolean rowInbounds = (0 <= sr && sr < image.length);
         boolean colInbounds = (0 <= sc && sc < image[0].length);
@@ -131,22 +131,27 @@ class Solution {
  * @param {number} color
  * @return {number[][]}
  */
-var floodFill = function(image, sr, sc, color) {
-    if (image == null || image[sr][sc] == color) return image;
-    dfs(image, sr, sc, image[sr][sc], color);
-    return image;
+var floodFill = function (image, sr, sc, color) {
+  if (image == null || image[sr][sc] == color) return image;
+  dfs(image, sr, sc, image[sr][sc], color);
+  return image;
 
-    function dfs(image, r, c, initial, color) {
-        if (r < 0 || r >= image.length || 
-            c < 0 || c >= image[0].length || image[r][c] != initial) {
-                return;
-        }
-        image[r][c] = color;
-        dfs(image, r + 1, c, initial, color);
-        dfs(image, r - 1, c, initial, color);
-        dfs(image, r, c + 1, initial, color);
-        dfs(image, r, c - 1, initial, color);
+  function dfs(image, r, c, initial, color) {
+    if (
+      r < 0 ||
+      r >= image.length ||
+      c < 0 ||
+      c >= image[0].length ||
+      image[r][c] != initial
+    ) {
+      return;
     }
+    image[r][c] = color;
+    dfs(image, r + 1, c, initial, color);
+    dfs(image, r - 1, c, initial, color);
+    dfs(image, r, c + 1, initial, color);
+    dfs(image, r, c - 1, initial, color);
+  }
 };
 ```
 
@@ -159,7 +164,7 @@ Similar idea but in BFS way. Use queue to store the points and search for 4 dire
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

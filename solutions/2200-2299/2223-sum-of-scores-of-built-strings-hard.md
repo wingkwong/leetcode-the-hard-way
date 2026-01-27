@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/sum-of-scores-of-built-strings/
+  Author: @wkw | https://leetcode.com/problems/sum-of-scores-of-built-strings/
 ---
 
 # 2223 - Sum of Scores of Built Strings (Hard)
@@ -14,7 +13,7 @@ https://leetcode.com/problems/sum-of-scores-of-built-strings/
 
 You are **building** a string `s` of length `n` **one** character at a time, **prepending** each new character to the **front** of the string. The strings are labeled from `1` to `n`, where the string with length `i` is labeled `si`.
 
-* For example, for `s = "abaca"`, `s1 == "a"`, `s2 == "ca"`, `s3 == "aca"`, etc.
+- For example, for `s = "abaca"`, `s1 == "a"`, `s2 == "ca"`, `s3 == "aca"`, etc.
 
 The **score** of `si` is the length of the **longest common prefix** between `si` and `sn` (Note that `s == sn`).
 
@@ -39,7 +38,7 @@ The sum of the scores is 1 + 0 + 3 + 0 + 5 = 9, so we return 9.
 ```
 Input: s = "azbazbzaz"
 Output: 14
-Explanation: 
+Explanation:
 For s2 == "az", the longest common prefix is "az" which has a score of 2.
 For s6 == "azbzaz", the longest common prefix is "azb" which has a score of 3.
 For s9 == "azbazbzaz", the longest common prefix is "azbazbzaz" which has a score of 9.
@@ -49,14 +48,14 @@ The sum of the scores is 2 + 3 + 9 = 14, so we return 14.
 
 **Constraints:**
 
-* `1 <= s.length <= 10^5`
-* `s` consists of lowercase English letters.
+- `1 <= s.length <= 10^5`
+- `s` consists of lowercase English letters.
 
 ## Approach 1: Z Algorithm
 
 The sum of the score of every $$s_i$$ would be the sum of the values in $$Z$$ array.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -87,7 +86,7 @@ public:
         long long ans = 0;
         vector<int> z = z_function(s);
         for (auto x : z) ans += x;
-        return ans; 
+        return ans;
     }
 };
 ```

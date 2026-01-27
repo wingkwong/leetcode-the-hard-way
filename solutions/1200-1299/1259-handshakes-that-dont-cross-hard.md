@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/handshakes-that-dont-cross/'
+description: 'Author: @wkw | https://leetcode.com/problems/handshakes-that-dont-cross/'
 ---
 
 # 1259 - Handshakes That Don't Cross (Hard)
@@ -14,11 +14,11 @@ You are given an **even** number of people `numPeople` that stand around a circl
 
 Return _the number of ways these handshakes could occur such that none of the handshakes cross_.
 
-Since the answer could be very large, return it **modulo** `109 + 7`.
+Since the answer could be very large, return it **modulo** `1e9 + 7`.
 
 **Example 1:**
 
-![](https://assets.leetcode.com/uploads/2019/07/11/5125\_example\_2.png)
+![](https://assets.leetcode.com/uploads/2019/07/11/5125_example_2.png)
 
 ```
 Input: numPeople = 4
@@ -28,7 +28,7 @@ Explanation: There are two ways to do it, the first way is [(1,2),(3,4)] and the
 
 **Example 2:**
 
-![](https://assets.leetcode.com/uploads/2019/07/11/5125\_example\_3.png)
+![](https://assets.leetcode.com/uploads/2019/07/11/5125_example_3.png)
 
 ```
 Input: numPeople = 6
@@ -37,8 +37,8 @@ Output: 5
 
 **Constraints:**
 
-* `2 <= numPeople <= 1000`
-* `numPeople` is even.
+- `2 <= numPeople <= 1000`
+- `numPeople` is even.
 
 ## Approach 1: Dynamic Programming
 
@@ -46,7 +46,7 @@ Person 1 can shake hand with person with even number but not with odd number bec
 
 In general, let $$dp[i]$$ be the number of ways these handshakes could occur such that none of the handshakes cross of for $$i$$ people. If person $$i$$ shakes hand with person $$j$$, then we could divide into two sets - one from 2 to j - 1 and another one from j - 1 to i. The product of them would be the contribution to $$dp[i]$$.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -57,7 +57,7 @@ public:
         dp[0] = 1;
         for (int i = 2; i <= n; i += 2) {
             for (int j = 2; j <= i; j += 2) {
-                // two sets : 
+                // two sets :
                 // 1. [2 .. j - 1] = j - 1 - 2 + 1 = j - 2
                 // 2. [j + 1 .. i] = i - (j + 1) + 1 = i - j
                 dp[i] = (dp[i] + (dp[j - 2] * dp[i - j])) % M;

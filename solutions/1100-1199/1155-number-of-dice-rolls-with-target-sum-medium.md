@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/
+  Author: @wkw | https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/
 ---
 
 # 1155 - Number of Dice Rolls With Target Sum (Medium)
@@ -14,7 +13,7 @@ https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/
 
 You have `n` dice and each die has `k` faces numbered from `1` to `k`.
 
-Given three integers `n`, `k`, and `target`, return _the number of possible ways (out of the_ `kn` _total ways) to roll the dice so the sum of the face-up numbers equals_ `target`. Since the answer may be too large, return it **modulo** `109 + 7`.
+Given three integers `n`, `k`, and `target`, return _the number of possible ways (out of the_ `kn` _total ways) to roll the dice so the sum of the face-up numbers equals_ `target`. Since the answer may be too large, return it **modulo** `1e9 + 7`.
 
 **Example 1:**
 
@@ -39,17 +38,17 @@ There are 6 ways to get a sum of 7: 1+6, 2+5, 3+4, 4+3, 5+2, 6+1.
 ```
 Input: n = 30, k = 30, target = 500
 Output: 222616187
-Explanation: The answer must be returned modulo 109 + 7.
+Explanation: The answer must be returned modulo 1e9 + 7.
 ```
 
 **Constraints:**
 
-* `1 <= n, k <= 30`
-* `1 <= target <= 1000`
+- `1 <= n, k <= 30`
+- `1 <= target <= 1000`
 
 ## Approach 1: Dynamic Programming
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

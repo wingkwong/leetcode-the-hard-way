@@ -1,8 +1,8 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/distinct-prime-factors-of-product-of-array/'
+description: 'Author: @wkw | https://leetcode.com/problems/distinct-prime-factors-of-product-of-array/'
 ---
 
-# 2521 - Distinct Prime Factors of Product of Array (Medium) 
+# 2521 - Distinct Prime Factors of Product of Array (Medium)
 
 ## Problem Link
 
@@ -10,7 +10,7 @@ https://leetcode.com/problems/distinct-prime-factors-of-product-of-array/
 
 ## Problem Statement
 
-Given an array of positive integers `nums`, return *the number of **distinct prime factors** in the product of the elements of* `nums`.
+Given an array of positive integers `nums`, return _the number of **distinct prime factors** in the product of the elements of_ `nums`.
 
 **Note** that:
 
@@ -48,7 +48,7 @@ For each number, we can prime-factorize it and insert it to a Set. The answer wo
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

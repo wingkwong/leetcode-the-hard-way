@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @radojicic23 | https://leetcode.com/problems/majority-element/'
+description: 'Author: @wkw, @radojicic23 | https://leetcode.com/problems/majority-element/'
 ---
 
 # 0169 - Majority Element (Easy)
@@ -30,11 +30,9 @@ Output: 2
 
 **Constraints:**
 
-* `n == nums.length`
-* `1 <= n <= 5 * 10^4`
-* `-2^31 <= nums[i] <= 2^31 - 1`
-
-
+- `n == nums.length`
+- `1 <= n <= 5 * 10^4`
+- `-2^31 <= nums[i] <= 2^31 - 1`
 
 **Follow-up:** Could you solve the problem in linear time and in `O(1)` space?
 
@@ -42,12 +40,11 @@ Output: 2
 
 The Boyer-Moore Voting Algorithm is used to find the majority of a sequence of elements using linear time and constant space. We initialise the counter $$i := 0$$ and iterate each number $$x$$. If the counter is $$0$$, then we set $$x$$ as the major element. If the current number is the major element, then we increase the counter by $$1$$, else decrease by $$1$$.
 
-Reference: [Boyer-Moore Voting Algorithm](https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore\_majority\_vote\_algorithm)
-
+Reference: [Boyer-Moore Voting Algorithm](https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore_majority_vote_algorithm)
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -82,7 +79,7 @@ class Solution:
             if count == 0:
                 res = n
             count += (1 if n == res else -1)
-        return res 
+        return res
 ```
 
 </TabItem>
@@ -95,15 +92,15 @@ class Solution:
  * @param {number[]} nums
  * @return {number}
  */
-var majorityElement = function(nums) {
-    let res = 0;
-    let count = 0;
-    for (n of nums) {
-        if (count == 0) res = n, count = 1;
-        else if (n == res) count++;
-        else count--;
-    }
-    return res; 
+var majorityElement = function (nums) {
+  let res = 0;
+  let count = 0;
+  for (n of nums) {
+    if (count == 0) (res = n), (count = 1);
+    else if (n == res) count++;
+    else count--;
+  }
+  return res;
 };
 ```
 
@@ -116,7 +113,7 @@ If the majority number appears more than $$[n / 2]$$ times, each of its bits wil
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -137,5 +134,6 @@ public:
     }
 };
 ```
+
 </TabItem>
 </Tabs>

@@ -1,8 +1,8 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/maximum-count-of-positive-integer-and-negative-integer/'
+description: 'Author: @wkw | https://leetcode.com/problems/maximum-count-of-positive-integer-and-negative-integer/'
 ---
 
-# 2529 - Maximum Count of Positive Integer and Negative Integer (Easy) 
+# 2529 - Maximum Count of Positive Integer and Negative Integer (Easy)
 
 ## Problem Link
 
@@ -10,7 +10,7 @@ https://leetcode.com/problems/maximum-count-of-positive-integer-and-negative-int
 
 ## Problem Statement
 
-Given an array `nums` sorted in **non-decreasing** order, return *the maximum between the number of positive integers and the number of negative integers.*
+Given an array `nums` sorted in **non-decreasing** order, return _the maximum between the number of positive integers and the number of negative integers._
 
 - In other words, if the number of positive integers in `nums` is `pos` and the number of negative integers is `neg`, then return the maximum of `pos` and `neg`.
 
@@ -50,7 +50,7 @@ Explanation: There are 4 positive integers and 0 negative integers. The maximum 
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

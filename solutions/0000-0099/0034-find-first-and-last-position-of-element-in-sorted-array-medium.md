@@ -1,7 +1,8 @@
 ---
 description: >-
-  Author: @wingkwong, @ganajayant, @vigneshshiv, @radojicic23 |
-  https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
+  Author: @wkw, @ganajayant, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
+
+
 tags: [Array, Binary Search]
 ---
 
@@ -57,7 +58,7 @@ Output: [-1,-1]
 
 <Tabs>
 <TabItem value="c++" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -194,7 +195,7 @@ class Solution:
 </TabItem>
 
 <TabItem value="kotlint" label="Kotlin">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```kotlin
 class Solution {
@@ -208,7 +209,7 @@ class Solution {
         }
         return if (nums[l] == target) l else -1
     }
-    
+
     fun getLastPosition(nums: IntArray, target: Int): Int {
         var l = 0
         var r = nums.size - 1
@@ -219,7 +220,7 @@ class Solution {
         }
         return if (nums[l] == target) l else -1
     }
-    
+
     fun searchRange(nums: IntArray, target: Int): IntArray {
         if (nums.size == 0) return intArrayOf(-1, -1)
         return intArrayOf(
@@ -284,7 +285,7 @@ class Solution {
 </TabItem>
 
 <TabItem value="kotlin" label="Kotlin">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```kotlin
 class Solution {
@@ -298,7 +299,7 @@ class Solution {
         }
         return if (nums[l] == target) l else -1
     }
-    
+
     fun getLastPosition(nums: IntArray, target: Int): Int {
         var l = 0
         var r = nums.size - 1
@@ -309,7 +310,7 @@ class Solution {
         }
         return if (nums[l] == target) l else -1
     }
-    
+
     fun searchRange(nums: IntArray, target: Int): IntArray {
         if (nums.size == 0) return intArrayOf(-1, -1)
         val first = getFirstPosition(nums, target)

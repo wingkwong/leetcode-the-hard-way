@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/missing-number/'
+description: 'Author: @wkw, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/missing-number/'
 tags: ['Array', 'Hash Table', 'Math', 'Bit Manupulation', 'Sorting']
 ---
 
@@ -39,16 +39,16 @@ Explanation: n = 9 since there are 9 numbers, so all numbers are in the range [0
 
 **Constraints:**
 
-* `n == nums.length`
-* `1 <= n <= 10^4`
-* `0 <= nums[i] <= n`
-* All the numbers of `nums` are **unique**.
+- `n == nums.length`
+- `1 <= n <= 10^4`
+- `0 <= nums[i] <= n`
+- All the numbers of `nums` are **unique**.
 
 ## Approach 1: Sorting
 
 <Tabs>
 <TabItem value="c++" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -108,21 +108,21 @@ class Solution {
  * @param {number[]} nums
  * @return {number}
  */
-var missingNumber = function(nums) {
-    const n = nums.length;
-    // sort numbers (increasing order)
-    nums.sort((a, b) => a - b);
-    // check the first value 
-    if (nums[0] != 0) return 0;
-    // iterate through list of numbers
-    // if they are not equal (number and index of that number)
-    // that index is the missing number
-    for (let i = 1; i < n; i++) {
-        if (nums[i] != i) {
-            return i;
-        }
+var missingNumber = function (nums) {
+  const n = nums.length;
+  // sort numbers (increasing order)
+  nums.sort((a, b) => a - b);
+  // check the first value
+  if (nums[0] != 0) return 0;
+  // iterate through list of numbers
+  // if they are not equal (number and index of that number)
+  // that index is the missing number
+  for (let i = 1; i < n; i++) {
+    if (nums[i] != i) {
+      return i;
     }
-    return n;
+  }
+  return n;
 };
 ```
 
@@ -145,7 +145,7 @@ class Solution:
         for i in range(len(nums)):
             if nums[i] != i:
                 return i
-        return n 
+        return n
 ```
 
 </TabItem>
@@ -155,7 +155,7 @@ class Solution:
 
 <Tabs>
 <TabItem value="c++" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -209,17 +209,17 @@ class Solution {
  * @param {number[]} nums
  * @return {number}
  */
-var missingNumber = function(nums) {
-    // we can utilise the properties of XOR:
-    // a ^ a = 0
-    // a ^ 0 = a
-    // a ^ b ^ c = a ^ c ^ b
-    const n = nums.length;
-    let ans = n;
-    for (let i = 0; i < n; i++) {
-        ans ^= (i ^ nums[i]);
-    }
-    return ans;
+var missingNumber = function (nums) {
+  // we can utilise the properties of XOR:
+  // a ^ a = 0
+  // a ^ 0 = a
+  // a ^ b ^ c = a ^ c ^ b
+  const n = nums.length;
+  let ans = n;
+  for (let i = 0; i < n; i++) {
+    ans ^= i ^ nums[i];
+  }
+  return ans;
 };
 ```
 
@@ -251,7 +251,7 @@ To calculate the sum of first n element, we can use Gauss' Formula - $n * (n + 1
 
 <Tabs>
 <TabItem value="c++" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -260,7 +260,7 @@ public:
         int n = (int) nums.size();
         int sum = 0;
         for(int x : nums) sum += x;
-        return (n * (n + 1) / 2) - sum; 
+        return (n * (n + 1) / 2) - sum;
     }
 };
 ```
@@ -291,11 +291,11 @@ class Solution {
  * @param {number[]} nums
  * @return {number}
  */
-var missingNumber = function(nums) {
-    const nums_len = nums.length;
-    let nums_sum = 0;
-    for (n of nums) nums_sum += n;
-    return (nums_len * (nums_len + 1) / 2) - nums_sum;
+var missingNumber = function (nums) {
+  const nums_len = nums.length;
+  let nums_sum = 0;
+  for (n of nums) nums_sum += n;
+  return (nums_len * (nums_len + 1)) / 2 - nums_sum;
 };
 ```
 
@@ -304,7 +304,7 @@ var missingNumber = function(nums) {
 <TabItem value="python" label="Python">
 <SolutionAuthor name="@radojicic23"/>
 
-```python 
+```python
 class Solution:
     def missingNumber(self, nums: List[int]) -> int:
         nums_len = len(nums)

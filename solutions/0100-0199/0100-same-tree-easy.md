@@ -50,6 +50,7 @@ Output: false
 ## Approach 1: Recursive Depth-First Search
 
 Very simply, a tree, $$p$$ is the same as a tree, $$q$$ if the structure of both trees is identical, and the values of the nodes are the same. Meaning at each step we must make sure:
+
 1. p and q are both currently nodes, and their values are equal. If so, we can continue to check their subtrees.
 2. If 1 isn't true. Then check if they are null nodes. If so we can return True. If one is null and the other isn't then we must return False.
 
@@ -85,6 +86,7 @@ class Solution:
         # if 1 is a node and the other is None, it will return False.
         return p is q
 ```
+
 </TabItem>
 
 <TabItem value="js" label="JavaScript">
@@ -104,18 +106,18 @@ class Solution:
  * @param {TreeNode} q
  * @return {boolean}
  */
-var isSameTree = function(p, q) {
-    // if both of them are empty
-    if (!p && !q) return true;
-    // if one of them is empty 
-    // if the values are not the same
-    if (!p || !q || p.val != q.val) return false;
-    // recursive call
-    // are left and right subtree equal
-    return (isSameTree(p.left, q.left) && 
-            isSameTree(p.right, q.right));
+var isSameTree = function (p, q) {
+  // if both of them are empty
+  if (!p && !q) return true;
+  // if one of them is empty
+  // if the values are not the same
+  if (!p || !q || p.val != q.val) return false;
+  // recursive call
+  // are left and right subtree equal
+  return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
 };
 ```
+
 </TabItem>
 
 <TabItem value="cpp" label="C++">
@@ -140,7 +142,7 @@ public:
         if (!p && !q) {
             return true;
         }
-        // if one of them is empty 
+        // if one of them is empty
         // if the values are not the same
         if (!p || !q || p->val != q->val) {
             return false;
@@ -152,6 +154,7 @@ public:
     }
 };
 ```
+
 </TabItem>
 </Tabs>
 
@@ -198,6 +201,7 @@ class Solution:
         # the same. return True.
         return True
 ```
+
 </TabItem>
 
 <TabItem value="cpp" label="C++">
@@ -235,5 +239,6 @@ public:
     }
 };
 ```
+
 </TabItem>
 </Tabs>

@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/minimum-weighted-subgraph-with-the-required-paths/
+  Author: @wkw | https://leetcode.com/problems/minimum-weighted-subgraph-with-the-required-paths/
 ---
 
 # 2203 - Minimum Weighted Subgraph With the Required Paths (Hard)
@@ -21,8 +20,6 @@ Lastly, you are given three **distinct** integers `src1`, `src2`, and `dest` den
 Return _the **minimum weight** of a subgraph of the graph such that it is **possible** to reach_ `dest` _from both_ `src1` _and_ `src2` _via a set of edges of this subgraph_. In case such a subgraph does not exist, return `-1`.
 
 A **subgraph** is a graph whose vertices and edges are subsets of the original graph. The **weight** of a subgraph is the sum of weights of its constituent edges.
-
-
 
 **Example 1:**
 
@@ -51,19 +48,19 @@ It can be seen that there does not exist any path from node 1 to node 2, hence t
 
 **Constraints:**
 
-* `3 <= n <= 10^5`
-* `0 <= edges.length <= 10^5`
-* `edges[i].length == 3`
-* `0 <= fromi, toi, src1, src2, dest <= n - 1`
-* `fromi != toi`
-* `src1`, `src2`, and `dest` are pairwise distinct.
-* `1 <= weight[i] <= 10^5`
+- `3 <= n <= 10^5`
+- `0 <= edges.length <= 10^5`
+- `edges[i].length == 3`
+- `0 <= fromi, toi, src1, src2, dest <= n - 1`
+- `fromi != toi`
+- `src1`, `src2`, and `dest` are pairwise distinct.
+- `1 <= weight[i] <= 10^5`
 
 ## Approach 1: Dijkstra x 3
 
 We calculate the shortest paths for each node from $$src1$$, $$src2$$ and $$dest$$. For $$dest$$, we need to do it in a reversed order. If we cannot reach $$src1$$ or $$src2$$ from $$dest$$, then the answer is $$-1$$. Otherwise, we iterate each node to find the distances and sum them together to take the minimal one.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 using ll = long long;

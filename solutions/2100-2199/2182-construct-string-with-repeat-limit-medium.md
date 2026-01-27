@@ -3,7 +3,6 @@ description: 'Author: @TBC | https://leetcode.com/problems/construct-string-with
 draft: 'true'
 ---
 
-
 # 2182 - Construct String With Repeat Limit (Medium)
 
 ## Problem Link
@@ -35,7 +34,7 @@ Note that the string "zzcccca" is lexicographically larger but the letter 'c' ap
 ```
 Input: s = "aababab", repeatLimit = 2
 Output: "bbabaa"
-Explanation: We use only some of the characters from s to construct the repeatLimitedString "bbabaa". 
+Explanation: We use only some of the characters from s to construct the repeatLimitedString "bbabaa".
 The letter 'a' appears at most 2 times in a row.
 The letter 'b' appears at most 2 times in a row.
 Hence, no letter appears more than repeatLimit times in a row and the string is a valid repeatLimitedString.
@@ -45,7 +44,7 @@ Note that the string "bbabaaa" is lexicographically larger but the letter 'a' ap
 
 **Constraints:**
 
-* `1 <= repeatLimit <= s.length <= 10^5`
-* `s` consists of lowercase English letters.
+- `1 <= repeatLimit <= s.length <= 10^5`
+- `s` consists of lowercase English letters.
 
 ## Approach 1: TBC

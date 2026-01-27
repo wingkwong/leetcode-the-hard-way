@@ -38,9 +38,9 @@ Explanation: Remove all the digits from the number and it is left with nothing w
 
 **Constraints:**
 
-* `1 <= k <= num.length <= 10^5`
-* `num` consists of only digits.
-* `num` does not have any leading zeros except for the zero itself.
+- `1 <= k <= num.length <= 10^5`
+- `num` consists of only digits.
+- `num` does not have any leading zeros except for the zero itself.
 
 ## Approach 1: Monotonic Stack
 
@@ -72,7 +72,7 @@ public:
             ans.push_back(num[i]);
         }
 
-        // if there are still some more digits that need to be removed, 
+        // if there are still some more digits that need to be removed,
         // remove k more trailing digits
         while(k--){
             ans.pop_back();
@@ -90,7 +90,7 @@ public:
         }
 
         string ansStr(ans.begin()+idx, ans.end());
-        
+
         if (ansStr.length() == 0){
           // if everything is popped, give it back a 0.
           // e.g. 12, k = 2

@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/find-unique-binary-string/'
+description: 'Author: @wkw | https://leetcode.com/problems/find-unique-binary-string/'
 tags: [Array, String, Backtracking]
 ---
 
@@ -12,8 +12,6 @@ https://leetcode.com/problems/find-unique-binary-string/
 ## Problem Statement
 
 Given an array of strings `nums` containing `n` **unique** binary strings each of length `n`, return _a binary string of length_ `n` _that **does not appear** in_ `nums`_. If there are multiple answers, you may return **any** of them_.
-
-
 
 **Example 1:**
 
@@ -41,11 +39,11 @@ Explanation: "101" does not appear in nums. "000", "010", "100", and "110" would
 
 **Constraints:**
 
-* `n == nums.length`
-* `1 <= n <= 16`
-* `nums[i].length == n`
-* `nums[i]` is either `'0'` or `'1'`.
-* All the strings of `nums` are **unique**.
+- `n == nums.length`
+- `1 <= n <= 16`
+- `nums[i].length == n`
+- `nums[i]` is either `'0'` or `'1'`.
+- All the strings of `nums` are **unique**.
 
 ## Approach 1: Hash Map
 
@@ -55,7 +53,7 @@ As $$n$$ is at most $$16$$, there would be at most $$2 ^ {16} = 65536$$ possibil
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 // try all 2 ^ n possibilities
@@ -77,7 +75,7 @@ Here's the full solution.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

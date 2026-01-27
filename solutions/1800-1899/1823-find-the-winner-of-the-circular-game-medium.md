@@ -1,5 +1,5 @@
 ---
-description: "Author: @wingkwong | https://leetcode.com/problems/find-the-winner-of-the-circular-game/"
+description: 'Author: @wkw | https://leetcode.com/problems/find-the-winner-of-the-circular-game/'
 tags: [Array, Math, Recursion, Queue, Simulation]
 ---
 
@@ -64,7 +64,7 @@ We know that the next $k$ friends in the clockwise direction will leave so we ad
 
 <Tabs>
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:

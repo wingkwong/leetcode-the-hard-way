@@ -1,15 +1,15 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/count-special-integers/'
+description: 'Author: @wkw | https://leetcode.com/problems/count-special-integers/'
 tags: [Math, Dynamic Programming]
 ---
 
-# 2376 - Count Special Integers (Hard) 
+# 2376 - Count Special Integers (Hard)
 
 ## Problem Statement
 
 We call a positive integer **special** if all of its digits are **distinct**.
 
-Given a **positive** integer `n`, return *the number of special integers that belong to the interval*`[1, n]`.
+Given a **positive** integer `n`, return _the number of special integers that belong to the interval_`[1, n]`.
 
 **Example 1:**
 
@@ -42,7 +42,7 @@ Some of the integers that are not special are: 22, 114, and 131.
 
 ## Approach 1: Digit DP + BitMasking
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -73,7 +73,7 @@ public:
         // memoize the answer
         return dp[i][mask][tight] = ans;
     }
-    
+
     int countSpecialNumbers(int n) {
         // init dp with value -1
         memset(dp, -1, sizeof(dp));

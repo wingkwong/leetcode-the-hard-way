@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @vigneshshiv, @wingkwong, @radojicic23 |
-  https://leetcode.com/problems/remove-nth-node-from-end-of-list/
+  Author: @vigneshshiv, @wkw, @radojicic23 | https://leetcode.com/problems/remove-nth-node-from-end-of-list/
 ---
 
 # 0019 - Remove Nth Node From End of List (Easy)
@@ -50,7 +49,7 @@ Output: [1]
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 /**
@@ -102,7 +101,7 @@ public:
 </TabItem>
 
 <TabItem value="java" label="Java">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```java
 /**
@@ -145,7 +144,7 @@ class Solution {
 </TabItem>
 
 <TabItem value="go" label="Go">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```go
 /**
@@ -197,7 +196,7 @@ func removeNthFromEnd(head *ListNode, n int) *ListNode {
 </TabItem>
 
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 # Definition for singly-linked list.
@@ -369,19 +368,20 @@ class Solution:
  * @param {number} n
  * @return {ListNode}
  */
-var removeNthFromEnd = function(head, n) {
-    let dummy = new ListNode();
-    dummy.next = head;
-    let slow = dummy, fast = dummy;
-    while (fast.next) {
-        fast = fast.next;
-        if (n <= 0) {
-            slow = slow.next;
-        }
-        n--;
+var removeNthFromEnd = function (head, n) {
+  let dummy = new ListNode();
+  dummy.next = head;
+  let slow = dummy,
+    fast = dummy;
+  while (fast.next) {
+    fast = fast.next;
+    if (n <= 0) {
+      slow = slow.next;
     }
-    slow.next = slow.next.next;
-    return dummy.next;
+    n--;
+  }
+  slow.next = slow.next.next;
+  return dummy.next;
 };
 ```
 

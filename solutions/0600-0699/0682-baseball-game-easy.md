@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/baseball-game/'
+description: 'Author: @wkw | https://leetcode.com/problems/baseball-game/'
 ---
 
 # 0682 - Baseball Game (Easy)
@@ -56,21 +56,21 @@ The total sum is 5 + -2 + -4 + 9 + 5 + 14 = 27.
 
 ```
 Input: ops = ["1"]
-Output: 1 
+Output: 1
 ```
 
 **Constraints:**
 
-* `1 <= ops.length <= 1000`
-* `ops[i]` is `"C"`, `"D"`, `"+"`, or a string representing an integer in the range `[-3 * 104, 3 * 104]`.
-* For operation `"+"`, there will always be at least two previous scores on the record.
-* For operations `"C"` and `"D"`, there will always be at least one previous score on the record.
+- `1 <= ops.length <= 1000`
+- `ops[i]` is `"C"`, `"D"`, `"+"`, or a string representing an integer in the range `[-3 * 104, 3 * 104]`.
+- For operation `"+"`, there will always be at least two previous scores on the record.
+- For operations `"C"` and `"D"`, there will always be at least one previous score on the record.
 
 ## Approach 1: Simulation
 
 Just do what it says.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -79,13 +79,13 @@ public:
         vector<int> s;
         for (auto op: ops) {
             int n = s.size();
-            // Record a new score that is the sum of the previous two scores. 
+            // Record a new score that is the sum of the previous two scores.
             // It is guaranteed there will always be two previous scores.
             if (op == "+") s.push_back(s[n - 2] + s[n - 1]);
-            // Record a new score that is double the previous score. 
+            // Record a new score that is double the previous score.
             // It is guaranteed there will always be a previous score.
             else if (op == "D") s.push_back(2 * s[n - 1]);
-            // Invalidate the previous score, removing it from the record. 
+            // Invalidate the previous score, removing it from the record.
             // It is guaranteed there will always be a previous score.
             else if (op == "C") s.pop_back();
             // An integer x - Record a new score of x.

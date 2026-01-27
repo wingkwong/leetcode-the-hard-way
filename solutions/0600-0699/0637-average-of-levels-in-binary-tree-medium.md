@@ -1,13 +1,13 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/average-of-levels-in-binary-tree/'
+description: 'Author: @wkw | https://leetcode.com/problems/average-of-levels-in-binary-tree/'
 tags: [Tree, Depth-First Search, Breadth-First Search, Binary Tree]
 ---
 
-# 0637 - Average of Levels in Binary Tree (Easy) 
+# 0637 - Average of Levels in Binary Tree (Easy)
 
 ## Problem Statement
 
-Given the `root` of a binary tree, return *the average value of the nodes on each level in the form of an array*. Answers within `10-5` of the actual answer will be accepted.
+Given the `root` of a binary tree, return _the average value of the nodes on each level in the form of an array_. Answers within `10-5` of the actual answer will be accepted.
 
 **Example 1:**
 
@@ -32,7 +32,7 @@ Output: [3.00000,14.50000,11.00000]
 
 ## Approach 1: BFS
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 /**
@@ -56,12 +56,12 @@ public:
     // Then remove the front of the queue, add its children to back of the queue
     // Do the above steps until the queue is empty
     // In this question, we need to extra thing which is calculate the average value of the nodes on each level
-    // We can simply use `sum` to store the current sum of the nodes, 
-    // and calculate the average after processing all the nodes on each level 
+    // We can simply use `sum` to store the current sum of the nodes,
+    // and calculate the average after processing all the nodes on each level
     vector<double> averageOfLevels(TreeNode* root) {
         // Use a queue for perform BFS
         queue<TreeNode*> q;
-        // Push the root node. 
+        // Push the root node.
         // Unlike some other questions, the number of nodes is guaranteed to be [1, 10 ^ 4]
         // Hence, we don't need to check if it is null or not here
         q.push(root);

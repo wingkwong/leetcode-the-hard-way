@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @ColeB2, @radojicic23 | https://leetcode.com/problems/combination-sum-ii/'
+description: 'Author: @wkw, @ColeB2, @radojicic23 | https://leetcode.com/problems/combination-sum-ii/'
 tags: [Array, Backtracking]
 ---
 
@@ -21,7 +21,7 @@ Each number in `candidates` may only be used **once** in the combination.
 
 ```
 Input: candidates = [10,1,2,7,6,1,5], target = 8
-Output: 
+Output:
 [
 [1,1,6],
 [1,2,5],
@@ -34,7 +34,7 @@ Output:
 
 ```
 Input: candidates = [2,5,2,1,2], target = 5
-Output: 
+Output:
 [
 [1,2,2],
 [5]
@@ -43,9 +43,9 @@ Output:
 
 **Constraints:**
 
-* `1 <= candidates.length <= 100`
-* `1 <= candidates[i] <= 50`
-* `1 <= target <= 30`
+- `1 <= candidates.length <= 100`
+- `1 <= candidates[i] <= 50`
+- `1 <= target <= 30`
 
 ## Approach 1: Backtracking
 
@@ -53,7 +53,7 @@ Similar to [0039 - Combination Sum (Medium)](combination-sum-medium), the only d
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -148,24 +148,24 @@ class Solution:
  * @param {number} target
  * @return {number[][]}
  */
-var combinationSum2 = function(candidates, target) {
-    res = [];
-    candidates.sort((a, b) => a - b);
-    function backtrack(index, curr, target) {
-        if (target < 0) return;
-        if (target == 0) {
-            res.push(curr.slice());
-            return;
-        }
-        for (let i = index; i < candidates.length; i++) {
-            if (i != index && candidates[i] === candidates[i - 1]) continue;
-            curr.push(candidates[i]);
-            backtrack(i + 1, curr, target - candidates[i]);
-            curr.pop();
-        }
+var combinationSum2 = function (candidates, target) {
+  res = [];
+  candidates.sort((a, b) => a - b);
+  function backtrack(index, curr, target) {
+    if (target < 0) return;
+    if (target == 0) {
+      res.push(curr.slice());
+      return;
     }
-    backtrack(0, [], target);
-    return res;
+    for (let i = index; i < candidates.length; i++) {
+      if (i != index && candidates[i] === candidates[i - 1]) continue;
+      curr.push(candidates[i]);
+      backtrack(i + 1, curr, target - candidates[i]);
+      curr.pop();
+    }
+  }
+  backtrack(0, [], target);
+  return res;
 };
 ```
 

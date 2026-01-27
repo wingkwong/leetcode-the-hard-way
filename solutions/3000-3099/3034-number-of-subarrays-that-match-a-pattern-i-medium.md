@@ -1,8 +1,8 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/number-of-subarrays-that-match-a-pattern-i/'
+description: 'Author: @wkw | https://leetcode.com/problems/number-of-subarrays-that-match-a-pattern-i/'
 ---
 
-# 3034 - Number of Subarrays That Match a Pattern I (Medium) 
+# 3034 - Number of Subarrays That Match a Pattern I (Medium)
 
 ## Problem Link
 
@@ -18,7 +18,7 @@ A subarray `nums[i..j]` of size `m + 1` is said to match the `pattern` if the fo
 - `nums[i + k + 1] == nums[i + k]` if `pattern[k] == 0`.
 - `nums[i + k + 1] < nums[i + k]` if `pattern[k] == -1`.
 
-Return *the**count** of subarrays in* `nums` *that match the* `pattern`.
+Return _the**count** of subarrays in_ `nums` _that match the_ `pattern`.
 
 **Example 1:**
 
@@ -56,7 +56,7 @@ For larger constraints, one may use Z Algo or KMP to achieve $O(n)$.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -64,7 +64,7 @@ public:
     int countMatchingSubarrays(vector<int>& nums, vector<int>& pattern) {
         int ans = 0, n = nums.size(), m = pattern.size();
         // we start from each `i` to check the subarray
-        // if the pattern size is `m`, 
+        // if the pattern size is `m`,
         // the valid starting point is [0, n - m - 1]
         for (int i = 0; i < n - m; i++) {
             int ok = 1;

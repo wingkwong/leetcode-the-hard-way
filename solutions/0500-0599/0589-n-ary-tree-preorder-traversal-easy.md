@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong, @radojicic23 |
-  https://leetcode.com/problems/n-ary-tree-preorder-traversal/
+  Author: @wkw, @radojicic23 | https://leetcode.com/problems/n-ary-tree-preorder-traversal/
 ---
 
 # 0589 - N-ary Tree Preorder Traversal (Easy)
@@ -27,7 +26,7 @@ Output: [1,3,5,6,2,4]
 
 **Example 2:**
 
-![](https://assets.leetcode.com/uploads/2019/11/08/sample\_4\_964.png)
+![](https://assets.leetcode.com/uploads/2019/11/08/sample_4_964.png)
 
 ```
 Input: root = [1,null,2,3,4,5,null,null,6,7,null,8,null,9,10,null,null,11,null,12,null,13,null,null,14]
@@ -36,9 +35,9 @@ Output: [1,2,3,6,7,11,14,4,8,12,5,9,13,10]
 
 **Constraints:**
 
-* The number of nodes in the tree is in the range `[0, 10^4]`.
-* `0 <= Node.val <= 10^4`
-* The height of the n-ary tree is less than or equal to `1000`.
+- The number of nodes in the tree is in the range `[0, 10^4]`.
+- `0 <= Node.val <= 10^4`
+- The height of the n-ary tree is less than or equal to `1000`.
 
 ## Approach 1: DFS
 
@@ -46,7 +45,7 @@ Straightforward preorder traversal.
 
 <Tabs>
 <TabItem value="c++" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -83,10 +82,10 @@ class Solution:
         output = []
         self.dfs(root, output)
         return output
-        
+
     def dfs(self, root, output):
         if not root:
-            return 
+            return
         output.append(root.val)
         for child in root.children:
             self.dfs(child, output)
@@ -110,18 +109,18 @@ class Solution:
  * @param {Node|null} root
  * @return {number[]}
  */
-var preorder = function(root) {
-    let output = new Array();
-    dfs(root, output);
-    return output;
+var preorder = function (root) {
+  let output = new Array();
+  dfs(root, output);
+  return output;
 
-    function dfs(root, output) {
-        if (!root) return;
-        output.push(root.val);
-        for (child of root.children) {
-            dfs(child, output);
-        }
+  function dfs(root, output) {
+    if (!root) return;
+    output.push(root.val);
+    for (child of root.children) {
+      dfs(child, output);
     }
+  }
 };
 ```
 

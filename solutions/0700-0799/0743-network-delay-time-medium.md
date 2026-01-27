@@ -1,6 +1,13 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/network-delay-time/'
-tags: [Depth-First Search, Breadth-First Search, Graph, Heap (Priority Queue), Shortest Path]
+description: 'Author: @wkw | https://leetcode.com/problems/network-delay-time/'
+tags:
+  [
+    Depth-First Search,
+    Breadth-First Search,
+    Graph,
+    Heap (Priority Queue),
+    Shortest Path,
+  ]
 ---
 
 # 0743 - Network Delay Time (Medium)
@@ -17,7 +24,7 @@ We will send a signal from a given node `k`. Return the time it takes for all th
 
 **Example 1:**
 
-![](https://assets.leetcode.com/uploads/2019/05/23/931\_example\_1.png)
+![](https://assets.leetcode.com/uploads/2019/05/23/931_example_1.png)
 
 ```
 Input: times = [[2,1,1],[2,3,1],[3,4,1]], n = 4, k = 2
@@ -40,13 +47,13 @@ Output: -1
 
 **Constraints:**
 
-* `1 <= k <= n <= 100`
-* `1 <= times.length <= 6000`
-* `times[i].length == 3`
-* `1 <= ui, vi <= n`
-* `ui != vi`
-* `0 <= wi <= 100`
-* All the pairs `(ui, vi)` are **unique**. (i.e., no multiple edges.)
+- `1 <= k <= n <= 100`
+- `1 <= times.length <= 6000`
+- `times[i].length == 3`
+- `1 <= ui, vi <= n`
+- `ui != vi`
+- `0 <= wi <= 100`
+- All the pairs `(ui, vi)` are **unique**. (i.e., no multiple edges.)
 
 ## Approach 1: Dijkstra
 
@@ -56,7 +63,7 @@ Therefore, the problem is now asking to find out the max time it takes from the 
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -143,7 +150,7 @@ class Solution:
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -161,7 +168,7 @@ public:
             dist = ndist;
         }
     }
-    
+
     int networkDelayTime(vector<vector<int>>& times, int n, int k) {
         vector<array<int, 3>> g;
         vector<int> dist(n, 1e9);

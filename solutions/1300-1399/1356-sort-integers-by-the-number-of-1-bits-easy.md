@@ -1,7 +1,8 @@
 ---
 description: >-
-  Author: @wingkwong, @vigneshshiv |
-  https://leetcode.com/problems/sort-integers-by-the-number-of-1-bits
+  Author: @wkw, @vigneshshiv | https://leetcode.com/problems/sort-integers-by-the-number-of-1-bits
+
+
 tags: ['Sorting']
 ---
 
@@ -39,14 +40,14 @@ Explantion: All integers have 1 bit in the binary representation, you should jus
 
 **Constraints:**
 
-* `1 <= arr.length <= 500`
-* `0 <= arr[i] <= 10^4`
+- `1 <= arr.length <= 500`
+- `0 <= arr[i] <= 10^4`
 
-## Approach 1: Sorting + __builtin_popcount / Bit Count
+## Approach 1: Sorting + \_\_builtin_popcount / Bit Count
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -55,10 +56,10 @@ public:
         sort(arr.begin(), arr.end(), [&](int a, int b){
             // __builtin_popcount(x) returns the number of 1-bits set in an int x.
             int x = __builtin_popcount(a), y = __builtin_popcount(b);
-            return x == y ? 
+            return x == y ?
                 // in case of two or more integers have the same number of 1's you have to sort them in ascending order
-                a < b : 
-                // else sort the integers in the array in ascending order by the number of 1's in their binary representation 
+                a < b :
+                // else sort the integers in the array in ascending order by the number of 1's in their binary representation
                 x < y;
         });
         return arr;
@@ -86,7 +87,7 @@ class Solution {
 </TabItem>
 </Tabs>
 
-## Approach 2: Sorting with Math Logic    
+## Approach 2: Sorting with Math Logic
 
 Since the input values can range from `0` to `10000`, we can add to each element on the array the value of the bit count (number of 1s) multiplied by 10001.
 

@@ -35,10 +35,10 @@ Output: true
 
 **Constraints:**
 
-* `1 <= nums.length <= 10^5`
-* `-10^9 <= nums[i] <= 10^9`
+- `1 <= nums.length <= 10^5`
+- `-10^9 <= nums[i] <= 10^9`
 
-## Approach 1: Count number of appearance using std::unordered\_set
+## Approach 1: Count number of appearance using std::unordered_set
 
 Perhaps the most straight forward way to find out duplicated elements since nothing could be added into a set when the same value is inside the set already. Then we could compare the number of distinct elements vs. number of elements in nums to judge if there is duplicates.
 
@@ -61,7 +61,7 @@ public:
 
         for (auto const & num: nums){
             result = appears.insert(num);
-            if (result.second == false){ 
+            if (result.second == false){
                 // stop early once we find a duplicate.
                 return true;
             }
@@ -82,7 +82,7 @@ class Solution {
         // HashSet for efficient lookup / add method itself provides true or false based on the key.
         Set<Integer> table = new HashSet<>();
         for (int num : nums) {
-            // Returns true - if key is added to the Set 
+            // Returns true - if key is added to the Set
             // otherwise false if the key is already present.
             if (!table.add(num)) return true;
         }
@@ -101,13 +101,13 @@ class Solution {
  * @param {number[]} nums
  * @return {boolean}
  */
-var containsDuplicate = function(nums) {
-    let hash_set = new Set();
-    for (n of nums) {
-        if (hash_set.has(n)) return true;
-        hash_set.add(n);
-    }
-    return false;
+var containsDuplicate = function (nums) {
+  let hash_set = new Set();
+  for (n of nums) {
+    if (hash_set.has(n)) return true;
+    hash_set.add(n);
+  }
+  return false;
 };
 ```
 
@@ -124,7 +124,7 @@ class Solution:
             if n in hash_set:
                 return True
             hash_set.add(n)
-        return False 
+        return False
 ```
 
 </TabItem>
@@ -170,14 +170,14 @@ public:
  * @param {number[]} nums
  * @return {boolean}
  */
-var containsDuplicate = function(nums) {
-    nums.sort();
-    let last_num = nums[0];
-    for (i = 1; i < nums.length; i++) {
-        if (last_num == nums[i]) return true;
-        else last_num = nums[i];
-    }
-    return false;
+var containsDuplicate = function (nums) {
+  nums.sort();
+  let last_num = nums[0];
+  for (i = 1; i < nums.length; i++) {
+    if (last_num == nums[i]) return true;
+    else last_num = nums[i];
+  }
+  return false;
 };
 ```
 
@@ -196,7 +196,7 @@ class Solution:
                 return True
             else:
                 last_num = nums[i]
-        return False 
+        return False
 ```
 
 </TabItem>
@@ -208,12 +208,7 @@ In general, we want to make use of `defaultdict` in python.
 
 We can declare `dictionary = defaultdict(int)` to keep track of what elements we have seen so far.
 
-You might be thinking: Why can't we simply loop the array for each element to check if there is duplicate? It is less time efficient if we do not use a `dictionary`.
-![1](https://user-images.githubusercontent.com/24492138/170910845-58aaea00-3a90-4c15-9ca2-fdf9e473baa5.jpg)
-![2](https://user-images.githubusercontent.com/24492138/170910857-5bcbaf02-22f7-4d31-8b93-94784fa2be73.jpg)
-![3](https://user-images.githubusercontent.com/24492138/170910863-48ac46bf-dae8-423e-809a-22ec32466b06.jpg)
-![4](https://user-images.githubusercontent.com/24492138/170910866-22f6ed1d-b58c-4e6a-8e32-11ba7e0b6b29.jpg)
-
+You might be thinking: Why can't we simply loop the array for each element to check if there is duplicate? It is less time efficient if we do not use a `dictionary`. ![1](https://user-images.githubusercontent.com/24492138/170910845-58aaea00-3a90-4c15-9ca2-fdf9e473baa5.jpg) ![2](https://user-images.githubusercontent.com/24492138/170910857-5bcbaf02-22f7-4d31-8b93-94784fa2be73.jpg) ![3](https://user-images.githubusercontent.com/24492138/170910863-48ac46bf-dae8-423e-809a-22ec32466b06.jpg) ![4](https://user-images.githubusercontent.com/24492138/170910866-22f6ed1d-b58c-4e6a-8e32-11ba7e0b6b29.jpg)
 
 <Tabs>
 <TabItem value="py" label="Python">
@@ -239,13 +234,13 @@ return False
  * @param {number[]} nums
  * @return {boolean}
  */
-var containsDuplicate = function(nums) {
-    let hash_map = new Object();
-    for (n of nums) {
-        if (hash_map.hasOwnProperty(n)) return true;
-        hash_map[n] = 1;
-    }
-    return false;
+var containsDuplicate = function (nums) {
+  let hash_map = new Object();
+  for (n of nums) {
+    if (hash_map.hasOwnProperty(n)) return true;
+    hash_map[n] = 1;
+  }
+  return false;
 };
 ```
 

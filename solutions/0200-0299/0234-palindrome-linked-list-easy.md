@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/palindrome-linked-list/'
+description: 'Author: @wkw, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/palindrome-linked-list/'
 tags: [Linked List, Two Pointers, Stack, Recursion]
 ---
 
-# 0234 - Palindrome Linked List (Easy) 
+# 0234 - Palindrome Linked List (Easy)
 
 ## Problem Statement
 
@@ -34,7 +34,7 @@ Output: false
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -83,30 +83,30 @@ public:
 #         self.next = next
 class Solution:
     def isPalindrome(self, head: Optional[ListNode]) -> bool:
-        slow, fast = head, head 
+        slow, fast = head, head
 
         # find middle value(slow)
         while fast and fast.next:
             slow = slow.next
             fast = fast.next.next
 
-        # reverse second portion 
+        # reverse second portion
         prev = None # dummy
         while slow:
             tmp = slow.next
-            slow.next = prev 
-            prev = slow 
+            slow.next = prev
+            prev = slow
             slow = tmp
 
-        # check if it's palindrome 
+        # check if it's palindrome
         left, right = head, prev
         while right:
             if left.val != right.val:
-                return False 
+                return False
             left = left.next
             right = right.next
-        
-        return True 
+
+        return True
 ```
 
 </TabItem>
@@ -126,33 +126,33 @@ class Solution:
  * @param {ListNode} head
  * @return {boolean}
  */
-var isPalindrome = function(head) {
-    let slow = head;
-    let fast = head;
-    // find middle value(slow)
-    while (fast && fast.next) {
-        slow = slow.next;
-        fast = fast.next.next;
+var isPalindrome = function (head) {
+  let slow = head;
+  let fast = head;
+  // find middle value(slow)
+  while (fast && fast.next) {
+    slow = slow.next;
+    fast = fast.next.next;
+  }
+  // reverse second portion
+  let prev = null;
+  while (slow) {
+    let temp = slow.next;
+    slow.next = prev;
+    prev = slow;
+    slow = temp;
+  }
+  // check if it's palindrome
+  let left = head;
+  let right = prev;
+  while (right) {
+    if (left.val != right.val) {
+      return false;
     }
-    // reverse second portion 
-    let prev = null;
-    while (slow) {
-        let temp = slow.next;
-        slow.next = prev;
-        prev = slow;
-        slow = temp;
-    }
-    // check if it's palindrome
-    let left = head;
-    let right = prev;
-    while (right) {
-        if (left.val != right.val) {
-            return false;
-        }
-        left = left.next;
-        right = right.next;
-    }
-    return true;
+    left = left.next;
+    right = right.next;
+  }
+  return true;
 };
 ```
 
@@ -163,7 +163,7 @@ var isPalindrome = function(head) {
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -200,15 +200,15 @@ public:
  * @param {ListNode} head
  * @return {boolean}
  */
-var isPalindrome = function(head) {
-    let head_str = new String();
-    // convert to string
-    while (head) {
-        head_str += head.val;
-        head = head.next;
-    }
-    // return true if it's palindrome 
-    return head_str == head_str.split('').reverse().join('');
+var isPalindrome = function (head) {
+  let head_str = new String();
+  // convert to string
+  while (head) {
+    head_str += head.val;
+    head = head.next;
+  }
+  // return true if it's palindrome
+  return head_str == head_str.split('').reverse().join('');
 };
 ```
 
@@ -241,11 +241,11 @@ class Solution:
 
 Iterative approach using Stack
 
-* Push first half of the elements onto a stack.
-* Iterate through the linked list, using fast runner / slow runner technique.
-* At each step, push the data from the slow runner onto a stack
-* When the fast runner hits the end of the list, the slow runner will have reached the middle of the list.
-* By this point, the stack will have all the elements from the front of the linked list, but in reverse order Last, iterate through the rest of the slow runner node, and compare the node to the top of the stack.
+- Push first half of the elements onto a stack.
+- Iterate through the linked list, using fast runner / slow runner technique.
+- At each step, push the data from the slow runner onto a stack
+- When the fast runner hits the end of the list, the slow runner will have reached the middle of the list.
+- By this point, the stack will have all the elements from the front of the linked list, but in reverse order Last, iterate through the rest of the slow runner node, and compare the node to the top of the stack.
 
 Time Complexity: $O(n)$, where $n$ - # of nodes in the list
 
@@ -297,15 +297,14 @@ class Solution {
 </TabItem>
 </Tabs>
 
-
 ## Approach 4: Follow up: O(n) time, O(1) space
 
 Easy steps to solve the problem,
 
-* Find the middle node
-* Reverse a list from middle
-* Compare both halves
-* Re-reverse the list (optional here), and return true if either of halves are empty
+- Find the middle node
+- Reverse a list from middle
+- Compare both halves
+- Re-reverse the list (optional here), and return true if either of halves are empty
 
 Time Complexity: $O(n)$, where $n$ - # of nodes in the list
 

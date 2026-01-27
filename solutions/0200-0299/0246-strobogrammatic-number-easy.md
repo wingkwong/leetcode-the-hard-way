@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/strobogrammatic-number/'
+description: 'Author: @wkw | https://leetcode.com/problems/strobogrammatic-number/'
 tags: ['Hash Map']
 ---
 
@@ -29,9 +29,9 @@ A **strobogrammatic number** is a number that looks the same when rotated `180` 
 
 **Constraints:**
 
-* `1 <= num.length <= 50`
-* `num` consists of only digits.
-* `num` does not contain any leading zeros except for zero itself.
+- `1 <= num.length <= 50`
+- `num` consists of only digits.
+- `num` does not contain any leading zeros except for zero itself.
 
 ## Problem Link
 
@@ -39,7 +39,7 @@ https://leetcode.com/problems/strobogrammatic-number/
 
 ## Problem Statement
 
-First we need to find out which numbers are still valid after rotated by 180 degrees. There are only three cases. First it becomes an invalid number, such as `2`, `3`, `4` and etc. The second case is the number remains the same, such as `0`, `1` and `8`. The third case is it becomes another number, such as `6 -> 9`. 
+First we need to find out which numbers are still valid after rotated by 180 degrees. There are only three cases. First it becomes an invalid number, such as `2`, `3`, `4` and etc. The second case is the number remains the same, such as `0`, `1` and `8`. The third case is it becomes another number, such as `6 -> 9`.
 
 Therefore, we can use two pointers from the left and right to check if the number can be rotatable. If so, would the rotated number be the same as the target number.
 

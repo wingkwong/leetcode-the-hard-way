@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @ColeB2, @jit | https://leetcode.com/problems/kth-largest-element-in-an-array/'
+description: 'Author: @wkw, @ColeB2, @jit | https://leetcode.com/problems/kth-largest-element-in-an-array/'
 tags: [Priority Queue, Quick Select]
 ---
 
@@ -31,8 +31,8 @@ Output: 4
 
 **Constraints:**
 
-* `1 <= k <= nums.length <= 10^4`
-* `-10^4 <= nums[i] <= 10^4`
+- `1 <= k <= nums.length <= 10^4`
+- `-10^4 <= nums[i] <= 10^4`
 
 ## Approach 1: Priority Queue
 
@@ -42,10 +42,9 @@ Time Complexity: $$O(nlogk)$$. Where n is the number of values in the nums array
 
 Space Complexity: $$O(k)$$. Where $$k$$ is the size of our heap, as we are only putting $$k$$ values inside our heap.
 
-
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -109,7 +108,7 @@ The following STL functions can partially sort to solve the problem.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -121,7 +120,7 @@ public:
 };
 ```
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -136,7 +135,7 @@ public:
 </TabItem>
 
 <TabItem value="python" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:
@@ -165,7 +164,7 @@ impl Solution {
 
 Quick Select is a partitioning pattern using in Quick Sort, which can be done on $$O(n)$$ time on average.
 
-First, we need to choose a pivot value, and partition the values around the pivot (That is the larger numbers left, smaller on the right). If after the partitioning stage, we have $$k-1$$ elements to the left of our partition ($$k-1$$ because we are 0 indexed), it means the value at our partition index is the kth largest. If not we have to adjust our left or right pointers. Either our partition index is less than k, then we move our left pointer up $$partition + 1$$ or our right down to $$partition - 1$$. 
+First, we need to choose a pivot value, and partition the values around the pivot (That is the larger numbers left, smaller on the right). If after the partitioning stage, we have $$k-1$$ elements to the left of our partition ($$k-1$$ because we are 0 indexed), it means the value at our partition index is the kth largest. If not we have to adjust our left or right pointers. Either our partition index is less than k, then we move our left pointer up $$partition + 1$$ or our right down to $$partition - 1$$.
 
 Time Complexity: Average Case $$O(n)$$. Where n is the number of values. By selecting a random pivot, we can avoid malicious inputs, and in general solve the question on $$O(n)$$ time. Whereas if we select the worst partition at each iteration, we will approach $$O(n^2)$$ time.
 
@@ -189,8 +188,8 @@ class Solution:
             i = l
             # track our pivot value, swapped with right side already.
             pivot_value = nums[r]
-            # loop from l to r + 1. Note r + 1 will swap our pivot 
-            # back in place for us. 
+            # loop from l to r + 1. Note r + 1 will swap our pivot
+            # back in place for us.
             for j in range(l, r + 1):
                 # number looking at is larger than our pivot
                 if nums[j] >= pivot_value:
@@ -218,7 +217,7 @@ class Solution:
             elif p > k - 1:
                 # move right pointer down.
                 right = p - 1
-        # p == k - 1, it means our partition is the kth largest. 
+        # p == k - 1, it means our partition is the kth largest.
         return nums[p]
 ```
 

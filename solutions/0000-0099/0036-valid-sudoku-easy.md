@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @vigneshshiv, @radojicic23 |
-  https://leetcode.com/problems/valid-sudoku/
+  Author: @vigneshshiv, @radojicic23 | https://leetcode.com/problems/valid-sudoku/
 ---
 
 # 0036 - Valid Sudoku (Easy)
@@ -19,27 +18,28 @@ Determine if a `9 x 9` Sudoku board is valid. Only the filled cells need to be v
 3. Each of the nine `3 x 3` sub-boxes of the grid must contain the digits `1-9` without repetition.
 
 **Note:**
-* A Sudoku board (partially filled) could be valid but is not necessarily solvable.
-* Only the filled cells need to be validated according to the mentioned rules.
+
+- A Sudoku board (partially filled) could be valid but is not necessarily solvable.
+- Only the filled cells need to be validated according to the mentioned rules.
 
 **Example 1:**
 
 ```
-5 3 .  . 7 .  . . .  
-6 . .  1 9 5  . . .  
-. 9 8  . . .  . 6 .  
+5 3 .  . 7 .  . . .
+6 . .  1 9 5  . . .
+. 9 8  . . .  . 6 .
 
-8 . .  . 6 .  . . 3  
-4 . .  8 . 3  . . 1  
-7 . .  . 2 .  . . 6  
+8 . .  . 6 .  . . 3
+4 . .  8 . 3  . . 1
+7 . .  . 2 .  . . 6
 
-. 6 .  . . .  2 8 .  
-. . .  4 1 9  . . 5  
-. . .  . 8 .  . 7 9 
+. 6 .  . . .  2 8 .
+. . .  4 1 9  . . 5
+. . .  . 8 .  . 7 9
 ```
 
 ```
-Input: board = 
+Input: board =
 [["5","3",".",".","7",".",".",".","."]
 ,["6",".",".","1","9","5",".",".","."]
 ,[".","9","8",".",".",".",".","6","."]
@@ -55,7 +55,7 @@ Output: true
 **Example 2:**
 
 ```
-Input: board = 
+Input: board =
 [["8","3",".",".","7",".",".",".","."]
 ,["6",".",".","1","9","5",".",".","."]
 ,[".","9","8",".",".",".",".","6","."]
@@ -71,17 +71,17 @@ Explanation: Same as Example 1, except with the 5 in the top left corner being m
 
 **Constraints:**
 
-* `board.length == 9`
-* `board[i].length == 9`
-* `board[i][j]` is a digit `1-9` or `'.'`.
+- `board.length == 9`
+- `board[i].length == 9`
+- `board[i][j]` is a digit `1-9` or `'.'`.
 
 ## Approach 1: HashSet
 
-Every value in the row or column or `3 x 3` block, the value is unique, With the help of this simple logic, add the Numbers in the HashSet, Add `num` value for `m`th row and for `n`th column and the same for `3 x 3` matrix. 
+Every value in the row or column or `3 x 3` block, the value is unique, With the help of this simple logic, add the Numbers in the HashSet, Add `num` value for `m`th row and for `n`th column and the same for `3 x 3` matrix.
 
 If the same value repeat again for the same row or column or `3 x 3` block, then the given sudoku is not valid, otherwise is valid.
 
-Time Complexity: $O(m * n)$, where $m$ - # of rows, $n$ - # of columns, 
+Time Complexity: $O(m * n)$, where $m$ - # of rows, $n$ - # of columns,
 
 Space complexity: $O(1)$, since the values are fixed for `9 x 9` board
 
@@ -120,15 +120,15 @@ class Solution:
         cols = collections.defaultdict(set)
         rows = collections.defaultdict(set)
         squares = collections.defaultdict(set)
-        
+
         for r in range(9):
             for c in range(9):
                 # if it's empty skip it
                 if board[r][c] == ".":
                     continue
-                # have we found a duplicate 
-                if (board[r][c] in rows[r] or 
-                    board[r][c] in cols[c] or 
+                # have we found a duplicate
+                if (board[r][c] in rows[r] or
+                    board[r][c] in cols[c] or
                     board[r][c] in squares[(r // 3, c // 3)]):
                     return False
                 # if it is valid
@@ -144,15 +144,15 @@ class Solution:
 
 ## Approach 2: Standard
 
-Iterate over rows and columns and `3 x 3` block to check if the number is repeats. 
+Iterate over rows and columns and `3 x 3` block to check if the number is repeats.
 
-Since, it's easier to find the duplicate number on the same row or column. But how to find the `3 x 3` block for any given index in the grid. 
+Since, it's easier to find the duplicate number on the same row or column. But how to find the `3 x 3` block for any given index in the grid.
 
-For example, first `3 x 3` starts and end in the range of $(0, 0)$ to $(2, 2)$. Suppose, if we are in the cell of $(1, 2)$, how to find the start range of this cell which is same above mentioned. 
+For example, first `3 x 3` starts and end in the range of $(0, 0)$ to $(2, 2)$. Suppose, if we are in the cell of $(1, 2)$, how to find the start range of this cell which is same above mentioned.
 
-It's simple, just `row - row % sqrt(board.length)`, Either we can use $sqrt$ approach or just use 3, since we know here Sudoku is `9 x 9` matrix. 
+It's simple, just `row - row % sqrt(board.length)`, Either we can use $sqrt$ approach or just use 3, since we know here Sudoku is `9 x 9` matrix.
 
-For the above said cell $(1, 2)$, start range of this block is $(0, 0)$, since the start is clear, end is always within `3 x 3` from the start index. 
+For the above said cell $(1, 2)$, start range of this block is $(0, 0)$, since the start is clear, end is always within `3 x 3` from the start index.
 
 Time complexity: $O(n^2)$
 
@@ -174,7 +174,7 @@ class Solution {
         }
         return true;
     }
-    
+
     public boolean isValid(char[][] board, int row, int col, int num) {
         // Check the row, from col 0 to 8
         for (int i = 0; i < board.length; i++) {

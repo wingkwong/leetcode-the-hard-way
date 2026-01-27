@@ -1,8 +1,8 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/find-all-good-indices/'
+description: 'Author: @wkw | https://leetcode.com/problems/find-all-good-indices/'
 ---
 
-# 2420 - Find All Good Indices (Medium) 
+# 2420 - Find All Good Indices (Medium)
 
 ## Problem Link
 
@@ -17,7 +17,7 @@ We call an index `i` in the range `k <= i < n - k` **good** if the following con
 - The `k` elements that are just **before** the index `i` are in **non-increasing** order.
 - The `k` elements that are just **after** the index `i` are in **non-decreasing** order.
 
-Return *an array of all good indices sorted in **increasing** order*.
+Return _an array of all good indices sorted in **increasing** order_.
 
 **Example 1:**
 
@@ -41,7 +41,7 @@ Explanation: There are no good indices in this array.
 **Constraints:**
 
 - `n == nums.length`
-- `3 <= n <= 105`
+- `3 <= n <= 1e5`
 - `1 <= nums[i] <= 10^6`
 - `1 <= k <= n / 2`
 
@@ -49,7 +49,7 @@ Explanation: There are no good indices in this array.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -57,7 +57,7 @@ public:
     vector<int> goodIndices(vector<int>& nums, int k) {
         int n = nums.size();
         // inc[i]: number of elements after the index i are in non-decreasing order
-        // dec[i]: number of elements before the index i are in non-increasing order 
+        // dec[i]: number of elements before the index i are in non-increasing order
         vector<int> inc(n, 1), dec(n, 1);
         for (int i = 1; i < n; i++) {
             // if it's non-increasing, add 1 to the previous state

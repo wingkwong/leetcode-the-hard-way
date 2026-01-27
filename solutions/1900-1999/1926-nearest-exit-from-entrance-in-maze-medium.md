@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/nearest-exit-from-entrance-in-maze/'
+description: 'Author: @wkw | https://leetcode.com/problems/nearest-exit-from-entrance-in-maze/'
 tags: [Array, Breadth-First Search, Matrix]
 ---
 
-# 1926 - Nearest Exit from Entrance in Maze (Medium) 
+# 1926 - Nearest Exit from Entrance in Maze (Medium)
 
 ## Problem Link
 
@@ -15,7 +15,7 @@ You are given an `m x n` matrix `maze` (**0-indexed**) with empty cells (represe
 
 In one step, you can move one cell **up**, **down**, **left**, or **right**. You cannot step into a cell with a wall, and you cannot step outside the maze. Your goal is to find the **nearest exit** from the `entrance`. An **exit** is defined as an **empty cell** that is at the **border** of the `maze`. The `entrance` **does not count** as an exit.
 
-Return *the **number of steps** in the shortest path from the*`entrance`*to the nearest exit, or*`-1`*if no such path exists*.
+Return _the **number of steps** in the shortest path from the_`entrance`_to the nearest exit, or_`-1`_if no such path exists_.
 
 **Example 1:**
 
@@ -65,7 +65,7 @@ Explanation: There are no exits in this maze.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -82,7 +82,7 @@ public:
         while (!q.empty()) {
             auto [i, j, steps] = q.front(); q.pop();
             // handle exit condition, we can exit if
-            // 1. the current position is not the entrance 
+            // 1. the current position is not the entrance
             bool isAtTheEntrance = i == entrance[0] && j == entrance[1];
             // 2. and the current position is at the border
             bool isAtTheBorder = i == 0 || j == 0 || i == m - 1 || j == n - 1;

@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/find-first-palindromic-string-in-the-array/
+  Author: @wkw | https://leetcode.com/problems/find-first-palindromic-string-in-the-array/
 ---
 
 # 2108 - Find First Palindromic String in the Array (Easy)
@@ -43,9 +42,9 @@ Explanation: There are no palindromic strings, so the empty string is returned.
 
 **Constraints:**
 
-* `1 <= words.length <= 100`
-* `1 <= words[i].length <= 100`
-* `words[i]` consists only of lowercase English letters.
+- `1 <= words.length <= 100`
+- `1 <= words[i].length <= 100`
+- `words[i]` consists only of lowercase English letters.
 
 ## Approach 1: Check each word
 
@@ -91,7 +90,7 @@ bool isPalindrome(const string &s) {
 
 We just need to iterate each string and check if the target $$s$$s is a palindrome, return the string if so.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -99,7 +98,7 @@ public:
     bool isPalindrome(const string& s) {
         return equal(s.begin(), s.begin() + s.size() / 2, s.rbegin());
     }
-    
+
     string firstPalindrome(vector<string>& words) {
         for (auto s : words) {
             if (isPalindrome(s)) {
@@ -110,4 +109,3 @@ public:
     }
 };
 ```
-

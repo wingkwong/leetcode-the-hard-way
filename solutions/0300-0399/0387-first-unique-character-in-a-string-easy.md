@@ -1,5 +1,5 @@
 ---
-description: 'Author: @heder, @wingkwong, @jit | https://leetcode.com/problems/first-unique-character-in-a-string/'
+description: 'Author: @heder, @wkw, @jit | https://leetcode.com/problems/first-unique-character-in-a-string/'
 tags: [Hash Table, String, Queue, Counting]
 ---
 
@@ -11,7 +11,7 @@ https://leetcode.com/problems/first-unique-character-in-a-string/
 
 ## Problem Statement
 
-Given a string `s`, *find the first non-repeating character in it and return its index*. If it does not exist, return `-1`.
+Given a string `s`, _find the first non-repeating character in it and return its index_. If it does not exist, return `-1`.
 
 **Example 1:**
 
@@ -68,7 +68,7 @@ public:
 </TabItem>
 
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:

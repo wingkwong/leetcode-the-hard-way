@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/maximize-number-of-subsequences-in-a-string/
+  Author: @wkw | https://leetcode.com/problems/maximize-number-of-subsequences-in-a-string/
 ---
 
 # 2207 - Maximize Number of Subsequences in a String (Medium)
@@ -43,15 +42,15 @@ Some of the strings which can be obtained from text and have 6 subsequences "ab"
 
 **Constraints:**
 
-* `1 <= text.length <= 10^5`
-* `pattern.length == 2`
-* `text` and `pattern` consist only of lowercase English letters.
+- `1 <= text.length <= 10^5`
+- `pattern.length == 2`
+- `text` and `pattern` consist only of lowercase English letters.
 
 ## Approach 1: Counting
 
 We should add $$pattern[0]$$ to the beginning or add $$pattern[1]$$ to the end of the text. Therefore, we check both case to see which one is better. We iterate the text and check if the character is equal to $$pattern[1]$$, if so, we add the frequency of $$pattern[0]$$. We increase the frequency of the current character by $$1$$.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

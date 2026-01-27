@@ -1,6 +1,15 @@
 ---
-description: 'Author: @wingkwong, @heiheihang, @ColeB2 | https://leetcode.com/problems/k-closest-points-to-origin/'
-tags: [Array, Math, Divide and Conquer, Geometry, Sorting, Heap (Priority Queue), Quickselect]
+description: 'Author: @wkw, @heiheihang, @ColeB2 | https://leetcode.com/problems/k-closest-points-to-origin/'
+tags:
+  [
+    Array,
+    Math,
+    Divide and Conquer,
+    Geometry,
+    Sorting,
+    Heap (Priority Queue),
+    Quickselect,
+  ]
 ---
 
 # 0973 - K Closest Points to Origin (Medium)
@@ -41,20 +50,20 @@ Explanation: The answer [[-2,4],[3,3]] would also be accepted.
 
 **Constraints:**
 
-* `1 <= k <= points.length <= 10^4`
-* `-10^4 < xi, yi < 10^4`
+- `1 <= k <= points.length <= 10^4`
+- `-10^4 < xi, yi < 10^4`
 
 ## Approach 1: nth_element
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
 public:
     vector<vector<int>> kClosest(vector<vector<int>>& points, int K) {
-        // we don't need to care about the exact order 
+        // we don't need to care about the exact order
         // nth_element approach is enough
         nth_element(points.begin(), points.begin() + K, points.end(),[](vector<int>& q, vector<int>& p) {
             // sort by Euclidean distance
@@ -90,20 +99,20 @@ Space Complexity: $$O(k)$$. We only need to maintain k items inside of our heap.
 class Solution:
     def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]:
         h = []
-        
+
         for a, b in points:
-            
+
             dist = a ** 2 + b ** 2
             heappush(h, [-dist, a, b])
             if len(h) > k:
                 heappop(h)
-        
+
         res = []
-        
+
         while h:
             res.append([h[0][1], h[0][2]])
             heappop(h)
-            
+
         return res
 ```
 
@@ -137,7 +146,7 @@ class Solution:
         # to work as endpoints of our array we are trying to partition.
         def partition(l, r):
             # pivot, select one at random between l and r. We use a
-            # pivot instead of always selecting the first/last etc to 
+            # pivot instead of always selecting the first/last etc to
             # hopefully prevent O(n^2) time complexity against malicious
             # inputs.
             pivot = random.randint(l, r)

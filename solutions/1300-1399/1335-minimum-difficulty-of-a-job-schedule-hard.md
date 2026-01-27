@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/minimum-difficulty-of-a-job-schedule/'
+description: 'Author: @wkw | https://leetcode.com/problems/minimum-difficulty-of-a-job-schedule/'
 tags: [Array, Dynamic Programming]
 ---
 
-# 1335 - Minimum Difficulty of a Job Schedule (Hard) 
+# 1335 - Minimum Difficulty of a Job Schedule (Hard)
 
 ## Problem Link
 
@@ -17,7 +17,7 @@ You have to finish **at least** one task every day. The difficulty of a job sche
 
 You are given an integer array `jobDifficulty` and an integer `d`. The difficulty of the `ith` job is `jobDifficulty[i]`.
 
-Return *the minimum difficulty of a job schedule*. If you cannot find a schedule for the jobs return `-1`.
+Return _the minimum difficulty of a job schedule_. If you cannot find a schedule for the jobs return `-1`.
 
 **Example 1:**
 
@@ -59,13 +59,13 @@ Visualization for $n = 6, d = 3$. (by @liangyong0411)
 
 <Tabs>
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:
     def minDifficulty(self, jobDifficulty: List[int], d: int) -> int:
         n = len(jobDifficulty)
-    
+
         @cache
         # dp(i, k): min difficulty when you start working on i-th job at day `k`
         def dp(i, k):
@@ -73,24 +73,24 @@ class Solution:
             # we put all the remaining jobs on this day
             # so we return the one with max difficulty
             if k == d: return max(jobDifficulty[i:])
-            # init min difficulty with inf 
+            # init min difficulty with inf
             res = float('inf')
             # cur is the max difficulty we've seen so far
             # init current max with 0
             cur = 0
-            # for jobDifficulty like 6 5 4 3 2 1, 
+            # for jobDifficulty like 6 5 4 3 2 1,
             # we can have following ways to distribute them into two days
             # 6 | 5 4 3 2 1
-            # 6 5 | 4 3 2 1 
+            # 6 5 | 4 3 2 1
             # 6 5 4 | 3 2 1
             # 6 5 4 3 | 2 1
             # 6 5 4 3 2 | 1
             # notice that each day we must have at least one task
-            # given the starting index `i`, 
+            # given the starting index `i`,
             # we can only at most choose the jobs till the position `n - d + k - 1`
             for j in range(i, n - d + k):
                 cur = max(cur, jobDifficulty[j])
-                # if j-th job is the last job on day `k`, 
+                # if j-th job is the last job on day `k`,
                 # the max difficulty for day `k` is `cur`
                 # and we need to start (j + 1)-th job on the next day
                 # the result would be `cur + dp(j + 1, k + 1)`

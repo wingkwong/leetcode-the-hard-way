@@ -48,7 +48,7 @@ Output: 1
 
 ## Approach 1: Dynamic Programming - Memoization
 
-For each number in $$nums$$ we can calculate and store the possible sums on each iteration, and continue to do that and count all the sums at the end. 
+For each number in $$nums$$ we can calculate and store the possible sums on each iteration, and continue to do that and count all the sums at the end.
 
 To improve that we can use a hash map, with our key, value pairs being the $$sum$$ as our key, and the number of times that sum occurs as the value. This avoids repeated work on each iteration and allows $$O(1)$$ access to the $$target$$ number at the end instead of counting the occurrences of our target sum.
 
@@ -74,14 +74,14 @@ class Solution:
             # each sum on each iteration, we just need the new sums
             # we create on every pass.
             new_dp = defaultdict(int)
-            # iterate over each key, value pair. 
+            # iterate over each key, value pair.
             # _sum = keys which are our sums we created in dp.
             # value = freq, which is the frequency of each sum.
             for _sum, freq in dp.items():
                 # The new sums we create will be the _sum +/- num
                 # so our new keys will be _sum + num and _sum - num.
-                # The values or frequency of each will be all the 
-                # frequencies that each original _sum occurred at in 
+                # The values or frequency of each will be all the
+                # frequencies that each original _sum occurred at in
                 # the original dp hash map.
                 new_dp[_sum + num] += freq
                 new_dp[_sum - num] += freq

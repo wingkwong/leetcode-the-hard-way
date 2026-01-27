@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/design-circular-queue/'
+description: 'Author: @wkw | https://leetcode.com/problems/design-circular-queue/'
 tags: [Array, Linked List, Design, Queue]
 ---
 
-# 0622 - Design Circular Queue (Medium) 
+# 0622 - Design Circular Queue (Medium)
 
 ## Problem Link
 
@@ -59,7 +59,7 @@ myCircularQueue.Rear();     // return 4
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 // Time Complexity: O(1)
@@ -76,7 +76,7 @@ public:
         // the idx of the head element
         headIdx = 0;
     }
-    
+
     bool enQueue(int value) {
         // handle full case
         if (isFull()) return false;
@@ -91,7 +91,7 @@ public:
         cnt += 1;
         return true;
     }
-    
+
     bool deQueue() {
         // handle empty case
         if (isEmpty()) return false;
@@ -101,14 +101,14 @@ public:
         cnt -= 1;
         return true;
     }
-    
+
     int Front() {
         // handle empty queue case
         if (isEmpty()) return -1;
         // return the head element
         return q[headIdx];
     }
-    
+
     int Rear() {
         // handle empty queue case
         if (isEmpty()) return -1;
@@ -122,18 +122,18 @@ public:
         // headIdx = 2, cnt = 3, sz = 4, tailIdx = (2 + 3 - 1) % 4 = 0
         return q[(headIdx + cnt - 1) % sz];
     }
-    
+
     bool isEmpty() {
         // no element in the queue
         return cnt == 0;
     }
-    
+
     bool isFull() {
         // return true if the count is equal to the queue size
         // else return false
         return cnt == sz;
     }
-    
+
 private:
     int cnt, sz, headIdx;
     vector<int> q;
@@ -154,7 +154,7 @@ private:
 </TabItem>
 
 <TabItem value="java" label="Java">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```java
 // Time Complexity: O(1)
@@ -171,11 +171,11 @@ class MyCircularQueue {
         // the idx of the head element
         headIdx = 0;
     }
-    
+
     public boolean enQueue(int value) {
          // handle full case
         if (isFull()) return false;
-        // set the value 
+        // set the value
         // Given an array of size of 4, we can find the position to be inserted using the formula
         // targetIdx = (headIdx + cnt) % sz
         // e.g. [1, 2, 3, _]
@@ -187,7 +187,7 @@ class MyCircularQueue {
         cnt += 1;
         return true;
     }
-    
+
     public boolean deQueue() {
         // handle empty case
         if (isEmpty()) return false;
@@ -197,14 +197,14 @@ class MyCircularQueue {
         cnt -= 1;
         return true;
     }
-    
+
     public int Front() {
         // handle empty queue case
         if (isEmpty()) return -1;
         // return the head element
         return q[headIdx];
     }
-    
+
     public int Rear() {
         // handle empty queue case
         if (isEmpty()) return -1;
@@ -218,18 +218,18 @@ class MyCircularQueue {
         // headIdx = 2, cnt = 3, sz = 4, tailIdx = (2 + 3 - 1) % 4 = 0
         return q[(headIdx + cnt - 1) % sz];
     }
-    
+
     public boolean isEmpty() {
         // no element in the queue
         return cnt == 0;
     }
-    
+
     public boolean isFull() {
         // return true if the count is equal to the queue size
         // else return false
         return cnt == sz;
     }
-    
+
     private int[] q;
     private int headIdx, cnt, sz;
 }
@@ -249,7 +249,7 @@ class MyCircularQueue {
 </TabItem>
 
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 # Time Complexity: O(1)
@@ -265,7 +265,7 @@ class MyCircularQueue:
         self.sz = k
         # the idx of the head element
         self.headIdx = 0
-        
+
 
     def enQueue(self, value: int) -> bool:
         # handle full case
@@ -295,7 +295,7 @@ class MyCircularQueue:
         if self.isEmpty(): return -1
         # return the head element
         return self.q[self.headIdx]
-        
+
     def Rear(self) -> int:
         # handle empty queue case
         if self.isEmpty(): return -1
@@ -332,79 +332,79 @@ class MyCircularQueue:
 </TabItem>
 
 <TabItem value="ts" label="TypeScript">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```ts
 // Time Complexity: O(1)
 // Space Complexity: O(N)
 class MyCircularQueue {
-    private q: number[]
-    private cnt: number
-    private sz: number
-    private headIdx: number
+  private q: number[];
+  private cnt: number;
+  private sz: number;
+  private headIdx: number;
 
-    constructor(k: number) {
-        // the queue holding the elements for the circular queue
-        this.q = []
-        // the number of elements in the circular queue
-        this.cnt = 0
-        // queue size
-        this.sz = k
-        // the idx of the head element
-        this.headIdx = 0
-    }
+  constructor(k: number) {
+    // the queue holding the elements for the circular queue
+    this.q = [];
+    // the number of elements in the circular queue
+    this.cnt = 0;
+    // queue size
+    this.sz = k;
+    // the idx of the head element
+    this.headIdx = 0;
+  }
 
-    enQueue(value: number): boolean {
-        // handle full case
-        if (this.isFull()) return false
-        // set the value 
-        this.q[(this.headIdx + this.cnt) % this.sz] = value
-        // increase the number of elements by 1
-        this.cnt += 1
-        return true
-    }
+  enQueue(value: number): boolean {
+    // handle full case
+    if (this.isFull()) return false;
+    // set the value
+    this.q[(this.headIdx + this.cnt) % this.sz] = value;
+    // increase the number of elements by 1
+    this.cnt += 1;
+    return true;
+  }
 
-    deQueue(): boolean {
-        // handle empty case
-        if (this.isEmpty()) return false
-        // update the head index
-        this.headIdx = (this.headIdx + 1) % this.sz
-        // decrease the number of elements by 1
-        this.cnt -= 1
-        return true
-    }
+  deQueue(): boolean {
+    // handle empty case
+    if (this.isEmpty()) return false;
+    // update the head index
+    this.headIdx = (this.headIdx + 1) % this.sz;
+    // decrease the number of elements by 1
+    this.cnt -= 1;
+    return true;
+  }
 
-    Front(): number {
-        // handle empty queue case
-        if (this.isEmpty()) return -1
-        // return the head element
-        return this.q[this.headIdx]
-    }
+  Front(): number {
+    // handle empty queue case
+    if (this.isEmpty()) return -1;
+    // return the head element
+    return this.q[this.headIdx];
+  }
 
-    Rear(): number {
-        // handle empty queue case
-        if (this.isEmpty()) return -1
-        // Given an array of size of 4, we can find the tail using the formula
-        // tailIdx = (headIdx + cnt - 1) % sz
-        // e.g. [0 1 2] 3
-        // headIdx = 0, cnt = 3, sz = 4, tailIdx = (0 + 3 - 1) % 4 = 2
-        // e.g. 0 [1 2 3]
-        // headIdx = 1, cnt = 3, sz = 4, tailIdx = (1 + 3 - 1) % 4 = 3
-        // e.g. 0] 1 [2 3
-        // headIdx = 2, cnt = 3, sz = 4, tailIdx = (2 + 3 - 1) % 4 = 0
-        return this.q[(this.headIdx + this.cnt - 1) % this.sz]
-    }
+  Rear(): number {
+    // handle empty queue case
+    if (this.isEmpty()) return -1;
+    // Given an array of size of 4, we can find the tail using the formula
+    // tailIdx = (headIdx + cnt - 1) % sz
+    // e.g. [0 1 2] 3
+    // headIdx = 0, cnt = 3, sz = 4, tailIdx = (0 + 3 - 1) % 4 = 2
+    // e.g. 0 [1 2 3]
+    // headIdx = 1, cnt = 3, sz = 4, tailIdx = (1 + 3 - 1) % 4 = 3
+    // e.g. 0] 1 [2 3
+    // headIdx = 2, cnt = 3, sz = 4, tailIdx = (2 + 3 - 1) % 4 = 0
+    return this.q[(this.headIdx + this.cnt - 1) % this.sz];
+  }
 
-    isEmpty(): boolean {
-        // no element in the queue
-        return this.cnt == 0
-    }
+  isEmpty(): boolean {
+    // no element in the queue
+    return this.cnt == 0;
+  }
 
-    isFull(): boolean {
-        // return true if the count is equal to the queue size
-        // else return false
-        return this.cnt == this.sz
-    }    
+  isFull(): boolean {
+    // return true if the count is equal to the queue size
+    // else return false
+    return this.cnt == this.sz;
+  }
 }
 
 /**
@@ -422,7 +422,7 @@ class MyCircularQueue {
 </TabItem>
 
 <TabItem value="go" label="Go">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```go
 // Time Complexity: O(1)
@@ -453,7 +453,7 @@ func (this *MyCircularQueue) EnQueue(value int) bool {
     if this.IsFull() {
         return false
     }
-     // set the value 
+     // set the value
     this.q[(this.headIdx + this.cnt) % this.sz] = value
     // increase the number of elements by 1
     this.cnt += 1

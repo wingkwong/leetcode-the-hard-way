@@ -1,8 +1,8 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/find-the-maximum-divisibility-score/'
+description: 'Author: @wkw | https://leetcode.com/problems/find-the-maximum-divisibility-score/'
 ---
 
-# 2644 - Find the Maximum Divisibility Score (Easy) 
+# 2644 - Find the Maximum Divisibility Score (Easy)
 
 ## Problem Link
 
@@ -14,7 +14,7 @@ You are given two **0-indexed** integer arrays `nums` and `divisors`.
 
 The **divisibility score** of `divisors[i]` is the number of indices `j` such that `nums[j]` is divisible by `divisors[i]`.
 
-Return *the integer* `divisors[i]` *with the maximum divisibility score*. If there is more than one integer with the maximum score, return the minimum of them.
+Return _the integer_ `divisors[i]` _with the maximum divisibility score_. If there is more than one integer with the maximum score, return the minimum of them.
 
 **Example 1:**
 
@@ -60,7 +60,7 @@ Since divisors[0] and divisors[1] both have the maximum divisibility score, we r
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -98,7 +98,7 @@ public:
 </TabItem>
 
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:

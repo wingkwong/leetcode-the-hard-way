@@ -1,5 +1,5 @@
 ---
-description: 'Author: @ColeB2, @wingkwong | https://leetcode.com/problems/last-stone-weight/'
+description: 'Author: @ColeB2, @wkw | https://leetcode.com/problems/last-stone-weight/'
 tags: [Array, Heap (Priority Queue)]
 ---
 
@@ -27,7 +27,7 @@ Return _the weight of the last remaining stone_. If there are no stones left, re
 ```
 Input: stones = [2,7,4,1,8,1]
 Output: 1
-Explanation: 
+Explanation:
 We combine 7 and 8 to get 1 so the array converts to [2,4,1,1,1] then,
 we combine 2 and 4 to get 2 so the array converts to [2,1,1,1] then,
 we combine 2 and 1 to get 1 so the array converts to [1,1,1] then,
@@ -90,7 +90,7 @@ class Solution:
             if stone2 > stone1:
                 # Add onto the heap the difference of stones 1 and 2.
                 heapq.heappush(heap, stone1 - stone2)
-        # remembering that we used negative values of the stones, we 
+        # remembering that we used negative values of the stones, we
         # must return the absolute value of the remaining stone if it
         # exists, else 0 as the question asks.
         return abs(heap[0]) if heap else 0
@@ -99,7 +99,7 @@ class Solution:
 </TabItem>
 
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -108,7 +108,7 @@ public:
         // initialize a priority_queue in c++
         priority_queue<int> pq;
         // push the positive value of the stone onto the priority_queue
-        for (int x : stones) pq.push(x); 
+        for (int x : stones) pq.push(x);
         // We need at least 2 stones to smash together, so we loop while
         // our heap has at least 2 stones inside.
         while (pq.size() >= 2) {

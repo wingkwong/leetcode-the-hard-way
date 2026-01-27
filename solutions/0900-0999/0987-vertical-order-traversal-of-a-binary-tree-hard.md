@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @lonyehan | https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/'
+description: 'Author: @wkw, @lonyehan | https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/'
 tags: [Hash Table, Tree, Depth-First Search, Breadth-First Search, Binary Tree]
 ---
 
@@ -17,7 +17,7 @@ For each node at position `(row, col)`, its left and right children will be at p
 
 The **vertical order traversal** of a binary tree is a list of top-to-bottom orderings for each column index starting from the leftmost column and ending on the rightmost column. There may be multiple nodes in the same row and same column. In such a case, sort these nodes by their values.
 
-Return *the **vertical order traversal** of the binary tree*.
+Return _the **vertical order traversal** of the binary tree_.
 
 **Example 1:**
 
@@ -65,7 +65,7 @@ Note that the solution remains the same since 5 and 6 are in the same location a
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 /**
@@ -84,15 +84,15 @@ public:
      void dfs(TreeNode* root, int col, int row, map<int, map<int, multiset<int>>>& nodes) {
         // if root is nullptr, then skip it
         if (!root) return;
-         
+
         // insert the current node value to corresponding row and grouped by col.
         // see above diagram for better understanding
-        // for example, 
+        // for example,
         // we add node 1 to nodes[0][0]
-        // we add node 5 to nodes[0][2]. 
+        // we add node 5 to nodes[0][2].
         // we add node 6 to nodes[0][2]
         nodes[col][row].insert(root -> val);
-         
+
         // then we perform pre order traversal
         // see https://wingkwong.github.io/leetcode-the-hard-way/tutorials/graph-theory/binary-tree#pre-order
         // for more understanding on tree traversals
@@ -101,11 +101,11 @@ public:
         // dfs on right sub tree
         dfs(root-> right, col + 1, row + 1, nodes);
     }
-    
+
     vector<vector<int>> verticalTraversal(TreeNode* root) {
         // init ans - store the final ans
         vector<vector<int>> ans;
-        // nodes is used to store the node values grouped by column 
+        // nodes is used to store the node values grouped by column
         // see above diagram for better understanding
         // use multiset here as the value could be same
         // use map here to take care of the order
@@ -114,7 +114,7 @@ public:
         dfs(root, 0, 0, nodes);
         // for each column in nodes
         for (auto column : nodes) {
-            // init col - store the node values for all rows at the current column 
+            // init col - store the node values for all rows at the current column
             vector<int> col;
             // for each row at the current column, we append all the node values to col
             // for example: column idx = 0, we add row = 0 (node 1) and row = 2 (node 5 & node 6)
@@ -131,6 +131,7 @@ public:
     }
 };
 ```
+
 </TabItem>
 
 <TabItem value="cs" label="C#">
@@ -140,9 +141,9 @@ public:
 public class Solution {
     public IList<IList<int>> VerticalTraversal(TreeNode root) {
         Dictionary<int, PriorityQueue<int, double>> dict = new Dictionary<int, PriorityQueue<int, double>>();
-		
+
         DFS(root, dict);
-        
+
         List<IList<int>> result = new List<IList<int>>();
         foreach(var v in dict.Keys.OrderBy(x => x)){
             List<int> temp = new List<int>();
@@ -153,12 +154,12 @@ public class Solution {
         }
         return result;
     }
-    
+
     public void DFS(TreeNode node, Dictionary<int, PriorityQueue<int, double>> dict, int row = 0, int col = 0){
         if(node == null) return;
-        
+
         DFS(node.left, dict, row + 1, col - 1);
-        
+
         if(!dict.ContainsKey(col)){
             dict[col] = new PriorityQueue<int, double>();
             dict[col].Enqueue(node.val, row + 0.00001 * node.val);
@@ -166,7 +167,7 @@ public class Solution {
         else{
             dict[col].Enqueue(node.val, row + 0.00001 * node.val);
         }
-        
+
         DFS(node.right, dict, row + 1, col + 1);
     }
 }

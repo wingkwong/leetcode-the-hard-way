@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/find-smallest-letter-greater-than-target
+  Author: @wkw | https://leetcode.com/problems/find-smallest-letter-greater-than-target
 ---
 
 # 0744 - Find Smallest Letter Greater Than Target (Easy)
@@ -16,7 +15,7 @@ Given a characters array `letters` that is sorted in **non-decreasing** order an
 
 **Note** that the letters wrap around.
 
-* For example, if `target == 'z'` and `letters == ['a', 'b']`, the answer is `'a'`.
+- For example, if `target == 'z'` and `letters == ['a', 'b']`, the answer is `'a'`.
 
 **Example 1:**
 
@@ -41,11 +40,11 @@ Output: "f"
 
 **Constraints:**
 
-* `2 <= letters.length <= 10^4`
-* `letters[i]` is a lowercase English letter.
-* `letters` is sorted in **non-decreasing** order.
-* `letters` contains at least two different characters.
-* `target` is a lowercase English letter.
+- `2 <= letters.length <= 10^4`
+- `letters[i]` is a lowercase English letter.
+- `letters` is sorted in **non-decreasing** order.
+- `letters` contains at least two different characters.
+- `target` is a lowercase English letter.
 
 ## Approach 1: Binary Search
 
@@ -55,7 +54,7 @@ Output: "f"
 
 :::
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

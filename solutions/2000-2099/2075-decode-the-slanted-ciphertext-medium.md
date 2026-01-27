@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/decode-the-slanted-ciphertext
+  Author: @wkw | https://leetcode.com/problems/decode-the-slanted-ciphertext
 ---
 
 # 2075 - Decode the Slanted Ciphertext (Medium)
@@ -36,8 +35,6 @@ Given the encoded string `encodedText` and number of rows `rows`, return _the or
 
 **Note:** `originalText` **does not** have any trailing spaces `' '`. The test cases are generated such that there is only one possible `originalText`.
 
-
-
 **Example 1:**
 
 ```
@@ -53,7 +50,7 @@ Explanation: This is the same example described in the problem description.
 ```
 Input: encodedText = "iveo    eed   l te   olc", rows = 4
 Output: "i love leetcode"
-Explanation: The figure above denotes the matrix that was used to encode originalText. 
+Explanation: The figure above denotes the matrix that was used to encode originalText.
 The blue arrows show how we can find originalText from encodedText.
 ```
 
@@ -69,15 +66,15 @@ Explanation: Since there is only 1 row, both originalText and encodedText are th
 
 **Constraints:**
 
-* `0 <= encodedText.length <= 10^6`
-* `encodedText` consists of lowercase English letters and `' '` only.
-* `encodedText` is a valid encoding of some `originalText` that **does not** have trailing spaces.
-* `1 <= rows <= 1000`
-* The testcases are generated such that there is **only one** possible `originalText`.
+- `0 <= encodedText.length <= 10^6`
+- `encodedText` consists of lowercase English letters and `' '` only.
+- `encodedText` is a valid encoding of some `originalText` that **does not** have trailing spaces.
+- `1 <= rows <= 1000`
+- The testcases are generated such that there is **only one** possible `originalText`.
 
 ## Approach 1: Simulation
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

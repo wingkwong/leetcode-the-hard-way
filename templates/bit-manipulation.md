@@ -100,7 +100,7 @@ int lowest_bit_index(int x) {
 for (int s = m; s; s = (s - 1) & m) {
     // use s
 }
- ```
+```
 
  </TabItem>
 </Tabs>

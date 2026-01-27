@@ -1,5 +1,5 @@
 ---
-description: "Author: @wingkwong, @ganajayant, @radojicic23 | https://leetcode.com/problems/unique-paths/"
+description: 'Author: @wkw, @ganajayant, @radojicic23 | https://leetcode.com/problems/unique-paths/'
 tags: [Math, Dynamic Programming, Combinatorics]
 ---
 
@@ -47,7 +47,7 @@ We need to make $$n - 1 + m - 1$$ steps in total. How many ways to choose from $
 
 <Tabs>
 <TabItem value="c++" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -71,9 +71,8 @@ public:
 
 </TabItem>
 
-
 <TabItem value="java" label="Java">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```java
 class Solution {
@@ -94,15 +93,12 @@ class Solution {
 
 ## Approach 2: Dynamic programming (Top Down) Memoization
 
-We begin with the position (0,0).
-At any position (i,j), we make a recursive call to (i+1,j) and (i,j+1) to get the number of paths to the right and below the current node.
-If (i,j) goes out of bound, there can exist no path from it so we simply return 0.
-If we reach (n-1,m-1), we have found a path and so in this case we return 1.
+We begin with the position (0,0). At any position (i,j), we make a recursive call to (i+1,j) and (i,j+1) to get the number of paths to the right and below the current node. If (i,j) goes out of bound, there can exist no path from it so we simply return 0. If we reach (n-1,m-1), we have found a path and so in this case we return 1.
 
 We are using memoization to store already computed value so it will reduce runtime by just accessing the already computed value
-<Tabs>
-<TabItem value="java" label="Java">
-<SolutionAuthor name="@ganajayant"/>
+
+<Tabs> 
+<TabItem value="java" label="Java"> <SolutionAuthor name="@ganajayant"/>
 
 ```java
 class Solution {

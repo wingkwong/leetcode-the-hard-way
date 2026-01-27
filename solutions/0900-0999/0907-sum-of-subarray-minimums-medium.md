@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/sum-of-subarray-minimums/'
+description: 'Author: @wkw | https://leetcode.com/problems/sum-of-subarray-minimums/'
 tags: [Array, Dynamic Programming, Stack, Monotonic Stack]
 ---
 
-# 0907 - Sum of Subarray Minimums (Medium) 
+# 0907 - Sum of Subarray Minimums (Medium)
 
 ## Problem Link
 
@@ -11,15 +11,15 @@ https://leetcode.com/problems/sum-of-subarray-minimums/
 
 ## Problem Statement
 
-Given an array of integers arr, find the sum of `min(b)`, where `b` ranges over every (contiguous) subarray of `arr`. Since the answer may be large, return the answer **modulo** `109 + 7`.
+Given an array of integers arr, find the sum of `min(b)`, where `b` ranges over every (contiguous) subarray of `arr`. Since the answer may be large, return the answer **modulo** `1e9 + 7`.
 
 **Example 1:**
 
 ```
 Input: arr = [3,1,2,4]
 Output: 17
-Explanation: 
-Subarrays are [3], [1], [2], [4], [3,1], [1,2], [2,4], [3,1,2], [1,2,4], [3,1,2,4]. 
+Explanation:
+Subarrays are [3], [1], [2], [4], [3,1], [1,2], [2,4], [3,1,2], [1,2,4], [3,1,2,4].
 Minimums are 3, 1, 2, 4, 1, 1, 2, 1, 1, 1.
 Sum is 17.
 ```
@@ -51,7 +51,7 @@ $$
 
 <Tabs>
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:
@@ -59,7 +59,7 @@ class Solution:
         res, n, M = 0, len(arr), 10 ** 9 + 7
         s = [-1]
         for i in range(n + 1):
-            while s[-1] != -1 and (i == n or arr[i] <= arr[s[-1]]): 
+            while s[-1] != -1 and (i == n or arr[i] <= arr[s[-1]]):
                 j = s[-1]
                 s.pop()
                 k = s[-1]

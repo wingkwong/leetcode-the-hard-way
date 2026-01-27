@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/n-th-tribonacci-number/'
+description: 'Author: @wkw | https://leetcode.com/problems/n-th-tribonacci-number/'
 tags: [Math, Dynamic Programming, Memoization]
 ---
 
-# 1137 - N-th Tribonacci Number (Easy) 
+# 1137 - N-th Tribonacci Number (Easy)
 
 ## Problem Link
 
@@ -43,7 +43,7 @@ Output: 1389537
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 // TC: O(N)
@@ -78,7 +78,7 @@ In the above DP solution, we can further optimize the space to constant space si
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 // TC: O(N)
@@ -114,7 +114,7 @@ Here's the hardcoded solution. In case someone is interested, you may take a loo
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

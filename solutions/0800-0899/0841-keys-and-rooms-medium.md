@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong, @radojicic23 | https://leetcode.com/problems/keys-and-rooms/'
+description: 'Author: @wkw, @radojicic23 | https://leetcode.com/problems/keys-and-rooms/'
 tags: [Depth-First Search, Breadth-First Search, Graph]
 ---
 
-# 0841 - Keys and Rooms (Medium) 
+# 0841 - Keys and Rooms (Medium)
 
 ## Problem Link
 
@@ -15,14 +15,14 @@ There are `n` rooms labeled from `0` to `n - 1` and all the rooms are locked ex
 
 When you visit a room, you may find a set of **distinct keys** in it. Each key has a number on it, denoting which room it unlocks, and you can take all of them with you to unlock the other rooms.
 
-Given an array `rooms` where `rooms[i]` is the set of keys that you can obtain if you visited room `i`, return `true` *if you can visit **all** the rooms, or* `false` *otherwise*.
+Given an array `rooms` where `rooms[i]` is the set of keys that you can obtain if you visited room `i`, return `true` _if you can visit **all** the rooms, or_ `false` _otherwise_.
 
 **Example 1:**
 
 ```
 Input: rooms = [[1],[2],[3],[]]
 Output: true
-Explanation: 
+Explanation:
 We visit room 0 and pick up key 1.
 We then visit room 1 and pick up key 2.
 We then visit room 2 and pick up key 3.
@@ -53,7 +53,7 @@ We can use DFS to traverse from the first room and mark every room that we could
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -70,7 +70,7 @@ public:
             }
         }
     }
-    
+
     bool canVisitAllRooms(vector<vector<int>>& rooms) {
         int n = (int) rooms.size();
         vector<int> vis(n, 0);
@@ -85,7 +85,7 @@ public:
 </TabItem>
 
 <TabItem value="rs" label="Rust">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```rs
 impl Solution {
@@ -97,7 +97,7 @@ impl Solution {
             }
         }
     }
-    
+
     pub fn can_visit_all_rooms(rooms: Vec<Vec<i32>>) -> bool {
         let mut vis = vec![false; rooms.len()];
         Self::dfs(0, &mut vis, &rooms);
@@ -116,19 +116,19 @@ impl Solution {
  * @param {number[][]} rooms
  * @return {boolean}
  */
-var canVisitAllRooms = function(rooms) {
-    let visited = new Set();
-    dfs(0);
-    return visited.size == rooms.length;
-    
-    function dfs(room) {
-        if (!visited.has(room)) {
-            visited.add(room);
-            for (i of rooms[room]) {
-                dfs(i);
-            }
-        }
+var canVisitAllRooms = function (rooms) {
+  let visited = new Set();
+  dfs(0);
+  return visited.size == rooms.length;
+
+  function dfs(room) {
+    if (!visited.has(room)) {
+      visited.add(room);
+      for (i of rooms[room]) {
+        dfs(i);
+      }
     }
+  }
 };
 ```
 

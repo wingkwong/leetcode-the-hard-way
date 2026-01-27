@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/number-of-nodes-in-the-sub-tree-with-the-same-label/'
+description: 'Author: @wkw | https://leetcode.com/problems/number-of-nodes-in-the-sub-tree-with-the-same-label/'
 tags: [Hash Table, Tree, Depth-First Search, Breadth-First Search, Counting]
 ---
 
-# 1519 - Number of Nodes in the Sub-Tree With the Same Label (Medium) 
+# 1519 - Number of Nodes in the Sub-Tree With the Same Label (Medium)
 
 ## Problem Link
 
@@ -15,7 +15,7 @@ You are given a tree (i.e. a connected, undirected graph that has no cycles) con
 
 The `edges` array is given on the form `edges[i] = [ai, bi]`, which means there is an edge between nodes `ai` and `bi` in the tree.
 
-Return *an array of size n* where `ans[i]` is the number of nodes in the subtree of the `ith` node which have the same label as node `i`.
+Return _an array of size n_ where `ans[i]` is the number of nodes in the subtree of the `ith` node which have the same label as node `i`.
 
 A subtree of a tree `T` is the tree consisting of a node in `T` and all of its descendant nodes.
 
@@ -60,7 +60,7 @@ Output: [3,2,1,1,1]
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

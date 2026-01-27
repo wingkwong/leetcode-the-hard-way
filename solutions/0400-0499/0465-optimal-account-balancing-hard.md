@@ -40,10 +40,10 @@ Therefore, person #1 only need to give person #0 $4, and all debt is settled.
 
 **Constraints:**
 
-* `1 <= transactions.length <= 8`
-* `transactions[i].length == 3`
-* `0 <= fromi, toi < 12`
-* `fromi != toi`
-* `1 <= amounti <= 100`
+- `1 <= transactions.length <= 8`
+- `transactions[i].length == 3`
+- `0 <= fromi, toi < 12`
+- `fromi != toi`
+- `1 <= amounti <= 100`
 
 ## Approach 1: TBC

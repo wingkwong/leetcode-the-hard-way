@@ -1,5 +1,5 @@
 ---
-description: "Author: @vale-c | https://leetcode.com/problems/valid-palindrome/"
+description: 'Author: @vale-c | https://leetcode.com/problems/valid-palindrome/'
 ---
 
 # 0125 - Valid Palindrome (Easy)
@@ -48,9 +48,9 @@ The space complexity is $O(1)$ since we only use a constant amount of space.
 ```py
 class Solution:
     def isPalindrome(self, s: str) -> bool:
-        # discard all non-alphanumeric characters and 
+        # discard all non-alphanumeric characters and
         # convert all uppercase letters to lowercase
-        alpha = ''.join(char for char in s.lower() if char.isalnum()) 
+        alpha = ''.join(char for char in s.lower() if char.isalnum())
 
         # start pointer from the beginning
         # end pointer from the end
@@ -108,7 +108,7 @@ class Solution {
     public boolean isPalindrome(String s) {
         /* discard all non-alphanumeric characters and convert all uppercase letters to lowercase */
         String alpha = s.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
-        
+
         int start = 0;
         int end = alpha.length() - 1;
 
@@ -134,22 +134,22 @@ class Solution {
  * @param {string} s
  * @return {boolean}
  */
-var isPalindrome = function(s) {
-    /* discard all non-alphanumeric characters and convert all uppercase letters to lowercase */
-    const alpha = s.toLowerCase().replace(/[^a-z0-9]/g, ''); 
-    
-    let start = 0;
-    let end = alpha.length - 1;
+var isPalindrome = function (s) {
+  /* discard all non-alphanumeric characters and convert all uppercase letters to lowercase */
+  const alpha = s.toLowerCase().replace(/[^a-z0-9]/g, '');
 
-    while (start < end) {
-        if (alpha[start] != alpha[end]) {
-            return false;
-        } else {
-            start += 1;
-            end -= 1;
-        }
+  let start = 0;
+  let end = alpha.length - 1;
+
+  while (start < end) {
+    if (alpha[start] != alpha[end]) {
+      return false;
+    } else {
+      start += 1;
+      end -= 1;
     }
-    return true;
+  }
+  return true;
 };
 ```
 

@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @heiheihang, @wingkwong |
-  https://leetcode.com/problems/all-ancestors-of-a-node-in-a-directed-acyclic-graph/
+  Author: @heiheihang, @wkw | https://leetcode.com/problems/all-ancestors-of-a-node-in-a-directed-acyclic-graph/
 ---
 
 # 2192 - All Ancestors of a Node in a Directed Acyclic Graph (Medium)
@@ -55,13 +54,13 @@ The above diagram represents the input graph.
 
 **Constraints:**
 
-* `1 <= n <= 1000`
-* `0 <= edges.length <= min(2000, n * (n - 1) / 2)`
-* `edges[i].length == 2`
-* `0 <= fromi, toi <= n - 1`
-* `fromi != toi`
-* There are no duplicate edges.
-* The graph is **directed** and **acyclic**.
+- `1 <= n <= 1000`
+- `0 <= edges.length <= min(2000, n * (n - 1) / 2)`
+- `edges[i].length == 2`
+- `0 <= fromi, toi <= n - 1`
+- `fromi != toi`
+- There are no duplicate edges.
+- The graph is **directed** and **acyclic**.
 
 ## Approach 1: Topological Sort
 
@@ -78,68 +77,68 @@ We observe that we can be sure that the ancestors of a node are all found until 
 
 ```python
 def getAncestors(self, n: int, edges: List[List[int]]) -> List[List[int]]:
-        
+
         #initialise the list of ancestors
         ancestors = []
         for i in range(n):
             ancestors.append(set())
-        
+
         #initialize bfs level
         level = set()
-        
+
         #initialize sets of parent, children, and in-degree
         parents = defaultdict(list)
         children = defaultdict(list)
         degree = defaultdict(int)
-        
+
         for parent,child in edges:
             parents[child].append(parent)
             children[parent].append(child)
             degree[child] += 1
-            
+
         #find the set of nodes without parents
         for i in range(n):
             if(i not in parents):
                 level.add(i)
-        
+
         #perform bfs
         while(level):
             newLevel = set()
             for node in level:
-                
+
                 #group all its parent's ancestors to node_ancestors
                 node_ancestors = set()
                 for parent in parents[node]:
                     node_ancestors |= ancestors[parent]
-                
+
                 #need to include itself for its children to reference
                 node_ancestors.add(node)
-                
-                #set the node's ancestors 
+
+                #set the node's ancestors
                 ancestors[node] = node_ancestors
-                
+
                 #update its child in-degree
                 for child in children[node]:
                     degree[child] -= 1
-                    
+
                     #if the child's parents have been visited, add it to next level
                     if(degree[child] == 0):
                         newLevel.add(child)
             level = newLevel
-                
-        
+
+
         ans = []
-        
+
         #put all ancestors to the final answer list
         for i in range(n):
             s = res[i]
-            
-            #need to remove itself 
+
+            #need to remove itself
             s.remove(i)
             l = list(s)
             l.sort()
             ans.append(l)
-            
+
         return ans
 ```
 
@@ -147,7 +146,7 @@ def getAncestors(self, n: int, edges: List[List[int]]) -> List[List[int]]:
 
 We can start from each node $$u$$ and perform DFS to find out all visited nodes. The ancestors of $$u$$would be those visited nodes excluding $$u$$. Since the searching direction is opposite, we change it from $$u$$ -> $$v$$ to $$v$$ -> $$u$$. In Example 1, if $$u$$ is $$6$$, then $$6$$-> $$3$$ -> $$0$$, $$6$$ -> $$3$$-> $$1$$ and $$6$$-> $$4$$ -> $$2$$, so the visited nodes excluding itself are $$[0, 1, 2, 3,4]$$.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

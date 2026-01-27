@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/two-city-scheduling/'
+description: 'Author: @wkw | https://leetcode.com/problems/two-city-scheduling/'
 tags: ['Array', 'Sorting', 'Greedy']
 ---
 
@@ -20,7 +20,7 @@ Return _the minimum cost to fly every person to a city_ such that exactly `n` pe
 ```
 Input: costs = [[10,20],[30,200],[400,50],[30,20]]
 Output: 110
-Explanation: 
+Explanation:
 The first person goes to city A for a cost of 10.
 The second person goes to city A for a cost of 30.
 The third person goes to city B for a cost of 50.
@@ -45,10 +45,10 @@ Output: 3086
 
 **Constraints:**
 
-* `2 * n == costs.length`
-* `2 <= costs.length <= 100`
-* `costs.length` is even.
-* `1 <= aCosti, bCosti <= 1000`
+- `2 * n == costs.length`
+- `2 <= costs.length <= 100`
+- `costs.length` is even.
+- `1 <= aCosti, bCosti <= 1000`
 
 ## Approach 1: Sorting + Greedy
 
@@ -61,7 +61,7 @@ public:
         int n = costs.size(), ans = 0;
         // sort by the diff
         sort(costs.begin(), costs.end(), [&](const vector<int>& x, const vector<int>& y) {
-           return x[1] - x[0] > y[1] - y[0]; 
+           return x[1] - x[0] > y[1] - y[0];
         });
         for (int i = 0; i < n / 2; i++) {
             // cost to fly i-th person to city A

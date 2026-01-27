@@ -1,5 +1,5 @@
 ---
-description: "Author: @wingkwong, @radojicic23 | https://leetcode.com/problems/insert-interval/"
+description: 'Author: @wkw, @radojicic23 | https://leetcode.com/problems/insert-interval/'
 tags: [Array]
 ---
 
@@ -45,7 +45,7 @@ Explanation: Because the new interval [4,8] overlaps with [3,5],[6,7],[8,10].
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -87,7 +87,7 @@ public:
 </TabItem>
 
 <TabItem value="java" label="Java">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```java
 class Solution {
@@ -130,7 +130,7 @@ class Solution {
 </TabItem>
 
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:
@@ -168,7 +168,7 @@ class Solution:
 </TabItem>
 
 <TabItem value="rs" label="Rust">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```rs
 use std::cmp::min;

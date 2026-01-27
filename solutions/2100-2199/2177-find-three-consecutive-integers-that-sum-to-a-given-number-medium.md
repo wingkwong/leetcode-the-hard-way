@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/find-three-consecutive-integers-that-sum-to-a-given-number/
+  Author: @wkw | https://leetcode.com/problems/find-three-consecutive-integers-that-sum-to-a-given-number/
 ---
 
 # 2177 - Find Three Consecutive Integers That Sum to a Given Number (Medium)
@@ -33,7 +32,7 @@ Explanation: There is no way to express 4 as the sum of 3 consecutive integers.
 
 **Constraints:**
 
-* `0 <= num <= 10^15`
+- `0 <= num <= 10^15`
 
 ## Approach 1: Math
 

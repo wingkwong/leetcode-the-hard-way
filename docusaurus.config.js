@@ -7,8 +7,7 @@ const darkCodeTheme = require('prism-react-renderer').themes.dracula;
 const math = require('remark-math');
 const katex = require('rehype-katex');
 
-/** @type {import('@docusaurus/types').Config} */
-const config = {
+module.exports = {
   title: 'LeetCode The Hard Way',
   tagline: 'From Absolute Beginner to Quitter',
   url: 'http://leetcodethehardway.com/',
@@ -32,9 +31,8 @@ const config = {
 
   presets: [
     [
-      'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+      '@docusaurus/preset-classic',
+      {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/',
@@ -45,8 +43,7 @@ const config = {
           rehypePlugins: [katex],
           // showLastUpdateTime: true,
           // showLastUpdateAuthor: true,
-          editUrl:
-            'https://github.com/wingkwong/leetcode-the-hard-way',
+          editUrl: 'https://github.com/wingkwong/leetcode-the-hard-way',
         },
         // blog: {
         //   showReadingTime: true,
@@ -62,7 +59,7 @@ const config = {
         googleAnalytics: {
           trackingID: 'UA-119822493-4',
         },
-      }),
+      },
     ],
   ],
 
@@ -181,7 +178,7 @@ const config = {
               {
                 label: 'Contact',
                 href: 'mailto:leetcodethehardway@gmail.com',
-              }
+              },
             ],
           },
         ],
@@ -195,14 +192,14 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
-        additionalLanguages: ['csharp', 'java', 'kotlin', 'rust']
+        additionalLanguages: ['csharp', 'java', 'kotlin', 'rust'],
       },
       // https://docusaurus.io/docs/search#using-algolia-docsearch
       algolia: {
         appId: 'TSP4XHNA9P',
         apiKey: '13aa27443cab36b7f20f3a59617607a6',
         indexName: 'leetcode-the-hard-way',
-        contextualSearch: false
+        contextualSearch: false,
       },
       docs: {
         sidebar: {
@@ -274,7 +271,4 @@ const config = {
       },
     ],
   ],
-
 };
-
-module.exports = config;

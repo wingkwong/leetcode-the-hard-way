@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong, @jit | https://leetcode.com/problems/convert-an-array-into-a-2d-array-with-conditions/'
+description: 'Author: @wkw, @jit | https://leetcode.com/problems/convert-an-array-into-a-2d-array-with-conditions/'
 tags: [Array, Hash Table]
 ---
 
-# 2610 - Convert an Array Into a 2D Array With Conditions (Medium) 
+# 2610 - Convert an Array Into a 2D Array With Conditions (Medium)
 
 ## Problem Link
 
@@ -17,7 +17,7 @@ You are given an integer array `nums`. You need to create a 2D array from `nums`
 - Each row in the 2D array contains **distinct** integers.
 - The number of rows in the 2D array should be **minimal**.
 
-Return *the resulting array*. If there are multiple answers, return any of them.
+Return _the resulting array_. If there are multiple answers, return any of them.
 
 **Note** that the 2D array can have a different number of elements on each row.
 
@@ -49,7 +49,7 @@ Explanation: All elements of the array are distinct, so we can keep all of them 
 
 ## Approach 1: Frequency Count
 
-We can distribute the elements by frequency count. Taking $nums = [1,3,4,1,2,3,1]$ as an example, we can do the followings: 
+We can distribute the elements by frequency count. Taking $nums = [1,3,4,1,2,3,1]$ as an example, we can do the followings:
 
 - there are three 1s, we can put them into first three rows.
 - there are one 2, we can put it into the first row.
@@ -60,7 +60,7 @@ As we can see, we need to distribute $K$ elements into first $K$ rows, which mea
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -83,7 +83,6 @@ public:
 ```
 
 </TabItem>
-
 
 <TabItem value="elixir" label="Elixir">
 <SolutionAuthor name="@jit"/>

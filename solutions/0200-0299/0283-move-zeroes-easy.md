@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @heiheihang, @vigneshshiv, @radojicic23 |
-  https://leetcode.com/problems/move-zeroes/
+  Author: @heiheihang, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/move-zeroes/
 ---
 
 # 0283 - Move Zeroes (Easy)
@@ -32,8 +31,8 @@ Output: [0]
 
 **Constraints:**
 
-* `1 <= nums.length <= 10^4`
-* `-2^31 <= nums[i] <= 2^31 - 1`
+- `1 <= nums.length <= 10^4`
+- `-2^31 <= nums[i] <= 2^31 - 1`
 
 **Follow up:** Could you minimize the total number of operations done?
 
@@ -66,11 +65,11 @@ def moveZeroes(self, nums: List[int]) -> None:
                 nums[left_pointer] = nums[i]
                 #as the current position is filled, move to the next one
                 left_pointer += 1
-        
+
         #we put zeros to the remaining spots in nums
         for i in range(left_pointer, len(nums)):
             nums[i] = 0
-            
+
 ```
 
 </TabItem>
@@ -105,20 +104,20 @@ class Solution {
  * @param {number[]} nums
  * @return {void} Do not return anything, modify nums in-place instead.
  */
-var moveZeroes = function(nums) {
-    let slow = 0;
-    for (let fast = 0; fast < nums.length; fast++) {
-        if (nums[fast] === 0) {
-            continue;
-        } else {
-            nums[slow] = nums[fast];
-            slow++;
-        }
+var moveZeroes = function (nums) {
+  let slow = 0;
+  for (let fast = 0; fast < nums.length; fast++) {
+    if (nums[fast] === 0) {
+      continue;
+    } else {
+      nums[slow] = nums[fast];
+      slow++;
     }
-    while (slow < nums.length) {
-        nums[slow] = 0;
-        slow++;
-    }
+  }
+  while (slow < nums.length) {
+    nums[slow] = 0;
+    slow++;
+  }
 };
 ```
 
@@ -153,9 +152,9 @@ public:
 
 ## Approach 2: Two pointers Optimal
 
-Iterate through numbers and count the $0$ occurances, while doing so, if any non-zero number present and if the zero's count more than $0$, shift the current number to current $index - count0$ count index. This solves the problem in linear time and optimally.  
+Iterate through numbers and count the $0$ occurances, while doing so, if any non-zero number present and if the zero's count more than $0$, shift the current number to current $index - count0$ count index. This solves the problem in linear time and optimally.
 
-For example, the given input is $[1, 3, 0, 0, 12]$, right now $12$ has to be placed in first $0$ th position. While iterating, we have count $2$ zero's and we are at the last index. Shift $12$ present in current index $4$ to index $2$, apply $nums[i - count0] = nums[i]$ and set $0$ in the current index. 
+For example, the given input is $[1, 3, 0, 0, 12]$, right now $12$ has to be placed in first $0$ th position. While iterating, we have count $2$ zero's and we are at the last index. Shift $12$ present in current index $4$ to index $2$, apply $nums[i - count0] = nums[i]$ and set $0$ in the current index.
 
 <Tabs>
 <TabItem value="java" label="Java">
@@ -188,20 +187,20 @@ class Solution {
  * @param {number[]} nums
  * @return {void} Do not return anything, modify nums in-place instead.
  */
-var moveZeroes = function(nums) {
-    let count_zero = 0;
-    // iterate through array
-    for (i = 0; i < nums.length; i++) {
-        // count the zeros
-        if (nums[i] == 0) count_zero++;
-        // if the current number is not zero and
-        // if zero's count is one or more
-        else if (count_zero > 0) {
-            // swap them
-            nums[i - count_zero] = nums[i];
-            nums[i] = 0
-        }
+var moveZeroes = function (nums) {
+  let count_zero = 0;
+  // iterate through array
+  for (i = 0; i < nums.length; i++) {
+    // count the zeros
+    if (nums[i] == 0) count_zero++;
+    // if the current number is not zero and
+    // if zero's count is one or more
+    else if (count_zero > 0) {
+      // swap them
+      nums[i - count_zero] = nums[i];
+      nums[i] = 0;
     }
+  }
 };
 ```
 
@@ -222,10 +221,10 @@ class Solution:
             # count the zeros
             if nums[i] == 0:
                 count_zero += 1
-            # if the current number is not 0 and 
+            # if the current number is not 0 and
             # if zero's count is 1 or more
             elif count_zero > 0:
-                # swap them 
+                # swap them
                 nums[i - count_zero] = nums[i]
                 nums[i] = 0
 ```

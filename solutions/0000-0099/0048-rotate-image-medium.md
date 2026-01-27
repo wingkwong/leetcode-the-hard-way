@@ -1,5 +1,5 @@
 ---
-description: "Author: @wingkwong, @radojicic23 | https://leetcode.com/problems/rotate-image/"
+description: 'Author: @wkw, @radojicic23 | https://leetcode.com/problems/rotate-image/'
 tags: [Array, Math, Matrix]
 ---
 
@@ -40,7 +40,7 @@ Output: [[15,13,2,5],[14,3,4,1],[12,6,8,9],[16,7,10,11]]
 <Tabs>
 
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

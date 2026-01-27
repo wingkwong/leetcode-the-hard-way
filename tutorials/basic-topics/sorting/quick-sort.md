@@ -11,4 +11,4 @@ keywords:
   - quick sort
 ---
 
-<TutorialAuthors names="@TBC"/>
+<TutorialCredits authors="@TBC"/>

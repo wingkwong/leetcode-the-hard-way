@@ -1,8 +1,8 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/prime-in-diagonal/'
+description: 'Author: @wkw | https://leetcode.com/problems/prime-in-diagonal/'
 ---
 
-# 2614 - Prime In Diagonal (Easy) 
+# 2614 - Prime In Diagonal (Easy)
 
 ## Problem Link
 
@@ -12,7 +12,7 @@ https://leetcode.com/problems/prime-in-diagonal/
 
 You are given a 0-indexed two-dimensional integer array `nums`.
 
-Return *the largest **prime** number that lies on at least one of the **diagonals** of*`nums`. In case, no prime is present on any of the diagonals, *return 0.*
+Return _the largest **prime** number that lies on at least one of the **diagonals** of_`nums`. In case, no prime is present on any of the diagonals, _return 0._
 
 Note that:
 
@@ -41,13 +41,13 @@ Explanation: The numbers 1, 3, 9, 10, and 17 are all present on at least one of 
 
 - `1 <= nums.length <= 300`
 - `nums.length == numsi.length`
-- `1 <= nums[i][j] <= 4*106`
+- `1 <= nums[i][j] <= 4 * 1e6`
 
 ## Approach 1: Check Prime
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -60,10 +60,10 @@ public:
           if (n % i == 0 || n % (i + 2) == 0) {
             return 0;
           }
-        } 
+        }
         return 1;
     }
-    
+
     int diagonalPrime(vector<vector<int>>& nums) {
         int ans = 0, n = nums.size();
         for (int i = 0; i < n; i++) {

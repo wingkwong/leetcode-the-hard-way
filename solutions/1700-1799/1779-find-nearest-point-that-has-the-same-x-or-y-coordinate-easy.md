@@ -1,5 +1,5 @@
 ---
-description: "Author: @wingkwong | https://leetcode.com/problems/find-nearest-point-that-has-the-same-x-or-y-coordinate/"
+description: 'Author: @wkw | https://leetcode.com/problems/find-nearest-point-that-has-the-same-x-or-y-coordinate/'
 tags: [Array]
 ---
 
@@ -53,7 +53,7 @@ For each point, we simply check if the current point has the same X or Y coordin
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -77,7 +77,7 @@ public:
 </TabItem>
 
 <TabItem value="rs" label="Rust">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```rs
 impl Solution {

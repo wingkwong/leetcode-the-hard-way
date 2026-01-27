@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/number-of-ways-to-divide-a-long-corridor/
+  Author: @wkw | https://leetcode.com/problems/number-of-ways-to-divide-a-long-corridor/
 ---
 
 # 2147 - Number of Ways to Divide a Long Corridor (Hard)
@@ -18,7 +17,7 @@ One room divider has **already** been installed to the left of index `0`, and **
 
 Divide the corridor into non-overlapping sections, where each section has **exactly two seats** with any number of plants. There may be multiple ways to perform the division. Two ways are **different** if there is a position with a room divider installed in the first way but not in the second way.
 
-Return _the number of ways to divide the corridor_. Since the answer may be very large, return it **modulo** `109 + 7`. If there is no way, return `0`.
+Return _the number of ways to divide the corridor_. Since the answer may be very large, return it **modulo** `1e9 + 7`. If there is no way, return `0`.
 
 **Example 1:**
 
@@ -55,15 +54,15 @@ Explanation: There is no way to divide the corridor because there will always be
 
 **Constraints:**
 
-* `n == corridor.length`
-* `1 <= n <= 10^5`
-* `corridor[i]` is either `'S'` or `'P'`.
+- `n == corridor.length`
+- `1 <= n <= 10^5`
+- `corridor[i]` is either `'S'` or `'P'`.
 
 ## Approach 1: Greedy
 
 Count the number of seats. If there are two seats already and there are plants after them, count the plants. If it reaches the third seat, that means we can divide the corridor between the second seat and the third seat, i.e. `plants + 1` ways. We update answer and reset the counters. At the end, we need to check if the seat counter is 2 as we need 2 seats in the last block.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -85,4 +84,3 @@ public:
     }
 };
 ```
-

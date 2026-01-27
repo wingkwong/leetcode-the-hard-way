@@ -4,7 +4,7 @@ draft: 'true'
 tags: [Array, Dynamic Programming, Greedy, Heap (Priority Queue)]
 ---
 
-# 0871 - Minimum Number of Refueling Stops (Hard) 
+# 0871 - Minimum Number of Refueling Stops (Hard)
 
 ## Problem Statement
 
@@ -14,7 +14,7 @@ There are gas stations along the way. The gas stations are represented as an arr
 
 The car starts with an infinite tank of gas, which initially has `startFuel` liters of fuel in it. It uses one liter of gas per one mile that it drives. When the car reaches a gas station, it may stop and refuel, transferring all the gas from the station into the car.
 
-Return *the minimum number of refueling stops the car must make in order to reach its destination*. If it cannot reach the destination, return `-1`.
+Return _the minimum number of refueling stops the car must make in order to reach its destination_. If it cannot reach the destination, return `-1`.
 
 Note that if the car reaches a gas station with `0` fuel left, the car can still refuel there. If the car reaches the destination with `0` fuel left, it is still considered to have arrived.
 

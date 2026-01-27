@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/check-if-one-string-swap-can-make-strings-equal/
+  Author: @wkw | https://leetcode.com/problems/check-if-one-string-swap-can-make-strings-equal/
 ---
 
 # 1790 - Check if One String Swap Can Make Strings Equal (Easy)
@@ -42,9 +41,9 @@ Explanation: The two strings are already equal, so no string swap operation is r
 
 **Constraints:**
 
-* `1 <= s1.length, s2.length <= 100`
-* `s1.length == s2.length`
-* `s1` and `s2` consist of only lowercase English letters.
+- `1 <= s1.length, s2.length <= 100`
+- `s1.length == s2.length`
+- `s1` and `s2` consist of only lowercase English letters.
 
 ## Approach 1: Simulation
 
@@ -52,7 +51,7 @@ We iterate each index $$i$$ and look for the first difference, mark the index as
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -82,7 +81,7 @@ public:
 </TabItem>
 
 <TabItem value="rs" label="Rust">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```rs
 impl Solution {
@@ -91,7 +90,7 @@ impl Solution {
         let mut last = usize::MAX;
         let mut c1: Vec<_> = s1.chars().collect();
         let c2: Vec<_> = s2.chars().collect();
-        for i in 0 .. n { 
+        for i in 0 .. n {
             if c1[i] != c2[i] {
                 if last == usize::MAX {
                     last = i;

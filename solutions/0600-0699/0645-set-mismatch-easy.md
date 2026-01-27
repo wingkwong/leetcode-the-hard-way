@@ -3,7 +3,7 @@ description: 'Author: @heder | https://leetcode.com/problems/set-mismatch/'
 tags: [Array, Hash Table, Bit Manipulation, Sorting]
 ---
 
-# 0645 - Set Mismatch (Easy) 
+# 0645 - Set Mismatch (Easy)
 
 ## Problem Link
 
@@ -15,7 +15,7 @@ You have a set of integers `s`, which originally contains all the numbers from `
 
 You are given an integer array `nums` representing the data status of this set after the error.
 
-Find the number that occurs twice and the number that is missing and return *them in the form of an array*.
+Find the number that occurs twice and the number that is missing and return _them in the form of an array_.
 
 **Example 1:**
 
@@ -70,7 +70,6 @@ static vector<int> findErrorNums(const vector<int>& nums) {
 
 If we want to could add an early exit in the second loop, i.e. stop when have found the duplicate and the missing number:
 
-
 <SolutionAuthor name="@heder"/>
 
 ```cpp
@@ -87,6 +86,7 @@ If we want to could add an early exit in the second loop, i.e. stop when have fo
         }
         return {dup, miss};
 ```
+
 </TabItem>
 </Tabs>
 
@@ -158,7 +158,6 @@ static vector<int> findErrorNums(vector<int>& nums) {
 ```
 
 A very common variant of this idea is the use the highest bit of an integer, i.e. the sign bit, which leads to an implementation like the following (details may vary):
-
 
 <SolutionAuthor name="@heder"/>
 
@@ -268,8 +267,7 @@ static vector<int> findErrorNums(const vector<int>& nums) {
 
 Btw. @pankaj_777 posted [a variant of the this idea](https://leetcode.com/problems/set-mismatch/discuss/2733783/DAILY-LEETCODE-SOLUTION-oror-EASY-C%2B%2B-SOLUTION) which is maybe a bit easier to understand, but is a bit less robust against overflows.
 
-Why and how does this approach work?
-Let's assume $$m$$ is the missing number and $$d$$ is the duplicate.
+Why and how does this approach work? Let's assume $$m$$ is the missing number and $$d$$ is the duplicate.
 
 We can observe that sum of all natural numbers from $$1$$ to $$n$$ minus the sum of all the elements in the array, will be $$m - d$$ as the missing number $$m$$ will be in the sum of all numbers and we have the duplicate twice in nums, formally:
 

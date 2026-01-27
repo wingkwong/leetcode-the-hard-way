@@ -1,7 +1,8 @@
 ---
 description: >-
-  Author: @wingkwong, @jaffar |
-  https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram/
+  Author: @wkw, @jaffar | https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram/
+
+
 tags: [Hash Table, String, Counting]
 ---
 
@@ -40,20 +41,20 @@ Explanation: Replace 'p', 'r', 'a', 'i' and 'c' from t with proper characters to
 ```
 Input: s = "anagram", t = "mangaar"
 Output: 0
-Explanation: "anagram" and "mangaar" are anagrams. 
+Explanation: "anagram" and "mangaar" are anagrams.
 ```
 
 **Constraints:**
 
-* `1 <= s.length <= 5 * 10^4`
-* `s.length == t.length`
-* `s` and `t` consist of lowercase English letters only.
+- `1 <= s.length <= 5 * 10^4`
+- `s.length == t.length`
+- `s` and `t` consist of lowercase English letters only.
 
 ## Approach 1: Frequency Count
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -73,7 +74,6 @@ public:
 ```
 
 </TabItem>
-
 
 <TabItem value="py" label="Python">
 <SolutionAuthor name="@jaffar"/>

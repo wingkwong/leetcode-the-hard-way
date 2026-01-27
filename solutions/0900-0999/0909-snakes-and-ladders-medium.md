@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/snakes-and-ladders/'
+description: 'Author: @wkw | https://leetcode.com/problems/snakes-and-ladders/'
 tags: [Array, Breadth-First Search, Matrix]
 ---
 
-# 0909 - Snakes and Ladders (Medium) 
+# 0909 - Snakes and Ladders (Medium)
 
 ## Problem Link
 
@@ -17,7 +17,8 @@ You start on square `1` of the board. In each move, starting from square `curr`,
 
 - Choose a destination square `next` with a label in the range `[curr + 1, min(curr + 6, n2)]`.
 
-		This choice simulates the result of a standard **6-sided die roll**: i.e., there are always at most 6 destinations, regardless of the size of the board.
+      This choice simulates the result of a standard **6-sided die roll**: i.e., there are always at most 6 destinations, regardless of the size of the board.
+
 - If `next` has a snake or ladder, you **must** move to the destination of that snake or ladder. Otherwise, you move to `next`.
 - The game ends when you reach the square `n2`.
 
@@ -27,14 +28,14 @@ Note that you only take a snake or ladder at most once per move. If the destinat
 
 - For example, suppose the board is `[[-1,4],[-1,3]]`, and on the first move, your destination square is `2`. You follow the ladder to square `3`, but do **not** follow the subsequent ladder to `4`.
 
-Return *the least number of moves required to reach the square*`n2`*. If it is not possible to reach the square, return*`-1`.
+Return _the least number of moves required to reach the square_`n2`_. If it is not possible to reach the square, return_`-1`.
 
 **Example 1:**
 
 ```
 Input: board = [[-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1],[-1,35,-1,-1,13,-1],[-1,-1,-1,-1,-1,-1],[-1,15,-1,-1,-1,-1]]
 Output: 4
-Explanation: 
+Explanation:
 In the beginning, you start at square 1 (at row 5, column 0).
 You decide to move to square 2 and must take the ladder to square 15.
 You then decide to move to square 17 and must take the snake to square 13.
@@ -61,7 +62,7 @@ Output: 1
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -79,7 +80,7 @@ public:
                     g[k++] = board[i][j];
                 }
             } else {
-                // if the direction is odd, 
+                // if the direction is odd,
                 // we iterate columns from the left to the right
                 // e.g. 1 -> 2 -> 3 -> 4 -> 5 -> 6
                 for (int j = 0; j < n; j++) {

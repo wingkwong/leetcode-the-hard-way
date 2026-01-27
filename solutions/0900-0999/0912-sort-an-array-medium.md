@@ -1,5 +1,5 @@
 ---
-description: 'Author: @saishreekouda, @wingkwong, @ganajayant, @deepanshu-rawat6| https://leetcode.com/problems/sort-an-array/'
+description: 'Author: @saishreekouda, @wkw, @ganajayant, @deepanshu-rawat6| https://leetcode.com/problems/sort-an-array/'
 tags: ['sorting']
 ---
 
@@ -29,8 +29,8 @@ Output: [0,0,1,1,2,5]
 
 **Constraints:**
 
-* `1 <= nums.length <= 5 * 10^4`
-* `-5 * 10^4 <= nums[i] <= 5 * 10^4`
+- `1 <= nums.length <= 5 * 10^4`
+- `-5 * 10^4 <= nums[i] <= 5 * 10^4`
 
 ## Approach 1: STL
 
@@ -38,13 +38,14 @@ Output: [0,0,1,1,2,5]
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 void standardSTLSort(vector<int>& nums) {
     sort(nums.begin(), nums.end());
 }
 ```
+
 </TabItem>
 <TabItem value="java" label="Java">
 <SolutionAuthor name="@ganajayant"/>
@@ -57,21 +58,22 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 </Tabs>
-
 
 ### Stable STL Sort
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 void stableSTLSort(vector<int>& nums) {
     stable_sort(nums.begin(), nums.end());
 }
 ```
+
 </TabItem>
 </Tabs>
 
@@ -81,7 +83,7 @@ void stableSTLSort(vector<int>& nums) {
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 int partition(vector<int>& nums, int l, int r) {
@@ -105,6 +107,7 @@ void quickSort(vector<int>& nums, int l, int r) {
     }
 }
 ```
+
 </TabItem>
 <TabItem value="java" label="Java">
 <SolutionAuthor name="@ganajayant"/>
@@ -138,15 +141,15 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 </Tabs>
-
 
 ### Quick Sort with Randomised Pivot (TLE)
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 int partition(vector<int>& nums, int l, int r) {
@@ -171,25 +174,27 @@ void quickSort(vector<int>& nums, int l, int r) {
     }
 }
 ```
+
 </TabItem>
 </Tabs>
 
 ## Approach 3: Merge Sort
 
-Standard merge sort algorithm, following a divide and conquer approach, division of sub-array by mid values till sub-array length
-reaches one, then merging parts by either out-place or in-place merging in either ascending or descending order. 
+Standard merge sort algorithm, following a divide and conquer approach, division of sub-array by mid values till sub-array length reaches one, then merging parts by either out-place or in-place merging in either ascending or descending order.
 
 ### Merge Sort with Outplace Merging
 
 In this approach, merging happen in seperate array of size, then it is passed on in the above function calls.
 
 #### In mergeSort() function:
+
 - Dividing the array into 2 subarrays(one is $left$ and other is $right$) till their length reaches one(because no futher division can take place)
 - Then passing left and right parts into merge() function for sorting in correct order.
 
 #### In merge() function:
-- We merge the two subarrays( $left$ and $right$ ) into another array $mix$ . 
-- This merge operation stores elements from  $left$ and $right$ in an ascending order, by comparing elements from individual subarrays. 
+
+- We merge the two subarrays( $left$ and $right$ ) into another array $mix$ .
+- This merge operation stores elements from $left$ and $right$ in an ascending order, by comparing elements from individual subarrays.
 - Finally, since one subarray would have greater elements then the other one, so we add those elements seperately. Then, we return the sorted subarray into the above function call.
 
 This solution gives $O(n log n)$ time complexity and $O(n)$ space complexity.
@@ -227,7 +232,7 @@ class Solution {
         while (i < first.length && j < second.length) {
             if (first[i] < second[j]) {
                 mix[k] = first[i];
-                i++;    
+                i++;
             } else {
                 mix[k] = second[j];
                 j++;
@@ -253,19 +258,22 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 </Tabs>
 
 ### Merge Sort using In-place Merging
 
-In this approach, merging happens in-place, changes are made in the original arrays itself by modifying the reference variables. 
+In this approach, merging happens in-place, changes are made in the original arrays itself by modifying the reference variables.
 
 #### In mergeSort() function:
+
 Dividing the array into 2 subarrays(by calling mergeSort() function recursively) till their length reaches one.
 
 #### In mergeInPlace() function:
-- We merge the two subarrays(one from s to mid and another from mid to e) into another array $mix$ . 
-- This merge operation stores elements from the two sub-arrays in an ascending order, by comparing elements from individual subarrays. - - Finally, since one subarray would have greater elements then the other one, so we add those elements seperately. 
+
+- We merge the two subarrays(one from s to mid and another from mid to e) into another array $mix$ .
+- This merge operation stores elements from the two sub-arrays in an ascending order, by comparing elements from individual subarrays. - - Finally, since one subarray would have greater elements then the other one, so we add those elements seperately.
 - Then, we place the sorted elements from $mix$ into $arr$ , finally changes in $arr$ have been made in-place.
 
 This solution gives $O(n log n)$ time complexity and $O(1)$ space complexity.
@@ -333,6 +341,7 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 </Tabs>
 
@@ -340,7 +349,7 @@ class Solution {
 
 <Tabs>
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:
@@ -353,11 +362,12 @@ class Solution:
             ans.extend([i] * v)
         return ans
 ```
+
 </TabItem>
 </Tabs>
 
-
 ## Approach 5: Shell Sort
+
 - Start with a gap sequence. A common choice is to start with $\frac{n}{2}$ and halve it in each iteration until the gap becomes $1$, where $n$ is the length of the array.
 
 - Divide the array into subarrays of size equal to the current gap.
@@ -395,6 +405,7 @@ public:
     }
 };
 ```
+
 </TabItem>
 <TabItem value="py" label="Python3">
 <SolutionAuthor name="@saishreekouda"/>
@@ -415,5 +426,6 @@ class Solution:
             gap //= 2
         return nums
 ```
+
 </TabItem>
 </Tabs>

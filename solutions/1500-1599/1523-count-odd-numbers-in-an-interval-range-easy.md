@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/count-odd-numbers-in-an-interval-range/
+  Author: @wkw | https://leetcode.com/problems/count-odd-numbers-in-an-interval-range/
 ---
 
 # 1523 - Count Odd Numbers in an Interval Range (Easy)
@@ -32,13 +31,13 @@ Explanation: The odd numbers between 8 and 10 are [9].
 
 **Constraints:**
 
-* `0 <= low <= high <= 10^9`
+- `0 <= low <= high <= 10^9`
 
 ## Approach 1: Brute Force
 
 Iterate from $$low$$ to $$high$$ and check if $$i$$ is odd.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```go
 func countOdds(low int, high int) int {
@@ -50,7 +49,7 @@ func countOdds(low int, high int) int {
 }
 ```
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```rust
 impl Solution {
@@ -68,7 +67,7 @@ impl Solution {
 
 Numbers of odd numbers in $$[low, high]$$ is same as $$[1, high] - [1 , low - 1]$$. Therefore, we just find out those two numbers to get the answer. There are $$(high + 1) / 2$$ odd numbers in $$[1, high]$$ and $$low/2$$ odd numbers in $$[1, low - 1]$$.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```go
 func countOdds(low int, high int) int {
@@ -76,7 +75,7 @@ func countOdds(low int, high int) int {
 }
 ```
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```rust
 impl Solution {

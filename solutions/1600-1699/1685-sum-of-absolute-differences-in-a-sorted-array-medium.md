@@ -3,7 +3,7 @@ description: 'Author: @jit, @heder | https://leetcode.com/problems/sum-of-absolu
 tags: [Array, Math, Prefix Sum]
 ---
 
-# 1685 - Sum of Absolute Differences in a Sorted Array (Medium) 
+# 1685 - Sum of Absolute Differences in a Sorted Array (Medium)
 
 ## Problem Link
 
@@ -13,7 +13,7 @@ https://leetcode.com/problems/sum-of-absolute-differences-in-a-sorted-array/
 
 You are given an integer array `nums` sorted in **non-decreasing** order.
 
-Build and return *an integer array*`result`*with the same length as*`nums`*such that*`result[i]`*is equal to the **summation of absolute differences** between*`nums[i]`*and all the other elements in the array.*
+Build and return _an integer array_`result`_with the same length as_`nums`_such that_`result[i]`_is equal to the **summation of absolute differences** between_`nums[i]`_and all the other elements in the array._
 
 In other words, `result[i]` is equal to `sum(|nums[i]-nums[j]|)` where `0 <= j < nums.length` and `j != i` (**0-indexed**).
 

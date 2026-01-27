@@ -1,8 +1,8 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/prime-pairs-with-target-sum/'
+description: 'Author: @wkw | https://leetcode.com/problems/prime-pairs-with-target-sum/'
 ---
 
-# 2761 - Prime Pairs With Target Sum (Medium) 
+# 2761 - Prime Pairs With Target Sum (Medium)
 
 ## Problem Link
 
@@ -16,7 +16,7 @@ You are given an integer `n`. We say that two integers `x` and `y` form a prime 
 - `x + y == n`
 - `x` and `y` are prime numbers
 
-Return *the 2D sorted list of prime number pairs* `[xi, yi]`. The list should be sorted in **increasing** order of `xi`. If there are no prime number pairs at all, return *an empty array*.
+Return _the 2D sorted list of prime number pairs_ `[xi, yi]`. The list should be sorted in **increasing** order of `xi`. If there are no prime number pairs at all, return _an empty array_.
 
 **Note:** A prime number is a natural number greater than `1` with only two factors, itself and `1`.
 
@@ -25,7 +25,7 @@ Return *the 2D sorted list of prime number pairs* `[xi, yi]`. The list should be
 ```
 Input: n = 10
 Output: [[3,7],[5,5]]
-Explanation: In this example, there are two prime pairs that satisfy the criteria. 
+Explanation: In this example, there are two prime pairs that satisfy the criteria.
 These pairs are [3,7] and [5,5], and we return them in the sorted order as described in the problem statement.
 ```
 
@@ -43,7 +43,7 @@ Explanation: We can show that there is no prime number pair that gives a sum of 
 
 ## Approach 1: Sieve of Eratosthenes
 
-First thought - we may think that we can brute force by Iterating $x$ and iterating $y$, then checking if $x + y == n$ and if $x$ and $y$ is prime. 
+First thought - we may think that we can brute force by Iterating $x$ and iterating $y$, then checking if $x + y == n$ and if $x$ and $y$ is prime.
 
 ```cpp
 for (int x = 1; x <= n; x++) {
@@ -55,11 +55,11 @@ for (int x = 1; x <= n; x++) {
 }
 ```
 
-However, $n$ can be up to $10^6$ and O(n ^ 2) solution is a no go. Also checking if a number is a prime number on the fly is expensive. 
+However, $n$ can be up to $10^6$ and O(n ^ 2) solution is a no go. Also checking if a number is a prime number on the fly is expensive.
 
 Hence, now we have two things to think about
 
-1. how to optimize the solution without Iterating $x$ and $y$ 
+1. how to optimize the solution without Iterating $x$ and $y$
 2. how to check if $x$ and $y$ are prime numbers efficiently
 
 To solve the first problem, by looking at Example 1, we know that we don't need to output $[7, 3]$ since it is covered with $[3, 7]$. Also, it is easy to see $y == n - x$ by deriving from $x + y == n$. With these info, we don't need to iterate in $O(n^2)$. We just need to check $i$ in $[1 .. n / 2]$. The pair is simply $i$ and $n - i$.
@@ -74,11 +74,11 @@ for (int i = 1; i <= n / 2; i++) {
 }
 ```
 
-To solve the second problem we can pre-compute all prime numbers up to $n$ by using Sieve of Eatosthenes so that we don't need to calculate each time on the fly. 
+To solve the second problem we can pre-compute all prime numbers up to $n$ by using Sieve of Eatosthenes so that we don't need to calculate each time on the fly.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

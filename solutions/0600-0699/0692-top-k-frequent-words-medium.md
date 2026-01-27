@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @vigneshshiv |
-  https://leetcode.com/problems/top-k-frequent-words/
+  Author: @vigneshshiv | https://leetcode.com/problems/top-k-frequent-words/
 ---
 
 # 0692 - Top K Frequent Words (Medium)
@@ -35,13 +34,12 @@ Explanation: "the", "is", "sunny" and "day" are the four most frequent words, wi
 
 **Constraints:**
 
-* `1 <= words.length <= 500`
-* `1 <= words[i].length <= 10`
-* `words[i]` consists of lowercase English letters.
-* `k` is in the range `[1, The number of unique words[i]]`
+- `1 <= words.length <= 500`
+- `1 <= words[i].length <= 10`
+- `words[i]` consists of lowercase English letters.
+- `k` is in the range `[1, The number of unique words[i]]`
 
 **Follow-up**: Could you solve it in `O(n log(k))` time and `O(n)` extra space?
-
 
 ## Approach 1: Priority Queue
 
@@ -83,17 +81,17 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 </Tabs>
 
-
 ## Approach 2: Bucket Sort
 
-Consider, if we could find the no. of occurances of all words and forms frequency ordering element from highest to lowest, the we could solve this problem easily. 
+Consider, if we could find the no. of occurances of all words and forms frequency ordering element from highest to lowest, the we could solve this problem easily.
 
 - Builds a word frequency of all words
 - Then, build a value frequency (no of occurances) of all words from highest to lowest
-- Iterate through value frequency HashMap, and add only top $K$ elements to result and return it. 
+- Iterate through value frequency HashMap, and add only top $K$ elements to result and return it.
 
 Time Complexity: $O(n log(k))$, where $n$ - # of words, $k$ - top K frequency words
 
@@ -131,16 +129,15 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 </Tabs>
 
-
 ## Approach 3: STL (Comparator Interface)
 
-Leveraging the Comparator interface and sorting the elements by considering object attributes for comparison. 
-This feature allows to use Lambda expression in the context of Functional Interfaces. 
+Leveraging the Comparator interface and sorting the elements by considering object attributes for comparison. This feature allows to use Lambda expression in the context of Functional Interfaces.
 
-This is an Optimal solution with minimizing the amount of operation we did in the above two approaches. 
+This is an Optimal solution with minimizing the amount of operation we did in the above two approaches.
 
 Time Complexity: $O(n log(k))$, where $n$ - # of words, $k$ - top K frequency words
 
@@ -167,6 +164,6 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 </Tabs>
-

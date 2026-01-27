@@ -105,7 +105,7 @@ class Solution:
                         or grid[r][c] != 1
                         ):
                         continue
-                    # They are fresh, make them rotten, 
+                    # They are fresh, make them rotten,
                     grid[r][c] = 2
                     fresh -= 1
                     # add new rotten orange to the queue. We won't reach

@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @radojicic23 | https://leetcode.com/problems/boats-to-save-people/'
+description: 'Author: @wkw, @radojicic23 | https://leetcode.com/problems/boats-to-save-people/'
 ---
 
 # 0881 - Boats to Save People (Medium)
@@ -40,8 +40,8 @@ Explanation: 4 boats (3), (3), (4), (5)
 
 **Constraints:**
 
-* `1 <= people.length <= 5 * 10^4`
-* `1 <= people[i] <= limit <= 3 * 10^4`
+- `1 <= people.length <= 5 * 10^4`
+- `1 <= people[i] <= limit <= 3 * 10^4`
 
 ## Approach 1: Greedy
 
@@ -49,7 +49,7 @@ Let's sort the input. We know that the maximum weight is at most $$limit$$. The 
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -92,12 +92,12 @@ public:
         sort(people.begin(), people.end());
         int n = people.size(), ans = 0, i = 0, j = n - 1;
         while (i <= j) {
-            // move the min pointer only i-th person is included 
+            // move the min pointer only i-th person is included
             i += people[j] + people[i] <= limit;
             // need one boat for each round
             // move the max pointer as it is always chosen
             ans++, j--;
-        }        
+        }
         return ans;
     }
 };
@@ -113,17 +113,17 @@ class Solution:
     def numRescueBoats(self, people: List[int], limit: int) -> int:
         people.sort()
         l, r = 0, len(people) - 1
-        res = 0 
+        res = 0
 
         while l <= r:
             if people[l] + people[r] <= limit:
-                res += 1 
+                res += 1
                 l += 1
                 r -= 1
             else:
                 res += 1
                 r -= 1
-        return res 
+        return res
 ```
 
 </TabItem>
@@ -137,22 +137,24 @@ class Solution:
  * @param {number} limit
  * @return {number}
  */
-var numRescueBoats = function(people, limit) {
-    people.sort(function(a, b) {return a - b});
-    let l = 0;
-    let r = people.length - 1;
-    let res = 0;
-    while (l <= r) {
-        if (people[l] + people[r] <= limit) {
-            res += 1;
-            l += 1;
-            r -= 1;
-        } else {
-            res += 1;
-            r -= 1;
-        }
+var numRescueBoats = function (people, limit) {
+  people.sort(function (a, b) {
+    return a - b;
+  });
+  let l = 0;
+  let r = people.length - 1;
+  let res = 0;
+  while (l <= r) {
+    if (people[l] + people[r] <= limit) {
+      res += 1;
+      l += 1;
+      r -= 1;
+    } else {
+      res += 1;
+      r -= 1;
     }
-    return res;
+  }
+  return res;
 };
 ```
 

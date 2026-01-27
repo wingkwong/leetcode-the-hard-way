@@ -36,9 +36,9 @@ Explanation: Remove all the digits from the number and it is left with nothing w
 
 **Constraints:**
 
-* $1 <= a.length, b.length <= 10^4$
-* a and b consist only of '0' or '1' characters.
-* Each string does not contain leading zeros except for the zero itself.
+- $1 <= a.length, b.length <= 10^4$
+- a and b consist only of '0' or '1' characters.
+- Each string does not contain leading zeros except for the zero itself.
 
 ## Approach 1: Adding Digits One By One
 
@@ -53,7 +53,7 @@ class Solution {
 public:
     string addBinary(string a, string b) {
         // preallocate a long string, no copying is needed in iteration.
-        string ans(max(a.size(), b.size()), '0'); 
+        string ans(max(a.size(), b.size()), '0');
         int i = a.size()-1, j = b.size()-1, k = ans.size()-1, carry = 0;
         while(i >= 0 || j >= 0){
             // if all digits are used up for one of the string, give 0 for that part.
@@ -71,4 +71,3 @@ public:
     }
 };
 ```
-

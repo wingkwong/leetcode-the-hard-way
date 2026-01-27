@@ -1,7 +1,8 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/equal-row-and-column-pairs
+  Author: @wkw | https://leetcode.com/problems/equal-row-and-column-pairs
+
+
 tags: ['Hash Map']
 ---
 
@@ -45,13 +46,13 @@ Explanation: There are 3 equal row and column pairs:
 
 **Constraints:**
 
-* `n == grid.length == grid[i].length`
-* `1 <= n <= 200`
-* `1 <= grid[i][j] <= 10^5`
+- `n == grid.length == grid[i].length`
+- `1 <= n <= 200`
+- `1 <= grid[i][j] <= 10^5`
 
 ## Approach 1: Hash Map
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -72,7 +73,7 @@ public:
             vector<int> tmp;
             for (int i = 0; i < n; i++) tmp.push_back(g[i][j]);
             // in example 1, we got {3,1,2}, {2,7,7}, {1,6,7}
-            // since {2,7,7} has frequency of 1, we add it to answer 
+            // since {2,7,7} has frequency of 1, we add it to answer
             // otherwise, it would be adding 0
             ans += m[tmp];
         }

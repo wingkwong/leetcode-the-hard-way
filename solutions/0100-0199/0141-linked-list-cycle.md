@@ -49,9 +49,9 @@ Explanation: There is no cycle in the linked list.
 
 **Constraints:**
 
-* The number of the nodes in the list is in the range `[0, 10^4]`.
-* `-10^5 <= Node.val <= 10^5`
-* `pos` is `-1` or a **valid index** in the linked-list.
+- The number of the nodes in the list is in the range `[0, 10^4]`.
+- `-10^5 <= Node.val <= 10^5`
+- `pos` is `-1` or a **valid index** in the linked-list.
 
 **Follow up:** Can you solve it using `O(1)` (i.e. constant) memory?
 
@@ -77,22 +77,22 @@ public class Solution {
     public bool HasCycle(ListNode head) {
         ListNode slowPointer = head;
         ListNode quickPointer = head;
-        
+
         if(head == null) return false;
-        
+
         while(head != null) {
             // slow pointer, move one step each time.
             slowPointer = slowPointer.next;
             if(slowPointer == null) return false;
-            
+
             // quick pointer, move two steps each time.
             quickPointer = quickPointer?.next?.next;
             if(quickPointer == null) return false;
-            
+
             // slow pointer meets quick pointer means that there is a cycle in this linked list
             if(slowPointer == quickPointer) return true;
         }
-        
+
         return false;
     }
 }
@@ -114,28 +114,28 @@ class Solution:
     def hasCycle(self, head: ListNode) -> bool:
         slowPointer = head
         quickPointer = head
-        
+
         if head == None:
             return False
-        
+
         while head != None:
             # slow pointer, move one step each time.
             slowPointer = slowPointer.next
             if slowPointer == None:
                 return False
-            
+
             # quick pointer, move two steps each time.
             quickPointer = quickPointer.next.next if quickPointer.next != None else None
             if quickPointer == None:
                 return False
-            
+
             # slow pointer meets quick pointer means that there is a cycle in this linked list
             if slowPointer == quickPointer:
                 return True
-        
+
         return False
-  ```
-  
+```
+
 </TabItem>
 <TabItem value="java" label="Java">
 <SolutionAuthor name="@vigneshshiv"/>
@@ -193,18 +193,18 @@ public class Solution {
  * @param {ListNode} head
  * @return {boolean}
  */
-var hasCycle = function(head) {
-    let slow = head
-    let fast = head 
+var hasCycle = function (head) {
+  let slow = head;
+  let fast = head;
 
-    while (fast && fast.next) {
-        slow = slow.next;
-        fast = fast.next;
-        if (slow == fast) {
-            return true;
-        }
+  while (fast && fast.next) {
+    slow = slow.next;
+    fast = fast.next;
+    if (slow == fast) {
+      return true;
     }
-    return false;
+  }
+  return false;
 };
 ```
 

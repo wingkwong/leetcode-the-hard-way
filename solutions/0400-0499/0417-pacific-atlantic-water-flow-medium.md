@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong, @radojicic23, @ColeB2 | https://leetcode.com/problems/pacific-atlantic-water-flow/'
+description: 'Author: @wkw, @radojicic23, @ColeB2 | https://leetcode.com/problems/pacific-atlantic-water-flow/'
 tags: [Array, Depth-First Search, Breadth-First Search, Matrix]
 ---
 
-# 0417 - Pacific Atlantic Water Flow (Medium) 
+# 0417 - Pacific Atlantic Water Flow (Medium)
 
 ## Problem Statement
 
@@ -13,7 +13,7 @@ The island is partitioned into a grid of square cells. You are given an `m x n` 
 
 The island receives a lot of rain, and the rain water can flow to neighboring cells directly north, south, east, and west if the neighboring cell's height is **less than or equal to** the current cell's height. Water can flow from any cell adjacent to an ocean into the ocean.
 
-Return *a **2D list** of grid coordinates*`result`*where*`result[i] = [ri, ci]`*denotes that rain water can flow from cell*`(ri, ci)`*to **both** the Pacific and Atlantic oceans*.
+Return _a **2D list** of grid coordinates_`result`_where_`result[i] = [ri, ci]`_denotes that rain water can flow from cell_`(ri, ci)`_to **both** the Pacific and Atlantic oceans_.
 
 **Example 1:**
 
@@ -21,19 +21,19 @@ Return *a **2D list** of grid coordinates*`result`*where*`result[i] = [ri, ci]`*
 Input: heights = [[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]
 Output: [[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]
 Explanation: The following cells can flow to the Pacific and Atlantic oceans, as shown below:
-[0,4]: [0,4] -> Pacific Ocean 
+[0,4]: [0,4] -> Pacific Ocean
        [0,4] -> Atlantic Ocean
-[1,3]: [1,3] -> [0,3] -> Pacific Ocean 
+[1,3]: [1,3] -> [0,3] -> Pacific Ocean
        [1,3] -> [1,4] -> Atlantic Ocean
-[1,4]: [1,4] -> [1,3] -> [0,3] -> Pacific Ocean 
+[1,4]: [1,4] -> [1,3] -> [0,3] -> Pacific Ocean
        [1,4] -> Atlantic Ocean
-[2,2]: [2,2] -> [1,2] -> [0,2] -> Pacific Ocean 
+[2,2]: [2,2] -> [1,2] -> [0,2] -> Pacific Ocean
        [2,2] -> [2,3] -> [2,4] -> Atlantic Ocean
-[3,0]: [3,0] -> Pacific Ocean 
+[3,0]: [3,0] -> Pacific Ocean
        [3,0] -> [4,0] -> Atlantic Ocean
-[3,1]: [3,1] -> [3,0] -> Pacific Ocean 
+[3,1]: [3,1] -> [3,0] -> Pacific Ocean
        [3,1] -> [4,1] -> Atlantic Ocean
-[4,0]: [4,0] -> Pacific Ocean 
+[4,0]: [4,0] -> Pacific Ocean
        [4,0] -> Atlantic Ocean
 Note that there are other possible paths for these cells to flow to the Pacific and Atlantic oceans.
 ```
@@ -76,7 +76,7 @@ public:
         // perform DFS on the bottom cell
         if (j + 1 < n && !vis[i][j + 1] && M[i][j + 1] >= M[i][j]) dfs(M, vis, i, j + 1);
     }
-    
+
     vector<vector<int>> pacificAtlantic(vector<vector<int>>& M) {
         vector<vector<int>> ans;
         int m = M.size(), n = M[0].size();
@@ -85,9 +85,9 @@ public:
         // A[i][j] = 1 means it is able to flow to atlantic ocean
         vector<vector<int>> A(m, vector<int>(n));
         for(int i = 0; i < m; i++) {
-            // perform dfs starting from the left-most column 
+            // perform dfs starting from the left-most column
             dfs(M, P, i, 0);
-            // perform dfs starting from the right-most column 
+            // perform dfs starting from the right-most column
             dfs(M, A, i, n - 1);
         }
         for(int i = 0; i < n; i++) {
@@ -121,35 +121,35 @@ public:
 ```python
 class Solution:
     def pacificAtlantic(self, heights: List[List[int]]) -> List[List[int]]:
-        rows, cols = len(heights), len(heights[0]) 
+        rows, cols = len(heights), len(heights[0])
         # 2 hashsets to maintain all the positions that can reach two oceans
-        pac, atl = set(), set() 
-        
+        pac, atl = set(), set()
+
         def dfs(r, c, visit, prev_height):
-            # if position is already been visited or 
+            # if position is already been visited or
             # if it's out of bounds or if height is to small
-            if ((r, c) in visit or 
+            if ((r, c) in visit or
                 r < 0 or c < 0 or r == rows or c == cols or
-                heights[r][c] < prev_height): 
+                heights[r][c] < prev_height):
                 return
             # visit new cell
-            visit.add((r, c)) 
+            visit.add((r, c))
             # run dfs on all four of those neighbours
             dfs(r + 1, c, visit, heights[r][c])
             dfs(r - 1, c, visit, heights[r][c])
-            dfs(r, c + 1, visit, heights[r][c])   
-            dfs(r, c - 1, visit, heights[r][c])         
-        
+            dfs(r, c + 1, visit, heights[r][c])
+            dfs(r, c - 1, visit, heights[r][c])
+
         # go through every single column in the first row
         # for the first row and the last row
-        for c in range(cols): 
+        for c in range(cols):
             dfs(0, c, pac, heights[0][c])
             dfs(rows - 1, c, atl, heights[rows - 1][c])
         # for the first column and the last column
-        for r in range(rows): 
+        for r in range(rows):
             dfs(r, 0, pac, heights[r][0])
             dfs(r, cols - 1, atl, heights[r][cols - 1])
-        
+
         res = []
         for r in range(rows):
             for c in range(cols):
@@ -170,7 +170,6 @@ Note: Since we are finding the highest point we can reach from the beaches, we n
 Time Complexity: $$O(m*n)$$ where m is the number of rows, and n is the number of columns. Our BFS will traverse each cell, check where they can reach, and will use a set to avoid repeated work.
 
 Space Complexity: $$O(m*n)$$. We will maintain 2 hash sets of points we can reach, as well as our queue will take up to $$O(m*n)$$ space.
-
 
 <Tabs>
 <TabItem value="python" label="Python">

@@ -1,7 +1,8 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/parallel-courses-ii
+  Author: @wkw | https://leetcode.com/problems/parallel-courses-ii
+
+
 tags: ['Dynamic Programming', 'Bit Masking']
 ---
 
@@ -21,7 +22,7 @@ Return _the **minimum** number of semesters needed to take all courses_. The tes
 
 **Example 1:**
 
-![](https://assets.leetcode.com/uploads/2020/05/22/leetcode\_parallel\_courses\_1.png)
+![](https://assets.leetcode.com/uploads/2020/05/22/leetcode_parallel_courses_1.png)
 
 <pre><code>Input: n = 4, dependencies = [[2,1],[3,1],[1,4]], k = 2
 <strong>Output:
@@ -34,7 +35,7 @@ In the third semester, you can take course 4.</code></pre>
 
 **Example 2:**
 
-![](https://assets.leetcode.com/uploads/2020/05/22/leetcode\_parallel\_courses\_2.png)
+![](https://assets.leetcode.com/uploads/2020/05/22/leetcode_parallel_courses_2.png)
 
 <pre><code>Input: n = 5, dependencies = [[2,1],[3,1],[4,1],[1,5]], k = 2
 <strong>Output:
@@ -54,18 +55,18 @@ In the fourth semester, you can take course 5.</code></pre>
 
 **Constraints:**
 
-* `1 <= n <= 15`
-* `1 <= k <= n`
-* `0 <= relations.length <= n * (n-1) / 2`
-* `relations[i].length == 2`
-* `1 <= prevCoursei, nextCoursei <= n`
-* `prevCoursei != nextCoursei`
-* All the pairs `[prevCoursei, nextCoursei]` are **unique**.
-* The given graph is a directed acyclic graph.
+- `1 <= n <= 15`
+- `1 <= k <= n`
+- `0 <= relations.length <= n * (n-1) / 2`
+- `relations[i].length == 2`
+- `1 <= prevCoursei, nextCoursei <= n`
+- `prevCoursei != nextCoursei`
+- All the pairs `[prevCoursei, nextCoursei]` are **unique**.
+- The given graph is a directed acyclic graph.
 
 ## Approach 1: DP Bit Masking
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -75,7 +76,7 @@ public:
         // the worst case is that in each semester we can only take one course, hence initialise with `n`
         // at the end, the answer would be dp[(1 << n) - 1], i.e. all bits set
         vector<int> dp(1 << n, n);
-        // if the i-th bit is set in pre[j], 
+        // if the i-th bit is set in pre[j],
         // that means we need to take course i in order to take course j
         vector<int> pre(n);
         // build the prerequisites

@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/count-positions-on-street-with-required-brightness/
+  Author: @wkw | https://leetcode.com/problems/count-positions-on-street-with-required-brightness/
 ---
 
 # 2237 - Count Positions on Street With Required Brightness (Medium)
@@ -17,8 +16,6 @@ You are given an integer `n`. A perfectly straight street is represented by a nu
 The **brightness** of a position `p` is defined as the number of street lamps that light up the position `p`. You are given a **0-indexed** integer array `requirement` of size `n` where `requirement[i]` is the minimum **brightness** of the `ith` position on the street.
 
 Return _the number of positions_ `i` _on the street between_ `0` _and_ `n - 1` _that have a **brightness** of **at least** _ `requirement[i]`_._
-
-
 
 **Example 1:**
 
@@ -54,16 +51,16 @@ Explanation:
 
 **Constraints:**
 
-* `1 <= n <= 10^5`
-* `1 <= lights.length <= 10^5`
-* `0 <= positioni < n`
-* `0 <= rangei <= 10^5`
-* `requirement.length == n`
-* `0 <= requirement[i] <= 10^5`
+- `1 <= n <= 10^5`
+- `1 <= lights.length <= 10^5`
+- `0 <= positioni < n`
+- `0 <= rangei <= 10^5`
+- `requirement.length == n`
+- `0 <= requirement[i] <= 10^5`
 
 ## Approach 1: Line Sweep
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

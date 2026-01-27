@@ -1,8 +1,8 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/maximum-palindromes-after-operations/'
+description: 'Author: @wkw | https://leetcode.com/problems/maximum-palindromes-after-operations/'
 ---
 
-# 3035 - Maximum Palindromes After Operations (Medium) 
+# 3035 - Maximum Palindromes After Operations (Medium)
 
 ## Problem Link
 
@@ -16,7 +16,7 @@ You are allowed to perform the following operation **any** number of times (**in
 
 - Choose integers `i`, `j`, `x`, and `y` such that `0 <= i, j < n`, `0 <= x < words[i].length`, `0 <= y < words[j].length`, and **swap** the characters `words[i][x]` and `words[j][y]`.
 
-Return *an integer denoting the **maximum** number of palindromes*`words`*can contain, after performing some operations.*
+Return _an integer denoting the **maximum** number of palindromes_`words`_can contain, after performing some operations._
 
 **Note:** `i` and `j` may be equal during an operation.
 
@@ -36,7 +36,7 @@ Hence, the maximum number of palindromes achievable is 3.
 ```
 Input: words = ["abc","ab"]
 Output: 2
-Explanation: In this example, one way to get the maximum number of palindromes is: 
+Explanation: In this example, one way to get the maximum number of palindromes is:
 Choose i = 0, j = 1, x = 1, y = 0, so we swap words[0][1] and words[1][0]. words becomes ["aac","bb"].
 Choose i = 0, j = 0, x = 1, y = 2, so we swap words[0][1] and words[0][2]. words becomes ["aca","bb"].
 Both strings are now palindromes.
@@ -62,14 +62,14 @@ Hence, the answer is 1.
 
 ## Approach 1: Counting
 
-The frequency of each character matters. We calculate and fill the character based on the word length. For example, if we got four `a`, then we have make $4 / 2 = 2$ pairs. If we got five `a`, we can still make $2$ pairs and we have an extra `a` to be used for the word with odd length (e.g.  `b_b` -> `b[a]b`). 
+The frequency of each character matters. We calculate and fill the character based on the word length. For example, if we got four `a`, then we have make $4 / 2 = 2$ pairs. If we got five `a`, we can still make $2$ pairs and we have an extra `a` to be used for the word with odd length (e.g. `b_b` -> `b[a]b`).
 
 - Time Complexity: $O(n log n)$
 - Space Complexity: $O(n)$
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -80,8 +80,8 @@ public:
         unordered_map<char, int> cnt;
         // count the frequency for each character
         for (auto word : words) for (auto x : word) cnt[x]++;
-        // we wanna know how many pairs `p` we can make 
-        // and how many characters with odd frequency 
+        // we wanna know how many pairs `p` we can make
+        // and how many characters with odd frequency
         int p = 0, odd = 0;
         for (auto x : cnt) p += x.second / 2, odd += x.second % 2;
         // we need to construct in a greedy fashion
@@ -99,7 +99,7 @@ public:
                 // if this word has odd length, then we need an extra character (taken from `odd`)
                 // increase `ans` by 1 since this word is a palindrome.
                 p -= l / 2, odd -= l % 2, ans += 1;
-                // if we didn't have odd but we needed one, we borrow from `p` 
+                // if we didn't have odd but we needed one, we borrow from `p`
                 if (odd < 0) odd += 2, p -= 1;
             }
         }

@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/maximum-good-people-based-on-statements/
+  Author: @wkw | https://leetcode.com/problems/maximum-good-people-based-on-statements/
 ---
 
 # 2151 - Maximum Good People Based on Statements (Hard)
@@ -14,14 +13,14 @@ https://leetcode.com/problems/maximum-good-people-based-on-statements/
 
 There are two types of persons:
 
-* The **good person**: The person who always tells the truth.
-* The **bad person**: The person who might tell the truth and might lie.
+- The **good person**: The person who always tells the truth.
+- The **bad person**: The person who might tell the truth and might lie.
 
 You are given a **0-indexed** 2D integer array `statements` of size `n x n` that represents the statements made by `n` people about each other. More specifically, `statements[i][j]` could be one of the following:
 
-* `0` which represents a statement made by person `i` that person `j` is a **bad** person.
-* `1` which represents a statement made by person `i` that person `j` is a **good** person.
-* `2` represents that **no statement** is made by person `i` about person `j`.
+- `0` which represents a statement made by person `i` that person `j` is a **bad** person.
+- `1` which represents a statement made by person `i` that person `j` is a **good** person.
+- `2` represents that **no statement** is made by person `i` about person `j`.
 
 Additionally, no person ever makes a statement about themselves. Formally, we have that `statements[i][i] = 2` for all `0 <= i < n`.
 
@@ -83,18 +82,18 @@ Note that there is more than one way to arrive at this conclusion.
 
 **Constraints:**
 
-* `n == statements.length == statements[i].length`
-* `2 <= n <= 15`
-* `statements[i][j]` is either `0`, `1`, or `2`.
-* `statements[i][i] == 2`
+- `n == statements.length == statements[i].length`
+- `2 <= n <= 15`
+- `statements[i][j]` is either `0`, `1`, or `2`.
+- `statements[i][i] == 2`
 
 ## Approach 1: Bit Masking
 
-First, let's look at the constraint for n. It is just `2 <= n <= 15`, which means this probably could be solved by Bit Masking. We can enumerate bit mask `mask` from 1 to  2 ^ n - 1.  If the `i`-th bit of `mask` is 1 or 0, it means that person `i` is good or bad. Bad persons' statements can be ignored as they can either true or false. Hence, if person `i` tells the truth, we just need to check if there is contradiction for person `j`.
+First, let's look at the constraint for n. It is just `2 <= n <= 15`, which means this probably could be solved by Bit Masking. We can enumerate bit mask `mask` from 1 to 2 ^ n - 1. If the `i`-th bit of `mask` is 1 or 0, it means that person `i` is good or bad. Bad persons' statements can be ignored as they can either true or false. Hence, if person `i` tells the truth, we just need to check if there is contradiction for person `j`.
 
 If there is no contradiction for `mask`, then we can count the number of 1s in `mask` and update the answer. If you use C++, there is a built-in function called `__builtin_popcount` to count it.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -109,12 +108,12 @@ public:
                     if (statements[i][j] == 0 && good || statements[i][j] == 1 && !good) {
                         return 0;
                     }
-                }    
+                }
             }
         }
         return 1;
     }
-    
+
     int maximumGood(vector<vector<int>>& statements) {
         int ans = 0, n = statements.size();
         for (int mask = 1; mask < (1 << n); mask++) {
@@ -122,7 +121,7 @@ public:
                 ans = max(ans, __builtin_popcount(mask));
             }
         }
-    
+
         return ans;
     }
 };

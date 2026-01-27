@@ -1,5 +1,5 @@
 ---
-description: 'Author: @ColeB2, @wingkwong | https://leetcode.com/problems/longest-increasing-subsequence/'
+description: 'Author: @ColeB2, @wkw | https://leetcode.com/problems/longest-increasing-subsequence/'
 tags: [Array, Binary Search, Dynamic Programming]
 ---
 
@@ -64,7 +64,7 @@ class Solution:
         for i, num in enumerate(nums):
             # iterate over each num from 0 to the current num.
             for j in range(0, i + 1):
-                # current num, num > nums[j] it creates 
+                # current num, num > nums[j] it creates
                 # a stricly increasing subsequence.
                 if num > nums[j]:
                     # update length of longest subsequence.
@@ -87,7 +87,7 @@ class Solution:
 
 ## Approach 2: Binary Search
 
-Our follow-up asks for a $$O(nlogn)$$ solution, which we can achieve using binary search. The method is called Patience Sorting and involves creating $$piles$$ of numbers to stack our numbers on top. This $$piles$$ array is what we will binary search over. 
+Our follow-up asks for a $$O(nlogn)$$ solution, which we can achieve using binary search. The method is called Patience Sorting and involves creating $$piles$$ of numbers to stack our numbers on top. This $$piles$$ array is what we will binary search over.
 
 For each number in $$nums$$ we can run a binary search on our $$piles$$ array to find where we can place the number. We are looking for the best position in the $$piles$$ array where we can "place" our number on top. If the number is greater than all numbers, we create a new pile and append the number to $$piles$$, if not, binary search will find us a number to place it on top of. Meaning we overwrite the number with the current number.
 
@@ -133,9 +133,8 @@ class Solution:
 
 </TabItem>
 
-
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

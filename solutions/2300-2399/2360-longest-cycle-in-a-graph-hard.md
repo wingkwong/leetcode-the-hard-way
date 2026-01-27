@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/longest-cycle-in-a-graph
+  Author: @wkw | https://leetcode.com/problems/longest-cycle-in-a-graph
 ---
 
 # 2360 - Longest Cycle in a Graph (Hard)
@@ -43,16 +42,16 @@ Explanation: There are no cycles in this graph.
 
 **Constraints:**
 
-* `n == edges.length`
-* `2 <= n <= 10^5`
-* `-1 <= edges[i] < n`
-* `edges[i] != i`
+- `n == edges.length`
+- `2 <= n <= 10^5`
+- `-1 <= edges[i] < n`
+- `edges[i] != i`
 
 ## Approach: Strongly Connected Component
 
-We can compute Strongly Connected Component on the graph and find the maximum one. 
+We can compute Strongly Connected Component on the graph and find the maximum one.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -81,7 +80,7 @@ public:
         return low;
       }
     };
-    
+
     int longestCycle(vector<int>& edges) {
         int n = edges.size(), ans = -1;
         vector<vector<int>> g(n);

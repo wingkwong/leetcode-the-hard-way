@@ -39,7 +39,6 @@ for (int i = 0; i < n; i++) {
 </TabItem>
 </Tabs>
 
-
 ### Suffix Sum - Starting with last element
 
 <Tabs>

@@ -9,8 +9,7 @@ keywords:
   - algorithm
 ---
 
-<TutorialAuthors names="@RohitTaparia"/>
-<Contributors names="@wingkwong" />
+<TutorialCredits authors="@RohitTaparia" contributors="@wkw" />
 
 ## Overview
 
@@ -22,7 +21,7 @@ In this example, for nodes $7$ and $4$, the LCA is $2$.
 
 For nodes $6$ and $4$, the LCA is $5$.
 
-For nodes $4$ and $8$, the LCA is the root itself, i.e. $3$. 
+For nodes $4$ and $8$, the LCA is the root itself, i.e. $3$.
 
 $$NOTE:$$ The LCA in a binary tree for the root with any other node will be the root itself.
 
@@ -72,6 +71,7 @@ int findingLCA(int x, int y, vector<int>& adj) {
   return lca;
 }
 ```
+
 </TabItem>
 </Tabs>
 
@@ -115,6 +115,7 @@ bool findPath(Node* root, vector<int>& current_path, int value) {
 }
 
 ```
+
 </TabItem>
 </Tabs>
 
@@ -172,6 +173,7 @@ class Solution {
   }
 };
 ```
+
 </TabItem>
 </Tabs>
 
@@ -270,23 +272,10 @@ class Solution {
   }
 };
 ```
+
 </TabItem>
 </Tabs>
 
-export const suggestedProblems = [
-  {
-    "problemName": "1123. Lowest Common Ancestor of Deepest Leaves",
-    "difficulty": "Medium",
-    "leetCodeLink": "https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves/",
-    "solutionLink": ""
-  },
-  {
-    "problemName": "235. Lowest Common Ancestor of a Binary Search Tree",
-    "difficulty": "Medium",
-    "leetCodeLink": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/",
-    "solutionLink": ""
-  }
-]
+export const suggestedProblems = [ { "problemName": "1123. Lowest Common Ancestor of Deepest Leaves", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves/", "solutionLink": "" }, { "problemName": "235. Lowest Common Ancestor of a Binary Search Tree", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/", "solutionLink": "" } ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />
-

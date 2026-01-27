@@ -1,7 +1,8 @@
 ---
 description: >-
-  Author: @saishreekouda, @deepanshu-rawat6, @vigneshshiv, @radojicic23 |
-  https://leetcode.com/problems/merge-sorted-array/
+  Author: @saishreekouda, @deepanshu-rawat6, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/merge-sorted-array/
+
+
 tags: [Array, Two Pointers, Sorting]
 ---
 
@@ -49,12 +50,11 @@ Note that because m = 0, there are no elements in nums1. The 0 is only there to 
 
 **Constraints:**
 
-* `nums1.length == m + n`
-* `nums2.length == n`
-* `0 <= m, n <= 200`
-* `1 <= m + n <= 200`
-* `-10^9 <= nums1[i], nums2[j] <= 10^9`
- 
+- `nums1.length == m + n`
+- `nums2.length == n`
+- `0 <= m, n <= 200`
+- `1 <= m + n <= 200`
+- `-10^9 <= nums1[i], nums2[j] <= 10^9`
 
 **Follow up:** Can you come up with an algorithm that runs in `O(m + n)` time?
 
@@ -79,6 +79,7 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 
 <TabItem value="python" label="Python">
@@ -107,11 +108,13 @@ class Solution:
  * @param {number} n
  * @return {void} Do not return anything, modify nums1 in-place instead.
  */
-var merge = function(nums1, m, nums2, n) {
-    for (i = 0; i < n; i++) {
-        nums1[m + i] = nums2[i];
-    }
-    nums1.sort(function(a, b) {return a - b});
+var merge = function (nums1, m, nums2, n) {
+  for (i = 0; i < n; i++) {
+    nums1[m + i] = nums2[i];
+  }
+  nums1.sort(function (a, b) {
+    return a - b;
+  });
 };
 ```
 
@@ -137,8 +140,7 @@ public:
 
 ## Approach 2: Two Pointers
 
-A better way to do it is using one-pass two pointer approach. We make a copy of $nums1$ into $temp$, then iterate through both arrays $nums2$ and $temp$ comparing their elements in **ascending fashion** with the help of two pointers $i$ and $j$,simultaneouslty adding the smaller elements into $nums1$. Finally, the bigger elements out of either $nums2$ or $temp$ are going to be added by seperately iterating over them if $i$ or $j$ satisfies the conditions.
-This solution gives $O(m + n)$ or $O(n)$ time complexity and $O(m)$ or $O(n)$ space complexity.
+A better way to do it is using one-pass two pointer approach. We make a copy of $nums1$ into $temp$, then iterate through both arrays $nums2$ and $temp$ comparing their elements in **ascending fashion** with the help of two pointers $i$ and $j$,simultaneouslty adding the smaller elements into $nums1$. Finally, the bigger elements out of either $nums2$ or $temp$ are going to be added by seperately iterating over them if $i$ or $j$ satisfies the conditions. This solution gives $O(m + n)$ or $O(n)$ time complexity and $O(m)$ or $O(n)$ space complexity.
 
 <Tabs>
 <TabItem value="java" label="Java">
@@ -178,6 +180,7 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 
 <TabItem value="python" label="Python">
@@ -188,9 +191,9 @@ class Solution:
     def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
         # last element of nums1
         last = m + n - 1
-        # merge them in reverse order 
+        # merge them in reverse order
         while m > 0 and n > 0:
-            # find the largest value 
+            # find the largest value
             if nums1[m - 1] > nums2[n - 1]:
                 nums1[last] = nums1[m - 1]
                 m -= 1
@@ -198,7 +201,7 @@ class Solution:
                 nums1[last] = nums2[n - 1]
                 n -= 1
             last -= 1
-        # edge case 
+        # edge case
         # fill nums1 with leftover of nums2 elements
         while n > 0:
             nums1[last] = nums2[n - 1]
@@ -219,28 +222,28 @@ class Solution:
  * @param {number} n
  * @return {void} Do not return anything, modify nums1 in-place instead.
  */
-var merge = function(nums1, m, nums2, n) {
-    // last element of nums1
-    let last = m + n - 1;
-    // merge them in reverse order
-    while (m > 0 && n > 0) {
-        // find the largest value 
-        if (nums1[m - 1] > nums2[n - 1]) {
-            nums1[last] = nums1[m - 1];
-            m--;
-        } else {
-            nums1[last] = nums2[n - 1];
-            n--;
-        }
-        last--;
+var merge = function (nums1, m, nums2, n) {
+  // last element of nums1
+  let last = m + n - 1;
+  // merge them in reverse order
+  while (m > 0 && n > 0) {
+    // find the largest value
+    if (nums1[m - 1] > nums2[n - 1]) {
+      nums1[last] = nums1[m - 1];
+      m--;
+    } else {
+      nums1[last] = nums2[n - 1];
+      n--;
     }
-    // edge case
-    // fill nums1 with leftover of nums2 elements
-    while (n > 0) {
-        nums1[last] = nums2[n - 1];
-        n--;
-        last--;
-    }
+    last--;
+  }
+  // edge case
+  // fill nums1 with leftover of nums2 elements
+  while (n > 0) {
+    nums1[last] = nums2[n - 1];
+    n--;
+    last--;
+  }
 };
 ```
 
@@ -257,7 +260,7 @@ public:
         int last = m + n - 1;
         // merge them in reverse order
         while (m > 0 && n > 0) {
-            // find the largest value 
+            // find the largest value
             if (nums1[m - 1] > nums2[n - 1]) {
                 nums1[last] = nums1[m - 1];
                 m--;
@@ -282,9 +285,9 @@ public:
 
 ## Approach 3: Two Pointers In-place (Optimal)
 
-As we know, $nums1$ can hold size of $m + n$ array, which can have empty slots at the end to move $nums2$ array. 
+As we know, $nums1$ can hold size of $m + n$ array, which can have empty slots at the end to move $nums2$ array.
 
-Since the array is already sorted, we can place the elements from highest to lowest in $nums1$ by moving from last slot to first. 
+Since the array is already sorted, we can place the elements from highest to lowest in $nums1$ by moving from last slot to first.
 
 Time Complexity: $O(m + n)$, where, $m$ - length of nums1, $n$ - length of nums2
 
@@ -300,7 +303,7 @@ class Solution {
         // index position for array placements
         int idx = nums1.length - 1; m -= 1; n -= 1;
         while (n >= 0) {
-            // Place elements from right direction to left. 
+            // Place elements from right direction to left.
             if (m >= 0 && nums1[m] > nums2[n]) {
                 nums1[idx] = nums1[m--];
             } else {
@@ -311,6 +314,7 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 
 <TabItem value="js" label="JavaScript">
@@ -324,20 +328,21 @@ class Solution {
  * @param {number} n
  * @return {void} Do not return anything, modify nums1 in-place instead.
  */
-var merge = function(nums1, m, nums2, n) {
-    let index = m + n - 1;
-    let a = m - 1;
-    let b = n - 1;
-    while (b >= 0) {
-        if (a >= 0 && nums1[a] > nums2[b]) {
-            nums1[index] = nums1[a--];
-        } else {
-            nums1[index] = nums2[b--];
-        }
-        index--;
+var merge = function (nums1, m, nums2, n) {
+  let index = m + n - 1;
+  let a = m - 1;
+  let b = n - 1;
+  while (b >= 0) {
+    if (a >= 0 && nums1[a] > nums2[b]) {
+      nums1[index] = nums1[a--];
+    } else {
+      nums1[index] = nums2[b--];
     }
-}
+    index--;
+  }
+};
 ```
+
 </TabItem>
 
 <TabItem value="py" label="Python">
@@ -358,6 +363,7 @@ class Solution:
                 b -= 1
             index -= 1
 ```
+
 </TabItem>
 
 <TabItem value="cpp" label="C++">
@@ -380,22 +386,21 @@ public:
     }
 };
 ```
+
 </TabItem>
 </Tabs>
 
-## Approach 4: Shell sort 
+## Approach 4: Shell sort
 
 1. Calculate the gap value for merging the two arrays. The gap is determined as $\lceil \frac{{\text{size of arr1} + \text{size of arr2}}}{{2}} \rceil$.
 
 2. Initialize two pointers: the left pointer at index $0$ and the right pointer at index (left + gap).
 
 3. Perform the following steps for each gap until the gap becomes $0$:
-    - Inside a loop that continues until the right pointer reaches the end (i.e., index $n + m$), handle three different cases:
-        - If the left pointer is inside $\text{arr1}$ and the right pointer is in $\text{arr2}$, compare $\text{arr1}[{\text{left}}]$ and $\text{arr2}[{\text{right}} - n]$. If $\text{arr1}[{\text{left}}] > \text{arr2}[{\text{right}} - n]$, swap them.
-        - If both pointers are in $\text{arr2}$, compare $\text{arr1}[{\text{left}} - n]$ and $\text{arr2}[{\text{right}} - n]$. If $\text{arr1}[{\text{left}} - n] > \text{arr2}[{\text{right}} - n]$, swap them.
-        - If both pointers are in $\text{arr1}$, compare $\text{arr1}[{\text{left}}]$ and $\text{arr2}[{\text{right}}]$. If $\text{arr1}[{\text{left}}] > \text{arr2}[{\text{right}}]$, swap them.
-
-   
+   - Inside a loop that continues until the right pointer reaches the end (i.e., index $n + m$), handle three different cases:
+     - If the left pointer is inside $\text{arr1}$ and the right pointer is in $\text{arr2}$, compare $\text{arr1}[{\text{left}}]$ and $\text{arr2}[{\text{right}} - n]$. If $\text{arr1}[{\text{left}}] > \text{arr2}[{\text{right}} - n]$, swap them.
+     - If both pointers are in $\text{arr2}$, compare $\text{arr1}[{\text{left}} - n]$ and $\text{arr2}[{\text{right}} - n]$. If $\text{arr1}[{\text{left}} - n] > \text{arr2}[{\text{right}} - n]$, swap them.
+     - If both pointers are in $\text{arr1}$, compare $\text{arr1}[{\text{left}}]$ and $\text{arr2}[{\text{right}}]$. If $\text{arr1}[{\text{left}}] > \text{arr2}[{\text{right}}]$, swap them.
 4. After the right pointer reaches the end, decrease the value of the gap by setting it to $\lceil \frac{{\text{current gap}}}{{2}} \rceil$.
 
 5. Repeat the loop until the gap becomes $0$.
@@ -443,6 +448,7 @@ class Solution {
   }
 };
 ```
+
 </TabItem>
 <TabItem value="py" label="Python3">
 <SolutionAuthor name="@saishreekouda"/>
@@ -480,6 +486,7 @@ class Solution:
             nums1[i] = nums2[j]
             j += 1
 ```
+
 </TabItem>
 <TabItem value="java" label="Java">
 <SolutionAuthor name="@saishreekouda"/>
@@ -528,5 +535,6 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 </Tabs>

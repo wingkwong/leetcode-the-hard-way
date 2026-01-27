@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @ganajayant, @radojicic23 | https://leetcode.com/problems/group-anagrams/'
+description: 'Author: @wkw, @ganajayant, @radojicic23 | https://leetcode.com/problems/group-anagrams/'
 tags: ['Array', 'Hash Table', 'String', 'Sorting']
 ---
 
@@ -38,9 +38,9 @@ Output: [["a"]]
 
 **Constraints:**
 
-* `1 <= strs.length <= 10^4`
-* `0 <= strs[i].length <= 100`
-* `strs[i]` consists of lowercase English letters.
+- `1 <= strs.length <= 10^4`
+- `0 <= strs[i].length <= 100`
+- `strs[i]` consists of lowercase English letters.
 
 ## Approach 1: Sorting + Hash Map
 
@@ -50,7 +50,7 @@ We can use a hash map to store the sorted string as a key, and push the original
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -86,6 +86,7 @@ public:
     }
 };
 ```
+
 </TabItem>
 <TabItem value="java" label="Java">
 <SolutionAuthor name="@ganajayant"/>
@@ -117,6 +118,7 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 
 <TabItem value="python" label="Python">
@@ -147,22 +149,22 @@ class Solution:
  * @param {string[]} strs
  * @return {string[][]}
  */
-var groupAnagrams = function(strs) {
-    let ans = [];
-    let hashMap = {};
-    for (let i = 0; i < strs.length; i++) {
-        let word = strs[i];
-        let sortedWord = word.split("").sort().join("");
-        if (hashMap[sortedWord]) {
-            hashMap[sortedWord].push(word);
-        } else {
-            hashMap[sortedWord] = [word];
-        }
+var groupAnagrams = function (strs) {
+  let ans = [];
+  let hashMap = {};
+  for (let i = 0; i < strs.length; i++) {
+    let word = strs[i];
+    let sortedWord = word.split('').sort().join('');
+    if (hashMap[sortedWord]) {
+      hashMap[sortedWord].push(word);
+    } else {
+      hashMap[sortedWord] = [word];
     }
-    for (let i in hashMap) {
-        ans.push(hashMap[i]);
-    }
-    return ans;
+  }
+  for (let i in hashMap) {
+    ans.push(hashMap[i]);
+  }
+  return ans;
 };
 ```
 
@@ -173,7 +175,7 @@ var groupAnagrams = function(strs) {
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -185,7 +187,7 @@ public:
             13, 17, 19, 23, 29,
             31, 37, 41, 43, 47,
             53, 59, 61, 67, 71,
-            73, 79, 83, 89, 97, 
+            73, 79, 83, 89, 97,
             101
         };
 		// hacked by ["djrw", "beisx", "ceflvx", "anp"] :D

@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/contains-duplicate-ii/'
+description: 'Author: @wkw | https://leetcode.com/problems/contains-duplicate-ii/'
 tags: ['Sliding Window']
 ---
 
@@ -36,20 +36,20 @@ Output: false
 
 **Constraints:**
 
-* `1 <= nums.length <= 10^5`
-* `-10^9 <= nums[i] <= 10^9`
-* `0 <= k <= 10^5`
+- `1 <= nums.length <= 10^5`
+- `-10^9 <= nums[i] <= 10^9`
+- `0 <= k <= 10^5`
 
 ## Approach 1: Sliding Window
 
-Since $k$ is provided, we can use a fixed-length sliding window approach. As we need to check if a variable exists before, we use a hash map to store the occurrence of each number. 
+Since $k$ is provided, we can use a fixed-length sliding window approach. As we need to check if a variable exists before, we use a hash map to store the occurrence of each number.
 
 We can do the following steps.
 
 1. We push first $min(n, k)$ elements to the hash map. If it exists before, then return true. By specifying $min(n, k)$, we can guarantee that the condition $abs(i - j) <= k$ is always true.
 2. For $[k .. n)$, if we the element exists in hash map, then return false. Otherwise, we remove $nums[i - k]$ from the hash map and include $nums[i]$ to the hash map, i.e. sliding the window to the right.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -81,7 +81,7 @@ public:
 
 Once you get the idea, we can combine both into a single for loop.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

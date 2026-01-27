@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/path-sum/'
+description: 'Author: @wkw | https://leetcode.com/problems/path-sum/'
 tags: [Tree, Depth-First Search, Breadth-First Search, Binary Tree]
 ---
 
@@ -52,7 +52,7 @@ Explanation: Since the tree is empty, there are no root-to-leaf paths.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 /**

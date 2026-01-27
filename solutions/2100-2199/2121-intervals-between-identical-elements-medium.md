@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/intervals-between-identical-elements/
+  Author: @wkw | https://leetcode.com/problems/intervals-between-identical-elements/
 ---
 
 # 2121 - Intervals Between Identical Elements (Medium)
@@ -49,9 +48,9 @@ Explanation:
 
 **Constraints:**
 
-* `n == arr.length`
-* `1 <= n <= 105`
-* `1 <= arr[i] <= 105`
+- `n == arr.length`
+- `1 <= n <= 1e5`
+- `1 <= arr[i] <= 1e5`
 
 ## Approach 1: Prefix Sum
 
@@ -61,7 +60,7 @@ Let's say the list is \[1, 3, 5, 7, 9] and let $$k$$ be $$7$$. The absolute diff
 
 Similarly, let $$k$$ be $$3$$ and we want to find out the absolute difference for numbers greater than or equal to $$3$$. $$(3−3)+(3−5)+(3−7)+(3−9)$$. We can arrange it to $$3∗4−(3+5+7+9)$$, which is same as $$(pre[n]−pre[i])−k∗(n−i)$$. Therefore, $$ans[k]$$ would be the sum of the left part and the right part.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -82,7 +81,7 @@ public:
             }
             for (int i = 0; i < n; i++) {
                 long long k = v[i];
-                ans[k] = (k * (i + 1) - pre[i + 1]) + 
+                ans[k] = (k * (i + 1) - pre[i + 1]) +
                             ((pre[n] - pre[i]) - (k * (n - i)));
             }
         }

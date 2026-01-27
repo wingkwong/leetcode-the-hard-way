@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @radojicic23 | https://leetcode.com/problems/backspace-string-compare/'
+description: 'Author: @wkw, @radojicic23 | https://leetcode.com/problems/backspace-string-compare/'
 tags: [Two Pointers, String, Stack, Simulation]
 ---
 
@@ -41,8 +41,8 @@ Explanation: s becomes "c" while t becomes "b".
 
 **Constraints:**
 
-* `1 <= s.length, t.length <= 200`
-* `s` and `t` only contain lowercase letters and `'#'` characters.
+- `1 <= s.length, t.length <= 200`
+- `s` and `t` only contain lowercase letters and `'#'` characters.
 
 ## Approach 1: Simulation
 
@@ -50,7 +50,7 @@ We build the final string for $$s$$ and $$t$$. If we see #, then we can only bac
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -80,7 +80,7 @@ public:
 ```python
 class Solution:
     def backspaceCompare(self, s: str, t: str) -> bool:
-        
+
         def get_result(st):
             new_st = []
             for c in st:
@@ -104,24 +104,24 @@ class Solution:
  * @param {string} t
  * @return {boolean}
  */
-var backspaceCompare = function(s, t) {
-    function get_result(st) {
-        let new_st = [];
-        for (c of st) {
-            if (c == "#") {
-                if (new_st != null) new_st.pop();
-            } else new_st.push(c);
-        }
-        return new_st.join("");
+var backspaceCompare = function (s, t) {
+  function get_result(st) {
+    let new_st = [];
+    for (c of st) {
+      if (c == '#') {
+        if (new_st != null) new_st.pop();
+      } else new_st.push(c);
     }
-    return get_result(s) == get_result(t);
+    return new_st.join('');
+  }
+  return get_result(s) == get_result(t);
 };
 ```
 
 </TabItem>
 
 <TabItem value="kotlin" label="Kotlin">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```kt
 class Solution {

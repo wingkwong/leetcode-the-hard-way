@@ -1,8 +1,8 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/number-of-nodes-with-value-one/'
+description: 'Author: @wkw | https://leetcode.com/problems/number-of-nodes-with-value-one/'
 ---
 
-# 2445 - Number of Nodes With Value One (Medium) 
+# 2445 - Number of Nodes With Value One (Medium)
 
 ## Problem Link
 
@@ -16,7 +16,7 @@ There is an **undirected** connected tree with `n` nodes labeled from `1` to `n`
 
 You are also given an integer array `queries`. Initially, every node has a value `0` on it. For each query `queries[i]`, you should flip all values in the subtree of the node with the label `queries[i]`.
 
-Return *the total number of nodes with the value*`1`***after processing all the queries***.
+Return _the total number of nodes with the value_`1`**_after processing all the queries_**.
 
 **Note** that:
 
@@ -51,7 +51,7 @@ After processing the queries, there are one red node (node with value 1): 2.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -69,10 +69,10 @@ public:
             // u is the current node label
             // if u is greater than n, then return 0
             if (u > n) return 0;
-            // do we need to flip the node u? 
+            // do we need to flip the node u?
             // we flip the value if f[u] is 1
             v ^= f[u];
-            // the result would be the value of u, i.e. v 
+            // the result would be the value of u, i.e. v
             // plus the result of the left subtree, i.e dfs(u * 2, v)
             // plus the result of the right subtree, i.e. dfs(u * 2 + 1, v)
             return v + dfs(u * 2, v) + dfs(u * 2 + 1, v);

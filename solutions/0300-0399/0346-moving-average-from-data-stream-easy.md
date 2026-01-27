@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/moving-average-from-data-stream/
+  Author: @wkw | https://leetcode.com/problems/moving-average-from-data-stream/
 ---
 
 # 0346 - Moving Average from Data Stream (Easy)
@@ -16,8 +15,8 @@ Given a stream of integers and a window size, calculate the moving average of al
 
 Implement the `MovingAverage` class:
 
-* `MovingAverage(int size)` Initializes the object with the size of the window `size`.
-* `double next(int val)` Returns the moving average of the last `size` values of the stream.
+- `MovingAverage(int size)` Initializes the object with the size of the window `size`.
+- `double next(int val)` Returns the moving average of the last `size` values of the stream.
 
 **Example 1:**
 
@@ -38,9 +37,9 @@ movingAverage.next(5); // return 6.0 = (10 + 3 + 5) / 3
 
 **Constraints:**
 
-* `1 <= size <= 1000`
-* `-10^5 <= val <= 10^5`
-* At most `10^4` calls will be made to `next`.
+- `1 <= size <= 1000`
+- `-10^5 <= val <= 10^5`
+- At most `10^4` calls will be made to `next`.
 
 ## Approach 1: Deque
 
@@ -58,7 +57,7 @@ for (auto x : nums) {
 
 In general, for sliding window, we have a pointer to track if it is within the window or not. Here we can check the size of $$d$$. If it already has $$n$$ elements, then we need to remove the one from the front (i.e. the leftmost one) before pushing the next one to the back. We also need to subtract the old value and add the new value to $$sum$$.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class MovingAverage {
@@ -69,7 +68,7 @@ public:
         n = size;
         sum = 0;
     }
-    
+
     double next(int val) {
         // keep track the current sum to avoid recalculation
         sum += val;

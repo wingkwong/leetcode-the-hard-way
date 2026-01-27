@@ -90,7 +90,7 @@ class Solution:
         while stack:
             # adj_list[stack[-1]] -> stack[-1] top of the stack, and
             # our current destination. So we are checking that while
-            # the destination we are at (which updates on each loop), 
+            # the destination we are at (which updates on each loop),
             # has a destination to go to, go to it.
             while adj_list[stack[-1]]:
                 stack.append(adj_list[stack[-1]].pop())

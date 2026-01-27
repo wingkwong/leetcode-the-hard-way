@@ -41,7 +41,8 @@ Output: 0
 
 ## Approach 1: Dynamic Programming
 
-A tricky question, which requires us to track 3 states. 
+A tricky question, which requires us to track 3 states.
+
 1. We are ready to buy stock, no need to wait for a cool down.
 2. We are ready to sell stock,
 3. We sold stock, and now need to cool down.

@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/reverse-pairs/'
+description: 'Author: @wkw | https://leetcode.com/problems/reverse-pairs/'
 ---
 
 # 0493 - Reverse Pairs (Hard)
@@ -30,12 +30,12 @@ Output: 3
 
 **Constraints:**
 
-* `1 <= nums.length <= 5 * 10^4`
-* `-231 <= nums[i] <= 231 - 1`
+- `1 <= nums.length <= 5 * 10^4`
+- `-231 <= nums[i] <= 231 - 1`
 
 ## Approach 1: Ordered Set
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 #include <ext/pb_ds/assoc_container.hpp>
@@ -48,8 +48,8 @@ public:
     int reversePairs(vector<int>& nums) {
         int ans = 0;
         for (auto x : nums) {
-            // number of elements >= (2LL * x) 
-            ans += T.order_of_key(2LL * x); 
+            // number of elements >= (2LL * x)
+            ans += T.order_of_key(2LL * x);
             T.insert(x);
         }
         return ans;
@@ -92,14 +92,14 @@ template <class T>
 
 </details>
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
 public:
     // BIT Template goes here
     // ...
-    
+
     int reversePairs(vector<int>& nums) {
         int n = nums.size(), pos = -1, inversions = 0;
         vector<int> sorted_nums = nums;

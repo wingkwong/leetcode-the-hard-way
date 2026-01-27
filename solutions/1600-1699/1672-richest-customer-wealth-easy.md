@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @radojicic23 | https://leetcode.com/problems/richest-customer-wealth/'
+description: 'Author: @wkw, @radojicic23 | https://leetcode.com/problems/richest-customer-wealth/'
 tags: [Array, Matrix]
 ---
 
@@ -31,9 +31,9 @@ Both customers are considered the richest with a wealth of 6 each, so return 6.
 ```
 Input: accounts = [[1,5],[7,3],[3,5]]
 Output: 10
-Explanation: 
+Explanation:
 1st customer has wealth = 6
-2nd customer has wealth = 10 
+2nd customer has wealth = 10
 3rd customer has wealth = 8
 The 2nd customer is the richest with a wealth of 10.
 ```
@@ -47,10 +47,10 @@ Output: 17
 
 **Constraints:**
 
-* `m == accounts.length`
-* `n == accounts[i].length`
-* `1 <= m, n <= 50`
-* `1 <= accounts[i][j] <= 100`
+- `m == accounts.length`
+- `n == accounts[i].length`
+- `1 <= m, n <= 50`
+- `1 <= accounts[i][j] <= 100`
 
 ## Approach 1: Max Row Sum
 
@@ -58,7 +58,7 @@ Given a `m x n` grid, we need to find the maximum row sum. We iterate each row a
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -79,7 +79,7 @@ public:
 
 Actually we don't need to define `n`, `m`, `i` and `j` if we write in the following style.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -105,7 +105,7 @@ Same idea as approach 1 but it is using STL.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -144,21 +144,21 @@ class Solution:
  * @param {number[][]} accounts
  * @return {number}
  */
-var maximumWealth = function(accounts) {
-    let ans = 0;
-    for (i of accounts) {
-        ans = Math.max(ans, sum(i));
-    }
-    return ans;
+var maximumWealth = function (accounts) {
+  let ans = 0;
+  for (i of accounts) {
+    ans = Math.max(ans, sum(i));
+  }
+  return ans;
 };
 
 function sum(arr) {
-    let res = 0;
-    for (i of arr) {
-        res += i;
-    }
-    return res;
-};
+  let res = 0;
+  for (i of arr) {
+    res += i;
+  }
+  return res;
+}
 ```
 
 </TabItem>

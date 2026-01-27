@@ -1,6 +1,8 @@
 ---
 description: >-
   Author: @jessicaribeiroalves, @radojicic23 | https://leetcode.com/problems/integer-to-roman/
+
+
 tags: [Hash Table, Math, String]
 ---
 
@@ -116,32 +118,32 @@ class Solution(object):
 
 ```js
 const numbersDict = [
-    [1000, 'M'],
-    [900, 'CM'],
-    [500, 'D'],
-    [400, 'CD'],
-    [100, 'C'],
-    [90, 'XC'],
-    [50, 'L'],
-    [40, 'XL'],
-    [10, 'X'],
-    [9, 'IX'],
-    [5, 'V'],
-    [4, 'IV'],
-    [1, 'I']
+  [1000, 'M'],
+  [900, 'CM'],
+  [500, 'D'],
+  [400, 'CD'],
+  [100, 'C'],
+  [90, 'XC'],
+  [50, 'L'],
+  [40, 'XL'],
+  [10, 'X'],
+  [9, 'IX'],
+  [5, 'V'],
+  [4, 'IV'],
+  [1, 'I'],
 ];
 
 const intToRoman = (num) => {
-    let remaining = num;
-    let result = '';
+  let remaining = num;
+  let result = '';
 
-    for (let [integerValue, romanNumeral] of numbersDict) {
-        while (remaining >= integerValue) {
-            result += romanNumeral;
-            remaining -= integerValue;
-        }
+  for (let [integerValue, romanNumeral] of numbersDict) {
+    while (remaining >= integerValue) {
+      result += romanNumeral;
+      remaining -= integerValue;
     }
-    return result;
+  }
+  return result;
 };
 ```
 
@@ -155,19 +157,19 @@ class Solution {
 public:
     string intToRoman(int num) {
         vector<pair<int, string>> numbers = {
-            {1000, "M"}, 
-            {900, "CM"}, 
+            {1000, "M"},
+            {900, "CM"},
             {500, "D"},
-            {400, "CD"}, 
-            {100, "C"}, 
-            {90, "XC"}, 
-            {50, "L"}, 
-            {40, "XL"}, 
-            {10, "X"}, 
-            {9, "IX"}, 
-            {5, "V"}, 
-            {4, "IV"}, 
-            {1, "I"} 
+            {400, "CD"},
+            {100, "C"},
+            {90, "XC"},
+            {50, "L"},
+            {40, "XL"},
+            {10, "X"},
+            {9, "IX"},
+            {5, "V"},
+            {4, "IV"},
+            {1, "I"}
         };
         string ans = "";
         while (num > 0) {

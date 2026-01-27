@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/minimum-number-of-operations-to-convert-time/
+  Author: @wkw | https://leetcode.com/problems/minimum-number-of-operations-to-convert-time/
 ---
 
 # 2224 - Minimum Number of Operations to Convert Time (Easy)
@@ -43,14 +42,14 @@ Explanation: We only have to add one minute to current, so the minimum number of
 
 **Constraints:**
 
-* `current` and `correct` are in the format `"HH:MM"`
-* `current <= correct`
+- `current` and `correct` are in the format `"HH:MM"`
+- `current <= correct`
 
 ## Approach 1: Greedy
 
 Choosing $$60$$ 1 time is better than choosing $$15$$ 4 times. We choose from the largest number as many times as we could, then choose the second largest and etc. Since the operation is on minute, we need to convert the input to minute format first. Then we calculate the difference and try each operation to see how many times we could apply and update the difference after each operation.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -66,7 +65,7 @@ public:
         res += (t[4] - '0');
         return res;
     }
-    
+
     int convertTime(string current, string correct) {
         // convert inputs to minute format
         int from = getMinutes(current), to = getMinutes(correct);

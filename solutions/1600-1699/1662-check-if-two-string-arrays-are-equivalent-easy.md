@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/'
+description: 'Author: @wkw | https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/'
 tags: [Array, String]
 ---
 
-# 1662 - Check If Two String Arrays are Equivalent (Easy) 
+# 1662 - Check If Two String Arrays are Equivalent (Easy)
 
 ## Problem Link
 
@@ -11,7 +11,7 @@ https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/
 
 ## Problem Statement
 
-Given two string arrays `word1` and `word2`, return`true`*if the two arrays **represent** the same string, and*`false`*otherwise.*
+Given two string arrays `word1` and `word2`, return`true`_if the two arrays **represent** the same string, and_`false`_otherwise._
 
 A string is **represented** by an array if the array elements concatenated **in order** forms the string.
 
@@ -51,14 +51,14 @@ Output: true
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
 public:
-    // intuition: 
+    // intuition:
     // we can combine all words together as `s1` and `s2` and then compare,
-    // based on the above idea, we can simulate it by using two pointers 
+    // based on the above idea, we can simulate it by using two pointers
     // to check if a character in one word matches that in another word
     // if we've processed one character, then we move to another character in the same word
     // if we've processed one word, then we move to the next word
@@ -71,7 +71,7 @@ public:
         int x = 0, y = 0;
         while (i < n && j < m) {
             // if both character doesn't match, then return false
-            // remember to increase the pointer x and y 
+            // remember to increase the pointer x and y
             // otherwise, it will cause TLE
             if (word1[i][x++] != word2[j][y++]) return false;
             // reach the end of the current word
@@ -80,7 +80,7 @@ public:
             if (x == word1[i].size()) i += 1, x = 0;
             if (y == word2[j].size()) j += 1, y = 0;
         }
-        // if they are equivalent, word pointers would be at position n and m 
+        // if they are equivalent, word pointers would be at position n and m
         return i == n && j == m;
     }
 };

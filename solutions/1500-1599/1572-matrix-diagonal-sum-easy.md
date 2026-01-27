@@ -16,7 +16,7 @@ Only include the sum of all the elements on the primary diagonal and all the ele
 
 **Example 1:**
 
-![](https://assets.leetcode.com/uploads/2020/08/14/sample\_1911.png)
+![](https://assets.leetcode.com/uploads/2020/08/14/sample_1911.png)
 
 ```
 Input: mat = [[1,2,3],
@@ -46,9 +46,9 @@ Output: 5
 
 **Constraints:**
 
-* `n == mat.length == mat[i].length`
-* `1 <= n <= 100`
-* `1 <= mat[i][j] <= 100`
+- `n == mat.length == mat[i].length`
+- `1 <= n <= 100`
+- `1 <= mat[i][j] <= 100`
 
 ## Approach 1: Iteration
 
@@ -58,31 +58,31 @@ We have to first iterate the primary diagonal first. In the primary diagonal, th
 
 ```python
 def diagonalSum(self, mat: List[List[int]]) -> int:
-        
+
         #initialize result
         result = 0
-        
+
         #add all values in primary diagonal
         for row in range(len(mat)):
             #col = row in primary diagonal
-            col = row 
-            
+            col = row
+
             #add the value to result
             result += mat[row][col]
-        
+
         #add all values in secondary diagonal
         for row in range(len(mat)):
-            
+
             #col is the the opposite end of row in secondary diagonal
             col = len(mat) - row - 1
-            
+
             #to avoid adding the center number twice, we skip if row == col
             if(row == col):
                 continue
-                
+
             #add the value to result
             result += mat[row][col]
-        
+
         #return result
         return result
 ```

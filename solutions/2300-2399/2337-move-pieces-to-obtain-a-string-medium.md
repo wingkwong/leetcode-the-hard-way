@@ -1,7 +1,8 @@
 ---
 description: >-
-  Author: @TBC |
-  https://leetcode.com/problems/move-pieces-to-obtain-a-string
+  Author: @TBC | https://leetcode.com/problems/move-pieces-to-obtain-a-string
+
+
 draft: true
 ---
 
@@ -15,8 +16,8 @@ https://leetcode.com/problems/move-pieces-to-obtain-a-string
 
 You are given two strings `start` and `target`, both of length `n`. Each string consists **only** of the characters `'L'`, `'R'`, and `'_'` where:
 
-* The characters `'L'` and `'R'` represent pieces, where a piece `'L'` can move to the **left** only if there is a **blank** space directly to its left, and a piece `'R'` can move to the **right** only if there is a **blank** space directly to its right.
-* The character `'_'` represents a blank space that can be occupied by **any** of the `'L'` or `'R'` pieces.
+- The characters `'L'` and `'R'` represent pieces, where a piece `'L'` can move to the **left** only if there is a **blank** space directly to its left, and a piece `'R'` can move to the **right** only if there is a **blank** space directly to its right.
+- The character `'_'` represents a blank space that can be occupied by **any** of the `'L'` or `'R'` pieces.
 
 Return `true` _if it is possible to obtain the string_ `target` _by moving the pieces of the string_ `start` _ **any** number of times_. Otherwise, return `false`.
 
@@ -51,9 +52,9 @@ Explanation: The piece in the string start can move only to the right, so it is 
 
 **Constraints:**
 
-* `n == start.length == target.length`
-* `1 <= n <= 10^5`
-* `start` and `target` consist of the characters `'L'`, `'R'`, and `'_'`.
+- `n == start.length == target.length`
+- `1 <= n <= 10^5`
+- `start` and `target` consist of the characters `'L'`, `'R'`, and `'_'`.
 
 ## Approach: TBC
 

@@ -1,7 +1,8 @@
 ---
 description: >-
-  Author: @vigneshshiv, @radojicic23, @ColeB2 |
-  https://leetcode.com/problems/letter-combinations-of-a-phone-number/
+  Author: @vigneshshiv, @radojicic23, @ColeB2 | https://leetcode.com/problems/letter-combinations-of-a-phone-number/
+
+
 tags: [Hash Table, String, Backtracking]
 ---
 
@@ -42,16 +43,16 @@ Output: ["a","b","c"]
 
 **Constraints:**
 
-* `0 <= digits.length <= 4`
-* `digits[i]` is a digit in the range `['2', '9']`.
+- `0 <= digits.length <= 4`
+- `digits[i]` is a digit in the range `['2', '9']`.
 
 ## Approach 1: Recursive Backtracking with Subsets
 
-Simple and naive approach to solve this problem by having map of key and values same as Phone key pad. 
+Simple and naive approach to solve this problem by having map of key and values same as Phone key pad.
 
-Iterative over the input digit by digit and for each digit look for the combinations of key characters. Initialize prefix string which holds an key combination in the recursive call stack. 
+Iterative over the input digit by digit and for each digit look for the combinations of key characters. Initialize prefix string which holds an key combination in the recursive call stack.
 
-As per example 1, digits is $23$, for the first digit $2$, the program iterates over `"abc"` characters, and for each char, the program is recursively called to get the next digit combination associated with current character `'a'`. 
+As per example 1, digits is $23$, for the first digit $2$, the program iterates over `"abc"` characters, and for each char, the program is recursively called to get the next digit combination associated with current character `'a'`.
 
 Maximum possibilities for each character is $4$, So each of recursive call, adds the char to the prefix string and add it to the result list, it does $O(n)$ time, and $O(4^n)$ recursive call stack for each character, where $n$ is the length of the string.
 
@@ -65,7 +66,7 @@ Space complexity: $O(n^n)$ or $O(4 ^ n)$
 
 ```java
 class Solution {
-    
+
     private Map<Character, String> digitToChar = Map.of(
             '2', "abc",
             '3', "def",
@@ -76,7 +77,7 @@ class Solution {
             '8', "tuv",
             '9', "wxyz"
     );
-    
+
     public List<String> letterCombinations(String digits) {
         if (digits.length() == 0) {
             return new ArrayList<>();
@@ -85,7 +86,7 @@ class Solution {
         backtrack(digits, result, "", 0);
         return result;
     }
-    
+
     public void backtrack(String digits, List<String> result, String prefix, int index) {
         if (prefix.length() == digits.length()) {
             result.add(prefix);
@@ -111,24 +112,24 @@ class Solution {
 class Solution:
     def letterCombinations(self, digits: str) -> List[str]:
         res = []
-        hashmap = {'2': 'abc', 
-                   '3': 'def', 
-                   '4': 'ghi', 
-                   '5': 'jkl', 
-                   '6': 'mno', 
-                   '7': 'pqrs', 
-                   '8': 'tuv', 
+        hashmap = {'2': 'abc',
+                   '3': 'def',
+                   '4': 'ghi',
+                   '5': 'jkl',
+                   '6': 'mno',
+                   '7': 'pqrs',
+                   '8': 'tuv',
                    '9': 'wxyz'}
-                   
+
         def backtrack(i, curr_str):
             if len(curr_str) == len(digits):
                 res.append(curr_str)
-                return 
+                return
             for c in hashmap[digits[i]]:
                 backtrack(i + 1, curr_str + c)
         if digits:
             backtrack(0, "")
-        return res 
+        return res
 ```
 
 </TabItem>
@@ -141,30 +142,32 @@ class Solution:
  * @param {string} digits
  * @return {string[]}
  */
-var letterCombinations = function(digits) {
-    let res = [];
-    const hashmap = {'2': 'abc', 
-               '3': 'def', 
-               '4': 'ghi', 
-               '5': 'jkl', 
-               '6': 'mno', 
-               '7': 'pqrs', 
-               '8': 'tuv', 
-               '9': 'wxyz'};
-    
-    function backtrack(i, curr_str) {
-        if (curr_str.length == digits.length) {
-            res.push(curr_str);
-            return;
-        }
-        for (c of hashmap[digits[i]]) {
-            backtrack(i + 1, curr_str + c);
-        }
+var letterCombinations = function (digits) {
+  let res = [];
+  const hashmap = {
+    2: 'abc',
+    3: 'def',
+    4: 'ghi',
+    5: 'jkl',
+    6: 'mno',
+    7: 'pqrs',
+    8: 'tuv',
+    9: 'wxyz',
+  };
+
+  function backtrack(i, curr_str) {
+    if (curr_str.length == digits.length) {
+      res.push(curr_str);
+      return;
     }
-    if (digits) {
-        backtrack(0, "");
+    for (c of hashmap[digits[i]]) {
+      backtrack(i + 1, curr_str + c);
     }
-    return res;
+  }
+  if (digits) {
+    backtrack(0, '');
+  }
+  return res;
 };
 ```
 
@@ -180,13 +183,13 @@ public:
         vector<string> ans;
         string currStr = "";
         map<char, string> hashMap = {
-                {'2', "abc"}, 
-                {'3', "def"}, 
-                {'4', "ghi"}, 
-                {'5', "jkl"}, 
-                {'6', "mno"}, 
-                {'7', "pqrs"}, 
-                {'8', "tuv"}, 
+                {'2', "abc"},
+                {'3', "def"},
+                {'4', "ghi"},
+                {'5', "jkl"},
+                {'6', "mno"},
+                {'7', "pqrs"},
+                {'8', "tuv"},
                 {'9', "wxyz"}
         };
         if (digits == "") return ans;
@@ -210,16 +213,15 @@ public:
 </TabItem>
 </Tabs>
 
-
 ## Approach 2: Recursive Backtracking with ASCII
 
-Instead of having a map of characters for each digits, try to solve the problem only with numbers. 
+Instead of having a map of characters for each digits, try to solve the problem only with numbers.
 
-Try to map every digits to ASCII combinations like $2$ is mapped `"abc"`, How to get this from the number. 
+Try to map every digits to ASCII combinations like $2$ is mapped `"abc"`, How to get this from the number.
 
-Based on the input, we need to have a **start and end range** for each digit. To form `'a'` from $2$, which number we can add to get `'a'`, if we add $0$ with char `'a'` then we will get the same char `'a'`, like wise we need to form the range for other digits as well. 
+Based on the input, we need to have a **start and end range** for each digit. To form `'a'` from $2$, which number we can add to get `'a'`, if we add $0$ with char `'a'` then we will get the same char `'a'`, like wise we need to form the range for other digits as well.
 
-For $7$ and $9$ key pads has 4 chars, so apply the logic by bit different as mentioned below in the program. 
+For $7$ and $9$ key pads has 4 chars, so apply the logic by bit different as mentioned below in the program.
 
 Time and Space complexity is same as above.
 
@@ -229,14 +231,14 @@ Time and Space complexity is same as above.
 
 ```java
 class Solution {
-    
+
     public List<String> letterCombinations(String digits) {
         if (digits.isEmpty()) {
             return new ArrayList<>();
         }
         return letterCombinations("", digits);
     }
-    
+
     public List<String> letterCombinations(String prefix, String digits) {
         List<String> result = new ArrayList<>();
         if (digits.isEmpty()) {
@@ -316,4 +318,3 @@ class Solution:
 
 </TabItem>
 </Tabs>
-

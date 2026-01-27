@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/shortest-palindrome/'
+description: 'Author: @wkw | https://leetcode.com/problems/shortest-palindrome/'
 ---
 
 # 0214 - Shortest Palindrome (Hard)
@@ -30,14 +30,14 @@ Output: "dcbabcd"
 
 **Constraints:**
 
-* `0 <= s.length <= 5 * 10^4`
-* `s` consists of lowercase English letters only.
+- `0 <= s.length <= 5 * 10^4`
+- `s` consists of lowercase English letters only.
 
 ## Approach 1: Z Algorithm
 
 We first concatenate the search pattern and given string with a character that is not in either strings, says $$ $ $$. Hence, we have $$k = s + $ + t$$. Then We built $$Z$$ and iterate $$k$$. If there is a $$i$$ that can satisfy $$Z[i] == n - i$$, then the answer would be $$t'$$+ $$s$$ where $$t'$$ is the first $$n - i$$ characters of $$s$$.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -55,7 +55,7 @@ public:
         }
         return z;
     }
-    
+
     string shortestPalindrome(string s) {
         string r(s);
         reverse(r.begin(), r.end());
@@ -73,6 +73,3 @@ public:
     }
 };
 ```
-
-
-

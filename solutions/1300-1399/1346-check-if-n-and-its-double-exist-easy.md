@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/check-if-n-and-its-double-exist/
+  Author: @wkw | https://leetcode.com/problems/check-if-n-and-its-double-exist/
 ---
 
 # 1346 - Check If N and Its Double Exist (Easy)
@@ -16,9 +15,9 @@ Given an array `arr` of integers, check if there exists two integers `N` and `M`
 
 More formally check if there exists two indices `i` and `j` such that :
 
-* `i != j`
-* `0 <= i, j < arr.length`
-* `arr[i] == 2 * arr[j]`
+- `i != j`
+- `0 <= i, j < arr.length`
+- `arr[i] == 2 * arr[j]`
 
 **Example 1:**
 
@@ -46,8 +45,8 @@ Explanation: In this case does not exist N and M, such that N = 2 * M.
 
 **Constraints:**
 
-* `2 <= arr.length <= 500`
-* `-10^3 <= arr[i] <= 10^3`
+- `2 <= arr.length <= 500`
+- `-10^3 <= arr[i] <= 10^3`
 
 ## Approach 1: Binary Search
 
@@ -59,7 +58,7 @@ Explanation: In this case does not exist N and M, such that N = 2 * M.
 
 First we sort the input, and we iterate each element and look for its double using binary search. For the binary search function, we can use the same solution as [0704 - Binary Search (Easy)](../0700-0799/binary-search-easy).
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -79,7 +78,7 @@ public:
         }
         return nums[l] == target ? l : -1;
     }
-    
+
     bool checkIfExist(vector<int>& arr) {
         sort(arr.begin(), arr.end());
         for (int i = 0; i < arr.size(); i++) {

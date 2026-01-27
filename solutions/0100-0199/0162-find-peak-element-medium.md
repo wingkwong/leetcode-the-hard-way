@@ -3,7 +3,7 @@ description: 'Author: @yashh0903 | https://leetcode.com/problems/find-peak-eleme
 tags: [Array, Binary Search]
 ---
 
-# 0162 - Find Peak Element (Medium) 
+# 0162 - Find Peak Element (Medium)
 
 ## Problem Link
 
@@ -40,6 +40,7 @@ Explanation: Your function can return either index number 1 where the peak eleme
 - `1 <= nums.length <= 1000`
 - `-2 ^ 31 <= nums[i] <= 2 ^ 31 - 1`
 - `nums[i] != nums[i + 1]` for all valid `i`.
+
 ## Approach 1: Binary Search
 
 - Initialize start as the start index of the vector (0) and end as the end index of the vector (nums.size() - 1).

@@ -1,7 +1,8 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/maximum-value-of-k-coins-from-piles/
+  Author: @wkw | https://leetcode.com/problems/maximum-value-of-k-coins-from-piles/
+
+
 tags: [Array, Dynamic Programming, Prefix Sum]
 ---
 
@@ -42,10 +43,10 @@ The maximum total can be obtained if we choose all coins from the last pile.
 
 **Constraints:**
 
-* `n == piles.length`
-* `1 <= n <= 1000`
-* `1 <= piles[i][j] <= 10^5`
-* `1 <= k <= sum(piles[i].length) <= 2000`
+- `n == piles.length`
+- `1 <= n <= 1000`
+- `1 <= piles[i][j] <= 10^5`
+- `1 <= k <= sum(piles[i].length) <= 2000`
 
 ## Approach 1: Dynamic Programming
 
@@ -53,7 +54,7 @@ Let $$dp[i][j]$$ be the maximum total value we can have if we pick $$j$$ element
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -66,9 +67,9 @@ public:
             if (i == n || k == 0) return 0;
             // calculated previously - return immediately
             if (dp[i][k] != -1) return dp[i][k];
-            // do not take 
+            // do not take
             int res = dfs(i + 1, k), val = 0;
-            // try to take it one by one 
+            // try to take it one by one
             // calculate the value we could have
             for (int j = 0; j < min((int) piles[i].size(), k); j++) {
                 // take this element
@@ -85,7 +86,7 @@ public:
 </TabItem>
 
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:
@@ -96,9 +97,9 @@ class Solution:
             if i == len(piles) or k == 0:
                 return 0
             res = 0
-            # do not take 
+            # do not take
             res += dp(i + 1, k)
-            # try to take it one by one 
+            # try to take it one by one
             # calculate the value we could have
             take = 0
             for j in range(min(k, len(piles[i]))):

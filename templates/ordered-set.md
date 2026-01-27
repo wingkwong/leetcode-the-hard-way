@@ -9,10 +9,8 @@ keywords:
   - gnu c++ pbds
 ---
 
-
 <Tabs>
 <TabItem value="cpp" label="C++">
-
 
 ```cpp
 #include <ext/pb_ds/assoc_container.hpp>

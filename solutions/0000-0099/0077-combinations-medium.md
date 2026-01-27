@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/combinations/'
+description: 'Author: @wkw | https://leetcode.com/problems/combinations/'
 tags: [Backtracking]
 ---
 
-# 0077 - Combinations (Medium) 
+# 0077 - Combinations (Medium)
 
 ## Problem Link
 
@@ -11,7 +11,7 @@ https://leetcode.com/problems/combinations/
 
 ## Problem Statement
 
-Given two integers `n` and `k`, return *all possible combinations of* `k` *numbers chosen from the range* `[1, n]`.
+Given two integers `n` and `k`, return _all possible combinations of_ `k` _numbers chosen from the range_ `[1, n]`.
 
 You may return the answer in **any order**.
 
@@ -43,7 +43,7 @@ This question can be solved by standard backtracking. Check out [Backtracking](.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -60,7 +60,7 @@ public:
                 chosen.push_back(i);
                 backtrack(i + 1);
                 chosen.pop_back();
-            } 
+            }
         };
         backtrack(1);
         return ans;

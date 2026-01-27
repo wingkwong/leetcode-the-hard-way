@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @vigneshshiv, @radojicic23 |
-  https://leetcode.com/problems/longest-common-prefix/
+  Author: @vigneshshiv, @radojicic23 | https://leetcode.com/problems/longest-common-prefix/
 ---
 
 # 0014 - Longest Common Prefix (Easy)
@@ -33,23 +32,23 @@ Explanation: There is no common prefix among the input strings.
 
 **Constraints:**
 
-* `1 <= strs.length <= 200`
-* `0 <= strs[i].length <= 200`
-* `strs[i]` consists of only lowercase English letters.
+- `1 <= strs.length <= 200`
+- `0 <= strs[i].length <= 200`
+- `strs[i]` consists of only lowercase English letters.
 
 <br />
 
 ## Approach 1: Sorting
 
-Sorting becomes handy to solve this problem, after sorting strings ordered in lexicographic order. 
+Sorting becomes handy to solve this problem, after sorting strings ordered in lexicographic order.
 
-Since we need to find the longest common prefix of the all words, The first char of **each word in the array**, should be same. Following that the 2nd char and 3rd char and it continues till last char. 
+Since we need to find the longest common prefix of the all words, The first char of **each word in the array**, should be same. Following that the 2nd char and 3rd char and it continues till last char.
 
-In the example 1, all of first char starts with `'f'` and then `'l'`, but next char `'o'` match with 2 words, not with `flight`. The same goes to example 2, the very first character of each word is not matching, so there is no common prefix found. 
+In the example 1, all of first char starts with `'f'` and then `'l'`, but next char `'o'` match with 2 words, not with `flight`. The same goes to example 2, the very first character of each word is not matching, so there is no common prefix found.
 
-Instead of comparing every word with other words in the array, starting from first, which makes algorithm to run $O(n^2)$ time. We can do better by comparing first and last word in the array to find the common prefix. 
+Instead of comparing every word with other words in the array, starting from first, which makes algorithm to run $O(n^2)$ time. We can do better by comparing first and last word in the array to find the common prefix.
 
-Since strings are ordered, the least common prefix we can find with first and last word in the array. 
+Since strings are ordered, the least common prefix we can find with first and last word in the array.
 
 Time Complexity: $O(n log(n))$, where $n$ - # of words in the array
 
@@ -90,20 +89,20 @@ class Solution {
  * @param {string[]} strs
  * @return {string}
  */
-var longestCommonPrefix = function(strs) {
-    if (strs.length == 0) return "";
-    strs.sort();
-    let first = strs[0];
-    let last = strs[strs.length - 1];
-    let i = 0;
-    while (i < first.length) {
-        if (first.charAt(i) == last.charAt(i)) {
-            i += 1;
-        } else {
-            break;
-        }
+var longestCommonPrefix = function (strs) {
+  if (strs.length == 0) return '';
+  strs.sort();
+  let first = strs[0];
+  let last = strs[strs.length - 1];
+  let i = 0;
+  while (i < first.length) {
+    if (first.charAt(i) == last.charAt(i)) {
+      i += 1;
+    } else {
+      break;
     }
-    return i == 0 ? "" : first.slice(0, i);
+  }
+  return i == 0 ? '' : first.slice(0, i);
 };
 ```
 
@@ -115,7 +114,7 @@ var longestCommonPrefix = function(strs) {
 ```py
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
-        if len(strs) == 0: return 
+        if len(strs) == 0: return
         strs.sort()
         first, last = strs[0], strs[-1]
         i = 0
@@ -162,9 +161,9 @@ public:
 
 ## Approach 2: Linear Search
 
-Compare any two words, find the common prefix and keep moving forward with the next word in the array, at the end we have found the common prefix. 
+Compare any two words, find the common prefix and keep moving forward with the next word in the array, at the end we have found the common prefix.
 
-In the middle, if we find a common prefix is `""` then break the loop and return it.  
+In the middle, if we find a common prefix is `""` then break the loop and return it.
 
 Time complexity: $O(n * s)$, where n - # of elements in the array, s - length of the substring
 

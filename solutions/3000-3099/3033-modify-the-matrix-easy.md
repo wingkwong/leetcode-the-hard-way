@@ -1,8 +1,8 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/modify-the-matrix/'
+description: 'Author: @wkw | https://leetcode.com/problems/modify-the-matrix/'
 ---
 
-# 3033 - Modify the Matrix (Easy) 
+# 3033 - Modify the Matrix (Easy)
 
 ## Problem Link
 
@@ -12,7 +12,7 @@ https://leetcode.com/problems/modify-the-matrix/
 
 Given a **0-indexed** `m x n` integer matrix `matrix`, create a new **0-indexed** matrix called `answer`. Make `answer` equal to `matrix`, then replace each element with the value `-1` with the **maximum** element in its respective column.
 
-Return *the matrix* `answer`.
+Return _the matrix_ `answer`.
 
 **Example 1:**
 
@@ -49,14 +49,14 @@ The approach is simply just search the maximum element for each column and repla
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
 public:
     vector<vector<int>> modifiedMatrix(vector<vector<int>>& matrix) {
         int m = matrix.size(), n = matrix[0].size();
-        // mx[j] stores the maximum element in 
+        // mx[j] stores the maximum element in
         vector<int> mx(n);
         // iterate columns first
         for (int j = 0; j < n; j++) {
@@ -87,10 +87,9 @@ As you can see, we can further optimize the above solution. Since we iterate the
 - Time Complexity: $O(m * n)$
 - Space Complexity: $O(1)$
 
-
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```
 class Solution {

@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/longest-square-streak-in-an-array/'
+description: 'Author: @wkw | https://leetcode.com/problems/longest-square-streak-in-an-array/'
 tags: [Array, Hash Table, Binary Search, Dynamic Programming, Sorting]
 ---
 
-# 2501 - Longest Square Streak in an Array (Medium) 
+# 2501 - Longest Square Streak in an Array (Medium)
 
 ## Problem Link
 
@@ -16,7 +16,7 @@ You are given an integer array `nums`. A subsequence of `nums` is called a **squ
 - The length of the subsequence is at least `2`, and
 - **after** sorting the subsequence, each element (except the first element) is the **square** of the previous number.
 
-Return*the length of the **longest square streak** in*`nums`*, or return*`-1`*if there is no **square streak**.*
+Return*the length of the **longest square streak** in*`nums`_, or return_`-1`_if there is no **square streak**._
 
 A **subsequence** is an array that can be derived from another array by deleting some or no elements without changing the order of the remaining elements.
 
@@ -51,7 +51,7 @@ We can brute force to find the longest subsequence from the range $[1, 317]$ sin
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

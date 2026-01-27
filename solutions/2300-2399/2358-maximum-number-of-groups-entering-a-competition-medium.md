@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/maximum-number-of-groups-entering-a-competition
+  Author: @wkw | https://leetcode.com/problems/maximum-number-of-groups-entering-a-competition
 ---
 
 # 2358 - Maximum Number of Groups Entering a Competition (Medium)
@@ -14,8 +13,8 @@ https://leetcode.com/problems/maximum-number-of-groups-entering-a-competition
 
 You are given a positive integer array `grades` which represents the grades of students in a university. You would like to enter **all** these students into a competition in **ordered** non-empty groups, such that the ordering meets the following conditions:
 
-* The sum of the grades of students in the `ith` group is **less than** the sum of the grades of students in the `(i + 1)th` group, for all groups (except the last).
-* The total number of students in the `ith` group is **less than** the total number of students in the `(i + 1)th` group, for all groups (except the last).
+- The sum of the grades of students in the `ith` group is **less than** the sum of the grades of students in the `(i + 1)th` group, for all groups (except the last).
+- The total number of students in the `ith` group is **less than** the total number of students in the `(i + 1)th` group, for all groups (except the last).
 
 Return _the **maximum** number of groups that can be formed_.
 
@@ -41,14 +40,14 @@ Explanation: We can only form 1 group, since forming 2 groups would lead to an e
 
 **Constraints:**
 
-* `1 <= grades.length <= 10^5`
-* `1 <= grades[i] <= 10^5`
+- `1 <= grades.length <= 10^5`
+- `1 <= grades[i] <= 10^5`
 
 ## Approach: Math
 
 We need to form groups of `1, 2, 3, ...` students in order to maximize the number of groups. We can use the formula `i * (i + 1) / 2` to find out the number of students in `i` groups.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

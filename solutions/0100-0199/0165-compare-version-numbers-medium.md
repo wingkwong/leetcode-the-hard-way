@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/compare-version-numbers/'
+description: 'Author: @wkw | https://leetcode.com/problems/compare-version-numbers/'
 ---
 
 # 0165 - Compare Version Numbers (Medium)
@@ -18,9 +18,9 @@ To compare version numbers, compare their revisions in **left-to-right order**. 
 
 _Return the following:_
 
-* If `version1 < version2`, return `-1`.
-* If `version1 > version2`, return `1`.
-* Otherwise, return `0`.
+- If `version1 < version2`, return `-1`.
+- If `version1 > version2`, return `1`.
+- Otherwise, return `0`.
 
 **Example 1:**
 
@@ -48,16 +48,16 @@ Explanation: version1's revision 0 is "0", while version2's revision 0 is "1". 0
 
 **Constraints:**
 
-* `1 <= version1.length, version2.length <= 500`
-* `version1` and `version2` only contain digits and `'.'`.
-* `version1` and `version2` **are valid version numbers**.
-* All the given revisions in `version1` and `version2` can be stored in a **32-bit integer**.
+- `1 <= version1.length, version2.length <= 500`
+- `version1` and `version2` only contain digits and `'.'`.
+- `version1` and `version2` **are valid version numbers**.
+- All the given revisions in `version1` and `version2` can be stored in a **32-bit integer**.
 
 ## Approach 1: Split
 
 We split the input strings by "." and store the digit into a list. Then we pad 0s to the shortest list to make the length for both list equal. Then we can compare both list. In Python3, $$cmp(a, b)$$ is gone so the equivalent for it is $$(a > b) - (a < b)$$.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```python
 class Solution:
@@ -69,4 +69,3 @@ class Solution:
         else: v2 += [0] * (l1 - l2)
         return (v1 > v2) - (v1 < v2)
 ```
-

@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @vigneshshiv |
-  https://leetcode.com/problems/valid-parentheses/
+  Author: @vigneshshiv | https://leetcode.com/problems/valid-parentheses/
 ---
 
 # 0020 - Valid Parentheses (Easy)
@@ -43,18 +42,18 @@ Output: false
 
 **Constraints:**
 
-* `1 <= s.length <= 10^4`
-* `s` consists of parentheses only `'()[]{}'`.
+- `1 <= s.length <= 10^4`
+- `s` consists of parentheses only `'()[]{}'`.
 
 ## Approach 1: Stack
 
-Stack is widely known as `LIFO (last-in, first-out)` data structure. 
+Stack is widely known as `LIFO (last-in, first-out)` data structure.
 
 It's commonly used in `undo mechanisms in text editors` and `compiler syntax checking for matching brackets and braces`.
 
-Parentheses/braces can be in this order `'()()'` or `'(())'`, since the last open `'('` brace next sequence could be either `')'` or `'('` another open brace to nested open braces. 
+Parentheses/braces can be in this order `'()()'` or `'(())'`, since the last open `'('` brace next sequence could be either `')'` or `'('` another open brace to nested open braces.
 
-If the input has any of the open `'('` or `'{'` or `'['` we can push onto a stack. If any close braces/parentheses comes then validate with last inserted character which is on the stack pop, should match corresponding open braces/paranetheses. 
+If the input has any of the open `'('` or `'{'` or `'['` we can push onto a stack. If any close braces/parentheses comes then validate with last inserted character which is on the stack pop, should match corresponding open braces/paranetheses.
 
 Time Complexity: $O(n)$, where $n$ - # of characters in the string
 
@@ -94,6 +93,7 @@ class Solution {
     }
 }
 ```
+
 </TabItem>
 <TabItem value="python" label="Python">
 <SolutionAuthor name="@vale-c"/>
@@ -128,6 +128,7 @@ class Solution:
         # that all the brackets were matched
         return not stack
 ```
+
 </TabItem>
 <TabItem value="javascript" label="JavaScript">
 <SolutionAuthor name="@vale-c"/>
@@ -137,42 +138,43 @@ class Solution:
  * @param {string} s
  * @return {boolean}
  */
-var isValid = function(s) {
-    // if string is empty or has only one character
-    if (!s || s.length < 2) {
+var isValid = function (s) {
+  // if string is empty or has only one character
+  if (!s || s.length < 2) {
+    return false;
+  }
+  let stack = [];
+  // iterate over the string
+  for (let c of s) {
+    // if the character is an opening bracket
+    if (c === '(' || c === '[' || c === '{') {
+      // push it to the stack
+      stack.push(c);
+    } else {
+      // if the stack is empty there is no opening bracket to match
+      if (!stack.length) {
         return false;
+      }
+      let last = stack.pop();
+      // if the character is a closing bracket and the last element
+      // in the stack is not the corresponding opening bracket
+      if (c === ')' && last !== '(') {
+        return false;
+      }
+      if (c === ']' && last !== '[') {
+        return false;
+      }
+      if (c === '}' && last !== '{') {
+        return false;
+      }
     }
-    let stack = [];
-    // iterate over the string
-    for (let c of s) {
-        // if the character is an opening bracket
-        if (c === '(' || c === '[' || c === '{') {
-            // push it to the stack
-            stack.push(c);
-        } else {
-            // if the stack is empty there is no opening bracket to match
-            if (!stack.length) {
-                return false;
-            }
-            let last = stack.pop();
-            // if the character is a closing bracket and the last element
-            // in the stack is not the corresponding opening bracket
-            if (c === ')' && last !== '(') {
-                return false;
-            }
-            if (c === ']' && last !== '[') {
-                return false;
-            }
-            if (c === '}' && last !== '{') {
-                return false;
-            }
-        }
-    }
-    // if the stack is empty it means
-    // that all the brackets were matched
-    return !stack.length;
+  }
+  // if the stack is empty it means
+  // that all the brackets were matched
+  return !stack.length;
 };
 ```
+
 </TabItem>
 <TabItem value="cpp" label="C++">
 <SolutionAuthor name="@vale-c"/>
@@ -191,7 +193,7 @@ public:
             // if the character is an opening bracket
             if (c == '(' || c == '[' || c == '{') {
                 // push it to the stack
-                stack.push(c); 
+                stack.push(c);
             } else {
                 // if the stack is empty there is no opening bracket to match
                 if (stack.empty()) {
@@ -199,9 +201,9 @@ public:
                 }
                 char last = stack.top();
                 stack.pop();
-                // if the character is a closing bracket and the last element 
+                // if the character is a closing bracket and the last element
                 // in the stack is not the corresponding opening bracket
-                if (c == ')' && last != '(') { 
+                if (c == ')' && last != '(') {
                     return false;
                 }
                 if (c == ']' && last != '[') {
@@ -218,5 +220,6 @@ public:
     }
 };
 ```
+
 </TabItem>
 </Tabs>

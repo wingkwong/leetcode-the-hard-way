@@ -1,5 +1,5 @@
 ---
-description: "Author: @wingkwong, @dhanu084, @radojicic23| https://leetcode.com/problems/online-stock-span/"
+description: 'Author: @wkw, @dhanu084, @radojicic23| https://leetcode.com/problems/online-stock-span/'
 tags: [Stack, Design, Monotonic Stack, Data Stream]
 ---
 
@@ -51,7 +51,7 @@ stockSpanner.next(85);  // return 6
 
 <Tabs>
 <TabItem value="kt" label="Kotlin">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```kt
 class StockSpanner() {
@@ -127,7 +127,7 @@ class StockSpanner:
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 // modified from https://wingkwong.github.io/leetcode-the-hard-way/templates/segment-tree
@@ -197,25 +197,25 @@ public:
 <SolutionAuthor name="@radojicic23"/>
 
 ```javascript
-var StockSpanner = function() {
-    this.stack = [];
+var StockSpanner = function () {
+  this.stack = [];
 };
 
-/** 
+/**
  * @param {number} price
  * @return {number}
  */
-StockSpanner.prototype.next = function(price) {
-    let span = 1;
-    while (this.stack.length && this.stack[this.stack.length - 1][0] <= price) {
-        span += this.stack[this.stack.length - 1][1];
-        this.stack.pop();
-    }
-    this.stack.push([price, span]);
-    return span;
+StockSpanner.prototype.next = function (price) {
+  let span = 1;
+  while (this.stack.length && this.stack[this.stack.length - 1][0] <= price) {
+    span += this.stack[this.stack.length - 1][1];
+    this.stack.pop();
+  }
+  this.stack.push([price, span]);
+  return span;
 };
 
-/** 
+/**
  * Your StockSpanner object will be instantiated and called as such:
  * var obj = new StockSpanner()
  * var param_1 = obj.next(price)

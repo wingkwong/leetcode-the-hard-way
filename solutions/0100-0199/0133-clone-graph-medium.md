@@ -11,9 +11,9 @@ https://leetcode.com/problems/clone-graph/
 
 ## Problem Statement
 
-Given a reference of a node in a [**connected**](https://en.wikipedia.org/wiki/Connectivity\_\(graph\_theory\)#Connected\_graph) undirected graph.
+Given a reference of a node in a [**connected**](<https://en.wikipedia.org/wiki/Connectivity_(graph_theory)#Connected_graph>) undirected graph.
 
-Return a [**deep copy**](https://en.wikipedia.org/wiki/Object\_copying#Deep\_copy) (clone) of the graph.
+Return a [**deep copy**](https://en.wikipedia.org/wiki/Object_copying#Deep_copy) (clone) of the graph.
 
 Each node in the graph contains a value (`int`) and a list (`List[Node]`) of its neighbors.
 
@@ -32,11 +32,9 @@ For simplicity, each node's value is the same as the node's index (1-indexed). F
 
 The given node will always be the first node with `val = 1`. You must return the **copy of the given node** as a reference to the cloned graph.
 
-
-
 **Example 1:**
 
-![](https://assets.leetcode.com/uploads/2019/11/04/133\_clone\_graph\_question.png)
+![](https://assets.leetcode.com/uploads/2019/11/04/133_clone_graph_question.png)
 
 ```
 Input: adjList = [[2,4],[1,3],[2,4],[1,3]]
@@ -66,15 +64,13 @@ Output: []
 Explanation: This an empty graph, it does not have any nodes.
 ```
 
-
-
 **Constraints:**
 
-* The number of nodes in the graph is in the range `[0, 100]`.
-* `1 <= Node.val <= 100`
-* `Node.val` is unique for each node.
-* There are no repeated edges and no self-loops in the graph.
-* The Graph is connected and all nodes can be visited starting from the given node.
+- The number of nodes in the graph is in the range `[0, 100]`.
+- `1 <= Node.val <= 100`
+- `Node.val` is unique for each node.
+- There are no repeated edges and no self-loops in the graph.
+- The Graph is connected and all nodes can be visited starting from the given node.
 
 ## Approach 1: Iterative Depth/Breadth-First Search
 
@@ -84,11 +80,9 @@ Starting at the first node, we will traverse by checking all the neighbors of th
 
 We will also want to check if the neighbour has been added to our hash map. If not, we can add it to our queue/stack to visit it and its neighbors, as well as add it to the hash map with its copy.
 
-
 Time Complexity: $$O(V + E)$$. Where $$V$$ is the number of nodes, and $$E$$ is the number of edges in the graph. We will visit each vertex/node once during our BFS/DFS, and while looking through the neighbors, we will check on each edge twice. Once for each neighbor.
 
 Space: $$O(V)$$ Our hash map, and stack/queue will take $$O(V)$$ space.
-
 
 <Tabs>
 <TabItem value="python" label="Python">
@@ -101,7 +95,7 @@ class Solution:
         if not node:
             return None
         # initialize our nodes hash map. This track whether we have
-        # visited a node or node, as well as gives us access to the 
+        # visited a node or node, as well as gives us access to the
         # copies. Key: Value -> node.val, node copy.
         nodes = {node.val : Node(node.val)}
         # Stack/Queue containing node we are traversing and the copy.
@@ -130,4 +124,3 @@ class Solution:
 
 </TabItem>
 </Tabs>
-

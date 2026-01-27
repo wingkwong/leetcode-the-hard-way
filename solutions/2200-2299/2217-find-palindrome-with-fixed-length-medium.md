@@ -1,7 +1,8 @@
 ---
 description: >-
-  Author: @TBC |
-  https://leetcode.com/problems/find-palindrome-with-fixed-length/
+  Author: @TBC | https://leetcode.com/problems/find-palindrome-with-fixed-length/
+
+
 draft: true
 ---
 
@@ -40,8 +41,8 @@ The first six palindromes of length 4 are:
 
 **Constraints:**
 
-* `1 <= queries.length <= 5 * 10^4`
-* `1 <= queries[i] <= 10^9`
-* `1 <= intLength <= 15`
+- `1 <= queries.length <= 5 * 10^4`
+- `1 <= queries[i] <= 10^9`
+- `1 <= intLength <= 15`
 
 ## Approach 1: TBC

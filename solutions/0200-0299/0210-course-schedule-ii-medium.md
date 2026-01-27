@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/course-schedule-ii/'
+description: 'Author: @wkw | https://leetcode.com/problems/course-schedule-ii/'
 tags: [Depth-First Search, Breadth-First Search, Graph, Topological Sort]
 ---
 
-# 0210 - Course Schedule II (Medium) 
+# 0210 - Course Schedule II (Medium)
 
 ## Problem Statement
 
@@ -11,7 +11,7 @@ There are a total of `numCourses` courses you have to take, labeled from `0` to 
 
 - For example, the pair `[0, 1]`, indicates that to take course `0` you have to first take course `1`.
 
-Return *the ordering of courses you should take to finish all courses*. If there are many valid answers, return **any** of them. If it is impossible to finish all courses, return **an empty array**.
+Return _the ordering of courses you should take to finish all courses_. If there are many valid answers, return **any** of them. If it is impossible to finish all courses, return **an empty array**.
 
 **Example 1:**
 
@@ -50,7 +50,7 @@ Output: [0]
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 // for topological sorting tutorial,
@@ -122,7 +122,7 @@ public:
 class Solution:
     # Time Complexity: O(V + E) where v is number of vertexes/courses and
     # E is the number of edges in our graph, preqrequisite connections.
-    # Space Complexity: O(V + E). V size indegrees, V+E adj_list, 
+    # Space Complexity: O(V + E). V size indegrees, V+E adj_list,
     # V sized top_sort list, and our queue could reach size V
     # in the worst case scenario.
     def findOrder(self, numCourses: int, prerequisites: List[List[int]]) -> List[int]:

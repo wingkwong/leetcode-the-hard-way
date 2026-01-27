@@ -1,7 +1,6 @@
 ---
-description: >- 
-  Author: @wingkwong, @vigneshshiv, @radojicic23 | 
-  https://leetcode.com/problems/find-the-duplicate-number/
+description: >-
+  Author: @wkw, @vigneshshiv, @radojicic23 |  https://leetcode.com/problems/find-the-duplicate-number/
 ---
 
 # 0287 - Find the Duplicate Number (Medium)
@@ -34,10 +33,10 @@ Output: 3
 
 **Constraints:**
 
-* `1 <= n <= 10^5`
-* `nums.length == n + 1`
-* `1 <= nums[i] <= n`
-* All the integers in `nums` appear only **once** except for **precisely one integer** which appears **two or more** times.
+- `1 <= n <= 10^5`
+- `nums.length == n + 1`
+- `1 <= nums[i] <= n`
+- All the integers in `nums` appear only **once** except for **precisely one integer** which appears **two or more** times.
 
 ## Approach 1: Bit Masking
 
@@ -45,7 +44,7 @@ We iterate each bit one by one. We calculate the expected bit count and the actu
 
 <Tabs>
 <TabItem value="c++" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -112,7 +111,7 @@ class Solution {
 
 ## Approach 3: Floyd's Tortoise and Hare (cycle detection)
 
-Solving this in linear time and constant space requires Floyd's Tortoise and Hare algorithm. 
+Solving this in linear time and constant space requires Floyd's Tortoise and Hare algorithm.
 
 It's a simple cycle detection algorithm, where one pointer traverses twice as fast as another, once two pointers meet, we can trace back to where the cycle begins.
 
@@ -153,20 +152,20 @@ class Solution {
  * @param {number[]} nums
  * @return {number}
  */
-var findDuplicate = function(nums) {
-    let slow = 0;
-    let fast = 0;
-    while (true) {
-        slow = nums[slow];
-        fast = nums[nums[fast]];
-        if (slow == fast) break;
-    }
-    fast = 0;
-    while (true) {
-        slow = nums[slow];
-        fast = nums[fast];
-        if (slow == fast) return slow;
-    }
+var findDuplicate = function (nums) {
+  let slow = 0;
+  let fast = 0;
+  while (true) {
+    slow = nums[slow];
+    fast = nums[nums[fast]];
+    if (slow == fast) break;
+  }
+  fast = 0;
+  while (true) {
+    slow = nums[slow];
+    fast = nums[fast];
+    if (slow == fast) return slow;
+  }
 };
 ```
 
@@ -178,19 +177,19 @@ var findDuplicate = function(nums) {
 ```python
 class Solution:
     def findDuplicate(self, nums: List[int]) -> int:
-        slow, fast = 0, 0 
+        slow, fast = 0, 0
         while True:
             slow = nums[slow]
             fast = nums[nums[fast]]
             if slow == fast:
                 break
-        
+
         fast = 0
         while True:
             slow = nums[slow]
             fast = nums[fast]
             if slow == fast:
-                return slow 
+                return slow
 ```
 
 </TabItem>

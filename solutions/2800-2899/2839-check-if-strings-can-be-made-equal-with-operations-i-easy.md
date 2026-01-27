@@ -1,8 +1,8 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/check-if-strings-can-be-made-equal-with-operations-i/'
+description: 'Author: @wkw | https://leetcode.com/problems/check-if-strings-can-be-made-equal-with-operations-i/'
 ---
 
-# 2839 - Check if Strings Can be Made Equal With Operations I (Easy) 
+# 2839 - Check if Strings Can be Made Equal With Operations I (Easy)
 
 ## Problem Link
 
@@ -16,7 +16,7 @@ You can apply the following operation on any of the two strings **any** number o
 
 - Choose any two indices `i` and `j` such that `j - i = 2`, then **swap** the two characters at those indices in the string.
 
-Return `true`*if you can make the strings*`s1`*and*`s2`*equal, and*`false`*otherwise*.
+Return `true`_if you can make the strings_`s1`_and_`s2`_equal, and_`false`_otherwise_.
 
 **Example 1:**
 
@@ -47,7 +47,7 @@ Since we have 4 characters and given we can only swap `s1[i]` and `s1[j]` where 
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

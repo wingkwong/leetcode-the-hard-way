@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/intersection-of-multiple-arrays/
+  Author: @wkw | https://leetcode.com/problems/intersection-of-multiple-arrays/
 ---
 
 # 2248 - Intersection of Multiple Arrays (Easy)
@@ -19,7 +18,7 @@ Given a 2D integer array `nums` where `nums[i]` is a non-empty array of **distin
 ```
 Input: nums = [[3,1,2,4,5],[1,2,3,4],[3,4,5,6]]
 Output: [3,4]
-Explanation: 
+Explanation:
 The only integers present in each of nums[0] = [3,1,2,4,5], nums[1] = [1,2,3,4], and nums[2] = [3,4,5,6] are 3 and 4, so we return [3,4].
 ```
 
@@ -28,16 +27,16 @@ The only integers present in each of nums[0] = [3,1,2,4,5], nums[1] = [1,2,3,4],
 ```
 Input: nums = [[1,2,3],[4,5,6]]
 Output: []
-Explanation: 
+Explanation:
 There does not exist any integer present both in nums[0] and nums[1], so we return an empty list [].
 ```
 
 **Constraints:**
 
-* `1 <= nums.length <= 1000`
-* `1 <= sum(nums[i].length) <= 1000`
-* `1 <= nums[i][j] <= 1000`
-* All the values of `nums[i]` are **unique**.
+- `1 <= nums.length <= 1000`
+- `1 <= sum(nums[i].length) <= 1000`
+- `1 <= nums[i][j] <= 1000`
+- All the values of `nums[i]` are **unique**.
 
 ## Approach 1: Brute Force
 
@@ -45,7 +44,7 @@ Observation: Each element of the final output would have a frequency of $$nums.l
 
 We use hash map to store the frequency for each integer. Iterate the map and look for the those with $$occurrence ==nums.length$$.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

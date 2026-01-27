@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @heiheihang, @wingkwong |
-  https://leetcode.com/problems/counting-words-with-a-given-prefix/
+  Author: @heiheihang, @wkw | https://leetcode.com/problems/counting-words-with-a-given-prefix/
 ---
 
 # 2185 - Counting Words With a Given Prefix (Easy)
@@ -36,9 +35,9 @@ Explanation: There are no strings that contain "code" as a prefix.
 
 **Constraints:**
 
-* `1 <= words.length <= 100`
-* `1 <= words[i].length, pref.length <= 100`
-* `words[i]` and `pref` consist of lowercase English letters.
+- `1 <= words.length <= 100`
+- `1 <= words[i].length, pref.length <= 100`
+- `words[i]` and `pref` consist of lowercase English letters.
 
 ## Approach 1: Iteration
 
@@ -48,33 +47,33 @@ We can define the length of the prefix string to be `n` , then we need to grab t
 
 ```python
 def prefixCount(self, words: List[str], pref: str) -> int:
-        
+
         #define the length of prefix
         n = len(pref)
-        
+
         res = 0
-        
+
         #iterate each word
         for s in words:
-        
+
             #cannot get first n characters if it is shorter than n, so skip
             if( len(s) < n):
                 continue
             #compare the first n characters
             if(s[:n] == pref):
                 res += 1
-                
+
         return res
 ```
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
 public:
     int prefixCount(vector<string>& words, string pref) {
         int ans = 0;
-        // string::find returns the first position 
+        // string::find returns the first position
         // of the first character of the first match
         for (auto s: words) ans += s.find(pref) == 0;
         return ans;

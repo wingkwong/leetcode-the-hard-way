@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong , @deepanshu-rawat6, @radojicic23 | https://leetcode.com/problems/longest-common-subsequence/'
+description: 'Author: @wkw , @deepanshu-rawat6, @radojicic23 | https://leetcode.com/problems/longest-common-subsequence/'
 tags: [String, Dynamic Programming]
 ---
 
@@ -15,15 +15,15 @@ Given two strings `text1` and `text2`, return _the length of their longest **com
 
 A **subsequence** of a string is a new string generated from the original string with some characters (can be none) deleted without changing the relative order of the remaining characters.
 
-* For example, `"ace"` is a subsequence of `"abcde"`.
+- For example, `"ace"` is a subsequence of `"abcde"`.
 
 A **common subsequence** of two strings is a subsequence that is common to both strings.
 
 **Example 1:**
 
 ```
-Input: text1 = "abcde", text2 = "ace" 
-Output: 3  
+Input: text1 = "abcde", text2 = "ace"
+Output: 3
 Explanation: The longest common subsequence is "ace" and its length is 3.
 ```
 
@@ -45,8 +45,8 @@ Explanation: There is no such common subsequence, so the result is 0.
 
 **Constraints:**
 
-* `1 <= text1.length, text2.length <= 1000`
-* `text1` and `text2` consist of only lowercase English characters.
+- `1 <= text1.length, text2.length <= 1000`
+- `text1` and `text2` consist of only lowercase English characters.
 
 ## Approach 1: DP
 
@@ -54,7 +54,7 @@ LCS is a classic problem. Let $dp[i][j]$ be the LCS for string $text1$ ends at i
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -94,13 +94,13 @@ class Solution {
                     dp[i][j] = 0;
                 } else if (text1.charAt(i - 1) == text2.charAt(j - 1)) {
                     /*
-                    if match found, then store value of previous diagonal element(dp[i - 1][j - 1]) 
+                    if match found, then store value of previous diagonal element(dp[i - 1][j - 1])
                     and increase the value by 1 i.e. a new character match is found
                     */
                     dp[i][j] = dp[i - 1][j - 1] + 1;
                 } else {
                     /*
-                    otherwise, choose maximum of either previous element, either in 
+                    otherwise, choose maximum of either previous element, either in
                     row(dp[i][j -1]) or column(dp[i][j - 1])
                     */
                     dp[i][j] = Math.max(dp[i][j - 1],dp[i - 1][j]);
@@ -124,21 +124,21 @@ class Solution {
  * @param {string} text2
  * @return {number}
  */
-var longestCommonSubsequence = function(text1, text2) {
-    let n = text1.length;
-    let m = text2.length;
-    let dp = new Array(n + 1).fill(0).map(x => new Array(m + 1).fill(0));
-    for (i = 1; i <= n; i++) {
-        for (j = 1; j <= m; j++) {
-            if (text1[i - 1] != text2[j - 1]) {
-                dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
-            } else {
-                dp[i][j] = 1 + dp[i - 1][j - 1];
-            }
-        }
+var longestCommonSubsequence = function (text1, text2) {
+  let n = text1.length;
+  let m = text2.length;
+  let dp = new Array(n + 1).fill(0).map((x) => new Array(m + 1).fill(0));
+  for (i = 1; i <= n; i++) {
+    for (j = 1; j <= m; j++) {
+      if (text1[i - 1] != text2[j - 1]) {
+        dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
+      } else {
+        dp[i][j] = 1 + dp[i - 1][j - 1];
+      }
     }
-    return dp[n][m];
-};  
+  }
+  return dp[n][m];
+};
 ```
 
 </TabItem>
@@ -150,7 +150,7 @@ var longestCommonSubsequence = function(text1, text2) {
 class Solution:
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
         dp = [[0 for _ in range(len(text2) + 1)] for _ in range(len(text1) + 1)]
-        
+
         for i in range(len(text1) - 1, -1, -1):
             for j in range(len(text2) - 1, -1, -1):
                 if text1[i] == text2[j]:

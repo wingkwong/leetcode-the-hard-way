@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/consecutive-numbers-sum/'
+description: 'Author: @wkw | https://leetcode.com/problems/consecutive-numbers-sum/'
 ---
 
 # 0829 - Consecutive Numbers Sum (Hard)
@@ -33,12 +33,12 @@ Explanation: 9 = 4 + 5 = 2 + 3 + 4
 ```
 Input: n = 15
 Output: 4
-Explanation: 15 = 8 + 7 = 4 + 5 + 6 = 1 + 2 + 3 + 4 + 5 
+Explanation: 15 = 8 + 7 = 4 + 5 + 6 = 1 + 2 + 3 + 4 + 5
 ```
 
 **Constraints:**
 
-* `1 <= n <= 10^9`
+- `1 <= n <= 10^9`
 
 ## Approach: Math
 
@@ -72,7 +72,7 @@ $$
 
 where $$l$$is the last term and it is equivalent to $$a + (n - 1) * d$$.
 
-Back to our problem, from $$0 + 1 + 2 + ... + (k - 1)$$, we can see that the first term is 0 and and last term is $$(k - 1)$$. Therefore, we can know that  $$0 + 1 + 2 + ... + (k - 1) = (k / 2) * (0 + (k - 1))  = k * (k - 1) / 2$$.
+Back to our problem, from $$0 + 1 + 2 + ... + (k - 1)$$, we can see that the first term is 0 and and last term is $$(k - 1)$$. Therefore, we can know that $$0 + 1 + 2 + ... + (k - 1) = (k / 2) * (0 + (k - 1))  = k * (k - 1) / 2$$.
 
 Now we have $$k * x = n - k * (k - 1) / 2$$, which means we can construct a sum of $$n$$using $$k$$terms starting from $$x$$ if $$n - k * (k - 1) / 2$$ is a multiple of $$k$$. We can iterate $$k$$and check if this statement is true or not. The next problem would be "What is the range of $$k$$?".
 
@@ -88,7 +88,7 @@ $$
 
 The upper bound for $$k$$ approximately would be around $$\sqrt {2 * n + k}$$. Therefore, we iterate $$k$$ from $$2$$ to $$\sqrt {2 * n + k}$$ to check if $$n - k * (k - 1) / 2$$ is a multiple of $$k$$. If so, it means we have one sequence so we increase the answer by $$1$$.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

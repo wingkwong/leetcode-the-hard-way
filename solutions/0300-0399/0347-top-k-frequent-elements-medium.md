@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/top-k-frequent-elements/'
+description: 'Author: @wkw | https://leetcode.com/problems/top-k-frequent-elements/'
 ---
 
 # 0347 - Top K Frequent Elements (Medium)
@@ -28,11 +28,9 @@ Output: [1]
 
 **Constraints:**
 
-* `1 <= nums.length <= 10^5`
-* `k` is in the range `[1, the number of unique elements in the array]`.
-* It is **guaranteed** that the answer is **unique**.
-
-
+- `1 <= nums.length <= 10^5`
+- `k` is in the range `[1, the number of unique elements in the array]`.
+- It is **guaranteed** that the answer is **unique**.
 
 **Follow up:** Your algorithm's time complexity must be better than `O(n log n)`, where n is the array's size.
 
@@ -42,7 +40,7 @@ When you need to solve something started with "Top K ...", priority queue may po
 
 We use priority queue to sort the input by their frequency and pop the top element when the queue size is greater than $$k$$. What's left in the queue would be the top $$k$$ frequent elements and we just list them out in a reverse order.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -71,7 +69,7 @@ public:
         // construct ans
         vector<int> ans(k);
         for(int i = k - 1; i >= 0; i--) {
-            ans[i] = pq.top(); 
+            ans[i] = pq.top();
             pq.pop();
         }
         return ans;

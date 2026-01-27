@@ -9,7 +9,7 @@ keywords:
   - algorithm
 ---
 
-<TutorialAuthors names="@wingkwong"/>
+<TutorialCredits authors="@wkw"/>
 
 ## Overview
 
@@ -73,35 +73,10 @@ for (auto x : nums) {
     if (find(tmp.begin(), tmp.end(), x) != tmp.end()) continue;
     tmp.push_back(x);
     backtrack(nums, ans, tmp);
-    tmp.pop_back();   
+    tmp.pop_back();
 }
 ```
 
-export const suggestedProblems = [
-  {
-    "problemName": "0039 - Combination Sum",
-    "difficulty": "Medium",
-    "leetCodeLink": "https://leetcode.com/problems/combination-sum/",
-    "solutionLink": "../../solutions/0000-0099/combination-sum-medium"
-  },
-  {
-    "problemName": "0040 - Combination Sum II",
-    "difficulty": "Medium",
-    "leetCodeLink": "https://leetcode.com/problems/combination-sum-ii/",
-    "solutionLink": "../../solutions/0000-0099/combination-sum-ii-medium"
-  },
-  {
-    "problemName": "0046 - Permutations",
-    "difficulty": "Medium",
-    "leetCodeLink": "https://leetcode.com/problems/permutations/",
-    "solutionLink": "../../solutions/0000-0099/permutations-medium"
-  },
-  {
-    "problemName": "0078 - Subsets",
-    "difficulty": "Medium",
-    "leetCodeLink": "https://leetcode.com/problems/subsets/",
-    "solutionLink": "../../solutions/0000-0099/subsets-medium"
-  },
-]
+export const suggestedProblems = [ { "problemName": "0039 - Combination Sum", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/combination-sum/", "solutionLink": "../../solutions/0000-0099/combination-sum-medium" }, { "problemName": "0040 - Combination Sum II", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/combination-sum-ii/", "solutionLink": "../../solutions/0000-0099/combination-sum-ii-medium" }, { "problemName": "0046 - Permutations", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/permutations/", "solutionLink": "../../solutions/0000-0099/permutations-medium" }, { "problemName": "0078 - Subsets", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/subsets/", "solutionLink": "../../solutions/0000-0099/subsets-medium" }, ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />

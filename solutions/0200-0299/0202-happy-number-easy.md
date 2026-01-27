@@ -1,5 +1,5 @@
 ---
-description: 'Author: @vigneshshiv, @wingkwong | https://leetcode.com/problems/happy-number/'
+description: 'Author: @vigneshshiv, @wkw | https://leetcode.com/problems/happy-number/'
 tags: [Array, Math, Two Pointers]
 ---
 
@@ -15,9 +15,9 @@ Write an algorithm to determine if a number `n` is happy.
 
 A **happy number** is a number defined by the following process:
 
-* Starting with any positive integer, replace the number by the sum of the squares of its digits.
-* Repeat the process until the number equals 1 (where it will stay), or it **loops endlessly in a cycle** which does not include 1.
-* Those numbers for which this process **ends in 1** are happy.
+- Starting with any positive integer, replace the number by the sum of the squares of its digits.
+- Repeat the process until the number equals 1 (where it will stay), or it **loops endlessly in a cycle** which does not include 1.
+- Those numbers for which this process **ends in 1** are happy.
 
 Return `true` _if_ `n` _is a happy number, and_ `false` _if not_.
 
@@ -42,7 +42,7 @@ Output: false
 
 **Constraints:**
 
-* `1 <= n <= 2^31 - 1`
+- `1 <= n <= 2^31 - 1`
 
 ## Approach 1: Floyd's Tortoise and Hare
 
@@ -68,7 +68,7 @@ class Solution {
         } while (slow != fast);
         return slow == 1 ? true : false;
     }
-    
+
     public int digitSquareSum(int num) {
         int ans = 0;
         while (num > 0) {
@@ -84,7 +84,7 @@ class Solution {
 </TabItem>
 
 <TabItem value="rs" label="Rust">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```rs
 impl Solution {
@@ -97,7 +97,7 @@ impl Solution {
         }
         res
     }
-    
+
     pub fn is_happy(n: i32) -> bool {
         let mut slow = n;
         let mut fast = Solution::nxt(n);

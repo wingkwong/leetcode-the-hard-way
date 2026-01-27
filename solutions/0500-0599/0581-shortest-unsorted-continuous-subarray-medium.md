@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/shortest-unsorted-continuous-subarray/
+  Author: @wkw | https://leetcode.com/problems/shortest-unsorted-continuous-subarray/
 ---
 
 # 0581 - Shortest Unsorted Continuous Subarray (Medium)
@@ -40,8 +39,8 @@ Output: 0
 
 **Constraints:**
 
-* `1 <= nums.length <= 10^4`
-* `-105 <= nums[i] <= 10^5`
+- `1 <= nums.length <= 10^4`
+- `-105 <= nums[i] <= 10^5`
 
 ## Approach 1: Sort
 
@@ -49,7 +48,7 @@ If the input is sorted, then return $$0$$.
 
 Otherwise, we compare the input with the sorted version to check the first difference $$l$$ and the last difference $$r$$. The answer will be $$r - l + 1$$.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

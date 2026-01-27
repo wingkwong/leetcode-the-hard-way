@@ -61,7 +61,7 @@ Backward Diagonals
 x   0  1  2 3
   -----------
 0 | 0  1  2 3
-1 |-1  0  1 2 
+1 |-1  0  1 2
 2 |-2 -1  0 1
 3 |-3 -2 -1 0
 ```
@@ -74,14 +74,13 @@ Space Complexity: $$O(n^2)$$ our board will be of size $$n*n$$.
 <TabItem value="python" label="Python">
 <SolutionAuthor name="@ColeB2"/>
 
-
 ```py
 class Solution:
     def solveNQueens(self, n: int) -> List[List[str]]:
         # initialize our return list and our board
         n_queens = []
         # Note our board will be a list of lists where each cell is
-        # a list containing a string character. As this gives us 
+        # a list containing a string character. As this gives us
         # more efficient access to each cell to replace it with
         # either a 'Q' or a '.'
         board = [['.'] * n for _ in range(n)]

@@ -17,8 +17,7 @@ Implement the `Twitter` class:
 
 - `Twitter()` Initializes your twitter object.
 
-- `void postTweet(int userId, int tweetId)` Composes a new tweet with ID `tweetId` by the user `userId`. Each call to this function will be 
-made with a unique `tweetId`.
+- `void postTweet(int userId, int tweetId)` Composes a new tweet with ID `tweetId` by the user `userId`. Each call to this function will be made with a unique `tweetId`.
 
 - `List<Integer> getNewsFeed(int userId)` Retrieves the `10` most recent tweet IDs in the user's news feed. Each item in the news feed must be posted by users who the user followed or by the user themself. Tweets must be **ordered from most recent to least recent**.
 
@@ -57,11 +56,9 @@ twitter.getNewsFeed(1);  // User 1's news feed should return a list with 1 tweet
 
 We can use hash maps to track which users make which tweets, and which user follows which user. The tweets will be ordered by time, and we have no need to access random tweets, we can map to a list, and just append the newest tweets to the end. The followers will need easy access though and have no need for repeats, so we can map to a set of followees.
 
-The tricky part is how to get our news feed.
-We can just get all tweets from all followers and sort them. Slightly more efficient would be to put all tweets from all followers into a heap of size 10. But even better we can put all followees most recent tweets into a heap, thus limiting the size of our heap, and only put their next recent tweet into the heap when we pop off their most recent.
+The tricky part is how to get our news feed. We can just get all tweets from all followers and sort them. Slightly more efficient would be to put all tweets from all followers into a heap of size 10. But even better we can put all followees most recent tweets into a heap, thus limiting the size of our heap, and only put their next recent tweet into the heap when we pop off their most recent.
 
 Since a followees second most recent tweet will never be more recent than their most recent tweet, we can do this to maintain a followee-sized heap instead of a 10-sized heap.
-
 
 <Tabs>
 <TabItem value="python" label="Python">
@@ -73,12 +70,12 @@ class Twitter:
         # initialize our timer to track order of tweets
         self.time = 0
         # initialize our dictionaries/hash maps to track our tweets
-        # and our followers. Defaultdict just allows us to add a 
+        # and our followers. Defaultdict just allows us to add a
         # tweet for a user, even if the user doesn't exist in the hash
         # map, as it will make the key:value pair for us.
         self.userTweets = defaultdict(list)
         self.userFollows = defaultdict(set)
-        
+
 
     def postTweet(self, userId: int, tweetId: int) -> None:
         # Time: O(1)
@@ -88,7 +85,7 @@ class Twitter:
         # of the heap. So lower times will appear at the top. Ie -10
         # will be above -9, etc.
         self.time -= 1
-        
+
 
     def getNewsFeed(self, userId: int) -> List[int]:
         # Time O(klogk) to create our initial min heap, where
@@ -109,10 +106,10 @@ class Twitter:
                 tweetIdx = len(self.userTweets[followeeId]) - 1
                 # get the time and id of the most recent tweet
                 time, tweetId = self.userTweets[followeeId][tweetIdx]
-                # push it onto the heap, time must be first as 
+                # push it onto the heap, time must be first as
                 # the heap will sort by the first value first.
                 heapq.heappush(minHeap, (time, tweetId, followeeId, tweetIdx - 1))
-        
+
         # while we have minHeap values and our newsFeed isn't full
         while minHeap and len(newsFeed) < 10:
             # pop most recent tweet off the heap.
@@ -128,13 +125,13 @@ class Twitter:
                 heapq.heappush(minHeap, (time, tweetId, followeeId, tweetIdx - 1))
         # return our news feed.
         return newsFeed
-        
+
 
     def follow(self, followerId: int, followeeId: int) -> None:
         # Time O(1)
         # add the followee to the users follower set.
         self.userFollows[followerId].add(followeeId)
-        
+
 
     def unfollow(self, followerId: int, followeeId: int) -> None:
         # Time O(1)

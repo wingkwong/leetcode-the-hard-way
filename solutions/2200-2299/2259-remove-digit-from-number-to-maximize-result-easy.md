@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/remove-digit-from-number-to-maximize-result/
+  Author: @wkw | https://leetcode.com/problems/remove-digit-from-number-to-maximize-result/
 ---
 
 # 2259 - Remove Digit From Number to Maximize Result (Easy)
@@ -39,21 +38,21 @@ Since 231 > 123, we return "231".
 Input: number = "551", digit = "5"
 Output: "51"
 Explanation: We can remove either the first or second '5' from "551".
-Both result in the string "51". 
+Both result in the string "51".
 ```
 
 **Constraints:**
 
-* `2 <= number.length <= 100`
-* `number` consists of digits from `'1'` to `'9'`.
-* `digit` is a digit from `'1'` to `'9'`.
-* `digit` occurs at least once in `number`.
+- `2 <= number.length <= 100`
+- `number` consists of digits from `'1'` to `'9'`.
+- `digit` is a digit from `'1'` to `'9'`.
+- `digit` occurs at least once in `number`.
 
 ## Approach 1: Brute Force
 
 Iterate from the right, check each possible answer.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

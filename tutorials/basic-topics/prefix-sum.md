@@ -8,7 +8,7 @@ keywords:
   - prefix sum
 ---
 
-<TutorialAuthors names="@wingkwong"/>
+<TutorialCredits authors="@wkw"/>
 
 ## Overview
 
@@ -26,35 +26,35 @@ The prefix sum has a time complexity of O(n) and a space complexity of O(n), it 
 
 Let's say the input $a$ is $[1, 2, 3, 4, 5]$. The prefix sum array $pref$ would be $[1, 3, 6, 10, 15]$ which can be calculated as follows:
 
-$$$
+$$
 pref[0] = a[0] \\
 pref[1] = a[0] + a[1] \\
 pref[2] = a[0] + a[1] + a[2] \\
 ...
-$$$
+$$
 
 We can notice that $pref[i]$ is the previous value $pref[i - 1]$ plus the input $a[i]$ starting from $i = 1$, which can be illrustrated as follows:
 
-$$$
+$$
 pref[0] = a[0] \\
 pref[1] = pref[0] + a[1] \\
 pref[2] = pref[1] + a[2] \\
 ...
-$$$
+$$
 
-To generalise, we have 
+To generalise, we have
 
-$$$
+$$
   pref[i] =
 \begin{cases}
 a[0],  & \text{if $i$ is 0} \\
 pref[i - 1] + a[i], & \text{if $i$ >= 1}
 \end{cases}
-$$$
+$$
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 vector<int> generatePrefixSum(vector<int>& a) {
@@ -65,9 +65,9 @@ vector<int> generatePrefixSum(vector<int>& a) {
     return pref;
 }
 ```
+
 </TabItem>
 </Tabs>
-
 
 ### Example : [1480 - Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/)
 
@@ -84,7 +84,7 @@ Let's start with a brute force solution, we iterate each element $a[i]$ and we i
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -103,6 +103,7 @@ public:
     }
 };
 ```
+
 </TabItem>
 </Tabs>
 
@@ -110,7 +111,7 @@ However, if we utilise the idea of Prefix sum, we know the result at some point 
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -127,6 +128,7 @@ public:
     }
 };
 ```
+
 </TabItem>
 </Tabs>
 
@@ -134,7 +136,7 @@ As we don't actually need $pref$ for further process in this question, we can ju
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -147,10 +149,11 @@ public:
     }
 };
 ```
+
 </TabItem>
 </Tabs>
 
-Prefix Sum is useful when we want to find the sum of all elements in a given range or something related to subarray problems. Besides, it doesn't have to be sum. We can make it like product ($pref[i] = pref[i - 1] * a[i]$) or even XOR ($pref[i] = pref[i - 1] \oplus a[i]$). 
+Prefix Sum is useful when we want to find the sum of all elements in a given range or something related to subarray problems. Besides, it doesn't have to be sum. We can make it like product ($pref[i] = pref[i - 1] * a[i]$) or even XOR ($pref[i] = pref[i - 1] \oplus a[i]$).
 
 ### Example: [0303 - Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/)
 
@@ -180,7 +183,7 @@ Sometimes we may pad a zero as the first element in prefix sum as we want to exc
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 vector<int> generatePrefixSum(vector<int>& a) {
@@ -190,25 +193,26 @@ vector<int> generatePrefixSum(vector<int>& a) {
     return pref;
 }
 ```
+
 </TabItem>
 </Tabs>
 
-Given $l$ and $r$, if we want to calculate the sum of the elements of $nums$ between $l$ and $r$ inclusive. The answer is simply $pref[r + 1] - pref[l]$. 
+Given $l$ and $r$, if we want to calculate the sum of the elements of $nums$ between $l$ and $r$ inclusive. The answer is simply $pref[r + 1] - pref[l]$.
 
-Let's say we have an input $[a,b,c,d]$ and $pref$ would be $[0, a, a+b, a+b+c, a+b+c+d]$. Supposing we want to calculate the sum for the last three elements (i.e. $l = 1, r = 3$), it is easy to see the answer is $b + c + d$. 
+Let's say we have an input $[a,b,c,d]$ and $pref$ would be $[0, a, a+b, a+b+c, a+b+c+d]$. Supposing we want to calculate the sum for the last three elements (i.e. $l = 1, r = 3$), it is easy to see the answer is $b + c + d$.
 
-If we use $pref$ to calculate, that would be 
+If we use $pref$ to calculate, that would be
 
-$$$
+$$
 rangeSum(l, r) = pref[r + 1] - pref[l] \\
 rangeSum(1, 3) = pref[4] - pref[1] \\
-= (a + b + c + d) - (a) \\ 
+= (a + b + c + d) - (a) \\
 = b + c + d
-$$$
+$$
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class NumArray {
@@ -221,12 +225,12 @@ public:
         return pref;
     }
 
-    
+
     NumArray(vector<int>& nums) {
         pref.resize(nums.size() + 1);
         pref = generatePrefixSum(nums);
     }
-    
+
     int sumRange(int left, int right) {
         return pref[right + 1] - pref[left];
     }
@@ -236,31 +240,6 @@ public:
 </TabItem>
 </Tabs>
 
-export const suggestedProblems = [
-  {
-    "problemName": "1480 - Running Sum of 1d Array",
-    "difficulty": "Easy",
-    "leetCodeLink": "https://leetcode.com/problems/running-sum-of-1d-array",
-    "solutionLink": "../../solutions/1400-1499/running-sum-of-1d-array-easy"
-  },
-  {
-    "problemName": "0303 - Range Sum Query - Immutable",
-    "difficulty": "Easy",
-    "leetCodeLink": "https://leetcode.com/problems/range-sum-query-immutable/",
-    "solutionLink": ""
-  },
-  {
-    "problemName": "1004 - Max Consecutive Ones III",
-    "difficulty": "Medium",
-    "leetCodeLink": "https://leetcode.com/problems/max-consecutive-ones-iii/",
-    "solutionLink": "../../solutions/1000-1099/max-consecutive-ones-iii-medium"
-  },
-  {
-    "problemName": "0974 - Subarray Sums Divisible by K",
-    "difficulty": "Medium",
-    "leetCodeLink": "https://leetcode.com/problems/subarray-sums-divisible-by-k/",
-    "solutionLink": "../../solutions/0900-0999/subarray-sums-divisible-by-k-medium"
-  },
-]
+export const suggestedProblems = [ { "problemName": "1480 - Running Sum of 1d Array", "difficulty": "Easy", "leetCodeLink": "https://leetcode.com/problems/running-sum-of-1d-array", "solutionLink": "../../solutions/1400-1499/running-sum-of-1d-array-easy" }, { "problemName": "0303 - Range Sum Query - Immutable", "difficulty": "Easy", "leetCodeLink": "https://leetcode.com/problems/range-sum-query-immutable/", "solutionLink": "" }, { "problemName": "1004 - Max Consecutive Ones III", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/max-consecutive-ones-iii/", "solutionLink": "../../solutions/1000-1099/max-consecutive-ones-iii-medium" }, { "problemName": "0974 - Subarray Sums Divisible by K", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/subarray-sums-divisible-by-k/", "solutionLink": "../../solutions/0900-0999/subarray-sums-divisible-by-k-medium" }, ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />

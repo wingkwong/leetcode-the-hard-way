@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/lexicographically-smallest-equivalent-string/'
+description: 'Author: @wkw | https://leetcode.com/problems/lexicographically-smallest-equivalent-string/'
 tags: [String, Union Find]
 ---
 
-# 1061 - Lexicographically Smallest Equivalent String (Medium) 
+# 1061 - Lexicographically Smallest Equivalent String (Medium)
 
 ## Problem Link
 
@@ -25,7 +25,7 @@ Equivalent characters follow the usual rules of any equivalence relation:
 
 For example, given the equivalency information from `s1 = "abc"` and `s2 = "cde"`, `"acd"` and `"aab"` are equivalent strings of `baseStr = "eed"`, and `"aab"` is the lexicographically smallest equivalent string of `baseStr`.
 
-Return *the lexicographically smallest equivalent string of*`baseStr`*by using the equivalency information from*`s1`*and*`s2`.
+Return _the lexicographically smallest equivalent string of_`baseStr`_by using the equivalency information from_`s1`_and_`s2`.
 
 **Example 1:**
 
@@ -64,18 +64,18 @@ Explanation: We group the equivalent characters in s1 and s2 as [a,o,e,r,s,c], [
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
 public:
     int root[26];
-    
+
     // recursively get the root element
     int get(int x) {
         return x == root[x] ? x : (root[x] = get(root[x]));
     }
-    
+
     // unite two elements
     void unite(int x, int y) {
         // find the root of x
@@ -106,9 +106,8 @@ public:
 
 </TabItem>
 
-
 <TabItem value="java" label="Java">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```java
 class Solution {
@@ -133,7 +132,7 @@ class Solution {
         }
         return;
     }
-    
+
     public String smallestEquivalentString(String s1, String s2, String baseStr) {
         String ans = "";
         // init root. initialy each element is in its own group.
@@ -151,25 +150,24 @@ class Solution {
 
 </TabItem>
 
-
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:
     def smallestEquivalentString(self, s1: str, s2: str, baseStr: str) -> str:
         root = [i for i in range(26)]
-    
+
         def get(x):
             # recursively get the root element
             if x == root[x]:
-                return x 
+                return x
             else:
                 return get(root[x])
-        
+
         # unite two elements
         def unite(x, y):
-            # find the root of x and y, 
+            # find the root of x and y,
             x = get(x)
             y = get(y)
             # if their roots are not same, we combine them
@@ -179,7 +177,7 @@ class Solution:
                 else:
                     root[x] = y
             return
-        
+
         ans = ""
         for i in range(len(s1)):
             unite(ord(s1[i]) - ord('a'), ord(s2[i]) - ord('a'))
@@ -191,9 +189,8 @@ class Solution:
 
 </TabItem>
 
-
 <TabItem value="rs" label="Rust">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```rs
 impl Solution {

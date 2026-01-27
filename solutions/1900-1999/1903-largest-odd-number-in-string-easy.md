@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong, @jit | https://leetcode.com/problems/largest-odd-number-in-string/'
+description: 'Author: @wkw, @jit | https://leetcode.com/problems/largest-odd-number-in-string/'
 tags: [Math, String, Greedy]
 ---
 
-# 1903 - Largest Odd Number in String (Easy) 
+# 1903 - Largest Odd Number in String (Easy)
 
 ## Problem Link
 
@@ -11,7 +11,7 @@ https://leetcode.com/problems/largest-odd-number-in-string/
 
 ## Problem Statement
 
-You are given a string `num`, representing a large integer. Return *the **largest-valued odd** integer (as a string) that is a **non-empty substring** of*`num`*, or an empty string*`""`*if no odd integer exists*.
+You are given a string `num`, representing a large integer. Return _the **largest-valued odd** integer (as a string) that is a **non-empty substring** of_`num`_, or an empty string_`""`_if no odd integer exists_.
 
 A **substring** is a contiguous sequence of characters within a string.
 
@@ -50,7 +50,7 @@ A number is odd as long as the last digit is odd. Therefore, we can search the l
 
 <Tabs>
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 class Solution:

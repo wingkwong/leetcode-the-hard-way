@@ -10,7 +10,7 @@ keywords:
   - algorithm
 ---
 
-<TutorialAuthors names="@TBC"/>
+<TutorialCredits authors="@TBC"/>
 
 ## Overview
 

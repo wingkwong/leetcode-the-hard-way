@@ -47,7 +47,6 @@ Time Complexity: $$O(n)$$, must traverse each node to create the inorder travers
 
 Space Complexity: $$O(n)$$, to store the values of each node inside an array and utilize recursive call stack.
 
-
 <Tabs>
 <TabItem value="python" label="Python">
 <SolutionAuthor name="@ColeB2"/>
@@ -145,31 +144,30 @@ public:
  */
 
 // recursive function
-const inorder = function(root) {
-    // if root exist 
-    if (root !== null) {
-        // recursive call on the left side
-        inorder(root.left);
-        // insert current node to result array
-        res.push(root.val);
-        // recursive call on the right side
-        inorder(root.right);
-    }
-}
+const inorder = function (root) {
+  // if root exist
+  if (root !== null) {
+    // recursive call on the left side
+    inorder(root.left);
+    // insert current node to result array
+    res.push(root.val);
+    // recursive call on the right side
+    inorder(root.right);
+  }
+};
 
-var kthSmallest = function(root, k) {
-    // initialize result array
-    res = [];
-    // get inorder traversal array
-    inorder(root);
-    // return kth smallest value
-    return res[k - 1];
+var kthSmallest = function (root, k) {
+  // initialize result array
+  res = [];
+  // get inorder traversal array
+  inorder(root);
+  // return kth smallest value
+  return res[k - 1];
 };
 ```
 
 </TabItem>
 </Tabs>
-
 
 ## Approach 2: Iterative Inorder Traversal
 
@@ -213,7 +211,7 @@ class Solution:
                 # move our current node pointer to the left child.
                 node = node.left
             # Done going left, now we process the node and go right.
-            # node will equal null either from the above loop, or below process. 
+            # node will equal null either from the above loop, or below process.
             # So we need to pop a new node off the stack.
             node = stack.pop()
             # Update our n variable.
@@ -248,35 +246,35 @@ class Solution:
  * @param {number} k
  * @return {number}
  */
-var kthSmallest = function(root, k) {
-    // initialize variable to count up to k
-    let n = 0;
-    // initialize stack
-    let stack = [];
-    // initialize curr node pointer
-    let curr = root;
-    // while current node is not null and stack is not empty
-    while (curr || stack) {
-        // while current node is not null 
-        while (curr) {
-            // add current node to the stack
-            stack.push(curr);
-            // shift current pointer to the left
-            curr = curr.left;
-        }
-        // current pointer is done going left
-        // pop that current node from the stack  
-        curr = stack.pop();
-        // update count variable
-        n++;
-        // if we found kth smallest element
-        if (n === k) {
-            // return kth smallest value
-            return curr.val;
-        }
-        // shift current pointer to the right 
-        curr = curr.right;
+var kthSmallest = function (root, k) {
+  // initialize variable to count up to k
+  let n = 0;
+  // initialize stack
+  let stack = [];
+  // initialize curr node pointer
+  let curr = root;
+  // while current node is not null and stack is not empty
+  while (curr || stack) {
+    // while current node is not null
+    while (curr) {
+      // add current node to the stack
+      stack.push(curr);
+      // shift current pointer to the left
+      curr = curr.left;
     }
+    // current pointer is done going left
+    // pop that current node from the stack
+    curr = stack.pop();
+    // update count variable
+    n++;
+    // if we found kth smallest element
+    if (n === k) {
+      // return kth smallest value
+      return curr.val;
+    }
+    // shift current pointer to the right
+    curr = curr.right;
+  }
 };
 ```
 
@@ -316,10 +314,10 @@ public:
                 curr = curr->left;
             }
             // current pointer is done going left
-            // pop that current node from the stack 
+            // pop that current node from the stack
             curr = st.top();
             st.pop();
-            // update count variable  
+            // update count variable
             n++;
             // if we found kth smallest element
             if (n == k) {
@@ -329,7 +327,7 @@ public:
             // shift current pointer to the right
             curr = curr->right;
         }
-        // kth smallest not found so return -1 
+        // kth smallest not found so return -1
         return -1;
     }
 };

@@ -1,7 +1,8 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/two-out-of-three
+  Author: @wkw | https://leetcode.com/problems/two-out-of-three
+
+
 tags: ['Hash Map']
 ---
 
@@ -46,12 +47,12 @@ Explanation: No value is present in at least two arrays.
 
 **Constraints:**
 
-* `1 <= nums1.length, nums2.length, nums3.length <= 100`
-* `1 <= nums1[i], nums2[j], nums3[k] <= 100`
+- `1 <= nums1.length, nums2.length, nums3.length <= 100`
+- `1 <= nums1[i], nums2[j], nums3[k] <= 100`
 
 ## Approach 1: Hash Map
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

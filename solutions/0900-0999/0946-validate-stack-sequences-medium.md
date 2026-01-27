@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/validate-stack-sequences/'
+description: 'Author: @wkw | https://leetcode.com/problems/validate-stack-sequences/'
 ---
 
 # 0946 - Validate Stack Sequences (Medium)
@@ -34,17 +34,17 @@ Explanation: 1 cannot be popped before 2.
 
 **Constraints:**
 
-* `1 <= pushed.length <= 1000`
-* `0 <= pushed[i] <= 1000`
-* All the elements of `pushed` are **unique**.
-* `popped.length == pushed.length`
-* `popped` is a permutation of `pushed`.
+- `1 <= pushed.length <= 1000`
+- `0 <= pushed[i] <= 1000`
+- All the elements of `pushed` are **unique**.
+- `popped.length == pushed.length`
+- `popped` is a permutation of `pushed`.
 
 ## Approach 1: Simulation
 
 We use stack to simulate. For each item in $$pushed$$, we push it to the stack. If the top element of the stack matches the target element in $$popped$$, we pop that and increase the pointer in $$popped$$. At the end, return true if the stack is empty, return false if not.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

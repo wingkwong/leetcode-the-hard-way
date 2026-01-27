@@ -18,7 +18,7 @@ For this problem, a height-balanced binary tree is defined as:
 
 **Example 1:**
 
-![](https://assets.leetcode.com/uploads/2020/10/06/balance\_1.jpg)
+![](https://assets.leetcode.com/uploads/2020/10/06/balance_1.jpg)
 
 ```
 Input: root = [3,9,20,null,null,15,7]
@@ -27,7 +27,7 @@ Output: true
 
 **Example 2:**
 
-![](https://assets.leetcode.com/uploads/2020/10/06/balance\_2.jpg)
+![](https://assets.leetcode.com/uploads/2020/10/06/balance_2.jpg)
 
 ```
 Input: root = [1,2,2,3,3,null,null,4,4]
@@ -38,22 +38,21 @@ Output: false
 
 ```
 Input: root = []
-Output: true 
+Output: true
 ```
 
 **Constraints:**
 
-* The number of nodes in the tree is in the range `[0, 5000]`.
-* `-10^4 <= Node.val <= 10^4`
+- The number of nodes in the tree is in the range `[0, 5000]`.
+- `-10^4 <= Node.val <= 10^4`
 
 ## Visualization
 
-![height-balanced](https://user-images.githubusercontent.com/63882653/152684367-0ea099bd-623c-4d5a-8862-0ec035620c13.jpg)
-![Height-unbalanced](https://user-images.githubusercontent.com/63882653/152684944-1e774af3-8303-42be-9d7b-20af26221f74.jpg)
+![height-balanced](https://user-images.githubusercontent.com/63882653/152684367-0ea099bd-623c-4d5a-8862-0ec035620c13.jpg) ![Height-unbalanced](https://user-images.githubusercontent.com/63882653/152684944-1e774af3-8303-42be-9d7b-20af26221f74.jpg)
 
 ## Approach 1: Straight forward - Recursion
 
-This solution is strictly following the definition of a balanced binary tree.  
+This solution is strictly following the definition of a balanced binary tree.
 
 - (1) ABS(left sub-tree's height - right sub-tree's height) $<= 1$.
 
@@ -81,7 +80,7 @@ class Solution {
             return false;
         }
     }
-    
+
     public int height(TreeNode root){
         if (root == null) return -1;
         int ld = height(root.left);
@@ -92,7 +91,6 @@ class Solution {
 ```
 
 </TabItem>
-
 
 <TabItem value="python" label="Python">
 <SolutionAuthor name="@ColeB2"/>
@@ -105,14 +103,14 @@ class Solution {
 #         self.left = left
 #         self.right = right
 class Solution:
-    # We will use Truthy values for our return here. Meaning if we return any 
+    # We will use Truthy values for our return here. Meaning if we return any
     # number that isn't 0, the judge will consider is similar as returning True.
     # And if we return 0/False, the judge will consider it as a False value.
     def isBalanced(self, root: Optional[TreeNode]) -> bool:
-        # Base case null node: 
-        # We will use 1 as height of null node here as it accomplishes 2 things: 
+        # Base case null node:
+        # We will use 1 as height of null node here as it accomplishes 2 things:
         # 1. it passes up a height value for child nodes,
-        #    Ex. For a child node. If we calculate the left/right height 
+        #    Ex. For a child node. If we calculate the left/right height
         #    difference, it will come out to 0 regardless if we use 0-0 or 1-1.
         # 2. it acts as a 'Truthy' value for the 'null tree'
         #    Ex. if our initial input is null, ie an empty tree. It is considered
@@ -135,7 +133,6 @@ class Solution:
         # Return height of longest subtree up for further calculations.
         return max(left, right) + 1
 ```
+
 </TabItem>
 </Tabs>
-
-

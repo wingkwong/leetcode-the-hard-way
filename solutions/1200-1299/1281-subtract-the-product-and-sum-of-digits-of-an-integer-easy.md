@@ -1,7 +1,6 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/
+  Author: @wkw | https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/
 ---
 
 # 1281 - Subtract the Product and Sum of Digits of an Integer (Easy)
@@ -18,10 +17,10 @@ Given an integer number `n`, return the difference between the product of its di
 
 ```
 Input: n = 234
-Output: 15 
-Explanation: 
-Product of digits = 2 * 3 * 4 = 24 
-Sum of digits = 2 + 3 + 4 = 9 
+Output: 15
+Explanation:
+Product of digits = 2 * 3 * 4 = 24
+Sum of digits = 2 + 3 + 4 = 9
 Result = 24 - 9 = 15
 ```
 
@@ -30,15 +29,15 @@ Result = 24 - 9 = 15
 ```
 Input: n = 4421
 Output: 21
-Explanation: 
-Product of digits = 4 * 4 * 2 * 1 = 32 
-Sum of digits = 4 + 4 + 2 + 1 = 11 
+Explanation:
+Product of digits = 4 * 4 * 2 * 1 = 32
+Sum of digits = 4 + 4 + 2 + 1 = 11
 Result = 32 - 11 = 21
 ```
 
 **Constraints:**
 
-* `1 <= n <= 10^5`
+- `1 <= n <= 10^5`
 
 ## Approach 1: **Product & Sum of Digits**
 
@@ -78,7 +77,7 @@ int digitProduct(int n) {
 
 At the end, we just subtract the product and sum.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -95,7 +94,7 @@ public:
         }
         return sum;
     }
-    
+
     int digitProduct(int n) {
         int product = 1;
         while (n > 0) {
@@ -108,7 +107,7 @@ public:
         }
         return product;
     }
-    
+
     int subtractProductAndSum(int n) {
         return digitProduct(n) - digitSum(n);
     }
@@ -117,7 +116,7 @@ public:
 
 Once you got the idea, you should realise that they can be combined together.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -134,7 +133,7 @@ public:
 };
 ```
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```go
 func subtractProductAndSum(n int) int {

@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/longest-palindrome-by-concatenating-two-letter-words/'
+description: 'Author: @wkw | https://leetcode.com/problems/longest-palindrome-by-concatenating-two-letter-words/'
 tags: [Array, Hash Table, String, Greedy, Counting]
 ---
 
-# 2131 - Longest Palindrome by Concatenating Two Letter Words (Medium) 
+# 2131 - Longest Palindrome by Concatenating Two Letter Words (Medium)
 
 ## Problem Link
 
@@ -15,7 +15,7 @@ You are given an array of strings `words`. Each element of `words` consists of *
 
 Create the **longest possible palindrome** by selecting some elements from `words` and concatenating them in **any order**. Each element can be selected **at most once**.
 
-Return *the **length** of the longest palindrome that you can create*. If it is impossible to create any palindrome, return `0`.
+Return _the **length** of the longest palindrome that you can create_. If it is impossible to create any palindrome, return `0`.
 
 A **palindrome** is a string that reads the same forward and backward.
 
@@ -48,7 +48,7 @@ Note that "ll" is another longest palindrome that can be created, and so is "xx"
 
 **Constraints:**
 
-- `1 <= words.length <= 105`
+- `1 <= words.length <= 1e5`
 - `words[i].length == 2`
 - `words[i]` consists of lowercase English letters.
 
@@ -56,7 +56,7 @@ Note that "ll" is another longest palindrome that can be created, and so is "xx"
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 // a palindrome is a string that reads the same forward and backward
@@ -101,7 +101,7 @@ public:
                 // case 1: the word is not same as the reversed self, e.g. "ab" != "ba"
                 // find the reversed self
                 if (cnt.count(rev)) {
-                    // if it can be found, 
+                    // if it can be found,
                     // then we can only include the min of their counts
                     // e.g. "ab", "ba", "ba", "ba"
                     // we can only form "abba" as we don't have enough "ab" for the rest of "ba"
@@ -111,7 +111,7 @@ public:
                 // Alternatively, you can use STL
                 // auto it = cnt.find(rev);
                 // if (it != cnt.end()) ans += min(f, it->second);
-                
+
             } else {
                 // case 2: both character are same, e.g. aa
                 // we can put it on both side

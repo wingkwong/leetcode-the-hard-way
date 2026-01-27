@@ -1,5 +1,5 @@
 ---
-description: "Author: @ColeB2, @radojicic23 | https://leetcode.com/problems/reorder-list/"
+description: 'Author: @ColeB2, @radojicic23 | https://leetcode.com/problems/reorder-list/'
 tags: [Linked List, Two Pointers, Stack, Recursion]
 ---
 
@@ -48,10 +48,10 @@ Output: [1,5,2,4,3]
 - The number of nodes in the list is in the range `[1, 5 * 10^4]`.
 - `1 <= Node.val <= 1000`
 
-
 ## Approach 1: Iterative using 2 pointers.
 
-We can break this problem down into 3 distinct parts. 
+We can break this problem down into 3 distinct parts.
+
 1. Find the middle.
 2. Reverse the second half.
 3. Merge the Two linked lists.
@@ -63,12 +63,14 @@ All of these can be done with very careful pointer manipulation to track the pro
 We can find the middle, using a 2 pointer approach, 1 a slow pointer that moves 1 node at a time, and a 2nd fast pointer that moves 2 nodes at a time, stopping only in the case when either our fast pointer reaches null, or fast's next pointer is null. By starting the slow pointer at the first node, and the fast pointer at the second node, we will always end off in the case of the slow node being left at the end of the first half, ready to move on to the second half. In the case of an odd number of nodes, the first half will be larger too, which allows for an easy merge.
 
 Example:
+
 ```
 0 -> 1 -> 2 -> 3 -> 4-> null
 s    f
      s         f
           s             f
 ```
+
 Here we can see that when it ends, by moving our slow pointer to the second half, we have a split of 0->1->2->null and 3->4->null. We can also imagine in the case of a 4 node linked list, the split would be even: 0->1->null and 2->3->null.
 
 2. [Reversing](https://wingkwong.github.io/leetcode-the-hard-way/solutions/0200-0299/reverse-linked-list-easy) the second half.
@@ -81,6 +83,7 @@ Then, to reverse a linked list, we will need 2 pointers again, one to point to t
 0->1->2->null
 0<-1  2->null
 ```
+
 Above we can see, if we don't track our next node from the current, we can easily lose our linked list.
 
 3. Merging
@@ -125,12 +128,12 @@ class Solution:
             slow = slow.next
             # move fast pointer twice.
             fast = fast.next.next
-        
+
         # Reverseing the second half
         # To reverse we need two nodes, a prev for the current node to point to.
         prev = None
         # A head node of the list we want to reverse, note: slow will always
-        # be at the end of the first half of the linked list, so we start on 
+        # be at the end of the first half of the linked list, so we start on
         # slow's next node, for the second half.
         node = slow.next
         # break the linked lists in two halves before we start.
@@ -234,35 +237,35 @@ public:
  * @param {ListNode} head
  * @return {void} Do not return anything, modify head in-place instead.
  */
-var reorderList = function(head) {
-    // find middle node 
-    let slow = head;
-    let fast = head.next;
-    while (fast && fast.next) {
-        slow = slow.next;
-        fast = fast.next.next;
-    }
-    let second = slow.next;
-    slow.next = null;
-    let prev = null;
+var reorderList = function (head) {
+  // find middle node
+  let slow = head;
+  let fast = head.next;
+  while (fast && fast.next) {
+    slow = slow.next;
+    fast = fast.next.next;
+  }
+  let second = slow.next;
+  slow.next = null;
+  let prev = null;
 
-    // reverse second half
-    while (second) {
-        let tmp = second.next;
-        second.next = prev;
-        prev = second;
-        second = tmp;
-    }
-    // merge two halfs
-    let first = head;
-    second = prev;
-    while (second) {
-        let tmp1 = first.next;
-        let tmp2 = second.next;
-        first.next = second;
-        second.next = tmp1;
-        first = tmp1, second = tmp2; 
-    }
+  // reverse second half
+  while (second) {
+    let tmp = second.next;
+    second.next = prev;
+    prev = second;
+    second = tmp;
+  }
+  // merge two halfs
+  let first = head;
+  second = prev;
+  while (second) {
+    let tmp1 = first.next;
+    let tmp2 = second.next;
+    first.next = second;
+    second.next = tmp1;
+    (first = tmp1), (second = tmp2);
+  }
 };
 ```
 

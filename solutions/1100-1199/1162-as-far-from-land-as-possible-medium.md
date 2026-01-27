@@ -1,10 +1,9 @@
 ---
 description: >-
-  Author: @wingkwong |
-  https://leetcode.com/problems/as-far-from-land-as-possible/
+  Author: @wkw | https://leetcode.com/problems/as-far-from-land-as-possible/
 ---
 
-# 1162 -  As Far from Land as Possible (Medium)
+# 1162 - As Far from Land as Possible (Medium)
 
 ## Problem Link
 
@@ -18,7 +17,7 @@ The distance used in this problem is the Manhattan distance: the distance betwee
 
 **Example 1:**
 
-![](https://assets.leetcode.com/uploads/2019/05/03/1336\_ex1.JPG)
+![](https://assets.leetcode.com/uploads/2019/05/03/1336_ex1.JPG)
 
 ```
 Input: grid = [[1,0,1],[0,0,0],[1,0,1]]
@@ -28,7 +27,7 @@ Explanation: The cell (1, 1) is as far as possible from all the land with distan
 
 **Example 2:**
 
-![](https://assets.leetcode.com/uploads/2019/05/03/1336\_ex2.JPG)
+![](https://assets.leetcode.com/uploads/2019/05/03/1336_ex2.JPG)
 
 ```
 Input: grid = [[1,0,0],[0,0,0],[0,0,0]]
@@ -38,16 +37,16 @@ Explanation: The cell (2, 2) is as far as possible from all the land with distan
 
 **Constraints:**
 
-* `n == grid.length`
-* `n == grid[i].length`
-* `1 <= n <= 100`
-* `grid[i][j]` is `0` or `1`
+- `n == grid.length`
+- `n == grid[i].length`
+- `1 <= n <= 100`
+- `grid[i][j]` is `0` or `1`
 
 ## Approach 1: BFS
 
 We use a queue to store all coordinates for each $$1$$. If the size of the queue is $$n * n$$, then we can return $$-1$$. Otherwise, we can walk the grid and mark $$dist$$ for those cells with $$0$$. The answer would be $$dist - 1$$.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

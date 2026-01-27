@@ -9,7 +9,7 @@ keywords:
   - algorithm
 ---
 
-<TutorialAuthors names="@wingkwong"/>
+<TutorialCredits authors="@wkw"/>
 
 ## Overview
 
@@ -19,7 +19,7 @@ The Sieve of Eratosthenes is an algorithm used to find all prime numbers up to a
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 vector<bool> sieveOfEratosthenes(const int n) {
@@ -40,13 +40,6 @@ vector<bool> sieveOfEratosthenes(const int n) {
 
 </Tabs>
 
-export const suggestedProblems = [
-  {
-    "problemName": "0204 - Count Primes",
-    "difficulty": "Medium",
-    "leetCodeLink": "https://leetcode.com/problems/count-primes/",
-    "solutionLink": "../../../solutions/0200-0299/count-primes"
-  },
-]
+export const suggestedProblems = [ { "problemName": "0204 - Count Primes", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/count-primes/", "solutionLink": "../../../solutions/0200-0299/count-primes" }, ]
 
 <Table title="Suggested Problems" data={suggestedProblems} />

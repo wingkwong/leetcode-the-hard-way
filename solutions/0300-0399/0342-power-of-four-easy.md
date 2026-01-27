@@ -1,13 +1,13 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/power-of-four/'
+description: 'Author: @wkw | https://leetcode.com/problems/power-of-four/'
 tags: [Math, Bit Manipulation, Recursion]
 ---
 
-# 0342 - Power of Four (Easy) 
+# 0342 - Power of Four (Easy)
 
 ## Problem Statement
 
-Given an integer `n`, return *true if it is a power of four. Otherwise, return false*.
+Given an integer `n`, return _true if it is a power of four. Otherwise, return false_.
 
 An integer `n` is a power of four, if there exists an integer `x` such that `n == 4 ^ x`.
 
@@ -40,7 +40,7 @@ Output: true
 
 ## Approach 1: Binary Search
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -66,7 +66,7 @@ public:
 
 ## Approach 2: Bit Manipulation
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -74,10 +74,10 @@ public:
     bool isPowerOfFour(int num) {
         // 4: 100
         // 16: 10000
-        // observation: 
+        // observation:
         // count of 1s is 1 and the number of trailing zeros is even
         return __builtin_popcount(num) == 1 && // only 1 bit is set
-              (__builtin_ctz(num) & 1) == 0;     // with even trailing zeros 
+              (__builtin_ctz(num) & 1) == 0;     // with even trailing zeros
     }
 };
 ```

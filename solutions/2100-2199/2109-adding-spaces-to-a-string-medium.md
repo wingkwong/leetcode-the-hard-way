@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/adding-spaces-to-a-string/'
+description: 'Author: @wkw | https://leetcode.com/problems/adding-spaces-to-a-string/'
 ---
 
 # 2109 - Adding Spaces to a String (Medium)
@@ -12,16 +12,16 @@ https://leetcode.com/problems/adding-spaces-to-a-string/
 
 You are given a **0-indexed** string `s` and a **0-indexed** integer array `spaces` that describes the indices in the original string where spaces will be added. Each space should be inserted **before** the character at the given index.
 
-* For example, given `s = "EnjoyYourCoffee"` and `spaces = [5, 9]`, we place spaces before `'Y'` and `'C'`, which are at indices `5` and `9` respectively. Thus, we obtain `"Enjoy`` `**`Y`**`our`` `**`C`**`offee"`.
+- For example, given `s = "EnjoyYourCoffee"` and `spaces = [5, 9]`, we place spaces before `'Y'` and `'C'`, which are at indices `5` and `9` respectively. Thus, we obtain `"Enjoy`` `**`Y`**`our`` `**`C`**`offee"`.
 
-Return **** _the modified string **after** the spaces have been added._
+Return \***\* \_the modified string **after\*\* the spaces have been added.\_
 
 **Example 1:**
 
 ```
 Input: s = "LeetcodeHelpsMeLearn", spaces = [8,13,15]
 Output: "Leetcode Helps Me Learn"
-Explanation: 
+Explanation:
 The indices 8, 13, and 15 correspond to the underlined characters in "LeetcodeHelpsMeLearn".
 We then place spaces before those characters.
 ```
@@ -47,17 +47,17 @@ We are also able to place spaces before the first character of the string.
 
 **Constraints:**
 
-* `1 <= s.length <= 3 * 10^5`
-* `s` consists only of lowercase and uppercase English letters.
-* `1 <= spaces.length <= 3 * 10^5`
-* `0 <= spaces[i] <= s.length - 1`
-* All the values of `spaces` are **strictly increasing**.
+- `1 <= s.length <= 3 * 10^5`
+- `s` consists only of lowercase and uppercase English letters.
+- `1 <= spaces.length <= 3 * 10^5`
+- `0 <= spaces[i] <= s.length - 1`
+- All the values of `spaces` are **strictly increasing**.
 
 ## Approach 1: Two Pointers
 
 We iterate the string using pointer `i` and iterate spaces using pointer `j`. If `i` is equal to `spaces[j]` , then we need to add a space there and increase pointer `j`.
 
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {

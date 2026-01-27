@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong, @lonyehan, @radojicic23 | https://leetcode.com/problems/path-sum-ii/'
+description: 'Author: @wkw, @lonyehan, @radojicic23 | https://leetcode.com/problems/path-sum-ii/'
 tags: [Backtracking, Tree, Depth-First Search, Binary Tree]
 ---
 
-# 0113 - Path Sum II (Medium) 
+# 0113 - Path Sum II (Medium)
 
 ## Problem Link
 
@@ -11,7 +11,7 @@ https://leetcode.com/problems/path-sum-ii/
 
 ## Problem Statement
 
-Given the `root` of a binary tree and an integer `targetSum`, return *all **root-to-leaf** paths where the sum of the node values in the path equals*`targetSum`*. Each path should be returned as a list of the node **values**, not node references*.
+Given the `root` of a binary tree and an integer `targetSum`, return _all **root-to-leaf** paths where the sum of the node values in the path equals_`targetSum`_. Each path should be returned as a list of the node **values**, not node references_.
 
 A **root-to-leaf** path is a path starting from the root and ending at any leaf node. A **leaf** is a node with no children.
 
@@ -49,15 +49,15 @@ Output: []
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
 public:
     vector<vector<int>> ans;
-    
+
     // the idea is to use dfs to traverse the tree from all root to leaf paths
-    // `path` is used to store the current route 
+    // `path` is used to store the current route
     // `remainingSum` is used to store thre remaining sum that we need with the initial value `targetSum`.
     //  we substract it from the node value when we traverse down the tree
     // if we arrive the leaf and the the remaining sum is eqaul to leaf node value
@@ -92,16 +92,16 @@ public:
         // we don't need to check if right sub tree is nullptr or not
         // as we handle it in the first line of this function
         dfs(node-> right, path, remainingSum - node-> val);
-        // backtrack 
+        // backtrack
         path.pop_back();
     }
-    
+
     vector<vector<int>> pathSum(TreeNode* root, int targetSum) {
         // used to store current route
         vector<int> path;
         // dfs from the root
         dfs(root, path, targetSum);
-        return ans;  
+        return ans;
     }
 };
 ```
@@ -109,7 +109,7 @@ public:
 </TabItem>
 
 <TabItem value="py" label="Python">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 # Definition for a binary tree node.
@@ -120,7 +120,7 @@ public:
 #         self.right = right
 class Solution:
     # the idea is to use dfs to traverse the tree from all root to leaf paths
-    # `path` is used to store the current route 
+    # `path` is used to store the current route
     # `remainingSum` is used to store thre remaining sum that we need with the initial value `targetSum`.
     #  we substract it from the node value when we traverse down the tree
     # if we arrive the leaf and the the remaining sum is eqaul to leaf node value
@@ -161,9 +161,9 @@ class Solution:
         # we don't need to check if right sub tree is nullptr or not
         # as we handle it in the first line of this function
         self.dfs(root.right, path, ans, remainingSum - root.val)
-        # backtrack 
+        # backtrack
         path.pop()
-    
+
     def pathSum(self, root: Optional[TreeNode], targetSum: int) -> List[List[int]]:
         ans = []
         self.dfs(root, [], ans, targetSum)
@@ -173,7 +173,7 @@ class Solution:
 </TabItem>
 
 <TabItem value="java" label="Java">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```java
 /**
@@ -194,7 +194,7 @@ class Solution:
 class Solution {
     List<List<Integer>> ans = new ArrayList<List<Integer>>();
     // the idea is to use dfs to traverse the tree from all root to leaf paths
-    // `path` is used to store the current route 
+    // `path` is used to store the current route
     // `remainingSum` is used to store thre remaining sum that we need with the initial value `targetSum`.
     //  we substract it from the node value when we traverse down the tree
     // if we arrive the leaf and the the remaining sum is eqaul to leaf node value
@@ -229,7 +229,7 @@ class Solution {
         // we don't need to check if right sub tree is nullptr or not
         // as we handle it in the first line of this function
         this.dfs(node.right, path, remainingSum - node.val);
-        // backtrack 
+        // backtrack
         path.remove(path.size() - 1);
     }
     public List<List<Integer>> pathSum(TreeNode root, int targetSum) {
@@ -265,12 +265,12 @@ public class Solution {
 
     public void PreOrder(TreeNode root, int targetSum, List<int> list, int sum = 0) {
         if(root == null) return;
-                
+
         sum += root.val;
         list.Add(root.val);
-    
+
         // Is this node is leaf and sum equal to target?
-        if(sum == targetSum && root.left == null && root.right == null) {             
+        if(sum == targetSum && root.left == null && root.right == null) {
             result.Add(list);
         }
         PreOrder(root.left, targetSum, new List<int>(list), sum);
@@ -304,19 +304,19 @@ public class Solution {
  * @param {number} targetSum
  * @return {number[][]}
  */
-var pathSum = function(root, targetSum) {
-    function dfs(root, remainingSum, path, ans) {
-        if (!root) return ans;
-        path.push(root.val);
-        if (!root.left && !root.right && root.val === remainingSum) {
-            ans.push(path.slice());
-        }
-        dfs(root.left, remainingSum - root.val, path, ans);
-        dfs(root.right, remainingSum - root.val, path, ans);
-        path.pop();
-        return ans;
+var pathSum = function (root, targetSum) {
+  function dfs(root, remainingSum, path, ans) {
+    if (!root) return ans;
+    path.push(root.val);
+    if (!root.left && !root.right && root.val === remainingSum) {
+      ans.push(path.slice());
     }
-    return dfs(root, targetSum, [], []);
+    dfs(root.left, remainingSum - root.val, path, ans);
+    dfs(root.right, remainingSum - root.val, path, ans);
+    path.pop();
+    return ans;
+  }
+  return dfs(root, targetSum, [], []);
 };
 ```
 

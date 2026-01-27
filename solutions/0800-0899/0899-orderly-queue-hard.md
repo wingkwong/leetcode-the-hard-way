@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/orderly-queue/'
+description: 'Author: @wkw | https://leetcode.com/problems/orderly-queue/'
 tags: [Math, String, Sorting]
 ---
 
-# 0899 - Orderly Queue (Hard) 
+# 0899 - Orderly Queue (Hard)
 
 ## Problem Link
 
@@ -13,14 +13,14 @@ https://leetcode.com/problems/orderly-queue/
 
 You are given a string `s` and an integer `k`. You can choose one of the first `k` letters of `s` and append it at the end of the string..
 
-Return *the lexicographically smallest string you could have after applying the mentioned step any number of moves*.
+Return _the lexicographically smallest string you could have after applying the mentioned step any number of moves_.
 
 **Example 1:**
 
 ```
 Input: s = "cba", k = 1
 Output: "acb"
-Explanation: 
+Explanation:
 In the first move, we move the 1st character 'c' to the end, obtaining the string "bac".
 In the second move, we move the 1st character 'b' to the end, obtaining the final result "acb".
 ```
@@ -30,7 +30,7 @@ In the second move, we move the 1st character 'b' to the end, obtaining the fina
 ```
 Input: s = "baaca", k = 3
 Output: "aaabc"
-Explanation: 
+Explanation:
 In the first move, we move the 1st character 'b' to the end, obtaining the string "aacab".
 In the second move, we move the 3rd character 'c' to the end, obtaining the final result "aaabc".
 ```
@@ -44,7 +44,7 @@ In the second move, we move the 3rd character 'c' to the end, obtaining the fina
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 // Time Complexity: O(N ^ 2)
@@ -66,12 +66,12 @@ public:
             if (!swapped) break;
         }
     }
-    
+
     string orderlyQueue(string s, int k) {
         string ans = s;
         if (k == 1) {
             // "cba" -> "bac" -> "acb" -> "cba" -> ...
-            // we only have N swaps here 
+            // we only have N swaps here
             // as it will become the original string after N swaps
             // hence, we can try all N possible swaps and find the lexicographically smallest one
             for (int i = 1; i < s.size(); i++) {
@@ -79,8 +79,8 @@ public:
             }
         } else {
             // if k > 1, we can move any character to any position by swapping two adjacent characters
-            // By swapping a number of times, 
-            // e.g. "cab" 
+            // By swapping a number of times,
+            // e.g. "cab"
             // eventually we could have "abc", "acb", "bca", "bac", "cba", "cab" (3 * 2 * 1 = 6 possible arrangements)
             // so the lexicographically smallest string would be the sorted string using bubble sort
             bubbleSort(ans);
@@ -90,10 +90,11 @@ public:
     }
 };
 ```
+
 </TabItem>
 
 <TabItem value="java" label="Java">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```java
 // Time Complexity: O(N ^ 2)
@@ -103,7 +104,7 @@ class Solution {
         String ans = s;
         if (k == 1) {
             // "cba" -> "bac" -> "acb" -> "cba" -> ...
-            // we only have N swaps here 
+            // we only have N swaps here
             // as it will become the original string after N swaps
             // hence, we can try all N possible swaps and find the lexicographically smallest one
             for (int i = 0; i < s.length(); i++) {
@@ -114,8 +115,8 @@ class Solution {
             }
         } else {
             // if k > 1, we can move any character to any position by swapping two adjacent characters
-            // By swapping a number of times, 
-            // e.g. "cab" 
+            // By swapping a number of times,
+            // e.g. "cab"
             // eventually we could have "abc", "acb", "bca", "bac", "cba", "cab" (3 * 2 * 1 = 6 possible arrangements)
             // so the lexicographically smallest string would be the sorted string
             char[] ca = ans.toCharArray();
@@ -130,7 +131,7 @@ class Solution {
 </TabItem>
 
 <TabItem value="go" label="Go">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```go
 // Time Complexity: O(N ^ 2)
@@ -139,7 +140,7 @@ func orderlyQueue(s string, k int) string {
     ans := s
     if k == 1 {
         // "cba" -> "bac" -> "acb" -> "cba" -> ...
-        // we only have N swaps here 
+        // we only have N swaps here
         // as it will become the original string after N swaps
         // hence, we can try all N possible swaps and find the lexicographically smallest one
         for i := 0; i < len(s); i++ {
@@ -150,8 +151,8 @@ func orderlyQueue(s string, k int) string {
         }
     } else {
         // if k > 1, we can move any character to any position by swapping two adjacent characters
-        // By swapping a number of times, 
-        // e.g. "cab" 
+        // By swapping a number of times,
+        // e.g. "cab"
         // eventually we could have "abc", "acb", "bca", "bac", "cba", "cab" (3 * 2 * 1 = 6 possible arrangements)
         // so the lexicographically smallest string would be the sorted string
         r := []rune(ans)
@@ -165,7 +166,7 @@ func orderlyQueue(s string, k int) string {
 </TabItem>
 
 <TabItem value="py" label="Python3">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```py
 # Time Complexity: O(N ^ 2)
@@ -173,13 +174,13 @@ func orderlyQueue(s string, k int) string {
 class Solution:
     def orderlyQueue(self, s: str, k: int) -> str:
         # "cba" -> "bac" -> "acb" -> "cba" -> ...
-        # we only have N swaps here 
+        # we only have N swaps here
         # as it will become the original string after N swaps
         # hence, we can try all N possible swaps and find the lexicographically smallest one
         if k == 1: return min(s[i:] + s[:i] for i in range(len(s)))
         # if k > 1, we can move any character to any position by swapping two adjacent characters
-        # By swapping a number of times, 
-        # e.g. "cab" 
+        # By swapping a number of times,
+        # e.g. "cab"
         # eventually we could have "abc", "acb", "bca", "bac", "cba", "cab" (3 * 2 * 1 = 6 possible arrangements)
         # so the lexicographically smallest string would be the sorted string
         return "".join(sorted(s))
@@ -192,7 +193,7 @@ class Solution:
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -230,5 +231,6 @@ public:
     }
 };
 ```
+
 </TabItem>
 </Tabs>

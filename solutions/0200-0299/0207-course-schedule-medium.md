@@ -1,9 +1,9 @@
 ---
-description: 'Author: @wingkwong | https://leetcode.com/problems/course-schedule/'
+description: 'Author: @wkw | https://leetcode.com/problems/course-schedule/'
 tags: [Depth-First Search, Breadth-First Search, Graph, Topological Sort]
 ---
 
-# 0207 - Course Schedule (Medium) 
+# 0207 - Course Schedule (Medium)
 
 ## Problem Statement
 
@@ -18,7 +18,7 @@ Return `true` if you can finish all courses. Otherwise, return `false`.
 ```
 Input: numCourses = 2, prerequisites = [[1,0]]
 Output: true
-Explanation: There are a total of 2 courses to take. 
+Explanation: There are a total of 2 courses to take.
 To take course 1 you should have finished course 0. So it is possible.
 ```
 
@@ -27,7 +27,7 @@ To take course 1 you should have finished course 0. So it is possible.
 ```
 Input: numCourses = 2, prerequisites = [[1,0],[0,1]]
 Output: false
-Explanation: There are a total of 2 courses to take. 
+Explanation: There are a total of 2 courses to take.
 To take course 1 you should have finished course 0, and to take course 0 you should also have finished course 1. So it is impossible.
 ```
 
@@ -43,7 +43,7 @@ To take course 1 you should have finished course 0, and to take course 0 you sho
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 // for topological sorting tutorial,
@@ -54,12 +54,12 @@ struct TopologicalSort {
     vector<int> orders;
     vector<vector<int>> G;
     bool isTopologicalSorted = false;
-    
+
     TopologicalSort(vector<vector<int>>& g, vector<int>& in) {
         G = g;
         n = (int) G.size();
         indegree = in;
-        
+
         int res = 0;
         queue<int> q;
         for(int i = 0; i < n; i++) {

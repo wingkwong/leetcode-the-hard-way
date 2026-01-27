@@ -8,7 +8,7 @@ keywords:
   - binary search
 ---
 
-Please refer the [tutorial](../tutorials/basic-topics/binary-search) guide for more details. 
+Please refer the [tutorial](../tutorials/basic-topics/binary-search) guide for more details.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -52,7 +52,6 @@ int search(int[] nums, int target) {
 
 </TabItem>
 </Tabs>
-
 
 <Tabs>
 <TabItem value="cpp" label="C++">

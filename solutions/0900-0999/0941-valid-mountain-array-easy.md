@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wingkwong, @radojicic23 | https://leetcode.com/problems/valid-mountain-array/'
+description: 'Author: @wkw, @radojicic23 | https://leetcode.com/problems/valid-mountain-array/'
 ---
 
 # 0941 - Valid Mountain Array (Easy)
@@ -14,14 +14,12 @@ Given an array of integers `arr`, return _`true` if and only if it is a valid mo
 
 Recall that arr is a mountain array if and only if:
 
-* `arr.length >= 3`
-* There exists some `i` with `0 < i < arr.length - 1` such that:
-  * `arr[0] < arr[1] < ... < arr[i - 1] < arr[i]`
-  * `arr[i] > arr[i + 1] > ... > arr[arr.length - 1]`
+- `arr.length >= 3`
+- There exists some `i` with `0 < i < arr.length - 1` such that:
+  - `arr[0] < arr[1] < ... < arr[i - 1] < arr[i]`
+  - `arr[i] > arr[i + 1] > ... > arr[arr.length - 1]`
 
-![](https://assets.leetcode.com/uploads/2019/10/20/hint\_valid\_mountain\_array.png)
-
-
+![](https://assets.leetcode.com/uploads/2019/10/20/hint_valid_mountain_array.png)
 
 **Example 1:**
 
@@ -46,16 +44,16 @@ Output: true
 
 **Constraints:**
 
-* `1 <= arr.length <= 10^4`
-* `0 <= arr[i] <= 10^4`
+- `1 <= arr.length <= 10^4`
+- `0 <= arr[i] <= 10^4`
 
 ## Approach 1: Prefix and Suffix
 
-If the array length is less than 3, then it must be false. Otherwise, we can calculate the prefix and suffix.  `prefix[i]` means it is a strictly increasing array from the first mountain till mountain `i`. Similarly, `suffix[j]` means it is a strictly decreasing array from the last mountain till mountain `j`. If there is a certain point `k` where `prefix[k]` and `suffix[k]` both true, then that would be the peak of a valid mountain.
+If the array length is less than 3, then it must be false. Otherwise, we can calculate the prefix and suffix. `prefix[i]` means it is a strictly increasing array from the first mountain till mountain `i`. Similarly, `suffix[j]` means it is a strictly decreasing array from the last mountain till mountain `j`. If there is a certain point `k` where `prefix[k]` and `suffix[k]` both true, then that would be the peak of a valid mountain.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -78,11 +76,11 @@ public:
 
 ## Approach 2: One Pass
 
-From approach 1, we can see that both prefix and suffix array only record if it is a strictly increasing or decreasing array till certain point. We can optimise it using two pointers `i` and `j`, where pointer `i` is to check the strictly increasing array and pointer `j` is to check the strictly decreasing array.  If they stop at the same point, then that would be the peak of the same mountain.
+From approach 1, we can see that both prefix and suffix array only record if it is a strictly increasing or decreasing array till certain point. We can optimise it using two pointers `i` and `j`, where pointer `i` is to check the strictly increasing array and pointer `j` is to check the strictly decreasing array. If they stop at the same point, then that would be the peak of the same mountain.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
-<SolutionAuthor name="@wingkwong"/>
+<SolutionAuthor name="@wkw"/>
 
 ```cpp
 class Solution {
@@ -111,7 +109,7 @@ class Solution:
         while r - 1 > 0 and arr[r] < arr[r - 1]:
             r -= 1
         return l == r
-        
+
 ```
 
 </TabItem>
@@ -124,14 +122,14 @@ class Solution:
  * @param {number[]} arr
  * @return {boolean}
  */
-var validMountainArray = function(arr) {
-    let left = 0;
-    let right = arr.length - 1;
-    if (arr.length < 3) return false;
-    while (left + 1 < arr.length - 1 && arr[left] < arr[left + 1]) left++;
-    while (right - 1 > 0 && arr[right] < arr[right - 1]) right--;
-    return left == right;
-};     
+var validMountainArray = function (arr) {
+  let left = 0;
+  let right = arr.length - 1;
+  if (arr.length < 3) return false;
+  while (left + 1 < arr.length - 1 && arr[left] < arr[left + 1]) left++;
+  while (right - 1 > 0 && arr[right] < arr[right - 1]) right--;
+  return left == right;
+};
 ```
 
 </TabItem>

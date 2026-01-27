@@ -1,5 +1,5 @@
 ---
-description: "Author: @ColeB2 | https://leetcode.com/problems/daily-temperatures/"
+description: 'Author: @ColeB2 | https://leetcode.com/problems/daily-temperatures/'
 tags: [Array, Stack, Monotonic Stack]
 ---
 
@@ -39,13 +39,12 @@ Output: [1,1,0]
 - `1 <= temperatures.length <= 10^5`
 - `30 <= temperatures[i] <= 100`
 
-
 ## Approach 1: Monotonic Stack
 
 To solve this problem, we will use a Monotonic Decreasing Stack. That is a stack, where all the values inside the stack, are ordered from largest, to smallest. Meaning, we only add to the stack when the stack is either:
-1. Empty, or
-2. If the incoming value is smaller or equal to the value on top of the stack. 
 
+1. Empty, or
+2. If the incoming value is smaller or equal to the value on top of the stack.
 
 That means that if any incoming value is larger, we must pop values off the top of the stack, until it satisfies rules 1 or 2 before we can add it to our stack.
 
@@ -55,8 +54,6 @@ Time Complexity: $$O(n)$$ where n is the length of the input, temperatures.
 
 Space Complexity: $$O(n)$$ which will be the size of our output array, and our stack in the worst case.
 
-
-
 <Tabs>
 <TabItem value="python" label="Python">
 <SolutionAuthor name="@ColeB2"/>
@@ -65,7 +62,7 @@ Space Complexity: $$O(n)$$ which will be the size of our output array, and our s
 class Solution:
     def dailyTemperatures(self, temperatures: List[int]) -> List[int]:
         # Here we will utilize a monotonic decreasing stack, meaning everything
-        # in the stack will be ordered from 'hottest' to 'coldest', and any 
+        # in the stack will be ordered from 'hottest' to 'coldest', and any
         # incoming element, 'warmer' than the top of the stack, will force us
         # to remove the 'colder' days from the top of our stack, and calculate
         # the difference in how many days apart they were for our output array.
@@ -76,7 +73,7 @@ class Solution:
         stack = []
         # Loop through temperatures, tracking index, i and temperature, temp.
         for i, temp in enumerate(temperatures):
-            # While the incoming temperature is 'warmer' than the temperature on 
+            # While the incoming temperature is 'warmer' than the temperature on
             # top of the stack: We can start popping.
             # Note our stack values are formatted with tuples in the form:
             # (index, temperature).
