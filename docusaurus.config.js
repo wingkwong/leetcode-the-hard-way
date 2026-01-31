@@ -184,11 +184,6 @@ module.exports = {
         ],
         copyright: `Copyright © ${new Date().getFullYear()} LeetCode The Hard Way. Built with Docusaurus.`,
       },
-      announcementBar: {
-        id: 'announcementBar-2', // Increment on change
-        content: `⭐️ Master the technical interview without endless grinding with <a href="https://shareasale.com/r.cfm?b=1896233&u=3650658&m=114505&urllink=&afftrack=">AlgoMonster</a> ⭐️`,
-        isCloseable: false,
-      },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
