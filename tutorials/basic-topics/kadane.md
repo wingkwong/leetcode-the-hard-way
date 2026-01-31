@@ -78,9 +78,7 @@ public:
 </TabItem>
 </Tabs>
 
-export const kadaneSuggestedProblems = [ { "problemName": "152 - Maximum Product Subarray", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/maximum-product-subarray/", "solutionLink": "" }, { "problemName": "121 - Best Time to Buy and Sell Stock", "difficulty": "Easy", "leetCodeLink": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/", "solutionLink": "" }, { "problemName": "918 - Maximum-sum-circular-subarray", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/maximum-sum-circular-subarray/", "solutionLink": "" }
-
-]
+export const kadaneSuggestedProblems = [ { "problemName": "152 - Maximum Product Subarray", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/maximum-product-subarray/", "solutionLink": "" }, { "problemName": "121 - Best Time to Buy and Sell Stock", "difficulty": "Easy", "leetCodeLink": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/", "solutionLink": "" }, { "problemName": "918 - Maximum-sum-circular-subarray", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/maximum-sum-circular-subarray/", "solutionLink": "" }]
 
 <Table title="Suggested Problems" data={kadaneSuggestedProblems} />
 
