@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "2.4.1",
-    "prettier": "3.5.3"
+    "prettier": "3.8.1"
   },
   "browserslist": {
     "production": [
