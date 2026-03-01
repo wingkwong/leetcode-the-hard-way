@@ -188,6 +188,32 @@ public:
 ```
 
 </TabItem>
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@DongDong"/>
+
+```py
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+
+        pairs = [(num, i) for i, num in enumerate(nums)]
+        sorted_pairs = sorted(pairs)
+
+        left, right = 0, len(nums)-1
+        
+        while left < right:
+            
+            sum = sorted_pairs[left][0] + sorted_pairs[right][0]
+
+            if sum == target:
+                return [sorted_pairs[left][1], sorted_pairs[right][1]]
+            elif sum <> target:
+                left += 1
+            else:
+                right -= 1
+        return []
+```
+
+</TabItem>
 </Tabs>
 
 ## Approach 3: Hash Table
