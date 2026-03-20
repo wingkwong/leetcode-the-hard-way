@@ -1,5 +1,5 @@
 ---
-description: 'Author: @wkw, @ganajayant, @skoden, @radojicic23 | https://leetcode.com/problems/two-sum/'
+description: 'Author: @wkw, @ganajayant, @skoden, @radojicic23, @DongDong | https://leetcode.com/problems/two-sum/'
 tags: [Array, Two Pointer, Hash Table]
 ---
 
@@ -194,22 +194,13 @@ public:
 ```py
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-
-        pairs = [(num, i) for i, num in enumerate(nums)]
-        sorted_pairs = sorted(pairs)
-
-        left, right = 0, len(nums)-1
-        
-        while left < right:
-            
-            sum = sorted_pairs[left][0] + sorted_pairs[right][0]
-
-            if sum == target:
-                return [sorted_pairs[left][1], sorted_pairs[right][1]]
-            elif sum <> target:
-                left += 1
-            else:
-                right -= 1
+        sorted_pairs = sorted([(num, i) for i, num in enumerate(nums)])
+        l, r = 0, len(nums) - 1
+        while l < r:
+            s = sorted_pairs[l][0] + sorted_pairs[r][0]
+            if s == target: return [sorted_pairs[l][1], sorted_pairs[r][1]]
+            elif s < target: l += 1
+            else: r -= 1
         return []
 ```
 
