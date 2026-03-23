@@ -1,0 +1,74 @@
+---
+description: 'Author: @DongDong | https://leetcode.com/problems/product-of-array-except-self/'
+tags: [Array, Prefix Sum]
+---
+
+# 0238 - Product of Array Except Self (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/product-of-array-except-self/
+
+## Problem Statement
+
+Given an integer array `nums`, return an array `answer` such that `answer[i]` is equal to the product of all the elements of `nums` except `nums[i]`.
+
+The product of any prefix or suffix of `nums` is **guaranteed** to fit in a **32-bit** integer.
+
+You must write an algorithm that runs in `O(n)` time and without using the division operation.
+
+**Example 1:**
+
+```
+Input: nums = [1,2,3,4]
+Output: [24,12,8,6]
+```
+
+**Example 2:**
+
+```
+Input: nums = [-1,1,0,-3,3]
+Output: [0,0,9,0,0]
+```
+
+**Constraints:**
+
+- `2 <= nums.length <= 10^5`
+- `-30 <= nums[i] <= 30`
+- The input is generated such that `answer[i]` is **guaranteed** to fit in a **32-bit** integer.
+
+
+## Approach 1: Prefix Sum
+
+This is a classic prefix sum problem.
+
+Time Complexity: $$O(m*n)$$ where m is the number of rows, and n is the number of columns in the grid. We must traverse the whole grid in order to determine the number of islands.
+
+Space Complexity: $$(m*n)$$ where m is the number of rows, and n is the number of columns in the grid. In the worst case, our queue/stack/recursive stack/visited set will grow in direct proportion to the size of the grid.
+
+<Tabs>
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@DongDong"/>
+
+```py
+class Solution:
+    def productExceptSelf(self, nums: List[int]) -> List[int]:
+        
+        prefix = [1]*len(nums)
+        suffix = [1]*len(nums)
+        answer = [0]*len(nums)
+
+        for i in range(1,len(nums)):
+            prefix[i] = prefix[i-1] * nums[i-1]
+
+        for j in range(len(nums)-2, -1, -1):
+            suffix[j] = suffix[j+1] * nums[j+1]
+
+        for k in range(len(nums)):
+            answer[k] = prefix[k] * suffix[k]
+
+        return answer
+```
+
+</TabItem>
+</Tabs>
