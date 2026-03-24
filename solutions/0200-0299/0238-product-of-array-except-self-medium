@@ -40,11 +40,29 @@ Output: [0,0,9,0,0]
 
 ## Approach 1: Prefix Sum
 
-This is a classic prefix sum problem.
+This problem is conceptually similar to a **prefix sum** problem, but instead of using sums, you use products. The idea is to create the **prefix** and **suffix** arrays, then multiply both arrays to arrive at the answer. The mathematics behind the approach are as below:
 
-Time Complexity: $$O(m*n)$$ where m is the number of rows, and n is the number of columns in the grid. We must traverse the whole grid in order to determine the number of islands.
+$$
+A = [a_{0}, a_{1}, a_{2},...a_{n-1}]
+$$
 
-Space Complexity: $$(m*n)$$ where m is the number of rows, and n is the number of columns in the grid. In the worst case, our queue/stack/recursive stack/visited set will grow in direct proportion to the size of the grid.
+$$
+P_{i} = \prod_{j=0}^{i-1} a_{j} = a_{0} \times a_{1} \times a_{2}...\times a_{n-1}
+$$
+
+$$
+S_{i} = \prod_{j=i+1}^{n-1} a_{j} = a_{i+1} \times a_{i+2} \times a_{i+3}...\times a_{n-1}
+$$
+
+$$
+R_{i} = P_{i} \times S_{i}
+$$
+
+Given an array $A$, loop through all elements and create two separate arrays, prefix ($P_{i}$) and suffix ($S_{i}$). Then, multiply the arrays together. In Example 1 above, $A = [1,2,3,4]$. The prefix array, $P = [1,1,2,6]$ and suffix array, $S = [24,12,4,1]$. Therefore, the resulting $R = [24,12,8,6]$. 
+
+Time Complexity: $O(n)$ where n is the number of elements in the array. We make two passes through the array.
+
+Space Complexity: $O(1)$ additional space (excluding the output array), as we only use a few variables for intermediate products.
 
 <Tabs>
 <TabItem value="python" label="Python">
