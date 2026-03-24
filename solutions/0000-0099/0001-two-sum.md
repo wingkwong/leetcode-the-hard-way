@@ -1,6 +1,6 @@
 ---
 description: 'Author: @wkw, @ganajayant, @skoden, @radojicic23, @DongDong | https://leetcode.com/problems/two-sum/'
-tags: [Array, Two Pointer, Hash Table]
+tags: [Array, Two Pointers, Hash Table]
 ---
 
 # 0001 - Two Sum (Easy)
