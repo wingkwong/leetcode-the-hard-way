@@ -40,7 +40,7 @@ Output: [0,0,9,0,0]
 
 ## Approach 1: Prefix Sum
 
-This problem is conceptually similar to a **prefix sum** problem, but instead of using sums, you use products. The idea is to create the **prefix** and **suffix** arrays, then multiply both arrays to arrive at the answer. The mathematics behind the approach are as below:
+This problem is conceptually similar to a **prefix sum** problem, but instead of using sums, you use products. The idea is to construct two arrays: prefix and suffix arrays. The prefix array stores the product of all elements to the left of each index, while the suffix array stores the product of all elements to the right. By multiplying the corresponding values from the prefix and suffix arrays at each index, we obtain the final result. The mathematical formulation of this approach is shown below:
 
 $$
 A = [a_{0}, a_{1}, a_{2},...a_{n-1}]
@@ -75,7 +75,6 @@ class Solution:
         n = len(nums)
         prefix = [1]*n
         suffix = [1]*n
-        answer = [1]*n
 
         for i in range(1, n):
             prefix[i] = prefix[i-1] * nums[i-1]
@@ -83,10 +82,7 @@ class Solution:
         for j in range(n-2, -1, -1):
             suffix[j] = suffix[j+1] * nums[j+1]
 
-        for k in range(n):
-            answer[k] = prefix[k] * suffix[k]
-
-        return answer
+        return [prefix[k] * suffix[k] for k in range(n)]
 ```
 
 </TabItem>
