@@ -60,9 +60,9 @@ $$
 
 Given an array $A$, loop through all elements and create two separate arrays, prefix ($P_{i}$) and suffix ($S_{i}$). Then, multiply the arrays together. In Example 1 above, $A = [1,2,3,4]$. The prefix array, $P = [1,1,2,6]$ and suffix array, $S = [24,12,4,1]$. Therefore, the resulting $R = [24,12,8,6]$. 
 
-Time Complexity: $O(n)$ where n is the number of elements in the array. We make two passes through the array.
+Time Complexity: $O(n)$
 
-Space Complexity: $O(1)$ additional space (excluding the output array), as we only use a few variables for intermediate products.
+Space Complexity: $O(n)$
 
 <Tabs>
 <TabItem value="python" label="Python">
@@ -72,17 +72,18 @@ Space Complexity: $O(1)$ additional space (excluding the output array), as we on
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
         
-        prefix = [1]*len(nums)
-        suffix = [1]*len(nums)
-        answer = [0]*len(nums)
+        n = len(nums)
+        prefix = [1]*n
+        suffix = [1]*n
+        answer = [1]*n
 
-        for i in range(1,len(nums)):
+        for i in range(1, n):
             prefix[i] = prefix[i-1] * nums[i-1]
 
-        for j in range(len(nums)-2, -1, -1):
+        for j in range(n-2, -1, -1):
             suffix[j] = suffix[j+1] * nums[j+1]
 
-        for k in range(len(nums)):
+        for k in range(n):
             answer[k] = prefix[k] * suffix[k]
 
         return answer
