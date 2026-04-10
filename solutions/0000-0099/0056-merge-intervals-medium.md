@@ -1,6 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/merge-intervals/'
-tags: [Array, Sorting]
+description: 'Author: @ColeB2, @DongDong | https://leetcode.com/problems/merge-intervals/'
+tags: [Array, Sorting, Greedy]
 ---
 
 # 0056 - Merge Intervals (Medium)
@@ -46,7 +46,7 @@ Time Complexity: $$O(nlogn)$$, we must first sort intervals, then do a linear sc
 Space Complexity: $$O(n)$$, our $$merged\_intervals$$ array will hold up to $$n$$ intervals.
 
 <Tabs>
-<TabItem value="python" label="Python">
+<TabItem value="py" label="Python">
 <SolutionAuthor name="@ColeB2"/>
 
 ```py
@@ -77,6 +77,43 @@ class Solution:
                 # the incoming interval to merged_intervals
                 merged_intervals.append([start, end])
         return merged_intervals
+```
+
+</TabItem>
+</Tabs>
+
+## Approach 2: Greedy
+
+We can solve this problem using a greedy approach. First, we sort the intervals by their start values and initialize a current interval using the first interval.
+
+Then, we iterate through the remaining intervals and check whether the current interval overlaps with the next one. If `start <= curr_end`, the intervals overlap, so we merge them by updating `curr_end = max(curr_end, end)`. If they do not overlap, we append the current merged interval to the result and start a new interval.
+
+Finally, we append the last interval to `res`.
+
+Time Complexity: $$O(nlogn)$$
+
+Space Complexity: $$O(n)$$
+
+<Tabs>
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@DongDong"/>
+
+```py
+class Solution:
+    def merge(self, intervals: List[List[int]]) -> List[List[int]]:
+        intervals.sort(key=lambda x : x[0])
+        curr_start, curr_end = intervals[0]
+        res = []
+        for start, end in intervals:
+            if start <= curr_end:
+                curr_end = max(curr_end, end)
+            else:
+                res.append([curr_start, curr_end])
+                curr_start = start
+                curr_end = end
+        # Append last set of interval 
+        res.append([curr_start, curr_end])
+        return res
 ```
 
 </TabItem>

@@ -1,6 +1,6 @@
 ---
 description: >-
-  Author: @wkw | https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/
+  Author: @wkw, @DongDong | https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/
 ---
 
 # 0452 - Minimum Number of Arrows to Burst Balloons (Medium)
@@ -55,6 +55,10 @@ Explanation: The balloons can be burst by 2 arrows:
 
 The answer is at least 1. First we sort the balloons by the end coordinate. Set the first end coordinate as `cur_r`. Iterate over all balloons to check if the balloon starts after `cur_r`. If so, increase answer by 1 and set `cur_r = r`.
 
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@wkw"/>
+
 ```cpp
 class Solution {
 public:
@@ -70,4 +74,25 @@ public:
         return ans;
     }
 };
+
 ```
+
+</TabItem>
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@DongDong"/>
+
+```python
+class Solution:
+    def findMinArrowShots(self, points: List[List[int]]) -> int:
+        points.sort(key=lambda x: x[1])
+        ans = 1
+        cur_r = points[0][1]
+        for start, end in points:
+            if cur_r < start:
+                ans += 1
+                cur_r = end
+        return ans
+```
+
+</TabItem>
+</Tabs>

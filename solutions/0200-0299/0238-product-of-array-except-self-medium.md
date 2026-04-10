@@ -1,0 +1,85 @@
+---
+description: 'Author: @DongDong | https://leetcode.com/problems/product-of-array-except-self/'
+tags: [Array, Prefix Sum]
+---
+
+# 0238 - Product of Array Except Self (Medium)
+
+## Problem Link
+
+https://leetcode.com/problems/product-of-array-except-self/
+
+## Problem Statement
+
+Given an integer array `nums`, return an array `answer` such that `answer[i]` is equal to the product of all the elements of `nums` except `nums[i]`.
+
+The product of any prefix or suffix of `nums` is **guaranteed** to fit in a **32-bit** integer.
+
+You must write an algorithm that runs in `O(n)` time and without using the division operation.
+
+**Example 1:**
+
+```
+Input: nums = [1,2,3,4]
+Output: [24,12,8,6]
+```
+
+**Example 2:**
+
+```
+Input: nums = [-1,1,0,-3,3]
+Output: [0,0,9,0,0]
+```
+
+**Constraints:**
+
+- `2 <= nums.length <= 10^5`
+- `-30 <= nums[i] <= 30`
+- The input is generated such that `answer[i]` is **guaranteed** to fit in a **32-bit** integer.
+
+
+## Approach 1: Prefix Sum
+
+This problem is conceptually similar to a **prefix sum** problem, but instead of using sums, you use products. The idea is to construct two arrays: prefix and suffix arrays. The prefix array stores the product of all elements to the left of each index, while the suffix array stores the product of all elements to the right. By multiplying the corresponding values from the prefix and suffix arrays at each index, we obtain the final result. The mathematical formulation of this approach is shown below:
+
+$$
+A = [a_{0}, a_{1}, a_{2},...a_{n-1}]
+$$
+
+$$
+P_{i} = \prod_{j=0}^{i-1} a_{j} = a_{0} \times a_{1} \times a_{2}...\times a_{n-1}
+$$
+
+$$
+S_{i} = \prod_{j=i+1}^{n-1} a_{j} = a_{i+1} \times a_{i+2} \times a_{i+3}...\times a_{n-1}
+$$
+
+$$
+R_{i} = P_{i} \times S_{i}
+$$
+
+Given an array $A$, loop through all elements and create two separate arrays, prefix ($P_{i}$) and suffix ($S_{i}$). Then, multiply the arrays together. In Example 1 above, $A = [1,2,3,4]$. The prefix array, $P = [1,1,2,6]$ and suffix array, $S = [24,12,4,1]$. Therefore, the resulting $R = [24,12,8,6]$. 
+
+Time Complexity: $O(n)$
+
+Space Complexity: $O(n)$
+
+<Tabs>
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@DongDong"/>
+
+```py
+class Solution:
+    def productExceptSelf(self, nums: List[int]) -> List[int]:
+        n = len(nums)
+        prefix = [1]*n
+        suffix = [1]*n
+        for i in range(1, n):
+            prefix[i] = prefix[i - 1] * nums[i - 1]
+        for j in range(n-2, -1, -1):
+            suffix[j] = suffix[j + 1] * nums[j + 1]
+        return [prefix[k] * suffix[k] for k in range(n)]
+```
+
+</TabItem>
+</Tabs>
