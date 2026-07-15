@@ -4,8 +4,15 @@ import rehypeKatex from 'rehype-katex';
 import remarkMath from 'remark-math';
 import { z } from 'zod';
 
+const booleanLike = z.preprocess((value) => {
+  if (value === 'true') return true;
+  if (value === 'false') return false;
+  return value;
+}, z.boolean().optional());
+
 const docsOptions = {
   schema: pageSchema.extend({
+    draft: booleanLike,
     title: z.string().optional(),
     hide_table_of_contents: z.boolean().optional(),
     keywords: z.array(z.string()).optional(),
