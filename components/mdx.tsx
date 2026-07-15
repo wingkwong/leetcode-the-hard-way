@@ -141,7 +141,7 @@ function Table({ title, collectionLink, isSorted = true, data }: TableProps) {
               <td className={problem.difficulty.toLowerCase()}>{problem.difficulty}</td>
               <td style={{ textAlign: 'center' }}>
                 {problem.solutionLink ? (
-                  <a href={problem.solutionLink}>View Solutions</a>
+                  <a href={normalizeSolutionLink(problem)}>View Solutions</a>
                 ) : (
                   <span>N/A</span>
                 )}
@@ -157,6 +157,30 @@ function Table({ title, collectionLink, isSorted = true, data }: TableProps) {
       </table>
     </>
   );
+}
+
+function normalizeSolutionLink(problem: Problem) {
+  const link = problem.solutionLink;
+
+  if (!link || /^https?:\/\//.test(link)) return link;
+
+  const parts = link.split('/').filter(Boolean);
+  const solutionsIndex = parts.indexOf('solutions');
+  if (solutionsIndex === -1) return link;
+
+  const range = parts[solutionsIndex + 1];
+  const slug = parts[solutionsIndex + 2];
+  if (!range || !slug) return link;
+
+  const normalizedSlug = slug.startsWith(`${range}/`) ? slug.slice(range.length + 1) : slug;
+  const hasNumericPrefix = /^\d{4}-/.test(normalizedSlug);
+  const problemId = problem.problemName.match(/^\s*(\d{1,4})\b/)?.[1];
+  const finalSlug =
+    hasNumericPrefix || !problemId
+      ? normalizedSlug
+      : `${problemId.padStart(4, '0')}-${normalizedSlug}`;
+
+  return `/solutions/${range}/${finalSlug}`;
 }
 
 export function getMDXComponents(
