@@ -1,0 +1,17 @@
+{
+  "title": "1200 - 1299",
+  "description": "Solutions categorised by Problem IDs",
+  "pages": [
+    "1201-ugly-number-iii-medium",
+    "1202-smallest-string-with-swaps-medium",
+    "1219-path-with-maximum-gold-medium",
+    "1232-check-if-it-is-a-straight-line-easy",
+    "1235-maximum-profit-in-job-scheduling-hard",
+    "1239-maximum-length-of-a-concatenated-string-with-unique-characters-medium",
+    "1259-handshakes-that-dont-cross-hard",
+    "1269-number-of-ways-to-stay-in-the-same-place-after-some-steps-hard",
+    "1281-subtract-the-product-and-sum-of-digits-of-an-integer-easy",
+    "1293-shortest-path-in-a-grid-with-obstacles-elimination-hard",
+    "1299-replace-elements-with-greatest-element-on-right-side-easy"
+  ]
+}

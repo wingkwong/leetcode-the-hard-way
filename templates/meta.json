@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "index",
+    "binary-search",
+    "bit-manipulation",
+    "euler",
+    "fenwick-tree",
+    "graph-theory",
+    "linked-list",
+    "manachers-algorithm",
+    "ordered-set",
+    "prefix-sum",
+    "segment-tree",
+    "sparse-table",
+    "two-pointers"
+  ]
+}

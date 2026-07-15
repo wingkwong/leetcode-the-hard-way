@@ -1,0 +1,26 @@
+{
+  "title": "Basic Topics",
+  "description": "This section provides tutorials on fundamental Data Structures and Algorithm topics, catering to those who are new to the subject.",
+  "pages": [
+    "sorting",
+    "arrays",
+    "backtracking",
+    "binary-search",
+    "brute-force",
+    "divide-and-conquer",
+    "doubly-linked-list",
+    "greedy",
+    "hash-map",
+    "heap",
+    "kadane",
+    "linear-search",
+    "linked-list",
+    "mod",
+    "prefix-sum",
+    "queue-and-stack",
+    "sliding-window",
+    "time-complexity",
+    "trie",
+    "two-pointers"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "2800 - 2899",
+  "description": "Solutions categorised by Problem IDs",
+  "pages": [
+    "2810-faulty-keyboard-easy",
+    "2811-check-if-it-is-possible-to-split-array-medium",
+    "2815-max-pair-sum-in-an-array-easy",
+    "2839-check-if-strings-can-be-made-equal-with-operations-i-easy",
+    "2840-check-if-strings-can-be-made-equal-with-operations-ii-medium",
+    "2841-maximum-sum-of-almost-unique-subarray-medium",
+    "2843-count-symmetric-integers-easy",
+    "2859-sum-of-values-at-indices-with-k-set-bits-easy",
+    "2864-maximum-odd-binary-number-easy",
+    "2873-maximum-value-of-an-ordered-triplet-i-easy",
+    "2873-maximum-value-of-an-ordered-triplet-ii-medium"
+  ]
+}

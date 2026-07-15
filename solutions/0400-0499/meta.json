@@ -1,0 +1,33 @@
+{
+  "title": "0400 - 0499",
+  "description": "Solutions categorised by Problem IDs",
+  "pages": [
+    "0402-remove-k-digits-medium",
+    "0403-Frog-Jump",
+    "0404-sum-of-left-leaves-easy",
+    "0413-arithmetic-slices-medium",
+    "0416-partition-equal-subset-sum-medium",
+    "0417-pacific-atlantic-water-flow-medium",
+    "0421-maximum-xor-of-two-numbers-in-an-array",
+    "0424-longest-repeating-character-replacement-medium",
+    "0429-n-ary-tree-level-order-traversal-medium",
+    "0433-minimum-genetic-mutation-medium",
+    "0435-non-overlapping-intervals-medium",
+    "0437-path-sum-iii-medium",
+    "0438-find-all-anagrams-in-a-string-medium",
+    "0441-arranging-coins-easy",
+    "0443-string-compression-medium",
+    "0445-Add-Two-Numbers-II",
+    "0451-sort-characters-by-frequency-medium",
+    "0452-minimum-number-of-arrows-to-burst-balloons-medium",
+    "0454-4sum-ii-medium",
+    "0464-can-i-win-medium",
+    "0465-optimal-account-balancing-hard",
+    "0472-concatenated-words-hard",
+    "0473-matchsticks-to-square-medium",
+    "0491-non-decreasing-subsequences-medium",
+    "0493-reverse-pairs-hard",
+    "0494-target-sum-medium",
+    "0496-next-greater-element-i-easy"
+  ]
+}

@@ -3,10 +3,13 @@
 
 # Production
 /build
+/.next
 
 # Generated files
 .docusaurus
+.source
 .cache-loader
+tsconfig.tsbuildinfo
 
 # Misc
 .DS_Store

@@ -1,0 +1,32 @@
+{
+  "title": "2300 - 2399",
+  "description": "Solutions categorised by Problem IDs",
+  "pages": [
+    "2300-successful-pairs-of-spells-and-potions-medium",
+    "2302-count-subarrays-with-score-less-than-k",
+    "2331-evaluate-boolean-binary-tree-easy",
+    "2332-the-latest-time-to-catch-a-bus-medium",
+    "2333-minimum-sum-of-squared-difference-medium",
+    "2334-subarray-with-elements-greater-than-varying-threshold-hard",
+    "2335-minimum-amount-of-time-to-fill-cups-easy",
+    "2336-smallest-number-in-infinite-set-medium",
+    "2337-move-pieces-to-obtain-a-string-medium",
+    "2338-count-the-number-of-ideal-arrays-hard",
+    "2351-first-letter-to-appear-twice-easy",
+    "2352-equal-row-and-column-pairs-medium",
+    "2353-design-a-food-rating-system-medium",
+    "2354-number-of-excellent-pairs-hard",
+    "2357-make-array-zero-by-subtracting-equal-amounts-easy",
+    "2358-maximum-number-of-groups-entering-a-competition-medium",
+    "2359-find-closest-node-to-given-two-nodes-medium",
+    "2360-longest-cycle-in-a-graph-hard",
+    "2373-largest-local-values-in-a-matrix-easy",
+    "2376-count-special-integers-hard",
+    "2379-minimum-recolors-to-get-k-consecutive-black-blocks-easy",
+    "2380-time-needed-to-rearrange-a-binary-string-medium",
+    "2381-shifting-letters-ii-medium",
+    "2383-minimum-hours-of-training-to-win-a-competition-easy",
+    "2384-largest-palindromic-number-medium",
+    "2392-build-a-matrix-with-conditions-hard"
+  ]
+}

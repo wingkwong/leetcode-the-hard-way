@@ -1,0 +1,22 @@
+{
+  "title": "1600 - 1699",
+  "description": "Solutions categorised by Problem IDs",
+  "pages": [
+    "1624-largest-substring-between-two-equal-characters-easy",
+    "1626-best-team-with-no-conflicts-medium",
+    "1630-arithmetic-subarrays-medium",
+    "1631-path-with-minimum-effort-medium",
+    "1633-smallest-string-with-a-given-numeric-value-medium",
+    "1639-number-of-ways-to-form-a-target-string-given-a-dictionary-hard",
+    "1655-distribute-repeating-integers-hard",
+    "1657-define-if-two-strings-are-close-medium",
+    "1662-check-if-two-string-arrays-are-equivalent-easy",
+    "1664-ways-to-make-a-fair-array-medium",
+    "1672-richest-customer-wealth-easy",
+    "1675-minimize-deviation-in-array-hard",
+    "1679-max-number-of-k-sum-pairs-medium",
+    "1680-concatenation-of-consecutive-binary-numbers-medium",
+    "1685-sum-of-absolute-differences-in-a-sorted-array-medium",
+    "1692-count-ways-to-distribute-candies-hard"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "title": "0800 - 0899",
+  "description": "Solutions categorised by Problem IDs",
+  "pages": [
+    "0813-largest-sum-of-averages-medium",
+    "0814-binary-tree-pruning-medium",
+    "0829-consecutive-numbers-sum-hard",
+    "0838-push-dominoes-medium",
+    "0841-keys-and-rooms-medium",
+    "0844-backspace-string-compare-easy",
+    "0846-hand-of-straights-medium",
+    "0847-shortest-path-visiting-all-nodes-hard",
+    "0852-peak-index-in-a-mountain-array-easy",
+    "0853-car-fleet-medium",
+    "0867-transpose-matrix-easy",
+    "0869-reordered-power-of-2-medium",
+    "0871-minimum-number-of-refueling-stops-hard",
+    "0875-koko-eating-bananas-medium",
+    "0876-middle-of-the-linked-list-easy",
+    "0877-stone-game-medium",
+    "0881-boats-to-save-people-medium",
+    "0896-monotonic-array-easy",
+    "0899-orderly-queue-hard"
+  ]
+}

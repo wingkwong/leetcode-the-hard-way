@@ -1,0 +1,18 @@
+{
+  "title": "1000 - 1099",
+  "description": "Solutions categorised by Problem IDs",
+  "pages": [
+    "0997-find-the-town-judge-easy",
+    "1000-minimum-cost-to-merge-stones-hard",
+    "1004-max-consecutive-ones-iii-medium",
+    "1011-capacity-to-ship-packages-within-d-days-medium",
+    "1019-next-greater-node-in-linked-list",
+    "1029-two-city-scheduling-medium",
+    "1043-partition-array-for-maximum-sum-medium",
+    "1046-last-stone-weight-easy",
+    "1047-remove-all-adjacent-duplicates-in-string-easy",
+    "1061-lexicographically-smallest-equivalent-string-medium",
+    "1066-campus-bikes-ii-medium",
+    "1071-greatest-common-divisor-of-strings-easy"
+  ]
+}

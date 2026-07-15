@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "index",
+    "programming-skills-i",
+    "data-structure-i",
+    "arrays",
+    "two-pointers",
+    "sliding-windows",
+    "heap",
+    "backtracking",
+    "stack",
+    "tree",
+    "binary-search",
+    "graph-theory",
+    "trie",
+    "dynamic-programming",
+    "leetcode-summer-intensive"
+  ]
+}

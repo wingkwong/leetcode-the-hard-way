@@ -1,0 +1,12 @@
+{
+  "title": "Strings",
+  "description": "This section covers Strings topics.",
+  "pages": [
+    "knuth–morris–pratt-algorithm",
+    "levenshtein-distance",
+    "manachers-algorithm",
+    "palindrome",
+    "rabin-karp-algorithm",
+    "z-algorithm"
+  ]
+}

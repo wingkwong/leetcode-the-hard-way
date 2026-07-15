@@ -1,0 +1,19 @@
+{
+  "title": "1700 - 1799",
+  "description": "Solutions categorised by Problem IDs",
+  "pages": [
+    "1704-determine-if-string-halves-are-alike-easy",
+    "1706-where-will-the-ball-fall-medium",
+    "1727-largest-submatrix-with-rearrangements-medium",
+    "1748-sum-of-unique-elements-easy",
+    "1751-maximum-number-of-events-that-can-be-attended-ii-hard",
+    "1758-minimum-changes-to-make-alternating-binary-string-easy",
+    "1762-buildings-with-an-ocean-view-medium",
+    "1768-merge-strings-alternately-easy",
+    "1770-maximum-score-from-performing-multiplication-operations-medium",
+    "1779-find-nearest-point-that-has-the-same-x-or-y-coordinate-easy",
+    "1790-check-if-one-string-swap-can-make-strings-equal-easy",
+    "1791-find-center-of-star-graph-easy",
+    "1793-maximum-score-of-a-good-subarray-hard"
+  ]
+}

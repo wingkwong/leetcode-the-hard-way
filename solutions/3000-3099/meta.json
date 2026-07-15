@@ -1,0 +1,11 @@
+{
+  "title": "3000 - 3099",
+  "description": "Solutions categorised by Problem IDs",
+  "pages": [
+    "3005-count-elements-with-maximum-frequency-easy",
+    "3033-modify-the-matrix-easy",
+    "3034-number-of-subarrays-that-match-a-pattern-i-medium",
+    "3035-maximum-palindromes-after-operations-medium",
+    "3064-guess-the-number-using-bitwise-questions-i-medium"
+  ]
+}

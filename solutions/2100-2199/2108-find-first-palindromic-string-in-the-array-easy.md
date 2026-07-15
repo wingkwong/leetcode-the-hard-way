@@ -50,7 +50,7 @@ Explanation: There are no palindromic strings, so the empty string is returned.
 
 There are several ways to check if a string is a palindrome or not.
 
-#### Long and Efficient <a href="#longandefficient" id="longandefficient"></a>
+#### Long and Efficient
 
 ```cpp
 bool isPalindrome(const string& s) {
@@ -62,7 +62,7 @@ bool isPalindrome(const string& s) {
 }
 ```
 
-#### Shorter but not efficient <a href="#shorterbutnotefficient" id="shorterbutnotefficient"></a>
+#### Shorter but not efficient
 
 ```cpp
 bool isPalindrome(const string& s) {
@@ -72,7 +72,7 @@ bool isPalindrome(const string& s) {
 }
 ```
 
-#### Shortest but not efficient <a href="#shortestbutnotefficient" id="shortestbutnotefficient"></a>
+#### Shortest but not efficient
 
 ```cpp
 bool isPalindrome(const string& s) {
@@ -80,7 +80,7 @@ bool isPalindrome(const string& s) {
 }
 ```
 
-#### Shortest but efficient <a href="#shortestbutefficient" id="shortestbutefficient"></a>
+#### Shortest but efficient
 
 ```cpp
 bool isPalindrome(const string &s) {
