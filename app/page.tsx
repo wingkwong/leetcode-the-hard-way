@@ -1,99 +1,114 @@
-import Image from 'next/image';
-import Link from 'next/link';
-const features = [
-  {
-    image: '/img/undraw_learning_sketching_nd4f.svg',
-    title: 'DSA Topics Tutorials',
-    description:
-      'Learn data structures and algorithms from fundamentals through advanced techniques while working through LeetCode-style problems.',
-  },
-  {
-    image: '/img/undraw_onboarding_re_6osc.svg',
-    title: 'Detailed Explanations',
-    description:
-      'Read solution writeups with the reasoning, tradeoffs, and implementation details kept together.',
-  },
-  {
-    image: '/img/undraw_community_re_cyrm.svg',
-    title: 'LeetCode Community',
-    description:
-      'Use the tutorials, roadmaps, templates, and solution catalog as a structured path for practice.',
-  },
-];
+import { DocsLayout } from 'fumadocs-ui/layouts/docs';
+import {
+  DocsBody,
+  DocsDescription,
+  DocsPage,
+  DocsTitle,
+} from 'fumadocs-ui/layouts/docs/page';
+import type { Root } from 'fumadocs-core/page-tree';
+import type { Metadata } from 'next';
+import { baseOptions } from '../lib/layout.shared';
 
-const navLinks = [
-  { href: '/tutorials/basic-topics', label: 'Tutorials' },
-  { href: '/solutions/0000-0099', label: 'Solutions' },
-  { href: '/roadmap', label: 'Roadmap' },
-  { href: '/templates', label: 'Templates' },
+export const metadata: Metadata = {
+  title: 'Introduction | LeetCode The Hard Way',
+  description:
+    'A structured resource for learning data structures and algorithms through tutorials, templates, roadmaps, and LeetCode solution explanations.',
+};
+
+const introTree: Root = {
+  name: 'LeetCode The Hard Way',
+  children: [
+    {
+      type: 'page',
+      name: 'Introduction',
+      url: '/',
+    },
+    {
+      type: 'separator',
+      name: 'Documentation',
+    },
+    {
+      type: 'page',
+      name: 'Tutorials',
+      url: '/tutorials/basic-topics',
+    },
+    {
+      type: 'page',
+      name: 'Solutions',
+      url: '/solutions/0000-0099',
+    },
+    {
+      type: 'page',
+      name: 'Roadmap',
+      url: '/roadmap',
+    },
+    {
+      type: 'page',
+      name: 'Templates',
+      url: '/templates',
+    },
+  ],
+};
+
+const sections = [
+  {
+    title: 'Tutorials',
+    description:
+      'Learn data structures, algorithms, math, strings, graph theory, and other core topics.',
+    href: '/tutorials/basic-topics',
+  },
+  {
+    title: 'Solutions',
+    description:
+      'Browse detailed LeetCode solution explanations grouped by problem ID ranges.',
+    href: '/solutions/0000-0099',
+  },
+  {
+    title: 'Roadmap',
+    description:
+      'Follow curated problem sets for specific topics and study plans.',
+    href: '/roadmap',
+  },
+  {
+    title: 'Templates',
+    description:
+      'Use reusable implementation templates for common algorithm patterns.',
+    href: '/templates',
+  },
 ];
 
 export default function HomePage() {
   return (
-    <main className="home">
-      <nav className="home-nav">
-        <Link className="home-brand" href="/">
-          LeetCode The Hard Way
-        </Link>
-        <div className="home-nav-links">
-          {navLinks.map((link) => (
-            <Link href={link.href} key={link.href}>
-              {link.label}
-            </Link>
-          ))}
-        </div>
-      </nav>
+    <DocsLayout {...baseOptions()} tree={introTree}>
+      <DocsPage>
+        <DocsTitle>Introduction</DocsTitle>
+        <DocsDescription>
+          LeetCode The Hard Way is a structured resource for learning data
+          structures and algorithms through tutorials, templates, roadmaps, and
+          solution explanations.
+        </DocsDescription>
+        <DocsBody>
+          <p>
+            Start with the tutorials when you want to learn a concept, use the
+            roadmap pages when you want a focused practice path, and refer to the
+            solution catalog when you want complete explanations for individual
+            problems.
+          </p>
 
-      <section className="home-hero">
-        <div className="home-hero-content">
-          <h1>LeetCode The Hard Way</h1>
-          <p>From Absolute Beginner to Quitter</p>
-          <div className="home-actions">
-            <Link href="/tutorials/basic-topics">Learn Basic Topics</Link>
-            <Link href="/solutions/0000-0099">Solution Explanations</Link>
+          <div className="generated-index-grid">
+            {sections.map((section) => (
+              <a
+                className="generated-index-link"
+                href={section.href}
+                key={section.href}
+              >
+                <span>{section.title}</span>
+                <small>{section.description}</small>
+              </a>
+            ))}
           </div>
-        </div>
-      </section>
-
-      <section className="home-features" aria-label="Highlights">
-        {features.map((feature) => (
-          <article className="home-feature" key={feature.title}>
-            <Image
-              alt=""
-              height={180}
-              src={feature.image}
-              width={180}
-            />
-            <h2>{feature.title}</h2>
-            <p>{feature.description}</p>
-          </article>
-        ))}
-      </section>
-
-      <section className="home-section home-about">
-        <h2>About</h2>
-        <p>
-          Welcome to LeetCode The Hard Way, a resource for improving data
-          structures and algorithms skills through tutorials, templates, roadmaps,
-          and detailed LeetCode solution explanations across popular programming
-          languages.
-        </p>
-        <p>
-          From basic data structures to advanced topics, the site is organized so
-          you can learn a concept, practice it, and then study complete solutions.
-        </p>
-      </section>
-
-      <section className="home-section home-sponsor">
-        <h2>Sponsorship and Advertisement</h2>
-        <p>
-          Interested in advertising on LeetCode The Hard Way? Email{' '}
-          <a href="mailto:leetcodethehardway@gmail.com">
-            leetcodethehardway@gmail.com
-          </a>
-          .
-        </p>
-      </section>
-    </main>
+        </DocsBody>
+      </DocsPage>
+    </DocsLayout>
   );
 }
