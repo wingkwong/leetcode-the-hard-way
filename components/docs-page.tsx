@@ -56,7 +56,9 @@ export function renderDocsPage(section: Section, slug: string[] = []) {
     >
       {showTitle && <DocsTitle>{page.data.title}</DocsTitle>}
       {showTitle && page.data.description && (
-        <DocsDescription>{page.data.description}</DocsDescription>
+        <DocsDescription className="docs-description">
+          {page.data.description}
+        </DocsDescription>
       )}
       <DocsBody>
         <MDX components={getRelativeMDXComponents(section.source, page)} />
@@ -96,7 +98,11 @@ function renderGeneratedIndex(section: Section, slug: string[]) {
   return (
     <DocsPage>
       <DocsTitle>{title}</DocsTitle>
-      {meta?.description && <DocsDescription>{meta.description}</DocsDescription>}
+      {meta?.description && (
+        <DocsDescription className="docs-description">
+          {meta.description}
+        </DocsDescription>
+      )}
       <DocsBody>
         <div className="generated-index-grid">
           {children.map((child) => (

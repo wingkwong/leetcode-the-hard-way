@@ -1,6 +1,7 @@
 import defaultMdxComponents, { createRelativeLink } from 'fumadocs-ui/mdx';
+import { UserRound, UsersRound } from 'lucide-react';
 import type { MDXComponents } from 'mdx/types';
-import type { ReactNode } from 'react';
+import type { ComponentPropsWithoutRef, ReactNode } from 'react';
 import { TabItem, Tabs } from './tabs';
 
 type SolutionAuthorProps = {
@@ -32,51 +33,70 @@ type TableProps = {
 };
 
 function SolutionAuthor({ name }: SolutionAuthorProps) {
+  const author = name.trim();
+
   return (
     <div className="solution-author-wrapper">
-      <span>Written by {name}</span>
+      <UserRound aria-hidden="true" className="solution-author-icon" size={16} />
+      <span className="solution-author-label">Written by</span>
+      <span className="solution-author-name">{author}</span>
     </div>
   );
 }
 
 function TutorialCredits({ authors, contributors }: TutorialCreditsProps) {
-  const authorNames = authors ? authors.split(',').map((name) => name.trim()) : [];
-  const contributorNames = contributors
-    ? contributors.split(',').map((name) => name.trim())
-    : [];
+  const authorNames = parseCreditNames(authors);
+  const contributorNames = parseCreditNames(contributors);
 
   if (authorNames.length === 0 && contributorNames.length === 0) return null;
 
   return (
     <div className="tutorial-credit-wrapper">
-      {authorNames.length > 0 && (
-        <CreditGroup
-          label={authorNames.length > 1 ? 'Authors: ' : 'Author: '}
-          names={authorNames}
-        />
-      )}
-      {contributorNames.length > 0 && (
-        <CreditGroup
-          label={contributorNames.length > 1 ? 'Contributors: ' : 'Contributor: '}
-          names={contributorNames}
-        />
-      )}
+      <UsersRound aria-hidden="true" className="tutorial-credit-icon" size={16} />
+      <div className="tutorial-credit-content">
+        {authorNames.length > 0 && (
+          <CreditGroup
+            label={authorNames.length > 1 ? 'Authors' : 'Author'}
+            names={authorNames}
+          />
+        )}
+        {contributorNames.length > 0 && (
+          <CreditGroup
+            label={contributorNames.length > 1 ? 'Contributors' : 'Contributor'}
+            names={contributorNames}
+          />
+        )}
+      </div>
     </div>
   );
 }
 
 function CreditGroup({ label, names }: { label: string; names: string[] }) {
   return (
-    <div className="tutorial-credit-inner-wrapper">
-      <div className="tutorial-credit-wrapper-type">{label}</div>
-      <div className="tutorial-credit-wrapper-base">
-        {names.map((name) => (
-          <span className="tutorial-credit-wrapper-name" key={name}>
-            {name}
-          </span>
-        ))}
-      </div>
+    <div className="tutorial-credit-group">
+      <span className="tutorial-credit-label">{label}</span>
+      <span className="tutorial-credit-names">{names.join(', ')}</span>
     </div>
+  );
+}
+
+function parseCreditNames(value?: string) {
+  return value
+    ? value
+        .split(',')
+        .map((name) => name.trim())
+        .filter(Boolean)
+    : [];
+}
+
+function MdxImage({ className, loading, ...props }: ComponentPropsWithoutRef<'img'>) {
+  return (
+    <img
+      {...props}
+      className={['mdx-image', className].filter(Boolean).join(' ')}
+      decoding="async"
+      loading={loading ?? 'lazy'}
+    />
   );
 }
 
@@ -121,25 +141,29 @@ function Table({ title, collectionLink, isSorted = true, data }: TableProps) {
           </a>
         </h4>
       )}
-      <table className="suggested-problem-table">
+      <table className={`suggested-problem-table${hasTopic ? ' has-topic' : ''}`}>
         <thead>
           <tr>
-            <th>Problem Name</th>
-            <th>Difficulty</th>
-            <th>Solution Link</th>
-            {hasTopic && <th>Topic</th>}
+            <th className="suggested-problem-name">Problem Name</th>
+            <th className="suggested-problem-difficulty">Difficulty</th>
+            <th className="suggested-problem-solution">Solution Link</th>
+            {hasTopic && <th className="suggested-problem-topic">Topic</th>}
           </tr>
         </thead>
         <tbody>
           {rows.map((problem) => (
             <tr key={`${problem.problemName}-${problem.leetCodeLink}`}>
-              <td>
+              <td className="suggested-problem-name">
                 <a href={problem.leetCodeLink} rel="noreferrer" target="_blank">
                   {problem.problemName}
                 </a>
               </td>
-              <td className={problem.difficulty.toLowerCase()}>{problem.difficulty}</td>
-              <td style={{ textAlign: 'center' }}>
+              <td
+                className={`suggested-problem-difficulty ${problem.difficulty.toLowerCase()}`}
+              >
+                {problem.difficulty}
+              </td>
+              <td className="suggested-problem-solution">
                 {problem.solutionLink ? (
                   <a href={normalizeSolutionLink(problem)}>View Solutions</a>
                 ) : (
@@ -147,7 +171,7 @@ function Table({ title, collectionLink, isSorted = true, data }: TableProps) {
                 )}
               </td>
               {hasTopic && (
-                <td>
+                <td className="suggested-problem-topic">
                   <Tags names={problem.tags} />
                 </td>
               )}
@@ -194,6 +218,7 @@ export function getMDXComponents(
     TutorialCredits,
     Table,
     Tags,
+    img: MdxImage,
     ...components,
   };
 }
