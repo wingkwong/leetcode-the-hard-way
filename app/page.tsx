@@ -82,7 +82,7 @@ export default function HomePage() {
     <DocsLayout {...baseOptions()} tree={introTree}>
       <DocsPage>
         <DocsTitle>Introduction</DocsTitle>
-        <DocsDescription>
+        <DocsDescription className="docs-description">
           LeetCode The Hard Way is a structured resource for learning data
           structures and algorithms through tutorials, templates, roadmaps, and
           solution explanations.
