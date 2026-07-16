@@ -1,0 +1,18 @@
+{
+  "title": "1800 - 1899",
+  "description": "Solutions categorised by Problem IDs",
+  "pages": [
+    "1800-maximum-ascending-subarray-sum-easy",
+    "1822-sign-of-the-product-of-an-array-easy",
+    "1823-find-the-winner-of-the-circular-game-medium",
+    "1833-maximum-ice-cream-bars-medium",
+    "1851-minimum-interval-to-include-each-query-hard",
+    "1852-distinct-numbers-in-each-subarray-medium",
+    "1854-maximum-population-year-easy",
+    "1855-maximum-distance-between-a-pair-of-values-medium",
+    "1859-sorting-the-sentence-easy",
+    "1863-sum-of-all-subset-xor-totals-easy",
+    "1866-number-of-ways-to-rearrange-sticks-with-k-sticks-visible-hard",
+    "1899-merge-triplets-to-form-target-triplet-medium"
+  ]
+}

@@ -1,6 +1,6 @@
 ---
 title: 'Radix Sort'
-description: ''
+description: 'Radix sort orders values digit by digit, often using counting sort as a stable subroutine.'
 hide_table_of_contents: true
 draft: true
 keywords:

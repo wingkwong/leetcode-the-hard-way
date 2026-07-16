@@ -1,6 +1,6 @@
 ---
 title: 'Graph Theory'
-description: 'Graph Templates'
+description: 'Graph theory templates for tree traversal, shortest paths, topological sorting, and related algorithms.'
 hide_table_of_contents: false
 keywords:
   - leetcode

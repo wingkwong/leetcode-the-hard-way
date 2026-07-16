@@ -1,0 +1,23 @@
+{
+  "title": "0500 - 0599",
+  "description": "Solutions categorised by Problem IDs",
+  "pages": [
+    "0501-find-mode-in-binary-search-tree-easy",
+    "0508-most-frequent-subtree-sum-medium",
+    "0518-coin-change-2-medium",
+    "0520-detect-capital-easy",
+    "0523-continuous-subarray-sum-medium",
+    "0525-contiguous-array-medium",
+    "0532-k-diff-pairs-in-an-array-medium",
+    "0540-single-element-in-a-sorted-array-medium",
+    "0542-01-matrix-medium",
+    "0543-diameter-of-binary-tree-easy",
+    "0557-reverse-words-in-a-string-iii-easy",
+    "0559-maximum-depth-of-n-ary-tree-easy",
+    "0560-subarray-sum-equals-k-medium",
+    "0567-permutation-in-string-medium",
+    "0572-subtree-of-another-tree-easy",
+    "0581-shortest-unsorted-continuous-subarray-medium",
+    "0589-n-ary-tree-preorder-traversal-easy"
+  ]
+}

@@ -1,6 +1,6 @@
 ---
 title: 'Fenwick Tree'
-description: ''
+description: 'Fenwick tree templates for efficient prefix sums, range queries, and point updates.'
 hide_table_of_contents: false
 keywords:
   - leetcode

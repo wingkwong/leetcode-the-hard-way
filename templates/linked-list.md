@@ -1,6 +1,6 @@
 ---
 title: 'Linked List'
-description: ''
+description: "Linked list templates for common pointer techniques such as Floyd's fast and slow pointers."
 hide_table_of_contents: false
 keywords:
   - leetcode

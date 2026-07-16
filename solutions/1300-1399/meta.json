@@ -1,0 +1,23 @@
+{
+  "title": "1300 - 1399",
+  "description": "Solutions categorised by Problem IDs",
+  "pages": [
+    "1305-all-elements-in-two-binary-search-trees-medium",
+    "1326-minimum-number-of-taps-to-open-to-water-a-garden-hard",
+    "1328-break-a-palindrome-medium",
+    "1329-sort-the-matrix-diagonally-medium",
+    "1331-rank-transform-of-an-array-easy",
+    "1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance-medium",
+    "1335-minimum-difficulty-of-a-job-schedule-hard",
+    "1337-the-k-weakest-rows-in-a-matrix-easy",
+    "1346-check-if-n-and-its-double-exist-easy",
+    "1347-minimum-number-of-steps-to-make-two-strings-anagram-medium",
+    "1349-maximum-students-taking-exam-hard",
+    "1356-sort-integers-by-the-number-of-1-bits-easy",
+    "1359-count-all-valid-pickup-and-delivery-options-hard",
+    "1365-how-many-numbers-are-smaller-than-the-current-number-easy",
+    "1371-find-the-longest-substring-containing-vowels-in-even-counts-medium",
+    "1372-longest-zigzag-path-in-a-binary-tree-medium",
+    "1383-maximum-performance-of-a-team-hard"
+  ]
+}

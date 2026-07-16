@@ -1,0 +1,19 @@
+{
+  "title": "Sorting",
+  "description": "Sorting refers to rearranging elements in a specific order.",
+  "pages": [
+    "introduction",
+    "bubble-sort",
+    "bucket-sort",
+    "counting-sort",
+    "cyclic-sort",
+    "heap-sort",
+    "insertion-sort",
+    "merge-sort",
+    "quick-sort",
+    "radix-sort",
+    "selection-sort",
+    "shell-sort",
+    "tim-sort"
+  ]
+}

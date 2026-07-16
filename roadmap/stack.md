@@ -1,6 +1,6 @@
 ---
 title: 'Stack'
-description: ''
+description: 'Practice stack problems involving monotonic stacks, parsing, matching, and next-greater patterns.'
 hide_table_of_contents: true
 sidebar_position: 40
 draft: true

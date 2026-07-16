@@ -1,0 +1,30 @@
+{
+  "title": "2400 - 2499",
+  "description": "Solutions categorised by Problem IDs",
+  "pages": [
+    "2400-number-of-ways-to-reach-a-position-after-exactly-k-steps-medium",
+    "2401-longest-nice-subarray-medium",
+    "2404-most-frequent-even-element-easy",
+    "2405-optimal-partition-of-string-medium",
+    "2406-divide-intervals-into-minimum-number-of-groups-medium",
+    "2413-smallest-even-multiple-easy",
+    "2418-sort-the-people-easy",
+    "2419-longest-subarray-with-maximum-bitwise-and-medium",
+    "2420-find-all-good-indices-medium",
+    "2421-number-of-good-paths-hard",
+    "2425-bitwise-xor-of-all-pairs-medium",
+    "2432-the-employee-that-worked-on-the-longest-task-easy",
+    "2433-find-the-original-array-of-prefix-xor-medium",
+    "2439-minimize-maximum-of-array-medium",
+    "2441-largest-positive-integer-that-exists-with-its-negative-easy",
+    "2445-number-of-nodes-with-value-one-medium",
+    "2455-average-value-of-even-numbers-that-are-divisible-by-three-easy",
+    "2461-maximum-sum-of-distinct-subarrays-with-length-k-medium",
+    "2469-convert-the-temperature-easy",
+    "2477-minimum-fuel-cost-to-report-to-the-capital-medium",
+    "2482-difference-between-ones-and-zeros-in-row-and-column-medium",
+    "2485-find-the-pivot-integer-easy",
+    "2486-append-characters-to-string-to-make-subsequence-medium",
+    "2487-remove-nodes-from-linked-list-medium"
+  ]
+}

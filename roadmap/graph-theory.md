@@ -1,6 +1,6 @@
 ---
 title: 'Graph Theory'
-description: ''
+description: 'Practice graph problems covering traversal, shortest paths, topological ordering, and connectivity.'
 hide_table_of_contents: true
 sidebar_position: 70
 draft: true

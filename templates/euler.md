@@ -1,6 +1,6 @@
 ---
 title: 'Euler Path'
-description: ''
+description: "Euler path templates for traversing every edge exactly once, including Hierholzer's algorithm."
 hide_table_of_contents: false
 keywords:
   - leetcode

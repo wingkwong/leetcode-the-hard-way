@@ -1,0 +1,20 @@
+{
+  "title": "1400 - 1499",
+  "description": "Solutions categorised by Problem IDs",
+  "pages": [
+    "1431-kids-with-the-greatest-number-of-candies-easy",
+    "1434-number-of-ways-to-wear-different-hats-to-each-other-hard",
+    "1443-minimum-time-to-collect-all-apples-in-a-tree",
+    "1448-count-good-nodes-in-binary-tree-medium",
+    "1457-pseudo-palindromic-paths-in-a-binary-tree-medium",
+    "1460-make-two-arrays-equal-by-reversing-subarrays-easy",
+    "1464-maximum-product-of-two-elements-in-an-array-easy",
+    "1470-shuffle-the-array-easy",
+    "1475-final-prices-with-a-special-discount-in-a-shop-easy",
+    "1480-running-sum-of-1d-array-easy",
+    "1482-minimum-number-of-days-to-make-m-bouquets-medium",
+    "1491-average-salary-excluding-the-minimum-and-maximum-salary-easy",
+    "1494-parallel-courses-ii-hard",
+    "1496-path-crossing-easy"
+  ]
+}

@@ -1,6 +1,6 @@
 ---
 title: 'MOD (1e9 + 7)'
-description: 'Mod 1e9+7'
+description: 'Learn modular arithmetic with 1e9 + 7, including overflow-safe operations and modular inverses.'
 hide_table_of_contents: false
 keywords:
   - leetcode

@@ -1,6 +1,6 @@
 ---
 title: 'Quick Sort'
-description: ''
+description: 'Quick sort partitions an array around a pivot and recursively sorts the partitions.'
 hide_table_of_contents: true
 draft: true
 keywords:

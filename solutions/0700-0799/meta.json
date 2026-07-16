@@ -1,0 +1,24 @@
+{
+  "title": "0700 - 0799",
+  "description": "Solutions categorised by Problem IDs",
+  "pages": [
+    "0703-kth-largest-element-in-a-stream-easy",
+    "0704-binary-search-easy",
+    "0706-design-hashmap-medium",
+    "0713-subarray-product-less-than-k-medium",
+    "0718-maximum-length-of-repeated-subarray-medium",
+    "0724-find-pivot-index-easy",
+    "0732-my-calendar-iii-hard",
+    "0733-flood-fill-easy",
+    "0739-daily-temperatures-medium",
+    "0740-delete-and-earn-medium",
+    "0743-network-delay-time-medium",
+    "0744-find-smallest-letter-greater-than-target-easy",
+    "0746-min-cost-climbing-stairs-easy",
+    "0763-partition-labels-medium",
+    "0778-swim-in-rising-water-hard",
+    "0785-is-graph-bipartite-medium",
+    "0787-cheapest-flights-within-k-stops-medium",
+    "0799-champagne-tower-medium"
+  ]
+}

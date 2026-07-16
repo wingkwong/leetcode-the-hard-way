@@ -1,0 +1,260 @@
+:root {
+  --site-heading: #203320;
+  --site-primary: #343955;
+  --site-hero-bg: #004389;
+  --site-hero-text: #f7f8f8;
+  --site-link: #1d4ed8;
+  --site-feature-bg: #f7f4f4;
+  --site-about-bg: #ffc72c;
+  --site-sponsor-bg: #8eaebd;
+  --site-footer-bg: #353738;
+}
+
+.dark {
+  --site-heading: #f7f8f8;
+  --site-primary: #f7f8f8;
+  --site-hero-bg: #000000;
+  --site-hero-text: #f6fdfd;
+  --site-link: #93c5fd;
+  --site-feature-bg: #2d2d2d;
+  --site-about-bg: #c19300;
+  --site-sponsor-bg: #4a6b78;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.prose a:not([data-card]):not(.generated-index-link) {
+  color: var(--site-link);
+}
+
+table {
+  width: 100%;
+}
+
+table th:nth-child(1) {
+  text-align: left;
+}
+
+.suggested-problem-table {
+  table-layout: fixed;
+}
+
+.suggested-problem-table .suggested-problem-name {
+  text-align: left;
+  width: 60%;
+}
+
+.suggested-problem-table .suggested-problem-difficulty {
+  text-align: center;
+  width: 18%;
+}
+
+.suggested-problem-table .suggested-problem-solution {
+  text-align: center;
+  width: 22%;
+}
+
+.suggested-problem-table.has-topic .suggested-problem-name {
+  width: 42%;
+}
+
+.suggested-problem-table.has-topic .suggested-problem-difficulty {
+  width: 14%;
+}
+
+.suggested-problem-table.has-topic .suggested-problem-solution {
+  width: 18%;
+}
+
+.suggested-problem-table .suggested-problem-topic {
+  text-align: center;
+  width: 26%;
+}
+
+table,
+tr,
+td,
+th {
+  border: none !important;
+}
+
+.docs-description {
+  margin-top: 0.375rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose > h2:first-child,
+.prose > .tutorial-credit-wrapper + h2 {
+  margin-top: 1rem;
+}
+
+.mdx-image {
+  border-radius: 8px;
+  display: block;
+  height: auto;
+  margin: 1.5rem 0;
+  max-width: 100%;
+}
+
+.easy {
+  color: rgb(0 175 155);
+}
+
+.medium {
+  color: rgb(255 184 0);
+}
+
+.hard {
+  color: rgb(255 45 85);
+}
+
+.tutorial-credit-wrapper {
+  align-items: flex-start;
+  color: var(--color-fd-muted-foreground);
+  display: flex;
+  font-size: 0.8125rem;
+  gap: 8px;
+  line-height: 1.45;
+  margin: 4px 0 8px;
+}
+
+.tutorial-credit-icon {
+  color: var(--site-link);
+  flex: 0 0 auto;
+  margin-top: 1px;
+  stroke-width: 2;
+}
+
+.tutorial-credit-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  min-width: 0;
+}
+
+.tutorial-credit-group {
+  align-items: baseline;
+  display: inline-flex;
+  gap: 6px;
+  min-width: 0;
+}
+
+.tutorial-credit-label {
+  color: inherit;
+}
+
+.tutorial-credit-names {
+  color: var(--color-fd-foreground);
+  font-weight: 600;
+}
+
+.solution-author-wrapper {
+  align-items: center;
+  color: var(--color-fd-muted-foreground);
+  display: flex;
+  font-size: 0.8125rem;
+  gap: 6px;
+  line-height: 1.4;
+  margin: 14px 0 8px;
+}
+
+.solution-author-icon {
+  color: var(--site-link);
+  flex: 0 0 auto;
+  stroke-width: 2;
+}
+
+.solution-author-label {
+  color: inherit;
+}
+
+.solution-author-name {
+  color: var(--color-fd-foreground);
+  font-weight: 600;
+}
+
+.tag-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+}
+
+.tag-wrapper .topic-tag {
+  background-color: #4b5270;
+  border-radius: 2px;
+  color: #fff;
+  padding: 5px;
+}
+
+.mdx-tabs {
+  margin: 1.5rem 0;
+  border: 1px solid var(--color-fd-border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.mdx-tab-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  border-bottom: 1px solid var(--color-fd-border);
+  background: var(--color-fd-muted);
+  padding: 6px;
+}
+
+.mdx-tab-trigger {
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--color-fd-muted-foreground);
+  cursor: pointer;
+  font: inherit;
+  padding: 8px 12px;
+}
+
+.mdx-tab-trigger[aria-selected='true'] {
+  background: var(--color-fd-background);
+  color: var(--color-fd-foreground);
+}
+
+.mdx-tab-panel {
+  padding: 16px;
+}
+
+.generated-index-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 24px;
+}
+
+.generated-index-link {
+  border: 1px solid var(--color-fd-border);
+  border-radius: 8px;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.generated-index-link:hover {
+  background: var(--color-fd-muted);
+}
+
+.generated-index-link span {
+  font-weight: 600;
+}
+
+.generated-index-link small {
+  color: var(--color-fd-muted-foreground);
+  line-height: 1.45;
+}

@@ -1,6 +1,6 @@
 ---
 title: 'Prefix Sum'
-description: ''
+description: 'Prefix and suffix sum templates for answering range sum queries efficiently.'
 hide_table_of_contents: false
 keywords:
   - leetcode

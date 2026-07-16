@@ -1,0 +1,13 @@
+{
+  "title": "2000 - 2099",
+  "description": "Solutions categorised by Problem IDs",
+  "pages": [
+    "2007-find-original-array-from-doubled-array-medium",
+    "2009-minimum-number-of-operations-to-make-array-continuous-hard",
+    "2013-detect-squares-medium",
+    "2017-grid-game-medium",
+    "2032-two-out-of-three-easy",
+    "2050-parallel-courses-iii-hard",
+    "2075-decode-the-slanted-ciphertext-medium"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "title": "1900 - 1999",
+  "description": "Solutions categorised by Problem IDs",
+  "pages": [
+    "1903-largest-odd-number-in-string-easy",
+    "1913-maximum-product-difference-between-two-pairs-easy",
+    "1916-count-ways-to-build-rooms-in-an-ant-colony",
+    "1922-count-good-numbers-medium",
+    "1926-nearest-exit-from-entrance-in-maze-medium",
+    "1929-concatenation-of-array-easy",
+    "1980-find-unique-binary-string-medium",
+    "1992-find-all-groups-of-farmland-medium",
+    "1996-the-number-of-weak-characters-in-the-game-medium"
+  ]
+}

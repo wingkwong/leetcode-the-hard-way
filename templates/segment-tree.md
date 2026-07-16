@@ -1,6 +1,6 @@
 ---
 title: 'Segment Tree'
-description: ''
+description: 'Segment tree templates for range queries and point updates on arrays.'
 hide_table_of_contents: false
 keywords:
   - leetcode
