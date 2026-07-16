@@ -8,12 +8,14 @@ import {
 import type { Root } from 'fumadocs-core/page-tree';
 import type { Metadata } from 'next';
 import { baseOptions } from '../lib/layout.shared';
+import { createPageMetadata, defaultDescription } from '../lib/seo';
 
-export const metadata: Metadata = {
-  title: 'Introduction | LeetCode The Hard Way',
-  description:
-    'A structured resource for learning data structures and algorithms through tutorials, templates, roadmaps, and LeetCode solution explanations.',
-};
+export const metadata: Metadata = createPageMetadata({
+  title: 'Introduction',
+  description: defaultDescription,
+  pathname: '/',
+  type: 'website',
+});
 
 const introTree: Root = {
   name: 'LeetCode The Hard Way',

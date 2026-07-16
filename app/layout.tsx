@@ -1,15 +1,50 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
 import { RootProvider } from 'fumadocs-ui/provider/next';
+import {
+  JsonLdScript,
+  createOrganizationJsonLd,
+  createWebSiteJsonLd,
+  defaultDescription,
+  defaultPreviewImage,
+  siteName,
+  siteUrl,
+} from '../lib/seo';
 import 'fumadocs-ui/style.css';
 import 'katex/dist/katex.css';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'LeetCode The Hard Way',
-  description: 'A structured resource for learning data structures and algorithms through tutorials, templates, roadmaps, and solution explanations.',
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: siteName,
+    template: `%s | ${siteName}`,
+  },
+  description: defaultDescription,
   icons: {
     icon: '/img/favicon.ico',
+    shortcut: '/img/favicon.ico',
+  },
+  openGraph: {
+    title: siteName,
+    description: defaultDescription,
+    url: siteUrl,
+    siteName,
+    type: 'website',
+    images: [
+      {
+        url: defaultPreviewImage,
+        width: 1881,
+        height: 535,
+        alt: siteName,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: siteName,
+    description: defaultDescription,
+    images: [defaultPreviewImage],
   },
 };
 
@@ -22,6 +57,11 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body>
         <RootProvider>{children}</RootProvider>
+        <JsonLdScript data={createWebSiteJsonLd()} id="website-json-ld" />
+        <JsonLdScript
+          data={createOrganizationJsonLd()}
+          id="organization-json-ld"
+        />
         <Script
           async
           crossOrigin="anonymous"

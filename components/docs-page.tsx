@@ -8,6 +8,11 @@ import {
   DocsTitle,
 } from 'fumadocs-ui/layouts/docs/page';
 import { getRelativeMDXComponents, type MDXComponent } from './mdx';
+import {
+  JsonLdScript,
+  createPageMetadata,
+  createTechArticleJsonLd,
+} from '../lib/seo';
 
 type Page = {
   data: {
@@ -48,12 +53,17 @@ export function renderDocsPage(section: Section, slug: string[] = []) {
 
   const MDX = page.data.body;
   const showTitle = section.renderTitle !== false && Boolean(page.data.title);
+  const seo = getDocsPageSeo(section, slug, page);
 
   return (
     <DocsPage
       full={page.data.hide_table_of_contents}
       toc={page.data.hide_table_of_contents ? undefined : page.data.toc as []}
     >
+      <JsonLdScript
+        data={createTechArticleJsonLd(seo)}
+        id="docs-page-json-ld"
+      />
       {showTitle && <DocsTitle>{page.data.title}</DocsTitle>}
       {showTitle && page.data.description && (
         <DocsDescription className="docs-description">
@@ -68,24 +78,7 @@ export function renderDocsPage(section: Section, slug: string[] = []) {
 }
 
 export function getDocsMetadata(section: Section, slug: string[] = []) {
-  const page = section.source.getPage(slug);
-
-  if (page) {
-    return {
-      title: page.data.title
-        ? `${page.data.title} | LeetCode The Hard Way`
-        : 'LeetCode The Hard Way',
-      description: page.data.description,
-    };
-  }
-
-  const meta = readMeta(section.contentDir, slug);
-  const title = meta?.title ?? titleFromSlug(slug.at(-1) ?? section.title);
-
-  return {
-    title: `${title} | LeetCode The Hard Way`,
-    description: meta?.description,
-  };
+  return createPageMetadata(getDocsPageSeo(section, slug));
 }
 
 function renderGeneratedIndex(section: Section, slug: string[]) {
@@ -94,9 +87,14 @@ function renderGeneratedIndex(section: Section, slug: string[]) {
   const meta = readMeta(section.contentDir, slug);
   const title = meta?.title ?? titleFromSlug(slug.at(-1) ?? section.title);
   const children = getChildren(section, slug, meta);
+  const seo = getDocsPageSeo(section, slug);
 
   return (
     <DocsPage>
+      <JsonLdScript
+        data={createTechArticleJsonLd(seo)}
+        id="docs-page-json-ld"
+      />
       <DocsTitle>{title}</DocsTitle>
       {meta?.description && (
         <DocsDescription className="docs-description">
@@ -115,6 +113,22 @@ function renderGeneratedIndex(section: Section, slug: string[]) {
       </DocsBody>
     </DocsPage>
   );
+}
+
+function getDocsPageSeo(section: Section, slug: string[], page?: Page) {
+  const currentPage = page ?? section.source.getPage(slug);
+  const meta = currentPage ? null : readMeta(section.contentDir, slug);
+  const title =
+    currentPage?.data.title ??
+    meta?.title ??
+    titleFromSlug(slug.at(-1) ?? section.title);
+  const description = currentPage?.data.description ?? meta?.description;
+
+  return {
+    title,
+    description,
+    pathname: getPathname(section.baseUrl, slug),
+  };
 }
 
 function getChildren(section: Section, slug: string[], meta?: MetaFile | null) {
@@ -173,6 +187,10 @@ function hasDescendant(pages: Page[], slug: string[]) {
 
 function startsWithSlug(candidate: string[], slug: string[]) {
   return slug.every((part, index) => candidate[index] === part);
+}
+
+function getPathname(baseUrl: string, slug: string[]) {
+  return [baseUrl, ...slug].filter(Boolean).join('/');
 }
 
 function readMeta(contentDir: string, slug: string[]): MetaFile | null {
