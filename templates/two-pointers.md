@@ -1,6 +1,6 @@
 ---
 title: 'Two Pointers'
-description: ''
+description: 'Two pointers templates for scanning arrays from both ends or maintaining paired indices.'
 hide_table_of_contents: false
 keywords:
   - leetcode

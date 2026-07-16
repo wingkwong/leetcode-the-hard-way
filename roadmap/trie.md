@@ -1,6 +1,6 @@
 ---
 title: 'Trie'
-description: ''
+description: 'Practice trie problems for prefix search, word dictionaries, and string matching.'
 hide_table_of_contents: true
 sidebar_position: 80
 draft: true

@@ -1,6 +1,6 @@
 ---
 title: 'Two Pointers'
-description: ''
+description: 'Practice two-pointer problems that use paired indices, opposite-end scans, and window boundaries.'
 hide_table_of_contents: true
 sidebar_position: 25
 draft: true
