@@ -7,7 +7,10 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'LeetCode The Hard Way',
-  description: 'From Absolute Beginner to Quitter',
+  description: 'A structured resource for learning data structures and algorithms through tutorials, templates, roadmaps, and solution explanations.',
+  icons: {
+    icon: '/img/favicon.ico',
+  },
 };
 
 export default function RootLayout({
