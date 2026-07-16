@@ -62,7 +62,7 @@ public:
 
 ## Approach 2: Binary Search
 
-:::info Prerequisite
+:::info[Prerequisite]
 
 - [Binary Search](../../tutorials/basic-topics/binary-search)
 

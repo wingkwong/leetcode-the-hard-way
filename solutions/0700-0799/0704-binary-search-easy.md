@@ -73,7 +73,7 @@ Note we found our insight above that the array is sorted. Since the array is sor
 
 ## Approach 2: Binary Search
 
-:::info Prerequisite
+:::info[Prerequisite]
 
 - [Binary Search](../../tutorials/basic-topics/binary-search)
 

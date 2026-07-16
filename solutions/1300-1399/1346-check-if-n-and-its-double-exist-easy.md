@@ -50,7 +50,7 @@ Explanation: In this case does not exist N and M, such that N = 2 * M.
 
 ## Approach 1: Binary Search
 
-:::info Prerequisite
+:::info[Prerequisite]
 
 - [Binary Search](../../tutorials/basic-topics/binary-search)
 

@@ -50,7 +50,7 @@ Output: -1
 
 ## Approach 1: Binary Search
 
-:::info Prerequisite
+:::info[Prerequisite]
 
 - [Binary Search](../../tutorials/basic-topics/binary-search)
 

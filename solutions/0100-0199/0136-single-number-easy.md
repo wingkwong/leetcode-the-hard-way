@@ -43,7 +43,7 @@ Output: 1
 
 ## Approach 1: Bit Manipulation
 
-:::info Prerequisite
+:::info[Prerequisite]
 
 You should understand properties of XOR.
 

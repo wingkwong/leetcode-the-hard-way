@@ -52,7 +52,7 @@ myHashMap.get(2);    // return -1 (i.e., not found), The map is now [[1,1]]
 
 ## Approach 1: With Array and LinkedList
 
-:::info Prerequisite
+:::info[Prerequisite]
 
 - [HashMap](../../tutorials/basic-topics/hash-map)
 

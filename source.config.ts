@@ -1,4 +1,5 @@
 import { defineConfig, defineDocs } from 'fumadocs-mdx/config';
+import { remarkAdmonition } from 'fumadocs-core/mdx-plugins/remark-admonition';
 import { metaSchema, pageSchema } from 'fumadocs-core/source/schema';
 import rehypeKatex from 'rehype-katex';
 import remarkMath from 'remark-math';
@@ -52,7 +53,7 @@ export const templates = defineDocs({
 
 export default defineConfig({
   mdxOptions: {
-    remarkPlugins: [remarkMath],
+    remarkPlugins: [remarkMath, remarkAdmonition],
     rehypePlugins: (plugins) => [rehypeKatex, ...plugins],
     remarkImageOptions: false,
     rehypeCodeOptions: {

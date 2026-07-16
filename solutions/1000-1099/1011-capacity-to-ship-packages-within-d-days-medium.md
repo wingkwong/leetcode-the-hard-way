@@ -62,7 +62,7 @@ Explanation:
 
 ## Approach 1: Binary Seach
 
-:::info Prerequisite
+:::info[Prerequisite]
 
 - [Binary Tree](../../tutorials/graph-theory/binary-tree)
 

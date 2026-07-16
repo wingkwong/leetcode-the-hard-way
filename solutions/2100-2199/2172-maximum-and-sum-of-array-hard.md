@@ -7,6 +7,8 @@ description: >-
 
 ## Problem Link
 
+https://leetcode.com/problems/maximum-and-sum-of-array
+
 ## Problem Statement
 
 You are given an integer array `nums` of length `n` and an integer `numSlots` such that `2 * numSlots >= n`. There are `numSlots` slots numbered from `1` to `numSlots`.
@@ -150,7 +152,7 @@ class Solution:
 
 ## Approach 3: MCMF
 
-:::info Prerequisite
+:::info[Prerequisite]
 
 - MCMF
 
