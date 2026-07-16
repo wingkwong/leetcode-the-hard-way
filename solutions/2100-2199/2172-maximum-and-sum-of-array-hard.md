@@ -51,6 +51,8 @@ _This approach is prepared by @heiheihang._
 
 Naive backtracking
 
+<Tabs>
+<TabItem value="py" label="Python">
 <SolutionAuthor name="@heiheihang"/>
 
 ```python
@@ -93,6 +95,9 @@ class Solution:
         return backtrack(0)
 ```
 
+</TabItem>
+</Tabs>
+
 ## Approach 2: Bitmask DP
 
 We notice that the naive approach is too inefficient. There are some repetitions in the combination of numbers in slots. We can take advantage of that by storing the state of the slots (utilizing the `slots` dictionary from brute force!)
@@ -103,52 +108,45 @@ We can use the _ith_ bit `mask1` to represent if the _ith_ slot has 0 or 1 eleme
 
 We need to use some bit manipulation to update the states.
 
+<Tabs>
+<TabItem value="py" label="Python">
 <SolutionAuthor name="@heiheihang"/>
 
 ```python
 class Solution:
     def maximumANDSum(self, nums: List[int], numSlots: int) -> int:
-
-
-        #mask 1 represents if the slot has 0 or 1 element
-        #mask 2 represents if the slot has 2 element
+        # mask 1 represents if the slot has 0 or 1 element
+        # mask 2 represents if the slot has 2 element
         @lru_cache(None)
         def dp(i, mask1, mask2):
-
-            #reached the end of nums
-            if(i == len(nums)):
-                return 0
-
-            #set the initial result
+            # reached the end of nums
+            if(i == len(nums)): return 0
+            # set the initial result
             res = 0
-
-            #iterate all slots
+            # iterate all slots
             for j in range(numSlots):
-
-                #check if slot is full
-                #both slots are filled
-                if(mask2 & (1 << j) != 0):
-                    continue
+                # check if slot is full
+                # both slots are filled
+                if(mask2 & (1 << j) != 0): continue
                 else:
                     newMask1 = mask1
                     newMask2 = mask2
-
-                    #slot is empty
+                    # slot is empty
                     if(mask1 & (1 << j) == 0):
-                        #set mask 1 to
+                        # set mask 1 to
                         newMask1 = mask1 | (1 << j)
-                    #slot has 1 element
+                    # slot has 1 element
                     else:
-                        #clear mask 1
+                        # clear mask 1
                         newMask1 = mask1 ^ (1 << j)
                         newMask2 = mask2 | (1 << j)
-
                     res = max(res, dp(i+1, newMask1, newMask2) + (nums[i] & (j+1)))
-
             return res
-
         return dp(0,0,0)
 ```
+
+</TabItem>
+</Tabs>
 
 ## Approach 3: MCMF
 
@@ -292,6 +290,8 @@ $$
 
 Now we need to create the edges from $$source$$ to each element in $$nums$$ with $$1$$ capacity and $$0$$ cost. Then we create the edges from each element in $$nums$$ to each slot with $$1$$ capacity and $$-(nums[i - 1] & slot)$$. The minus sign is here because this MCMF template is to calculate the minimum cost and this problem is asking for the maximum one. Similarly, we create edges from each slot to $$sink$$ with $$2$$ capacities (because each slot at most contains 2 elements) and $$0$$ cost.
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wkw"/>
 
 ```cpp
@@ -327,3 +327,6 @@ public:
     }
 };
 ```
+
+</TabItem>
+</Tabs>
