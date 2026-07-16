@@ -3,7 +3,7 @@
   --site-primary: #343955;
   --site-hero-bg: #004389;
   --site-hero-text: #f7f8f8;
-  --site-link: #5039c4;
+  --site-link: color-mix(in oklab, var(--color-fd-foreground) 82%, var(--color-fd-muted-foreground));
   --site-feature-bg: #f7f4f4;
   --site-about-bg: #ffc72c;
   --site-sponsor-bg: #8eaebd;
@@ -15,7 +15,7 @@
   --site-primary: #f7f8f8;
   --site-hero-bg: #000000;
   --site-hero-text: #f6fdfd;
-  --site-link: #9da0e2;
+  --site-link: color-mix(in oklab, var(--color-fd-foreground) 84%, var(--color-fd-muted-foreground));
   --site-feature-bg: #2d2d2d;
   --site-about-bg: #c19300;
   --site-sponsor-bg: #4a6b78;
