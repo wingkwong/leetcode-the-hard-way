@@ -2,13 +2,10 @@
 /node_modules
 
 # Production
-/build
 /.next
 
 # Generated files
-.docusaurus
 .source
-.cache-loader
 tsconfig.tsbuildinfo
 
 # Misc
