@@ -1,6 +1,5 @@
 {
   "pages": [
-    "index",
     "binary-search",
     "bit-manipulation",
     "euler",
