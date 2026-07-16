@@ -4,7 +4,9 @@ export const siteName = 'LeetCode The Hard Way';
 export const siteUrl = 'https://leetcodethehardway.com';
 export const defaultDescription =
   'A structured resource for learning data structures and algorithms through tutorials, templates, roadmaps, and LeetCode solution explanations.';
-export const defaultPreviewImage = '/img/banner.png';
+export const defaultPreviewImage = '/img/og.png';
+export const defaultPreviewImageHeight = 630;
+export const defaultPreviewImageWidth = 1200;
 
 export function absoluteUrl(pathname = '/') {
   return new URL(pathname, siteUrl).toString();
@@ -46,8 +48,8 @@ export function createPageMetadata({
       images: [
         {
           url: defaultPreviewImage,
-          width: 1881,
-          height: 535,
+          width: defaultPreviewImageWidth,
+          height: defaultPreviewImageHeight,
           alt: siteName,
         },
       ],
@@ -108,13 +110,7 @@ export function createTechArticleJsonLd({
   };
 }
 
-export function JsonLdScript({
-  data,
-  id,
-}: {
-  data: unknown;
-  id: string;
-}) {
+export function JsonLdScript({ data, id }: { data: unknown; id: string }) {
   return (
     <script
       id={id}

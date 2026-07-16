@@ -8,6 +8,8 @@ import {
   createWebSiteJsonLd,
   defaultDescription,
   defaultPreviewImage,
+  defaultPreviewImageHeight,
+  defaultPreviewImageWidth,
   siteName,
   siteUrl,
 } from '../lib/seo';
@@ -35,8 +37,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: defaultPreviewImage,
-        width: 1881,
-        height: 535,
+        width: defaultPreviewImageWidth,
+        height: defaultPreviewImageHeight,
         alt: siteName,
       },
     ],
