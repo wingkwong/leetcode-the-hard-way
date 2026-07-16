@@ -23,30 +23,6 @@ const introTree: Root = {
       name: 'Introduction',
       url: '/',
     },
-    {
-      type: 'separator',
-      name: 'Documentation',
-    },
-    {
-      type: 'page',
-      name: 'Tutorials',
-      url: '/tutorials/basic-topics',
-    },
-    {
-      type: 'page',
-      name: 'Solutions',
-      url: '/solutions/0000-0099',
-    },
-    {
-      type: 'page',
-      name: 'Roadmap',
-      url: '/roadmap',
-    },
-    {
-      type: 'page',
-      name: 'Templates',
-      url: '/templates',
-    },
   ],
 };
 
