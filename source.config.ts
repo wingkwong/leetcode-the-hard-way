@@ -4,6 +4,7 @@ import { metaSchema, pageSchema } from 'fumadocs-core/source/schema';
 import rehypeKatex from 'rehype-katex';
 import remarkMath from 'remark-math';
 import { z } from 'zod';
+import { remarkMdxComponentsInMd } from './lib/remark-mdx-components-in-md';
 
 const booleanLike = z.preprocess((value) => {
   if (value === 'true') return true;
@@ -53,7 +54,7 @@ export const templates = defineDocs({
 
 export default defineConfig({
   mdxOptions: {
-    remarkPlugins: [remarkMath, remarkAdmonition],
+    remarkPlugins: [remarkMath, remarkAdmonition, remarkMdxComponentsInMd],
     rehypePlugins: (plugins) => [rehypeKatex, ...plugins],
     remarkImageOptions: false,
     rehypeCodeOptions: {
