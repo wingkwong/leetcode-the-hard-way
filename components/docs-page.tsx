@@ -35,7 +35,9 @@ type Source = {
 type Section = {
   baseUrl: string;
   contentDir: string;
+  formatSlug?: (slug: string[]) => string[];
   renderTitle?: boolean;
+  resolveSlug?: (slug: string[]) => string[];
   source: Source;
   title: string;
 };
@@ -47,18 +49,19 @@ type MetaFile = {
 };
 
 export function renderDocsPage(section: Section, slug: string[] = []) {
-  const page = section.source.getPage(slug);
+  const resolvedSlug = resolveSlug(section, slug);
+  const page = section.source.getPage(resolvedSlug);
 
-  if (!page) return renderGeneratedIndex(section, slug);
+  if (!page) return renderGeneratedIndex(section, resolvedSlug);
 
   const MDX = page.data.body;
   const showTitle = section.renderTitle !== false && Boolean(page.data.title);
-  const seo = getDocsPageSeo(section, slug, page);
+  const seo = getDocsPageSeo(section, resolvedSlug, page);
 
   return (
     <DocsPage
       full={page.data.hide_table_of_contents}
-      toc={page.data.hide_table_of_contents ? undefined : page.data.toc as []}
+      toc={page.data.hide_table_of_contents ? undefined : (page.data.toc as [])}
     >
       <JsonLdScript
         data={createTechArticleJsonLd(seo)}
@@ -78,7 +81,9 @@ export function renderDocsPage(section: Section, slug: string[] = []) {
 }
 
 export function getDocsMetadata(section: Section, slug: string[] = []) {
-  return createPageMetadata(getDocsPageSeo(section, slug));
+  return createPageMetadata(
+    getDocsPageSeo(section, resolveSlug(section, slug)),
+  );
 }
 
 function renderGeneratedIndex(section: Section, slug: string[]) {
@@ -104,7 +109,11 @@ function renderGeneratedIndex(section: Section, slug: string[]) {
       <DocsBody>
         <div className="generated-index-grid">
           {children.map((child) => (
-            <a className="generated-index-link" href={child.url} key={child.url}>
+            <a
+              className="generated-index-link"
+              href={child.url}
+              key={child.url}
+            >
               <span>{child.title}</span>
               {child.description && <small>{child.description}</small>}
             </a>
@@ -116,7 +125,8 @@ function renderGeneratedIndex(section: Section, slug: string[]) {
 }
 
 function getDocsPageSeo(section: Section, slug: string[], page?: Page) {
-  const currentPage = page ?? section.source.getPage(slug);
+  const resolvedSlug = resolveSlug(section, slug);
+  const currentPage = page ?? section.source.getPage(resolvedSlug);
   const meta = currentPage ? null : readMeta(section.contentDir, slug);
   const title =
     currentPage?.data.title ??
@@ -127,13 +137,12 @@ function getDocsPageSeo(section: Section, slug: string[], page?: Page) {
   return {
     title,
     description,
-    pathname: getPathname(section.baseUrl, slug),
+    pathname: getPathname(section.baseUrl, formatSlug(section, resolvedSlug)),
   };
 }
 
 function getChildren(section: Section, slug: string[], meta?: MetaFile | null) {
   const pages = section.source.getPages();
-  const prefix = slug.join('/');
   const ordered = meta?.pages ?? [];
   const items = new Map<
     string,
@@ -153,14 +162,16 @@ function getChildren(section: Section, slug: string[], meta?: MetaFile | null) {
     const childSlug = [...slug, next];
     const key = next;
     const exactPage =
-      page.slugs.length === childSlug.length ? page : section.source.getPage(childSlug);
+      page.slugs.length === childSlug.length
+        ? page
+        : section.source.getPage(childSlug);
     const childMeta = readMeta(section.contentDir, childSlug);
 
     if (!items.has(key)) {
       items.set(key, {
         title: exactPage?.data.title ?? childMeta?.title ?? titleFromSlug(next),
         description: exactPage?.data.description ?? childMeta?.description,
-        url: [section.baseUrl, prefix, next].filter(Boolean).join('/'),
+        url: getPathname(section.baseUrl, formatSlug(section, childSlug)),
       });
     }
   }
@@ -171,8 +182,10 @@ function getChildren(section: Section, slug: string[], meta?: MetaFile | null) {
       const rightIndex = ordered.indexOf(right);
 
       if (leftIndex !== -1 || rightIndex !== -1) {
-        return (leftIndex === -1 ? Number.MAX_SAFE_INTEGER : leftIndex) -
-          (rightIndex === -1 ? Number.MAX_SAFE_INTEGER : rightIndex);
+        return (
+          (leftIndex === -1 ? Number.MAX_SAFE_INTEGER : leftIndex) -
+          (rightIndex === -1 ? Number.MAX_SAFE_INTEGER : rightIndex)
+        );
       }
 
       return left.localeCompare(right);
@@ -191,6 +204,14 @@ function startsWithSlug(candidate: string[], slug: string[]) {
 
 function getPathname(baseUrl: string, slug: string[]) {
   return [baseUrl, ...slug].filter(Boolean).join('/');
+}
+
+function resolveSlug(section: Section, slug: string[]) {
+  return section.resolveSlug?.(slug) ?? slug;
+}
+
+function formatSlug(section: Section, slug: string[]) {
+  return section.formatSlug?.(slug) ?? slug;
 }
 
 function readMeta(contentDir: string, slug: string[]): MetaFile | null {

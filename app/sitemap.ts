@@ -23,6 +23,7 @@ const docsSections = [
   },
   {
     baseUrl: '/solutions',
+    formatSlug: formatSolutionSlug,
     source: solutionsSource,
   },
   {
@@ -35,6 +36,7 @@ const docsSections = [
   },
 ] satisfies {
   baseUrl: string;
+  formatSlug?: (slug: string[]) => string[];
   source: Source;
 }[];
 
@@ -43,10 +45,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   for (const section of docsSections) {
     for (const page of section.source.getPages()) {
-      paths.add(page.url);
+      paths.add(getPathname(section.baseUrl, formatSlug(section, page.slugs)));
 
       for (let depth = 0; depth < page.slugs.length; depth++) {
-        paths.add(getPathname(section.baseUrl, page.slugs.slice(0, depth)));
+        paths.add(
+          getPathname(
+            section.baseUrl,
+            formatSlug(section, page.slugs.slice(0, depth)),
+          ),
+        );
       }
     }
   }
@@ -58,4 +65,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
 function getPathname(baseUrl: string, slug: string[]) {
   return [baseUrl, ...slug].filter(Boolean).join('/');
+}
+
+function formatSlug(
+  section: {
+    formatSlug?: (slug: string[]) => string[];
+  },
+  slug: string[],
+) {
+  return section.formatSlug?.(slug) ?? slug;
+}
+
+function formatSolutionSlug(slug: string[]) {
+  if (slug.length < 2) return slug;
+
+  const publicSlug = [...slug];
+  publicSlug[publicSlug.length - 1] =
+    publicSlug.at(-1)?.replace(/^\d{4}-/, '') ?? '';
+  return publicSlug;
 }

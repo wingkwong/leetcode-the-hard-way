@@ -37,7 +37,11 @@ function SolutionAuthor({ name }: SolutionAuthorProps) {
 
   return (
     <div className="solution-author-wrapper">
-      <UserRound aria-hidden="true" className="solution-author-icon" size={16} />
+      <UserRound
+        aria-hidden="true"
+        className="solution-author-icon"
+        size={16}
+      />
       <span className="solution-author-label">Written by</span>
       <span className="solution-author-name">{author}</span>
     </div>
@@ -52,7 +56,11 @@ function TutorialCredits({ authors, contributors }: TutorialCreditsProps) {
 
   return (
     <div className="tutorial-credit-wrapper">
-      <UsersRound aria-hidden="true" className="tutorial-credit-icon" size={16} />
+      <UsersRound
+        aria-hidden="true"
+        className="tutorial-credit-icon"
+        size={16}
+      />
       <div className="tutorial-credit-content">
         {authorNames.length > 0 && (
           <CreditGroup
@@ -89,7 +97,11 @@ function parseCreditNames(value?: string) {
     : [];
 }
 
-function MdxImage({ className, loading, ...props }: ComponentPropsWithoutRef<'img'>) {
+function MdxImage({
+  className,
+  loading,
+  ...props
+}: ComponentPropsWithoutRef<'img'>) {
   return (
     <img
       {...props}
@@ -127,7 +139,9 @@ function Table({ title, collectionLink, isSorted = true, data }: TableProps) {
   };
   const rows = [...data].sort((left, right) => {
     if (!isSorted) return 0;
-    return (sortOrder[left.difficulty] ?? 99) - (sortOrder[right.difficulty] ?? 99);
+    return (
+      (sortOrder[left.difficulty] ?? 99) - (sortOrder[right.difficulty] ?? 99)
+    );
   });
 
   return (
@@ -141,7 +155,9 @@ function Table({ title, collectionLink, isSorted = true, data }: TableProps) {
           </a>
         </h4>
       )}
-      <table className={`suggested-problem-table${hasTopic ? ' has-topic' : ''}`}>
+      <table
+        className={`suggested-problem-table${hasTopic ? ' has-topic' : ''}`}
+      >
         <thead>
           <tr>
             <th className="suggested-problem-name">Problem Name</th>
@@ -196,20 +212,15 @@ function normalizeSolutionLink(problem: Problem) {
   const slug = parts[solutionsIndex + 2];
   if (!range || !slug) return link;
 
-  const normalizedSlug = slug.startsWith(`${range}/`) ? slug.slice(range.length + 1) : slug;
-  const hasNumericPrefix = /^\d{4}-/.test(normalizedSlug);
-  const problemId = problem.problemName.match(/^\s*(\d{1,4})\b/)?.[1];
-  const finalSlug =
-    hasNumericPrefix || !problemId
-      ? normalizedSlug
-      : `${problemId.padStart(4, '0')}-${normalizedSlug}`;
+  const normalizedSlug = slug.startsWith(`${range}/`)
+    ? slug.slice(range.length + 1)
+    : slug;
+  const finalSlug = normalizedSlug.replace(/^\d{4}-/, '');
 
   return `/solutions/${range}/${finalSlug}`;
 }
 
-export function getMDXComponents(
-  components?: MDXComponents,
-): MDXComponents {
+export function getMDXComponents(components?: MDXComponents): MDXComponents {
   return {
     ...defaultMdxComponents,
     Tabs,
@@ -229,6 +240,4 @@ export function getRelativeMDXComponents(source: unknown, page: unknown) {
   });
 }
 
-export type MDXComponent = (props: {
-  components?: MDXComponents;
-}) => ReactNode;
+export type MDXComponent = (props: { components?: MDXComponents }) => ReactNode;
