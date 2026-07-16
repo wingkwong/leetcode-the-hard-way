@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@types/mdx": "latest",
+    "@vercel/analytics": "^2.0.1",
     "fumadocs-core": "latest",
     "fumadocs-mdx": "latest",
     "fumadocs-ui": "latest",

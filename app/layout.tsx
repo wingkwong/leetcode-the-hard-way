@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
+import { Analytics } from '@vercel/analytics/next';
 import { RootProvider } from 'fumadocs-ui/provider/next';
 import {
   JsonLdScript,
@@ -79,6 +80,7 @@ export default function RootLayout({
             gtag('config', 'G-NY80BVQV8L');
           `}
         </Script>
+        <Analytics />
       </body>
     </html>
   );
