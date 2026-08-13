@@ -43,6 +43,8 @@ Output: true
 
 ## Approach 1: Counting
 
+<Tabs>
+<TabItem value="cpp" label="C++">
 <SolutionAuthor name="@wkw"/>
 
 ```cpp
@@ -64,3 +66,23 @@ public:
     }
 };
 ```
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+<SolutionAuthor name="@wkw"/>
+
+```python
+class Solution:
+    def canConstruct(self, ransomNote: str, magazine: str) -> bool:
+        d = defaultdict(int)
+        for x in magazine: d[x] += 1
+        for x in ransomNote:
+            d[x] -= 1
+            if d[x] < 0: 
+                return False
+        return True
+```
+
+</TabItem>
+</Tabs>
