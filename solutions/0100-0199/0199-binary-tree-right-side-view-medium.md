@@ -45,7 +45,8 @@ Output: []
 Maintain an ArrayList. TRAVERSAL -> ROOT ->RIGHT -> LEFT This is the way traversal is done in array so that rightmost node at i level is visited first. When at i level, check in array/vector, if there is an element already present at indexi in the array. [ index represents the level in tree ]->[element at index i is rightmost node at level i] If at that level, element is present,, just continue the traversal. Else if no element is present at index i -> add that node to answer [res] at the i index.
 
 <Tabs> 
-<TabItem value="java" label="Java"> <SolutionAuthor name="@ganajayant"/>
+<TabItem value="java" label="Java"> 
+<SolutionAuthor name="@ganajayant"/>
 
 ```java
 /**

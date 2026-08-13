@@ -40,7 +40,8 @@ Output: [9,4]
 3. return result.
 
 <Tabs> 
-<TabItem value="java" label="Java"> <SolutionAuthor name="@ganajayant"/>
+<TabItem value="java" label="Java"> 
+<SolutionAuthor name="@ganajayant"/>
 
 ```java
 class Solution {

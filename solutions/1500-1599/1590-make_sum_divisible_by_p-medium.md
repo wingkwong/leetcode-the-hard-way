@@ -65,7 +65,8 @@ Calculating and storing suffix array will be done in $O(n)$. Since we are using 
 The only extra memory we are using is the suffix array and a HashMap.
 
 <Tabs> 
-<TabItem value="cpp" label="C++"> <SolutionAuthor name="@darkhope"/>
+<TabItem value="cpp" label="C++"> 
+<SolutionAuthor name="@darkhope"/>
 
 ```cpp
 class Solution {
