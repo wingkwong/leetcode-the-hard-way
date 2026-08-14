@@ -67,3 +67,41 @@ def maximumLengthSubstring(self, s: str) -> int:
 
 </TabItem>
 </Tabs>
+
+
+## Approach 2: Sliding Window
+
+Instead of restarting the scan from every index, we maintain a single window $[i, j]$ that always satisfies the constraint. We expand the window by moving the right pointer $j$ forward and incrementing the count of $s[j]$ in the map $d$. Whenever this makes $s[j]$ appear more than twice, we shrink the window from the left by decrementing $d[s[i]]$ and advancing $i$ until the constraint holds again. 
+
+After each step the window is guaranteed valid, so we update $res$ with its current length $j - i + 1$. Since each character is added and removed at most once, the pointers together traverse the string in a single pass, giving $O(n)$ time and $O(k)$ space where $k$ is the number of distinct characters (effectively $O(1)$ for a fixed alphabet).
+
+<Tabs>
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@wkw"/>
+
+```py
+class Solution:
+    def maximumLengthSubstring(self, s: str) -> int:
+        # n: string length, i: left pointer, res: best length
+        n, i, res = len(s), 0, 0
+        # counts of each char in the current window
+        d = defaultdict(int)
+        # j: right pointer, expand the window rightward
+        for j in range(n):
+            # add s[j] to the window
+            d[s[j]] += 1
+            # s[j] now appears more than twice -> invalid
+            while d[s[j]] > 2:
+                # drop the leftmost char from the window
+                d[s[i]] -= 1
+                # shrink the window from the left
+                i += 1
+            # window is valid now -> update the max length
+            res = max(res, j - i + 1)
+        # longest valid substring length
+        return res
+```
+
+</TabItem>
+</Tabs>
+
