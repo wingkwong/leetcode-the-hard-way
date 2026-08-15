@@ -1,12 +1,63 @@
-chrome.runtime.sendMessage({ type: 'page_action_show' });
+(() => {
+  if (globalThis.__lthwConverterContentLoaded) {
+    return;
+  }
+  globalThis.__lthwConverterContentLoaded = true;
+
+const DESCRIPTION_SELECTORS = [
+  '[class^="HTMLContent_html__"]',
+  '[class*=" HTMLContent_html__"]',
+  '[data-key=description-content] [class^=content__]',
+];
+const TITLE_SELECTORS = [
+  "[data-cy='question-title']",
+  '[class~="text-title-large"] a',
+  '[class~="text-title-large"]',
+];
+const DIFFICULTY_SELECTORS = ['[diff]', '[class*="text-difficulty-"]'];
+const EXTRACT_RETRY_COUNT = 5;
+const EXTRACT_RETRY_DELAY_MS = 250;
 
 chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
   switch (msg.type) {
     case 'extract':
-      sendResponse(extract());
-      return;
+      extractWithRetry().then(sendResponse);
+      return true;
   }
 });
+
+/**
+ * @return {Promise<{
+ *   title: string,
+ *   href: string,
+ *   problem: string,
+ *   difficulty: string,
+ *   topics: Array.<{ title: string, href: string }>,
+ *   questions: Array.<{ title: string, href: string }>,
+ * }>}
+ */
+async function extractWithRetry() {
+  for (let attempt = 0; attempt < EXTRACT_RETRY_COUNT; attempt++) {
+    const meta = extract();
+    if (
+      (meta.title && meta.problem && meta.difficulty) ||
+      attempt === EXTRACT_RETRY_COUNT - 1
+    ) {
+      return meta;
+    }
+    await sleep(EXTRACT_RETRY_DELAY_MS);
+  }
+
+  return extract();
+}
+
+/**
+ * @param {number} delay
+ * @return {Promise<void>}
+ */
+function sleep(delay) {
+  return new Promise((resolve) => setTimeout(resolve, delay));
+}
 
 function extract() {
   return {
@@ -23,20 +74,22 @@ function extract() {
  * @return {string}
  */
 function extractTitle() {
-  const $title = document.querySelector("[data-cy='question-title']");
-  if (!$title) {
-    return '';
+  for (const selector of TITLE_SELECTORS) {
+    const $title = document.querySelector(selector);
+    const title = ($title && $title.textContent ? $title.textContent : '').trim();
+    if (title) {
+      return title;
+    }
   }
-  return ($title.textContent || '').trim();
+
+  return '';
 }
 
 /**
  * @return {string}
  */
 function extractProblem() {
-  const $desp = document.querySelector(
-    '[data-key=description-content] [class^=content__]',
-  );
+  const $desp = findDescriptionElement();
   if (!$desp) {
     return '';
   }
@@ -114,14 +167,42 @@ function extractProblem() {
 }
 
 /**
+ * @return {Element | null}
+ */
+function findDescriptionElement() {
+  for (const selector of DESCRIPTION_SELECTORS) {
+    const $desp = document.querySelector(selector);
+    if ($desp) {
+      return $desp;
+    }
+  }
+
+  return null;
+}
+
+/**
  * @return {string}
  */
 function extractDifficulty() {
-  const $difficulty = document.querySelector('[diff]');
-  if (!$difficulty) {
-    return '';
+  for (const selector of DIFFICULTY_SELECTORS) {
+    const $difficulty = document.querySelector(selector);
+    if (!$difficulty) {
+      continue;
+    }
+
+    const difficulty = ($difficulty.textContent || '').trim();
+    if (difficulty) {
+      return difficulty;
+    }
+
+    const className = $difficulty.getAttribute('class') || '';
+    const match = className.match(/\btext-difficulty-(easy|medium|hard)\b/i);
+    if (match) {
+      return match[1][0].toUpperCase() + match[1].slice(1).toLowerCase();
+    }
   }
-  return ($difficulty.textContent || '').trim();
+
+  return '';
 }
 
 /**
@@ -140,3 +221,4 @@ function extractTags(selector) {
     })
     .filter(Boolean);
 }
+})();

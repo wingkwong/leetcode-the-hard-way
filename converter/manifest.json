@@ -2,8 +2,8 @@
   "name": "LeetCode The Hard Way - Converter",
   "short_name": "LTHWConverter",
   "description": "Converts a Leetcode problem page into Github Flavored Markdown",
-  "manifest_version": 2,
-  "minimum_chrome_version": "55",
+  "manifest_version": 3,
+  "minimum_chrome_version": "88",
   "version": "0.1.0",
   "content_scripts": [
     {
@@ -14,13 +14,13 @@
       ]
     }
   ],
-  "background": {
-    "scripts": ["background.js"],
-    "persistent": false
-  },
-  "page_action": {
+  "action": {
     "default_title": "Click to generate Markdown from a Leetcode problem page",
     "default_popup": "popup.html"
   },
-  "permissions": ["https://*.leetcode.com/*", "https://*.leetcode-cn.com/*"]
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": [
+    "https://*.leetcode.com/*",
+    "https://*.leetcode-cn.com/*"
+  ]
 }

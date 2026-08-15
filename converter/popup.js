@@ -2,7 +2,7 @@ let meta;
 
 chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
   if (tabs.length > 0 && tabs[0].id) {
-    chrome.tabs.sendMessage(tabs[0].id, { type: 'extract' }, (data) => {
+    requestExtract(tabs[0].id, (data) => {
       meta = data;
       renderMarkdown();
     });
@@ -16,6 +16,41 @@ const $textarea = document.querySelector('.txt');
 
 $btnMD.onclick = renderMarkdown;
 $btnJSON.onclick = renderJSON;
+
+function requestExtract(tabId, callback) {
+  chrome.tabs.sendMessage(tabId, { type: 'extract' }, (data) => {
+    const error = chrome.runtime.lastError;
+    if (!error) {
+      callback(data);
+      return;
+    }
+
+    chrome.scripting.executeScript(
+      {
+        target: { tabId },
+        files: ['content.js'],
+      },
+      () => {
+        const injectError = chrome.runtime.lastError;
+        if (injectError) {
+          console.warn(injectError.message);
+          callback(null);
+          return;
+        }
+
+        chrome.tabs.sendMessage(tabId, { type: 'extract' }, (retryData) => {
+          const retryError = chrome.runtime.lastError;
+          if (retryError) {
+            console.warn(retryError.message);
+            callback(null);
+            return;
+          }
+          callback(retryData);
+        });
+      },
+    );
+  });
+}
 
 function renderMarkdown() {
   tabs.forEach(($tab) => $tab.classList.remove('active'));
@@ -61,7 +96,7 @@ function renderMarkdown() {
     content += `${meta.problem}\n\n`;
     content += `## Approach 1: TBC\n\n`;
     content += `<Tabs>\n`;
-    content += `<TabItem value="cpp" label="C++">\n`;
+    content += `<TabItem value="py" label="Python">\n`;
     content += `<SolutionAuthor name="@wkw"/>\n\n`;
     content += '```cpp\n';
     content += '\n';
