@@ -1,5 +1,6 @@
 import { getDocsMetadata, renderDocsPage } from '../../../components/docs-page';
 import { roadmapSource } from '../../../lib/source';
+import { generateDocsStaticParams } from '../../../lib/static-params';
 
 const section = {
   baseUrl: '/roadmap',
@@ -9,7 +10,7 @@ const section = {
 };
 
 export function generateStaticParams() {
-  return roadmapSource.generateParams();
+  return generateDocsStaticParams(roadmapSource.generateParams());
 }
 
 export async function generateMetadata({

@@ -1,5 +1,6 @@
 import { getDocsMetadata, renderDocsPage } from '../../../components/docs-page';
 import { solutionsSource } from '../../../lib/source';
+import { generateDocsStaticParams } from '../../../lib/static-params';
 
 const section = {
   baseUrl: '/solutions',
@@ -12,24 +13,10 @@ const section = {
 };
 
 export function generateStaticParams() {
-  const params = solutionsSource.generateParams();
-  const seen = new Set<string>();
-
-  return params.flatMap((param) => {
-    const variants = [param];
-    const publicSlug = param.slug ? formatSolutionSlug(param.slug) : undefined;
-
-    if (publicSlug && publicSlug.join('/') !== param.slug?.join('/')) {
-      variants.push({ ...param, slug: publicSlug });
-    }
-
-    return variants.filter((variant) => {
-      const key = variant.slug?.join('/') ?? '';
-      if (seen.has(key)) return false;
-      seen.add(key);
-      return true;
-    });
-  });
+  return generateDocsStaticParams(
+    solutionsSource.generateParams(),
+    formatSolutionSlug,
+  );
 }
 
 export async function generateMetadata({

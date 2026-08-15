@@ -1,5 +1,6 @@
 import { getDocsMetadata, renderDocsPage } from '../../../components/docs-page';
 import { templatesSource } from '../../../lib/source';
+import { generateDocsStaticParams } from '../../../lib/static-params';
 
 const section = {
   baseUrl: '/templates',
@@ -9,7 +10,7 @@ const section = {
 };
 
 export function generateStaticParams() {
-  return templatesSource.generateParams();
+  return generateDocsStaticParams(templatesSource.generateParams());
 }
 
 export async function generateMetadata({

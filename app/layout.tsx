@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
-import { Analytics } from '@vercel/analytics/next';
 import { RootProvider } from 'fumadocs-ui/provider/next';
 import {
   JsonLdScript,
@@ -59,7 +58,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <RootProvider>{children}</RootProvider>
+        <RootProvider
+          search={{ options: { type: 'static', api: '/api/search' } }}
+        >
+          {children}
+        </RootProvider>
         <JsonLdScript data={createWebSiteJsonLd()} id="website-json-ld" />
         <JsonLdScript
           data={createOrganizationJsonLd()}
@@ -82,7 +85,6 @@ export default function RootLayout({
             gtag('config', 'G-NY80BVQV8L');
           `}
         </Script>
-        <Analytics />
       </body>
     </html>
   );

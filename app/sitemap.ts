@@ -7,6 +7,8 @@ import {
 } from '../lib/source';
 import { absoluteUrl } from '../lib/seo';
 
+export const dynamic = 'force-static';
+
 type Page = {
   slugs: string[];
   url: string;
