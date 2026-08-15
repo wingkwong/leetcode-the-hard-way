@@ -27,7 +27,7 @@
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "prettier": "3.9.6",
-    "typescript": "^5.9.3"
+    "typescript": "^7.0.0"
   },
   "browserslist": {
     "production": [
