@@ -3,6 +3,7 @@ import { UserRound, UsersRound } from 'lucide-react';
 import type { MDXComponents } from 'mdx/types';
 import type { ComponentPropsWithoutRef, ReactNode } from 'react';
 import { TabItem, Tabs } from './tabs';
+import { formatPagePathname } from '../lib/seo';
 
 type SolutionAuthorProps = {
   name: string;
@@ -112,6 +113,12 @@ function MdxImage({
   );
 }
 
+function MdxLink({ href, ...props }: ComponentPropsWithoutRef<'a'>) {
+  const Anchor = defaultMdxComponents.a ?? 'a';
+
+  return <Anchor {...props} href={href ? formatPagePathname(href) : href} />;
+}
+
 function Tags({ names }: TagsProps) {
   if (!names) return null;
 
@@ -217,7 +224,7 @@ function normalizeSolutionLink(problem: Problem) {
     : slug;
   const finalSlug = normalizedSlug.replace(/^\d{4}-/, '');
 
-  return `/solutions/${range}/${finalSlug}`;
+  return formatPagePathname(`/solutions/${range}/${finalSlug}`);
 }
 
 export function getMDXComponents(components?: MDXComponents): MDXComponents {
@@ -236,7 +243,7 @@ export function getMDXComponents(components?: MDXComponents): MDXComponents {
 
 export function getRelativeMDXComponents(source: unknown, page: unknown) {
   return getMDXComponents({
-    a: createRelativeLink(source as never, page as never),
+    a: createRelativeLink(source as never, page as never, MdxLink),
   });
 }
 

@@ -12,6 +12,7 @@ import {
   JsonLdScript,
   createPageMetadata,
   createTechArticleJsonLd,
+  formatPagePathname,
 } from '../lib/seo';
 
 type Page = {
@@ -203,7 +204,7 @@ function startsWithSlug(candidate: string[], slug: string[]) {
 }
 
 function getPathname(baseUrl: string, slug: string[]) {
-  return [baseUrl, ...slug].filter(Boolean).join('/');
+  return formatPagePathname([baseUrl, ...slug].filter(Boolean).join('/'));
 }
 
 function resolveSlug(section: Section, slug: string[]) {

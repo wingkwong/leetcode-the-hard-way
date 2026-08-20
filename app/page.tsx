@@ -8,7 +8,11 @@ import {
 import type { Root } from 'fumadocs-core/page-tree';
 import type { Metadata } from 'next';
 import { baseOptions } from '../lib/layout.shared';
-import { createPageMetadata, defaultDescription } from '../lib/seo';
+import {
+  createPageMetadata,
+  defaultDescription,
+  formatPagePathname,
+} from '../lib/seo';
 
 export const metadata: Metadata = createPageMetadata({
   title: 'Introduction',
@@ -33,25 +37,25 @@ const sections = [
     title: 'Tutorials',
     description:
       'Learn data structures, algorithms, math, strings, graph theory, and other core topics.',
-    href: '/tutorials/basic-topics',
+    href: formatPagePathname('/tutorials/basic-topics'),
   },
   {
     title: 'Solutions',
     description:
       'Browse detailed LeetCode solution explanations grouped by problem ID ranges.',
-    href: '/solutions/0000-0099',
+    href: formatPagePathname('/solutions/0000-0099'),
   },
   {
     title: 'Roadmap',
     description:
       'Follow curated problem sets for specific topics and study plans.',
-    href: '/roadmap',
+    href: formatPagePathname('/roadmap'),
   },
   {
     title: 'Templates',
     description:
       'Use reusable implementation templates for common algorithm patterns.',
-    href: '/templates',
+    href: formatPagePathname('/templates'),
   },
 ];
 
@@ -68,9 +72,9 @@ export default function HomePage() {
         <DocsBody>
           <p>
             Start with the tutorials when you want to learn a concept, use the
-            roadmap pages when you want a focused practice path, and refer to the
-            solution catalog when you want complete explanations for individual
-            problems.
+            roadmap pages when you want a focused practice path, and refer to
+            the solution catalog when you want complete explanations for
+            individual problems.
           </p>
 
           <div className="generated-index-grid">

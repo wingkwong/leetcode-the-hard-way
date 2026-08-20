@@ -5,7 +5,7 @@ import {
   templatesSource,
   tutorialsSource,
 } from '../lib/source';
-import { absoluteUrl } from '../lib/seo';
+import { absoluteUrl, formatPagePathname } from '../lib/seo';
 
 export const dynamic = 'force-static';
 
@@ -66,7 +66,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 }
 
 function getPathname(baseUrl: string, slug: string[]) {
-  return [baseUrl, ...slug].filter(Boolean).join('/');
+  return formatPagePathname([baseUrl, ...slug].filter(Boolean).join('/'));
 }
 
 function formatSlug(

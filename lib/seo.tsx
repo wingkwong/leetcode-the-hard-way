@@ -9,7 +9,38 @@ export const defaultPreviewImageHeight = 630;
 export const defaultPreviewImageWidth = 1200;
 
 export function absoluteUrl(pathname = '/') {
-  return new URL(pathname, siteUrl).toString();
+  const url = new URL(pathname, siteUrl);
+  url.pathname = formatPagePathname(url.pathname);
+  return url.toString();
+}
+
+export function formatPagePathname(pathname = '/') {
+  if (isExternalHref(pathname) || pathname.startsWith('#')) return pathname;
+
+  const hashIndex = pathname.indexOf('#');
+  const hash = hashIndex === -1 ? '' : pathname.slice(hashIndex);
+  const pathWithSearch =
+    hashIndex === -1 ? pathname : pathname.slice(0, hashIndex);
+  const searchIndex = pathWithSearch.indexOf('?');
+  const search = searchIndex === -1 ? '' : pathWithSearch.slice(searchIndex);
+  const path =
+    searchIndex === -1 ? pathWithSearch : pathWithSearch.slice(0, searchIndex);
+
+  if (path === '' || path === '/') return `${path || '/'}${search}${hash}`;
+  if (path.endsWith('/') || hasFileExtension(path)) {
+    return `${path}${search}${hash}`;
+  }
+
+  return `${path}/${search}${hash}`;
+}
+
+function isExternalHref(href: string) {
+  return /^[a-z][a-z\d+.-]*:/i.test(href);
+}
+
+function hasFileExtension(pathname: string) {
+  const segment = pathname.split('/').at(-1) ?? '';
+  return /\.[a-z0-9]+$/i.test(segment);
 }
 
 export function formatPageTitle(title: string) {
