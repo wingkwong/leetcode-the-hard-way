@@ -98,7 +98,7 @@ function renderMarkdown() {
     content += `<Tabs>\n`;
     content += `<TabItem value="py" label="Python">\n`;
     content += `<SolutionAuthor name="@wkw"/>\n\n`;
-    content += '```cpp\n';
+    content += '```py\n';
     content += '\n';
     content += '```\n\n';
     content += `</TabItem>\n`;
