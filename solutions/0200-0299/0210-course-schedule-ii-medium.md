@@ -54,7 +54,7 @@ Output: [0]
 
 ```cpp
 // for topological sorting tutorial,
-// see https://wingkwong.github.io/leetcode-the-hard-way/tutorials/graph-theory/topological-sorting
+// see https://leetcodethehardway.com/tutorials/graph-theory/topological-sorting
 struct TopologicalSort {
     int n;
     vector<int> indegree;

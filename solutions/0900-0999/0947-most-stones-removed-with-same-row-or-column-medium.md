@@ -64,7 +64,7 @@ Explanation: [0,0] is the only stone on the plane, so you cannot remove it.
 <SolutionAuthor name="@wkw"/>
 
 ```cpp
-// retrieved from https://wingkwong.github.io/leetcode-the-hard-way/tutorials/graph-theory/disjoint-set-union
+// retrieved from https://leetcodethehardway.com/tutorials/graph-theory/disjoint-set-union
 class dsu {
  public:
   vector<int> root, rank;

@@ -53,7 +53,7 @@ Output: [3,4,6,16,17]
 class Solution {
 public:
     // for full tutorial, please go to
-    // https://wingkwong.github.io/leetcode-the-hard-way/tutorials/basic-topics/prefix-sum
+    // https://leetcodethehardway.com/tutorials/basic-topics/prefix-sum
     vector<int> generatePrefixSum(vector<int>& a) {
         int n = a.size();
 		// we need a vector of size n

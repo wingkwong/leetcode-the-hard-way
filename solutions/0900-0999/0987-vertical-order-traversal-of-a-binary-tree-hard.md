@@ -94,7 +94,7 @@ public:
         nodes[col][row].insert(root -> val);
 
         // then we perform pre order traversal
-        // see https://wingkwong.github.io/leetcode-the-hard-way/tutorials/graph-theory/binary-tree#pre-order
+        // see https://leetcodethehardway.com/tutorials/graph-theory/binary-tree#pre-order
         // for more understanding on tree traversals
         // dfs on left sub tree
         dfs(root-> left, col - 1, row + 1, nodes);

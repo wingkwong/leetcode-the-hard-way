@@ -130,7 +130,7 @@ class StockSpanner:
 <SolutionAuthor name="@wkw"/>
 
 ```cpp
-// modified from https://wingkwong.github.io/leetcode-the-hard-way/templates/segment-tree
+// modified from https://leetcodethehardway.com/templates/segment-tree
 struct segtree {
     vector<long long> sums;
     int size;

@@ -73,7 +73,7 @@ s    f
 
 Here we can see that when it ends, by moving our slow pointer to the second half, we have a split of 0->1->2->null and 3->4->null. We can also imagine in the case of a 4 node linked list, the split would be even: 0->1->null and 2->3->null.
 
-2. [Reversing](https://wingkwong.github.io/leetcode-the-hard-way/solutions/0200-0299/reverse-linked-list-easy) the second half.
+2. [Reversing](https://leetcodethehardway.com/solutions/0200-0299/reverse-linked-list-easy) the second half.
 
 Before we reverse, we will need to sever the links between both halves to make sure we have two separate linked lists.
 

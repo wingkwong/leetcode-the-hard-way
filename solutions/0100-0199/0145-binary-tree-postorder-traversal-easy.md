@@ -65,7 +65,7 @@ Output: [1]
 
 // This is a standard post-order traversal problem, I'd suggest to learn in-order and pre-order as well.
 // Here's a short tutorial if you're interested.
-// https://wingkwong.github.io/leetcode-the-hard-way/tutorials/graph-theory/binary-tree
+// https://leetcodethehardway.com/tutorials/graph-theory/binary-tree
 // then you may try the following problems
 // 94. Binary Tree Inorder Traversal: https://leetcode.com/problems/binary-tree-inorder-traversal/
 // 144. Binary Tree Postorder Traversal: https://leetcode.com/problems/binary-tree-preorder-traversal/
@@ -104,7 +104,7 @@ public:
 
 # This is a standard post-order traversal problem, I'd suggest to learn in-order and pre-order as well.
 # Here's a short tutorial if you're interested.
-# https://wingkwong.github.io/leetcode-the-hard-way/tutorials/graph-theory/binary-tree
+# https://leetcodethehardway.com/tutorials/graph-theory/binary-tree
 # then you may try the following problems
 # 94. Binary Tree Inorder Traversal: https://leetcode.com/problems/binary-tree-inorder-traversal/
 # 144. Binary Tree Postorder Traversal: https://leetcode.com/problems/binary-tree-preorder-traversal/

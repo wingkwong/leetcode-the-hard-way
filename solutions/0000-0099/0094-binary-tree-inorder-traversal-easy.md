@@ -61,7 +61,7 @@ Output: [1]
 
 // This is a standard in-order traversal problem, I'd suggest to learn pre-order and post-order as well.
 // Here's a short tutorial if you're interested.
-// https://wingkwong.github.io/leetcode-the-hard-way/tutorials/graph-theory/binary-tree
+// https://leetcodethehardway.com/tutorials/graph-theory/binary-tree
 // then you may try the following problems
 // 144. Binary Tree Preorder Traversal: https://leetcode.com/problems/binary-tree-preorder-traversal/
 // 145. Binary Tree Postorder Traversal: https://leetcode.com/problems/binary-tree-postorder-traversal/

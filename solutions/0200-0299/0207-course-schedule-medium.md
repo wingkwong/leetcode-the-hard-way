@@ -47,7 +47,7 @@ To take course 1 you should have finished course 0, and to take course 0 you sho
 
 ```cpp
 // for topological sorting tutorial,
-// see https://wingkwong.github.io/leetcode-the-hard-way/tutorials/graph-theory/topological-sorting
+// see https://leetcodethehardway.com/tutorials/graph-theory/topological-sorting
 struct TopologicalSort {
     int n;
     vector<int> indegree;
