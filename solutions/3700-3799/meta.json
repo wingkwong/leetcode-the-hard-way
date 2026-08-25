@@ -2,6 +2,7 @@
   "title": "3700 - 3799",
   "description": "Solutions categorised by Problem IDs",
   "pages": [
-    "3702-longest-subsequence-with-non-zero-bitwise-xor-medium"
+    "3702-longest-subsequence-with-non-zero-bitwise-xor-medium",
+    "3718-smallest-missing-multiple-of-k-easy"
   ]
 }
