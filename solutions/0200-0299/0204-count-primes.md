@@ -40,7 +40,13 @@ Output: 0
 
 ## Approach 1: Sieve of Eratosthenes
 
-See [Sieve of Eratosthenes](../../tutorials/math/number-theory/sieve-of-eratosthenes).
+Create a boolean array for the integers from `0` to `n - 1`. Initially assume each integer is prime, except `0` and `1`. For each remaining prime `p`, mark its multiples as composite, starting at `p * p`. Smaller multiples have already been marked by a smaller prime factor.
+
+Only process candidates while `p * p < n`: every composite number below `n` has a prime factor smaller than `sqrt(n)`. After marking the composites, count the entries still marked prime. For example, below `10`, the remaining numbers are `2`, `3`, `5`, and `7`, so the answer is `4`.
+
+The sieve takes $O(n \log \log n)$ time and $O(n)$ space. The final counting pass takes $O(n)$ time. Return `0` immediately when `n < 2`.
+
+See [Sieve of Eratosthenes](/tutorials/math/number-theory/sieve-of-eratosthenes/) for the full tutorial.
 
 <SolutionAuthor name="@wkw"/>
 
