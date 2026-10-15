@@ -1,6 +1,6 @@
 {
   "title": "Strings",
-  "description": "This section covers Strings topics.",
+  "description": "Explore algorithms for pattern matching, palindromes, and edit distance. Learn how techniques such as KMP, rolling hashes, and Manacher's algorithm help solve string problems efficiently.",
   "pages": [
     "knuth–morris–pratt-algorithm",
     "levenshtein-distance",
