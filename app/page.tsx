@@ -37,13 +37,13 @@ const sections = [
     title: 'Tutorials',
     description:
       'Learn data structures, algorithms, math, strings, graph theory, and other core topics.',
-    href: formatPagePathname('/tutorials/basic-topics'),
+    href: formatPagePathname('/tutorials'),
   },
   {
     title: 'Solutions',
     description:
       'Browse detailed LeetCode solution explanations grouped by problem ID ranges.',
-    href: formatPagePathname('/solutions/0000-0099'),
+    href: formatPagePathname('/solutions'),
   },
   {
     title: 'Roadmap',

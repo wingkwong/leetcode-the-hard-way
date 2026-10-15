@@ -10,12 +10,12 @@ export function baseOptions(): BaseLayoutProps {
     links: [
       {
         text: 'Tutorials',
-        url: formatPagePathname('/tutorials/basic-topics'),
+        url: formatPagePathname('/tutorials'),
         active: 'nested-url',
       },
       {
         text: 'Solutions',
-        url: formatPagePathname('/solutions/0000-0099'),
+        url: formatPagePathname('/solutions'),
         active: 'nested-url',
       },
       {
