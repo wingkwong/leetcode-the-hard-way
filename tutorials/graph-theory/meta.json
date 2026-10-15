@@ -1,6 +1,6 @@
 {
   "title": "Graph Theory",
-  "description": "Welcome to our Graph Theory tutorial page! Graph theory is a branch of mathematics that deals with the study of graphs and their properties. In computer science, graph theory is used to model and analyze problems related to networks, such as social networks, transportation networks, and communication networks. In below tutorials, we will cover the basic concepts of graph theory. We will start with an introduction to the basic definitions and terminologies used in graph theory and then move on to more advanced topics such as graph traversals, shortest paths, and network flow.",
+  "description": "Learn how graphs model connections and help solve algorithmic problems. Explore graph traversals, shortest paths, spanning trees, and more through practical tutorials.",
   "pages": [
     "introduction",
     "bellman-ford-algorithm",
