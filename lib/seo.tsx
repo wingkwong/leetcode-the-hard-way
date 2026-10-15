@@ -109,7 +109,6 @@ export function createOrganizationJsonLd() {
     '@type': 'Organization',
     name: siteName,
     url: siteUrl,
-    logo: absoluteUrl('/img/logo.svg'),
   };
 }
 
@@ -133,10 +132,6 @@ export function createTechArticleJsonLd({
     publisher: {
       '@type': 'Organization',
       name: siteName,
-      logo: {
-        '@type': 'ImageObject',
-        url: absoluteUrl('/img/logo.svg'),
-      },
     },
   };
 }

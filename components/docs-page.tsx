@@ -133,7 +133,11 @@ function getDocsPageSeo(section: Section, slug: string[], page?: Page) {
     currentPage?.data.title ??
     meta?.title ??
     titleFromSlug(slug.at(-1) ?? section.title);
-  const description = currentPage?.data.description ?? meta?.description;
+  const description = getPageDescription(
+    section,
+    title,
+    currentPage?.data.description ?? meta?.description,
+  );
 
   return {
     title,
@@ -171,7 +175,11 @@ function getChildren(section: Section, slug: string[], meta?: MetaFile | null) {
     if (!items.has(key)) {
       items.set(key, {
         title: exactPage?.data.title ?? childMeta?.title ?? titleFromSlug(next),
-        description: exactPage?.data.description ?? childMeta?.description,
+        description: getPageDescription(
+          section,
+          exactPage?.data.title ?? childMeta?.title ?? titleFromSlug(next),
+          exactPage?.data.description ?? childMeta?.description,
+        ),
         url: getPathname(section.baseUrl, formatSlug(section, childSlug)),
       });
     }
@@ -229,4 +237,35 @@ function titleFromSlug(value: string) {
     .filter(Boolean)
     .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
     .join(' ');
+}
+
+function getPageDescription(
+  section: Section,
+  title: string,
+  description?: string,
+) {
+  // Older solutions use author credits and an external URL as their summary.
+  // Keep credits in the article; describe the page itself in search previews.
+  if (
+    description &&
+    !/^Author:/i.test(description.trim()) &&
+    description !== 'Solutions categorised by Problem IDs'
+  ) {
+    return description;
+  }
+
+  if (section.baseUrl === '/solutions') {
+    if (/^\d{4}\s*-\s*\d{4}$/.test(title)) {
+      return `Browse LeetCode solutions for problems ${title}, with explanations and code implementations.`;
+    }
+    if (title === section.title) {
+      return 'Browse LeetCode solutions by problem number, with explanations and code implementations for each problem.';
+    }
+    return `Explore solutions to LeetCode ${title}, with explanations and code implementations.`;
+  }
+
+  return (
+    description ??
+    `Explore ${title} in the LeetCode The Hard Way ${section.title.toLowerCase()} collection.`
+  );
 }
