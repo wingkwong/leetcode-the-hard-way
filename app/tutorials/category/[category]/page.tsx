@@ -1,6 +1,6 @@
-import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { StaticRedirect } from '../../../../components/static-redirect';
+import { createPageMetadata } from '../../../../lib/seo';
 
 const tutorialCategoryRedirects = {
   'basic-topics': '/tutorials/basic-topics/',
@@ -17,12 +17,17 @@ type PageProps = {
   params: Promise<{ category: string }>;
 };
 
-export const metadata: Metadata = {
-  robots: {
-    index: false,
-    follow: true,
-  },
-};
+export async function generateMetadata({ params }: PageProps) {
+  const { category } = await params;
+  const destination = tutorialCategoryRedirects[category as TutorialCategory];
+  if (!destination) notFound();
+
+  return createPageMetadata({
+    title: 'Tutorials',
+    pathname: destination,
+    type: 'website',
+  });
+}
 
 export function generateStaticParams() {
   return Object.keys(tutorialCategoryRedirects).map((category) => ({

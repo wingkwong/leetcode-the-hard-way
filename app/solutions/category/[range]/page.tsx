@@ -1,28 +1,30 @@
-import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { StaticRedirect } from '../../../../components/static-redirect';
+import { createPageMetadata } from '../../../../lib/seo';
+import { solutionsSource } from '../../../../lib/source';
 
-const solutionRanges = Array.from({ length: 34 }, (_, index) => {
-  const start = index * 100;
-  const end = start + 99;
-  const folder = `${String(start).padStart(4, '0')}-${String(end).padStart(4, '0')}`;
-
-  return {
-    destination: `/solutions/${folder}/`,
-    range: `${String(start).padStart(4, '0')}---${String(end).padStart(4, '0')}`,
-  };
-});
+const solutionRanges = [
+  ...new Set(solutionsSource.getPages().map((page) => page.slugs[0])),
+].map((folder) => ({
+  destination: `/solutions/${folder}/`,
+  range: folder.replace('-', '---'),
+}));
 
 type PageProps = {
   params: Promise<{ range: string }>;
 };
 
-export const metadata: Metadata = {
-  robots: {
-    index: false,
-    follow: true,
-  },
-};
+export async function generateMetadata({ params }: PageProps) {
+  const { range } = await params;
+  const redirect = solutionRanges.find((item) => item.range === range);
+  if (!redirect) notFound();
+
+  return createPageMetadata({
+    title: 'Solutions',
+    pathname: redirect.destination,
+    type: 'website',
+  });
+}
 
 export function generateStaticParams() {
   return solutionRanges.map(({ range }) => ({ range }));

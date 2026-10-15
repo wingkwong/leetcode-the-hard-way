@@ -1,6 +1,8 @@
 import { getDocsMetadata, renderDocsPage } from '../../../components/docs-page';
 import { solutionsSource } from '../../../lib/source';
 import { generateDocsStaticParams } from '../../../lib/static-params';
+import { StaticRedirect } from '../../../components/static-redirect';
+import { formatPagePathname } from '../../../lib/seo';
 
 const section = {
   baseUrl: '/solutions',
@@ -34,11 +36,25 @@ export default async function SolutionsPage({
   params: Promise<{ slug?: string[] }>;
 }) {
   const { slug = [] } = await params;
+  const canonicalSlug = formatSolutionSlug(resolveSolutionSlug(slug));
+
+  // Keep old numbered URLs working without publishing a second article.
+  // GitHub Pages serves static files, so use an immediate HTML redirect.
+  if (canonicalSlug.join('/') !== slug.join('/')) {
+    return (
+      <StaticRedirect
+        destination={formatPagePathname(
+          `/solutions/${canonicalSlug.join('/')}`,
+        )}
+      />
+    );
+  }
+
   return renderDocsPage(section, slug);
 }
 
 function resolveSolutionSlug(slug: string[]) {
-  if (slug.length < 2 || hasSolutionIdPrefix(slug.at(-1))) return slug;
+  if (slug.length < 2 || solutionsSource.getPage(slug)) return slug;
 
   const page = solutionsSource.getPages().find((candidate) => {
     if (candidate.slugs.length !== slug.length) return false;
@@ -64,8 +80,4 @@ function formatSolutionSlug(slug: string[]) {
 
 function stripSolutionIdPrefix(slug = '') {
   return slug.replace(/^\d{4}-/, '');
-}
-
-function hasSolutionIdPrefix(slug = '') {
-  return /^\d{4}-/.test(slug);
 }
