@@ -14,7 +14,7 @@ keywords:
 
 ### Tree Traversal
 
-Please refer the [tutorial](../tutorials/graph-theory/binary-tree#traversal) guide for more details.
+Please refer the [tutorial](/tutorials/graph-theory/binary-tree/#traversal) guide for more details.
 
 #### Preorder traversal
 
@@ -114,7 +114,7 @@ def postorder(node):
 
 In Breadth First Search, we explore all the closest nodes first before going one step further.
 
-Please refer the [tutorial](../tutorials/graph-theory/breadth-first-search) guide for more details.
+Please refer the [tutorial](/tutorials/graph-theory/breadth-first-search/) guide for more details.
 
 <Tabs>
 <TabItem value="py" label="Python">
@@ -144,7 +144,7 @@ def findTargetNode(root, targetValue):
 
 Bellman Ford Algorithm computes shortest paths from a single source vertex to all of the other vertices in a weighted directed graph.
 
-Please refer the [tutorial](../tutorials/graph-theory/bellman-ford-algorithm) guide for more details.
+Please refer the [tutorial](/tutorials/graph-theory/bellman-ford-algorithm/) guide for more details.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -171,7 +171,7 @@ void bellman_ford(T_a3 &g, T_vector &dist, int src, int mx_edges) {
 
 Dijkstra's Algorithm is used to find the shortest paths between nodes in a graph.
 
-Please refer the [tutorial](../tutorials/graph-theory/dijkstra) guide for more details.
+Please refer the [tutorial](/tutorials/graph-theory/dijkstra/) guide for more details.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -202,7 +202,7 @@ void dijkstra(T_pair &g, T_vector &dist, int start) {
 
 Topological Sorting is a linear ordering of its vertices such that for every directed edge (u,v) from vertex u to vertex v, u come before v in the ordering.
 
-Please refer the [tutorial](../tutorials/graph-theory/topological-sorting) guide for more details.
+Please refer the [tutorial](/tutorials/graph-theory/topological-sorting/) guide for more details.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -255,7 +255,7 @@ struct TopologicalSort {
 
 Kahn's Algorithm is a classical algorithm in computer science that is used for topological sorting of directed acyclic graphs (DAGs).
 
-Please refer the [tutorial](../tutorials/graph-theory/kahns-algorithm) guide for more details.
+Please refer the [tutorial](/tutorials/graph-theory/kahns-algorithm/) guide for more details.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -299,7 +299,7 @@ T_vector kahn(int n, T_vector_vector &edges){
 
 Disjoint Set Union is a data structure that allows us to combine any two sets into one.
 
-Please refer the [tutorial](../tutorials/graph-theory/disjoint-set-union) guide for more details.
+Please refer the [tutorial](/tutorials/graph-theory/disjoint-set-union/) guide for more details.
 
 <Tabs>
 <TabItem value="cpp" label="C++">

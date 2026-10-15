@@ -55,9 +55,9 @@ Output: []
 
 ## Approach 1: Divide and Conquer
 
-> It is recommended to solve [0021 - Merge Two Sorted Lists (Easy)](merge-two-sorted-lists-easy) first.
+> It is recommended to solve [0021 - Merge Two Sorted Lists (Easy)](/solutions/0000-0099/merge-two-sorted-lists-easy/) first.
 
-We can directly use the solution from [0021 - Merge Two Sorted Lists (Easy)](merge-two-sorted-lists-easy) to solve this problem because merging K sorted lists is same as merging two sorted lists $$log_2k$$ times.
+We can directly use the solution from [0021 - Merge Two Sorted Lists (Easy)](/solutions/0000-0099/merge-two-sorted-lists-easy/) to solve this problem because merging K sorted lists is same as merging two sorted lists $$log_2k$$ times.
 
 The idea is to merge the $$k$$ lists into $$k / 2$$, then $$k / 4$$, $$k / 8$$ and so on. Therefore, we merge the pairs$$(0, 1), (2,3), (4,5),(6,7)$$, then $$(0, 2), (4,6)$$, then $$(0, 4)$$ and get the final result.
 

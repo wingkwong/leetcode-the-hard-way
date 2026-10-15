@@ -66,7 +66,7 @@ public:
 
 ## Approach 2: Backtracking
 
-Check out [Backtracking](../../tutorials/basic-topics/backtracking) section for the detailed explanation.
+Check out [Backtracking](/tutorials/basic-topics/backtracking/) section for the detailed explanation.
 
 <Tabs>
 <TabItem value="cpp" label="C++">

@@ -38,7 +38,7 @@ Output: [1,1,8,8]
 
 :::info[Prerequisite]
 
-- [Binary Tree](../../tutorials/graph-theory/binary-tree)
+- [Binary Tree](/tutorials/graph-theory/binary-tree/)
 
 :::
 

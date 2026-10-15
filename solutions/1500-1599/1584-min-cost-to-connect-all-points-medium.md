@@ -52,7 +52,7 @@ If we see this problem as a graph problem, it is same as find a minimum spanning
 
 For more, please see [Kruskal's Algorithm](https://en.wikipedia.org/wiki/Kruskal's_algorithm).
 
-For DSU templates, please see [DSU Template](../../templates/graph-theory#disjoin-set-union-dsu).
+For DSU templates, please see [DSU Template](/templates/graph-theory/#disjoin-set-union-dsu).
 
 <Tabs>
 <TabItem value="cpp" label="C++">

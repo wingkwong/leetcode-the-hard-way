@@ -39,7 +39,7 @@ Explanation: The square root of 8 is 2.82842..., and since the decimal part is t
 
 :::info[Prerequisite]
 
-- [Binary Search](../../tutorials/basic-topics/binary-search)
+- [Binary Search](/tutorials/basic-topics/binary-search/)
 
 :::
 

@@ -50,7 +50,7 @@ Output: "f"
 
 :::info[Prerequisite]
 
-- [Binary Search](../../tutorials/basic-topics/binary-search)
+- [Binary Search](/tutorials/basic-topics/binary-search/)
 
 :::
 

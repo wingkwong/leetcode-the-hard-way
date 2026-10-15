@@ -87,7 +87,7 @@ class Solution {
 
 ## Approach 2: Edit Distance
 
-We can directly use [0072 - Edit Distance (Hard)](../0000-0099/edit-distance-hard) solution to solve this easy problem since the constraints are not large. Edit distance here means the minimum number of operations required to covert $$s$$ to $$t$$. We just need to check if it is equal to $$m - n$$.
+We can directly use [0072 - Edit Distance (Hard)](/solutions/0000-0099/edit-distance-hard/) solution to solve this easy problem since the constraints are not large. Edit distance here means the minimum number of operations required to covert $$s$$ to $$t$$. We just need to check if it is equal to $$m - n$$.
 
 <Tabs>
 <TabItem value="c++" label="C++">
@@ -233,7 +233,7 @@ class Solution {
 
 ## Approach 4: LCS
 
-If $$s$$ is a subsequence of $$t$$, then it means the Longest Common Subsequence (LCS) would be $$n$$. We can directly use [1143 - Longest Common Subsequence (Medium)](../1100-1199/longest-common-subsequence-medium) solution.
+If $$s$$ is a subsequence of $$t$$, then it means the Longest Common Subsequence (LCS) would be $$n$$. We can directly use [1143 - Longest Common Subsequence (Medium)](/solutions/1100-1199/longest-common-subsequence-medium/) solution.
 
 <Tabs>
 <TabItem value="c++" label="C++">

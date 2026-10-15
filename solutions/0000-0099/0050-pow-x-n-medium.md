@@ -43,7 +43,7 @@ Explanation: 2-2 = 1/22 = 1/4 = 0.25
 
 ## Approach 1: Binary Exponentiation
 
-If the exponent $$n$$ is negative, we need to change it to positive exponent $$- n$$ and make the base to $$1 / x$$. Then apply [Binary Exponentiation](../../tutorials/math/number-theory/binary-exponentiation).
+If the exponent $$n$$ is negative, we need to change it to positive exponent $$- n$$ and make the base to $$1 / x$$. Then apply [Binary Exponentiation](/tutorials/math/number-theory/binary-exponentiation/).
 
 Time Complexity: $$O(log n)$$ instead of calculating $$x * x$$, $$n$$ times. We can utilize binary exponentiation to reduce the number of calculations to $$log n$$ time.
 

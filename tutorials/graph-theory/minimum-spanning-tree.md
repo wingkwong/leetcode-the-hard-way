@@ -18,7 +18,7 @@ A Minimum Spanning Tree (MST) is a subset of the edges of a connected, undirecte
 
 ### Kruskal's Algorithm
 
-[See Here](../graph-theory/kruskals-algorithm)
+[See Here](/tutorials/graph-theory/kruskals-algorithm/)
 
 ### Prim's Algorithm
 

@@ -160,7 +160,7 @@ public:
 
 ## Approach 2: Stack
 
-Numbers are stored forward order, so keep traversing the nodes and add it to the stack. Now at the last, the last node will be at top of the stack. Pop top of the stack one by one and add the digits and create a node and keep the last node for the next node pointer (same as [Reverse LinkedList](../0200-0299/0206-reverse-linked-list-easy.md)). In each iteration, the current node will be set to prev node next pointer. Finally if carry is remaining then add it to head.
+Numbers are stored forward order, so keep traversing the nodes and add it to the stack. Now at the last, the last node will be at top of the stack. Pop top of the stack one by one and add the digits and create a node and keep the last node for the next node pointer (same as [Reverse LinkedList](/solutions/0200-0299/reverse-linked-list-easy/)). In each iteration, the current node will be set to prev node next pointer. Finally if carry is remaining then add it to head.
 
 Time Complexity is $O(n)$, where $n$ is the length of longest linked list.
 

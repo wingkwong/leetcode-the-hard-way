@@ -54,7 +54,7 @@ myHashMap.get(2);    // return -1 (i.e., not found), The map is now [[1,1]]
 
 :::info[Prerequisite]
 
-- [HashMap](../../tutorials/basic-topics/hash-map)
+- [HashMap](/tutorials/basic-topics/hash-map/)
 
 :::
 

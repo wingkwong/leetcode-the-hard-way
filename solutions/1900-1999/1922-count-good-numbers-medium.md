@@ -47,7 +47,7 @@ Output: 564908303
 
 ## Approach 1: Math
 
-For even indices, good numbers can only include $0, 2, 4, 6, 8$. For odd indices, $2 ,3, 5, 7$ are good. Given a string of length $n$, it has $n + 1 // 2$ even indices and $n // 2$ odd indices. Thefore, the number of good numbers is simply $(5 ^ {(n + 1) / 2}) * (4 ^ {(n / 2)})$. Since $n$ can be up to $10 ^ {15}$, built-in $pow$ will cause TLE. We need to use [Binary Exponentiation](../../tutorials/math/number-theory/binary-exponentiation) to optimize it.
+For even indices, good numbers can only include $0, 2, 4, 6, 8$. For odd indices, $2 ,3, 5, 7$ are good. Given a string of length $n$, it has $n + 1 // 2$ even indices and $n // 2$ odd indices. Thefore, the number of good numbers is simply $(5 ^ {(n + 1) / 2}) * (4 ^ {(n / 2)})$. Since $n$ can be up to $10 ^ {15}$, built-in $pow$ will cause TLE. We need to use [Binary Exponentiation](/tutorials/math/number-theory/binary-exponentiation/) to optimize it.
 
 <Tabs>
 <TabItem value="py" label="Python">

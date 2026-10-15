@@ -53,7 +53,7 @@ Output: 1
 
 ## Approach 1: Binary Search
 
-See [Binary Search](../../tutorials/basic-topics/binary-search) for basic understanding.
+See [Binary Search](/tutorials/basic-topics/binary-search/) for basic understanding.
 
 <Tabs>
 <TabItem value="cpp" label="C++">

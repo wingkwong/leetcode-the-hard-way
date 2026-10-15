@@ -46,7 +46,7 @@ Output: 3
 
 ## Approach 1: Dynamic Programming
 
-Similar to [House Robber](/solutions/0100-0199/house-robber-medium), at any given house, the max number of money we can have would be all the money at that house, plus the amount we brought from 2 houses before that house, or it would be the money we got from the last house plus us skipping this house. The caveat is, if we take from the first house, we can't take from the last house and vice-versa. So we can use the same algorithm, with 1 trick, that is to run the algorithm once over $$nums$$ from $$0$$ to $$n - 1$$ and once from $$1$$ to $$n$$, and taking the max of those too passes. This gives us both the max of if we included the first house and if we included the last house and does it in the same, linear time.
+Similar to [House Robber](/solutions/0100-0199/house-robber-medium/), at any given house, the max number of money we can have would be all the money at that house, plus the amount we brought from 2 houses before that house, or it would be the money we got from the last house plus us skipping this house. The caveat is, if we take from the first house, we can't take from the last house and vice-versa. So we can use the same algorithm, with 1 trick, that is to run the algorithm once over $$nums$$ from $$0$$ to $$n - 1$$ and once from $$1$$ to $$n$$, and taking the max of those too passes. This gives us both the max of if we included the first house and if we included the last house and does it in the same, linear time.
 
 Time Complexity: $$O(n)$$ Where $$n$$ is the number of houses. We must traverse each house twice, once for the first $$n - 1$$ houses, and once for the last $$n - 1$$ houses.
 

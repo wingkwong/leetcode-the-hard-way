@@ -12,11 +12,11 @@ keywords:
 
 ## Binary Search Trees
 
-**Binary search trees (BST)** are basically [binary trees](./binary-tree.md) where each node's value is larger than all the nodes in that node's left subtree, and smaller than all the nodes in that node's right subtree. This property allows the [binary search algorithm](./../basic-topics/binary-search.md) to be applied to the tree, which is useful for fast lookup, insertion, and deletion of the nodes.
+**Binary search trees (BST)** are basically [binary trees](/tutorials/graph-theory/binary-tree/) where each node's value is larger than all the nodes in that node's left subtree, and smaller than all the nodes in that node's right subtree. This property allows the [binary search algorithm](/tutorials/basic-topics/binary-search/) to be applied to the tree, which is useful for fast lookup, insertion, and deletion of the nodes.
 
 ### Implementation
 
-A BST can be implemented using a [binary tree](./binary-tree.md) with the following structure:
+A BST can be implemented using a [binary tree](/tutorials/graph-theory/binary-tree/) with the following structure:
 
 ```cpp
 struct TreeNode {
@@ -33,7 +33,7 @@ struct TreeNode {
 
 #### Insertion
 
-Inserting a node into a BST is similar to inserting a node into a [binary tree](./binary-tree.md), except that the node must be inserted in the correct position to maintain the BST property. The following is an example of inserting a node into a BST:
+Inserting a node into a BST is similar to inserting a node into a [binary tree](/tutorials/graph-theory/binary-tree/), except that the node must be inserted in the correct position to maintain the BST property. The following is an example of inserting a node into a BST:
 
 ```cpp
 TreeNode* insert(TreeNode* root, int key) {

@@ -45,9 +45,9 @@ Output: [3,2,1,4,5]
 
 ## Approach 1: Iterative
 
-A hard question, but if we break it down, it is made up of a bunch of fairly easy linked list ideas, just used all at once. The first and most obvious one is to [reverse a linked list](https://leetcodethehardway.com/solutions/0200-0299/reverse-linked-list-easy#problem-link). Secondly, we can use a bunch of other simple linked list tricks, that is using pointers to track interesting nodes, and a dummy head to simplify the code and basic linked list traversal.
+A hard question, but if we break it down, it is made up of a bunch of fairly easy linked list ideas, just used all at once. The first and most obvious one is to [reverse a linked list](https://leetcodethehardway.com/solutions/0200-0299/reverse-linked-list-easy/#problem-link). Secondly, we can use a bunch of other simple linked list tricks, that is using pointers to track interesting nodes, and a dummy head to simplify the code and basic linked list traversal.
 
-So first, [reversing](https://leetcodethehardway.com/solutions/0200-0299/reverse-linked-list-easy#problem-link) a linked list. I recommend you check the link to get a more in-depth answer. But simply we need to track previous and next pointers for each node to adjust the pointers and not lose track of where we are inside the linked list.
+So first, [reversing](https://leetcodethehardway.com/solutions/0200-0299/reverse-linked-list-easy/#problem-link) a linked list. I recommend you check the link to get a more in-depth answer. But simply we need to track previous and next pointers for each node to adjust the pointers and not lose track of where we are inside the linked list.
 
 Secondly, we need a bunch of pointers:
 

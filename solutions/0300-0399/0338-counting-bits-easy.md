@@ -48,7 +48,7 @@ Explanation:
 
 ## Approach 1: (n + 1) hammingWeight
 
-If you've solved [0191 - Number of 1 Bits (Easy)](../0100-0199/number-of-1-bits-easy), then you can use that solution in this problem. The time complexity is $$O(n logn)$$.
+If you've solved [0191 - Number of 1 Bits (Easy)](/solutions/0100-0199/number-of-1-bits-easy/), then you can use that solution in this problem. The time complexity is $$O(n logn)$$.
 
 <SolutionAuthor name="@wkw"/>
 

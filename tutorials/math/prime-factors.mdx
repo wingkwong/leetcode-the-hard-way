@@ -56,11 +56,11 @@ vector<int> getPrimeFactors(int n) {
 
 ## Approach #2: Finding prime factor in log(n) time
 
-Before moving further, it's important to recognise that a number $N$ cannot have more than $log(N)$ prime factors. Since the smallest prime factor a number can have is $2$ and $2^{log(n)} \geq n$. If the number has a prime factor bigger than $2$ than it will have even lesser prime factors. The pre-requisite for this method is knowing [Sieve of Eratosthenes](../math/number-theory/sieve-of-eratosthenes.md).
+Before moving further, it's important to recognise that a number $N$ cannot have more than $log(N)$ prime factors. Since the smallest prime factor a number can have is $2$ and $2^{log(n)} \geq n$. If the number has a prime factor bigger than $2$ than it will have even lesser prime factors. The pre-requisite for this method is knowing [Sieve of Eratosthenes](/tutorials/math/number-theory/sieve-of-eratosthenes/).
 
 We can optimise our code to find prime factors of a number $N$ in $O(log(N))$ time. But to do so, we need to do some pre-computations which takes $O(MAX)$ time, where $MAX$ is the largest number upto which we can find it's prime factors. Thus the final time complexity is $O(MAX + log(N))$. This is helpful only if we have to find prime factor of multiple numbers less than or equal to $MAX$.
 
-Since the pre computation takes $O(MAX)$ time so we cannot find prime factors of very large numbers (due to constraints on time) using this method. The pre computation process is a modification of [Sieve of Eratosthenes](../math/number-theory/sieve-of-eratosthenes.md). For each number from $2$ to $MAX$ we find it's smallest prime factor and store it in an array, let's call it `min_prime`. We will see how to find `min_prime` array later, first let us see how to calculate prime factor of a number $N$ if we already have the `min_prime` array in hand.
+Since the pre computation takes $O(MAX)$ time so we cannot find prime factors of very large numbers (due to constraints on time) using this method. The pre computation process is a modification of [Sieve of Eratosthenes](/tutorials/math/number-theory/sieve-of-eratosthenes/). For each number from $2$ to $MAX$ we find it's smallest prime factor and store it in an array, let's call it `min_prime`. We will see how to find `min_prime` array later, first let us see how to calculate prime factor of a number $N$ if we already have the `min_prime` array in hand.
 
 ## Implementation
 
@@ -258,7 +258,7 @@ The above code is bound to come out of `while` loop in atmost $log(n)$ steps. In
 
 ## [Example #3: 952. Largest Component Size by Common Factor](https://leetcode.com/problems/largest-component-size-by-common-factor/description/)
 
-This problem requires basic knowledge of graph traversal. The two popular traversals are [Depth First Search](../graph-theory/depth-first-search.md) and [Breadth First Search](../graph-theory/breadth-first-search.md).
+This problem requires basic knowledge of graph traversal. The two popular traversals are [Depth First Search](/tutorials/graph-theory/depth-first-search/) and [Breadth First Search](/tutorials/graph-theory/breadth-first-search/).
 
 First let us see how to build the graph. Naive way of building graph would be to iterate over all $(i, j)$ pairs and check if $\gcd(nums_i, nums_j) > 1$. If it is then add an edge bweten them, else not. But this approch will take $O(n^2)$ operations in worst case, which will not pass.
 
@@ -364,7 +364,7 @@ public:
 - **Time Complexity:** $O(MAX + n \cdot log(n))$, where $MAX$ is the max element of `nums` and $n$ is length of `nums`.
 - **Space Complexity:** $O(MAX + n \cdot log(n))$, as we are building a graph of $n \cdot log(n)$ edges and $(MAX + 1)$ nodes.
 
-The process of finding connected components can be done using a data structure [Disjoint Set Union](../graph-theory/disjoint-set-union.md) as well.
+The process of finding connected components can be done using a data structure [Disjoint Set Union](/tutorials/graph-theory/disjoint-set-union/) as well.
 
 export const suggestedProblems = [ { "problemName": "263. Ugly Number", "difficulty": "Easy", "leetCodeLink": "https://leetcode.com/problems/ugly-number/", "solutionLink": "../../../solutions/0200-0299/ugly-number-easy" }, { "problemName": "650. 2 Keys Keyboard", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/2-keys-keyboard/", "solutionLink": "../../../solutions/0600-0699/two-keys-keyboard-medium" }, { "problemName": "2709. Greatest Common Divisor Traversal", "difficulty": "Hard", "leetCodeLink": "https://leetcode.com/problems/greatest-common-divisor-traversal/", "solutionLink": "../../../solutions/2700-2799/greatest-common-divisor-traversal-hard" }, ]
 

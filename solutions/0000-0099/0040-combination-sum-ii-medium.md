@@ -49,7 +49,7 @@ Output:
 
 ## Approach 1: Backtracking
 
-Similar to [0039 - Combination Sum (Medium)](combination-sum-medium), the only difference is each number can be used once in the combination. To avoid overcounting, we can simply add `i != start && candidates[i] == candidates[i - 1].`
+Similar to [0039 - Combination Sum (Medium)](/solutions/0000-0099/combination-sum-medium/), the only difference is each number can be used once in the combination. To avoid overcounting, we can simply add `i != start && candidates[i] == candidates[i - 1].`
 
 <Tabs>
 <TabItem value="cpp" label="C++">

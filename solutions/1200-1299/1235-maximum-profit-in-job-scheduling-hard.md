@@ -141,4 +141,4 @@ public:
 
 ## Similar Problems
 
-- [1751 - Maximum Number of Events That Can Be Attended II (Hard)](../1700-1799/maximum-number-of-events-that-can-be-attended-ii-hard)
+- [1751 - Maximum Number of Events That Can Be Attended II (Hard)](/solutions/1700-1799/maximum-number-of-events-that-can-be-attended-ii-hard/)

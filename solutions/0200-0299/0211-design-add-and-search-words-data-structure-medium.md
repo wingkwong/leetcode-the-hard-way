@@ -49,7 +49,7 @@ wordDictionary.search("b.."); // return True
 
 ## Approach 1: Trie - Depth-First Search
 
-If you haven't heard of a [trie](https://leetcodethehardway.com/solutions/0200-0299/implement-trie-medium), then this question will be extremely hard. But basically, a trie is a linked tree structure, which will have some way to denote which character you are currently looking at, and for each character in the trie, it will link to the next characters if they exist. So you can imagine a tree, but instead of numbers, we use letters, and each path from the root to the leaf will form a word.
+If you haven't heard of a [trie](https://leetcodethehardway.com/solutions/0200-0299/implement-trie-medium/), then this question will be extremely hard. But basically, a trie is a linked tree structure, which will have some way to denote which character you are currently looking at, and for each character in the trie, it will link to the next characters if they exist. So you can imagine a tree, but instead of numbers, we use letters, and each path from the root to the leaf will form a word.
 
 The only adjustment we have to make is to the search method. Since we are introducing a wild card character, `'.'`, it means instead of just following a singular path down the tree, at that level we will have to search every path, as the answer can be down any one of the paths.
 

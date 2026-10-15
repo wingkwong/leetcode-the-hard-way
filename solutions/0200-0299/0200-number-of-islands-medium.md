@@ -48,7 +48,7 @@ Output: 3
 
 ## Approach 1: Flood Fill
 
-We can use [0733 - Flood Fill (Easy)](../0700-0799/flood-fill-easy) solution in this problem. The idea is to search for $$1$$ and paint the entire island with different character that does not exist in the grid (says $$2$$). Every time we start flood fill, we increase our answer by $$1$$.
+We can use [0733 - Flood Fill (Easy)](/solutions/0700-0799/flood-fill-easy/) solution in this problem. The idea is to search for $$1$$ and paint the entire island with different character that does not exist in the grid (says $$2$$). Every time we start flood fill, we increase our answer by $$1$$.
 
 Time Complexity: $$O(m*n)$$ where m is the number of rows, and n is the number of columns in the grid. We must traverse the whole grid in order to determine the number of islands.
 

@@ -40,7 +40,7 @@ Output: "y"
 
 ## Approach 1: Bit Manipulation
 
-Same idea as [0136 - Single Number (Easy)](../0100-0199/single-number-easy).
+Same idea as [0136 - Single Number (Easy)](/solutions/0100-0199/single-number-easy/).
 
 Prerequisite: You should understand properties of XOR.
 

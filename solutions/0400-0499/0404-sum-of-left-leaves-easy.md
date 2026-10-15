@@ -37,7 +37,7 @@ Output: 0
 
 ## Approach 1: DFS
 
-Following the template from [DFS Guide](../../tutorials/graph-theory/depth-first-search), we iterate to each node and check if it is a left leaf. If it is a left leaf, we return that value to its parent for cumulating the sum. The trick here is to add a `is_left` parameter to the `dfs` function.
+Following the template from [DFS Guide](/tutorials/graph-theory/depth-first-search/), we iterate to each node and check if it is a left leaf. If it is a left leaf, we return that value to its parent for cumulating the sum. The trick here is to add a `is_left` parameter to the `dfs` function.
 
 <Tabs>
 <TabItem value="py" label="Python">

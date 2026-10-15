@@ -64,7 +64,7 @@ Explanation:
 
 :::info[Prerequisite]
 
-- [Binary Tree](../../tutorials/graph-theory/binary-tree)
+- [Binary Tree](/tutorials/graph-theory/binary-tree/)
 
 :::
 

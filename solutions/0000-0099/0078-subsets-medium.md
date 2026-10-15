@@ -70,7 +70,7 @@ public:
 
 ## Approach 2: Backtracking
 
-Standard [Backtracking](../../tutorials/basic-topics/backtracking) problem.
+Standard [Backtracking](/tutorials/basic-topics/backtracking/) problem.
 
 <Tabs>
 <TabItem value="cpp" label="C++">

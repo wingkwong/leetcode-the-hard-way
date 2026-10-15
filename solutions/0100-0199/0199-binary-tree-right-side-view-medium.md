@@ -204,7 +204,7 @@ var rightSideView = function (root) {
 
 A level order traversal, selecting the far right node in each level makes a lot of sense. We can perform a level order traversal using a queue and performing a breadth-first search.
 
-A [level order traversal](https://leetcodethehardway.com/solutions/0100-0199/binary-tree-level-order-traversal-medium) can be started by placing the root into the queue. Then for each iteration, we can loop over the length of the queue, $$n$$. By looping over $$n$$ it means we only ever loop over the current level, meaning we can add nodes to the queue, and will never reach them as our for loop will stop, maintaining a perfect level order traversal.
+A [level order traversal](https://leetcodethehardway.com/solutions/0100-0199/binary-tree-level-order-traversal-medium/) can be started by placing the root into the queue. Then for each iteration, we can loop over the length of the queue, $$n$$. By looping over $$n$$ it means we only ever loop over the current level, meaning we can add nodes to the queue, and will never reach them as our for loop will stop, maintaining a perfect level order traversal.
 
 We can place the nodes from left to right, or right to left. If we place nodes right first, then left. Then on each iteration, our rightmost node will be first in the queue. If we place them left to right, then on each iteration the rightmost node will be last in our queue.
 

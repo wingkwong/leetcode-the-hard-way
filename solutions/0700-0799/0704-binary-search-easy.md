@@ -75,7 +75,7 @@ Note we found our insight above that the array is sorted. Since the array is sor
 
 :::info[Prerequisite]
 
-- [Binary Search](../../tutorials/basic-topics/binary-search)
+- [Binary Search](/tutorials/basic-topics/binary-search/)
 
 :::
 

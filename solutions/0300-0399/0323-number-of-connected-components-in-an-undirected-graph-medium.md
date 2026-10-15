@@ -40,7 +40,7 @@ Output: 1
 
 ## Approach 1: DSU
 
-Eventually the connected components would belong to its own group. We can use DSU to unite those nodes and count how many groups at the end. See [Disjoint Set Union (DSU)](../../tutorials/graph-theory/disjoint-set-union) for basic understanding.
+Eventually the connected components would belong to its own group. We can use DSU to unite those nodes and count how many groups at the end. See [Disjoint Set Union (DSU)](/tutorials/graph-theory/disjoint-set-union/) for basic understanding.
 
 <Tabs>
 <TabItem value="cpp" label="C++">

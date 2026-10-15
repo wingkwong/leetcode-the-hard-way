@@ -39,7 +39,7 @@ Explanation: There is 1 choose 1 = 1 total combination.
 
 ## Approach 1: Backtracking
 
-This question can be solved by standard backtracking. Check out [Backtracking](../../tutorials/basic-topics/backtracking) section for the detailed explanation.
+This question can be solved by standard backtracking. Check out [Backtracking](/tutorials/basic-topics/backtracking/) section for the detailed explanation.
 
 <Tabs>
 <TabItem value="cpp" label="C++">

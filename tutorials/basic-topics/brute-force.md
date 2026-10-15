@@ -33,7 +33,7 @@ Note that the brute force approach often results in a solution that has a high t
 >
 > Explanation: Running sum is obtained as follows: $[1, 1 + 2, 1 + 2 + 3, 1 + 2 + 3 + 4]$
 
-For a brute force solution, we iterate each element $a[i]$ and we iterate from $j = [0 .. i]$ to add $a[j]$ to $sum$. This solution is acceptable but it is slow as we have two for-loops here. A better approach would be using [Prefix Sum](../basic-topics/prefix-sum) to reduce time complexity.
+For a brute force solution, we iterate each element $a[i]$ and we iterate from $j = [0 .. i]$ to add $a[j]$ to $sum$. This solution is acceptable but it is slow as we have two for-loops here. A better approach would be using [Prefix Sum](/tutorials/basic-topics/prefix-sum/) to reduce time complexity.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
@@ -70,7 +70,7 @@ public:
 >
 > $-x$ if $x < 0$
 
-Similar to Example 1, we iterate each element and iterate the elements after that to search for each pair to see if the condition can be met or not. Some better approaches would be using [Sliding Window](../basic-topics/sliding-window) or Counting Sort to reduce time complexity.
+Similar to Example 1, we iterate each element and iterate the elements after that to search for each pair to see if the condition can be met or not. Some better approaches would be using [Sliding Window](/tutorials/basic-topics/sliding-window/) or Counting Sort to reduce time complexity.
 
 <Tabs>
 <TabItem value="cpp" label="C++">

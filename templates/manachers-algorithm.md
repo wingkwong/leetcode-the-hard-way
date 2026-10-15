@@ -8,7 +8,7 @@ keywords:
   - manachers
 ---
 
-Please refer the [tutorial](../tutorials/strings/manachers-algorithm) guide for more details.
+Please refer the [tutorial](/tutorials/strings/manachers-algorithm/) guide for more details.
 
 The function takes input of a string and returns all possible palindromic strings at each center, possible in the string.
 
