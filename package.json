@@ -32,7 +32,7 @@
     "@types/react-dom": "19.2.3",
     "prettier": "3.9.10",
     "serve": "14.2.6",
-    "typescript": "^5.9.3"
+    "typescript": "^7.0.0"
   },
   "browserslist": {
     "production": [
