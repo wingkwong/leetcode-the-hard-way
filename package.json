@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "fumadocs-core": "16.11.4",
-    "fumadocs-mdx": "15.1.1",
+    "fumadocs-mdx": "15.4.7",
     "fumadocs-ui": "16.11.4",
     "katex": "0.17.0",
     "lucide-react": "1.24.0",
