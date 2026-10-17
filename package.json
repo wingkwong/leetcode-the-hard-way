@@ -13,7 +13,7 @@
     "prettier": "pnpm format"
   },
   "dependencies": {
-    "fumadocs-core": "16.11.4",
+    "fumadocs-core": "16.17.5",
     "fumadocs-mdx": "15.1.1",
     "fumadocs-ui": "16.11.4",
     "katex": "0.17.0",
