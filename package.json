@@ -26,7 +26,7 @@
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
-    "prettier": "3.9.9",
+    "prettier": "3.9.10",
     "typescript": "^5.9.3"
   },
   "browserslist": {
@@ -41,5 +41,5 @@
       "last 1 safari version"
     ]
   },
-  "packageManager": "pnpm@10.34.5"
+  "packageManager": "pnpm@12.14.0"
 }
