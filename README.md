@@ -5,3 +5,7 @@
 Contributions are welcome. Please see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 Discord Community: https://discord.com/invite/Nqm4jJcyBf
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
