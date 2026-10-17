@@ -1,7 +1,7 @@
 ---
 title: 'Trie'
 description: 'A trie or prefix tree is a tree data structure used to efficiently store and retrieve keys in a dataset of strings.'
-# hide_table_of_contents: true
+hide_table_of_contents: false
 keywords:
   - leetcode
   - tutorial

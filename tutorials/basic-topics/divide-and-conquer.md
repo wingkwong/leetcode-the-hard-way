@@ -1,7 +1,7 @@
 ---
 title: 'Divide and Conquer'
 description: 'Divide and conquer breaks a problem into smaller subproblems, solves them recursively, and combines the results.'
-# hide_table_of_contents: true
+hide_table_of_contents: false
 draft: true
 keywords:
   - leetcode

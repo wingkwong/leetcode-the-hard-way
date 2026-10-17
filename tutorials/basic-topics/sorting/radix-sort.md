@@ -1,7 +1,7 @@
 ---
 title: 'Radix Sort'
 description: 'Radix sort orders values digit by digit, often using counting sort as a stable subroutine.'
-hide_table_of_contents: true
+hide_table_of_contents: false
 draft: true
 keywords:
   - leetcode

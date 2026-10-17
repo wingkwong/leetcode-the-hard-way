@@ -1,7 +1,7 @@
 ---
 title: 'Palindrome'
 description: 'A palindrome is a word, number, phrase, or other sequence of characters which reads the same backward as forward.'
-hide_table_of_contents: true
+hide_table_of_contents: false
 keywords:
   - leetcode
   - tutorial

@@ -1,7 +1,7 @@
 ---
 title: 'Brute Force'
 description: 'Brute Force is used when the problem size is limited'
-hide_table_of_contents: true
+hide_table_of_contents: false
 keywords:
   - leetcode
   - tutorial

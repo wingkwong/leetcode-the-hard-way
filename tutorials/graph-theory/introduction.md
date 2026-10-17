@@ -1,7 +1,7 @@
 ---
 title: 'Introduction'
 description: 'Graphs can solve a plethora of interesting problems!'
-hide_table_of_contents: true
+hide_table_of_contents: false
 sidebar_position: 1
 keywords:
   - leetcode

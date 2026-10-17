@@ -1,7 +1,7 @@
 ---
 title: 'Quick Sort'
 description: 'Quick sort partitions an array around a pivot and recursively sorts the partitions.'
-hide_table_of_contents: true
+hide_table_of_contents: false
 draft: true
 keywords:
   - leetcode

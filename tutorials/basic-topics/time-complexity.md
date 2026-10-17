@@ -1,7 +1,7 @@
 ---
 title: 'Time Complexity'
 description: 'Time Complexity is one of the important measurements when it comes to writing an efficient solution.'
-hide_table_of_contents: true
+hide_table_of_contents: false
 keywords:
   - leetcode
   - tutorial

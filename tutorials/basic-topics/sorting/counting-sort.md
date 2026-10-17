@@ -1,7 +1,7 @@
 ---
 title: 'Counting Sort'
 description: 'Counting sort uses value frequencies to sort integers efficiently when the value range is limited.'
-hide_table_of_contents: true
+hide_table_of_contents: false
 draft: true
 keywords:
   - leetcode
