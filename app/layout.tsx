@@ -24,8 +24,12 @@ export const metadata: Metadata = {
   },
   description: defaultDescription,
   icons: {
-    icon: '/img/favicon.ico',
+    icon: [
+      { url: '/img/favicon.ico', sizes: '16x16 32x32 48x48' },
+      { url: '/img/favicon.svg', type: 'image/svg+xml', sizes: 'any' },
+    ],
     shortcut: '/img/favicon.ico',
+    apple: { url: '/img/apple-touch-icon.png', sizes: '180x180' },
   },
   openGraph: {
     title: siteName,
