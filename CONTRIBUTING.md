@@ -4,14 +4,37 @@
 
 Don't rely on a Markdown editor. Start the application locally to make and verify your changes.
 
+Use Node.js 24.x and pnpm 12.14.0, matching the versions declared in `package.json`. If pnpm is not installed, install it with `npm install --global pnpm@12.14.0`.
+
 ```bash
 cd leetcode-the-hard-way
-npm i
-npm run start
-# By default, a browser window will open at http://localhost:3000/.
+pnpm install --frozen-lockfile
+pnpm dev
 ```
 
+Open http://localhost:3000/ in your browser. Changes to the site and documentation will reload during development.
+
+To preview the production site, build the static export and serve the generated `out` directory:
+
+```bash
+pnpm build
+pnpm start
+```
+
+Open the local URL printed by the preview server.
+
 ## Before Creating a PR
+
+Run the type and formatting checks:
+
+```bash
+pnpm typecheck
+pnpm format:check
+```
+
+`pnpm typecheck` generates the Fumadocs and Next.js types before checking TypeScript. Use `pnpm exec prettier --write path/to/changed-file` to format individual files, or `pnpm format` to format the entire repository. The existing `pnpm prettier` command remains an alias for `pnpm format`.
+
+Run `pnpm build` to verify the production static export before submitting changes.
 
 See the [Checklist](https://github.com/wingkwong/leetcode-the-hard-way/blob/main/.github/pull_request_template.md#checklist).
 

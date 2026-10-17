@@ -2,31 +2,36 @@
   "name": "leetcode-the-hard-way",
   "version": "0.0.0",
   "private": true,
+  "license": "MIT",
   "scripts": {
-    "dev": "next dev",
-    "start": "next start",
+    "dev": "next dev --webpack",
+    "start": "serve out",
     "build": "next build --webpack",
-    "prettier": "prettier --write ."
+    "typecheck": "fumadocs-mdx && next typegen && tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "prettier": "pnpm format"
   },
   "dependencies": {
-    "@types/mdx": "latest",
-    "fumadocs-core": "latest",
-    "fumadocs-mdx": "latest",
-    "fumadocs-ui": "latest",
-    "katex": "latest",
-    "lucide-react": "latest",
-    "next": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "rehype-katex": "latest",
-    "remark-math": "latest",
-    "zod": "latest"
+    "fumadocs-core": "16.11.4",
+    "fumadocs-mdx": "15.1.1",
+    "fumadocs-ui": "16.11.4",
+    "katex": "0.17.0",
+    "lucide-react": "1.24.0",
+    "next": "16.2.10",
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
+    "rehype-katex": "7.0.1",
+    "remark-math": "6.0.0",
+    "zod": "4.4.3"
   },
   "devDependencies": {
-    "@types/node": "latest",
-    "@types/react": "latest",
-    "@types/react-dom": "latest",
+    "@types/mdx": "2.0.14",
+    "@types/node": "^24",
+    "@types/react": "19.2.17",
+    "@types/react-dom": "19.2.3",
     "prettier": "3.9.10",
+    "serve": "14.2.6",
     "typescript": "^5.9.3"
   },
   "browserslist": {
@@ -40,6 +45,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "engines": {
+    "node": "24.x"
   },
   "packageManager": "pnpm@12.14.0"
 }
