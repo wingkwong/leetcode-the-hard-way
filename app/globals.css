@@ -89,6 +89,122 @@ th {
   margin-bottom: 0.75rem;
 }
 
+.sponsors-marquee {
+  border-top: 1px solid var(--color-fd-border);
+  flex-shrink: 0;
+  margin-top: 1rem;
+  padding: 1rem 0 0.5rem;
+  font-size: 0.75rem;
+}
+
+.sponsors-marquee-header {
+  align-items: center;
+  color: var(--color-fd-muted-foreground);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.sponsors-marquee-toggle {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  border-radius: 4px;
+  color: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  height: 24px;
+  width: 24px;
+}
+
+.sponsors-marquee-toggle:hover {
+  background: var(--color-fd-muted);
+}
+
+.sponsors-marquee-toggle:focus-visible,
+.sponsors-marquee-link:focus-visible {
+  outline: 2px solid var(--site-link);
+  outline-offset: 3px;
+}
+
+.sponsors-marquee-viewport {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+.sponsors-marquee-track {
+  animation: sponsors-marquee-scroll 24s linear infinite;
+  display: flex;
+  width: max-content;
+}
+
+.sponsors-marquee-group {
+  display: flex;
+  flex-shrink: 0;
+  gap: 0.625rem;
+  padding-right: 0.625rem;
+}
+
+.sponsors-marquee-placeholder {
+  align-items: center;
+  background: var(--color-fd-muted);
+  border: 1px dashed var(--color-fd-border);
+  border-radius: 8px;
+  color: var(--color-fd-muted-foreground);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+  height: 76px;
+  width: 136px;
+}
+
+.sponsors-marquee-track[data-paused='true'],
+.sponsors-marquee:hover .sponsors-marquee-track,
+.sponsors-marquee:focus-within .sponsors-marquee-track {
+  animation-play-state: paused;
+}
+
+.sponsors-marquee-link {
+  color: var(--color-fd-muted-foreground);
+  display: block;
+  margin-top: 0.75rem;
+  text-align: center;
+}
+
+.sponsors-marquee-link:hover {
+  color: var(--color-fd-foreground);
+}
+
+@keyframes sponsors-marquee-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sponsors-marquee-track {
+    animation: none;
+    width: 100%;
+  }
+
+  .sponsors-marquee-group {
+    flex: 1;
+    padding: 0;
+  }
+
+  .sponsors-marquee-placeholder {
+    width: 100%;
+  }
+
+  .sponsors-marquee-toggle,
+  .sponsors-marquee-group[aria-hidden='true'],
+  .sponsors-marquee-placeholder:not(:first-child) {
+    display: none;
+  }
+}
+
 .prose > h2:first-child,
 .prose > .tutorial-credit-wrapper + h2 {
   margin-top: 1rem;

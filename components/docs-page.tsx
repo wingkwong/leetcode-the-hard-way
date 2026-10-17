@@ -8,6 +8,7 @@ import {
   DocsTitle,
 } from 'fumadocs-ui/layouts/docs/page';
 import { getRelativeMDXComponents, type MDXComponent } from './mdx';
+import { SponsorsMarquee } from './sponsors-marquee';
 import {
   JsonLdScript,
   createPageMetadata,
@@ -63,6 +64,7 @@ export function renderDocsPage(section: Section, slug: string[] = []) {
     <DocsPage
       full={page.data.hide_table_of_contents}
       toc={page.data.hide_table_of_contents ? undefined : (page.data.toc as [])}
+      tableOfContent={{ footer: <SponsorsMarquee /> }}
     >
       <JsonLdScript
         data={createTechArticleJsonLd(seo)}
