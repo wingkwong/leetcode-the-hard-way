@@ -1,28 +1,10 @@
-'use client';
-
-import { Heart, Pause, Play } from 'lucide-react';
-import { useState } from 'react';
+import { Heart } from 'lucide-react';
 
 export function SponsorsMarquee() {
-  const [paused, setPaused] = useState(false);
-
   return (
     <section className="sponsors-marquee" aria-label="Sponsors">
-      <div className="sponsors-marquee-header">
-        <span>Sponsors</span>
-        <button
-          className="sponsors-marquee-toggle"
-          type="button"
-          aria-label={
-            paused ? 'Play sponsors marquee' : 'Pause sponsors marquee'
-          }
-          onClick={() => setPaused(!paused)}
-        >
-          {paused ? <Play size={12} /> : <Pause size={12} />}
-        </button>
-      </div>
       <div className="sponsors-marquee-viewport">
-        <div className="sponsors-marquee-track" data-paused={paused}>
+        <div className="sponsors-marquee-track">
           {[false, true].map((duplicate) => (
             <div
               className="sponsors-marquee-group"
