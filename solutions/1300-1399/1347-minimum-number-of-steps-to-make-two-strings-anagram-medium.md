@@ -2,7 +2,6 @@
 description: >-
   Author: @wkw, @jaffar | https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram/
 
-
 tags: [Hash Table, String, Counting]
 ---
 

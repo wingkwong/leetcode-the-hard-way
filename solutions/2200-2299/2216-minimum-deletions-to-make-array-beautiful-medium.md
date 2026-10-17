@@ -2,7 +2,6 @@
 description: >-
   Author: @TBC | https://leetcode.com/problems/minimum-deletions-to-make-array-beautiful/
 
-
 draft: true
 ---
 

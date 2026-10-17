@@ -2,7 +2,6 @@
 description: >-
   Author: @wkw, @ganajayant, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
 
-
 tags: [Array, Binary Search]
 ---
 

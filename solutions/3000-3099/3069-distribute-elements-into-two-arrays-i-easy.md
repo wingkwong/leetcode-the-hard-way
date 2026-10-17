@@ -3,7 +3,7 @@ description: 'Author: @wkw | https://leetcode.com/problems/distribute-elements-i
 tags: [Array, Simulation]
 ---
 
-# 3069 - Distribute Elements Into Two Arrays I (Easy) 
+# 3069 - Distribute Elements Into Two Arrays I (Easy)
 
 ## Problem Link
 
@@ -19,7 +19,7 @@ You need to distribute all the elements of `nums` between two arrays $arr1$ and 
 
 The array `result` is formed by concatenating the arrays $arr1$ and $arr2$. For example, if `arr1 == [1,2,3]` and `arr2 == [4,5,6]`, then `result = [1,2,3,4,5,6]`.
 
-Return *the array* `result`.
+Return _the array_ `result`.
 
 **Example 1:**
 

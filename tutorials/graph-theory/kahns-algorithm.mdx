@@ -71,6 +71,13 @@ T_vector kahn(int n, T_vector_vector &edges){
 
 There are a few important things to note about Kahn's Algorithm. First, the algorithm is not unique, as there may be multiple nodes with no incoming edges at any given time. Second, the algorithm has a time complexity of $O(|V| + |E|)$, where $|V|$ is the number of nodes in the graph and $|E|$ is the number of edges. This is because each node and edge is visited exactly once. Finally, the algorithm can be easily modified to detect cycles in a graph by keeping track of the nodes that have been visited but not yet added to the sorted order.
 
-export const suggestedProblems = [ { "problemName": "0207 - Course Schedule", "difficulty": "Medium", "leetCodeLink": "https://leetcode.com/problems/network-delay-time/", "solutionLink": "" } ]
+export const suggestedProblems = [
+  {
+    problemName: '0207 - Course Schedule',
+    difficulty: 'Medium',
+    leetCodeLink: 'https://leetcode.com/problems/network-delay-time/',
+    solutionLink: '',
+  },
+];
 
 <Table title="Suggested Problems" data={suggestedProblems} />

@@ -104,7 +104,13 @@ th {
 
 .sponsors-marquee-viewport {
   overflow: hidden;
-  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
 }
 
 .sponsors-marquee-track {

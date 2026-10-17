@@ -3,7 +3,7 @@ description: 'Author: @wkw | https://leetcode.com/problems/count-commas-in-range
 tags: ['Math']
 ---
 
-# 3870 - Count Commas in Range (Easy) 
+# 3870 - Count Commas in Range (Easy)
 
 ## Problem Link
 
@@ -51,12 +51,13 @@ Since $n <= 100,000$, every number in the range contains at most one comma.
 - Numbers from $1$ through $999$ contain no commas.
 - Numbers from $1,000$ through $n$ contain exactly one comma.
 
-Therefore, 
+Therefore,
 
-- if $n >= 1,000$, the number of integers containing a comma is $n - 1000 + 1 = n - 999$. 
+- if $n >= 1,000$, the number of integers containing a comma is $n - 1000 + 1 = n - 999$.
 - else, no commas are used. Combining both cases, the answer is $max(n - 999, 0)$.
 
 Complexity Analysis:
+
 - **Time Complexity:** $O(1)$
 - **Space Complexity:** $O(1)$
 

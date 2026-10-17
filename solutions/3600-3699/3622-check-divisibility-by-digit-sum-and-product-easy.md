@@ -3,7 +3,7 @@ description: 'Author: @wkw | https://leetcode.com/problems/check-divisibility-by
 tags: [Math]
 ---
 
-# 3622 - Check Divisibility by Digit Sum and Product (Easy) 
+# 3622 - Check Divisibility by Digit Sum and Product (Easy)
 
 ## Problem Link
 

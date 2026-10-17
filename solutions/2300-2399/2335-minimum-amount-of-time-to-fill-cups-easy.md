@@ -2,7 +2,6 @@
 description: >-
   Author: @TBC | https://leetcode.com/problems/minimum-amount-of-time-to-fill-cups
 
-
 draft: true
 ---
 

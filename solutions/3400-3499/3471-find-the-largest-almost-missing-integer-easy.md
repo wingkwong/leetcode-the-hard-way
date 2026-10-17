@@ -3,7 +3,7 @@ description: 'Author: @wkw | https://leetcode.com/problems/find-the-largest-almo
 tags: [Array, Hash Table]
 ---
 
-# 3471 - Find the Largest Almost Missing Integer (Easy) 
+# 3471 - Find the Largest Almost Missing Integer (Easy)
 
 ## Problem Link
 
@@ -13,7 +13,7 @@ https://leetcode.com/problems/find-the-largest-almost-missing-integer
 
 You are given an integer array `nums` and an integer `k`.
 
-An integer `x` is **almost missing** from `nums` if `x` appears in *exactly* one subarray of size `k` within `nums`.
+An integer `x` is **almost missing** from `nums` if `x` appears in _exactly_ one subarray of size `k` within `nums`.
 
 Return the **largest** **almost missing** integer from `nums`. If no such integer exists, return `-1`.
 
@@ -69,9 +69,9 @@ There is no integer that appears in only one subarray of size 1.
 
 ## Approach 1: Array
 
-If $k == n$, there is only one subarray, so every distinct integer appears in exactly one size-k subarray, therefore, the answer is max(nums). 
+If $k == n$, there is only one subarray, so every distinct integer appears in exactly one size-k subarray, therefore, the answer is max(nums).
 
-If $k == 1$, every element forms its own subarray, so an integer is almost missing exactly when it occurs once in nums. We return the largest integer with frequency $1$. 
+If $k == 1$, every element forms its own subarray, so an integer is almost missing exactly when it occurs once in nums. We return the largest integer with frequency $1$.
 
 Otherwise, when $1 < k < n$, any element at an middle position belongs to at least two size-k subarrays. Thus, only the first and last elements can appear in exactly one such subarray, and each qualifies only if it occurs exactly once in the entire array.
 

@@ -2,7 +2,6 @@
 description: >-
   Author: @wkw | https://leetcode.com/problems/rank-transform-of-an-array
 
-
 tags: ['Sorting']
 ---
 

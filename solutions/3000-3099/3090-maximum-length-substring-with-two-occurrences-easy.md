@@ -49,7 +49,7 @@ def maximumLengthSubstring(self, s: str) -> int:
     res = 0
     # try each index i as the starting point of a substring
     for i in range(n):
-        # reset the map for every run 
+        # reset the map for every run
         d = defaultdict(int)
         # count the starting character itself
         d[s[i]] = 1
@@ -68,10 +68,9 @@ def maximumLengthSubstring(self, s: str) -> int:
 </TabItem>
 </Tabs>
 
-
 ## Approach 2: Sliding Window
 
-Instead of restarting the scan from every index, we maintain a single window $[i, j]$ that always satisfies the constraint. We expand the window by moving the right pointer $j$ forward and incrementing the count of $s[j]$ in the map $d$. Whenever this makes $s[j]$ appear more than twice, we shrink the window from the left by decrementing $d[s[i]]$ and advancing $i$ until the constraint holds again. 
+Instead of restarting the scan from every index, we maintain a single window $[i, j]$ that always satisfies the constraint. We expand the window by moving the right pointer $j$ forward and incrementing the count of $s[j]$ in the map $d$. Whenever this makes $s[j]$ appear more than twice, we shrink the window from the left by decrementing $d[s[i]]$ and advancing $i$ until the constraint holds again.
 
 After each step the window is guaranteed valid, so we update $res$ with its current length $j - i + 1$. Since each character is added and removed at most once, the pointers together traverse the string in a single pass, giving $O(n)$ time and $O(k)$ space where $k$ is the number of distinct characters (effectively $O(1)$ for a fixed alphabet).
 
@@ -104,4 +103,3 @@ class Solution:
 
 </TabItem>
 </Tabs>
-

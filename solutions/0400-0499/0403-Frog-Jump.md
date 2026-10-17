@@ -2,7 +2,6 @@
 description: >-
   Author: @Kavita613 | https://leetcode.com/problems/frog-jump/
 
-
 tags: [Array, Dynamic Programming]
 ---
 
@@ -114,7 +113,7 @@ public:
 ## Approach 2: Dynamic Programming
 
 We apply Recursion + Memoization to find out the solution. There are three possible recursion call for $k-1$, $k$, $k+1$ moves.  
- There are some base condtions, we have to facus on
+There are some base condtions, we have to facus on
 
 - if move k is less then zero, then we can not make a jump at that position.
 - Now, we have to find that whatever $move$ $(stones[idx-1] + k)$ that has been made is present in our $stones$ array or not

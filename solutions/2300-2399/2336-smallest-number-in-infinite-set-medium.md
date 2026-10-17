@@ -2,7 +2,6 @@
 description: >-
   Author: @TBC | https://leetcode.com/problems/smallest-number-in-infinite-set
 
-
 draft: true
 ---
 

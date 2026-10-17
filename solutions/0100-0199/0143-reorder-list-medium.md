@@ -264,7 +264,7 @@ var reorderList = function (head) {
     let tmp2 = second.next;
     first.next = second;
     second.next = tmp1;
-    (first = tmp1), (second = tmp2);
+    ((first = tmp1), (second = tmp2));
   }
 };
 ```

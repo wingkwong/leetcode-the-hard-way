@@ -3,7 +3,7 @@ description: 'Author: @wkw | https://leetcode.com/problems/cinema-seat-allocatio
 tags: [Array, Hash Table, Bit Manipulation]
 ---
 
-# 1386 - Cinema Seat Allocation (Medium) 
+# 1386 - Cinema Seat Allocation (Medium)
 
 ## Problem Link
 

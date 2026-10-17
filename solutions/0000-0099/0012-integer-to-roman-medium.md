@@ -2,7 +2,6 @@
 description: >-
   Author: @jessicaribeiroalves, @radojicic23 | https://leetcode.com/problems/integer-to-roman/
 
-
 tags: [Hash Table, Math, String]
 ---
 

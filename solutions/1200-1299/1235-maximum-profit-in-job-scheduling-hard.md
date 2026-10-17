@@ -2,7 +2,6 @@
 description: >-
   Author: @wkw | https://leetcode.com/problems/maximum-profit-in-job-scheduling/
 
-
 tags: [Array, Binary Search, Dynamic Programming, Sorting]
 ---
 

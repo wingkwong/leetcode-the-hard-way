@@ -2,7 +2,6 @@
 description: >-
   Author: @jessicaribeiroalves | https://leetcode.com/problems/determine-if-two-strings-are-close/
 
-
 tags: [Hash Table, String, Sorting, Counting]
 ---
 

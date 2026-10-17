@@ -2,7 +2,6 @@
 description: >-
   Author: @wkw, @ColeB2 | https://leetcode.com/problems/min-cost-to-connect-all-points/''
 
-
 tags: [Array, Union Find, Graph, Minimum Spanning Tree]
 ---
 

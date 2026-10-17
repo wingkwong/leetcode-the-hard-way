@@ -2,7 +2,6 @@
 description: >-
   Author: @TBC | https://leetcode.com/problems/design-a-food-rating-system
 
-
 draft: true
 ---
 

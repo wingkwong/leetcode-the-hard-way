@@ -248,7 +248,7 @@ class Solution {
 ```
 
 </TabItem>
-	
+
 <TabItem value="go" label="Go">
 <SolutionAuthor name="@iraycd"/>
 

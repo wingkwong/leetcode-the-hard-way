@@ -2,7 +2,6 @@
 description: >-
   Author: @wkw | https://leetcode.com/problems/equal-row-and-column-pairs
 
-
 tags: ['Hash Map']
 ---
 

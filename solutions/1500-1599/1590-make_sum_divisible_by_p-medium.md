@@ -2,7 +2,6 @@
 description: >-
   Author: @darkhope | https://leetcode.com/problems/make-sum-divisible-by-p/
 
-
 tags: [Array, Hash Table, Prefix Sum]
 ---
 

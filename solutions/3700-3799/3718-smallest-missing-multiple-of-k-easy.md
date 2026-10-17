@@ -3,7 +3,7 @@ description: 'Author: @wkw | https://leetcode.com/problems/smallest-missing-mult
 tags: ['Array', 'Hash Table']
 ---
 
-# 3718 - Smallest Missing Multiple of K (Easy) 
+# 3718 - Smallest Missing Multiple of K (Easy)
 
 ## Problem Link
 

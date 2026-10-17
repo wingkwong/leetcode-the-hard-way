@@ -2,7 +2,6 @@
 description: >-
   Author: @wkw | https://leetcode.com/problems/longest-palindromic-substring/
 
-
 tags: [String, Dynamic Programming]
 ---
 

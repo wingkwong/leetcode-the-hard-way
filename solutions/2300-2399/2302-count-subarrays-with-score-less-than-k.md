@@ -64,7 +64,7 @@ Time Complexity: $O(n)$, where $n$ is the size of array
 Space complexity: $O(1)$
 
 <Tabs>
-  
+
 <TabItem value="cpp" label="C++">
 <SolutionAuthor name="@saloni33"/>
 

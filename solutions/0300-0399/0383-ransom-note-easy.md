@@ -79,7 +79,7 @@ class Solution:
         for x in magazine: d[x] += 1
         for x in ransomNote:
             d[x] -= 1
-            if d[x] < 0: 
+            if d[x] < 0:
                 return False
         return True
 ```

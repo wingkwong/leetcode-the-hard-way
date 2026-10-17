@@ -142,7 +142,9 @@ function parseComponentHtml(value: string): ComponentToken[] | null {
       children: [],
     };
 
-    tokens.push(selfClosing ? { type: 'self', element } : { type: 'open', element });
+    tokens.push(
+      selfClosing ? { type: 'self', element } : { type: 'open', element },
+    );
   }
 
   return tokens;

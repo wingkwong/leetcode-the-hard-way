@@ -2,7 +2,6 @@
 description: >-
   Author: @TBC | https://leetcode.com/problems/minimum-sum-of-squared-difference/
 
-
 draft: true
 ---
 

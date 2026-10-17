@@ -23,7 +23,6 @@ Return the number of players who win the game.
 
 **Note** that _multiple_ players can win the game.
 
-
 **Example 1:**
 
 **Input:** n = 4, pick = $[[0,0],[1,0],[1,0],[2,1],[2,1],[2,0]]$

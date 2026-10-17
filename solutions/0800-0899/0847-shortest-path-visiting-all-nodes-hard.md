@@ -2,7 +2,6 @@
 description: >-
   Author: @heiheihang, @wkw | https://leetcode.com/problems/shortest-path-visiting-all-nodes/
 
-
 tags:
   [Dynamic Programming, Bit Manipulation, Breadth-First Search, Graph, Bitmask]
 ---

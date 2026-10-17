@@ -2,7 +2,6 @@
 description: >-
   Author: @ColeB2 | https://leetcode.com/problems/longest-substring-without-repeating-characters/
 
-
 tags: [Hash Table, String, Sliding Window]
 ---
 

@@ -3,7 +3,7 @@ description: 'Author: @wkw | https://leetcode.com/problems/longest-subsequence-w
 tags: [Array, Bit Manipulation]
 ---
 
-# 3702 - Longest Subsequence With Non-Zero Bitwise XOR (Medium) 
+# 3702 - Longest Subsequence With Non-Zero Bitwise XOR (Medium)
 
 ## Problem Link
 

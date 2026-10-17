@@ -13,7 +13,7 @@ https://leetcode.com/problems/count-elements-with-maximum-frequency/
 
 You are given an array `nums` consisting of **positive** integers.
 
-Return _the **total frequencies** of elements in_`nums` *such that those elements all have the **maximum** frequency*.
+Return _the **total frequencies** of elements in_`nums` _such that those elements all have the **maximum** frequency_.
 
 The **frequency** of an element is the number of occurrences of that element in the array.
 

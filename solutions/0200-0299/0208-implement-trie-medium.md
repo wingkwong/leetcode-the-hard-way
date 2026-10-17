@@ -2,7 +2,6 @@
 description: >-
   Author: @vigneshshiv | https://leetcode.com/problems/implement-trie-prefix-tree/
 
-
 tags: [Hash Table, String, Design, Trie]
 ---
 

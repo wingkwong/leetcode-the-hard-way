@@ -2,7 +2,6 @@
 description: >-
   Author: @TBC | https://leetcode.com/problems/subarray-with-elements-greater-than-varying-threshold
 
-
 draft: true
 ---
 

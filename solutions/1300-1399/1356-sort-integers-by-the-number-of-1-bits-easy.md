@@ -2,7 +2,6 @@
 description: >-
   Author: @wkw, @vigneshshiv | https://leetcode.com/problems/sort-integers-by-the-number-of-1-bits
 
-
 tags: ['Sorting']
 ---
 

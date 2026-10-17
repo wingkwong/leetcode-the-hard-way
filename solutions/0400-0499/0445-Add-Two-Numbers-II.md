@@ -2,7 +2,6 @@
 description: >-
   Author: @Kavita613, @vigneshshiv | https://leetcode.com/problems/add-two-numbers-ii/
 
-
 tags: [Linked List, Math, Stack]
 ---
 

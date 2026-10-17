@@ -2,7 +2,6 @@
 description: >-
   Author: @saishreekouda, @deepanshu-rawat6, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/merge-sorted-array/
 
-
 tags: [Array, Two Pointers, Sorting]
 ---
 

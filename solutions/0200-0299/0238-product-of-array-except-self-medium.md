@@ -37,7 +37,6 @@ Output: [0,0,9,0,0]
 - `-30 <= nums[i] <= 30`
 - The input is generated such that `answer[i]` is **guaranteed** to fit in a **32-bit** integer.
 
-
 ## Approach 1: Prefix Sum
 
 This problem is conceptually similar to a **prefix sum** problem, but instead of using sums, you use products. The idea is to construct two arrays: prefix and suffix arrays. The prefix array stores the product of all elements to the left of each index, while the suffix array stores the product of all elements to the right. By multiplying the corresponding values from the prefix and suffix arrays at each index, we obtain the final result. The mathematical formulation of this approach is shown below:
@@ -58,7 +57,7 @@ $$
 R_{i} = P_{i} \times S_{i}
 $$
 
-Given an array $A$, loop through all elements and create two separate arrays, prefix ($P_{i}$) and suffix ($S_{i}$). Then, multiply the arrays together. In Example 1 above, $A = [1,2,3,4]$. The prefix array, $P = [1,1,2,6]$ and suffix array, $S = [24,12,4,1]$. Therefore, the resulting $R = [24,12,8,6]$. 
+Given an array $A$, loop through all elements and create two separate arrays, prefix ($P_{i}$) and suffix ($S_{i}$). Then, multiply the arrays together. In Example 1 above, $A = [1,2,3,4]$. The prefix array, $P = [1,1,2,6]$ and suffix array, $S = [24,12,4,1]$. Therefore, the resulting $R = [24,12,8,6]$.
 
 Time Complexity: $O(n)$
 

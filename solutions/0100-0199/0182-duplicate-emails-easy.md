@@ -32,7 +32,7 @@ The result format is in the following example.
 Example 1:
 
 ```
-Input: 
+Input:
 Person table:
 +----+---------+
 | id | email   |
@@ -41,7 +41,7 @@ Person table:
 | 2  | c@d.com |
 | 3  | a@b.com |
 +----+---------+
-Output: 
+Output:
 +---------+
 | Email   |
 +---------+
@@ -57,12 +57,11 @@ The idea is to group the rows by their `email` value, then keep only the groups 
 
 - **`GROUP BY email`** collapses all rows that share the same email into a single group. For the example input, this creates two groups: one for `a@b.com` (containing rows with `id` 1 and 3) and one for `c@d.com` (containing the row with `id` 2).
 - **`COUNT(*)`** computes how many rows fall into each group. Here, `a@b.com` has a count of `2` and `c@d.com` has a count of `1`.
-- **`HAVING COUNT(*) > 1`** filters the groups *after* aggregation, keeping only those whose row count is at least 2. We use `HAVING` instead of `WHERE` because `WHERE` filters individual rows *before* grouping and cannot reference aggregate functions like `COUNT(*)`.
+- **`HAVING COUNT(*) > 1`** filters the groups _after_ aggregation, keeping only those whose row count is at least 2. We use `HAVING` instead of `WHERE` because `WHERE` filters individual rows _before_ grouping and cannot reference aggregate functions like `COUNT(*)`.
 
 **Time complexity:** $O(n)$ on average, where $n$ is the number of rows in `Person`, since each row is scanned once to build the groups (hash-based grouping). With sort-based grouping it may be $O(n \log n)$.
 
 **Space complexity:** $O(d)$, where $d$ is the number of distinct emails for storing the group aggregates.
-
 
 <Tabs>
 <TabItem value="sql" label="SQL">

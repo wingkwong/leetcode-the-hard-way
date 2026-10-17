@@ -2,7 +2,6 @@
 description: >-
   Author: @jessicaribeiroalves | https://leetcode.com/problems/transpose-matrix/
 
-
 tags: [Array, Matrix, Simulation]
 ---
 
@@ -92,10 +91,10 @@ const transpose = (matrix) => {
 </TabItem>
 </Tabs>
 
-**Time Complexity: $O(m*n)$**
+**Time Complexity: $O(m\*n)$**
 
 The time complexity for this solution is $O(m*n)$ considering $m$ as the number of rows and $n$ as the number of columns in the original matrix.
 
-**Space Complexity: $O(m*n)$**
+**Space Complexity: $O(m\*n)$**
 
 The space complexity for this solution is also $O(m*n)$ considering $m$ as the number of rows and $n$ as the number of columns in the original matrix.

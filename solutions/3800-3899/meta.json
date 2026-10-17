@@ -1,7 +1,5 @@
 {
   "title": "3800 - 3899",
   "description": "Solutions categorised by Problem IDs",
-  "pages": [
-    "3870-count-commas-in-range-easy"
-  ]
+  "pages": ["3870-count-commas-in-range-easy"]
 }

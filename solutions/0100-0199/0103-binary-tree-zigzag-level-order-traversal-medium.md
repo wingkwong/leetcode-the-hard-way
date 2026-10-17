@@ -2,7 +2,6 @@
 description: >-
   Author: @wkw | https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/
 
-
 tags: [Tree, Breadth-First Search, Binary Tree]
 ---
 

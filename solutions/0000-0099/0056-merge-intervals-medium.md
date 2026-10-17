@@ -111,7 +111,7 @@ class Solution:
                 res.append([curr_start, curr_end])
                 curr_start = start
                 curr_end = end
-        # Append last set of interval 
+        # Append last set of interval
         res.append([curr_start, curr_end])
         return res
 ```
