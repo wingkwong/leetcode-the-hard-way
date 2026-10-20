@@ -11,12 +11,25 @@ export function SponsorsMarquee() {
               aria-hidden={duplicate || undefined}
               key={String(duplicate)}
             >
-              {[0, 1, 2].map((slot) => (
-                <div className="sponsors-marquee-placeholder" key={slot}>
-                  <Heart size={18} aria-hidden="true" />
-                  <span>Your logo here</span>
-                </div>
-              ))}
+              <a
+                rel="sponsored"
+                className="sponsors-marquee-placeholder"
+                href="https://www.awin1.com/awclick.php?gid=526254&mid=95005&awinaffid=2074225&linkid=4003993&clickref=leetcodethehardway.com"
+                tabIndex={duplicate ? -1 : undefined}
+                target="_blank"
+              >
+                <img
+                  src="https://assets.algo.monster/AlgoMonster.svg"
+                  alt="AlgoMonster"
+                  width={120}
+                  height={48}
+                  className="object-contain"
+                />
+              </a>
+              <div className="sponsors-marquee-placeholder" key="empty-slot">
+                <Heart size={18} aria-hidden="true" />
+                <span>Your logo here</span>
+              </div>
             </div>
           ))}
         </div>

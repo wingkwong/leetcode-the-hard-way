@@ -114,7 +114,7 @@ th {
 }
 
 .sponsors-marquee-track {
-  animation: sponsors-marquee-scroll 24s linear infinite;
+  animation: sponsors-marquee-scroll 12s linear infinite;
   display: flex;
   width: max-content;
 }
