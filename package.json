@@ -3,6 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "license": "MIT",
+  "author": "WK Wong <wkwdev@proton.me>",
+  "homepage": "https://github.com/wingkwong/leetcode-the-hard-way",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wingkwong/leetcode-the-hard-way.git"
+  },
   "scripts": {
     "dev": "next dev --webpack",
     "start": "serve out",
@@ -13,26 +19,26 @@
     "prettier": "pnpm format"
   },
   "dependencies": {
-    "fumadocs-core": "16.11.4",
-    "fumadocs-mdx": "15.1.1",
-    "fumadocs-ui": "16.11.4",
-    "katex": "0.17.0",
-    "lucide-react": "1.24.0",
+    "fumadocs-core": "16.17.7",
+    "fumadocs-mdx": "15.4.9",
+    "fumadocs-ui": "16.17.7",
+    "katex": "0.19.0",
+    "lucide-react": "1.60.0",
     "next": "16.4.2",
-    "react": "19.2.7",
-    "react-dom": "19.2.7",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
     "rehype-katex": "7.0.1",
     "remark-math": "6.0.0",
-    "zod": "4.4.3"
+    "zod": "4.6.7"
   },
   "devDependencies": {
     "@types/mdx": "2.0.14",
     "@types/node": "^24",
-    "@types/react": "19.2.17",
-    "@types/react-dom": "19.2.3",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
     "prettier": "3.9.10",
     "serve": "14.2.6",
-    "typescript": "^5.9.3"
+    "typescript": "^6.0.3"
   },
   "browserslist": {
     "production": [
