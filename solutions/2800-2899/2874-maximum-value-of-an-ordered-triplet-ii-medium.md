@@ -3,7 +3,7 @@ description: 'Author: @wkw | https://leetcode.com/problems/maximum-value-of-an-o
 tags: [Array]
 ---
 
-# 2873 - Maximum Value of an Ordered Triplet II (Medium)
+# 2874 - Maximum Value of an Ordered Triplet II (Medium)
 
 ## Problem Link
 
