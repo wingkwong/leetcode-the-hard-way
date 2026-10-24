@@ -16,3 +16,4 @@ minimumReleaseAgeExclude:
   - fumadocs-core@16.17.8
   - fumadocs-ui@16.17.8
   - next@16.4.3
+  - katex@0.19.1
