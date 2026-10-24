@@ -92,7 +92,7 @@ func hammingWeight(num uint32) int {
 
 ```rs
 impl Solution {
-    pub fn hammingWeight (n: u32) -> i32 {
+    pub fn hamming_weight(n: i32) -> i32 {
         n.count_ones() as i32
     }
 }
