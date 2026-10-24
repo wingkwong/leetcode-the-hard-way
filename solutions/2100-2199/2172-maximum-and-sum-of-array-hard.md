@@ -277,7 +277,7 @@ struct MCMF {
     }
     return make_pair(flow, cost);
   }
-}
+};
 ```
 
 </details>
