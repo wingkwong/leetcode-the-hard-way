@@ -6,6 +6,7 @@ import {
   tutorialsSource,
 } from '../lib/source';
 import { absoluteUrl, formatPagePathname } from '../lib/seo';
+import { getSolutionTagGroups, getSolutionTagUrl } from '../lib/solution-tags';
 
 export const dynamic = 'force-static';
 
@@ -43,7 +44,10 @@ const docsSections = [
 }[];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const paths = new Set<string>(['/']);
+  const paths = new Set<string>(['/', '/solutions/tags/']);
+  for (const [tag] of getSolutionTagGroups()) {
+    paths.add(getSolutionTagUrl(tag));
+  }
 
   for (const section of docsSections) {
     for (const page of section.source.getPages()) {

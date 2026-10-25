@@ -1,6 +1,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { notFound } from 'next/navigation';
+import type { TOCItemType } from 'fumadocs-core/toc';
+import defaultMdxComponents from 'fumadocs-ui/mdx';
 import {
   DocsBody,
   DocsDescription,
@@ -9,6 +11,7 @@ import {
 } from 'fumadocs-ui/layouts/docs/page';
 import { getRelativeMDXComponents, type MDXComponent } from './mdx';
 import { SponsorsMarquee } from './sponsors-marquee';
+import { getSolutionTagUrl } from '../lib/solution-tags';
 import {
   JsonLdScript,
   createPageMetadata,
@@ -22,7 +25,8 @@ type Page = {
     description?: string;
     hide_table_of_contents?: boolean;
     title?: string;
-    toc?: unknown;
+    tags?: string[];
+    toc?: TOCItemType[];
   };
   slugs: string[];
   url: string;
@@ -59,11 +63,40 @@ export function renderDocsPage(section: Section, slug: string[] = []) {
   const MDX = page.data.body;
   const showTitle = section.renderTitle !== false && Boolean(page.data.title);
   const seo = getDocsPageSeo(section, resolvedSlug, page);
+  const tags =
+    section.baseUrl === '/solutions'
+      ? [
+          ...new Map(
+            (page.data.tags ?? []).map((tag) => [getSolutionTagUrl(tag), tag]),
+          ),
+        ]
+      : [];
+  const topics = tags.length > 0 && (
+    <nav aria-label="Solution topics" className="solution-tags">
+      {tags.map(([url, tag]) => (
+        <a className="solution-tag" href={url} key={url}>
+          {tag}
+        </a>
+      ))}
+    </nav>
+  );
+  const components = getRelativeMDXComponents(section.source, page);
+  const Heading = defaultMdxComponents.h1;
+  const titleId = page.data.toc?.find((item) => item.depth === 1)?.url.slice(1);
+
+  if (tags.length > 0 && !showTitle) {
+    components.h1 = (props) => (
+      <>
+        <Heading {...props} />
+        {props.id === titleId && topics}
+      </>
+    );
+  }
 
   return (
     <DocsPage
       full={page.data.hide_table_of_contents}
-      toc={page.data.hide_table_of_contents ? undefined : (page.data.toc as [])}
+      toc={page.data.hide_table_of_contents ? undefined : page.data.toc}
       tableOfContent={{ footer: <SponsorsMarquee /> }}
     >
       <JsonLdScript
@@ -71,13 +104,14 @@ export function renderDocsPage(section: Section, slug: string[] = []) {
         id="docs-page-json-ld"
       />
       {showTitle && <DocsTitle>{page.data.title}</DocsTitle>}
+      {showTitle && topics}
       {showTitle && page.data.description && (
         <DocsDescription className="docs-description">
           {page.data.description}
         </DocsDescription>
       )}
       <DocsBody>
-        <MDX components={getRelativeMDXComponents(section.source, page)} />
+        <MDX components={components} />
       </DocsBody>
     </DocsPage>
   );
@@ -110,6 +144,11 @@ function renderGeneratedIndex(section: Section, slug: string[]) {
         </DocsDescription>
       )}
       <DocsBody>
+        {section.baseUrl === '/solutions' && slug.length === 0 && (
+          <p>
+            <a href="/solutions/tags/">Browse solutions by topic</a>
+          </p>
+        )}
         <div className="generated-index-grid">
           {children.map((child) => (
             <a
