@@ -280,6 +280,63 @@ th {
   justify-content: center;
 }
 
+.solution-tags {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0.75rem 0 1.5rem;
+}
+
+.prose > h1:has(+ .solution-tags) {
+  margin-bottom: 0;
+}
+
+.solution-tag {
+  align-items: center;
+  background: color-mix(
+    in srgb,
+    var(--site-link) 6%,
+    var(--color-fd-background)
+  );
+  border: 1px solid color-mix(in srgb, var(--site-link) 16%, transparent);
+  border-radius: 999px;
+  color: var(--site-link);
+  display: inline-flex;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.5;
+  max-width: 100%;
+  min-height: 30px;
+  overflow-wrap: anywhere;
+  padding: 5px 11px;
+  text-decoration: none;
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease;
+}
+
+.solution-tag:hover {
+  background: color-mix(
+    in srgb,
+    var(--site-link) 12%,
+    var(--color-fd-background)
+  );
+  border-color: color-mix(in srgb, var(--site-link) 32%, transparent);
+  text-decoration: none;
+}
+
+.solution-tag:focus-visible {
+  outline: 2px solid var(--site-link);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .solution-tag {
+    transition: none;
+  }
+}
+
 .tag-wrapper .topic-tag {
   background-color: #4b5270;
   border-radius: 2px;
