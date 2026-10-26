@@ -2,6 +2,7 @@
   "title": "3600 - 3699",
   "description": "Solutions categorised by Problem IDs",
   "pages": [
+    "3619-count-islands-with-total-value-divisible-by-k-medium",
     "3622-check-divisibility-by-digit-sum-and-product-easy",
     "3644-maximum-k-to-sort-a-permutation-medium"
   ]
