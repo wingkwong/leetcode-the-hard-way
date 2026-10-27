@@ -19,7 +19,7 @@ export function SponsorsMarquee() {
                 target="_blank"
               >
                 <img
-                  src="https://assets.algo.monster/AlgoMonster.svg"
+                  src="/img/algo-monster-logo.svg"
                   alt="AlgoMonster"
                   width={120}
                   height={48}
