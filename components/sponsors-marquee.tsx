@@ -26,6 +26,22 @@ export function SponsorsMarquee() {
                   className="object-contain"
                 />
               </a>
+              <a
+                rel="sponsored"
+                className="sponsors-marquee-placeholder"
+                style={{ backgroundColor: 'hsl(0, 0%, 12.9%)' }}
+                href="https://app.zapply.jobs/onboarding?ref=website-cta-wingkwong"
+                tabIndex={duplicate ? -1 : undefined}
+                target="_blank"
+              >
+                <img
+                  src="/img/zapply-sidebar-logo.png"
+                  alt="Visit Zapply"
+                  width={120}
+                  height={48}
+                  className="object-contain"
+                />
+              </a>
               <div className="sponsors-marquee-placeholder" key="empty-slot">
                 <Heart size={18} aria-hidden="true" />
                 <span>Your logo here</span>
