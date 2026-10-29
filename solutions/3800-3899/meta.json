@@ -2,6 +2,7 @@
   "title": "3800 - 3899",
   "description": "Solutions categorised by Problem IDs",
   "pages": [
+    "3841-palindromic-path-queries-in-a-tree-hard",
     "3863-minimum-operations-to-sort-a-string-medium",
     "3870-count-commas-in-range-easy",
     "3882-minimum-xor-path-in-a-grid-medium"
