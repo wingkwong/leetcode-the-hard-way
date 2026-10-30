@@ -19,6 +19,11 @@ export function baseOptions(): BaseLayoutProps {
         active: 'nested-url',
       },
       {
+        text: 'Ratings',
+        url: formatPagePathname('/ratings'),
+        active: 'nested-url',
+      },
+      {
         text: 'Roadmap',
         url: formatPagePathname('/roadmap'),
         active: 'nested-url',

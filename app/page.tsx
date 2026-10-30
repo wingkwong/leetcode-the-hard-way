@@ -46,6 +46,12 @@ const sections = [
     href: formatPagePathname('/solutions'),
   },
   {
+    title: 'Ratings',
+    description:
+      'Browse LeetCode problem ratings with search, sorting, and pagination.',
+    href: formatPagePathname('/ratings'),
+  },
+  {
     title: 'Roadmap',
     description:
       'Follow curated problem sets for specific topics and study plans.',
