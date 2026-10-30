@@ -8,6 +8,7 @@ export type RatingEntry = {
   id: number;
   rating: number;
   title: string;
+  titleSlug: string;
 };
 
 type SortKey = 'id' | 'title' | 'rating';
@@ -49,7 +50,16 @@ export function RatingsTable({ ratings }: { ratings: RatingEntry[] }) {
   return (
     <div className="ratings-table-wrapper">
       <p className="ratings-source-note">
-        <b>Disclaimer</b>: The data is sourced from the <a href="https://github.com/zerotrac/leetcode_problem_rating" target="_blank" rel="noopener noreferrer">LeetCode Problem Rating Project</a>. The ratings may not be fully accurate and should be used for reference only.
+        <b>Disclaimer</b>: The data is sourced from the{' '}
+        <a
+          href="https://github.com/zerotrac/leetcode_problem_rating"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LeetCode Problem Rating Project
+        </a>
+        . The ratings may not be fully accurate and should be used for reference
+        only.
       </p>
       <div className="ratings-toolbar">
         <div className="ratings-search-group">
@@ -118,7 +128,13 @@ export function RatingsTable({ ratings }: { ratings: RatingEntry[] }) {
             pageRatings.map((entry) => (
               <tr className="ratings-row" key={entry.id}>
                 <td className="ratings-question-cell">
-                  {entry.id}. {entry.title}
+                  <a
+                    href={`https://leetcode.com/problems/${entry.titleSlug}`}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    {entry.id}. {entry.title}
+                  </a>
                 </td>
                 <td className="ratings-rating-cell">
                   {roundRating(entry.rating)}
@@ -128,7 +144,7 @@ export function RatingsTable({ ratings }: { ratings: RatingEntry[] }) {
           ) : (
             <tr>
               <td className="ratings-empty" colSpan={2}>
-                No questions found.
+                No question found.
               </td>
             </tr>
           )}
