@@ -1,8 +1,15 @@
 import { Heart } from 'lucide-react';
 
-export function SponsorsMarquee() {
+type SponsorsMarqueeProps = {
+  className?: string;
+};
+
+export function SponsorsMarquee({ className }: SponsorsMarqueeProps) {
   return (
-    <section className="sponsors-marquee" aria-label="Sponsors">
+    <section
+      className={['sponsors-marquee', className].filter(Boolean).join(' ')}
+      aria-label="Sponsors"
+    >
       <div className="sponsors-marquee-viewport">
         <div className="sponsors-marquee-track">
           {[false, true].map((duplicate) => (

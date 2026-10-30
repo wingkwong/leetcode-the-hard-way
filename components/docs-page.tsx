@@ -10,7 +10,7 @@ import {
   DocsTitle,
 } from 'fumadocs-ui/layouts/docs/page';
 import { getRelativeMDXComponents, type MDXComponent } from './mdx';
-import { SponsorsMarquee } from './sponsors-marquee';
+import { SponsorsTableOfContent } from './sponsors-table-of-content';
 import { getSolutionTagUrl } from '../lib/solution-tags';
 import {
   JsonLdScript,
@@ -111,7 +111,7 @@ export function renderDocsPage(section: Section, slug: string[] = []) {
     <DocsPage
       full={page.data.hide_table_of_contents}
       toc={page.data.hide_table_of_contents ? undefined : page.data.toc}
-      tableOfContent={{ footer: <SponsorsMarquee /> }}
+      tableOfContent={{ component: <SponsorsTableOfContent /> }}
     >
       <JsonLdScript
         data={createTechArticleJsonLd(seo)}
@@ -146,7 +146,7 @@ function renderGeneratedIndex(section: Section, slug: string[]) {
   const seo = getDocsPageSeo(section, slug);
 
   return (
-    <DocsPage>
+    <DocsPage tableOfContent={{ component: <SponsorsTableOfContent /> }}>
       <JsonLdScript
         data={createTechArticleJsonLd(seo)}
         id="docs-page-json-ld"

@@ -7,6 +7,7 @@ import {
 } from 'fumadocs-ui/layouts/docs/page';
 import type { Root } from 'fumadocs-core/page-tree';
 import type { Metadata } from 'next';
+import { SponsorsTableOfContent } from '../components/sponsors-table-of-content';
 import { baseOptions } from '../lib/layout.shared';
 import {
   createPageMetadata,
@@ -68,7 +69,7 @@ const sections = [
 export default function HomePage() {
   return (
     <DocsLayout {...baseOptions()} tree={introTree}>
-      <DocsPage>
+      <DocsPage tableOfContent={{ component: <SponsorsTableOfContent /> }}>
         <DocsTitle>Introduction</DocsTitle>
         <DocsDescription className="docs-description">
           LeetCode The Hard Way is a structured resource for learning data

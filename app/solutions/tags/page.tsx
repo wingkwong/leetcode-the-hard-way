@@ -4,6 +4,7 @@ import {
   DocsPage,
   DocsTitle,
 } from 'fumadocs-ui/layouts/docs/page';
+import { SponsorsTableOfContent } from '../../../components/sponsors-table-of-content';
 import { createPageMetadata } from '../../../lib/seo';
 import {
   getSolutionTagGroups,
@@ -20,7 +21,7 @@ export const metadata = createPageMetadata({
 
 export default function SolutionTagsPage() {
   return (
-    <DocsPage>
+    <DocsPage tableOfContent={{ component: <SponsorsTableOfContent /> }}>
       <DocsTitle>Solution Topics</DocsTitle>
       <DocsDescription>
         Browse solutions by algorithm or data structure.

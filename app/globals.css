@@ -323,6 +323,10 @@ th {
   font-size: 0.75rem;
 }
 
+.sponsors-marquee--standalone {
+  border-top: none;
+}
+
 .sponsors-marquee-link:focus-visible {
   outline: 2px solid var(--site-link);
   outline-offset: 3px;

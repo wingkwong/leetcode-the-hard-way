@@ -5,6 +5,7 @@ import {
   DocsPage,
   DocsTitle,
 } from 'fumadocs-ui/layouts/docs/page';
+import { SponsorsTableOfContent } from '../../../../components/sponsors-table-of-content';
 import { createPageMetadata } from '../../../../lib/seo';
 import {
   getSolutionTagGroups,
@@ -42,7 +43,7 @@ export default async function SolutionTagPage({ params }: PageProps) {
   const [tag, pages] = getTagGroup((await params).tag);
 
   return (
-    <DocsPage>
+    <DocsPage tableOfContent={{ component: <SponsorsTableOfContent /> }}>
       <DocsTitle>{tag}</DocsTitle>
       <DocsDescription>
         {pages.length} {pages.length === 1 ? 'solution' : 'solutions'}
