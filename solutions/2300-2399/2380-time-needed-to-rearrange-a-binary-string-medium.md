@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/time-needed-to-rearrange-a-binary-string/'
 tags: [String, Dynamic Programming, Simulation]
+rating: 1481
 ---
 
 # 2380 - Time Needed to Rearrange a Binary String (Medium)

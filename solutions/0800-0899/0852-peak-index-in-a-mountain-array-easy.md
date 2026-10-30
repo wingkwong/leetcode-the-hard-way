@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wingkowng | https://leetcode.com/problems/peak-index-in-a-mountain-array/
+rating: 1182
 ---
 
 # 0852 - Peak Index in a Mountain Array (Easy)

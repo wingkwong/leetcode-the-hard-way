@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/maximum-score-from-performing-multiplication-operations
+rating: 2068
 ---
 
 # 1770 - Maximum Score from Performing Multiplication Operations (Medium)

@@ -3,6 +3,7 @@ description: >-
   Author: @TBC | https://leetcode.com/problems/design-a-food-rating-system
 
 draft: true
+rating: 1782
 ---
 
 # 2353 - Design a Food Rating System (Medium)

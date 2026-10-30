@@ -1,6 +1,7 @@
 ---
 description: 'Author: @heder | https://leetcode.com/problems/the-employee-that-worked-on-the-longest-task/'
 tags: [Array]
+rating: 1267
 ---
 
 # 2432 - The Employee That Worked on the Longest Task (Easy)

@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/a-number-after-a-double-reversal/
+rating: 1187
 ---
 
 # 2119 - A Number After a Double Reversal (Easy)

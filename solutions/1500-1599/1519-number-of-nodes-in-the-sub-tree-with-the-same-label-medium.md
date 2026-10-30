@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/number-of-nodes-in-the-sub-tree-with-the-same-label/'
 tags: [Hash Table, Tree, Depth-First Search, Breadth-First Search, Counting]
+rating: 1809
 ---
 
 # 1519 - Number of Nodes in the Sub-Tree With the Same Label (Medium)

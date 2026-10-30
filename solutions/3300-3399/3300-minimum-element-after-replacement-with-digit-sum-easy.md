@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/minimum-element-after-replacement-with-digit-sum/'
+rating: 1181
 ---
 
 # 3300 - Minimum Element After Replacement With Digit Sum (Easy)

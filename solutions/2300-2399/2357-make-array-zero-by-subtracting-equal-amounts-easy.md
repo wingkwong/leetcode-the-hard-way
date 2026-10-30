@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/make-array-zero-by-subtracting-equal-amounts
+rating: 1225
 ---
 
 # 2357 - Make Array Zero by Subtracting Equal Amounts (Easy)

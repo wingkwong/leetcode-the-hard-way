@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/find-target-indices-after-sorting-array'
 tags: ['Array', 'Binary Search', 'Sorting']
+rating: 1152
 ---
 
 # 2089 - Find Target Indices After Sorting Array (Easy)

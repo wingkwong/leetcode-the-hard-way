@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw, @jit | https://leetcode.com/problems/largest-local-values-in-a-matrix/'
 tags: [Array, Matrix]
+rating: 1331
 ---
 
 # 2373 - Largest Local Values in a Matrix (Easy)

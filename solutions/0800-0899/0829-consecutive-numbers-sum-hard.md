@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/consecutive-numbers-sum/'
+rating: 1694
 ---
 
 # 0829 - Consecutive Numbers Sum (Hard)

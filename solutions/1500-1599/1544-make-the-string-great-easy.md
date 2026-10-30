@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/make-the-string-great/'
 tags: [String, Stack]
+rating: 1344
 ---
 
 # 1544 - Make The String Great (Easy)

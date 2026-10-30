@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves'
+rating: 1607
 ---
 
 # 1123 - Lowest Common Ancestor of Deepest Leaves (Medium)

@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/monotonic-array/'
 tags: [Array]
+rating: 1259
 ---
 
 # 0896 - Monotonic Array (Easy)

@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/palindromic-path-queries-in-a-tree'
 tags: ['Array', 'String', 'Dvide and Conquer', 'Bit Manipulation', 'Tree', 'Depth-First Search', 'Binary Indexed Tree', 'Segment Tree']
+rating: 2384
 ---
 
 # 3841 - Palindromic Path Queries in a Tree (Hard)

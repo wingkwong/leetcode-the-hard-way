@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/count-integers-in-intervals
+rating: 2222
 ---
 
 # 2276 - Count Integers in Intervals (Hard)

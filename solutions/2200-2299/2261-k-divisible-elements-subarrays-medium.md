@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/k-divisible-elements-subarrays/
+rating: 1724
 ---
 
 # 2261 - K Divisible Elements Subarrays (Medium)

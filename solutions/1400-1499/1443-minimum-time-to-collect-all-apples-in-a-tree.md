@@ -1,6 +1,7 @@
 ---
 description: 'Author: @hirotake111, @wkw | https://leetcode.com/problems/minimum-time-to-collect-all-apples-in-a-tree/'
 tags: [Tree, Depth-First Search, Backtracking]
+rating: 1683
 ---
 
 # 1443 - Minimum Time to Collect All Apples in a Tree (Medium)

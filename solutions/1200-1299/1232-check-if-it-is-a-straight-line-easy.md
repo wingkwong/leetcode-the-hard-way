@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/check-if-it-is-a-straight-line/
+rating: 1247
 ---
 
 # 1232 - Check If It Is a Straight Line (Easy)

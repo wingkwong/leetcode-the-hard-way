@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/modify-the-matrix/'
+rating: 1181
 ---
 
 # 3033 - Modify the Matrix (Easy)

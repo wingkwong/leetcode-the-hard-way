@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/grid-game/'
+rating: 1719
 ---
 
 # 2017 - Grid Game (Medium)

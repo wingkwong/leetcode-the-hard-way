@@ -1,5 +1,6 @@
 ---
 description: 'Author: @kat-kan | https://leetcode.com/problems/smallest-even-multiple/'
+rating: 1145
 ---
 
 # 2413 - Smallest Even Multiple (Easy)

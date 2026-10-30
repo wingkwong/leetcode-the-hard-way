@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw, @adlet_lee, @jit | https://leetcode.com/problems/find-center-of-star-graph/'
 tags: [Graph]
+rating: 1287
 ---
 
 # 1791 - Find Center of Star Graph (Easy)

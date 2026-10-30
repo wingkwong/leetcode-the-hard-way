@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/break-a-palindrome/'
 tags: [String, Greedy]
+rating: 1474
 ---
 
 # 1328 - Break a Palindrome (Medium)

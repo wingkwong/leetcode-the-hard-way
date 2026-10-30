@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/count-nodes-equal-to-average-of-subtree/
+rating: 1473
 ---
 
 # 2265 - Count Nodes Equal to Average of Subtree (Medium)

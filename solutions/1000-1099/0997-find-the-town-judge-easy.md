@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/find-the-town-judge/'
 tags: [Array, Hash Table, Graph]
+rating: 1202
 ---
 
 # 0997 - Find the Town Judge (Easy)

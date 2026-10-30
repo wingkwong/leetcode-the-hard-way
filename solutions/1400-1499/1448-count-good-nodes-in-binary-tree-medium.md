@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/count-good-nodes-in-binary-tree/'
 tags: [Tree, Depth-First Search, Breadth-First Search, Binary Tree]
+rating: 1360
 ---
 
 # 1448 - Count Good Nodes in Binary Tree (Medium)

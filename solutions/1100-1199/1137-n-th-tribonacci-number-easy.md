@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/n-th-tribonacci-number/'
 tags: [Math, Dynamic Programming, Memoization]
+rating: 1143
 ---
 
 # 1137 - N-th Tribonacci Number (Easy)

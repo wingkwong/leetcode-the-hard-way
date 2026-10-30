@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/longest-nice-subarray/'
 tags: [Array, Bit Manipulation, Sliding Window]
+rating: 1750
 ---
 
 # 2401 - Longest Nice Subarray (Medium)

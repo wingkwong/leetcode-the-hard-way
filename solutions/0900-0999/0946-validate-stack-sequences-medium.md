@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/validate-stack-sequences/'
+rating: 1462
 ---
 
 # 0946 - Validate Stack Sequences (Medium)

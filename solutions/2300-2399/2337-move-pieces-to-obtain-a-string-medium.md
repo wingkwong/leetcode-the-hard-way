@@ -3,6 +3,7 @@ description: >-
   Author: @TBC | https://leetcode.com/problems/move-pieces-to-obtain-a-string
 
 draft: true
+rating: 1693
 ---
 
 # 2337 - Move Pieces to Obtain a String (Medium)

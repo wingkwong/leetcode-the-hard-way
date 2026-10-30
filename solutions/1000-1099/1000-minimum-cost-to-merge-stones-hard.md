@@ -1,6 +1,7 @@
 ---
 description: 'Author: @hwaiting_dk | https://leetcode.com/problems/minimum-cost-to-merge-stones/'
 tags: [Array, Dynamic Programming]
+rating: 2423
 ---
 
 # 1000 - Minimum Cost to Merge Stones (Hard)

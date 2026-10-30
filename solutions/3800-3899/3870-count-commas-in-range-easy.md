@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/count-commas-in-range'
 tags: ['Math']
+rating: 1149
 ---
 
 # 3870 - Count Commas in Range (Easy)

@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/ways-to-make-a-fair-array/'
 tags: [Array, Dynamic Programming]
+rating: 1590
 ---
 
 # 1664 - Ways to Make a Fair Array (Medium)

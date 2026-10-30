@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/count-odd-numbers-in-an-interval-range/
+rating: 1209
 ---
 
 # 1523 - Count Odd Numbers in an Interval Range (Easy)

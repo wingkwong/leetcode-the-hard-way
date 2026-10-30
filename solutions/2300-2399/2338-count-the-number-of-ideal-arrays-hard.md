@@ -3,6 +3,7 @@ description: >-
   Author: @TBC | https://leetcode.com/problems/count-the-number-of-ideal-arrays
 
 draft: true
+rating: 2615
 ---
 
 # 2338 - Count the Number of Ideal Arrays (Hard)

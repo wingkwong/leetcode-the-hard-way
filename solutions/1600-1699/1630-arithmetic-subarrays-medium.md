@@ -1,6 +1,7 @@
 ---
 description: 'Author: @jit, @martin0327, @heder | https://leetcode.com/problems/arithmetic-subarrays/'
 tags: [Array, Sorting]
+rating: 1422
 ---
 
 # 1630 - Arithmetic Subarrays (Medium)

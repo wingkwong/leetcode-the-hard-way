@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/maximum-score-of-a-node-sequence/
+rating: 2304
 ---
 
 # 2242 - Maximum Score of a Node Sequence (Hard)

@@ -1,6 +1,7 @@
 ---
 description: 'Author: @jit | https://leetcode.com/problems/knight-dialer/'
 tags: [Dynamic Programming]
+rating: 1690
 ---
 
 # 0935 - Knight Dialer (Medium)

@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/decode-the-slanted-ciphertext
+rating: 1759
 ---
 
 # 2075 - Decode the Slanted Ciphertext (Medium)

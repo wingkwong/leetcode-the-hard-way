@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw, @jit, @jaffar | https://leetcode.com/problems/largest-substring-between-two-equal-characters/'
 tags: [Hash Table, String]
+rating: 1282
 ---
 
 # 1624 - Largest Substring Between Two Equal Characters (Easy)

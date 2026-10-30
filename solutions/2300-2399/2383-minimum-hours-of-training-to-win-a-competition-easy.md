@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/minimum-hours-of-training-to-win-a-competition/'
+rating: 1413
 ---
 
 # 2383 - Minimum Hours of Training to Win a Competition (Easy)

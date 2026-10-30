@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/find-the-number-of-winning-players'
 tags: [Mid Level, Array, Hash Table, Counting]
+rating: 1285
 ---
 
 # 3238 - Find the Number of Winning Players (Easy)

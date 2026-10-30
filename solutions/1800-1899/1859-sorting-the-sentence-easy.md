@@ -3,6 +3,7 @@ description: >-
   Author: @wkw | https://leetcode.com/problems/sorting-the-sentence/
 
 tags: ['Sorting']
+rating: 1290
 ---
 
 # 1859 - Sorting the Sentence (Easy)

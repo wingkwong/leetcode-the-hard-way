@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/sum-of-subarray-minimums/'
 tags: [Array, Dynamic Programming, Stack, Monotonic Stack]
+rating: 1976
 ---
 
 # 0907 - Sum of Subarray Minimums (Medium)

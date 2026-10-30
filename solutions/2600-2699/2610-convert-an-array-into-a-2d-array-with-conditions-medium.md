@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw, @jit | https://leetcode.com/problems/convert-an-array-into-a-2d-array-with-conditions/'
 tags: [Array, Hash Table]
+rating: 1374
 ---
 
 # 2610 - Convert an Array Into a 2D Array With Conditions (Medium)

@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/two-city-scheduling/'
 tags: ['Array', 'Sorting', 'Greedy']
+rating: 1348
 ---
 
 # 1029 - Two City Scheduling (Medium)

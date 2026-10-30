@@ -1,6 +1,7 @@
 ---
 description: 'Author: @ColeB2 | https://leetcode.com/problems/minimum-interval-to-include-each-query/'
 tags: [Array, Binary Search, Line Sweep, Sorting, Heap (Priority Queue)]
+rating: 2286
 ---
 
 # 1851 - Minimum Interval to Include Each Query

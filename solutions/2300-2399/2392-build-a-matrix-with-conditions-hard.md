@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/build-a-matrix-with-conditions/'
+rating: 1961
 ---
 
 # 2392 - Build a Matrix With Conditions (Hard)

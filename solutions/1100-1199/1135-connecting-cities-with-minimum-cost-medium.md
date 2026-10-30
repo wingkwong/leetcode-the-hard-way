@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/connecting-cities-with-minimum-cost/
+rating: 1753
 ---
 
 # 1135 - Connecting Cities With Minimum Cost (Medium)

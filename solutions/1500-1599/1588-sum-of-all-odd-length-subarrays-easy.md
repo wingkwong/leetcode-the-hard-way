@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @luiz290788, @wkw |  https://leetcode.com/problems/sum-of-all-odd-length-subarrays/
+rating: 1409
 ---
 
 # 1588 - Sum Of All Odd Length Subarrays (Easy)

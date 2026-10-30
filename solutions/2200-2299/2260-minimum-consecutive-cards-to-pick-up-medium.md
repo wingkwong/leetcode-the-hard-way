@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw, @dhanu084 | https://leetcode.com/problems/minimum-consecutive-cards-to-pick-up/
+rating: 1365
 ---
 
 # 2260 - Minimum Consecutive Cards to Pick Up (Medium)

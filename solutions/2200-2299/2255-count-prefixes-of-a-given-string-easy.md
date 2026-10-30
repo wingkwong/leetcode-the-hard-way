@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/count-prefixes-of-a-given-string/
+rating: 1261
 ---
 
 # 2255 - Count Prefixes of a Given String (Easy)

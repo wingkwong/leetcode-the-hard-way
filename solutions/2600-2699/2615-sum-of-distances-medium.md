@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/sum-of-distances/'
+rating: 1793
 ---
 
 # 2615 - Sum of Distances (Medium)

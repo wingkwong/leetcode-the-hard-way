@@ -1,6 +1,7 @@
 ---
 description: 'Author: @ColeB2 | https://leetcode.com/problems/merge-triplets-to-form-target-triplet/'
 tags: [Array, Greedy]
+rating: 1636
 ---
 
 # 1899 - Merge Triplets to Form Target Triplet (Medium)

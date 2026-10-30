@@ -1,6 +1,7 @@
 ---
 description: 'Author: @ColeB2 | https://leetcode.com/problems/hand-of-straights/'
 tags: [Array, Hash Table, Greedy, Sorting]
+rating: 1565
 ---
 
 # 0846 - Hand of Straights (Medium)

@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/numbers-with-same-consecutive-differences/'
 tags: [Backtracking, Breadth-First Search]
+rating: 1433
 ---
 
 # 0967 - Numbers With Same Consecutive Differences (Medium)

@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/maximum-count-of-positive-integer-and-negative-integer/'
+rating: 1196
 ---
 
 # 2529 - Maximum Count of Positive Integer and Negative Integer (Easy)

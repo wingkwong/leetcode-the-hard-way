@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/minimum-difficulty-of-a-job-schedule/'
 tags: [Array, Dynamic Programming]
+rating: 2035
 ---
 
 # 1335 - Minimum Difficulty of a Job Schedule (Hard)

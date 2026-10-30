@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/minimum-cost-to-cut-a-stick/
+rating: 2116
 ---
 
 # 1547 - Minimum Cost to Cut a Stick (Hard)

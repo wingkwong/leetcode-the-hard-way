@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/calculate-digit-sum-of-a-string/
+rating: 1302
 ---
 
 # 2243 - Calculate Digit Sum of a String (Easy)

@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/stone-game/'
+rating: 1590
 ---
 
 # 0877 - Stone Game (Medium)

@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/sum-in-a-matrix/'
+rating: 1333
 ---
 
 # 2679 - Sum in a Matrix (Medium)

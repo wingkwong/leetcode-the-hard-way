@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/number-of-ways-to-buy-pens-and-pencils/
+rating: 1400
 ---
 
 # 2240 - Number of Ways to Buy Pens and Pencils (Medium)

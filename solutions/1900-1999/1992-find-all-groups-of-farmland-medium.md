@@ -1,6 +1,7 @@
 ---
 description: 'Author: @dhanu084 | https://leetcode.com/problems/find-all-groups-of-farmland/'
 tags: [Graphs, DFS]
+rating: 1539
 ---
 
 # 1992 - Find All Groups of Farmland (Medium)

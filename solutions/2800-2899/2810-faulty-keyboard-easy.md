@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/faulty-keyboard/'
 tags: [String, Simulation]
+rating: 1193
 ---
 
 # 2810 - Faulty Keyboard (Easy)

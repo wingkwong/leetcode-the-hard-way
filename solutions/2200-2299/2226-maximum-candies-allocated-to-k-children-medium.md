@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/maximum-candies-allocated-to-k-children/
+rating: 1646
 ---
 
 # 2226 - Maximum Candies Allocated to K Children (Medium)

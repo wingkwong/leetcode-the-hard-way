@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/number-of-ways-to-reach-a-position-after-exactly-k-steps/'
+rating: 1751
 ---
 
 # 2400 - Number of Ways to Reach a Position After Exactly k Steps (Medium)

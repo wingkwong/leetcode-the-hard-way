@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/largest-component-size-by-common-factor
+rating: 2272
 ---
 
 # 0952 - Largest Component Size by Common Factor (Hard)

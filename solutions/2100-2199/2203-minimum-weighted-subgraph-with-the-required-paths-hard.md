@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/minimum-weighted-subgraph-with-the-required-paths/
+rating: 2364
 ---
 
 # 2203 - Minimum Weighted Subgraph With the Required Paths (Hard)

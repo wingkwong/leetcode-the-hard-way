@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @hirotake111 | https://leetcode.com/problems/maximum-ice-cream-bars/
+rating: 1253
 ---
 
 # 1833 - Maximum Ice Cream Bars (Medium)

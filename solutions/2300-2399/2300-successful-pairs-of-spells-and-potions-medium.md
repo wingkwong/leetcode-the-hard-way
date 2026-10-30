@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/successful-pairs-of-spells-and-potions/'
 tags: [Array, Two Pointers, Binary Search, Sorting]
+rating: 1477
 ---
 
 # 2300 - Successful Pairs of Spells and Potions (Medium)

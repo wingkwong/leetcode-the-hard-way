@@ -1,5 +1,6 @@
 ---
 description: 'Author: @heiheihang | https://leetcode.com/problems/concatenation-of-array/'
+rating: 1133
 ---
 
 # 1929 - Concatenation of Array (Easy)

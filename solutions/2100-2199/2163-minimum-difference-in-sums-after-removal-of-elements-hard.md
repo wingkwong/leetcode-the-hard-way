@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/minimum-difference-in-sums-after-removal-of-elements/
+rating: 2225
 ---
 
 # 2163 - Minimum Difference in Sums After Removal of Elements (Hard)

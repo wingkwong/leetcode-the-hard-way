@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/sum-of-scores-of-built-strings/
+rating: 2220
 ---
 
 # 2223 - Sum of Scores of Built Strings (Hard)

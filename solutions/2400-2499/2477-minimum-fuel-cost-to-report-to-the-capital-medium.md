@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/minimum-fuel-cost-to-report-to-the-capital/'
 tags: [Tree, Depth-First Search, Breadth-First Search, Graph]
+rating: 2012
 ---
 
 # 2477 - Minimum Fuel Cost to Report to the Capital (Medium)

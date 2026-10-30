@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/longest-palindrome-by-concatenating-two-letter-words/'
 tags: [Array, Hash Table, String, Greedy, Counting]
+rating: 1557
 ---
 
 # 2131 - Longest Palindrome by Concatenating Two Letter Words (Medium)

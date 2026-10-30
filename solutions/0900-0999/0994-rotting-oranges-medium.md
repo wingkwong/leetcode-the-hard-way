@@ -1,6 +1,7 @@
 ---
 description: 'Author: @ColeB2 | https://leetcode.com/problems/rotting-oranges/'
 tags: [Array, Breadth-First Search, Matrix]
+rating: 1433
 ---
 
 # 0994 - Rotting Oranges (Medium)

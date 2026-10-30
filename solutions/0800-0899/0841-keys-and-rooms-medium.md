@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw, @radojicic23 | https://leetcode.com/problems/keys-and-rooms/'
 tags: [Depth-First Search, Breadth-First Search, Graph]
+rating: 1412
 ---
 
 # 0841 - Keys and Rooms (Medium)

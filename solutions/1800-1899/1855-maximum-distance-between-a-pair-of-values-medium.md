@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/maximum-distance-between-a-pair-of-values/
+rating: 1515
 ---
 
 # 1855 - Maximum Distance Between a Pair of Values (Medium)

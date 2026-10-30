@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw, @iraycd | https://leetcode.com/problems/bag-of-tokens/'
 tags: [Array, Two Pointers, Greedy, Sorting]
+rating: 1762
 ---
 
 # 0948 - Bag of Tokens (Medium)

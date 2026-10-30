@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/ugly-number-iii/'
+rating: 2039
 ---
 
 # 1201 - Ugly Number III (Medium)

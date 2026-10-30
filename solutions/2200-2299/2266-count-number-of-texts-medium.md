@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/count-number-of-texts/'
+rating: 1857
 ---
 
 # 2266 - Count Number of Texts (Medium)

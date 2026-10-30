@@ -1,6 +1,7 @@
 ---
 description: 'Author: @yashh0903 | https://leetcode.com/problems/next-greater-node-in-linked-list/'
 tags: [Array, Linked List, Stack, Monotonic Stack]
+rating: 1571
 ---
 
 # 1019 - Next Greater Node In Linked List (Medium)

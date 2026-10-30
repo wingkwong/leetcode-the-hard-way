@@ -1,6 +1,7 @@
 ---
 description: 'Author: @Ishwarendra | https://leetcode.com/problems/greatest-common-divisor-traversal/'
 tags: ['Prime Factor', 'Graph', 'DFS', 'BFS', 'DSU']
+rating: 2172
 ---
 
 # 2709 - Greatest Common Divisor Traversal

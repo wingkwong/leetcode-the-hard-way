@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @heiheihang | https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/
+rating: 1176
 ---
 
 # 1431 - Kids With the Greatest Number of Candies (Easy)

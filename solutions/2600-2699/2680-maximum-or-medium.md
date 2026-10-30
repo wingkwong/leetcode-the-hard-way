@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/maximum-or/'
+rating: 1912
 ---
 
 # 2680 - Maximum OR (Medium)

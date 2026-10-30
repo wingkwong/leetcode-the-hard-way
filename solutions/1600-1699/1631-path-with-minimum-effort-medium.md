@@ -10,6 +10,7 @@ tags:
     Heap (Priority Queue),
     Matrix,
   ]
+rating: 1948
 ---
 
 # 1631 - Path With Minimum Effort (Medium)

@@ -1,6 +1,7 @@
 ---
 description: 'Author: @TBC | https://leetcode.com/problems/minimize-deviation-in-array/'
 draft: 'true'
+rating: 2533
 ---
 
 # 1675 - Minimize Deviation in Array (Hard)

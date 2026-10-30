@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw| https://leetcode.com/problems/design-an-atm-machine/'
+rating: 1616
 ---
 
 # 2241 - Design an ATM Machine (Medium)

@@ -1,6 +1,7 @@
 ---
 description: 'Author: @ColeB2, @wkw | https://leetcode.com/problems/last-stone-weight/'
 tags: [Array, Heap (Priority Queue)]
+rating: 1173
 ---
 
 # 1046 - Last Stone Weight (Easy)

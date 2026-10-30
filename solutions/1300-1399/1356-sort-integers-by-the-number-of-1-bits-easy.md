@@ -3,6 +3,7 @@ description: >-
   Author: @wkw, @vigneshshiv | https://leetcode.com/problems/sort-integers-by-the-number-of-1-bits
 
 tags: ['Sorting']
+rating: 1258
 ---
 
 # 1356 - Sort Integers by The Number of 1 Bits (Easy)

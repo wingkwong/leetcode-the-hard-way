@@ -1,6 +1,7 @@
 ---
 description: 'Author: @heder, @wkw, @jit, @jaffar | https://leetcode.com/problems/maximum-product-difference-between-two-pairs/'
 tags: [Array, Sorting]
+rating: 1145
 ---
 
 # 1913 - Maximum Product Difference Between Two Pairs (Easy)

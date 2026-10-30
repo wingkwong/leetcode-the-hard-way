@@ -1,6 +1,7 @@
 ---
 description: 'Author: @dhanu084 | https://leetcode.com/problems/remove-nodes-from-linked-list/'
 tags: [Linked List, Stack]
+rating: 1455
 ---
 
 # 2487 - Remove Nodes From Linked List (Medium)

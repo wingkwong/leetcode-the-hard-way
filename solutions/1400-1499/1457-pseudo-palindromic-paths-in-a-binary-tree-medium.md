@@ -8,6 +8,7 @@ tags:
     Breadth-First Search,
     Binary Tree,
   ]
+rating: 1405
 ---
 
 # 1457 - Pseudo-Palindromic Paths in a Binary Tree (Medium)

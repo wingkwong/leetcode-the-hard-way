@@ -1,6 +1,7 @@
 ---
 description: 'Author: @TBC | https://leetcode.com/problems/where-will-the-ball-fall/'
 tags: [Array, Dynamic Programming, Depth-First Search, Matrix, Simulation]
+rating: 1765
 ---
 
 # 1706 - Where Will the Ball Fall (Medium)

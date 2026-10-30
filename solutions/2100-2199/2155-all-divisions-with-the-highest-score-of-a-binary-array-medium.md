@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/all-divisions-with-the-highest-score-of-a-binary-array/
+rating: 1391
 ---
 
 # 2155 - All Divisions With the Highest Score of a Binary Array (Medium)

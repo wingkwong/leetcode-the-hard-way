@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/count-islands-with-total-value-divisible-by-k'
 tags: ['Array', 'Depth-First Search', 'Breadth-First Search', 'Union-Find', 'Matrix']
+rating: 1461
 ---
 
 # 3619 - Count Islands With Total Value Divisible by K (Medium)

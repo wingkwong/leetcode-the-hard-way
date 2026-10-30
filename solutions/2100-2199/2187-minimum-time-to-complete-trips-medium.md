@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @heiheihang, @wkw | https://leetcode.com/problems/minimum-time-to-complete-trips/
+rating: 1641
 ---
 
 # 2187 - Minimum Time to Complete Trips (Medium)

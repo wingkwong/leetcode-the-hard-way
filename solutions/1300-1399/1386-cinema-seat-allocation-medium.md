@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/cinema-seat-allocation'
 tags: [Array, Hash Table, Bit Manipulation]
+rating: 1637
 ---
 
 # 1386 - Cinema Seat Allocation (Medium)

@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/longest-chunked-palindrome-decomposition/
+rating: 1912
 ---
 
 # 1147 - Longest Chunked Palindrome Decomposition (Hard)

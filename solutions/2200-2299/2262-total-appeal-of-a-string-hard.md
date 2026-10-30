@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/total-appeal-of-a-string/'
+rating: 2033
 ---
 
 # 2262 - Total Appeal of A String (Hard)

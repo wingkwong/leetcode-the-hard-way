@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/prime-pairs-with-target-sum/'
+rating: 1505
 ---
 
 # 2761 - Prime Pairs With Target Sum (Medium)

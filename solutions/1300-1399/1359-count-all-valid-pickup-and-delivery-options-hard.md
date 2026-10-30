@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/count-all-valid-pickup-and-delivery-options/
+rating: 1723
 ---
 
 # 1359 - Count All Valid Pickup and Delivery Options (Hard)

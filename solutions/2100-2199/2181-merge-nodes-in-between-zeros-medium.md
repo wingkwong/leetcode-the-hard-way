@@ -1,6 +1,7 @@
 ---
 description: 'Author: @TBC | https://leetcode.com/problems/merge-nodes-in-between-zeros/'
 draft: 'true'
+rating: 1333
 ---
 
 # 2181 - Merge Nodes in Between Zeros (Medium)

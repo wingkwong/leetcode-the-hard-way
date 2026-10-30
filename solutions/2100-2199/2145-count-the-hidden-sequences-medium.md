@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/count-the-hidden-sequences/'
+rating: 1614
 ---
 
 # 2145 - Count the Hidden Sequences (Medium)

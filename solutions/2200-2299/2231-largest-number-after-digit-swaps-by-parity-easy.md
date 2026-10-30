@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/largest-number-after-digit-swaps-by-parity/
+rating: 1365
 ---
 
 # 2231 - Largest Number After Digit Swaps by Parity (Easy)

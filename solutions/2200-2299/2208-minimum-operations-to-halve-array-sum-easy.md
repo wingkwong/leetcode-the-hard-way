@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @heiheihang, @wkw | https://leetcode.com/problems/minimum-operations-to-halve-array-sum/
+rating: 1550
 ---
 
 # 2208 - Minimum Operations to Halve Array Sum (Medium)

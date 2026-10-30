@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/minimum-average-difference/'
 tags: [Array, Prefix Sum]
+rating: 1395
 ---
 
 # 2256 - Minimum Average Difference (Medium)

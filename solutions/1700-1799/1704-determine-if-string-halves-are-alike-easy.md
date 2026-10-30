@@ -1,6 +1,7 @@
 ---
 description: 'Author: @heder, @wkw | https://leetcode.com/problems/determine-if-string-halves-are-alike/'
 tags: [String, Counting]
+rating: 1208
 ---
 
 # 1704 - Determine if String Halves Are Alike (Easy)

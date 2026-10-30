@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/create-grid-with-exactly-one-path'
+rating: 1311
 ---
 
 # 3963 - Create Grid With Exactly One Path (Easy)

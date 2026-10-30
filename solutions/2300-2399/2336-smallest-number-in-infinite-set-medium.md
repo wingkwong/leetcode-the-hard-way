@@ -3,6 +3,7 @@ description: >-
   Author: @TBC | https://leetcode.com/problems/smallest-number-in-infinite-set
 
 draft: true
+rating: 1375
 ---
 
 # 2336 - Smallest Number in Infinite Set (Medium)

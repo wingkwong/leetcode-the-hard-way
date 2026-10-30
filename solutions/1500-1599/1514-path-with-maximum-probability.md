@@ -3,6 +3,7 @@ description: >-
   Author: @Kavita613 | https://leetcode.com/problems/path-with-maximum-probability/
 
 tags: [Graph, Heap (Priority Queue), Shortest Path]
+rating: 1846
 ---
 
 # 1514 - Path with Maximum Probability (Medium)

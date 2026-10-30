@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/maximum-product-after-k-increments/
+rating: 1686
 ---
 
 # 2233 - Maximum Product After K Increments (Medium)

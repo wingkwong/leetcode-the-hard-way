@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/sort-the-matrix-diagonally/'
 tags: [Array, Sorting, Matrix]
+rating: 1548
 ---
 
 # 1329 - Sort the Matrix Diagonally (Medium)

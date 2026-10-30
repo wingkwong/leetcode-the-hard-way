@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/sort-the-jumbled-numbers/'
+rating: 1496
 ---
 
 # 2191 - Sort the Jumbled Numbers (Medium)

@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/most-frequent-even-element/'
+rating: 1259
 ---
 
 # 2404 - Most Frequent Even Element (Easy)

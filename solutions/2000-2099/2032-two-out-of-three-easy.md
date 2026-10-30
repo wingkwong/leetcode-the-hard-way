@@ -3,6 +3,7 @@ description: >-
   Author: @wkw | https://leetcode.com/problems/two-out-of-three
 
 tags: ['Hash Map']
+rating: 1270
 ---
 
 # 2032 - Two Out of Three (Easy)

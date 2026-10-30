@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/count-equal-and-divisible-pairs-in-an-array/
+rating: 1216
 ---
 
 # 2176 - Count Equal and Divisible Pairs in an Array (Easy)

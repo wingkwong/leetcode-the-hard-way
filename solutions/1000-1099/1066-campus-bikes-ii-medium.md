@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/campus-bikes-ii/'
+rating: 1885
 ---
 
 # 1066 - Campus Bikes II (Medium)

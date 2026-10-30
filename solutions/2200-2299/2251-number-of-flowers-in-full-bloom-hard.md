@@ -3,6 +3,7 @@ description: >-
   Author: @wkw | https://leetcode.com/problems/number-of-flowers-in-full-bloom/
 
 tags: [Array, Hash Table, Binary Search, Sorting, Prefix Sum, Ordered Set]
+rating: 2022
 ---
 
 # 2251 - Number of Flowers in Full Bloom (Hard)

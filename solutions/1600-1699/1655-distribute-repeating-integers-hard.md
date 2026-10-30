@@ -1,6 +1,7 @@
 ---
 description: 'Author: @TBC | https://leetcode.com/problems/distribute-repeating-integers/'
 draft: 'true'
+rating: 2307
 ---
 
 # 1655 - Distribute Repeating Integers (Hard)

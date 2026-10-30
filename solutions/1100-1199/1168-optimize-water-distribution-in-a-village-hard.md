@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/optimize-water-distribution-in-a-village/
+rating: 2069
 ---
 
 # 1168 - Optimize Water Distribution in a Village (Hard)

@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw, @vigneshshiv | https://leetcode.com/problems/greatest-common-divisor-of-strings/'
 tags: [Math, String]
+rating: 1398
 ---
 
 # 1071 - Greatest Common Divisor of Strings (Easy)

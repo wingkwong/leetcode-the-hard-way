@@ -3,6 +3,7 @@ description: >-
   Author: @TBC | https://leetcode.com/problems/minimum-sum-of-squared-difference/
 
 draft: true
+rating: 2011
 ---
 
 # 2333 - Minimum Sum of Squared Difference (Medium)

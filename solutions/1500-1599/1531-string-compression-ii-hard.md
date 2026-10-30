@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/string-compression-ii/'
 tags: [String, Dynamic Programming]
+rating: 2576
 ---
 
 # 1531 - String Compression II (Hard)

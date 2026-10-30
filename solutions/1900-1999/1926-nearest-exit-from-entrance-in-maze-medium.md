@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/nearest-exit-from-entrance-in-maze/'
 tags: [Array, Breadth-First Search, Matrix]
+rating: 1638
 ---
 
 # 1926 - Nearest Exit from Entrance in Maze (Medium)

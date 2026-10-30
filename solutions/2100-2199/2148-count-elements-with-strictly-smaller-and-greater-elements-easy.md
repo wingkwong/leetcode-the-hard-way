@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/count-elements-with-strictly-smaller-and-greater-elements/
+rating: 1202
 ---
 
 # 2148 - Count Elements With Strictly Smaller and Greater Elements (Easy)

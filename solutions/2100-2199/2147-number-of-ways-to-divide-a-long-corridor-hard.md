@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/number-of-ways-to-divide-a-long-corridor/
+rating: 1915
 ---
 
 # 2147 - Number of Ways to Divide a Long Corridor (Hard)

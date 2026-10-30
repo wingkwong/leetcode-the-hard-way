@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw, @ganajayant | https://leetcode.com/problems/partition-array-according-to-given-pivot/
+rating: 1338
 ---
 
 # 2161 - Partition Array According to Given Pivot (Medium)

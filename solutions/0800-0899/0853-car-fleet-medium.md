@@ -1,6 +1,7 @@
 ---
 description: 'Author: @ColeB2 | https://leetcode.com/problems/car-fleet/'
 tags: [Array, Stack, Sorting, Monotonic Stack]
+rating: 1678
 ---
 
 # 0853 - Car Fleet (Medium)

@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/binary-tree-pruning/'
 tags: [Tree, Depth-First Search, Binary Tree]
+rating: 1380
 ---
 
 # 0814 - Binary Tree Pruning (Medium)

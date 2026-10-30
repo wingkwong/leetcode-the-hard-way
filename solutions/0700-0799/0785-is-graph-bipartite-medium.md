@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/is-graph-bipartite'
+rating: 1625
 ---
 
 # 0785 - Is Graph Bipartite? (Medium)

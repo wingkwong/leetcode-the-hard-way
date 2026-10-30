@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/maximum-k-to-sort-a-permutation'
 tags: ['Bit Manipulation']
+rating: 1775
 ---
 
 # 3644 - Maximum K to Sort a Permutation (Medium) 

@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/handshakes-that-dont-cross/'
+rating: 1951
 ---
 
 # 1259 - Handshakes That Don't Cross (Hard)

@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/push-dominoes/'
 tags: [Two Pointers, String, Dynamic Programming]
+rating: 1638
 ---
 
 # 0838 - Push Dominoes (Medium)

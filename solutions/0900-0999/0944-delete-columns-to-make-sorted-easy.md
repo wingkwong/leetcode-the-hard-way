@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/delete-columns-to-make-sorted/'
 tags: [Array, String]
+rating: 1396
 ---
 
 # 0944 - Delete Columns to Make Sorted (Easy)

@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/number-of-excellent-pairs/
+rating: 2076
 ---
 
 # 2354 - Number of Excellent Pairs (Hard)

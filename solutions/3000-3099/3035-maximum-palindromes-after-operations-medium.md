@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/maximum-palindromes-after-operations/'
+rating: 1857
 ---
 
 # 3035 - Maximum Palindromes After Operations (Medium)

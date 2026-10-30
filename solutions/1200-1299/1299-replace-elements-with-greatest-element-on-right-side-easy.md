@@ -1,6 +1,7 @@
 ---
 description: 'Author: @ColeB2 | https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side/'
 tags: [Array]
+rating: 1219
 ---
 
 # 1299 - Replace Elements with Greatest Element on Right Side

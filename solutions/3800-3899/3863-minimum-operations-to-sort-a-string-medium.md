@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/minimum-operations-to-sort-a-string'
 tags: ["String"]
+rating: 1860
 ---
 
 # 3863 - Minimum Operations to Sort a String (Medium)

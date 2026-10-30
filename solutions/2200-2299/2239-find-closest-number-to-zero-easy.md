@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/find-closest-number-to-zero/
+rating: 1256
 ---
 
 # 2239 - Find Closest Number to Zero (Easy)

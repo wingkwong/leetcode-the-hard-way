@@ -1,6 +1,7 @@
 ---
 description: 'Author: @DongDong | https://leetcode.com/problems/squares-of-a-sorted-array/'
 tags: [Array, Two Pointers]
+rating: 1130
 ---
 
 # 0977 - Squares of A Sorted Array (Easy)

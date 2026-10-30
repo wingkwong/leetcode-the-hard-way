@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw| https://leetcode.com/problems/max-consecutive-ones-iii/'
+rating: 1656
 ---
 
 # 1004 - Max Consecutive Ones III (Medium)

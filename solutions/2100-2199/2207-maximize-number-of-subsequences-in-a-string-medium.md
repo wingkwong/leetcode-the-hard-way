@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/maximize-number-of-subsequences-in-a-string/
+rating: 1550
 ---
 
 # 2207 - Maximize Number of Subsequences in a String (Medium)

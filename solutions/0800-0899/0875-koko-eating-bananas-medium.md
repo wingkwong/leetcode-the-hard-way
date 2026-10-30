@@ -1,5 +1,6 @@
 ---
 description: 'Author: @ColeB2 | https://leetcode.com/problems/koko-eating-bananas/'
+rating: 1766
 ---
 
 # 0875 - Koko Eating Bananas

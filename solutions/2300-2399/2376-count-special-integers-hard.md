@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/count-special-integers/'
 tags: [Math, Dynamic Programming]
+rating: 2120
 ---
 
 # 2376 - Count Special Integers (Hard)

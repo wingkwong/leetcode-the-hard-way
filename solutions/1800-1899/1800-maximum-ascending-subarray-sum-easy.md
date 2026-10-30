@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/maximum-ascending-subarray-sum/
+rating: 1229
 ---
 
 # 1800 - Maximum Ascending Subarray Sum (Easy)

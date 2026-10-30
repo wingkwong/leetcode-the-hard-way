@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/shifting-letters-ii/'
+rating: 1793
 ---
 
 # 2381 - Shifting Letters II (Medium)

@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/maximal-score-after-applying-k-operations/'
 tags: [Array, Greedy, Heap (Priority Queue)]
+rating: 1386
 ---
 
 # 2530 - Maximal Score After Applying K Operations (Medium)

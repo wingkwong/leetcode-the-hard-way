@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/minimum-sum-of-four-digit-number-after-splitting-digits/
+rating: 1314
 ---
 
 # 2160 - Minimum Sum of Four Digit Number After Splitting Digits (Easy)

@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/longest-square-streak-in-an-array/'
 tags: [Array, Hash Table, Binary Search, Dynamic Programming, Sorting]
+rating: 1480
 ---
 
 # 2501 - Longest Square Streak in an Array (Medium)

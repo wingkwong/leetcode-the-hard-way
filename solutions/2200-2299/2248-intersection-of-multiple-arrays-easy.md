@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/intersection-of-multiple-arrays/
+rating: 1264
 ---
 
 # 2248 - Intersection of Multiple Arrays (Easy)

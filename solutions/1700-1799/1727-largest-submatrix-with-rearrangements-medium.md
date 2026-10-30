@@ -1,6 +1,7 @@
 ---
 description: 'Author: @jit | https://leetcode.com/problems/largest-submatrix-with-rearrangements/'
 tags: [Array, Greedy, Sorting, Matrix]
+rating: 1927
 ---
 
 # 1727 - Largest Submatrix With Rearrangements (Medium)

@@ -3,6 +3,7 @@ description: >-
   Author: @jessicaribeiroalves | https://leetcode.com/problems/transpose-matrix/
 
 tags: [Array, Matrix, Simulation]
+rating: 1259
 ---
 
 # 0867 - Transpose Matrix (Easy)

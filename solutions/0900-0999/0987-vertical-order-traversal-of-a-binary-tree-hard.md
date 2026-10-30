@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw, @lonyehan | https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/'
 tags: [Hash Table, Tree, Depth-First Search, Breadth-First Search, Binary Tree]
+rating: 1676
 ---
 
 # 0987 - Vertical Order Traversal of a Binary Tree (Hard)

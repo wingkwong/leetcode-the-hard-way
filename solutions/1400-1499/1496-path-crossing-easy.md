@@ -1,6 +1,7 @@
 ---
 description: 'Author: @jaffar, @jit, @wkw | https://leetcode.com/problems/path-crossing/'
 tags: [Hash Table, String]
+rating: 1508
 ---
 
 # 1496 - Path Crossing (Easy)

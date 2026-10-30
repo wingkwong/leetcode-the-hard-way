@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/count-number-of-rectangles-containing-each-point/
+rating: 1998
 ---
 
 # 2250 - Count Number of Rectangles Containing Each Point (Medium)

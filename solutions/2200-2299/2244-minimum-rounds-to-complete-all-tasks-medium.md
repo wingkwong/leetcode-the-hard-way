@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/minimum-rounds-to-complete-all-tasks/
+rating: 1372
 ---
 
 # 2244 - Minimum Rounds to Complete All Tasks (Medium)

@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/champagne-tower/'
 tags: [Dynamic Programming]
+rating: 1856
 ---
 
 # 0799 - Champagne Tower (Medium)

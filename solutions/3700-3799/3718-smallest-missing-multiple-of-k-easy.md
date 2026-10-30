@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/smallest-missing-multiple-of-k/'
 tags: ['Array', 'Hash Table']
+rating: 1228
 ---
 
 # 3718 - Smallest Missing Multiple of K (Easy)

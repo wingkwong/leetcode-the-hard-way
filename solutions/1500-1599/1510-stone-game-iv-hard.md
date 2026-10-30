@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/stone-game-iv/'
+rating: 1787
 ---
 
 # 1510 - Stone Game IV (Hard)

@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/encrypt-and-decrypt-strings'
+rating: 1945
 ---
 
 # 2227 - Encrypt and Decrypt Strings (Hard)

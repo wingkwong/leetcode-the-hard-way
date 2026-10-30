@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/count-the-digits-that-divide-a-number/'
+rating: 1261
 ---
 
 # 2520 - Count the Digits That Divide a Number (Easy)

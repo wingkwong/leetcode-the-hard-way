@@ -1,6 +1,7 @@
 ---
 description: 'Author: @dhanu084, @wkw, @jit, @heder | https://leetcode.com/problems/find-the-pivot-integer/'
 tags: [Math, Prefix Sum]
+rating: 1207
 ---
 
 # 2485 - Find the Pivot Integer (Easy)

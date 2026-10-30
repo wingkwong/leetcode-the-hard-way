@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/minimum-time-to-make-rope-colorful/'
 tags: [Array, String, Dynamic Programming, Greedy]
+rating: 1574
 ---
 
 # 1578 - Minimum Time to Make Rope Colorful (Medium)

@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/minimum-xor-path-in-a-grid'
 tags: ['Dynamic Programming', 'Bit Manipulation', 'Matrix']
+rating: 1771
 ---
 
 # 3882 - Minimum XOR Path in a Grid (Medium)

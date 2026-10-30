@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/shortest-path-with-at-most-k-consecutive-identical-characters'
 tags: ['Graph Theory', 'Heap (Priority Queue)', 'Shortest Path']
+rating: 1840
 ---
 
 # 3970 - Shortest Path With At Most K Consecutive Identical Characters (Medium)

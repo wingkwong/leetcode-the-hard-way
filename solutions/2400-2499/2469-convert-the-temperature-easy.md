@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/convert-the-temperature/'
 tags: [Math]
+rating: 1153
 ---
 
 # 2469 - Convert the Temperature (Easy)

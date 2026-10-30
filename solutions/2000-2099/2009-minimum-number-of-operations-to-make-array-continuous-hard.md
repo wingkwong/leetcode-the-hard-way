@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/minimum-number-of-operations-to-make-array-continuous/'
 tags: [Array, Binary Search]
+rating: 2084
 ---
 
 # 2009 - Minimum Number of Operations to Make Array Continuous (Hard)

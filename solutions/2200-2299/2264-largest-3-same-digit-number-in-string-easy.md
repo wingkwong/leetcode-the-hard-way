@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/largest-3-same-digit-number-in-string/
+rating: 1309
 ---
 
 # 2264 - Largest 3-Same-Digit Number in String (Easy)

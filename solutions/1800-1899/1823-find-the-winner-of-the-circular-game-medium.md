@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/find-the-winner-of-the-circular-game/'
 tags: [Array, Math, Recursion, Queue, Simulation]
+rating: 1412
 ---
 
 # 1823 - Find the Winner of the Circular Game (Medium)

@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/find-substring-with-given-hash-value/
+rating: 2063
 ---
 
 # 2156 - Find Substring With Given Hash Value (Medium)

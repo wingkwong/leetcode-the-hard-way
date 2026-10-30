@@ -3,6 +3,7 @@ description: >-
   Author: @wkw | https://leetcode.com/problems/maximum-value-of-k-coins-from-piles/
 
 tags: [Array, Dynamic Programming, Prefix Sum]
+rating: 2158
 ---
 
 # 2218 - Maximum Value of K Coins From Piles (Hard)

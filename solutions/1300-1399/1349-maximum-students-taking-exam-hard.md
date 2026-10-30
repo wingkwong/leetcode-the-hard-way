@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/maximum-students-taking-exam/
+rating: 2386
 ---
 
 # 1349 - Maximum Students Taking Exam (Hard)

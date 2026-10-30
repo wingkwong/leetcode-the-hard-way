@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/solving-questions-with-brainpower/
+rating: 1504
 ---
 
 # 2140 - Solving Questions With Brainpower (Medium)

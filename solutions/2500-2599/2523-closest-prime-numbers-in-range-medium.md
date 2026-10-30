@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/closest-prime-numbers-in-range/'
 tags: [Math, Number Theory]
+rating: 1650
 ---
 
 # 2523 - Closest Prime Numbers in Range (Medium)

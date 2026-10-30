@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/parallel-courses-iii/'
 tags: [Array, Dynamic Programming, Graph, Topological Sort]
+rating: 2084
 ---
 
 # 2050 - Parallel Courses III (Hard)

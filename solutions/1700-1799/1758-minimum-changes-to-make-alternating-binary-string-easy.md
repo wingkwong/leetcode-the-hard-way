@@ -1,6 +1,7 @@
 ---
 description: 'Author: @jit, @wkw | https://leetcode.com/problems/minimum-changes-to-make-alternating-binary-string/'
 tags: [String]
+rating: 1354
 ---
 
 # 1758 - Minimum Changes To Make Alternating Binary String (Easy)

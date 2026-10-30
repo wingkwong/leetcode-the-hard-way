@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw, @iraycd | https://leetcode.com/problems/the-number-of-weak-characters-in-the-game/'
 tags: [Array, Stack, Greedy, Sorting, Monotonic Stack]
+rating: 1861
 ---
 
 # 1996 - The Number of Weak Characters in the Game (Medium)

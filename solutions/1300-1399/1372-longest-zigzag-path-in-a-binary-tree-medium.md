@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/longest-zigzag-path-in-a-binary-tree/'
 tags: [Dynamic Programming, Tree, Depth-First Search, Binary Tree]
+rating: 1713
 ---
 
 # 1372 - Longest ZigZag Path in a Binary Tree (Medium)

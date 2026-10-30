@@ -3,6 +3,7 @@ description: >-
   Author: @wkw | https://leetcode.com/problems/subarrays-with-k-different-integers/
 
 tags: [Array, Hash Table, Sliding Window, Counting]
+rating: 2210
 ---
 
 # 0992 - Subarrays with K Different Integers (Hard)

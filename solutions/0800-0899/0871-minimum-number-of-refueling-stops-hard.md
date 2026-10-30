@@ -2,6 +2,7 @@
 description: 'Author: @TBC | https://leetcode.com/problems/minimum-number-of-refueling-stops/'
 draft: 'true'
 tags: [Array, Dynamic Programming, Greedy, Heap (Priority Queue)]
+rating: 2074
 ---
 
 # 0871 - Minimum Number of Refueling Stops (Hard)

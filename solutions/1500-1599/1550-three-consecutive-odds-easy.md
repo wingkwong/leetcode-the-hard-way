@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/three-consecutive-odds/'
 tags: [Array]
+rating: 1222
 ---
 
 # 1550 - Three Consecutive Odds (Easy)

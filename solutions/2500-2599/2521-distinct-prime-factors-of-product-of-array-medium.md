@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/distinct-prime-factors-of-product-of-array/'
+rating: 1413
 ---
 
 # 2521 - Distinct Prime Factors of Product of Array (Medium)

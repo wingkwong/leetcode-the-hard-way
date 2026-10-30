@@ -3,6 +3,7 @@ description: >-
   Author: @wkw,@heiheihang | https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix/
 
 tags: [Array, Binary Search, Sorting, Heap (Priority Queue), Matrix]
+rating: 1225
 ---
 
 # 1337 - The K Weakest Rows in a Matrix (Easy)

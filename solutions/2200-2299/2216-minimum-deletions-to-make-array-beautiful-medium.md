@@ -3,6 +3,7 @@ description: >-
   Author: @TBC | https://leetcode.com/problems/minimum-deletions-to-make-array-beautiful/
 
 draft: true
+rating: 1510
 ---
 
 # 2216 - Minimum Deletions to Make Array Beautiful (Medium)

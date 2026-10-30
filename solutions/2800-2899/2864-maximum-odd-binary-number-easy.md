@@ -1,6 +1,7 @@
 ---
 description: 'Author: @heder, @wkw | https://leetcode.com/problems/maximum-odd-binary-number/'
 tags: [Math, String, Greedy]
+rating: 1238
 ---
 
 # 2864 - Maximum Odd Binary Number (Easy)

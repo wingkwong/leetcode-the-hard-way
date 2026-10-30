@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/optimal-partition-of-string/'
+rating: 1355
 ---
 
 # 2405 - Optimal Partition of String (Medium)

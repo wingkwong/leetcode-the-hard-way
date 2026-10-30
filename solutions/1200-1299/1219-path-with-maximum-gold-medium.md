@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/path-with-maximum-gold/'
 tags: [Array, Backtracking, Matrix]
+rating: 1663
 ---
 
 # 1219 - Path with Maximum Gold (Medium)

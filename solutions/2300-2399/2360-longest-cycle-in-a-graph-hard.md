@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/longest-cycle-in-a-graph
+rating: 1897
 ---
 
 # 2360 - Longest Cycle in a Graph (Hard)

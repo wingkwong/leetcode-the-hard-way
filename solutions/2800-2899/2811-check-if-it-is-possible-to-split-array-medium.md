@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/check-if-it-is-possible-to-split-array/'
 tags: [Array, Dynamic Programming, Greedy]
+rating: 1543
 ---
 
 # 2811 - Check if it is Possible to Split Array (Medium)

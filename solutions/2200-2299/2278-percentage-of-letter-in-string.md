@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/percentage-of-letter-in-string
+rating: 1162
 ---
 
 # 2278 - Percentage of Letter in String (Easy)

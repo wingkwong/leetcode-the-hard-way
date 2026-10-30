@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/sum-of-even-numbers-after-queries/'
 tags: [Array, Simulation]
+rating: 1198
 ---
 
 # 0985 - Sum of Even Numbers After Queries (Medium)

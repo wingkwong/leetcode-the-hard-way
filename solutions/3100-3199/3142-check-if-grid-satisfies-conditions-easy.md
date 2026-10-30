@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/check-if-grid-satisfies-conditions/'
 tags: [Array, Matrix]
+rating: 1303
 ---
 
 # 3142 - Check if Grid Satisfies Conditions (Easy)

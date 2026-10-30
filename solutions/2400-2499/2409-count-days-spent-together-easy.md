@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/count-days-spent-together'
 tags: ['Math']
+rating: 1562
 ---
 
 # 2409 - Count Days Spent Together (Easy)

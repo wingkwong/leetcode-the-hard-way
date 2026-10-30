@@ -3,6 +3,7 @@ description: >-
   Author: @wkw | https://leetcode.com/problems/equal-row-and-column-pairs
 
 tags: ['Hash Map']
+rating: 1286
 ---
 
 # 2352 - Equal Row and Column Pairs (Medium)

@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/number-of-senior-citizens/'
+rating: 1199
 ---
 
 # 2678 - Number of Senior Citizens (Easy)

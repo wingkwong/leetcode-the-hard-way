@@ -10,6 +10,7 @@ tags:
     Heap (Priority Queue),
     Quickselect,
   ]
+rating: 1214
 ---
 
 # 0973 - K Closest Points to Origin (Medium)

@@ -3,6 +3,7 @@ description: >-
   Author: @wkw | https://leetcode.com/problems/rearrange-array-elements-by-sign/
 
 tags: [Array, Two Pointers, Simulation]
+rating: 1236
 ---
 
 # 2149 - Rearrange Array Elements by Sign (Medium)

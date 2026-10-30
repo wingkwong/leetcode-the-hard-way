@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/largest-combination-with-bitwise-and-greater-than-zero
+rating: 1642
 ---
 
 # 2275 - Largest Combination With Bitwise AND Greater Than Zero (Medium)

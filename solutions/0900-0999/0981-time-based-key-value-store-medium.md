@@ -1,5 +1,6 @@
 ---
 description: 'Author: @ganajayant | https://leetcode.com/problems/time-based-key-value-store/'
+rating: 1575
 ---
 
 # 0981 - Time Based Key-Value Store (Medium)

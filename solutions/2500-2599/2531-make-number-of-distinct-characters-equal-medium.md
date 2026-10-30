@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/make-number-of-distinct-characters-equal/'
+rating: 1776
 ---
 
 # 2531 - Make Number of Distinct Characters Equal (Medium)

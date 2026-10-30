@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/best-team-with-no-conflicts/'
 tags: [Array, Dynamic Programming, Sorting]
+rating: 2027
 ---
 
 # 1626 - Best Team With No Conflicts (Medium)

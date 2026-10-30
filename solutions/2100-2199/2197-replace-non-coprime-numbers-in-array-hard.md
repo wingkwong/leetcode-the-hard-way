@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/replace-non-coprime-numbers-in-array/
+rating: 2057
 ---
 
 # 2197 - Replace Non-Coprime Numbers in Array (Hard)

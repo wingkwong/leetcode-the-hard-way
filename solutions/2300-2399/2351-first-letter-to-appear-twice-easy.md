@@ -3,6 +3,7 @@ description: >-
   Author: @wkw | https://leetcode.com/problems/first-letter-to-appear-twice
 
 tags: ['Hash Map']
+rating: 1155
 ---
 
 # 2351 - First Letter to Appear Twice (Easy)

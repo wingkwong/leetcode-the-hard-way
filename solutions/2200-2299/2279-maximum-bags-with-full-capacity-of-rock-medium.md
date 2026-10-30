@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw, @radojicic23 | https://leetcode.com/problems/maximum-bags-with-full-capacity-of-rocks
+rating: 1249
 ---
 
 # 2279 - Maximum Bags With Full Capacity of Rocks (Medium)

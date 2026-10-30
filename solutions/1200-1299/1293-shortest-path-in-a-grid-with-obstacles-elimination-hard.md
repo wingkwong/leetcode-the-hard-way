@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/shortest-path-in-a-grid-with-obstacles-elimination/'
 tags: [Array, Breadth-First Search, Matrix]
+rating: 1967
 ---
 
 # 1293 - Shortest Path in a Grid with Obstacles Elimination (Hard)

@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/maximum-population-year/'
+rating: 1370
 ---
 
 # 1854 - Maximum Population Year (Easy)

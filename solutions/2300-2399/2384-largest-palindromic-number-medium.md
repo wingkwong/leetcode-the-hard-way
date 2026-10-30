@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/largest-palindromic-number/'
+rating: 1636
 ---
 
 # 2384 - Largest Palindromic Number (Medium)

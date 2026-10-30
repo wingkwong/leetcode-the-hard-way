@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/minimize-the-maximum-difference-of-pairs/'
+rating: 2155
 ---
 
 # 2616 - Minimize the Maximum Difference of Pairs (Medium)

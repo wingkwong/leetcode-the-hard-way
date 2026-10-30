@@ -3,6 +3,7 @@ description: >-
   Author: @wkw | https://leetcode.com/problems/maximum-profit-in-job-scheduling/
 
 tags: [Array, Binary Search, Dynamic Programming, Sorting]
+rating: 2023
 ---
 
 # 1235 - Maximum Profit in Job Scheduling (Hard)

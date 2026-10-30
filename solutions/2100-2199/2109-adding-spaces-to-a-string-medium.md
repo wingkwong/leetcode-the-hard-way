@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/adding-spaces-to-a-string/'
+rating: 1315
 ---
 
 # 2109 - Adding Spaces to a String (Medium)

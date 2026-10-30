@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/find-indices-with-index-and-value-difference-ii/'
 tags: [Array]
+rating: 1324
 ---
 
 # 2905 - Find Indices With Index and Value Difference II (Medium)

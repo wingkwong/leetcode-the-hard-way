@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @heiheihang | https://leetcode.com/problems/minimum-number-of-moves-to-make-palindrome/
+rating: 2091
 ---
 
 # 2193 - Minimum Number of Moves to Make Palindrome (Hard)

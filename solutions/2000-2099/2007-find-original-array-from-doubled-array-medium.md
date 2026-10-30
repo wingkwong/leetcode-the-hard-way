@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw, @iraycd | https://leetcode.com/problems/find-original-array-from-doubled-array/'
 tags: [Array, Hash Table, Greedy, Sorting]
+rating: 1557
 ---
 
 # 2007 - Find Original Array From Doubled Array (Medium)

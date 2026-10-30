@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/minimum-operations-to-sort-a-permutation'
 tags: ['Array']
+rating: 1855
 ---
 
 # 3942 - Minimum Operations to Sort a Permutation (Medium)

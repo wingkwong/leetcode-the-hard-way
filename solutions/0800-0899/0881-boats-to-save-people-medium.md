@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw, @radojicic23 | https://leetcode.com/problems/boats-to-save-people/'
+rating: 1530
 ---
 
 # 0881 - Boats to Save People (Medium)

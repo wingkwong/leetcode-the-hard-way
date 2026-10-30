@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/as-far-from-land-as-possible/
+rating: 1666
 ---
 
 # 1162 - As Far from Land as Possible (Medium)

@@ -1,5 +1,6 @@
 ---
 description: 'Author: @ganajayant | https://leetcode.com/problems/bitwise-xor-of-all-pairings'
+rating: 1622
 ---
 
 # 2425 - Bitwise XOR of All Pairings (Medium)

@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/fruit-into-baskets/'
 tags: [Array, Hash Table, Sliding Window]
+rating: 1516
 ---
 
 # 0904 - Fruit Into Baskets (Medium)

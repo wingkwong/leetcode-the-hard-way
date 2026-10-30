@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/recover-the-original-array/'
+rating: 2159
 ---
 
 # 2122 - Recover the Original Array (Hard)

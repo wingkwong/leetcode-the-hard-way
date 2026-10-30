@@ -1,5 +1,6 @@
 ---
 description: 'Author: @heiheihang | https://leetcode.com/problems/design-bitset/'
+rating: 1752
 ---
 
 # 2166 - Design Bitset (Medium)

@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/count-lattice-points-inside-a-circle/
+rating: 1603
 ---
 
 # 2249 - Count Lattice Points Inside a Circle (Medium)

@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @heiheihang, @wkw | https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram-ii/
+rating: 1253
 ---
 
 # 2186 - Minimum Number of Steps to Make Two Strings Anagram II (Medium)

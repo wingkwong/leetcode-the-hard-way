@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/find-the-largest-almost-missing-integer'
 tags: [Array, Hash Table]
+rating: 1308
 ---
 
 # 3471 - Find the Largest Almost Missing Integer (Easy)

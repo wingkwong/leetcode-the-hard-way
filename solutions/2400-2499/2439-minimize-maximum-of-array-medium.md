@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/minimize-maximum-of-array/'
 tags: [Array, Binary Search, Dynamic Programming, Greedy, Prefix Sum]
+rating: 1965
 ---
 
 # 2439 - Minimize Maximum of Array (Medium)

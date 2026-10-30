@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @heiheihang | https://leetcode.com/problems/minimum-operations-to-make-the-array-alternating/
+rating: 1663
 ---
 
 # 2170 - Minimum Operations to Make the Array Alternating (Medium)

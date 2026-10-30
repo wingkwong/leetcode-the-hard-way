@@ -1,6 +1,7 @@
 ---
 description: 'Author: @ColeB2 | https://leetcode.com/problems/detect-squares/'
 tags: [Array, Hash Table, Design, Counting]
+rating: 1841
 ---
 
 # 2013 - Detect Squares (Medium)

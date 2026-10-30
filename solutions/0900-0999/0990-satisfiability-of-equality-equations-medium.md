@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/satisfiability-of-equality-equations/'
 tags: [Array, String, Union Find, Graph]
+rating: 1638
 ---
 
 # 0990 - Satisfiability of Equality Equations (Medium)

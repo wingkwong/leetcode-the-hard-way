@@ -11,6 +11,7 @@ tags:
     Heap (Priority Queue),
     Shortest Path,
   ]
+rating: 1786
 ---
 
 # 0787 - Cheapest Flights Within K Stops (Medium)

@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/subarray-sums-divisible-by-k/'
 tags: [Array, Hash Table, Prefix Sum]
+rating: 1676
 ---
 
 # 0974 - Subarray Sums Divisible by K (Medium)

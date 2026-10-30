@@ -1,6 +1,7 @@
 ---
 description: 'Author: @heder | https://leetcode.com/problems/count-symmetric-integers/'
 tags: [Math, Enumeration]
+rating: 1270
 ---
 
 # 2843 - Count Symmetric Integers (Easy)

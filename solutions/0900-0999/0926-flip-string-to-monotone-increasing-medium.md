@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/flip-string-to-monotone-increasing/'
 tags: [String, Dynamic Programming]
+rating: 1602
 ---
 
 # 0926 - Flip String to Monotone Increasing (Medium)

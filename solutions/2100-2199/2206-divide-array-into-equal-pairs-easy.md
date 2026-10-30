@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/divide-array-into-equal-pairs/
+rating: 1223
 ---
 
 # 2206 - Divide Array Into Equal Pairs (Easy)

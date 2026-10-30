@@ -1,6 +1,7 @@
 ---
 description: >-
   Authors: @heiheihang, @wkw | https://leetcode.com/problems/smallest-value-of-the-rearranged-number/
+rating: 1362
 ---
 
 # 2165 - Smallest Value of the Rearranged Number (Medium)

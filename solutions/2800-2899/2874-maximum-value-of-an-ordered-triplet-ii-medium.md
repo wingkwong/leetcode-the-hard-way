@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/maximum-value-of-an-ordered-triplet-ii'
 tags: [Array]
+rating: 1583
 ---
 
 # 2874 - Maximum Value of an Ordered Triplet II (Medium)

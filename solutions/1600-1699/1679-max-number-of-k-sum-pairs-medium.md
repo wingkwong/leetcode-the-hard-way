@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw, @vigneshshiv | https://leetcode.com/problems/max-number-of-k-sum-pairs/'
+rating: 1346
 ---
 
 # 1679 - Max Number of K-Sum Pairs (Medium)

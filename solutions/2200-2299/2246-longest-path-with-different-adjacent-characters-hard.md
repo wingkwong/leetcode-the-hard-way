@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/longest-path-with-different-adjacent-characters/
+rating: 2126
 ---
 
 # 2246 - Longest Path With Different Adjacent Characters (Hard)

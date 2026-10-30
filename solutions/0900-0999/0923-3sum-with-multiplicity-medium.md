@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/3sum-with-multiplicity/'
+rating: 1711
 ---
 
 # 0923 - 3Sum With Multiplicity (Medium)

@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/check-if-n-and-its-double-exist/
+rating: 1225
 ---
 
 # 1346 - Check If N and Its Double Exist (Easy)

@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/maximum-sum-circular-subarray/'
 tags: [Array, Divide and Conquer, Dynamic Programming, Queue, Monotonic Queue]
+rating: 1777
 ---
 
 # 0918 - Maximum Sum Circular Subarray (Medium)

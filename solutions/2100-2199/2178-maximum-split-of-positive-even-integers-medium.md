@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/maximum-split-of-positive-even-integers/
+rating: 1538
 ---
 
 # 2178 - Maximum Split of Positive Even Integers (Medium)

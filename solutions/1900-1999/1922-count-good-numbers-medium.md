@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/count-good-numbers'
 tags: [Math, Recursion]
+rating: 1675
 ---
 
 # 1922 - Count Good Numbers (Medium)

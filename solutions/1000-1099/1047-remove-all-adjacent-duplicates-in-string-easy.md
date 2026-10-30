@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw, @radojicic23 | https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/'
 tags: [String, Stack]
+rating: 1286
 ---
 
 # 1047 - Remove All Adjacent Duplicates In String (Easy)

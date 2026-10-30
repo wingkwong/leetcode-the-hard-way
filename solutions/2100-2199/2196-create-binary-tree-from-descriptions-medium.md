@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/create-binary-tree-from-descriptions/
+rating: 1644
 ---
 
 # 2196 - Create Binary Tree From Descriptions (Medium)

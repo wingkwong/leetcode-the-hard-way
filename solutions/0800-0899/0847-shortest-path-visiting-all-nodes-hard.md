@@ -4,6 +4,7 @@ description: >-
 
 tags:
   [Dynamic Programming, Bit Manipulation, Breadth-First Search, Graph, Bitmask]
+rating: 2201
 ---
 
 # 0847 - Shortest Path Visiting All Nodes (Hard)

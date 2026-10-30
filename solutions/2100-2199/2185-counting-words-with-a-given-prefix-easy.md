@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @heiheihang, @wkw | https://leetcode.com/problems/counting-words-with-a-given-prefix/
+rating: 1167
 ---
 
 # 2185 - Counting Words With a Given Prefix (Easy)

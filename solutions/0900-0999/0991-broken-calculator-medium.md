@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/broken-calculator/'
+rating: 1909
 ---
 
 # 0991 - Broken Calculator (Medium)

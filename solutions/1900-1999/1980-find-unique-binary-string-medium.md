@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/find-unique-binary-string/'
 tags: [Array, String, Backtracking]
+rating: 1362
 ---
 
 # 1980 - Find Unique Binary String (Medium)

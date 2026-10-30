@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/intervals-between-identical-elements/
+rating: 1761
 ---
 
 # 2121 - Intervals Between Identical Elements (Medium)

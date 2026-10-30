@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/snakes-and-ladders/'
 tags: [Array, Breadth-First Search, Matrix]
+rating: 2020
 ---
 
 # 0909 - Snakes and Ladders (Medium)

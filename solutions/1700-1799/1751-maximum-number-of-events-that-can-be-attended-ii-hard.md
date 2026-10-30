@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended-ii/'
+rating: 2041
 ---
 
 # 1751 - Maximum Number of Events That Can Be Attended II (Hard)

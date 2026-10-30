@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/maximum-good-people-based-on-statements/
+rating: 1980
 ---
 
 # 2151 - Maximum Good People Based on Statements (Hard)

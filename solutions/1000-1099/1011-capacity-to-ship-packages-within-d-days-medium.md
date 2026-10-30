@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @SkollRyu | https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/
+rating: 1725
 ---
 
 # 1011 - Capacity to Ship Packages within d days (Medium)

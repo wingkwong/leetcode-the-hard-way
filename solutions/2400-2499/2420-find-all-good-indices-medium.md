@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/find-all-good-indices/'
+rating: 1695
 ---
 
 # 2420 - Find All Good Indices (Medium)

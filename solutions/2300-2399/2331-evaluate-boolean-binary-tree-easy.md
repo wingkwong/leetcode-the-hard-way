@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/evaluate-boolean-binary-tree
+rating: 1304
 ---
 
 # 2331 - Evaluate Boolean Binary Tree (Easy)

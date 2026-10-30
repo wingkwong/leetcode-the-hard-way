@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw, @radojicic23 | https://leetcode.com/problems/valid-mountain-array/'
+rating: 1208
 ---
 
 # 0941 - Valid Mountain Array (Easy)

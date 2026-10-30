@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @1SundayMorning | https://leetcode.com/problems/minimize-result-by-adding-parentheses-to-expression/
+rating: 1612
 ---
 
 # 2232 - Minimize Result by Adding Parentheses to Expression (Medium)

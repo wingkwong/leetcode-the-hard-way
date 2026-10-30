@@ -1,6 +1,7 @@
 ---
 description: 'Author: @heder | https://leetcode.com/problems/count-elements-with-maximum-frequency/'
 tags: [Array, Hash Table, Counting]
+rating: 1217
 ---
 
 # 3005 - Count Elements With Maximum Frequency (Easy)

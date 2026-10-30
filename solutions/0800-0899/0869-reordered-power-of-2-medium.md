@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/reordered-power-of-2/'
 tags: [Math, Sorting, Counting, Enumeration]
+rating: 1505
 ---
 
 # 0869 - Reordered Power of 2 (Medium)

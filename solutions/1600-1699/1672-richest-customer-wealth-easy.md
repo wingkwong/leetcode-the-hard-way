@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw, @radojicic23 | https://leetcode.com/problems/richest-customer-wealth/'
 tags: [Array, Matrix]
+rating: 1183
 ---
 
 # 1672 - Richest Customer Wealth (Easy)

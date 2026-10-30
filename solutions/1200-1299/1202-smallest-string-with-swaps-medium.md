@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/smallest-string-with-swaps'
+rating: 1855
 ---
 
 # 1202 - Smallest String With Swaps (Medium)

@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/power-of-heroes/'
 tags: [Array, Math, Sorting, Prefix Sum]
+rating: 2060
 ---
 
 # 2681 - Power of Heroes (Hard)

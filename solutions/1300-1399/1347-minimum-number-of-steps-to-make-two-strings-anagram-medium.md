@@ -3,6 +3,7 @@ description: >-
   Author: @wkw, @jaffar | https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram/
 
 tags: [Hash Table, String, Counting]
+rating: 1331
 ---
 
 # 1347 - Minimum Number of Steps to Make Two Strings Anagram (Easy)

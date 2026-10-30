@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/'
 tags: [Array, String]
+rating: 1217
 ---
 
 # 1662 - Check If Two String Arrays are Equivalent (Easy)

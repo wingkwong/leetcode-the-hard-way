@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw, @jaffar, @jit | https://leetcode.com/problems/maximum-product-of-two-elements-in-an-array/'
 tags: [Array, Sorting, Heap (Priority Queue)]
+rating: 1121
 ---
 
 # 1464 - Maximum Product of Two Elements in an Array (Easy)

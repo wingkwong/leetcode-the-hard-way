@@ -1,6 +1,7 @@
 ---
 description: 'Author: @ColeB2, @wkw | https://leetcode.com/problems/min-cost-climbing-stairs/'
 tags: [Array, Dynamic Programming]
+rating: 1358
 ---
 
 # 0746 - Min Cost Climbing Stairs (Easy)

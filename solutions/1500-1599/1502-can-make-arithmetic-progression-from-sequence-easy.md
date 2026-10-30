@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/can-make-arithmetic-progression-from-sequence/
+rating: 1155
 ---
 
 # 1502 - Can Make Arithmetic Progression From Sequence (Easy)

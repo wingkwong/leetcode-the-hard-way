@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/stone-game-ix'
+rating: 2277
 ---
 
 # 2029 - Stone Game IX (Medium)

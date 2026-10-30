@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/sum-of-all-subset-xor-totals/'
+rating: 1372
 ---
 
 # 1863 - Sum of All Subset XOR Totals (Easy)

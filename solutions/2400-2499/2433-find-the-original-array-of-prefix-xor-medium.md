@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @vigneshshiv | https://leetcode.com/problems/find-the-original-array-of-prefix-xor/
+rating: 1367
 ---
 
 # 2433 - Find the Original array of prefix XOR (Medium)

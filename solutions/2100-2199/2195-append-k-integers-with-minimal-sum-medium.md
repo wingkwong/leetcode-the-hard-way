@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/append-k-integers-with-minimal-sum/
+rating: 1659
 ---
 
 # 2195 - Append K Integers With Minimal Sum (Medium)

@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/distribute-elements-into-two-arrays-i'
 tags: [Array, Simulation]
+rating: 1204
 ---
 
 # 3069 - Distribute Elements Into Two Arrays I (Easy)

@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/removing-minimum-and-maximum-from-array'
 tags: ['Array', 'Greedy']
+rating: 1384
 ---
 
 # 2091 - Removing Minimum and Maximum From Array (Medium)

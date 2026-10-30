@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/sign-of-the-product-of-an-array/
+rating: 1210
 ---
 
 # 1822 - Sign of the Product of an Array (Easy)

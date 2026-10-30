@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/find-the-maximum-divisibility-score/'
+rating: 1258
 ---
 
 # 2644 - Find the Maximum Divisibility Score (Easy)

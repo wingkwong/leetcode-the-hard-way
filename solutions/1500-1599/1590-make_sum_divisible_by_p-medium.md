@@ -3,6 +3,7 @@ description: >-
   Author: @darkhope | https://leetcode.com/problems/make-sum-divisible-by-p/
 
 tags: [Array, Hash Table, Prefix Sum]
+rating: 2039
 ---
 
 # 1590 - Make Sum Divisible by P (Medium)

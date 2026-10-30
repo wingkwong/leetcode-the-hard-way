@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/stone-game-ii/'
 tags: [Array, Math, Dynamic Programming, Game Theory]
+rating: 2035
 ---
 
 # 1140 - Stone Game II (Medium)

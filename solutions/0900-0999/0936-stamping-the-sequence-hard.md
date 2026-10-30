@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/stamping-the-sequence/'
+rating: 2583
 ---
 
 # 0936 - Stamping The Sequence (Hard)

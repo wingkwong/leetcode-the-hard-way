@@ -1,5 +1,6 @@
 ---
 description: 'Author: @heiheihang | https://leetcode.com/problems/merge-strings-alternately/'
+rating: 1167
 ---
 
 # 1768 - Merge Strings Alternately (Easy)

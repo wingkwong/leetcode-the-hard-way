@@ -1,6 +1,7 @@
 ---
 description: 'Author: @heder | https://leetcode.com/problems/difference-between-ones-and-zeros-in-row-and-column/'
 tags: [Array, Matrix, Simulation]
+rating: 1373
 ---
 
 # 2482 - Difference Between Ones and Zeros in Row and Column (Medium)

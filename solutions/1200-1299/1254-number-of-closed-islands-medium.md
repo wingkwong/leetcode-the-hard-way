@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/number-of-closed-islands'
 tags: ['Array', 'Depth-First Search', 'Breadth-First Search', 'Union-Find']
+rating: 1659
 ---
 
 # 1254 - Number of Closed Islands (Medium)

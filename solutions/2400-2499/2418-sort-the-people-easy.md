@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw, @ganajayant, @lonyehan | https://leetcode.com/problems/sort-the-people/'
+rating: 1193
 ---
 
 # 2418 - Sort the People (Easy)

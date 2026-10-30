@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/maximum-consecutive-floors-without-special-floors
+rating: 1333
 ---
 
 # 2274 - Maximum Consecutive Floors Without Special Floors (Medium)

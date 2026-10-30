@@ -1,6 +1,7 @@
 ---
 description: 'Author: @Dhanu084 | https://leetcode.com/problems/partition-array-for-maximum-sum/description/'
 tags: [Recursion, Dynamic Programming]
+rating: 1916
 ---
 
 # 1043 - Partition Array for Maximum Sum (Medium)

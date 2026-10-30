@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/count-good-triplets-in-an-array/
+rating: 2272
 ---
 
 # 2179 - Count Good Triplets in an Array (Hard)

@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/the-two-sneaky-numbers-of-digitville/'
 tags: [Array, Hash Table, Math]
+rating: 1164
 ---
 
 # 3289 - The Two Sneaky Numbers of Digitville (Easy)

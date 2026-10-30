@@ -1,6 +1,7 @@
 ---
 description: 'Author: @TBC | https://leetcode.com/problems/construct-string-with-repeat-limit/'
 draft: 'true'
+rating: 1680
 ---
 
 # 2182 - Construct String With Repeat Limit (Medium)

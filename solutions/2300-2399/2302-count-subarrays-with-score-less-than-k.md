@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @saloni33 | https://leetcode.com/problems/count-subarrays-with-score-less-than-k/
+rating: 1808
 ---
 
 # 2302 - Count Subarrays With Score Less Than K (Hard)

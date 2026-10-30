@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw, @jit | https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/description/'
 tags: [Array, Binary Search]
+rating: 1946
 ---
 
 # 1482 - Minimum Number of Days to Make m Bouquets (Medium)

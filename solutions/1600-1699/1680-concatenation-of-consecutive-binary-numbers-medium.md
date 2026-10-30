@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/concatenation-of-consecutive-binary-numbers/'
 tags: [Math, Bit Manipulation, Simulation]
+rating: 1630
 ---
 
 # 1680 - Concatenation of Consecutive Binary Numbers (Medium)

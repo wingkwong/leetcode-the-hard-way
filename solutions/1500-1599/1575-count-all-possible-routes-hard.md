@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/count-all-possible-routes/'
+rating: 2055
 ---
 
 # 1575 - Count All Possible Routes (Hard)

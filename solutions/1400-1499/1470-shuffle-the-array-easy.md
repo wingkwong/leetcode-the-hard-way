@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/shuffle-the-array/'
 tags: [Array]
+rating: 1121
 ---
 
 # 1470 - Shuffle the Array (Easy)

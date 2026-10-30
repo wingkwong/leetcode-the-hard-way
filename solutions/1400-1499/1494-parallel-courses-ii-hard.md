@@ -3,6 +3,7 @@ description: >-
   Author: @wkw | https://leetcode.com/problems/parallel-courses-ii
 
 tags: ['Dynamic Programming', 'Bit Masking']
+rating: 2082
 ---
 
 # 1494 - Parallel Courses II (Hard)

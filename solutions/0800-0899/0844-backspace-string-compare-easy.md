@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw, @radojicic23 | https://leetcode.com/problems/backspace-string-compare/'
 tags: [Two Pointers, String, Stack, Simulation]
+rating: 1228
 ---
 
 # 0844 - Backspace String Compare (Easy)

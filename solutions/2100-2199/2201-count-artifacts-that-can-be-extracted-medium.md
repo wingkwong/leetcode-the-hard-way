@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/count-artifacts-that-can-be-extracted/
+rating: 1525
 ---
 
 # 2201 - Count Artifacts That Can Be Extracted (Medium)

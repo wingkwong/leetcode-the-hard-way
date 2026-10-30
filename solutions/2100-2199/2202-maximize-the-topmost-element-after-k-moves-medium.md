@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/maximize-the-topmost-element-after-k-moves/
+rating: 1717
 ---
 
 # 2202 - Maximize the Topmost Element After K Moves (Medium)

@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/maximum-performance-of-a-team/'
 tags: [Array, Greedy, Sorting, Heap (Priority Queue)]
+rating: 2091
 ---
 
 # 1383 - Maximum Performance of a Team (Hard)

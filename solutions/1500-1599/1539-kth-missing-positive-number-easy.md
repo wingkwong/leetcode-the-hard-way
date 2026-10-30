@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/kth-missing-positive-number/
+rating: 1295
 ---
 
 # 1539 - Kth Missing Positive Number (Easy)

@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/largest-sum-of-averages/'
 tags: [Array, Dynamic Programming, Prefix Sum]
+rating: 1937
 ---
 
 # 0813 - Largest Sum of Averages (Medium)

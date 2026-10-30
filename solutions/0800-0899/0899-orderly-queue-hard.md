@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/orderly-queue/'
 tags: [Math, String, Sorting]
+rating: 2097
 ---
 
 # 0899 - Orderly Queue (Hard)

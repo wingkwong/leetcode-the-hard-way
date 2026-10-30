@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/number-of-good-paths/'
 tags: [Array, Tree, Union Find, Graph]
+rating: 2445
 ---
 
 # 2421 - Number of Good Paths (Hard)

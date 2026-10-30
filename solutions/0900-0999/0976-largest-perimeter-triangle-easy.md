@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/largest-perimeter-triangle/'
+rating: 1341
 ---
 
 # 0976 - Largest Perimeter Triangle (Easy)

@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/minimum-recolors-to-get-k-consecutive-black-blocks/'
+rating: 1360
 ---
 
 # 2379 - Minimum Recolors to Get K Consecutive Black Blocks (Easy)

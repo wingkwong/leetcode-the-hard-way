@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/minimum-cost-to-set-cooking-time/
+rating: 1852
 ---
 
 # 2162 - Minimum Cost to Set Cooking Time (Medium)

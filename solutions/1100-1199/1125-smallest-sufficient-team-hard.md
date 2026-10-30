@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/smallest-sufficient-team/'
+rating: 2251
 ---
 
 # 1125 - Smallest Sufficient Team (Hard)

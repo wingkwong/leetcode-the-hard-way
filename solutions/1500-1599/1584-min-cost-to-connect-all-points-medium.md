@@ -3,6 +3,7 @@ description: >-
   Author: @wkw, @ColeB2 | https://leetcode.com/problems/min-cost-to-connect-all-points/''
 
 tags: [Array, Union Find, Graph, Minimum Spanning Tree]
+rating: 1858
 ---
 
 # 1584 - Min Cost to Connect All Points (Medium)

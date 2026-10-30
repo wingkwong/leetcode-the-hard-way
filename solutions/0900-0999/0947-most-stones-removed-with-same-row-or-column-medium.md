@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/'
 tags: [Depth-First Search, Union Find, Graph]
+rating: 2035
 ---
 
 # 0947 - Most Stones Removed with Same Row or Column (Medium)

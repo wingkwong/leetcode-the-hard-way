@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/cells-in-a-range-on-an-excel-sheet/
+rating: 1253
 ---
 
 # 2194 - Cells in a Range on an Excel Sheet (Easy)

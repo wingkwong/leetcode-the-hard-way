@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/maximum-length-substring-with-two-occurrences'
 tags: [Mid Level, Hash Table, String, Sliding Window]
+rating: 1329
 ---
 
 # 3090 - Maximum Length Substring With Two Occurrences (Easy)

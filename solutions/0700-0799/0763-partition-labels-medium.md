@@ -1,6 +1,7 @@
 ---
 description: 'Author: @ColeB2 | https://leetcode.com/problems/partition-labels/'
 tags: [Hash Table, Two Pointers, String, Greedy]
+rating: 1443
 ---
 
 # 0763 - Partition Labels (Medium)

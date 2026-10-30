@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw, @jit | https://leetcode.com/problems/largest-odd-number-in-string/'
 tags: [Math, String, Greedy]
+rating: 1249
 ---
 
 # 1903 - Largest Odd Number in String (Easy)

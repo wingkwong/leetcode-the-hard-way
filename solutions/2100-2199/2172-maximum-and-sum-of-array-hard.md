@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @heiheihang, @wkw | https://leetcode.com/problems/maximum-and-sum-of-array/
+rating: 2392
 ---
 
 # 2172 - Maximum AND Sum of Array (Hard)

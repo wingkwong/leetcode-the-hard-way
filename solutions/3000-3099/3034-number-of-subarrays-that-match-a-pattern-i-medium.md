@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/number-of-subarrays-that-match-a-pattern-i/'
+rating: 1384
 ---
 
 # 3034 - Number of Subarrays That Match a Pattern I (Medium)

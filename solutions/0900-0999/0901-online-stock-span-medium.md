@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw, @dhanu084, @radojicic23| https://leetcode.com/problems/online-stock-span/'
 tags: [Stack, Design, Monotonic Stack, Data Stream]
+rating: 1709
 ---
 
 # 0901 - Online Stock Span (Medium)

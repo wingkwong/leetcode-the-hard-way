@@ -1,5 +1,6 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/divide-intervals-into-minimum-number-of-groups/'
+rating: 1713
 ---
 
 # 2406 - Divide Intervals Into Minimum Number of Groups (Medium)

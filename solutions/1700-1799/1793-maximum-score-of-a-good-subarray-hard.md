@@ -1,6 +1,7 @@
 ---
 description: 'Author: @wkw | https://leetcode.com/problems/maximum-score-of-a-good-subarray/'
 tags: [Array, Two Pointers, Binary Search, Stack, Monotonic Stack]
+rating: 1946
 ---
 
 # 1793 - Maximum Score of a Good Subarray (Hard)

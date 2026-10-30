@@ -1,5 +1,6 @@
 ---
 description: 'Author: @heiheihang | https://leetcode.com/problems/matrix-diagonal-sum/'
+rating: 1280
 ---
 
 # 1572 - Matrix Diagonal Sum (Easy)

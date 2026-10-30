@@ -1,6 +1,7 @@
 ---
 description: >-
   Author: @wkw | https://leetcode.com/problems/count-operations-to-obtain-zero/
+rating: 1200
 ---
 
 # 2169 - Count Operations to Obtain Zero (Easy)
