@@ -2,6 +2,7 @@
   "title": "3900 - 3999",
   "description": "Solutions categorised by Problem IDs",
   "pages": [
-    "3942-minimum-operations-to-sort-a-permutation-medium"
+    "3942-minimum-operations-to-sort-a-permutation-medium",
+    "3970-shortest-path-with-at-most-k-consecutive-identical-characters-medium"
   ]
 }
