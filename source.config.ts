@@ -18,6 +18,7 @@ const docsOptions = {
     title: z.string().optional(),
     hide_table_of_contents: z.boolean().optional(),
     keywords: z.array(z.string()).optional(),
+    rating: z.union([z.number(), z.string().trim().min(1)]).optional(),
     tags: z.array(z.string().trim().min(1)).optional(),
     sidebar_position: z.number().optional(),
   }),

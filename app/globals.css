@@ -280,7 +280,7 @@ th {
   justify-content: center;
 }
 
-.solution-tags {
+.solution-meta {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
@@ -288,7 +288,13 @@ th {
   margin: 0.75rem 0 1.5rem;
 }
 
-.prose > h1:has(+ .solution-tags) {
+.solution-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.prose > h1:has(+ .solution-meta) {
   margin-bottom: 0;
 }
 
@@ -329,6 +335,25 @@ th {
 .solution-tag:focus-visible {
   outline: 2px solid var(--site-link);
   outline-offset: 2px;
+}
+
+.solution-rating {
+  align-items: center;
+  background: color-mix(
+    in srgb,
+    rgb(255 45 85) 10%,
+    var(--color-fd-background)
+  );
+  border: 1px solid color-mix(in srgb, rgb(255 45 85) 24%, transparent);
+  border-radius: 999px;
+  color: rgb(255 45 85);
+  display: inline-flex;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.5;
+  min-height: 30px;
+  padding: 5px 11px;
+  white-space: nowrap;
 }
 
 @media (prefers-reduced-motion: reduce) {

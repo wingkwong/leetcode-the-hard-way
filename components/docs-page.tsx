@@ -24,6 +24,7 @@ type Page = {
     body: MDXComponent;
     description?: string;
     hide_table_of_contents?: boolean;
+    rating?: number | string;
     title?: string;
     tags?: string[];
     toc?: TOCItemType[];
@@ -71,24 +72,37 @@ export function renderDocsPage(section: Section, slug: string[] = []) {
           ),
         ]
       : [];
-  const topics = tags.length > 0 && (
-    <nav aria-label="Solution topics" className="solution-tags">
-      {tags.map(([url, tag]) => (
-        <a className="solution-tag" href={url} key={url}>
-          {tag}
-        </a>
-      ))}
-    </nav>
+  const rating = section.baseUrl === '/solutions' ? page.data.rating : undefined;
+  const solutionMeta = (tags.length > 0 || rating !== undefined) && (
+    <div className="solution-meta">
+      {tags.length > 0 && (
+        <nav aria-label="Solution topics" className="solution-tags">
+          {tags.map(([url, tag]) => (
+            <a className="solution-tag" href={url} key={url}>
+              {tag}
+            </a>
+          ))}
+        </nav>
+      )}
+      {rating !== undefined && (
+        <span
+          aria-label={`Problem rating ${rating}`}
+          className="solution-rating"
+        >
+          Rating {rating}
+        </span>
+      )}
+    </div>
   );
   const components = getRelativeMDXComponents(section.source, page);
   const Heading = defaultMdxComponents.h1;
   const titleId = page.data.toc?.find((item) => item.depth === 1)?.url.slice(1);
 
-  if (tags.length > 0 && !showTitle) {
+  if ((tags.length > 0 || rating !== undefined) && !showTitle) {
     components.h1 = (props) => (
       <>
         <Heading {...props} />
-        {props.id === titleId && topics}
+        {props.id === titleId && solutionMeta}
       </>
     );
   }
@@ -104,7 +118,7 @@ export function renderDocsPage(section: Section, slug: string[] = []) {
         id="docs-page-json-ld"
       />
       {showTitle && <DocsTitle>{page.data.title}</DocsTitle>}
-      {showTitle && topics}
+      {showTitle && solutionMeta}
       {showTitle && page.data.description && (
         <DocsDescription className="docs-description">
           {page.data.description}
