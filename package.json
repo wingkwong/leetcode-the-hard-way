@@ -12,7 +12,7 @@
   "scripts": {
     "dev": "next dev --webpack",
     "start": "serve out",
-    "build": "next build --webpack",
+    "build": "node scripts/update-potd.mjs && next build --webpack",
     "typecheck": "fumadocs-mdx && next typegen && tsc --noEmit",
     "format": "prettier --write .",
     "format:check": "prettier --check .",

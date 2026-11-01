@@ -8,6 +8,7 @@ import {
 import type { Root } from 'fumadocs-core/page-tree';
 import type { Metadata } from 'next';
 import { SponsorsTableOfContent } from '../components/sponsors-table-of-content';
+import { ProblemOfTheDay } from '../components/problem-of-the-day';
 import { baseOptions } from '../lib/layout.shared';
 import {
   createPageMetadata,
@@ -83,6 +84,8 @@ export default function HomePage() {
             the solution catalog when you want complete explanations for
             individual problems.
           </p>
+
+          <ProblemOfTheDay />
 
           <div className="generated-index-grid">
             {sections.map((section) => (

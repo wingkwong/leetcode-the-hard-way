@@ -5,6 +5,9 @@ on:
     branches:
       - main
   workflow_dispatch:
+  schedule:
+    # Allow a five-minute buffer after UTC midnight, then refresh again at 00:20.
+    - cron: '5,20 0 * * *'
 
 permissions:
   contents: read
