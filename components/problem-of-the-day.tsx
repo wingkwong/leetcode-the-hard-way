@@ -65,15 +65,15 @@ export function ProblemOfTheDay() {
     <section aria-label="Problem of the Day" aria-live="polite">
       {problem && (
         <>
+          <span>Problem of the Day</span>
           {problem.solutionUrl ? (
             <a className="generated-index-link" href={problem.solutionUrl}>
-              <span>Problem of the Day</span>
               <small>
                 {problem.questionId} - {problem.title}
               </small>
             </a>
           ) : (
-            <a href={`https://leetcode.com/problems/${problem.slug}/`}>
+            <a className="generated-index-link" href={`https://leetcode.com/problems/${problem.slug}/`}>
               <small>
                 {problem.questionId} - {problem.title}
               </small>
