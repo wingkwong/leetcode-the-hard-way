@@ -59,7 +59,7 @@ export function SponsorsMarquee({ className }: SponsorsMarqueeProps) {
       </div>
       <a
         className="sponsors-marquee-link"
-        href="https://github.com/sponsors/wingkwong"
+        href="https://github.com/sponsors/wingkwong/sponsorships?sponsor=wingkwong&tier_id=670478"
         target="_blank"
         rel="noopener noreferrer"
       >
