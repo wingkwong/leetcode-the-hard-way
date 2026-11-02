@@ -6,8 +6,8 @@ on:
       - main
   workflow_dispatch:
   schedule:
-    # Allow a five-minute buffer after UTC midnight, then refresh again at 00:20.
-    - cron: '5,20 0 * * *'
+    # Refresh and commit the POTD daily at 00:00 UTC.
+    - cron: '0 0 * * *'
 
 permissions:
   contents: read
@@ -21,6 +21,10 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
     steps:
       - name: Checkout
         uses: actions/checkout@v7
@@ -42,6 +46,19 @@ jobs:
 
       - name: Build
         run: pnpm build
+
+      - name: Commit updated POTD
+        if: github.event_name == 'schedule'
+        run: |
+          git add public/potd.json
+          if git diff --cached --quiet; then
+            echo "POTD is unchanged; skipping commit."
+            exit 0
+          fi
+          git config user.name "WK Wong"
+          git config user.email "wkwdev@proton.me"
+          git commit -m "chore: update POTD"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
