@@ -65,6 +65,21 @@ export function SponsorsMarquee({ className }: SponsorsMarqueeProps) {
       >
         Become a sponsor <span aria-hidden="true">↗</span>
       </a>
+      <hr className="my-4 border-fd-border" />
+      <a
+        href="https://buymeacoffee.com/leetcodethehardway"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mx-auto block w-fit rounded-sm px-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-fd-ring"
+      >
+        <img
+          src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png"
+          alt="Buy Me A Coffee"
+          width={174}
+          height={41}
+          className="h-[41px] w-[174px]"
+        />
+      </a>
     </section>
   );
 }

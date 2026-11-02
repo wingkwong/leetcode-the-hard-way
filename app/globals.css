@@ -370,8 +370,8 @@ th {
   width: 136px;
 }
 
-.sponsors-marquee:hover .sponsors-marquee-track,
-.sponsors-marquee:focus-within .sponsors-marquee-track {
+.sponsors-marquee-viewport:hover .sponsors-marquee-track,
+.sponsors-marquee-viewport:focus-within .sponsors-marquee-track {
   animation-play-state: paused;
 }
 

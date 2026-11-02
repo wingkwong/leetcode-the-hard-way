@@ -6,6 +6,8 @@ Contributions are welcome. Please see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 Discord Community: https://discord.com/invite/Nqm4jJcyBf
 
+<a href="https://buymeacoffee.com/leetcodethehardway" target="_blank" rel="noopener noreferrer"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" width="174" height="41"></a>
+
 ## **Website & Autofill Extension**
 
 [![Apply to jobs in seconds with Zapply.](public/img/apply-faster-banner.png)](https://app.zapply.jobs/onboarding?ref=github-cta-wingkwong)
