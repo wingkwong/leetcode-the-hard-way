@@ -83,6 +83,12 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
     );
     console.log(`Updated POTD for ${problem.date}: ${problem.title}`);
   } else {
+    if (process.argv.includes('--strict')) {
+      console.error(
+        'POTD refresh failed; refusing to report a successful update.',
+      );
+      process.exitCode = 1;
+    }
     // Do not block unrelated deployments. The UI rejects any expired data.
     console.warn('Keeping the bundled POTD; expired data shows a placeholder.');
   }

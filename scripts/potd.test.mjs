@@ -3,6 +3,8 @@ import { mkdtemp, mkdir, rm, writeFile } from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
 import { test } from 'node:test';
+import { spawnSync } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
 import {
   getCurrentDailyProblem,
   millisecondsUntilUtcMidnight,
@@ -17,6 +19,26 @@ const problem = {
   solutionUrl:
     '/solutions/0400-0499/minimum-moves-to-equal-array-elements-medium/',
 };
+
+test('CLI refresh failures fail strict automation but preserve ordinary builds', () => {
+  const mockFetch = `data:text/javascript,${encodeURIComponent(
+    'globalThis.fetch = async () => new Response("", { status: 503 });',
+  )}`;
+  for (const strict of [false, true]) {
+    const result = spawnSync(
+      process.execPath,
+      [
+        '--import',
+        mockFetch,
+        fileURLToPath(new URL('./update-potd.mjs', import.meta.url)),
+        ...(strict ? ['--strict'] : []),
+      ],
+      { encoding: 'utf8' },
+    );
+    assert.equal(result.status, strict ? 1 : 0, result.stderr);
+    assert.match(result.stderr, /POTD refresh attempt 3 failed/);
+  }
+});
 
 test('POTD is visible for exactly its UTC calendar day', () => {
   for (const time of ['00:00:00.000', '23:59:59.999']) {
