@@ -6,9 +6,8 @@ on:
       - main
   workflow_dispatch:
   schedule:
-    # Try shortly after midnight and retry throughout the day if GitHub delays a run.
     # Scheduled runs skip the build when today's POTD is already committed.
-    - cron: '5,20 * * * *'
+    - cron: '5 0 * * *'
 
 permissions:
   contents: read
