@@ -13,6 +13,8 @@ const booleanLike = z.preprocess((value) => {
 }, z.boolean().optional());
 
 const docsOptions = {
+  // Share article chunks between routes instead of eagerly loading every body.
+  async: true,
   schema: pageSchema.extend({
     draft: booleanLike,
     title: z.string().optional(),
@@ -59,12 +61,18 @@ export default defineConfig({
     remarkPlugins: [remarkMath, remarkAdmonition, remarkMdxComponentsInMd],
     rehypePlugins: (plugins) => [rehypeKatex, ...plugins],
     remarkImageOptions: false,
-    rehypeCodeOptions: {
-      themes: {
-        light: 'github-light',
-        dark: 'github-dark',
-      },
-      fallbackLanguage: 'plaintext',
-    },
+    // Webpack precompiles every article. Token-level highlighting makes the
+    // generated modules much larger, so keep local previews lightweight.
+    rehypeCodeOptions:
+      process.env.NODE_ENV === 'development' &&
+      process.env.DEV_SYNTAX_HIGHLIGHT !== '1'
+        ? false
+        : {
+            themes: {
+              light: 'github-light',
+              dark: 'github-dark',
+            },
+            fallbackLanguage: 'plaintext',
+          },
   },
 });

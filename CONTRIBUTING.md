@@ -14,6 +14,8 @@ pnpm dev
 
 Open http://localhost:3000/ in your browser. Changes to the site and documentation will reload during development.
 
+Local development skips code syntax highlighting to reduce memory use when Webpack compiles the documentation collection. Code blocks still render, and production builds retain highlighting. To check syntax colors locally, restart with `DEV_SYNTAX_HIGHLIGHT=1 pnpm dev` (this uses more memory).
+
 To preview the production site, build the static export and serve the generated `out` directory:
 
 ```bash

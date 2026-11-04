@@ -21,13 +21,12 @@ import {
 
 type Page = {
   data: {
-    body: MDXComponent;
+    load: () => Promise<{ body: MDXComponent; toc: TOCItemType[] }>;
     description?: string;
     hide_table_of_contents?: boolean;
     rating?: number | string;
     title?: string;
     tags?: string[];
-    toc?: TOCItemType[];
   };
   slugs: string[];
   url: string;
@@ -55,13 +54,13 @@ type MetaFile = {
   title?: string;
 };
 
-export function renderDocsPage(section: Section, slug: string[] = []) {
+export async function renderDocsPage(section: Section, slug: string[] = []) {
   const resolvedSlug = resolveSlug(section, slug);
   const page = section.source.getPage(resolvedSlug);
 
   if (!page) return renderGeneratedIndex(section, resolvedSlug);
 
-  const MDX = page.data.body;
+  const { body: MDX, toc } = await page.data.load();
   const showTitle = section.renderTitle !== false && Boolean(page.data.title);
   const seo = getDocsPageSeo(section, resolvedSlug, page);
   const tags =
@@ -72,7 +71,8 @@ export function renderDocsPage(section: Section, slug: string[] = []) {
           ),
         ]
       : [];
-  const rating = section.baseUrl === '/solutions' ? page.data.rating : undefined;
+  const rating =
+    section.baseUrl === '/solutions' ? page.data.rating : undefined;
   const solutionMeta = (tags.length > 0 || rating !== undefined) && (
     <div className="solution-meta">
       {tags.length > 0 && (
@@ -96,7 +96,7 @@ export function renderDocsPage(section: Section, slug: string[] = []) {
   );
   const components = getRelativeMDXComponents(section.source, page);
   const Heading = defaultMdxComponents.h1;
-  const titleId = page.data.toc?.find((item) => item.depth === 1)?.url.slice(1);
+  const titleId = toc.find((item) => item.depth === 1)?.url.slice(1);
 
   if ((tags.length > 0 || rating !== undefined) && !showTitle) {
     components.h1 = (props) => (
@@ -110,7 +110,7 @@ export function renderDocsPage(section: Section, slug: string[] = []) {
   return (
     <DocsPage
       full={page.data.hide_table_of_contents}
-      toc={page.data.hide_table_of_contents ? undefined : page.data.toc}
+      toc={page.data.hide_table_of_contents ? undefined : toc}
       tableOfContent={{ component: <SponsorsTableOfContent /> }}
     >
       <JsonLdScript
