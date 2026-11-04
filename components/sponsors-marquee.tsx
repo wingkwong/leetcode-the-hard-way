@@ -49,6 +49,21 @@ export function SponsorsMarquee({ className }: SponsorsMarqueeProps) {
                   className="object-contain"
                 />
               </a>
+              <a
+                rel="sponsored"
+                className="sponsors-marquee-placeholder"
+                href="https://certgarden.com"
+                tabIndex={duplicate ? -1 : undefined}
+                target="_blank"
+              >
+                <img
+                  src="/img/cert-garden-logo.svg"
+                  alt="CertGarden"
+                  width={120}
+                  height={48}
+                  className="object-contain"
+                />
+              </a>
               <div className="sponsors-marquee-placeholder" key="empty-slot">
                 <Heart size={18} aria-hidden="true" />
                 <span>Your logo here</span>

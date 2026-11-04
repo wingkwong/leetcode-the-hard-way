@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="284" height="64" viewBox="0 0 284 64" fill="none" role="img" aria-labelledby="title">
+  <title id="title">CertGarden</title>
+  <style>
+    @media (prefers-color-scheme: dark) {
+      path { stroke: #50c688; }
+      text { fill: #50c688; }
+    }
+  </style>
+  <g transform="translate(8 8) scale(1.5)">
+    <path d="M16 17C5 18 2 12 6 9C10 6 14 11 16 17C10 7 13 2 17 3C23 4 21 11 16 17C23 9 29 11 27 16C25 21 20 20 16 17M16 17C15 22 22 23 19 27C17 30 12 28 12 25" stroke="#286344" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="68" y="44" fill="#286344" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700" letter-spacing="-1">CertGarden</text>
+</svg>
