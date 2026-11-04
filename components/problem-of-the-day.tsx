@@ -69,7 +69,7 @@ export function ProblemOfTheDay() {
             className="generated-index-link"
             href={problem.solutionUrl || `https://leetcode.com/problems/${problem.slug}/`}
           >
-            <strong>Problem of the Day</strong>
+            <strong>Problem of the Day {problem.solutionUrl && '(Editorial Available)'}</strong>
             <small>
               {problem.questionId} - {problem.title}
             </small>
