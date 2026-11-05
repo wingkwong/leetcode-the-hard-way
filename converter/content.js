@@ -5,6 +5,7 @@
   globalThis.__lthwConverterContentLoaded = true;
 
   const DESCRIPTION_SELECTORS = [
+    '[data-qd-rendered-description]',
     '[class^="HTMLContent_html__"]',
     '[class*=" HTMLContent_html__"]',
     '[data-key=description-content] [class^=content__]',
