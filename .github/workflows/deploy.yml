@@ -5,9 +5,6 @@ on:
     branches:
       - main
   workflow_dispatch:
-  schedule:
-    # Scheduled runs skip the build when today's POTD is already committed.
-    - cron: '5 0 * * *'
 
 permissions:
   contents: read
@@ -21,12 +18,6 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    outputs:
-      deploy: ${{ steps.potd.outputs.deploy }}
-    permissions:
-      contents: write
-      pages: write
-      id-token: write
     steps:
       - name: Checkout
         uses: actions/checkout@v7
@@ -40,54 +31,22 @@ jobs:
           node-version: 24
           cache: pnpm
 
-      - name: Refresh and commit POTD
-        id: potd
-        env:
-          EVENT_NAME: ${{ github.event_name }}
-        run: |
-          if [ "$EVENT_NAME" = "push" ]; then
-            node scripts/update-potd.mjs
-          else
-            node scripts/update-potd.mjs --strict
-          fi
-          git add public/potd.json
-          echo "deploy=true" >> "$GITHUB_OUTPUT"
-          if git diff --cached --quiet; then
-            echo "POTD is unchanged; skipping commit."
-            if [ "$EVENT_NAME" = "schedule" ]; then
-              echo "deploy=false" >> "$GITHUB_OUTPUT"
-            fi
-            exit 0
-          fi
-          if [ "$EVENT_NAME" = "push" ] || [ "$GITHUB_REF_NAME" != "main" ]; then
-            exit 0
-          fi
-          git config user.name "WK Wong"
-          git config user.email "wkwdev@proton.me"
-          git commit -m "chore: update POTD"
-          git push origin "HEAD:${GITHUB_REF_NAME}"
-
       - name: Setup Pages
-        if: steps.potd.outputs.deploy == 'true'
         uses: actions/configure-pages@v6
 
       - name: Install dependencies
-        if: steps.potd.outputs.deploy == 'true'
         run: pnpm install --frozen-lockfile
 
       - name: Build
-        if: steps.potd.outputs.deploy == 'true'
-        run: pnpm exec next build --webpack
+        run: pnpm build
 
       - name: Upload artifact
-        if: steps.potd.outputs.deploy == 'true'
         uses: actions/upload-pages-artifact@v5
         with:
           path: ./out
           include-hidden-files: true
 
   deploy:
-    if: needs.build.outputs.deploy == 'true'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
