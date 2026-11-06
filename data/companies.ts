@@ -1,3 +1,4 @@
+import { PAGE_SIZE, companyPageHref } from '../lib/problem-pagination';
 import snapshot from './company-problems.json';
 
 export type CompanyProblem = {
@@ -27,3 +28,14 @@ export const companyDirectory = companies
   .sort((a, b) => a.name.localeCompare(b.name, 'en'));
 
 export type CompanySummary = (typeof companyDirectory)[number];
+
+export const companyPages = companies.flatMap((company) =>
+  Array.from(
+    { length: Math.ceil(company.problems.length / PAGE_SIZE) },
+    (_, index) => ({
+      company,
+      page: index + 1,
+      href: companyPageHref(company.slug, index + 1),
+    }),
+  ),
+);
