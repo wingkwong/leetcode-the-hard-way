@@ -44,7 +44,11 @@ export function CompanyDirectory({
                 href={href}
                 prefetch={false}
                 aria-current={
-                  pathname === href.slice(0, -1) ? 'page' : undefined
+                  pathname === href.slice(0, -1)
+                    ? 'page'
+                    : pathname.startsWith(href)
+                      ? 'location'
+                      : undefined
                 }
               >
                 <span>{name}</span>

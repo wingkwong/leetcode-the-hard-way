@@ -25,7 +25,7 @@
   color: var(--color-fd-muted-foreground);
 }
 .company-list a:hover,
-.company-list a[aria-current='page'] {
+.company-list a[aria-current] {
   background: var(--color-fd-accent);
 }
 .company-sidebar .company-list {
