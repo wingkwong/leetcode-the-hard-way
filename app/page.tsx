@@ -8,7 +8,6 @@ import {
 import type { Root } from 'fumadocs-core/page-tree';
 import type { Metadata } from 'next';
 import { SponsorsTableOfContent } from '../components/sponsors-table-of-content';
-import { ProblemOfTheDay } from '../components/problem-of-the-day';
 import { baseOptions } from '../lib/layout.shared';
 import {
   createPageMetadata,
@@ -35,6 +34,11 @@ const introTree: Root = {
 };
 
 const sections = [
+  {
+    title: 'Problem of the Day (POTD)',
+    description: 'Browse daily LeetCode problems and their editorials by date.',
+    href: formatPagePathname('/potd'),
+  },
   {
     title: 'Problems (By Company)',
     description: 'Browse company problem lists by difficulty and frequency.',
@@ -89,8 +93,6 @@ export default function HomePage() {
             the solution catalog when you want complete explanations for
             individual problems.
           </p>
-
-          <ProblemOfTheDay />
 
           <div className="generated-index-grid">
             {sections.map((section) => (

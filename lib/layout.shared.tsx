@@ -8,6 +8,11 @@ export function baseOptions(): BaseLayoutProps {
     },
     links: [
       {
+        text: 'Problem of the Day (POTD)',
+        url: formatPagePathname('/potd'),
+        active: 'nested-url',
+      },
+      {
         text: 'Problems (By Company)',
         url: formatPagePathname('/companies'),
         active: 'nested-url',

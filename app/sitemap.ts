@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next';
+import { potdArchivePages } from '../lib/potd-archive';
 import { companyPages } from '../data/companies';
 import {
   roadmapSource,
@@ -46,6 +47,7 @@ const docsSections = [
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const paths = new Set<string>(['/', '/companies/', '/solutions/tags/']);
+  for (const { href } of potdArchivePages) paths.add(href);
   for (const { href } of companyPages) {
     paths.add(href);
   }

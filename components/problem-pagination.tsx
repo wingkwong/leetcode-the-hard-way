@@ -25,7 +25,7 @@ export function ProblemPagination({
       <button
         className="ratings-pagination-button"
         disabled={disabled}
-        onClick={() => onPageChange?.(target)}
+        onClick={onPageChange ? () => onPageChange(target) : undefined}
         type="button"
       >
         {label}
