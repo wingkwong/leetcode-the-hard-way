@@ -2,7 +2,8 @@
 
 import { useMemo, useState } from 'react';
 
-import { PAGE_SIZE, ProblemPagination } from './problem-pagination';
+import { PAGE_SIZE } from '../lib/problem-pagination';
+import { ProblemPagination } from './problem-pagination';
 
 export type RatingEntry = {
   id: number;

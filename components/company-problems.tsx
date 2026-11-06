@@ -2,12 +2,23 @@
 
 import { useMemo, useState } from 'react';
 import type { CompanyProblem } from '../data/companies';
-import { PAGE_SIZE, ProblemPagination } from './problem-pagination';
+import { PAGE_SIZE, companyPageHref } from '../lib/problem-pagination';
+import { ProblemPagination } from './problem-pagination';
 
-export function CompanyProblems({ problems }: { problems: CompanyProblem[] }) {
+export function CompanyProblems({
+  problems,
+  companySlug,
+  routePage,
+}: {
+  problems: CompanyProblem[];
+  companySlug: string;
+  routePage: number;
+}) {
   const [query, setQuery] = useState('');
   const [difficulty, setDifficulty] = useState('');
-  const [page, setPage] = useState(1);
+  const [filteredPage, setFilteredPage] = useState(1);
+  const filtering = Boolean(query.trim() || difficulty);
+  const page = filtering ? filteredPage : routePage;
   const matches = useMemo(() => {
     const term = query.trim().toLowerCase();
     return problems
@@ -33,7 +44,7 @@ export function CompanyProblems({ problems }: { problems: CompanyProblem[] }) {
           value={query}
           onChange={(e) => {
             setQuery(e.target.value);
-            setPage(1);
+            setFilteredPage(1);
           }}
         />
         <span className="ratings-select-wrapper">
@@ -43,7 +54,7 @@ export function CompanyProblems({ problems }: { problems: CompanyProblem[] }) {
             value={difficulty}
             onChange={(e) => {
               setDifficulty(e.target.value);
-              setPage(1);
+              setFilteredPage(1);
             }}
           >
             <option value="">All difficulties</option>
@@ -116,7 +127,7 @@ export function CompanyProblems({ problems }: { problems: CompanyProblem[] }) {
               onClick={() => {
                 setQuery('');
                 setDifficulty('');
-                setPage(1);
+                setFilteredPage(1);
               }}
             >
               Clear filters
@@ -128,7 +139,12 @@ export function CompanyProblems({ problems }: { problems: CompanyProblem[] }) {
         <ProblemPagination
           currentPage={page}
           totalPages={totalPages}
-          onPageChange={setPage}
+          {...(filtering
+            ? { onPageChange: setFilteredPage }
+            : {
+                getPageHref: (target: number) =>
+                  companyPageHref(companySlug, target),
+              })}
         />
       )}
     </div>

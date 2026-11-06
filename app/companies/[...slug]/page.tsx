@@ -7,31 +7,43 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ChangeCompany } from '../../../components/company-directory';
 import { CompanyProblems } from '../../../components/company-problems';
-import { companies, companyDirectory } from '../../../data/companies';
+import { companyPages, companyDirectory } from '../../../data/companies';
 import { createPageMetadata } from '../../../lib/seo';
 
-type Props = { params: Promise<{ company: string }> };
+type Props = { params: Promise<{ slug: string[] }> };
+
+export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return companies.map(({ slug }) => ({ company: slug }));
+  return companyPages.map(({ href }) => ({
+    slug: href.slice('/companies/'.length, -1).split('/'),
+  }));
 }
 
-function getCompany(slug: string) {
-  return companies.find((entry) => entry.slug === slug) ?? notFound();
+function getCompanyPage(slug: string[]) {
+  const href = `/companies/${slug.join('/')}/`;
+  return companyPages.find((entry) => entry.href === href) ?? notFound();
 }
 
 export async function generateMetadata({ params }: Props) {
-  const { slug, name } = getCompany((await params).company);
+  const {
+    company: { name },
+    page,
+    href,
+  } = getCompanyPage((await params).slug);
   return createPageMetadata({
-    title: `${name} Problems`,
-    pathname: `/companies/${slug}`,
+    title: page === 1 ? `${name} Problems` : `${name} Problems – Page ${page}`,
+    pathname: href,
     type: 'website',
     description: `Browse all-time ${name} problems by difficulty, frequency, and topic.`,
   });
 }
 
 export default async function CompanyPage({ params }: Props) {
-  const { name, slug, problems } = getCompany((await params).company);
+  const {
+    company: { name, slug, problems },
+    page,
+  } = getCompanyPage((await params).slug);
   return (
     <DocsPage breadcrumb={{ enabled: false }}>
       <nav aria-label="Breadcrumb" className="company-breadcrumb">
@@ -42,7 +54,12 @@ export default async function CompanyPage({ params }: Props) {
         {problems.length} {problems.length === 1 ? 'problem' : 'problems'}
       </DocsDescription>
       <ChangeCompany companies={companyDirectory} selected={slug} />
-      <CompanyProblems key={slug} problems={problems} />
+      <CompanyProblems
+        key={`${slug}/${page}`}
+        companySlug={slug}
+        routePage={page}
+        problems={problems}
+      />
     </DocsPage>
   );
 }

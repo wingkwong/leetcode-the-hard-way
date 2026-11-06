@@ -1,37 +1,44 @@
-export const PAGE_SIZE = 25;
+type PaginationProps = {
+  currentPage: number;
+  totalPages: number;
+} & (
+  | { getPageHref: (page: number) => string; onPageChange?: never }
+  | { onPageChange: (page: number) => void; getPageHref?: never }
+);
 
 export function ProblemPagination({
   currentPage,
   totalPages,
+  getPageHref,
   onPageChange,
-}: {
-  currentPage: number;
-  totalPages: number;
-  onPageChange: (page: number) => void;
-}) {
-  return (
-    <div className="ratings-pagination">
+}: PaginationProps) {
+  function control(label: string, target: number) {
+    const disabled = target < 1 || target > totalPages;
+    if (!disabled && getPageHref) {
+      return (
+        <a className="ratings-pagination-button" href={getPageHref(target)}>
+          {label}
+        </a>
+      );
+    }
+    return (
       <button
         className="ratings-pagination-button"
-        disabled={currentPage <= 1}
-        onClick={() => onPageChange(currentPage - 1)}
+        disabled={disabled}
+        onClick={() => onPageChange?.(target)}
         type="button"
       >
-        Previous
+        {label}
       </button>
-
+    );
+  }
+  return (
+    <nav aria-label="Problem list pagination" className="ratings-pagination">
+      {control('Previous', currentPage - 1)}
       <span className="ratings-pagination-status">
         Page {currentPage} of {totalPages}
       </span>
-
-      <button
-        className="ratings-pagination-button"
-        disabled={currentPage >= totalPages}
-        onClick={() => onPageChange(currentPage + 1)}
-        type="button"
-      >
-        Next
-      </button>
-    </div>
+      {control('Next', currentPage + 1)}
+    </nav>
   );
 }
