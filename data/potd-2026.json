@@ -1,0 +1,2172 @@
+[
+  {
+    "date": "2026-01-01",
+    "questionId": "66",
+    "title": "Plus One",
+    "slug": "plus-one",
+    "solutionUrl": "/solutions/0000-0099/plus-one-easy/"
+  },
+  {
+    "date": "2026-01-02",
+    "questionId": "961",
+    "title": "N-Repeated Element in Size 2N Array",
+    "slug": "n-repeated-element-in-size-2n-array",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-01-03",
+    "questionId": "1411",
+    "title": "Number of Ways to Paint N × 3 Grid",
+    "slug": "number-of-ways-to-paint-n-3-grid",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-01-04",
+    "questionId": "1390",
+    "title": "Four Divisors",
+    "slug": "four-divisors",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-01-05",
+    "questionId": "1975",
+    "title": "Maximum Matrix Sum",
+    "slug": "maximum-matrix-sum",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-01-06",
+    "questionId": "1161",
+    "title": "Maximum Level Sum of a Binary Tree",
+    "slug": "maximum-level-sum-of-a-binary-tree",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-01-07",
+    "questionId": "1339",
+    "title": "Maximum Product of Splitted Binary Tree",
+    "slug": "maximum-product-of-splitted-binary-tree",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-01-08",
+    "questionId": "1458",
+    "title": "Max Dot Product of Two Subsequences",
+    "slug": "max-dot-product-of-two-subsequences",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-01-09",
+    "questionId": "865",
+    "title": "Smallest Subtree with all the Deepest Nodes",
+    "slug": "smallest-subtree-with-all-the-deepest-nodes",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-01-10",
+    "questionId": "712",
+    "title": "Minimum ASCII Delete Sum for Two Strings",
+    "slug": "minimum-ascii-delete-sum-for-two-strings",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-01-11",
+    "questionId": "85",
+    "title": "Maximal Rectangle",
+    "slug": "maximal-rectangle",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-01-12",
+    "questionId": "1266",
+    "title": "Minimum Time Visiting All Points",
+    "slug": "minimum-time-visiting-all-points",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-01-13",
+    "questionId": "3453",
+    "title": "Separate Squares I",
+    "slug": "separate-squares-i",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-01-14",
+    "questionId": "3454",
+    "title": "Separate Squares II",
+    "slug": "separate-squares-ii",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-01-15",
+    "questionId": "2943",
+    "title": "Maximize Area of Square Hole in Grid",
+    "slug": "maximize-area-of-square-hole-in-grid",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-01-16",
+    "questionId": "2975",
+    "title": "Maximum Square Area by Removing Fences From a Field",
+    "slug": "maximum-square-area-by-removing-fences-from-a-field",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-01-17",
+    "questionId": "3047",
+    "title": "Find the Largest Area of Square Inside Two Rectangles",
+    "slug": "find-the-largest-area-of-square-inside-two-rectangles",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-01-18",
+    "questionId": "1895",
+    "title": "Largest Magic Square",
+    "slug": "largest-magic-square",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-01-19",
+    "questionId": "1292",
+    "title": "Maximum Side Length of a Square with Sum Less than or Equal to Threshold",
+    "slug": "maximum-side-length-of-a-square-with-sum-less-than-or-equal-to-threshold",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-01-20",
+    "questionId": "3314",
+    "title": "Construct the Minimum Bitwise Array I",
+    "slug": "construct-the-minimum-bitwise-array-i",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-01-21",
+    "questionId": "3315",
+    "title": "Construct the Minimum Bitwise Array II",
+    "slug": "construct-the-minimum-bitwise-array-ii",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-01-22",
+    "questionId": "3507",
+    "title": "Minimum Pair Removal to Sort Array I",
+    "slug": "minimum-pair-removal-to-sort-array-i",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-01-23",
+    "questionId": "3510",
+    "title": "Minimum Pair Removal to Sort Array II",
+    "slug": "minimum-pair-removal-to-sort-array-ii",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-01-24",
+    "questionId": "1877",
+    "title": "Minimize Maximum Pair Sum in Array",
+    "slug": "minimize-maximum-pair-sum-in-array",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-01-25",
+    "questionId": "1984",
+    "title": "Minimum Difference Between Highest and Lowest of K Scores",
+    "slug": "minimum-difference-between-highest-and-lowest-of-k-scores",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-01-26",
+    "questionId": "1200",
+    "title": "Minimum Absolute Difference",
+    "slug": "minimum-absolute-difference",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-01-27",
+    "questionId": "3650",
+    "title": "Minimum Cost Path with Edge Reversals",
+    "slug": "minimum-cost-path-with-edge-reversals",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-01-28",
+    "questionId": "3651",
+    "title": "Minimum Cost Path with Teleportations",
+    "slug": "minimum-cost-path-with-teleportations",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-01-29",
+    "questionId": "2976",
+    "title": "Minimum Cost to Convert String I",
+    "slug": "minimum-cost-to-convert-string-i",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-01-30",
+    "questionId": "2977",
+    "title": "Minimum Cost to Convert String II",
+    "slug": "minimum-cost-to-convert-string-ii",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-01-31",
+    "questionId": "744",
+    "title": "Find Smallest Letter Greater Than Target",
+    "slug": "find-smallest-letter-greater-than-target",
+    "solutionUrl": "/solutions/0700-0799/find-smallest-letter-greater-than-target-easy/"
+  },
+  {
+    "date": "2026-02-01",
+    "questionId": "3010",
+    "title": "Divide an Array Into Subarrays With Minimum Cost I",
+    "slug": "divide-an-array-into-subarrays-with-minimum-cost-i",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-02-02",
+    "questionId": "3013",
+    "title": "Divide an Array Into Subarrays With Minimum Cost II",
+    "slug": "divide-an-array-into-subarrays-with-minimum-cost-ii",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-02-03",
+    "questionId": "3637",
+    "title": "Trionic Array I",
+    "slug": "trionic-array-i",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-02-04",
+    "questionId": "3640",
+    "title": "Trionic Array II",
+    "slug": "trionic-array-ii",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-02-05",
+    "questionId": "3379",
+    "title": "Transformed Array",
+    "slug": "transformed-array",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-02-06",
+    "questionId": "3634",
+    "title": "Minimum Removals to Balance Array",
+    "slug": "minimum-removals-to-balance-array",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-02-07",
+    "questionId": "1653",
+    "title": "Minimum Deletions to Make String Balanced",
+    "slug": "minimum-deletions-to-make-string-balanced",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-02-08",
+    "questionId": "110",
+    "title": "Balanced Binary Tree",
+    "slug": "balanced-binary-tree",
+    "solutionUrl": "/solutions/0100-0199/balanced-binary-tree-easy/"
+  },
+  {
+    "date": "2026-02-09",
+    "questionId": "1382",
+    "title": "Balance a Binary Search Tree",
+    "slug": "balance-a-binary-search-tree",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-02-10",
+    "questionId": "3719",
+    "title": "Longest Balanced Subarray I",
+    "slug": "longest-balanced-subarray-i",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-02-11",
+    "questionId": "3721",
+    "title": "Longest Balanced Subarray II",
+    "slug": "longest-balanced-subarray-ii",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-02-12",
+    "questionId": "3713",
+    "title": "Longest Balanced Substring I",
+    "slug": "longest-balanced-substring-i",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-02-13",
+    "questionId": "3714",
+    "title": "Longest Balanced Substring II",
+    "slug": "longest-balanced-substring-ii",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-02-14",
+    "questionId": "799",
+    "title": "Champagne Tower",
+    "slug": "champagne-tower",
+    "solutionUrl": "/solutions/0700-0799/champagne-tower-medium/"
+  },
+  {
+    "date": "2026-02-15",
+    "questionId": "67",
+    "title": "Add Binary",
+    "slug": "add-binary",
+    "solutionUrl": "/solutions/0000-0099/add-binary-easy/"
+  },
+  {
+    "date": "2026-02-16",
+    "questionId": "190",
+    "title": "Reverse Bits",
+    "slug": "reverse-bits",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-02-17",
+    "questionId": "401",
+    "title": "Binary Watch",
+    "slug": "binary-watch",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-02-18",
+    "questionId": "693",
+    "title": "Binary Number with Alternating Bits",
+    "slug": "binary-number-with-alternating-bits",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-02-19",
+    "questionId": "696",
+    "title": "Count Binary Substrings",
+    "slug": "count-binary-substrings",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-02-20",
+    "questionId": "761",
+    "title": "Special Binary String",
+    "slug": "special-binary-string",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-02-21",
+    "questionId": "762",
+    "title": "Prime Number of Set Bits in Binary Representation",
+    "slug": "prime-number-of-set-bits-in-binary-representation",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-02-22",
+    "questionId": "868",
+    "title": "Binary Gap",
+    "slug": "binary-gap",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-02-23",
+    "questionId": "1461",
+    "title": "Check If a String Contains All Binary Codes of Size K",
+    "slug": "check-if-a-string-contains-all-binary-codes-of-size-k",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-02-24",
+    "questionId": "1022",
+    "title": "Sum of Root To Leaf Binary Numbers",
+    "slug": "sum-of-root-to-leaf-binary-numbers",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-02-25",
+    "questionId": "1356",
+    "title": "Sort Integers by The Number of 1 Bits",
+    "slug": "sort-integers-by-the-number-of-1-bits",
+    "solutionUrl": "/solutions/1300-1399/sort-integers-by-the-number-of-1-bits-easy/"
+  },
+  {
+    "date": "2026-02-26",
+    "questionId": "1404",
+    "title": "Number of Steps to Reduce a Number in Binary Representation to One",
+    "slug": "number-of-steps-to-reduce-a-number-in-binary-representation-to-one",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-02-27",
+    "questionId": "3666",
+    "title": "Minimum Operations to Equalize Binary String",
+    "slug": "minimum-operations-to-equalize-binary-string",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-02-28",
+    "questionId": "1680",
+    "title": "Concatenation of Consecutive Binary Numbers",
+    "slug": "concatenation-of-consecutive-binary-numbers",
+    "solutionUrl": "/solutions/1600-1699/concatenation-of-consecutive-binary-numbers-medium/"
+  },
+  {
+    "date": "2026-03-01",
+    "questionId": "1689",
+    "title": "Partitioning Into Minimum Number Of Deci-Binary Numbers",
+    "slug": "partitioning-into-minimum-number-of-deci-binary-numbers",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-03-02",
+    "questionId": "1536",
+    "title": "Minimum Swaps to Arrange a Binary Grid",
+    "slug": "minimum-swaps-to-arrange-a-binary-grid",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-03-03",
+    "questionId": "1545",
+    "title": "Find Kth Bit in Nth Binary String",
+    "slug": "find-kth-bit-in-nth-binary-string",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-03-04",
+    "questionId": "1582",
+    "title": "Special Positions in a Binary Matrix",
+    "slug": "special-positions-in-a-binary-matrix",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-03-05",
+    "questionId": "1758",
+    "title": "Minimum Changes To Make Alternating Binary String",
+    "slug": "minimum-changes-to-make-alternating-binary-string",
+    "solutionUrl": "/solutions/1700-1799/minimum-changes-to-make-alternating-binary-string-easy/"
+  },
+  {
+    "date": "2026-03-06",
+    "questionId": "1784",
+    "title": "Check if Binary String Has at Most One Segment of Ones",
+    "slug": "check-if-binary-string-has-at-most-one-segment-of-ones",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-03-07",
+    "questionId": "1888",
+    "title": "Minimum Number of Flips to Make the Binary String Alternating",
+    "slug": "minimum-number-of-flips-to-make-the-binary-string-alternating",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-03-08",
+    "questionId": "1980",
+    "title": "Find Unique Binary String",
+    "slug": "find-unique-binary-string",
+    "solutionUrl": "/solutions/1900-1999/find-unique-binary-string-medium/"
+  },
+  {
+    "date": "2026-03-09",
+    "questionId": "3129",
+    "title": "Find All Possible Stable Binary Arrays I",
+    "slug": "find-all-possible-stable-binary-arrays-i",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-03-10",
+    "questionId": "3130",
+    "title": "Find All Possible Stable Binary Arrays II",
+    "slug": "find-all-possible-stable-binary-arrays-ii",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-03-11",
+    "questionId": "1009",
+    "title": "Complement of Base 10 Integer",
+    "slug": "complement-of-base-10-integer",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-03-12",
+    "questionId": "3600",
+    "title": "Maximize Spanning Tree Stability with Upgrades",
+    "slug": "maximize-spanning-tree-stability-with-upgrades",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-03-13",
+    "questionId": "3296",
+    "title": "Minimum Number of Seconds to Make Mountain Height Zero",
+    "slug": "minimum-number-of-seconds-to-make-mountain-height-zero",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-03-14",
+    "questionId": "1415",
+    "title": "The k-th Lexicographical String of All Happy Strings of Length n",
+    "slug": "the-k-th-lexicographical-string-of-all-happy-strings-of-length-n",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-03-15",
+    "questionId": "1622",
+    "title": "Fancy Sequence",
+    "slug": "fancy-sequence",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-03-16",
+    "questionId": "1878",
+    "title": "Get Biggest Three Rhombus Sums in a Grid",
+    "slug": "get-biggest-three-rhombus-sums-in-a-grid",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-03-17",
+    "questionId": "1727",
+    "title": "Largest Submatrix With Rearrangements",
+    "slug": "largest-submatrix-with-rearrangements",
+    "solutionUrl": "/solutions/1700-1799/largest-submatrix-with-rearrangements-medium/"
+  },
+  {
+    "date": "2026-03-18",
+    "questionId": "3070",
+    "title": "Count Submatrices with Top-Left Element and Sum Less Than k",
+    "slug": "count-submatrices-with-top-left-element-and-sum-less-than-k",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-03-19",
+    "questionId": "3212",
+    "title": "Count Submatrices With Equal Frequency of X and Y",
+    "slug": "count-submatrices-with-equal-frequency-of-x-and-y",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-03-20",
+    "questionId": "3567",
+    "title": "Minimum Absolute Difference in Sliding Submatrix",
+    "slug": "minimum-absolute-difference-in-sliding-submatrix",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-03-21",
+    "questionId": "3643",
+    "title": "Flip Square Submatrix Vertically",
+    "slug": "flip-square-submatrix-vertically",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-03-22",
+    "questionId": "1886",
+    "title": "Determine Whether Matrix Can Be Obtained By Rotation",
+    "slug": "determine-whether-matrix-can-be-obtained-by-rotation",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-03-23",
+    "questionId": "1594",
+    "title": "Maximum Non Negative Product in a Matrix",
+    "slug": "maximum-non-negative-product-in-a-matrix",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-03-24",
+    "questionId": "2906",
+    "title": "Construct Product Matrix",
+    "slug": "construct-product-matrix",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-03-25",
+    "questionId": "3546",
+    "title": "Equal Sum Grid Partition I",
+    "slug": "equal-sum-grid-partition-i",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-03-26",
+    "questionId": "3548",
+    "title": "Equal Sum Grid Partition II",
+    "slug": "equal-sum-grid-partition-ii",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-03-27",
+    "questionId": "2946",
+    "title": "Matrix Similarity After Cyclic Shifts",
+    "slug": "matrix-similarity-after-cyclic-shifts",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-03-28",
+    "questionId": "2573",
+    "title": "Find the String with LCP",
+    "slug": "find-the-string-with-lcp",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-03-29",
+    "questionId": "2839",
+    "title": "Check if Strings Can be Made Equal With Operations I",
+    "slug": "check-if-strings-can-be-made-equal-with-operations-i",
+    "solutionUrl": "/solutions/2800-2899/check-if-strings-can-be-made-equal-with-operations-i-easy/"
+  },
+  {
+    "date": "2026-03-30",
+    "questionId": "2840",
+    "title": "Check if Strings Can be Made Equal With Operations II",
+    "slug": "check-if-strings-can-be-made-equal-with-operations-ii",
+    "solutionUrl": "/solutions/2800-2899/check-if-strings-can-be-made-equal-with-operations-ii-medium/"
+  },
+  {
+    "date": "2026-03-31",
+    "questionId": "3474",
+    "title": "Lexicographically Smallest Generated String",
+    "slug": "lexicographically-smallest-generated-string",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-04-01",
+    "questionId": "2751",
+    "title": "Robot Collisions",
+    "slug": "robot-collisions",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-04-02",
+    "questionId": "3418",
+    "title": "Maximum Amount of Money Robot Can Earn",
+    "slug": "maximum-amount-of-money-robot-can-earn",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-04-03",
+    "questionId": "3661",
+    "title": "Maximum Walls Destroyed by Robots",
+    "slug": "maximum-walls-destroyed-by-robots",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-04-04",
+    "questionId": "2075",
+    "title": "Decode the Slanted Ciphertext",
+    "slug": "decode-the-slanted-ciphertext",
+    "solutionUrl": "/solutions/2000-2099/decode-the-slanted-ciphertext-medium/"
+  },
+  {
+    "date": "2026-04-05",
+    "questionId": "657",
+    "title": "Robot Return to Origin",
+    "slug": "robot-return-to-origin",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-04-06",
+    "questionId": "874",
+    "title": "Walking Robot Simulation",
+    "slug": "walking-robot-simulation",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-04-07",
+    "questionId": "2069",
+    "title": "Walking Robot Simulation II",
+    "slug": "walking-robot-simulation-ii",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-04-08",
+    "questionId": "3653",
+    "title": "XOR After Range Multiplication Queries I",
+    "slug": "xor-after-range-multiplication-queries-i",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-04-09",
+    "questionId": "3655",
+    "title": "XOR After Range Multiplication Queries II",
+    "slug": "xor-after-range-multiplication-queries-ii",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-04-10",
+    "questionId": "3740",
+    "title": "Minimum Distance Between Three Equal Elements I",
+    "slug": "minimum-distance-between-three-equal-elements-i",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-04-11",
+    "questionId": "3741",
+    "title": "Minimum Distance Between Three Equal Elements II",
+    "slug": "minimum-distance-between-three-equal-elements-ii",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-04-12",
+    "questionId": "1320",
+    "title": "Minimum Distance to Type a Word Using Two Fingers",
+    "slug": "minimum-distance-to-type-a-word-using-two-fingers",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-04-13",
+    "questionId": "1848",
+    "title": "Minimum Distance to the Target Element",
+    "slug": "minimum-distance-to-the-target-element",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-04-14",
+    "questionId": "2463",
+    "title": "Minimum Total Distance Traveled",
+    "slug": "minimum-total-distance-traveled",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-04-15",
+    "questionId": "2515",
+    "title": "Shortest Distance to Target String in a Circular Array",
+    "slug": "shortest-distance-to-target-string-in-a-circular-array",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-04-16",
+    "questionId": "3488",
+    "title": "Closest Equal Element Queries",
+    "slug": "closest-equal-element-queries",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-04-17",
+    "questionId": "3761",
+    "title": "Minimum Absolute Distance Between Mirror Pairs",
+    "slug": "minimum-absolute-distance-between-mirror-pairs",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-04-18",
+    "questionId": "3783",
+    "title": "Mirror Distance of an Integer",
+    "slug": "mirror-distance-of-an-integer",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-04-19",
+    "questionId": "1855",
+    "title": "Maximum Distance Between a Pair of Values",
+    "slug": "maximum-distance-between-a-pair-of-values",
+    "solutionUrl": "/solutions/1800-1899/maximum-distance-between-a-pair-of-values-medium/"
+  },
+  {
+    "date": "2026-04-20",
+    "questionId": "2078",
+    "title": "Two Furthest Houses With Different Colors",
+    "slug": "two-furthest-houses-with-different-colors",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-04-21",
+    "questionId": "1722",
+    "title": "Minimize Hamming Distance After Swap Operations",
+    "slug": "minimize-hamming-distance-after-swap-operations",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-04-22",
+    "questionId": "2452",
+    "title": "Words Within Two Edits of Dictionary",
+    "slug": "words-within-two-edits-of-dictionary",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-04-23",
+    "questionId": "2615",
+    "title": "Sum of Distances",
+    "slug": "sum-of-distances",
+    "solutionUrl": "/solutions/2600-2699/sum-of-distances-medium/"
+  },
+  {
+    "date": "2026-04-24",
+    "questionId": "2833",
+    "title": "Furthest Point From Origin",
+    "slug": "furthest-point-from-origin",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-04-25",
+    "questionId": "3464",
+    "title": "Maximize the Distance Between Points on a Square",
+    "slug": "maximize-the-distance-between-points-on-a-square",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-04-26",
+    "questionId": "1559",
+    "title": "Detect Cycles in 2D Grid",
+    "slug": "detect-cycles-in-2d-grid",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-04-27",
+    "questionId": "1391",
+    "title": "Check if There is a Valid Path in a Grid",
+    "slug": "check-if-there-is-a-valid-path-in-a-grid",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-04-28",
+    "questionId": "2033",
+    "title": "Minimum Operations to Make a Uni-Value Grid",
+    "slug": "minimum-operations-to-make-a-uni-value-grid",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-04-29",
+    "questionId": "3225",
+    "title": "Maximum Score From Grid Operations",
+    "slug": "maximum-score-from-grid-operations",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-04-30",
+    "questionId": "3742",
+    "title": "Maximum Path Score in a Grid",
+    "slug": "maximum-path-score-in-a-grid",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-05-01",
+    "questionId": "396",
+    "title": "Rotate Function",
+    "slug": "rotate-function",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-05-02",
+    "questionId": "788",
+    "title": "Rotated Digits",
+    "slug": "rotated-digits",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-05-03",
+    "questionId": "796",
+    "title": "Rotate String",
+    "slug": "rotate-string",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-05-04",
+    "questionId": "48",
+    "title": "Rotate Image",
+    "slug": "rotate-image",
+    "solutionUrl": "/solutions/0000-0099/rotate-image-medium/"
+  },
+  {
+    "date": "2026-05-05",
+    "questionId": "61",
+    "title": "Rotate List",
+    "slug": "rotate-list",
+    "solutionUrl": "/solutions/0000-0099/rotate-list-medium/"
+  },
+  {
+    "date": "2026-05-06",
+    "questionId": "1861",
+    "title": "Rotating the Box",
+    "slug": "rotating-the-box",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-05-07",
+    "questionId": "3660",
+    "title": "Jump Game IX",
+    "slug": "jump-game-ix",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-05-08",
+    "questionId": "3629",
+    "title": "Minimum Jumps to Reach End via Prime Teleportation",
+    "slug": "minimum-jumps-to-reach-end-via-prime-teleportation",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-05-09",
+    "questionId": "1914",
+    "title": "Cyclically Rotating a Grid",
+    "slug": "cyclically-rotating-a-grid",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-05-10",
+    "questionId": "2770",
+    "title": "Maximum Number of Jumps to Reach the Last Index",
+    "slug": "maximum-number-of-jumps-to-reach-the-last-index",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-05-11",
+    "questionId": "2553",
+    "title": "Separate the Digits in an Array",
+    "slug": "separate-the-digits-in-an-array",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-05-12",
+    "questionId": "1665",
+    "title": "Minimum Initial Energy to Finish Tasks",
+    "slug": "minimum-initial-energy-to-finish-tasks",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-05-13",
+    "questionId": "1674",
+    "title": "Minimum Moves to Make Array Complementary",
+    "slug": "minimum-moves-to-make-array-complementary",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-05-14",
+    "questionId": "2784",
+    "title": "Check if Array is Good",
+    "slug": "check-if-array-is-good",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-05-15",
+    "questionId": "153",
+    "title": "Find Minimum in Rotated Sorted Array",
+    "slug": "find-minimum-in-rotated-sorted-array",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-05-16",
+    "questionId": "154",
+    "title": "Find Minimum in Rotated Sorted Array II",
+    "slug": "find-minimum-in-rotated-sorted-array-ii",
+    "solutionUrl": "/solutions/0100-0199/find-minimum-in-rotated-sorted-array-ii-hard/"
+  },
+  {
+    "date": "2026-05-17",
+    "questionId": "1306",
+    "title": "Jump Game III",
+    "slug": "jump-game-iii",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-05-18",
+    "questionId": "1345",
+    "title": "Jump Game IV",
+    "slug": "jump-game-iv",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-05-19",
+    "questionId": "2540",
+    "title": "Minimum Common Value",
+    "slug": "minimum-common-value",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-05-20",
+    "questionId": "2657",
+    "title": "Find the Prefix Common Array of Two Arrays",
+    "slug": "find-the-prefix-common-array-of-two-arrays",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-05-21",
+    "questionId": "3043",
+    "title": "Find the Length of the Longest Common Prefix",
+    "slug": "find-the-length-of-the-longest-common-prefix",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-05-22",
+    "questionId": "33",
+    "title": "Search in Rotated Sorted Array",
+    "slug": "search-in-rotated-sorted-array",
+    "solutionUrl": "/solutions/0000-0099/search-in-rotated-sorted-array-medium/"
+  },
+  {
+    "date": "2026-05-23",
+    "questionId": "1752",
+    "title": "Check if Array Is Sorted and Rotated",
+    "slug": "check-if-array-is-sorted-and-rotated",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-05-24",
+    "questionId": "1340",
+    "title": "Jump Game V",
+    "slug": "jump-game-v",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-05-25",
+    "questionId": "1871",
+    "title": "Jump Game VII",
+    "slug": "jump-game-vii",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-05-26",
+    "questionId": "3120",
+    "title": "Count the Number of Special Characters I",
+    "slug": "count-the-number-of-special-characters-i",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-05-27",
+    "questionId": "3121",
+    "title": "Count the Number of Special Characters II",
+    "slug": "count-the-number-of-special-characters-ii",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-05-28",
+    "questionId": "3093",
+    "title": "Longest Common Suffix Queries",
+    "slug": "longest-common-suffix-queries",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-05-29",
+    "questionId": "3300",
+    "title": "Minimum Element After Replacement With Digit Sum",
+    "slug": "minimum-element-after-replacement-with-digit-sum",
+    "solutionUrl": "/solutions/3300-3399/minimum-element-after-replacement-with-digit-sum-easy/"
+  },
+  {
+    "date": "2026-05-30",
+    "questionId": "3161",
+    "title": "Block Placement Queries",
+    "slug": "block-placement-queries",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-05-31",
+    "questionId": "2126",
+    "title": "Destroying Asteroids",
+    "slug": "destroying-asteroids",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-06-01",
+    "questionId": "2144",
+    "title": "Minimum Cost of Buying Candies With Discount",
+    "slug": "minimum-cost-of-buying-candies-with-discount",
+    "solutionUrl": "/solutions/2100-2199/minimum-cost-of-buying-candies-with-discount-easy/"
+  },
+  {
+    "date": "2026-06-02",
+    "questionId": "3633",
+    "title": "Earliest Finish Time for Land and Water Rides I",
+    "slug": "earliest-finish-time-for-land-and-water-rides-i",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-06-03",
+    "questionId": "3635",
+    "title": "Earliest Finish Time for Land and Water Rides II",
+    "slug": "earliest-finish-time-for-land-and-water-rides-ii",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-06-04",
+    "questionId": "3751",
+    "title": "Total Waviness of Numbers in Range I",
+    "slug": "total-waviness-of-numbers-in-range-i",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-06-05",
+    "questionId": "3753",
+    "title": "Total Waviness of Numbers in Range II",
+    "slug": "total-waviness-of-numbers-in-range-ii",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-06-06",
+    "questionId": "2574",
+    "title": "Left and Right Sum Differences",
+    "slug": "left-and-right-sum-differences",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-06-07",
+    "questionId": "2196",
+    "title": "Create Binary Tree From Descriptions",
+    "slug": "create-binary-tree-from-descriptions",
+    "solutionUrl": "/solutions/2100-2199/create-binary-tree-from-descriptions-medium/"
+  },
+  {
+    "date": "2026-06-08",
+    "questionId": "2161",
+    "title": "Partition Array According to Given Pivot",
+    "slug": "partition-array-according-to-given-pivot",
+    "solutionUrl": "/solutions/2100-2199/partition-array-according-to-given-pivot-medium/"
+  },
+  {
+    "date": "2026-06-09",
+    "questionId": "3689",
+    "title": "Maximum Total Subarray Value I",
+    "slug": "maximum-total-subarray-value-i",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-06-10",
+    "questionId": "3691",
+    "title": "Maximum Total Subarray Value II",
+    "slug": "maximum-total-subarray-value-ii",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-06-11",
+    "questionId": "3558",
+    "title": "Number of Ways to Assign Edge Weights I",
+    "slug": "number-of-ways-to-assign-edge-weights-i",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-06-12",
+    "questionId": "3559",
+    "title": "Number of Ways to Assign Edge Weights II",
+    "slug": "number-of-ways-to-assign-edge-weights-ii",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-06-13",
+    "questionId": "3838",
+    "title": "Weighted Word Mapping",
+    "slug": "weighted-word-mapping",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-06-14",
+    "questionId": "2130",
+    "title": "Maximum Twin Sum of a Linked List",
+    "slug": "maximum-twin-sum-of-a-linked-list",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-06-15",
+    "questionId": "2095",
+    "title": "Delete the Middle Node of a Linked List",
+    "slug": "delete-the-middle-node-of-a-linked-list",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-06-16",
+    "questionId": "3612",
+    "title": "Process String with Special Operations I",
+    "slug": "process-string-with-special-operations-i",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-06-17",
+    "questionId": "3614",
+    "title": "Process String with Special Operations II",
+    "slug": "process-string-with-special-operations-ii",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-06-18",
+    "questionId": "1344",
+    "title": "Angle Between Hands of a Clock",
+    "slug": "angle-between-hands-of-a-clock",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-06-19",
+    "questionId": "1732",
+    "title": "Find the Highest Altitude",
+    "slug": "find-the-highest-altitude",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-06-20",
+    "questionId": "1840",
+    "title": "Maximum Building Height",
+    "slug": "maximum-building-height",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-06-21",
+    "questionId": "1833",
+    "title": "Maximum Ice Cream Bars",
+    "slug": "maximum-ice-cream-bars",
+    "solutionUrl": "/solutions/1800-1899/maximum-ice-cream-bars-medium/"
+  },
+  {
+    "date": "2026-06-22",
+    "questionId": "1189",
+    "title": "Maximum Number of Balloons",
+    "slug": "maximum-number-of-balloons",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-06-23",
+    "questionId": "3699",
+    "title": "Number of ZigZag Arrays I",
+    "slug": "number-of-zigzag-arrays-i",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-06-24",
+    "questionId": "3700",
+    "title": "Number of ZigZag Arrays II",
+    "slug": "number-of-zigzag-arrays-ii",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-06-25",
+    "questionId": "3737",
+    "title": "Count Subarrays With Majority Element I",
+    "slug": "count-subarrays-with-majority-element-i",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-06-26",
+    "questionId": "3739",
+    "title": "Count Subarrays With Majority Element II",
+    "slug": "count-subarrays-with-majority-element-ii",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-06-27",
+    "questionId": "3020",
+    "title": "Find the Maximum Number of Elements in Subset",
+    "slug": "find-the-maximum-number-of-elements-in-subset",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-06-28",
+    "questionId": "1846",
+    "title": "Maximum Element After Decreasing and Rearranging",
+    "slug": "maximum-element-after-decreasing-and-rearranging",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-06-29",
+    "questionId": "1967",
+    "title": "Number of Strings That Appear as Substrings in Word",
+    "slug": "number-of-strings-that-appear-as-substrings-in-word",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-06-30",
+    "questionId": "1358",
+    "title": "Number of Substrings Containing All Three Characters",
+    "slug": "number-of-substrings-containing-all-three-characters",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-07-01",
+    "questionId": "2812",
+    "title": "Find the Safest Path in a Grid",
+    "slug": "find-the-safest-path-in-a-grid",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-07-02",
+    "questionId": "3286",
+    "title": "Find a Safe Walk Through a Grid",
+    "slug": "find-a-safe-walk-through-a-grid",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-07-03",
+    "questionId": "3620",
+    "title": "Network Recovery Pathways",
+    "slug": "network-recovery-pathways",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-07-04",
+    "questionId": "2492",
+    "title": "Minimum Score of a Path Between Two Cities",
+    "slug": "minimum-score-of-a-path-between-two-cities",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-07-05",
+    "questionId": "1301",
+    "title": "Number of Paths with Max Score",
+    "slug": "number-of-paths-with-max-score",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-07-06",
+    "questionId": "1288",
+    "title": "Remove Covered Intervals",
+    "slug": "remove-covered-intervals",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-07-07",
+    "questionId": "3754",
+    "title": "Concatenate Non-Zero Digits and Multiply by Sum I",
+    "slug": "concatenate-non-zero-digits-and-multiply-by-sum-i",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-07-08",
+    "questionId": "3756",
+    "title": "Concatenate Non-Zero Digits and Multiply by Sum II",
+    "slug": "concatenate-non-zero-digits-and-multiply-by-sum-ii",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-07-09",
+    "questionId": "3532",
+    "title": "Path Existence Queries in a Graph I",
+    "slug": "path-existence-queries-in-a-graph-i",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-07-10",
+    "questionId": "3534",
+    "title": "Path Existence Queries in a Graph II",
+    "slug": "path-existence-queries-in-a-graph-ii",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-07-11",
+    "questionId": "2685",
+    "title": "Count the Number of Complete Components",
+    "slug": "count-the-number-of-complete-components",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-07-12",
+    "questionId": "1331",
+    "title": "Rank Transform of an Array",
+    "slug": "rank-transform-of-an-array",
+    "solutionUrl": "/solutions/1300-1399/rank-transform-of-an-array-easy/"
+  },
+  {
+    "date": "2026-07-13",
+    "questionId": "1291",
+    "title": "Sequential Digits",
+    "slug": "sequential-digits",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-07-14",
+    "questionId": "3336",
+    "title": "Find the Number of Subsequences With Equal GCD",
+    "slug": "find-the-number-of-subsequences-with-equal-gcd",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-07-15",
+    "questionId": "3658",
+    "title": "GCD of Odd and Even Sums",
+    "slug": "gcd-of-odd-and-even-sums",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-07-16",
+    "questionId": "3867",
+    "title": "Sum of GCD of Formed Pairs",
+    "slug": "sum-of-gcd-of-formed-pairs",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-07-17",
+    "questionId": "3312",
+    "title": "Sorted GCD Pair Queries",
+    "slug": "sorted-gcd-pair-queries",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-07-18",
+    "questionId": "1979",
+    "title": "Find Greatest Common Divisor of Array",
+    "slug": "find-greatest-common-divisor-of-array",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-07-19",
+    "questionId": "1081",
+    "title": "Smallest Subsequence of Distinct Characters",
+    "slug": "smallest-subsequence-of-distinct-characters",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-07-20",
+    "questionId": "1260",
+    "title": "Shift 2D Grid",
+    "slug": "shift-2d-grid",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-07-21",
+    "questionId": "3499",
+    "title": "Maximize Active Section with Trade I",
+    "slug": "maximize-active-section-with-trade-i",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-07-22",
+    "questionId": "3501",
+    "title": "Maximize Active Section with Trade II",
+    "slug": "maximize-active-section-with-trade-ii",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-07-23",
+    "questionId": "3513",
+    "title": "Number of Unique XOR Triplets I",
+    "slug": "number-of-unique-xor-triplets-i",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-07-24",
+    "questionId": "3514",
+    "title": "Number of Unique XOR Triplets II",
+    "slug": "number-of-unique-xor-triplets-ii",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-07-25",
+    "questionId": "3536",
+    "title": "Maximum Product of Two Digits",
+    "slug": "maximum-product-of-two-digits",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-07-26",
+    "questionId": "628",
+    "title": "Maximum Product of Three Numbers",
+    "slug": "maximum-product-of-three-numbers",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-07-27",
+    "questionId": "1464",
+    "title": "Maximum Product of Two Elements in an Array",
+    "slug": "maximum-product-of-two-elements-in-an-array",
+    "solutionUrl": "/solutions/1400-1499/maximum-product-of-two-elements-in-an-array-easy/"
+  },
+  {
+    "date": "2026-07-28",
+    "questionId": "3517",
+    "title": "Smallest Palindromic Rearrangement I",
+    "slug": "smallest-palindromic-rearrangement-i",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-07-29",
+    "questionId": "3518",
+    "title": "Smallest Palindromic Rearrangement II",
+    "slug": "smallest-palindromic-rearrangement-ii",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-07-30",
+    "questionId": "3014",
+    "title": "Minimum Number of Pushes to Type Word I",
+    "slug": "minimum-number-of-pushes-to-type-word-i",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-07-31",
+    "questionId": "3016",
+    "title": "Minimum Number of Pushes to Type Word II",
+    "slug": "minimum-number-of-pushes-to-type-word-ii",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-08-01",
+    "questionId": "486",
+    "title": "Predict the Winner",
+    "slug": "predict-the-winner",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-08-02",
+    "questionId": "877",
+    "title": "Stone Game",
+    "slug": "stone-game",
+    "solutionUrl": "/solutions/0800-0899/stone-game-medium/"
+  },
+  {
+    "date": "2026-08-03",
+    "questionId": "1406",
+    "title": "Stone Game III",
+    "slug": "stone-game-iii",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-08-04",
+    "questionId": "3731",
+    "title": "Find Missing Elements",
+    "slug": "find-missing-elements",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-08-05",
+    "questionId": "3310",
+    "title": "Remove Methods From Project",
+    "slug": "remove-methods-from-project",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-08-06",
+    "questionId": "3345",
+    "title": "Smallest Divisible Digit Product I",
+    "slug": "smallest-divisible-digit-product-i",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-08-07",
+    "questionId": "3348",
+    "title": "Smallest Divisible Digit Product II",
+    "slug": "smallest-divisible-digit-product-ii",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-08-08",
+    "questionId": "3302",
+    "title": "Find the Lexicographically Smallest Valid Sequence",
+    "slug": "find-the-lexicographically-smallest-valid-sequence",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-08-09",
+    "questionId": "1140",
+    "title": "Stone Game II",
+    "slug": "stone-game-ii",
+    "solutionUrl": "/solutions/1100-1199/stone-game-ii-medium/"
+  },
+  {
+    "date": "2026-08-10",
+    "questionId": "1510",
+    "title": "Stone Game IV",
+    "slug": "stone-game-iv",
+    "solutionUrl": "/solutions/1500-1599/stone-game-iv-hard/"
+  },
+  {
+    "date": "2026-08-11",
+    "questionId": "2996",
+    "title": "Smallest Missing Integer Greater Than Sequential Prefix Sum",
+    "slug": "smallest-missing-integer-greater-than-sequential-prefix-sum",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-08-12",
+    "questionId": "2958",
+    "title": "Length of Longest Subarray With at Most K Frequency",
+    "slug": "length-of-longest-subarray-with-at-most-k-frequency",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-08-13",
+    "questionId": "2213",
+    "title": "Longest Substring of One Repeating Character",
+    "slug": "longest-substring-of-one-repeating-character",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-08-14",
+    "questionId": "3090",
+    "title": "Maximum Length Substring With Two Occurrences",
+    "slug": "maximum-length-substring-with-two-occurrences",
+    "solutionUrl": "/solutions/3000-3099/maximum-length-substring-with-two-occurrences-easy/"
+  },
+  {
+    "date": "2026-08-15",
+    "questionId": "3702",
+    "title": "Longest Subsequence With Non-Zero Bitwise XOR",
+    "slug": "longest-subsequence-with-non-zero-bitwise-xor",
+    "solutionUrl": "/solutions/3700-3799/longest-subsequence-with-non-zero-bitwise-xor-medium/"
+  },
+  {
+    "date": "2026-08-16",
+    "questionId": "2029",
+    "title": "Stone Game IX",
+    "slug": "stone-game-ix",
+    "solutionUrl": "/solutions/2000-2099/stone-game-ix-medium/"
+  },
+  {
+    "date": "2026-08-17",
+    "questionId": "1563",
+    "title": "Stone Game V",
+    "slug": "stone-game-v",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-08-18",
+    "questionId": "3471",
+    "title": "Find the Largest Almost Missing Integer",
+    "slug": "find-the-largest-almost-missing-integer",
+    "solutionUrl": "/solutions/3400-3499/find-the-largest-almost-missing-integer-easy/"
+  },
+  {
+    "date": "2026-08-19",
+    "questionId": "1386",
+    "title": "Cinema Seat Allocation",
+    "slug": "cinema-seat-allocation",
+    "solutionUrl": "/solutions/1300-1399/cinema-seat-allocation-medium/"
+  },
+  {
+    "date": "2026-08-20",
+    "questionId": "3069",
+    "title": "Distribute Elements Into Two Arrays I",
+    "slug": "distribute-elements-into-two-arrays-i",
+    "solutionUrl": "/solutions/3000-3099/distribute-elements-into-two-arrays-i-easy/"
+  },
+  {
+    "date": "2026-08-21",
+    "questionId": "3116",
+    "title": "Kth Smallest Amount With Single Denomination Combination",
+    "slug": "kth-smallest-amount-with-single-denomination-combination",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-08-22",
+    "questionId": "3622",
+    "title": "Check Divisibility by Digit Sum and Product",
+    "slug": "check-divisibility-by-digit-sum-and-product",
+    "solutionUrl": "/solutions/3600-3699/check-divisibility-by-digit-sum-and-product-easy/"
+  },
+  {
+    "date": "2026-08-23",
+    "questionId": "1927",
+    "title": "Sum Game",
+    "slug": "sum-game",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-08-24",
+    "questionId": "1872",
+    "title": "Stone Game VIII",
+    "slug": "stone-game-viii",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-08-25",
+    "questionId": "3718",
+    "title": "Smallest Missing Multiple of K",
+    "slug": "smallest-missing-multiple-of-k",
+    "solutionUrl": "/solutions/3700-3799/smallest-missing-multiple-of-k-easy/"
+  },
+  {
+    "date": "2026-08-26",
+    "questionId": "2904",
+    "title": "Shortest and Lexicographically Smallest Beautiful String",
+    "slug": "shortest-and-lexicographically-smallest-beautiful-string",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-08-27",
+    "questionId": "3720",
+    "title": "Lexicographically Smallest Permutation Greater Than Target",
+    "slug": "lexicographically-smallest-permutation-greater-than-target",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-08-28",
+    "questionId": "3734",
+    "title": "Lexicographically Smallest Palindromic Permutation Greater Than Target",
+    "slug": "lexicographically-smallest-palindromic-permutation-greater-than-target",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-08-29",
+    "questionId": "2948",
+    "title": "Make Lexicographically Smallest Array by Swapping Elements",
+    "slug": "make-lexicographically-smallest-array-by-swapping-elements",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-08-30",
+    "questionId": "2091",
+    "title": "Removing Minimum and Maximum From Array",
+    "slug": "removing-minimum-and-maximum-from-array",
+    "solutionUrl": "/solutions/2000-2099/removing-minimum-and-maximum-from-array-medium/"
+  },
+  {
+    "date": "2026-08-31",
+    "questionId": "2058",
+    "title": "Find the Minimum and Maximum Number of Nodes Between Critical Points",
+    "slug": "find-the-minimum-and-maximum-number-of-nodes-between-critical-points",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-09-01",
+    "questionId": "3568",
+    "title": "Minimum Moves to Clean the Classroom",
+    "slug": "minimum-moves-to-clean-the-classroom",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-09-02",
+    "questionId": "3875",
+    "title": "Construct Uniform Parity Array I",
+    "slug": "construct-uniform-parity-array-i",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-09-03",
+    "questionId": "3876",
+    "title": "Construct Uniform Parity Array II",
+    "slug": "construct-uniform-parity-array-ii",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-09-04",
+    "questionId": "3903",
+    "title": "Smallest Stable Index I",
+    "slug": "smallest-stable-index-i",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-09-05",
+    "questionId": "3904",
+    "title": "Smallest Stable Index II",
+    "slug": "smallest-stable-index-ii",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-09-06",
+    "questionId": "115",
+    "title": "Distinct Subsequences",
+    "slug": "distinct-subsequences",
+    "solutionUrl": "/solutions/0100-0199/distinct-subsequences-hard/"
+  },
+  {
+    "date": "2026-09-07",
+    "questionId": "940",
+    "title": "Distinct Subsequences II",
+    "slug": "distinct-subsequences-ii",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-09-08",
+    "questionId": "3870",
+    "title": "Count Commas in Range",
+    "slug": "count-commas-in-range",
+    "solutionUrl": "/solutions/3800-3899/count-commas-in-range-easy/"
+  },
+  {
+    "date": "2026-09-09",
+    "questionId": "3871",
+    "title": "Count Commas in Range II",
+    "slug": "count-commas-in-range-ii",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-09-10",
+    "questionId": "2265",
+    "title": "Count Nodes Equal to Average of Subtree",
+    "slug": "count-nodes-equal-to-average-of-subtree",
+    "solutionUrl": "/solutions/2200-2299/count-nodes-equal-to-average-of-subtree-medium/"
+  },
+  {
+    "date": "2026-09-11",
+    "questionId": "3483",
+    "title": "Unique 3-Digit Even Numbers",
+    "slug": "unique-3-digit-even-numbers",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-09-12",
+    "questionId": "3414",
+    "title": "Maximum Score of Non-overlapping Intervals",
+    "slug": "maximum-score-of-non-overlapping-intervals",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-09-13",
+    "questionId": "835",
+    "title": "Image Overlap",
+    "slug": "image-overlap",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-09-14",
+    "questionId": "836",
+    "title": "Rectangle Overlap",
+    "slug": "rectangle-overlap",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-09-15",
+    "questionId": "2472",
+    "title": "Maximum Number of Non-overlapping Palindrome Substrings",
+    "slug": "maximum-number-of-non-overlapping-palindrome-substrings",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-09-16",
+    "questionId": "1621",
+    "title": "Number of Sets of K Non-Overlapping Line Segments",
+    "slug": "number-of-sets-of-k-non-overlapping-line-segments",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-09-17",
+    "questionId": "1477",
+    "title": "Find Two Non-overlapping Sub-arrays Each With Target Sum",
+    "slug": "find-two-non-overlapping-sub-arrays-each-with-target-sum",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-09-18",
+    "questionId": "1520",
+    "title": "Maximum Number of Non-Overlapping Substrings",
+    "slug": "maximum-number-of-non-overlapping-substrings",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-09-19",
+    "questionId": "1401",
+    "title": "Circle and Rectangle Overlapping",
+    "slug": "circle-and-rectangle-overlapping",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-09-20",
+    "questionId": "3498",
+    "title": "Reverse Degree of a String",
+    "slug": "reverse-degree-of-a-string",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-09-21",
+    "questionId": "3524",
+    "title": "Find X Value of Array I",
+    "slug": "find-x-value-of-array-i",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-09-22",
+    "questionId": "3525",
+    "title": "Find X Value of Array II",
+    "slug": "find-x-value-of-array-ii",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-09-23",
+    "questionId": "1658",
+    "title": "Minimum Operations to Reduce X to Zero",
+    "slug": "minimum-operations-to-reduce-x-to-zero",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-09-24",
+    "questionId": "3550",
+    "title": "Smallest Index With Digit Sum Equal to Index",
+    "slug": "smallest-index-with-digit-sum-equal-to-index",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-09-25",
+    "questionId": "1096",
+    "title": "Brace Expansion II",
+    "slug": "brace-expansion-ii",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-09-26",
+    "questionId": "1807",
+    "title": "Evaluate the Bracket Pairs of a String",
+    "slug": "evaluate-the-bracket-pairs-of-a-string",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-09-27",
+    "questionId": "1190",
+    "title": "Reverse Substrings Between Each Pair of Parentheses",
+    "slug": "reverse-substrings-between-each-pair-of-parentheses",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-09-28",
+    "questionId": "1614",
+    "title": "Maximum Nesting Depth of the Parentheses",
+    "slug": "maximum-nesting-depth-of-the-parentheses",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-09-29",
+    "questionId": "2267",
+    "title": " Check if There Is a Valid Parentheses String Path",
+    "slug": "check-if-there-is-a-valid-parentheses-string-path",
+    "solutionUrl": "/solutions/2200-2299/check-if-there-is-a-valid-parentheses-string-path-hard/"
+  },
+  {
+    "date": "2026-09-30",
+    "questionId": "1111",
+    "title": "Maximum Nesting Depth of Two Valid Parentheses Strings",
+    "slug": "maximum-nesting-depth-of-two-valid-parentheses-strings",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-10-01",
+    "questionId": "20",
+    "title": "Valid Parentheses",
+    "slug": "valid-parentheses",
+    "solutionUrl": "/solutions/0000-0099/valid-parentheses-easy/"
+  },
+  {
+    "date": "2026-10-02",
+    "questionId": "22",
+    "title": "Generate Parentheses",
+    "slug": "generate-parentheses",
+    "solutionUrl": "/solutions/0000-0099/generate-parentheses-medium/"
+  },
+  {
+    "date": "2026-10-03",
+    "questionId": "32",
+    "title": "Longest Valid Parentheses",
+    "slug": "longest-valid-parentheses",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-10-04",
+    "questionId": "678",
+    "title": "Valid Parenthesis String",
+    "slug": "valid-parenthesis-string",
+    "solutionUrl": "/solutions/0600-0699/valid-parenthesis-string-medium/"
+  },
+  {
+    "date": "2026-10-05",
+    "questionId": "856",
+    "title": "Score of Parentheses",
+    "slug": "score-of-parentheses",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-10-06",
+    "questionId": "921",
+    "title": "Minimum Add to Make Parentheses Valid",
+    "slug": "minimum-add-to-make-parentheses-valid",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-10-07",
+    "questionId": "301",
+    "title": "Remove Invalid Parentheses",
+    "slug": "remove-invalid-parentheses",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-10-08",
+    "questionId": "1021",
+    "title": "Remove Outermost Parentheses",
+    "slug": "remove-outermost-parentheses",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-10-09",
+    "questionId": "1541",
+    "title": "Minimum Insertions to Balance a Parentheses String",
+    "slug": "minimum-insertions-to-balance-a-parentheses-string",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-10-10",
+    "questionId": "2333",
+    "title": "Minimum Sum of Squared Difference",
+    "slug": "minimum-sum-of-squared-difference",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-10-11",
+    "questionId": "2778",
+    "title": "Sum of Squares of Special Elements ",
+    "slug": "sum-of-squares-of-special-elements",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-10-12",
+    "questionId": "2897",
+    "title": "Apply Operations on Array to Maximize Sum of Squares",
+    "slug": "apply-operations-on-array-to-maximize-sum-of-squares",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-10-13",
+    "questionId": "3727",
+    "title": "Maximum Alternating Sum of Squares",
+    "slug": "maximum-alternating-sum-of-squares",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-10-14",
+    "questionId": "3723",
+    "title": "Maximize Sum of Squares of Digits",
+    "slug": "maximize-sum-of-squares-of-digits",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-10-15",
+    "questionId": "2913",
+    "title": "Subarrays Distinct Element Sum of Squares I",
+    "slug": "subarrays-distinct-element-sum-of-squares-i",
+    "solutionUrl": "/solutions/2900-2999/subarrays-distinct-element-sum-of-squares-i-easy/"
+  },
+  {
+    "date": "2026-10-16",
+    "questionId": "2916",
+    "title": "Subarrays Distinct Element Sum of Squares II",
+    "slug": "subarrays-distinct-element-sum-of-squares-ii",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-10-17",
+    "questionId": "3551",
+    "title": "Minimum Swaps to Sort by Digit Sum",
+    "slug": "minimum-swaps-to-sort-by-digit-sum",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-10-18",
+    "questionId": "1569",
+    "title": "Number of Ways to Reorder Array to Get Same BST",
+    "slug": "number-of-ways-to-reorder-array-to-get-same-bst",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-10-19",
+    "questionId": "2089",
+    "title": "Find Target Indices After Sorting Array",
+    "slug": "find-target-indices-after-sorting-array",
+    "solutionUrl": "/solutions/2000-2099/find-target-indices-after-sorting-array-easy/"
+  },
+  {
+    "date": "2026-10-20",
+    "questionId": "3886",
+    "title": "Sum of Sortable Integers",
+    "slug": "sum-of-sortable-integers",
+    "solutionUrl": null
+  },
+  {
+    "date": "2026-10-21",
+    "questionId": "3863",
+    "title": "Minimum Operations to Sort a String",
+    "slug": "minimum-operations-to-sort-a-string",
+    "solutionUrl": "/solutions/3800-3899/minimum-operations-to-sort-a-string-medium/"
+  },
+  {
+    "date": "2026-10-22",
+    "questionId": "3942",
+    "title": "Minimum Operations to Sort a Permutation",
+    "slug": "minimum-operations-to-sort-a-permutation",
+    "solutionUrl": "/solutions/3900-3999/minimum-operations-to-sort-a-permutation-medium/"
+  },
+  {
+    "date": "2026-10-23",
+    "questionId": "3644",
+    "title": "Maximum K to Sort a Permutation",
+    "slug": "maximum-k-to-sort-a-permutation",
+    "solutionUrl": "/solutions/3600-3699/maximum-k-to-sort-a-permutation-medium/"
+  },
+  {
+    "date": "2026-10-24",
+    "questionId": "2409",
+    "title": "Count Days Spent Together",
+    "slug": "count-days-spent-together",
+    "solutionUrl": "/solutions/2400-2499/count-days-spent-together-easy/"
+  },
+  {
+    "date": "2026-10-25",
+    "questionId": "1254",
+    "title": "Number of Closed Islands",
+    "slug": "number-of-closed-islands",
+    "solutionUrl": "/solutions/1200-1299/number-of-closed-islands-medium/"
+  },
+  {
+    "date": "2026-10-26",
+    "questionId": "3619",
+    "title": "Count Islands With Total Value Divisible by K",
+    "slug": "count-islands-with-total-value-divisible-by-k",
+    "solutionUrl": "/solutions/3600-3699/count-islands-with-total-value-divisible-by-k-medium/"
+  },
+  {
+    "date": "2026-10-27",
+    "questionId": "3963",
+    "title": "Create Grid With Exactly One Path",
+    "slug": "create-grid-with-exactly-one-path",
+    "solutionUrl": "/solutions/3900-3999/create-grid-with-exactly-one-path-easy/"
+  },
+  {
+    "date": "2026-10-28",
+    "questionId": "3882",
+    "title": "Minimum XOR Path in a Grid",
+    "slug": "minimum-xor-path-in-a-grid",
+    "solutionUrl": "/solutions/3800-3899/minimum-xor-path-in-a-grid-medium/"
+  },
+  {
+    "date": "2026-10-29",
+    "questionId": "3841",
+    "title": "Palindromic Path Queries in a Tree",
+    "slug": "palindromic-path-queries-in-a-tree",
+    "solutionUrl": "/solutions/3800-3899/palindromic-path-queries-in-a-tree-hard/"
+  },
+  {
+    "date": "2026-10-30",
+    "questionId": "3970",
+    "title": "Shortest Path With At Most K Consecutive Identical Characters",
+    "slug": "shortest-path-with-at-most-k-consecutive-identical-characters",
+    "solutionUrl": "/solutions/3900-3999/shortest-path-with-at-most-k-consecutive-identical-characters-medium/"
+  },
+  {
+    "date": "2026-10-31",
+    "questionId": "3665",
+    "title": "Twisted Mirror Path Count",
+    "slug": "twisted-mirror-path-count",
+    "solutionUrl": "/solutions/3600-3699/twisted-mirror-path-count-medium/"
+  },
+  {
+    "date": "2026-11-01",
+    "questionId": "453",
+    "title": "Minimum Moves to Equal Array Elements",
+    "slug": "minimum-moves-to-equal-array-elements",
+    "solutionUrl": "/solutions/0400-0499/minimum-moves-to-equal-array-elements-medium/"
+  },
+  {
+    "date": "2026-11-02",
+    "questionId": "462",
+    "title": "Minimum Moves to Equal Array Elements II",
+    "slug": "minimum-moves-to-equal-array-elements-ii",
+    "solutionUrl": "/solutions/0400-0499/minimum-moves-to-equal-array-elements-ii-medium/"
+  },
+  {
+    "date": "2026-11-03",
+    "questionId": "3736",
+    "title": "Minimum Moves to Equal Array Elements III",
+    "slug": "minimum-moves-to-equal-array-elements-iii",
+    "solutionUrl": "/solutions/3700-3799/minimum-moves-to-equal-array-elements-iii-easy/"
+  },
+  {
+    "date": "2026-11-04",
+    "questionId": "3505",
+    "title": "Minimum Operations to Make Elements Within K Subarrays Equal",
+    "slug": "minimum-operations-to-make-elements-within-k-subarrays-equal",
+    "solutionUrl": "/solutions/3500-3599/minimum-operations-to-make-elements-within-k-subarrays-equal-hard/"
+  },
+  {
+    "date": "2026-11-05",
+    "questionId": "1385",
+    "title": "Find the Distance Value Between Two Arrays",
+    "slug": "find-the-distance-value-between-two-arrays",
+    "solutionUrl": "/solutions/1300-1399/find-the-distance-value-between-two-arrays-easy/"
+  },
+  {
+    "date": "2026-11-06",
+    "questionId": "2747",
+    "title": "Count Zero Request Servers",
+    "slug": "count-zero-request-servers",
+    "solutionUrl": "/solutions/2700-2799/count-zero-request-servers-medium/"
+  }
+]
