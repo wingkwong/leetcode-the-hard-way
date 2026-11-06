@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from 'react';
 
-const PAGE_SIZE = 25;
+import { PAGE_SIZE, ProblemPagination } from './problem-pagination';
 
 export type RatingEntry = {
   id: number;
@@ -151,31 +151,11 @@ export function RatingsTable({ ratings }: { ratings: RatingEntry[] }) {
         </tbody>
       </table>
 
-      <div className="ratings-pagination">
-        <button
-          className="ratings-pagination-button"
-          disabled={currentPage <= 1}
-          onClick={() => setPage((current) => Math.max(1, current - 1))}
-          type="button"
-        >
-          Previous
-        </button>
-
-        <span className="ratings-pagination-status">
-          Page {currentPage} of {totalPages}
-        </span>
-
-        <button
-          className="ratings-pagination-button"
-          disabled={currentPage >= totalPages}
-          onClick={() =>
-            setPage((current) => Math.min(totalPages, current + 1))
-          }
-          type="button"
-        >
-          Next
-        </button>
-      </div>
+      <ProblemPagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={setPage}
+      />
     </div>
   );
 }
