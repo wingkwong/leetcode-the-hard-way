@@ -28,10 +28,3 @@ export function getCurrentDailyProblem(
   }
   return problem as DailyProblem;
 }
-
-export function millisecondsUntilUtcMidnight(now = new Date()) {
-  return (
-    Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() + 1) -
-    now.getTime()
-  );
-}

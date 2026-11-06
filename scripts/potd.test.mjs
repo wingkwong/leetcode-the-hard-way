@@ -1,15 +1,16 @@
 import assert from 'node:assert/strict';
-import { mkdtemp, mkdir, rm, writeFile } from 'node:fs/promises';
+import { mkdtemp, mkdir, readFile, rm, writeFile } from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
 import { test } from 'node:test';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
+import { getCurrentDailyProblem } from '../lib/problem-of-the-day.ts';
 import {
-  getCurrentDailyProblem,
-  millisecondsUntilUtcMidnight,
-} from '../lib/problem-of-the-day.ts';
-import { fetchDailyProblem, findSolutionUrl } from './update-potd.mjs';
+  fetchDailyProblem,
+  findSolutionUrl,
+  updateYearlyArchives,
+} from './update-potd.mjs';
 
 const problem = {
   date: '2026-11-01',
@@ -20,24 +21,21 @@ const problem = {
     '/solutions/0400-0499/minimum-moves-to-equal-array-elements-medium/',
 };
 
-test('CLI refresh failures fail strict automation but preserve ordinary builds', () => {
+test('manual refresh exits with a failure when all fetch attempts fail', () => {
   const mockFetch = `data:text/javascript,${encodeURIComponent(
     'globalThis.fetch = async () => new Response("", { status: 503 });',
   )}`;
-  for (const strict of [false, true]) {
-    const result = spawnSync(
-      process.execPath,
-      [
-        '--import',
-        mockFetch,
-        fileURLToPath(new URL('./update-potd.mjs', import.meta.url)),
-        ...(strict ? ['--strict'] : []),
-      ],
-      { encoding: 'utf8' },
-    );
-    assert.equal(result.status, strict ? 1 : 0, result.stderr);
-    assert.match(result.stderr, /POTD refresh attempt 3 failed/);
-  }
+  const result = spawnSync(
+    process.execPath,
+    [
+      '--import',
+      mockFetch,
+      fileURLToPath(new URL('./update-potd.mjs', import.meta.url)),
+    ],
+    { encoding: 'utf8' },
+  );
+  assert.equal(result.status, 1, result.stderr);
+  assert.match(result.stderr, /POTD refresh attempt 3 failed/);
 });
 
 test('POTD is visible for exactly its UTC calendar day', () => {
@@ -52,7 +50,7 @@ test('POTD is visible for exactly its UTC calendar day', () => {
   }
 });
 
-test('date selection and rollover use UTC across time zones and month/year boundaries', () => {
+test('date selection uses UTC across time zones', () => {
   assert.equal(
     getCurrentDailyProblem(problem, new Date('2026-11-02T07:59:59+08:00')),
     problem,
@@ -60,14 +58,6 @@ test('date selection and rollover use UTC across time zones and month/year bound
   assert.equal(
     getCurrentDailyProblem(problem, new Date('2026-11-01T00:00:00+08:00')),
     null,
-  );
-  assert.equal(
-    millisecondsUntilUtcMidnight(new Date('2026-11-01T00:00:00Z')),
-    86_400_000,
-  );
-  assert.equal(
-    millisecondsUntilUtcMidnight(new Date('2026-12-31T23:59:59.999Z')),
-    1,
   );
 });
 
@@ -210,4 +200,113 @@ test('failed, malformed, and stale API responses are rejected', async () => {
       }),
     );
   }
+});
+
+async function archiveDirectory(t) {
+  const directory = await mkdtemp(path.join(os.tmpdir(), 'potd-years-'));
+  t.after(() => rm(directory, { recursive: true, force: true }));
+  return directory;
+}
+
+function monthlyFeed(dates) {
+  return Response.json({
+    data: {
+      dailyCodingChallengeV2: {
+        challenges: dates.map((date) => ({
+          date,
+          question: {
+            questionFrontendId: problem.questionId,
+            title: problem.title,
+            titleSlug: problem.slug,
+          },
+        })),
+      },
+    },
+  });
+}
+
+test('yearly archive backfills missed days, ignores future dates and updates repeat runs by date', async (t) => {
+  const dataDirectory = await archiveDirectory(t);
+  const file = path.join(dataDirectory, 'potd-2026.json');
+  const second = { ...problem, date: '2026-11-02' };
+  const current = { ...problem, date: '2026-11-03' };
+  await writeFile(file, JSON.stringify([problem]));
+  await updateYearlyArchives({
+    dataDirectory,
+    dailyProblem: current,
+    fetchImpl: async (url) => {
+      assert.match(url.searchParams.get('query'), /year: 2026, month: 11/);
+      return monthlyFeed(['2026-11-04', second.date]);
+    },
+  });
+  assert.deepEqual(JSON.parse(await readFile(file, 'utf8')), [
+    problem,
+    second,
+    current,
+  ]);
+  const corrected = { ...current, solutionUrl: null };
+  await updateYearlyArchives({
+    dataDirectory,
+    dailyProblem: corrected,
+    fetchImpl: assert.fail,
+  });
+  assert.deepEqual(JSON.parse(await readFile(file, 'utf8')), [
+    problem,
+    second,
+    corrected,
+  ]);
+});
+
+test('January refresh recovers a missed December day and creates the next yearly file', async (t) => {
+  const dataDirectory = await archiveDirectory(t);
+  const file = path.join(dataDirectory, 'potd-2026.json');
+  const entries = Array.from({ length: 60 }, (_, index) => ({
+    ...problem,
+    date: new Date(Date.UTC(2026, 10, index + 1)).toISOString().slice(0, 10),
+  }));
+  await writeFile(file, JSON.stringify(entries));
+  const dailyProblem = { ...problem, date: '2027-01-01' };
+  await assert.rejects(
+    updateYearlyArchives({
+      dataDirectory,
+      dailyProblem,
+      fetchImpl: async () => monthlyFeed([]),
+    }),
+    /Missing POTD: 2026-12-31/,
+  );
+  assert.deepEqual(JSON.parse(await readFile(file, 'utf8')), entries);
+  await updateYearlyArchives({
+    dataDirectory,
+    dailyProblem,
+    fetchImpl: async (url) => {
+      assert.match(url.searchParams.get('query'), /year: 2026, month: 12/);
+      return monthlyFeed(['2026-12-31']);
+    },
+  });
+  assert.deepEqual(JSON.parse(await readFile(file, 'utf8')), [
+    ...entries,
+    { ...problem, date: '2026-12-31' },
+  ]);
+  assert.deepEqual(
+    JSON.parse(
+      await readFile(path.join(dataDirectory, 'potd-2027.json'), 'utf8'),
+    ),
+    [dailyProblem],
+  );
+});
+
+test('an empty archive starts in the current problem’s UTC year on first run', async (t) => {
+  const dataDirectory = await archiveDirectory(t);
+  const dailyProblem = { ...problem, date: '2032-02-29' };
+  await updateYearlyArchives({
+    dataDirectory,
+    dailyProblem,
+    fetchImpl: assert.fail,
+  });
+  assert.deepEqual(
+    JSON.parse(
+      await readFile(path.join(dataDirectory, 'potd-2032.json'), 'utf8'),
+    ),
+    [dailyProblem],
+  );
 });
