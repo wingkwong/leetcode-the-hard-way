@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ChangeCompany } from '../../../components/company-directory';
 import { CompanyProblems } from '../../../components/company-problems';
+import { SponsorsTableOfContent } from '../../../components/sponsors-table-of-content';
 import { companyPages, companyDirectory } from '../../../data/companies';
 import { createPageMetadata } from '../../../lib/seo';
 
@@ -45,7 +46,10 @@ export default async function CompanyPage({ params }: Props) {
     page,
   } = getCompanyPage((await params).slug);
   return (
-    <DocsPage breadcrumb={{ enabled: false }}>
+    <DocsPage
+      breadcrumb={{ enabled: false }}
+      tableOfContent={{ component: <SponsorsTableOfContent /> }}
+    >
       <nav aria-label="Breadcrumb" className="company-breadcrumb">
         <Link href="/companies/">Companies</Link> / {name}
       </nav>
