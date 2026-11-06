@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next';
+import { companyDirectory } from '../data/companies';
 import {
   roadmapSource,
   solutionsSource,
@@ -44,7 +45,10 @@ const docsSections = [
 }[];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const paths = new Set<string>(['/', '/solutions/tags/']);
+  const paths = new Set<string>(['/', '/companies/', '/solutions/tags/']);
+  for (const { slug } of companyDirectory) {
+    paths.add(formatPagePathname(`/companies/${slug}`));
+  }
   for (const [tag] of getSolutionTagGroups()) {
     paths.add(getSolutionTagUrl(tag));
   }

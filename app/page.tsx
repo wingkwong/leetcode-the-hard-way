@@ -36,6 +36,11 @@ const introTree: Root = {
 
 const sections = [
   {
+    title: 'Problems (By Company)',
+    description: 'Browse company problem lists by difficulty and frequency.',
+    href: formatPagePathname('/companies'),
+  },
+  {
     title: 'Tutorials',
     description:
       'Learn data structures, algorithms, math, strings, graph theory, and other core topics.',

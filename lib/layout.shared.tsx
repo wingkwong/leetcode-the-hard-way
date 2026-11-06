@@ -8,6 +8,11 @@ export function baseOptions(): BaseLayoutProps {
     },
     links: [
       {
+        text: 'Problems (By Company)',
+        url: formatPagePathname('/companies'),
+        active: 'nested-url',
+      },
+      {
         text: 'Tutorials',
         url: formatPagePathname('/tutorials'),
         active: 'nested-url',
