@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @radojicic23 | https://leetcode.com/problems/jump-game-ii/'
+title: 'LeetCode 45 – Jump Game II'
+description: 'Find the fewest jumps to the last index by treating the positions reachable in each jump as one search level.'
 tags: [Array, Dynamic Programming, Greedy]
 ---
 

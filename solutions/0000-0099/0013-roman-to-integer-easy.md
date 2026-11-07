@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @jessicaribeiroalves, @radojicic23 | https://leetcode.com/problems/roman-to-integer/
+title: 'LeetCode 13 – Roman to Integer'
+description: 'Read Roman numerals from left to right and account for smaller symbols that precede larger ones.'
 ---
 
 # 0013 - Roman to Integer (Easy)

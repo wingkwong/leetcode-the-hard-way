@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @radojicic23 | https://leetcode.com/problems/arranging-coins/'
+title: 'LeetCode 441 – Arranging Coins'
+description: 'Find how many complete coin rows fit in a staircase using triangular numbers or binary search.'
 ---
 
 # 0441 - Arranging Coins (Easy)

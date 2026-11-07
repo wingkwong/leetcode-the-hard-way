@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @ganajayant, @radojicic23 | https://leetcode.com/problems/search-insert-position/'
+title: 'LeetCode 35 – Search Insert Position'
+description: 'Use binary search to find a target''s index or the position where it belongs in a sorted array.'
 ---
 
 # 0035 - Search Insert Position (Easy)

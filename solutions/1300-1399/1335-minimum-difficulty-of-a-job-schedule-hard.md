@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/minimum-difficulty-of-a-job-schedule/'
+title: 'LeetCode 1335 – Minimum Difficulty of a Job Schedule'
+description: 'Minimize the sum of daily job difficulties by choosing day boundaries while preserving the original job order.'
 tags: [Array, Dynamic Programming]
 rating: 2035
 ---

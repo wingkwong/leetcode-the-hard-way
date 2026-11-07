@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @hiverkiya | https://leetcode.com/problems/check-if-an-array-is-consecutive/
+title: 'LeetCode 2229 – Check if an Array is Consecutive'
+description: 'Determine whether the array forms a consecutive sequence by sorting it and comparing neighboring values.'
 
 tags: [Array]
 ---

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/reverse-vowels-of-a-string/'
+title: 'LeetCode 345 – Reverse Vowels of a String'
+description: 'Reverse only the vowels in a string by moving two pointers inward to find the next pair to swap.'
 tags: [Two Pointers, String]
 ---
 

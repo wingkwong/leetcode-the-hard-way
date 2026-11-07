@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/count-days-spent-together'
+title: 'LeetCode 2409 – Count Days Spent Together'
+description: 'Count days two people spend together by converting dates to day numbers and intersecting their inclusive intervals.'
 tags: ['Math']
 rating: 1562
 ---

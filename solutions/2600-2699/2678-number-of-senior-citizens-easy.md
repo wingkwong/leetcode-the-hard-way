@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/number-of-senior-citizens/'
+title: 'LeetCode 2678 – Number of Senior Citizens'
+description: 'Count passengers older than sixty by extracting the age digits from each fixed-format passenger record.'
 rating: 1199
 ---
 

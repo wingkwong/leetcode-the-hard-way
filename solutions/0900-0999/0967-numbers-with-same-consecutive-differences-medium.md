@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/numbers-with-same-consecutive-differences/'
+title: 'LeetCode 967 – Numbers With Same Consecutive Differences'
+description: 'Generate numbers whose neighboring digits differ by k by extending valid prefixes with breadth-first search.'
 tags: [Backtracking, Breadth-First Search]
 rating: 1433
 ---

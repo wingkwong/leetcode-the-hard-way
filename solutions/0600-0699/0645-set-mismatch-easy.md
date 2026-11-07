@@ -1,5 +1,6 @@
 ---
-description: 'Author: @heder | https://leetcode.com/problems/set-mismatch/'
+title: 'LeetCode 645 – Set Mismatch'
+description: 'Identify the duplicated and missing values in a sequence using counts, sorting, arithmetic, or XOR.'
 tags: [Array, Hash Table, Bit Manipulation, Sorting]
 ---
 

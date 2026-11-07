@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/check-if-strings-can-be-made-equal-with-operations-ii/'
+title: 'LeetCode 2840 – Check if Strings Can be Made Equal With Operations II'
+description: 'Decide whether two strings can match after distance-two swaps by comparing sorted characters at even and odd positions.'
 rating: 1486
 ---
 

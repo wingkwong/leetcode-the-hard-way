@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/all-elements-in-two-binary-search-trees/
+title: 'LeetCode 1305 – All Elements in Two Binary Search Trees'
+description: 'Combine the values from two binary search trees by sorting their traversals or merging their inorder sequences.'
 rating: 1260
 ---
 

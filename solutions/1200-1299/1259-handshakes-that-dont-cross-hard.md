@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/handshakes-that-dont-cross/'
+title: 'LeetCode 1259 – Handshakes That Don''t Cross'
+description: 'Count noncrossing handshakes by pairing one person and combining independent arrangements on either side.'
 rating: 1951
 ---
 

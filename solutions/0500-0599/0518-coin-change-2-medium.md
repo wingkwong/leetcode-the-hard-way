@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw, @ColeB2, @radojicic23 | https://leetcode.com/problems/coin-change-2
+title: 'LeetCode 518 – Coin Change 2'
+description: 'Count ways to make an amount with unlimited coins by processing denominations one at a time in dynamic programming.'
 
 tags: [Array, Dynamic Programming]
 ---

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @heiheihang, @wkw | https://leetcode.com/problems/next-greater-element-i/'
+title: 'LeetCode 496 – Next Greater Element I'
+description: 'Find each queried number''s next greater value by resolving pending elements with a stack and storing their answers.'
 ---
 
 # 0496 - Next Greater Element I (Easy)

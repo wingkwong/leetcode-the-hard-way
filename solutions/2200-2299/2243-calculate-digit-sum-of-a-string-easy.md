@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/calculate-digit-sum-of-a-string/
+title: 'LeetCode 2243 – Calculate Digit Sum of a String'
+description: 'Reduce a digit string by splitting it into groups and replacing each group with its digit sum until it is short enough.'
 rating: 1302
 ---
 

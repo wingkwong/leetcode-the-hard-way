@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/subarray-sums-divisible-by-k/'
+title: 'LeetCode 974 – Subarray Sums Divisible by K'
+description: 'Count subarrays divisible by k by grouping prefix sums that share a remainder.'
 tags: [Array, Hash Table, Prefix Sum]
 rating: 1676
 ---

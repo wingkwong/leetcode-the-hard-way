@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/count-special-integers/'
+title: 'LeetCode 2376 – Count Special Integers'
+description: 'Count positive integers with distinct digits up to a limit using digit dynamic programming and a mask of used digits.'
 tags: [Math, Dynamic Programming]
 rating: 2120
 ---

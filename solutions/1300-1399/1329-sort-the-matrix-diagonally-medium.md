@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/sort-the-matrix-diagonally/'
+title: 'LeetCode 1329 – Sort the Matrix Diagonally'
+description: 'Sort each top-left to bottom-right matrix diagonal by grouping its values and writing them back in order.'
 tags: [Array, Sorting, Matrix]
 rating: 1548
 ---

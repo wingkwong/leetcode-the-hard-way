@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @iraycd | https://leetcode.com/problems/bag-of-tokens/'
+title: 'LeetCode 948 – Bag of Tokens'
+description: 'Maximize token score by spending power on cheaper tokens and trading expensive tokens for power when needed.'
 tags: [Array, Two Pointers, Greedy, Sorting]
 rating: 1762
 ---

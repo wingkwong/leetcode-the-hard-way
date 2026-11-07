@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/grid-game/'
+title: 'LeetCode 2017 – Grid Game'
+description: 'Minimize the second robot''s attainable score by comparing the top and bottom row sums left by the first robot.'
 rating: 1719
 ---
 

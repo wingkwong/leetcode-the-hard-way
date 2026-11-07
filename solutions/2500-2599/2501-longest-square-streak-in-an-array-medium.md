@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/longest-square-streak-in-an-array/'
+title: 'LeetCode 2501 – Longest Square Streak in an Array'
+description: 'Find the longest square streak by following chains in which each next value is the square of the previous one.'
 tags: [Array, Hash Table, Binary Search, Dynamic Programming, Sorting]
 rating: 1480
 ---

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/coin-change/'
+title: 'LeetCode 322 – Coin Change'
+description: 'Find the fewest coins needed for an amount by combining optimal solutions for smaller amounts.'
 tags: [Array, Dynamic Programming, Breadth-First Search]
 ---
 

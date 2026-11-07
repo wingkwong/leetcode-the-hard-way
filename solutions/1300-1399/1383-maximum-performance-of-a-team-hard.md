@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/maximum-performance-of-a-team/'
+title: 'LeetCode 1383 – Maximum Performance of a Team'
+description: 'Maximize team performance by processing efficiency thresholds and using a heap to select speeds.'
 tags: [Array, Greedy, Sorting, Heap (Priority Queue)]
 rating: 2091
 ---

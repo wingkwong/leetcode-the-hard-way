@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/number-of-excellent-pairs/
+title: 'LeetCode 2354 – Number of Excellent Pairs'
+description: 'Count excellent ordered pairs by using set-bit counts to test the combined contribution of bitwise AND and OR.'
 rating: 2076
 ---
 

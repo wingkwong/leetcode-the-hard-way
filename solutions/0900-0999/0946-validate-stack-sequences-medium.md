@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/validate-stack-sequences/'
+title: 'LeetCode 946 – Validate Stack Sequences'
+description: 'Test whether a pop sequence is possible by simulating stack pushes and matching each available pop.'
 rating: 1462
 ---
 

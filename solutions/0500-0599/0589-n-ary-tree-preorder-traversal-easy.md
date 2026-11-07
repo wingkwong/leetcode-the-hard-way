@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw, @radojicic23 | https://leetcode.com/problems/n-ary-tree-preorder-traversal/
+title: 'LeetCode 589 – N-ary Tree Preorder Traversal'
+description: 'Produce the preorder traversal of an N-ary tree by visiting each node before its children from left to right.'
 ---
 
 # 0589 - N-ary Tree Preorder Traversal (Easy)

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/clone-graph/'
+title: 'LeetCode 133 – Clone Graph'
+description: 'Clone a graph by mapping each visited node to its copy and recreating neighbor links during traversal.'
 tags: [Hash Table, Depth-First Search, Breadth-First Search, Graph]
 ---
 

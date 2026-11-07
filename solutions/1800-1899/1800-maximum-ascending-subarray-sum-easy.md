@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/maximum-ascending-subarray-sum/
+title: 'LeetCode 1800 – Maximum Ascending Subarray Sum'
+description: 'Find the largest sum of a strictly ascending subarray by extending or restarting the running sum at each element.'
 rating: 1229
 ---
 

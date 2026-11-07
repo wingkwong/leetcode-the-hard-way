@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/maximum-subarray/'
+title: 'LeetCode 53 – Maximum Subarray'
+description: 'Find the maximum subarray sum with Kadane''s algorithm by deciding at each value whether to extend the current run or start again.'
 tags: [Array, Divide and Conquer, Dynamic Programming]
 ---
 

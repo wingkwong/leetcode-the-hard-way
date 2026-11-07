@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/count-good-nodes-in-binary-tree/'
+title: 'LeetCode 1448 – Count Good Nodes in Binary Tree'
+description: 'Count tree nodes whose value equals or exceeds every earlier value on their root-to-node path.'
 tags: [Tree, Depth-First Search, Breadth-First Search, Binary Tree]
 rating: 1360
 ---

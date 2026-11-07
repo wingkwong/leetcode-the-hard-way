@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/jump-game/'
+title: 'LeetCode 55 – Jump Game'
+description: 'Decide whether the last array index is reachable by tracking the farthest position each jump can reach.'
 tags: [Array, Dynamic Programming, Greedy]
 ---
 

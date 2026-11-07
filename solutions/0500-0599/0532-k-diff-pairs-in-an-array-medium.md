@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/k-diff-pairs-in-an-array/'
+title: 'LeetCode 532 – K-diff Pairs in an Array'
+description: 'Count distinct pairs with a given difference using a frequency map that also handles a difference of zero.'
 ---
 
 # 0532 - K-diff Pairs in an Array (Medium)

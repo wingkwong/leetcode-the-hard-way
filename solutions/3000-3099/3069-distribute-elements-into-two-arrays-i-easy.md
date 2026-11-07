@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/distribute-elements-into-two-arrays-i'
+title: 'LeetCode 3069 – Distribute Elements Into Two Arrays I'
+description: 'Distribute values between two arrays by comparing their most recently appended elements at each step.'
 tags: [Array, Simulation]
 rating: 1204
 ---

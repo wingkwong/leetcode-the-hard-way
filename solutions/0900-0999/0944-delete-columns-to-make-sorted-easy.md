@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/delete-columns-to-make-sorted/'
+title: 'LeetCode 944 – Delete Columns to Make Sorted'
+description: 'Count the matrix columns that violate alphabetical order by comparing adjacent characters down each column.'
 tags: [Array, String]
 rating: 1396
 ---

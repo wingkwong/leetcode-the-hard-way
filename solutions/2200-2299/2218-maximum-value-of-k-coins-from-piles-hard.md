@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/maximum-value-of-k-coins-from-piles/
+title: 'LeetCode 2218 – Maximum Value of K Coins From Piles'
+description: 'Maximize the value of exactly k coins by comparing how many top coins to take from each pile with dynamic programming.'
 
 tags: [Array, Dynamic Programming, Prefix Sum]
 rating: 2158

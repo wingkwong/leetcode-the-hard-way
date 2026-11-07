@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/'
+title: 'LeetCode 309 – Best Time to Buy and Sell Stock with Cooldown'
+description: 'Maximize stock profit by tracking buy and sell decisions across days with a required cooldown after selling.'
 tags: [Array, Dynamic Programming]
 ---
 

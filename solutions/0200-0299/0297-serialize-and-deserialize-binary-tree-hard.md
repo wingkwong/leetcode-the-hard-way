@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/serialize-and-deserialize-binary-tree/'
+title: 'LeetCode 297 – Serialize and Deserialize Binary Tree'
+description: 'Serialize and reconstruct a binary tree in breadth-first order while retaining the positions of missing children.'
 tags:
   [String, Tree, Depth-First Search, Breadth-First Search, Design, Binary Tree]
 ---

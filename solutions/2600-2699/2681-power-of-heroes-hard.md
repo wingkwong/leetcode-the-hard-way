@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/power-of-heroes/'
+title: 'LeetCode 2681 – Power of Heroes'
+description: 'Sum the power of all hero groups by sorting strengths and aggregating the contributions of subset minima and maxima.'
 tags: [Array, Math, Sorting, Prefix Sum]
 rating: 2060
 ---

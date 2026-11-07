@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/equal-row-and-column-pairs
+title: 'LeetCode 2352 – Equal Row and Column Pairs'
+description: 'Count equal row-column pairs in a square grid by mapping complete sequences to their occurrence counts.'
 
 tags: ['Hash Map']
 rating: 1286

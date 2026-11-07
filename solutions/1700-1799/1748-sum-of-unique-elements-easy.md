@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/sum-of-unique-elements/
+title: 'LeetCode 1748 – Sum of Unique Elements'
+description: 'Sum the values that occur exactly once in an array by first counting their frequencies.'
 
 tags: ['Hash Map']
 rating: 1228

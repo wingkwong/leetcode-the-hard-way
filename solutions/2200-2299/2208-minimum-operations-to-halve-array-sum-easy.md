@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @heiheihang, @wkw | https://leetcode.com/problems/minimum-operations-to-halve-array-sum/
+title: 'LeetCode 2208 – Minimum Operations to Halve Array Sum'
+description: 'Minimize operations to halve the array sum by repeatedly taking the largest current value from a heap and halving it.'
 rating: 1550
 ---
 

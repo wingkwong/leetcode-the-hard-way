@@ -1,5 +1,6 @@
 ---
-description: 'Author: @dhanu084 | https://leetcode.com/problems/bulls-and-cows/'
+title: 'LeetCode 299 – Bulls and Cows'
+description: 'Count bulls from exact digit matches and cows from the frequencies of the remaining unmatched digits.'
 tags: [Hashmap]
 ---
 

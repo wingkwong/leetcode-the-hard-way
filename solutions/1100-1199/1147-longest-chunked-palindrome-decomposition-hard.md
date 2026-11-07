@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/longest-chunked-palindrome-decomposition/
+title: 'LeetCode 1147 – Longest Chunked Palindrome Decomposition'
+description: 'Maximize the number of mirrored chunks by greedily matching the shortest equal prefix and suffix.'
 rating: 1912
 ---
 

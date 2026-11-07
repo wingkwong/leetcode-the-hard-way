@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/optimal-partition-of-string/'
+title: 'LeetCode 2405 – Optimal Partition of String'
+description: 'Minimize partitions into substrings with distinct letters by starting a new part when a character would repeat.'
 rating: 1355
 ---
 

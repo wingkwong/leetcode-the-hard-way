@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw, @dhanu084 | https://leetcode.com/problems/minimum-consecutive-cards-to-pick-up/
+title: 'LeetCode 2260 – Minimum Consecutive Cards to Pick Up'
+description: 'Find the shortest consecutive block of cards containing a duplicate by tracking the last position of each value.'
 rating: 1365
 ---
 

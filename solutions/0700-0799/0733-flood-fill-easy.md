@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/flood-fill/'
+title: 'LeetCode 733 – Flood Fill'
+description: 'Recolor the connected region matching a starting pixel with depth-first or breadth-first flood fill.'
 ---
 
 # 0733 - Flood Fill (Easy)

@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw, @ganajayant | https://leetcode.com/problems/partition-array-according-to-given-pivot/
+title: 'LeetCode 2161 – Partition Array According to Given Pivot'
+description: 'Partition an array into values below, equal to, and above a pivot while preserving order within the groups.'
 rating: 1338
 ---
 

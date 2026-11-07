@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @darkhope | https://leetcode.com/problems/make-sum-divisible-by-p/
+title: 'LeetCode 1590 – Make Sum Divisible by P'
+description: 'Find the shortest removable subarray that makes the remaining sum divisible by p using prefix remainders and a hash map.'
 
 tags: [Array, Hash Table, Prefix Sum]
 rating: 2039

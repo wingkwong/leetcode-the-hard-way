@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/combinations/'
+title: 'LeetCode 77 – Combinations'
+description: 'Generate all k-element combinations from 1 through n by backtracking through increasing choices.'
 tags: [Backtracking]
 ---
 

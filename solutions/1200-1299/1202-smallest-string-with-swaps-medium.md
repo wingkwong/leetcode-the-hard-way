@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/smallest-string-with-swaps'
+title: 'LeetCode 1202 – Smallest String With Swaps'
+description: 'Find the smallest string reachable through swaps by grouping connected indices and reordering their available characters.'
 rating: 1855
 ---
 

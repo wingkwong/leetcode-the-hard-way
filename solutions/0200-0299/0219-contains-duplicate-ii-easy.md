@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/contains-duplicate-ii/'
+title: 'LeetCode 219 – Contains Duplicate II'
+description: 'Find equal values whose indices differ by at most k by maintaining a sliding window of recent elements.'
 tags: ['Sliding Window']
 ---
 

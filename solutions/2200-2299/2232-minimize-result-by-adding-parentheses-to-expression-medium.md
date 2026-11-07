@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @1SundayMorning | https://leetcode.com/problems/minimize-result-by-adding-parentheses-to-expression/
+title: 'LeetCode 2232 – Minimize Result by Adding Parentheses to Expression'
+description: 'Minimize an addition expression''s value by trying every valid placement of a pair of parentheses around the plus sign.'
 rating: 1612
 ---
 

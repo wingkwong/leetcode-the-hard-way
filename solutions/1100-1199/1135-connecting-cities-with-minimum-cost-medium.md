@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/connecting-cities-with-minimum-cost/
+title: 'LeetCode 1135 – Connecting Cities With Minimum Cost'
+description: 'Connect all cities at minimum cost by sorting roads by cost and building a minimum spanning tree with Kruskal''s algorithm.'
 rating: 1753
 ---
 

@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @saloni33 | https://leetcode.com/problems/count-subarrays-with-score-less-than-k/
+title: 'LeetCode 2302 – Count Subarrays With Score Less Than K'
+description: 'Count subarrays whose sum times length stays below k by maintaining a sliding window with a running sum.'
 rating: 1808
 ---
 

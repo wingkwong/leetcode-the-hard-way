@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/number-of-ways-to-rearrange-sticks-with-k-sticks-visible/
+title: 'LeetCode 1866 – Number of Ways to Rearrange Sticks With K Sticks Visible'
+description: 'Count stick arrangements with exactly k visible sticks by considering where to insert the shortest stick.'
 rating: 2333
 ---
 

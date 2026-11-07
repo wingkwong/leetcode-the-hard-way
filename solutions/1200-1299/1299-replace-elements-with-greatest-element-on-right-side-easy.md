@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side/'
+title: 'LeetCode 1299 – Replace Elements with Greatest Element on Right Side'
+description: 'Replace each element with the greatest value to its right by scanning backward and maintaining a running maximum.'
 tags: [Array]
 rating: 1219
 ---

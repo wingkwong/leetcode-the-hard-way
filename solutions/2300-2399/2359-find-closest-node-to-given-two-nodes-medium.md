@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/find-closest-node-to-given-two-nodes
+title: 'LeetCode 2359 – Find Closest Node to Given Two Nodes'
+description: 'Find the common reachable node that minimizes the larger distance from two starts by comparing their distances to each node.'
 rating: 1715
 ---
 

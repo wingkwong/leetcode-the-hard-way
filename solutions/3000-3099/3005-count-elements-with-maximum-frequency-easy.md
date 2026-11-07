@@ -1,5 +1,6 @@
 ---
-description: 'Author: @heder | https://leetcode.com/problems/count-elements-with-maximum-frequency/'
+title: 'LeetCode 3005 – Count Elements With Maximum Frequency'
+description: 'Count the elements belonging to values tied for the highest frequency by building and comparing occurrence counts.'
 tags: [Array, Hash Table, Counting]
 rating: 1217
 ---

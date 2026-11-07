@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/number-of-subarrays-that-match-a-pattern-i/'
+title: 'LeetCode 3034 – Number of Subarrays That Match a Pattern I'
+description: 'Count subarrays matching a comparison pattern by testing the direction of change between neighboring values.'
 rating: 1384
 ---
 

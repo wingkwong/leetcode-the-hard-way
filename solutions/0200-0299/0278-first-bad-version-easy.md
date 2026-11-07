@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @radojicic23 | https://leetcode.com/problems/first-bad-version/'
+title: 'LeetCode 278 – First Bad Version'
+description: 'Locate the earliest bad version with binary search over the transition from good to bad releases.'
 ---
 
 # 0278 - First Bad Version (Easy)

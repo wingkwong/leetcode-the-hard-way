@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @radojicic23 | https://leetcode.com/problems/permutations/'
+title: 'LeetCode 46 – Permutations'
+description: 'Generate all permutations of distinct values by choosing an unused value for each position and backtracking.'
 ---
 
 # 0046 - Permutations (Medium)

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @jit | https://leetcode.com/problems/largest-local-values-in-a-matrix/'
+title: 'LeetCode 2373 – Largest Local Values in a Matrix'
+description: 'Build a matrix of local maxima by checking each three-by-three window in the original grid.'
 tags: [Array, Matrix]
 rating: 1331
 ---

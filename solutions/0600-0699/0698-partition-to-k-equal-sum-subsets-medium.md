@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/partition-to-k-equal-sum-subsets/'
+title: 'LeetCode 698 – Partition to K Equal Sum Subsets'
+description: 'Decide whether the array can be split into k equal-sum subsets by tracking valid partial partitions with dynamic programming.'
 tags:
   [
     Array,

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/walls-and-gates/'
+title: 'LeetCode 286 – Walls and Gates'
+description: 'Fill each empty room with its distance to the nearest gate by starting breadth-first search from every gate at once.'
 tags: [Array, Breadth-First Search, Matrix]
 ---
 

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/is-graph-bipartite'
+title: 'LeetCode 785 – Is Graph Bipartite?'
+description: 'Test whether a graph is bipartite by assigning alternating colors during traversal and checking neighboring vertices.'
 rating: 1625
 ---
 

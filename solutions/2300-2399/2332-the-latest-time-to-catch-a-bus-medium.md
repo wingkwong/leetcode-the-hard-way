@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @TBC | https://leetcode.com/problems/the-latest-time-to-catch-a-bus
+title: 'LeetCode 2332 – The Latest Time to Catch a Bus'
+description: 'Find the latest arrival time that secures a bus seat given bus capacities, passenger arrivals, and occupied arrival times.'
 
 draft: true
 rating: 1841

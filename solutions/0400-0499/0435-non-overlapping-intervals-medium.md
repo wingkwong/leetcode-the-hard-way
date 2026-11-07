@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/non-overlapping-intervals/'
+title: 'LeetCode 435 – Non-overlapping Intervals'
+description: 'Minimize interval removals by greedily keeping compatible intervals with room for subsequent choices.'
 tags: [Array, Dynamic Programming, Greedy, Sorting]
 ---
 

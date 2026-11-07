@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @TBC | https://leetcode.com/problems/design-a-food-rating-system
+title: 'LeetCode 2353 – Design a Food Rating System'
+description: 'Design a food rating system that updates scores and returns the highest-rated food for a cuisine, breaking ties by name.'
 
 draft: true
 rating: 1782

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @jit, @martin0327, @heder | https://leetcode.com/problems/arithmetic-subarrays/'
+title: 'LeetCode 1630 – Arithmetic Subarrays'
+description: 'Answer subarray queries asking whether the selected values can be rearranged into an arithmetic progression.'
 tags: [Array, Sorting]
 rating: 1422
 ---

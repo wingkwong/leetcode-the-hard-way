@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/car-fleet/'
+title: 'LeetCode 853 – Car Fleet'
+description: 'Count car fleets by processing cars in road order and comparing the times they need to reach the destination.'
 tags: [Array, Stack, Sorting, Monotonic Stack]
 rating: 1678
 ---

@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/largest-combination-with-bitwise-and-greater-than-zero
+title: 'LeetCode 2275 – Largest Combination With Bitwise AND Greater Than Zero'
+description: 'Find the largest subset with positive bitwise AND by counting how many candidates share each set bit.'
 rating: 1642
 ---
 

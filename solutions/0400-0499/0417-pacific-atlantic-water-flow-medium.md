@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @radojicic23, @ColeB2 | https://leetcode.com/problems/pacific-atlantic-water-flow/'
+title: 'LeetCode 417 – Pacific Atlantic Water Flow'
+description: 'Find cells that drain into both oceans by searching inland from each coast and taking the intersection.'
 tags: [Array, Depth-First Search, Breadth-First Search, Matrix]
 ---
 

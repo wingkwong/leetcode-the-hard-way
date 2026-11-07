@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @ColeB2, @radojicic23 | https://leetcode.com/problems/binary-search/'
+title: 'LeetCode 704 – Binary Search'
+description: 'Find a target in a sorted array by repeatedly halving the candidate range and comparing its midpoint.'
 ---
 
 # 0704 - Binary Search (Easy)

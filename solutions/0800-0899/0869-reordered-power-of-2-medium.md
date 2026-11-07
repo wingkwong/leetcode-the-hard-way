@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/reordered-power-of-2/'
+title: 'LeetCode 869 – Reordered Power of 2'
+description: 'Check whether an integer''s digits can be rearranged into a power of two by comparing sorted digit sequences.'
 tags: [Math, Sorting, Counting, Enumeration]
 rating: 1505
 ---

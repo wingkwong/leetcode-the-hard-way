@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/maximum-k-to-sort-a-permutation'
+title: 'LeetCode 3644 – Maximum K to Sort a Permutation'
+description: 'Find the largest bitwise AND value that permits sorting a permutation by combining the bits shared by all misplaced values.'
 tags: ['Bit Manipulation']
 rating: 1775
 ---

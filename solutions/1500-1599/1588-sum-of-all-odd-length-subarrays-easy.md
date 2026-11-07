@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @luiz290788, @wkw |  https://leetcode.com/problems/sum-of-all-odd-length-subarrays/
+title: 'LeetCode 1588 – Sum of All Odd Length Subarrays'
+description: 'Sum all odd-length subarrays by enumerating them or counting how often each element contributes to the total.'
 rating: 1409
 ---
 

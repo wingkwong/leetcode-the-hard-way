@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/minimum-fuel-cost-to-report-to-the-capital/'
+title: 'LeetCode 2477 – Minimum Fuel Cost to Report to the Capital'
+description: 'Minimize fuel for travel to the capital by combining subtree passenger counts and rounding up the cars needed on each edge.'
 tags: [Tree, Depth-First Search, Breadth-First Search, Graph]
 rating: 2012
 ---

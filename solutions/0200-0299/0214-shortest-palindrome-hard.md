@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/shortest-palindrome/'
+title: 'LeetCode 214 – Shortest Palindrome'
+description: 'Find the shortest palindrome obtainable by prepending characters using the Z algorithm to locate a palindromic prefix.'
 ---
 
 # 0214 - Shortest Palindrome (Hard)

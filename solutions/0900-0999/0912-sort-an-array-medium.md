@@ -1,5 +1,6 @@
 ---
-description: 'Author: @saishreekouda, @wkw, @ganajayant, @deepanshu-rawat6| https://leetcode.com/problems/sort-an-array/'
+title: 'LeetCode 912 – Sort an Array'
+description: 'Compare sorting methods for an integer array, including quicksort, merge sort, counting sort, and Shell sort.'
 tags: ['sorting']
 ---
 

@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/subarrays-with-k-different-integers/
+title: 'LeetCode 992 – Subarrays with K Different Integers'
+description: 'Count subarrays containing exactly k distinct integers by tracking distinct values in sliding windows.'
 
 tags: [Array, Hash Table, Sliding Window, Counting]
 rating: 2210

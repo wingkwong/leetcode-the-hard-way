@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/maximum-population-year/'
+title: 'LeetCode 1854 – Maximum Population Year'
+description: 'Find the earliest year with the largest population by sweeping changes at birth and death years.'
 rating: 1370
 ---
 

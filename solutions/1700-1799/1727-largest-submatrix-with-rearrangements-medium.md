@@ -1,5 +1,6 @@
 ---
-description: 'Author: @jit | https://leetcode.com/problems/largest-submatrix-with-rearrangements/'
+title: 'LeetCode 1727 – Largest Submatrix With Rearrangements'
+description: 'Find the largest all-ones submatrix after column rearrangements by sorting consecutive column heights within each row.'
 tags: [Array, Greedy, Sorting, Matrix]
 rating: 1927
 ---

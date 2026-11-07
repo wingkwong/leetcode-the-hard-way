@@ -1,5 +1,6 @@
 ---
-description: 'Author: @dhanu084 | https://leetcode.com/problems/remove-nodes-from-linked-list/'
+title: 'LeetCode 2487 – Remove Nodes From Linked List'
+description: 'Remove linked-list nodes with a greater value to their right by tracking candidates with a stack.'
 tags: [Linked List, Stack]
 rating: 1455
 ---

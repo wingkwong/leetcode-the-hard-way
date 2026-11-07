@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/find-all-anagrams-in-a-string/
+title: 'LeetCode 438 – Find All Anagrams in a String'
+description: 'Find all starting positions of anagrams by comparing letter counts in a fixed-length sliding window.'
 
 tags: [Hash Table, String, Sliding Window]
 ---

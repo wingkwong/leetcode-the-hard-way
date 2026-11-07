@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/maximum-consecutive-floors-without-special-floors
+title: 'LeetCode 2274 – Maximum Consecutive Floors Without Special Floors'
+description: 'Find the longest stretch without a special floor by sorting the special floors and measuring the gaps between boundaries.'
 rating: 1333
 ---
 

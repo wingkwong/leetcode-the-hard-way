@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/count-islands-with-total-value-divisible-by-k'
+title: 'LeetCode 3619 – Count Islands With Total Value Divisible by K'
+description: 'Count islands whose cell values sum to a multiple of k by accumulating component totals with iterative depth-first search.'
 tags: ['Array', 'Depth-First Search', 'Breadth-First Search', 'Union-Find', 'Matrix']
 rating: 1461
 ---

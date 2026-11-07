@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/find-nearest-point-that-has-the-same-x-or-y-coordinate/'
+title: 'LeetCode 1779 – Find Nearest Point That Has the Same X or Y Coordinate'
+description: 'Find the nearest point sharing an x or y coordinate using Manhattan distance and the earliest index as a tiebreaker.'
 tags: [Array]
 rating: 1260
 ---

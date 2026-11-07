@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/smallest-string-with-a-given-numeric-value/
+title: 'LeetCode 1633 – Smallest String With A Given Numeric Value'
+description: 'Construct the lexicographically smallest string with a given value by assigning extra letter weight toward its right end.'
 ---
 
 # 1633 - Smallest String With A Given Numeric Value (Medium)

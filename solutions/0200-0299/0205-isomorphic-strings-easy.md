@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/isomorphic-strings/'
+title: 'LeetCode 205 – Isomorphic Strings'
+description: 'Test whether one string can map to another with a consistent one-to-one correspondence between their characters.'
 tags: [Hash Table, String]
 ---
 

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/reconstruct-itinerary/'
+title: 'LeetCode 332 – Reconstruct Itinerary'
+description: 'Reconstruct an itinerary using each ticket once by finding an Eulerian path and respecting lexical order.'
 tags: [Depth-First Search, Graph, Eulerian Circuit]
 ---
 

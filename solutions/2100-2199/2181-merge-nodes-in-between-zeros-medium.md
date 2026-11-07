@@ -1,5 +1,6 @@
 ---
-description: 'Author: @TBC | https://leetcode.com/problems/merge-nodes-in-between-zeros/'
+title: 'LeetCode 2181 – Merge Nodes in Between Zeros'
+description: 'Combine the values between successive zeroes in a linked list into one node per group.'
 draft: 'true'
 rating: 1333
 ---

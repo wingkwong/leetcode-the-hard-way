@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2, @radojicic23 | https://leetcode.com/problems/reorder-list/'
+title: 'LeetCode 143 – Reorder List'
+description: 'Reorder a linked list by finding its middle, reversing the second half, and alternating nodes from the two halves.'
 tags: [Linked List, Two Pointers, Stack, Recursion]
 ---
 

@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @jessicaribeiroalves | https://leetcode.com/problems/determine-if-two-strings-are-close/
+title: 'LeetCode 1657 – Determine if Two Strings Are Close'
+description: 'Test whether two strings are close by comparing the letters they contain and the multiset of their character frequencies.'
 
 tags: [Hash Table, String, Sorting, Counting]
 rating: 1530

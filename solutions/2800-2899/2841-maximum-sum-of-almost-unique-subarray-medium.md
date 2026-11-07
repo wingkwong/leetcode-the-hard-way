@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/maximum-sum-of-almost-unique-subarray/'
+title: 'LeetCode 2841 – Maximum Sum of Almost Unique Subarray'
+description: 'Maximize the sum of a fixed-length subarray with enough distinct values by tracking frequencies in a sliding window.'
 rating: 1546
 ---
 

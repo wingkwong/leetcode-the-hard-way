@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/average-of-levels-in-binary-tree/'
+title: 'LeetCode 637 – Average of Levels in Binary Tree'
+description: 'Compute the average node value at each level of a binary tree by processing levels with breadth-first search.'
 tags: [Tree, Depth-First Search, Breadth-First Search, Binary Tree]
 ---
 

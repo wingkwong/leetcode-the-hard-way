@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/number-of-ways-to-divide-a-long-corridor/
+title: 'LeetCode 2147 – Number of Ways to Divide a Long Corridor'
+description: 'Count corridor partitions with exactly two seats per section by multiplying the available divider choices between seat pairs.'
 rating: 1915
 ---
 

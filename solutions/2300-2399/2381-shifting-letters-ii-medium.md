@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/shifting-letters-ii/'
+title: 'LeetCode 2381 – Shifting Letters II'
+description: 'Apply overlapping letter shifts by sweeping range updates and accumulating their net effect at each character.'
 rating: 1793
 ---
 

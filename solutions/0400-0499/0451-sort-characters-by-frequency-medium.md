@@ -1,5 +1,6 @@
 ---
-description: 'Author: @heder, @jit, @jaffar | https://leetcode.com/problems/sort-characters-by-frequency/'
+title: 'LeetCode 451 – Sort Characters By Frequency'
+description: 'Sort characters by occurrence count and rebuild the string with the most frequent characters first.'
 tags:
   [Hash Table, String, Sorting, Heap (Priority Queue), Bucket Sort, Counting]
 ---

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/make-number-of-distinct-characters-equal/'
+title: 'LeetCode 2531 – Make Number of Distinct Characters Equal'
+description: 'Decide whether swapping one letter between two words can equalize their distinct-letter counts by tracking character frequencies.'
 rating: 1776
 ---
 

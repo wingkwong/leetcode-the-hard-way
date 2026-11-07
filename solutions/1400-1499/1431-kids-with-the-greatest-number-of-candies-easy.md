@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @heiheihang | https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/
+title: 'LeetCode 1431 – Kids With the Greatest Number of Candies'
+description: 'Determine which children can have the most candies after receiving the extra candies by comparing against the current maximum.'
 rating: 1176
 ---
 

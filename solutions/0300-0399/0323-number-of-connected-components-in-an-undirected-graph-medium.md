@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/'
+title: 'LeetCode 323 – Number of Connected Components in an Undirected Graph'
+description: 'Count connected components in an undirected graph by merging the endpoints of each edge with disjoint sets.'
 tags: [Depth-First Search, Breadth-First Search, Union Find, Graph]
 ---
 

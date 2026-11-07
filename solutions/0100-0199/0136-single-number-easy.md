@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/single-number/'
+title: 'LeetCode 136 – Single Number'
+description: 'Find the only unpaired number by XORing the array values so that equal pairs cancel out.'
 ---
 
 # 0136 - Single Number (Easy)

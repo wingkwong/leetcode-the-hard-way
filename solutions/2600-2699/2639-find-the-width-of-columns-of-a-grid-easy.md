@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/find-the-width-of-columns-of-a-grid/'
+title: 'LeetCode 2639 – Find the Width of Columns of a Grid'
+description: 'Find each grid column''s required width by measuring its longest printed integer, including the sign for negative values.'
 rating: 1283
 ---
 

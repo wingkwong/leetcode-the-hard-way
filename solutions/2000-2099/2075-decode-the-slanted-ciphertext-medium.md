@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/decode-the-slanted-ciphertext
+title: 'LeetCode 2075 – Decode the Slanted Ciphertext'
+description: 'Decode slanted ciphertext by reconstructing its row layout and reading diagonal characters in order.'
 rating: 1759
 ---
 

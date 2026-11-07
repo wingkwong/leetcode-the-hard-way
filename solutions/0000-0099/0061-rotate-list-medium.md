@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @radojicic23 | https://leetcode.com/problems/rotate-list/'
+title: 'LeetCode 61 – Rotate List'
+description: 'Rotate a linked list by connecting its tail to its head and cutting the resulting cycle at the new tail.'
 ---
 
 # 0061 - Rotate List (Medium)

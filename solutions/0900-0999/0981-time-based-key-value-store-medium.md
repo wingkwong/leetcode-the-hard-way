@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ganajayant | https://leetcode.com/problems/time-based-key-value-store/'
+title: 'LeetCode 981 – Time Based Key-Value Store'
+description: 'Store values by key and timestamp, then binary search for the latest value available at a query time.'
 rating: 1575
 ---
 

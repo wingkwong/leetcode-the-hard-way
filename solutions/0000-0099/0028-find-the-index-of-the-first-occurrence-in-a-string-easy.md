@@ -1,5 +1,6 @@
 ---
-description: 'Author: @la-la-Cute, @ganajayant, @radojicic23 | https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/'
+title: 'LeetCode 28 – Find the Index of the First Occurrence in a String'
+description: 'Find the first occurrence of a substring with a rolling hash and compare it with direct substring search.'
 ---
 
 # 0028 - Find the Index of the First Occurrence in a String (Easy)

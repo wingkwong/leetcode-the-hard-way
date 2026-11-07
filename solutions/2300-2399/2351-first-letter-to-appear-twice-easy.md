@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/first-letter-to-appear-twice
+title: 'LeetCode 2351 – First Letter to Appear Twice'
+description: 'Find the earliest second occurrence of a letter by tracking which characters have already appeared.'
 
 tags: ['Hash Map']
 rating: 1155

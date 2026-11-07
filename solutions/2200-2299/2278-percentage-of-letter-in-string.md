@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/percentage-of-letter-in-string
+title: 'LeetCode 2278 – Percentage of Letter in String'
+description: 'Compute a letter''s percentage in a string by counting occurrences and rounding the result down.'
 rating: 1162
 ---
 

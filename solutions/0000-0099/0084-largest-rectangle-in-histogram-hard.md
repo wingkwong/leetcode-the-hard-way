@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2| https://leetcode.com/problems/largest-rectangle-in-histogram/'
+title: 'LeetCode 84 – Largest Rectangle in Histogram'
+description: 'Find the largest rectangle in a histogram with a monotonic stack that tracks bars awaiting a shorter boundary.'
 tags: [Array, Stack, Monotonic Stack]
 ---
 

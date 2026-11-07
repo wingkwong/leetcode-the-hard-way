@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/maximal-score-after-applying-k-operations/'
+title: 'LeetCode 2530 – Maximal Score After Applying K Operations'
+description: 'Maximize the score over k operations by repeatedly selecting the largest available element with a priority queue.'
 tags: [Array, Greedy, Heap (Priority Queue)]
 rating: 1386
 ---

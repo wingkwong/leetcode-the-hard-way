@@ -1,5 +1,6 @@
 ---
-description: 'Author: @Dhanu084 | https://leetcode.com/problems/partition-array-for-maximum-sum/description/'
+title: 'LeetCode 1043 – Partition Array for Maximum Sum'
+description: 'Maximize the array sum after partitioning by choosing block lengths and scoring each block by its maximum value.'
 tags: [Recursion, Dynamic Programming]
 rating: 1916
 ---

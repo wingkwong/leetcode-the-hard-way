@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @SkollRyu | https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/
+title: 'LeetCode 1011 – Capacity To Ship Packages Within D Days'
+description: 'Find the minimum shipping capacity that meets the day limit by binary searching capacities and testing each load schedule.'
 rating: 1725
 ---
 

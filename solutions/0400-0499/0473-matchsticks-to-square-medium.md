@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/matchsticks-to-square/'
+title: 'LeetCode 473 – Matchsticks to Square'
+description: 'Determine whether matchsticks form a square by tracking subsets of sticks that can fill four equal sides.'
 ---
 
 # 0473 - Matchsticks to Square (Medium)

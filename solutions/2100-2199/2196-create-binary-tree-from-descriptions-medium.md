@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/create-binary-tree-from-descriptions/
+title: 'LeetCode 2196 – Create Binary Tree From Descriptions'
+description: 'Build a binary tree from parent-child descriptions by mapping values to nodes and identifying the root.'
 rating: 1644
 ---
 

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @BlackPanther112358 | https://leetcode.com/problems/count-ways-to-build-rooms-in-an-ant-colony/'
+title: 'LeetCode 1916 – Count Ways to Build Rooms in an Ant Colony'
+description: 'Count valid orders for building rooms by combining independent subtree orderings while respecting parent dependencies.'
 tags: [Math, Dynamic Programming, Tree, Graph, Topological Sort, Combinatorics]
 rating: 2486
 ---

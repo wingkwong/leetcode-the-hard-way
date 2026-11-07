@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/minimum-interval-to-include-each-query/'
+title: 'LeetCode 1851 – Minimum Interval to Include Each Query'
+description: 'Answer each query with the length of its smallest enclosing interval by sorting the queries and tracking candidates in a heap.'
 tags: [Array, Binary Search, Line Sweep, Sorting, Heap (Priority Queue)]
 rating: 2286
 ---

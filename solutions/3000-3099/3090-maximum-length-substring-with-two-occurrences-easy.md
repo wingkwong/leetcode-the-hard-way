@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/maximum-length-substring-with-two-occurrences'
+title: 'LeetCode 3090 – Maximum Length Substring With Two Occurrences'
+description: 'Find the longest substring with at most two copies of each character by tracking frequencies in a sliding window.'
 tags: [Mid Level, Hash Table, String, Sliding Window]
 rating: 1329
 ---

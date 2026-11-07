@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @ganajayant, @radojicic23 | https://leetcode.com/problems/group-anagrams/'
+title: 'LeetCode 49 – Group Anagrams'
+description: 'Group anagrams with a hash map by assigning words that share the same letters a common key.'
 tags: ['Array', 'Hash Table', 'String', 'Sorting']
 ---
 

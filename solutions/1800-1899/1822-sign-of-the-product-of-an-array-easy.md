@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/sign-of-the-product-of-an-array/
+title: 'LeetCode 1822 – Sign of the Product of an Array'
+description: 'Determine the sign of an array product by checking for zero and counting the parity of its negative factors.'
 rating: 1210
 ---
 

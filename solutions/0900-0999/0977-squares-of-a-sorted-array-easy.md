@@ -1,5 +1,6 @@
 ---
-description: 'Author: @DongDong | https://leetcode.com/problems/squares-of-a-sorted-array/'
+title: 'LeetCode 977 – Squares of a Sorted Array'
+description: 'Produce sorted squares from a sorted array by comparing the absolute values at its two ends.'
 tags: [Array, Two Pointers]
 rating: 1130
 ---

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @ganajayant, @vigneshshiv, @radojicic23, @jit | https://leetcode.com/problems/binary-tree-inorder-traversal/'
+title: 'LeetCode 94 – Binary Tree Inorder Traversal'
+description: 'Traverse a binary tree in left-root-right order using recursion or an explicit stack.'
 tags: [Stack, Tree, Depth-First Search, Binary Tree]
 ---
 

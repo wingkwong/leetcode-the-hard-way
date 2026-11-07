@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/minimum-cost-of-buying-candies-with-discount/
+title: 'LeetCode 2144 – Minimum Cost of Buying Candies With Discount'
+description: 'Minimize the cost of candies under a buy-two-get-one discount by choosing groups in descending price order.'
 rating: 1261
 ---
 

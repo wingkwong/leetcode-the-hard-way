@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @vigneshshiv, @radojicic23, @ColeB2 | https://leetcode.com/problems/letter-combinations-of-a-phone-number/
+title: 'LeetCode 17 – Letter Combinations of a Phone Number'
+description: 'Generate all letter combinations for phone keypad digits by choosing one letter per digit with backtracking.'
 
 tags: [Hash Table, String, Backtracking]
 ---

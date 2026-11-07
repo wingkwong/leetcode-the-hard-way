@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @radojicic23 | https://leetcode.com/problems/sqrtx/'
+title: 'LeetCode 69 – Sqrt(x)'
+description: 'Find the integer square root by binary searching for the largest integer whose square fits within the input.'
 ---
 
 # 0069 - Sqrt(x) (Easy)

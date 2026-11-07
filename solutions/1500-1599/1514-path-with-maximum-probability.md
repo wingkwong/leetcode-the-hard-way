@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @Kavita613 | https://leetcode.com/problems/path-with-maximum-probability/
+title: 'LeetCode 1514 – Path with Maximum Probability'
+description: 'Find the path with the highest success probability by adapting Dijkstra''s algorithm to products of edge probabilities.'
 
 tags: [Graph, Heap (Priority Queue), Shortest Path]
 rating: 1846

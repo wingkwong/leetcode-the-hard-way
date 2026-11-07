@@ -1,5 +1,6 @@
 ---
-description: 'Author: @heder, wingkwong | https://leetcode.com/problems/average-value-of-even-numbers-that-are-divisible-by-three/'
+title: 'LeetCode 2455 – Average Value of Even Numbers That Are Divisible by Three'
+description: 'Average the even values divisible by three by accumulating their sum and count and rounding down.'
 tags: [Array, Math]
 rating: 1151
 ---

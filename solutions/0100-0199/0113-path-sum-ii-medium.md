@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @lonyehan, @radojicic23 | https://leetcode.com/problems/path-sum-ii/'
+title: 'LeetCode 113 – Path Sum II'
+description: 'Find all root-to-leaf paths with a given sum by recording the current path and backtracking between branches.'
 tags: [Backtracking, Tree, Depth-First Search, Binary Tree]
 ---
 

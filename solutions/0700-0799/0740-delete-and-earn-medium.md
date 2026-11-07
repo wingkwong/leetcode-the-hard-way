@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/delete-and-earn/'
+title: 'LeetCode 740 – Delete and Earn'
+description: 'Maximize points from deleting values by grouping equal numbers and choosing between adjacent values with dynamic programming.'
 ---
 
 # 0740 - Delete and Earn (Medium)

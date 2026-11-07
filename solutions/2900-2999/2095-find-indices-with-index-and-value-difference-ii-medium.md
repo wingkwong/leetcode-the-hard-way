@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/find-indices-with-index-and-value-difference-ii/'
+title: 'LeetCode 2905 – Find Indices With Index and Value Difference II'
+description: 'Find indices meeting both distance thresholds in one pass by tracking extreme values among eligible earlier positions.'
 tags: [Array]
 rating: 1324
 ---

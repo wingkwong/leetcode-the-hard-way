@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/maximum-value-of-an-ordered-triplet-i'
+title: 'LeetCode 2873 – Maximum Value of an Ordered Triplet I'
+description: 'Maximize the ordered triplet expression by testing valid index triples or tracking the best earlier choices.'
 tags: [Array]
 rating: 1270
 ---

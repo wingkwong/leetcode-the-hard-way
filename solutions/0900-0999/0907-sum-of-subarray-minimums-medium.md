@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/sum-of-subarray-minimums/'
+title: 'LeetCode 907 – Sum of Subarray Minimums'
+description: 'Sum all subarray minimums by using a stack to determine how many subarrays each element represents.'
 tags: [Array, Dynamic Programming, Stack, Monotonic Stack]
 rating: 1976
 ---

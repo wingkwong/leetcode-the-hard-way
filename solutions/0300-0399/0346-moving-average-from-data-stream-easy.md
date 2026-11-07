@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/moving-average-from-data-stream/
+title: 'LeetCode 346 – Moving Average from Data Stream'
+description: 'Compute a moving average over a fixed-size window by queuing recent values and tracking their sum.'
 ---
 
 # 0346 - Moving Average from Data Stream (Easy)

@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @vigneshshiv, @MithunPrabhu777, @AnshikaAnand222, @radojicic23 | https://leetcode.com/problems/longest-substring-without-repeating-characters/
+title: 'LeetCode 3 – Longest Substring Without Repeating Characters'
+description: 'Find the longest substring with distinct characters by sliding a window and tracking which characters it contains.'
 
 tags: [Hash Table, String, Sliding Window]
 ---

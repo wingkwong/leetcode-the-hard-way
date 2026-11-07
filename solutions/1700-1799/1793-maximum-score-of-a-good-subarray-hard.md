@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/maximum-score-of-a-good-subarray/'
+title: 'LeetCode 1793 – Maximum Score of a Good Subarray'
+description: 'Maximize the score of a subarray containing a given index by querying interval minima with a sparse table.'
 tags: [Array, Two Pointers, Binary Search, Stack, Monotonic Stack]
 rating: 1946
 ---

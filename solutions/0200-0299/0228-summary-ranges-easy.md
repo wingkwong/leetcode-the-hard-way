@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/summary-ranges/'
+title: 'LeetCode 228 – Summary Ranges'
+description: 'Summarize a sorted array as ranges by scanning each maximal run of consecutive integers.'
 ---
 
 # 0228 - Summary Ranges (Easy)

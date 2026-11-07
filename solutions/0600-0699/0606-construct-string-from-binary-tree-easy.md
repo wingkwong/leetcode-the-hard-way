@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @lonyehan, @jit, @kesava-karri | https://leetcode.com/problems/construct-string-from-binary-tree/'
+title: 'LeetCode 606 – Construct String from Binary Tree'
+description: 'Encode a binary tree as a parenthesized preorder string and retain the empty child markers needed to preserve its structure.'
 tags: [String, Tree, Depth-First Search, Binary Tree]
 ---
 

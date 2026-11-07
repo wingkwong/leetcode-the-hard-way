@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/intersection-of-multiple-arrays/
+title: 'LeetCode 2248 – Intersection of Multiple Arrays'
+description: 'Find the sorted intersection of multiple arrays by keeping only values that appear in every array.'
 rating: 1264
 ---
 

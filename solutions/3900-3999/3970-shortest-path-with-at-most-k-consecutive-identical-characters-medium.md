@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/shortest-path-with-at-most-k-consecutive-identical-characters'
+title: 'LeetCode 3970 – Shortest Path With At Most K Consecutive Identical Characters'
+description: 'Find a minimum-weight path with bounded runs of equal labels by tracking the current run length in Dijkstra''s algorithm.'
 tags: ['Graph Theory', 'Heap (Priority Queue)', 'Shortest Path']
 rating: 1840
 ---

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/merge-triplets-to-form-target-triplet/'
+title: 'LeetCode 1899 – Merge Triplets to Form Target Triplet'
+description: 'Determine whether triplets can merge into a target by filtering out oversized coordinates and matching each target component.'
 tags: [Array, Greedy]
 rating: 1636
 ---

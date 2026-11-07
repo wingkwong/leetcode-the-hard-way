@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/removing-minimum-number-of-magic-beans/
+title: 'LeetCode 2171 – Removing Minimum Number of Magic Beans'
+description: 'Minimize bean removals by sorting bag sizes and testing which common size to retain in all nonempty bags.'
 rating: 1748
 ---
 

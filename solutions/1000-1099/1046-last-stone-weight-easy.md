@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2, @wkw | https://leetcode.com/problems/last-stone-weight/'
+title: 'LeetCode 1046 – Last Stone Weight'
+description: 'Simulate stone collisions with a max-heap that repeatedly removes the two heaviest stones.'
 tags: [Array, Heap (Priority Queue)]
 rating: 1173
 ---

@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw, @ganajayant, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
+title: 'LeetCode 34 – Find First and Last Position of Element in Sorted Array'
+description: 'Locate the first and last occurrences of a target using binary search for the boundaries of its run.'
 
 tags: [Array, Binary Search]
 ---

@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/find-the-longest-substring-containing-vowels-in-even-counts/
+title: 'LeetCode 1371 – Find the Longest Substring Containing Vowels in Even Counts'
+description: 'Find the longest substring with even vowel counts by tracking vowel parities in a bit mask.'
 rating: 2041
 ---
 

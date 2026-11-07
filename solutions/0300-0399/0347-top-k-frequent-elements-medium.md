@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/top-k-frequent-elements/'
+title: 'LeetCode 347 – Top K Frequent Elements'
+description: 'Find the k most frequent array elements by counting occurrences and selecting candidates with a priority queue.'
 ---
 
 # 0347 - Top K Frequent Elements (Medium)

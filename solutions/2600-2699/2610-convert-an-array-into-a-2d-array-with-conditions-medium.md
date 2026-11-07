@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @jit | https://leetcode.com/problems/convert-an-array-into-a-2d-array-with-conditions/'
+title: 'LeetCode 2610 – Convert an Array Into a 2D Array With Conditions'
+description: 'Arrange values into the fewest rows with no duplicates per row by tracking how many times each value occurs.'
 tags: [Array, Hash Table]
 rating: 1374
 ---

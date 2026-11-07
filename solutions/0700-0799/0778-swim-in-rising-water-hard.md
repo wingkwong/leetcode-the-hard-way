@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/swim-in-rising-water/'
+title: 'LeetCode 778 – Swim in Rising Water'
+description: 'Find the earliest water level that allows a crossing by prioritizing paths according to the highest elevation encountered.'
 tags:
   [
     Array,

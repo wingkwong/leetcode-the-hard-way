@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/check-if-there-is-a-valid-parentheses-string-path/
+title: 'LeetCode 2267 – Check if There Is a Valid Parentheses String Path'
+description: 'Search for a valid parentheses path in a grid by tracking position and unmatched opening brackets with memoization.'
 rating: 2085
 ---
 

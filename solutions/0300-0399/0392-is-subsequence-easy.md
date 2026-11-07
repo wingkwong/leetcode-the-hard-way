@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @vigneshshiv | https://leetcode.com/problems/is-subsequence/'
+title: 'LeetCode 392 – Is Subsequence'
+description: 'Check whether one string is a subsequence of another by advancing two pointers through the characters in order.'
 tags: [Two Pointers, String, Dynamic Programming]
 ---
 

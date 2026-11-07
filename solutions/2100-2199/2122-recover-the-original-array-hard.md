@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/recover-the-original-array/'
+title: 'LeetCode 2122 – Recover the Original Array'
+description: 'Recover the original array by testing candidate offsets and pairing each shifted value with its required counterpart.'
 rating: 2159
 ---
 

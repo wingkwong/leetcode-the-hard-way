@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/adding-spaces-to-a-string/'
+title: 'LeetCode 2109 – Adding Spaces to a String'
+description: 'Insert spaces at specified positions by advancing through the string and the ordered list of insertion indices together.'
 rating: 1315
 ---
 

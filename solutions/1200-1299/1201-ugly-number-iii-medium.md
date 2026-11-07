@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/ugly-number-iii/'
+title: 'LeetCode 1201 – Ugly Number III'
+description: 'Find the nth integer divisible by at least one of three divisors by combining inclusion-exclusion with binary search.'
 rating: 2039
 ---
 

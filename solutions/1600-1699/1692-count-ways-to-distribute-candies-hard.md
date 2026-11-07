@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/count-ways-to-distribute-candies/
+title: 'LeetCode 1692 – Count Ways to Distribute Candies'
+description: 'Count distributions into nonempty bags by considering whether the next candy joins an existing group or starts a new one.'
 ---
 
 # 1692 - Count Ways to Distribute Candies (Hard)

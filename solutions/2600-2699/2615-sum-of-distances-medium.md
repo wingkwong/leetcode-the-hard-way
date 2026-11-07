@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/sum-of-distances/'
+title: 'LeetCode 2615 – Sum of Distances'
+description: 'Compute the sum of index distances to equal values by grouping their positions and reusing prefix sums.'
 rating: 1793
 ---
 

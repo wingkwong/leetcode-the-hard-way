@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/lexicographically-smallest-equivalent-string/'
+title: 'LeetCode 1061 – Lexicographically Smallest Equivalent String'
+description: 'Find the smallest equivalent string by grouping interchangeable letters and selecting the smallest representative.'
 tags: [String, Union Find]
 ---
 

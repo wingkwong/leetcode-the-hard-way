@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @heiheihang, @wkw, @radojicic23 | https://leetcode.com/problems/running-sum-of-1d-array/
+title: 'LeetCode 1480 – Running Sum of 1d Array'
+description: 'Compute running sums by carrying the cumulative total through the array in order.'
 rating: 1105
 ---
 

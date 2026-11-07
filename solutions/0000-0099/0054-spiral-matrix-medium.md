@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/spiral-matrix/'
+title: 'LeetCode 54 – Spiral Matrix'
+description: 'Read a matrix in spiral order by tracking visited cells and turning when the next cell is blocked.'
 tags: [Array, Matrix, Simulation]
 ---
 

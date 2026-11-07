@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/minimum-cost-to-cut-a-stick/
+title: 'LeetCode 1547 – Minimum Cost to Cut a Stick'
+description: 'Minimize stick-cutting cost by choosing the first cut in each interval and combining the best remaining costs.'
 rating: 2116
 ---
 

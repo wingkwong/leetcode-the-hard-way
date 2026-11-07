@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/find-the-number-of-winning-players'
+title: 'LeetCode 3238 – Find the Number of Winning Players'
+description: 'Count winning players by tracking how often each player picks each color and comparing counts with that player''s threshold.'
 tags: [Mid Level, Array, Hash Table, Counting]
 rating: 1285
 ---

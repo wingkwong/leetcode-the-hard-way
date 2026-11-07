@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @radojicic23 | https://leetcode.com/problems/majority-element/'
+title: 'LeetCode 169 – Majority Element'
+description: 'Find the majority element by canceling competing values with the Boyer-Moore voting algorithm.'
 ---
 
 # 0169 - Majority Element (Easy)

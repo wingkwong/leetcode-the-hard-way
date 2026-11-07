@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @vigneshshiv | https://leetcode.com/problems/subtree-of-another-tree/
+title: 'LeetCode 572 – Subtree of Another Tree'
+description: 'Check whether a tree contains a given subtree by comparing structure and values at candidate starting nodes.'
 ---
 
 # 0572 - Subtree of Another Tree (Easy)

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2, @radojicic23 | https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/'
+title: 'LeetCode 235 – Lowest Common Ancestor of a Binary Search Tree'
+description: 'Find the lowest common ancestor in a binary search tree by following key comparisons until the search paths split.'
 tags: [Tree, Depth-First Search, Binary Search Tree, Binary Tree]
 ---
 

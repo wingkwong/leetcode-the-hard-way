@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw, @jaffar | https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram/
+title: 'LeetCode 1347 – Minimum Number of Steps to Make Two Strings Anagram'
+description: 'Count the character replacements needed to turn one string into an anagram of the other by comparing letter frequencies.'
 
 tags: [Hash Table, String, Counting]
 rating: 1331

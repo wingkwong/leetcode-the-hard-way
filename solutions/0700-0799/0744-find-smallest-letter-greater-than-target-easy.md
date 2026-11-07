@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/find-smallest-letter-greater-than-target
+title: 'LeetCode 744 – Find Smallest Letter Greater Than Target'
+description: 'Use binary search to find the first letter greater than a target, wrapping to the beginning when necessary.'
 ---
 
 # 0744 - Find Smallest Letter Greater Than Target (Easy)

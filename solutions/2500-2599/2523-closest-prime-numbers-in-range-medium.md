@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/closest-prime-numbers-in-range/'
+title: 'LeetCode 2523 – Closest Prime Numbers in Range'
+description: 'Find the closest pair of primes in an inclusive range by sieving primes and comparing adjacent gaps.'
 tags: [Math, Number Theory]
 rating: 1650
 ---

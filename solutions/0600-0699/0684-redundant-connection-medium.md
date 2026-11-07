@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/redundant-connection/'
+title: 'LeetCode 684 – Redundant Connection'
+description: 'Find the extra edge in an undirected graph by detecting when its endpoints already belong to the same disjoint set.'
 tags: [Depth-First Search, Breadth-First Search, Union Find, Graph]
 ---
 

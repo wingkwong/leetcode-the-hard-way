@@ -1,5 +1,6 @@
 ---
-description: 'Author: @heiheihang | https://leetcode.com/problems/merge-strings-alternately/'
+title: 'LeetCode 1768 – Merge Strings Alternately'
+description: 'Merge two strings by alternating characters until one is exhausted, then append the remaining suffix.'
 rating: 1167
 ---
 

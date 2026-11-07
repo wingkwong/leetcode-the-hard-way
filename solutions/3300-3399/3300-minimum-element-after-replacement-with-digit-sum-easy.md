@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/minimum-element-after-replacement-with-digit-sum/'
+title: 'LeetCode 3300 – Minimum Element After Replacement With Digit Sum'
+description: 'Find the minimum value after replacing every array element with the sum of its decimal digits.'
 rating: 1181
 ---
 

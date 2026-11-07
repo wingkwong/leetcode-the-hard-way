@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/path-sum/'
+title: 'LeetCode 112 – Path Sum'
+description: 'Search root-to-leaf paths for a target sum, carrying the remaining amount down the tree.'
 tags: [Tree, Depth-First Search, Breadth-First Search, Binary Tree]
 ---
 

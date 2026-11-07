@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/maximum-product-after-k-increments/
+title: 'LeetCode 2233 – Maximum Product After K Increments'
+description: 'Maximize the product after k increments by using a priority queue to repeatedly increase a smallest value.'
 rating: 1686
 ---
 

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/maximum-sum-circular-subarray/'
+title: 'LeetCode 918 – Maximum Sum Circular Subarray'
+description: 'Find the maximum circular subarray sum by comparing a standard maximum subarray with a wraparound candidate.'
 tags: [Array, Divide and Conquer, Dynamic Programming, Queue, Monotonic Queue]
 rating: 1777
 ---

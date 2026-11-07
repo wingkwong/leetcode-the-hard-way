@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/append-k-integers-with-minimal-sum/
+title: 'LeetCode 2195 – Append K Integers With Minimal Sum'
+description: 'Choose the k smallest missing positive integers and sum them by accounting for gaps between existing values.'
 rating: 1659
 ---
 

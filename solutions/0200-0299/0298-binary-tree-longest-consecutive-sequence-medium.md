@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/binary-tree-longest-consecutive-sequence/'
+title: 'LeetCode 298 – Binary Tree Longest Consecutive Sequence'
+description: 'Find the longest downward run of consecutive node values by carrying its length through a depth-first traversal.'
 tags: [Tree, Depth-First Search, Binary Tree]
 ---
 

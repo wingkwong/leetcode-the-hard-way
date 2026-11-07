@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/utf-8-validation/'
+title: 'LeetCode 393 – UTF-8 Validation'
+description: 'Validate a UTF-8 byte sequence by checking leading-bit patterns and the required number of continuation bytes.'
 tags: [Array, Bit Manipulation]
 ---
 

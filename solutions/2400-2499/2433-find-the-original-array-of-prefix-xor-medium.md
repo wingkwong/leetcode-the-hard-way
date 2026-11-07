@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @vigneshshiv | https://leetcode.com/problems/find-the-original-array-of-prefix-xor/
+title: 'LeetCode 2433 – Find The Original Array of Prefix Xor'
+description: 'Recover the original array by XORing neighboring prefix XOR values to isolate each element.'
 rating: 1367
 ---
 

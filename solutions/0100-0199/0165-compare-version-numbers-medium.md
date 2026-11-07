@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/compare-version-numbers/'
+title: 'LeetCode 165 – Compare Version Numbers'
+description: 'Compare version numbers one numeric revision at a time, treating missing revisions as zero.'
 ---
 
 # 0165 - Compare Version Numbers (Medium)

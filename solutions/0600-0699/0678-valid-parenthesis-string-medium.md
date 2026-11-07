@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/valid-parenthesis-string/'
+title: 'LeetCode 678 – Valid Parenthesis String'
+description: 'Validate parentheses with wildcards by tracking the minimum and maximum possible number of unmatched opening brackets.'
 tags: [String, Dynamic Programming, Stack, Greedy]
 ---
 

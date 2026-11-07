@@ -1,5 +1,6 @@
 ---
-description: 'Author: @DoubleSpicy, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/contains-duplicate/'
+title: 'LeetCode 217 – Contains Duplicate'
+description: 'Detect a repeated array value by tracking previously seen values or checking neighbors after sorting.'
 ---
 
 # 0217 - Contains Duplicate (Easy)

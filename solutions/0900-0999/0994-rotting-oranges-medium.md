@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/rotting-oranges/'
+title: 'LeetCode 994 – Rotting Oranges'
+description: 'Compute the minutes needed to rot all reachable oranges by spreading infection from every rotten orange in parallel.'
 tags: [Array, Breadth-First Search, Matrix]
 rating: 1433
 ---

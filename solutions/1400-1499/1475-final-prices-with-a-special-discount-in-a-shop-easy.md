@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @heiheihang | https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/
+title: 'LeetCode 1475 – Final Prices With a Special Discount in a Shop'
+description: 'Apply the first eligible price discount to each item by resolving waiting prices with a stack.'
 rating: 1212
 ---
 

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/design-circular-queue/'
+title: 'LeetCode 622 – Design Circular Queue'
+description: 'Implement a circular queue in an array by wrapping the front and rear positions around its fixed capacity.'
 tags: [Array, Linked List, Design, Queue]
 ---
 

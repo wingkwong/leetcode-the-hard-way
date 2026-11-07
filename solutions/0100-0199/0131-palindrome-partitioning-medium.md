@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @ColeB2 | https://leetcode.com/problems/palindrome-partitioning/'
+title: 'LeetCode 131 – Palindrome Partitioning'
+description: 'Partition a string into palindromes by trying palindromic prefixes and backtracking through the remaining suffix.'
 tags: [String, Dynamic Programming, Backtracking]
 ---
 

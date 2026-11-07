@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @radojicic23 | https://leetcode.com/problems/find-the-difference/'
+title: 'LeetCode 389 – Find the Difference'
+description: 'Identify the extra character in a shuffled string using XOR, character counts, or sorting.'
 tags: [Hash Table, String, Bit Manipulation, Sorting]
 ---
 

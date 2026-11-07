@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/find-mode-in-binary-search-tree/'
+title: 'LeetCode 501 – Find Mode in Binary Search Tree'
+description: 'Find the most frequent values in a binary search tree by traversing its nodes and tracking occurrence counts.'
 tags: [Tree, Depth-First Search, Binary Search Tree, Binary Tree]
 ---
 

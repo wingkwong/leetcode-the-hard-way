@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/task-scheduler/'
+title: 'LeetCode 621 – Task Scheduler'
+description: 'Minimize task scheduling time under a cooldown by reasoning about task frequencies or simulating available tasks with a heap.'
 tags: [Array, Hash Table, Greedy, Sorting, Heap (Priority Queue), Counting]
 ---
 

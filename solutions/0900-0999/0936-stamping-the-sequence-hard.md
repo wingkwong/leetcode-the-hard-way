@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/stamping-the-sequence/'
+title: 'LeetCode 936 – Stamping The Sequence'
+description: 'Construct a stamping sequence by working backward and erasing target positions that match a possible stamp placement.'
 rating: 2583
 ---
 

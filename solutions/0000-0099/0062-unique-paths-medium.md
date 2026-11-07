@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @ganajayant, @radojicic23 | https://leetcode.com/problems/unique-paths/'
+title: 'LeetCode 62 – Unique Paths'
+description: 'Count paths across a grid using combinations or dynamic programming that adds the paths from above and from the left.'
 tags: [Math, Dynamic Programming, Combinatorics]
 ---
 

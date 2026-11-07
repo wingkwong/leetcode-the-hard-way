@@ -1,5 +1,6 @@
 ---
-description: 'Author: @pankajsirari222, @radojicic23 | https://leetcode.com/problems/remove-duplicates-from-sorted-array/'
+title: 'LeetCode 26 – Remove Duplicates from Sorted Array'
+description: 'Remove duplicates from a sorted array by writing each new value to the next available position.'
 tags: [Array, Two Pointers]
 ---
 

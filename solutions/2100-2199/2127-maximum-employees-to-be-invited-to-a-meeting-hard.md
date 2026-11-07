@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/maximum-employees-to-be-invited-to-a-meeting/
+title: 'LeetCode 2127 – Maximum Employees to Be Invited to a Meeting'
+description: 'Find the largest possible meeting by analyzing favorite-person cycles and chains that feed into mutual pairs.'
 rating: 2449
 ---
 

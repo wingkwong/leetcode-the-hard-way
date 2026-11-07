@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/total-appeal-of-a-string/'
+title: 'LeetCode 2262 – Total Appeal of A String'
+description: 'Sum the number of distinct characters over all substrings by tracking each character''s contribution from its occurrence positions.'
 rating: 2033
 ---
 

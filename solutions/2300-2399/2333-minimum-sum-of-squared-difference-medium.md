@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @TBC | https://leetcode.com/problems/minimum-sum-of-squared-difference/
+title: 'LeetCode 2333 – Minimum Sum of Squared Difference'
+description: 'Minimize the sum of squared differences between corresponding array values with a limited budget of unit changes.'
 
 draft: true
 rating: 2011

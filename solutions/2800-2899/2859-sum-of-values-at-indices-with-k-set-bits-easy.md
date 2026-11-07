@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/sum-of-values-at-indices-with-k-set-bits/'
+title: 'LeetCode 2859 – Sum of Values at Indices With K Set Bits'
+description: 'Sum array values at indices whose binary representations contain exactly k set bits.'
 tags: [Array, Bit Manipulation]
 rating: 1218
 ---

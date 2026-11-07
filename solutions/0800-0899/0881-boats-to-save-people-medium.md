@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @radojicic23 | https://leetcode.com/problems/boats-to-save-people/'
+title: 'LeetCode 881 – Boats to Save People'
+description: 'Minimize rescue boats by sorting weights and deciding when the lightest remaining person can ride with the heaviest.'
 rating: 1530
 ---
 

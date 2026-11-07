@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/minimum-number-of-operations-to-make-array-continuous/'
+title: 'LeetCode 2009 – Minimum Number of Operations to Make Array Continuous'
+description: 'Minimize replacements for a continuous array by finding the largest set of distinct values that fits in a valid range.'
 tags: [Array, Binary Search]
 rating: 2084
 ---

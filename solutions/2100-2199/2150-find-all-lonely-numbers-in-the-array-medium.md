@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/find-all-lonely-numbers-in-the-array/
+title: 'LeetCode 2150 – Find All Lonely Numbers in the Array'
+description: 'Find values that occur once and have neither adjacent integer present by checking a frequency table.'
 rating: 1276
 ---
 

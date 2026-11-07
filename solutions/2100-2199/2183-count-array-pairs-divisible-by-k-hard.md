@@ -1,5 +1,6 @@
 ---
-description: 'Author: @TBC | https://leetcode.com/problems/count-array-pairs-divisible-by-k/'
+title: 'LeetCode 2183 – Count Array Pairs Divisible by K'
+description: 'Count pairs of distinct indices whose corresponding array values have a product divisible by k.'
 rating: 2246
 ---
 

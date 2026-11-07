@@ -1,5 +1,6 @@
 ---
-description: 'Author: @heiheihang, @wkw, @jit | https://leetcode.com/problems/sum-of-left-leaves/'
+title: 'LeetCode 404 – Sum of Left Leaves'
+description: 'Sum the values of left leaves by distinguishing them from right children during depth-first traversal.'
 tags: [Tree, Depth-First Search, Breadth-First Search, Binary Tree]
 ---
 

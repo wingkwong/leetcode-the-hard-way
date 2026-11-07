@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @ColeB2 | https://leetcode.com/problems/word-ladder/'
+title: 'LeetCode 127 – Word Ladder'
+description: 'Find the shortest word transformation sequence with breadth-first search over valid one-letter changes.'
 tags: [Hash Table, String, Breadth-First Search]
 ---
 

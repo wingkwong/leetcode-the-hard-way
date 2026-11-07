@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @vigneshshiv, @radojicic23 | https://leetcode.com/problems/search-in-rotated-sorted-array/
+title: 'LeetCode 33 – Search in Rotated Sorted Array'
+description: 'Search a rotated sorted array by identifying the sorted half at each binary search step.'
 ---
 
 # 0033 - Search in Rotated Sorted Array (Medium)

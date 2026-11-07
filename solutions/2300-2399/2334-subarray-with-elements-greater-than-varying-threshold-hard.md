@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @TBC | https://leetcode.com/problems/subarray-with-elements-greater-than-varying-threshold
+title: 'LeetCode 2334 – Subarray With Elements Greater Than Varying Threshold'
+description: 'Find a subarray whose elements all exceed the given threshold divided by the subarray''s length.'
 
 draft: true
 rating: 2381

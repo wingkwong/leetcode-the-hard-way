@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/single-element-in-a-sorted-array/'
+title: 'LeetCode 540 – Single Element in a Sorted Array'
+description: 'Find the only unpaired value in a sorted array by binary searching for the point where adjacent pair alignment changes.'
 tags: [Array, Binary Search]
 ---
 

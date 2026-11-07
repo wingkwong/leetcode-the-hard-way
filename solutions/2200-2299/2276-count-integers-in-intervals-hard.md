@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/count-integers-in-intervals
+title: 'LeetCode 2276 – Count Integers in Intervals'
+description: 'Maintain the count of covered integers as intervals arrive by merging overlaps and updating their combined length.'
 rating: 2222
 ---
 

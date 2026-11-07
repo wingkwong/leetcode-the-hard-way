@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @radojicic23 | https://leetcode.com/problems/keys-and-rooms/'
+title: 'LeetCode 841 – Keys and Rooms'
+description: 'Determine whether all rooms are reachable by following the keys collected during depth-first search.'
 tags: [Depth-First Search, Breadth-First Search, Graph]
 rating: 1412
 ---

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/regular-expression-matching/'
+title: 'LeetCode 10 – Regular Expression Matching'
+description: 'Match a string against a pattern containing dots and stars by memoizing the remaining string and pattern positions.'
 tags: [String, Dynamic Programming, Recursion]
 ---
 

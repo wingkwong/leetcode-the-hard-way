@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/replace-non-coprime-numbers-in-array/
+title: 'LeetCode 2197 – Replace Non-Coprime Numbers in Array'
+description: 'Repeatedly merge adjacent non-coprime numbers into their least common multiple until no further merge applies.'
 rating: 2057
 ---
 

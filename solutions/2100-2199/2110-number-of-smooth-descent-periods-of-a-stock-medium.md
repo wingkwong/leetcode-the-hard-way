@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/number-of-smooth-descent-periods-of-a-stock/
+title: 'LeetCode 2110 – Number of Smooth Descent Periods of a Stock'
+description: 'Count smooth descent periods by tracking runs in which each price is exactly one lower than the preceding price.'
 rating: 1408
 ---
 

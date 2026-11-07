@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/twisted-mirror-path-count'
+title: 'LeetCode 3665 – Twisted Mirror Path Count'
+description: 'Count paths through a grid of turning mirrors by tracking how many paths reach each cell from above and from the left.'
 tags: ['Array', 'Dynamic Programming', 'Matrix']
 ---
 

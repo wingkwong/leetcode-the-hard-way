@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @iraycd | https://leetcode.com/problems/the-number-of-weak-characters-in-the-game/'
+title: 'LeetCode 1996 – The Number of Weak Characters in the Game'
+description: 'Count characters dominated in both attack and defense by organizing attack values and tracking stronger opponents'' defenses.'
 tags: [Array, Stack, Greedy, Sorting, Monotonic Stack]
 rating: 1861
 ---

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @ColeB2 | https://leetcode.com/problems/number-of-islands/'
+title: 'LeetCode 200 – Number of Islands'
+description: 'Count islands by flood-filling each connected group of land cells when it is first encountered.'
 tags: [Array, Depth-First Search, Breadth-First Search, Union Find, Matrix]
 ---
 

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/find-the-town-judge/'
+title: 'LeetCode 997 – Find the Town Judge'
+description: 'Identify the town judge by counting incoming and outgoing trust relationships for each person.'
 tags: [Array, Hash Table, Graph]
 rating: 1202
 ---

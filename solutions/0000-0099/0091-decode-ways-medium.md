@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2, @heder, @wkw | https://leetcode.com/problems/decode-ways/'
+title: 'LeetCode 91 – Decode Ways'
+description: 'Count valid decodings of a digit string by combining the ways to decode valid one-digit and two-digit groups.'
 tags: [String, Dynamic Programming]
 ---
 

@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/check-if-one-string-swap-can-make-strings-equal/
+title: 'LeetCode 1790 – Check if One String Swap Can Make Strings Equal'
+description: 'Check whether at most one character swap can make two strings equal by examining their mismatched positions.'
 rating: 1301
 ---
 

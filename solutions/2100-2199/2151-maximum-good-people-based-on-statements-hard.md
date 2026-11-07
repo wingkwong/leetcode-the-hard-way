@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/maximum-good-people-based-on-statements/
+title: 'LeetCode 2151 – Maximum Good People Based on Statements'
+description: 'Maximize the number of good people by enumerating assignments and checking each good person''s statements for consistency.'
 rating: 1980
 ---
 

@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/count-operations-to-obtain-zero/
+title: 'LeetCode 2169 – Count Operations to Obtain Zero'
+description: 'Count subtraction operations until either integer becomes zero by repeatedly subtracting the smaller from the larger.'
 rating: 1200
 ---
 

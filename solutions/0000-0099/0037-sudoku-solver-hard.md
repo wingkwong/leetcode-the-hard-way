@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @vigneshshiv | https://leetcode.com/problems/sudoku-solver/
+title: 'LeetCode 37 – Sudoku Solver'
+description: 'Fill a Sudoku grid by trying legal digits in empty cells and backtracking when a choice blocks the solution.'
 ---
 
 # 0037 - Sudoku Solver (Hard)

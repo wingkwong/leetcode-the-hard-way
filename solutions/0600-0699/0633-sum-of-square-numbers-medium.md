@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/sum-of-square-numbers/'
+title: 'LeetCode 633 – Sum of Square Numbers'
+description: 'Check whether a nonnegative integer is a sum of two squares by testing candidate squares with binary search.'
 ---
 
 # 0633 - Sum of Square Numbers (Medium)

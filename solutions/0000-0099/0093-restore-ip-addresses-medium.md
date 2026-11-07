@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/restore-ip-addresses/'
+title: 'LeetCode 93 – Restore IP Addresses'
+description: 'Restore valid IP addresses by trying splits into four decimal segments and checking segment lengths, values, and leading zeros.'
 tags: [String, Backtracking]
 ---
 

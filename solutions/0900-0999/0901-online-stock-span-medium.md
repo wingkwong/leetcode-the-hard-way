@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @dhanu084, @radojicic23| https://leetcode.com/problems/online-stock-span/'
+title: 'LeetCode 901 – Online Stock Span'
+description: 'Compute each day''s stock span by tracking earlier prices and skipping runs already covered by smaller prices.'
 tags: [Stack, Design, Monotonic Stack, Data Stream]
 rating: 1709
 ---

@@ -1,6 +1,6 @@
 ---
-description: >-
-  Authors: @heiheihang, @wkw | https://leetcode.com/problems/minimum-time-to-remove-all-cars-containing-illegal-goods/
+title: 'LeetCode 2167 – Minimum Time to Remove All Cars Containing Illegal Goods'
+description: 'Minimize the time to remove illegal goods by comparing individual removals with deleting cars from either end.'
 rating: 2219
 ---
 

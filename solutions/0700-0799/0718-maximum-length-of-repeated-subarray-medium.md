@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/maximum-length-of-repeated-subarray/'
+title: 'LeetCode 718 – Maximum Length of Repeated Subarray'
+description: 'Find the longest contiguous sequence shared by two arrays using dynamic programming or a search over candidate lengths.'
 tags:
   [
     Array,

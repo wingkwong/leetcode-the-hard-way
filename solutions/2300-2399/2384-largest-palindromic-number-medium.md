@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/largest-palindromic-number/'
+title: 'LeetCode 2384 – Largest Palindromic Number'
+description: 'Build the largest palindromic number from digit counts by placing matching pairs around the best available center.'
 rating: 1636
 ---
 

@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @heiheihang | https://leetcode.com/problems/minimum-number-of-moves-to-make-palindrome/
+title: 'LeetCode 2193 – Minimum Number of Moves to Make Palindrome'
+description: 'Count adjacent swaps needed to make a palindrome by matching characters from opposite ends and moving them into place.'
 rating: 2091
 ---
 

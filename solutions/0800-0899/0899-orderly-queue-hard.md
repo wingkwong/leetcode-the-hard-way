@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/orderly-queue/'
+title: 'LeetCode 899 – Orderly Queue'
+description: 'Find the lexicographically smallest reachable string by distinguishing rotations from the case where arbitrary reordering is possible.'
 tags: [Math, String, Sorting]
 rating: 2097
 ---

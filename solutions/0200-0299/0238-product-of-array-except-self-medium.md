@@ -1,5 +1,6 @@
 ---
-description: 'Author: @DongDong | https://leetcode.com/problems/product-of-array-except-self/'
+title: 'LeetCode 238 – Product of Array Except Self'
+description: 'Compute the product of all other elements at each index by combining products to its left and right.'
 tags: [Array, Prefix Sum]
 ---
 

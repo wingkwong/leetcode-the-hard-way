@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/check-if-it-is-a-straight-line/
+title: 'LeetCode 1232 – Check If It Is a Straight Line'
+description: 'Check whether all points lie on one straight line by comparing their relative horizontal and vertical changes.'
 rating: 1247
 ---
 

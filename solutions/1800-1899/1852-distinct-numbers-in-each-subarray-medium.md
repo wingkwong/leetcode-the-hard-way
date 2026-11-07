@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @TBC | https://leetcode.com/problems/distinct-numbers-in-each-subarray/
+title: 'LeetCode 1852 – Distinct Numbers in Each Subarray'
+description: 'For every fixed-length subarray, determine how many distinct values appear in that window.'
 
 draft: 'true'
 ---

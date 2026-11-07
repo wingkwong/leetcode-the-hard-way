@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/shuffle-the-array/'
+title: 'LeetCode 1470 – Shuffle the Array'
+description: 'Interleave the two halves of an array by taking one corresponding element from each half at a time.'
 tags: [Array]
 rating: 1121
 ---

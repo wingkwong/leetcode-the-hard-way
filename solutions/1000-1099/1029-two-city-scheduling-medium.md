@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/two-city-scheduling/'
+title: 'LeetCode 1029 – Two City Scheduling'
+description: 'Split travelers evenly between two cities at minimum cost by sorting the differences between their fares.'
 tags: ['Array', 'Sorting', 'Greedy']
 rating: 1348
 ---

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/the-two-sneaky-numbers-of-digitville/'
+title: 'LeetCode 3289 – The Two Sneaky Numbers of Digitville'
+description: 'Identify the two extra occurrences in a sequence of integers by counting how often each value appears.'
 tags: [Array, Hash Table, Math]
 rating: 1164
 ---

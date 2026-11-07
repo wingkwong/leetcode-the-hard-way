@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/sum-in-a-matrix/'
+title: 'LeetCode 2679 – Sum in a Matrix'
+description: 'Compute the matrix game score by sorting each row and summing the largest value at each removal round.'
 rating: 1333
 ---
 

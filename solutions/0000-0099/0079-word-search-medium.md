@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/word-search/'
+title: 'LeetCode 79 – Word Search'
+description: 'Search for a word in a grid by exploring adjacent cells and backtracking to avoid reusing a cell in the same path.'
 tags: [Array, Backtracking, Matrix]
 ---
 

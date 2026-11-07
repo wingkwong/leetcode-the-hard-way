@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/longest-palindrome-by-concatenating-two-letter-words/'
+title: 'LeetCode 2131 – Longest Palindrome by Concatenating Two Letter Words'
+description: 'Build the longest palindrome from two-letter words by matching reversed pairs and choosing a possible center.'
 tags: [Array, Hash Table, String, Greedy, Counting]
 rating: 1557
 ---

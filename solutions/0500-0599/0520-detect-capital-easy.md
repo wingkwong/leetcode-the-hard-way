@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/detect-capital/'
+title: 'LeetCode 520 – Detect Capital'
+description: 'Check whether a word uses capitals consistently by distinguishing uppercase, lowercase, and initial-capital patterns.'
 ---
 
 # 0520 - Detect Capital (Easy)

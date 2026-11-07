@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2, @wkw | https://leetcode.com/problems/min-cost-climbing-stairs/'
+title: 'LeetCode 746 – Min Cost Climbing Stairs'
+description: 'Minimize the cost of climbing stairs by comparing the costs of arriving from one or two steps below.'
 tags: [Array, Dynamic Programming]
 rating: 1358
 ---

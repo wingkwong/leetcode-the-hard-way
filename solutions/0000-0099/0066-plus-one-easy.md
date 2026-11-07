@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/plus-one/'
+title: 'LeetCode 66 – Plus One'
+description: 'Add one to a number stored as digits by propagating the carry backward through trailing nines.'
 tags: [Array, Math]
 ---
 

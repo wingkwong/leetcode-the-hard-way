@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @heiheihang, @wkw | https://leetcode.com/problems/minimum-time-to-complete-trips/
+title: 'LeetCode 2187 – Minimum Time to Complete Trips'
+description: 'Find the minimum time needed for all trips by binary searching time and counting completed trips at each candidate.'
 rating: 1641
 ---
 

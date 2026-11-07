@@ -1,5 +1,6 @@
 ---
-description: 'Author: @aryankashyap7, @radojicic23 | https://leetcode.com/problems/climbing-stairs/'
+title: 'LeetCode 70 – Climbing Stairs'
+description: 'Count ways to climb stairs using the Fibonacci recurrence for a final move of either one or two steps.'
 tags: [Math, Dynamic Programming, Memoization]
 ---
 

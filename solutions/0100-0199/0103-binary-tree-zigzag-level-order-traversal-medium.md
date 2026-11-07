@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/
+title: 'LeetCode 103 – Binary Tree Zigzag Level Order Traversal'
+description: 'Traverse a binary tree by level while alternating the order in which each level''s values are returned.'
 
 tags: [Tree, Breadth-First Search, Binary Tree]
 ---

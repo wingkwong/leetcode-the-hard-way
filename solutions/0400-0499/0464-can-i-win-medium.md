@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/can-i-win/'
+title: 'LeetCode 464 – Can I Win'
+description: 'Decide whether the first player can force a win by representing the already chosen integers with a bit mask.'
 tags:
   [
     Math,

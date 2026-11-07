@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @lonyehan | https://leetcode.com/problems/n-ary-tree-level-order-traversal/'
+title: 'LeetCode 429 – N-ary Tree Level Order Traversal'
+description: 'Collect the values at each level of an N-ary tree by processing its children with breadth-first search.'
 tags: [Tree, Breadth-First Search]
 ---
 

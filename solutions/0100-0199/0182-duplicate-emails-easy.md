@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/duplicate-emails'
+title: 'LeetCode 182 – Duplicate Emails'
+description: 'Find repeated email addresses by grouping records by email and filtering groups with more than one entry.'
 ---
 
 # 0182 - Duplicate Emails (Easy)

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/number-of-ways-to-reach-a-position-after-exactly-k-steps/'
+title: 'LeetCode 2400 – Number of Ways to Reach a Position After Exactly k Steps'
+description: 'Count walks reaching a target after exactly k unit steps by calculating how many rightward moves the displacement requires.'
 rating: 1751
 ---
 

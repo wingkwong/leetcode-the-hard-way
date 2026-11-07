@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/sum-of-all-subset-xor-totals/'
+title: 'LeetCode 1863 – Sum of All Subset XOR Totals'
+description: 'Sum XOR values over all subsets by enumerating selections or reasoning about each bit''s contribution.'
 rating: 1372
 ---
 

@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @TBC | https://leetcode.com/problems/find-the-difference-of-two-arrays/
+title: 'LeetCode 2215 – Find the Difference of Two Arrays'
+description: 'Find the distinct values exclusive to each of two arrays and return them as two separate collections.'
 
 draft: true
 rating: 1208

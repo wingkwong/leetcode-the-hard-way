@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @vigneshshiv | https://leetcode.com/problems/concatenated-words/
+title: 'LeetCode 472 – Concatenated Words'
+description: 'Identify words formed by concatenating shorter dictionary words using prefix searches or a set of known words.'
 ---
 
 # 0472 - Concatenated Words (Hard)

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/minimum-genetic-mutation/'
+title: 'LeetCode 433 – Minimum Genetic Mutation'
+description: 'Find the fewest valid gene mutations by searching the gene bank one single-character change at a time.'
 tags: [Hash Table, String, Breadth-First Search]
 ---
 

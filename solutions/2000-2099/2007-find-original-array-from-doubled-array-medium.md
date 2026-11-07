@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @iraycd | https://leetcode.com/problems/find-original-array-from-doubled-array/'
+title: 'LeetCode 2007 – Find Original Array From Doubled Array'
+description: 'Reconstruct an original array by sorting the values and matching each remaining element with an available double.'
 tags: [Array, Hash Table, Greedy, Sorting]
 rating: 1557
 ---

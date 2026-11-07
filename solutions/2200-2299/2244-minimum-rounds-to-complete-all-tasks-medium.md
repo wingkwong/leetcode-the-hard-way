@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/minimum-rounds-to-complete-all-tasks/
+title: 'LeetCode 2244 – Minimum Rounds to Complete All Tasks'
+description: 'Minimize task rounds by grouping equal difficulties in twos and threes and detecting impossible singletons.'
 rating: 1372
 ---
 

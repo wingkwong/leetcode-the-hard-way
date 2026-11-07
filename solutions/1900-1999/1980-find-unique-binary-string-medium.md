@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/find-unique-binary-string/'
+title: 'LeetCode 1980 – Find Unique Binary String'
+description: 'Find a binary string absent from the input by storing the existing strings and checking candidate values.'
 tags: [Array, String, Backtracking]
 rating: 1362
 ---

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves'
+title: 'LeetCode 1123 – Lowest Common Ancestor of Deepest Leaves'
+description: 'Locate the lowest common ancestor of the deepest leaves by comparing subtree depths during depth-first traversal.'
 rating: 1607
 ---
 

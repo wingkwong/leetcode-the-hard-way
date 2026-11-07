@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/minimum-number-of-changes-to-make-binary-string-beautiful/'
+title: 'LeetCode 2914 – Minimum Number of Changes to Make Binary String Beautiful'
+description: 'Minimize changes to form even-length uniform binary substrings by counting adjacent pairs whose two bits differ.'
 rating: 1480
 ---
 

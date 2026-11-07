@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/zigzag-conversion/'
+title: 'LeetCode 6 – Zigzag Conversion'
+description: 'Simulate the zigzag row pattern and read the rows in order to construct the converted string.'
 tags: [String]
 ---
 

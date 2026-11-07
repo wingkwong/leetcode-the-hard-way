@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @ColeB2 | https://leetcode.com/problems/powx-n/'
+title: 'LeetCode 50 – Pow(x, n)'
+description: 'Compute a positive or negative integer power with binary exponentiation, squaring the base as the exponent shrinks.'
 tags: [Math, Recursion]
 ---
 

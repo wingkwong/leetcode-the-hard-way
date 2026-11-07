@@ -1,5 +1,6 @@
 ---
-description: 'Author: @lonyehan, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/linked-list-cycle/'
+title: 'LeetCode 141 – Linked List Cycle'
+description: 'Detect a linked-list cycle with two pointers that move at different speeds and meet if a cycle exists.'
 tags: [Hash Table, Linked List, Two Pointers]
 ---
 

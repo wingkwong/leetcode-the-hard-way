@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/fruit-into-baskets/'
+title: 'LeetCode 904 – Fruit Into Baskets'
+description: 'Find the longest run containing at most two fruit types by sliding a window along the row of trees.'
 tags: [Array, Hash Table, Sliding Window]
 rating: 1516
 ---

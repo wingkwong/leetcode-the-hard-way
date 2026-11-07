@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/minimum-weighted-subgraph-with-the-required-paths/
+title: 'LeetCode 2203 – Minimum Weighted Subgraph With the Required Paths'
+description: 'Minimize the weight of two routes to a common destination by combining distances from both sources and to the destination.'
 rating: 2364
 ---
 

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/find-duplicate-file-in-system/'
+title: 'LeetCode 609 – Find Duplicate File in System'
+description: 'Find duplicate files by parsing directory entries and grouping file paths that share identical contents.'
 tags: [Array, Hash Table, String]
 ---
 

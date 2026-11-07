@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/flip-string-to-monotone-increasing/'
+title: 'LeetCode 926 – Flip String to Monotone Increasing'
+description: 'Minimize flips to make a binary string monotone increasing by tracking the best cost as each bit is processed.'
 tags: [String, Dynamic Programming]
 rating: 1602
 ---

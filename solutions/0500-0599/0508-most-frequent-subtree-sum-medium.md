@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/most-frequent-subtree-sum/'
+title: 'LeetCode 508 – Most Frequent Subtree Sum'
+description: 'Compute subtree sums from the leaves upward and count their frequencies to identify the most common sums.'
 tags: [Hash Table, Tree, Depth-First Search, Binary Tree]
 ---
 

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @yashh0903 | https://leetcode.com/problems/find-peak-element/'
+title: 'LeetCode 162 – Find Peak Element'
+description: 'Locate a peak by binary searching in the direction of a rising neighbor.'
 tags: [Array, Binary Search]
 ---
 

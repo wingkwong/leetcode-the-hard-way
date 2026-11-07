@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/find-indices-with-index-and-value-difference-i/'
+title: 'LeetCode 2903 – Find Indices With Index and Value Difference I'
+description: 'Find indices meeting minimum index and value gaps by testing pairs or tracking extreme eligible earlier values.'
 tags: [Array]
 rating: 1158
 ---

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/string-compression-ii/'
+title: 'LeetCode 1531 – String Compression II'
+description: 'Minimize run-length encoding size after deletions by tracking which characters to keep and when encoded run lengths change.'
 tags: [String, Dynamic Programming]
 rating: 2576
 ---

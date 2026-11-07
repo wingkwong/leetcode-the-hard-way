@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/combination-sum-iv/
+title: 'LeetCode 377 – Combination Sum IV'
+description: 'Count ordered combinations that reach a target by combining the counts for smaller remaining sums.'
 ---
 
 # 0377 - Combination Sum IV (Medium)

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/baseball-game/'
+title: 'LeetCode 682 – Baseball Game'
+description: 'Simulate a baseball score record by updating earlier scores when cancellation, doubling, or sum operations appear.'
 ---
 
 # 0682 - Baseball Game (Easy)

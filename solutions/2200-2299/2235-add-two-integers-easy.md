@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/add-two-integers/'
+title: 'LeetCode 2235 – Add Two Integers'
+description: 'Solve LeetCode 2235 with direct addition, or use XOR and carry bits to add two integers without the plus operator.'
 ---
 
 # 2235 - Add Two Integers (Easy)

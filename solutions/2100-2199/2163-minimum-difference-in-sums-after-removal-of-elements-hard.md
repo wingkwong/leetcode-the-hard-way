@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/minimum-difference-in-sums-after-removal-of-elements/
+title: 'LeetCode 2163 – Minimum Difference in Sums After Removal of Elements'
+description: 'Minimize the difference between two retained sums by maintaining the best prefix and suffix selections with two heaps.'
 rating: 2225
 ---
 

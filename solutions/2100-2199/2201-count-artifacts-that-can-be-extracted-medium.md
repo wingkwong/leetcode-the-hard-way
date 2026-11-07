@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/count-artifacts-that-can-be-extracted/
+title: 'LeetCode 2201 – Count Artifacts That Can Be Extracted'
+description: 'Count extractable artifacts by checking whether every cell in each artifact''s rectangular footprint has been dug.'
 rating: 1525
 ---
 

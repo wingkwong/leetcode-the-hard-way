@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/minimum-operations-to-make-the-array-k-increasing/
+title: 'LeetCode 2111 – Minimum Operations to Make the Array K-Increasing'
+description: 'Minimize replacements for a k-increasing array by finding a longest nondecreasing subsequence in each stride-k group.'
 rating: 1941
 ---
 

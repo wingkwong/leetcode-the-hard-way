@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/
+title: 'LeetCode 1365 – How Many Numbers Are Smaller Than the Current Number'
+description: 'Count how many array elements are strictly smaller than each value by using its position in sorted order.'
 rating: 1152
 ---
 

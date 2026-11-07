@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/network-delay-time/'
+title: 'LeetCode 743 – Network Delay Time'
+description: 'Compute when every node receives a signal by finding shortest travel times with Dijkstra''s algorithm or Bellman-Ford.'
 tags:
   [
     Depth-First Search,

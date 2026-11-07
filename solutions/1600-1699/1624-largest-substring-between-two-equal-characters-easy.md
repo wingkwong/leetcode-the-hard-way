@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @jit, @jaffar | https://leetcode.com/problems/largest-substring-between-two-equal-characters/'
+title: 'LeetCode 1624 – Largest Substring Between Two Equal Characters'
+description: 'Find the longest gap between matching characters by comparing their first and last positions.'
 tags: [Hash Table, String]
 rating: 1282
 ---

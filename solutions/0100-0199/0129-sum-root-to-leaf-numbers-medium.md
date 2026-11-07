@@ -1,5 +1,6 @@
 ---
-description: 'Author: @heder, @jit | https://leetcode.com/problems/sum-root-to-leaf-numbers/'
+title: 'LeetCode 129 – Sum Root to Leaf Numbers'
+description: 'Sum the numbers represented by root-to-leaf paths by appending each node''s digit as the traversal descends.'
 tags: [Tree, Depth-First Search, Binary Tree]
 ---
 

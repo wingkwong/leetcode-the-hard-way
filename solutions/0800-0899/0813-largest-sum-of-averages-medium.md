@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/largest-sum-of-averages/'
+title: 'LeetCode 813 – Largest Sum of Averages'
+description: 'Maximize the sum of group averages by using dynamic programming to choose partition boundaries in the array.'
 tags: [Array, Dynamic Programming, Prefix Sum]
 rating: 1937
 ---

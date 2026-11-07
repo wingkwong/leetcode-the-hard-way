@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/find-median-from-data-stream/'
+title: 'LeetCode 295 – Find Median from Data Stream'
+description: 'Maintain a running median with two heaps that balance the lower and upper halves of a data stream.'
 tags: [Two Pointers, Design, Sorting, Heap (Priority Queue), Data Stream]
 ---
 

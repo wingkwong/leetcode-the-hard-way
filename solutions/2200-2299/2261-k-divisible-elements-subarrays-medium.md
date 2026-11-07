@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/k-divisible-elements-subarrays/
+title: 'LeetCode 2261 – K Divisible Elements Subarrays'
+description: 'Count distinct subarrays with at most k elements divisible by p by extending candidate ranges and recording their contents.'
 rating: 1724
 ---
 

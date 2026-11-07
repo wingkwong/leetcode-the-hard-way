@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @jit | https://leetcode.com/problems/largest-odd-number-in-string/'
+title: 'LeetCode 1903 – Largest Odd Number in String'
+description: 'Find the largest odd-valued substring of a decimal string by locating its rightmost odd digit.'
 tags: [Math, String, Greedy]
 rating: 1249
 ---

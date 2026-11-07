@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @vigneshshiv, @radojicic23, @jit | https://leetcode.com/problems/valid-anagram/'
+title: 'LeetCode 242 – Valid Anagram'
+description: 'Determine whether two strings are anagrams by comparing character counts or sorting their letters.'
 tags: [Hash Table, String, Sorting]
 ---
 

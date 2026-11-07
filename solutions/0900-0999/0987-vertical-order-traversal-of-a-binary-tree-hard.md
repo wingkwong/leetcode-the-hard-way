@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @lonyehan | https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/'
+title: 'LeetCode 987 – Vertical Order Traversal of a Binary Tree'
+description: 'Traverse a binary tree by vertical columns, using row positions and node values to break ordering ties.'
 tags: [Hash Table, Tree, Depth-First Search, Breadth-First Search, Binary Tree]
 rating: 1676
 ---

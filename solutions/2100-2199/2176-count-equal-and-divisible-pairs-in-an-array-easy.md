@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/count-equal-and-divisible-pairs-in-an-array/
+title: 'LeetCode 2176 – Count Equal and Divisible Pairs in an Array'
+description: 'Count equal-valued index pairs whose index product is divisible by k by testing pairs directly.'
 rating: 1216
 ---
 

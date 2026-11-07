@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2, @radojicic23 | https://leetcode.com/problems/kth-smallest-element-in-a-bst/'
+title: 'LeetCode 230 – Kth Smallest Element in a BST'
+description: 'Find the kth smallest key in a binary search tree by visiting nodes in sorted order with inorder traversal.'
 tags: [Tree, Depth-First Search, Binary Search Tree, Binary Tree]
 ---
 

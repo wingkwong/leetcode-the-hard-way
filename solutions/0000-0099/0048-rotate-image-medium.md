@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @radojicic23 | https://leetcode.com/problems/rotate-image/'
+title: 'LeetCode 48 – Rotate Image'
+description: 'Rotate a square matrix clockwise in place by cycling four cells at a time around each layer.'
 tags: [Array, Math, Matrix]
 ---
 

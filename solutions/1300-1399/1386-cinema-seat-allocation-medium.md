@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/cinema-seat-allocation'
+title: 'LeetCode 1386 – Cinema Seat Allocation'
+description: 'Determine how many four-person families can sit together by using reserved-seat masks to test blocks in each cinema row.'
 tags: [Array, Hash Table, Bit Manipulation]
 rating: 1637
 ---

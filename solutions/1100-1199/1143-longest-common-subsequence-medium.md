@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw , @deepanshu-rawat6, @radojicic23 | https://leetcode.com/problems/longest-common-subsequence/'
+title: 'LeetCode 1143 – Longest Common Subsequence'
+description: 'Find the longest common subsequence by comparing prefixes and deciding how to handle matching or differing characters.'
 tags: [String, Dynamic Programming]
 ---
 

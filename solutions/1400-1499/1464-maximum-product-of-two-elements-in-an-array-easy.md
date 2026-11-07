@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @jaffar, @jit | https://leetcode.com/problems/maximum-product-of-two-elements-in-an-array/'
+title: 'LeetCode 1464 – Maximum Product of Two Elements in an Array'
+description: 'Maximize the product obtained after subtracting one from each of two chosen array values by selecting the largest pair.'
 tags: [Array, Sorting, Heap (Priority Queue)]
 rating: 1121
 ---

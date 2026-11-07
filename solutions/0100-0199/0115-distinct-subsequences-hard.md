@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @ColeB2 | https://leetcode.com/problems/distinct-subsequences/'
+title: 'LeetCode 115 – Distinct Subsequences'
+description: 'Count the subsequences that form a target string by combining the choices to use or skip each source character.'
 tags: [String, Dynamic Programming]
 ---
 

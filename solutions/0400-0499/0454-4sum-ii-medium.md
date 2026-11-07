@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/4sum-ii/'
+title: 'LeetCode 454 – 4Sum II'
+description: 'Count zero-sum quadruples from four arrays by matching sums from two arrays to complementary sums from the other two.'
 ---
 
 # 0454 - 4Sum II (Medium)

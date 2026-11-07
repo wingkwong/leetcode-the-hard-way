@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/missing-number/'
+title: 'LeetCode 268 – Missing Number'
+description: 'Find the missing value from zero through n using sorting, XOR cancellation, or the expected arithmetic sum.'
 tags: ['Array', 'Hash Table', 'Math', 'Bit Manupulation', 'Sorting']
 ---
 

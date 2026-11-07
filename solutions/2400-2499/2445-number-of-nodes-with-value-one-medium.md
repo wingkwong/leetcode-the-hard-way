@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/number-of-nodes-with-value-one/'
+title: 'LeetCode 2445 – Number of Nodes With Value One'
+description: 'Count tree nodes set to one after subtree flips by carrying the parity of ancestor flips through a depth-first traversal.'
 ---
 
 # 2445 - Number of Nodes With Value One (Medium)

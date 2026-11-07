@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/process-tasks-using-servers'
+title: 'LeetCode 1882 – Process Tasks Using Servers'
+description: 'Assign queued tasks to servers by tracking available servers and their release times with two heaps.'
 tags: ['Array', 'Heap (Priority Queue)']
 ---
 

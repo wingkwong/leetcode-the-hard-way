@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @vigneshshiv | https://leetcode.com/problems/greatest-common-divisor-of-strings/'
+title: 'LeetCode 1071 – Greatest Common Divisor of Strings'
+description: 'Find the largest repeating string unit shared by two strings using compatibility checks and the greatest common divisor of their lengths.'
 tags: [Math, String]
 rating: 1398
 ---

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2, @radojicic23 | https://leetcode.com/problems/invert-binary-tree/'
+title: 'LeetCode 226 – Invert Binary Tree'
+description: 'Invert a binary tree by swapping every node''s left and right subtrees with depth-first or breadth-first traversal.'
 tags: [Tree, Depth-First Search, Breadth-First Search, Binary Tree]
 ---
 

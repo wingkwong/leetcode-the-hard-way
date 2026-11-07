@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/find-the-largest-almost-missing-integer'
+title: 'LeetCode 3471 – Find the Largest Almost Missing Integer'
+description: 'Find the largest integer appearing in exactly one length-k subarray by analyzing its possible window positions.'
 tags: [Array, Hash Table]
 rating: 1308
 ---

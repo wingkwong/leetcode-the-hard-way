@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @TBC | https://leetcode.com/problems/smallest-number-in-infinite-set
+title: 'LeetCode 2336 – Smallest Number in Infinite Set'
+description: 'Design a set of positive integers that supports removing the smallest available number and adding a removed number back.'
 
 draft: true
 rating: 1375

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @deepanshu-rawat6, @radojicic23 | https://leetcode.com/problems/valid-perfect-square/'
+title: 'LeetCode 367 – Valid Perfect Square'
+description: 'Test whether a positive integer is a perfect square by binary searching for an integer root.'
 ---
 
 # 0367 - Valid Perfect Square (Easy)

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw| https://leetcode.com/problems/max-consecutive-ones-iii/'
+title: 'LeetCode 1004 – Max Consecutive Ones III'
+description: 'Find the longest run of ones after flipping at most k zeroes by maintaining a sliding window.'
 rating: 1656
 ---
 

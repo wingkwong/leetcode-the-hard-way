@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/two-out-of-three
+title: 'LeetCode 2032 – Two Out of Three'
+description: 'Find values present in at least two of three arrays by tracking which arrays contain each distinct value.'
 
 tags: ['Hash Map']
 rating: 1270

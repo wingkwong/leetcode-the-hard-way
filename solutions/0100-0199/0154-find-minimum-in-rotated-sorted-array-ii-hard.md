@@ -1,5 +1,6 @@
 ---
-description: 'Author: @yashh0903 | https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/'
+title: 'LeetCode 154 – Find Minimum in Rotated Sorted Array II'
+description: 'Find the minimum in a rotated sorted array with binary search that handles ambiguous comparisons caused by duplicates.'
 tags: [Array, Binary Search]
 ---
 

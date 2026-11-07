@@ -1,5 +1,6 @@
 ---
-description: 'Author: @jit, @heder | https://leetcode.com/problems/sum-of-absolute-differences-in-a-sorted-array/'
+title: 'LeetCode 1685 – Sum of Absolute Differences in a Sorted Array'
+description: 'Compute absolute differences for every value in a sorted array by combining the sums on either side.'
 tags: [Array, Math, Prefix Sum]
 rating: 1496
 ---

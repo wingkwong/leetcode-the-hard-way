@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/lru-cache/'
+title: 'LeetCode 146 – LRU Cache'
+description: 'Implement an LRU cache with a doubly linked list to update access order and evict the least recently used entry.'
 tags: [Hash Table, Linked List, Design, Doubly-Linked List]
 ---
 

@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/minimum-sum-of-four-digit-number-after-splitting-digits/
+title: 'LeetCode 2160 – Minimum Sum of Four Digit Number After Splitting Digits'
+description: 'Minimize the sum of two numbers made from four digits by sorting the digits and placing the smallest in the tens positions.'
 rating: 1314
 ---
 

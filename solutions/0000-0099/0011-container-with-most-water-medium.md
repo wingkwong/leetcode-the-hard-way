@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @ganajayant, @radojicic23 | https://leetcode.com/problems/container-with-most-water/'
+title: 'LeetCode 11 – Container With Most Water'
+description: 'Find the container that holds the most water by moving two pointers inward and reconsidering the shorter boundary.'
 ---
 
 # 0011 - Container With Most Water (Medium)

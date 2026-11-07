@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/minimum-lines-to-represent-a-line-chart
+title: 'LeetCode 2280 – Minimum Lines to Represent a Line Chart'
+description: 'Find how many line segments represent a stock chart by sorting the points and detecting changes in slope.'
 rating: 1681
 ---
 

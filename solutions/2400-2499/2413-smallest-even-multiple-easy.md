@@ -1,5 +1,6 @@
 ---
-description: 'Author: @kat-kan | https://leetcode.com/problems/smallest-even-multiple/'
+title: 'LeetCode 2413 – Smallest Even Multiple'
+description: 'Find the smallest multiple shared by two and n by checking whether n is already even.'
 rating: 1145
 ---
 

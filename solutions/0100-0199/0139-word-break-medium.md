@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/word-break/'
+title: 'LeetCode 139 – Word Break'
+description: 'Decide whether a string can be split into dictionary words by tracking which prefixes admit a valid segmentation.'
 tags: [Array, Hash Table, String, Dynamic Programming, Trie, Memoization]
 ---
 

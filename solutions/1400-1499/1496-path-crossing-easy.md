@@ -1,5 +1,6 @@
 ---
-description: 'Author: @jaffar, @jit, @wkw | https://leetcode.com/problems/path-crossing/'
+title: 'LeetCode 1496 – Path Crossing'
+description: 'Detect whether a path crosses itself by tracking the coordinates visited after each directional step.'
 tags: [Hash Table, String]
 rating: 1508
 ---

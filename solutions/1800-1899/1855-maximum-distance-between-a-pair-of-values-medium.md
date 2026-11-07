@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/maximum-distance-between-a-pair-of-values/
+title: 'LeetCode 1855 – Maximum Distance Between a Pair of Values'
+description: 'Maximize the distance between valid indices in two nonincreasing arrays with two pointers or binary search.'
 rating: 1515
 ---
 

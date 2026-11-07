@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/reverse-string/'
+title: 'LeetCode 344 – Reverse String'
+description: 'Reverse a character array in place by swapping corresponding entries from opposite ends.'
 ---
 
 # 0344 - Reverse String (Easy)

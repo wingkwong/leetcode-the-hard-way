@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/make-two-arrays-equal-by-reversing-subarrays/'
+title: 'LeetCode 1460 – Make Two Arrays Equal by Reversing Subarrays'
+description: 'Determine whether two arrays can match after subarray reversals by comparing their sorted elements.'
 tags: [Array, Hash Table, Sorting]
 rating: 1152
 ---

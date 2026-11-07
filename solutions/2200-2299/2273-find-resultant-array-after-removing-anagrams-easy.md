@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/find-resultant-array-after-removing-anagrams/
+title: 'LeetCode 2273 – Find Resultant Array After Removing Anagrams'
+description: 'Remove adjacent anagrams by comparing sorted letter signatures and keeping the first word in each consecutive group.'
 rating: 1295
 ---
 

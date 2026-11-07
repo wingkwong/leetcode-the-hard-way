@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2, @wkw | https://leetcode.com/problems/longest-increasing-subsequence/'
+title: 'LeetCode 300 – Longest Increasing Subsequence'
+description: 'Find the longest increasing subsequence with dynamic programming or binary search over candidate subsequence tails.'
 tags: [Array, Binary Search, Dynamic Programming]
 ---
 

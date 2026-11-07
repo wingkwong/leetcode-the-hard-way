@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/prime-pairs-with-target-sum/'
+title: 'LeetCode 2761 – Prime Pairs With Target Sum'
+description: 'List prime pairs summing to a target by sieving candidate primes and checking their complements.'
 rating: 1505
 ---
 

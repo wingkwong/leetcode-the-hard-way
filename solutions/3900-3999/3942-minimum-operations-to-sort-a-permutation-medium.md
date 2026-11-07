@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/minimum-operations-to-sort-a-permutation'
+title: 'LeetCode 3942 – Minimum Operations to Sort a Permutation'
+description: 'Minimize rotations and reversals needed to sort a permutation by checking the circular order in both directions.'
 tags: ['Array']
 rating: 1855
 ---

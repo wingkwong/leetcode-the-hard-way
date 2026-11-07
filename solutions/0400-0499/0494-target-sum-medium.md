@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/target-sum/'
+title: 'LeetCode 494 – Target Sum'
+description: 'Count assignments of plus and minus signs that reach a target by memoizing the sums reachable from each position.'
 tags: [Array, Dynamic Programming, Backtracking]
 ---
 

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/number-of-closed-islands'
+title: 'LeetCode 1254 – Number of Closed Islands'
+description: 'Count islands enclosed by water by exploring land components and checking whether they touch the grid boundary.'
 tags: ['Array', 'Depth-First Search', 'Breadth-First Search', 'Union-Find']
 rating: 1659
 ---

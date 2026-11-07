@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/median-of-two-sorted-arrays/'
+title: 'LeetCode 4 – Median of Two Sorted Arrays'
+description: 'Find the median of two sorted arrays by scanning them in order or using binary search to locate the middle values.'
 tags: [Array, Binary Search, Divide and Conquer]
 ---
 

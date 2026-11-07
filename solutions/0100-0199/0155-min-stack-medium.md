@@ -1,5 +1,6 @@
 ---
-description: 'Author: @heiheihang, @ColeB2 | https://leetcode.com/problems/min-stack/'
+title: 'LeetCode 155 – Min Stack'
+description: 'Design a stack that supports minimum queries by retaining the current minimum alongside ordinary stack operations.'
 ---
 
 # 0155 - Min Stack (Medium)

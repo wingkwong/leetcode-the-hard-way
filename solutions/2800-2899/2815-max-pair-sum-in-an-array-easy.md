@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/max-pair-sum-in-an-array/'
+title: 'LeetCode 2815 – Max Pair Sum in an Array'
+description: 'Find the largest pair sum whose two numbers share the same maximum decimal digit.'
 tags: [Array, Hash Table]
 rating: 1295
 ---

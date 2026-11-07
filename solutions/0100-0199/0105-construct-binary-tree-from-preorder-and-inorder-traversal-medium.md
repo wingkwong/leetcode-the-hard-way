@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/'
+title: 'LeetCode 105 – Construct Binary Tree from Preorder and Inorder Traversal'
+description: 'Rebuild a binary tree by taking roots from preorder traversal and splitting their subtrees with inorder traversal.'
 tags: [Array, Hash Table, Divide and Conquer, Tree, Binary Tree]
 ---
 

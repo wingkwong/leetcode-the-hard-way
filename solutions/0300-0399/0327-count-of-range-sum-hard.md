@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/count-of-range-sum/'
+title: 'LeetCode 327 – Count of Range Sum'
+description: 'Count subarray sums within a given interval by querying earlier prefix sums in an ordered collection.'
 ---
 
 # 0327 - Count of Range Sum (Hard)

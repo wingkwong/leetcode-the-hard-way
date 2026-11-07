@@ -1,5 +1,6 @@
 ---
-description: 'Author: @DoubleSpicy | https://leetcode.com/problems/add-binary/'
+title: 'LeetCode 67 – Add Binary'
+description: 'Add two binary strings from right to left, carrying into the next position whenever the digit sum reaches two.'
 ---
 
 # 0067 - Add Binary (easy)

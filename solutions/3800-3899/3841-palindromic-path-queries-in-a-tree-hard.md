@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/palindromic-path-queries-in-a-tree'
+title: 'LeetCode 3841 – Palindromic Path Queries in a Tree'
+description: 'Answer tree-path palindrome rearrangement queries under label updates using parity masks, heavy-light decomposition, and a Fenwick tree.'
 tags: ['Array', 'String', 'Dvide and Conquer', 'Bit Manipulation', 'Tree', 'Depth-First Search', 'Binary Indexed Tree', 'Segment Tree']
 rating: 2384
 ---

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @dhanu084 | https://leetcode.com/problems/largest-positive-integer-that-exists-with-its-negative/'
+title: 'LeetCode 2441 – Largest Positive Integer That Exists With Its Negative'
+description: 'Find the largest positive integer whose negative also appears by checking for matching opposite values.'
 rating: 1168
 ---
 

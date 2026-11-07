@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2, @DongDong | https://leetcode.com/problems/remove-element/'
+title: 'LeetCode 27 – Remove Element'
+description: 'Remove a target value in place with two pointers and return the number of elements kept.'
 tags: [Array, Two Pointers]
 ---
 

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @ganajayant, @radojicic23| https://leetcode.com/problems/swap-nodes-in-pairs/'
+title: 'LeetCode 24 – Swap Nodes in Pairs'
+description: 'Swap adjacent linked-list nodes in pairs by rewiring their links, either iteratively or recursively.'
 ---
 
 # 0024 - Swap Nodes in Pairs (Medium)

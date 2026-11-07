@@ -1,5 +1,6 @@
 ---
-description: 'Author: @heder, @wkw, @jit, @jaffar | https://leetcode.com/problems/maximum-product-difference-between-two-pairs/'
+title: 'LeetCode 1913 – Maximum Product Difference Between Two Pairs'
+description: 'Maximize the product difference between two pairs by choosing the two largest and two smallest array values.'
 tags: [Array, Sorting]
 rating: 1145
 ---

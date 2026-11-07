@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @vigneshshiv, @MithunPrabhu777, @radojicic23 | https://leetcode.com/problems/reverse-integer/
+title: 'LeetCode 7 – Reverse Integer'
+description: 'Reverse the decimal digits of a signed integer and check whether the result fits in the 32-bit range.'
 ---
 
 # 0007 - Reverse Integer (Medium)

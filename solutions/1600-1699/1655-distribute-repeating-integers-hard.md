@@ -1,5 +1,6 @@
 ---
-description: 'Author: @TBC | https://leetcode.com/problems/distribute-repeating-integers/'
+title: 'LeetCode 1655 – Distribute Repeating Integers'
+description: 'Determine whether repeated integers can satisfy every customer''s order when each customer requires identical values.'
 draft: 'true'
 rating: 2307
 ---

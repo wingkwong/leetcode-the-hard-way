@@ -1,5 +1,6 @@
 ---
-description: 'Author: @heder | https://leetcode.com/problems/the-employee-that-worked-on-the-longest-task/'
+title: 'LeetCode 2432 – The Employee That Worked on the Longest Task'
+description: 'Identify the employee who worked the longest single task by comparing differences between successive completion times.'
 tags: [Array]
 rating: 1267
 ---

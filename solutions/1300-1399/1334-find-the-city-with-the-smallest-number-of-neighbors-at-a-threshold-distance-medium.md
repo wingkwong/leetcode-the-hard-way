@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/
+title: 'LeetCode 1334 – Find the City With the Smallest Number of Neighbors at a Threshold Distance'
+description: 'Find the city with the fewest neighbors within a distance threshold by computing shortest paths between cities.'
 rating: 1855
 ---
 

@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/number-of-flowers-in-full-bloom/
+title: 'LeetCode 2251 – Number of Flowers in Full Bloom'
+description: 'Count flowers blooming at each arrival time by sweeping bloom starts, ends, and queries in time order.'
 
 tags: [Array, Hash Table, Binary Search, Sorting, Prefix Sum, Ordered Set]
 rating: 2022

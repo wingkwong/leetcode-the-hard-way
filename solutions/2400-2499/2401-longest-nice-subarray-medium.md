@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/longest-nice-subarray/'
+title: 'LeetCode 2401 – Longest Nice Subarray'
+description: 'Find the longest subarray whose elements share no set bits by tracking occupied bits in a sliding window.'
 tags: [Array, Bit Manipulation, Sliding Window]
 rating: 1750
 ---

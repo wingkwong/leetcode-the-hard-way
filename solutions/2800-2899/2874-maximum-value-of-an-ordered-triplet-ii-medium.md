@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/maximum-value-of-an-ordered-triplet-ii'
+title: 'LeetCode 2874 – Maximum Value of an Ordered Triplet II'
+description: 'Maximize the ordered triplet value by carrying forward the best earlier value and difference for each possible final element.'
 tags: [Array]
 rating: 1583
 ---
