@@ -90,7 +90,9 @@ This exactly matches the queue behavior in the problem:
 
 If multiple servers become free at the same moment, the heap order on `(available_time, weight, index)` ensures they are considered in the correct priority order.
 
-The time complexity is $O((n + m) log n)$, where $n$ is the number of servers and $m$ is the number of tasks, and the space complexity is $O(n)$ auxiliary space for the two heaps, excluding the output array.
+The time complexity is $O((n + m) log n)$, where $n$ is the number of servers and $m$ is the number of tasks. 
+
+The space complexity is $O(n)$ for the two heaps excluding the output array.
 
 <Tabs>
 <TabItem value="py" label="Python">
