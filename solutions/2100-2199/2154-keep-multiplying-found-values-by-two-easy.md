@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/keep-multiplying-found-values-by-two/
+title: 'LeetCode 2154 – Keep Multiplying Found Values by Two'
+description: 'Keep doubling a starting value while it appears in the array, using a set to test each new value.'
 rating: 1236
 ---
 

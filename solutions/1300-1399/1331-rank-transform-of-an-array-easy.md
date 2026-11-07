@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/rank-transform-of-an-array
+title: 'LeetCode 1331 – Rank Transform of an Array'
+description: 'Assign ordered ranks to distinct array values after sorting, giving equal values the same rank.'
 
 tags: ['Sorting']
 rating: 1356

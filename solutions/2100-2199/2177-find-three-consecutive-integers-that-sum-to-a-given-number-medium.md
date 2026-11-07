@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/find-three-consecutive-integers-that-sum-to-a-given-number/
+title: 'LeetCode 2177 – Find Three Consecutive Integers That Sum to a Given Number'
+description: 'Find three consecutive integers with a given sum by determining whether the sum has an integer middle value.'
 rating: 1257
 ---
 

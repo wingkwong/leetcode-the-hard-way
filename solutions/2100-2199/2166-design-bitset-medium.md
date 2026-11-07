@@ -1,5 +1,6 @@
 ---
-description: 'Author: @heiheihang | https://leetcode.com/problems/design-bitset/'
+title: 'LeetCode 2166 – Design Bitset'
+description: 'Implement a bitset with updates, flips, count queries, and string conversion while tracking which bits are set.'
 rating: 1752
 ---
 

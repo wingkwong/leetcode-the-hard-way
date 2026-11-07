@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/3sum-with-multiplicity/'
+title: 'LeetCode 923 – 3Sum With Multiplicity'
+description: 'Count index triples with a target sum by combining value frequencies and accounting for repeated values.'
 rating: 1711
 ---
 

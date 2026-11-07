@@ -1,5 +1,6 @@
 ---
-description: 'Author: @heiheihang | https://leetcode.com/problems/matrix-diagonal-sum/'
+title: 'LeetCode 1572 – Matrix Diagonal Sum'
+description: 'Add both diagonals of a square matrix and count their shared center only once.'
 rating: 1280
 ---
 

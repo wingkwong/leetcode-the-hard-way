@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/count-elements-with-strictly-smaller-and-greater-elements/
+title: 'LeetCode 2148 – Count Elements With Strictly Smaller and Greater Elements'
+description: 'Count array elements strictly between the minimum and maximum using the order of the sorted values.'
 rating: 1202
 ---
 

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/minimum-moves-to-equal-array-elements-iii'
+title: 'LeetCode 3736 – Minimum Moves to Equal Array Elements III'
+description: 'Minimize unit increments to equalize an array by summing each element''s distance to the current maximum.'
 tags: ['Array', 'Math']
 ---
 

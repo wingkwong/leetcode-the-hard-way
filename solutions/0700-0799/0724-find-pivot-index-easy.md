@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/find-pivot-index/'
+title: 'LeetCode 724 – Find Pivot Index'
+description: 'Find a pivot index by comparing the running sum to its left with the remaining sum to its right.'
 tags: [Array, Prefix Sum]
 ---
 

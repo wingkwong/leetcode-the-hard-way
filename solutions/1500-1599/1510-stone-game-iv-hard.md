@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/stone-game-iv/'
+title: 'LeetCode 1510 – Stone Game IV'
+description: 'Determine whether the first player can win the square-removal stone game by finding moves to losing states.'
 rating: 1787
 ---
 

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/count-zero-request-servers'
+title: 'LeetCode 2747 – Count Zero Request Servers'
+description: 'Count inactive servers for each query by sorting request times and maintaining the active servers in a sliding time window.'
 tags: ['Array', 'Hash Table', 'Sliding Window', 'Sorting']
 ---
 

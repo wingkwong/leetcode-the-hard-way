@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/largest-component-size-by-common-factor
+title: 'LeetCode 952 – Largest Component Size by Common Factor'
+description: 'Find the largest component linked by common factors by factoring the values and merging related elements with disjoint sets.'
 rating: 2272
 ---
 

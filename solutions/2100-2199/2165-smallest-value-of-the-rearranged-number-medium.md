@@ -1,6 +1,6 @@
 ---
-description: >-
-  Authors: @heiheihang, @wkw | https://leetcode.com/problems/smallest-value-of-the-rearranged-number/
+title: 'LeetCode 2165 – Smallest Value of the Rearranged Number'
+description: 'Rearrange digits to form the smallest signed integer by handling negative values and leading zeroes separately.'
 rating: 1362
 ---
 

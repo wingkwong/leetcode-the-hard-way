@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @heiheihang | https://leetcode.com/problems/sort-even-and-odd-indices-independently/
+title: 'LeetCode 2164 – Sort Even and Odd Indices Independently'
+description: 'Sort values at even indices in ascending order and values at odd indices in descending order, then interleave them.'
 rating: 1253
 ---
 

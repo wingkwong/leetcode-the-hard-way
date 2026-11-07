@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @Kavita613 | https://leetcode.com/problems/frog-jump/
+title: 'LeetCode 403 – Frog Jump'
+description: 'Decide whether the frog can cross the river by tracking which jump lengths can reach each stone.'
 
 tags: [Array, Dynamic Programming]
 ---

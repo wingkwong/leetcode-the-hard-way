@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/smallest-missing-multiple-of-k/'
+title: 'LeetCode 3718 – Smallest Missing Multiple of K'
+description: 'Find the smallest missing positive multiple of k by checking successive multiples against the values in the array.'
 tags: ['Array', 'Hash Table']
 rating: 1228
 ---

@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @vigneshshiv | https://leetcode.com/problems/implement-trie-prefix-tree/
+title: 'LeetCode 208 – Implement Trie (Prefix Tree)'
+description: 'Implement a prefix tree that supports inserting words, searching for whole words, and checking prefixes.'
 
 tags: [Hash Table, String, Design, Trie]
 ---

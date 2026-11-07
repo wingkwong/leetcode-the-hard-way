@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @ganajayant, @radojicic23| https://leetcode.com/problems/search-a-2d-matrix/'
+title: 'LeetCode 74 – Search a 2D Matrix'
+description: 'Locate a target in a sorted matrix by exploiting the order of its rows and columns with binary search.'
 tags: [Array, Binary Search, Matrix]
 ---
 

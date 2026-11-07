@@ -1,5 +1,6 @@
 ---
-description: 'Author: @heder, @wkw | https://leetcode.com/problems/maximum-odd-binary-number/'
+title: 'LeetCode 2864 – Maximum Odd Binary Number'
+description: 'Rearrange binary digits into the largest odd number by reserving one trailing one and placing the remaining ones first.'
 tags: [Math, String, Greedy]
 rating: 1238
 ---

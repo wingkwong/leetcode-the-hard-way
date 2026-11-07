@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/longest-subsequence-with-non-zero-bitwise-xor'
+title: 'LeetCode 3702 – Longest Subsequence With Non-Zero Bitwise XOR'
+description: 'Find the longest subsequence with nonzero XOR by checking the full-array XOR and whether removing one element can make it nonzero.'
 tags: [Array, Bit Manipulation]
 rating: 1489
 ---

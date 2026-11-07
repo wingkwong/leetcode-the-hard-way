@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ganajayant | https://leetcode.com/problems/bitwise-xor-of-all-pairings'
+title: 'LeetCode 2425 – Bitwise XOR of All Pairings'
+description: 'Compute the XOR of all cross-array pairings by determining whether each element appears an even or odd number of times.'
 rating: 1622
 ---
 

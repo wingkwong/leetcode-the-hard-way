@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw, @radojicic23, @vigneshshiv | https://leetcode.com/problems/increasing-triplet-subsequence/
+title: 'LeetCode 334 – Increasing Triplet Subsequence'
+description: 'Detect an increasing triplet by tracking the smallest viable first and second values during a single scan.'
 ---
 
 # 0334 - Increasing Triplet Subsequence (Medium)

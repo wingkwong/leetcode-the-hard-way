@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @ganajayant, @skoden, @radojicic23, @DongDong | https://leetcode.com/problems/two-sum/'
+title: 'LeetCode 1 – Two Sum'
+description: 'Find two indices whose values add up to the target. A hash table lets you look up the complement as you scan the array.'
 tags: [Array, Two Pointers, Hash Table]
 ---
 

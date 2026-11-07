@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/ways-to-make-a-fair-array/'
+title: 'LeetCode 1664 – Ways to Make a Fair Array'
+description: 'Count removals that balance the sums at even and odd indices by accounting for the index shift after each deletion.'
 tags: [Array, Dynamic Programming]
 rating: 1590
 ---

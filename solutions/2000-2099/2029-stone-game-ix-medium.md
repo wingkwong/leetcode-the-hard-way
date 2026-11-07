@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/stone-game-ix'
+title: 'LeetCode 2029 – Stone Game IX'
+description: 'Analyze the stone game by grouping stones by their remainder modulo three and examining the resulting move choices.'
 rating: 2277
 ---
 

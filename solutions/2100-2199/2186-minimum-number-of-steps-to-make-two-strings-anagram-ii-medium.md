@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @heiheihang, @wkw | https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram-ii/
+title: 'LeetCode 2186 – Minimum Number of Steps to Make Two Strings Anagram II'
+description: 'Count how many characters must be appended to make two strings anagrams by comparing their character frequencies.'
 rating: 1253
 ---
 

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/'
+title: 'LeetCode 1662 – Check If Two String Arrays are Equivalent'
+description: 'Compare two arrays of string fragments by advancing through their characters in concatenation order.'
 tags: [Array, String]
 rating: 1217
 ---

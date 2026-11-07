@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/count-commas-in-range'
+title: 'LeetCode 3870 – Count Commas in Range'
+description: 'Count thousands-separator commas from one through n by identifying the first number that needs a separator.'
 tags: ['Math']
 rating: 1149
 ---

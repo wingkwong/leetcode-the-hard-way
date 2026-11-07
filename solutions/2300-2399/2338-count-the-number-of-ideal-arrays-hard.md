@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @TBC | https://leetcode.com/problems/count-the-number-of-ideal-arrays
+title: 'LeetCode 2338 – Count the Number of Ideal Arrays'
+description: 'Count bounded positive-integer arrays in which each element divides its successor.'
 
 draft: true
 rating: 2615

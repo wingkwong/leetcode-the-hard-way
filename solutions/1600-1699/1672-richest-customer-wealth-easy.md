@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @radojicic23 | https://leetcode.com/problems/richest-customer-wealth/'
+title: 'LeetCode 1672 – Richest Customer Wealth'
+description: 'Find the richest customer''s wealth by summing each row of account balances and taking the largest total.'
 tags: [Array, Matrix]
 rating: 1183
 ---

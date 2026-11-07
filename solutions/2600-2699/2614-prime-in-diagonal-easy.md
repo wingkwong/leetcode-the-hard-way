@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/prime-in-diagonal/'
+title: 'LeetCode 2614 – Prime In Diagonal'
+description: 'Find the largest prime on either diagonal of a square matrix by checking the diagonal entries for primality.'
 rating: 1375
 ---
 

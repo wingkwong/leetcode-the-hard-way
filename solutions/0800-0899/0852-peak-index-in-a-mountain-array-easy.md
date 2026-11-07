@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wingkowng | https://leetcode.com/problems/peak-index-in-a-mountain-array/
+title: 'LeetCode 852 – Peak Index in a Mountain Array'
+description: 'Locate the peak of a mountain array by binary searching the transition from its rising slope to its falling slope.'
 rating: 1182
 ---
 

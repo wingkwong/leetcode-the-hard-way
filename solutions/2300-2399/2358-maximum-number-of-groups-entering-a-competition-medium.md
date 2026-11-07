@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/maximum-number-of-groups-entering-a-competition
+title: 'LeetCode 2358 – Maximum Number of Groups Entering a Competition'
+description: 'Find the maximum number of student groups by analyzing how the required group sizes increase.'
 rating: 1503
 ---
 

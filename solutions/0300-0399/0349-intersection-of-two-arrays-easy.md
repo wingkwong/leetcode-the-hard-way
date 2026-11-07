@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ganajayant | https://leetcode.com/problems/intersection-of-two-arrays/'
+title: 'LeetCode 349 – Intersection of Two Arrays'
+description: 'Find the distinct values shared by two arrays using a lookup table to detect matches.'
 ---
 
 # 0349 - Intersection of Two Arrays (Easy)

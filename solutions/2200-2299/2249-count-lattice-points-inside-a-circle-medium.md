@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/count-lattice-points-inside-a-circle/
+title: 'LeetCode 2249 – Count Lattice Points Inside a Circle'
+description: 'Count distinct lattice points covered by one or more circles by testing integer coordinates against squared radii.'
 rating: 1603
 ---
 

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @Dhanu084 | https://leetcode.com/problems/maximum-sum-of-distinct-subarrays-with-length-k/'
+title: 'LeetCode 2461 – Maximum Sum of Distinct Subarrays With Length K'
+description: 'Find the maximum sum of a length-k subarray with distinct values by maintaining a running sum and frequency window.'
 tags: [Array, Hash Table, Sliding Window]
 rating: 1553
 ---

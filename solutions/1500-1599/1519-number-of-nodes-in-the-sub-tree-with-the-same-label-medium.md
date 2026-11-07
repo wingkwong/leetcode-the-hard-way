@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/number-of-nodes-in-the-sub-tree-with-the-same-label/'
+title: 'LeetCode 1519 – Number of Nodes in the Sub-Tree With the Same Label'
+description: 'Count same-label descendants for every tree node by aggregating letter frequencies from child subtrees.'
 tags: [Hash Table, Tree, Depth-First Search, Breadth-First Search, Counting]
 rating: 1809
 ---

@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @TBC | https://leetcode.com/problems/minimum-amount-of-time-to-fill-cups
+title: 'LeetCode 2335 – Minimum Amount of Time to Fill Cups'
+description: 'Find the minimum time to fill three types of cups when a second can fill up to two cups of different types.'
 
 draft: true
 rating: 1360

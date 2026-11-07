@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2, @kesava-karri | https://leetcode.com/problems/surrounded-regions/'
+title: 'LeetCode 130 – Surrounded Regions'
+description: 'Identify open cells connected to the board''s edge with graph search, then capture the enclosed regions.'
 tags: [Array, Depth-First Search, Breadth-First Search, Union Find, Matrix]
 ---
 

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/sliding-window-maximum/'
+title: 'LeetCode 239 – Sliding Window Maximum'
+description: 'Track the largest value in every sliding window with a monotonic queue of candidate indices.'
 tags: [Array, Queue, Sliding Window, Heap(Priority Queue), Monotonic Queue]
 ---
 

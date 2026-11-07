@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/campus-bikes-ii/'
+title: 'LeetCode 1066 – Campus Bikes II'
+description: 'Assign bikes to workers with minimum total distance by recording used bikes in a bit mask during dynamic programming.'
 rating: 1885
 ---
 

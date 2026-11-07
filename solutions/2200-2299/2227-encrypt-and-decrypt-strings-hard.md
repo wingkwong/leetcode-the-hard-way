@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/encrypt-and-decrypt-strings'
+title: 'LeetCode 2227 – Encrypt and Decrypt Strings'
+description: 'Implement dictionary-based encryption and count the words that could produce a given ciphertext using hash maps.'
 rating: 1945
 ---
 

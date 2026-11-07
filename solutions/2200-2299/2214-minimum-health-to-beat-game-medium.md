@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/minimum-health-to-beat-game/'
+title: 'LeetCode 2214 – Minimum Health to Beat Game'
+description: 'Find the least starting health needed by using armor on the hit that gives the greatest damage reduction.'
 tags: [Array, Greedy, Prefix Sum]
 ---
 

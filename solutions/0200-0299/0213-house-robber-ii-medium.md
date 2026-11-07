@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/house-robber-ii/'
+title: 'LeetCode 213 – House Robber II'
+description: 'Maximize robbery proceeds on a circular street by handling the cases that exclude the first or last house.'
 tags: [Array, Dynamic Programming]
 ---
 

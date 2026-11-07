@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/path-with-minimum-effort/'
+title: 'LeetCode 1631 – Path With Minimum Effort'
+description: 'Minimize the largest height change on a grid path by binary searching the effort limit and testing reachability.'
 tags:
   [
     Array,

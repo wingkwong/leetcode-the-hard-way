@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/minimum-operations-to-sort-a-string'
+title: 'LeetCode 3863 – Minimum Operations to Sort a String'
+description: 'Find the fewest proper-substring sorts needed to order a string by examining its boundary characters and extreme values.'
 tags: ["String"]
 rating: 1860
 ---

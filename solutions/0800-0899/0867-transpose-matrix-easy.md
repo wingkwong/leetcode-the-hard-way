@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @jessicaribeiroalves | https://leetcode.com/problems/transpose-matrix/
+title: 'LeetCode 867 – Transpose Matrix'
+description: 'Transpose a matrix by exchanging row and column indices, including when the matrix is rectangular.'
 
 tags: [Array, Matrix, Simulation]
 rating: 1259

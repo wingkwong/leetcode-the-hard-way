@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/longest-cycle-in-a-graph
+title: 'LeetCode 2360 – Longest Cycle in a Graph'
+description: 'Find the longest directed cycle in a graph with at most one outgoing edge per node using strongly connected components.'
 rating: 1897
 ---
 

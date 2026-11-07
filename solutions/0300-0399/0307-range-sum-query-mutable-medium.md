@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/range-sum-query-mutable/'
+title: 'LeetCode 307 – Range Sum Query - Mutable'
+description: 'Answer range-sum queries after point updates by storing partial sums in a segment tree.'
 tags: [Array, Design, Binary Indexed Tree, Segment Tree]
 ---
 

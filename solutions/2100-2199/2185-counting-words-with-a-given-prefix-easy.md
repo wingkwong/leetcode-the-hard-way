@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @heiheihang, @wkw | https://leetcode.com/problems/counting-words-with-a-given-prefix/
+title: 'LeetCode 2185 – Counting Words With a Given Prefix'
+description: 'Count the words that begin with a given prefix by checking the beginning of each candidate.'
 rating: 1167
 ---
 

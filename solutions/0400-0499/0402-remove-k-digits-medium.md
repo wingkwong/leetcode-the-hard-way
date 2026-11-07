@@ -1,5 +1,6 @@
 ---
-description: 'Author: @DoubleSpicy | https://leetcode.com/problems/remove-k-digits/'
+title: 'LeetCode 402 – Remove K Digits'
+description: 'Remove k digits to form the smallest possible number by using a monotonic stack to discard larger preceding digits.'
 ---
 
 # 0402 - Remove K Digits (Medium)

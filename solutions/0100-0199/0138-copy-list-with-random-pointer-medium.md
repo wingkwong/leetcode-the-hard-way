@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/copy-list-with-random-pointer/'
+title: 'LeetCode 138 – Copy List with Random Pointer'
+description: 'Copy a linked list with random pointers while preserving the correspondence between original nodes and their copies.'
 tags: [Hash Table, Linked List]
 ---
 

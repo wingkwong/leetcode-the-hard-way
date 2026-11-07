@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/longest-path-with-different-adjacent-characters/
+title: 'LeetCode 2246 – Longest Path With Different Adjacent Characters'
+description: 'Find the longest tree path whose adjacent characters differ by combining compatible child branches during depth-first traversal.'
 rating: 2126
 ---
 

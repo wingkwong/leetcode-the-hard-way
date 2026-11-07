@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @ganajayant | https://leetcode.com/problems/longest-subarray-with-maximum-bitwise-and/'
+title: 'LeetCode 2419 – Longest Subarray With Maximum Bitwise AND'
+description: 'Find the longest subarray attaining the maximum bitwise AND by measuring consecutive runs of the array''s largest value.'
 rating: 1496
 ---
 

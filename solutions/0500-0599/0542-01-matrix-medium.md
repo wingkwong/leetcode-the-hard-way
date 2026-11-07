@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/01-matrix/'
+title: 'LeetCode 542 – 01 Matrix'
+description: 'Compute each cell''s distance to the nearest zero with breadth-first traversal of the binary matrix.'
 tags: [Array, Dynamic Programming, Breadth-First Search, Matrix]
 ---
 

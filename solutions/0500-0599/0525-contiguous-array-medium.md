@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/contiguous-array/'
+title: 'LeetCode 525 – Contiguous Array'
+description: 'Find the longest subarray with equal numbers of zeroes and ones by tracking where each prefix balance first occurs.'
 tags: [Array, Hash Table, Prefix Sum]
 ---
 

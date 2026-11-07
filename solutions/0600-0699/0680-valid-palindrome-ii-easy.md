@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/valid-palindrome-ii/'
+title: 'LeetCode 680 – Valid Palindrome II'
+description: 'Check whether a string can be a palindrome after deleting at most one character by testing possible removals.'
 ---
 
 # 0680 - Valid Palindrome II (Easy)

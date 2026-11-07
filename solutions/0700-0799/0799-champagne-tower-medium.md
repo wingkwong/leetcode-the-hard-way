@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/champagne-tower/'
+title: 'LeetCode 799 – Champagne Tower'
+description: 'Calculate the amount in a champagne glass by passing each overflowing glass''s excess equally to the next row.'
 tags: [Dynamic Programming]
 rating: 1856
 ---

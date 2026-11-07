@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/find-first-palindromic-string-in-the-array/
+title: 'LeetCode 2108 – Find First Palindromic String in the Array'
+description: 'Find the first palindromic word in array order by checking each candidate for symmetry.'
 rating: 1216
 ---
 

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @vigneshshiv, @radojicic23, @ColeB2 | https://leetcode.com/problems/maximum-depth-of-binary-tree'
+title: 'LeetCode 104 – Maximum Depth of Binary Tree'
+description: 'Measure the maximum depth of a binary tree using recursive or iterative search from the root to its deepest leaf.'
 ---
 
 # 0104 - Maximum Depth of Binary Tree (Easy)

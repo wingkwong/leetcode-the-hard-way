@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/best-team-with-no-conflicts/'
+title: 'LeetCode 1626 – Best Team With No Conflicts'
+description: 'Build the highest-scoring team without age conflicts by ordering players and tracking compatible score totals.'
 tags: [Array, Dynamic Programming, Sorting]
 rating: 2027
 ---

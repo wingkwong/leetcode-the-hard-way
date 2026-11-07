@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/largest-number-after-digit-swaps-by-parity/
+title: 'LeetCode 2231 – Largest Number After Digit Swaps by Parity'
+description: 'Maximize a number with parity-preserving swaps by placing the largest available same-parity digit at each position.'
 rating: 1365
 ---
 

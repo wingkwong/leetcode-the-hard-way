@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended-ii/'
+title: 'LeetCode 1751 – Maximum Number of Events That Can Be Attended II'
+description: 'Maximize the value of up to k nonoverlapping events by combining compatible schedules with dynamic programming.'
 rating: 2041
 ---
 

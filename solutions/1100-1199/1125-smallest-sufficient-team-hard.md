@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/smallest-sufficient-team/'
+title: 'LeetCode 1125 – Smallest Sufficient Team'
+description: 'Select the smallest team covering all required skills by representing skill sets as bit masks in dynamic programming.'
 rating: 2251
 ---
 

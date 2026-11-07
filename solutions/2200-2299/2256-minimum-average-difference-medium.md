@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/minimum-average-difference/'
+title: 'LeetCode 2256 – Minimum Average Difference'
+description: 'Find the split with the minimum difference between truncated averages by computing prefix and suffix sums.'
 tags: [Array, Prefix Sum]
 rating: 1395
 ---

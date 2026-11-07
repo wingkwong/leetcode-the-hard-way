@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2, @radojicic23 | https://leetcode.com/problems/add-two-numbers/'
+title: 'LeetCode 2 – Add Two Numbers'
+description: 'Add two numbers stored in reverse-order linked lists by summing one pair of digits at a time and carrying into the next node.'
 tags: [Linked List, Math, Recursion]
 ---
 

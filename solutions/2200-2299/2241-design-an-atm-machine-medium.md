@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw| https://leetcode.com/problems/design-an-atm-machine/'
+title: 'LeetCode 2241 – Design an ATM Machine'
+description: 'Simulate deposits and withdrawals in an ATM that dispenses larger denominations first and tracks available banknotes.'
 rating: 1616
 ---
 

@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw, @heder | https://leetcode.com/problems/find-players-with-zero-or-one-losses/
+title: 'LeetCode 2225 – Find Players With Zero or One Losses'
+description: 'Identify players with zero or one loss by counting match outcomes and returning each group in sorted order.'
 
 tags: [Array, Hash Table, Sorting, Counting]
 rating: 1316

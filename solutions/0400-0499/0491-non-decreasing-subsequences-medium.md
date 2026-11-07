@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/non-decreasing-subsequences/'
+title: 'LeetCode 491 – Non-decreasing Subsequences'
+description: 'Generate distinct non-decreasing subsequences while filtering out repeated sequences.'
 tags: [Array, Hash Table, Backtracking, Bit Manipulation]
 ---
 

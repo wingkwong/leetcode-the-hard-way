@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @radojicic23 | https://leetcode.com/problems/valid-mountain-array/'
+title: 'LeetCode 941 – Valid Mountain Array'
+description: 'Validate a mountain array by checking for a strictly rising stretch followed by a strictly falling stretch.'
 rating: 1208
 ---
 

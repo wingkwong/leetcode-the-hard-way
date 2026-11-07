@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @vigneshshiv, @radojicic23 | https://leetcode.com/problems/longest-common-prefix/
+title: 'LeetCode 14 – Longest Common Prefix'
+description: 'Find the longest prefix shared by all strings by scanning characters or comparing the extremes after sorting.'
 ---
 
 # 0014 - Longest Common Prefix (Easy)

@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @vigneshshiv | https://leetcode.com/problems/string-compression/
+title: 'LeetCode 443 – String Compression'
+description: 'Compress consecutive character runs in place by writing each character and the digits of its repeat count.'
 ---
 
 # 0443 - String Compression (Medium)

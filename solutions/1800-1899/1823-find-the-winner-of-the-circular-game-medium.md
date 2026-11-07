@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/find-the-winner-of-the-circular-game/'
+title: 'LeetCode 1823 – Find the Winner of the Circular Game'
+description: 'Find the survivor of a circular elimination game using a recurrence that maps the winner back to the larger circle.'
 tags: [Array, Math, Recursion, Queue, Simulation]
 rating: 1412
 ---

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/'
+title: 'LeetCode 188 – Best Time to Buy and Sell Stock IV'
+description: 'Maximize stock-trading profit with at most k transactions by tracking the best outcomes across days and transaction counts.'
 tags: [Array, Dynamic Programming]
 ---
 

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/stone-game-ii/'
+title: 'LeetCode 1140 – Stone Game II'
+description: 'Maximize the stones taken under optimal play by tracking the current pile position and the limit on the next move.'
 tags: [Array, Math, Dynamic Programming, Game Theory]
 rating: 2035
 ---

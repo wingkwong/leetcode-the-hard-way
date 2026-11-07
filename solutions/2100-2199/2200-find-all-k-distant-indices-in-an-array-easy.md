@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/find-all-k-distant-indices-in-an-array/
+title: 'LeetCode 2200 – Find All K-Distant Indices in an Array'
+description: 'Find indices within k positions of a key occurrence by checking distances to matching array entries.'
 rating: 1266
 ---
 

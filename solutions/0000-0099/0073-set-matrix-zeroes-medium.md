@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/set-matrix-zeroes/'
+title: 'LeetCode 73 – Set Matrix Zeroes'
+description: 'Set entire matrix rows and columns to zero in place by storing markers in the matrix itself.'
 tags: [Array, Hash Table, Matrix]
 ---
 

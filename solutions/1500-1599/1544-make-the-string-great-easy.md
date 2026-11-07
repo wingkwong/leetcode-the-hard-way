@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/make-the-string-great/'
+title: 'LeetCode 1544 – Make The String Great'
+description: 'Remove adjacent copies of a letter with opposite case and account for new pairs exposed by each removal.'
 tags: [String, Stack]
 rating: 1344
 ---

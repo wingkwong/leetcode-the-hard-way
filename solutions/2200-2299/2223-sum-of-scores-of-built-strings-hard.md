@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/sum-of-scores-of-built-strings/
+title: 'LeetCode 2223 – Sum of Scores of Built Strings'
+description: 'Compute the sum of prefix-match scores for all suffixes using the Z algorithm.'
 rating: 2220
 ---
 

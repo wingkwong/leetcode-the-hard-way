@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/minimum-operations-to-make-array-values-equal-to-k/'
+title: 'LeetCode 3375 – Minimum Operations to Make Array Values Equal to K'
+description: 'Count the distinct levels above k to determine the fewest operations needed to reduce all values to k, checking feasibility first.'
 rating: 1383
 ---
 

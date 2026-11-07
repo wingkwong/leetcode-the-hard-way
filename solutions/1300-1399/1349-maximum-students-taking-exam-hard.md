@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/maximum-students-taking-exam/
+title: 'LeetCode 1349 – Maximum Students Taking Exam'
+description: 'Maximize exam seating by representing occupied seats with bit masks and excluding placements that allow cheating.'
 rating: 2386
 ---
 

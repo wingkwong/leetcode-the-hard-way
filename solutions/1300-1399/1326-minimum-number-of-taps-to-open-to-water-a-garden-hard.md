@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/minimum-number-of-taps-to-open-to-water-a-garden/description/'
+title: 'LeetCode 1326 – Minimum Number of Taps to Open to Water a Garden'
+description: 'Find the fewest taps needed to cover a garden by using each tap''s watering interval to extend coverage.'
 tags: [Array, Dynamic Programming, Greedy]
 rating: 1885
 ---

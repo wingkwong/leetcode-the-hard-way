@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/binary-tree-maximum-path-sum/'
+title: 'LeetCode 124 – Binary Tree Maximum Path Sum'
+description: 'Find the maximum path sum in a binary tree by combining the gains from the left and right branches at each node.'
 tags: [Dynamic Programming, Tree, Depth-First Search, Binary Tree]
 ---
 

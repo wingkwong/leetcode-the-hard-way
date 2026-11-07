@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/find-the-distance-value-between-two-arrays'
+title: 'LeetCode 1385 – Find the Distance Value Between Two Arrays'
+description: 'Count values in the first array that stay more than the given distance from every value in the second array.'
 tags: ['Array', 'Two Pointers', 'Binary Search', 'Sorting']
 ---
 

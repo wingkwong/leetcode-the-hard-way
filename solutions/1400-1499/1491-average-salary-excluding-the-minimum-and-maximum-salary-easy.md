@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/average-salary-excluding-the-minimum-and-maximum-salary/'
+title: 'LeetCode 1491 – Average Salary Excluding the Minimum and Maximum Salary'
+description: 'Compute the average salary after removing the minimum and maximum by tracking the sum and both extremes in one pass.'
 rating: 1201
 ---
 

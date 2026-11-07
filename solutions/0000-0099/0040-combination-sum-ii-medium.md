@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @ColeB2, @radojicic23 | https://leetcode.com/problems/combination-sum-ii/'
+title: 'LeetCode 40 – Combination Sum II'
+description: 'Generate unique combinations that reach the target while using each candidate at most once and skipping duplicate choices.'
 tags: [Array, Backtracking]
 ---
 

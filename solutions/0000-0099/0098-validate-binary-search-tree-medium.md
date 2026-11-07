@@ -1,5 +1,6 @@
 ---
-description: 'Author: @dhanu084, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/validate-binary-search-tree/'
+title: 'LeetCode 98 – Validate Binary Search Tree'
+description: 'Validate a binary search tree by checking each node against the value bounds imposed by its ancestors.'
 ---
 
 # 0098 - Validate Binary Search Tree (Medium)

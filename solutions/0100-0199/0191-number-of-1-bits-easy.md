@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/number-of-1-bits/'
+title: 'LeetCode 191 – Number of 1 Bits'
+description: 'Count the set bits of an integer by repeatedly clearing its lowest set bit.'
 ---
 
 # 0191 - Number of 1 Bits (Easy)

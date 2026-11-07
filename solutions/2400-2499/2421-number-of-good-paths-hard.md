@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/number-of-good-paths/'
+title: 'LeetCode 2421 – Number of Good Paths'
+description: 'Count good paths by merging graph components in value order and counting equal-valued endpoints within each component.'
 tags: [Array, Tree, Union Find, Graph]
 rating: 2445
 ---

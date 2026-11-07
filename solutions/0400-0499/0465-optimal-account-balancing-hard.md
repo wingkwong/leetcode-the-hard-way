@@ -1,5 +1,6 @@
 ---
-description: 'Author: @TBC | https://leetcode.com/problems/optimal-account-balancing/'
+title: 'LeetCode 465 – Optimal Account Balancing'
+description: 'Given a list of transactions, find the smallest number of transfers needed to settle everyone''s net balance.'
 ---
 
 # 0465 - Optimal Account Balancing (Hard)

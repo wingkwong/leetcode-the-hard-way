@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/minimum-moves-to-equal-array-elements'
+title: 'LeetCode 453 – Minimum Moves to Equal Array Elements'
+description: 'Find the minimum moves to equalize an array by relating increments of all but one element to differences from the minimum.'
 tags: ['Array', 'Math']
 ---
 

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/reverse-nodes-in-k-group/'
+title: 'LeetCode 25 – Reverse Nodes in k-Group'
+description: 'Reverse complete groups of k linked-list nodes in place and preserve the order of the final incomplete group.'
 tags: [Linked List, Recursion]
 ---
 

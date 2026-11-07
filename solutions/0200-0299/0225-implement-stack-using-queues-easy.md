@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/implement-stack-using-queues
+title: 'LeetCode 225 – Implement Stack using Queues'
+description: 'Implement last-in-first-out stack operations with queues by arranging elements so the newest value can be removed first.'
 ---
 
 # 0225 - Implement Stack using Queues (Easy)

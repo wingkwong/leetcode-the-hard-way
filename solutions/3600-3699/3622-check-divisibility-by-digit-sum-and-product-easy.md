@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/check-divisibility-by-digit-sum-and-product'
+title: 'LeetCode 3622 – Check Divisibility by Digit Sum and Product'
+description: 'Test whether an integer is divisible by the sum of its digit sum and digit product.'
 tags: [Math]
 rating: 1149
 ---

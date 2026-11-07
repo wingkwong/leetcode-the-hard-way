@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/binary-tree-pruning/'
+title: 'LeetCode 814 – Binary Tree Pruning'
+description: 'Remove subtrees containing no ones by processing children before deciding whether to keep their parent.'
 tags: [Tree, Depth-First Search, Binary Tree]
 rating: 1380
 ---

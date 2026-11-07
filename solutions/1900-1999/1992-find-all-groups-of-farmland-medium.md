@@ -1,5 +1,6 @@
 ---
-description: 'Author: @dhanu084 | https://leetcode.com/problems/find-all-groups-of-farmland/'
+title: 'LeetCode 1992 – Find All Groups of Farmland'
+description: 'Locate rectangular farmland groups by traversing connected cells and recording the corners of each group.'
 tags: [Graphs, DFS]
 rating: 1539
 ---

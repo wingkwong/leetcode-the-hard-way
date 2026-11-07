@@ -1,5 +1,6 @@
 ---
-description: 'Author: @heder | https://leetcode.com/problems/count-symmetric-integers/'
+title: 'LeetCode 2843 – Count Symmetric Integers'
+description: 'Count even-length integers whose two halves have equal digit sums, either directly or with precomputed prefix counts.'
 tags: [Math, Enumeration]
 rating: 1270
 ---

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/partition-equal-subset-sum/'
+title: 'LeetCode 416 – Partition Equal Subset Sum'
+description: 'Check for two equal-sum subsets by using dynamic programming to search for a subset totaling half the array sum.'
 tags: [Array, Dynamic Programming]
 ---
 

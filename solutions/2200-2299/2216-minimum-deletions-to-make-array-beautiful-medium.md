@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @TBC | https://leetcode.com/problems/minimum-deletions-to-make-array-beautiful/
+title: 'LeetCode 2216 – Minimum Deletions to Make Array Beautiful'
+description: 'Find the fewest deletions that leave an even-length array with different values at each consecutive even-odd index pair.'
 
 draft: true
 rating: 1510

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/koko-eating-bananas/'
+title: 'LeetCode 875 – Koko Eating Bananas'
+description: 'Find the slowest banana-eating speed that meets the deadline by binary searching over possible speeds.'
 rating: 1766
 ---
 

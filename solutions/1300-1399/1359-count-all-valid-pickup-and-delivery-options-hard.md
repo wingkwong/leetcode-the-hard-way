@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/count-all-valid-pickup-and-delivery-options/
+title: 'LeetCode 1359 – Count All Valid Pickup and Delivery Options'
+description: 'Count valid pickup and delivery sequences by inserting each new order subject to its pickup preceding its delivery.'
 rating: 1723
 ---
 

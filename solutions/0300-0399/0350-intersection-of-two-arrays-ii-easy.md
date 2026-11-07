@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @jit | https://leetcode.com/problems/intersection-of-two-arrays-ii/'
+title: 'LeetCode 350 – Intersection of Two Arrays II'
+description: 'Find the intersection of two arrays while retaining each shared value up to its smaller occurrence count.'
 tags: [Array, Hash Table, Two Pointers, Binary Search, Sorting]
 ---
 

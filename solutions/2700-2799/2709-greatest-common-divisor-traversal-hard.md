@@ -1,5 +1,6 @@
 ---
-description: 'Author: @Ishwarendra | https://leetcode.com/problems/greatest-common-divisor-traversal/'
+title: 'LeetCode 2709 – Greatest Common Divisor Traversal'
+description: 'Test whether all indices connect through pairs with a common factor by linking values through their prime factors.'
 tags: ['Prime Factor', 'Graph', 'DFS', 'BFS', 'DSU']
 rating: 2172
 ---

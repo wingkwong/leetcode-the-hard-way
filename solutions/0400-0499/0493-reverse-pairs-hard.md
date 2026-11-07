@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/reverse-pairs/'
+title: 'LeetCode 493 – Reverse Pairs'
+description: 'Count index pairs whose first value exceeds twice the second using an ordered set or a binary indexed tree.'
 ---
 
 # 0493 - Reverse Pairs (Hard)

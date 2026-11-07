@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/nearest-exit-from-entrance-in-maze/'
+title: 'LeetCode 1926 – Nearest Exit from Entrance in Maze'
+description: 'Find the nearest maze exit with breadth-first search from the entrance, excluding the entrance itself as an exit.'
 tags: [Array, Breadth-First Search, Matrix]
 rating: 1638
 ---

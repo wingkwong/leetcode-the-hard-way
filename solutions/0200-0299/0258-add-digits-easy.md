@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/add-digits/'
+title: 'LeetCode 258 – Add Digits'
+description: 'Reduce an integer to one digit by summing its digits repeatedly or applying the digital root formula.'
 ---
 
 # 0258 - Add Digits (Easy)

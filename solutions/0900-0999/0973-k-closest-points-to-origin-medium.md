@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @heiheihang, @ColeB2 | https://leetcode.com/problems/k-closest-points-to-origin/'
+title: 'LeetCode 973 – K Closest Points to Origin'
+description: 'Select the k points nearest the origin by comparing squared distances with a heap or quickselect.'
 tags:
   [
     Array,

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/palindrome-linked-list/'
+title: 'LeetCode 234 – Palindrome Linked List'
+description: 'Check a linked list for palindrome symmetry using a stack or by finding the midpoint and comparing its halves.'
 tags: [Linked List, Two Pointers, Stack, Recursion]
 ---
 

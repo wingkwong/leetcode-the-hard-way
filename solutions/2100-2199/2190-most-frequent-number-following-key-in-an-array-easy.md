@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/most-frequent-number-following-key-in-an-array/
+title: 'LeetCode 2190 – Most Frequent Number Following Key In an Array'
+description: 'Find the most frequent value immediately following a given key by counting its successors in array order.'
 rating: 1289
 ---
 

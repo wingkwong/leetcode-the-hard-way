@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/longest-increasing-path-in-a-matrix/'
+title: 'LeetCode 329 – Longest Increasing Path in a Matrix'
+description: 'Find the longest increasing path through a matrix with memoized search or topological sorting.'
 tags:
   [
     Array,

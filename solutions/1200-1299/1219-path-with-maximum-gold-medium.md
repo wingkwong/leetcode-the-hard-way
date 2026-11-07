@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/path-with-maximum-gold/'
+title: 'LeetCode 1219 – Path with Maximum Gold'
+description: 'Collect the most gold by exploring nonrepeating paths with depth-first search and undoing each move during backtracking.'
 tags: [Array, Backtracking, Matrix]
 rating: 1663
 ---

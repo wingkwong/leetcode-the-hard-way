@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @jessicaribeiroalves, @radojicic23 | https://leetcode.com/problems/integer-to-roman/
+title: 'LeetCode 12 – Integer to Roman'
+description: 'Convert an integer to Roman numerals by consuming the largest available values, including subtractive pairs such as IV and IX.'
 
 tags: [Hash Table, Math, String]
 ---

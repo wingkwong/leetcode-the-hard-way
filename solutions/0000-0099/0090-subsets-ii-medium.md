@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/subsets-ii/'
+title: 'LeetCode 90 – Subsets II'
+description: 'Build unique subsets of an array containing duplicates by controlling which existing subsets a repeated value can extend.'
 tags: [Array, Backtracking, Bit Manipulation]
 ---
 

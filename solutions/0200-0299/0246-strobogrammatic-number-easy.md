@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/strobogrammatic-number/'
+title: 'LeetCode 246 – Strobogrammatic Number'
+description: 'Check whether a number still reads the same after a half-turn by matching rotatable digit pairs from opposite ends.'
 tags: ['Hash Map']
 ---
 

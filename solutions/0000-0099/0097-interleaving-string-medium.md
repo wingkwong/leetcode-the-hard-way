@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/interleaving-string/'
+title: 'LeetCode 97 – Interleaving String'
+description: 'Decide whether two strings can interleave to form a third by tracking which pairs of prefixes can build each target prefix.'
 tags: [String, Dynamic Programming]
 ---
 

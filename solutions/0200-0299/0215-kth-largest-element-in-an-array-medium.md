@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @ColeB2, @jit | https://leetcode.com/problems/kth-largest-element-in-an-array/'
+title: 'LeetCode 215 – Kth Largest Element in an Array'
+description: 'Find the kth largest array element using a priority queue or quickselect partitioning.'
 tags: [Priority Queue, Quick Select]
 ---
 

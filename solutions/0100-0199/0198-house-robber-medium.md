@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2, @radojicic23 | https://leetcode.com/problems/house-robber/'
+title: 'LeetCode 198 – House Robber'
+description: 'Maximize the amount robbed from nonadjacent houses by comparing the gains from robbing or skipping each house.'
 tags: [Array, Dynamic Programming]
 ---
 

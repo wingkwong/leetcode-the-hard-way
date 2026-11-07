@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/word-pattern/'
+title: 'LeetCode 290 – Word Pattern'
+description: 'Check whether words follow a pattern by enforcing a one-to-one mapping between words and pattern characters.'
 tags: [Hash Table, String]
 ---
 

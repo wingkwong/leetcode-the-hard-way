@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/unique-paths-ii/'
+title: 'LeetCode 63 – Unique Paths II'
+description: 'Count grid paths around obstacles by assigning zero paths to blocked cells and combining paths from neighboring cells.'
 tags: [Array, Dynamic Programming, Matrix]
 ---
 

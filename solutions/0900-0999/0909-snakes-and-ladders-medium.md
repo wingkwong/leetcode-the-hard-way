@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/snakes-and-ladders/'
+title: 'LeetCode 909 – Snakes and Ladders'
+description: 'Find the fewest dice throws needed to reach the final square while accounting for forced snake and ladder moves.'
 tags: [Array, Breadth-First Search, Matrix]
 rating: 2020
 ---

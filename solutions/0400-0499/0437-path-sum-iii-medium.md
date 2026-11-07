@@ -1,5 +1,6 @@
 ---
-description: 'Author: @kesava-karri | https://leetcode.com/problems/path-sum-iii/'
+title: 'LeetCode 437 – Path Sum III'
+description: 'Count downward tree paths with a target sum by considering paths that begin below the root as well as at the root.'
 tags: [Tree, Binary Tree, Depth-First Search, Breadth-First Search]
 ---
 

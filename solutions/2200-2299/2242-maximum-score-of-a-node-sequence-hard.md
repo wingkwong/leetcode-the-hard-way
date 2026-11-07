@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/maximum-score-of-a-node-sequence/
+title: 'LeetCode 2242 – Maximum Score of a Node Sequence'
+description: 'Maximize a four-node path''s score by examining its middle edge and high-scoring neighbors at each end.'
 rating: 2304
 ---
 

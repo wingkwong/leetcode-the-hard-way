@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/graph-valid-tree/'
+title: 'LeetCode 261 – Graph Valid Tree'
+description: 'Check whether an undirected graph forms a tree by tracking connected components with disjoint sets.'
 tags: ['DSU', 'Graph', 'DFS', 'BFS']
 ---
 

@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @TBC | https://leetcode.com/problems/find-palindrome-with-fixed-length/
+title: 'LeetCode 2217 – Find Palindrome With Fixed Length'
+description: 'For each query, find the specified positive palindrome in increasing order among numbers with a fixed digit length.'
 
 draft: true
 rating: 1822

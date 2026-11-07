@@ -1,5 +1,6 @@
 ---
-description: 'Author: @vale-c | https://leetcode.com/problems/valid-palindrome/'
+title: 'LeetCode 125 – Valid Palindrome'
+description: 'Check a string for a palindrome with two pointers that skip non-alphanumeric characters and ignore letter case.'
 ---
 
 # 0125 - Valid Palindrome (Easy)

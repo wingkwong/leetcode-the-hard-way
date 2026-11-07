@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/minimum-time-to-make-rope-colorful/'
+title: 'LeetCode 1578 – Minimum Time to Make Rope Colorful'
+description: 'Make adjacent balloon colors different at minimum removal cost by keeping the most expensive balloon in each same-color run.'
 tags: [Array, String, Dynamic Programming, Greedy]
 rating: 1574
 ---

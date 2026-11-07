@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/find-substring-with-given-hash-value/
+title: 'LeetCode 2156 – Find Substring With Given Hash Value'
+description: 'Find the first substring with a specified polynomial hash by updating a rolling hash from right to left.'
 rating: 2063
 ---
 

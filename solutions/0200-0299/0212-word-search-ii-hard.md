@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/word-search-ii/'
+title: 'LeetCode 212 – Word Search II'
+description: 'Find dictionary words in a grid by searching neighboring cells and pruning paths with a prefix tree.'
 tags: [Array, String, Backtracking, Trie, Matrix]
 ---
 

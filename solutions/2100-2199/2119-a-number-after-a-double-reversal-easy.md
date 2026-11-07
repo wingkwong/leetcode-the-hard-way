@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/a-number-after-a-double-reversal/
+title: 'LeetCode 2119 – A Number After a Double Reversal'
+description: 'Decide whether reversing an integer twice recovers it by checking the effect of trailing zeroes.'
 rating: 1187
 ---
 

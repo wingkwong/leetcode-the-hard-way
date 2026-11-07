@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @ganajayant, @sourav, @radojicic23 | https://leetcode.com/problems/merge-two-sorted-lists/'
+title: 'LeetCode 21 – Merge Two Sorted Lists'
+description: 'Merge two sorted linked lists by repeatedly taking the smaller head, using either iteration or recursion.'
 ---
 
 # 0021 - Merge Two Sorted Lists (Easy)

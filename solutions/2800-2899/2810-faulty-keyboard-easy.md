@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/faulty-keyboard/'
+title: 'LeetCode 2810 – Faulty Keyboard'
+description: 'Simulate a keyboard that reverses the text typed so far whenever the trigger character appears.'
 tags: [String, Simulation]
 rating: 1193
 ---

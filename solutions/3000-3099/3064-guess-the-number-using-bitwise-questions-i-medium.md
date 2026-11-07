@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/guess-the-number-using-bitwise-questions-i/'
+title: 'LeetCode 3064 – Guess the Number Using Bitwise Questions I'
+description: 'Recover a hidden number by querying shared set bits with masks that isolate individual binary positions.'
 tags: [Bit Manipulation, Interactive]
 ---
 

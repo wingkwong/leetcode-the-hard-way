@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ganajayant, @ColeB2, @radojicic23 | https://leetcode.com/problems/binary-tree-right-side-view/'
+title: 'LeetCode 199 – Binary Tree Right Side View'
+description: 'Find the visible node on each level from the right side of a binary tree using depth-first or breadth-first traversal.'
 ---
 
 # 0199 - Binary Tree Right Side View (Medium)

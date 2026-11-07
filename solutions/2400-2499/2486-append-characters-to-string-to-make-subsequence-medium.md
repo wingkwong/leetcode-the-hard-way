@@ -1,5 +1,6 @@
 ---
-description: 'Author: @dhanu084 | https://leetcode.com/problems/append-characters-to-string-to-make-subsequence/'
+title: 'LeetCode 2486 – Append Characters to String to Make Subsequence'
+description: 'Find the fewest characters to append by matching the longest possible prefix of the target as a subsequence.'
 tags: [Two Pointers]
 rating: 1363
 ---

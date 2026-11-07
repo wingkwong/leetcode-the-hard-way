@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/maximize-the-topmost-element-after-k-moves/
+title: 'LeetCode 2202 – Maximize the Topmost Element After K Moves'
+description: 'Find the largest attainable stack top after exactly k moves by considering which elements can be exposed or returned.'
 rating: 1717
 ---
 

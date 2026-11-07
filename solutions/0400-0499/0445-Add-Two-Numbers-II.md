@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @Kavita613, @vigneshshiv | https://leetcode.com/problems/add-two-numbers-ii/
+title: 'LeetCode 445 – Add Two Numbers II'
+description: 'Add numbers stored most-significant-digit first in linked lists by using stacks or recursion to process the final digits first.'
 
 tags: [Linked List, Math, Stack]
 ---

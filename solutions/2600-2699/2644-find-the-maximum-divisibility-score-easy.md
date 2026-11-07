@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/find-the-maximum-divisibility-score/'
+title: 'LeetCode 2644 – Find the Maximum Divisibility Score'
+description: 'Find the divisor that divides the most array values, breaking ties by choosing the smallest divisor.'
 rating: 1258
 ---
 

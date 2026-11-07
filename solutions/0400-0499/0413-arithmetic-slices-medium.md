@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/arithmetic-slices/'
+title: 'LeetCode 413 – Arithmetic Slices'
+description: 'Count contiguous arithmetic slices by extending runs of equal differences and adding the new slices at each step.'
 ---
 
 # 0413 - Arithmetic Slices (Medium)

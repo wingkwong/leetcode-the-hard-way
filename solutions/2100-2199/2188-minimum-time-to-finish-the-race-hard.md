@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @heiheihang | https://leetcode.com/problems/minimum-time-to-finish-the-race/
+title: 'LeetCode 2188 – Minimum Time to Finish the Race'
+description: 'Minimize race time by combining the best runs on one tire with the cost of changing tires between runs.'
 rating: 2315
 ---
 

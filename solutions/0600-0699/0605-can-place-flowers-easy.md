@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @vigneshshiv | https://leetcode.com/problems/can-place-flowers/
+title: 'LeetCode 605 – Can Place Flowers'
+description: 'Determine how many flowers fit in a flowerbed while keeping at least one empty plot between adjacent plantings.'
 ---
 
 # 0605 - Can Place Flowers (Easy)

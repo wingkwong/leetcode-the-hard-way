@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/number-of-ways-to-stay-in-the-same-place-after-some-steps/
+title: 'LeetCode 1269 – Number of Ways to Stay in the Same Place After Some Steps'
+description: 'Count walks that return to the starting index by tracking reachable positions after each stay, left, or right move.'
 
 tags: [Dynamic Programming]
 rating: 1854

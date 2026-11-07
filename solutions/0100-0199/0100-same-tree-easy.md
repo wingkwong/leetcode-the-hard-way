@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2, @radojicic23 | https://leetcode.com/problems/same-tree/'
+title: 'LeetCode 100 – Same Tree'
+description: 'Check whether two binary trees have identical structure and values by visiting corresponding nodes together.'
 tags: [Tree, Depth-First Search, Breadth-First Search, Binary Tree]
 ---
 

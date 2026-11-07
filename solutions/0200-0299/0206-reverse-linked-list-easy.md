@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @vigneshshiv, @radojicic23 | https://leetcode.com/problems/reverse-linked-list/
+title: 'LeetCode 206 – Reverse Linked List'
+description: 'Reverse a linked list by changing the direction of its links iteratively or recursively.'
 ---
 
 # 0206 - Reverse Linked List (Easy)

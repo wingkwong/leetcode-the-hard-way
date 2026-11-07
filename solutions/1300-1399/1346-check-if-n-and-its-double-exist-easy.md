@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/check-if-n-and-its-double-exist/
+title: 'LeetCode 1346 – Check If N and Its Double Exist'
+description: 'Determine whether the array contains a value and its double at distinct indices using sorted lookup.'
 rating: 1225
 ---
 

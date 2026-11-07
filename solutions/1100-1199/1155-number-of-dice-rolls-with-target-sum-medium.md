@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/
+title: 'LeetCode 1155 – Number of Dice Rolls With Target Sum'
+description: 'Count dice outcomes reaching a target by combining results for one fewer die across the possible face values.'
 rating: 1654
 ---
 

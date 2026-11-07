@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/number-of-ways-to-buy-pens-and-pencils/
+title: 'LeetCode 2240 – Number of Ways to Buy Pens and Pencils'
+description: 'Count affordable combinations of pens and pencils by fixing the quantity of one item and counting choices for the other.'
 rating: 1400
 ---
 

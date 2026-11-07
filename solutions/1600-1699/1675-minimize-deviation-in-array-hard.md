@@ -1,5 +1,6 @@
 ---
-description: 'Author: @TBC | https://leetcode.com/problems/minimize-deviation-in-array/'
+title: 'LeetCode 1675 – Minimize Deviation in Array'
+description: 'Find the smallest possible difference between the maximum and minimum array values after the allowed doubling and halving operations.'
 draft: 'true'
 rating: 2533
 ---

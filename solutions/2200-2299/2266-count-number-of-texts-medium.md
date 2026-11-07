@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/count-number-of-texts/'
+title: 'LeetCode 2266 – Count Number of Texts'
+description: 'Count possible text messages for a sequence of phone keypad presses by grouping compatible presses with dynamic programming.'
 rating: 1857
 ---
 

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @ganajayant | https://leetcode.com/problems/subarray-sum-equals-k/'
+title: 'LeetCode 560 – Subarray Sum Equals K'
+description: 'Count subarrays that sum to k by looking up how often the required earlier prefix sum has occurred.'
 ---
 
 # 0560 - Subarray Sum Equals K (Medium)

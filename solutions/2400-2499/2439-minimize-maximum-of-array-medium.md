@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/minimize-maximum-of-array/'
+title: 'LeetCode 2439 – Minimize Maximum of Array'
+description: 'Minimize the maximum array value after leftward transfers by examining the rounded-up average of each prefix.'
 tags: [Array, Binary Search, Dynamic Programming, Greedy, Prefix Sum]
 rating: 1965
 ---

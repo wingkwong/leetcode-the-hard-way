@@ -1,5 +1,6 @@
 ---
-description: 'Author: @TBC | https://leetcode.com/problems/minimum-number-of-refueling-stops/'
+title: 'LeetCode 871 – Minimum Number of Refueling Stops'
+description: 'Given a fuel tank, a destination, and stations along the route, determine the fewest refueling stops needed to arrive.'
 draft: 'true'
 tags: [Array, Dynamic Programming, Greedy, Heap (Priority Queue)]
 rating: 2074

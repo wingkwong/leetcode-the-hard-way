@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/push-dominoes/'
+title: 'LeetCode 838 – Push Dominoes'
+description: 'Resolve falling dominoes by comparing the opposing forces between successive pushed positions.'
 tags: [Two Pointers, String, Dynamic Programming]
 rating: 1638
 ---

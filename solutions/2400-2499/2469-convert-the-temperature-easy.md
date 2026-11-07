@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/convert-the-temperature/'
+title: 'LeetCode 2469 – Convert the Temperature'
+description: 'Convert a Celsius temperature into Kelvin and Fahrenheit using the two conversion formulas.'
 tags: [Math]
 rating: 1153
 ---

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @hirotake111, @wkw | https://leetcode.com/problems/minimum-time-to-collect-all-apples-in-a-tree/'
+title: 'LeetCode 1443 – Minimum Time to Collect All Apples in a Tree'
+description: 'Compute the round-trip time to collect every apple by counting the tree edges needed to reach apple-bearing branches.'
 tags: [Tree, Depth-First Search, Backtracking]
 rating: 1683
 ---

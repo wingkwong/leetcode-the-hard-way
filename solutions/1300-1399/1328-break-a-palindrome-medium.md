@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/break-a-palindrome/'
+title: 'LeetCode 1328 – Break a Palindrome'
+description: 'Change one character to turn a palindrome into the lexicographically smallest possible nonpalindrome.'
 tags: [String, Greedy]
 rating: 1474
 ---

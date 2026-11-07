@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @radojicic23, @ColeB2 | https://leetcode.com/problems/combination-sum/'
+title: 'LeetCode 39 – Combination Sum'
+description: 'Generate combinations that reach a target sum, allowing repeated candidates, with backtracking or dynamic programming.'
 tags: [Array, Backtracking]
 ---
 

@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/maximum-split-of-positive-even-integers/
+title: 'LeetCode 2178 – Maximum Split of Positive Even Integers'
+description: 'Split an even sum into as many distinct positive even integers as possible by choosing small values greedily.'
 rating: 1538
 ---
 

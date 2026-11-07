@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/sum-of-even-numbers-after-queries/'
+title: 'LeetCode 985 – Sum of Even Numbers After Queries'
+description: 'Update the sum of even array values after each query by accounting for the changed value before and after the update.'
 tags: [Array, Simulation]
 rating: 1198
 ---

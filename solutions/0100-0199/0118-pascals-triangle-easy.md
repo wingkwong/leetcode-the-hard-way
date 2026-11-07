@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2, @wkw | https://leetcode.com/problems/pascals-triangle/'
+title: 'LeetCode 118 – Pascal''s Triangle'
+description: 'Build Pascal''s triangle row by row, adding neighboring entries from the previous row to obtain each interior value.'
 tags: [Array, Dynamic Programming]
 ---
 

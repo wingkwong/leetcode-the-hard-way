@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/shortest-path-in-a-grid-with-obstacles-elimination/'
+title: 'LeetCode 1293 – Shortest Path in a Grid with Obstacles Elimination'
+description: 'Find the shortest grid path with obstacle removals by including the remaining elimination budget in breadth-first search.'
 tags: [Array, Breadth-First Search, Matrix]
 rating: 1967
 ---

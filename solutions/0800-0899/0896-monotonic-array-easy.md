@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/monotonic-array/'
+title: 'LeetCode 896 – Monotonic Array'
+description: 'Determine whether an array stays nondecreasing or nonincreasing as you scan its neighboring values.'
 tags: [Array]
 rating: 1259
 ---

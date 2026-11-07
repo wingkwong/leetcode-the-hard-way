@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/daily-temperatures/'
+title: 'LeetCode 739 – Daily Temperatures'
+description: 'Find the wait until a warmer day by storing unresolved days in a monotonic stack.'
 tags: [Array, Stack, Monotonic Stack]
 ---
 

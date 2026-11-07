@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/binary-digit-score'
+title: 'LeetCode 4092 – Binary Digit Score'
+description: 'Compute the binary digit score of two integers by counting their set bits and applying the product or integer quotient rule.'
 ---
 
 # 4092 - Binary Digit Score (Easy)

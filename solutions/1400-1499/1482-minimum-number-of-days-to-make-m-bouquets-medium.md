@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @jit | https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/description/'
+title: 'LeetCode 1482 – Minimum Number of Days to Make m Bouquets'
+description: 'Find the earliest day enough adjacent flowers bloom for all bouquets by binary searching the day and checking feasibility.'
 tags: [Array, Binary Search]
 rating: 1946
 ---

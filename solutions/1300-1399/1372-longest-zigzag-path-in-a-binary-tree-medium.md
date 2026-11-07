@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/longest-zigzag-path-in-a-binary-tree/'
+title: 'LeetCode 1372 – Longest ZigZag Path in a Binary Tree'
+description: 'Find the longest alternating left-right path in a binary tree by tracking direction during depth-first traversal.'
 tags: [Dynamic Programming, Tree, Depth-First Search, Binary Tree]
 rating: 1713
 ---

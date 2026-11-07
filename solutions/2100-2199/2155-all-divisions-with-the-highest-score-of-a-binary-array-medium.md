@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/all-divisions-with-the-highest-score-of-a-binary-array/
+title: 'LeetCode 2155 – All Divisions With the Highest Score of a Binary Array'
+description: 'Find all best binary-array split points by tracking zeroes on the left and ones on the right.'
 rating: 1391
 ---
 

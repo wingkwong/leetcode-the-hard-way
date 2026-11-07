@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/minimum-white-tiles-after-covering-with-carpets/
+title: 'LeetCode 2209 – Minimum White Tiles After Covering With Carpets'
+description: 'Minimize uncovered white tiles by choosing where to place fixed-length carpets with dynamic programming.'
 rating: 2106
 ---
 

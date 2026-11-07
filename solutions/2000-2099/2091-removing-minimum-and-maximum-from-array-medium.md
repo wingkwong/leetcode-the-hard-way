@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/removing-minimum-and-maximum-from-array'
+title: 'LeetCode 2091 – Removing Minimum and Maximum From Array'
+description: 'Minimize end deletions needed to remove both extremes by comparing removals from the left, right, or both ends.'
 tags: ['Array', 'Greedy']
 rating: 1384
 ---

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/minimum-recolors-to-get-k-consecutive-black-blocks/'
+title: 'LeetCode 2379 – Minimum Recolors to Get K Consecutive Black Blocks'
+description: 'Find the fewest white blocks to recolor by counting white blocks in candidate runs of length k.'
 rating: 1360
 ---
 

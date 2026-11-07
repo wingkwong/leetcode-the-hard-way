@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @heiheihang, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/move-zeroes/
+title: 'LeetCode 283 – Move Zeroes'
+description: 'Move zeroes to the end in place while keeping the relative order of nonzero elements with two pointers.'
 ---
 
 # 0283 - Move Zeroes (Easy)

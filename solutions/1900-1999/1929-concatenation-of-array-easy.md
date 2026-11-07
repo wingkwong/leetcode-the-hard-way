@@ -1,5 +1,6 @@
 ---
-description: 'Author: @heiheihang | https://leetcode.com/problems/concatenation-of-array/'
+title: 'LeetCode 1929 – Concatenation of Array'
+description: 'Construct an array''s concatenation by placing each element at its corresponding position in both halves of the result.'
 rating: 1133
 ---
 

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/my-calendar-iii/'
+title: 'LeetCode 732 – My Calendar III'
+description: 'Track the largest overlap after each calendar booking using a sweep over interval boundaries or a segment tree.'
 tags: [Binary Search, Design, Segment Tree, Ordered Set]
 ---
 

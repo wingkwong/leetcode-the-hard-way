@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2, @DongDong | https://leetcode.com/problems/merge-intervals/'
+title: 'LeetCode 56 – Merge Intervals'
+description: 'Merge overlapping intervals by sorting them and extending the current interval whenever the next one overlaps.'
 tags: [Array, Sorting, Greedy]
 ---
 

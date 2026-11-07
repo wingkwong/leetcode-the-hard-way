@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/'
+title: 'LeetCode 947 – Most Stones Removed with Same Row or Column'
+description: 'Maximize stone removals by joining stones that share a row or column and counting the resulting connected components.'
 tags: [Depth-First Search, Union Find, Graph]
 rating: 2035
 ---

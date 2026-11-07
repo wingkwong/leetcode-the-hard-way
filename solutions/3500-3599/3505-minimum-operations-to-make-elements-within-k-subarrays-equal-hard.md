@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/minimum-operations-to-make-elements-within-k-subarrays-equal'
+title: 'LeetCode 3505 – Minimum Operations to Make Elements Within K Subarrays Equal'
+description: 'Minimize changes to make k disjoint subarrays uniform by computing window median costs and choosing intervals with dynamic programming.'
 tags: ['Array', 'Hash Table', 'Math', 'Dynamic Programming', 'Sliding Window', 'Heap (Priority Queue)']
 ---
 

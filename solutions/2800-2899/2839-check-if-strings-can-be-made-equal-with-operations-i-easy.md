@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/check-if-strings-can-be-made-equal-with-operations-i/'
+title: 'LeetCode 2839 – Check if Strings Can be Made Equal With Operations I'
+description: 'Check whether the allowed swaps can make two four-character strings equal by testing the possible rearrangements.'
 rating: 1285
 ---
 

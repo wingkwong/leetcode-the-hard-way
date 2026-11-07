@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/design-twitter/'
+title: 'LeetCode 355 – Design Twitter'
+description: 'Design a news feed that merges recent posts from followed users with a priority queue.'
 tags: [Hash Table, Linked List, Design, Heap (Priority Queue)]
 ---
 

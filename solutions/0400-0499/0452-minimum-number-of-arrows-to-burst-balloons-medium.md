@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw, @DongDong | https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/
+title: 'LeetCode 452 – Minimum Number of Arrows to Burst Balloons'
+description: 'Find the fewest arrows needed by grouping overlapping balloon intervals around shared burst positions.'
 ---
 
 # 0452 - Minimum Number of Arrows to Burst Balloons (Medium)

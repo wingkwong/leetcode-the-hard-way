@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/
+title: 'LeetCode 421 – Maximum XOR of Two Numbers in an Array'
+description: 'Build the largest possible XOR one bit at a time by testing whether two array prefixes can produce each candidate.'
 ---
 
 # 0421 - Maximum XOR of Two Numbers in an Array

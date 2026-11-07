@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/broken-calculator/'
+title: 'LeetCode 991 – Broken Calculator'
+description: 'Minimize broken-calculator operations by working backward from the target with greedy inverse operations.'
 rating: 1909
 ---
 

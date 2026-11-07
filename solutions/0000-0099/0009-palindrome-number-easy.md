@@ -1,5 +1,6 @@
 ---
-description: 'Author: @tostream, @ganajayant, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/palindrome-number/'
+title: 'LeetCode 9 – Palindrome Number'
+description: 'Check whether an integer reads the same in both directions by comparing its digits as text or reversing them numerically.'
 ---
 
 # 0009 - Palindrome Number (Easy)

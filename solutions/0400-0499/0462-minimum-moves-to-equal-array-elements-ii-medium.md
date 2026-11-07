@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii'
+title: 'LeetCode 462 – Minimum Moves to Equal Array Elements II'
+description: 'Minimize unit moves to equalize an array by sorting the values and measuring their distances to a median.'
 tags: ['Array', 'Math', 'Sorting']
 ---
 

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/number-of-ways-to-wear-different-hats-to-each-other/'
+title: 'LeetCode 1434 – Number of Ways to Wear Different Hats to Each Other'
+description: 'Count assignments of distinct preferred hats by tracking which people have received a hat during dynamic programming.'
 tags: [Array, Dynamic Programming, Bit Manipulation, Bitmask]
 rating: 2273
 ---

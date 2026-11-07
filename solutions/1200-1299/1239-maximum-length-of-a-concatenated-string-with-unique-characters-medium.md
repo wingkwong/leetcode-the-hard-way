@@ -1,5 +1,6 @@
 ---
-description: 'Author: @heder | https://leetcode.com/problems/maximum-length-of-a-concatenated-string-with-unique-characters/'
+title: 'LeetCode 1239 – Maximum Length of a Concatenated String with Unique Characters'
+description: 'Maximize the length of a concatenation with distinct characters by using bit masks to detect conflicting letters.'
 tags: [Array, String, Backtracking, Bit Manipulation]
 rating: 1720
 ---

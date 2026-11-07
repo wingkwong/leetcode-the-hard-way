@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/find-all-good-indices/'
+title: 'LeetCode 2420 – Find All Good Indices'
+description: 'Find indices surrounded by the required nonincreasing and nondecreasing runs by precomputing lengths on both sides.'
 rating: 1695
 ---
 

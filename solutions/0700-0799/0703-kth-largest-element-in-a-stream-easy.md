@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/kth-largest-element-in-a-stream/
+title: 'LeetCode 703 – Kth Largest Element in a Stream'
+description: 'Track the kth largest stream value with a min-heap that keeps the k largest elements seen so far.'
 
 tags:
   [

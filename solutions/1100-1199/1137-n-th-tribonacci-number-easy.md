@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/n-th-tribonacci-number/'
+title: 'LeetCode 1137 – N-th Tribonacci Number'
+description: 'Compute Tribonacci numbers by adding the three preceding terms, with the option to store just those three values.'
 tags: [Math, Dynamic Programming, Memoization]
 rating: 1143
 ---

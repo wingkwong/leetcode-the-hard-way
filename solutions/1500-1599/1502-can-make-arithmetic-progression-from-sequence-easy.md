@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/can-make-arithmetic-progression-from-sequence/
+title: 'LeetCode 1502 – Can Make Arithmetic Progression From Sequence'
+description: 'Check whether a sequence can form an arithmetic progression by sorting it and comparing consecutive differences.'
 rating: 1155
 ---
 

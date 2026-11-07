@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw, @ColeB2 | https://leetcode.com/problems/min-cost-to-connect-all-points/''
+title: 'LeetCode 1584 – Min Cost to Connect All Points'
+description: 'Connect all points at minimum total Manhattan distance by building a minimum spanning tree with Kruskal''s or Prim''s algorithm.'
 
 tags: [Array, Union Find, Graph, Minimum Spanning Tree]
 rating: 1858

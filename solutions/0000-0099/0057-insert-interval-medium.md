@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @radojicic23 | https://leetcode.com/problems/insert-interval/'
+title: 'LeetCode 57 – Insert Interval'
+description: 'Insert an interval into a sorted list, merge its overlaps, and retain the surrounding disjoint intervals in one pass.'
 tags: [Array]
 ---
 

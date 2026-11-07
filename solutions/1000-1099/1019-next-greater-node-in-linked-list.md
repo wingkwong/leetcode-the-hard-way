@@ -1,5 +1,6 @@
 ---
-description: 'Author: @yashh0903 | https://leetcode.com/problems/next-greater-node-in-linked-list/'
+title: 'LeetCode 1019 – Next Greater Node In Linked List'
+description: 'Find the next larger value after each linked-list node by resolving earlier nodes with a monotonic stack.'
 tags: [Array, Linked List, Stack, Monotonic Stack]
 rating: 1571
 ---

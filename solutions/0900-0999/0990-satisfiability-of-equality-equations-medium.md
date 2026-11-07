@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/satisfiability-of-equality-equations/'
+title: 'LeetCode 990 – Satisfiability of Equality Equations'
+description: 'Decide whether variable equalities and inequalities can coexist by joining equal variables with disjoint sets.'
 tags: [Array, String, Union Find, Graph]
 rating: 1638
 ---

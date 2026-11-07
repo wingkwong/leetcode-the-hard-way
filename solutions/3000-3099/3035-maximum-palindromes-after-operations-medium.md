@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/maximum-palindromes-after-operations/'
+title: 'LeetCode 3035 – Maximum Palindromes After Operations'
+description: 'Maximize how many words can become palindromes after swaps by counting available character pairs and prioritizing shorter words.'
 rating: 1857
 ---
 

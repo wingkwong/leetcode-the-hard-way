@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/burst-balloons/'
+title: 'LeetCode 312 – Burst Balloons'
+description: 'Maximize coins from bursting balloons by choosing the last balloon to burst in each interval and caching subproblem results.'
 tags: [Array, Dynamic Programming]
 ---
 

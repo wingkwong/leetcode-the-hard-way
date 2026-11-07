@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @adlet_lee, @jit | https://leetcode.com/problems/find-center-of-star-graph/'
+title: 'LeetCode 1791 – Find Center of Star Graph'
+description: 'Identify the center of a star graph by finding the endpoint shared by its first two edges.'
 tags: [Graph]
 rating: 1287
 ---

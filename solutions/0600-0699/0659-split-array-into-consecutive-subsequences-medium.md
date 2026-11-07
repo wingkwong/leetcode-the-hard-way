@@ -1,5 +1,6 @@
 ---
-description: 'Author: @TBC | https://leetcode.com/problems/split-array-into-consecutive-subsequences/'
+title: 'LeetCode 659 – Split Array into Consecutive Subsequences'
+description: 'Determine whether a sorted sequence can be divided into consecutive subsequences, each containing at least three integers.'
 draft: 'true'
 tags: [Array, Hash Table, Greedy, Heap (Priority Queue)]
 ---

@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @hirotake111 | https://leetcode.com/problems/maximum-ice-cream-bars/
+title: 'LeetCode 1833 – Maximum Ice Cream Bars'
+description: 'Buy the most ice cream bars within budget by counting prices and spending coins on the cheapest bars first.'
 rating: 1253
 ---
 

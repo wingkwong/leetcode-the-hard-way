@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/intervals-between-identical-elements/
+title: 'LeetCode 2121 – Intervals Between Identical Elements'
+description: 'Sum the distances to equal values at every array position by grouping their indices and using prefix sums.'
 rating: 1761
 ---
 

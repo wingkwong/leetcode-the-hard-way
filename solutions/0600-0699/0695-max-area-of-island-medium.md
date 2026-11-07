@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2, wingkwong | https://leetcode.com/problems/max-area-of-island/'
+title: 'LeetCode 695 – Max Area of Island'
+description: 'Find the largest island area by exploring each connected group of land cells and counting its size.'
 tags: [Array, Depth-First Search, Breadth-First Search, Union Find, Matrix]
 ---
 

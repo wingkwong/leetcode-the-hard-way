@@ -1,5 +1,6 @@
 ---
-description: 'Author: @heder, @wkw | https://leetcode.com/problems/determine-if-string-halves-are-alike/'
+title: 'LeetCode 1704 – Determine if String Halves Are Alike'
+description: 'Check whether the two halves of a string are alike by comparing their vowel counts without regard to letter case.'
 tags: [String, Counting]
 rating: 1208
 ---

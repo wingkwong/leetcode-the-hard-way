@@ -1,5 +1,6 @@
 ---
-description: 'Author: @TBC | https://leetcode.com/problems/construct-string-with-repeat-limit/'
+title: 'LeetCode 2182 – Construct String With Repeat Limit'
+description: 'Build the lexicographically largest possible string subject to a maximum number of consecutive copies of the same character.'
 draft: 'true'
 rating: 1680
 ---

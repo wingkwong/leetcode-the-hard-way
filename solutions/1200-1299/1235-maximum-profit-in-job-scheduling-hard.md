@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/maximum-profit-in-job-scheduling/
+title: 'LeetCode 1235 – Maximum Profit in Job Scheduling'
+description: 'Maximize profit from nonoverlapping jobs by comparing the value of taking each job with the best compatible schedule.'
 
 tags: [Array, Binary Search, Dynamic Programming, Sorting]
 rating: 2023

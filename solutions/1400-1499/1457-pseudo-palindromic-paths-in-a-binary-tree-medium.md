@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/pseudo-palindromic-paths-in-a-binary-tree/'
+title: 'LeetCode 1457 – Pseudo-Palindromic Paths in a Binary Tree'
+description: 'Count root-to-leaf paths whose digits can form a palindrome by tracking odd occurrence counts with a bit mask.'
 tags:
   [
     Bit Manipulation,

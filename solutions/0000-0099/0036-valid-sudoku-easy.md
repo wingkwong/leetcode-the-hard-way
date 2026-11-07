@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @vigneshshiv, @radojicic23 | https://leetcode.com/problems/valid-sudoku/
+title: 'LeetCode 36 – Valid Sudoku'
+description: 'Check Sudoku validity by tracking which digits have appeared in each row, column, and three-by-three box.'
 ---
 
 # 0036 - Valid Sudoku (Easy)

@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @heiheihang | https://leetcode.com/problems/minimum-operations-to-make-the-array-alternating/
+title: 'LeetCode 2170 – Minimum Operations to Make the Array Alternating'
+description: 'Minimize changes to make an array alternating by comparing the most frequent values at even and odd positions.'
 rating: 1663
 ---
 

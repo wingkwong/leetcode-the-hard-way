@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @ganajayant, @lonyehan | https://leetcode.com/problems/sort-the-people/'
+title: 'LeetCode 2418 – Sort the People'
+description: 'Order people''s names by descending height by sorting the paired records or selecting them with a heap.'
 rating: 1193
 ---
 

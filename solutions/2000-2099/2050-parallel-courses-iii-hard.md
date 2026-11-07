@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/parallel-courses-iii/'
+title: 'LeetCode 2050 – Parallel Courses III'
+description: 'Find the minimum completion time for parallel courses by tracking the longest prerequisite chain with course durations.'
 tags: [Array, Dynamic Programming, Graph, Topological Sort]
 rating: 2084
 ---

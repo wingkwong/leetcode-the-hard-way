@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/consecutive-numbers-sum/'
+title: 'LeetCode 829 – Consecutive Numbers Sum'
+description: 'Count the ways to express an integer as a sum of consecutive positive numbers by examining possible sequence lengths.'
 rating: 1694
 ---
 

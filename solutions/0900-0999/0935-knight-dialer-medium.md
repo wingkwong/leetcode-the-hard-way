@@ -1,5 +1,6 @@
 ---
-description: 'Author: @jit | https://leetcode.com/problems/knight-dialer/'
+title: 'LeetCode 935 – Knight Dialer'
+description: 'Count keypad sequences a knight can dial by modeling legal jumps as transitions between digit states.'
 tags: [Dynamic Programming]
 rating: 1690
 ---

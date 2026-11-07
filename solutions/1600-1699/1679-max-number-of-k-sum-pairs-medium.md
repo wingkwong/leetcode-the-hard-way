@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @vigneshshiv | https://leetcode.com/problems/max-number-of-k-sum-pairs/'
+title: 'LeetCode 1679 – Max Number of K-Sum Pairs'
+description: 'Maximize disjoint pairs summing to k by matching complements with a hash map or using two pointers after sorting.'
 rating: 1346
 ---
 

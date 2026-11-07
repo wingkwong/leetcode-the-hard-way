@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/subarray-product-less-than-k/'
+title: 'LeetCode 713 – Subarray Product Less Than K'
+description: 'Count subarrays with product below k by shrinking a sliding window until its product satisfies the bound.'
 tags: [Array, Sliding Window]
 ---
 

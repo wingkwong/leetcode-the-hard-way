@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/maximum-width-of-binary-tree/
+title: 'LeetCode 662 – Maximum Width of Binary Tree'
+description: 'Measure each level''s width, including gaps, by assigning tree positions during breadth-first traversal.'
 ---
 
 # 0662 - Maximum Width of Binary Tree (Medium)

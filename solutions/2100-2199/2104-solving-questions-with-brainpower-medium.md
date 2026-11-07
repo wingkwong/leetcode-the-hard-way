@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/solving-questions-with-brainpower/
+title: 'LeetCode 2140 – Solving Questions With Brainpower'
+description: 'Maximize exam points by comparing the reward from answering each question with the best score from skipping it.'
 rating: 1504
 ---
 

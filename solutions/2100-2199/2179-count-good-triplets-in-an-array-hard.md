@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/count-good-triplets-in-an-array/
+title: 'LeetCode 2179 – Count Good Triplets in an Array'
+description: 'Count triples that appear in the same relative order in two permutations using index mappings and a binary indexed tree.'
 rating: 2272
 ---
 

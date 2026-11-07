@@ -1,5 +1,6 @@
 ---
-description: 'Author: @jit, @wkw | https://leetcode.com/problems/minimum-changes-to-make-alternating-binary-string/'
+title: 'LeetCode 1758 – Minimum Changes To Make Alternating Binary String'
+description: 'Count mismatches against both possible alternating binary patterns and take the smaller number of changes.'
 tags: [String]
 rating: 1354
 ---

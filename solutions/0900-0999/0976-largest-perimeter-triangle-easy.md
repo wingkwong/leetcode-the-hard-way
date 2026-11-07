@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/largest-perimeter-triangle/'
+title: 'LeetCode 976 – Largest Perimeter Triangle'
+description: 'Find the largest triangle perimeter by sorting the side lengths and testing neighboring triples against the triangle inequality.'
 rating: 1341
 ---
 

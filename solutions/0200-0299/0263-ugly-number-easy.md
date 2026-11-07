@@ -1,5 +1,6 @@
 ---
-description: 'Author: @Ishwarendra | https://leetcode.com/problems/ugly-number/'
+title: 'LeetCode 263 – Ugly Number'
+description: 'Test whether a number is ugly by dividing out factors of two, three, and five and checking what remains.'
 tags: ['Prime Factor', 'Math']
 ---
 

@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw,@heiheihang | https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix/
+title: 'LeetCode 1337 – The K Weakest Rows in a Matrix'
+description: 'Find the k weakest matrix rows by comparing soldier counts and breaking ties by row index.'
 
 tags: [Array, Binary Search, Sorting, Heap (Priority Queue), Matrix]
 rating: 1225

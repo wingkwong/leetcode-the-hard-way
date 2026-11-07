@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2, @vigneshshiv | https://leetcode.com/problems/generate-parentheses/description/'
+title: 'LeetCode 22 – Generate Parentheses'
+description: 'Generate balanced strings of parentheses by backtracking and adding a closing bracket only when an opening bracket is available.'
 tags: [String, Dynamic Programming, Backtracking]
 ---
 

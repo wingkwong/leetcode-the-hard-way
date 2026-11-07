@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/course-schedule-ii/'
+title: 'LeetCode 210 – Course Schedule II'
+description: 'Construct a valid course order by topologically sorting the prerequisite graph.'
 tags: [Depth-First Search, Breadth-First Search, Graph, Topological Sort]
 ---
 

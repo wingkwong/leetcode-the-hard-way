@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/find-closest-number-to-zero/
+title: 'LeetCode 2239 – Find Closest Number to Zero'
+description: 'Find the integer closest to zero in one pass, choosing the larger value when two candidates are equally close.'
 rating: 1256
 ---
 

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @Srijita-Mandal, @radojicic23 | https://leetcode.com/problems/binary-tree-level-order-traversal/'
+title: 'LeetCode 102 – Binary Tree Level Order Traversal'
+description: 'Traverse a binary tree one level at a time with a queue and collect the values from each level.'
 tags: [Tree, Breadth-First Search, Binary Tree]
 ---
 

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/check-if-it-is-possible-to-split-array/'
+title: 'LeetCode 2811 – Check if it is Possible to Split Array'
+description: 'Determine whether an array admits all required splits by checking its length and the sums of neighboring pairs.'
 tags: [Array, Dynamic Programming, Greedy]
 rating: 1543
 ---

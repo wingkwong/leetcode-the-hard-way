@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @ColeB2 | https://leetcode.com/problems/permutation-in-string/'
+title: 'LeetCode 567 – Permutation in String'
+description: 'Detect a permutation of one string inside another by tracking character frequencies in a fixed-length window.'
 tags: [Hash Table, Two Pointers, String, Sliding Window]
 ---
 

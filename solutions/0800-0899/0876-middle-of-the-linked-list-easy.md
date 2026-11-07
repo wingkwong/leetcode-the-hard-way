@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/middle-of-the-linked-list/description/'
+title: 'LeetCode 876 – Middle of the Linked List'
+description: 'Find the middle of a linked list by moving one pointer twice as fast as the other.'
 tags: [Linked List, Two Pointers]
 rating: 1232
 ---

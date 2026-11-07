@@ -1,5 +1,6 @@
 ---
-description: 'Author: @Ishwarendra | https://leetcode.com/problems/2-keys-keyboard/'
+title: 'LeetCode 650 – 2 Keys Keyboard'
+description: 'Minimize Copy All and Paste operations by factoring the desired number of characters into multiplicative steps.'
 tags: ['Prime Factor', 'Math']
 ---
 

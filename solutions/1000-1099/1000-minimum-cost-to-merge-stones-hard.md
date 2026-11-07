@@ -1,5 +1,6 @@
 ---
-description: 'Author: @hwaiting_dk | https://leetcode.com/problems/minimum-cost-to-merge-stones/'
+title: 'LeetCode 1000 – Minimum Cost to Merge Stones'
+description: 'Minimize the cost of merging consecutive stone piles by choosing merge boundaries with interval dynamic programming.'
 tags: [Array, Dynamic Programming]
 rating: 2423
 ---

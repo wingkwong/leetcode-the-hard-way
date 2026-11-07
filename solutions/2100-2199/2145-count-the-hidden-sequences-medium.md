@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/count-the-hidden-sequences/'
+title: 'LeetCode 2145 – Count the Hidden Sequences'
+description: 'Count valid starting values for a hidden sequence by tracking the minimum and maximum cumulative differences.'
 rating: 1614
 ---
 

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/palindromic-substrings/'
+title: 'LeetCode 647 – Palindromic Substrings'
+description: 'Count palindromic substrings with Manacher''s algorithm by using the palindrome radius at each center.'
 tags: [String, Dynamic Programming]
 ---
 

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/stone-game/'
+title: 'LeetCode 877 – Stone Game'
+description: 'Analyze optimal play in the stone game using the parity of pile positions or dynamic programming over intervals.'
 rating: 1590
 ---
 

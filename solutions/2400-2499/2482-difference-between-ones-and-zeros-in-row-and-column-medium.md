@@ -1,5 +1,6 @@
 ---
-description: 'Author: @heder | https://leetcode.com/problems/difference-between-ones-and-zeros-in-row-and-column/'
+title: 'LeetCode 2482 – Difference Between Ones and Zeros in Row and Column'
+description: 'Build the difference matrix from row and column counts of ones and zeroes, reusing the totals for every cell.'
 tags: [Array, Matrix, Simulation]
 rating: 1373
 ---

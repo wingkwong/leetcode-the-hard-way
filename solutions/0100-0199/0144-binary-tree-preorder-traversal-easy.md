@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @ganajayant, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/binary-tree-preorder-traversal/'
+title: 'LeetCode 144 – Binary Tree Preorder Traversal'
+description: 'Visit a binary tree in root-left-right order using recursive preorder traversal or an explicit stack.'
 tags: [Stack, Tree, Depth-First Search, Binary Tree]
 ---
 

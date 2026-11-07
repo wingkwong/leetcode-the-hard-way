@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/power-of-four/'
+title: 'LeetCode 342 – Power of Four'
+description: 'Determine whether a positive integer is a power of four using binary search or properties of its set bits.'
 tags: [Math, Bit Manipulation, Recursion]
 ---
 

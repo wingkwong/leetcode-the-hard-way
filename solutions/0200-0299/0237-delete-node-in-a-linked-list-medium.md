@@ -1,5 +1,6 @@
 ---
-description: 'Author: @heder | https://leetcode.com/problems/delete-node-in-a-linked-list/'
+title: 'LeetCode 237 – Delete Node in a Linked List'
+description: 'Delete a linked-list node given only that node by copying its successor''s value and bypassing the successor.'
 tags: [Linked List]
 ---
 

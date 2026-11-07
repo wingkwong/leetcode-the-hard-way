@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/evaluate-boolean-binary-tree
+title: 'LeetCode 2331 – Evaluate Boolean Binary Tree'
+description: 'Evaluate a Boolean binary tree by recursively applying each internal node''s operator to its children''s results.'
 rating: 1304
 ---
 

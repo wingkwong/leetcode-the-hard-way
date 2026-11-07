@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @vigneshshiv | https://leetcode.com/problems/design-hashmap/
+title: 'LeetCode 706 – Design HashMap'
+description: 'Build a hash map using an array of buckets and linked lists to handle keys that map to the same bucket.'
 ---
 
 # 0706 - Design HashMap (Medium)

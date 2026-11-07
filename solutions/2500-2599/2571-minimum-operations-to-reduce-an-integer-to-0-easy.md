@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/minimum-operations-to-reduce-an-integer-to-0/'
+title: 'LeetCode 2571 – Minimum Operations to Reduce an Integer to 0'
+description: 'Minimize additions or subtractions of powers of two needed to reach zero by comparing choices with dynamic programming.'
 rating: 1649
 ---
 

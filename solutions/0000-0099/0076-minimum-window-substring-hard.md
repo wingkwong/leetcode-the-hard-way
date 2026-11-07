@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @vigneshshiv | https://leetcode.com/problems/minimum-window-substring/
+title: 'LeetCode 76 – Minimum Window Substring'
+description: 'Find the shortest substring containing all required characters by expanding and shrinking a window of character counts.'
 ---
 
 # 0076 - Minimum Window Substring (Hard)

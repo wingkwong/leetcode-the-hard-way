@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/evaluate-reverse-polish-notation/'
+title: 'LeetCode 150 – Evaluate Reverse Polish Notation'
+description: 'Evaluate a reverse Polish expression by stacking operands and applying each operator to the two most recent values.'
 tags: [Array, Math, Stack]
 ---
 

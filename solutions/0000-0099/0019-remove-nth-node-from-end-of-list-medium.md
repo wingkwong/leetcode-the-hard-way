@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @vigneshshiv, @wkw, @radojicic23 | https://leetcode.com/problems/remove-nth-node-from-end-of-list/
+title: 'LeetCode 19 – Remove Nth Node From End of List'
+description: 'Remove the nth node from the end of a linked list by keeping two pointers a fixed distance apart.'
 ---
 
 # 0019 - Remove Nth Node From End of List (Easy)

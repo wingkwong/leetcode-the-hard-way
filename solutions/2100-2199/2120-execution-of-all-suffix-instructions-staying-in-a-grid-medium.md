@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/execution-of-all-suffix-instructions-staying-in-a-grid/
+title: 'LeetCode 2120 – Execution of All Suffix Instructions Staying in a Grid'
+description: 'Count executable moves for every instruction suffix by tracking when the robot would first leave the grid.'
 rating: 1380
 ---
 

@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw, @radojicic23 | https://leetcode.com/problems/guess-number-higher-or-lower/
+title: 'LeetCode 374 – Guess Number Higher or Lower'
+description: 'Identify a hidden number by using higher-or-lower feedback to halve the remaining search range.'
 ---
 
 # 0374 - Guess Number Higher or Lower (Easy)

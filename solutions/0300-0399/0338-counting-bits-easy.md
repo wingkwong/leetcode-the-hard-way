@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/counting-bits/'
+title: 'LeetCode 338 – Counting Bits'
+description: 'Count set bits for every integer from zero through n, reusing counts from previously processed integers.'
 ---
 
 # 0338 - Counting Bits (Easy)

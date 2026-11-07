@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/maximum-or/'
+title: 'LeetCode 2680 – Maximum OR'
+description: 'Maximize the bitwise OR after doublings by combining each shifted candidate with prefix and suffix OR values.'
 rating: 1912
 ---
 

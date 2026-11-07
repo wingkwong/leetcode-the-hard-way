@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/parallel-courses-ii
+title: 'LeetCode 1494 – Parallel Courses II'
+description: 'Minimize semesters under prerequisite and course-load limits by tracking completed courses with bit-mask dynamic programming.'
 
 tags: ['Dynamic Programming', 'Bit Masking']
 rating: 2082

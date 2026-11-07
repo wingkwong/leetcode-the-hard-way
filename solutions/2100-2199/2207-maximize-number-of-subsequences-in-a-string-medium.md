@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/maximize-number-of-subsequences-in-a-string/
+title: 'LeetCode 2207 – Maximize Number of Subsequences in a String'
+description: 'Maximize the count of a two-character subsequence by comparing the gains from inserting either pattern character.'
 rating: 1550
 ---
 

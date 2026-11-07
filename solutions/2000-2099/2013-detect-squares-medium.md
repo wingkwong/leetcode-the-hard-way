@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/detect-squares/'
+title: 'LeetCode 2013 – Detect Squares'
+description: 'Count axis-aligned squares for a query point by choosing a diagonal corner and looking up the other two corners.'
 tags: [Array, Hash Table, Design, Counting]
 rating: 1841
 ---

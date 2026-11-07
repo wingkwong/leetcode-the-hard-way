@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/sort-the-jumbled-numbers/'
+title: 'LeetCode 2191 – Sort the Jumbled Numbers'
+description: 'Sort numbers by their remapped decimal digits while preserving the relative order of equal mapped values.'
 rating: 1496
 ---
 

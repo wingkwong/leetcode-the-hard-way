@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/n-queens/'
+title: 'LeetCode 51 – N-Queens'
+description: 'Place n queens with backtracking, discarding placements that share a column or diagonal with an earlier queen.'
 tags: [Array, Backtracking]
 ---
 

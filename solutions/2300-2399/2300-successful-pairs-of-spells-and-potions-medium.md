@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/successful-pairs-of-spells-and-potions/'
+title: 'LeetCode 2300 – Successful Pairs of Spells and Potions'
+description: 'Count potions that form a successful pair with each spell by binary searching the minimum qualifying potion strength.'
 tags: [Array, Two Pointers, Binary Search, Sorting]
 rating: 1477
 ---

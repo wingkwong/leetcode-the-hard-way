@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/concatenation-of-consecutive-binary-numbers/'
+title: 'LeetCode 1680 – Concatenation of Consecutive Binary Numbers'
+description: 'Concatenate consecutive integers in binary by shifting the accumulated value to make room for each new number.'
 tags: [Math, Bit Manipulation, Simulation]
 rating: 1630
 ---

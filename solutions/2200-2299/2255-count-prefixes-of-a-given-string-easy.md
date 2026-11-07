@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/count-prefixes-of-a-given-string/
+title: 'LeetCode 2255 – Count Prefixes of a Given String'
+description: 'Count how many words in an array match the beginning of a given string.'
 rating: 1261
 ---
 

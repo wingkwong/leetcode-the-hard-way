@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/distinct-prime-factors-of-product-of-array/'
+title: 'LeetCode 2521 – Distinct Prime Factors of Product of Array'
+description: 'Count the distinct prime factors of an array''s product by factoring its elements and collecting unique primes.'
 rating: 1413
 ---
 

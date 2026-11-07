@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/design-add-and-search-words-data-structure/'
+title: 'LeetCode 211 – Design Add and Search Words Data Structure'
+description: 'Support word insertion and wildcard searches by branching through a trie whenever a dot can match multiple letters.'
 tags: [String, Depth-First Search, Design, Trie]
 ---
 

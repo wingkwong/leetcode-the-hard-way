@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/buildings-with-an-ocean-view/
+title: 'LeetCode 1762 – Buildings With an Ocean View'
+description: 'Find buildings with an ocean view by scanning from the ocean side and tracking the tallest building seen.'
 ---
 
 # 1762 - Buildings With an Ocean View (Medium)

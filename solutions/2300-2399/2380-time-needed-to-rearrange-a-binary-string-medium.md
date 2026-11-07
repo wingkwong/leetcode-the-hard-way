@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/time-needed-to-rearrange-a-binary-string/'
+title: 'LeetCode 2380 – Time Needed to Rearrange a Binary String'
+description: 'Simulate simultaneous swaps of adjacent zero-one pairs and count the seconds until the binary string stabilizes.'
 tags: [String, Dynamic Programming, Simulation]
 rating: 1481
 ---

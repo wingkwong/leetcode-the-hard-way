@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @heiheihang, @wkw | https://leetcode.com/problems/maximum-and-sum-of-array/
+title: 'LeetCode 2172 – Maximum AND Sum of Array'
+description: 'Maximize the AND sum when assigning values to slots with limited capacity using bit-mask dynamic programming or flow.'
 rating: 2392
 ---
 

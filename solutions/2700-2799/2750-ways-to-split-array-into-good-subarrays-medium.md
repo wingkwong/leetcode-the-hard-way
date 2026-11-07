@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/ways-to-split-array-into-good-subarrays/'
+title: 'LeetCode 2750 – Ways to Split Array Into Good Subarrays'
+description: 'Count splits into subarrays containing exactly one set bit each by multiplying the possible cuts between successive ones.'
 tags: [Array, Math, Dynamic Programming]
 rating: 1598
 ---

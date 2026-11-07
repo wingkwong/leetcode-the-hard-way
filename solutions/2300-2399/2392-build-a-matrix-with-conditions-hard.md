@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/build-a-matrix-with-conditions/'
+title: 'LeetCode 2392 – Build a Matrix With Conditions'
+description: 'Construct a matrix satisfying row and column constraints by topologically sorting the two independent sets of precedence rules.'
 rating: 1961
 ---
 

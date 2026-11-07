@@ -1,5 +1,6 @@
 ---
-description: 'Author: @dhanu084, @wkw, @jit, @heder | https://leetcode.com/problems/find-the-pivot-integer/'
+title: 'LeetCode 2485 – Find the Pivot Integer'
+description: 'Find the integer whose inclusive left and right sums agree using triangular sums or binary search.'
 tags: [Math, Prefix Sum]
 rating: 1207
 ---

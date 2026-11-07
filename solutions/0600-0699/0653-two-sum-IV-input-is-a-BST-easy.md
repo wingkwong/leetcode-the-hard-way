@@ -1,5 +1,6 @@
 ---
-description: 'Author: @madhu915 | https://leetcode.com/problems/two-sum-iv-input-is-a-bst/'
+title: 'LeetCode 653 – Two Sum IV - Input is a BST'
+description: 'Check whether two nodes in a binary search tree sum to a target by searching for complementary values during traversal.'
 tags:
   [
     Hash Table,

@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/rearrange-array-elements-by-sign/
+title: 'LeetCode 2149 – Rearrange Array Elements by Sign'
+description: 'Rearrange values into alternating positive and negative positions while preserving their order within each sign group.'
 
 tags: [Array, Two Pointers, Simulation]
 rating: 1236

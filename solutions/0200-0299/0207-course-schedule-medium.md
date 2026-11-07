@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/course-schedule/'
+title: 'LeetCode 207 – Course Schedule'
+description: 'Use topological sorting on course prerequisites to decide whether all courses can be completed.'
 tags: [Depth-First Search, Breadth-First Search, Graph, Topological Sort]
 ---
 

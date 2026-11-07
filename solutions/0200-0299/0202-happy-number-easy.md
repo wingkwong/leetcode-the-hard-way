@@ -1,5 +1,6 @@
 ---
-description: 'Author: @vigneshshiv, @wkw | https://leetcode.com/problems/happy-number/'
+title: 'LeetCode 202 – Happy Number'
+description: 'Detect whether repeated sums of squared digits reach one or enter a cycle using fast and slow iteration.'
 tags: [Array, Math, Two Pointers]
 ---
 

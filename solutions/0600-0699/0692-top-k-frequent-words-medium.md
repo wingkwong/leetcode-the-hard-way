@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @vigneshshiv | https://leetcode.com/problems/top-k-frequent-words/
+title: 'LeetCode 692 – Top K Frequent Words'
+description: 'Select the k most frequent words, breaking frequency ties in alphabetical order, with a heap or frequency buckets.'
 ---
 
 # 0692 - Top K Frequent Words (Medium)

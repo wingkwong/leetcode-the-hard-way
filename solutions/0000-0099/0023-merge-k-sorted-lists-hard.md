@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @rahulvarma5297, @radojicic23 | https://leetcode.com/problems/merge-k-sorted-lists/'
+title: 'LeetCode 23 – Merge k Sorted Lists'
+description: 'Merge k sorted linked lists in pairs with divide and conquer until a single sorted list remains.'
 tags: [Linked List, Divide and Conquer, Heap (Priority Queue), Merge Sort]
 ---
 

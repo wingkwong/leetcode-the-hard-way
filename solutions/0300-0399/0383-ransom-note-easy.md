@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/ransom-note/'
+title: 'LeetCode 383 – Ransom Note'
+description: 'Check whether the available magazine letters can spell a ransom note by counting how many copies of each letter are needed.'
 tags: [Hash Table, String, Counting]
 ---
 

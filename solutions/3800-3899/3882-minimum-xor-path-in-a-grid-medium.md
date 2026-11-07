@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/minimum-xor-path-in-a-grid'
+title: 'LeetCode 3882 – Minimum XOR Path in a Grid'
+description: 'Find the minimum path XOR in a grid by tracking all reachable XOR values at each cell.'
 tags: ['Dynamic Programming', 'Bit Manipulation', 'Matrix']
 rating: 1771
 ---

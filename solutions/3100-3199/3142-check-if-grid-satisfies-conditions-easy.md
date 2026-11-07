@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/check-if-grid-satisfies-conditions/'
+title: 'LeetCode 3142 – Check if Grid Satisfies Conditions'
+description: 'Check a grid''s adjacency conditions by comparing vertical neighbors for equality and horizontal neighbors for inequality.'
 tags: [Array, Matrix]
 rating: 1303
 ---

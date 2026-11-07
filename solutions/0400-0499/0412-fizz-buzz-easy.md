@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/fizz-buzz'
+title: 'LeetCode 412 – Fizz Buzz'
+description: 'Generate the Fizz Buzz sequence by testing divisibility by three, five, or both at each number.'
 tags: [Math, String, Simulation]
 ---
 

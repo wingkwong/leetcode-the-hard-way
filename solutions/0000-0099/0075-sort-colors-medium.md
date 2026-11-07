@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ganajayant, @RadhikaChhabra17, @radojicic23 | https://leetcode.com/problems/sort-colors/'
+title: 'LeetCode 75 – Sort Colors'
+description: 'Sort an array of three colors by counting each color and writing the values back in order.'
 tags: [Array, Two Pointers, Sorting]
 ---
 

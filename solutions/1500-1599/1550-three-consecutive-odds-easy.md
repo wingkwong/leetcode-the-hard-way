@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/three-consecutive-odds/'
+title: 'LeetCode 1550 – Three Consecutive Odds'
+description: 'Detect three consecutive odd numbers by checking the parity of neighboring array elements.'
 tags: [Array]
 rating: 1222
 ---

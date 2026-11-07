@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/divide-intervals-into-minimum-number-of-groups/'
+title: 'LeetCode 2406 – Divide Intervals Into Minimum Number of Groups'
+description: 'Find the minimum number of nonoverlapping interval groups by sweeping endpoints and measuring the maximum simultaneous overlap.'
 rating: 1713
 ---
 

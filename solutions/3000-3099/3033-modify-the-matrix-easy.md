@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/modify-the-matrix/'
+title: 'LeetCode 3033 – Modify the Matrix'
+description: 'Replace missing matrix entries with the largest value in their own column by examining column maxima.'
 rating: 1181
 ---
 

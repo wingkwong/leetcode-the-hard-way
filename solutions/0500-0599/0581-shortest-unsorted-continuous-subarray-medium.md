@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/shortest-unsorted-continuous-subarray/
+title: 'LeetCode 581 – Shortest Unsorted Continuous Subarray'
+description: 'Find the shortest segment that needs sorting by comparing the array with its sorted order.'
 ---
 
 # 0581 - Shortest Unsorted Continuous Subarray (Medium)

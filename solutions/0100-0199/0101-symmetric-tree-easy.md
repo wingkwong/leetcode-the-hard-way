@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/symmetric-tree/'
+title: 'LeetCode 101 – Symmetric Tree'
+description: 'Test whether a binary tree is symmetric by comparing mirrored pairs of nodes recursively or iteratively.'
 ---
 
 # 0101 - Symmetric Tree (Easy)

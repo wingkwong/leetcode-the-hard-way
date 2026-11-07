@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/sorting-the-sentence/
+title: 'LeetCode 1859 – Sorting the Sentence'
+description: 'Reassemble a shuffled sentence by using the position digit attached to each word to recover its original order.'
 
 tags: ['Sorting']
 rating: 1290

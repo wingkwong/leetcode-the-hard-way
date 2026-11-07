@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/diameter-of-binary-tree/'
+title: 'LeetCode 543 – Diameter of Binary Tree'
+description: 'Find a binary tree''s diameter by combining left and right subtree heights at every possible turning point.'
 tags: [Tree, Depth-First Search, Binary Tree]
 ---
 

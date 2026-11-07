@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw, @radojicic23 | https://leetcode.com/problems/maximum-bags-with-full-capacity-of-rocks
+title: 'LeetCode 2279 – Maximum Bags With Full Capacity of Rocks'
+description: 'Maximize the number of full bags by filling the smallest remaining capacity gaps first.'
 rating: 1249
 ---
 

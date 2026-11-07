@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/count-all-possible-routes/'
+title: 'LeetCode 1575 – Count All Possible Routes'
+description: 'Count routes that reach the destination within the fuel budget by tracking the current city and remaining fuel.'
 rating: 2055
 ---
 

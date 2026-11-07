@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/partition-labels/'
+title: 'LeetCode 763 – Partition Labels'
+description: 'Partition a string so each letter stays within one part by tracking the last occurrence of every character encountered.'
 tags: [Hash Table, Two Pointers, String, Greedy]
 rating: 1443
 ---

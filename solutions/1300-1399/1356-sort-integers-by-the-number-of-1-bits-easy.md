@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw, @vigneshshiv | https://leetcode.com/problems/sort-integers-by-the-number-of-1-bits
+title: 'LeetCode 1356 – Sort Integers by The Number of 1 Bits'
+description: 'Sort integers by their number of set bits, breaking ties by their numeric values.'
 
 tags: ['Sorting']
 rating: 1258

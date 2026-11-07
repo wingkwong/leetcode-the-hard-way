@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/find-target-indices-after-sorting-array'
+title: 'LeetCode 2089 – Find Target Indices After Sorting Array'
+description: 'Find a target''s indices in sorted order by sorting the array or counting values smaller than and equal to the target.'
 tags: ['Array', 'Binary Search', 'Sorting']
 rating: 1152
 ---

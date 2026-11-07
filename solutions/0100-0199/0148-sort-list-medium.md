@@ -1,5 +1,6 @@
 ---
-description: 'Author: @vigneshshiv, @radojicic23 | https://leetcode.com/problems/sort-list/'
+title: 'LeetCode 148 – Sort List'
+description: 'Sort a linked list by splitting it into halves, recursively sorting them, and merging the sorted lists.'
 ---
 
 # 0148 - Sort List (Medium)

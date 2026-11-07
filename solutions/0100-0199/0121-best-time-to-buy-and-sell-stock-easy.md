@@ -1,5 +1,6 @@
 ---
-description: 'Author: @jeremiaaxel, @ColeB2, @radojicic23 | https://leetcode.com/problems/best-time-to-buy-and-sell-stock/'
+title: 'LeetCode 121 – Best Time to Buy and Sell Stock'
+description: 'Find the best profit from one stock trade by tracking the lowest price seen before each possible sale.'
 ---
 
 # 0121 - Best Time to Buy and Sell Stock (Easy)

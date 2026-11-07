@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/count-odd-numbers-in-an-interval-range/
+title: 'LeetCode 1523 – Count Odd Numbers in an Interval Range'
+description: 'Count odd integers in an inclusive interval using its endpoints without enumerating every value.'
 rating: 1209
 ---
 

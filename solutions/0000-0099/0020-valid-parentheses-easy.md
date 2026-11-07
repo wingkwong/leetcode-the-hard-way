@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @vigneshshiv | https://leetcode.com/problems/valid-parentheses/
+title: 'LeetCode 20 – Valid Parentheses'
+description: 'Validate brackets with a stack that matches each closing bracket to the most recent unmatched opening bracket.'
 ---
 
 # 0020 - Valid Parentheses (Easy)

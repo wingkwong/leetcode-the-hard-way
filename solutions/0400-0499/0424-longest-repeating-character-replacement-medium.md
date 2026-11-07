@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @ColeB2 | https://leetcode.com/problems/longest-substring-without-repeating-characters/
+title: 'LeetCode 424 – Longest Repeating Character Replacement'
+description: 'Find the longest substring that can become a single repeated letter by tracking character frequencies in a sliding window.'
 
 tags: [Hash Table, String, Sliding Window]
 ---

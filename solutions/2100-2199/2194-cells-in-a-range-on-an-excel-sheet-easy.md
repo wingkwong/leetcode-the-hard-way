@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/cells-in-a-range-on-an-excel-sheet/
+title: 'LeetCode 2194 – Cells in a Range on an Excel Sheet'
+description: 'List all spreadsheet cells in a rectangular range by iterating over its columns and rows in the requested order.'
 rating: 1253
 ---
 

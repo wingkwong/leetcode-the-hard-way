@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/minimum-cost-to-set-cooking-time/
+title: 'LeetCode 2162 – Minimum Cost to Set Cooking Time'
+description: 'Minimize microwave keypad cost by evaluating valid minute-second representations and their movement and button-press costs.'
 rating: 1852
 ---
 

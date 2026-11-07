@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @ColeB2 | https://leetcode.com/problems/edit-distance/'
+title: 'LeetCode 72 – Edit Distance'
+description: 'Compute edit distance by comparing insertion, deletion, and replacement costs with memoization or tabulation.'
 tags: [String, Dynamic Programming]
 ---
 

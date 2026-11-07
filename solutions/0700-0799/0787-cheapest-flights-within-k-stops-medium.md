@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw, @ColeB2 | https://leetcode.com/problems/cheapest-flights-within-k-stops/
+title: 'LeetCode 787 – Cheapest Flights Within K Stops'
+description: 'Find the cheapest flight under a stop limit by tracking route cost together with the number of flights taken.'
 
 tags:
   [

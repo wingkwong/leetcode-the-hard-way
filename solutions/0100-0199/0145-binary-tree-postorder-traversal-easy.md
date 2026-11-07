@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @ganajayant, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/binary-tree-postorder-traversal/'
+title: 'LeetCode 145 – Binary Tree Postorder Traversal'
+description: 'Visit the children before their parent in a binary tree using recursive or iterative postorder traversal.'
 tags: [Stack, Tree, Depth-First Search, Binary Tree]
 ---
 

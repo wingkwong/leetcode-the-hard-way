@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/create-grid-with-exactly-one-path'
+title: 'LeetCode 3963 – Create Grid With Exactly One Path'
+description: 'Construct a grid with exactly one valid path by opening the top row and rightmost column and blocking the remaining cells.'
 rating: 1311
 ---
 

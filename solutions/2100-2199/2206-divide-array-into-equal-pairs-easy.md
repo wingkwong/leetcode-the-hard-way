@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/divide-array-into-equal-pairs/
+title: 'LeetCode 2206 – Divide Array Into Equal Pairs'
+description: 'Decide whether all array values can be grouped into equal pairs by checking the multiplicity of each value.'
 rating: 1223
 ---
 

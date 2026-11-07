@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/maximum-candies-allocated-to-k-children/
+title: 'LeetCode 2226 – Maximum Candies Allocated to K Children'
+description: 'Maximize equal candy portions for k children by binary searching a portion size and counting how many portions it yields.'
 rating: 1646
 ---
 

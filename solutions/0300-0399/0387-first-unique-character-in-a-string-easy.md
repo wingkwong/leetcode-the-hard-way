@@ -1,5 +1,6 @@
 ---
-description: 'Author: @heder, @wkw, @jit | https://leetcode.com/problems/first-unique-character-in-a-string/'
+title: 'LeetCode 387 – First Unique Character in a String'
+description: 'Locate the first character that occurs once by counting character frequencies and checking the original order.'
 tags: [Hash Table, String, Queue, Counting]
 ---
 

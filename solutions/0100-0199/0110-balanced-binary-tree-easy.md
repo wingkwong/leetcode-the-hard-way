@@ -1,5 +1,6 @@
 ---
-description: 'Author: @SkollRyu, @ColeB2 | https://leetcode.com/problems/balanced-binary-tree/'
+title: 'LeetCode 110 – Balanced Binary Tree'
+description: 'Check whether a binary tree is height-balanced by comparing the heights of the two subtrees at each node.'
 ---
 
 # 0110 - Balanced Binary Tree (Easy)

@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @TBC | https://leetcode.com/problems/move-pieces-to-obtain-a-string
+title: 'LeetCode 2337 – Move Pieces to Obtain a String'
+description: 'Determine whether one arrangement of pieces can reach another when each piece may slide only in its permitted direction.'
 
 draft: true
 rating: 1693

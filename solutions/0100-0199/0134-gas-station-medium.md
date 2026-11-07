@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @hirotake111 | https://leetcode.com/problems/gas-station/
+title: 'LeetCode 134 – Gas Station'
+description: 'Find a starting gas station for a complete circuit by tracking fuel gained and spent along the circular route.'
 ---
 
 # 0134 - Gas Station (Medium)

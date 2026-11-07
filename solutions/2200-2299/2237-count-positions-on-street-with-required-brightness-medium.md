@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/count-positions-on-street-with-required-brightness/
+title: 'LeetCode 2237 – Count Positions on Street With Required Brightness'
+description: 'Count street positions meeting their brightness requirement by sweeping the start and end of each light''s coverage.'
 ---
 
 # 2237 - Count Positions on Street With Required Brightness (Medium)

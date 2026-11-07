@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/count-integers-with-even-digit-sum/
+title: 'LeetCode 2180 – Count Integers With Even Digit Sum'
+description: 'Count positive integers up to a bound whose decimal digits have an even sum by evaluating each candidate.'
 rating: 1257
 ---
 

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/continuous-subarray-sum/'
+title: 'LeetCode 523 – Continuous Subarray Sum'
+description: 'Detect a subarray of at least two values whose sum is a multiple of k by comparing prefix-sum remainders.'
 ---
 
 # 0523 - Continuous Subarray Sum (Medium)

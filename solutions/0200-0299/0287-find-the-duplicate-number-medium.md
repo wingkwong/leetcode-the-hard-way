@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw, @vigneshshiv, @radojicic23 |  https://leetcode.com/problems/find-the-duplicate-number/
+title: 'LeetCode 287 – Find the Duplicate Number'
+description: 'Find the repeated number by treating array values as links and detecting a cycle with slow and fast pointers.'
 ---
 
 # 0287 - Find the Duplicate Number (Medium)

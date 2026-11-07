@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @heiheihang, @wkw | https://leetcode.com/problems/shortest-path-visiting-all-nodes/
+title: 'LeetCode 847 – Shortest Path Visiting All Nodes'
+description: 'Find the shortest walk visiting every graph node by tracking both the current vertex and the set of visited vertices.'
 
 tags:
   [Dynamic Programming, Bit Manipulation, Breadth-First Search, Graph, Bitmask]

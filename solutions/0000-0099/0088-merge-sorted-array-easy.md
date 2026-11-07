@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @saishreekouda, @deepanshu-rawat6, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/merge-sorted-array/
+title: 'LeetCode 88 – Merge Sorted Array'
+description: 'Merge two sorted arrays in place by filling the destination from the back with the larger remaining value.'
 
 tags: [Array, Two Pointers, Sorting]
 ---

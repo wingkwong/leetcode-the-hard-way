@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/optimize-water-distribution-in-a-village/
+title: 'LeetCode 1168 – Optimize Water Distribution in a Village'
+description: 'Minimize water supply costs by modeling wells and pipes as edges in a minimum spanning tree.'
 rating: 2069
 ---
 

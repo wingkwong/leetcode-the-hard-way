@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/most-frequent-even-element/'
+title: 'LeetCode 2404 – Most Frequent Even Element'
+description: 'Find the most frequent even value with a frequency map, choosing the smallest value when counts tie.'
 rating: 1259
 ---
 

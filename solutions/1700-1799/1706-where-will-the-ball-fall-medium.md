@@ -1,5 +1,6 @@
 ---
-description: 'Author: @TBC | https://leetcode.com/problems/where-will-the-ball-fall/'
+title: 'LeetCode 1706 – Where Will the Ball Fall'
+description: 'Trace each falling ball through a grid of slanted boards and detect where a wall or V-shaped channel traps it.'
 tags: [Array, Dynamic Programming, Depth-First Search, Matrix, Simulation]
 rating: 1765
 ---

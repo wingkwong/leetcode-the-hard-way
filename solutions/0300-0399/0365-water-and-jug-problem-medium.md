@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/water-and-jug-problem'
+title: 'LeetCode 365 – Water and Jug Problem'
+description: 'Determine which amounts two water jugs can measure using their capacities and greatest common divisor.'
 ---
 
 # 0365 - Water and Jug Problem (Medium)

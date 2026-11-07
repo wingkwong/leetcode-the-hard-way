@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/reverse-words-in-a-string-iii/'
+title: 'LeetCode 557 – Reverse Words in a String III'
+description: 'Reverse the characters within each word while keeping word order intact, using splitting or two pointers.'
 tags: [Two Pointers, String]
 ---
 

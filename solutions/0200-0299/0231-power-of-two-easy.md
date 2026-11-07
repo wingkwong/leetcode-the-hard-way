@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @vigneshshiv, @radojicic23, @jit | https://leetcode.com/problems/power-of-two/'
+title: 'LeetCode 231 – Power of Two'
+description: 'Test whether an integer is a power of two by checking that it is positive and contains exactly one set bit.'
 tags: [Math, Bit Manipulation, Recursion]
 ---
 

@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/maximum-score-from-performing-multiplication-operations
+title: 'LeetCode 1770 – Maximum Score from Performing Multiplication Operations'
+description: 'Maximize the score from successive multipliers by choosing an element from either end of the array at each step.'
 rating: 2068
 ---
 

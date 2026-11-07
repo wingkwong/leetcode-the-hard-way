@@ -1,5 +1,6 @@
 ---
-description: 'Author: @divyansh_0602, @jit, @heder| https://leetcode.com/problems/add-one-row-to-tree/'
+title: 'LeetCode 623 – Add One Row to Tree'
+description: 'Insert a row at a specified tree depth by attaching new nodes and reconnecting the original children beneath them.'
 tags: [Tree, Depth-First Search, Breadth-First Search, Binary Tree]
 ---
 

@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/count-number-of-rectangles-containing-each-point/
+title: 'LeetCode 2250 – Count Number of Rectangles Containing Each Point'
+description: 'Count rectangles containing each query point by grouping rectangles by height and searching their widths.'
 rating: 1998
 ---
 

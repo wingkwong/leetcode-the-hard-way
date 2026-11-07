@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @vigneshshiv, @radojicic23 | https://leetcode.com/problems/trapping-rain-water/'
+title: 'LeetCode 42 – Trapping Rain Water'
+description: 'Compute trapped rainwater from the heights on either side of each bar. Compare two pointers, dynamic programming, and a monotonic stack.'
 tags: [Array, Two Pointers, Dynamic Programming, Stack, Monotonic Stack]
 ---
 

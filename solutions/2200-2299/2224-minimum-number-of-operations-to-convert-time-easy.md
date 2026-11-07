@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/minimum-number-of-operations-to-convert-time/
+title: 'LeetCode 2224 – Minimum Number of Operations to Convert Time'
+description: 'Convert one time to another in the fewest operations by greedily taking the largest allowed minute increments.'
 rating: 1296
 ---
 

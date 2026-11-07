@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/count-primes/'
+title: 'LeetCode 204 – Count Primes'
+description: 'Count primes below a limit with the Sieve of Eratosthenes by crossing out multiples of each prime.'
 ---
 
 # 0204 - Count Primes

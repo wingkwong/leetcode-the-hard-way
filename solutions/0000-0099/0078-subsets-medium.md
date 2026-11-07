@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @vigneshshiv | https://leetcode.com/problems/subsets/'
+title: 'LeetCode 78 – Subsets'
+description: 'Generate the power set using bit masks, backtracking, or iterative expansion of the subsets built so far.'
 tags: [Array, Backtracking, Bit Manipulation]
 ---
 

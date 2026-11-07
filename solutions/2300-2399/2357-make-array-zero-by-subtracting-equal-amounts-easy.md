@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/make-array-zero-by-subtracting-equal-amounts
+title: 'LeetCode 2357 – Make Array Zero by Subtracting Equal Amounts'
+description: 'Find how many subtractions it takes to zero an array by counting its distinct positive values.'
 rating: 1225
 ---
 

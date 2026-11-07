@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @heiheihang | https://leetcode.com/problems/maximum-depth-of-n-ary-tree/
+title: 'LeetCode 559 – Maximum Depth of N-ary Tree'
+description: 'Find the maximum depth of an N-ary tree by exploring its children and taking the deepest root-to-leaf path.'
 ---
 
 # 0559 - Maximum Depth of N-ary Tree (Easy)

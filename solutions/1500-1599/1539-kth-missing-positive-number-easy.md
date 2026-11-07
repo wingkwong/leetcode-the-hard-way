@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/kth-missing-positive-number/
+title: 'LeetCode 1539 – Kth Missing Positive Number'
+description: 'Locate the kth missing positive integer by tracking gaps in the increasing sequence.'
 rating: 1295
 ---
 

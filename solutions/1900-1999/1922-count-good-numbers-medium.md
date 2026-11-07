@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/count-good-numbers'
+title: 'LeetCode 1922 – Count Good Numbers'
+description: 'Count valid digit strings by separating even-index and odd-index choices and raising their counts to the required powers.'
 tags: [Math, Recursion]
 rating: 1675
 ---

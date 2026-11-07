@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/hand-of-straights/'
+title: 'LeetCode 846 – Hand of Straights'
+description: 'Determine whether a hand forms equal-sized consecutive groups by processing card values in sorted order and tracking counts.'
 tags: [Array, Hash Table, Greedy, Sorting]
 rating: 1565
 ---

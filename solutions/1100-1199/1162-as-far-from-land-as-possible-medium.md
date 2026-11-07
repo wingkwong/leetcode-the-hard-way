@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/as-far-from-land-as-possible/
+title: 'LeetCode 1162 – As Far from Land as Possible'
+description: 'Find the water cell farthest from land by expanding a breadth-first search from land cells.'
 rating: 1666
 ---
 

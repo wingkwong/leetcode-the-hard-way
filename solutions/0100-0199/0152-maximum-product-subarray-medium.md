@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/maximum-product-subarray/'
+title: 'LeetCode 152 – Maximum Product Subarray'
+description: 'Find the maximum product subarray by tracking both extrema, since multiplying by a negative number can reverse their roles.'
 tags: [Array, Dynamic Programming]
 ---
 

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @radojicic23 | https://leetcode.com/problems/backspace-string-compare/'
+title: 'LeetCode 844 – Backspace String Compare'
+description: 'Compare typed strings after simulating backspaces that remove the preceding character.'
 tags: [Two Pointers, String, Stack, Simulation]
 rating: 1228
 ---

@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw | https://leetcode.com/problems/minimize-the-maximum-difference-of-pairs/'
+title: 'LeetCode 2616 – Minimize the Maximum Difference of Pairs'
+description: 'Minimize the largest difference among p disjoint pairs by binary searching the difference bound and testing sorted neighbors.'
 rating: 2155
 ---
 

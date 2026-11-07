@@ -1,5 +1,6 @@
 ---
-description: 'Author: @ColeB2 | https://leetcode.com/problems/length-of-last-word/'
+title: 'LeetCode 58 – Length of Last Word'
+description: 'Find the length of the last word by scanning backward past trailing spaces and counting its characters.'
 tags: [String]
 ---
 

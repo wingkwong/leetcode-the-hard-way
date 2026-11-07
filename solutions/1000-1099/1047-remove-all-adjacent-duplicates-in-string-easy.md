@@ -1,5 +1,6 @@
 ---
-description: 'Author: @wkw, @radojicic23 | https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/'
+title: 'LeetCode 1047 – Remove All Adjacent Duplicates In String'
+description: 'Remove adjacent equal pairs repeatedly by using a stack to expose new pairs as earlier ones disappear.'
 tags: [String, Stack]
 rating: 1286
 ---

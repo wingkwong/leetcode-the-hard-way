@@ -1,6 +1,6 @@
 ---
-description: >-
-  Author: @wkw | https://leetcode.com/problems/longest-palindromic-substring/
+title: 'LeetCode 5 – Longest Palindromic Substring'
+description: 'Find the longest palindromic substring with Manacher''s algorithm, reusing palindrome lengths around previously visited centers.'
 
 tags: [String, Dynamic Programming]
 ---
