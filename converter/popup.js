@@ -67,7 +67,7 @@ function renderMarkdown() {
 
   let frontMatter = '';
 
-  frontMatter += `description: 'Author: @TBC | ${meta.href}'\n`;
+  frontMatter += `description: 'TBC'\n`;
   frontMatter += `draft: 'true'\n`;
 
   if (meta.topics.length > 0) {
