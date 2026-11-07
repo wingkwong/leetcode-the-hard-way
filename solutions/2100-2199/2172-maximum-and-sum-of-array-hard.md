@@ -48,8 +48,6 @@ Note that slots 2, 5, 6, and 8 are empty which is permitted.
 
 ## Approach 1: Brute Force
 
-_This approach is prepared by @heiheihang._
-
 Naive backtracking
 
 <Tabs>
@@ -59,40 +57,27 @@ Naive backtracking
 ```python
 class Solution:
     def maximumANDSum(self, nums: List[int], numSlots: int) -> int:
-
-        #store the number of elements in each slot
+        # store the number of elements in each slot
         slots = defaultdict(int)
         val = 0
         res = 0
-
         def backtrack(idx):
-
-            #return 0 when reaches the end of nums
-            if(idx == len(nums)):
-                return 0
-
-            #store the maximum result
+            # return 0 when reaches the end of nums
+            if(idx == len(nums)): return 0
+            # store the maximum result
             res = 0
-
-            #iterate all slots
+            # iterate all slots
             for i in range(numSlots):
-
-                #naive pruning for trivial results
-                if(nums[idx] & (i+1) == 0 or slots[i+1] == 2):
-                    continue
-
-                #update if we want to take that number at ith slot
+                # naive pruning for trivial results
+                if(nums[idx] & (i+1) == 0 or slots[i+1] == 2): continue
+                # update if we want to take that number at ith slot
                 slots[i+1] += 1
-
-                #backtrack
+                # backtrack
                 res = max(res, backtrack(idx+1) + ((i+1) & nums[idx]))
-
-                #resume state
+                # resume state
                 slots[i+1] -= 1
-
             #final backtrack for not using the current number
             backtrack(idx+1)
-
         return backtrack(0)
 ```
 
@@ -150,12 +135,6 @@ class Solution:
 </Tabs>
 
 ## Approach 3: MCMF
-
-:::info[Prerequisite]
-
-- MCMF
-
-:::
 
 > MCMF tutorial will not be included here. Please check out [https://cp-algorithms.com/graph/min_cost_flow.html](https://cp-algorithms.com/graph/min_cost_flow.html) for more.
 
@@ -289,7 +268,7 @@ $$
 source, nums[0], nums[1], ... ,nums[n - 1], slot_1, slot_2, .., slot_k, sink
 $$
 
-Now we need to create the edges from $$source$$ to each element in $$nums$$ with $$1$$ capacity and $$0$$ cost. Then we create the edges from each element in $$nums$$ to each slot with $$1$$ capacity and $$-(nums[i - 1] & slot)$$. The minus sign is here because this MCMF template is to calculate the minimum cost and this problem is asking for the maximum one. Similarly, we create edges from each slot to $$sink$$ with $$2$$ capacities (because each slot at most contains 2 elements) and $$0$$ cost.
+Now we need to create the edges from $$source$$ to each element in $$nums$$ with $$1$$ capacity and $$0$$ cost. Then we create the edges from each element in $$nums$$ to each slot with $$1$$ capacity and $$-(nums[i - 1] \& slot)$$. The minus sign is here because this MCMF template is to calculate the minimum cost and this problem is asking for the maximum one. Similarly, we create edges from each slot to $$sink$$ with $$2$$ capacities (because each slot at most contains 2 elements) and $$0$$ cost.
 
 <Tabs>
 <TabItem value="cpp" label="C++">
