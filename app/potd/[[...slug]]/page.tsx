@@ -56,7 +56,11 @@ export default async function ArchivePage({ params }: Props) {
                   <time dateTime={date}>{date}</time>
                 </td>
                 <td>
-                  <a href={`https://leetcode.com/problems/${slug}/`}>
+                  <a
+                    href={`https://leetcode.com/problems/${slug}/`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     {questionId} – {title}
                   </a>
                 </td>
@@ -64,6 +68,8 @@ export default async function ArchivePage({ params }: Props) {
                   {solutionUrl ? (
                     <a
                       href={solutionUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       aria-label={`Read editorial for ${title}`}
                     >
                       Read editorial
