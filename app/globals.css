@@ -327,7 +327,7 @@ th {
   margin-bottom: 0.75rem;
 }
 
-.sponsors-marquee {
+.sponsor-panel {
   border-top: 1px solid var(--color-fd-border);
   flex-shrink: 0;
   margin-top: 1rem;
@@ -335,40 +335,23 @@ th {
   font-size: 0.75rem;
 }
 
-.sponsors-marquee--standalone {
+.sponsor-panel--standalone {
   border-top: none;
 }
 
-.sponsors-marquee-link:focus-visible {
+.sponsor-panel-link:focus-visible {
   outline: 2px solid var(--site-link);
   outline-offset: 3px;
 }
 
-.sponsors-marquee-viewport {
-  overflow: hidden;
-  mask-image: linear-gradient(
-    to right,
-    transparent,
-    black 8%,
-    black 92%,
-    transparent
-  );
-}
-
-.sponsors-marquee-track {
-  animation: sponsors-marquee-scroll 12s linear infinite;
+.sponsor-list {
+  align-items: center;
   display: flex;
-  width: max-content;
-}
-
-.sponsors-marquee-group {
-  display: flex;
-  flex-shrink: 0;
+  flex-direction: column;
   gap: 0.625rem;
-  padding-right: 0.625rem;
 }
 
-.sponsors-marquee-placeholder {
+.sponsor-card {
   align-items: center;
   background: var(--color-fd-muted);
   border: 1px dashed var(--color-fd-border);
@@ -378,51 +361,19 @@ th {
   flex-direction: column;
   gap: 0.5rem;
   justify-content: center;
-  height: 76px;
-  width: 136px;
+  height: 56px;
+  width: 80%;
 }
 
-.sponsors-marquee-viewport:hover .sponsors-marquee-track,
-.sponsors-marquee-viewport:focus-within .sponsors-marquee-track {
-  animation-play-state: paused;
-}
-
-.sponsors-marquee-link {
+.sponsor-panel-link {
   color: var(--color-fd-muted-foreground);
   display: block;
   margin-top: 0.75rem;
   text-align: center;
 }
 
-.sponsors-marquee-link:hover {
+.sponsor-panel-link:hover {
   color: var(--color-fd-foreground);
-}
-
-@keyframes sponsors-marquee-scroll {
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .sponsors-marquee-track {
-    animation: none;
-    width: 100%;
-  }
-
-  .sponsors-marquee-group {
-    flex: 1;
-    padding: 0;
-  }
-
-  .sponsors-marquee-placeholder {
-    width: 100%;
-  }
-
-  .sponsors-marquee-group[aria-hidden='true'],
-  .sponsors-marquee-placeholder:not(:first-child) {
-    display: none;
-  }
 }
 
 .prose > h2:first-child,
