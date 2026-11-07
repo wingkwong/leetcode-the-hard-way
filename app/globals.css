@@ -34,6 +34,18 @@ a {
   color: var(--site-link);
 }
 
+.prose ul:not(:where(.not-prose, .not-prose *)) {
+  padding-inline-start: 1.625em;
+}
+
+.prose ul > li:not(:where(.not-prose, .not-prose *)) {
+  padding-inline-start: 0.375em;
+}
+
+.prose :where(li, ol > li > p):not(:where(.not-prose, .not-prose *)) {
+  margin-block: 0.25em;
+}
+
 table {
   width: 100%;
 }
