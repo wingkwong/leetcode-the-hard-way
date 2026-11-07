@@ -40,7 +40,21 @@ export const tutorials = defineDocs({
 
 export const solutions = defineDocs({
   dir: 'solutions',
-  docs: docsOptions,
+  docs: {
+    ...docsOptions,
+    schema: ({ source }) =>
+      docsOptions.schema.transform((data) => {
+        if (data.title) return data;
+
+        const heading = /^# (\d+)(?:[ \t]*[-.])?[ \t]+(.+)$/m.exec(source);
+        if (!heading) return data;
+
+        const name = heading[2]
+          .trim()
+          .replace(/\s+\((easy|medium|hard)\)$/i, '');
+        return { ...data, title: `${heading[1]} - ${name}` };
+      }),
+  },
   meta: metaOptions,
 });
 
