@@ -60,7 +60,7 @@ export function RatingsTable({ ratings }: { ratings: RatingEntry[] }) {
           LeetCode Problem Rating Project
         </a>
         . The ratings may not be fully accurate and should be used for reference
-        only. Last updated: <time dateTime="2026-11-03">November 3, 2026</time>.
+        only. Last updated: <time dateTime="2026-11-08">November 8, 2026</time>.
       </p>
       <div className="ratings-toolbar">
         <div className="ratings-search-group">
