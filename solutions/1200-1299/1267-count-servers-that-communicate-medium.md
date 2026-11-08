@@ -1,6 +1,7 @@
 ---
 title: 'LeetCode 1267 – Count Servers that Communicate'
 description: 'Use row and column totals to count servers that share a row or column with another server.'
+tags: ['Array', 'Counting', 'Depth-First Search', 'Breadth-First Search', 'Union-Find', 'Matrix']
 ---
 
 # 1267 - Count Servers that Communicate (Medium)
