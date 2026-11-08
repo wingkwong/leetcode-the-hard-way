@@ -2175,5 +2175,12 @@
     "title": "Process Tasks Using Servers",
     "slug": "process-tasks-using-servers",
     "solutionUrl": "/solutions/1800-1899/process-tasks-using-servers-medium/"
+  },
+  {
+    "date": "2026-11-08",
+    "questionId": "1267",
+    "title": "Count Servers that Communicate",
+    "slug": "count-servers-that-communicate",
+    "solutionUrl": "/solutions/1200-1299/count-servers-that-communicate-medium/"
   }
 ]
