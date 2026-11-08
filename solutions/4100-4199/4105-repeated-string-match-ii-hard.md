@@ -81,7 +81,13 @@ class Solution:
     def repeatedStringMatch(self, a: str, b: str, x: int, y: int) -> bool:
         n, m = len(a), len(b)
         if m * y > n * x: return False
-        return any(all((a[(s + i) % n] == b[i % m] for i in range(min(m * y, n * m)))) for s in range(min(n, n * x - m * y + 1)))
+        return any(
+            all(
+                a[(s + i) % n] == b[i % m]
+                for i in range(min(m * y, n * m))
+            )
+            for s in range(min(n, n * x - m * y + 1))
+        )
 ```
 
 </TabItem>
