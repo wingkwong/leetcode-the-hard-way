@@ -5,6 +5,9 @@
     "4102-count-valid-substrings-i-medium",
     "4103-remove-elements-by-type-and-color-medium",
     "4104-count-valid-substrings-ii-medium",
-    "4105-repeated-string-match-ii-hard"
+    "4105-repeated-string-match-ii-hard",
+    "4106-find-mismatched-segments-between-two-strings-medium",
+    "4107-count-valid-suffix-sorts-i-medium",
+    "4108-minimum-cost-to-make-red-nodes-connected-medium"
   ]
 }
