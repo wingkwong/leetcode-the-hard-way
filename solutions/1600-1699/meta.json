@@ -2,6 +2,7 @@
   "title": "1600 - 1699",
   "description": "Solutions categorised by Problem IDs",
   "pages": [
+    "1606-find-servers-that-handled-most-number-of-requests-hard",
     "1624-largest-substring-between-two-equal-characters-easy",
     "1626-best-team-with-no-conflicts-medium",
     "1630-arithmetic-subarrays-medium",
