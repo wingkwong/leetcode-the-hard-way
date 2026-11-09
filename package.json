@@ -19,12 +19,12 @@
     "prettier": "pnpm format"
   },
   "dependencies": {
-    "fumadocs-core": "16.17.10",
-    "fumadocs-mdx": "15.4.10",
-    "fumadocs-ui": "16.17.10",
+    "fumadocs-core": "16.18.3",
+    "fumadocs-mdx": "15.5.2",
+    "fumadocs-ui": "16.18.3",
     "katex": "0.19.1",
-    "lucide-react": "1.66.0",
-    "next": "16.4.4",
+    "lucide-react": "1.70.0",
+    "next": "16.4.5",
     "react": "19.3.1",
     "react-dom": "19.3.1",
     "rehype-katex": "7.0.1",
@@ -37,7 +37,7 @@
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
     "prettier": "3.9.10",
-    "serve": "14.2.6",
+    "serve": "14.2.7",
     "typescript": "^6.0.3"
   },
   "browserslist": {
@@ -55,5 +55,5 @@
   "engines": {
     "node": "24.x"
   },
-  "packageManager": "pnpm@12.17.0"
+  "packageManager": "pnpm@12.18.0"
 }
