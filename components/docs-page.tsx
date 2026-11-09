@@ -15,6 +15,7 @@ import { getSolutionTagUrl } from '../lib/solution-tags';
 import {
   JsonLdScript,
   createPageMetadata,
+  createSolutionPageMetadata,
   createTechArticleJsonLd,
   formatPagePathname,
 } from '../lib/seo';
@@ -132,9 +133,15 @@ export async function renderDocsPage(section: Section, slug: string[] = []) {
 }
 
 export function getDocsMetadata(section: Section, slug: string[] = []) {
-  return createPageMetadata(
-    getDocsPageSeo(section, resolveSlug(section, slug)),
-  );
+  const seo = getDocsPageSeo(section, resolveSlug(section, slug));
+
+  return section.baseUrl === '/solutions'
+    ? createSolutionPageMetadata(seo)
+    : createPageMetadata({
+        description: seo.description,
+        pathname: seo.pathname,
+        title: seo.seoTitle ?? seo.title,
+      });
 }
 
 function renderGeneratedIndex(section: Section, slug: string[]) {
@@ -196,9 +203,41 @@ function getDocsPageSeo(section: Section, slug: string[], page?: Page) {
 
   return {
     title,
+    seoTitle: getDocsSeoTitle(section, resolvedSlug, title, currentPage),
     description,
     pathname: getPathname(section.baseUrl, formatSlug(section, resolvedSlug)),
   };
+}
+
+function getDocsSeoTitle(
+  section: Section,
+  slug: string[],
+  title: string,
+  currentPage?: Page,
+) {
+  if (section.baseUrl === '/solutions' || slug.length === 0) {
+    return undefined;
+  }
+
+  const breadcrumbTitles = getBreadcrumbTitles(section, slug, currentPage);
+  const breadcrumbTitle = [
+    ...breadcrumbTitles.reverse(),
+    section.title,
+  ].join(' | ');
+
+  return breadcrumbTitle && breadcrumbTitle !== title
+    ? breadcrumbTitle
+    : undefined;
+}
+
+function getBreadcrumbTitles(
+  section: Section,
+  slug: string[],
+  currentPage?: Page,
+) {
+  return slug
+    .map((_, index) => getNodeTitle(section, slug.slice(0, index + 1), currentPage))
+    .filter((value): value is string => Boolean(value));
 }
 
 function getChildren(section: Section, slug: string[], meta?: MetaFile | null) {
@@ -284,6 +323,18 @@ function readMeta(contentDir: string, slug: string[]): MetaFile | null {
   if (!fs.existsSync(file)) return null;
 
   return JSON.parse(fs.readFileSync(file, 'utf8')) as MetaFile;
+}
+
+function getNodeTitle(section: Section, slug: string[], currentPage?: Page) {
+  const exactPage =
+    currentPage && startsWithSlug(currentPage.slugs, slug)
+      ? currentPage.slugs.length === slug.length
+        ? currentPage
+        : section.source.getPage(slug)
+      : section.source.getPage(slug);
+  const meta = readMeta(section.contentDir, slug);
+
+  return exactPage?.data.title ?? meta?.title ?? titleFromSlug(slug.at(-1) ?? '');
 }
 
 function titleFromSlug(value: string) {

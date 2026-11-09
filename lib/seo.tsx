@@ -47,6 +47,10 @@ export function formatPageTitle(title: string) {
   return title === siteName ? siteName : `${title} | ${siteName}`;
 }
 
+export function formatSolutionSeoTitle(title: string) {
+  return `LeetCode ${title} (Solution & Explanation)`;
+}
+
 export function createPageMetadata({
   description,
   pathname,
@@ -92,6 +96,23 @@ export function createPageMetadata({
       images: [defaultPreviewImage],
     },
   };
+}
+
+export function createSolutionPageMetadata({
+  description,
+  pathname,
+  title,
+}: {
+  description?: string;
+  pathname: string;
+  title: string;
+}) {
+  return createPageMetadata({
+    description,
+    pathname,
+    title: formatSolutionSeoTitle(title),
+    type: 'article',
+  });
 }
 
 export function createWebSiteJsonLd() {

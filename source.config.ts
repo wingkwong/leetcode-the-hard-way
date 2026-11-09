@@ -32,6 +32,25 @@ const metaOptions = {
   }),
 };
 
+function normalizeSolutionTitle(title: string) {
+  return title
+    .replace(/^LeetCode\s+/i, '')
+    .replace(/\s*[–—]\s*/g, ' - ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function inferSolutionTitle(source: string) {
+  const heading = /^# (\d+)(?:[ \t]*[-.])[ \t]+(.+)$/m.exec(source);
+  if (!heading) return undefined;
+
+  const name = heading[2]
+    .trim()
+    .replace(/\s+\((easy|medium|hard)\)$/i, '');
+
+  return `${heading[1]} - ${name}`;
+}
+
 export const tutorials = defineDocs({
   dir: 'tutorials',
   docs: docsOptions,
@@ -44,15 +63,11 @@ export const solutions = defineDocs({
     ...docsOptions,
     schema: ({ source }) =>
       docsOptions.schema.transform((data) => {
-        if (data.title) return data;
+        const title = data.title
+          ? normalizeSolutionTitle(data.title)
+          : inferSolutionTitle(source);
 
-        const heading = /^# (\d+)(?:[ \t]*[-.])?[ \t]+(.+)$/m.exec(source);
-        if (!heading) return data;
-
-        const name = heading[2]
-          .trim()
-          .replace(/\s+\((easy|medium|hard)\)$/i, '');
-        return { ...data, title: `${heading[1]} - ${name}` };
+        return title ? { ...data, title } : data;
       }),
   },
   meta: metaOptions,
