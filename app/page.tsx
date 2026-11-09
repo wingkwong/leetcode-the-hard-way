@@ -82,9 +82,8 @@ export default function HomePage() {
       <DocsPage tableOfContent={{ component: <SponsorsTableOfContent /> }}>
         <DocsTitle>Introduction</DocsTitle>
         <DocsDescription className="docs-description">
-          LeetCode The Hard Way is a structured resource for learning data
-          structures and algorithms through tutorials, templates, roadmaps, and
-          solution explanations.
+          LeetCode The Hard Way began as my personal learning notes and has since grown into a free resource for everyone.
+          It offers structured tutorials, templates, roadmaps, and solution explanations for learning data structures and algorithms.
         </DocsDescription>
         <DocsBody>
           <p>
