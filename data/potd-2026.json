@@ -2182,5 +2182,12 @@
     "title": "Count Servers that Communicate",
     "slug": "count-servers-that-communicate",
     "solutionUrl": "/solutions/1200-1299/count-servers-that-communicate-medium/"
+  },
+  {
+    "date": "2026-11-09",
+    "questionId": "1606",
+    "title": "Find Servers That Handled Most Number of Requests",
+    "slug": "find-servers-that-handled-most-number-of-requests",
+    "solutionUrl": "/solutions/1600-1699/find-servers-that-handled-most-number-of-requests-hard/"
   }
 ]
