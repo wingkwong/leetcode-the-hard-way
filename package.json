@@ -19,9 +19,9 @@
     "prettier": "pnpm format"
   },
   "dependencies": {
-    "fumadocs-core": "16.18.3",
-    "fumadocs-mdx": "15.5.2",
-    "fumadocs-ui": "16.18.3",
+    "fumadocs-core": "16.18.4",
+    "fumadocs-mdx": "15.5.3",
+    "fumadocs-ui": "16.18.4",
     "katex": "0.19.1",
     "lucide-react": "1.70.0",
     "next": "16.4.5",
