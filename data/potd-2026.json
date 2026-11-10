@@ -2189,5 +2189,12 @@
     "title": "Find Servers That Handled Most Number of Requests",
     "slug": "find-servers-that-handled-most-number-of-requests",
     "solutionUrl": "/solutions/1600-1699/find-servers-that-handled-most-number-of-requests-hard/"
+  },
+  {
+    "date": "2026-11-10",
+    "questionId": "3693",
+    "title": "Climbing Stairs II",
+    "slug": "climbing-stairs-ii",
+    "solutionUrl": "/solutions/3600-3699/climbing-stairs-ii-medium/"
   }
 ]
