@@ -2196,5 +2196,12 @@
     "title": "Climbing Stairs II",
     "slug": "climbing-stairs-ii",
     "solutionUrl": "/solutions/3600-3699/climbing-stairs-ii-medium/"
+  },
+  {
+    "date": "2026-11-11",
+    "questionId": "3789",
+    "title": "Minimum Cost to Acquire Required Items",
+    "slug": "minimum-cost-to-acquire-required-items",
+    "solutionUrl": null
   }
 ]
