@@ -8,7 +8,7 @@ tags: ['Math', 'Greedy']
 
 ## Problem Link
 
-https://leetcode.com/problems/minimum-cost-to-acquire-required-items/description/?envType=daily-question&envId=2026-11-11
+https://leetcode.com/problems/minimum-cost-to-acquire-required-items
 
 ## Problem Statement
 
