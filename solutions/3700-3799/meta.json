@@ -4,6 +4,7 @@
   "pages": [
     "3702-longest-subsequence-with-non-zero-bitwise-xor-medium",
     "3718-smallest-missing-multiple-of-k-easy",
-    "3736-minimum-moves-to-equal-array-elements-iii-easy"
+    "3736-minimum-moves-to-equal-array-elements-iii-easy",
+    "3789-minimum-cost-to-acquire-required-items-medium"
   ]
 }
