@@ -2203,5 +2203,12 @@
     "title": "Minimum Cost to Acquire Required Items",
     "slug": "minimum-cost-to-acquire-required-items",
     "solutionUrl": "/solutions/3700-3799/minimum-cost-to-acquire-required-items-medium/"
+  },
+  {
+    "date": "2026-11-12",
+    "questionId": "3105",
+    "title": "Longest Strictly Increasing or Strictly Decreasing Subarray",
+    "slug": "longest-strictly-increasing-or-strictly-decreasing-subarray",
+    "solutionUrl": null
   }
 ]
