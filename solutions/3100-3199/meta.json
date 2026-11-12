@@ -1,5 +1,8 @@
 {
   "title": "3100 - 3199",
   "description": "Solutions categorised by Problem IDs",
-  "pages": ["3142-check-if-grid-satisfies-conditions-easy"]
+  "pages": [
+    "3105-longest-strictly-increasing-or-strictly-decreasing-subarray-easy",
+    "3142-check-if-grid-satisfies-conditions-easy"
+  ]
 }
