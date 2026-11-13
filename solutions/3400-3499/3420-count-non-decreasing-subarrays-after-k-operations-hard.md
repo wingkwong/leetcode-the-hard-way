@@ -8,7 +8,7 @@ tags: ['Array', 'Stack', 'Segment Tree', 'Queue', 'Sliding Window', 'Monotonic S
 
 ## Problem Link
 
-https://leetcode.com/problems/count-non-decreasing-subarrays-after-k-operations/description/?envType=daily-question&envId=2026-11-13
+https://leetcode.com/problems/count-non-decreasing-subarrays-after-k-operations
 
 ## Problem Statement
 
