@@ -2210,5 +2210,12 @@
     "title": "Longest Strictly Increasing or Strictly Decreasing Subarray",
     "slug": "longest-strictly-increasing-or-strictly-decreasing-subarray",
     "solutionUrl": "/solutions/3100-3199/longest-strictly-increasing-or-strictly-decreasing-subarray-easy/"
+  },
+  {
+    "date": "2026-11-13",
+    "questionId": "3420",
+    "title": "Count Non-Decreasing Subarrays After K Operations",
+    "slug": "count-non-decreasing-subarrays-after-k-operations",
+    "solutionUrl": null
   }
 ]
