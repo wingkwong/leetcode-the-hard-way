@@ -1,5 +1,8 @@
 {
   "title": "3400 - 3499",
   "description": "Solutions categorised by Problem IDs",
-  "pages": ["3471-find-the-largest-almost-missing-integer-easy"]
+  "pages": [
+    "3420-count-non-decreasing-subarrays-after-k-operations-hard",
+    "3471-find-the-largest-almost-missing-integer-easy"
+  ]
 }
