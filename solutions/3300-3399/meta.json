@@ -3,6 +3,7 @@
   "description": "Solutions categorised by Problem IDs",
   "pages": [
     "3300-minimum-element-after-replacement-with-digit-sum-easy",
+    "3364-minimum-positive-sum-subarray-easy",
     "3375-minimum-operations-to-make-array-values-equal-to-k-easy"
   ]
 }
