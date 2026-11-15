@@ -2224,5 +2224,12 @@
     "title": "Minimum Positive Sum Subarray ",
     "slug": "minimum-positive-sum-subarray",
     "solutionUrl": "/solutions/3300-3399/minimum-positive-sum-subarray-easy/"
+  },
+  {
+    "date": "2026-11-15",
+    "questionId": "1524",
+    "title": "Number of Sub-arrays With Odd Sum",
+    "slug": "number-of-sub-arrays-with-odd-sum",
+    "solutionUrl": "/solutions/1500-1599/number-of-sub-arrays-with-odd-sum-medium/"
   }
 ]
