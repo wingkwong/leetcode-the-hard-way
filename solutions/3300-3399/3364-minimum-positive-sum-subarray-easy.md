@@ -17,7 +17,7 @@ Return the **minimum** sum of such a subarray. If no such subarray exists, retur
 
 A **subarray** is a contiguous **non-empty** sequence of elements within an array.
 
-OriginalPython3**Example 1:**
+**Example 1:**
 
 **Input:** nums = [3, -2, 1, 4], l = 2, r = 3
 

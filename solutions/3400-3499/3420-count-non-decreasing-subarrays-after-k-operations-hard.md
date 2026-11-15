@@ -22,7 +22,7 @@ Return the number of subarrays that you can make **non-decreasing** ​​​​
 
 An array is said to be **non-decreasing** if each element is greater than or equal to its previous element, if it exists.
 
-OriginalPython3**Example 1:**
+**Example 1:**
 
 **Input:** nums = [6,3,1,2,4,4], k = 7
 
