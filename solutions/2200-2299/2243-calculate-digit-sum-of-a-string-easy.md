@@ -58,7 +58,9 @@ s becomes "0" + "0" + "0" = "000", whose length is equal to k, so we return "000
 
 Just following the instructions.
 
-<SolutionAuthor name="@wkw"/>
+<Tabs>
+<TabItem value="cpp" label="C++">
+<SolutionAuthor name="@wkw" />
 
 ```cpp
 class Solution {
@@ -84,3 +86,20 @@ public:
     }
 };
 ```
+
+</TabItem>
+
+<TabItem value="py" label="Python">
+<SolutionAuthor name="@wkw"/>
+
+```py
+class Solution:
+    def digitSum(self, s: str, k: int) -> str:
+        while len(s) > k:
+            res = ''.join(str(sum(map(int, s[i:i + k]))) for i in range(0, len(s), k))
+            s = res
+        return s
+```
+
+</TabItem>
+</Tabs>
