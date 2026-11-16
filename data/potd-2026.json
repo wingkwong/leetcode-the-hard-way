@@ -2231,5 +2231,12 @@
     "title": "Number of Sub-arrays With Odd Sum",
     "slug": "number-of-sub-arrays-with-odd-sum",
     "solutionUrl": "/solutions/1500-1599/number-of-sub-arrays-with-odd-sum-medium/"
+  },
+  {
+    "date": "2026-11-16",
+    "questionId": "2243",
+    "title": "Calculate Digit Sum of a String",
+    "slug": "calculate-digit-sum-of-a-string",
+    "solutionUrl": "/solutions/2200-2299/calculate-digit-sum-of-a-string-easy/"
   }
 ]
