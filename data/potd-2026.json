@@ -2238,5 +2238,12 @@
     "title": "Calculate Digit Sum of a String",
     "slug": "calculate-digit-sum-of-a-string",
     "solutionUrl": "/solutions/2200-2299/calculate-digit-sum-of-a-string-easy/"
+  },
+  {
+    "date": "2026-11-17",
+    "questionId": "2911",
+    "title": "Minimum Changes to Make K Semi-palindromes",
+    "slug": "minimum-changes-to-make-k-semi-palindromes",
+    "solutionUrl": null
   }
 ]
