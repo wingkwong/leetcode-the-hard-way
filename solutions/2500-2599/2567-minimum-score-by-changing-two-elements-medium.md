@@ -19,7 +19,7 @@ You are given an integer array `nums`.
 
 Return the **minimum score** after **changing two elements** of `nums`.
 
-OriginalPython3**Example 1:**
+**Example 1:**
 
 **Input:** nums = [1,4,7,8,5]
 
