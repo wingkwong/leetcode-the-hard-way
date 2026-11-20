@@ -2259,5 +2259,12 @@
     "title": "Minimum Score by Changing Two Elements",
     "slug": "minimum-score-by-changing-two-elements",
     "solutionUrl": "/solutions/2500-2599/minimum-score-by-changing-two-elements-medium/"
+  },
+  {
+    "date": "2026-11-20",
+    "questionId": "3041",
+    "title": "Maximize Consecutive Elements in an Array After Modification",
+    "slug": "maximize-consecutive-elements-in-an-array-after-modification",
+    "solutionUrl": null
   }
 ]
