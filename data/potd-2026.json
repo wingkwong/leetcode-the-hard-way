@@ -2266,5 +2266,12 @@
     "title": "Maximize Consecutive Elements in an Array After Modification",
     "slug": "maximize-consecutive-elements-in-an-array-after-modification",
     "solutionUrl": "/solutions/3000-3099/maximize-consecutive-elements-in-an-array-after-modification-hard/"
+  },
+  {
+    "date": "2026-11-21",
+    "questionId": "3331",
+    "title": "Find Subtree Sizes After Changes",
+    "slug": "find-subtree-sizes-after-changes",
+    "solutionUrl": null
   }
 ]
