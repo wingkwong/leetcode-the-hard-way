@@ -2273,5 +2273,12 @@
     "title": "Find Subtree Sizes After Changes",
     "slug": "find-subtree-sizes-after-changes",
     "solutionUrl": "/solutions/3300-3399/find-subtree-sizes-after-changes-medium/"
+  },
+  {
+    "date": "2026-11-22",
+    "questionId": "2124",
+    "title": "Check if All A's Appears Before All B's",
+    "slug": "check-if-all-as-appears-before-all-bs",
+    "solutionUrl": "/solutions/2100-2199/check-if-all-as-appears-before-all-bs-easy/"
   }
 ]
