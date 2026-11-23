@@ -2280,5 +2280,12 @@
     "title": "Check if All A's Appears Before All B's",
     "slug": "check-if-all-as-appears-before-all-bs",
     "solutionUrl": "/solutions/2100-2199/check-if-all-as-appears-before-all-bs-easy/"
+  },
+  {
+    "date": "2026-11-23",
+    "questionId": "1352",
+    "title": "Product of the Last K Numbers",
+    "slug": "product-of-the-last-k-numbers",
+    "solutionUrl": null
   }
 ]
