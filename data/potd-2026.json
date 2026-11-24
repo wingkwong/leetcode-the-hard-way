@@ -2287,5 +2287,12 @@
     "title": "Product of the Last K Numbers",
     "slug": "product-of-the-last-k-numbers",
     "solutionUrl": "/solutions/1300-1399/product-of-the-last-k-numbers-medium/"
+  },
+  {
+    "date": "2026-11-24",
+    "questionId": "3411",
+    "title": "Maximum Subarray With Equal Products",
+    "slug": "maximum-subarray-with-equal-products",
+    "solutionUrl": null
   }
 ]
