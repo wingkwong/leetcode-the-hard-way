@@ -2294,5 +2294,12 @@
     "title": "Maximum Subarray With Equal Products",
     "slug": "maximum-subarray-with-equal-products",
     "solutionUrl": "/solutions/3400-3499/maximum-subarray-with-equal-products-easy/"
+  },
+  {
+    "date": "2026-11-25",
+    "questionId": "3934",
+    "title": "Smallest Unique Subarray",
+    "slug": "smallest-unique-subarray",
+    "solutionUrl": null
   }
 ]
