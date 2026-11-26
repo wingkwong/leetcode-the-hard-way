@@ -2301,5 +2301,12 @@
     "title": "Smallest Unique Subarray",
     "slug": "smallest-unique-subarray",
     "solutionUrl": null
+  },
+  {
+    "date": "2026-11-26",
+    "questionId": "3360",
+    "title": "Stone Removal Game",
+    "slug": "stone-removal-game",
+    "solutionUrl": null
   }
 ]
