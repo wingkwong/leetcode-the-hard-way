@@ -2308,5 +2308,12 @@
     "title": "Stone Removal Game",
     "slug": "stone-removal-game",
     "solutionUrl": "/solutions/3300-3399/stone-removal-game-easy/"
+  },
+  {
+    "date": "2026-11-27",
+    "questionId": "3946",
+    "title": "Maximum Number of Items From Sale I",
+    "slug": "maximum-number-of-items-from-sale-i",
+    "solutionUrl": null
   }
 ]
