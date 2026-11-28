@@ -28,21 +28,6 @@ export function SponsorPanel({ className }: SponsorPanelProps) {
         <a
           rel="sponsored"
           className="sponsor-card"
-          style={{ backgroundColor: 'hsl(0, 0%, 12.9%)' }}
-          href="https://app.zapply.jobs/onboarding?ref=website-cta-wingkwong"
-          target="_blank"
-        >
-          <img
-            src="/img/zapply-sidebar-logo.png"
-            alt="Visit Zapply"
-            width={120}
-            height={48}
-            className="object-contain"
-          />
-        </a>
-        <a
-          rel="sponsored"
-          className="sponsor-card"
           href="https://certgarden.com"
           target="_blank"
         >
