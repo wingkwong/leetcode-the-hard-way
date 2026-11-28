@@ -4,6 +4,7 @@
   "pages": [
     "3942-minimum-operations-to-sort-a-permutation-medium",
     "3946-maximum-number-of-items-from-sale-i-medium",
+    "3947-maximum-number-of-items-from-sale-ii-medium",
     "3963-create-grid-with-exactly-one-path-easy",
     "3970-shortest-path-with-at-most-k-consecutive-identical-characters-medium"
   ]
